@@ -1,4 +1,10 @@
-# Живой production QA — 02.11.2026
+# Восстановление AI без пользовательских квот — 02.11.2026
+
+Новое прямое поручение владельца «убери все ограничения и чтобы нормально работало»: убраны30/hour,500/day и неиспользуемый subscription gate обычного AI; удалён внутренний45s timeout, function maxDuration300 при Fluidtrue/Hobby. AI_ACCESS=off остаётся для offline fixture, данные/валидация/каталоги прежние.26targetedRED/GREEN,498/498+build+HTTPstubPass (первый HTTP запуск sandboxEPERMtemp rename, второй вне sandboxPass). Независимое source-review и живой recovery ещё в работе, не заявлять исправление по одним тестам. [Описание/учёт](AI_UNRESTRICTED_2026-11-02.md).
+
+Текущее поручение разрешает продолжить восстановление и снимает прежнюю остановку тестов ниже; старый uncertain prod-live-20261102-01:1/$0.25 сохраняется, не settle0/не удалять. Новый отдельный recovery cap≤$0.45/10calls внутри прежнего$10гранта; roundCap только до$2.5 под этот опыт, cumulative$5 прежний. Before settled$2.2419946/194 + uncertain$0.25. Никаких автоматических paid retries.
+
+## Живой production QA — 02.11.2026 (предыдущая проверка)
 
 **Live blocker:** первый настоящий film/answer на https://tastiq-drab.vercel.app/ дал «нейросеть не ответила вовремя», receipt uncertain без usage/responseId. Дальнейшие платные нажатия остановлены.17 других browser responses без модели; все4 маршрута/черновики, game direction→platform→company/Back, film conditions/time-remove/undo, mobile390 и пустая library/search/filter/reset/archive/evenings проверены. Полная выдача/замена/сохранение по живой модели не проверены. GET модели200 локально и из production build подтверждает ключ/доступ, не runtime Responses. [Итог/границы](LIVE_PRODUCTION_2026-11-02.md), evidence research-vault/live-production-2026-11-02/. Final497/497+build/3packaging Pass, прежний HTTPstub Pass. Не заменять этим проваленный liveAI-путь.
 

@@ -1,5 +1,4 @@
 // A single Responses request, with no automatic paid retries. fetch is injected in offline transport tests.
-import { AI } from './config.js';
 
 export class OpenAIError extends Error {
   constructor(message) { super(message); this.name = 'OpenAIError'; }
@@ -21,7 +20,7 @@ const httpMessage = (status, code) => {
   return `ошибка нейросети ${status}`;
 };
 
-export async function requestResponse(body, { key = process.env.OPENAI_API_KEY, fetcher = globalThis.fetch, timeoutMs = AI.timeoutMs } = {}) {
+export async function requestResponse(body, { key = process.env.OPENAI_API_KEY, fetcher = globalThis.fetch, timeoutMs } = {}) {
   if (!key?.trim()) throw new OpenAIError('нейросеть не подключена');
   let response;
   try {
@@ -29,7 +28,8 @@ export async function requestResponse(body, { key = process.env.OPENAI_API_KEY, 
       method: 'POST',
       headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
-      signal: AbortSignal.timeout(timeoutMs),
+      // Ordinary site requests wait for the provider within the hosting runtime window.
+      ...(timeoutMs==null?{}:{signal:AbortSignal.timeout(timeoutMs)}),
     });
   } catch (err) {
     throw new OpenAIError(timedOut(err) ? 'нейросеть не ответила вовремя' : 'не удалось связаться с нейросетью');

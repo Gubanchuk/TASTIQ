@@ -124,9 +124,9 @@ try {
   const mediaEntries=readFileSync(process.env.JOURNAL_PATH,'utf8').trim().split('\n').map(JSON.parse).filter(x=>x.event.startsWith('media-conversation-'));
   assert.equal(mediaEntries.length,6);assert.deepEqual(mediaEntries.map(x=>x.data.domain),['film','film','series','series','cartoon','cartoon']);
   assert.ok(mediaEntries.every(x=>x.data.usage.cached===40&&x.data.usage.estimatedUsd===0.000324));
-  const { AI_LIMITS } = await import('../src/ai/access.js');
-  AI_LIMITS.perHour = 2;
-  assert.ok((await intent('хочу скорость')).error, 'intent and picks share the rate limit');
+  const { aiSpend } = await import('../src/ai/access.js');
+  for(let i=0;i<550;i++)aiSpend({uid:'offline-smoke'});
+  assert.equal((await(await localFetch(`${base}/api/ai/status?uid=offline-smoke`)).json()).enabled,true,'ordinary site AI has no hourly or daily quota');
   assert.equal(requests, 8);
   process.env.OPENAI_API_KEY = '';
   const disabled = await (await localFetch(`${base}/api/ai/status?uid=offline-smoke`)).json();
@@ -159,7 +159,7 @@ try {
   assert.equal(qaInvalid.status,400,'QA never bypasses feedback validation');
   await localFetch(`${base}/api/log`,{method:'POST',headers:qaHeaders,body:JSON.stringify({event:'qa-check'})});
   assert.equal(readFileSync(process.env.JOURNAL_PATH,'utf8'),journalBeforeQa,'QA cannot pollute owner statistics');
-  process.env.OPENAI_API_KEY='offline-smoke-key';AI_LIMITS.perHour=100;
+  process.env.OPENAI_API_KEY='offline-smoke-key';
   const qaPick=await(await localFetch(`${base}/api/ai/pick`,{method:'POST',headers:qaHeaders,body:JSON.stringify({state,wish:'qa-meter-check'})})).json();
   assert.equal(requests,9);assert.equal(qaPick.qaBilling.calls.length,1);
   const qaPaid=JSON.parse(readFileSync(join(ledgerDir,'budget.json'),'utf8')).calls.at(-1);
@@ -167,7 +167,7 @@ try {
   assert.equal(readFileSync(process.env.JOURNAL_PATH,'utf8'),journalBeforeQa);
   const blockedQa=await(await localFetch(`${base}/api/ai/pick`,{method:'POST',headers:{...qaHeaders,'x-tastiq-max-reserve-usd':'0.000001'},body:JSON.stringify({state,wish:'qa-before-dispatch'})})).json();
   assert.equal(requests,9,'reserve rejection cannot dispatch the model');assert.equal(blockedQa.qaBilling.calls[0].notRequested,true);
-  console.log('PASS: HTTP/static, AI picks + intent + three media domains, feedback validation/privacy, in-flight sharing, cache, shared limits, isolated usage journal, disabled access. Paid requests: 0.');
+  console.log('PASS: HTTP/static, AI picks + intent + three media domains, feedback validation/privacy, in-flight sharing, cache, no app quotas, isolated usage journal, disabled access. Paid requests: 0.');
   process.exit(0);
 } catch (err) {
   console.error(err);

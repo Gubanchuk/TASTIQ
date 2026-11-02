@@ -18,5 +18,4 @@ export const AI = {
   picks: 4,
   spares: Number(process.env.AI_SPARES ?? 0),
   maxOutputTokens: 8000,
-  timeoutMs: 45_000,
 };

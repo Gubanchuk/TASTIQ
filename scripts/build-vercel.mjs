@@ -17,7 +17,7 @@ export function buildVercel({root=resolve(dirname(fileURLToPath(import.meta.url)
  for(const name of runtimeData)cpSync(join(root,'data',name),join(fn,'data',name));
  writeFileSync(join(fn,'package.json'),JSON.stringify({private:true,type:'module'}));
  writeFileSync(join(fn,'handler.mjs'),"export {handler as default} from './src/server/app.js';\n");
- writeFileSync(join(fn,'.vc-config.json'),JSON.stringify({runtime:'nodejs24.x',handler:'handler.mjs',launcherType:'Nodejs',shouldAddHelpers:false,maxDuration:60}));
+ writeFileSync(join(fn,'.vc-config.json'),JSON.stringify({runtime:'nodejs24.x',handler:'handler.mjs',launcherType:'Nodejs',shouldAddHelpers:false,maxDuration:300}));
  writeFileSync(join(output,'config.json'),JSON.stringify({version:3,routes:[{handle:'filesystem'},{src:'/(.*)',dest:'/tastiq'}]},null,2));
  return output;
 }

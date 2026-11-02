@@ -200,18 +200,20 @@ test('a title the sieves removed is never shown, even if named', () => {
   assert.equal(result, null);
 });
 
-test('access: off without a key, limited per browser per hour', () => {
-  const key = process.env.OPENAI_API_KEY;
+test('access: a configured provider has no browser/day quota or subscription gate', () => {
+  const key = process.env.OPENAI_API_KEY,access=AI_LIMITS.access;
   try {
     delete process.env.OPENAI_API_KEY;
     assert.equal(aiAccess({ uid: 'a' }).allowed, false);
     process.env.OPENAI_API_KEY = 'test';
-    const now = Date.now();
-    for (let i = 0; i < AI_LIMITS.perHour; i++) aiSpend({ uid: 'limit-test' }, now);
-    assert.equal(aiAccess({ uid: 'limit-test' }, now).allowed, false);
-    assert.equal(aiAccess({ uid: 'limit-test' }, now + 3_600_001).allowed, true);
+    AI_LIMITS.access='all';const now = Date.now();
+    for (let i = 0; i < 550; i++) aiSpend({ uid: 'limit-test' }, now);
+    assert.equal(aiAccess({ uid: 'limit-test' }, now).allowed, true);
     assert.equal(aiAccess({ uid: 'someone-else' }, now).allowed, true);
+    AI_LIMITS.access='list';assert.equal(aiAccess({uid:'not-subscribed'}).allowed,true);
+    AI_LIMITS.access='off';assert.equal(aiAccess().allowed,false,'offline fixtures may explicitly disable provider calls');
   } finally {
+    AI_LIMITS.access=access;
     if (key === undefined) delete process.env.OPENAI_API_KEY;
     else process.env.OPENAI_API_KEY = key;
   }

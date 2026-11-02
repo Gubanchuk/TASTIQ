@@ -27,6 +27,7 @@ test('Vercel output serves actual public HTML and a Node API, with only approved
   assert.ok(existsSync(join(output,'static/shared/app.js')));
   assert.equal(json(join(fn,'.vc-config.json')).launcherType,'Nodejs');
   assert.equal(json(join(fn,'.vc-config.json')).shouldAddHelpers,false,'preserve raw JSON request streams');
+  assert.equal(json(join(fn,'.vc-config.json')).maxDuration,300,'allow the full Hobby/Fluid window for model responses');
   assert.match(readFileSync(join(fn,'handler.mjs'),'utf8'),/src\/server\/app\.js/);
   assert.ok(existsSync(join(fn,'data/catalog-screen.json')));
   for(const name of ['.env','data/journal.ndjson','data/unrelated.json'])assert.equal(existsSync(join(fn,name)),false,name);

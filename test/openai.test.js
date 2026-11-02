@@ -10,11 +10,21 @@ test('the transport sends a single authenticated Responses request and returns r
     assert.equal(init.method, 'POST');
     assert.equal(init.headers.Authorization, 'Bearer test-key');
     assert.deepEqual(JSON.parse(init.body), { model: 'test', input: 'hello' });
-    assert.ok(init.signal instanceof AbortSignal);
+    assert.equal(init.signal,undefined,'ordinary calls have no application deadline');
     return new Response(JSON.stringify({ status: 'completed', output: [] }));
   } });
   assert.equal(result.status, 'completed');
   assert.equal(calls, 1, 'no automatic paid retries');
+});
+
+test('a model response arriving beyond the old 45-second deadline is accepted without another paid request', async t=>{
+  const deadlines=[];let complete,calls=0;
+  t.mock.method(AbortSignal,'timeout',ms=>{const controller=new AbortController();deadlines.push({ms,controller});return controller.signal;});
+  const result=requestResponse({model:'test'},{key:'test',fetcher:async(_url,init)=>{
+    calls++;return new Promise((resolve,reject)=>{complete=()=>resolve(new Response(JSON.stringify({status:'completed',id:'slow-response'})));init.signal?.addEventListener('abort',()=>reject(new DOMException('late','TimeoutError')));});
+  }});
+  for(const {ms,controller}of deadlines)if(ms<=45000)controller.abort();
+  complete();assert.equal((await result).id,'slow-response');assert.equal(calls,1);
 });
 
 test('a missing key makes no HTTP request', async () => {
