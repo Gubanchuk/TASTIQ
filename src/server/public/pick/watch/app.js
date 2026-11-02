@@ -1,3 +1,4 @@
+import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createConversationClient,conversationStorageKey} from '/shared/conversation-client.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
@@ -24,7 +25,7 @@ const neutralLabels={unknown:'Пока не знаю',indifferent:'Неважн�
 const contextReady=screen=>Boolean(screen?.canBack);
 const button=(label,act,extra='',primary=false)=>`<button type="button" class="btn ${primary?'btn-primary':'btn-secondary'}" data-act="${act}"${extra.includes('data-focus=')?'':` data-focus="${act}"`} ${extra}>${esc(label)}</button>`;
 let storage,uid=null;
-try{storage=localStorage;uid=storage.getItem('tastiq.uid');if(!uid){uid=crypto.randomUUID();storage.setItem('tastiq.uid',uid);}}catch{ /* this visit can continue without persistence */ }
+try{storage=qaStorage(localStorage);uid=storage.getItem('tastiq.uid');if(!uid){uid=crypto.randomUUID();storage.setItem('tastiq.uid',uid);}}catch{ /* this visit can continue without persistence */ }
 const mode=new URLSearchParams(location.search).get('mode')==='free'?'free':'guided';
 let renderedKey=null,screenKey=null,navigationFocus=null,lastRemovedFactFocus=null,pendingFamiliar=null,pendingBack=null,localNotice='',currentRequest='resume',searchTimer=null,searchGeneration=0,activeEvening=null,activeEveningDialogue=null,observedKey=null,observingKey=null;
 let pendingAction={type:'resume'},pendingOrigin=null,processingShown=false,lastVisibleError=null;
@@ -33,11 +34,11 @@ const disclosures=new Map();
 const compactRequest=matchMedia('(max-width:760px)');
 const history=createMediaHistory(domain,{storage});
 const library=createLibraryStore({storage});
-const feedback=createFeedbackStore({storage,send:async run=>{
+const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
  return response.ok?response.json():null;
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});}});
-const client=createConversationClient({domain,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),onChange:render});
+const client=createConversationClient({fetch,domain,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),onChange:render});
 const knownQuestionDrafts=new Set();
 try {const saved=JSON.parse(storage?.getItem(CONVERSATION_KEY)??'null');for(const drafts of [saved?.drafts,saved?.previous?.drafts])for(const key of Object.keys(drafts??{}))knownQuestionDrafts.add(key);}catch { /* no saved keys in a memory-only visit */ }
 const currentDraft=question=>client.draft(questionDraftKey(client.state,question));

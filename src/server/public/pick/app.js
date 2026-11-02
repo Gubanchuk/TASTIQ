@@ -11,6 +11,9 @@ import { createAnchorDraft } from '/shared/anchor-draft.js';
 import { createLibraryStore } from '/shared/library-store.js';
 import { createResultViewState } from '/shared/result-view-state.js';
 import { pickerEntryRoute } from '/shared/media-route.js';
+import {qaLegacyTarget} from '/shared/qa-session.js';
+
+if(qaLegacyTarget){location.replace(qaLegacyTarget);}else{
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const resultView=createResultViewState();
@@ -2194,3 +2197,5 @@ if (startDomain === 'game') {
 }
 
 }
+
+} // ordinary legacy bootstrap; QA is redirected before any owner store is opened

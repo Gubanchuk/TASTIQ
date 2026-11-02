@@ -18,9 +18,11 @@ import { budgetTransport } from '../ai/budget-transport.js';
 import { createConversationService } from './conversation-service.js';
 import { createMediaConversationService } from './media-conversation-service.js';
 import {journalPath} from './runtime-paths.js';
+import {runQaRequest,qaReceipt,observeQaApi,isQaRequest} from './qa-observation.js';
 
 const PUBLIC = resolve(ROOT, 'src', 'server', 'public');
 const JOURNAL = journalPath();
+const appendJournal=(content,encoding='utf8')=>{if(!isQaRequest())appendFileSync(JOURNAL,content,encoding);};
 export const catalogs = loadCatalogs({ gamesPath: process.env.CATALOG_PATH, screenPath: process.env.SCREEN_CATALOG_PATH });
 const paidLedger = process.env.AI_EVAL_BUDGET_DIR ? new PaidBudget(resolve(process.env.AI_EVAL_BUDGET_DIR)) : null;
 let aiOptions = {};
@@ -32,12 +34,14 @@ if (paidLedger) {
   process.once('SIGINT', () => process.exit(0));
   process.once('SIGTERM', () => process.exit(0));
 }
+aiOptions.api=observeQaApi(aiOptions.api);
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml' };
 
 function send(res, status, body) {
   res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
-  res.end(JSON.stringify(body));
+  const billing=qaReceipt();
+  res.end(JSON.stringify(billing&&body&&typeof body==='object'&&!Array.isArray(body)?{...body,qaBilling:billing}:body));
 }
 
 // The same AI request (dialogue, wish) within an hour is answered from memory: a reload or «Назад» costs nothing.
@@ -52,10 +56,10 @@ const clientIp = (req) => req.socket.remoteAddress ?? null;
 const aiRunning = new Map();
 const intentCache = new Map(), intentRunning = new Map();
 const conversationService = createConversationService({catalogs, ...aiOptions, access:aiAccess, spend:aiSpend,
-  journal:row=>appendFileSync(JOURNAL,JSON.stringify(row)+'\n','utf8')});
+  journal:row=>appendJournal(JSON.stringify(row)+'\n','utf8')});
 const mediaConversationServices=Object.fromEntries(['film','series','cartoon'].filter(domain=>catalogs[domain]).map(domain=>[
   domain,createMediaConversationService({domain,catalogs,...aiOptions,access:aiAccess,spend:aiSpend,
-    journal:row=>appendFileSync(JOURNAL,JSON.stringify(row)+'\n','utf8')}),
+    journal:row=>appendJournal(JSON.stringify(row)+'\n','utf8')}),
 ]));
 
 async function intentRoute(req, body) {
@@ -71,7 +75,7 @@ async function intentRoute(req, body) {
   aiSpend(who);
   const run = (async () => {
     const out = await aiIntent(catalog, text, aiOptions);
-    appendFileSync(JOURNAL, JSON.stringify({ at: new Date().toISOString(), event: 'ai-intent', data: {
+    appendJournal( JSON.stringify({ at: new Date().toISOString(), event: 'ai-intent', data: {
       domain: body.domain, model: out.model ?? AI.model, ms: out.ms ?? null, error: out.error ?? null,
       usage: out.usage ? { in: out.usage.input_tokens, out: out.usage.output_tokens, cached: out.usage.input_tokens_details?.cached_tokens ?? 0, estimatedUsd: estimateCost(out.usage, AI.model) } : null,
     } }) + '\n', 'utf8');
@@ -103,7 +107,7 @@ async function aiCall(who, body, key) {
   aiSpend(who);
   const state = body.state;
   const ai = await aiPick(catalogs, state, { ...aiOptions, wish: body.wish ?? '', previous: Array.isArray(body.previous) ? body.previous.slice(0, 12) : [] });
-  appendFileSync(JOURNAL, JSON.stringify({ at: new Date().toISOString(), event: 'ai', data: { domain: state?.domain, model: ai.model ?? AI.model, ms: ai.ms ?? null, error: ai.error ?? null, wish: Boolean(body.wish), picks: ai.picks?.map((p) => p.id) ?? [], own: ai.picks?.filter((p) => p.own).map((p) => p.id) ?? [], dropped: ai.dropped ?? 0, usage: ai.usage ? { in: ai.usage.input_tokens, out: ai.usage.output_tokens, cached: ai.usage.input_tokens_details?.cached_tokens ?? 0, estimatedUsd: estimateCost(ai.usage, AI.model) } : null } }) + '\n', 'utf8');
+  appendJournal( JSON.stringify({ at: new Date().toISOString(), event: 'ai', data: { domain: state?.domain, model: ai.model ?? AI.model, ms: ai.ms ?? null, error: ai.error ?? null, wish: Boolean(body.wish), picks: ai.picks?.map((p) => p.id) ?? [], own: ai.picks?.filter((p) => p.own).map((p) => p.id) ?? [], dropped: ai.dropped ?? 0, usage: ai.usage ? { in: ai.usage.input_tokens, out: ai.usage.output_tokens, cached: ai.usage.input_tokens_details?.cached_tokens ?? 0, estimatedUsd: estimateCost(ai.usage, AI.model) } : null } }) + '\n', 'utf8');
   if (ai.error) return { error: ai.error };
   // The first AI.picks are shown; the model's picks after them are spares for the place of a removed card.
   const ids = [...ai.picks.slice(0, AI.picks).map((p) => p.id), ...(ai.filled ?? []), ...ai.picks.slice(AI.picks).map((p) => p.id)];
@@ -167,16 +171,17 @@ const routes = {
     }
     const data = publicFeedback(run);
     data.cards = data.cards.map(c=>({...c,title:String(catalog.byId.get(c.id).ru??catalog.byId.get(c.id).name).slice(0,200)}));
-    appendFileSync(JOURNAL, JSON.stringify({ at: new Date().toISOString(), event: 'quality-feedback', data }) + '\n', 'utf8');
+    appendJournal( JSON.stringify({ at: new Date().toISOString(), event: 'quality-feedback', data }) + '\n', 'utf8');
     return { ok: true, id: run.id, revision: run.revision };
   },
   'POST /api/log': (_, body) => {
-    appendFileSync(JOURNAL, JSON.stringify({ at: new Date().toISOString(), ...body }) + '\n', 'utf8');
+    appendJournal( JSON.stringify({ at: new Date().toISOString(), ...body }) + '\n', 'utf8');
     return { ok: true };
   },
 };
 
-export async function handler(req, res) {
+export async function handler(req,res){return runQaRequest(req,()=>handleRequest(req,res));}
+async function handleRequest(req, res) {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const handler = routes[`${req.method} ${url.pathname}`];
   try {

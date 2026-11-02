@@ -1,4 +1,10 @@
-# Vercel восстановлен — 02.11.2026
+# Живой production QA — 02.11.2026
+
+Владелец подключил environment variables и попросил полный live-прогон https://tastiq-drab.vercel.app/. AIstatus теперь enabled:true. Для точного расхода и отсутствия тестовых owner feedback добавлен opt-in QA-сеанс: scoped storage/отдельныйIDB, request marker/санитизированныеusage receipts, reserve≤$0.25 и1 model call/HTTP, unknownusage stop, QAjournal exclusion без обхода валидации/AIspend. Normal flow unchanged; legacy QA guard направляет в изолированнуюlibrary до bootstrap. [План/границы](LIVE_PRODUCTION_2026-11-02.md). Source-review Pass после legacyfix,8targetedGREEN+HTTPstub; актуальный live-результат ещё не заявлен.
+
+Новый этап≤$0.45/12calls из прежнего гранта; база учтённогоledger upper$2.2419946/194/uncertain0. Резервирование перед платным UI-действием, receipts и observer в data/runtime/prod-live-20261102-01 (localonly). Старый media-stage12/$0.1772022 остаётся immutable. Не делать платные нажатия до работающегоobserver и подтверждённогоQAreceipt. Не смешивать с ручными production-вызовами владельца.
+
+## Vercel восстановлен — 02.11.2026
 
 Владелец сообщил, что tastiq-drab.vercel.app показывает исходник `Happy developing`. Причина подтверждена HTTP200/application-javascript и CLI: Framework Other без build/output публиковал корневой шаблонный index.js. Исправлено через официальный Build Output API: npm run build → public static + Node24 function; общий handler в src/server/app.js, локальный listener остаётся server.js. В artifact только src и6runtime JSON по явному списку, без ключей/ledger/journals/research; .vercel исключён из Git. На Vercel journal временный в OS temp, не durable analytics. UI/core/catalog/ranking не менялись.
 

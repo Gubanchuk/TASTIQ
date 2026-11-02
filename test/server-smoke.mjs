@@ -151,6 +151,22 @@ try {
   const paid = JSON.parse(readFileSync(join(ledgerDir, 'budget.json'), 'utf8'));
   assert.equal(paid.calls.length, 8, 'cached and concurrent HTTP requests are not paid twice');
   assert.ok(Math.abs(paid.cumulativeUpper-1.002592)<1e-10);
+  const qaHeaders={'Content-Type':'application/json','x-tastiq-qa-run':'http-qa','x-tastiq-max-reserve-usd':'0.25'};
+  const journalBeforeQa=readFileSync(process.env.JOURNAL_PATH,'utf8');
+  const qaFeedback=await localFetch(`${base}/api/feedback`,{method:'POST',headers:qaHeaders,body:JSON.stringify({run:feedbackRun})});
+  assert.equal(qaFeedback.status,200);assert.equal((await qaFeedback.json()).qaBilling.run,'http-qa');
+  const qaInvalid=await localFetch(`${base}/api/feedback`,{method:'POST',headers:qaHeaders,body:JSON.stringify({run:{...feedbackRun,cards:[{id:'foreign-id',title:'Unknown',origin:'model'}]}})});
+  assert.equal(qaInvalid.status,400,'QA never bypasses feedback validation');
+  await localFetch(`${base}/api/log`,{method:'POST',headers:qaHeaders,body:JSON.stringify({event:'qa-check'})});
+  assert.equal(readFileSync(process.env.JOURNAL_PATH,'utf8'),journalBeforeQa,'QA cannot pollute owner statistics');
+  process.env.OPENAI_API_KEY='offline-smoke-key';AI_LIMITS.perHour=100;
+  const qaPick=await(await localFetch(`${base}/api/ai/pick`,{method:'POST',headers:qaHeaders,body:JSON.stringify({state,wish:'qa-meter-check'})})).json();
+  assert.equal(requests,9);assert.equal(qaPick.qaBilling.calls.length,1);
+  const qaPaid=JSON.parse(readFileSync(join(ledgerDir,'budget.json'),'utf8')).calls.at(-1);
+  assert.deepEqual(qaPick.qaBilling.calls[0].usage,qaPaid.response.usage);assert.equal(qaPick.qaBilling.calls[0].costUsd,qaPaid.costUsd);
+  assert.equal(readFileSync(process.env.JOURNAL_PATH,'utf8'),journalBeforeQa);
+  const blockedQa=await(await localFetch(`${base}/api/ai/pick`,{method:'POST',headers:{...qaHeaders,'x-tastiq-max-reserve-usd':'0.000001'},body:JSON.stringify({state,wish:'qa-before-dispatch'})})).json();
+  assert.equal(requests,9,'reserve rejection cannot dispatch the model');assert.equal(blockedQa.qaBilling.calls[0].notRequested,true);
   console.log('PASS: HTTP/static, AI picks + intent + three media domains, feedback validation/privacy, in-flight sharing, cache, shared limits, isolated usage journal, disabled access. Paid requests: 0.');
   process.exit(0);
 } catch (err) {

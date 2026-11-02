@@ -1,3 +1,4 @@
+import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '/shared/library-store.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '/shared/media-history.js';
@@ -13,12 +14,12 @@ const EXPOSURES={played:'Уже играл',started:'Начал',finished:'Пр�
 const key=row=>`${row.domain}:${row.id}`;
 const title=row=>String(row.title||row.ru||row.name||'Без названия');
 const icon=name=>`<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">${({search:'<circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/>',close:'<path d="m5 5 10 10M15 5 5 15"/>',arrow:'<path d="M3 10h13m-5-5 5 5-5 5"/>',book:'<path d="M5 3h10v14l-5-3-5 3V3Z"/>'})[name]||''}</svg>`;
-let storage;try{storage=localStorage;}catch{/* keep this visit in memory */}
+let storage;try{storage=qaStorage(localStorage);}catch{/* keep this visit in memory */}
 const library=createLibraryStore({storage});
 const familiar=createGameHistory({storage});
 const mediaHistories=Object.fromEntries(['film','series','cartoon'].map(domain=>[domain,createMediaHistory(domain,{storage})]));
 const historyFor=domain=>domain==='game'?familiar:mediaHistories[domain];
-const feedback=createFeedbackStore({storage,send:async run=>{
+const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
  if(!response.ok)throw Error('Feedback unavailable');return response.json();
 },onChange:()=>{
