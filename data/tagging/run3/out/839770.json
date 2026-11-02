@@ -1,0 +1,13 @@
+{"appid": 839770, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "featuring a turn-based tactics system"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "Phoenix Point is set in 2047 on an Earth in the midst of an alien invasion"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p2", "q": "the apocalyptic world"}, {"id": "p5", "q": "has overwhelmed and destroyed worldwide civilization"}]},
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p1", "q": "Lovecraftian horrors on the verge of wiping out humanity"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p5", "q": "reducing the remnants of humanity to isolated havens"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "How players resolve these challenges can result in different endings to the game"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p2", "q": "multiple factions of humans will pursue their own objectives"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p9", "q": "the tactical battles were \"simply abysmal\""}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p9", "q": "in a state that still feels very experimental and unrefined"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p9", "q": "\"between onerous and dull\""}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p9", "q": "PcGamer's reviewer praises the game's visual design"}]}
+]}

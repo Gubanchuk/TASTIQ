@@ -1,0 +1,7 @@
+{"id": "tt0375355", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "Joey is an American sitcom created by Scott Silveri"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "s", "q": "welcomes the chance to turn his family into his friends"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p1", "q": "After reuniting with his high-strung sister, Gina, a hairdresser"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p1", "q": "He begins a tentative romance with his superintendent"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p3", "q": "the show was canceled due to low ratings in May 2006"}]}
+]}

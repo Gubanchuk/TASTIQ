@@ -1,0 +1,13 @@
+{"appid": 1388770, "features": [
+{"f": "tone.dark", "r": 3, "ev": [{"id": "p4", "q": "Cruelty Squad is set in a dystopian corporatocracy"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Cruelty Squad is a 2021 tactical first-person shooter"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p3", "q": "consuming cooked giblets, or even eating corpses"}, {"id": "p9", "q": "grislier than Hotline Miami"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p9", "q": "commented on the harshness of the visuals"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "silent and non-lethal solutions are also possible"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p3", "q": "traverse open, sandbox-style levels to locate and neutralize targets"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p4", "q": "Technological advances allow people to be resurrected after death"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "The game is notable for its surreal"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "The game is notable for its surreal"}]},
+{"f": "humor.dark", "r": 1, "ev": [{"id": "p1", "q": "anti-capitalist, anti-corporate, and a satire on the gig economy"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p3", "q": "the player can harvest organs from corpses as well as go fishing"}]}
+]}

@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-31T18:56:41.499Z",
+  "port": 5177,
+  "execSession": 98249,
+  "aiStatus": {
+    "enabled": true,
+    "reason": null,
+    "locked": false,
+    "model": "gpt-6.1-sol"
+  },
+  "cases": [
+    {
+      "id": "story",
+      "step": "ask",
+      "qid": "lean:cognitive.high|cognitive.low",
+      "title": "Подумать или отключить голову?",
+      "hint": "Выбери, чего хочется сегодня. Если оба варианта подходят — нажми «Всё равно»."
+    },
+    {
+      "id": "runs",
+      "step": "result",
+      "title": "Вот что я подобрал"
+    },
+    {
+      "id": "short-series",
+      "step": "ask",
+      "qid": "fact:popularity",
+      "title": "Что-то известное или менее известное?",
+      "hint": "Уточним, что тебе подходит сегодня. Если не важно — нажми «Всё равно»."
+    }
+  ],
+  "productionJournalUnchanged": true,
+  "budget": {
+    "totalUpper": 1.1916883,
+    "remainingLower": 3.8083117,
+    "successfulCalls": 135,
+    "uncertainReserve": 0
+  },
+  "paidCalls": 0
+}

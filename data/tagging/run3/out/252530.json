@@ -1,0 +1,6 @@
+{"appid": 252530, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "OMSI 2 is a bus simulation game"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "is set from 1986 to 1994"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p2", "q": "recreated on a 1:1 scale"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p3", "q": "bustled out of the door before it was good and ready"}]}
+]}

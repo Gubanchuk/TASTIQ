@@ -1,0 +1,13 @@
+{
+  "appid": 236870,
+  "features": [
+    {"f": "loop.stealth", "r": 3, "ev": [{"id": "p3", "q": "Hitman is a stealth video game"}]},
+    {"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p0", "q": "a number of large, open-ended sandboxes that Agent 47 can freely explore"}]},
+    {"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "Each episode is set in a location"}]},
+    {"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "Hitman is a puzzle game with action and stealth elements"}]},
+    {"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "a genetically enhanced assassin called Agent 47"}]},
+    {"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "solves a mysterious series of seemingly unconnected assassinations"}]},
+    {"f": "tone.whimsical", "r": 1, "ev": [{"id": "p12", "q": "more of a funhouse ride than a grim series of contract killings"}]},
+    {"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p9", "q": "feels unrefined and unfinished in lots of small but important ways"}, {"id": "p9", "q": "said the game was more unfinished than episodic"}]}
+  ]
+}

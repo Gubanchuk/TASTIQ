@@ -1,0 +1,9 @@
+{"id": "tt0361089", "features": [
+{"f": "world.war", "r": 3, "ev": [{"id": "p0", "q": "the film follows a group of war pigeons during World War II"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "takes the Second World War as its backdrop"}]},
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2005 animated war comedy film"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is a 2005 animated war comedy film"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "The ensemble voice cast includes Ewan McGregor, Ricky Gervais, Tim Curry"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "p0", "q": "inspired by true stories of hundreds of pigeons that helped the soldiers"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p3", "q": "but the story is strictly by-the-numbers"}]}
+]}

@@ -1,0 +1,16 @@
+{"appid": 644930, "features": [
+{"f": "tone.dark", "r": 3, "ev": [{"id": "a", "q": "Billions of infected roam around the world in massive swarms"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "d", "q": "Steampunk strategy game set on a post-apocalyptic planet"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "a", "q": "building and managing human colonies"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "a", "q": "Build fortified colonies to survive in infected territories"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "r237335594", "q": "Resource management is balanced between economoy spending and military spending"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "r236941539", "q": "it's the only good single-player RTS"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "r236941539", "q": "some other player on the other side of the map"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "r237335594", "q": "Resource management is balanced between economoy spending and military spending"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "r236941539", "q": "this game is genuinely unfair"}, {"id": "r235822086", "q": "this game knows how to frustrate you"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r235822086", "q": "The music, style, idea, and mechanics"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "a", "q": "48 missions with more than 60 hours of gameplay"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "a", "q": "It is a fast and ultra addictive game mode"}]},
+{"f": "session.long", "r": 2, "ev": [{"id": "r235736211", "q": "A lot of the maps you play in will take hours of real life time to play through"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "a", "q": "a strategy game in a distant future"}]}
+]}

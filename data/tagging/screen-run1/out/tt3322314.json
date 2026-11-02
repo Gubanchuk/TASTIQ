@@ -1,0 +1,10 @@
+{"id": "tt3322314", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "based on the Marvel Comics character Luke Cage"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p1", "q": "who now fights crime and corruption"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p4", "q": "a confident, charismatic lead performance"}, {"id": "p5", "q": "Alfre Woodard's standout performance"}]},
+{"f": "tone.gritty", "r": 1, "ev": [{"id": "p4", "q": "An immersive, socially conscious narrative"}]},
+{"f": "story.complex", "r": 2, "ev": [{"id": "p5", "q": "delivers a satisfyingly complex narrative"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p5", "q": "a solid ensemble cast led by Alfre Woodard's standout performance"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p1", "q": "a neo-blaxploitation, neo-Western tone"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "Netflix cancelled Luke Cage on October 19, 2018"}]}
+]}

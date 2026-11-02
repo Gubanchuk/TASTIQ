@@ -1,0 +1,8 @@
+{"appid": 323850, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "competitive four-player game"}]},
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "multiplayer party platformer indie game"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p1", "q": "whose health drops rapidly if they stop moving for a moment"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p2", "q": "one of the best party games on Steam"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "praising its simplicity and multiplayer gameplay"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p1", "q": "Different rules or modifiers are added in each round"}]}
+]}

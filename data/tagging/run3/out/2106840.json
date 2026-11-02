@@ -1,0 +1,11 @@
+{"appid": 2106840, "features": [
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "is a visual novel"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p2", "q": "uncover the mystery behind the curses taking over the district"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "Certain story branches and choices can bring a character to their death"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p5", "q": "one of the most intriguing and engaging narratives"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p3", "q": "the plot centers on supernatural urban legends"}, {"id": "p5", "q": "the horror gets in the way of the story occasionally"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "Set in the 1980s, in Sumida, Tokyo, Japan"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "the plot centers on supernatural urban legends"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p5", "q": "praised the game mechanics and art style"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p5", "q": "deemed the Switch controls to be poor"}]}
+]}

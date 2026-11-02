@@ -1,0 +1,9 @@
+{"appid": 91700, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is an action role-playing first-person shooter video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "It is a cyberpunk themed game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "E.Y.E: Divine Cybermancy is set in a dystopian future"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p5", "q": "The player must choose between supporting Rimanah"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p7", "q": "letting you accomplish your goals in any way you see fit"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p7", "q": "noting its unrefined game mechanics and steep learning curve"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p7", "q": "drops you into a chilling sci-fi world"}]}
+]}

@@ -1,0 +1,7 @@
+{"id": "tt35707374", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is an American crime drama television series created by Ed Whitmore"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "s", "q": "is a dramatic thriller about a hitman who develops early onset Alzheimer's"}]},
+{"f": "characters.antihero", "r": 2, "ev": [{"id": "p1", "q": "is a contract killer and family man struggling to keep his two lives separate"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "s", "q": "putting his family in danger"}]},
+{"f": "completeness.running", "r": 1, "ev": [{"id": "p0", "q": "the series was renewed for a second season"}]}
+]}

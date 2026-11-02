@@ -1,0 +1,36 @@
+{
+  "id": "tt0407121",
+  "name": "Pooh's Heffalump Movie",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2005,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Pooh's Heffalump Movie is a 2005 American animated musical comedy film directed by Frank Nissen and written by Brian Hohlfeld and Evan Spiliotopoulos. Produced by the Japanese arm of Disneytoon Studios, with animation provided by Walt Disney Animation Japan, it features the characters from A. A. Milne's Winnie-the-Pooh stories, and it is the fifth animated feature film in Disney's Winnie the Pooh franchise."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "Pooh's Heffalump Movie was released in the United States on February 11, 2005 by Buena Vista Pictures Distribution. It received generally positive reviews from critics and grossed $53 million worldwide. It was followed by a direct-to-video Halloween sequel, Pooh's Heffalump Halloween Movie, also released in 2005."
+    },
+    {
+      "id": "p2",
+      "section": "Box office",
+      "text": "Pooh's Heffalump Movie made $5.8million in its opening weekend, a per theater average of $2,296 from 2,529 theaters. The film ended up with a final gross of $18.1million in North America and $34.8million in other countries, bringing the total worldwide gross to $52.9million."
+    },
+    {
+      "id": "p3",
+      "section": "Critical response",
+      "text": "Metacritic, which uses a weighted average, assigned the a score of 64 out of 100, based on 23 critics, indicating \"generally favorable\" reviews."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Pooh's_Heffalump_Movie"
+}

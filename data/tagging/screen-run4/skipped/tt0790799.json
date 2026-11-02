@@ -1,0 +1,26 @@
+{
+  "id": "tt0790799",
+  "name": "$9.99",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2008,
+  "genres": [
+    "Animation",
+    "Drama",
+    "Fantasy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "$9.99 is a 2008 Australian adult stop-motion animated drama film written and directed by Tatia Rosenthal, with the screenplay by Etgar Keret. The film marks the third collaboration between Rosenthal and Keret. It features a voice cast of Geoffrey Rush, Samuel Johnson, Anthony LaPaglia, Joel Edgerton, Ben Mendelsohn and Claudia Karvan."
+    },
+    {
+      "id": "p1",
+      "section": "Premise",
+      "text": "Unemployed, 28 year old Dave Peck finds an advertisement for a book that will tell him the meaning of life \"for the low price of $9.99.\" On his quest to find the true meaning of life, he crosses paths with a colourful collection of neighbours including an old man and his guardian angel, a magician, a bewitching woman, a brokenhearted man and a little boy."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/%249.99"
+}

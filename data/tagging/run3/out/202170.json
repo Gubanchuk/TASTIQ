@@ -1,0 +1,14 @@
+{"appid": 202170, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p3", "q": "Sleeping Dogs is an action-adventure game set in an open world environment"}]},
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p5", "q": "Unlike most similar open-world games, Sleeping Dogs emphasizes melee combat over gunplay"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p3", "q": "running, jumping, climbing over obstacles, swimming, and driving cars, boats and motorcycles"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p0", "q": "martial arts moves, fighting, shooting and parkour abilities"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p0", "q": "the story follows Wei Shen, a Hong Kong-American police officer and martial artist"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "The game features the option to choose from Triad, Face and Police XPs"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p10", "q": "given to Shen by the experience system during the campaign"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p0", "q": "Set in contemporary Hong Kong"}, {"id": "p11", "q": "lauded the game's depiction of Hong Kong"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p9", "q": "found the missions generic and linear"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p11", "q": "Pinsof acclaimed the city's scale and AI"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p12", "q": "Edge called Shen an engaging protagonist and complimented the other characters"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p9", "q": "robust and intuitive"}]}
+]}

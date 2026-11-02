@@ -1,0 +1,9 @@
+{"appid": 1740720, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "Players start with a scythe as a weapon"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p1", "q": "It is a side-scrolling action game with platform game and roguelite elements"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p4", "q": "a punishing but satisfying roguelike"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p4", "q": "and praised the humor"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "Players can unlock abilities that persist through deaths"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p1", "q": "Players control the CEO of Death Incorporated, a personification of death"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p4", "q": "criticized what they felt were repetitive level design"}]}
+]}

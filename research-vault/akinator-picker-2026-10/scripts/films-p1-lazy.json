@@ -1,0 +1,1678 @@
+{
+ "label": "Персона 1: пара (она — умные мелодрамы, он — фантастика) — lazy",
+ "screens": 8,
+ "log": [
+  {
+   "n": 1,
+   "action": null,
+   "note": "открыли /pick/",
+   "screen": {
+    "step": "domain",
+    "title": "Что хочешь?",
+    "options": [
+     {
+      "value": "game",
+      "label": "Поиграть"
+     },
+     {
+      "value": "film",
+      "label": "Посмотреть фильм"
+     },
+     {
+      "value": "series",
+      "label": "Посмотреть сериал"
+     },
+     {
+      "value": "cartoon",
+      "label": "Посмотреть мультфильм"
+     }
+    ],
+    "later": [
+     "Почитать",
+     "Аниме"
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "note": "Посмотреть фильм",
+   "screen": {
+    "step": "genres",
+    "title": "Что обычно смотришь?",
+    "hint": "Это только чтобы спросить про знакомое. Подбирать буду не по жанру, а по тому, за что тебе заходит.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "genre:Drama",
+      "label": "драмы"
+     },
+     {
+      "value": "genre:Comedy",
+      "label": "комедии"
+     },
+     {
+      "value": "genre:Action",
+      "label": "боевики"
+     },
+     {
+      "value": "genre:Crime",
+      "label": "криминал"
+     },
+     {
+      "value": "genre:Romance",
+      "label": "мелодрамы"
+     },
+     {
+      "value": "genre:Thriller",
+      "label": "триллеры"
+     },
+     {
+      "value": "genre:Horror",
+      "label": "ужасы"
+     },
+     {
+      "value": "genre:Adventure",
+      "label": "приключения"
+     },
+     {
+      "value": "genre:Mystery",
+      "label": "детективы"
+     },
+     {
+      "value": "genre:Biography",
+      "label": "биографии"
+     },
+     {
+      "value": "genre:Fantasy",
+      "label": "фэнтези"
+     },
+     {
+      "value": "genre:Sci-Fi",
+      "label": "фантастика"
+     },
+     {
+      "value": "genre:Documentary",
+      "label": "документальное"
+     },
+     {
+      "value": "genre:History",
+      "label": "историческое"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "skip"
+   },
+   "note": "пропустил «что обычно смотришь»",
+   "screen": {
+    "step": "liked",
+    "title": "Что из этого смотрел, и зашло?",
+    "hint": "Отметь всё знакомое, что понравилось. Можно найти своё через поиск.",
+    "multi": true,
+    "search": true,
+    "canSkip": false,
+    "items": [
+     {
+      "id": "tt0120737",
+      "name": "The Lord of the Rings: The Fellowship of the Ring",
+      "ru": "Властелин колец: Братство кольца",
+      "original": null,
+      "year": 2001,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Drama",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.9"
+     },
+     {
+      "id": "tt0169547",
+      "name": "American Beauty",
+      "ru": "Красота по-американски",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/9a/American_Beauty_1999_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 8.3"
+     },
+     {
+      "id": "tt0088763",
+      "name": "Back to the Future",
+      "ru": "Назад в будущее",
+      "original": null,
+      "year": 1985,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Comedy",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt4154796",
+      "name": "Avengers: Endgame",
+      "ru": "Мстители: Финал",
+      "original": null,
+      "year": 2019,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.4"
+     },
+     {
+      "id": "tt0208092",
+      "name": "Snatch",
+      "ru": "Большой куш",
+      "original": null,
+      "year": 2000,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a7/Snatch_ver4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Comedy",
+       "Crime"
+      ],
+      "rating": "IMDb 8.2"
+     },
+     {
+      "id": "tt0325980",
+      "name": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "ru": "Пираты Карибского моря: Проклятие Чёрной жемчужины",
+      "original": null,
+      "year": 2003,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/89/Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.1"
+     },
+     {
+      "id": "tt0468569",
+      "name": "The Dark Knight",
+      "ru": "Тёмный рыцарь",
+      "original": null,
+      "year": 2008,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Thriller"
+      ],
+      "rating": "IMDb 9.1"
+     },
+     {
+      "id": "tt0266697",
+      "name": "Kill Bill: Vol. 1",
+      "ru": "Убить Билла. Фильм 1",
+      "original": null,
+      "year": 2003,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Crime",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.2"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "note": "liked page 1: Властелин колец: Братство кольца (2001) | Красота по-американски (1999) | Назад в будущее (1985) | Мстители: Финал (2019) | Большой куш (2000) | Пираты Карибского моря: Проклятие Чёрной жемчужины (2003) | Тёмный рыцарь (2008) | Убить Билла. Фильм 1 (2003) → узнал и зашло: Назад в будущее (1985)"
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0088763"
+    ],
+    "known": {},
+    "shownIds": [
+     "tt0120737",
+     "tt0169547",
+     "tt0088763",
+     "tt4154796",
+     "tt0208092",
+     "tt0325980",
+     "tt0468569",
+     "tt0266697"
+    ]
+   },
+   "note": "отметил Назад в будущее (1985), дальше",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Назад в будущее»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt0088763",
+     "name": "Back to the Future",
+     "ru": "Назад в будущее",
+     "original": null,
+     "year": 1985,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Adventure",
+      "Comedy",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 8.5"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "world.timetravel",
+      "label": "путешествия во времени"
+     },
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "aesthetic.soundtrack",
+      "label": "сильная музыка"
+     },
+     {
+      "value": "aesthetic.effects",
+      "label": "зрелищные спецэффекты"
+     },
+     {
+      "value": "world.school",
+      "label": "школа и подростки"
+     },
+     {
+      "value": "ending.strong",
+      "label": "сильный финал"
+     },
+     {
+      "value": "pace.fast",
+      "label": "быстрый темп"
+     },
+     {
+      "value": "humor.funny",
+      "label": "смешно"
+     },
+     {
+      "value": "world.fantasy",
+      "label": "фэнтези и магия"
+     },
+     {
+      "value": "tone.lighthearted",
+      "label": "лёгкое, весёлое"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "1 из 1"
+   }
+  },
+  {
+   "note": "why «Назад в будущее (1985)»: offered [путешествия во времени | фантастика | сильная музыка | зрелищные спецэффекты | школа и подростки | сильный финал | быстрый темп | смешно | фэнтези и магия | лёгкое, весёлое] → ткнул «путешествия во времени»"
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "world.timetravel"
+    ],
+    "love": false,
+    "issues": []
+   },
+   "note": "один чип, дальше",
+   "screen": {
+    "step": "disliked",
+    "title": "А что не зашло, хотя многие хвалят?",
+    "hint": "Если ничего такого не было, пропусти.",
+    "multi": true,
+    "search": true,
+    "canSkip": true,
+    "items": [
+     {
+      "id": "tt0253474",
+      "name": "The Pianist",
+      "ru": "Пианист",
+      "original": null,
+      "year": 2002,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Pianist_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Biography",
+       "Drama",
+       "Music"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt1853728",
+      "name": "Django Unchained",
+      "ru": "Джанго освобождённый",
+      "original": null,
+      "year": 2012,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Western"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt0167261",
+      "name": "The Lord of the Rings: The Two Towers",
+      "ru": "Властелин колец: Две крепости",
+      "original": null,
+      "year": 2002,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a1/Lord_Rings_Two_Towers.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Drama",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt1130884",
+      "name": "Shutter Island",
+      "ru": "Остров проклятых",
+      "original": null,
+      "year": 2010,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/7/76/Shutterislandposter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Mystery",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.2"
+     },
+     {
+      "id": "tt1375666",
+      "name": "Inception",
+      "ru": "Начало",
+      "original": null,
+      "year": 2010,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Sci-Fi",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0137523",
+      "name": "Fight Club",
+      "ru": "Бойцовский клуб",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0111161",
+      "name": "The Shawshank Redemption",
+      "ru": "Побег из Шоушенка",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 9.3"
+     },
+     {
+      "id": "tt2395427",
+      "name": "Avengers: Age of Ultron",
+      "ru": "Мстители: Эра Альтрона",
+      "original": null,
+      "year": 2015,
+      "image": null,
+      "poster": null,
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 7.3"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "skip"
+   },
+   "note": "пропустил «что не зашло»",
+   "screen": {
+    "step": "today",
+    "title": "Что сегодня?",
+    "hint": "Это только на сегодня, во вкус не записывается.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "relax",
+      "label": "Хочу расслабиться"
+     },
+     {
+      "value": "laugh",
+      "label": "Хочу посмеяться"
+     },
+     {
+      "value": "thrill",
+      "label": "Хочу пощекотать нервы"
+     },
+     {
+      "value": "cry",
+      "label": "Хочу, чтобы пробрало"
+     },
+     {
+      "value": "think",
+      "label": "Хочу подумать"
+     },
+     {
+      "value": "background",
+      "label": "Фоном, не вникая"
+     },
+     {
+      "value": "family",
+      "label": "Смотрю с детьми"
+     },
+     {
+      "value": "short",
+      "label": "Коротко, на один вечер"
+     },
+     {
+      "value": "binge",
+      "label": "Хочу засесть надолго"
+     }
+    ],
+    "avoid": [
+     {
+      "value": "dark",
+      "label": "Ничего мрачного"
+     },
+     {
+      "value": "scary",
+      "label": "Ничего страшного"
+     },
+     {
+      "value": "violence",
+      "label": "Без жестокости"
+     },
+     {
+      "value": "sad",
+      "label": "Без слёз"
+     },
+     {
+      "value": "long",
+      "label": "Ничего длинного"
+     }
+    ]
+   }
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "skip"
+   },
+   "note": "пропустил «что сегодня»",
+   "screen": {
+    "step": "playback",
+    "title": "Вот как я тебя вижу",
+    "taste": {
+     "confirmed": [
+      {
+       "f": "world.timetravel",
+       "label": "путешествия во времени",
+       "w": 0.61,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      }
+     ],
+     "inferred": [
+      {
+       "f": "world.scifi",
+       "label": "фантастика",
+       "w": 0.19,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.soundtrack",
+       "label": "сильная музыка",
+       "w": 0.17,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      },
+      {
+       "f": "humor.funny",
+       "label": "смешно",
+       "w": 0.17,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.effects",
+       "label": "зрелищные спецэффекты",
+       "w": 0.15,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      },
+      {
+       "f": "world.fantasy",
+       "label": "фэнтези и магия",
+       "w": 0.14,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      },
+      {
+       "f": "ending.strong",
+       "label": "сильный финал",
+       "w": 0.14,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      },
+      {
+       "f": "pace.fast",
+       "label": "быстрый темп",
+       "w": 0.14,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.lighthearted",
+       "label": "лёгкое, весёлое",
+       "w": 0.14,
+       "sources": [
+        "Назад в будущее"
+       ],
+       "ids": [
+        "tt0088763"
+       ],
+       "preference": false
+      }
+     ],
+     "dislikes": [],
+     "hardNo": [],
+     "consumed": 1
+    },
+    "today": [],
+    "lines": [
+     "Тебе важно: путешествия во времени (Назад в будущее).",
+     "Уже смотрел: 1, это не предложу."
+    ],
+    "options": [
+     {
+      "value": "confirm",
+      "label": "Да, подбирай"
+     },
+     {
+      "value": "more_liked",
+      "label": "Добавлю ещё, что зашло"
+     }
+    ]
+   }
+  },
+  {
+   "note": "playback lines:\n  > Тебе важно: путешествия во времени (Назад в будущее).\n  > Уже смотрел: 1, это не предложу."
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "note": "Да, подбирай",
+   "screen": {
+    "step": "result",
+    "title": "Вот что я подобрал",
+    "result": {
+     "top": {
+      "id": "tt0816692",
+      "domain": "film",
+      "name": "Interstellar",
+      "ru": "Интерстеллар",
+      "year": 2014,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "runtime": 169,
+      "seasons": null,
+      "episodes": null,
+      "status": null,
+      "rating": "IMDb 8.7",
+      "link": "https://www.imdb.com/title/tt0816692/",
+      "price": null,
+      "label": "likely",
+      "labelText": "Вероятно подойдёт",
+      "score": 2.026,
+      "parts": {
+       "fit": 1.694,
+       "penalty": 0,
+       "mood": 0,
+       "prior": 0.332
+      },
+      "mainAspect": "world",
+      "explanation": {
+       "reasons": [
+        {
+         "text": "Ты отметил «путешествия во времени» в Назад в будущее, здесь это тоже есть",
+         "factIds": [
+          "match:world.timetravel"
+         ]
+        },
+        {
+         "text": "Как в Назад в будущее, здесь «фантастика». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:world.scifi"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Как в Назад в будущее, здесь «зрелищные спецэффекты». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:aesthetic.effects"
+         ],
+         "weak": true
+        }
+       ],
+       "risks": [
+        {
+         "text": "Зрители жалуются: слабый финал",
+         "factIds": [
+          "risk:flaw:ending.weak"
+         ]
+        },
+        {
+         "text": "Зрители жалуются: слабый сюжет, дыры",
+         "factIds": [
+          "risk:flaw:story.weak"
+         ]
+        },
+        {
+         "text": "Зрители жалуются: наивно, слащаво",
+         "factIds": [
+          "risk:flaw:tone.cheesy"
+         ]
+        }
+       ],
+       "info": [
+        {
+         "text": "IMDb 8.7 из 10, 2 623 019 оценок",
+         "factIds": [
+          "fact:reviews"
+         ]
+        },
+        {
+         "text": "169 мин",
+         "factIds": [
+          "fact:runtime"
+         ]
+        }
+       ]
+      },
+      "facts": [
+       {
+        "id": "match:world.timetravel",
+        "type": "match",
+        "f": "world.timetravel",
+        "basis": "confirmed",
+        "sources": [
+         "Назад в будущее"
+        ],
+        "evidence": [
+         {
+          "id": "genome:time loop",
+          "kind": "genome",
+          "q": "time loop",
+          "rel": 0.929
+         },
+         {
+          "id": "genome:time travel",
+          "kind": "genome",
+          "q": "time travel",
+          "rel": 0.618
+         }
+        ],
+        "contribution": 0.6991917587529044
+       },
+       {
+        "id": "match:world.scifi",
+        "type": "match",
+        "f": "world.scifi",
+        "basis": "inferred",
+        "sources": [
+         "Назад в будущее"
+        ],
+        "evidence": [
+         {
+          "id": "genome:aliens",
+          "kind": "genome",
+          "q": "aliens",
+          "rel": 0.394
+         },
+         {
+          "id": "genome:artificial intelligence",
+          "kind": "genome",
+          "q": "artificial intelligence",
+          "rel": 0.645
+         }
+        ],
+        "contribution": 0.135203985
+       },
+       {
+        "id": "match:aesthetic.effects",
+        "type": "match",
+        "f": "aesthetic.effects",
+        "basis": "inferred",
+        "sources": [
+         "Назад в будущее"
+        ],
+        "evidence": [
+         {
+          "id": "genome:big budget",
+          "kind": "genome",
+          "q": "big budget",
+          "rel": 0.809
+         },
+         {
+          "id": "genome:dynamic cgi action",
+          "kind": "genome",
+          "q": "dynamic cgi action",
+          "rel": 0.473
+         }
+        ],
+        "contribution": 0.12004778760000001
+       },
+       {
+        "id": "risk:flaw:ending.weak",
+        "type": "risk_flaw",
+        "f": "ending.weak",
+        "evidence": [
+         {
+          "id": "genome:bad ending",
+          "kind": "genome",
+          "q": "bad ending",
+          "rel": 0.632
+         }
+        ]
+       },
+       {
+        "id": "risk:flaw:story.weak",
+        "type": "risk_flaw",
+        "f": "story.weak",
+        "evidence": [
+         {
+          "id": "genome:plot holes",
+          "kind": "genome",
+          "q": "plot holes",
+          "rel": 0.839
+         }
+        ]
+       },
+       {
+        "id": "risk:flaw:tone.cheesy",
+        "type": "risk_flaw",
+        "f": "tone.cheesy",
+        "evidence": [
+         {
+          "id": "genome:sentimental",
+          "kind": "genome",
+          "q": "sentimental",
+          "rel": 0.767
+         }
+        ]
+       },
+       {
+        "id": "fact:reviews",
+        "type": "fact",
+        "ratio": 0.87,
+        "total": 2623019,
+        "desc": "IMDb 8.7"
+       },
+       {
+        "id": "fact:runtime",
+        "type": "fact",
+        "runtime": 169
+       }
+      ]
+     },
+     "alternatives": [
+      {
+       "id": "tt0107048",
+       "domain": "film",
+       "name": "Groundhog Day",
+       "ru": "День сурка",
+       "year": 1993,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/b/b1/Groundhog_Day_%28movie_poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Comedy",
+        "Drama",
+        "Fantasy"
+       ],
+       "runtime": 101,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 8",
+       "link": "https://www.imdb.com/title/tt0107048/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 1.812,
+       "parts": {
+        "fit": 1.563,
+        "penalty": 0,
+        "mood": 0,
+        "prior": 0.249
+       },
+       "mainAspect": "world",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «путешествия во времени» в Назад в будущее, здесь это тоже есть",
+          "factIds": [
+           "match:world.timetravel"
+          ]
+         },
+         {
+          "text": "Как в Назад в будущее, здесь «маленький город». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.smalltown"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Назад в будущее, здесь «тёплое, доброе». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tone.feelgood"
+          ],
+          "weak": true
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 8 из 10, 742 379 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "101 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:world.timetravel",
+         "type": "match",
+         "f": "world.timetravel",
+         "basis": "confirmed",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:time loop",
+           "kind": "genome",
+           "q": "time loop",
+           "rel": 1
+          },
+          {
+           "id": "genome:time travel",
+           "kind": "genome",
+           "q": "time travel",
+           "rel": 0.576
+          }
+         ],
+         "contribution": 0.6991917587529044
+        },
+        {
+         "id": "match:world.smalltown",
+         "type": "match",
+         "f": "world.smalltown",
+         "basis": "inferred",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:small town",
+           "kind": "genome",
+           "q": "small town",
+           "rel": 0.901
+          },
+          {
+           "id": "usertag:small town",
+           "kind": "usertag",
+           "q": "small town",
+           "n": 36
+          }
+         ],
+         "contribution": 0.09995158124999999
+        },
+        {
+         "id": "match:tone.feelgood",
+         "type": "match",
+         "f": "tone.feelgood",
+         "basis": "inferred",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:affectionate",
+           "kind": "genome",
+           "q": "affectionate",
+           "rel": 0.638
+          },
+          {
+           "id": "genome:feel good movie",
+           "kind": "genome",
+           "q": "feel good movie",
+           "rel": 0.867
+          }
+         ],
+         "contribution": 0.0956076276
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.8,
+         "total": 742379,
+         "desc": "IMDb 8"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 101
+        }
+       ]
+      },
+      {
+       "id": "tt0246578",
+       "domain": "film",
+       "name": "Donnie Darko",
+       "ru": "Донни Дарко",
+       "year": 2001,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+       ],
+       "runtime": 113,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 8",
+       "link": "https://www.imdb.com/title/tt0246578/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 1.912,
+       "parts": {
+        "fit": 1.66,
+        "penalty": 0,
+        "mood": 0,
+        "prior": 0.253
+       },
+       "mainAspect": "world",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «путешествия во времени» в Назад в будущее, здесь это тоже есть",
+          "factIds": [
+           "match:world.timetravel"
+          ]
+         },
+         {
+          "text": "Как в Назад в будущее, здесь «фантастика». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.scifi"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Назад в будущее, здесь «сильная музыка». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:aesthetic.soundtrack"
+          ],
+          "weak": true
+         }
+        ],
+        "risks": [
+         {
+          "text": "Зрители жалуются: слабый финал",
+          "factIds": [
+           "risk:flaw:ending.weak"
+          ]
+         },
+         {
+          "text": "Зрители жалуются: слабый сюжет, дыры",
+          "factIds": [
+           "risk:flaw:story.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 8 из 10, 923 247 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "113 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:world.timetravel",
+         "type": "match",
+         "f": "world.timetravel",
+         "basis": "confirmed",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:time loop",
+           "kind": "genome",
+           "q": "time loop",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:time travel",
+           "kind": "genome",
+           "q": "time travel",
+           "rel": 0.843
+          }
+         ],
+         "contribution": 0.6991917587529044
+        },
+        {
+         "id": "match:world.scifi",
+         "type": "match",
+         "f": "world.scifi",
+         "basis": "inferred",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:future",
+           "kind": "genome",
+           "q": "future",
+           "rel": 0.566
+          },
+          {
+           "id": "genome:futuristic",
+           "kind": "genome",
+           "q": "futuristic",
+           "rel": 0.408
+          }
+         ],
+         "contribution": 0.1324999053
+        },
+        {
+         "id": "match:aesthetic.soundtrack",
+         "type": "match",
+         "f": "aesthetic.soundtrack",
+         "basis": "inferred",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:good music",
+           "kind": "genome",
+           "q": "good music",
+           "rel": 0.598
+          },
+          {
+           "id": "genome:good soundtrack",
+           "kind": "genome",
+           "q": "good soundtrack",
+           "rel": 0.897
+          }
+         ],
+         "contribution": 0.11379995843099999
+        },
+        {
+         "id": "risk:flaw:ending.weak",
+         "type": "risk_flaw",
+         "f": "ending.weak",
+         "evidence": [
+          {
+           "id": "genome:bad ending",
+           "kind": "genome",
+           "q": "bad ending",
+           "rel": 0.786
+          }
+         ]
+        },
+        {
+         "id": "risk:flaw:story.weak",
+         "type": "risk_flaw",
+         "f": "story.weak",
+         "evidence": [
+          {
+           "id": "genome:plot holes",
+           "kind": "genome",
+           "q": "plot holes",
+           "rel": 0.564
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.8,
+         "total": 923247,
+         "desc": "IMDb 8"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 113
+        }
+       ]
+      },
+      {
+       "id": "tt1631867",
+       "domain": "film",
+       "name": "Edge of Tomorrow",
+       "ru": "Грань будущего",
+       "year": 2014,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/f/f9/Edge_of_Tomorrow_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+       ],
+       "runtime": 113,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.9",
+       "link": "https://www.imdb.com/title/tt1631867/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 1.892,
+       "parts": {
+        "fit": 1.65,
+        "penalty": 0,
+        "mood": 0,
+        "prior": 0.242
+       },
+       "mainAspect": "world",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «путешествия во времени» в Назад в будущее, здесь это тоже есть",
+          "factIds": [
+           "match:world.timetravel"
+          ]
+         },
+         {
+          "text": "Как в Назад в будущее, здесь «фантастика». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.scifi"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Назад в будущее, здесь «быстрый темп». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:pace.fast"
+          ],
+          "weak": true
+         }
+        ],
+        "risks": [
+         {
+          "text": "Зрители жалуются: слабый сюжет, дыры",
+          "factIds": [
+           "risk:flaw:story.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 7.9 из 10, 819 046 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "113 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:world.timetravel",
+         "type": "match",
+         "f": "world.timetravel",
+         "basis": "confirmed",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:time loop",
+           "kind": "genome",
+           "q": "time loop",
+           "rel": 1
+          },
+          {
+           "id": "genome:time travel",
+           "kind": "genome",
+           "q": "time travel",
+           "rel": 0.855
+          }
+         ],
+         "contribution": 0.6991917587529044
+        },
+        {
+         "id": "match:world.scifi",
+         "type": "match",
+         "f": "world.scifi",
+         "basis": "inferred",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:alien",
+           "kind": "genome",
+           "q": "alien",
+           "rel": 0.982
+          },
+          {
+           "id": "genome:alien invasion",
+           "kind": "genome",
+           "q": "alien invasion",
+           "rel": 0.96
+          }
+         ],
+         "contribution": 0.135203985
+        },
+        {
+         "id": "match:pace.fast",
+         "type": "match",
+         "f": "pace.fast",
+         "basis": "inferred",
+         "sources": [
+          "Назад в будущее"
+         ],
+         "evidence": [
+          {
+           "id": "genome:action packed",
+           "kind": "genome",
+           "q": "action packed",
+           "rel": 0.942
+          },
+          {
+           "id": "genome:car chase",
+           "kind": "genome",
+           "q": "car chase",
+           "rel": 0.426
+          }
+         ],
+         "contribution": 0.11126808
+        },
+        {
+         "id": "risk:flaw:story.weak",
+         "type": "risk_flaw",
+         "f": "story.weak",
+         "evidence": [
+          {
+           "id": "genome:plot holes",
+           "kind": "genome",
+           "q": "plot holes",
+           "rel": 0.824
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.79,
+         "total": 819046,
+         "desc": "IMDb 7.9"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 113
+        }
+       ]
+      }
+     ],
+     "fork": {
+      "id": "fork:world.space|characters.antihero",
+      "text": "Что тебе важнее?",
+      "options": [
+       {
+        "f": "world.space",
+        "label": "космос",
+        "favours": "tt0816692"
+       },
+       {
+        "f": "characters.antihero",
+        "label": "антигерой",
+        "favours": "tt0246578"
+       }
+      ],
+      "margin": 0.11358742757667417
+     },
+     "sieves": [
+      {
+       "id": 1,
+       "name": "Можно ли",
+       "removed": 0
+      },
+      {
+       "id": 2,
+       "name": "Было ли",
+       "removed": 1
+      },
+      {
+       "id": 3,
+       "name": "Сделано ли нормально",
+       "removed": 10288
+      },
+      {
+       "id": 4,
+       "name": "Моё ли (жёсткие стопы)",
+       "removed": 0
+      },
+      {
+       "id": 5,
+       "name": "Подходит ли сегодня (обязательное)",
+       "removed": 0
+      }
+     ],
+     "considered": 21837,
+     "taste": {
+      "confirmed": [
+       {
+        "f": "world.timetravel",
+        "label": "путешествия во времени",
+        "w": 0.61,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       }
+      ],
+      "inferred": [
+       {
+        "f": "world.scifi",
+        "label": "фантастика",
+        "w": 0.19,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.soundtrack",
+        "label": "сильная музыка",
+        "w": 0.17,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       },
+       {
+        "f": "humor.funny",
+        "label": "смешно",
+        "w": 0.17,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.effects",
+        "label": "зрелищные спецэффекты",
+        "w": 0.15,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.fantasy",
+        "label": "фэнтези и магия",
+        "w": 0.14,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       },
+       {
+        "f": "ending.strong",
+        "label": "сильный финал",
+        "w": 0.14,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       },
+       {
+        "f": "pace.fast",
+        "label": "быстрый темп",
+        "w": 0.14,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.lighthearted",
+        "label": "лёгкое, весёлое",
+        "w": 0.14,
+        "sources": [
+         "Назад в будущее"
+        ],
+        "ids": [
+         "tt0088763"
+        ],
+        "preference": false
+       }
+      ],
+      "dislikes": [],
+      "hardNo": [],
+      "consumed": 1
+     }
+    }
+   }
+  },
+  {
+   "note": "fork shown («Что тебе важнее?» космос / антигерой), lazy user ignores it"
+  }
+ ],
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [],
+  "shown": [
+   "tt0120737",
+   "tt0169547",
+   "tt0088763",
+   "tt4154796",
+   "tt0208092",
+   "tt0325980",
+   "tt0468569",
+   "tt0266697"
+  ],
+  "liked": [
+   "tt0088763"
+  ],
+  "disliked": [],
+  "whyIndex": 0,
+  "answers": {
+   "tt0088763": {
+    "reaction": "like",
+    "reasons": [
+     "world.timetravel"
+    ],
+    "issues": []
+   }
+  },
+  "corrections": [],
+  "preferences": [],
+  "session": {
+   "moods": [],
+   "avoid": [],
+   "notNow": [],
+   "asked": 0
+  },
+  "seed": 102
+ }
+}

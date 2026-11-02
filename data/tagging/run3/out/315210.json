@@ -1,0 +1,11 @@
+{"appid": 315210, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2024 action-adventure shooter game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p2", "q": "is an action-adventure game set in an open world based in Metropolis"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "the game features a four-player cooperative multiplayer mode"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "Players control the Suicide Squad, which features a total of eight playable characters"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "allowing players to re-spec into different skills at any point throughout the game"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Each character has a unique melee combat style and traversal method"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p1", "q": "who praised its narrative and gameplay"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p1", "q": "criticized its repetition and live service elements"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p0", "q": "the alien invader Brainiac"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 1488200, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "is a tactical role-playing game"}, {"id": "p2", "q": "Novel tactical mechanics"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p1", "q": "Characters can form bonds with each other, including romances"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "Characters can form bonds with each other"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "Progressing through quests allows players to gain special abilities"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p2", "q": "combination of chibi artwork with more realistic portraits"}]}
+]}

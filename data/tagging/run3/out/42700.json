@@ -1,0 +1,16 @@
+{
+  "appid": 42700,
+  "features": [
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 first-person shooter game"}]},
+    {"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "Set in the 1960s during the Cold War"}]},
+    {"f": "social.pvp", "r": 3, "ev": [{"id": "p7", "q": "consists of one of several styles of team-based action"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p8", "q": "allows enhanced personalization with appearance items as well as upgradable perks"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p12", "q": "sterling soundtrack of explosions, gunshots and whistling bullets"}]},
+    {"f": "combat.weighty", "r": 2, "ev": [{"id": "p12", "q": "meaty kick of the guns"}]},
+    {"f": "pace.fast", "r": 2, "ev": [{"id": "p12", "q": "the blistering pace of the action"}]},
+    {"f": "tone.creepy", "r": 1, "ev": [{"id": "p12", "q": "nail-shredding tension and creepy atmosphere"}]},
+    {"f": "tension.high", "r": 1, "ev": [{"id": "p12", "q": "nail-shredding tension and creepy atmosphere"}]},
+    {"f": "loop.driving", "r": 1, "ev": [{"id": "p6", "q": "the player pilots a Hind helicopter"}]},
+    {"f": "freedom.linear", "r": 1, "ev": [{"id": "p9", "q": "felt too much like a rail shooter"}]}
+  ]
+}

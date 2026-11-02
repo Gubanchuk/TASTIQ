@@ -1,0 +1,8 @@
+{"appid": 378610, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "The player explores a WWII-era, abandoned military base"}, {"id": "p1", "q": "to explore the vast valley with forests, ruins and magical creatures"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p4", "q": "running and bounding through wilderness remained exciting"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "a WWII-era, abandoned military base"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p1", "q": "forests, ruins and magical creatures"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p2", "q": "criticized for technical issues, length, and pacing"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p3", "q": "It boasts an amazing soundtrack"}]}
+]}

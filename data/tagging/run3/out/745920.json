@@ -1,0 +1,7 @@
+{"appid": 745920, "features": [
+{"f": "progression.collection", "r": 3, "ev": [{"id": "p0", "q": "is a creature-collection video game greatly inspired by the Pokémon series"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "against other Temtem controlled by an NPC or another player"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p1", "q": "command them in double battles against other Temtem"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p1", "q": "Players explore the area"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p2", "q": "the six floating islands of the Airborne Archipelago"}]}
+]}

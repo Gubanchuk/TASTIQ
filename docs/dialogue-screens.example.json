@@ -1,0 +1,1125 @@
+{
+ "domain": {
+  "step": "domain",
+  "title": "Что хочешь?",
+  "options": [
+   {
+    "value": "game",
+    "label": "Поиграть"
+   },
+   {
+    "value": "film",
+    "label": "Посмотреть фильм"
+   },
+   {
+    "value": "series",
+    "label": "Посмотреть сериал"
+   },
+   {
+    "value": "cartoon",
+    "label": "Посмотреть мультфильм"
+   }
+  ],
+  "later": [
+   "Почитать",
+   "Аниме"
+  ]
+ },
+ "platform": {
+  "step": "platform",
+  "title": "Где играешь?",
+  "options": [
+   {
+    "value": "windows",
+    "label": "ПК (Windows)"
+   },
+   {
+    "value": "mac",
+    "label": "Mac"
+   },
+   {
+    "value": "linux",
+    "label": "Linux"
+   },
+   {
+    "value": "deck",
+    "label": "Steam Deck"
+   }
+  ]
+ },
+ "genres": {
+  "step": "genres",
+  "title": "Во что обычно играешь?",
+  "hint": "Это только чтобы спросить про знакомое. Подбирать буду не по жанру, а по тому, за что тебе заходит.",
+  "multi": true,
+  "canSkip": true,
+  "options": [
+   {
+    "value": "social.coop",
+    "label": "кооператив"
+   },
+   {
+    "value": "freedom.open_world",
+    "label": "открытый мир"
+   },
+   {
+    "value": "loop.shooting",
+    "label": "стрельба"
+   },
+   "…"
+  ]
+ },
+ "liked": {
+  "step": "liked",
+  "title": "Во что играл, и зашло?",
+  "hint": "Отметь всё знакомое, что понравилось. Можно найти своё через поиск.",
+  "multi": true,
+  "search": true,
+  "canSkip": false,
+  "items": [
+   {
+    "id": "steam:1091500",
+    "name": "Cyberpunk 2077",
+    "ru": null,
+    "original": null,
+    "year": 2020,
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+    "kind": "game",
+    "genres": [
+     "RPG"
+    ],
+    "rating": "Very Positive"
+   },
+   {
+    "id": "steam:239140",
+    "name": "Dying Light",
+    "ru": null,
+    "original": null,
+    "year": 2015,
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239140/9d1b810b85ae46a0acbdfddf583ccbb81271183e/header.jpg?t=1782913513",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/239140/library_600x900.jpg",
+    "kind": "game",
+    "genres": [
+     "Action",
+     "Adventure",
+     "RPG"
+    ],
+    "rating": "Overwhelmingly Positive"
+   },
+   {
+    "id": "steam:1903340",
+    "name": "Clair Obscur: Expedition 33",
+    "ru": null,
+    "original": null,
+    "year": 2025,
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/be3305b02d4db0dffa3458537118423bf2792d7e/header.jpg?t=1782830877",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/library_600x900.jpg",
+    "kind": "game",
+    "genres": [
+     "Action",
+     "RPG"
+    ],
+    "rating": "Overwhelmingly Positive"
+   },
+   "…"
+  ],
+  "more": true
+ },
+ "why": {
+  "step": "why",
+  "title": "За что тебе зашло «Cyberpunk 2077»?",
+  "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+  "item": {
+   "id": "steam:1091500",
+   "name": "Cyberpunk 2077",
+   "ru": null,
+   "original": null,
+   "year": 2020,
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
+   "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+   "kind": "game",
+   "genres": [
+    "RPG"
+   ],
+   "rating": "Very Positive"
+  },
+  "multi": true,
+  "options": [
+   {
+    "value": "characters.memorable",
+    "label": "живые персонажи"
+   },
+   {
+    "value": "world.scifi",
+    "label": "фантастика и космос"
+   },
+   {
+    "value": "story.central",
+    "label": "сильный сюжет"
+   },
+   "…"
+  ],
+  "love": true,
+  "freeText": true,
+  "canSkip": true,
+  "progress": "1 из 1"
+ },
+ "disliked": {
+  "step": "disliked",
+  "title": "А что не зашло, хотя многие хвалят?",
+  "hint": "Если ничего такого не было, пропусти.",
+  "multi": true,
+  "search": true,
+  "canSkip": true,
+  "items": [
+   {
+    "id": "steam:239140",
+    "name": "Dying Light",
+    "ru": null,
+    "original": null,
+    "year": 2015,
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239140/9d1b810b85ae46a0acbdfddf583ccbb81271183e/header.jpg?t=1782913513",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/239140/library_600x900.jpg",
+    "kind": "game",
+    "genres": [
+     "Action",
+     "Adventure",
+     "RPG"
+    ],
+    "rating": "Overwhelmingly Positive"
+   },
+   {
+    "id": "steam:1903340",
+    "name": "Clair Obscur: Expedition 33",
+    "ru": null,
+    "original": null,
+    "year": 2025,
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/be3305b02d4db0dffa3458537118423bf2792d7e/header.jpg?t=1782830877",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/library_600x900.jpg",
+    "kind": "game",
+    "genres": [
+     "Action",
+     "RPG"
+    ],
+    "rating": "Overwhelmingly Positive"
+   },
+   {
+    "id": "steam:227300",
+    "name": "Euro Truck Simulator 2",
+    "ru": null,
+    "original": null,
+    "year": 2012,
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/d3c44cfff95e8223687121b05c80e594d35c4c53/header_alt_assets_9.jpg?t=1792055307",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/227300/library_600x900.jpg",
+    "kind": "game",
+    "genres": [
+     "Indie",
+     "Simulation"
+    ],
+    "rating": "Overwhelmingly Positive"
+   },
+   "…"
+  ],
+  "more": true
+ },
+ "why_not": {
+  "step": "why_not",
+  "title": "Что не понравилось в «Dark Souls III»?",
+  "hint": "Один клик: не нравится. Второй: «никогда, ни в чём».",
+  "item": {
+   "id": "steam:374320",
+   "name": "DARK SOULS™ III",
+   "ru": "Dark Souls III",
+   "original": null,
+   "year": 2016,
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg?t=1748630784",
+   "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/374320/library_600x900.jpg",
+   "kind": "game",
+   "genres": [
+    "Action"
+   ],
+   "rating": "Very Positive"
+  },
+  "multi": true,
+  "options": [
+   {
+    "value": "difficulty.hard",
+    "label": "постоянно умирал, бесило"
+   },
+   {
+    "value": "tone.dark",
+    "label": "тяжёлое, мрачное настроение"
+   },
+   {
+    "value": "social.pvp",
+    "label": "надо играть против людей"
+   },
+   "…"
+  ],
+  "categories": [
+   {
+    "value": "loop.melee",
+    "label": "ближний бой"
+   },
+   {
+    "value": "world.fantasy",
+    "label": "фэнтези"
+   },
+   {
+    "value": "social.coop",
+    "label": "кооператив"
+   },
+   "…"
+  ],
+  "badQuality": true,
+  "freeText": true,
+  "canSkip": true,
+  "progress": "1 из 1"
+ },
+ "today": {
+  "step": "today",
+  "title": "Что сегодня?",
+  "hint": "Это только на сегодня, во вкус не записывается.",
+  "multi": true,
+  "canSkip": true,
+  "options": [
+   {
+    "value": "relax",
+    "label": "Хочу расслабиться"
+   },
+   {
+    "value": "adrenaline",
+    "label": "Хочу адреналина"
+   },
+   {
+    "value": "story",
+    "label": "Хочу историю"
+   },
+   "…"
+  ],
+  "avoid": [
+   {
+    "value": "dark",
+    "label": "Ничего мрачного"
+   },
+   {
+    "value": "hard",
+    "label": "Ничего сложного"
+   },
+   {
+    "value": "long",
+    "label": "Ничего длинного"
+   },
+   "…"
+  ]
+ },
+ "playback": {
+  "step": "playback",
+  "title": "Вот как я тебя вижу",
+  "taste": {
+   "confirmed": [
+    {
+     "f": "world.living",
+     "label": "живой мир",
+     "w": 0.82,
+     "sources": [
+      "Cyberpunk 2077"
+     ],
+     "ids": [
+      "steam:1091500"
+     ],
+     "preference": false
+    }
+   ],
+   "inferred": [
+    {
+     "f": "world.scifi",
+     "label": "фантастика и космос",
+     "w": 0.18,
+     "sources": [
+      "Cyberpunk 2077"
+     ],
+     "ids": [
+      "steam:1091500"
+     ],
+     "preference": false
+    },
+    {
+     "f": "loop.shooting",
+     "label": "стрельба",
+     "w": 0.17,
+     "sources": [
+      "Cyberpunk 2077"
+     ],
+     "ids": [
+      "steam:1091500"
+     ],
+     "preference": false
+    },
+    {
+     "f": "characters.memorable",
+     "label": "живые персонажи",
+     "w": 0.16,
+     "sources": [
+      "Cyberpunk 2077"
+     ],
+     "ids": [
+      "steam:1091500"
+     ],
+     "preference": false
+    },
+    "…"
+   ],
+   "dislikes": [
+    {
+     "f": "difficulty.hard",
+     "label": "постоянно умирал, бесило",
+     "w": 1,
+     "sources": [
+      "Dark Souls III"
+     ],
+     "ids": [
+      "steam:374320"
+     ],
+     "preference": false
+    }
+   ],
+   "hardNo": [],
+   "consumed": 2
+  },
+  "today": [
+   "Хочу расслабиться"
+  ],
+  "lines": [
+   "Тебе важно: живой мир (Cyberpunk 2077).",
+   "Не нравится: постоянно умирал, бесило (Dark Souls III).",
+   "Сегодня: Хочу расслабиться.",
+   "Уже играл: 2, это не предложу."
+  ],
+  "options": [
+   {
+    "value": "confirm",
+    "label": "Да, подбирай"
+   },
+   {
+    "value": "more_liked",
+    "label": "Добавлю ещё, что зашло"
+   }
+  ]
+ },
+ "result": {
+  "step": "result",
+  "title": "Вот что я подобрал",
+  "result": {
+   "top": {
+    "id": "steam:518790",
+    "domain": "game",
+    "name": "theHunter: Call of the Wild™",
+    "ru": null,
+    "year": 2017,
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/518790/00f0df3558439a6a2cc4fbd7a658b00fb71353ea/header.jpg?t=1791555374",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/518790/library_600x900.jpg",
+    "kind": "game",
+    "genres": [
+     "Adventure",
+     "Simulation",
+     "Sports"
+    ],
+    "runtime": null,
+    "seasons": null,
+    "episodes": null,
+    "status": null,
+    "rating": "Very Positive",
+    "link": "https://store.steampowered.com/app/518790/",
+    "price": "бесплатно",
+    "label": "likely",
+    "labelText": "Вероятно подойдёт",
+    "score": 1.825,
+    "parts": {
+     "fit": 0.765,
+     "penalty": 0,
+     "mood": 0.758,
+     "prior": 0.303
+    },
+    "mainAspect": "world",
+    "explanation": {
+     "reasons": [
+      {
+       "text": "Ты отметил «живой мир» в Cyberpunk 2077, здесь это тоже есть",
+       "factIds": [
+        "match:world.living"
+       ]
+      },
+      {
+       "text": "Как в Cyberpunk 2077, здесь «стрельба». Ты это не отмечал, поэтому вес слабый",
+       "factIds": [
+        "match:loop.shooting"
+       ],
+       "weak": true
+      },
+      {
+       "text": "Под настроение «Хочу расслабиться»: «без стресса»",
+       "factIds": [
+        "mood:tension.low"
+       ]
+      },
+      {
+       "text": "Под настроение «Хочу расслабиться»: «спокойствие и медитативность»",
+       "factIds": [
+        "mood:tone.serene"
+       ]
+      }
+     ],
+     "risks": [
+      {
+       "text": "Игроки жалуются: затянуто, провисает",
+       "factIds": [
+        "risk:flaw:pace.draggy"
+       ]
+      }
+     ],
+     "info": [
+      {
+       "text": "89% положительных из 204 360 отзывов Steam",
+       "factIds": [
+        "fact:reviews"
+       ]
+      },
+      {
+       "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 34 ч",
+       "factIds": [
+        "fact:hours"
+       ]
+      },
+      {
+       "text": "играбельна на Steam Deck",
+       "factIds": [
+        "fact:deck"
+       ]
+      }
+     ]
+    },
+    "facts": [
+     {
+      "id": "match:world.living",
+      "type": "match",
+      "f": "world.living",
+      "basis": "confirmed",
+      "sources": [
+       "Cyberpunk 2077"
+      ],
+      "evidence": [
+       {
+        "id": "a",
+        "q": "The wild offers constant, unscripted encounters, continuously responding to your presence",
+        "kind": "description",
+        "thumb": null,
+        "hours": null,
+        "lang": null
+       },
+       {
+        "id": "d",
+        "q": "dynamic open world that reacts to your every move",
+        "kind": "description",
+        "thumb": null,
+        "hours": null,
+        "lang": null
+       }
+      ],
+      "contribution": 0.6728561810441375
+     },
+     {
+      "id": "match:loop.shooting",
+      "type": "match",
+      "f": "loop.shooting",
+      "basis": "inferred",
+      "sources": [
+       "Cyberpunk 2077"
+      ],
+      "evidence": [
+       {
+        "id": "r236751788",
+        "q": "is to hunt and shoot wildlife to gain experience and money",
+        "kind": "review",
+        "thumb": "up",
+        "hours": 161,
+        "lang": "english"
+       },
+       {
+        "id": "tag:FPS",
+        "kind": "tag",
+        "q": "FPS",
+        "votes": 859
+       }
+      ],
+      "contribution": 0.09185438719999998
+     },
+     {
+      "id": "mood:tension.low",
+      "type": "mood",
+      "f": "tension.low",
+      "why": [
+       "Хочу расслабиться"
+      ],
+      "evidence": [
+       {
+        "id": "tag:Relaxing",
+        "kind": "tag",
+        "q": "Relaxing",
+        "votes": 910
+       }
+      ]
+     },
+     "…"
+    ]
+   },
+   "alternatives": [
+    {
+     "id": "steam:2322560",
+     "domain": "game",
+     "name": "Love Is All Around",
+     "ru": null,
+     "year": null,
+     "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2322560/header.jpg",
+     "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2322560/library_600x900.jpg",
+     "kind": "game",
+     "genres": [
+      "Adventure",
+      "Indie",
+      "RPG"
+     ],
+     "runtime": null,
+     "seasons": null,
+     "episodes": null,
+     "status": null,
+     "rating": null,
+     "link": "https://store.steampowered.com/app/2322560/",
+     "price": "9.99 USD",
+     "label": "likely",
+     "labelText": "Вероятно подойдёт",
+     "score": 1.406,
+     "parts": {
+      "fit": 0.448,
+      "penalty": 0,
+      "mood": 0.614,
+      "prior": 0.344
+     },
+     "mainAspect": "world",
+     "explanation": {
+      "reasons": [
+       {
+        "text": "Ты отметил «живой мир» в Cyberpunk 2077, здесь это тоже есть",
+        "factIds": [
+         "match:world.living"
+        ]
+       },
+       {
+        "text": "Как в Cyberpunk 2077, здесь «выборы влияют на историю». Ты это не отмечал, поэтому вес слабый",
+        "factIds": [
+         "match:story.choices"
+        ],
+        "weak": true
+       },
+       {
+        "text": "Как в Cyberpunk 2077, здесь «разговоры и решения». Ты это не отмечал, поэтому вес слабый",
+        "factIds": [
+         "match:loop.dialogue"
+        ],
+        "weak": true
+       },
+       "…"
+      ],
+      "risks": [
+       {
+        "text": "Нет данных: длина",
+        "factIds": [
+         "gap:length"
+        ]
+       }
+      ],
+      "info": [
+       {
+        "text": "94% положительных из 45 414 отзывов Steam",
+        "factIds": [
+         "fact:reviews"
+        ]
+       }
+      ]
+     },
+     "facts": [
+      {
+       "id": "match:world.living",
+       "type": "match",
+       "f": "world.living",
+       "basis": "confirmed",
+       "sources": [
+        "Cyberpunk 2077"
+       ],
+       "evidence": [
+        {
+         "id": "tag:Immersive Sim",
+         "kind": "tag",
+         "q": "Immersive Sim",
+         "votes": 526
+        }
+       ],
+       "contribution": 0.36910967645849824
+      },
+      {
+       "id": "match:story.choices",
+       "type": "match",
+       "f": "story.choices",
+       "basis": "inferred",
+       "sources": [
+        "Cyberpunk 2077"
+       ],
+       "evidence": [
+        {
+         "id": "tag:Choices Matter",
+         "kind": "tag",
+         "q": "Choices Matter",
+         "votes": 598
+        }
+       ],
+       "contribution": 0.040628304000000004
+      },
+      {
+       "id": "match:loop.dialogue",
+       "type": "match",
+       "f": "loop.dialogue",
+       "basis": "inferred",
+       "sources": [
+        "Cyberpunk 2077"
+       ],
+       "evidence": [
+        {
+         "id": "tag:Visual Novel",
+         "kind": "tag",
+         "q": "Visual Novel",
+         "votes": 684
+        }
+       ],
+       "contribution": 0.0378525168
+      },
+      "…"
+     ]
+    },
+    {
+     "id": "steam:1222670",
+     "domain": "game",
+     "name": "The Sims™ 4",
+     "ru": null,
+     "year": 2020,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg?t=1790028362",
+     "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1222670/library_600x900.jpg",
+     "kind": "game",
+     "genres": [
+      "Adventure",
+      "Casual",
+      "Simulation"
+     ],
+     "runtime": null,
+     "seasons": null,
+     "episodes": null,
+     "status": null,
+     "rating": "Very Positive",
+     "link": "https://store.steampowered.com/app/1222670/",
+     "price": "бесплатно",
+     "label": "likely",
+     "labelText": "Вероятно подойдёт",
+     "score": 1.49,
+     "parts": {
+      "fit": 0.547,
+      "penalty": 0,
+      "mood": 0.673,
+      "prior": 0.27
+     },
+     "mainAspect": "world",
+     "explanation": {
+      "reasons": [
+       {
+        "text": "Ты отметил «живой мир» в Cyberpunk 2077, здесь это тоже есть",
+        "factIds": [
+         "match:world.living"
+        ]
+       },
+       {
+        "text": "Как в Cyberpunk 2077, здесь «свой герой». Ты это не отмечал, поэтому вес слабый",
+        "factIds": [
+         "match:characters.custom_hero"
+        ],
+        "weak": true
+       },
+       {
+        "text": "Под настроение «Хочу расслабиться»: «без стресса»",
+        "factIds": [
+         "mood:tension.low"
+        ]
+       },
+       {
+        "text": "Под настроение «Хочу расслабиться»: «уютная атмосфера»",
+        "factIds": [
+         "mood:tone.cozy"
+        ]
+       }
+      ],
+      "risks": [],
+      "info": [
+       {
+        "text": "86% положительных из 201 636 отзывов Steam",
+        "factIds": [
+         "fact:reviews"
+        ]
+       },
+       {
+        "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 38 ч",
+        "factIds": [
+         "fact:hours"
+        ]
+       },
+       {
+        "text": "играбельна на Steam Deck",
+        "factIds": [
+         "fact:deck"
+        ]
+       }
+      ]
+     },
+     "facts": [
+      {
+       "id": "match:world.living",
+       "type": "match",
+       "f": "world.living",
+       "basis": "confirmed",
+       "sources": [
+        "Cyberpunk 2077"
+       ],
+       "evidence": [
+        {
+         "id": "a",
+         "q": "Travel to different neighborhoods where you can meet other Sims and learn about their lives",
+         "kind": "description",
+         "thumb": null,
+         "hours": null,
+         "lang": null
+        },
+        {
+         "id": "tag:Immersive Sim",
+         "kind": "tag",
+         "q": "Immersive Sim",
+         "votes": 1711
+        }
+       ],
+       "contribution": 0.4958373320425827
+      },
+      {
+       "id": "match:characters.custom_hero",
+       "type": "match",
+       "f": "characters.custom_hero",
+       "basis": "inferred",
+       "sources": [
+        "Cyberpunk 2077"
+       ],
+       "evidence": [
+        {
+         "id": "a",
+         "q": "Choose how Sims look, act, and dress",
+         "kind": "description",
+         "thumb": null,
+         "hours": null,
+         "lang": null
+        },
+        {
+         "id": "r235880463",
+         "q": "create Sims, assign them jobs",
+         "kind": "review",
+         "thumb": "up",
+         "hours": 11,
+         "lang": "english"
+        }
+       ],
+       "contribution": 0.050854848
+      },
+      {
+       "id": "mood:tension.low",
+       "type": "mood",
+       "f": "tension.low",
+       "why": [
+        "Хочу расслабиться"
+       ],
+       "evidence": [
+        {
+         "id": "tag:Relaxing",
+         "kind": "tag",
+         "q": "Relaxing",
+         "votes": 1757
+        }
+       ]
+      },
+      "…"
+     ]
+    },
+    {
+     "id": "steam:1284190",
+     "domain": "game",
+     "name": "The Planet Crafter",
+     "ru": null,
+     "year": 2024,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/header.jpg?t=1788266415",
+     "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1284190/library_600x900.jpg",
+     "kind": "game",
+     "genres": [
+      "Adventure"
+     ],
+     "runtime": null,
+     "seasons": null,
+     "episodes": null,
+     "status": null,
+     "rating": "Overwhelmingly Positive",
+     "link": "https://store.steampowered.com/app/1284190/",
+     "price": "14.39 EUR",
+     "label": "likely",
+     "labelText": "Вероятно подойдёт",
+     "score": 1.491,
+     "parts": {
+      "fit": 0.477,
+      "penalty": 0,
+      "mood": 0.638,
+      "prior": 0.376
+     },
+     "mainAspect": "world",
+     "explanation": {
+      "reasons": [
+       {
+        "text": "Ты отметил «живой мир» в Cyberpunk 2077, здесь это тоже есть",
+        "factIds": [
+         "match:world.living"
+        ]
+       },
+       {
+        "text": "Как в Cyberpunk 2077, здесь «фантастика и космос». Ты это не отмечал, поэтому вес слабый",
+        "factIds": [
+         "match:world.scifi"
+        ],
+        "weak": true
+       },
+       {
+        "text": "Под настроение «Хочу расслабиться»: «спокойствие и медитативность»",
+        "factIds": [
+         "mood:tone.serene"
+        ]
+       },
+       {
+        "text": "Под настроение «Хочу расслабиться»: «без стресса»",
+        "factIds": [
+         "mood:tension.low"
+        ]
+       }
+      ],
+      "risks": [
+       {
+        "text": "Игроки жалуются: затянуто, провисает",
+        "factIds": [
+         "risk:flaw:pace.draggy"
+        ]
+       }
+      ],
+      "info": [
+       {
+        "text": "96% положительных из 74 810 отзывов Steam",
+        "factIds": [
+         "fact:reviews"
+        ]
+       },
+       {
+        "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 39 ч",
+        "factIds": [
+         "fact:hours"
+        ]
+       },
+       {
+        "text": "проверена для Steam Deck",
+        "factIds": [
+         "fact:deck"
+        ]
+       }
+      ]
+     },
+     "facts": [
+      {
+       "id": "match:world.living",
+       "type": "match",
+       "f": "world.living",
+       "basis": "confirmed",
+       "sources": [
+        "Cyberpunk 2077"
+       ],
+       "evidence": [
+        {
+         "id": "tag:Immersive Sim",
+         "kind": "tag",
+         "q": "Immersive Sim",
+         "votes": 497
+        }
+       ],
+       "contribution": 0.36910967645849824
+      },
+      {
+       "id": "match:world.scifi",
+       "type": "match",
+       "f": "world.scifi",
+       "basis": "inferred",
+       "sources": [
+        "Cyberpunk 2077"
+       ],
+       "evidence": [
+        {
+         "id": "d",
+         "q": "A space survival open world terraforming crafting game",
+         "kind": "description",
+         "thumb": null,
+         "hours": null,
+         "lang": null
+        },
+        {
+         "id": "tag:Space",
+         "kind": "tag",
+         "q": "Space",
+         "votes": 693
+        }
+       ],
+       "contribution": 0.10756800000000001
+      },
+      {
+       "id": "mood:tone.serene",
+       "type": "mood",
+       "f": "tone.serene",
+       "why": [
+        "Хочу расслабиться"
+       ],
+       "evidence": [
+        {
+         "id": "r236625486",
+         "q": "Honestly the most relaxing game I've ever played",
+         "kind": "review",
+         "thumb": "up",
+         "hours": 193,
+         "lang": "english"
+        }
+       ]
+      },
+      "…"
+     ]
+    }
+   ],
+   "fork": {
+    "id": "fork:loop.stealth|length.long",
+    "text": "Что тебе в играх важнее?",
+    "options": [
+     {
+      "f": "loop.stealth",
+      "label": "стелс",
+      "favours": "steam:518790"
+     },
+     {
+      "f": "length.long",
+      "label": "большая, на десятки часов",
+      "favours": "steam:1284190"
+     }
+    ],
+    "margin": 0.3333155776152723
+   },
+   "sieves": [
+    {
+     "id": 1,
+     "name": "Можно ли",
+     "removed": 0
+    },
+    {
+     "id": 2,
+     "name": "Было ли",
+     "removed": 2
+    },
+    {
+     "id": 3,
+     "name": "Сделано ли нормально",
+     "removed": 571
+    },
+    "…"
+   ],
+   "considered": 4379,
+   "taste": {
+    "confirmed": [
+     {
+      "f": "world.living",
+      "label": "живой мир",
+      "w": 0.82,
+      "sources": [
+       "Cyberpunk 2077"
+      ],
+      "ids": [
+       "steam:1091500"
+      ],
+      "preference": false
+     }
+    ],
+    "inferred": [
+     {
+      "f": "world.scifi",
+      "label": "фантастика и космос",
+      "w": 0.18,
+      "sources": [
+       "Cyberpunk 2077"
+      ],
+      "ids": [
+       "steam:1091500"
+      ],
+      "preference": false
+     },
+     {
+      "f": "loop.shooting",
+      "label": "стрельба",
+      "w": 0.17,
+      "sources": [
+       "Cyberpunk 2077"
+      ],
+      "ids": [
+       "steam:1091500"
+      ],
+      "preference": false
+     },
+     {
+      "f": "characters.memorable",
+      "label": "живые персонажи",
+      "w": 0.16,
+      "sources": [
+       "Cyberpunk 2077"
+      ],
+      "ids": [
+       "steam:1091500"
+      ],
+      "preference": false
+     },
+     "…"
+    ],
+    "dislikes": [
+     {
+      "f": "difficulty.hard",
+      "label": "постоянно умирал, бесило",
+      "w": 1,
+      "sources": [
+       "Dark Souls III"
+      ],
+      "ids": [
+       "steam:374320"
+      ],
+      "preference": false
+     }
+    ],
+    "hardNo": [],
+    "consumed": 2
+   }
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{"appid": 248610, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "Door Kickers is a real-time tactics video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "combines elements of strategy games and tactical shooters"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "the player is directed to plan the individual movements and actions of each trooper"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "As the team completes missions they will level up, both as a team and individually"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p6", "q": "can be used in a skill tree to improve their overall proficiency"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p6", "q": "Stars earned from completing missions can be spent on new weapons and equipment"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p4", "q": "Stealth troopers, who will hold fire as long as they are undetected"}]}
+]}

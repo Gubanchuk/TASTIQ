@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#151517" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+  <title>TASTIQ</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Подбор">
+      <div class="sidebar-head">
+        <a class="brand" href="/" aria-label="TASTIQ, на главную">TASTIQ</a>
+        <button class="icon-btn sidebar-close" id="sidebar-close" type="button" aria-label="Закрыть"></button>
+      </div>
+      <div class="sidebar-scroll">
+        <nav class="side-block" id="side-domains" aria-label="Разделы"></nav>
+        <section class="side-block" id="side-steps" aria-label="Шаги"></section>
+        <section class="side-block" id="side-taste" aria-label="Что я понял о тебе"></section>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main class="main" id="main">
+      <header class="toolbar" id="toolbar">
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Шаги и профиль" aria-controls="sidebar" aria-expanded="false"></button>
+        <button class="btn btn-plain back-btn" id="back-btn" type="button"></button>
+        <div class="toolbar-title" id="toolbar-title" aria-live="polite"></div>
+        <button class="btn btn-plain restart-btn" id="restart-btn" type="button"></button>
+        <div class="busy-bar" aria-hidden="true"></div>
+      </header>
+      <div class="content" id="content"></div>
+      <footer class="actionbar" id="actionbar"></footer>
+    </main>
+
+    <aside class="inspector" id="inspector" aria-label="Подробности"></aside>
+  </div>
+
+  <dialog class="sheet-dialog" id="confirm">
+    <form method="dialog">
+      <h2 id="confirm-title">Начать заново?</h2>
+      <p id="confirm-text">Ответы этого подбора сбросятся.</p>
+      <div class="dialog-actions">
+        <button class="btn btn-secondary" value="cancel">Отмена</button>
+        <button class="btn btn-primary" value="ok" id="confirm-ok">Начать заново</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="sr-only" id="announcer" aria-live="polite"></div>
+</body>
+</html>

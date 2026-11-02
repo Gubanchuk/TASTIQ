@@ -1,0 +1,16 @@
+{
+  "appid": 1817190,
+  "features": [
+    {"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "Combat focuses on chaining attacks together and using the environment"}]},
+    {"f": "freedom.open_world", "r": 3, "ev": [{"id": "p3", "q": "a fictionalized version of modern-day Manhattan"}]},
+    {"f": "world.modern", "r": 3, "ev": [{"id": "p3", "q": "a fictionalized version of modern-day Manhattan"}]},
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "unlocking new gadgets and suits by progressing through the main story"}]},
+    {"f": "progression.collection", "r": 1, "ev": [{"id": "p1", "q": "unlock additional content and collectible items"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p9", "q": "praised the game's story and Miles' new abilities"}]},
+    {"f": "characters.companions", "r": 1, "ev": [{"id": "p7", "q": "who is aware of his secret identity and assists him with his Spider-Man activities"}]},
+    {"f": "characters.lone_hero", "r": 1, "ev": [{"id": "p1", "q": "Miles can freely move around New York City"}]},
+    {"f": "tone.melancholic", "r": 1, "ev": [{"id": "p5", "q": "doubts whether he can live up to Peter's legacy"}]},
+    {"f": "world.scifi", "r": 1, "ev": [{"id": "p0", "q": "a high-tech criminal army called the Underground"}]},
+    {"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "though its short length received some criticism"}]}
+  ]
+}

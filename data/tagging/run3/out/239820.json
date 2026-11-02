@@ -1,0 +1,9 @@
+{
+  "appid": 239820,
+  "features": [
+    {"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "is a 2012 business simulation video game"}]},
+    {"f": "loop.building", "r": 2, "ev": [{"id": "p0", "q": "The player creates and develops video games"}]},
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "the player's game development skills improve"}]},
+    {"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "The player starts out in a garage in the early 1980s during the golden age of arcade video games"}]}
+  ]
+}

@@ -1,0 +1,11 @@
+{"appid": 1237320, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p3", "q": "Sonic Frontiers is a 3D platformer and action-adventure game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p4", "q": "The Starfall Islands act as the series's first open world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "The player explores the islands as they solve puzzles"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "that allow the player to purchase additional moves and abilities"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p4", "q": "obtaining various collectibles found in the open world"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p3", "q": "he runs at high speeds, collects rings, grinds on rails, and homes in on enemies to attack"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "who praised its visuals, story and soundtrack"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p4", "q": "as they solve puzzles, such as orienting statues and speedrunning"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p2", "q": "critiqued by others for a sense of repetition and feeling of under-engagement"}]}
+]}

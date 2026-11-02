@@ -1,0 +1,8 @@
+{"appid": 355790, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p0", "q": "Styx: Shards of Darkness is a stealth video game"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "Most communities in the world are suffering from goblin infestations"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p1", "q": "There is also a multiplayer co-op mode"}]},
+{"f": "characters.lone_hero", "r": 1, "ev": [{"id": "p2", "q": "Styx is an exceptional goblin who has human-like intelligence and can talk"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p6", "q": "challenging stealth adventure with just as much snark as it has sneaking"}]},
+{"f": "humor.dark", "r": 1, "ev": [{"id": "p6", "q": "just as much snark as it has sneaking"}]}
+]}

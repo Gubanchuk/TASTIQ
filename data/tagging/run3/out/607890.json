@@ -1,0 +1,8 @@
+{"appid": 607890, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "fight monsters using sword skills"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p1", "q": "a party in Hollow Realization consists of four characters including the player"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "Characters can be customized through in-game character creation"}]},
+{"f": "length.long", "r": 3, "ev": [{"id": "p3", "q": "will take the player approximately 70 to 100 hours"}]},
+{"f": "combat.precise", "r": 1, "ev": [{"id": "p7", "q": "with satisfying, nuanced combat"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p7", "q": "action-RPG fused with visual-novel trappings"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 2630, "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "The game is set during World War II"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Call of Duty 2 is a first-person shooter"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "The graphics and sound were widely praised"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "McNamara also praised the sound, describing it as"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p7", "q": "the screen will turn red and the sound of the character's heartbeat will increase in volume"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p3", "q": "a single-player story mode and a multiplayer mode"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p3", "q": "has a single-player story mode"}]}
+]}

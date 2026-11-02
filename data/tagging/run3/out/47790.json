@@ -1,0 +1,10 @@
+{"appid": 47790, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 first-person shooter game"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p3", "q": "Medal of Honor is a modern warfare first-person shooter"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p2", "q": "gritty and realistic single-player campaign"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p2", "q": "the explosive, gritty and realistic single-player campaign"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "Gameplay features two opposing sides"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "The player earns experience during gameplay to level up and unlock additional weapons"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "praising the game's engaging multiplayer, audio and voice acting"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "criticism was directed at the short length of the campaign"}]}
+]}

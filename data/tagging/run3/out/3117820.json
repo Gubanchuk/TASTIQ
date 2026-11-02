@@ -1,0 +1,9 @@
+{"appid": 3117820, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "card-based role-playing video game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "The player initially begins as the sadistic Sultan for the starting tutorial"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p1", "q": "Breaking a Bloodshed card on a target leads to its killing"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p1", "q": "breaking a Carnality card on a target usually leads to sex"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "a kingdom reminiscent of Shahriyâr's in One Thousand and One Nights"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "adored its Arabic inspired aesthetics and music"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p4", "q": "adored its Arabic inspired aesthetics and music"}]}
+]}

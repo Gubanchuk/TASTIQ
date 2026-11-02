@@ -1,0 +1,13 @@
+{"appid": 265300, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "battling enemies and bosses using melee weapons, such as axes and hammers"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "a slow tactical approach to close-quarters combat gameplay"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p9", "q": "the crunches of iron against bone when your hammer finds its mark"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Players journey through large, interconnected environments"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p2", "q": "from a range of different classes, each with their own specializations"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p2", "q": "with difficult enemies and locations to overcome"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p8", "q": "a more forgiving entry point"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p5", "q": "The game is set in a world long after the defeat of a god named Adyr"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p5", "q": "all sins are punished, even small and petty ones"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p12", "q": "praised the game's visuals, long length and combat"}]},
+{"f": "length.long", "r": 1, "ev": [{"id": "p12", "q": "praised the game's visuals, long length and combat"}]}
+]}

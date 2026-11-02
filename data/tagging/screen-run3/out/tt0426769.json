@@ -1,0 +1,11 @@
+{"id": "tt0426769", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a British preschool animated children's television series"}]},
+{"f": "audience.kids", "r": 3, "ev": [{"id": "p0", "q": "is a British preschool animated children's television series"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p0", "q": "is a British preschool animated children's television series"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p0", "q": "The ninth series began broadcasting in 2025"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p3", "q": "Episodes tend to feature everyday activities such as attending playgroup"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "s", "q": "playing games, dressing up, days out and jumping in muddy puddles"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "p5", "q": "Most episodes end with characters falling over on their backs while laughing"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "s", "q": "lives with her little brother George, Mummy Pig and Daddy Pig"}]},
+{"f": "tone.feelgood", "r": 1, "ev": [{"id": "s", "q": "Peppa is a loveable, cheeky little piggy"}]}
+]}

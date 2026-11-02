@@ -1,0 +1,10 @@
+{"id": "tt19516036", "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p0", "q": "is a British historical comedy television series"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "s", "q": "irreverent retelling set in the 18th century"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "s", "q": "the most famous but least likely of highway robbers"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "s", "q": "his gang of lovable rogues"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "s", "q": "his gang of lovable rogues"}]},
+{"f": "humor.satire", "r": 1, "ev": [{"id": "s", "q": "In this irreverent retelling set in the 18th century"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "s", "q": "whose success is defined mostly by his charm, showmanship and great hair"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "The final episode was released on 15 October 2025"}]}
+]}

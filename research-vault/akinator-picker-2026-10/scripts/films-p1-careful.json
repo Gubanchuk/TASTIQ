@@ -1,0 +1,4835 @@
+{
+ "label": "Персона 1: пара (она — умные мелодрамы, он — фантастика) — careful",
+ "screens": 13,
+ "log": [
+  {
+   "n": 1,
+   "action": null,
+   "note": "открыли /pick/",
+   "screen": {
+    "step": "domain",
+    "title": "Что хочешь?",
+    "options": [
+     {
+      "value": "game",
+      "label": "Поиграть"
+     },
+     {
+      "value": "film",
+      "label": "Посмотреть фильм"
+     },
+     {
+      "value": "series",
+      "label": "Посмотреть сериал"
+     },
+     {
+      "value": "cartoon",
+      "label": "Посмотреть мультфильм"
+     }
+    ],
+    "later": [
+     "Почитать",
+     "Аниме"
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "note": "Посмотреть фильм",
+   "screen": {
+    "step": "genres",
+    "title": "Что обычно смотришь?",
+    "hint": "Это только чтобы спросить про знакомое. Подбирать буду не по жанру, а по тому, за что тебе заходит.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "genre:Drama",
+      "label": "драмы"
+     },
+     {
+      "value": "genre:Comedy",
+      "label": "комедии"
+     },
+     {
+      "value": "genre:Action",
+      "label": "боевики"
+     },
+     {
+      "value": "genre:Crime",
+      "label": "криминал"
+     },
+     {
+      "value": "genre:Romance",
+      "label": "мелодрамы"
+     },
+     {
+      "value": "genre:Thriller",
+      "label": "триллеры"
+     },
+     {
+      "value": "genre:Horror",
+      "label": "ужасы"
+     },
+     {
+      "value": "genre:Adventure",
+      "label": "приключения"
+     },
+     {
+      "value": "genre:Mystery",
+      "label": "детективы"
+     },
+     {
+      "value": "genre:Biography",
+      "label": "биографии"
+     },
+     {
+      "value": "genre:Fantasy",
+      "label": "фэнтези"
+     },
+     {
+      "value": "genre:Sci-Fi",
+      "label": "фантастика"
+     },
+     {
+      "value": "genre:Documentary",
+      "label": "документальное"
+     },
+     {
+      "value": "genre:History",
+      "label": "историческое"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "genres",
+    "values": [
+     "genre:Drama",
+     "genre:Romance",
+     "genre:Sci-Fi"
+    ]
+   },
+   "note": "Она: драмы, мелодрамы. Он: фантастика. Нажали все три → genre:Drama, genre:Romance, genre:Sci-Fi",
+   "screen": {
+    "step": "liked",
+    "title": "Что из этого смотрел, и зашло?",
+    "hint": "Отметь всё знакомое, что понравилось. Можно найти своё через поиск.",
+    "multi": true,
+    "search": true,
+    "canSkip": false,
+    "items": [
+     {
+      "id": "tt1853728",
+      "name": "Django Unchained",
+      "ru": "Джанго освобождённый",
+      "original": null,
+      "year": 2012,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Western"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt0080684",
+      "name": "Star Wars: Episode V - The Empire Strikes Back",
+      "ru": "Звёздные войны. Эпизод 5: Империя наносит ответный удар",
+      "original": null,
+      "year": 1980,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/3/3f/The_Empire_Strikes_Back_%281980_film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Fantasy",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.7"
+     },
+     {
+      "id": "tt0169547",
+      "name": "American Beauty",
+      "ru": "Красота по-американски",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/9a/American_Beauty_1999_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 8.3"
+     },
+     {
+      "id": "tt0816692",
+      "name": "Interstellar",
+      "ru": "Интерстеллар",
+      "original": null,
+      "year": 2014,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.7"
+     },
+     {
+      "id": "tt0167404",
+      "name": "The Sixth Sense",
+      "ru": "Шестое чувство",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a4/The_Sixth_Sense_poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.2"
+     },
+     {
+      "id": "tt2395427",
+      "name": "Avengers: Age of Ultron",
+      "ru": "Мстители: Эра Альтрона",
+      "original": null,
+      "year": 2015,
+      "image": null,
+      "poster": null,
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 7.3"
+     },
+     {
+      "id": "tt0253474",
+      "name": "The Pianist",
+      "ru": "Пианист",
+      "original": null,
+      "year": 2002,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Pianist_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Biography",
+       "Drama",
+       "Music"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt4154796",
+      "name": "Avengers: Endgame",
+      "ru": "Мстители: Финал",
+      "original": null,
+      "year": 2019,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.4"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "note": "liked page shows: Джанго освобождённый (2012) | Звёздные войны. Эпизод 5: Империя наносит ответный удар (1980) | Красота по-американски (1999) | Интерстеллар (2014) | Шестое чувство (1999) | Мстители: Эра Альтрона (2015) | Пианист (2002) | Мстители: Финал (2019). Из них узнали и зашло: ничего. Остальное нашли через поиск."
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt1798709",
+     "tt0338013",
+     "tt2543164",
+     "tt0112471",
+     "tt0816692",
+     "tt0414387",
+     "tt3783958",
+     "tt0335266",
+     "tt3659388",
+     "tt1856101"
+    ],
+    "known": {},
+    "shownIds": [
+     "tt1853728",
+     "tt0080684",
+     "tt0169547",
+     "tt0816692",
+     "tt0167404",
+     "tt2395427",
+     "tt0253474",
+     "tt4154796"
+    ]
+   },
+   "note": "Нашли через поиск: Она, Вечное сияние, Прибытие, Перед рассветом, Интерстеллар, Гордость и предубеждение, Ла-Ла Ленд, Трудности перевода, Марсианин, Бегущий по лезвию 2049",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Она»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt1798709",
+     "name": "Her",
+     "ru": "Она",
+     "original": null,
+     "year": 2013,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/4/44/Her2013Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Drama",
+      "Romance",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 7.9"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "world.dystopia",
+      "label": "антиутопия"
+     },
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "cognitive.high",
+      "label": "заставляет думать"
+     },
+     {
+      "value": "characters.romance",
+      "label": "любовная линия"
+     },
+     {
+      "value": "tone.melancholic",
+      "label": "грустное, пробирает"
+     },
+     {
+      "value": "aesthetic.beautiful",
+      "label": "красивая картинка"
+     },
+     {
+      "value": "tone.whimsical",
+      "label": "странное, причудливое"
+     },
+     {
+      "value": "characters.acting",
+      "label": "сильная актёрская игра"
+     },
+     {
+      "value": "characters.memorable",
+      "label": "живые, сложные персонажи"
+     },
+     {
+      "value": "tone.dark",
+      "label": "мрачная атмосфера"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "1 из 3"
+   }
+  },
+  {
+   "note": "why «Она (2013)»: offered [антиутопия | фантастика | заставляет думать | любовная линия | грустное, пробирает | красивая картинка | странное, причудливое | сильная актёрская игра | живые, сложные персонажи | мрачная атмосфера]; persona says: Она: «любовь, которая про одиночество, и веришь». Он: «фантастика про ИИ без единого взрыва»; chosen [\"characters.romance\",\"tone.melancholic\",\"world.scifi\",\"cognitive.high\",\"aesthetic.beautiful\"]; wanted but not offered: tone.atmospheric, aesthetic.soundtrack, story.dialogue | free text «про любовь и одиночество, умная фантастика про искусственный интеллект» → parse: +любовная линия, фантастика; −—; understood=true"
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "characters.romance",
+     "tone.melancholic",
+     "world.scifi",
+     "cognitive.high",
+     "aesthetic.beautiful"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "note": "Она: «любовь, которая про одиночество, и веришь». Он: «фантастика про ИИ без единого взрыва»",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Вечное сияние чистого разума»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt0338013",
+     "name": "Eternal Sunshine of the Spotless Mind",
+     "ru": "Вечное сияние чистого разума",
+     "original": null,
+     "year": 2004,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/a/a4/Eternal_Sunshine_of_the_Spotless_Mind.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Drama",
+      "Romance",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 8.3"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "story.nonlinear",
+      "label": "нелинейный сюжет"
+     },
+     {
+      "value": "story.complex",
+      "label": "сложный, надо вникать"
+     },
+     {
+      "value": "aesthetic.stylized",
+      "label": "стильно и необычно снято"
+     },
+     {
+      "value": "cognitive.high",
+      "label": "заставляет думать"
+     },
+     {
+      "value": "characters.acting",
+      "label": "сильная актёрская игра"
+     },
+     {
+      "value": "characters.romance",
+      "label": "любовная линия"
+     },
+     {
+      "value": "tone.melancholic",
+      "label": "грустное, пробирает"
+     },
+     {
+      "value": "tone.whimsical",
+      "label": "странное, причудливое"
+     },
+     {
+      "value": "aesthetic.beautiful",
+      "label": "красивая картинка"
+     },
+     {
+      "value": "ending.strong",
+      "label": "сильный финал"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "2 из 3"
+   }
+  },
+  {
+   "note": "why «Вечное сияние чистого разума (2004)»: offered [нелинейный сюжет | сложный, надо вникать | стильно и необычно снято | заставляет думать | сильная актёрская игра | любовная линия | грустное, пробирает | странное, причудливое | красивая картинка | сильный финал]; persona says: Оба: «про любовь, но странно и умно, нелинейно; пересматривали дважды»; chosen [\"characters.romance\",\"story.nonlinear\",\"story.complex\",\"tone.melancholic\",\"tone.whimsical\",\"cognitive.high\"]; wanted but not offered: world.scifi, story.twist | free text «странно, нелинейно, про память и любовь» → parse: +странное, причудливое, нелинейный сюжет, любовная линия; −—; understood=true"
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "characters.romance",
+     "story.nonlinear",
+     "story.complex",
+     "tone.melancholic",
+     "tone.whimsical",
+     "cognitive.high"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "note": "Оба: «про любовь, но странно и умно, нелинейно; пересматривали дважды»",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Прибытие»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt2543164",
+     "name": "Arrival",
+     "ru": "Прибытие",
+     "original": null,
+     "year": 2016,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Drama",
+      "Mystery",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 7.9"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "world.timetravel",
+      "label": "путешествия во времени"
+     },
+     {
+      "value": "story.nonlinear",
+      "label": "нелинейный сюжет"
+     },
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "story.twist",
+      "label": "неожиданные повороты"
+     },
+     {
+      "value": "ending.strong",
+      "label": "сильный финал"
+     },
+     {
+      "value": "cognitive.high",
+      "label": "заставляет думать"
+     },
+     {
+      "value": "aesthetic.beautiful",
+      "label": "красивая картинка"
+     },
+     {
+      "value": "tone.melancholic",
+      "label": "грустное, пробирает"
+     },
+     {
+      "value": "characters.acting",
+      "label": "сильная актёрская игра"
+     },
+     {
+      "value": "tone.atmospheric",
+      "label": "атмосферное"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "3 из 3"
+   }
+  },
+  {
+   "note": "why «Прибытие (2016)»: offered [путешествия во времени | нелинейный сюжет | фантастика | неожиданные повороты | сильный финал | заставляет думать | красивая картинка | грустное, пробирает | сильная актёрская игра | атмосферное]; persona says: Он: «фантастика, где думают, а не стреляют». Она: «про материнство и потерю, ревела»; chosen [\"cognitive.high\",\"world.scifi\",\"story.twist\",\"tone.melancholic\",\"tone.atmospheric\"]; wanted but not offered: characters.female_lead, aesthetic.soundtrack, pace.slow | free text «заставляет думать, фантастика без стрельбы, пробирает» → parse: +фантастика, заставляет думать; −грустное, пробирает; understood=true"
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "cognitive.high",
+     "world.scifi",
+     "story.twist",
+     "tone.melancholic",
+     "tone.atmospheric"
+    ],
+    "love": false,
+    "issues": []
+   },
+   "note": "Он: «фантастика, где думают, а не стреляют». Она: «про материнство и потерю, ревела»",
+   "screen": {
+    "step": "disliked",
+    "title": "А что не зашло, хотя многие хвалят?",
+    "hint": "Если ничего такого не было, пропусти.",
+    "multi": true,
+    "search": true,
+    "canSkip": true,
+    "items": [
+     {
+      "id": "tt0088763",
+      "name": "Back to the Future",
+      "ru": "Назад в будущее",
+      "original": null,
+      "year": 1985,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Comedy",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt2278388",
+      "name": "The Grand Budapest Hotel",
+      "ru": "Отель «Гранд Будапешт»",
+      "original": null,
+      "year": 2014,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Grand_Budapest_Hotel.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Comedy",
+       "Drama"
+      ],
+      "rating": "IMDb 8.1"
+     },
+     {
+      "id": "tt1375666",
+      "name": "Inception",
+      "ru": "Начало",
+      "original": null,
+      "year": 2010,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Sci-Fi",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0137523",
+      "name": "Fight Club",
+      "ru": "Бойцовский клуб",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0111161",
+      "name": "The Shawshank Redemption",
+      "ru": "Побег из Шоушенка",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 9.3"
+     },
+     {
+      "id": "tt0109830",
+      "name": "Forrest Gump",
+      "ru": "Форрест Гамп",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Romance"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0090605",
+      "name": "Aliens",
+      "ru": "Чужой 2",
+      "original": null,
+      "year": 1986,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fb/Aliens_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.4"
+     },
+     {
+      "id": "tt0110912",
+      "name": "Pulp Fiction",
+      "ru": "Криминальное чтиво",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama"
+      ],
+      "rating": "IMDb 8.8"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "note": "disliked page shows: Назад в будущее (1985) | Отель «Гранд Будапешт» (2014) | Начало (2010) | Бойцовский клуб (1999) | Побег из Шоушенка (1994) | Форрест Гамп (1994) | Чужой 2 (1986) | Криминальное чтиво (1994)"
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0418279",
+     "tt0332280",
+     "tt2322441",
+     "tt2820852",
+     "tt1099212"
+    ],
+    "known": {},
+    "shownIds": [
+     "tt0088763",
+     "tt2278388",
+     "tt1375666",
+     "tt0137523",
+     "tt0111161",
+     "tt0109830",
+     "tt0090605",
+     "tt0110912"
+    ]
+   },
+   "note": "Нашли через поиск: Трансформеры, Дневник памяти, 50 оттенков серого, Форсаж 7, Сумерки",
+   "screen": {
+    "step": "why_not",
+    "title": "Что не понравилось в «Трансформеры»?",
+    "hint": "Один клик: не нравится. Второй: «никогда, ни в чём».",
+    "item": {
+     "id": "tt0418279",
+     "name": "Transformers",
+     "ru": "Трансформеры",
+     "original": null,
+     "year": 2007,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/6/66/Transformers07.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 7.1"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "aesthetic.effects",
+      "label": "одни спецэффекты, а смотреть нечего"
+     },
+     {
+      "value": "humor.silly",
+      "label": "тупые шутки"
+     },
+     {
+      "value": "story.weak",
+      "label": "сюжет с дырами"
+     },
+     {
+      "value": "story.predictable",
+      "label": "всё понятно заранее"
+     },
+     {
+      "value": "content.violence",
+      "label": "много крови и жестокости"
+     },
+     {
+      "value": "tension.high",
+      "label": "всё время на нервах"
+     },
+     {
+      "value": "pace.draggy",
+      "label": "затянуто, скучал"
+     },
+     {
+      "value": "characters.unlikeable",
+      "label": "герои бесили"
+     }
+    ],
+    "categories": [
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "world.superhero",
+      "label": "супергерои"
+     },
+     {
+      "value": "world.space",
+      "label": "космос"
+     },
+     {
+      "value": "format.animation",
+      "label": "анимация"
+     },
+     {
+      "value": "world.school",
+      "label": "школа и подростки"
+     },
+     {
+      "value": "story.revenge",
+      "label": "месть"
+     }
+    ],
+    "badQuality": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "1 из 2"
+   }
+  },
+  {
+   "note": "why_not «Трансформеры (2007)»: complaints offered [одни спецэффекты, а смотреть нечего | тупые шутки | сюжет с дырами | всё понятно заранее | много крови и жестокости | всё время на нервах | затянуто, скучал | герои бесили]; categories [фантастика | супергерои | космос | анимация | школа и подростки | месть]; persona says: Он: «грохот и тупой сюжет». Она: «ушла через полчаса»; chosen [{\"f\":\"story.weak\",\"hard\":false},{\"f\":\"aesthetic.effects\",\"hard\":false},{\"f\":\"humor.silly\",\"hard\":false},{\"f\":\"characters.unlikeable\",\"hard\":false}]; wanted but not offered: —"
+  },
+  {
+   "n": 9,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "humor.silly",
+      "hard": false
+     },
+     {
+      "f": "characters.unlikeable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "note": "Он: «грохот и тупой сюжет». Она: «ушла через полчаса»",
+   "screen": {
+    "step": "why_not",
+    "title": "Что не понравилось в «Дневник памяти»?",
+    "hint": "Один клик: не нравится. Второй: «никогда, ни в чём».",
+    "item": {
+     "id": "tt0332280",
+     "name": "The Notebook",
+     "ru": "Дневник памяти",
+     "original": null,
+     "year": 2004,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/8/86/Posternotebook.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Drama",
+      "Romance"
+     ],
+     "rating": "IMDb 7.8"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "tone.melancholic",
+      "label": "грустно, остался осадок"
+     },
+     {
+      "value": "tone.cheesy",
+      "label": "сопливо и наивно"
+     },
+     {
+      "value": "story.predictable",
+      "label": "всё понятно заранее"
+     },
+     {
+      "value": "pace.draggy",
+      "label": "затянуто, скучал"
+     },
+     {
+      "value": "story.weak",
+      "label": "сюжет с дырами"
+     },
+     {
+      "value": "characters.unlikeable",
+      "label": "герои бесили"
+     },
+     {
+      "value": "ending.weak",
+      "label": "слили концовку"
+     }
+    ],
+    "categories": [
+     {
+      "value": "characters.romance",
+      "label": "любовная линия"
+     }
+    ],
+    "badQuality": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "2 из 2"
+   }
+  },
+  {
+   "note": "why_not «Дневник памяти (2004)»: complaints offered [грустно, остался осадок | сопливо и наивно | всё понятно заранее | затянуто, скучал | сюжет с дырами | герои бесили | слили концовку]; categories [любовная линия]; persona says: Он: «сопли». Она: «слишком сладко, всё понятно заранее»; chosen [{\"f\":\"tone.cheesy\",\"hard\":false},{\"f\":\"story.predictable\",\"hard\":false}]; wanted but not offered: —"
+  },
+  {
+   "n": 10,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "tone.cheesy",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "note": "Он: «сопли». Она: «слишком сладко, всё понятно заранее»",
+   "screen": {
+    "step": "today",
+    "title": "Что сегодня?",
+    "hint": "Это только на сегодня, во вкус не записывается.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "relax",
+      "label": "Хочу расслабиться"
+     },
+     {
+      "value": "laugh",
+      "label": "Хочу посмеяться"
+     },
+     {
+      "value": "thrill",
+      "label": "Хочу пощекотать нервы"
+     },
+     {
+      "value": "cry",
+      "label": "Хочу, чтобы пробрало"
+     },
+     {
+      "value": "think",
+      "label": "Хочу подумать"
+     },
+     {
+      "value": "background",
+      "label": "Фоном, не вникая"
+     },
+     {
+      "value": "family",
+      "label": "Смотрю с детьми"
+     },
+     {
+      "value": "short",
+      "label": "Коротко, на один вечер"
+     },
+     {
+      "value": "binge",
+      "label": "Хочу засесть надолго"
+     }
+    ],
+    "avoid": [
+     {
+      "value": "dark",
+      "label": "Ничего мрачного"
+     },
+     {
+      "value": "scary",
+      "label": "Ничего страшного"
+     },
+     {
+      "value": "violence",
+      "label": "Без жестокости"
+     },
+     {
+      "value": "sad",
+      "label": "Без слёз"
+     },
+     {
+      "value": "long",
+      "label": "Ничего длинного"
+     }
+    ]
+   }
+  },
+  {
+   "note": "today offered moods [Хочу расслабиться | Хочу посмеяться | Хочу пощекотать нервы | Хочу, чтобы пробрало | Хочу подумать | Фоном, не вникая | Смотрю с детьми | Коротко, на один вечер | Хочу засесть надолго], avoid [Ничего мрачного | Ничего страшного | Без жестокости | Без слёз | Ничего длинного]; persona: Она: «хочу, чтобы пробрало». Он: «хочу подумать». Хотели бы сказать «смотрим вдвоём, часа на два» — такого нет"
+  },
+  {
+   "n": 11,
+   "action": {
+    "type": "today",
+    "values": [
+     "cry",
+     "think"
+    ],
+    "avoid": []
+   },
+   "note": "Она: «хочу, чтобы пробрало». Он: «хочу подумать». Хотели бы сказать «смотрим вдвоём, часа на два» — такого нет",
+   "screen": {
+    "step": "playback",
+    "title": "Вот как я тебя вижу",
+    "taste": {
+     "confirmed": [
+      {
+       "f": "cognitive.high",
+       "label": "заставляет думать",
+       "w": 2.15,
+       "sources": [
+        "Она",
+        "Вечное сияние чистого разума",
+        "Прибытие"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt0338013",
+        "tt2543164"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.melancholic",
+       "label": "грустное, пробирает",
+       "w": 1.65,
+       "sources": [
+        "Она",
+        "Вечное сияние чистого разума",
+        "Прибытие"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt0338013",
+        "tt2543164"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.romance",
+       "label": "любовная линия",
+       "w": 1.38,
+       "sources": [
+        "Она",
+        "Вечное сияние чистого разума"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt0338013"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.complex",
+       "label": "сложный, надо вникать",
+       "w": 1.32,
+       "sources": [
+        "Вечное сияние чистого разума"
+       ],
+       "ids": [
+        "tt0338013"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.whimsical",
+       "label": "странное, причудливое",
+       "w": 1.32,
+       "sources": [
+        "Вечное сияние чистого разума"
+       ],
+       "ids": [
+        "tt0338013"
+       ],
+       "preference": false
+      },
+      {
+       "f": "world.scifi",
+       "label": "фантастика",
+       "w": 1.23,
+       "sources": [
+        "Она",
+        "Прибытие"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt2543164"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.atmospheric",
+       "label": "атмосферное",
+       "w": 1.11,
+       "sources": [
+        "Прибытие"
+       ],
+       "ids": [
+        "tt2543164"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.nonlinear",
+       "label": "нелинейный сюжет",
+       "w": 1,
+       "sources": [
+        "Вечное сияние чистого разума"
+       ],
+       "ids": [
+        "tt0338013"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.twist",
+       "label": "неожиданные повороты",
+       "w": 0.89,
+       "sources": [
+        "Прибытие"
+       ],
+       "ids": [
+        "tt2543164"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.beautiful",
+       "label": "красивая картинка",
+       "w": 0.82,
+       "sources": [
+        "Она"
+       ],
+       "ids": [
+        "tt1798709"
+       ],
+       "preference": false
+      }
+     ],
+     "inferred": [
+      {
+       "f": "pace.slow",
+       "label": "неторопливое",
+       "w": 0.5,
+       "sources": [
+        "Она",
+        "Прибытие",
+        "Перед рассветом",
+        "Трудности перевода",
+        "Бегущий по лезвию 2049"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt2543164",
+        "tt0112471",
+        "tt0335266",
+        "tt1856101"
+       ],
+       "preference": false
+      },
+      {
+       "f": "world.dystopia",
+       "label": "антиутопия",
+       "w": 0.5,
+       "sources": [
+        "Она",
+        "Интерстеллар",
+        "Бегущий по лезвию 2049"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt0816692",
+        "tt1856101"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.acting",
+       "label": "сильная актёрская игра",
+       "w": 0.5,
+       "sources": [
+        "Она",
+        "Вечное сияние чистого разума",
+        "Прибытие",
+        "Перед рассветом",
+        "Интерстеллар",
+        "Ла-Ла Ленд",
+        "Трудности перевода",
+        "Марсианин",
+        "Бегущий по лезвию 2049"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt0338013",
+        "tt2543164",
+        "tt0112471",
+        "tt0816692",
+        "tt3783958",
+        "tt0335266",
+        "tt3659388",
+        "tt1856101"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.stylized",
+       "label": "стильно и необычно снято",
+       "w": 0.5,
+       "sources": [
+        "Вечное сияние чистого разума",
+        "Ла-Ла Ленд",
+        "Трудности перевода",
+        "Бегущий по лезвию 2049"
+       ],
+       "ids": [
+        "tt0338013",
+        "tt3783958",
+        "tt0335266",
+        "tt1856101"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.dark",
+       "label": "мрачная атмосфера",
+       "w": 0.4,
+       "sources": [
+        "Она",
+        "Вечное сияние чистого разума",
+        "Бегущий по лезвию 2049"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt0338013",
+        "tt1856101"
+       ],
+       "preference": false
+      },
+      {
+       "f": "length.long",
+       "label": "длинный",
+       "w": 0.4,
+       "sources": [
+        "Интерстеллар",
+        "Бегущий по лезвию 2049"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt1856101"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.memorable",
+       "label": "живые, сложные персонажи",
+       "w": 0.38,
+       "sources": [
+        "Она",
+        "Вечное сияние чистого разума",
+        "Трудности перевода"
+       ],
+       "ids": [
+        "tt1798709",
+        "tt0338013",
+        "tt0335266"
+       ],
+       "preference": false
+      },
+      {
+       "f": "world.timetravel",
+       "label": "путешествия во времени",
+       "w": 0.35,
+       "sources": [
+        "Прибытие",
+        "Интерстеллар"
+       ],
+       "ids": [
+        "tt2543164",
+        "tt0816692"
+       ],
+       "preference": false
+      }
+     ],
+     "dislikes": [
+      {
+       "f": "story.weak",
+       "label": "сюжет с дырами",
+       "w": 1,
+       "sources": [
+        "Трансформеры"
+       ],
+       "ids": [
+        "tt0418279"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.effects",
+       "label": "одни спецэффекты, а смотреть нечего",
+       "w": 1,
+       "sources": [
+        "Трансформеры"
+       ],
+       "ids": [
+        "tt0418279"
+       ],
+       "preference": false
+      },
+      {
+       "f": "humor.silly",
+       "label": "тупые шутки",
+       "w": 1,
+       "sources": [
+        "Трансформеры"
+       ],
+       "ids": [
+        "tt0418279"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.unlikeable",
+       "label": "герои бесили",
+       "w": 1,
+       "sources": [
+        "Трансформеры"
+       ],
+       "ids": [
+        "tt0418279"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.cheesy",
+       "label": "сопливо и наивно",
+       "w": 1,
+       "sources": [
+        "Дневник памяти"
+       ],
+       "ids": [
+        "tt0332280"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.predictable",
+       "label": "всё понятно заранее",
+       "w": 1,
+       "sources": [
+        "Дневник памяти"
+       ],
+       "ids": [
+        "tt0332280"
+       ],
+       "preference": false
+      }
+     ],
+     "hardNo": [],
+     "consumed": 15
+    },
+    "today": [
+     "Хочу, чтобы пробрало",
+     "Хочу подумать"
+    ],
+    "lines": [
+     "Тебе важно: заставляет думать (Она, Вечное сияние чистого разума, Прибытие); грустное, пробирает (Она, Вечное сияние чистого разума, Прибытие); любовная линия (Она, Вечное сияние чистого разума); сложный, надо вникать (Вечное сияние чистого разума); странное, причудливое (Вечное сияние чистого разума); фантастика (Она, Прибытие); атмосферное (Прибытие); нелинейный сюжет (Вечное сияние чистого разума); неожиданные повороты (Прибытие); красивая картинка (Она).",
+     "Не нравится: сюжет с дырами (Трансформеры); одни спецэффекты, а смотреть нечего (Трансформеры); тупые шутки (Трансформеры); герои бесили (Трансформеры); сопливо и наивно (Дневник памяти); всё понятно заранее (Дневник памяти).",
+     "Сегодня: Хочу, чтобы пробрало, Хочу подумать.",
+     "Уже смотрел: 15, это не предложу."
+    ],
+    "options": [
+     {
+      "value": "confirm",
+      "label": "Да, подбирай"
+     },
+     {
+      "value": "more_liked",
+      "label": "Добавлю ещё, что зашло"
+     }
+    ]
+   }
+  },
+  {
+   "note": "playback lines:\n  > Тебе важно: заставляет думать (Она, Вечное сияние чистого разума, Прибытие); грустное, пробирает (Она, Вечное сияние чистого разума, Прибытие); любовная линия (Она, Вечное сияние чистого разума); сложный, надо вникать (Вечное сияние чистого разума); странное, причудливое (Вечное сияние чистого разума); фантастика (Она, Прибытие); атмосферное (Прибытие); нелинейный сюжет (Вечное сияние чистого разума); неожиданные повороты (Прибытие); красивая картинка (Она).\n  > Не нравится: сюжет с дырами (Трансформеры); одни спецэффекты, а смотреть нечего (Трансформеры); тупые шутки (Трансформеры); герои бесили (Трансформеры); сопливо и наивно (Дневник памяти); всё понятно заранее (Дневник памяти).\n  > Сегодня: Хочу, чтобы пробрало, Хочу подумать.\n  > Уже смотрел: 15, это не предложу."
+  },
+  {
+   "n": 12,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "note": "Да, подбирай",
+   "screen": {
+    "step": "result",
+    "title": "Вот что я подобрал",
+    "result": {
+     "top": {
+      "id": "tt0246578",
+      "domain": "film",
+      "name": "Donnie Darko",
+      "ru": "Донни Дарко",
+      "year": 2001,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Sci-Fi"
+      ],
+      "runtime": 113,
+      "seasons": null,
+      "episodes": null,
+      "status": null,
+      "rating": "IMDb 8",
+      "link": "https://www.imdb.com/title/tt0246578/",
+      "price": null,
+      "label": "likely",
+      "labelText": "Вероятно подойдёт",
+      "score": 12.084,
+      "parts": {
+       "fit": 10.201,
+       "penalty": 0.374,
+       "mood": 2.004,
+       "prior": 0.253
+      },
+      "mainAspect": "cognitive",
+      "explanation": {
+       "reasons": [
+        {
+         "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+         "factIds": [
+          "match:cognitive.high"
+         ]
+        },
+        {
+         "text": "Ты отметил «грустное, пробирает» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+         "factIds": [
+          "match:tone.melancholic"
+         ]
+        },
+        {
+         "text": "Ты отметил «сложный, надо вникать» в Вечное сияние чистого разума, здесь это тоже есть",
+         "factIds": [
+          "match:story.complex"
+         ]
+        },
+        {
+         "text": "Ты отметил «фантастика» в Она и Прибытие, здесь это тоже есть",
+         "factIds": [
+          "match:world.scifi"
+         ]
+        },
+        {
+         "text": "Как в Прибытие и Интерстеллар, здесь «путешествия во времени». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:world.timetravel"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Как в Вечное сияние чистого разума, Ла-Ла Ленд, Трудности перевода и Бегущий по лезвию 2049, здесь «стильно и необычно снято». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:aesthetic.stylized"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Под настроение «Хочу, чтобы пробрало»: «сильная актёрская игра»",
+         "factIds": [
+          "mood:characters.acting"
+         ]
+        }
+       ],
+       "risks": [
+        {
+         "text": "В Трансформеры тебе не понравилось: «сюжет с дырами». Здесь это тоже есть",
+         "factIds": [
+          "risk:dislike:story.weak"
+         ]
+        },
+        {
+         "text": "Зрители жалуются: слабый финал",
+         "factIds": [
+          "risk:flaw:ending.weak"
+         ]
+        }
+       ],
+       "info": [
+        {
+         "text": "IMDb 8 из 10, 923 247 оценок",
+         "factIds": [
+          "fact:reviews"
+         ]
+        },
+        {
+         "text": "113 мин",
+         "factIds": [
+          "fact:runtime"
+         ]
+        }
+       ]
+      },
+      "facts": [
+       {
+        "id": "match:cognitive.high",
+        "type": "match",
+        "f": "cognitive.high",
+        "basis": "confirmed",
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         },
+         {
+          "id": "genome:existentialism",
+          "kind": "genome",
+          "q": "existentialism",
+          "rel": 0.896
+         }
+        ],
+        "contribution": 1.5073339945778879
+       },
+       {
+        "id": "match:tone.melancholic",
+        "type": "match",
+        "f": "tone.melancholic",
+        "basis": "confirmed",
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "evidence": [
+         {
+          "id": "genome:bittersweet",
+          "kind": "genome",
+          "q": "bittersweet",
+          "rel": 0.68
+         },
+         {
+          "id": "genome:depressing",
+          "kind": "genome",
+          "q": "depressing",
+          "rel": 0.549
+         }
+        ],
+        "contribution": 1.0431611085397625
+       },
+       {
+        "id": "match:story.complex",
+        "type": "match",
+        "f": "story.complex",
+        "basis": "confirmed",
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         },
+         {
+          "id": "genome:complex",
+          "kind": "genome",
+          "q": "complex",
+          "rel": 0.945
+         }
+        ],
+        "contribution": 0.9987936535926664
+       },
+       {
+        "id": "match:world.scifi",
+        "type": "match",
+        "f": "world.scifi",
+        "basis": "confirmed",
+        "sources": [
+         "Она",
+         "Прибытие"
+        ],
+        "evidence": [
+         {
+          "id": "genome:future",
+          "kind": "genome",
+          "q": "future",
+          "rel": 0.566
+         },
+         {
+          "id": "genome:futuristic",
+          "kind": "genome",
+          "q": "futuristic",
+          "rel": 0.408
+         }
+        ],
+        "contribution": 0.8647248913781552
+       },
+       {
+        "id": "match:world.timetravel",
+        "type": "match",
+        "f": "world.timetravel",
+        "basis": "inferred",
+        "sources": [
+         "Прибытие",
+         "Интерстеллар"
+        ],
+        "evidence": [
+         {
+          "id": "genome:time loop",
+          "kind": "genome",
+          "q": "time loop",
+          "rel": 0.978
+         },
+         {
+          "id": "genome:time travel",
+          "kind": "genome",
+          "q": "time travel",
+          "rel": 0.843
+         }
+        ],
+        "contribution": 0.3953233852
+       },
+       {
+        "id": "match:aesthetic.stylized",
+        "type": "match",
+        "f": "aesthetic.stylized",
+        "basis": "inferred",
+        "sources": [
+         "Вечное сияние чистого разума",
+         "Ла-Ла Ленд",
+         "Трудности перевода",
+         "Бегущий по лезвию 2049"
+        ],
+        "evidence": [
+         {
+          "id": "genome:art house",
+          "kind": "genome",
+          "q": "art house",
+          "rel": 0.634
+         },
+         {
+          "id": "genome:artistic",
+          "kind": "genome",
+          "q": "artistic",
+          "rel": 0.566
+         }
+        ],
+        "contribution": 0.354247692
+       },
+       {
+        "id": "mood:characters.acting",
+        "type": "mood",
+        "f": "characters.acting",
+        "why": [
+         "Хочу, чтобы пробрало"
+        ],
+        "evidence": [
+         {
+          "id": "genome:exceptional acting",
+          "kind": "genome",
+          "q": "exceptional acting",
+          "rel": 0.596
+         }
+        ]
+       },
+       {
+        "id": "risk:dislike:story.weak",
+        "type": "risk_dislike",
+        "f": "story.weak",
+        "sources": [
+         "Трансформеры"
+        ],
+        "evidence": [
+         {
+          "id": "genome:plot holes",
+          "kind": "genome",
+          "q": "plot holes",
+          "rel": 0.564
+         }
+        ]
+       },
+       {
+        "id": "risk:flaw:ending.weak",
+        "type": "risk_flaw",
+        "f": "ending.weak",
+        "evidence": [
+         {
+          "id": "genome:bad ending",
+          "kind": "genome",
+          "q": "bad ending",
+          "rel": 0.786
+         }
+        ]
+       },
+       {
+        "id": "fact:reviews",
+        "type": "fact",
+        "ratio": 0.8,
+        "total": 923247,
+        "desc": "IMDb 8"
+       },
+       {
+        "id": "fact:runtime",
+        "type": "fact",
+        "runtime": 113
+       }
+      ]
+     },
+     "alternatives": [
+      {
+       "id": "tt0414993",
+       "domain": "film",
+       "name": "The Fountain",
+       "ru": "Фонтан",
+       "year": 2006,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/e/ee/Fountain_poster_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Mystery",
+        "Romance"
+       ],
+       "runtime": 97,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.1",
+       "link": "https://www.imdb.com/title/tt0414993/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 11.978,
+       "parts": {
+        "fit": 9.929,
+        "penalty": 0.009,
+        "mood": 1.907,
+        "prior": 0.151
+       },
+       "mainAspect": "cognitive",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:cognitive.high"
+          ]
+         },
+         {
+          "text": "Ты отметил «грустное, пробирает» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:tone.melancholic"
+          ]
+         },
+         {
+          "text": "Ты отметил «нелинейный сюжет» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:story.nonlinear"
+          ]
+         },
+         {
+          "text": "Ты отметил «сложный, надо вникать» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:story.complex"
+          ]
+         },
+         {
+          "text": "Как в Она, Прибытие, Перед рассветом, Трудности перевода и Бегущий по лезвию 2049, здесь «неторопливое». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:pace.slow"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Вечное сияние чистого разума, Ла-Ла Ленд, Трудности перевода и Бегущий по лезвию 2049, здесь «стильно и необычно снято». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу, чтобы пробрало»: «сильная актёрская игра»",
+          "factIds": [
+           "mood:characters.acting"
+          ]
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 7.1 из 10, 259 993 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "97 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.98
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.858
+          }
+         ],
+         "contribution": 1.5073339945778879
+        },
+        {
+         "id": "match:tone.melancholic",
+         "type": "match",
+         "f": "tone.melancholic",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.472
+          },
+          {
+           "id": "genome:depressing",
+           "kind": "genome",
+           "q": "depressing",
+           "rel": 0.524
+          }
+         ],
+         "contribution": 1.074316280679467
+        },
+        {
+         "id": "match:story.nonlinear",
+         "type": "match",
+         "f": "story.nonlinear",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:multiple storylines",
+           "kind": "genome",
+           "q": "multiple storylines",
+           "rel": 0.588
+          },
+          {
+           "id": "genome:non-linear",
+           "kind": "genome",
+           "q": "non-linear",
+           "rel": 0.814
+          }
+         ],
+         "contribution": 1.0211028629049144
+        },
+        {
+         "id": "match:story.complex",
+         "type": "match",
+         "f": "story.complex",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.98
+          },
+          {
+           "id": "genome:complex",
+           "kind": "genome",
+           "q": "complex",
+           "rel": 0.932
+          }
+         ],
+         "contribution": 0.9987936535926664
+        },
+        {
+         "id": "match:pace.slow",
+         "type": "match",
+         "f": "pace.slow",
+         "basis": "inferred",
+         "sources": [
+          "Она",
+          "Прибытие",
+          "Перед рассветом",
+          "Трудности перевода",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.642
+          },
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.907
+          }
+         ],
+         "contribution": 0.37109
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "inferred",
+         "sources": [
+          "Вечное сияние чистого разума",
+          "Ла-Ла Ленд",
+          "Трудности перевода",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.642
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.912
+          }
+         ],
+         "contribution": 0.2989432
+        },
+        {
+         "id": "mood:characters.acting",
+         "type": "mood",
+         "f": "characters.acting",
+         "why": [
+          "Хочу, чтобы пробрало"
+         ],
+         "evidence": [
+          {
+           "id": "genome:good acting",
+           "kind": "genome",
+           "q": "good acting",
+           "rel": 0.443
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.71,
+         "total": 259993,
+         "desc": "IMDb 7.1"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 97
+        }
+       ]
+      },
+      {
+       "id": "tt1334260",
+       "domain": "film",
+       "name": "Never Let Me Go",
+       "ru": "Не отпускай меня",
+       "year": 2010,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/a/a1/Neverletmegoposterquad.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Romance",
+        "Sci-Fi"
+       ],
+       "runtime": 103,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.1",
+       "link": "https://www.imdb.com/title/tt1334260/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 10.711,
+       "parts": {
+        "fit": 8.684,
+        "penalty": 0.062,
+        "mood": 1.945,
+        "prior": 0.144
+       },
+       "mainAspect": "cognitive",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:cognitive.high"
+          ]
+         },
+         {
+          "text": "Ты отметил «грустное, пробирает» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:tone.melancholic"
+          ]
+         },
+         {
+          "text": "Ты отметил «атмосферное» в Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «любовная линия» в Она и Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:characters.romance"
+          ]
+         },
+         {
+          "text": "Как в Она, Интерстеллар и Бегущий по лезвию 2049, здесь «антиутопия». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.dystopia"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Она, Вечное сияние чистого разума, Прибытие, Перед рассветом, Интерстеллар, Ла-Ла Ленд, Трудности перевода, Марсианин и Бегущий по лезвию 2049, здесь «сильная актёрская игра». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:characters.acting"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 7.1 из 10, 161 615 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "103 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.889
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.916
+          }
+         ],
+         "contribution": 1.5073339945778879
+        },
+        {
+         "id": "match:tone.melancholic",
+         "type": "match",
+         "f": "tone.melancholic",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.897
+          },
+          {
+           "id": "genome:depressing",
+           "kind": "genome",
+           "q": "depressing",
+           "rel": 0.893
+          }
+         ],
+         "contribution": 1.074316280679467
+        },
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.572
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 30
+          }
+         ],
+         "contribution": 0.9497710086089889
+        },
+        {
+         "id": "match:characters.romance",
+         "type": "match",
+         "f": "characters.romance",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:love story",
+           "kind": "genome",
+           "q": "love story",
+           "rel": 0.835
+          },
+          {
+           "id": "genome:love triangles",
+           "kind": "genome",
+           "q": "love triangles",
+           "rel": 0.406
+          }
+         ],
+         "contribution": 0.7104674415965428
+        },
+        {
+         "id": "match:world.dystopia",
+         "type": "match",
+         "f": "world.dystopia",
+         "basis": "inferred",
+         "sources": [
+          "Она",
+          "Интерстеллар",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:distopia",
+           "kind": "genome",
+           "q": "distopia",
+           "rel": 0.843
+          },
+          {
+           "id": "genome:dystopia",
+           "kind": "genome",
+           "q": "dystopia",
+           "rel": 0.849
+          }
+         ],
+         "contribution": 0.510896
+        },
+        {
+         "id": "match:characters.acting",
+         "type": "match",
+         "f": "characters.acting",
+         "basis": "inferred",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие",
+          "Перед рассветом",
+          "Интерстеллар",
+          "Ла-Ла Ленд",
+          "Трудности перевода",
+          "Марсианин",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:good acting",
+           "kind": "genome",
+           "q": "good acting",
+           "rel": 0.721
+          },
+          {
+           "id": "genome:great acting",
+           "kind": "genome",
+           "q": "great acting",
+           "rel": 0.868
+          }
+         ],
+         "contribution": 0.34649450000000004
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.889
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.71,
+         "total": 161615,
+         "desc": "IMDb 7.1"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 103
+        }
+       ]
+      },
+      {
+       "id": "tt0137523",
+       "domain": "film",
+       "name": "Fight Club",
+       "ru": "Бойцовский клуб",
+       "year": 1999,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+       ],
+       "runtime": 139,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 8.8",
+       "link": "https://www.imdb.com/title/tt0137523/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 10.974,
+       "parts": {
+        "fit": 9.033,
+        "penalty": 0.04,
+        "mood": 1.639,
+        "prior": 0.342
+       },
+       "mainAspect": "cognitive",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:cognitive.high"
+          ]
+         },
+         {
+          "text": "Ты отметил «сложный, надо вникать» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:story.complex"
+          ]
+         },
+         {
+          "text": "Ты отметил «нелинейный сюжет» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:story.nonlinear"
+          ]
+         },
+         {
+          "text": "Ты отметил «странное, причудливое» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:tone.whimsical"
+          ]
+         },
+         {
+          "text": "Как в Она, Интерстеллар и Бегущий по лезвию 2049, здесь «антиутопия». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.dystopia"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Вечное сияние чистого разума, Ла-Ла Ленд, Трудности перевода и Бегущий по лезвию 2049, здесь «стильно и необычно снято». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу, чтобы пробрало»: «грустное, пробирает»",
+          "factIds": [
+           "mood:tone.melancholic"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу, чтобы пробрало»: «сильная актёрская игра»",
+          "factIds": [
+           "mood:characters.acting"
+          ]
+         }
+        ],
+        "risks": [
+         {
+          "text": "Сегодня ты просил другое («Хочу подумать»), а здесь «можно смотреть не напрягаясь»",
+          "factIds": [
+           "risk:mood:cognitive.low"
+          ]
+         },
+         {
+          "text": "Зрители жалуются: слабый финал",
+          "factIds": [
+           "risk:flaw:ending.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 8.8 из 10, 2 674 630 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "139 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.857
+          }
+         ],
+         "contribution": 1.5073339945778879
+        },
+        {
+         "id": "match:story.complex",
+         "type": "match",
+         "f": "story.complex",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:complex",
+           "kind": "genome",
+           "q": "complex",
+           "rel": 0.911
+          }
+         ],
+         "contribution": 0.9987936535926664
+        },
+        {
+         "id": "match:story.nonlinear",
+         "type": "match",
+         "f": "story.nonlinear",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:alternate endings",
+           "kind": "genome",
+           "q": "alternate endings",
+           "rel": 0.481
+          },
+          {
+           "id": "genome:multiple storylines",
+           "kind": "genome",
+           "q": "multiple storylines",
+           "rel": 0.482
+          }
+         ],
+         "contribution": 0.8874010975419302
+        },
+        {
+         "id": "match:tone.whimsical",
+         "type": "match",
+         "f": "tone.whimsical",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bizarre",
+           "kind": "genome",
+           "q": "bizarre",
+           "rel": 0.672
+          },
+          {
+           "id": "genome:off-beat comedy",
+           "kind": "genome",
+           "q": "off-beat comedy",
+           "rel": 0.352
+          }
+         ],
+         "contribution": 0.8422321769997656
+        },
+        {
+         "id": "match:world.dystopia",
+         "type": "match",
+         "f": "world.dystopia",
+         "basis": "inferred",
+         "sources": [
+          "Она",
+          "Интерстеллар",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:distopia",
+           "kind": "genome",
+           "q": "distopia",
+           "rel": 0.613
+          },
+          {
+           "id": "genome:dystopia",
+           "kind": "genome",
+           "q": "dystopia",
+           "rel": 0.726
+          }
+         ],
+         "contribution": 0.384193792
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "inferred",
+         "sources": [
+          "Вечное сияние чистого разума",
+          "Ла-Ла Ленд",
+          "Трудности перевода",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.585
+          },
+          {
+           "id": "genome:stylish",
+           "kind": "genome",
+           "q": "stylish",
+           "rel": 0.905
+          }
+         ],
+         "contribution": 0.373679
+        },
+        {
+         "id": "mood:tone.melancholic",
+         "type": "mood",
+         "f": "tone.melancholic",
+         "why": [
+          "Хочу, чтобы пробрало"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.379
+          }
+         ]
+        },
+        {
+         "id": "mood:characters.acting",
+         "type": "mood",
+         "f": "characters.acting",
+         "why": [
+          "Хочу, чтобы пробрало"
+         ],
+         "evidence": [
+          {
+           "id": "genome:exceptional acting",
+           "kind": "genome",
+           "q": "exceptional acting",
+           "rel": 0.801
+          }
+         ]
+        },
+        {
+         "id": "risk:mood:cognitive.low",
+         "type": "risk_mood",
+         "f": "cognitive.low",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:entertaining",
+           "kind": "genome",
+           "q": "entertaining",
+           "rel": 0.757
+          }
+         ]
+        },
+        {
+         "id": "risk:flaw:ending.weak",
+         "type": "risk_flaw",
+         "f": "ending.weak",
+         "evidence": [
+          {
+           "id": "genome:bad ending",
+           "kind": "genome",
+           "q": "bad ending",
+           "rel": 0.574
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.88,
+         "total": 2674630,
+         "desc": "IMDb 8.8"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 139
+        }
+       ]
+      }
+     ],
+     "fork": {
+      "id": "fork:characters.antihero|world.space",
+      "text": "Что тебе важнее?",
+      "options": [
+       {
+        "f": "characters.antihero",
+        "label": "антигерой",
+        "favours": "tt0246578"
+       },
+       {
+        "f": "world.space",
+        "label": "космос",
+        "favours": "tt0414993"
+       }
+      ],
+      "margin": 0.10625975160879264
+     },
+     "sieves": [
+      {
+       "id": 1,
+       "name": "Можно ли",
+       "removed": 0
+      },
+      {
+       "id": 2,
+       "name": "Было ли",
+       "removed": 15
+      },
+      {
+       "id": 3,
+       "name": "Сделано ли нормально",
+       "removed": 10286
+      },
+      {
+       "id": 4,
+       "name": "Моё ли (жёсткие стопы)",
+       "removed": 0
+      },
+      {
+       "id": 5,
+       "name": "Подходит ли сегодня (обязательное)",
+       "removed": 0
+      }
+     ],
+     "considered": 21825,
+     "taste": {
+      "confirmed": [
+       {
+        "f": "cognitive.high",
+        "label": "заставляет думать",
+        "w": 2.15,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.melancholic",
+        "label": "грустное, пробирает",
+        "w": 1.65,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.romance",
+        "label": "любовная линия",
+        "w": 1.38,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.complex",
+        "label": "сложный, надо вникать",
+        "w": 1.32,
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.whimsical",
+        "label": "странное, причудливое",
+        "w": 1.32,
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.scifi",
+        "label": "фантастика",
+        "w": 1.23,
+        "sources": [
+         "Она",
+         "Прибытие"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.atmospheric",
+        "label": "атмосферное",
+        "w": 1.11,
+        "sources": [
+         "Прибытие"
+        ],
+        "ids": [
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.nonlinear",
+        "label": "нелинейный сюжет",
+        "w": 1,
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.twist",
+        "label": "неожиданные повороты",
+        "w": 0.89,
+        "sources": [
+         "Прибытие"
+        ],
+        "ids": [
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.beautiful",
+        "label": "красивая картинка",
+        "w": 0.82,
+        "sources": [
+         "Она"
+        ],
+        "ids": [
+         "tt1798709"
+        ],
+        "preference": false
+       }
+      ],
+      "inferred": [
+       {
+        "f": "pace.slow",
+        "label": "неторопливое",
+        "w": 0.5,
+        "sources": [
+         "Она",
+         "Прибытие",
+         "Перед рассветом",
+         "Трудности перевода",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt2543164",
+         "tt0112471",
+         "tt0335266",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.dystopia",
+        "label": "антиутопия",
+        "w": 0.5,
+        "sources": [
+         "Она",
+         "Интерстеллар",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0816692",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.acting",
+        "label": "сильная актёрская игра",
+        "w": 0.5,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие",
+         "Перед рассветом",
+         "Интерстеллар",
+         "Ла-Ла Ленд",
+         "Трудности перевода",
+         "Марсианин",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt2543164",
+         "tt0112471",
+         "tt0816692",
+         "tt3783958",
+         "tt0335266",
+         "tt3659388",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.stylized",
+        "label": "стильно и необычно снято",
+        "w": 0.5,
+        "sources": [
+         "Вечное сияние чистого разума",
+         "Ла-Ла Ленд",
+         "Трудности перевода",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt0338013",
+         "tt3783958",
+         "tt0335266",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.dark",
+        "label": "мрачная атмосфера",
+        "w": 0.4,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "length.long",
+        "label": "длинный",
+        "w": 0.4,
+        "sources": [
+         "Интерстеллар",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.memorable",
+        "label": "живые, сложные персонажи",
+        "w": 0.38,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Трудности перевода"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt0335266"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.timetravel",
+        "label": "путешествия во времени",
+        "w": 0.35,
+        "sources": [
+         "Прибытие",
+         "Интерстеллар"
+        ],
+        "ids": [
+         "tt2543164",
+         "tt0816692"
+        ],
+        "preference": false
+       }
+      ],
+      "dislikes": [
+       {
+        "f": "story.weak",
+        "label": "сюжет с дырами",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.effects",
+        "label": "одни спецэффекты, а смотреть нечего",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "humor.silly",
+        "label": "тупые шутки",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.unlikeable",
+        "label": "герои бесили",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.cheesy",
+        "label": "сопливо и наивно",
+        "w": 1,
+        "sources": [
+         "Дневник памяти"
+        ],
+        "ids": [
+         "tt0332280"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.predictable",
+        "label": "всё понятно заранее",
+        "w": 1,
+        "sources": [
+         "Дневник памяти"
+        ],
+        "ids": [
+         "tt0332280"
+        ],
+        "preference": false
+       }
+      ],
+      "hardNo": [],
+      "consumed": 15
+     }
+    }
+   }
+  },
+  {
+   "note": "fork: «Что тебе важнее?» антигерой / космос → persona answers world.space"
+  },
+  {
+   "n": 13,
+   "action": {
+    "type": "fork",
+    "f": "world.space"
+   },
+   "note": "ответ на развилку",
+   "screen": {
+    "step": "result",
+    "title": "Вот что я подобрал",
+    "result": {
+     "top": {
+      "id": "tt0414993",
+      "domain": "film",
+      "name": "The Fountain",
+      "ru": "Фонтан",
+      "year": 2006,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/e/ee/Fountain_poster_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Romance"
+      ],
+      "runtime": 97,
+      "seasons": null,
+      "episodes": null,
+      "status": null,
+      "rating": "IMDb 7.1",
+      "link": "https://www.imdb.com/title/tt0414993/",
+      "price": null,
+      "label": "likely",
+      "labelText": "Вероятно подойдёт",
+      "score": 12.459,
+      "parts": {
+       "fit": 10.41,
+       "penalty": 0.009,
+       "mood": 1.907,
+       "prior": 0.151
+      },
+      "mainAspect": "cognitive",
+      "explanation": {
+       "reasons": [
+        {
+         "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+         "factIds": [
+          "match:cognitive.high"
+         ]
+        },
+        {
+         "text": "Ты отметил «грустное, пробирает» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+         "factIds": [
+          "match:tone.melancholic"
+         ]
+        },
+        {
+         "text": "Ты отметил «нелинейный сюжет» в Вечное сияние чистого разума, здесь это тоже есть",
+         "factIds": [
+          "match:story.nonlinear"
+         ]
+        },
+        {
+         "text": "Ты отметил «сложный, надо вникать» в Вечное сияние чистого разума, здесь это тоже есть",
+         "factIds": [
+          "match:story.complex"
+         ]
+        },
+        {
+         "text": "Как в Она, Прибытие, Перед рассветом, Трудности перевода и Бегущий по лезвию 2049, здесь «неторопливое». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:pace.slow"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Как в Вечное сияние чистого разума, Ла-Ла Ленд, Трудности перевода и Бегущий по лезвию 2049, здесь «стильно и необычно снято». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:aesthetic.stylized"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Под настроение «Хочу, чтобы пробрало»: «сильная актёрская игра»",
+         "factIds": [
+          "mood:characters.acting"
+         ]
+        }
+       ],
+       "risks": [],
+       "info": [
+        {
+         "text": "IMDb 7.1 из 10, 259 993 оценок",
+         "factIds": [
+          "fact:reviews"
+         ]
+        },
+        {
+         "text": "97 мин",
+         "factIds": [
+          "fact:runtime"
+         ]
+        }
+       ]
+      },
+      "facts": [
+       {
+        "id": "match:cognitive.high",
+        "type": "match",
+        "f": "cognitive.high",
+        "basis": "confirmed",
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.98
+         },
+         {
+          "id": "genome:existentialism",
+          "kind": "genome",
+          "q": "existentialism",
+          "rel": 0.858
+         }
+        ],
+        "contribution": 1.5073339945778879
+       },
+       {
+        "id": "match:tone.melancholic",
+        "type": "match",
+        "f": "tone.melancholic",
+        "basis": "confirmed",
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "evidence": [
+         {
+          "id": "genome:bittersweet",
+          "kind": "genome",
+          "q": "bittersweet",
+          "rel": 0.472
+         },
+         {
+          "id": "genome:depressing",
+          "kind": "genome",
+          "q": "depressing",
+          "rel": 0.524
+         }
+        ],
+        "contribution": 1.074316280679467
+       },
+       {
+        "id": "match:story.nonlinear",
+        "type": "match",
+        "f": "story.nonlinear",
+        "basis": "confirmed",
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "evidence": [
+         {
+          "id": "genome:multiple storylines",
+          "kind": "genome",
+          "q": "multiple storylines",
+          "rel": 0.588
+         },
+         {
+          "id": "genome:non-linear",
+          "kind": "genome",
+          "q": "non-linear",
+          "rel": 0.814
+         }
+        ],
+        "contribution": 1.0211028629049144
+       },
+       {
+        "id": "match:story.complex",
+        "type": "match",
+        "f": "story.complex",
+        "basis": "confirmed",
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.98
+         },
+         {
+          "id": "genome:complex",
+          "kind": "genome",
+          "q": "complex",
+          "rel": 0.932
+         }
+        ],
+        "contribution": 0.9987936535926664
+       },
+       {
+        "id": "match:pace.slow",
+        "type": "match",
+        "f": "pace.slow",
+        "basis": "inferred",
+        "sources": [
+         "Она",
+         "Прибытие",
+         "Перед рассветом",
+         "Трудности перевода",
+         "Бегущий по лезвию 2049"
+        ],
+        "evidence": [
+         {
+          "id": "genome:art house",
+          "kind": "genome",
+          "q": "art house",
+          "rel": 0.642
+         },
+         {
+          "id": "genome:meditative",
+          "kind": "genome",
+          "q": "meditative",
+          "rel": 0.907
+         }
+        ],
+        "contribution": 0.37109
+       },
+       {
+        "id": "match:aesthetic.stylized",
+        "type": "match",
+        "f": "aesthetic.stylized",
+        "basis": "inferred",
+        "sources": [
+         "Вечное сияние чистого разума",
+         "Ла-Ла Ленд",
+         "Трудности перевода",
+         "Бегущий по лезвию 2049"
+        ],
+        "evidence": [
+         {
+          "id": "genome:art house",
+          "kind": "genome",
+          "q": "art house",
+          "rel": 0.642
+         },
+         {
+          "id": "genome:artistic",
+          "kind": "genome",
+          "q": "artistic",
+          "rel": 0.912
+         }
+        ],
+        "contribution": 0.2989432
+       },
+       {
+        "id": "mood:characters.acting",
+        "type": "mood",
+        "f": "characters.acting",
+        "why": [
+         "Хочу, чтобы пробрало"
+        ],
+        "evidence": [
+         {
+          "id": "genome:good acting",
+          "kind": "genome",
+          "q": "good acting",
+          "rel": 0.443
+         }
+        ]
+       },
+       {
+        "id": "fact:reviews",
+        "type": "fact",
+        "ratio": 0.71,
+        "total": 259993,
+        "desc": "IMDb 7.1"
+       },
+       {
+        "id": "fact:runtime",
+        "type": "fact",
+        "runtime": 97
+       }
+      ]
+     },
+     "alternatives": [
+      {
+       "id": "tt0246578",
+       "domain": "film",
+       "name": "Donnie Darko",
+       "ru": "Донни Дарко",
+       "year": 2001,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+       ],
+       "runtime": 113,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 8",
+       "link": "https://www.imdb.com/title/tt0246578/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 12.084,
+       "parts": {
+        "fit": 10.201,
+        "penalty": 0.374,
+        "mood": 2.004,
+        "prior": 0.253
+       },
+       "mainAspect": "cognitive",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:cognitive.high"
+          ]
+         },
+         {
+          "text": "Ты отметил «грустное, пробирает» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:tone.melancholic"
+          ]
+         },
+         {
+          "text": "Ты отметил «сложный, надо вникать» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:story.complex"
+          ]
+         },
+         {
+          "text": "Ты отметил «фантастика» в Она и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:world.scifi"
+          ]
+         },
+         {
+          "text": "Как в Прибытие и Интерстеллар, здесь «путешествия во времени». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.timetravel"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Вечное сияние чистого разума, Ла-Ла Ленд, Трудности перевода и Бегущий по лезвию 2049, здесь «стильно и необычно снято». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу, чтобы пробрало»: «сильная актёрская игра»",
+          "factIds": [
+           "mood:characters.acting"
+          ]
+         }
+        ],
+        "risks": [
+         {
+          "text": "В Трансформеры тебе не понравилось: «сюжет с дырами». Здесь это тоже есть",
+          "factIds": [
+           "risk:dislike:story.weak"
+          ]
+         },
+         {
+          "text": "Зрители жалуются: слабый финал",
+          "factIds": [
+           "risk:flaw:ending.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 8 из 10, 923 247 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "113 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.896
+          }
+         ],
+         "contribution": 1.5073339945778879
+        },
+        {
+         "id": "match:tone.melancholic",
+         "type": "match",
+         "f": "tone.melancholic",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.68
+          },
+          {
+           "id": "genome:depressing",
+           "kind": "genome",
+           "q": "depressing",
+           "rel": 0.549
+          }
+         ],
+         "contribution": 1.0431611085397625
+        },
+        {
+         "id": "match:story.complex",
+         "type": "match",
+         "f": "story.complex",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:complex",
+           "kind": "genome",
+           "q": "complex",
+           "rel": 0.945
+          }
+         ],
+         "contribution": 0.9987936535926664
+        },
+        {
+         "id": "match:world.scifi",
+         "type": "match",
+         "f": "world.scifi",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:future",
+           "kind": "genome",
+           "q": "future",
+           "rel": 0.566
+          },
+          {
+           "id": "genome:futuristic",
+           "kind": "genome",
+           "q": "futuristic",
+           "rel": 0.408
+          }
+         ],
+         "contribution": 0.8647248913781552
+        },
+        {
+         "id": "match:world.timetravel",
+         "type": "match",
+         "f": "world.timetravel",
+         "basis": "inferred",
+         "sources": [
+          "Прибытие",
+          "Интерстеллар"
+         ],
+         "evidence": [
+          {
+           "id": "genome:time loop",
+           "kind": "genome",
+           "q": "time loop",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:time travel",
+           "kind": "genome",
+           "q": "time travel",
+           "rel": 0.843
+          }
+         ],
+         "contribution": 0.3953233852
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "inferred",
+         "sources": [
+          "Вечное сияние чистого разума",
+          "Ла-Ла Ленд",
+          "Трудности перевода",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.634
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.566
+          }
+         ],
+         "contribution": 0.354247692
+        },
+        {
+         "id": "mood:characters.acting",
+         "type": "mood",
+         "f": "characters.acting",
+         "why": [
+          "Хочу, чтобы пробрало"
+         ],
+         "evidence": [
+          {
+           "id": "genome:exceptional acting",
+           "kind": "genome",
+           "q": "exceptional acting",
+           "rel": 0.596
+          }
+         ]
+        },
+        {
+         "id": "risk:dislike:story.weak",
+         "type": "risk_dislike",
+         "f": "story.weak",
+         "sources": [
+          "Трансформеры"
+         ],
+         "evidence": [
+          {
+           "id": "genome:plot holes",
+           "kind": "genome",
+           "q": "plot holes",
+           "rel": 0.564
+          }
+         ]
+        },
+        {
+         "id": "risk:flaw:ending.weak",
+         "type": "risk_flaw",
+         "f": "ending.weak",
+         "evidence": [
+          {
+           "id": "genome:bad ending",
+           "kind": "genome",
+           "q": "bad ending",
+           "rel": 0.786
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.8,
+         "total": 923247,
+         "desc": "IMDb 8"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 113
+        }
+       ]
+      },
+      {
+       "id": "tt1334260",
+       "domain": "film",
+       "name": "Never Let Me Go",
+       "ru": "Не отпускай меня",
+       "year": 2010,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/a/a1/Neverletmegoposterquad.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Romance",
+        "Sci-Fi"
+       ],
+       "runtime": 103,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.1",
+       "link": "https://www.imdb.com/title/tt1334260/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 10.711,
+       "parts": {
+        "fit": 8.684,
+        "penalty": 0.062,
+        "mood": 1.945,
+        "prior": 0.144
+       },
+       "mainAspect": "cognitive",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:cognitive.high"
+          ]
+         },
+         {
+          "text": "Ты отметил «грустное, пробирает» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:tone.melancholic"
+          ]
+         },
+         {
+          "text": "Ты отметил «атмосферное» в Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «любовная линия» в Она и Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:characters.romance"
+          ]
+         },
+         {
+          "text": "Как в Она, Интерстеллар и Бегущий по лезвию 2049, здесь «антиутопия». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.dystopia"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Она, Вечное сияние чистого разума, Прибытие, Перед рассветом, Интерстеллар, Ла-Ла Ленд, Трудности перевода, Марсианин и Бегущий по лезвию 2049, здесь «сильная актёрская игра». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:characters.acting"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 7.1 из 10, 161 615 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "103 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.889
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.916
+          }
+         ],
+         "contribution": 1.5073339945778879
+        },
+        {
+         "id": "match:tone.melancholic",
+         "type": "match",
+         "f": "tone.melancholic",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.897
+          },
+          {
+           "id": "genome:depressing",
+           "kind": "genome",
+           "q": "depressing",
+           "rel": 0.893
+          }
+         ],
+         "contribution": 1.074316280679467
+        },
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.572
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 30
+          }
+         ],
+         "contribution": 0.9497710086089889
+        },
+        {
+         "id": "match:characters.romance",
+         "type": "match",
+         "f": "characters.romance",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:love story",
+           "kind": "genome",
+           "q": "love story",
+           "rel": 0.835
+          },
+          {
+           "id": "genome:love triangles",
+           "kind": "genome",
+           "q": "love triangles",
+           "rel": 0.406
+          }
+         ],
+         "contribution": 0.7104674415965428
+        },
+        {
+         "id": "match:world.dystopia",
+         "type": "match",
+         "f": "world.dystopia",
+         "basis": "inferred",
+         "sources": [
+          "Она",
+          "Интерстеллар",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:distopia",
+           "kind": "genome",
+           "q": "distopia",
+           "rel": 0.843
+          },
+          {
+           "id": "genome:dystopia",
+           "kind": "genome",
+           "q": "dystopia",
+           "rel": 0.849
+          }
+         ],
+         "contribution": 0.510896
+        },
+        {
+         "id": "match:characters.acting",
+         "type": "match",
+         "f": "characters.acting",
+         "basis": "inferred",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие",
+          "Перед рассветом",
+          "Интерстеллар",
+          "Ла-Ла Ленд",
+          "Трудности перевода",
+          "Марсианин",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:good acting",
+           "kind": "genome",
+           "q": "good acting",
+           "rel": 0.721
+          },
+          {
+           "id": "genome:great acting",
+           "kind": "genome",
+           "q": "great acting",
+           "rel": 0.868
+          }
+         ],
+         "contribution": 0.34649450000000004
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.889
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.71,
+         "total": 161615,
+         "desc": "IMDb 7.1"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 103
+        }
+       ]
+      },
+      {
+       "id": "tt0137523",
+       "domain": "film",
+       "name": "Fight Club",
+       "ru": "Бойцовский клуб",
+       "year": 1999,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+       ],
+       "runtime": 139,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 8.8",
+       "link": "https://www.imdb.com/title/tt0137523/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 10.974,
+       "parts": {
+        "fit": 9.033,
+        "penalty": 0.04,
+        "mood": 1.639,
+        "prior": 0.342
+       },
+       "mainAspect": "cognitive",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «заставляет думать» в Она, Вечное сияние чистого разума и Прибытие, здесь это тоже есть",
+          "factIds": [
+           "match:cognitive.high"
+          ]
+         },
+         {
+          "text": "Ты отметил «сложный, надо вникать» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:story.complex"
+          ]
+         },
+         {
+          "text": "Ты отметил «нелинейный сюжет» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:story.nonlinear"
+          ]
+         },
+         {
+          "text": "Ты отметил «странное, причудливое» в Вечное сияние чистого разума, здесь это тоже есть",
+          "factIds": [
+           "match:tone.whimsical"
+          ]
+         },
+         {
+          "text": "Как в Она, Интерстеллар и Бегущий по лезвию 2049, здесь «антиутопия». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:world.dystopia"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Вечное сияние чистого разума, Ла-Ла Ленд, Трудности перевода и Бегущий по лезвию 2049, здесь «стильно и необычно снято». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу, чтобы пробрало»: «грустное, пробирает»",
+          "factIds": [
+           "mood:tone.melancholic"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу, чтобы пробрало»: «сильная актёрская игра»",
+          "factIds": [
+           "mood:characters.acting"
+          ]
+         }
+        ],
+        "risks": [
+         {
+          "text": "Сегодня ты просил другое («Хочу подумать»), а здесь «можно смотреть не напрягаясь»",
+          "factIds": [
+           "risk:mood:cognitive.low"
+          ]
+         },
+         {
+          "text": "Зрители жалуются: слабый финал",
+          "factIds": [
+           "risk:flaw:ending.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 8.8 из 10, 2 674 630 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "139 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "confirmed",
+         "sources": [
+          "Она",
+          "Вечное сияние чистого разума",
+          "Прибытие"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.857
+          }
+         ],
+         "contribution": 1.5073339945778879
+        },
+        {
+         "id": "match:story.complex",
+         "type": "match",
+         "f": "story.complex",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:complex",
+           "kind": "genome",
+           "q": "complex",
+           "rel": 0.911
+          }
+         ],
+         "contribution": 0.9987936535926664
+        },
+        {
+         "id": "match:story.nonlinear",
+         "type": "match",
+         "f": "story.nonlinear",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:alternate endings",
+           "kind": "genome",
+           "q": "alternate endings",
+           "rel": 0.481
+          },
+          {
+           "id": "genome:multiple storylines",
+           "kind": "genome",
+           "q": "multiple storylines",
+           "rel": 0.482
+          }
+         ],
+         "contribution": 0.8874010975419302
+        },
+        {
+         "id": "match:tone.whimsical",
+         "type": "match",
+         "f": "tone.whimsical",
+         "basis": "confirmed",
+         "sources": [
+          "Вечное сияние чистого разума"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bizarre",
+           "kind": "genome",
+           "q": "bizarre",
+           "rel": 0.672
+          },
+          {
+           "id": "genome:off-beat comedy",
+           "kind": "genome",
+           "q": "off-beat comedy",
+           "rel": 0.352
+          }
+         ],
+         "contribution": 0.8422321769997656
+        },
+        {
+         "id": "match:world.dystopia",
+         "type": "match",
+         "f": "world.dystopia",
+         "basis": "inferred",
+         "sources": [
+          "Она",
+          "Интерстеллар",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:distopia",
+           "kind": "genome",
+           "q": "distopia",
+           "rel": 0.613
+          },
+          {
+           "id": "genome:dystopia",
+           "kind": "genome",
+           "q": "dystopia",
+           "rel": 0.726
+          }
+         ],
+         "contribution": 0.384193792
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "inferred",
+         "sources": [
+          "Вечное сияние чистого разума",
+          "Ла-Ла Ленд",
+          "Трудности перевода",
+          "Бегущий по лезвию 2049"
+         ],
+         "evidence": [
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.585
+          },
+          {
+           "id": "genome:stylish",
+           "kind": "genome",
+           "q": "stylish",
+           "rel": 0.905
+          }
+         ],
+         "contribution": 0.373679
+        },
+        {
+         "id": "mood:tone.melancholic",
+         "type": "mood",
+         "f": "tone.melancholic",
+         "why": [
+          "Хочу, чтобы пробрало"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.379
+          }
+         ]
+        },
+        {
+         "id": "mood:characters.acting",
+         "type": "mood",
+         "f": "characters.acting",
+         "why": [
+          "Хочу, чтобы пробрало"
+         ],
+         "evidence": [
+          {
+           "id": "genome:exceptional acting",
+           "kind": "genome",
+           "q": "exceptional acting",
+           "rel": 0.801
+          }
+         ]
+        },
+        {
+         "id": "risk:mood:cognitive.low",
+         "type": "risk_mood",
+         "f": "cognitive.low",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:entertaining",
+           "kind": "genome",
+           "q": "entertaining",
+           "rel": 0.757
+          }
+         ]
+        },
+        {
+         "id": "risk:flaw:ending.weak",
+         "type": "risk_flaw",
+         "f": "ending.weak",
+         "evidence": [
+          {
+           "id": "genome:bad ending",
+           "kind": "genome",
+           "q": "bad ending",
+           "rel": 0.574
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.88,
+         "total": 2674630,
+         "desc": "IMDb 8.8"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 139
+        }
+       ]
+      }
+     ],
+     "fork": {
+      "id": "fork:tension.low|characters.antihero",
+      "text": "Что тебе важнее?",
+      "options": [
+       {
+        "f": "tension.low",
+        "label": "спокойное, без нервов",
+        "favours": "tt0414993"
+       },
+       {
+        "f": "characters.antihero",
+        "label": "антигерой",
+        "favours": "tt0246578"
+       }
+      ],
+      "margin": 0.374771791764573
+     },
+     "sieves": [
+      {
+       "id": 1,
+       "name": "Можно ли",
+       "removed": 0
+      },
+      {
+       "id": 2,
+       "name": "Было ли",
+       "removed": 15
+      },
+      {
+       "id": 3,
+       "name": "Сделано ли нормально",
+       "removed": 10286
+      },
+      {
+       "id": 4,
+       "name": "Моё ли (жёсткие стопы)",
+       "removed": 0
+      },
+      {
+       "id": 5,
+       "name": "Подходит ли сегодня (обязательное)",
+       "removed": 0
+      }
+     ],
+     "considered": 21825,
+     "taste": {
+      "confirmed": [
+       {
+        "f": "cognitive.high",
+        "label": "заставляет думать",
+        "w": 2.15,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.melancholic",
+        "label": "грустное, пробирает",
+        "w": 1.65,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.romance",
+        "label": "любовная линия",
+        "w": 1.38,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.complex",
+        "label": "сложный, надо вникать",
+        "w": 1.32,
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.whimsical",
+        "label": "странное, причудливое",
+        "w": 1.32,
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.scifi",
+        "label": "фантастика",
+        "w": 1.23,
+        "sources": [
+         "Она",
+         "Прибытие"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.atmospheric",
+        "label": "атмосферное",
+        "w": 1.11,
+        "sources": [
+         "Прибытие"
+        ],
+        "ids": [
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.nonlinear",
+        "label": "нелинейный сюжет",
+        "w": 1,
+        "sources": [
+         "Вечное сияние чистого разума"
+        ],
+        "ids": [
+         "tt0338013"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.twist",
+        "label": "неожиданные повороты",
+        "w": 0.89,
+        "sources": [
+         "Прибытие"
+        ],
+        "ids": [
+         "tt2543164"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.beautiful",
+        "label": "красивая картинка",
+        "w": 0.82,
+        "sources": [
+         "Она"
+        ],
+        "ids": [
+         "tt1798709"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.space",
+        "label": "космос",
+        "w": 0.61,
+        "sources": [],
+        "ids": [],
+        "preference": true
+       }
+      ],
+      "inferred": [
+       {
+        "f": "pace.slow",
+        "label": "неторопливое",
+        "w": 0.5,
+        "sources": [
+         "Она",
+         "Прибытие",
+         "Перед рассветом",
+         "Трудности перевода",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt2543164",
+         "tt0112471",
+         "tt0335266",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.dystopia",
+        "label": "антиутопия",
+        "w": 0.5,
+        "sources": [
+         "Она",
+         "Интерстеллар",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0816692",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.acting",
+        "label": "сильная актёрская игра",
+        "w": 0.5,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Прибытие",
+         "Перед рассветом",
+         "Интерстеллар",
+         "Ла-Ла Ленд",
+         "Трудности перевода",
+         "Марсианин",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt2543164",
+         "tt0112471",
+         "tt0816692",
+         "tt3783958",
+         "tt0335266",
+         "tt3659388",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.stylized",
+        "label": "стильно и необычно снято",
+        "w": 0.5,
+        "sources": [
+         "Вечное сияние чистого разума",
+         "Ла-Ла Ленд",
+         "Трудности перевода",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt0338013",
+         "tt3783958",
+         "tt0335266",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.dark",
+        "label": "мрачная атмосфера",
+        "w": 0.4,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "length.long",
+        "label": "длинный",
+        "w": 0.4,
+        "sources": [
+         "Интерстеллар",
+         "Бегущий по лезвию 2049"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt1856101"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.memorable",
+        "label": "живые, сложные персонажи",
+        "w": 0.38,
+        "sources": [
+         "Она",
+         "Вечное сияние чистого разума",
+         "Трудности перевода"
+        ],
+        "ids": [
+         "tt1798709",
+         "tt0338013",
+         "tt0335266"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.timetravel",
+        "label": "путешествия во времени",
+        "w": 0.35,
+        "sources": [
+         "Прибытие",
+         "Интерстеллар"
+        ],
+        "ids": [
+         "tt2543164",
+         "tt0816692"
+        ],
+        "preference": false
+       }
+      ],
+      "dislikes": [
+       {
+        "f": "story.weak",
+        "label": "сюжет с дырами",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.effects",
+        "label": "одни спецэффекты, а смотреть нечего",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "humor.silly",
+        "label": "тупые шутки",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.unlikeable",
+        "label": "герои бесили",
+        "w": 1,
+        "sources": [
+         "Трансформеры"
+        ],
+        "ids": [
+         "tt0418279"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.cheesy",
+        "label": "сопливо и наивно",
+        "w": 1,
+        "sources": [
+         "Дневник памяти"
+        ],
+        "ids": [
+         "tt0332280"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.predictable",
+        "label": "всё понятно заранее",
+        "w": 1,
+        "sources": [
+         "Дневник памяти"
+        ],
+        "ids": [
+         "tt0332280"
+        ],
+        "preference": false
+       }
+      ],
+      "hardNo": [],
+      "consumed": 15
+     }
+    }
+   }
+  }
+ ],
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [
+   "genre:Drama",
+   "genre:Romance",
+   "genre:Sci-Fi"
+  ],
+  "shown": [
+   "tt1853728",
+   "tt0080684",
+   "tt0169547",
+   "tt0816692",
+   "tt0167404",
+   "tt2395427",
+   "tt0253474",
+   "tt4154796",
+   "tt0088763",
+   "tt2278388",
+   "tt1375666",
+   "tt0137523",
+   "tt0111161",
+   "tt0109830",
+   "tt0090605",
+   "tt0110912"
+  ],
+  "liked": [
+   "tt1798709",
+   "tt0338013",
+   "tt2543164"
+  ],
+  "disliked": [
+   "tt0418279",
+   "tt0332280"
+  ],
+  "whyIndex": 0,
+  "answers": {
+   "tt1798709": {
+    "reaction": "love",
+    "reasons": [
+     "characters.romance",
+     "tone.melancholic",
+     "world.scifi",
+     "cognitive.high",
+     "aesthetic.beautiful"
+    ],
+    "issues": []
+   },
+   "tt0338013": {
+    "reaction": "love",
+    "reasons": [
+     "characters.romance",
+     "story.nonlinear",
+     "story.complex",
+     "tone.melancholic",
+     "tone.whimsical",
+     "cognitive.high"
+    ],
+    "issues": []
+   },
+   "tt2543164": {
+    "reaction": "like",
+    "reasons": [
+     "cognitive.high",
+     "world.scifi",
+     "story.twist",
+     "tone.melancholic",
+     "tone.atmospheric"
+    ],
+    "issues": []
+   },
+   "tt0112471": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0816692": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0414387": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt3783958": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0335266": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt3659388": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt1856101": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0418279": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "humor.silly",
+      "hard": false
+     },
+     {
+      "f": "characters.unlikeable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "tt0332280": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "tone.cheesy",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "tt2322441": {
+    "reaction": "dislike",
+    "issues": []
+   },
+   "tt2820852": {
+    "reaction": "dislike",
+    "issues": []
+   },
+   "tt1099212": {
+    "reaction": "dislike",
+    "issues": []
+   }
+  },
+  "corrections": [],
+  "preferences": [
+   {
+    "f": "world.space"
+   }
+  ],
+  "session": {
+   "moods": [
+    "cry",
+    "think"
+   ],
+   "avoid": [],
+   "notNow": [],
+   "asked": 1
+  },
+  "seed": 101
+ }
+}

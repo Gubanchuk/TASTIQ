@@ -1,0 +1,6 @@
+{"appid": 648100, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p1", "q": "Raging Loop is an interactive visual novel with a branching plotline"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "in which the player's choices affect the direction of the story"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p5", "q": "in the hopes of learning the truth about the Feast's origin"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p4", "q": "According to legend, the wolves are yomibito risen from the dead"}]}
+]}

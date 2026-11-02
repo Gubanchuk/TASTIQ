@@ -1,0 +1,13 @@
+{"appid": 220, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "d", "q": "Experience the landmark first-person shooter"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "d", "q": "Gordon Freeman is joined by Alyx Vance"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r236058674", "q": "Сюжет хороший, не всё идеально"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "a", "q": "who finds himself on an alien-infested Earth being picked to the bone"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "a", "q": "its resources depleted, its populace dwindling"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "r236439775", "q": "the oppressive, sun-bleached dystopia of City 17"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r235738650", "q": "саундтрек, все это выполнено отлично даже сейчас"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "r235738650", "q": "Графика даже сейчас приятна для глаз"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "r237759586", "q": "I found it boring up until near the ending"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r237695321", "q": "Shooting the enemies is unsatisfactory because of lack of hit reaction animations"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r237695321", "q": "neverending, vehicle sections that are an absolute chore to play through"}]}
+]}

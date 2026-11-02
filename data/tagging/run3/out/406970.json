@@ -1,0 +1,9 @@
+{"appid": 406970, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "Players explore a post-apocalyptic future ruled by sentient robots"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "sentient robots take over the world"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "After completing various puzzles involving gathering parts to repair technology"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p1", "q": "they can speak to various characters, choosing dialogue options"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "players are given more freedom to explore"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p2", "q": "ghastly sluggish controls"}, {"id": "p2", "q": "they disliked the controls"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "initially impressed by its graphics and production values"}]}
+]}

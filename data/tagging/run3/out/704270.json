@@ -1,0 +1,10 @@
+{"appid": 704270, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Generation Zero is a first-person shooter video game"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "is an open-world, co-operative, first-person shooter, survival game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "is an open-world, co-operative, first-person shooter, survival game"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "can be played online with up to three other players or solo"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "an alternate 1989 Sweden where violent robots have taken over"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p2", "q": "While striving to survive in the Swedish wilderness"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "the local populace has disappeared as a result of the robotic invasion"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p3", "q": "The artistic style of the game has frequently been likened to the artwork"}]}
+]}

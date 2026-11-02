@@ -1,0 +1,9 @@
+{"appid": 266510, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "is an action role-playing roguelike deck-building game"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p4", "q": "which they can use to customize their deck up to a fixed size"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "The player earns more cards as they progress in the game"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "requiring the player to time attacks, blocks, dodges, and other abilities to defeat enemies"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "The player takes the role of a nameless hero"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p5", "q": "which provides an infinite number of"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p5", "q": "These bosses, representing the royalty of each suit, must be defeated in order"}]}
+]}

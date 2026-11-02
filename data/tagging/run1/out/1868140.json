@@ -1,0 +1,18 @@
+{"appid": 1868140, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "a", "q": "Explore and unravel the mysteries in the depths of the Blue Hole"}, {"id": "r236873935", "q": "The base game is a 2D diving exploration and fish catching game"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "d", "q": "sushi restaurant management at night"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "a", "q": "Running out of oxygen means leaving collected items and fish behind"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "a", "q": "Upgrade and forge equipment with collected resources and sushi restaurant profits"}]},
+{"f": "social.solo", "r": 3, "ev": [{"id": "d", "q": "a casual, singleplayer adventure RPG featuring deep-sea exploration"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "d", "q": "a casual, singleplayer adventure RPG featuring deep-sea exploration"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "a", "q": "Eccentric characters with a lighthearted narrative"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "a", "q": "Quirky but lovable characters"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "a", "q": "a story full of in-jokes, spoofs, and other humorous scenes"}, {"id": "r237444108", "q": "Plot advances, things happen, animations good, characters funny"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "a", "q": "A combination of pixel and 3D graphics"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "a", "q": "showcases breathtaking underwater scenery"}, {"id": "r237709138", "q": "Such an incredible and gorgeous game"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r236949399", "q": "absolutely love the gameplay and the music"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "a", "q": "Ample additional content to complement the main gameplay loop"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r237220918", "q": "playing it felt repetitive, like i was doing the same thing over and over"}, {"id": "r236605328", "q": "repeat until your brain rots"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r236589765", "q": "the mind-boggling lack of an ability to skip the story"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "r237444108", "q": "Then, it changes. You get employees to manage"}]}
+]}

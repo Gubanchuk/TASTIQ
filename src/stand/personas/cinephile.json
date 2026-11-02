@@ -1,0 +1,56 @@
+{
+  "id": "cinephile",
+  "name": "Саша, киноман, 35",
+  "domain": "film",
+  "who": "Живёт один, смотрит кино каждый вечер, ведёт список на Letterboxd.",
+  "today": "Что-то медленное, странное, красиво снятое, чего ещё не видел.",
+  "situation": { "time": "any", "company": "solo" },
+  "stops": [],
+  "prefer": ["aesthetic.stylized", "tone.whimsical", "tone.atmospheric", "pace.slow", "cognitive.high", "aesthetic.beautiful", "story.complex", "tone.melancholic", "story.nonlinear"],
+  "facts": { "popularity": "niche" },
+  "source": "research-vault/akinator-picker-2026-10/raw/persona-films.md, «Персона 2»",
+  "loved": [
+    { "id": "tt0166924", "name": "Малхолланд Драйв", "q": "малхолланд", "love": true, "reasons": ["tone.whimsical", "story.complex", "tone.atmospheric", "aesthetic.stylized", "cognitive.high", "story.nonlinear"], "text": "за авторский почерк, сновидческое, ничего не объясняет и не надо" },
+    { "id": "tt0079944", "name": "Сталкер", "q": "сталкер", "love": true, "reasons": ["pace.slow", "cognitive.high", "aesthetic.beautiful", "tone.atmospheric", "story.dialogue", "tone.whimsical"], "text": "медленно, созерцательно, каждый кадр как картина, философия" },
+    { "id": "tt0118694", "name": "Любовное настроение", "q": "любовное настроение", "love": true, "reasons": ["aesthetic.stylized", "tone.melancholic", "aesthetic.beautiful", "pace.slow", "aesthetic.soundtrack"], "text": "стильно снято, невысказанное, музыка и цвет" },
+    { "id": "tt0090756", "name": "Синий бархат", "q": "синий бархат", "reasons": ["tone.whimsical", "aesthetic.stylized", "tone.dark", "tone.atmospheric", "tone.creepy"] },
+    { "id": "tt0060827", "name": "Персона", "q": "персона", "reasons": ["cognitive.high", "story.complex", "aesthetic.beautiful", "tone.whimsical"] },
+    { "id": "tt0109424", "name": "Чунгкингский экспресс", "q": "чунгкингский", "reasons": ["aesthetic.stylized", "tone.melancholic", "aesthetic.soundtrack", "tone.whimsical"] },
+    { "id": "tt0069293", "name": "Солярис", "q": "солярис", "reasons": ["pace.slow", "cognitive.high", "tone.atmospheric", "world.space"] },
+    { "id": "tt0072443", "name": "Зеркало", "q": "зеркало", "reasons": ["aesthetic.beautiful", "story.nonlinear", "tone.whimsical", "cognitive.high"] },
+    { "id": "tt0074486", "name": "Голова-ластик", "q": "голова-ластик", "reasons": ["tone.whimsical", "tone.atmospheric", "aesthetic.stylized", "tone.creepy"] },
+    { "id": "tt0212712", "name": "2046", "q": "2046", "reasons": ["aesthetic.stylized", "tone.melancholic", "pace.slow", "aesthetic.beautiful"] }
+  ],
+  "disliked": [
+    { "id": "tt4154796", "name": "Мстители: Финал", "q": "мстители финал", "issues": [{ "f": "story.predictable" }, { "f": "humor.silly" }, { "f": "length.long" }, { "f": "aesthetic.effects", "hard": true }, { "f": "world.superhero", "hard": true }] },
+    { "id": "tt2109248", "name": "Трансформеры: Эпоха истребления", "q": "трансформеры эпоха", "issues": [{ "f": "story.weak" }, { "f": "pace.draggy" }, { "f": "story.predictable" }, { "f": "aesthetic.effects", "hard": true }, { "f": "world.superhero", "hard": true }] },
+    { "id": "tt0369610", "name": "Мир Юрского периода", "q": "мир юрского периода", "issues": [{ "f": "story.weak" }, { "f": "story.predictable" }, { "f": "aesthetic.effects", "hard": true }, { "f": "world.superhero", "hard": true }] },
+    { "id": "tt2527338", "name": "Звёздные войны: Скайуокер. Восход", "q": "скайуокер восход", "issues": [{ "f": "story.predictable" }, { "f": "story.weak" }, { "f": "world.superhero", "hard": true }] },
+    { "id": "tt2820852", "name": "Форсаж 7", "q": "форсаж 7", "issues": [{ "f": "story.weak" }, { "f": "world.superhero", "hard": true }] }
+  ],
+  "alsoSeen": [
+    { "id": "tt0246578", "name": "Донни Дарко" },
+    { "id": "tt0137523", "name": "Бойцовский клуб" },
+    { "id": "tt1130884", "name": "Остров проклятых" }
+  ],
+  "targets": [
+    { "id": "tt1441395", "name": "Побудь в моей шкуре" },
+    { "id": "tt2076220", "name": "Корпорация «Святые моторы»" },
+    { "id": "tt7984734", "name": "Маяк" }
+  ],
+  "modes": {
+    "careful": {
+      "seed": 4242,
+      "anchors": { "pages": 3, "love": true, "seen": true, "searchLoved": 4, "searchDisliked": 2 },
+      "why": { "maxChips": 4, "text": "reasons", "expand": true },
+      "whyNot": {},
+      "stops": true,
+      "result": { "rate": true }
+    },
+    "lazy": {
+      "seed": 4242,
+      "anchors": { "pages": 2, "love": true },
+      "why": {}
+    }
+  }
+}

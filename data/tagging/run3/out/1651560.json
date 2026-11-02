@@ -1,0 +1,7 @@
+{"appid": 1651560, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "Fabledom is a city-building game set in a fantasy medieval countryside"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "set in a fantasy medieval countryside"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "put their peasants to work building houses, chopping down trees, farming vegetables and mining stone"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p3", "q": "described the game as a relaxing"}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "p3", "q": "with few weaknesses and a charming scenario"}]}
+]}

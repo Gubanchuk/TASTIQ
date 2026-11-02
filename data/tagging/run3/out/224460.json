@@ -1,0 +1,10 @@
+{"appid": 224460, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is a puzzle-platform game"}, {"id": "p1", "q": "The player must solve puzzles that require movement between the physical world"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p2", "q": "Dawn is able to jump between two shadows, no matter how far apart they are"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The goal of the game is exploration and discovery through problem solving"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "The game is set in a noir atmosphere"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "aesthetically inspired by Belle Epoque and Art Nouveau"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p1", "q": "aesthetically inspired by Belle Epoque and Art Nouveau"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p6", "q": "full of heart, beauty, and at least a few excellent puzzles"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p6", "q": "and \"lifeless\" environments"}]}
+]}

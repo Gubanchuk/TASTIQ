@@ -1,0 +1,15 @@
+{"appid": 2221490, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p3", "q": "is a cover-based third-person shooter in which up to four players can complete missions together"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "has cooperative and player-versus-player online multiplayer modes"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "Rogue players can attack other players"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p5", "q": "Washington, D.C., is an open world for players to explore"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "Washington, D.C., is an open world for players to explore"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "they gain loot and experience points (XP)"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Each skill has unique mods that change its functionality."}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "is set in a near-future Washington, D.C."}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p1", "q": "creating the game's post-apocalyptic world"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "consulted first responders and experts in emergency management"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "Massive's digital recreation of Washington, D.C. was praised"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p9", "q": "praised the game for its tight satisfying gunplay"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p9", "q": "praised the more-impactful gunplay"}]}
+]}

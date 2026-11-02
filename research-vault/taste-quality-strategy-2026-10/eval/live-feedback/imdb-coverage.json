@@ -1,0 +1,49 @@
+{
+  "source": "data/raw/imdb/title.basics.tsv.gz",
+  "found": [
+    {
+      "query": "The Snowman",
+      "id": "tt0084701",
+      "type": "tvShort",
+      "name": "The Snowman",
+      "original": "The Snowman",
+      "year": 1982,
+      "runtime": 26,
+      "genres": "Adventure,Animation,Drama"
+    },
+    {
+      "query": "For the Birds",
+      "id": "tt0248808",
+      "type": "short",
+      "name": "For the Birds",
+      "original": "For the Birds",
+      "year": 2000,
+      "runtime": 3,
+      "genres": "Animation,Comedy,Family"
+    },
+    {
+      "query": "Presto",
+      "id": "tt1245104",
+      "type": "short",
+      "name": "Presto",
+      "original": "Presto",
+      "year": 2008,
+      "runtime": 5,
+      "genres": "Animation,Comedy,Family"
+    }
+  ],
+  "notFound": [
+    "Crac"
+  ],
+  "titleOnlyCandidate": {
+    "query": "Crac",
+    "queryYear": 1981,
+    "id": "tt0082209",
+    "type": "short",
+    "name": "Crac",
+    "year": 1980,
+    "runtime": 15,
+    "genres": "Animation,Drama,Family",
+    "caution": "Local IMDb title/year mismatch; do not resolve automatically by title alone."
+  }
+}

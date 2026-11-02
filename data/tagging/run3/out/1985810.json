@@ -1,0 +1,11 @@
+{"appid": 1985810, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2020 first-person shooter game co-developed by Treyarch and Raven Software"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "Set in 1981, Black Ops Cold War single-player story follows CIA operative Russell Adler"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "the cooperative Zombies mode"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p4", "q": "VIP Escort puts two teams of six against each other"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p9", "q": "a showcase for both stealth and freedom of choice"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p5", "q": "fight off endless hordes of the undead, which increase in both number and difficulty with every completed round"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p3", "q": "The campaign gives players the ability to create their own custom character"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p5", "q": "fight off endless hordes of the undead"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p9", "q": "enjoyable-but-short return to form for Black Ops"}]}
+]}

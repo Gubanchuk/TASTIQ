@@ -1,0 +1,7 @@
+{"appid": 298260, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "is a first person exploration game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "It takes elements from escape room games, includes slight puzzles"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p3", "q": "It will cost a couple hours of your life to finish Only If"}]},
+{"f": "world.modern", "r": 1, "ev": [{"id": "p1", "q": "set at modern times"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p2", "q": "ending with fantasy environments"}]}
+]}

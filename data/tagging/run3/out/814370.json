@@ -1,0 +1,10 @@
+{"appid": 814370, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "Metroidvania-style side-scrolling exploration with monster-taming and turn-based combat"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p3", "q": "Battles are turn-based three-on-three encounters"}]},
+{"f": "progression.collection", "r": 3, "ev": [{"id": "p2", "q": "Defeating monsters yields eggs that can be hatched and added to the player's roster"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Weapons, armor and skill trees let players build specialised monster teams"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p2", "q": "a pixel art world full of wild creatures"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "The combat system drew wide praise for its strategic depth"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p4", "q": "Players can also battle each other online in a player-versus-player mode"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "battles could feel slow at times"}]}
+]}

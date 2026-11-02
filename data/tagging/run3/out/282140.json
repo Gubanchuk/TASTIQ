@@ -1,0 +1,18 @@
+{
+  "appid": 282140,
+  "features": [
+    {"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "Soma is a 2015 survival horror video game"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p5", "q": "a major extinction event caused by a comet striking the planet"}]},
+    {"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "machinery that exhibit human characteristics such as possessing a personality and consciousness"}]},
+    {"f": "story.central", "r": 3, "ev": [{"id": "p2", "q": "with praise for its story, themes, atmosphere, sound design, and voice acting"}]},
+    {"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "discovering its history, while trying to make sense of his predicament"}]},
+    {"f": "story.lore", "r": 2, "ev": [{"id": "p3", "q": "the player will find a large array of clues, such as notes and audio tapes"}]},
+    {"f": "loop.stealth", "r": 2, "ev": [{"id": "p1", "q": "an emphasis on stealthy evasion of threats"}]},
+    {"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "the player progresses the plot through puzzle-solving, exploration, and the use of stealth"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "the player progresses the plot through puzzle-solving, exploration, and the use of stealth"}]},
+    {"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p3", "q": "stops them from killing the player"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "the atmosphere and sound design"}]},
+    {"f": "stability.slow_start", "r": 1, "ev": [{"id": "p10", "q": "let down by a slow start"}]},
+    {"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "disappointed that there were only a few different types"}]}
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "date": "2026-10-31",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "detailed": 40,
+  "discovery": {
+    "game": 0,
+    "cartoon": 0
+  },
+  "summary": {
+    "engine": 0,
+    "ai": 0,
+    "engineTop": 0,
+    "aiTop": 0,
+    "targets": 3,
+    "inShortlist": 2,
+    "ms": [
+      11829
+    ],
+    "usd": 0.017854,
+    "own": 0,
+    "ownHits": 0,
+    "engineSeen": 0,
+    "aiSeen": 0,
+    "flagged": 1,
+    "flaggedSeen": 0
+  },
+  "attempted": 1,
+  "errors": 0,
+  "unknownUsage": 0,
+  "records": [
+    {
+      "persona": "danya",
+      "mode": "careful",
+      "domain": "game",
+      "state": {
+        "step": "result",
+        "domain": "game",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "group",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [
+            {
+              "f": "tension.high",
+              "against": "tension.low",
+              "label": "адреналин"
+            },
+            {
+              "f": "humor.funny",
+              "against": "tone.dark",
+              "label": "посмеяться"
+            }
+          ],
+          "partySize": "4"
+        },
+        "stops": [],
+        "asked": [
+          "lean:tension.high|tension.low",
+          "lean:humor.funny|tone.dark"
+        ],
+        "shown": [
+          "steam:730",
+          "steam:271590",
+          "steam:105600",
+          "steam:359550",
+          "steam:252490",
+          "steam:4000",
+          "steam:440",
+          "steam:553850"
+        ],
+        "liked": [
+          "steam:730",
+          "steam:1966720"
+        ],
+        "disliked": [
+          "steam:632470"
+        ],
+        "whyIndex": 0,
+        "answers": {
+          "steam:730": {
+            "reaction": "love",
+            "reasons": [
+              "social.pvp",
+              "loop.shooting",
+              "tension.high",
+              "session.short",
+              "pace.fast"
+            ],
+            "issues": [],
+            "text": "катки с пацанами, клатчи, адреналин, быстрые раунды"
+          },
+          "steam:359550": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:553850": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:1966720": {
+            "reaction": "love",
+            "reasons": [
+              "tone.creepy",
+              "humor.funny",
+              "social.coop",
+              "tension.high"
+            ],
+            "issues": [],
+            "text": "ржали до слёз, страшно и смешно, с друзьями"
+          },
+          "steam:548430": {
+            "reaction": "love",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:252950": {
+            "reaction": "love",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:739630": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:550": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:945360": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:1172470": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "steam:632470": {
+            "reaction": "dislike",
+            "issues": [
+              {
+                "f": "loop.dialogue",
+                "hard": true
+              },
+              {
+                "f": "pace.slow",
+                "hard": false
+              }
+            ],
+            "badQuality": false,
+            "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+          },
+          "steam:289070": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "steam:1158310": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "steam:413150": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "steam:1174180": {
+            "reaction": "dislike",
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 355804
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Distinguish the person's explicitly confirmed reasons from weak inferred overlap. Tonight's soft lean (e.g. \"посмеяться\") should shape a story game they would love, not replace their main reasons with a collection of jokes. Explicit hard stops always win; a caveat is not permission to violate them.\n- Playtime at the moment of a Steam review is NOT completion time or the desired length of one session. Never treat it as either. A tagged length is an estimate; use reliable title knowledge and state uncertainty instead of inventing exact hours.\n- Detailed and compact discovery candidates have the same eligibility. The discovery list is deliberately wider; do not favour a title just because it has more tags, a fuller description, or an earlier engine rank. Check the compact titles against the person's main confirmed reasons too.\n- For a family evening, prioritize age suitability and tolerable intensity over pace or laughs. If age is unknown, do not invent it or guarantee \"nothing scary\"; choose cautious options and mention relevant frightening scenes.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: поиграть.\nС кем: компанией.\nИгроков: четверо.\nПлатформа: windows.\nСегодня просил: сегодня: адреналин; сегодня: посмеяться.\n\nЗнакомые тайтлы:\n- Counter-Strike 2, 2012: обожаю; за что: соревнование с людьми, стрельба, держит в напряжении, короткие заходы, быстрый темп; своими словами: «катки с пацанами, клатчи, адреналин, быстрые раунды»\n- Tom Clancy's Rainbow Six Siege, 2015: нормально\n- HELLDIVERS™ 2, 2024: нормально\n- Lethal Company, 2023: обожаю; за что: жуть и страх, много юмора, кооператив, держит в напряжении; своими словами: «ржали до слёз, страшно и смешно, с друзьями»\n- Deep Rock Galactic, 2020: обожаю\n- Rocket League (Rocket League®), 2015: обожаю\n- Phasmophobia, 2020: нормально\n- Left 4 Dead 2, 2009: нормально\n- Among Us, 2018: нормально\n- Apex Legends (Apex Legends™), 2020: нормально\n- Disco Elysium - The Final Cut, 2019: не моё; что мешало: разговоры и решения (никогда), неторопливый темп; своими словами: «стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое»\n- Sid Meier’s Civilization VI (Sid Meier’s Civilization® VI), 2016: не моё\n- Crusader Kings III, 2020: не моё\n- Stardew Valley, 2016: не моё\n- Red Dead Redemption 2, 2019: не моё\n\nКандидаты (40):\nid=steam:700330 | SCP: Secret Laboratory | 2017 | объём по разметке: без конца; на момент отзыва: 99 ч, не время прохождения | Action/Casual/Indie | Very Positive, 235458 оценок | движок #1, подтверждено: держит в напряжении, соревнование с людьми, жуть и страх, много юмора, кооператив, стрельба, слабый вывод: фантастика и космос, сложно, наказывает за ошибки, выживание | по тегам ближе всего к: Apex Legends (Apex Legends™) (0.78)\nid=steam:3097560 | Liar's Bar | 2024 | на момент отзыва: 4 ч, не время прохождения | Casual/Indie/Simulation | Very Positive, 56490 оценок | движок #4, подтверждено: держит в напряжении, кооператив, много юмора, соревнование с людьми, стрельба, жуть и страх | по тегам ближе всего к: Phasmophobia (0.71)\nid=steam:1782210 | Crab Game | 2021 | на момент отзыва: 3 ч, не время прохождения | Action/Casual/Free To Play | Very Positive, 150925 оценок | движок #2, подтверждено: соревнование с людьми, держит в напряжении, быстрый темп, жуть и страх, кооператив, много юмора, слабый вывод: фантастика и космос, езда и гонки, лёгкое весёлое настроение | по тегам ближе всего к: Apex Legends (Apex Legends™) (0.65)\nid=steam:466240 | Deceit | 2017 | на момент отзыва: 20 ч, не время прохождения | Action/Indie/Free To Play | Mostly Positive, 92073 оценок | движок #3, подтверждено: держит в напряжении, соревнование с людьми, жуть и страх, стрельба, много юмора, кооператив, слабый вывод: выживание, лут и снаряжение, постапокалипсис | по тегам ближе всего к: Apex Legends (Apex Legends™) (0.68)\nid=steam:602960 | Barotrauma | 2023 | на момент отзыва: 64 ч, не время прохождения | Action/Indie/Simulation | Very Positive, 90490 оценок | движок #5, подтверждено: жуть и страх, держит в напряжении, кооператив, соревнование с людьми, много юмора, стрельба, слабый вывод: сложно, наказывает за ошибки, фантастика и космос, выживание | по тегам ближе всего к: HELLDIVERS™ 2 (0.72)\nid=steam:2835570 | Buckshot Roulette | 2024 | на момент отзыва: 4 ч, не время прохождения | Action/Indie/Simulation | Overwhelmingly Positive, 127669 оценок | движок #6, подтверждено: держит в напряжении, короткие заходы, соревнование с людьми, жуть и страх, много юмора, кооператив, слабый вывод: стилизованный визуал | по тегам ближе всего к: Phasmophobia (0.57)\nid=steam:3241660 | R.E.P.O. | 2025 | на момент отзыва: 26 ч, не время прохождения | Action/Early Access | Overwhelmingly Positive, 429582 оценок | движок #7, подтверждено: жуть и страх, много юмора, кооператив, держит в напряжении, короткие заходы, слабый вывод: сложно, наказывает за ошибки, фантастика и космос, лут и снаряжение | по тегам ближе всего к: Lethal Company (0.87)\nid=steam:381210 | Dead by Daylight | 2016 | объём по разметке: без конца; на момент отзыва: 322 ч, не время прохождения | Action | Mostly Positive, 940728 оценок | движок #8, подтверждено: держит в напряжении, жуть и страх, соревнование с людьми, кооператив, много юмора, слабый вывод: сложно, наказывает за ошибки, выживание, стелс | по тегам ближе всего к: Apex Legends (Apex Legends™) (0.58)\nid=steam:422970 | Devil Daggers | 2016 | объём по разметке: короткая; время прохождения в каталоге неизвестно | Action/Indie | движок #9, подтверждено: держит в напряжении, быстрый темп, жуть и страх, стрельба, соревнование с людьми, короткие заходы, слабый вывод: сложно, наказывает за ошибки, выживание | по тегам ближе всего к: Counter-Strike 2 (0.52)\nid=steam:1172620 | Sea of Thieves (Sea of Thieves: 2026 Edition) | 2020 | объём по разметке: без конца; на момент отзыва: 39 ч, не время прохождения | Action/Adventure | Very Positive, 374194 оценок | движок #10, подтверждено: соревнование с людьми, кооператив, много юмора, держит в напряжении, стрельба, слабый вывод: езда и гонки, лут и снаряжение, сложно, наказывает за ошибки | по тегам ближе всего к: Apex Legends (Apex Legends™) (0.63)\nid=steam:2881650 | Content Warning | 2024 | на момент отзыва: 11 ч, не время прохождения | Action/Adventure/Indie | Very Positive, 164036 оценок | движок #11, подтверждено: жуть и страх, держит в напряжении, кооператив, много юмора, слабый вывод: фантастика и космос, сложно, наказывает за ошибки, лут и снаряжение | по тегам ближе всего к: Lethal Company (0.83)\nid=steam:239140 | Dying Light | 2015 | на момент отзыва: 23 ч, не время прохождения | Action/Adventure/RPG | Overwhelmingly Positive, 497753 оценок | движок #12, подтверждено: держит в напряжении, жуть и страх, кооператив, соревнование с людьми, стрельба, слабый вывод: выживание, лут и снаряжение, постапокалипсис | по тегам ближе всего к: Left 4 Dead 2 (0.65)\nid=steam:594650 | Hunt: Showdown (Hunt: Showdown 1896) | 2019 | на момент отзыва: 260 ч, не время прохождения | Action | Mostly Positive, 280368 оценок | движок #13, подтверждено: соревнование с людьми, жуть и страх, держит в напряжении, кооператив, стрельба, короткие заходы, слабый вывод: сложно, наказывает за ошибки, выживание, весомый бой, против: неторопливый темп | по тегам ближе всего к: Apex Legends (Apex Legends™) (0.69)\nid=steam:274190 | Broforce | 2015 | на момент отзыва: 14 ч, не время прохождения | Action/Adventure/Casual | Overwhelmingly Positive, 61130 оценок | движок #14, подтверждено: много юмора, кооператив, стрельба, соревнование с людьми, быстрый темп, короткие заходы, слабый вывод: сложно, наказывает за ошибки, ближний бой, лёгкое весёлое настроение | по тегам ближе всего к: HELLDIVERS™ 2 (0.69)\nid=steam:238430 | Contagion | 2013 | время прохождения в каталоге неизвестно | Action/Adventure/Indie | движок #15, подтверждено: держит в напряжении, жуть и страх, кооператив, стрельба, соревнование с людьми, слабый вывод: выживание, постапокалипсис | по тегам ближе всего к: Left 4 Dead 2 (0.77)\nid=steam:2567870 | Chained Together | 2024 | объём по разметке: короткая; на момент отзыва: 6 ч, не время прохождения | Adventure/Casual/Indie | Very Positive, 64850 оценок | движок #16, подтверждено: держит в напряжении, много юмора, кооператив, короткие заходы, соревнование с людьми, слабый вывод: сложно, наказывает за ошибки, постапокалипсис | по тегам ближе всего к: Rocket League (Rocket League®) (0.50)\nid=steam:204340 | Serious Sam II | 2012 | время прохождения в каталоге неизвестно | Action/Indie | движок #17, подтверждено: много юмора, стрельба, кооператив, держит в напряжении, быстрый темп, слабый вывод: сложно, наказывает за ошибки, фантастика и космос, езда и гонки | по тегам ближе всего к: HELLDIVERS™ 2 (0.80)\nid=steam:418460 | Rising Storm 2: Vietnam | 2017 | объём по разметке: без конца; на момент отзыва: 8 ч, не время прохождения | Action/Massively Multiplayer/Simulation | Very Positive, 59313 оценок | движок #18, подтверждено: держит в напряжении, стрельба, соревнование с людьми, жуть и страх, слабый вывод: сложно, наказывает за ошибки, езда и гонки, весомый бой | по тегам ближе всего к: Counter-Strike 2 (0.66)\nid=steam:323850 | Move or Die | 2016 | время прохождения в каталоге неизвестно | Action/Indie | движок #19, подтверждено: соревнование с людьми, быстрый темп, короткие заходы, держит в напряжении, много юмора, кооператив, слабый вывод: лёгкое весёлое настроение | по тегам ближе всего к: Among Us (0.55)\nid=steam:1097150 | Fall Guys | 2020 | объём по разметке: без конца; на момент отзыва: 49 ч, не время прохождения | Action/Casual/Indie | Very Positive, 467949 оценок | движок #20, подтверждено: соревнование с людьми, много юмора, кооператив, короткие заходы, слабый вывод: сложно, наказывает за ошибки, лёгкое весёлое настроение | по тегам ближе всего к: Among Us (0.68)\nid=steam:1677740 | Stumble Guys | 2021 | объём по разметке: без конца; на момент отзыва: 7 ч, не время прохождения | Action/Casual/Indie | Very Positive, 139062 оценок | движок #21, подтверждено: соревнование с людьми, кооператив, короткие заходы, много юмора, быстрый темп, слабый вывод: езда и гонки, сложно, наказывает за ошибки, выживание | по тегам ближе всего к: Among Us (0.70)\nid=steam:311690 | Enter the Gungeon | 2016 | объём по разметке: без конца; на момент отзыва: 19 ч, не время прохождения | Action/Adventure/Indie | Overwhelmingly Positive, 90077 оценок | движок #22, подтверждено: держит в напряжении, стрельба, короткие заходы, кооператив, много юмора, слабый вывод: сложно, наказывает за ошибки, лут и снаряжение, лёгкое весёлое настроение | по тегам ближе всего к: Deep Rock Galactic (0.70)\nid=steam:493520 | GTFO | 2021 | на момент отзыва: 11 ч, не время прохождения | Action | Very Positive, 67037 оценок | движок #23, подтверждено: держит в напряжении, жуть и страх, кооператив, стрельба, слабый вывод: сложно, наказывает за ошибки, выживание, стелс | по тегам ближе всего к: Left 4 Dead 2 (0.59)\nid=steam:1526490 | Fear Surrounds | 2021 | время прохождения в каталоге неизвестно | Casual/Indie/RPG | движок #24, подтверждено: держит в напряжении, жуть и страх, соревнование с людьми, много юмора, кооператив, короткие заходы, слабый вывод: выживание | по тегам ближе всего к: Among Us (0.65)\nid=steam:1533390 | Gorilla Tag | 2023 | на момент отзыва: 27 ч, не время прохождения | Action/Casual | Very Positive, 86561 оценок | движок #25, подтверждено: много юмора, держит в напряжении, соревнование с людьми, жуть и страх, кооператив, слабый вывод: выживание, лёгкое весёлое настроение | по тегам ближе всего к: Among Us (0.56)\nid=steam:408900 | Unfortunate Spacemen | 2020 | время прохождения в каталоге неизвестно | Action/Indie/Strategy | движок #26, подтверждено: держит в напряжении, жуть и страх, много юмора, стрельба, кооператив, соревнование с людьми, слабый вывод: фантастика и космос, выживание | по тегам ближе всего к: HELLDIVERS™ 2 (0.65)\nid=steam:204360 | Castle Crashers (Castle Crashers®) | 2012 | на момент отзыва: 9 ч, не время прохождения | Action/Adventure/Casual | Overwhelmingly Positive, 141266 оценок | движок #27, подтверждено: кооператив, много юмора, соревнование с людьми, быстрый темп, короткие заходы, слабый вывод: сложно, наказывает за ошибки, ближний бой, лёгкое весёлое настроение | по тегам ближе всего к: Among Us (0.58)\nid=steam:379720 | DOOM | 2016 | на момент отзыва: 20 ч, не время прохождения | Action | Overwhelmingly Positive, 222338 оценок | движок #28, подтверждено: быстрый темп, стрельба, кооператив, жуть и страх, держит в напряжении, соревнование с людьми, слабый вывод: фантастика и космос, сложно, наказывает за ошибки, ближний бой | по тегам ближе всего к: HELLDIVERS™ 2 (0.75)\nid=steam:952060 | Resident Evil 3 | 2020 | объём по разметке: короткая; на момент отзыва: 8 ч, не время прохождения | Action | Very Positive, 127980 оценок | движок #29, подтверждено: держит в напряжении, жуть и страх, стрельба, кооператив, соревнование с людьми, быстрый темп, слабый вывод: сложно, наказывает за ошибки, постапокалипсис, выживание | по тегам ближе всего к: Left 4 Dead 2 (0.63)\nid=steam:1179210 | Kill It With Fire | 2020 | объём по разметке: короткая; время прохождения в каталоге неизвестно | Action/Casual/Indie | движок #30, подтверждено: держит в напряжении, жуть и страх, много юмора, кооператив, короткие заходы, стрельба, слабый вывод: выживание, лёгкое весёлое настроение, стилизованный визуал | по тегам ближе всего к: Among Us (0.57)\nid=steam:312530 | Duck Game | 2015 | время прохождения в каталоге неизвестно | Action/Indie | движок #31, подтверждено: соревнование с людьми, много юмора, стрельба, быстрый темп, кооператив | по тегам ближе всего к: HELLDIVERS™ 2 (0.60)\nid=steam:509980 | Bigfoot (BIGFOOT) | 2017 | время прохождения в каталоге неизвестно | Action/Adventure/Indie | движок #32, подтверждено: держит в напряжении, жуть и страх, много юмора, стрельба, кооператив, соревнование с людьми, слабый вывод: выживание | по тегам ближе всего к: Phasmophobia (0.73)\nid=steam:1942280 | Brotato | 2023 | объём по разметке: без конца; на момент отзыва: 33 ч, не время прохождения | Action/Casual/Indie | Overwhelmingly Positive, 119985 оценок | движок #33, подтверждено: короткие заходы, кооператив, стрельба, быстрый темп, соревнование с людьми, слабый вывод: фантастика и космос, сложно, наказывает за ошибки, выживание | по тегам ближе всего к: Deep Rock Galactic (0.74)\nid=steam:10090 | Call of Duty: World at War | 2008 | объём по разметке: короткая; на момент отзыва: 8 ч, не время прохождения | Action | Very Positive, 53502 оценок | движок #34, подтверждено: держит в напряжении, стрельба, кооператив, соревнование с людьми, жуть и страх, слабый вывод: сложно, наказывает за ошибки, выживание, постапокалипсис | по тегам ближе всего к: Left 4 Dead 2 (0.57)\nid=steam:728880 | Overcooked! 2 | 2018 | объём по разметке: короткая (косвенно по часам отзывов); на момент отзыва: 11 ч, не время прохождения | Action/Casual/Indie | Very Positive, 85096 оценок | движок #35, подтверждено: кооператив, много юмора, держит в напряжении, соревнование с людьми, быстрый темп, слабый вывод: сложно, наказывает за ошибки, лёгкое весёлое настроение | по тегам ближе всего к: Among Us (0.62)\nid=steam:17500 | Zombie Panic! Source | 2008 | время прохождения в каталоге неизвестно | Action/Adventure/Casual | движок #36, подтверждено: держит в напряжении, жуть и страх, стрельба, кооператив, соревнование с людьми, слабый вывод: выживание, постапокалипсис | по тегам ближе всего к: Left 4 Dead 2 (0.75)\nid=steam:207140 | SpeedRunners | 2016 | время прохождения в каталоге неизвестно | Action/Casual/Indie | движок #37, подтверждено: быстрый темп, соревнование с людьми, короткие заходы, кооператив, много юмора, слабый вывод: езда и гонки | по тегам ближе всего к: Rocket League (Rocket League®) (0.62)\nid=steam:674940 | Stick Fight: The Game | 2017 | на момент отзыва: 4 ч, не время прохождения | Action/Casual/Indie | Very Positive, 125551 оценок | движок #38, подтверждено: соревнование с людьми, много юмора, кооператив, короткие заходы, стрельба, слабый вывод: ближний бой | по тегам ближе всего к: Apex Legends (Apex Legends™) (0.63)\nid=steam:2310 | Quake | 2007 | время прохождения в каталоге неизвестно | Action | движок #39, подтверждено: соревнование с людьми, стрельба, жуть и страх, быстрый темп, кооператив, держит в напряжении, слабый вывод: фантастика и космос | по тегам ближе всего к: HELLDIVERS™ 2 (0.76)\nid=steam:386940 | Ultimate Chicken Horse | 2016 | на момент отзыва: 5 ч, не время прохождения | Action/Casual/Indie | Overwhelmingly Positive, 53767 оценок | движок #40, подтверждено: кооператив, много юмора, соревнование с людьми, короткие заходы, слабый вывод: сложно, наказывает за ошибки, лёгкое весёлое настроение, стилизованный визуал | по тегам ближе всего к: Among Us (0.63)\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "steam:700330",
+        "steam:3097560",
+        "steam:1782210",
+        "steam:466240"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "steam:3241660",
+            "reason": "Как в любимой Lethal Company, вы вчетвером тащите добычу, пугаетесь монстров и смеётесь над тем, как друзья всё уронили.",
+            "caveat": "Стрельба не главное: придётся осторожно таскать хрупкие вещи.",
+            "likelySeen": true,
+            "own": false
+          },
+          {
+            "id": "steam:312530",
+            "reason": "Duck Game даёт любимые по CS короткие раунды и клатчи, но на четверых друг против друга и с нелепыми смертями.",
+            "caveat": "Это двухмерные перестрелки, а не тактический шутер.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:207140",
+            "reason": "Как в Rocket League, решают реакция и владение движением: четверо гонятся друг за другом и подставляют соперников.",
+            "caveat": "Разница в навыке быстро становится заметна: новичков часто выбивают первыми.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:274190",
+            "reason": "Для вашей компании — совместная стрельба в духе Deep Rock Galactic, но с короткими уровнями, разрушаемыми стенами и абсурдом.",
+            "caveat": "Общий экран: спешащий вперёд товарищ может погубить остальных.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужны адреналин и смех на четверых: быстрые зарубы с друзьями или страшный кооператив, без долгих диалогов и раскачки.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 11829,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 6007,
+          "input_tokens_details": {
+            "cache_write_tokens": 6004,
+            "cached_tokens": 0
+          },
+          "output_tokens": 584,
+          "output_tokens_details": {
+            "reasoning_tokens": 122
+          },
+          "total_tokens": 6591
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.017854
+    }
+  ]
+}

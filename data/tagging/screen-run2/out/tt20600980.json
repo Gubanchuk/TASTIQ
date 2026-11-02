@@ -1,0 +1,11 @@
+{"id": "tt20600980", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "the strange aliens and dangerous places they encounter on their adventure"}]},
+{"f": "world.space", "r": 3, "ev": [{"id": "s", "q": "lost in a strange and dangerous galaxy"}]},
+{"f": "characters.coming_of_age", "r": 3, "ev": [{"id": "p1", "q": "an Amblin Entertainment-style coming-of-age story"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "Skeleton Crew tells the story of four children"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p5", "q": "low-stakes, thematically light, young-skewing romp"}]},
+{"f": "tension.low", "r": 2, "ev": [{"id": "p5", "q": "low-stakes, thematically light, young-skewing romp"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "episodes released weekly until January 14, 2025"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p6", "q": "gets off to a depressingly familiar start"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "generally plodding along until Jude Law pops up"}]}
+]}

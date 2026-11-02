@@ -1,0 +1,15 @@
+{"appid": 1248130, "features": [
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "d", "q": "Harvest crops, tend to animals, manage productions"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "a", "q": "extend your farming operations with production chains"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "a", "q": "Creatively build your own farm"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "a", "q": "More than 400 machines and tools from over 100 real agricultural brands"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "a", "q": "Take on the role of a modern farmer"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "r236865010", "q": "very close to reality in parts"}]},
+{"f": "tone.serene", "r": 3, "ev": [{"id": "r236131747", "q": "slow, challenging and therapeutic games"}, {"id": "r237087069", "q": "Relax, Farm, Tranquility"}]},
+{"f": "pace.slow", "r": 2, "ev": [{"id": "r236865010", "q": "slow pace farming game"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "r237364969", "q": "Fun sandbox-simulator game overall"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "run your farm together with friends"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r235657649", "q": "I usually create a long-term multiplayer map"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "r236131747", "q": "takes a good amount of planning"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "r237169642", "q": "i wished that it still has bigger updates"}]}
+]}

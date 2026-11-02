@@ -1,0 +1,7 @@
+{"appid": 601840, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p1", "q": "roguelike deck-building game with elements of role-playing and digital card games"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "engaging in conversation trees to gain quests or shop"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "Each turn, the player is drawn a hand from their combat deck"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "they can gain new cards for either deck from quest rewards or through shops"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "There are seven difficulties available in addition to Story Mode"}]}
+]}

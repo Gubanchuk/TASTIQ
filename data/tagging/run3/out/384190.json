@@ -1,0 +1,11 @@
+{"appid": 384190, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "begins exploring the surrounding underwater environments"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "allows the player to freely navigate underwater environments"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p2", "q": "follows a linear path through interconnected areas"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p6", "q": "The visuals and environments were generally praised for their artistic style and beauty"}, {"id": "p1", "q": "the majority of praise went to its art style"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p6", "q": "Butterworth positively compared the graphics to the cel-shaded style"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "The setting and story drew from Sumerian mythology and the cosmic ocean myth"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p5", "q": "found the gameplay lacking in variety"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p5", "q": "the experience benefited from its short length"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p6", "q": "many critics calling it an emotive experience"}]}
+]}

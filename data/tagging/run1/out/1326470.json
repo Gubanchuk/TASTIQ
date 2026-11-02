@@ -1,0 +1,12 @@
+{"appid": 1326470, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "Craft, build, and struggle to survive"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "a", "q": "Build a small cabin, or a sea-side compound, the choice is yours"}]},
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "d", "q": "in this terrifying new open-world survival horror simulator"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "d", "q": "you find yourself in a cannibal-infested hellscape"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "a", "q": "Armed with pistols, axes, stun batons and more"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "a", "q": "Experience complete freedom to tackle the world how you want"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "d", "q": "in this terrifying new open-world survival horror simulator"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "d", "q": "Craft, build, and struggle to survive, alone or with friends"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "d", "q": "Craft, build, and struggle to survive, alone or with friends"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r237742628", "q": "the combat is just stun-lock or be stun-locked"}]}
+]}

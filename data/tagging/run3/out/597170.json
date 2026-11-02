@@ -1,0 +1,12 @@
+{"appid": 597170, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a beat 'em up video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "Robots are trying to conquer Earth"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "Robots are trying to conquer Earth and have enslaved large parts of humanity"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p9", "q": "Clone Drone in the Danger Zone is a comedy"}, {"id": "p9", "q": "It's all very Monty Python"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "After each level, the player can upgrade themselves or gain new abilities"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p1", "q": "The game has 4 modes: story mode, endless mode, challenges, and Twitch mode"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "Along with 5 separate but similar multiplayer gamemodes"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p9", "q": "The combat here isn't as complex"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p7", "q": "Critics praised its voxel style and simple gameplay"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p8", "q": "Each failure feels brutal"}]}
+]}

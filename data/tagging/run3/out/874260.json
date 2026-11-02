@@ -1,0 +1,9 @@
+{"appid": 874260, "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "is a mystery adventure role-playing game"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "The Forgotten City has four different endings"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p7", "q": "through excellently written dialogue and characters"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "the ruins restored as a city of the Roman Empire"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "the city is under the protection of the gods"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "As the player explores said ruins"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p9", "q": "We just wish the combat was either improved or not there at all"}]}
+]}

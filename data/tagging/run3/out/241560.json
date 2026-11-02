@@ -1,0 +1,9 @@
+{"appid": 241560, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p4", "q": "set in a persistent open world environment for free-roaming"}]},
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p4", "q": "The Crew is a racing game set in a persistent open world environment"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "with friends, or with online co-op matchmaking"}, {"id": "p6", "q": "Players had the ability to form"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "a scaled-down recreation of the contiguous United States"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p4", "q": "Miami in The South, Las Vegas in the Mountain States, and Los Angeles on the West Coast"}]},
+{"f": "characters.lone_hero", "r": 1, "ev": [{"id": "p5", "q": "infiltrating criminal groups with protagonist Alex Taylor"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p11", "q": "America is a pretty empty place"}]}
+]}

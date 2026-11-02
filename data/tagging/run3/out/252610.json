@@ -1,0 +1,13 @@
+{"appid": 252610, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "Set during a zombie apocalypse"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "A zombie apocalypse has killed billions and shattered world civilization"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "the group moves through buildings searching for supplies and fighting zombies"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p2", "q": "A character's morale must also be managed"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "text-based events, where the player must choose a response to problems"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "which can be spent on permanent upgrades for future journeys"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "they must survive a growing zombie horde for a set amount of time"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p3", "q": "There they are met by Mounties and a Justin Trudeau-lookalike"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p5", "q": "disliking the repetitiveness of the game"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p6", "q": "The brutal, random nature too often made me feel like I had little agency in my quest"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p5", "q": "chirpy, contagious, and memorable"}]}
+]}

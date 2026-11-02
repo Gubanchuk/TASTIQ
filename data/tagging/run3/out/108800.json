@@ -1,0 +1,13 @@
+{"appid": 108800, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Crysis 2 is a first-person shooter video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p4", "q": "panic about an alien invasion by the Ceph"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p4", "q": "in a war-torn New York City which has since been evacuated"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p6", "q": "criticized the linearity of the gameplay"}, {"id": "p10", "q": "being much more scripted and linear than Crysis"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "technically strong, visually outstanding and full of welcome fresh ideas"}, {"id": "p11", "q": "the stunning power of the CryEngine"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "provides freedom to customize weaponry and abilities"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "a gruesome disease that causes complete cellular breakdown"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "silent melee stealth kills"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "it was the multiplayer that tipped the balance"}, {"id": "p11", "q": "solid multiplayer gameplay options"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p1", "q": "Players are able to navigate between floors and buildings"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p9", "q": "it takes several hours of"}]}
+]}

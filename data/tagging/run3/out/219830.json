@@ -1,0 +1,9 @@
+{"appid": 219830, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "player vs player combat"}, {"id": "p2", "q": "two teams struggle to dominate the other"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "with a focus on building by gathering resources"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "Knights excel at close range combat and demolition using bombs"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p1", "q": "side-scrolling 2D pixelated action online multiplayer"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p3", "q": "light-hearted approach to medieval combat"}]},
+{"f": "world.historical", "r": 1, "ev": [{"id": "p3", "q": "light-hearted approach to medieval combat"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p3", "q": "Early critics praised its fast-paced battles"}]}
+]}

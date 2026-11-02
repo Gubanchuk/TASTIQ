@@ -1,0 +1,7 @@
+{"appid": 2795000, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p1", "q": "while avoiding his co-workers, who he will attack and kill if they spot him"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p5", "q": "praised the game's humor and twist on the stealth genre"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p4", "q": "Kyle cleans up his remains before at last receiving his paycheck"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p3", "q": "a company that produces plush toys, employs Kyle as a janitor"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p3", "q": "who he'll uncontrollably kill if they spot him"}]}
+]}

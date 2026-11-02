@@ -1,0 +1,6 @@
+{"appid": 805550, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p2", "q": "racing simulator in which players can drive race cars against AI"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "against other players online"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "realistic GT3 racing simulation"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p4", "q": "the smaller car and track selection compared with the original Assetto Corsa"}]}
+]}

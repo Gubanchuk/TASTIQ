@@ -1,0 +1,8 @@
+{"appid": 22000, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is a physics-based puzzle video game"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p3", "q": "The game is built around the idea of creating large structures using balls of goo"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p0", "q": "with the challenge to use as few goo balls as possible"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p3", "q": "Each level has its own graphic and musical theme, giving a unique atmosphere"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p3", "q": "Players from all over the world can compete"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p8", "q": "the \"slow start\" of the game"}]}
+]}

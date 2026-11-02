@@ -1,0 +1,9 @@
+{"appid": 342200, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "Players control large bipedal combat vehicles known as battlemechs and compete against other players."}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p0", "q": "free-to-play vehicle simulation video game"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "rewards cautious play, thoughtful weapon use, and using advanced tactics"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "praising the ability for players to customize their BattleMechs"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p5", "q": "criticized it for its high learning curve"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p4", "q": "it quickly became repetitive because only two game modes"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p3", "q": "matches swing between fast and furious and long and drawn out"}]}
+]}

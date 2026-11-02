@@ -1,0 +1,8 @@
+{"id": "tt0381798", "features": [
+{"f": "characters.antihero", "r": 2, "ev": [{"id": "p2", "q": "Tommy is an impatient, self-loathing, hypocritical, manipulative relapsed alcoholic"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p1", "q": "The series follows Tommy's troubled family and co-workers"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "suffers with severe survivor guilt and posttraumatic stress disorder"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p1", "q": "Tommy struggles with the loss of his cousin and best friend"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p0", "q": "is an American comedy drama television series that aired on FX"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "aired on FX from July 21, 2004, to September 7, 2011"}]}
+]}

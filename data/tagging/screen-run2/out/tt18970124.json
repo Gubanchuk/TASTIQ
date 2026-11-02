@@ -1,0 +1,8 @@
+{"id": "tt18970124", "features": [
+{"f": "format.documentary", "r": 3, "ev": [{"id": "p0", "q": "a limited docuseries created and directed by Joe Berlinger"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "depicts the murder spree of serial killer John Wayne Gacy"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "p1", "q": "The story is depicted through never-before-heard archival audio footage"}]},
+{"f": "content.disturbing", "r": 2, "ev": [{"id": "p0", "q": "killed at least 33 teenage boys and young men"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "s", "q": "Beneath a smiling exterior was the horrifying darkness"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "s", "q": "the horrifying darkness of a sadistic serial killer"}]}
+]}

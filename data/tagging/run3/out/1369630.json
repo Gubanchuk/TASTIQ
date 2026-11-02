@@ -1,0 +1,16 @@
+{
+  "appid": 1369630,
+  "features": [
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "a dark fantasy fairy tale"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "an endless and oppressive rain"}]},
+    {"f": "tone.creepy", "r": 1, "ev": [{"id": "p1", "q": "drives living things demented and transforms them into undead"}]},
+    {"f": "world.postapoc", "r": 2, "ev": [{"id": "p4", "q": "the Blight has destroyed the entire kingdom of Land's End"}]},
+    {"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "action role-playing platform game"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "turns to exploring beyond the safety of the sanctuary"}]},
+    {"f": "loop.melee", "r": 1, "ev": [{"id": "p10", "q": "its fighting mechanics that appear to have been inspired by Hollow Knight"}]},
+    {"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "Lily is accompanied on her journey by the souls of spirits"}]},
+    {"f": "story.lore", "r": 2, "ev": [{"id": "p6", "q": "Lily can also learn of the past of Land's End through recovered memories and notes"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "The game gained praise regarding its art design and ambience"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "The orchestral, primarily piano-based soundtrack also garnered critical acclaim"}]}
+  ]
+}

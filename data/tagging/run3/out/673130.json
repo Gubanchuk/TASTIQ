@@ -1,0 +1,8 @@
+{"appid": 673130, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter video game developed by Indefatigable"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "dark fantasy theme, action-oriented gameplay, and retro-inspired visual elements"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "corrupted the sacred lands of the known realms"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "The level design in Amid Evil promotes exploration"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "retro-inspired visual elements"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p6", "q": "A truly weird (and beautiful) fantasy setting"}]}
+]}

@@ -1,0 +1,11 @@
+{"appid": 40390, "features": [
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p4", "q": "players can improve five key attributes, each with a focus on different styles of gameplay"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "set in a fantasy world where monsters, ancient gods, and voodoo magic exist"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p4", "q": "\"Blades\" attribute determines proficiency and use of swords, daggers"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "\"Firearms\" revolves on pistols, rifles and other gunpowder-based weaponry"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "to explore the in-game world, complete quests, and customize their character's abilities"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p4", "q": "\"Cunning\" focuses on stealth, including sneaking, thievery"}]},
+{"f": "freedom.open_world", "r": 1, "ev": [{"id": "p12", "q": "Though you get across its semi open world via sea"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p7", "q": "travel with an AI-controlled companion that will aid in combat and questing"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p9", "q": "non-cliché humor"}]}
+]}

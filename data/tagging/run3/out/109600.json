@@ -1,0 +1,13 @@
+{
+  "appid": 109600,
+  "features": [
+    {"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "form groups of up to five player characters"}]},
+    {"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "free-to-play massively multiplayer online role-playing game"}]},
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Based on the fictional Forgotten Realms city of Neverwinter"}]},
+    {"f": "story.mystery", "r": 1, "ev": [{"id": "p4", "q": "The player is investigating the Sect Crown of Neverwinter"}]},
+    {"f": "social.pvp", "r": 1, "ev": [{"id": "p9", "q": "despite its PvP shortcomings"}]},
+    {"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p9", "q": "a fantastic starting point for console gamers"}]},
+    {"f": "combat.precise", "r": 1, "ev": [{"id": "p8", "q": "manages to map heroes' abilities effortlessly across the controller"}]},
+    {"f": "tone.dark", "r": 1, "ev": [{"id": "p4", "q": "plunged into chaos after the disappearance of the last Lord of Neverwinter"}]}
+  ]
+}

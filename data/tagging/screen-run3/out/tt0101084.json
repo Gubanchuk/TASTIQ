@@ -1,0 +1,10 @@
+{"id": "tt0101084", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "Doug is an American animated sitcom created by Jim Jinkins"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "the early adolescent life and zany hijinks of its eponymous character"}]},
+{"f": "characters.coming_of_age", "r": 3, "ev": [{"id": "p4", "q": "The series covers topics related to coming of age"}]},
+{"f": "world.school", "r": 2, "ev": [{"id": "p0", "q": "while attending school in his new hometown of Bluffington"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "the show incorporates many imagination sequences"}]},
+{"f": "audience.kids", "r": 1, "ev": [{"id": "p9", "q": "Nickelodeon was largely attempting to push the limits of children's programming"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p9", "q": "were considered to be inferior by fans of the Nickelodeon episodes"}]},
+{"f": "characters.family", "r": 1, "ev": [{"id": "p3", "q": "Doug Funnie and his family"}]}
+]}

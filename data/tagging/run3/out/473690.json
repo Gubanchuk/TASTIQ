@@ -1,0 +1,10 @@
+{"appid": 473690, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "action role-playing game based on martial arts fighting"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "merging single, cooperative and competitive play in the same campaign"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "merging single, cooperative and competitive play in the same campaign"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p0", "q": "Players earn cards, equipment, and weapons by progressing through the game"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "featuring a seamless open world with shortcuts and free-roaming"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Players build custom combinations of strikes, parries, and feints"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p4", "q": "difficult melee fights that emphasize stamina management"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "the game's simple controls quickly became complex"}]}
+]}

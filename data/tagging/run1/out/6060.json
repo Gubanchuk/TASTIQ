@@ -1,0 +1,73 @@
+{
+ "appid": 6060,
+ "features": [
+  {
+   "f": "social.pvp",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Engage in massive online battles with multiplayer action for up to 64 players"
+    },
+    {
+     "id": "r237897319",
+     "q": "Duking it out in private matches was so much fun"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "to play the classic Star Wars battles any way you want"
+    }
+   ]
+  },
+  {
+   "f": "loop.driving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "jump into more than 30 diverse ground and space vehicles"
+    },
+    {
+     "id": "r237988334",
+     "q": "Great game with a good vehicle system"
+    }
+   ]
+  },
+  {
+   "f": "world.scifi",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "the fate of the Star Wars galaxy"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "story-based saga where every action you take impacts the battlefront"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r234721527",
+     "q": "the ship battles are so bad i can't control anything"
+    }
+   ]
+  }
+ ]
+}

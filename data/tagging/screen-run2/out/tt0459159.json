@@ -1,0 +1,8 @@
+{"id": "tt0459159", "features": [
+{"f": "humor.satire", "r": 3, "ev": [{"id": "p0", "q": "that satirises the inner workings of British government"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p0", "q": "The Thick of It is a British comedy television series"}]},
+{"f": "content.profanity", "r": 3, "ev": [{"id": "p1", "q": "The series became well known for its profanity"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p3", "q": "Visually, the series has a news-as-it-is-happening feel"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p4", "q": "a human blowtorch who doesn't"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p5", "q": "The fourth and final series"}]}
+]}

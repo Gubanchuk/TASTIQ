@@ -1,0 +1,9 @@
+{"appid": 462770, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p5", "q": "integrates momentous, gut-wrenching choices with the other elements of its gameplay"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p5", "q": "praised the integration of narrative choices and gameplay in Pyre"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "The game takes place in a high-fantasy setting"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "help support or improve the party"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p1", "q": "learning more of the world's lore"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p5", "q": "particularly the hand drawn character portraits"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "allows two players controlling separate teams to compete"}]}
+]}

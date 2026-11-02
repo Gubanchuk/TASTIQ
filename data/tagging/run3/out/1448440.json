@@ -1,0 +1,10 @@
+{"appid": 1448440, "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "Set during a fictionalized version of the fall of the Han Dynasty"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Wo Long: Fallen Dynasty is a historical fantasy action role-playing video game"}]},
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "players are required to deflect attacks using their melee weapons"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "More difficult enemies would drop more valuable loot"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "to upgrade their characters and unlock new abilities"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "Like Nioh 1 and 2, the game is largely linear"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "The game also features a cooperative multiplayer mode"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p8", "q": "an inventive spin on the Soulslike formula"}]}
+]}

@@ -1,0 +1,11 @@
+{"appid": 350080, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter video game"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "set in an alternate-history 1946"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p2", "q": "the balance between stealth and action"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "praised the game's intense firefights, intriguing locations"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "Once a Perk's task is complete, the player unlocks a bonus"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p6", "q": "Various collectibles are also scattered throughout the levels"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p4", "q": "Players use melee attacks, firearms and explosives to fight enemies"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p5", "q": "which can be used as a tactical advantage during shootouts and stealth levels"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p9", "q": "praised the game for its brevity"}]}
+]}

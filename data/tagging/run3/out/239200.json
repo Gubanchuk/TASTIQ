@@ -1,0 +1,9 @@
+{"appid": 239200, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2013 survival horror game developed by The Chinese Room"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "a very dark and disturbing one that touches on depressing real-world themes"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p8", "q": "doles out psychological horror along with monsters and gore"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "players explore and interact with a variety of environments"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p5", "q": "After a series of puzzle-like tasks"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "Set in London on New Year's Eve, 1899"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p10", "q": "has wonderful, affecting stories to tell"}]}
+]}

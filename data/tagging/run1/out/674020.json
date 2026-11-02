@@ -1,0 +1,87 @@
+{
+ "appid": 674020,
+ "features": [
+  {
+   "f": "social.pvp",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Outgun the enemy in thrilling, team-based skirmishes"
+    },
+    {
+     "id": "d",
+     "q": "free-to-play tactical online multiplayer FPS"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237616178",
+     "q": "realistic, engaging gunfights in the Alpha, Beta, early-access"
+    }
+   ]
+  },
+  {
+   "f": "loop.driving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "drive around in tanks and vehicles"
+    }
+   ]
+  },
+  {
+   "f": "world.modern",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "set against the backdrop of a modern global conflict"
+    }
+   ]
+  },
+  {
+   "f": "world.realistic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Battle through stunning maps featuring realistic geography"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Customize your perfect loadout from a huge weapons arsenal"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235705124",
+     "q": "Game has shut down as of Aug 3 2026"
+    },
+    {
+     "id": "r236446082",
+     "q": "very little content to give it grace"
+    },
+    {
+     "id": "r236612173",
+     "q": "The game had server issues for several months"
+    }
+   ]
+  }
+ ]
+}

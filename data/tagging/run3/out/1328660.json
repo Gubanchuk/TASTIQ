@@ -1,0 +1,9 @@
+{"appid": 1328660, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 racing video game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p5", "q": "It is an open world"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p6", "q": "All vehicles in Hot Pursuit are licensed real-world cars"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p4", "q": "prominently featuring supercars and high-speed police chases"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "live multiplayer racing"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p5", "q": "both single-player and multiplayer game modes"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p5", "q": "which is used to unlock new vehicles"}]}
+]}

@@ -1,0 +1,32 @@
+{
+  "name": "tastiq",
+  "version": "0.1.0",
+  "description": "Game picker prototype: aspect-based taste profile, five sieves, explanations from facts",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "data:head": "node src/pipeline/01-head.js",
+    "data:details": "node src/pipeline/02-details.js",
+    "data:wikidata": "node src/pipeline/03-wikidata.js",
+    "tag:prepare": "node src/pipeline/04-tag-prepare.js",
+    "tag:api": "node src/pipeline/05-tag-api.js",
+    "tag:ingest": "node src/pipeline/06-tag-ingest.js",
+    "catalog": "node src/pipeline/07-catalog.js",
+    "start": "node --max-old-space-size=8192 src/server/server.js",
+    "test": "node --test \"test/**/*.test.js\"",
+    "test:server": "node test/server-smoke.mjs",
+    "stand": "node --max-old-space-size=8192 src/stand/simulate.js",
+    "personas": "node --max-old-space-size=8192 src/stand/personas.js",
+    "personas:ai": "node --max-old-space-size=8192 src/stand/personas-ai.js",
+    "eval:session": "node --max-old-space-size=8192 src/stand/session-eval.js",
+    "diagnose": "node --max-old-space-size=8192 src/stand/diagnose.js",
+    "journal": "node src/stand/journal-summary.js",
+    "catalog:screen": "node --max-old-space-size=8192 src/pipeline/screen/s04-catalog.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0"
+  }
+}

@@ -1,0 +1,11 @@
+{"appid": 96000, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is a puzzle point-and-click adventure game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "collecting the missing pieces hidden throughout the game"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p4", "q": "Reviewers unanimously applaud the hand-drawn art style"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "calling it \"gorgeous\" or \"absolutely stunning\""}]},
+{"f": "story.minimal", "r": 2, "ev": [{"id": "p3", "q": "contains no spoken or written text except in menus"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p4", "q": "feels the puzzles are \"easy\" and \"repetitive\""}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p4", "q": "suitable for the whole family, including younger children"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p4", "q": "most reviewers criticise the short playtime"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p4", "q": "feels the puzzles are \"easy\" and \"repetitive\""}]}
+]}

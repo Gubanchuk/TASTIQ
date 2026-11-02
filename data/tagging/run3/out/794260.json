@@ -1,0 +1,7 @@
+{"appid": 794260, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Outward is an open world fantasy role-playing video game"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "Outward is an open world fantasy role-playing video game"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "The game focuses on survival as well as the concept of the player being a commoner rather than a hero"}, {"id": "p1", "q": "carefully watch one's warmth, hunger, fatigue and thirst"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "The game can be played in multiplayer both online and locally through split-screen"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "the player is given multiple ways to react to their unfair situation"}]}
+]}

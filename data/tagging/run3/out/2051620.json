@@ -1,0 +1,10 @@
+{"appid": 2051620, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p2", "q": "Players are divided into two teams representing the Allies and the Axis"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Enlisted is a freemium squad-based multiplayer tactical first-person shooter"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "Enlisted is a freemium squad-based multiplayer tactical first-person shooter"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p1", "q": "alternatively, players may control the crew of a tank or plane"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "The game is set during World War II and revolves around major battles"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "p6", "q": "Heavy criticism was given to the game's slow player progression system"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p6", "q": "criticized the game's uncomfortable controls"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p8", "q": "the game's visuals are \"detailed and realistic\""}]}
+]}

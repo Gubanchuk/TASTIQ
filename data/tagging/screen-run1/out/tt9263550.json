@@ -1,0 +1,8 @@
+{"id": "tt9263550", "features": [
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "The film is based on the life of Nambi Narayanan"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "p0", "q": "a scientist at the Indian Space Research Organisation"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p2", "q": "praised Madhavan's performance, his screenplay and his noble intention"}, {"id": "p4", "q": "Madhavan carries the film on his shoulders"}]},
+{"f": "tone.inspiring", "r": 3, "ev": [{"id": "p5", "q": "the heroic and inspirational protagonist"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p6", "q": "but the writing is stodgy"}, {"id": "p7", "q": "If only the writing had been skillful in bringing out and coalescing the humour"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p7", "q": "the first half feels like a science class"}]}
+]}

@@ -1,0 +1,210 @@
+{
+  "scope": "overnight-20261101-02",
+  "capUsd": 0.8,
+  "maxRequests": 7,
+  "synthetic": true,
+  "humanFitMeasured": false,
+  "resumeHash": "df76167adedf3609f143f708630106929270b7290e4a872797ff067d724c5e43",
+  "status": "pass",
+  "checks": [
+    "Correction removes earlier RPG/replay goals and applies the new 45 minute budget.",
+    "Three-player/90-minute coop conditions survive two-card replacement; untouched cards stay exact.",
+    "Unknown direction elicits a non-context question; own words and optional combat are not converted into a hard ban.",
+    "Restore, time removal and replacement undo add no paid requests."
+  ],
+  "questions": [
+    {
+      "id": "desired_experience",
+      "title": "Какого ощущения тебе сейчас хочется от игры?",
+      "why": "Начнём не с жанра, а с того, что могло бы тебя увлечь сегодня.",
+      "options": [
+        {
+          "id": "unwind",
+          "label": "Расслабиться и выдохнуть"
+        },
+        {
+          "id": "story",
+          "label": "Увлечься историей"
+        },
+        {
+          "id": "explore",
+          "label": "Открывать места и секреты"
+        },
+        {
+          "id": "challenge",
+          "label": "Преодолевать сложные испытания"
+        },
+        {
+          "id": "plan",
+          "label": "Обдумывать решения и строить планы"
+        },
+        {
+          "id": "create",
+          "label": "Создавать что-то своё"
+        }
+      ],
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ]
+    },
+    {
+      "id": "exploration.discovery",
+      "title": "Что тебе интереснее находить во время исследования?",
+      "why": "Это поможет понять, чем игра должна увлекать тебя без частых боёв.",
+      "options": [
+        {
+          "id": "places",
+          "label": "Необычные места и красивые виды"
+        },
+        {
+          "id": "secrets",
+          "label": "Тайники и скрытые маршруты"
+        },
+        {
+          "id": "stories",
+          "label": "Следы прошлого и истории мира"
+        },
+        {
+          "id": "puzzles",
+          "label": "Загадки, которые постепенно разгадываешь"
+        },
+        {
+          "id": "discoveries",
+          "label": "Новых существ и необычные явления"
+        }
+      ],
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ]
+    }
+  ],
+  "racing": [
+    {
+      "id": "steam:1328660",
+      "title": "Need for Speed Hot Pursuit Remastered",
+      "reason": "В Hot Pursuit короткие заезды и погони запускаются с карты событий: можно сразу гонять, не погружаясь в длинный сюжет.",
+      "caveat": "Управление аркадное; машины и события открываются постепенно."
+    },
+    {
+      "id": "steam:244210",
+      "title": "Assetto Corsa",
+      "reason": "В Assetto Corsa можно выбрать машину и трассу вне карьеры и посвятить вечер самому управлению.",
+      "caveat": "Симулятор требователен к вождению; настройка управления может отнять время."
+    },
+    {
+      "id": "steam:2990",
+      "title": "FlatOut 2",
+      "reason": "FlatOut 2 предлагает одиночные быстрые гонки без карьеры: заезды по грунту, столкновения и ощутимый вес машины.",
+      "caveat": "Графика возрастная, а соперники часто толкаются и сбивают с траектории."
+    },
+    {
+      "id": "steam:550320",
+      "title": "art of rally",
+      "reason": "В art of rally есть отдельные заезды на время: можно сразу заняться поворотами и заносами без прохождения карьеры.",
+      "caveat": "Камера смотрит издалека сверху; к управлению заносом нужно привыкнуть."
+    }
+  ],
+  "coop": [
+    {
+      "id": "steam:275850",
+      "title": "No Man's Sky",
+      "reason": "Исследование планет и совместная стройка отвечают вашему запросу; сложность боёв и потерю вещей можно настроить.",
+      "caveat": "Вместимость онлайн-режима в каталоге не проверена; вводное обучение займёт часть вечера.",
+      "feasibility": [
+        {
+          "key": "players",
+          "status": "unknown",
+          "text": "Не проверено, можно ли играть всей компанией (3)."
+        },
+        {
+          "key": "minutes",
+          "status": "unknown",
+          "text": "Не проверено, удобно ли прерваться через 90 мин."
+        }
+      ]
+    },
+    {
+      "id": "steam:1203620",
+      "title": "Enshrouded",
+      "reason": "Руины, экспедиции и общая база дают цель помимо крафта; в настройках мира можно ослабить врагов и отключить потерю вещей.",
+      "caveat": "Вместимость онлайн-режима в каталоге не проверена; бои остаются заметной частью игры.",
+      "feasibility": [
+        {
+          "key": "players",
+          "status": "unknown",
+          "text": "Не проверено, можно ли играть всей компанией (3)."
+        },
+        {
+          "key": "minutes",
+          "status": "unknown",
+          "text": "Не проверено, удобно ли прерваться через 90 мин."
+        }
+      ]
+    },
+    {
+      "id": "steam:962130",
+      "title": "Grounded",
+      "reason": "Grounded предлагает исследовать огромный сад и строить базу; в настройках можно ослабить бои и отключить потерю рюкзака.",
+      "caveat": "Вместимость онлайн-группы не проверена; даже при мягких настройках встречаются пауки.",
+      "feasibility": [
+        {
+          "key": "players",
+          "status": "unknown",
+          "text": "Не проверено, можно ли играть всей компанией (3)."
+        },
+        {
+          "key": "minutes",
+          "status": "unknown",
+          "text": "Не проверено, удобно ли прерваться через 90 мин."
+        }
+      ]
+    },
+    {
+      "id": "steam:892970",
+      "title": "Valheim",
+      "reason": "В Valheim можно строить общий дом и открывать новые берега, снизив сложность боёв и потери при смерти настройками мира.",
+      "caveat": "Вместимость онлайн-группы не проверена; отключите рейды, чтобы не терять базу.",
+      "feasibility": [
+        {
+          "key": "players",
+          "status": "unknown",
+          "text": "Не проверено, можно ли играть всей компанией (3)."
+        },
+        {
+          "key": "minutes",
+          "status": "unknown",
+          "text": "Не проверено, удобно ли прерваться через 90 мин."
+        }
+      ]
+    }
+  ],
+  "requests": 7,
+  "codeBefore": {
+    "src/core/conversation.js": "0e291c895547a87f3ef4e188a5fa091c87d421485de2b5c892e415ee320b54dc",
+    "src/core/session-time.js": "0bb76869a83ea3abceadc75585abb45374d7c18e7915400742fa9affa1073ca5",
+    "src/server/conversation-service.js": "cd02d80c88c4596e20a4090efd3bfdc5d963e9248a7ef3c0878ca78d8f96ae2f",
+    "src/server/conversation-game-identity.js": "2362f1274d0578378deea3617ab4b6a7e2462c20bd0debae47fe295b38e0baef",
+    "src/ai/conversation.js": "72c4d83f39eb5ab22f2622aa72ad4e79876ad35c67f7ca7e222c964e313eb9d0",
+    "src/ai/prompt.js": "315a74e199c7a67d1bdb384c693e5546eca2c34b04b431596e4324bf5efdcd3c"
+  },
+  "codeAfter": {
+    "src/core/conversation.js": "0e291c895547a87f3ef4e188a5fa091c87d421485de2b5c892e415ee320b54dc",
+    "src/core/session-time.js": "0bb76869a83ea3abceadc75585abb45374d7c18e7915400742fa9affa1073ca5",
+    "src/server/conversation-service.js": "cd02d80c88c4596e20a4090efd3bfdc5d963e9248a7ef3c0878ca78d8f96ae2f",
+    "src/server/conversation-game-identity.js": "2362f1274d0578378deea3617ab4b6a7e2462c20bd0debae47fe295b38e0baef",
+    "src/ai/conversation.js": "72c4d83f39eb5ab22f2622aa72ad4e79876ad35c67f7ca7e222c964e313eb9d0",
+    "src/ai/prompt.js": "315a74e199c7a67d1bdb384c693e5546eca2c34b04b431596e4324bf5efdcd3c"
+  },
+  "costUsd": 0.1081527,
+  "successfulCallsAdded": 7,
+  "cumulativeUpper": 1.8116168,
+  "successfulCalls": 168,
+  "uncertainReserve": 0,
+  "additionalRemainingLower": 9.7666351
+}

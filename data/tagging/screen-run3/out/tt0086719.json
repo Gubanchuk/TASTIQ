@@ -1,0 +1,7 @@
+{"id": "tt0086719", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a half-hour American military science fiction animated television series"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "military science fiction animated television series"}]},
+{"f": "world.war", "r": 1, "ev": [{"id": "s", "q": "to defend human freedom against Cobra, a ruthless terrorist organization"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p0", "q": "the cartoon ran in syndication from 1983 to 1986"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p0", "q": "95 episodes were produced"}]}
+]}

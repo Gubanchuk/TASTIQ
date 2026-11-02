@@ -1,0 +1,7 @@
+{"appid": 243970, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a 2015 turn-based tactics stealth"}]},
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p2", "q": "with emphasis on stealth and espionage"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p5", "q": "a sophisticated AI system known as Incognita"}, {"id": "p5", "q": "The game is set in year 2074"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "they can unlock different agents with different skill sets"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "keeping cognizant of the amount of time taken for travel and missions"}]}
+]}

@@ -1,0 +1,18 @@
+{"appid": 47810, "features": [
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p4", "q": "They also recruit companions, who accompany them and provide assistance in battle"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p3", "q": "Players create their own Grey Warden character, customizing gender and appearance"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p2", "q": "praise mostly directed at its story, setting, characters, music and combat system"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p3", "q": "choosing a race and class"}, {"id": "p5", "q": "specialization options, which offer class-specific skills"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "The player can level up their Warden character by earning experience points"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p4", "q": "or pause the game to queue up actions"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p6", "q": "A dialogue tree offers several dialogue options for the player to select"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p6", "q": "The player often must choose between morally ambiguous options"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p6", "q": "unique quests and dialogue revealing the lore of Dragon Age"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "it will be a fantasy game"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p0", "q": "is tasked with defeating the Archdemon that commands them and ending their invasion"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p11", "q": "the combat requires both patience and strategy"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p11", "q": "praised the high difficulty of boss battles"}]},
+{"f": "length.long", "r": 3, "ev": [{"id": "p13", "q": "more than 80 hours of content available in the game"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p12", "q": "criticized the sex sequences as"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "praise mostly directed at its story, setting, characters, music and combat system"}]}
+]}

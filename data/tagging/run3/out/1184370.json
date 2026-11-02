@@ -1,0 +1,14 @@
+{
+  "appid": 1184370,
+  "features": [
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "The Worldwound is a magical chasm that allows demons to travel"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "where they maraud and do great evil"}]},
+    {"f": "tone.epic", "r": 2, "ev": [{"id": "p1", "q": "The country of Mendev has fought a series of wars against these demons"}]},
+    {"f": "loop.management", "r": 2, "ev": [{"id": "p6", "q": "expressed disappointment with the military management aspects"}]},
+    {"f": "progression.builds", "r": 3, "ev": [{"id": "p3", "q": "The chosen mythic path significantly affects the Commander's abilities"}]},
+    {"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "They recruit various individuals to their party"}]},
+    {"f": "story.choices", "r": 3, "ev": [{"id": "p4", "q": "the Commander can choose to abandon their mythic powers"}]},
+    {"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "from an unknown source"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p6", "q": "praised the game's story and technical improvements"}]}
+  ]
+}

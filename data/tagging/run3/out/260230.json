@@ -1,0 +1,16 @@
+{"appid": 260230, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Players solve puzzles by interacting with various objects and people"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "Set during World War I"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p9", "q": "The game's narrative was praised"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p0", "q": "a story about survival, sacrifice, and friendship"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p9", "q": "the devastation of the game's grimmer scenes more impactful"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p11", "q": "the hand-drawn art style elicits a sense of"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "The game's graphics received positive comments"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p11", "q": "Juba praised the game's soundtracks"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "stealth sections where the player must avoid being detected by enemies"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p0", "q": "The characters are accompanied by a dog named Walt"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p11", "q": "liked the endearing character designs"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "did not change or evolve throughout the game's campaign"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p10", "q": "which were accessible and not overly challenging to solve"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p4", "q": "The game comprises four chapters split into several sections"}]}
+]}

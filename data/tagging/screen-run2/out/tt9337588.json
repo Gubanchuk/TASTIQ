@@ -1,0 +1,9 @@
+{"id": "tt9337588", "features": [
+{"f": "world.dystopia", "r": 3, "ev": [{"id": "p0", "q": "Leila is an Indian Hindi-language dystopian drama series"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p2", "q": "Although Leila is set in the distant future"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "the sheer audacity of its ideas"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p2", "q": "Dissenters are branded as traitors, intellectuals are attacked"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p1", "q": "What the show cannot achieve in terms of streamlined storytelling"}]},
+{"f": "characters.female_lead", "r": 2, "ev": [{"id": "s", "q": "a woman searches for the daughter she lost"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p0", "q": "The six-episode series premiered on 14 June 2019 on Netflix"}]}
+]}

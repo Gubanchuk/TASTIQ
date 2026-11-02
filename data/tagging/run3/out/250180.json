@@ -1,0 +1,9 @@
+{"appid": 250180, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2000 run and gun video game"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p3", "q": "the player can perform melee attacks by using a knife and/or kicking"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "the player can find numerous weapon upgrades"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p9", "q": "criticized the excessive difficulty"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "with such detailed environments and smooth animation"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p11", "q": "is even better with a friend"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p10", "q": "you'll finish the lot in a day"}]}
+]}

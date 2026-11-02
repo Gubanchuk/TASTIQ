@@ -1,0 +1,9 @@
+{"appid": 94400, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "Players duel with swords in a pixelated environment"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "is a fast-paced two-player dueling game"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p2", "q": "Reviewers praised the feel of the gameplay and its balance"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p0", "q": "Players duel with swords in a pixelated environment"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p3", "q": "He praised the soundtrack but wanted more tracks"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "every single fight is hold-your-breath tense"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p1", "q": "The player to reach the end of their opponent's side first wins"}]}
+]}

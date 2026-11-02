@@ -1,0 +1,14 @@
+{"appid": 1361510, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a 2022 beat 'em up game"}, {"id": "p3", "q": "a side-scrolling action brawler"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p4", "q": "the game supports cooperative multiplayer for up to six players"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p2", "q": "praising the pixel-based visual style"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p10", "q": "impressed by the game's visuals"}, {"id": "p9", "q": "by far the game's best feature"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "lauded the game's appealing personality, animations, music"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p9", "q": "goofy background characters"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p6", "q": "along with April O'Neil and Master Splinter"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "well-rounded character roster"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Each character has their own attributes"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p4", "q": "the game must be completed in one sitting"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "the short length of the story mode"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p5", "q": "must travel to other dimensions to stop Shredder"}]}
+]}

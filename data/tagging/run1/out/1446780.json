@@ -1,0 +1,14 @@
+{"appid": 1446780, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "a", "q": "Charge up and hit hard with the devastating Great Sword"}, {"id": "r237174312", "q": "combat which implements jumping, air dashing, and the occasional wall-running"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "a", "q": "take aim from a distance with the Bow and Bowguns"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "r236799638", "q": "Slay monsters for parts. Use parts to make stuff. Repeat."}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "r237174312", "q": "This is the fastest, most technical Monster Hunter game."}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "r236943187", "q": "executing high damage combos in between perfectly spaced dodges"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r236688790", "q": "feels less clunky compared to Rise's"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "a", "q": "creatures inspired by Japanese folklore"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "r237174312", "q": "going for a less realistic and more 'anime' sort of vibe to the combat"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "r236905300", "q": "rise has this stylish presentation that I really like how it looks"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "r236943187", "q": "let's you actually play with your friends the whole way through"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r237201224", "q": "long tutorial dialogues, unskippable things"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "r238004073", "q": "the monster world is just low res and empty"}]}
+]}

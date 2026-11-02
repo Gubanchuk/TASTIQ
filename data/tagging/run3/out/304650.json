@@ -1,0 +1,10 @@
+{"appid": 304650, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p6", "q": "gives you a wonderful world to explore"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p5", "q": "with the writing and setting being the most highly praised aspects of the game"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p4", "q": "Several bits of writing and settings in the game are literary allusions"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p0", "q": "survival/exploration role-playing video game"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "a story mode where the player is presented with several choices"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "creates an atmosphere of tension"}]},
+{"f": "pace.slow", "r": 1, "ev": [{"id": "p2", "q": "The ship movement is quite slow"}]},
+{"f": "loop.cards", "r": 1, "ev": [{"id": "p2", "q": "in a card-like format"}]}
+]}

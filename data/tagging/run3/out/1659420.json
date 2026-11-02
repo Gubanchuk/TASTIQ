@@ -1,0 +1,17 @@
+{"appid": 1659420, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p4", "q": "Gameplay in the Uncharted series is a combination of action-adventure elements and 3D platforming"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p6", "q": "Shooting is central to the game's function"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "gameplay mostly revolving around combat, shooting, exploration, and puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "gameplay mostly revolving around combat, shooting, exploration, and puzzles"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p2", "q": "Later titles began including competitive and co-operative multiplayer game modes, stealth, and driving gameplay"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p7", "q": "In A Thief's End, the use of vehicles in an explorable environment was developed"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p5", "q": "players complete a single track series of levels with linear gameplay"}]},
+{"f": "freedom.open_world", "r": 1, "ev": [{"id": "p5", "q": "Later games contain elements of open world design"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "with praise for the stories, characters, voice acting, gameplay, and graphics"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "As the protagonist of the series, Nathan Drake is seen as a PlayStation mascot"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "Much of the praise for the series has gone towards the graphics"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p8", "q": "The co-op multiplayer mode allows up to three players"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p8", "q": "The competitive multiplayer allows a maximum of ten players to play against each other"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "historical fiction, elements of fantasy and folklore, and fictional characters alongside real-world historical figures"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p5", "q": "free-roaming to secure collectibles or stealth to avoid enemies"}]}
+]}

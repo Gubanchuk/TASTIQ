@@ -1,0 +1,11 @@
+{"appid": 238320, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "a", "q": "a first-person survival horror game"}, {"id": "r236296551", "q": "Атмосфера заброшенной психиатрической больницы"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "r236227543", "q": "a relentless first-person survival horror game that forces players to run and hide to survive"}, {"id": "r236227543", "q": "builds tension through its oppressive atmosphere"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "r236227543", "q": "forces players to run and hide to survive"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "r237196584", "q": "all of the lore is told through the documents found around the asylum"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "a", "q": "discover its terrible secret"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "r235888556", "q": "it could exist in the real world under a different name"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r237196584", "q": "The music & sound design"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r236900252", "q": "tedious repetitive tasks like find 3 fuses or shut off 2 valves"}, {"id": "r236227543", "q": "While occasionally repetitive"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "r237242260", "q": "Level design is somehow both linear and confusing"}]}
+]}

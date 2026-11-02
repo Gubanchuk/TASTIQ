@@ -1,0 +1,11 @@
+{"appid": 2072450, "features": [
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p2", "q": "players control Ichiban Kasuga and Kazuma Kiryu, and their respective party members"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p4", "q": "each character can choose from various character classes which are themed after real-world jobs"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "the game also has turn-based combat system for all playable characters"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p8", "q": "the character-focused story"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p5", "q": "the game features open world exploration throughout its three cities"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "the game features open world exploration throughout its three cities"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p5", "q": "a food delivery game parodying Sega's Crazy Taxi franchise"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p8", "q": "some portions feel way more fleshed out, and others feel like they drag the median down"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p8", "q": "felt it lost focus over the course of the narrative"}]}
+]}

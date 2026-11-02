@@ -1,0 +1,8 @@
+{"appid": 438640, "features": [
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "Multi-Builds which grant players access to various building options"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "adapt to the two-player co-op gameplay"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "adapts the events of the 2015 film Star Wars: The Force Awakens"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p2", "q": "The game features over 200 playable characters"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p3", "q": "though with numerous humorous deviations or minor changes"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "engage in \"Blaster Battles\" with enemies"}]}
+]}

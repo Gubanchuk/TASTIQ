@@ -1,0 +1,12 @@
+{"appid": 2064650, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p2", "q": "collects items as they travel around in the open virtual world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "explores a futuristic planet and fights aliens"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "Tower of Fantasy supports co-op play where up to 4 players on the same server can team up"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "PvP where players can challenge each other to duels in open-world combat"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "through a hack-and-slash combat system where the player character swaps between weapons"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "each weapon also has one of 3 roles (offense, defense, support)"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "explores a futuristic planet and fights aliens"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p0", "q": "after a cataclysm that nearly wiped out human civilization"}]},
+{"f": "combat.fast", "r": 1, "ev": [{"id": "p3", "q": "when fully switching weapons unleashes a powerful discharge attack"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p2", "q": "can equip various vehicles to move around in the world"}]}
+]}

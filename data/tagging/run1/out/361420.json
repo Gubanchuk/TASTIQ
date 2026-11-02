@@ -1,0 +1,8 @@
+{"appid": 361420, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "a", "q": "Build custom bases throughout the solar system"}, {"id": "r236952001", "q": "too busy making an awesome base"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "a", "q": "Each of them can be explored entirely"}, {"id": "r235682147", "q": "finding secrets and lores"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "a", "q": "a powerful instrument which can dig, collect, shape, build, and color terrain in any way they wish"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "r235742666", "q": "great for just burning time or having a relaxing experience"}, {"id": "r237354899", "q": "Прекрасная медитативная игра"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r236952001", "q": "niche mechanics with easy learning curve"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r236931045", "q": "the PC controls feel incredibly clunky and unintuitive"}]}
+]}

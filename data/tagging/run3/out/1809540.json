@@ -1,0 +1,8 @@
+{"appid": 1809540, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "with gameplay focused on melee combat mixed with side-scrolling platforming"}]},
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p1", "q": "with gameplay focused on melee combat mixed with side-scrolling platforming"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "The game is set in an Asian fantasy-inspired futuristic world"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "The game is set in an Asian fantasy-inspired futuristic world"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "The game features its own hand-drawn animation style"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p6", "q": "Despite Nine Sols difficulty, he said it made him feel invincible"}]}
+]}

@@ -1,0 +1,597 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T22:30:26.400Z",
+  "title": "Design System: TASTIQ — три невыбранные структуры v5",
+  "extensions": {
+    "colorMeta": {
+      "comparison-ground": {
+        "displayName": "comparison-ground",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00545 95.102)",
+          "oklch(26.429% 0.00545 95.102)",
+          "oklch(37.857% 0.00545 95.102)",
+          "oklch(49.286% 0.00545 95.102)",
+          "oklch(60.714% 0.00545 95.102)",
+          "oklch(72.143% 0.00545 95.102)",
+          "oklch(83.571% 0.00545 95.102)",
+          "oklch(95.000% 0.00545 95.102)"
+        ]
+      },
+      "comparison-ink": {
+        "displayName": "comparison-ink",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01214 264.334)",
+          "oklch(26.429% 0.01214 264.334)",
+          "oklch(37.857% 0.01214 264.334)",
+          "oklch(49.286% 0.01214 264.334)",
+          "oklch(60.714% 0.01214 264.334)",
+          "oklch(72.143% 0.01214 264.334)",
+          "oklch(83.571% 0.01214 264.334)",
+          "oklch(95.000% 0.01214 264.334)"
+        ]
+      },
+      "on-action": {
+        "displayName": "on-action",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00000 89.876)",
+          "oklch(26.429% 0.00000 89.876)",
+          "oklch(37.857% 0.00000 89.876)",
+          "oklch(49.286% 0.00000 89.876)",
+          "oklch(60.714% 0.00000 89.876)",
+          "oklch(72.143% 0.00000 89.876)",
+          "oklch(83.571% 0.00000 89.876)",
+          "oklch(95.000% 0.00000 89.876)"
+        ]
+      },
+      "focus": {
+        "displayName": "focus",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.10557 235.191)",
+          "oklch(26.429% 0.10557 235.191)",
+          "oklch(37.857% 0.10557 235.191)",
+          "oklch(49.286% 0.10557 235.191)",
+          "oklch(60.714% 0.10557 235.191)",
+          "oklch(72.143% 0.10557 235.191)",
+          "oklch(83.571% 0.10557 235.191)",
+          "oklch(95.000% 0.10557 235.191)"
+        ]
+      },
+      "conversation-ink": {
+        "displayName": "conversation-ink",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00179 106.511)",
+          "oklch(26.429% 0.00179 106.511)",
+          "oklch(37.857% 0.00179 106.511)",
+          "oklch(49.286% 0.00179 106.511)",
+          "oklch(60.714% 0.00179 106.511)",
+          "oklch(72.143% 0.00179 106.511)",
+          "oklch(83.571% 0.00179 106.511)",
+          "oklch(95.000% 0.00179 106.511)"
+        ]
+      },
+      "conversation-muted": {
+        "displayName": "conversation-muted",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01204 67.553)",
+          "oklch(26.429% 0.01204 67.553)",
+          "oklch(37.857% 0.01204 67.553)",
+          "oklch(49.286% 0.01204 67.553)",
+          "oklch(60.714% 0.01204 67.553)",
+          "oklch(72.143% 0.01204 67.553)",
+          "oklch(83.571% 0.01204 67.553)",
+          "oklch(95.000% 0.01204 67.553)"
+        ]
+      },
+      "conversation-accent": {
+        "displayName": "conversation-accent",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.000% 0.16042 34.117)",
+          "oklch(26.429% 0.16042 34.117)",
+          "oklch(37.857% 0.16042 34.117)",
+          "oklch(49.286% 0.16042 34.117)",
+          "oklch(60.714% 0.16042 34.117)",
+          "oklch(72.143% 0.16042 34.117)",
+          "oklch(83.571% 0.16042 34.117)",
+          "oklch(95.000% 0.16042 34.117)"
+        ]
+      },
+      "conversation-surface": {
+        "displayName": "conversation-surface",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01302 71.332)",
+          "oklch(26.429% 0.01302 71.332)",
+          "oklch(37.857% 0.01302 71.332)",
+          "oklch(49.286% 0.01302 71.332)",
+          "oklch(60.714% 0.01302 71.332)",
+          "oklch(72.143% 0.01302 71.332)",
+          "oklch(83.571% 0.01302 71.332)",
+          "oklch(95.000% 0.01302 71.332)"
+        ]
+      },
+      "conversation-line": {
+        "displayName": "conversation-line",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01838 64.897)",
+          "oklch(26.429% 0.01838 64.897)",
+          "oklch(37.857% 0.01838 64.897)",
+          "oklch(49.286% 0.01838 64.897)",
+          "oklch(60.714% 0.01838 64.897)",
+          "oklch(72.143% 0.01838 64.897)",
+          "oklch(83.571% 0.01838 64.897)",
+          "oklch(95.000% 0.01838 64.897)"
+        ]
+      },
+      "conversation-ground": {
+        "displayName": "conversation-ground",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01653 70.531)",
+          "oklch(26.429% 0.01653 70.531)",
+          "oklch(37.857% 0.01653 70.531)",
+          "oklch(49.286% 0.01653 70.531)",
+          "oklch(60.714% 0.01653 70.531)",
+          "oklch(72.143% 0.01653 70.531)",
+          "oklch(83.571% 0.01653 70.531)",
+          "oklch(95.000% 0.01653 70.531)"
+        ]
+      },
+      "conversation-nav": {
+        "displayName": "conversation-nav",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00466 247.992)",
+          "oklch(26.429% 0.00466 247.992)",
+          "oklch(37.857% 0.00466 247.992)",
+          "oklch(49.286% 0.00466 247.992)",
+          "oklch(60.714% 0.00466 247.992)",
+          "oklch(72.143% 0.00466 247.992)",
+          "oklch(83.571% 0.00466 247.992)",
+          "oklch(95.000% 0.00466 247.992)"
+        ]
+      },
+      "conversation-transcript": {
+        "displayName": "conversation-transcript",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01917 67.581)",
+          "oklch(26.429% 0.01917 67.581)",
+          "oklch(37.857% 0.01917 67.581)",
+          "oklch(49.286% 0.01917 67.581)",
+          "oklch(60.714% 0.01917 67.581)",
+          "oklch(72.143% 0.01917 67.581)",
+          "oklch(83.571% 0.01917 67.581)",
+          "oklch(95.000% 0.01917 67.581)"
+        ]
+      },
+      "conversation-card": {
+        "displayName": "conversation-card",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00854 84.572)",
+          "oklch(26.429% 0.00854 84.572)",
+          "oklch(37.857% 0.00854 84.572)",
+          "oklch(49.286% 0.00854 84.572)",
+          "oklch(60.714% 0.00854 84.572)",
+          "oklch(72.143% 0.00854 84.572)",
+          "oklch(83.571% 0.00854 84.572)",
+          "oklch(95.000% 0.00854 84.572)"
+        ]
+      },
+      "showcase-ink": {
+        "displayName": "showcase-ink",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00737 285.888)",
+          "oklch(26.429% 0.00737 285.888)",
+          "oklch(37.857% 0.00737 285.888)",
+          "oklch(49.286% 0.00737 285.888)",
+          "oklch(60.714% 0.00737 285.888)",
+          "oklch(72.143% 0.00737 285.888)",
+          "oklch(83.571% 0.00737 285.888)",
+          "oklch(95.000% 0.00737 285.888)"
+        ]
+      },
+      "showcase-muted": {
+        "displayName": "showcase-muted",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01274 297.376)",
+          "oklch(26.429% 0.01274 297.376)",
+          "oklch(37.857% 0.01274 297.376)",
+          "oklch(49.286% 0.01274 297.376)",
+          "oklch(60.714% 0.01274 297.376)",
+          "oklch(72.143% 0.01274 297.376)",
+          "oklch(83.571% 0.01274 297.376)",
+          "oklch(95.000% 0.01274 297.376)"
+        ]
+      },
+      "showcase-accent": {
+        "displayName": "showcase-accent",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.000% 0.19816 271.660)",
+          "oklch(26.429% 0.19816 271.660)",
+          "oklch(37.857% 0.19816 271.660)",
+          "oklch(49.286% 0.19816 271.660)",
+          "oklch(60.714% 0.19816 271.660)",
+          "oklch(72.143% 0.19816 271.660)",
+          "oklch(83.571% 0.19816 271.660)",
+          "oklch(95.000% 0.19816 271.660)"
+        ]
+      },
+      "showcase-surface": {
+        "displayName": "showcase-surface",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01302 82.402)",
+          "oklch(26.429% 0.01302 82.402)",
+          "oklch(37.857% 0.01302 82.402)",
+          "oklch(49.286% 0.01302 82.402)",
+          "oklch(60.714% 0.01302 82.402)",
+          "oklch(72.143% 0.01302 82.402)",
+          "oklch(83.571% 0.01302 82.402)",
+          "oklch(95.000% 0.01302 82.402)"
+        ]
+      },
+      "showcase-line": {
+        "displayName": "showcase-line",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00689 53.434)",
+          "oklch(26.429% 0.00689 53.434)",
+          "oklch(37.857% 0.00689 53.434)",
+          "oklch(49.286% 0.00689 53.434)",
+          "oklch(60.714% 0.00689 53.434)",
+          "oklch(72.143% 0.00689 53.434)",
+          "oklch(83.571% 0.00689 53.434)",
+          "oklch(95.000% 0.00689 53.434)"
+        ]
+      },
+      "showcase-nav": {
+        "displayName": "showcase-nav",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.19333 271.457)",
+          "oklch(26.429% 0.19333 271.457)",
+          "oklch(37.857% 0.19333 271.457)",
+          "oklch(49.286% 0.19333 271.457)",
+          "oklch(60.714% 0.19333 271.457)",
+          "oklch(72.143% 0.19333 271.457)",
+          "oklch(83.571% 0.19333 271.457)",
+          "oklch(95.000% 0.19333 271.457)"
+        ]
+      },
+      "catalogue-ink": {
+        "displayName": "catalogue-ink",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01508 196.342)",
+          "oklch(26.429% 0.01508 196.342)",
+          "oklch(37.857% 0.01508 196.342)",
+          "oklch(49.286% 0.01508 196.342)",
+          "oklch(60.714% 0.01508 196.342)",
+          "oklch(72.143% 0.01508 196.342)",
+          "oklch(83.571% 0.01508 196.342)",
+          "oklch(95.000% 0.01508 196.342)"
+        ]
+      },
+      "catalogue-muted": {
+        "displayName": "catalogue-muted",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01526 179.018)",
+          "oklch(26.429% 0.01526 179.018)",
+          "oklch(37.857% 0.01526 179.018)",
+          "oklch(49.286% 0.01526 179.018)",
+          "oklch(60.714% 0.01526 179.018)",
+          "oklch(72.143% 0.01526 179.018)",
+          "oklch(83.571% 0.01526 179.018)",
+          "oklch(95.000% 0.01526 179.018)"
+        ]
+      },
+      "catalogue-accent": {
+        "displayName": "catalogue-accent",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.000% 0.06455 180.497)",
+          "oklch(26.429% 0.06455 180.497)",
+          "oklch(37.857% 0.06455 180.497)",
+          "oklch(49.286% 0.06455 180.497)",
+          "oklch(60.714% 0.06455 180.497)",
+          "oklch(72.143% 0.06455 180.497)",
+          "oklch(83.571% 0.06455 180.497)",
+          "oklch(95.000% 0.06455 180.497)"
+        ]
+      },
+      "catalogue-surface": {
+        "displayName": "catalogue-surface",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.00924 106.570)",
+          "oklch(26.429% 0.00924 106.570)",
+          "oklch(37.857% 0.00924 106.570)",
+          "oklch(49.286% 0.00924 106.570)",
+          "oklch(60.714% 0.00924 106.570)",
+          "oklch(72.143% 0.00924 106.570)",
+          "oklch(83.571% 0.00924 106.570)",
+          "oklch(95.000% 0.00924 106.570)"
+        ]
+      },
+      "catalogue-line": {
+        "displayName": "catalogue-line",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01191 153.641)",
+          "oklch(26.429% 0.01191 153.641)",
+          "oklch(37.857% 0.01191 153.641)",
+          "oklch(49.286% 0.01191 153.641)",
+          "oklch(60.714% 0.01191 153.641)",
+          "oklch(72.143% 0.01191 153.641)",
+          "oklch(83.571% 0.01191 153.641)",
+          "oklch(95.000% 0.01191 153.641)"
+        ]
+      },
+      "catalogue-nav": {
+        "displayName": "catalogue-nav",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01381 220.050)",
+          "oklch(26.429% 0.01381 220.050)",
+          "oklch(37.857% 0.01381 220.050)",
+          "oklch(49.286% 0.01381 220.050)",
+          "oklch(60.714% 0.01381 220.050)",
+          "oklch(72.143% 0.01381 220.050)",
+          "oklch(83.571% 0.01381 220.050)",
+          "oklch(95.000% 0.01381 220.050)"
+        ]
+      },
+      "catalogue-selected": {
+        "displayName": "catalogue-selected",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01847 150.546)",
+          "oklch(26.429% 0.01847 150.546)",
+          "oklch(37.857% 0.01847 150.546)",
+          "oklch(49.286% 0.01847 150.546)",
+          "oklch(60.714% 0.01847 150.546)",
+          "oklch(72.143% 0.01847 150.546)",
+          "oklch(83.571% 0.01847 150.546)",
+          "oklch(95.000% 0.01847 150.546)"
+        ]
+      },
+      "catalogue-detail": {
+        "displayName": "catalogue-detail",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.000% 0.01409 138.713)",
+          "oklch(26.429% 0.01409 138.713)",
+          "oklch(37.857% 0.01409 138.713)",
+          "oklch(49.286% 0.01409 138.713)",
+          "oklch(60.714% 0.01409 138.713)",
+          "oklch(72.143% 0.01409 138.713)",
+          "oklch(83.571% 0.01409 138.713)",
+          "oklch(95.000% 0.01409 138.713)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "conversation-display": {
+        "displayName": "conversation-display",
+        "purpose": "Заголовок результата своего кандидата; не общий production display."
+      },
+      "conversation-title": {
+        "displayName": "conversation-title",
+        "purpose": "Название результата/выбранного detail своего кандидата."
+      },
+      "showcase-display": {
+        "displayName": "showcase-display",
+        "purpose": "Заголовок результата своего кандидата; не общий production display."
+      },
+      "showcase-title": {
+        "displayName": "showcase-title",
+        "purpose": "Название результата/выбранного detail своего кандидата."
+      },
+      "catalogue-display": {
+        "displayName": "catalogue-display",
+        "purpose": "Заголовок результата своего кандидата; не общий production display."
+      },
+      "catalogue-title": {
+        "displayName": "catalogue-title",
+        "purpose": "Название результата/выбранного detail своего кандидата."
+      },
+      "reason": {
+        "displayName": "reason",
+        "purpose": "Объяснение результата."
+      },
+      "catalogue-reason": {
+        "displayName": "catalogue-reason",
+        "purpose": "Объяснение результата."
+      },
+      "meta": {
+        "displayName": "meta",
+        "purpose": "Метаданные и служебные подписи."
+      },
+      "action": {
+        "displayName": "action",
+        "purpose": "Кнопка действия."
+      }
+    },
+    "shadows": [
+      {
+        "name": "showcase-result",
+        "value": "0 12px 23px #22222220",
+        "purpose": "Постер раскрытого сравнительного ряда."
+      },
+      {
+        "name": "showcase-shelf",
+        "value": "0 10px 17px #22222218",
+        "purpose": "Обложка медиаполки."
+      },
+      {
+        "name": "showcase-question",
+        "value": "0 13px 24px #25252526",
+        "purpose": "Обложки вопроса."
+      },
+      {
+        "name": "showcase-lower",
+        "value": "0 16px 25px #1717172e",
+        "purpose": "Медиалента нового низа."
+      },
+      {
+        "name": "notice",
+        "value": "0 12px 25px #16161630",
+        "purpose": "Локальное уведомление."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Фактический --ease."
+      },
+      {
+        "name": "button",
+        "value": "background .18s var(--ease),border-color .18s var(--ease)",
+        "purpose": "Кнопки; reduced motion отключает transitions/animations/scroll-behavior."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1250px"
+      },
+      {
+        "name": "narrow-desktop",
+        "value": "1000px"
+      },
+      {
+        "name": "phone",
+        "value": "650px"
+      },
+      {
+        "name": "context-summary",
+        "value": "640px"
+      },
+      {
+        "name": "small-phone",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "conversation / Основное действие",
+      "kind": "button",
+      "refersTo": "conversation-primary",
+      "description": "Кнопка отдельного невыбранного кандидата; акценты не объединяются в продуктовую палитру.",
+      "html": "<span class=\"ds-conversation\"><button class=\"ds-button ds-primary\">Беру на вечер</button></span>",
+      "css": ".ds-conversation{--ink:#2b2b2a;--muted:#6b655f;--accent:#b84025;--surface:#fbf4ec;--line:#d9cec4;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)} .ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;font-family:inherit;color:inherit}.ds-button{border:1px solid var(--line);border-radius:6px;background:transparent;padding:11px 16px;min-height:44px;font-size:13px;font-weight:550;line-height:1.4;transition:background .18s var(--ease),border-color .18s var(--ease)}.ds-button:hover{background:#00000008;border-color:#8d9592}.ds-button.ds-primary{background:var(--accent);color:#fff;border-color:var(--accent)}.ds-button.ds-primary:hover:not(:disabled){filter:brightness(.92)}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}.ds-button:disabled{opacity:.48;cursor:default}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "showcase / Основное действие",
+      "kind": "button",
+      "refersTo": "showcase-primary",
+      "description": "Кнопка отдельного невыбранного кандидата; акценты не объединяются в продуктовую палитру.",
+      "html": "<span class=\"ds-showcase\"><button class=\"ds-button ds-primary\">Беру на вечер</button></span>",
+      "css": ".ds-showcase{--ink:#252529;--muted:#65636b;--accent:#2c32b3;--surface:#fffaf1;--line:#d9d4d1;--ease:cubic-bezier(.16,1,.3,1);font-family:Onest,Arial,sans-serif;color:var(--ink)} .ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;font-family:inherit;color:inherit}.ds-button{border:1px solid var(--line);border-radius:6px;background:transparent;padding:11px 16px;min-height:44px;font-size:13px;font-weight:550;line-height:1.4;transition:background .18s var(--ease),border-color .18s var(--ease)}.ds-button:hover{background:#00000008;border-color:#8d9592}.ds-button.ds-primary{background:var(--accent);color:#fff;border-color:var(--accent)}.ds-button.ds-primary:hover:not(:disabled){filter:brightness(.92)}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}.ds-button:disabled{opacity:.48;cursor:default}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "catalogue / Основное действие",
+      "kind": "button",
+      "refersTo": "catalogue-primary",
+      "description": "Кнопка отдельного невыбранного кандидата; акценты не объединяются в продуктовую палитру.",
+      "html": "<span class=\"ds-catalogue\"><button class=\"ds-button ds-primary\">Беру на вечер</button></span>",
+      "css": ".ds-catalogue{--ink:#222d2d;--muted:#626e6b;--accent:#215e54;--surface:#f7f7f0;--line:#ccd4ce;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)} .ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;font-family:inherit;color:inherit}.ds-button{border:1px solid var(--line);border-radius:6px;background:transparent;padding:11px 16px;min-height:44px;font-size:13px;font-weight:550;line-height:1.4;transition:background .18s var(--ease),border-color .18s var(--ease)}.ds-button:hover{background:#00000008;border-color:#8d9592}.ds-button.ds-primary{background:var(--accent);color:#fff;border-color:var(--accent)}.ds-button.ds-primary:hover:not(:disabled){filter:brightness(.92)}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}.ds-button:disabled{opacity:.48;cursor:default}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Conversation / Вторичное действие",
+      "kind": "button",
+      "description": "Сохранение отдельно от выбора на вечер.",
+      "html": "<span class=\"ds-conversation\"><button class=\"ds-button\">Сохранить</button></span>",
+      "css": ".ds-conversation{--ink:#2b2b2a;--muted:#6b655f;--accent:#b84025;--surface:#fbf4ec;--line:#d9cec4;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)} .ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;font-family:inherit;color:inherit}.ds-button{border:1px solid var(--line);border-radius:6px;background:transparent;padding:11px 16px;min-height:44px;font-size:13px;font-weight:550;line-height:1.4;transition:background .18s var(--ease),border-color .18s var(--ease)}.ds-button:hover{background:#00000008;border-color:#8d9592}.ds-button.ds-primary{background:var(--accent);color:#fff;border-color:var(--accent)}.ds-button.ds-primary:hover:not(:disabled){filter:brightness(.92)}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}.ds-button:disabled{opacity:.48;cursor:default}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Conversation / Собственный ответ",
+      "kind": "input",
+      "description": "Белое textarea внутри того же вопроса; runtime не требуется.",
+      "html": "<div class=\"ds-conversation\"><label class=\"ds-field-label\" for=\"ds-answer\">Или свой ответ</label><textarea id=\"ds-answer\" class=\"ds-field\" rows=\"3\" placeholder=\"Например: исследовать и не спешить\"></textarea></div>",
+      "css": ".ds-conversation{--ink:#2b2b2a;--muted:#6b655f;--accent:#b84025;--surface:#fbf4ec;--line:#d9cec4;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)}.ds-field-label{display:block;font-size:13px;font-weight:550;margin:28px 0 11px}.ds-field{width:100%;resize:vertical;padding:16px;min-height:100px;border:1px solid #aeb5b0;background:#fff;border-radius:6px;font-size:14px;line-height:1.7}.ds-field{font-family:inherit;color:inherit;caret-color:var(--accent)}.ds-field::placeholder{color:#69716b;opacity:1}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}"
+    },
+    {
+      "name": "Catalogue / Навигация",
+      "kind": "nav",
+      "description": "Фрагмент графитовой навигации кандидата Сравнение.",
+      "html": "<div class=\"ds-catalogue\"><nav class=\"ds-nav\" aria-label=\"Основная навигация\"><button class=\"ds-wordmark\">tastiq</button><div class=\"ds-links\"><button class=\"ds-button ds-primary\">Подобрать</button><button class=\"ds-button\">Библиотека</button></div></nav></div>",
+      "css": ".ds-catalogue{--ink:#222d2d;--muted:#626e6b;--accent:#215e54;--surface:#f7f7f0;--line:#ccd4ce;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)} .ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;font-family:inherit;color:inherit}.ds-button{border:1px solid var(--line);border-radius:6px;background:transparent;padding:11px 16px;min-height:44px;font-size:13px;font-weight:550;line-height:1.4;transition:background .18s var(--ease),border-color .18s var(--ease)}.ds-button:hover{background:#00000008;border-color:#8d9592}.ds-button.ds-primary{background:var(--accent);color:#fff;border-color:var(--accent)}.ds-button.ds-primary:hover:not(:disabled){filter:brightness(.92)}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}.ds-button:disabled{opacity:.48;cursor:default}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-nav{display:flex;align-items:center;gap:40px;padding:20px 4%;background:#1f282b;color:#f0f6ef;flex-wrap:wrap}.ds-wordmark{padding:0;border:0;background:none;font-weight:800;font-size:26px;letter-spacing:-.035em}.ds-nav>.ds-wordmark{font-family:Onest,Arial,sans-serif;justify-content:flex-start;font-size:29px;gap:18px}.ds-nav>.ds-links{display:flex;gap:5px;margin-left:auto}.ds-nav>.ds-links>.ds-button{color:#ccdad4;border-color:transparent}.ds-nav>.ds-links>.ds-primary{background:#c5e8d4;color:#1e4638}.ds-wordmark{cursor:pointer;font-family:Onest,Arial,sans-serif;color:inherit}.ds-wordmark:focus-visible{outline:3px solid #257eaa;outline-offset:4px}"
+    },
+    {
+      "name": "Catalogue / Фильтр состояния",
+      "kind": "chip",
+      "description": "Выбранный фильтр с числом, а не декоративный label.",
+      "html": "<div class=\"ds-catalogue\"><button class=\"ds-filter\" aria-pressed=\"true\">Всю библиотеку <span>12</span></button></div>",
+      "css": ".ds-catalogue{--ink:#222d2d;--muted:#626e6b;--accent:#215e54;--surface:#f7f7f0;--line:#ccd4ce;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)}.ds-filter{justify-content:space-between;background:none;border:0;border-radius:4px;min-height:44px;text-align:left;line-height:1.5;padding:11px 10px;color:#5b6f60;font-size:13px;gap:10px}.ds-filter[aria-pressed=true]{background:#dce9da;color:#224930;font-weight:600}.ds-filter>span{font-size:12px;color:#627665}.ds-filter{display:inline-flex;align-items:center;font-family:inherit;cursor:pointer}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}"
+    },
+    {
+      "name": "Conversation / Запись статусной доски",
+      "kind": "card",
+      "refersTo": "conversation-board-card",
+      "description": "Название, fallback обложки и native select состояния; без eyebrow.",
+      "html": "<div class=\"ds-conversation\"><article class=\"ds-card\"><div class=\"ds-media\" aria-hidden=\"true\"><span>Название</span></div><div><p class=\"ds-meta\">Год · игра</p><h3>Название</h3><label class=\"ds-move\"><span class=\"ds-sr\">Список для названия</span><select class=\"ds-select\"><option>На потом</option><option>На этот вечер</option><option>Уже знакомо</option></select></label></div></article></div>",
+      "css": ".ds-conversation{--ink:#2b2b2a;--muted:#6b655f;--accent:#b84025;--surface:#fbf4ec;--line:#d9cec4;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)}.ds-card{display:grid;grid-template-columns:72px minmax(0,1fr);gap:15px;padding:13px;background:#fffcf6;margin-bottom:13px;border-radius:4px;min-width:0}.ds-media{position:relative;aspect-ratio:2/3;min-width:0;overflow:hidden;background:#d4d8cd;isolation:isolate;color:#233832}.ds-media>span{position:absolute;inset:0;display:grid;place-items:center;padding:15px;text-align:center;font-weight:650;font-size:18px;line-height:1.3;overflow-wrap:anywhere}.ds-card>.ds-media{aspect-ratio:2/3;border-radius:3px;align-self:start}.ds-card>div:not(.ds-media){position:relative;min-width:0;padding-bottom:2px}.ds-meta{color:var(--muted);font-size:12px;line-height:1.6}.ds-card h3{font-size:14px;line-height:1.45;letter-spacing:-.015em;margin:7px 0 13px;overflow-wrap:anywhere}.ds-move{display:block}.ds-select{font-size:12px;padding:8px 26px 8px 10px;min-height:39px;width:100%}.ds-card .ds-select{padding:7px 16px 7px 7px;font-size:12px;min-height:35px;border:0;background:#eee5da}.ds-select{font-family:inherit;color:inherit;max-width:100%}.ds-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}"
+    },
+    {
+      "name": "Catalogue / Выбранная строка",
+      "kind": "custom",
+      "description": "Строка сохраняет компактный порядок; настоящий detail находится отдельно или inline на mobile.",
+      "html": "<div class=\"ds-catalogue\"><button class=\"ds-choice\" aria-pressed=\"true\"><span class=\"ds-index\">1</span><span class=\"ds-media\" aria-hidden=\"true\"><span>Название</span></span><span class=\"ds-title\"><strong>Название</strong><small>Год · игра</small></span><span class=\"ds-reason\">Причина зависит от твоего запроса.</span><span class=\"ds-indicator\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L20 5\"/></svg></span></button></div>",
+      "css": ".ds-catalogue{--ink:#222d2d;--muted:#626e6b;--accent:#215e54;--surface:#f7f7f0;--line:#ccd4ce;--ease:cubic-bezier(.16,1,.3,1);font-family:Golos,Arial,sans-serif;color:var(--ink)}.ds-choice{display:grid;grid-template-columns:20px 60px minmax(120px,1fr) minmax(180px,1.1fr) 22px;gap:17px;align-items:center;text-align:left;width:100%;padding:20px 16px 20px 8px;background:none;border:0;border-radius:0;min-height:135px}.ds-choice:hover{background:#e8eee7}.ds-choice[aria-pressed=true]{background:#dfebe1}.ds-index{font-size:12px;color:#6e7f73;font-variant-numeric:tabular-nums}.ds-media{position:relative;aspect-ratio:2/3;min-width:0;overflow:hidden;background:#d4d8cd;isolation:isolate;color:#233832}.ds-media>span{position:absolute;inset:0;display:grid;place-items:center;padding:15px;text-align:center;font-weight:650;font-size:18px;line-height:1.3;overflow-wrap:anywhere}.ds-choice>.ds-media{aspect-ratio:2/3;border-radius:2px}.ds-title{display:flex;flex-direction:column;gap:10px;min-width:0}.ds-title strong{font-size:17px;font-weight:600;line-height:1.35;letter-spacing:-.02em}.ds-title small{font-size:12px;line-height:1.6;color:var(--muted)}.ds-reason{font-size:13px;line-height:1.7;color:#53675b}.ds-indicator{color:var(--accent)}.ds-indicator svg{width:17px;height:17px}.ds-choice{font-family:inherit;color:inherit;cursor:pointer}.ds-button:focus-visible,.ds-field:focus-visible,.ds-choice:focus-visible,.ds-filter:focus-visible,.ds-select:focus-visible{outline:3px solid #257eaa;outline-offset:4px}"
+    },
+    {
+      "name": "Showcase / Горизонтальная медиаполка",
+      "kind": "custom",
+      "description": "Медиараздел остаётся полкой с горизонтальным scroll snap на телефоне.",
+      "html": "<div class=\"ds-shelf-scope\"><div class=\"ds-track\"><article class=\"ds-item\"><button class=\"ds-cover\" aria-label=\"Открыть название\"><div class=\"ds-media\" aria-hidden=\"true\"><span>Название</span></div></button><h3>Название</h3><p class=\"ds-meta\">Год · На потом</p></article><article class=\"ds-item\"><button class=\"ds-cover\" aria-label=\"Открыть другое название\"><div class=\"ds-media\" aria-hidden=\"true\"><span>Другое название</span></div></button><h3>Другое название</h3><p class=\"ds-meta\">Год · Уже знакомо</p></article></div></div>",
+      "css": ".ds-shelf-scope{--muted:#65636b;font-family:Onest,Arial,sans-serif;color:#252529;background:#fffaf1}.ds-track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 15px;align-items:flex-start}.ds-item{flex:0 0 184px;scroll-snap-align:start;min-width:0}.ds-cover{display:block;position:relative;width:100%;padding:0;border:0;background:transparent;box-shadow:0 10px 17px #22222218}.ds-media{position:relative;aspect-ratio:2/3;min-width:0;overflow:hidden;background:#d4d8cd;isolation:isolate;color:#233832}.ds-media>span{position:absolute;inset:0;display:grid;place-items:center;padding:15px;text-align:center;font-weight:650;font-size:18px;line-height:1.3;overflow-wrap:anywhere}.ds-item .ds-media{aspect-ratio:2/3;border-radius:0}.ds-item h3{font-size:15px;line-height:1.4;font-weight:600;margin-top:14px;letter-spacing:-.015em}.ds-meta{color:var(--muted);font-size:12px;line-height:1.6}.ds-item>.ds-meta{margin-top:8px}.ds-cover{cursor:pointer}.ds-cover:focus-visible{outline:3px solid #257eaa;outline-offset:4px}@media(max-width:1000px){.ds-item{flex-basis:160px}}@media(max-width:650px){.ds-track{gap:17px;margin-right:-20px;padding-right:20px;overflow-x:auto}.ds-item{flex-basis:155px}}@media(max-width:360px){.ds-item{flex-basis:145px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Диалог и доска / Обложки и полки / Список и подробности",
+    "overview": "Это запись реализованного `/design-v2/`, не единая система основного сайта. Владелец отверг все прежние `/design/`; их оценки и палитры не перенесены сюда. Новый выбор ещё предстоит, production-интерфейс не переносили. Источник токенов — текущие `style.css`, `app.js` и `index.html` с asset version 5.\n\nКандидаты различаются единицей выбора, порядком чтения и библиотекой: «Разговор» — контекст и предложения, затем доска состояний; «Витрина» — раскрытые сравнительные ряды, затем медиаполки; «Сравнение» — строки и подробности выбранного, затем компактный фильтруемый список. Палитры с префиксами относятся только к своему кандидату.",
+    "keyCharacteristics": [
+      "Три самостоятельные структуры выдачи и библиотеки на desktop и mobile.",
+      "Исходные header и весь first лендинга изолированы от нового оформления.",
+      "Один вопрос, собственный ответ и inline Next; этапы остаются индикатором.",
+      "Демонстрационные списки имеют согласованные состояния при переходе между сценами."
+    ],
+    "rules": [
+      {
+        "name": "The Структура до цвета Rule",
+        "body": "Сравнивать единицу выбора, порядок чтения и группировку библиотеки; перекраска общей композиции не заменяет отдельного кандидата.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "**Do** сохранять самостоятельные модели выдачи и библиотеки каждого кандидата на телефоне.",
+      "**Do** сохранять исходный header и весь first лендинга; менять только нижнюю часть.",
+      "**Do** показывать текущую сводку и действие её правки перед скрываемой историей.",
+      "**Do** брать подписи состояний из одного состояния прототипа во всех сценах.",
+      "**Do** сохранять реальные обложки, текстовый fallback и демонстрационные подписи."
+    ],
+    "donts": [
+      "**Don't** называть кандидата выбранной системой или переносить прежний verdict отвергнутых макетов.",
+      "**Don't** заменять структурное различие одной перекраской общей сетки.",
+      "**Don't** возвращать надзаголовки «Начни с этого» / «Ещё вариант N» перед названиями предложений.",
+      "**Don't** превращать этапы в кликабельные вкладки.",
+      "**Don't** записывать демонстрационные изменения в реальные сохранения владельца или вызывать подбор приложения."
+    ]
+  }
+}

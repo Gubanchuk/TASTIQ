@@ -1,0 +1,7 @@
+{"appid": 271240, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "Featuring economic warfare ranging from hostile takeovers to sabotage"}, {"id": "p3", "q": "Supply and demand fluctuates constantly"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "science fiction themed real-time strategy video game set on Mars"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p3", "q": "their rival could be gearing up glass kilns"}, {"id": "p4", "q": "Players are warned when an opposing player earns enough money"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "begin to construct resource extractors on the neighboring hexes"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "tense, desperate races to earn money"}]}
+]}

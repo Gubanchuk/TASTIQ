@@ -1,0 +1,9 @@
+{"appid": 1766740, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "a 2022 survival horror game developed and published by Two Star Games"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "The game encourages players to use stealth to sneak past these guards"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p2", "q": "travelling across an open world map in a train"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "collecting loot, and using that loot to upgrade the player's train"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "an evil spider-train hybrid monster that wanders the landscape"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "travelling across an open world map in a train"}]},
+{"f": "length.short", "r": 3, "ev": [{"id": "p2", "q": "takes players around three to five hours to fully complete"}, {"id": "p8", "q": "very short and frustrating to play for any length of time"}]}
+]}

@@ -1,0 +1,10 @@
+{"appid": 1180660, "features": [
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p2", "q": "praised the complex characters"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "praised the complex characters, voice acting, narrative design and setting"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p4", "q": "The player's decisions during their interactions with the aforementioned non-player characters"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "The twins share a supernatural bond"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "investigate the death of their mother"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p0", "q": "the narrative explores the twins' childhood trauma"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "reunite after ten years in their hometown in rural Alaska"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p6", "q": "while exploring the house"}]}
+]}

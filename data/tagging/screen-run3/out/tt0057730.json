@@ -1,0 +1,7 @@
+{"id": "tt0057730", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated science fiction adventure television series"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "animated science fiction adventure television series"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "They solve mysteries and try to thwart the evil of Dr. Zin"}]},
+{"f": "tone.gritty", "r": 1, "ev": [{"id": "p1", "q": "featured more realistic art, human characters, and stories"}]},
+{"f": "characters.family", "r": 1, "ev": [{"id": "p0", "q": "about a boy who accompanies his scientist father on extraordinary adventures"}]}
+]}

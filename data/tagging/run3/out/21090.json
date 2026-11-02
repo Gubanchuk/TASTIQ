@@ -1,0 +1,10 @@
+{"appid": 21090, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2005 first-person shooter psychological horror video game"}]},
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2005 first-person shooter psychological horror video game"}, {"id": "p2", "q": "the atmosphere of the game was heavily influenced by Japanese horror"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "an elite group in the United States Army tasked with investigating supernatural phenomena"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p5", "q": "F.E.A.R.s melee system is a viable combat alternative"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p3", "q": "Critics also lauded the graphics, atmosphere, sound design, music, and combat mechanics"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p3", "q": "Critics also lauded the graphics, atmosphere, sound design, music, and combat mechanics"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p3", "q": "a lack of enemy variety, a weak plot, and repetitive level design"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p8", "q": "The game's multiplayer can support up to 16 players"}]}
+]}

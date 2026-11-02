@@ -1,0 +1,8 @@
+{"id": "tt14901058", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2021 adult animated martial arts film"}]},
+{"f": "audience.adult", "r": 2, "ev": [{"id": "p0", "q": "is a 2021 adult animated martial arts film"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "revolves around the otherworldly Mortal Kombat tournament set in Outworld"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p3", "q": "feels all over the place, attempting to tell too many stories at once"}]},
+{"f": "story.nonlinear", "r": 1, "ev": [{"id": "p3", "q": "two completely separate storylines happening at the same time"}]},
+{"f": "pace.fast", "r": 1, "ev": [{"id": "p3", "q": "to get to the next fight"}]}
+]}

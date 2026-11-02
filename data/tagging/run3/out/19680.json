@@ -1,0 +1,9 @@
+{"appid": 19680, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p3", "q": "a hack 'n' slash puzzle platformer played from a third-person perspective"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "she once again falls into Wonderland, where a new evil force has corrupted it"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p4", "q": "Her primary weapon is the Vorpal Blade, a decorated kitchen knife"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "a hack 'n' slash puzzle platformer played from a third-person perspective"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p1", "q": "suffering from trauma caused by the death of her family in a fire"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p6", "q": "the player can discover various secrets"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p11", "q": "Alice: Madness Returns indulges onto its steampunk aesthetics"}]}
+]}

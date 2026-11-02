@@ -1,0 +1,11 @@
+{"appid": 223100, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter video game developed by Dambuster Studios"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "set in an open world environment with many districts to explore"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p2", "q": "The player can scavenge for supplies to modify weapons and equipment"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "The Revolution features a four-player cooperative multiplayer mode"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p4", "q": "Power and water are intermittent and overpopulation has forced people into slum-like tent cities"}]},
+{"f": "world.postapoc", "r": 1, "ev": [{"id": "p4", "q": "The Red Zone is the bombed-out suburban area of Philadelphia that is full of ruins and rubble"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p4", "q": "overpopulation has forced people into slum-like tent cities"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p9", "q": "criticized the \"monotonous\" gameplay, \"inconsistent\" frame rate, \"awkward\" gunplay"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "all of Homefront: The Revolutions elements feel repetitive"}]}
+]}

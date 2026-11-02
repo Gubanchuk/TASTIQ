@@ -1,0 +1,1821 @@
+{
+  "paidCalls": 0,
+  "changes": [
+    {
+      "caseId": "pair-1-evening-1",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "steam:914800",
+        "steam:1118240",
+        "steam:206440",
+        "steam:481510"
+      ],
+      "after": [
+        "steam:914800",
+        "steam:1118240",
+        "steam:206440",
+        "steam:481510"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:914800",
+          "reason": "Coffee Talk даёт живые разговоры и личные драмы, которые ты любишь в Disco Elysium, но в спокойном ритме ночной кофейни.",
+          "caveat": "Ты скорее слушатель; влияние на историю скромнее, чем в любимых RPG.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Coffee Talk",
+          "original": "Coffee Talk",
+          "year": 2020
+        },
+        {
+          "id": "steam:1118240",
+          "reason": "В Lake можно неспешно знакомиться с жителями городка и выбирать ответы: живые люди и разговоры без опасностей и спешки.",
+          "caveat": "Развозить почту придётся регулярно; сюжет камерный, без размаха любимых RPG.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "title": "Lake",
+          "original": "Lake",
+          "year": 2021
+        },
+        {
+          "id": "steam:206440",
+          "reason": "To the Moon опирается на характеры, юмор в диалогах и личную драму — за это тебе запомнились Life Is Strange и Edith Finch.",
+          "caveat": "История линейная и очень слезливая; спокойный темп не означает лёгкую тему.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "To the Moon",
+          "original": "To the Moon",
+          "year": 2012
+        },
+        {
+          "id": "steam:481510",
+          "reason": "Night in the Woods цепляет текстом, дружескими перепалками и неблагополучным городком — близко к твоей любви к Disco Elysium.",
+          "caveat": "Позже появляются тревожные и пугающие сцены; на сегодня лучше неспешное начало.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Night in the Woods",
+          "original": "Night in the Woods",
+          "year": 2017
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "steam:914800",
+            "reason": "Coffee Talk даёт живые разговоры и личные драмы, которые ты любишь в Disco Elysium, но в спокойном ритме ночной кофейни.",
+            "caveat": "Ты скорее слушатель; влияние на историю скромнее, чем в любимых RPG.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:1118240",
+            "reason": "В Lake можно неспешно знакомиться с жителями городка и выбирать ответы: живые люди и разговоры без опасностей и спешки.",
+            "caveat": "Развозить почту придётся регулярно; сюжет камерный, без размаха любимых RPG.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:206440",
+            "reason": "To the Moon опирается на характеры, юмор в диалогах и личную драму — за это тебе запомнились Life Is Strange и Edith Finch.",
+            "caveat": "История линейная и очень слезливая; спокойный темп не означает лёгкую тему.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:481510",
+            "reason": "Night in the Woods цепляет текстом, дружескими перепалками и неблагополучным городком — близко к твоей любви к Disco Elysium.",
+            "caveat": "Позже появляются тревожные и пугающие сцены; на сегодня лучше неспешное начало.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужна спокойная история с живыми героями и хорошими диалогами — без гринда, сложных боёв и постоянного напряжения.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 1,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 7421,
+          "input_tokens_details": {
+            "cache_write_tokens": 7418,
+            "cached_tokens": 0
+          },
+          "output_tokens": 612,
+          "output_tokens_details": {
+            "reasoning_tokens": 150
+          },
+          "total_tokens": 8033
+        },
+        "shortlist": 40
+      }
+    },
+    {
+      "caseId": "pair-1-evening-1",
+      "system": "direct",
+      "changed": false,
+      "before": [
+        "steam:914800",
+        "steam:1055540",
+        "steam:1135690"
+      ],
+      "after": [
+        "steam:914800",
+        "steam:1055540",
+        "steam:1135690"
+      ],
+      "fillsBefore": 1,
+      "fillsAfter": 1,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:914800",
+          "title": "Coffee Talk",
+          "year": 2020,
+          "reason": "Ты ценишь текст и живых героев: здесь слушаешь посетителей ночной кофейни, готовишь напитки и узнаёшь их истории без боёв.",
+          "caveat": "Влияние на историю скромнее, чем в твоих любимых RPG; есть непростые личные темы.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Coffee Talk"
+        },
+        {
+          "id": "steam:1055540",
+          "title": "A Short Hike",
+          "year": 2019,
+          "reason": "Для спокойного вечера — прогулка по острову, добродушные разговоры и маленькие истории встречных без наказания за ошибки.",
+          "caveat": "Общего сюжета и значимых решений немного; есть прыжки и поиск пути.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "A Short Hike"
+        },
+        {
+          "id": "steam:1135690",
+          "title": "Unpacking",
+          "year": 2021,
+          "reason": "Ты ценишь запоминающиеся истории: здесь узнаёшь человека через вещи и переезды, спокойно обустраивая комнаты без таймера.",
+          "caveat": "Нет диалогов и сюжетных развилок; некоторые вещи нужно поставить в определённые места.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Unpacking"
+        },
+        {
+          "id": "steam:1113000",
+          "origin": "fill",
+          "title": "Persona 4 Golden",
+          "original": "Persona 4 Golden",
+          "year": 2020
+        }
+      ],
+      "result": {
+        "ms": 1,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 1318,
+          "input_tokens_details": {
+            "cache_write_tokens": 1315,
+            "cached_tokens": 0
+          },
+          "output_tokens": 604,
+          "output_tokens_details": {
+            "reasoning_tokens": 157
+          },
+          "total_tokens": 1922
+        },
+        "understood": "Сегодня ты хочешь спокойную историю с живыми героями, без напряжения и гринда.",
+        "picks": [
+          {
+            "id": "steam:914800",
+            "title": "Coffee Talk",
+            "year": 2020,
+            "reason": "Ты ценишь текст и живых героев: здесь слушаешь посетителей ночной кофейни, готовишь напитки и узнаёшь их истории без боёв.",
+            "caveat": "Влияние на историю скромнее, чем в твоих любимых RPG; есть непростые личные темы.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:1055540",
+            "title": "A Short Hike",
+            "year": 2019,
+            "reason": "Для спокойного вечера — прогулка по острову, добродушные разговоры и маленькие истории встречных без наказания за ошибки.",
+            "caveat": "Общего сюжета и значимых решений немного; есть прыжки и поиск пути.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:1135690",
+            "title": "Unpacking",
+            "year": 2021,
+            "reason": "Ты ценишь запоминающиеся истории: здесь узнаёшь человека через вещи и переезды, спокойно обустраивая комнаты без таймера.",
+            "caveat": "Нет диалогов и сюжетных развилок; некоторые вещи нужно поставить в определённые места.",
+            "likelySeen": false,
+            "own": true
+          }
+        ],
+        "filled": [
+          "steam:1113000"
+        ],
+        "rejected": [
+          {
+            "title": "Tavern Talk",
+            "year": 2024,
+            "reason": "not-in-catalog"
+          }
+        ],
+        "dropped": 1
+      }
+    },
+    {
+      "caseId": "pair-1-evening-2",
+      "system": "direct",
+      "changed": true,
+      "before": [
+        "steam:1341820",
+        "steam:250320",
+        "steam:282140"
+      ],
+      "after": [
+        "steam:1341820",
+        "steam:250320",
+        "steam:282140",
+        "steam:960910"
+      ],
+      "fillsBefore": 1,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:1341820",
+          "title": "As Dusk Falls",
+          "year": 2022,
+          "reason": "Криминальная драма с заложниками: напряжение строится на людях и решениях, а твои выборы заметно меняют судьбы персонажей.",
+          "caveat": "Визуальная подача — преимущественно статичные иллюстрации; есть QTE.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "As Dusk Falls"
+        },
+        {
+          "id": "steam:250320",
+          "title": "The Wolf Among Us",
+          "year": 2013,
+          "reason": "Мрачное расследование, неоднозначные герои и острые диалоги: близко твоей любви к персонажам, но с тревожной детективной интригой.",
+          "caveat": "Есть QTE и жестокие сцены; влияние решений на общий сюжет ограничено.",
+          "likelySeen": true,
+          "own": true,
+          "origin": "model",
+          "original": "The Wolf Among Us"
+        },
+        {
+          "id": "steam:282140",
+          "title": "SOMA",
+          "year": 2015,
+          "reason": "Подводный научно-фантастический хоррор держит тревогой и тяжёлыми вопросами о личности — здесь история важнее прокачки.",
+          "caveat": "Для меньшего риска гибели есть безопасный режим; хоррор и мрачные темы остаются.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "SOMA"
+        },
+        {
+          "id": "steam:960910",
+          "title": "Heavy Rain",
+          "year": 2020,
+          "reason": "Триллер об охоте на убийцу: решения под давлением и уязвимые герои дают тебе интерактивное кино с ощутимыми последствиями.",
+          "caveat": "Много QTE; неудачи могут необратимо изменить судьбы героев.",
+          "likelySeen": true,
+          "own": true,
+          "origin": "model",
+          "original": "Heavy Rain"
+        }
+      ],
+      "result": {
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 1331,
+          "input_tokens_details": {
+            "cache_write_tokens": 1328,
+            "cached_tokens": 0
+          },
+          "output_tokens": 632,
+          "output_tokens_details": {
+            "reasoning_tokens": 168
+          },
+          "total_tokens": 1963
+        },
+        "understood": "Сегодня ты хочешь напряжённую сюжетную игру для одного на Windows — без гринда и изнуряющих наказаний за ошибки.",
+        "picks": [
+          {
+            "id": "steam:1341820",
+            "title": "As Dusk Falls",
+            "year": 2022,
+            "reason": "Криминальная драма с заложниками: напряжение строится на людях и решениях, а твои выборы заметно меняют судьбы персонажей.",
+            "caveat": "Визуальная подача — преимущественно статичные иллюстрации; есть QTE.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:250320",
+            "title": "The Wolf Among Us",
+            "year": 2013,
+            "reason": "Мрачное расследование, неоднозначные герои и острые диалоги: близко твоей любви к персонажам, но с тревожной детективной интригой.",
+            "caveat": "Есть QTE и жестокие сцены; влияние решений на общий сюжет ограничено.",
+            "likelySeen": true,
+            "own": true
+          },
+          {
+            "id": "steam:282140",
+            "title": "SOMA",
+            "year": 2015,
+            "reason": "Подводный научно-фантастический хоррор держит тревогой и тяжёлыми вопросами о личности — здесь история важнее прокачки.",
+            "caveat": "Для меньшего риска гибели есть безопасный режим; хоррор и мрачные темы остаются.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:960910",
+            "title": "Heavy Rain",
+            "year": 2010,
+            "reason": "Триллер об охоте на убийцу: решения под давлением и уязвимые герои дают тебе интерактивное кино с ощутимыми последствиями.",
+            "caveat": "Много QTE; неудачи могут необратимо изменить судьбы героев.",
+            "likelySeen": true,
+            "own": true
+          }
+        ],
+        "filled": [],
+        "rejected": [],
+        "dropped": 0
+      }
+    },
+    {
+      "caseId": "pair-1-evening-2",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "steam:250320",
+        "steam:207610",
+        "steam:948740",
+        "steam:388880"
+      ],
+      "after": [
+        "steam:250320",
+        "steam:207610",
+        "steam:948740",
+        "steam:388880"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:250320",
+          "reason": "Как в Disco Elysium, здесь важны разговоры и неоднозначные герои, но расследование убийства быстрее затягивает в опасность.",
+          "caveat": "Много жестокости; решения меняют отношения сильнее, чем основной сюжет.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "title": "The Wolf Among Us",
+          "original": "The Wolf Among Us",
+          "year": 2013
+        },
+        {
+          "id": "steam:207610",
+          "reason": "Привязанность к героям, как в Mass Effect, превращает решения под давлением в личную драму — спокойно здесь не будет.",
+          "caveat": "Жестокость и тяжёлые потери; развилок меньше, чем кажется.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "The Walking Dead: The Game",
+          "original": "The Walking Dead",
+          "year": 2012
+        },
+        {
+          "id": "steam:948740",
+          "reason": "Любовь к тексту и необычным героям Disco Elysium здесь встречается с напряжённым расследованием и переплетёнными ветками.",
+          "caveat": "Есть кровавые сцены, сексуальные шутки и головоломки с таймером.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "AI: The Somnium Files",
+          "original": "AI: The Somnium Files",
+          "year": 2019
+        },
+        {
+          "id": "steam:388880",
+          "reason": "Разговоры на ходу напоминают Firewatch, но сверхъестественная угроза добавляет нужную тебе сегодня тревогу.",
+          "caveat": "Камерная история: меньше глубины персонажей и масштаба решений, чем в любимых RPG.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Oxenfree",
+          "original": "Oxenfree",
+          "year": 2016
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "steam:250320",
+            "reason": "Как в Disco Elysium, здесь важны разговоры и неоднозначные герои, но расследование убийства быстрее затягивает в опасность.",
+            "caveat": "Много жестокости; решения меняют отношения сильнее, чем основной сюжет.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:207610",
+            "reason": "Привязанность к героям, как в Mass Effect, превращает решения под давлением в личную драму — спокойно здесь не будет.",
+            "caveat": "Жестокость и тяжёлые потери; развилок меньше, чем кажется.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:948740",
+            "reason": "Любовь к тексту и необычным героям Disco Elysium здесь встречается с напряжённым расследованием и переплетёнными ветками.",
+            "caveat": "Есть кровавые сцены, сексуальные шутки и головоломки с таймером.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:388880",
+            "reason": "Разговоры на ходу напоминают Firewatch, но сверхъестественная угроза добавляет нужную тебе сегодня тревогу.",
+            "caveat": "Камерная история: меньше глубины персонажей и масштаба решений, чем в любимых RPG.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужна напряжённая история с живыми героями и весомыми решениями, без гринда и наказания за каждую ошибку.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 7261,
+          "input_tokens_details": {
+            "cache_write_tokens": 7258,
+            "cached_tokens": 0
+          },
+          "output_tokens": 689,
+          "output_tokens_details": {
+            "reasoning_tokens": 243
+          },
+          "total_tokens": 7950
+        },
+        "shortlist": 40
+      }
+    },
+    {
+      "caseId": "pair-2-evening-1",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "steam:3241660",
+        "steam:274190",
+        "steam:2881650",
+        "steam:774801"
+      ],
+      "after": [
+        "steam:3241660",
+        "steam:274190",
+        "steam:2881650",
+        "steam:774801"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:3241660",
+          "reason": "Как в любимой Lethal Company, вместе тащите добычу от монстров, а физика хрупких предметов превращает панику в смех.",
+          "caveat": "Онлайн на 1–6 игроков; монстры и потеря добычи могут заставить попотеть.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "R.E.P.O.",
+          "original": "R.E.P.O.",
+          "year": 2025
+        },
+        {
+          "id": "steam:274190",
+          "reason": "За любовь к стрельбе и угару в Deep Rock Galactic: вместе разносите уровни героями боевиков, без соперников-людей.",
+          "caveat": "Пиксельный вид сбоку вместо 3D; вместимость кооператива в каталоге не проверена.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Broforce",
+          "original": "Broforce",
+          "year": 2015
+        },
+        {
+          "id": "steam:2881650",
+          "reason": "Твоё «страшно и смешно, с друзьями» из Lethal Company здесь становится съёмкой монстров и просмотром своих нелепых подвигов.",
+          "caveat": "Онлайн на 2–4 игроков; стрельбы почти нет, зато есть погони и внезапные нападения.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Content Warning",
+          "original": "Content Warning",
+          "year": 2024
+        },
+        {
+          "id": "steam:774801",
+          "reason": "За быстрый темп Rocket League и кооперативную стрельбу Deep Rock Galactic: крабы с пушками вместе отбиваются от волн врагов.",
+          "caveat": "Юмор скорее в абсурде происходящего; вместимость кооператива не проверена.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Crab Champions",
+          "original": "Crab Champions",
+          "year": 2023
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "steam:3241660",
+            "reason": "Как в любимой Lethal Company, вместе тащите добычу от монстров, а физика хрупких предметов превращает панику в смех.",
+            "caveat": "Онлайн на 1–6 игроков; монстры и потеря добычи могут заставить попотеть.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:274190",
+            "reason": "За любовь к стрельбе и угару в Deep Rock Galactic: вместе разносите уровни героями боевиков, без соперников-людей.",
+            "caveat": "Пиксельный вид сбоку вместо 3D; вместимость кооператива в каталоге не проверена.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:2881650",
+            "reason": "Твоё «страшно и смешно, с друзьями» из Lethal Company здесь становится съёмкой монстров и просмотром своих нелепых подвигов.",
+            "caveat": "Онлайн на 2–4 игроков; стрельбы почти нет, зато есть погони и внезапные нападения.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:774801",
+            "reason": "За быстрый темп Rocket League и кооперативную стрельбу Deep Rock Galactic: крабы с пушками вместе отбиваются от волн врагов.",
+            "caveat": "Юмор скорее в абсурде происходящего; вместимость кооператива не проверена.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен кооперативный угар с друзьями: страшно и смешно, как в Lethal Company, или бодрая стрельба — без борьбы друг с другом.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 1,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 7026,
+          "input_tokens_details": {
+            "cache_write_tokens": 7023,
+            "cached_tokens": 0
+          },
+          "output_tokens": 526,
+          "output_tokens_details": {
+            "reasoning_tokens": 38
+          },
+          "total_tokens": 7552
+        },
+        "shortlist": 40
+      }
+    },
+    {
+      "caseId": "pair-2-evening-1",
+      "system": "direct",
+      "changed": false,
+      "before": [
+        "steam:3241660",
+        "steam:2881650",
+        "steam:477160",
+        "steam:42910"
+      ],
+      "after": [
+        "steam:3241660",
+        "steam:2881650",
+        "steam:477160",
+        "steam:42910"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:3241660",
+          "title": "R.E.P.O.",
+          "year": 2025,
+          "reason": "Совместная переноска хрупкой добычи среди монстров рождает физический хаос — под твой запрос «страшно и смешно, с друзьями».",
+          "caveat": "Есть скримеры и напряжённые вылазки: юмор здесь соседствует с хоррором.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "R.E.P.O."
+        },
+        {
+          "id": "steam:2881650",
+          "title": "Content Warning",
+          "year": 2024,
+          "reason": "Вы вместе снимаете монстров и собственные неудачи; просмотр записи превращает пережитый страх в повод поржать компанией.",
+          "caveat": "Хоррор остаётся важной частью игры; смешные моменты во многом создаёте вы сами.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Content Warning"
+        },
+        {
+          "id": "steam:477160",
+          "title": "Human Fall Flat",
+          "year": 2016,
+          "reason": "Нелепая физика и совместное преодоление препятствий дают простор для дружеского угара без соперников.",
+          "caveat": "Это головоломки, а не экшен: на отдельных препятствиях темп может просесть.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Human Fall Flat"
+        },
+        {
+          "id": "steam:42910",
+          "title": "Magicka",
+          "year": 2011,
+          "reason": "Вы смешиваете стихии и вместе отбиваетесь от врагов; нелепые ошибки с заклинаниями подходят под твой вкус к кооп-хаосу.",
+          "caveat": "Дружественный огонь неизбежен; сочетания стихий нужно освоить.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Magicka"
+        }
+      ],
+      "result": {
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 1260,
+          "input_tokens_details": {
+            "cache_write_tokens": 1257,
+            "cached_tokens": 0
+          },
+          "output_tokens": 588,
+          "output_tokens_details": {
+            "reasoning_tokens": 145
+          },
+          "total_tokens": 1848
+        },
+        "understood": "Сегодня ты хочешь смешной кооператив для компании, без соревнования с другими игроками.",
+        "picks": [
+          {
+            "id": "steam:3241660",
+            "title": "R.E.P.O.",
+            "year": 2025,
+            "reason": "Совместная переноска хрупкой добычи среди монстров рождает физический хаос — под твой запрос «страшно и смешно, с друзьями».",
+            "caveat": "Есть скримеры и напряжённые вылазки: юмор здесь соседствует с хоррором.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:2881650",
+            "title": "Content Warning",
+            "year": 2024,
+            "reason": "Вы вместе снимаете монстров и собственные неудачи; просмотр записи превращает пережитый страх в повод поржать компанией.",
+            "caveat": "Хоррор остаётся важной частью игры; смешные моменты во многом создаёте вы сами.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:477160",
+            "title": "Human: Fall Flat",
+            "year": 2016,
+            "reason": "Нелепая физика и совместное преодоление препятствий дают простор для дружеского угара без соперников.",
+            "caveat": "Это головоломки, а не экшен: на отдельных препятствиях темп может просесть.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "steam:42910",
+            "title": "Magicka",
+            "year": 2011,
+            "reason": "Вы смешиваете стихии и вместе отбиваетесь от врагов; нелепые ошибки с заклинаниями подходят под твой вкус к кооп-хаосу.",
+            "caveat": "Дружественный огонь неизбежен; сочетания стихий нужно освоить.",
+            "likelySeen": false,
+            "own": true
+          }
+        ],
+        "filled": [],
+        "rejected": [],
+        "dropped": 0
+      }
+    },
+    {
+      "caseId": "pair-2-evening-2",
+      "system": "direct",
+      "changed": false,
+      "before": [
+        "steam:291550"
+      ],
+      "after": [
+        "steam:291550"
+      ],
+      "fillsBefore": 3,
+      "fillsAfter": 3,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:291550",
+          "title": "Brawlhalla",
+          "year": 2017,
+          "reason": "Динамичные драки с выбиванием за край арены: можно соперничать с друзьями или вместе против других людей, без медленной раскачки.",
+          "caveat": "Это платформенный файтинг, а не шутер; движение и атаки придётся освоить.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Brawlhalla"
+        },
+        {
+          "id": "steam:466240",
+          "origin": "fill",
+          "title": "Deceit",
+          "original": "Deceit",
+          "year": 2017
+        },
+        {
+          "id": "steam:1782210",
+          "origin": "fill",
+          "title": "Crab Game",
+          "original": "Crab Game",
+          "year": 2021
+        },
+        {
+          "id": "steam:700330",
+          "origin": "fill",
+          "title": "SCP: Secret Laboratory",
+          "original": "SCP: Secret Laboratory",
+          "year": 2017
+        }
+      ],
+      "result": {
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 1259,
+          "input_tokens_details": {
+            "cache_write_tokens": 1256,
+            "cached_tokens": 0
+          },
+          "output_tokens": 586,
+          "output_tokens_details": {
+            "reasoning_tokens": 140
+          },
+          "total_tokens": 1845
+        },
+        "understood": "Сегодня ты хочешь соревноваться с живыми соперниками в компании друзей: быстрый экшен, напряжение и азарт.",
+        "picks": [
+          {
+            "id": "steam:291550",
+            "title": "Brawlhalla",
+            "year": 2017,
+            "reason": "Динамичные драки с выбиванием за край арены: можно соперничать с друзьями или вместе против других людей, без медленной раскачки.",
+            "caveat": "Это платформенный файтинг, а не шутер; движение и атаки придётся освоить.",
+            "likelySeen": false,
+            "own": true
+          }
+        ],
+        "filled": [
+          "steam:466240",
+          "steam:1782210",
+          "steam:700330"
+        ],
+        "rejected": [
+          {
+            "title": "THE FINALS",
+            "year": 2023,
+            "reason": "not-in-catalog"
+          },
+          {
+            "title": "VALORANT",
+            "year": 2020,
+            "reason": "not-in-catalog"
+          },
+          {
+            "title": "Overwatch 2",
+            "year": 2022,
+            "reason": "not-in-catalog"
+          }
+        ],
+        "dropped": 3
+      }
+    },
+    {
+      "caseId": "pair-2-evening-2",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "steam:312530",
+        "steam:207140",
+        "steam:700330"
+      ],
+      "after": [
+        "steam:312530",
+        "steam:207140",
+        "steam:700330"
+      ],
+      "fillsBefore": 1,
+      "fillsAfter": 1,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "steam:312530",
+          "reason": "Молниеносные перестрелки с нелепым оружием соединяют быстрые раунды CS2 и ваш любимый угар с друзьями.",
+          "caveat": "Сражаетесь друг против друга; вместимость лобби в каталоге не проверена.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Duck Game",
+          "original": "Duck Game",
+          "year": 2015
+        },
+        {
+          "id": "steam:207140",
+          "reason": "Гонки с крюками и подставами дают знакомые по Rocket League скорость, борьбу за победу и крики в дискорде.",
+          "caveat": "Без стрельбы; вместимость лобби в каталоге не проверена.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "SpeedRunners",
+          "original": "SpeedRunners",
+          "year": 2016
+        },
+        {
+          "id": "steam:700330",
+          "reason": "Побеги от монстров и бои между людьми соединяют страх и смех из Lethal Company с настоящим противостоянием игроков.",
+          "caveat": "Нужно освоить роли, после смерти бывает ожидание; вместимость группы не проверена.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "SCP: Secret Laboratory",
+          "original": "SCP: Secret Laboratory",
+          "year": 2017
+        },
+        {
+          "id": "steam:466240",
+          "origin": "fill",
+          "title": "Deceit",
+          "original": "Deceit",
+          "year": 2017
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "steam:312530",
+            "reason": "Молниеносные перестрелки с нелепым оружием соединяют быстрые раунды CS2 и ваш любимый угар с друзьями.",
+            "caveat": "Сражаетесь друг против друга; вместимость лобби в каталоге не проверена.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:207140",
+            "reason": "Гонки с крюками и подставами дают знакомые по Rocket League скорость, борьбу за победу и крики в дискорде.",
+            "caveat": "Без стрельбы; вместимость лобби в каталоге не проверена.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "steam:700330",
+            "reason": "Побеги от монстров и бои между людьми соединяют страх и смех из Lethal Company с настоящим противостоянием игроков.",
+            "caveat": "Нужно освоить роли, после смерти бывает ожидание; вместимость группы не проверена.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужно соревнование с людьми: азарт, быстрые схватки и повод орать в дискорде с друзьями, а не спокойный кооп.",
+        "dropped": 1,
+        "filled": [
+          "steam:466240"
+        ],
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 6983,
+          "input_tokens_details": {
+            "cache_write_tokens": 6980,
+            "cached_tokens": 0
+          },
+          "output_tokens": 596,
+          "output_tokens_details": {
+            "reasoning_tokens": 148
+          },
+          "total_tokens": 7579
+        },
+        "shortlist": 40
+      }
+    },
+    {
+      "caseId": "pair-3-evening-1",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "tt0120917",
+        "tt0317219",
+        "tt0351283",
+        "tt1490017"
+      ],
+      "after": [
+        "tt0120917",
+        "tt0317219",
+        "tt0351283",
+        "tt1490017"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt0120917",
+          "reason": "Как в «Зверополисе», непохожим героям приходится стать друзьями, а шутки и перепалки смешат и детей, и взрослых.",
+          "caveat": "Рисованная классика; есть короткие погони с ягуарами и падения.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Похождения императора",
+          "original": "The Emperor's New Groove",
+          "year": 2000
+        },
+        {
+          "id": "tt0317219",
+          "reason": "Дружба, добрый юмор и яркий мир машин отвечают твоему запросу на лёгкий семейный вечер без тяжёлых тем.",
+          "caveat": "Середина неспешная; в гонках бывают аварии.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Тачки",
+          "original": "Cars",
+          "year": 2006
+        },
+        {
+          "id": "tt0351283",
+          "reason": "Звериная компания и дружеские перепалки напоминают о «Зверополисе», а комические выходки — о «Кунг-фу Панде».",
+          "caveat": "Есть шуточные угрозы хищников; юмор более дурашливый, чем в «Зверополисе».",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Мадагаскар",
+          "original": "Madagascar",
+          "year": 2005
+        },
+        {
+          "id": "tt1490017",
+          "reason": "Как в «Зверополисе», яркий мир и шутки для двух возрастов сочетаются с историей, которую взрослому интересно обсуждать.",
+          "caveat": "Очень шумный темп, много погонь и игрушечных взрывов.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "ЛЕГО Фильм",
+          "original": "The Lego Movie",
+          "year": 2014
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "tt0120917",
+            "reason": "Как в «Зверополисе», непохожим героям приходится стать друзьями, а шутки и перепалки смешат и детей, и взрослых.",
+            "caveat": "Рисованная классика; есть короткие погони с ягуарами и падения.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0317219",
+            "reason": "Дружба, добрый юмор и яркий мир машин отвечают твоему запросу на лёгкий семейный вечер без тяжёлых тем.",
+            "caveat": "Середина неспешная; в гонках бывают аварии.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0351283",
+            "reason": "Звериная компания и дружеские перепалки напоминают о «Зверополисе», а комические выходки — о «Кунг-фу Панде».",
+            "caveat": "Есть шуточные угрозы хищников; юмор более дурашливый, чем в «Зверополисе».",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1490017",
+            "reason": "Как в «Зверополисе», яркий мир и шутки для двух возрастов сочетаются с историей, которую взрослому интересно обсуждать.",
+            "caveat": "Очень шумный темп, много погонь и игрушечных взрывов.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен смешной мультфильм для детей и взрослых: с дружбой, без тяжёлых тем и грусти, не скучный для тебя.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 6910,
+          "input_tokens_details": {
+            "cache_write_tokens": 6907,
+            "cached_tokens": 0
+          },
+          "output_tokens": 598,
+          "output_tokens_details": {
+            "reasoning_tokens": 139
+          },
+          "total_tokens": 7508
+        },
+        "shortlist": 40
+      }
+    },
+    {
+      "caseId": "pair-3-evening-1",
+      "system": "direct",
+      "changed": false,
+      "before": [
+        "tt2872750",
+        "tt2452042"
+      ],
+      "after": [
+        "tt2872750",
+        "tt2452042"
+      ],
+      "fillsBefore": 2,
+      "fillsAfter": 2,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt2872750",
+          "title": "Барашек Шон",
+          "year": 2015,
+          "reason": "Визуальные шутки, командная дружба и городские приключения: есть над чем посмеяться и тебе, и детям.",
+          "caveat": "Есть погони и угрожающий ловец животных; чувствительным детям может быть тревожно.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Shaun the Sheep Movie"
+        },
+        {
+          "id": "tt2452042",
+          "title": "Снупи и мелочь пузатая в кино",
+          "year": 2015,
+          "reason": "Школьные приключения и фантазии Снупи дают мягкий юмор без мрачности; дружба здесь важнее побед.",
+          "caveat": "Герой переживает из-за неудач; темп спокойнее, чем в «Зверополисе».",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "The Peanuts Movie"
+        },
+        {
+          "id": "tt2245084",
+          "origin": "fill",
+          "title": "Город героев",
+          "original": "Big Hero 6",
+          "year": 2014
+        },
+        {
+          "id": "tt0126029",
+          "origin": "fill",
+          "title": "Шрек",
+          "original": "Shrek",
+          "year": 2001
+        }
+      ],
+      "result": {
+        "ms": 1,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 998,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 891,
+          "output_tokens_details": {
+            "reasoning_tokens": 429
+          },
+          "total_tokens": 1889
+        },
+        "understood": "Сегодня ты хочешь посмотреть с детьми что-то смешное и лёгкое, без грусти, жути и тяжёлых тем.",
+        "picks": [
+          {
+            "id": "tt2872750",
+            "title": "Shaun the Sheep Movie",
+            "year": 2015,
+            "reason": "Визуальные шутки, командная дружба и городские приключения: есть над чем посмеяться и тебе, и детям.",
+            "caveat": "Есть погони и угрожающий ловец животных; чувствительным детям может быть тревожно.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "tt2452042",
+            "title": "The Peanuts Movie",
+            "year": 2015,
+            "reason": "Школьные приключения и фантазии Снупи дают мягкий юмор без мрачности; дружба здесь важнее побед.",
+            "caveat": "Герой переживает из-за неудач; темп спокойнее, чем в «Зверополисе».",
+            "likelySeen": false,
+            "own": true
+          }
+        ],
+        "filled": [
+          "tt2245084",
+          "tt0126029"
+        ],
+        "rejected": [
+          {
+            "title": "Presto",
+            "year": 2008,
+            "reason": "not-in-catalog"
+          },
+          {
+            "title": "For the Birds",
+            "year": 2000,
+            "reason": "not-in-catalog"
+          }
+        ],
+        "dropped": 2
+      }
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "direct",
+      "changed": false,
+      "before": [],
+      "after": [],
+      "fillsBefore": 4,
+      "fillsAfter": 4,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt2245084",
+          "origin": "fill",
+          "title": "Город героев",
+          "original": "Big Hero 6",
+          "year": 2014
+        },
+        {
+          "id": "tt0101414",
+          "origin": "fill",
+          "title": "Красавица и чудовище",
+          "original": "Beauty and the Beast",
+          "year": 1991
+        },
+        {
+          "id": "tt0110357",
+          "origin": "fill",
+          "title": "Король лев",
+          "original": "The Lion King",
+          "year": 1994
+        },
+        {
+          "id": "tt2096673",
+          "origin": "fill",
+          "title": "Головоломка",
+          "original": "Inside Out",
+          "year": 2015
+        }
+      ],
+      "result": {
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 995,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 815,
+          "output_tokens_details": {
+            "reasoning_tokens": 340
+          },
+          "total_tokens": 1810
+        },
+        "understood": "Ты хочешь трогательный грустный мультфильм с детьми, без страшного и тяжёлых тем, а не привычную комедию.",
+        "picks": [],
+        "filled": [
+          "tt2245084",
+          "tt0101414",
+          "tt0110357",
+          "tt2096673"
+        ],
+        "rejected": [
+          {
+            "title": "The Snowman",
+            "year": 1982,
+            "reason": "not-in-catalog"
+          },
+          {
+            "title": "Crac!",
+            "year": 1981,
+            "reason": "not-in-catalog"
+          },
+          {
+            "title": "Mimi wo Sumaseba",
+            "year": 1995,
+            "reason": "not-in-catalog"
+          },
+          {
+            "title": "Omohide Poro Poro",
+            "year": 1991,
+            "reason": "not-in-catalog"
+          }
+        ],
+        "dropped": 4
+      }
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "tt12801262",
+        "tt0317219"
+      ],
+      "after": [
+        "tt12801262",
+        "tt0317219"
+      ],
+      "fillsBefore": 2,
+      "fillsAfter": 2,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt12801262",
+          "reason": "Дружба, принятие непохожих и красивая картинка напоминают «Зверополис», а нежная грусть отвечает настроению вечера.",
+          "caveat": "Шутки остаются; есть травля и напряжённое спасение в воде.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Лука",
+          "original": "Luca",
+          "year": 2021
+        },
+        {
+          "id": "tt0317219",
+          "reason": "Как в любимом «Зверополисе», за ярким миром здесь стоят дружба и повод подумать; особенно трогает история забытого городка.",
+          "caveat": "Скорее комедия с грустной ноткой, чем драма; есть гоночные столкновения.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Тачки",
+          "original": "Cars",
+          "year": 2006
+        },
+        {
+          "id": "tt2245084",
+          "origin": "fill",
+          "title": "Город героев",
+          "original": "Big Hero 6",
+          "year": 2014
+        },
+        {
+          "id": "tt0101414",
+          "origin": "fill",
+          "title": "Красавица и чудовище",
+          "original": "Beauty and the Beast",
+          "year": 1991
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "tt12801262",
+            "reason": "Дружба, принятие непохожих и красивая картинка напоминают «Зверополис», а нежная грусть отвечает настроению вечера.",
+            "caveat": "Шутки остаются; есть травля и напряжённое спасение в воде.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0317219",
+            "reason": "Как в любимом «Зверополисе», за ярким миром здесь стоят дружба и повод подумать; особенно трогает история забытого городка.",
+            "caveat": "Скорее комедия с грустной ноткой, чем драма; есть гоночные столкновения.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе хочется растрогаться вместе с детьми, но без страшного и тяжёлых тем — поэтому выбираю мягкую грусть, а не тяжёлую драму.",
+        "dropped": 2,
+        "filled": [
+          "tt2245084",
+          "tt0101414"
+        ],
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 6913,
+          "input_tokens_details": {
+            "cache_write_tokens": 6910,
+            "cached_tokens": 0
+          },
+          "output_tokens": 781,
+          "output_tokens_details": {
+            "reasoning_tokens": 315
+          },
+          "total_tokens": 7694
+        },
+        "shortlist": 40
+      }
+    },
+    {
+      "caseId": "pair-4-evening-1",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "tt1826940",
+        "tt14218830",
+        "tt1587678",
+        "tt9214684"
+      ],
+      "after": [
+        "tt1826940",
+        "tt14218830",
+        "tt1587678",
+        "tt9214684"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt1826940",
+          "reason": "Как в «Друзьях», здесь компания соседей, дружба и нелепые бытовые истории, за которыми легко следить вполуха.",
+          "caveat": "В первых сериях Джесс заметно более эксцентричная, чем остальные.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Новенькая",
+          "original": "New Girl",
+          "year": 2011
+        },
+        {
+          "id": "tt14218830",
+          "reason": "Добрые учителя и отдельные школьные истории напоминают рабочую команду «Бруклина 9-9», а серии тоже короткие.",
+          "caveat": "Снято как «Офис», но неловкого юмора меньше.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Начальная школа «Эбботт»",
+          "original": "Abbott Elementary",
+          "year": 2021
+        },
+        {
+          "id": "tt1587678",
+          "reason": "Шестеро друзей поддерживают друг друга и попадают в нелепости — знакомая по «Друзьям» компания на короткий вечерний отдых.",
+          "caveat": "Шутки летят быстро: при фоновом просмотре часть пройдёт мимо.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Счастливый конец",
+          "original": "Happy Endings",
+          "year": 2011
+        },
+        {
+          "id": "tt9214684",
+          "reason": "Тёплые перепалки взрослых братьев и сестры дают добрый ансамбль и простые бытовые сюжеты для твоего «смотреть фоном».",
+          "caveat": "Разница в доходах и денежные заботы — постоянная тема шуток.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Домоводство",
+          "original": "Home Economics",
+          "year": 2021
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "tt1826940",
+            "reason": "Как в «Друзьях», здесь компания соседей, дружба и нелепые бытовые истории, за которыми легко следить вполуха.",
+            "caveat": "В первых сериях Джесс заметно более эксцентричная, чем остальные.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt14218830",
+            "reason": "Добрые учителя и отдельные школьные истории напоминают рабочую команду «Бруклина 9-9», а серии тоже короткие.",
+            "caveat": "Снято как «Офис», но неловкого юмора меньше.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1587678",
+            "reason": "Шестеро друзей поддерживают друг друга и попадают в нелепости — знакомая по «Друзьям» компания на короткий вечерний отдых.",
+            "caveat": "Шутки летят быстро: при фоновом просмотре часть пройдёт мимо.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt9214684",
+            "reason": "Тёплые перепалки взрослых братьев и сестры дают добрый ансамбль и простые бытовые сюжеты для твоего «смотреть фоном».",
+            "caveat": "Разница в доходах и денежные заботы — постоянная тема шуток.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен тёплый ситком с короткими, понятными историями, чтобы отдыхать фоном, как под «Друзей» и «Бруклин 9-9».",
+        "dropped": 0,
+        "filled": [],
+        "ms": 1,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 7528,
+          "input_tokens_details": {
+            "cache_write_tokens": 7525,
+            "cached_tokens": 0
+          },
+          "output_tokens": 511,
+          "output_tokens_details": {
+            "reasoning_tokens": 53
+          },
+          "total_tokens": 8039
+        },
+        "shortlist": 40
+      }
+    },
+    {
+      "caseId": "pair-4-evening-1",
+      "system": "direct",
+      "changed": false,
+      "before": [
+        "tt1587678",
+        "tt0090501",
+        "tt1826940",
+        "tt1597420"
+      ],
+      "after": [
+        "tt1587678",
+        "tt0090501",
+        "tt1826940",
+        "tt1597420"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt1587678",
+          "title": "Счастливый конец",
+          "year": 2011,
+          "reason": "Шестеро друзей, бытовые нелепости и короткие ситкомные истории — близко к тому, за что ты любишь «Друзей».",
+          "caveat": "Шутки летят быстро: фоном часть можно пропустить.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Happy Endings"
+        },
+        {
+          "id": "tt0090501",
+          "title": "Идеальные незнакомцы",
+          "year": 1986,
+          "reason": "Два непохожих кузена учатся жить вместе: добродушный юмор и простые сюжеты подойдут тебе для отдыха фоном.",
+          "caveat": "Ситком старой школы: закадровый смех и много физической комедии.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Perfect Strangers"
+        },
+        {
+          "id": "tt1826940",
+          "title": "Новенькая",
+          "year": 2011,
+          "reason": "Дружба соседей по квартире и смешные бытовые истории дают тебе тёплый ансамбль без сложной интриги.",
+          "caveat": "Есть сквозные романтические линии и немало неловкого юмора.",
+          "likelySeen": true,
+          "own": true,
+          "origin": "model",
+          "original": "New Girl"
+        },
+        {
+          "id": "tt1597420",
+          "title": "Мелисса и Джоуи",
+          "year": 2010,
+          "reason": "Домашние хлопоты и перепалки хозяйки дома с нянем-мужчиной: простой ситком, который не требует от тебя разгадывать сюжет.",
+          "caveat": "Заметная доля сюжетов посвящена подросткам и свиданиям.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Melissa & Joey"
+        }
+      ],
+      "result": {
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 987,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 601,
+          "output_tokens_details": {
+            "reasoning_tokens": 173
+          },
+          "total_tokens": 1588
+        },
+        "understood": "Сегодня ты хочешь лёгкий, добрый сериал для фона, без напряжения и необходимости вникать.",
+        "picks": [
+          {
+            "id": "tt1587678",
+            "title": "Happy Endings",
+            "year": 2011,
+            "reason": "Шестеро друзей, бытовые нелепости и короткие ситкомные истории — близко к тому, за что ты любишь «Друзей».",
+            "caveat": "Шутки летят быстро: фоном часть можно пропустить.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "tt0090501",
+            "title": "Perfect Strangers",
+            "year": 1986,
+            "reason": "Два непохожих кузена учатся жить вместе: добродушный юмор и простые сюжеты подойдут тебе для отдыха фоном.",
+            "caveat": "Ситком старой школы: закадровый смех и много физической комедии.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "tt1826940",
+            "title": "New Girl",
+            "year": 2011,
+            "reason": "Дружба соседей по квартире и смешные бытовые истории дают тебе тёплый ансамбль без сложной интриги.",
+            "caveat": "Есть сквозные романтические линии и немало неловкого юмора.",
+            "likelySeen": true,
+            "own": true
+          },
+          {
+            "id": "tt1597420",
+            "title": "Melissa & Joey",
+            "year": 2010,
+            "reason": "Домашние хлопоты и перепалки хозяйки дома с нянем-мужчиной: простой ситком, который не требует от тебя разгадывать сюжет.",
+            "caveat": "Заметная доля сюжетов посвящена подросткам и свиданиям.",
+            "likelySeen": false,
+            "own": true
+          }
+        ],
+        "filled": [],
+        "rejected": [],
+        "dropped": 0
+      }
+    },
+    {
+      "caseId": "pair-4-evening-2",
+      "system": "direct",
+      "changed": false,
+      "before": [
+        "tt0098833",
+        "tt0367279",
+        "tt2575988",
+        "tt2211457"
+      ],
+      "after": [
+        "tt0098833",
+        "tt0367279",
+        "tt2575988",
+        "tt2211457"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt0098833",
+          "title": "Дживс и Вустер",
+          "year": 1990,
+          "reason": "Запутанные светские интриги, недоразумения и остроумные развязки: тебе будет за чем следить без мрачной криминальной истории.",
+          "caveat": "Темп неспешный, юмор — британский и старомодный.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Jeeves and Wooster"
+        },
+        {
+          "id": "tt0367279",
+          "title": "Задержка в развитии",
+          "year": 2003,
+          "reason": "Переплетённые семейные махинации и шутки с отложенной развязкой требуют внимания; большой ансамбль отвечает твоей любви к нему.",
+          "caveat": "Герои эгоистичны; юмор язвительнее и неловче, чем в любимых тобой комедиях.",
+          "likelySeen": true,
+          "own": true,
+          "origin": "model",
+          "original": "Arrested Development"
+        },
+        {
+          "id": "tt2575988",
+          "title": "Силиконовая долина",
+          "year": 2014,
+          "reason": "Сделки, технические хитрости и ответные ходы конкурентов дают сюжет, в который нужно вникать, а не просто слушать фоном.",
+          "caveat": "Много грубой лексики и сексуальных шуток; деловые провалы создают напряжение.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Silicon Valley"
+        },
+        {
+          "id": "tt2211457",
+          "title": "Замок Бландингс",
+          "year": 2013,
+          "reason": "Подмены, тайные планы и столкновения интересов складываются в лёгкий фарс: можно распутывать интригу без страшного.",
+          "caveat": "Интриги преимущественно внутри серий, а не одна большая загадка на сезон.",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "original": "Blandings"
+        }
+      ],
+      "result": {
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 999,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 775,
+          "output_tokens_details": {
+            "reasoning_tokens": 309
+          },
+          "total_tokens": 1774
+        },
+        "understood": "Сегодня ты хочешь следить за хитросплетениями сюжета, но без крови, страшного и тяжёлых тем.",
+        "picks": [
+          {
+            "id": "tt0098833",
+            "title": "Jeeves and Wooster",
+            "year": 1990,
+            "reason": "Запутанные светские интриги, недоразумения и остроумные развязки: тебе будет за чем следить без мрачной криминальной истории.",
+            "caveat": "Темп неспешный, юмор — британский и старомодный.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "tt0367279",
+            "title": "Arrested Development",
+            "year": 2003,
+            "reason": "Переплетённые семейные махинации и шутки с отложенной развязкой требуют внимания; большой ансамбль отвечает твоей любви к нему.",
+            "caveat": "Герои эгоистичны; юмор язвительнее и неловче, чем в любимых тобой комедиях.",
+            "likelySeen": true,
+            "own": true
+          },
+          {
+            "id": "tt2575988",
+            "title": "Silicon Valley",
+            "year": 2014,
+            "reason": "Сделки, технические хитрости и ответные ходы конкурентов дают сюжет, в который нужно вникать, а не просто слушать фоном.",
+            "caveat": "Много грубой лексики и сексуальных шуток; деловые провалы создают напряжение.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "tt2211457",
+            "title": "Blandings",
+            "year": 2013,
+            "reason": "Подмены, тайные планы и столкновения интересов складываются в лёгкий фарс: можно распутывать интригу без страшного.",
+            "caveat": "Интриги преимущественно внутри серий, а не одна большая загадка на сезон.",
+            "likelySeen": false,
+            "own": true
+          }
+        ],
+        "filled": [],
+        "rejected": [],
+        "dropped": 0
+      }
+    },
+    {
+      "caseId": "pair-4-evening-2",
+      "system": "hybrid",
+      "changed": false,
+      "before": [
+        "tt0098833",
+        "tt1439629",
+        "tt0237123",
+        "tt1600199"
+      ],
+      "after": [
+        "tt0098833",
+        "tt1439629",
+        "tt0237123",
+        "tt1600199"
+      ],
+      "fillsBefore": 0,
+      "fillsAfter": 0,
+      "errorBefore": null,
+      "errorAfter": null,
+      "cards": [
+        {
+          "id": "tt0098833",
+          "reason": "Запутанные затеи и остроумные развязки требуют внимания, а дружеский дуэт сохраняет добрый тон, который ты любишь в «Друзьях».",
+          "caveat": "Британская комедия в антураже 1920–1930-х; темп спокойнее, чем в «Бруклине».",
+          "likelySeen": false,
+          "own": true,
+          "origin": "model",
+          "title": "Дживс и Вустер",
+          "original": "Jeeves and Wooster",
+          "year": 1990
+        },
+        {
+          "id": "tt1439629",
+          "reason": "Как в «Бруклине 9-9», здесь чудной дружный коллектив, но игры с жанрами и деталями делают просмотр не фоновым.",
+          "caveat": "Изобретательные сюжеты приходят не сразу; юмор бывает колким.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Сообщество",
+          "original": "Community",
+          "year": 2009
+        },
+        {
+          "id": "tt0237123",
+          "reason": "Компания из шести друзей напоминает «Друзей», а разные версии событий и хитро сплетённые недоразумения требуют внимания.",
+          "caveat": "Много разговоров о сексе; это комедия головоломных ситуаций, а не детектив.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Любовь на шестерых",
+          "original": "Coupling",
+          "year": 2000
+        },
+        {
+          "id": "tt1600199",
+          "reason": "Дружба двух адвокатов и рабочие подколы близки «Бруклину 9-9», а нестандартные судебные ходы дают сюжетную интригу.",
+          "caveat": "Юридические хитрости скорее развлекательные, чем правдоподобные.",
+          "likelySeen": false,
+          "own": false,
+          "origin": "model",
+          "title": "Компаньоны",
+          "original": "Franklin & Bash",
+          "year": 2011
+        }
+      ],
+      "result": {
+        "picks": [
+          {
+            "id": "tt0098833",
+            "reason": "Запутанные затеи и остроумные развязки требуют внимания, а дружеский дуэт сохраняет добрый тон, который ты любишь в «Друзьях».",
+            "caveat": "Британская комедия в антураже 1920–1930-х; темп спокойнее, чем в «Бруклине».",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "tt1439629",
+            "reason": "Как в «Бруклине 9-9», здесь чудной дружный коллектив, но игры с жанрами и деталями делают просмотр не фоновым.",
+            "caveat": "Изобретательные сюжеты приходят не сразу; юмор бывает колким.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0237123",
+            "reason": "Компания из шести друзей напоминает «Друзей», а разные версии событий и хитро сплетённые недоразумения требуют внимания.",
+            "caveat": "Много разговоров о сексе; это комедия головоломных ситуаций, а не детектив.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1600199",
+            "reason": "Дружба двух адвокатов и рабочие подколы близки «Бруклину 9-9», а нестандартные судебные ходы дают сюжетную интригу.",
+            "caveat": "Юридические хитрости скорее развлекательные, чем правдоподобные.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Сегодня тебе нужен хитро устроенный сюжет, за которым интересно следить, но с юмором и без жестокости, жути и тяжёлых тем.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 0,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 7606,
+          "input_tokens_details": {
+            "cache_write_tokens": 7603,
+            "cached_tokens": 0
+          },
+          "output_tokens": 659,
+          "output_tokens_details": {
+            "reasoning_tokens": 177
+          },
+          "total_tokens": 8265
+        },
+        "shortlist": 40
+      }
+    }
+  ]
+}

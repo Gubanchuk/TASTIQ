@@ -1,0 +1,12 @@
+{
+  "appid": 1465360,
+  "features": [
+    {"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "SnowRunner has the player control off-road vehicles as they traverse locations"}]},
+    {"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "an off-roading open world simulation video game"}]},
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "Mechanical improvements to trucks usually require the player to reach a certain progress threshold"}]},
+    {"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "SnowRunner has a large selection of trucks"}]},
+    {"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "Every location is in a rural region in either North America, Russia, Europe or Central Asia"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p3", "q": "Some critics praised the visuals and pacing of the game"}]},
+    {"f": "loop.building", "r": 1, "ev": [{"id": "p1", "q": "completing construction projects and/or repairs at different locations"}]}
+  ]
+}

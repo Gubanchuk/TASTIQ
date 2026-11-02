@@ -1,0 +1,108 @@
+
+=== 1. Shown four by score rank (first result, before taps); targets by rank ===
+andrey careful       shown ranks [1, 5, 2, 7] | targets: Oxenfree 36; Night in the Woods 3; Citizen Sleeper 74 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 1 | mmr 0.85/0.1: 1 | по счёту (λ=1): 1
+andrey lazy          shown ranks [1, 8, 7, 3] | targets: Oxenfree 1171; Night in the Woods 473; Citizen Sleeper 2535 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 0 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+cinephile careful    shown ranks [1, 3, 4, 9] | targets: Побудь в моей шкуре 1; Корпорация «Святые моторы» 483; Маяк 61 | mmr 0.7/0.1 (как есть): 1 | mmr 0.7/0.2: 1 | mmr 0.85/0.1: 1 | по счёту (λ=1): 1
+cinephile lazy       shown ranks [1, 3, 2, 4] | targets: Побудь в моей шкуре 54; Корпорация «Святые моторы» 747; Маяк 40 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 0 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+couple careful       shown ranks [1, 4, 2, 3] | targets: Гаттака 6; Прибытие 1; Бойфренд из будущего 682 | mmr 0.7/0.1 (как есть): 1 | mmr 0.7/0.2: 1 | mmr 0.85/0.1: 1 | по счёту (λ=1): 1
+couple lazy          shown ranks [1, 3, 6, 4] | targets: Гаттака 17; Прибытие 5; Бойфренд из будущего 208 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 0 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+danya careful        shown ranks [1, 2, 3, 11] | targets: Content Warning 12; Risk of Rain 2 108; Hunt: Showdown 1896 8 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 0 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+danya lazy           shown ranks [1, 2, 3, 5] | targets: Content Warning 109; Risk of Rain 2 108; Hunt: Showdown 1896 289 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 0 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+dima careful         shown ranks [1, 2, 3, 5] | targets: Лука 32; Энканто 14; Митчеллы против машин 84 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 0 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+dima lazy            shown ranks [1, 2, 4, 3] | targets: Лука 26; Энканто 31; Митчеллы против машин 62 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 0 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+lena careful         shown ranks [1, 3, 2, 7] | targets: Тед Лассо 7; Новенькая 15; Начальная школа «Эбботт» 28 | mmr 0.7/0.1 (как есть): 1 | mmr 0.7/0.2: 1 | mmr 0.85/0.1: 1 | по счёту (λ=1): 0
+lena lazy            shown ranks [1, 3, 2, 6] | targets: Тед Лассо 26; Новенькая 32; Начальная школа «Эбботт» 34 | mmr 0.7/0.1 (как есть): 0 | mmr 0.7/0.2: 1 | mmr 0.85/0.1: 0 | по счёту (λ=1): 0
+targets within top-4 by score: 3; within top-8: 7; in top-4 but not shown: 1
+targets in first four by variant: {
+  'mmr 0.7/0.1 (как есть)': 3,
+  'mmr 0.7/0.2': 5,
+  'mmr 0.85/0.1': 4,
+  'по счёту (λ=1)': 3
+}
+
+=== 2. Result phase: what «Уже смотрел» without a rating tells the engine ===
+
+-- как есть: targets shown 3/36 (on screen at the end 3), taps 13, replacements that were seen (wall) 5, median best rank 9.5
+   andrey careful       taps 0 wall 0 targets shown 0 best 3 ranks [36, 3, 74]
+   andrey lazy          taps 0 wall 0 targets shown 0 best 473 ranks [1171, 473, 2535]
+   cinephile careful    taps 1 wall 0 targets shown 1 best 1 ranks [1, 482, 60]
+   cinephile lazy       taps 1 wall 0 targets shown 0 best 39 ranks [53, 746, 39]
+   couple careful       taps 0 wall 0 targets shown 1 best 1 ranks [6, 1, 682]
+   couple lazy          taps 0 wall 0 targets shown 0 best 5 ranks [17, 5, 208]
+   danya careful        taps 0 wall 0 targets shown 0 best 8 ranks [12, 108, 8]
+   danya lazy           taps 1 wall 0 targets shown 0 best 106 ranks [107, 106, 287]
+   dima careful         taps 3 wall 2 targets shown 0 best 11 ranks [26, 11, 76]
+   dima lazy            taps 2 wall 1 targets shown 0 best 24 ranks [24, 29, 60]
+   lena careful         taps 0 wall 0 targets shown 1 best 7 ranks [7, 15, 28]
+   lena lazy            taps 5 wall 2 targets shown 0 best 21 ranks [21, 27, 29]
+
+-- seen→like: targets shown 3/36 (on screen at the end 3), taps 10, replacements that were seen (wall) 2, median best rank 8
+   andrey careful       taps 0 wall 0 targets shown 0 best 3 ranks [36, 3, 74]
+   andrey lazy          taps 0 wall 0 targets shown 0 best 473 ranks [1171, 473, 2535]
+   cinephile careful    taps 1 wall 0 targets shown 1 best 1 ranks [1, 485, 60]
+   cinephile lazy       taps 1 wall 0 targets shown 0 best 40 ranks [55, 790, 40]
+   couple careful       taps 0 wall 0 targets shown 1 best 1 ranks [6, 1, 682]
+   couple lazy          taps 0 wall 0 targets shown 0 best 5 ranks [17, 5, 208]
+   danya careful        taps 0 wall 0 targets shown 0 best 8 ranks [12, 108, 8]
+   danya lazy           taps 1 wall 0 targets shown 0 best 98 ranks [98, 109, 225]
+   dima careful         taps 3 wall 2 targets shown 0 best 11 ranks [26, 11, 76]
+   dima lazy            taps 1 wall 0 targets shown 0 best 17 ranks [18, 17, 49]
+   lena careful         taps 0 wall 0 targets shown 1 best 7 ranks [7, 15, 28]
+   lena lazy            taps 3 wall 0 targets shown 0 best 8 ranks [50, 8, 15]
+
+-- seen→love: targets shown 3/36 (on screen at the end 3), taps 11, replacements that were seen (wall) 3, median best rank 7
+   andrey careful       taps 0 wall 0 targets shown 0 best 3 ranks [36, 3, 74]
+   andrey lazy          taps 0 wall 0 targets shown 0 best 473 ranks [1171, 473, 2535]
+   cinephile careful    taps 1 wall 0 targets shown 1 best 1 ranks [1, 489, 64]
+   cinephile lazy       taps 1 wall 0 targets shown 0 best 45 ranks [65, 878, 45]
+   couple careful       taps 0 wall 0 targets shown 1 best 1 ranks [6, 1, 682]
+   couple lazy          taps 0 wall 0 targets shown 0 best 5 ranks [17, 5, 208]
+   danya careful        taps 0 wall 0 targets shown 0 best 8 ranks [12, 108, 8]
+   danya lazy           taps 1 wall 0 targets shown 0 best 77 ranks [77, 113, 152]
+   dima careful         taps 3 wall 2 targets shown 0 best 11 ranks [26, 11, 76]
+   dima lazy            taps 2 wall 1 targets shown 0 best 7 ranks [15, 7, 32]
+   lena careful         taps 0 wall 0 targets shown 1 best 7 ranks [7, 15, 28]
+   lena lazy            taps 3 wall 0 targets shown 0 best 2 ranks [92, 2, 9]
+
+-- niche после 2 тапов: targets shown 3/36 (on screen at the end 3), taps 11, replacements that were seen (wall) 3, median best rank 9
+   andrey careful       taps 0 wall 0 targets shown 0 best 3 ranks [36, 3, 74]
+   andrey lazy          taps 0 wall 0 targets shown 0 best 473 ranks [1171, 473, 2535]
+   cinephile careful    taps 1 wall 0 targets shown 1 best 1 ranks [1, 482, 60]
+   cinephile lazy       taps 1 wall 0 targets shown 0 best 39 ranks [53, 746, 39]
+   couple careful       taps 0 wall 0 targets shown 1 best 1 ranks [6, 1, 682]
+   couple lazy          taps 0 wall 0 targets shown 0 best 5 ranks [17, 5, 208]
+   danya careful        taps 0 wall 0 targets shown 0 best 8 ranks [12, 108, 8]
+   danya lazy           taps 1 wall 0 targets shown 0 best 106 ranks [107, 106, 287]
+   dima careful         taps 3 wall 2 targets shown 0 best 10 ranks [26, 10, 79]
+   dima lazy            taps 2 wall 1 targets shown 0 best 23 ranks [23, 32, 76]
+   lena careful         taps 0 wall 0 targets shown 1 best 7 ranks [7, 15, 28]
+   lena lazy            taps 3 wall 0 targets shown 0 best 27 ranks [144, 107, 27]
+
+-- seen→like + niche/2: targets shown 3/36 (on screen at the end 3), taps 10, replacements that were seen (wall) 2, median best rank 7.5
+   andrey careful       taps 0 wall 0 targets shown 0 best 3 ranks [36, 3, 74]
+   andrey lazy          taps 0 wall 0 targets shown 0 best 473 ranks [1171, 473, 2535]
+   cinephile careful    taps 1 wall 0 targets shown 1 best 1 ranks [1, 485, 60]
+   cinephile lazy       taps 1 wall 0 targets shown 0 best 40 ranks [55, 790, 40]
+   couple careful       taps 0 wall 0 targets shown 1 best 1 ranks [6, 1, 682]
+   couple lazy          taps 0 wall 0 targets shown 0 best 5 ranks [17, 5, 208]
+   danya careful        taps 0 wall 0 targets shown 0 best 8 ranks [12, 108, 8]
+   danya lazy           taps 1 wall 0 targets shown 0 best 98 ranks [98, 109, 225]
+   dima careful         taps 3 wall 2 targets shown 0 best 10 ranks [26, 10, 79]
+   dima lazy            taps 1 wall 0 targets shown 0 best 17 ranks [18, 17, 49]
+   lena careful         taps 0 wall 0 targets shown 1 best 7 ranks [7, 15, 28]
+   lena lazy            taps 3 wall 0 targets shown 0 best 7 ranks [177, 24, 7]
+
+=== 3. Limit of adaptive questions 5 instead of 3 (whole dialogue replayed) ===
+andrey careful       asks 3→3 | targets shown 0→0 | best 3→3 | extra: 
+andrey lazy          asks 3→5 | targets shown 0→0 | best 473→473 | extra: Открытый мир или чтобы вели →всё равно; То, во что играют все, или т→всё равно
+cinephile careful    asks 2→2 | targets shown 1→1 | best 1→1 | extra: 
+cinephile lazy       asks 3→4 | targets shown 0→0 | best 39→39 | extra: Что тебе важнее?→всё равно
+couple careful       asks 1→1 | targets shown 1→1 | best 1→1 | extra: 
+couple lazy          asks 3→5 | targets shown 0→0 | best 5→6 | extra: То, о чём все говорят, или т→всё равно; Что тебе важнее?→world.space
+danya careful        asks 2→2 | targets shown 0→0 | best 8→8 | extra: 
+danya lazy           asks 3→5 | targets shown 0→0 | best 106→106 | extra: Открытый мир или чтобы вели →всё равно; Свежее или можно и старое?→всё равно
+dima careful         asks 3→3 | targets shown 0→0 | best 11→11 | extra: 
+dima lazy            asks 3→5 | targets shown 0→0 | best 24→24 | extra: Что тебе важнее?→всё равно; Свежее или можно и старое?→всё равно
+lena careful         asks 3→5 | targets shown 1→1 | best 7→7 | extra: Что тебе важнее?→всё равно; Что тебе важнее?→всё равно
+lena lazy            asks 3→5 | targets shown 0→0 | best 21→7 | extra: Что тебе важнее?→всё равно; Что тебе важнее?→characters.ensemble
+total targets shown: 3 → 3; median best 9.5 → 7.5

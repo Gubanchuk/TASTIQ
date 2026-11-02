@@ -1,0 +1,8 @@
+{"id": "tt0361256", "features": [
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is an American fantasy comedy drama television series"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p0", "q": "is an American fantasy comedy drama television series"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p1", "q": "Jaye is the reluctant participant in conversations with various animal figurines"}]},
+{"f": "humor.deadpan", "r": 2, "ev": [{"id": "p3", "q": "deadpan protagonist and witty dialogue offer a distinctive take on twentysomething angst"}]},
+{"f": "story.dialogue", "r": 2, "ev": [{"id": "p3", "q": "witty dialogue offer a distinctive take on twentysomething angst"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p2", "q": "TV Guide included the series in their 2013 list of 60 shows"}]}
+]}

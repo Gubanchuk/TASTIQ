@@ -1,0 +1,10 @@
+{"appid": 1286680, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "action role-playing first-person shooter video game"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p2", "q": "players can mix and match these skills for their characters"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p2", "q": "players instead play as a custom made character using the game's character creator system"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "the game is set within the world of a fantasy-themed tabletop role-playing game"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "Boss characters will drop legendary weapons"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p6", "q": "praised the game's new dynamic environments, gameplay, humor and voice acting"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p4", "q": "can change the game's world on the fly"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "The game can be played solo or with up to three other players"}]}
+]}

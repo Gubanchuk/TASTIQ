@@ -1,0 +1,7 @@
+{"id": "tt3561180", "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "is an Icelandic television mystery drama series"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "p0", "q": "solving the murder of a former townsman whose mutilated corpse is recovered by fishermen"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "s", "q": "a remote village in the Northeastern Region of Iceland"}]},
+{"f": "aesthetic.effects", "r": 2, "ev": [{"id": "p1", "q": "Trapped is the most expensive television series ever made in Iceland"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p0", "q": "the first series of ten episodes"}]}
+]}

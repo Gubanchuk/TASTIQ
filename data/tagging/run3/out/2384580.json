@@ -1,0 +1,11 @@
+{"appid": 2384580, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a 2025 hack and slash game"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p4", "q": "the player controls a main character but can also issue commands to troops on the battlefield"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p5", "q": "The game incorporates both the traditional charge-based combo system"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p3", "q": "The game also features a branching storyline"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "based on the Chinese novel Romance of the Three Kingdoms"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "players can select another general as a teammate"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p2", "q": "plays a decisive role throughout the events of the novel"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p4", "q": "Multiple weapons and other character customizations are available"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "improved visuals"}]}
+]}

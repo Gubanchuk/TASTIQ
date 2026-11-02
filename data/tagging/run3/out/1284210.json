@@ -1,0 +1,14 @@
+{"appid": 1284210, "features": [
+{"f": "length.endless", "r": 3, "ev": [{"id": "p0", "q": "The game takes place in a persistent world"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Set in the fantasy world of Tyria"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "large scale combat taking place in a persistent world independent of the main world"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p8", "q": "testing a squad's coordination, damage output, positioning"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p1", "q": "A dynamic event system replaces traditional questing"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "a storyline that is responsive to player actions"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "create a character from a combination of five races and nine professions"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p7", "q": "Guild Wars 2 offers eight crafting disciplines"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p3", "q": "new regions of the world to explore"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p10", "q": "fosters an incredible urge to explore through a generous reward system"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "achingly pretty environment design"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p10", "q": "never unfairly penalizes"}]}
+]}

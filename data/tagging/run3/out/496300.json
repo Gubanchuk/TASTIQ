@@ -1,0 +1,9 @@
+{"appid": 496300, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "as they build and defend their kingdom from monsters called the Greed"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "the monarch must recruit subjects and give them jobs"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "defend it at night from monsters called the Greed"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p2", "q": "the pixel art and soundtrack as strengths"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p2", "q": "praised the soundtrack and the content additions"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "praised the visual effects, lighting, and strategic elements of gameplay"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p1", "q": "with each island being more difficult than the last"}]}
+]}

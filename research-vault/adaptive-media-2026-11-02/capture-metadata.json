@@ -1,0 +1,425 @@
+{
+  "captures": [
+    {
+      "name": "film-question-desktop",
+      "broken": 0,
+      "height": 900,
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "name": "film-question-mobile",
+      "broken": 0,
+      "height": 1223,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "name": "initial-film-result-desktop",
+      "broken": 0,
+      "height": 1801,
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "name": "initial-film-result-mobile",
+      "broken": 0,
+      "height": 2492,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "name": "initial-replace-error-mobile",
+      "broken": 0,
+      "height": 2515,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "name": "series-result-desktop",
+      "broken": 0,
+      "height": 1801,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1440,
+      "capture": "native viewport"
+    },
+    {
+      "name": "series-result-mobile",
+      "broken": 0,
+      "height": 2621,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "cartoon-question-mobile",
+      "broken": 0,
+      "height": 1223,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-film-question-mobile",
+      "broken": 0,
+      "height": 2299,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-error-mobile",
+      "broken": 0,
+      "height": 2299,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-error-desktop",
+      "broken": 0,
+      "height": 1045,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1440,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-error-mobile",
+      "broken": 0,
+      "height": 1480,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-film-model-question-mobile",
+      "broken": 0,
+      "height": 1491,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-film-model-question-desktop",
+      "broken": 0,
+      "height": 1013,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1440,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-film-result-desktop",
+      "broken": 0,
+      "height": 2545,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1440,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-film-result-mobile",
+      "broken": 0,
+      "height": 3687,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-series-model-question-mobile-native",
+      "broken": 0,
+      "height": 1471,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-series-clarification-mobile-native",
+      "broken": 0,
+      "height": 1421,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-series-result-mobile-top-native",
+      "broken": 0,
+      "height": 3714,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-series-result-mobile-card-native",
+      "broken": 0,
+      "height": 3693,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-series-result-desktop-native",
+      "broken": 0,
+      "height": 2545,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-cartoon-model-question-desktop-native",
+      "broken": 0,
+      "height": 1013,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-cartoon-review-desktop-native",
+      "broken": 0,
+      "height": 900,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-error-friendly-mobile-native",
+      "broken": 0,
+      "height": 1187,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-error-friendly-desktop-native",
+      "broken": 0,
+      "height": 900,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-pending-desktop-native",
+      "broken": 0,
+      "height": 1399,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-cartoon-result-desktop-native",
+      "broken": 0,
+      "height": 1587,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-cartoon-result-mobile-top-native",
+      "broken": 0,
+      "height": 2583,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-cartoon-result-mobile-card-native",
+      "broken": 0,
+      "height": 2583,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "final-pending-desktop-native",
+      "broken": 0,
+      "height": 900,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-game-model-question-desktop-native",
+      "broken": 0,
+      "height": 1037,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-game-result-desktop-native",
+      "broken": 0,
+      "height": 2468,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-game-result-mobile-native",
+      "broken": 0,
+      "height": 3473,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-library-all4-mobile-native",
+      "broken": 0,
+      "height": 1628,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-library-evenings-mobile-native",
+      "broken": 0,
+      "height": 1525,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-library-all4-desktop-native",
+      "broken": 0,
+      "height": 1421,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-film-result-desktop-native",
+      "broken": 0,
+      "height": 2478,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "verified-film-result-mobile-native",
+      "broken": 0,
+      "height": 3620,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "fix-cartoon-context-mobile-native",
+      "broken": 0,
+      "height": 2869,
+      "overflow": false,
+      "viewportHeight": 844,
+      "width": 390,
+      "capture": "native viewport"
+    },
+    {
+      "name": "fix-cartoon-context-desktop-native",
+      "broken": 0,
+      "height": 1519,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "fix-library-archive-desktop-native",
+      "broken": 0,
+      "height": 900,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "fix-library-archive-319-native",
+      "broken": 0,
+      "height": 772,
+      "overflow": false,
+      "viewportHeight": 740,
+      "width": 319,
+      "capture": "native viewport"
+    },
+    {
+      "name": "fix-library-all4-desktop-native",
+      "broken": 0,
+      "height": 1421,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "fix-library-media-familiar-native",
+      "broken": 0,
+      "height": 1787,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    },
+    {
+      "name": "fix-library-media-familiar-native",
+      "broken": 0,
+      "height": 1787,
+      "overflow": false,
+      "viewportHeight": 900,
+      "width": 1280,
+      "capture": "native viewport"
+    }
+  ],
+  "libraryFilterChecks": [
+    {
+      "domain": "game",
+      "titles": [
+        "A Short Hike"
+      ]
+    },
+    {
+      "domain": "film",
+      "titles": [
+        "Невероятные приключения Билла и Теда"
+      ]
+    },
+    {
+      "domain": "series",
+      "titles": [
+        "Charlie Chopra & The Mystery of Solang Valley"
+      ]
+    },
+    {
+      "domain": "cartoon",
+      "titles": [
+        "Медвежонок Винни и его друзья"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1849 @@
+{
+  "state": {
+    "version": 1,
+    "id": "overnight-20261101-01-replay",
+    "revision": 4,
+    "mode": "guided",
+    "phase": "result",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "rpg",
+            "label": "RPG"
+          }
+        ],
+        "text": "Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса.",
+        "kind": "answer",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      }
+    ],
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:replay",
+        "text": "Сегодня хочешь перепройти Skyrim.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Сегодня хочу перепройти Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": "replay"
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочется снова исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "снова исследовать мир",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:character_progression",
+        "text": "Хочется развивать героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "развивать героя",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "avoid:death_repetition",
+        "text": "Не хочется частых повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "но без частых повторов после смерти",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Играть будешь один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+    "uncertainties": [],
+    "retractions": [],
+    "sessionTime": {
+      "minutes": 30,
+      "sourceId": "overnight-20261101-01-replay:1",
+      "quote": "Сегодня есть полчаса."
+    },
+    "factRemovalUndo": null,
+    "result": {
+      "top": {
+        "id": "steam:489830",
+        "domain": "game",
+        "name": "The Elder Scrolls V: Skyrim Special Edition",
+        "ru": null,
+        "year": 2016,
+        "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg?t=1786648247",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/library_600x900.jpg",
+        "kind": "game",
+        "series": [],
+        "genres": [
+          "RPG"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "Very Positive",
+        "link": "https://store.steampowered.com/app/489830/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 4.192,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 3.849,
+          "prior": 0.343
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+              "factIds": [
+                "mood:social.solo"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+              "factIds": [
+                "mood:loop.exploration"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "92% положительных из 381 362 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 86 ч",
+              "factIds": [
+                "fact:hours"
+              ]
+            },
+            {
+              "text": "проверена для Steam Deck",
+              "factIds": [
+                "fact:deck"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:social.solo",
+            "type": "mood",
+            "f": "social.solo",
+            "why": [
+              "сегодня хочется: «Один»"
+            ],
+            "evidence": [
+              {
+                "id": "tag:Singleplayer",
+                "kind": "tag",
+                "q": "Singleplayer",
+                "votes": 3554
+              }
+            ]
+          },
+          {
+            "id": "mood:loop.exploration",
+            "type": "mood",
+            "f": "loop.exploration",
+            "why": [
+              "сегодня хочется: «снова исследовать мир»"
+            ],
+            "evidence": [
+              {
+                "id": "r237249944",
+                "q": "freedom of exploration are what make Skyrim truly special",
+                "kind": "review",
+                "thumb": "up",
+                "hours": 4,
+                "lang": "english",
+                "ru": "свобода исследования делает Skyrim по-настоящему особенным"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.922,
+            "total": 381362,
+            "desc": "Very Positive"
+          },
+          {
+            "id": "fact:hours",
+            "type": "fact",
+            "hours": 86
+          },
+          {
+            "id": "fact:deck",
+            "type": "fact",
+            "deck": "verified"
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "unknown",
+            "text": "Не проверено, удобно ли прерваться через 30 мин."
+          }
+        ],
+        "ai": {
+          "reason": "Твоё желание перепройти Skyrim важнее новинок: снизь сложность и сохраняйся чаще, чтобы спокойно исследовать мир и растить героя.",
+          "caveat": "При старте с нуля вступление займёт заметную часть сегодняшних получаса.",
+          "likelySeen": true,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:2623190",
+          "domain": "game",
+          "name": "The Elder Scrolls IV: Oblivion Remastered",
+          "ru": null,
+          "year": 2025,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/a7cee9165bb1bfc092c390c5cff215ce0e381dfc/header.jpg?t=1786648304",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Mostly Positive",
+          "link": "https://store.steampowered.com/app/2623190/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 4.613,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 4.48,
+            "prior": 0.133
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: недоделана",
+                "factIds": [
+                  "risk:flaw:completeness.unfinished"
+                ]
+              },
+              {
+                "text": "Оценка Mostly Positive: ниже, чем у большинства в каталоге",
+                "factIds": [
+                  "risk:quality"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "75% положительных из 70 639 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 41 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 221
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «снова исследовать мир»"
+              ],
+              "evidence": [
+                {
+                  "id": "d",
+                  "q": "Explore Cyrodiil like never before",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Исследуй Сиродил как никогда раньше"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:completeness.unfinished",
+              "type": "risk_flaw",
+              "f": "completeness.unfinished",
+              "evidence": [
+                {
+                  "id": "r236227568",
+                  "q": "Traitor developers abandoned the game left with many bugs",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 32,
+                  "lang": "english",
+                  "ru": "Предательские разработчики бросили игру, оставив много багов"
+                }
+              ]
+            },
+            {
+              "id": "risk:quality",
+              "type": "risk_quality",
+              "ratio": 0.751,
+              "desc": "Mostly Positive"
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.751,
+              "total": 70639,
+              "desc": "Mostly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 41
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 30 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Как альтернатива возвращению в Skyrim — свободные прогулки по Сиродилу, гильдии и развитие героя на низкой сложности.",
+            "caveat": "Вступление может занять все полчаса; перед опасными местами сохраняйся вручную.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:377160",
+          "domain": "game",
+          "name": "Fallout 4",
+          "ru": null,
+          "year": 2015,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1786648137",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/377160/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 4.375,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 4.16,
+            "prior": 0.215
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "81% положительных из 430 265 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 139 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 6843
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «снова исследовать мир»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Exploration",
+                  "kind": "tag",
+                  "q": "Exploration",
+                  "votes": 6769
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.812,
+              "total": 430265,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 139
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 30 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Здесь знакомый по Skyrim ритм: свернуть с дороги, найти новую историю и прокачать героя; для меньшего риска выбери лёгкий режим.",
+            "caveat": "Вместо фэнтези — стрельба и пустошь; вступление небыстрое, режим выживания не выбирай.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:292030",
+          "domain": "game",
+          "name": "The Witcher 3: Wild Hunt — Remastered",
+          "ru": "Ведьмак 3: Дикая Охота",
+          "year": 2015,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg?t=1790845156",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "The Witcher"
+          ],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/292030/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 4.217,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.82,
+            "prior": 0.397
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "96% положительных из 905 685 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 117 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 6287
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «снова исследовать мир»"
+              ],
+              "evidence": [
+                {
+                  "id": "r236437934",
+                  "q": "dozens of hours worth of base game and DLC stories and exploration",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 70,
+                  "lang": "english",
+                  "ru": "десятки часов сюжета и исследования в базовой игре и дополнениях"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.964,
+              "total": 905685,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 117
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 30 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Исследование мира и развитие героя отвечают твоему запросу, а низкая сложность позволит меньше застревать на боях.",
+            "caveat": "Герой задан заранее; за полчаса сюжетные диалоги могут оставить мало времени на прогулки.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.069,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 0
+        }
+      ],
+      "considered": 4381,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    },
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:replay",
+        "text": "Сегодня хочешь перепройти Skyrim.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Сегодня хочу перепройти Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": "replay"
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочется снова исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "снова исследовать мир",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:character_progression",
+        "text": "Хочется развивать героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "развивать героя",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "avoid:death_repetition",
+        "text": "Не хочется частых повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "но без частых повторов после смерти",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Играть будешь один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "uncertainties": [],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "sessionTime": {
+      "minutes": 30,
+      "sourceId": "overnight-20261101-01-replay:1",
+      "quote": "Сегодня есть полчаса."
+    },
+    "canUndoFactRemoval": false,
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      }
+    ],
+    "type": "result",
+    "result": {
+      "top": {
+        "id": "steam:489830",
+        "domain": "game",
+        "name": "The Elder Scrolls V: Skyrim Special Edition",
+        "ru": null,
+        "year": 2016,
+        "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg?t=1786648247",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/library_600x900.jpg",
+        "kind": "game",
+        "series": [],
+        "genres": [
+          "RPG"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "Very Positive",
+        "link": "https://store.steampowered.com/app/489830/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 4.192,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 3.849,
+          "prior": 0.343
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+              "factIds": [
+                "mood:social.solo"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+              "factIds": [
+                "mood:loop.exploration"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "92% положительных из 381 362 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 86 ч",
+              "factIds": [
+                "fact:hours"
+              ]
+            },
+            {
+              "text": "проверена для Steam Deck",
+              "factIds": [
+                "fact:deck"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:social.solo",
+            "type": "mood",
+            "f": "social.solo",
+            "why": [
+              "сегодня хочется: «Один»"
+            ],
+            "evidence": [
+              {
+                "id": "tag:Singleplayer",
+                "kind": "tag",
+                "q": "Singleplayer",
+                "votes": 3554
+              }
+            ]
+          },
+          {
+            "id": "mood:loop.exploration",
+            "type": "mood",
+            "f": "loop.exploration",
+            "why": [
+              "сегодня хочется: «снова исследовать мир»"
+            ],
+            "evidence": [
+              {
+                "id": "r237249944",
+                "q": "freedom of exploration are what make Skyrim truly special",
+                "kind": "review",
+                "thumb": "up",
+                "hours": 4,
+                "lang": "english",
+                "ru": "свобода исследования делает Skyrim по-настоящему особенным"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.922,
+            "total": 381362,
+            "desc": "Very Positive"
+          },
+          {
+            "id": "fact:hours",
+            "type": "fact",
+            "hours": 86
+          },
+          {
+            "id": "fact:deck",
+            "type": "fact",
+            "deck": "verified"
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "unknown",
+            "text": "Не проверено, удобно ли прерваться через 30 мин."
+          }
+        ],
+        "ai": {
+          "reason": "Твоё желание перепройти Skyrim важнее новинок: снизь сложность и сохраняйся чаще, чтобы спокойно исследовать мир и растить героя.",
+          "caveat": "При старте с нуля вступление займёт заметную часть сегодняшних получаса.",
+          "likelySeen": true,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:2623190",
+          "domain": "game",
+          "name": "The Elder Scrolls IV: Oblivion Remastered",
+          "ru": null,
+          "year": 2025,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/a7cee9165bb1bfc092c390c5cff215ce0e381dfc/header.jpg?t=1786648304",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Mostly Positive",
+          "link": "https://store.steampowered.com/app/2623190/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 4.613,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 4.48,
+            "prior": 0.133
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: недоделана",
+                "factIds": [
+                  "risk:flaw:completeness.unfinished"
+                ]
+              },
+              {
+                "text": "Оценка Mostly Positive: ниже, чем у большинства в каталоге",
+                "factIds": [
+                  "risk:quality"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "75% положительных из 70 639 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 41 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 221
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «снова исследовать мир»"
+              ],
+              "evidence": [
+                {
+                  "id": "d",
+                  "q": "Explore Cyrodiil like never before",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Исследуй Сиродил как никогда раньше"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:completeness.unfinished",
+              "type": "risk_flaw",
+              "f": "completeness.unfinished",
+              "evidence": [
+                {
+                  "id": "r236227568",
+                  "q": "Traitor developers abandoned the game left with many bugs",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 32,
+                  "lang": "english",
+                  "ru": "Предательские разработчики бросили игру, оставив много багов"
+                }
+              ]
+            },
+            {
+              "id": "risk:quality",
+              "type": "risk_quality",
+              "ratio": 0.751,
+              "desc": "Mostly Positive"
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.751,
+              "total": 70639,
+              "desc": "Mostly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 41
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 30 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Как альтернатива возвращению в Skyrim — свободные прогулки по Сиродилу, гильдии и развитие героя на низкой сложности.",
+            "caveat": "Вступление может занять все полчаса; перед опасными местами сохраняйся вручную.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:377160",
+          "domain": "game",
+          "name": "Fallout 4",
+          "ru": null,
+          "year": 2015,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1786648137",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/377160/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 4.375,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 4.16,
+            "prior": 0.215
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "81% положительных из 430 265 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 139 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 6843
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «снова исследовать мир»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Exploration",
+                  "kind": "tag",
+                  "q": "Exploration",
+                  "votes": 6769
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.812,
+              "total": 430265,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 139
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 30 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Здесь знакомый по Skyrim ритм: свернуть с дороги, найти новую историю и прокачать героя; для меньшего риска выбери лёгкий режим.",
+            "caveat": "Вместо фэнтези — стрельба и пустошь; вступление небыстрое, режим выживания не выбирай.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:292030",
+          "domain": "game",
+          "name": "The Witcher 3: Wild Hunt — Remastered",
+          "ru": "Ведьмак 3: Дикая Охота",
+          "year": 2015,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg?t=1790845156",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "The Witcher"
+          ],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/292030/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 4.217,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.82,
+            "prior": 0.397
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «снова исследовать мир»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "96% положительных из 905 685 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 117 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 6287
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «снова исследовать мир»"
+              ],
+              "evidence": [
+                {
+                  "id": "r236437934",
+                  "q": "dozens of hours worth of base game and DLC stories and exploration",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 70,
+                  "lang": "english",
+                  "ru": "десятки часов сюжета и исследования в базовой игре и дополнениях"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.964,
+              "total": 905685,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 117
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 30 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Исследование мира и развитие героя отвечают твоему запросу, а низкая сложность позволит меньше застревать на боях.",
+            "caveat": "Герой задан заранее; за полчаса сюжетные диалоги могут оставить мало времени на прогулки.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.069,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 0
+        }
+      ],
+      "considered": 4381,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    }
+  },
+  "feedbackState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": []
+    },
+    "stops": [],
+    "asked": [],
+    "shown": [],
+    "liked": [],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {},
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": [],
+      "goalDriven": true,
+      "excludeSeries": false,
+      "goalWants": [
+        {
+          "f": "loop.exploration",
+          "evidence": "снова исследовать мир"
+        },
+        {
+          "f": "social.solo",
+          "evidence": "Один"
+        }
+      ],
+      "goalAvoids": [],
+      "minutes": 30,
+      "goalRequires": [],
+      "goalExcludes": [],
+      "genreWants": [
+        "RPG"
+      ]
+    },
+    "seed": 399280,
+    "conversation": {
+      "revision": 4,
+      "summary": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+      "facts": [
+        {
+          "key": "direction:rpg",
+          "text": "Сегодня хочется RPG.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:1",
+          "quote": "RPG",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "skyrim:finished",
+          "text": "Ты уже прошёл Skyrim.",
+          "stance": "history",
+          "scope": "history",
+          "sourceId": "overnight-20261101-01-replay:1",
+          "quote": "Skyrim прошёл.",
+          "feature": null,
+          "gameId": "steam:72850",
+          "exposure": "finished",
+          "gameIntent": null
+        },
+        {
+          "key": "skyrim:replay",
+          "text": "Сегодня хочешь перепройти Skyrim.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:1",
+          "quote": "Сегодня хочу перепройти Skyrim",
+          "feature": null,
+          "gameId": "steam:72850",
+          "exposure": null,
+          "gameIntent": "replay"
+        },
+        {
+          "key": "goal:exploration",
+          "text": "Хочется снова исследовать мир.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:1",
+          "quote": "снова исследовать мир",
+          "feature": "loop.exploration",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "goal:character_progression",
+          "text": "Хочется развивать героя.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:1",
+          "quote": "развивать героя",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "avoid:death_repetition",
+          "text": "Не хочется частых повторов после смерти.",
+          "stance": "avoid",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:1",
+          "quote": "но без частых повторов после смерти",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "platform:windows",
+          "text": "Играть будешь на ПК с Windows.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:2",
+          "quote": "ПК (Windows)",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "company:solo",
+          "text": "Играть будешь один.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:3",
+          "quote": "Один",
+          "feature": "social.solo",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        }
+      ],
+      "sessionTime": {
+        "minutes": 30,
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Сегодня есть полчаса."
+      },
+      "uncertainties": [],
+      "retractions": [],
+      "familiarity": {
+        "returnToIds": [
+          "steam:72850"
+        ],
+        "hiddenIds": [],
+        "excludedIds": []
+      },
+      "turns": [
+        {
+          "id": "overnight-20261101-01-replay:1",
+          "question": "Во что тянет сегодня?",
+          "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса.",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-01-replay:2",
+          "question": "Где будешь играть?",
+          "answer": "ПК (Windows)",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-01-replay:3",
+          "question": "Будешь играть один или вместе с кем-то?",
+          "answer": "Один",
+          "kind": "answer",
+          "superseded": false
+        }
+      ]
+    }
+  }
+}

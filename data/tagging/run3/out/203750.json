@@ -1,0 +1,8 @@
+{"appid": 203750, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a third-person shooter video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "robots were used as the main labor force"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "critics praising the game's story and Consequence System"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "The game features a consequence system"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "how non-playable characters in the squad view and trust the player"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p1", "q": "leaving much of the world uninhabitable"}]}
+]}

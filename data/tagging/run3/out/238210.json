@@ -1,0 +1,12 @@
+{"appid": 238210, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "action role-playing and survival horror video game"}, {"id": "p12", "q": "A number of critics described the game as frightening"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p1", "q": "gameplay consists of first-person combat and exploration"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "The game takes place on board a starship in a cyberpunk depiction of 2114"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p4", "q": "adding a character customization and development system"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p13", "q": "owing to its complex role-playing gameplay"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "gameplay consists of first-person combat and exploration"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "The player can upgrade their skills by using"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p7", "q": "Because ammunition is scarce, to be effective the player must use it sparingly"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p10", "q": "praised the title for its open-ended gameplay"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "lauded the title for its hybrid gameplay, moody sound design"}]}
+]}

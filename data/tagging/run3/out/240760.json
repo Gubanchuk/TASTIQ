@@ -1,0 +1,9 @@
+{"appid": 240760, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "is a 2014 post-apocalyptic role-playing video game"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "It is a turn-based and party-based role-playing game with tactical combat"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p1", "q": "The player characters are highly customizable"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "The non-player characters in the party each have their own personality"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p7", "q": "branching storyline impacted by the player's choices"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "the player's choice of statistics, skills, and appearance"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "lauded its environmental graphics and tactical gameplay"}]}
+]}

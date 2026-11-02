@@ -1,0 +1,8 @@
+{"appid": 218680, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Scribblenauts Unlimited is a puzzle sandbox video game"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p0", "q": "Scribblenauts Unlimited is a puzzle sandbox video game"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "it takes place in a large overworld that is open to exploration"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "it takes place in a large overworld that is open to exploration"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "players can now attach multiple objects to each other, for example, creating a dog with wheels"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p4", "q": "noting its difficulty was low"}]}
+]}

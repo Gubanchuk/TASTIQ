@@ -1,0 +1,10 @@
+{"appid": 3017860, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Doom: The Dark Ages is a 2025 first-person shooter game"}]},
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "Melee weapons such as a gauntlet, an iron mace, and a flail, are available"}]},
+{"f": "combat.weighty", "r": 3, "ev": [{"id": "p8", "q": "a very weighty and powerful style of play"}, {"id": "p2", "q": "shifts towards a heavier, more grounded combat experience"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "in their war against the forces of Hell"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p5", "q": "reawakens an ancient being, known as an Old One"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p3", "q": "weaponized by the alien Maykrs"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p8", "q": "bloody, challenging, and strategic thrill ride"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "emphasizing strategic engagements"}]}
+]}

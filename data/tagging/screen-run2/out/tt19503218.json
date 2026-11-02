@@ -1,0 +1,8 @@
+{"id": "tt19503218", "features": [
+{"f": "length.short", "r": 2, "ev": [{"id": "p0", "q": "The ten-episode series was released on Netflix"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "the series was canceled after one season"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p1", "q": "Madolyn also undergoes character development as a result of being around Marco"}]},
+{"f": "tone.feelgood", "r": 1, "ev": [{"id": "p1", "q": "Marco develops in his identity, navigates dating, creates new friendships"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p1", "q": "Marco develops in his identity, navigates dating, creates new friendships"}]},
+{"f": "characters.friendship", "r": 1, "ev": [{"id": "p1", "q": "Marco develops in his identity, navigates dating, creates new friendships"}]}
+]}

@@ -1,0 +1,8 @@
+{"appid": 251990, "features": [
+{"f": "loop.life_sim", "r": 2, "ev": [{"id": "p2", "q": "The player reads through the story and schedules the protagonist's weekly lessons"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p6", "q": "some can close off entire branches of the story"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p0", "q": "keep the princess alive for 40 weeks"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "The game uses anime-style graphics"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p8", "q": "requires players to think smart and manage emotions"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "release a darker game that requires players to think smart"}]}
+]}

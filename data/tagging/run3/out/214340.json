@@ -1,0 +1,9 @@
+{"appid": 214340, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "players take on the role of a character who must solve a variety of puzzles"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p1", "q": "who can be talked with for clues and trivia"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p8", "q": "Deponia is an incredibly funny, affectionately designed adventure"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p9", "q": "sharp, pretty and quirky-as-hell"}]},
+{"f": "cognitive.low", "r": 1, "ev": [{"id": "p1", "q": "a hint system, indicating interactive elements"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p2", "q": "special puzzles that the player can skip if they cannot solve them"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p7", "q": "The plot moves glacially, and seems to be held up by puzzles that fail to complement it"}]}
+]}

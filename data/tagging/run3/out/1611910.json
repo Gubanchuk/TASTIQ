@@ -1,0 +1,6 @@
+{"appid": 1611910, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a turn-based tactics game set in the Games Workshop's Gothic science fiction"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "Gothic science fiction Warhammer 40,000 fictional universe"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "lost to the corrupting influence of Nurgle"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p3", "q": "Vakir accompanies the squad of Grey Knights to the Craftworld's infinity circuit chamber"}]}
+]}

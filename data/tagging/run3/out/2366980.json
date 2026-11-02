@@ -1,0 +1,11 @@
+{"appid": 2366980, "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p4", "q": "Critics highly praised the humour, considering it the primary focus of the game"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p0", "q": "is a 2024 comedy adventure game"}]},
+{"f": "story.minimal", "r": 2, "ev": [{"id": "p0", "q": "The game has a limited narrative"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p3", "q": "move objects, break objects, slap objects, or talk to characters"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p6", "q": "the hand-drawn animations as both giving the game a strong visual identity"}, {"id": "p0", "q": "cartoon-style 2D visuals"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "The aesthetics of Thank Goodness You're Here! were widely praised"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p6", "q": "praised the soundtrack and sound effects"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p2", "q": "criticism for the simplicity of gameplay and short length"}, {"id": "p5", "q": "found the game too short"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "the simplicity of gameplay"}]}
+]}

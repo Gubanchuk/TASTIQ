@@ -1,0 +1,10 @@
+{"appid": 41700, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2009 first-person shooter survival horror video game"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p1", "q": "The game takes place inside the Chernobyl exclusion zone in Ukraine"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p2", "q": "which the player must take care of with medical supplies"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p1", "q": "post-apocalyptic horror, as well as tactical role-playing action"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "Upgrading has three tiers of improvement"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "Each of these is a large playable area"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p4", "q": "Bandits are ruthless and generally hostile to anyone not in their gang"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p1", "q": "tactical role-playing action"}]}
+]}

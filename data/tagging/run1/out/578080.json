@@ -1,0 +1,9 @@
+{"appid": 578080, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "d", "q": "winner-take-all shooter that started the Battle Royale craze"}]},
+{"f": "loop.looting", "r": 3, "ev": [{"id": "d", "q": "loot unique weapons and supplies"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "d", "q": "survive in an ever-shrinking zone where every turn could be your last"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "d", "q": "every turn could be your last"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "r232988470", "q": "The gunplay still feels better than most other BRs"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "r231443585", "q": "Playing with friends, laughing at stupid situations"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r232714871", "q": "The movement feels kinda clunky"}]}
+]}

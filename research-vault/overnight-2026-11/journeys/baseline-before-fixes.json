@@ -1,0 +1,445 @@
+{
+  "at": "2026-11-01T00:30:09.890Z",
+  "frozenFileSha256": "2d6e5f7973f71abdee1a6732be9bca8cbac57be048b0c3b2b665607b3f9f4189",
+  "catalog": {
+    "items": 4952,
+    "sha256": "f2805c2776bc2a3327a67a875cd569cb6b8eea5b767e9aac570fcf1064ad45c1"
+  },
+  "sources": {
+    "src/core/conversation.js": "39665b79571f51776297b324980789916b0cd81d285f831d9b6dea5e67bac74d",
+    "src/server/conversation-service.js": "60033d2a36c5c092391134707be33d27f83eb8fcfae4698adfe1e99c95c1896a",
+    "src/core/sieves.js": "887797173f482876cc8324f72d3445c049a5d9c90082399550f8e003e5cf1065",
+    "src/core/feasibility.js": "67f9ebb628fc31781e424e3010d643488a469c3232195fec064cfffb1313ab20"
+  },
+  "paidApiCalls": 0,
+  "humanFit": null,
+  "results": [
+    {
+      "id": "today-switch",
+      "question": "Does a corrected today's goal replace the old genre without promoting past taste?",
+      "passCriterion": "The validated corrected projection contains only the current genre and current feature wants; raw correction remains available to the picker.",
+      "status": "fail",
+      "kind": "deterministic-contract",
+      "genres": [],
+      "wants": [
+        "loop.driving"
+      ],
+      "historyPreferences": []
+    },
+    {
+      "id": "neutral",
+      "question": "Can a neutral answer become a negative preference?",
+      "passCriterion": "Unknown, indifferent and none without additional text cannot support an avoid/exclude fact.",
+      "status": "pass",
+      "kind": "deterministic-contract",
+      "outcomes": [
+        {
+          "kind": "unknown",
+          "rejected": true
+        },
+        {
+          "kind": "indifferent",
+          "rejected": true
+        },
+        {
+          "kind": "none",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "question": "Does a conditional wish become a hard restriction?",
+      "passCriterion": "A validated conditional fact remains in the conversation but creates no unconditional goalRequires/goalExcludes.",
+      "status": "pass",
+      "kind": "deterministic-contract",
+      "requires": [],
+      "excludes": [],
+      "conditionalPreserved": "conditional"
+    },
+    {
+      "id": "context-change",
+      "question": "Can superseded company conditions reappear after editing the company?",
+      "passCriterion": "Changing group to solo removes facts sourced from the old context; the old source cannot validate a new proposal.",
+      "status": "pass",
+      "kind": "deterministic-contract",
+      "context": {
+        "platform": "windows",
+        "company": "solo",
+        "partySize": null
+      },
+      "oldSourceRejected": true
+    },
+    {
+      "id": "finished-replay",
+      "question": "Can an explicit current replay request reach candidates despite completed exposure?",
+      "passCriterion": "A completed game explicitly targeted for today's replay is admissible; a merely similar-game reference must not gain this permission.",
+      "status": "fail",
+      "kind": "missing-explicit-return-bridge",
+      "proposalAccepted": true,
+      "finishedGameAdmissible": false,
+      "rejection": {
+        "sieve": 2,
+        "reason": "уже играл (или другое издание)"
+      },
+      "boundary": "This hand-written valid interpretation exposes a bridge gap; it does not measure model understanding. Similar-reference negative case must be added with any return-intent fix."
+    },
+    {
+      "id": "started-history",
+      "question": "Does merely starting a game imply dislike or an exclusion?",
+      "passCriterion": "Started exposure alone leaves the game eligible and adds no negative taste weights.",
+      "status": "pass",
+      "kind": "deterministic-contract",
+      "admissible": true,
+      "negativeWeights": 0
+    },
+    {
+      "id": "blocked-return",
+      "question": "Does a deliberate return override a remembered block only for today without blocking the series?",
+      "passCriterion": "Result keep permits the current work/editions; restart clears keep and preserves the explicit block; unrelated series entries remain eligible.",
+      "status": "pass",
+      "kind": "deterministic-contract",
+      "allowedDuringReturn": [
+        "1",
+        "2"
+      ],
+      "excludedAfterRestart": true,
+      "keepAfterRestart": []
+    },
+    {
+      "id": "replace-undo",
+      "question": "Can batch replacement, repeated transport and undo preserve the request and unaffected card?",
+      "passCriterion": "One successful duplicate replacement invokes picker once, planner zero times; undo restores exact prior cards with no additional picker.",
+      "status": "pass",
+      "kind": "deterministic-contract",
+      "plans": 0,
+      "picks": 1,
+      "summaryPreserved": true,
+      "retainedIds": [
+        "3"
+      ]
+    },
+    {
+      "id": "v1-error-resume",
+      "question": "Can a restored old planner error answer the fallback question it displays?",
+      "passCriterion": "Actionless restore is free and its visible fallback question accepts the next answer without stale-question error.",
+      "status": "fail",
+      "kind": "deterministic-error",
+      "calls": 0,
+      "displayedQuestion": "experience",
+      "stateQuestion": null,
+      "error": "Этот вопрос уже изменился. Ответь на текущий."
+    },
+    {
+      "id": "today-minutes",
+      "question": "Does an explicit today's time budget reach feasibility checks separately from completion length?",
+      "passCriterion": "A validated 30-minute current budget results in session.minutes=30 and an explicit unknown interruption warning; total completion hours alone do not create a session budget.",
+      "status": "fail",
+      "kind": "missing-structured-time-bridge",
+      "proposalAccepted": true,
+      "minutes": null,
+      "checks": [],
+      "boundary": "Time remains in raw evidence for the picker, but the current fact schema has no structured minute field. No model claim or fit inference is made."
+    },
+    {
+      "id": "real-catalog-directions",
+      "question": "Do distinct supported today's signals affect retrieval without violating platform and hard filters?",
+      "passCriterion": "RPG/story, racing/driving and cooperative survival produce distinct scored shortlists; all shortlisted candidates pass current sieves. No particular title is required.",
+      "status": "pass",
+      "kind": "real-catalog-diagnostics",
+      "rows": [
+        {
+          "id": "story-rpg",
+          "eligible": 4381,
+          "allPass": true,
+          "top": [
+            {
+              "id": "steam:1150690",
+              "name": "Omori",
+              "score": 3.589
+            },
+            {
+              "id": "steam:1113000",
+              "name": "Persona 4 Golden",
+              "score": 3.589
+            },
+            {
+              "id": "steam:292030",
+              "name": "Ведьмак 3: Дикая Охота",
+              "score": 3.527
+            },
+            {
+              "id": "steam:206440",
+              "name": "To the Moon",
+              "score": 3.508
+            },
+            {
+              "id": "steam:1771300",
+              "name": "Kingdom Come: Deliverance II",
+              "score": 3.488
+            },
+            {
+              "id": "steam:1151640",
+              "name": "Horizon Zero Dawn™ Complete Edition",
+              "score": 3.487
+            },
+            {
+              "id": "steam:2593370",
+              "name": "The Hungry Lamb: Traveling in the Late Ming Dynasty",
+              "score": 3.486
+            },
+            {
+              "id": "steam:851850",
+              "name": "Dragon Ball Z: Kakarot",
+              "score": 3.471
+            },
+            {
+              "id": "steam:1328670",
+              "name": "Mass Effect Legendary Edition",
+              "score": 3.449
+            },
+            {
+              "id": "steam:20920",
+              "name": "Ведьмак 2: Убийцы королей",
+              "score": 3.436
+            }
+          ]
+        },
+        {
+          "id": "driving-racing",
+          "eligible": 4381,
+          "allPass": true,
+          "top": [
+            {
+              "id": "steam:270880",
+              "name": "American Truck Simulator",
+              "score": 1.971
+            },
+            {
+              "id": "steam:516750",
+              "name": "My Summer Car",
+              "score": 1.967
+            },
+            {
+              "id": "steam:635260",
+              "name": "CarX Drift Racing Online",
+              "score": 1.966
+            },
+            {
+              "id": "steam:552100",
+              "name": "Brick Rigs",
+              "score": 1.939
+            },
+            {
+              "id": "steam:12120",
+              "name": "Grand Theft Auto: San Andreas",
+              "score": 1.931
+            },
+            {
+              "id": "steam:244210",
+              "name": "Assetto Corsa",
+              "score": 1.923
+            },
+            {
+              "id": "steam:1551360",
+              "name": "Forza Horizon 5",
+              "score": 1.906
+            },
+            {
+              "id": "steam:1017180",
+              "name": "The Long Drive",
+              "score": 1.861
+            },
+            {
+              "id": "steam:40990",
+              "name": "Mafia: The City of Lost Heaven",
+              "score": 1.845
+            },
+            {
+              "id": "steam:12210",
+              "name": "Grand Theft Auto IV: The Complete Edition",
+              "score": 1.837
+            }
+          ]
+        },
+        {
+          "id": "cooperative-survival",
+          "eligible": 4380,
+          "allPass": true,
+          "top": [
+            {
+              "id": "steam:1284190",
+              "name": "The Planet Crafter",
+              "score": 1.976
+            },
+            {
+              "id": "steam:516750",
+              "name": "My Summer Car",
+              "score": 1.967
+            },
+            {
+              "id": "steam:387990",
+              "name": "Scrap Mechanic",
+              "score": 1.931
+            },
+            {
+              "id": "steam:848450",
+              "name": "Subnautica: Below Zero",
+              "score": 1.909
+            },
+            {
+              "id": "steam:440900",
+              "name": "Conan Exiles",
+              "score": 1.782
+            },
+            {
+              "id": "steam:1604030",
+              "name": "V Rising",
+              "score": 1.781
+            },
+            {
+              "id": "steam:305620",
+              "name": "The Long Dark",
+              "score": 1.779
+            },
+            {
+              "id": "steam:248860",
+              "name": "NEO Scavenger",
+              "score": 1.767
+            },
+            {
+              "id": "steam:105600",
+              "name": "Terraria",
+              "score": 1.765
+            },
+            {
+              "id": "steam:264710",
+              "name": "Subnautica",
+              "score": 1.752
+            }
+          ]
+        }
+      ],
+      "boundary": "Distinct scored lists demonstrate wiring only. They do not prove semantic understanding, sufficient retrieval recall or human fit."
+    },
+    {
+      "id": "real-catalog-capacity",
+      "question": "Are uncertain player counts kept distinguishable from confirmed capacity?",
+      "passCriterion": "For a three-player group, every shortlisted card without verified capacity carries an unknown/conditional capacity check; verified impossible capacity never passes.",
+      "status": "pass",
+      "kind": "real-catalog-diagnostics",
+      "checks": [
+        {
+          "id": "steam:1604030",
+          "name": "V Rising",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:1284190",
+          "name": "The Planet Crafter",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:602960",
+          "name": "Barotrauma",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:239140",
+          "name": "Dying Light",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:387990",
+          "name": "Scrap Mechanic",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:221100",
+          "name": "DayZ",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:105600",
+          "name": "Terraria",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:1942280",
+          "name": "Brotato",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:322330",
+          "name": "Don't Starve Together",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:304930",
+          "name": "Unturned",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:513710",
+          "name": "Scum",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        },
+        {
+          "id": "steam:440900",
+          "name": "Conan Exiles",
+          "players": {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          }
+        }
+      ],
+      "unknownOrConditional": 12,
+      "boundary": "Unknown capacity is disclosed, not silently certified. This audit does not independently verify each external player-count source."
+    }
+  ]
+}

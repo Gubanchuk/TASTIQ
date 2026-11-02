@@ -1,0 +1,12 @@
+{"appid": 359510, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p1", "q": "by conversing with the various suspects"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "is a murder mystery point-and-click adventure game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "Searching the environment will often unveil puzzles that must be solved"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "searching each room of the tower for clues"}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "p3", "q": "light-hearted, comfy murder mystery"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p3", "q": "light-hearted, comfy murder mystery"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p3", "q": "deemed it \"gorgeous\" and \"thrilling\""}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p3", "q": "winsome cast, gorgeous music and sharp writing"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p3", "q": "winsome cast, gorgeous music and sharp writing"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "p2", "q": "Negative comments were given about the undeserved ending"}, {"id": "p4", "q": "ends somewhat suddenly"}]}
+]}

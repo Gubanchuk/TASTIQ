@@ -1,0 +1,11 @@
+{"appid": 1902690, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "The combat is hack-and-slash style"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p1", "q": "launching special attacks and combos"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p1", "q": "a wide array of stances"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "allows for exploration of recreated districts of Edo"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "Players can give commands to their servant"}, {"id": "p2", "q": "They later form an alliance with Takao Dayu"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p7", "q": "praised the game's story and characters"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p7", "q": "positive feedback in regards to the narrative"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "a widespread weapon for Samurai during the Edo period"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "a spin-off of the Holy Grail War"}]}
+]}

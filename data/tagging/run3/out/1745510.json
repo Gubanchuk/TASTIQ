@@ -1,0 +1,10 @@
+{"appid": 1745510, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Set in a dark fantasy world"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "Set in a dark fantasy world"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "he described melee combat as"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p3", "q": "he described melee combat as"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "praised its graphics, soundtrack and level design"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p2", "q": "praised its graphics, soundtrack and level design"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "its game balance heavily favored magic builds"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p0", "q": "is banished into the Great Well, an underworld of sorts"}]}
+]}

@@ -1,0 +1,12 @@
+{"appid": 1017900, "features": [
+{"f": "loop.management", "r": 2, "ev": [{"id": "p0", "q": "act as the leader of an ancient civilization"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "gather resources in order to pay for new units, buildings, and more advanced technology"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "each advancement brings the player new technologies, weapons, and units"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Each civilization has technologies unique to them"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p8", "q": "praised its multiplayer and its popularity among gamers"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p5", "q": "four single-player campaigns"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p5", "q": "completed in a linear fashion"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p5", "q": "follow the history of the Egyptian, Greek, Babylonian, and Yamato civilizations"}, {"id": "p9", "q": "well rounded, historically accurate product"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p9", "q": "It's rare to see a game this beautiful"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p9", "q": "have a hand-painted feel to them"}]}
+]}

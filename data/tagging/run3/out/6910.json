@@ -1,0 +1,10 @@
+{"appid": 6910, "features": [
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p5", "q": "using stealth to infiltrate an area"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "with the option chosen influencing the course of the conversation"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p0", "q": "character customization based around cybernetic enhancements"}, {"id": "p10", "q": "the depth of customization through the skill and augmentation systems"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "features exploration and combat in environments connected to multiple city-based levels"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "in a dystopian cyberpunk future beset by terrorist acts"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "beset by terrorist acts, economic inequality, and a plague dubbed the Gray Death"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "The story is inspired by popular conspiracy theory motifs"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p11", "q": "faulting the stiff character movement and graphical issues that appeared during gameplay"}]}
+]}

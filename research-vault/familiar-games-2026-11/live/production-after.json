@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-31T23:27:22.802Z",
+  "checks": [
+    {
+      "path": "/pick/game/",
+      "status": 200
+    },
+    {
+      "path": "/api/ai/status",
+      "status": 200,
+      "data": {
+        "enabled": true,
+        "reason": null,
+        "locked": false,
+        "model": "gpt-6.1-sol"
+      }
+    }
+  ],
+  "pid": "47728",
+  "budget": {
+    "ceiling": 5,
+    "cumulativeUpper": 1.6288725,
+    "successfulCalls": 157,
+    "uncertainReserve": 0,
+    "remainingLower": 3.3711275
+  },
+  "additionalRemainingLower": 9.9493794
+}

@@ -1,0 +1,10 @@
+{"appid": 98800, "features": [
+{"f": "length.endless", "r": 2, "ev": [{"id": "p3", "q": "the objective is more often to see how far one can get before dying"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Each level is a randomly generated maze of interconnected rooms"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "Artifacts are powerful weapons and armor that have a randomly generated name"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "The player begins the game with seven chosen skills, which may be further improved"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "The game is turn-based, and both the player and numerous enemies take turns performing actions"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p2", "q": "The combat focuses on melee, ranged, and magic attacks"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p6", "q": "its humor sets it apart from other roguelikes"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p7", "q": "Nathan Meunier of IGN called Dungeons of Dredmor challenging"}, {"id": "p7", "q": "brutal and unforgiving"}]}
+]}

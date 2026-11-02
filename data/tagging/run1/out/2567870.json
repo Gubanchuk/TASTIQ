@@ -1,0 +1,111 @@
+{
+ "appid": 2567870,
+ "features": [
+  {
+   "f": "social.coop",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Scale various worlds solo or chained together with your friends"
+    },
+    {
+     "id": "a",
+     "q": "Local and online co-op"
+    }
+   ]
+  },
+  {
+   "f": "loop.platforming",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "the 1-4 player platforming sensation"
+    },
+    {
+     "id": "a",
+     "q": "scale punishing platforms and outrun the scorching heat"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Brave the punishing Normal Mode, play with checkpoints in Beginner Mode"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Climb up from the depths of Hell"
+    },
+    {
+     "id": "r238061689",
+     "q": "Симулятор ада, в котором ты сам покупаешь билет"
+    }
+   ]
+  },
+  {
+   "f": "humor.funny",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237377881",
+     "q": "Couldn't stop laughing"
+    },
+    {
+     "id": "r238058645",
+     "q": "funny game when playing with friends"
+    }
+   ]
+  },
+  {
+   "f": "social.pvp",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Compare your climbs with the world"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Coordinate your clambering and perfect your jumps"
+    }
+   ]
+  },
+  {
+   "f": "tension.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237661404",
+     "q": "One small mistake can ruin an entire run"
+    }
+   ]
+  },
+  {
+   "f": "world.empty",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235631393",
+     "q": "it's most of the time empty"
+    }
+   ]
+  }
+ ]
+}

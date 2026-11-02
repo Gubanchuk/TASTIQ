@@ -1,0 +1,12 @@
+{"appid": 297130, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "the player has only one arrow and can only take one hit"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p2", "q": "The difficulty is that the single arrow has to be charged to be shot"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p4", "q": "the player will die very often in a playthrough"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p6", "q": "the endearing 16-bit art-style"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p6", "q": "responsive control and creative boss battles"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p5", "q": "praising the game's artistic visuals"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p4", "q": "He also praised the music featured in the game"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p2", "q": "the player has to figure out how the respective boss behaves"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "encouraging a repetitive pattern in defeating bosses"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p6", "q": "criticizing the game's empty world"}]}
+]}

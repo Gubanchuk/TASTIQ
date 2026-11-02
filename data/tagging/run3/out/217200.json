@@ -1,0 +1,10 @@
+{"appid": 217200, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p3", "q": "Gameplay in Worms Armageddon is turn-based, with each team moving in a randomly-determined sequence"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p5", "q": "The game includes a wide variety of weapons, including melee, projectile, and explosive weapons"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "Local multiplayer allows the player to select which teams participate in the battle"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p6", "q": "a single-player campaign with premade missions"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is characterized by cartoonish graphics and a unique brand of humour"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p1", "q": "praised the refined gameplay and stylized graphics"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p5", "q": "others are rather fanciful and cartoonish, such as the sheep"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p11", "q": "its carefree, happy-go-lucky attitude"}]}
+]}

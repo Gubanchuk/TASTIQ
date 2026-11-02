@@ -1,0 +1,9 @@
+{"appid": 1940340, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "Combat in the game is turn-based, and the heroes must be positioned properly"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p5", "q": "The Scholar recruits a band of surviving heroes"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p4", "q": "allows Eldritch beings to invade the physical world"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "each of them have their own unique strengths and abilities"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p5", "q": "the troubled pasts and motivations of the heroes under his command"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "sends the majority of the human population into madness"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p5", "q": "come to terms with their pasts and overcome their guilt"}]}
+]}

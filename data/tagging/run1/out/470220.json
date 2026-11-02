@@ -1,0 +1,8 @@
+{"appid": 470220, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "a", "q": "battle it out in free-for-all matches"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "d", "q": "Play solo or with friends"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "d", "q": "Play solo or with friends"}]},
+{"f": "loop.cards", "r": 3, "ev": [{"id": "a", "q": "Match cards by color, number, or symbol"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r237854621", "q": "A perfect game to pass the time"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "a", "q": "Unlock colorful boards, card decks, music, avatars, and more"}]}
+]}

@@ -1,0 +1,11 @@
+{"appid": 22100, "features": [
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p2", "q": "The game features a sandbox gameplay style"}]},
+{"f": "story.minimal", "r": 2, "ev": [{"id": "p2", "q": "there is no overarching storyline present"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p3", "q": "the player is offered a set of options to customize the character"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "complex character skill system"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p0", "q": "trade, and manage a fief"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p9", "q": "praised the combat for being physics-based and aim-based"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "in the medieval land of Calradia"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p1", "q": "repetitive dialogue and locations"}, {"id": "p8", "q": "repetitive dialogues and locations"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p7", "q": "feels more underdeveloped than it does flat-out bad"}]}
+]}

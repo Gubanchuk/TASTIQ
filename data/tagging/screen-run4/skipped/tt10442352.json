@@ -1,0 +1,36 @@
+{
+  "id": "tt10442352",
+  "name": "Thelma the Unicorn",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2024,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Thelma the Unicorn is a 2024 American animated musical comedy film written by Jared and Jerusha Hess, and directed by Jared Hess and Lynn Wang (in Wang's feature film directorial debut). Based on the children's book series of the same name by Aaron Blabey, the film stars Brittany Howard as the titular character, alongside the voices of Will Forte, Jemaine Clement, Edi Patterson, Fred Armisen, Zach Galifianakis, Jon Heder and Shondrella Avery. The film marks the acting debut of Howard."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "Thelma the Unicorn was released on Netflix on May 17, 2024, and produced by Netflix Animation Studios and Scholastic Entertainment. The film received generally positive reviews from critics."
+    },
+    {
+      "id": "p2",
+      "section": "Critical response",
+      "text": "Metacritic, which uses a weighted average, assigned the film a score of 64 out of 100, based on 6 critics, indicating \"generally favorable\" reviews."
+    },
+    {
+      "id": "p3",
+      "section": "Accolades",
+      "text": "The film was nominated for the 2025 Visual Effects Society Award for Outstanding Animated Character in an Animated Feature."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Thelma_the_Unicorn"
+}

@@ -1,0 +1,9 @@
+{"id": "tt3281796", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "crime drama television series"}, {"id": "p2", "q": "an intelligent, smooth yet ruthless drug dealer"}]},
+{"f": "characters.antihero", "r": 2, "ev": [{"id": "p2", "q": "an intelligent, smooth yet ruthless drug dealer who goes by the alias"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p3", "q": "The show features James' family, which consists of his wife Tasha"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p3", "q": "Power also follows James' criminal partner and best friend Tommy Egan"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p4", "q": "the use of overly familiar by-the-numbers story elements"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p6", "q": "drama that's hard not to keep watching"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "It aired on the Starz network from June 7, 2014 to February 9, 2020"}]}
+]}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#282a2c">
+  <title>Что посмотреть сегодня — TASTIQ</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/pick/style.css">
+  <link rel="stylesheet" href="/pick/game/style.css">
+  <link rel="stylesheet" href="/pick/game/workspace.css">
+  <link rel="stylesheet" href="/shared/conversation.css">
+  <link rel="stylesheet" href="/pick/game/conversation.css">
+</head>
+<body class="conversation-page game-dialogue workspace-v2 media-dialogue">
+  <div class="conversation-app">
+  <aside class="conversation-rail" aria-label="Навигация TASTIQ">
+    <a class="conversation-brand" href="/" aria-label="TASTIQ — главная">tastiq<span aria-hidden="true"></span></a>
+    <nav class="conversation-links" aria-label="Основное">
+      <a href="/pick/game/" aria-current="page"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l-3 3V11.5A7.5 7.5 0 0 1 9.5 4h3a7.5 7.5 0 0 1 7.5 7.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Подобрать</a>
+      <a href="/library/"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/></svg>Библиотека</a>
+    </nav>
+    <nav class="conversation-domains" aria-label="Что подобрать"><a href="/pick/game/">Игры</a><a href="/pick/watch/?domain=film">Фильмы</a><a href="/pick/watch/?domain=series">Сериалы</a><a href="/pick/watch/?domain=cartoon">Мультфильмы</a></nav>
+    <p class="conversation-rail-note">Освободи вечер<br>для самого вечера.</p>
+  </aside>
+  <div class="conversation-body game-workspace">
+    <aside class="game-context-panel" aria-label="Понимание запроса">
+      <section id="request-panel"><div class="game-context-heading"><h2 tabindex="-1">Твой запрос</h2><button type="button" class="btn btn-secondary" data-act="focus-correction" data-focus="context-edit">Поправить</button></div><div id="understanding" class="game-understanding"></div></section>
+    </aside>
+    <section class="game-stage" id="stage" aria-label="Текущий шаг подбора">
+      <nav class="game-navigation" aria-label="Навигация подбора">
+        <button type="button" class="btn btn-plain game-back" data-act="back" id="back"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m11.5 5-5 5 5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Назад</button>
+        <ol class="game-journey" aria-label="Этапы подбора"><li data-journey-stage="0"><span aria-hidden="true">1</span><b>Желание</b></li><li data-journey-stage="1"><span aria-hidden="true">2</span><b>Условия</b></li><li data-journey-stage="2"><span aria-hidden="true">3</span><b>Уточнения</b></li><li data-journey-stage="3"><span aria-hidden="true">4</span><b>Варианты</b></li></ol>
+        <div class="game-navigation-tools"><button class="btn btn-plain" type="button" data-act="focus-request" id="request-link" hidden>Твой запрос</button><details class="game-session-menu" data-disclosure="session"><summary>Этот подбор<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="game-session-options"><button type="button" class="btn btn-plain" data-act="restore-previous" id="restore" hidden>Вернуть прошлый подбор</button><button type="button" class="btn btn-plain" data-act="restart" id="restart">Начать заново</button><a href="/library/">Открыть библиотеку</a><a href="/pick/?legacy=1">Прежний подбор</a></div></details></div>
+      </nav>
+      <div id="notice" class="game-notice" role="status" aria-live="polite"></div>
+      <div id="error" class="game-error" role="alert" tabindex="-1" hidden></div>
+      <section id="processing" class="game-processing" role="status" aria-live="polite" aria-labelledby="processing-title" aria-describedby="processing-description" tabindex="-1" hidden>
+        <div class="game-processing-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h2 id="processing-title">Обдумываю твой ответ</h2>
+        <p id="processing-description">Учитываю то, что тебе хочется сегодня.</p>
+        <p class="game-processing-note">Твой ответ сохранён в этом подборе.</p>
+      </section>
+      <main id="main" tabindex="-1"><h1>Начнём с того, чего хочется сегодня</h1><p>Открываю подбор…</p></main>
+      <footer id="actions" class="game-actions"><div id="action-controls" class="game-action-controls"></div></footer>
+      <div id="auxiliary" class="game-auxiliary"></div>
+    </section>
+  </div>
+  </div>
+  <noscript><p>Для подбора нужно включить JavaScript.</p></noscript>
+  <script type="module" src="/pick/watch/app.js?v=media-1"></script>
+</body>
+</html>

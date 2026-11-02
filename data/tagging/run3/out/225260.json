@@ -1,0 +1,15 @@
+{"appid": 225260, "features": [
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p5", "q": "Side missions include hot-rod races against a demon"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "the player must command troops to defeat their foes while defending their own stage"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "leading the down-trodden humans against a range of supernatural overlords using a battle axe"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "The player can also explore the game's world to find statues"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p4", "q": "The game uses an open world"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "The multiplayer modes are team-based"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p9", "q": "reviewers praising the story and characters of the game"}]},
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "p2", "q": "more than one hundred metal songs selected by Schafer for inclusion in the game"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "a fantasy world inspired by the artwork of heavy metal album covers"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p10", "q": "both giddily ridiculous and fist-pumpingly badass"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "the detailed art aspects of the world were impressive"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p11", "q": "the selected controls that made it difficult to target objectives"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p13", "q": "Most considered the side missions highly repetitive"}]}
+]}

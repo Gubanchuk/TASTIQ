@@ -1,0 +1,464 @@
+{
+  "date": "2026-10-31",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "detailed": 40,
+  "discovery": {
+    "game": 0,
+    "cartoon": 0
+  },
+  "summary": {
+    "engine": 1,
+    "ai": 3,
+    "engineTop": 0,
+    "aiTop": 1,
+    "targets": 6,
+    "inShortlist": 5,
+    "ms": [
+      11120,
+      7449
+    ],
+    "usd": 0.038588,
+    "own": 0,
+    "ownHits": 0,
+    "engineSeen": 2,
+    "aiSeen": 1,
+    "flagged": 0,
+    "flaggedSeen": 0
+  },
+  "attempted": 2,
+  "errors": 0,
+  "unknownUsage": 0,
+  "records": [
+    {
+      "persona": "lena",
+      "mode": "careful",
+      "domain": "series",
+      "state": {
+        "step": "result",
+        "domain": "series",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "solo",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": "short",
+          "leans": []
+        },
+        "stops": [
+          "content.violence",
+          "content.disturbing",
+          "tone.creepy"
+        ],
+        "asked": [
+          "fact:episode",
+          "fact:ended",
+          "fact:era"
+        ],
+        "shown": [
+          "tt0903747",
+          "tt0944947",
+          "tt4574334",
+          "tt1520211",
+          "tt0108778",
+          "tt1475582",
+          "tt7366338",
+          "tt1190634"
+        ],
+        "liked": [
+          "tt2467372",
+          "tt0108778"
+        ],
+        "disliked": [
+          "tt5834204"
+        ],
+        "whyIndex": 0,
+        "answers": {
+          "tt2467372": {
+            "reaction": "love",
+            "reasons": [
+              "humor.funny",
+              "tone.lighthearted",
+              "tone.feelgood",
+              "structure.procedural"
+            ],
+            "issues": [],
+            "text": "добрые герои, короткие серии по 20 минут"
+          },
+          "tt0386676": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt1266020": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt5834204": {
+            "reaction": "dislike",
+            "issues": [],
+            "badQuality": false
+          },
+          "tt0903747": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "tt0944947": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "tt1520211": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "tt0108778": {
+            "reaction": "love",
+            "reasons": [
+              "characters.ensemble",
+              "humor.funny",
+              "tone.feelgood",
+              "characters.friendship",
+              "cognitive.low"
+            ],
+            "issues": [],
+            "text": "можно включить любую серию фоном и отдыхать"
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 20261021
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: посмотреть сериал.\nС кем: один.\nСегодня просил: серии по 20–30 минут.\nТочно не надо: кровь и жестокость, тяжёлые темы, страшное.\n\nЗнакомые тайтлы:\n- Бруклин 9-9 (Brooklyn Nine-Nine), 2013: обожаю; за что: смешно, лёгкое, весёлое, тёплое, доброе, каждая серия — отдельная история; своими словами: «добрые герои, короткие серии по 20 минут»\n- Офис (The Office), 2005: нормально\n- Парки и зоны отдыха (Parks and Recreation), 2009: нормально\n- Рассказ служанки (The Handmaid's Tale), 2017: не моё\n- Во все тяжкие (Breaking Bad), 2008: не моё\n- Игра престолов (Game of Thrones), 2011: не моё\n- Ходячие мертвецы (The Walking Dead), 2010: не моё\n- Друзья (Friends), 1994: обожаю; за что: много героев, ансамбль, смешно, тёплое, доброе, дружба, можно смотреть не напрягаясь; своими словами: «можно включить любую серию фоном и отдыхать»\n\nКандидаты (40):\nid=tt13366604 | Платонические отношения (Platonic) | 2023 | 3 сез., 21 сер., по 30 мин, идёт | Comedy/Romance | IMDb 7.2, 28716 оценок | движок #1, совпало: смешно, тёплое, доброе, можно смотреть не напрягаясь, дружба, лёгкое, весёлое, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.45) | о чём: Platonic is a 10-episode, half-hour comedy which explores the inner workings of platonic friendship. A pair of former best friends who met in their youth reconnect as adults and try to mend the rift that led to their fal\nid=tt2211129 | Проект Минди (The Mindy Project) | 2012 | 6 сез., 117 сер., по 30 мин, закончен | Comedy | IMDb 7.5, 36855 оценок | движок #2, совпало: смешно, тёплое, доброе, лёгкое, весёлое, много героев, ансамбль, каждая серия — отдельная история, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.85) | о чём: The Mindy Project is a single-camera comedy series which follows a skilled OB/GYN navigating the tricky waters of both her personal and professional life.\nid=tt10638036 | Трепет сердца (Heartstopper) | 2022 | 3 сез., 24 сер., по 30 мин, закончен | Drama/Romance | IMDb 8.5, 96012 оценок | движок #3, совпало: тёплое, доброе, много героев, ансамбль, дружба, лёгкое, весёлое, смешно, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.69) | о чём: Heartstopper tells the story of Nick and Charlie, two British teens at an all-boys grammar school. Charlie, a highly-strung, openly gay over-thinker, and Nick, a cheerful, soft-hearted rugby player, who one day are made \nid=tt10986410 | Тед Лассо (Ted Lasso) | 2020 | 4 сез., 44 сер., по 30 мин, идёт | Comedy/Sport | IMDb 8.7, 475492 оценок | движок #4, совпало: тёплое, доброе, смешно, лёгкое, весёлое | о чём: Ted Lasso centers on an idealistic — and clueless — all-American football coach hired to manage an English football club — despite having no soccer coaching experience at all.\nid=tt1587678 | Счастливый конец (Happy Endings) | 2011 | 3 сез., 58 сер., по 22 мин, закончен | Comedy/Romance | IMDb 7.8, 41922 оценок | движок #5, совпало: смешно, тёплое, доброе, дружба, много героев, ансамбль, любовная линия, сатира и ирония | по тегам ближе всего к: Друзья (Friends) (0.83) | о чём: Forget who gets to keep the ring - when a couple splits, the real question is, who gets to keep the friends? Alex and Dave's wedding was supposed to be the happiest day of their lives, for them and their long-time friend\nid=tt0165598 | Шоу 70-х (That '70s Show) | 1998 | 8 сез., 200 сер., по 22 мин, закончен | Comedy/Drama/Romance | IMDb 8.1, 200426 оценок | движок #6, совпало: смешно, много героев, ансамбль, дружба, лёгкое, весёлое, любовная линия, маленький город | по тегам ближе всего к: Друзья (Friends) (0.86) | о чём: Crank up the 8-track and flash back to a time when platform shoes and puka shells were all the rage in this hilarious retro-sitcom. For Eric, Kelso, Jackie, Hyde, Donna and Fez, a group of high school teens who spend mos\nid=tt0053479 | Шоу Энди Гриффита (The Andy Griffith Show) | 1960 | 8 сез., 249 сер., по 30 мин, закончен | Comedy/Family | IMDb 8.4, 19305 оценок | движок #7, совпало: тёплое, доброе, смешно, много героев, ансамбль, дружба, лёгкое, весёлое, маленький город | по тегам ближе всего к: Друзья (Friends) (0.79) | о чём: Down-home humor and an endearing cast of characters helped to make The Andy Griffith Show one of the most beloved comedies in the history of television. Introduced as a spinoff from The Danny Thomas Show in 1960, The And\nid=tt20449048 | Feels Like Home | 2022 | 2 сез., 12 сер., по 35 мин, идёт | Comedy | IMDb 8.2, 10618 оценок | движок #8, совпало: тёплое, доброе, дружба, смешно, много героев, ансамбль, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.44) | о чём: The heartwarming journey of four boys, Avi, Lakshay, Sameer, and Gandhi, as they struggle to make their first house a home. Along the way, they discover true friendship, love, heartbreak, family, an iguana named Godzilla\nid=tt0088526 | Золотые девочки (The Golden Girls) | 1985 | 7 сез., 180 сер., по 30 мин, закончен | Comedy/Drama | IMDb 8.2, 53980 оценок | движок #9, совпало: смешно, много героев, ансамбль, дружба, лёгкое, весёлое | по тегам ближе всего к: Друзья (Friends) (0.87) | о чём: The Golden Girls follows four South Florida seniors sharing a house, their dreams, and a whole lot of cheesecake. Bright, promiscuous, clueless, and hilarious, these lovely mismatched ladies form the perfect circle of fr\nid=tt40197357 | Клиника (Scrubs) | 2026 | 2 сез., 19 сер., по 21 мин, идёт | Comedy/Drama | IMDb 8.2, 13614 оценок | движок #10, совпало: смешно, тёплое, доброе, дружба, каждая серия — отдельная история | по тегам ближе всего к: Друзья (Friends) (0.40) | тегов мало, суди по тому, что знаешь | о чём: Old friends JD and Turk scrub in together for the first time in a long time, learning that medicine has changed; interns have changed; but their bromance has stood the test of time.\nid=tt12759100 | Кто-то где-то (Somebody Somewhere) | 2022 | 3 сез., 21 сер., по 30 мин, закончен | Comedy/Drama | IMDb 8.3, 19495 оценок | движок #11, совпало: тёплое, доброе, смешно, много героев, ансамбль, дружба | по тегам ближе всего к: Друзья (Friends) (0.74) | о чём: Somebody Somewhere follows Sam, a true Kansan on the surface, but, beneath it all, struggling to fit the hometown mold. Grappling with loss and acceptance, singing is Sam's saving grace and leads her on a journey to disc\nid=tt11379698 | Cubicles | 2019 | 4 сез., 20 сер., по 28 мин, идёт | Comedy/Drama | IMDb 8.2, 9357 оценок | движок #12, совпало: тёплое, доброе, смешно, лёгкое, весёлое, много героев, ансамбль, дружба | тегов мало, суди по тому, что знаешь | о чём: Cubicles follows the chronicles of Piyush, a typical first jobber & the people around him.\nid=tt26670955 | Человек внутри (A Man on the Inside) | 2024 | 3 сез., 22 сер., по 30 мин, идёт | Comedy/Crime | IMDb 7.6, 47800 оценок | движок #13, совпало: смешно, тёплое, доброе, много героев, ансамбль, лёгкое, весёлое | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.54) | о чём: A retired man gets a new lease on life when he answers an ad from a PI and becomes a mole in a secret investigation.\nid=tt23488694 | Гиперкомпенсация (Overcompensating) | 2025 | 2 сез., 16 сер., по 35 мин, идёт | Comedy | IMDb 7.7, 17253 оценок | движок #14, совпало: смешно, тёплое, доброе, много героев, ансамбль, дружба | по тегам ближе всего к: Друзья (Friends) (0.41) | о чём: Overcompensating is a college-set ensemble comedy about the chaotic journey of Benny, a closeted former football player and homecoming king, as he becomes fast friends with Carmen, an outsider on a mission to fit in at a\nid=tt4477976 | Супермаркет (Superstore) | 2015 | 6 сез., 113 сер., по 22 мин, закончен | Comedy | IMDb 7.8, 87202 оценок | движок #15, совпало: смешно, много героев, ансамбль, тёплое, доброе, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.90) | о чём: Superstore is a workplace comedy about a unique family of employees at a super-sized megastore. From the bright-eyed newbies and the seen-it-all veterans to the clueless summer hires and in-it-for-life managers, together\nid=tt1826940 | Новенькая (New Girl) | 2011 | 7 сез., 146 сер., по 22 мин, закончен | Comedy/Romance | IMDb 7.8, 266862 оценок | движок #16, совпало: смешно, много героев, ансамбль, лёгкое, весёлое, дружба, любовная линия, сильный финал | по тегам ближе всего к: Друзья (Friends) (0.93) | о чём: New Girl is a single-camera ensemble comedy starring Zooey Deschanel as Jess, an offbeat girl who - after a bad breakup - moves in with three single guys and essentially sets a bomb off in their lives.\nid=tt5024912 | Белая ворона (Insecure) | 2016 | 5 сез., 44 сер., по 30 мин, закончен | Comedy/Drama/Romance | IMDb 8.1, 25235 оценок | движок #17, совпало: смешно, дружба, много героев, ансамбль, тёплое, доброе, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.72) | о чём: Insecure focuses on the awkward experiences and racy tribulations of a modern day African-American woman through the eyes of Issa Dee, played by Issa Rae. Jay Ellis will play Lawrence, Issa's depressed and unemployed boy\nid=tt0285403 | Клиника (Scrubs) | 2001 | 9 сез., 182 сер., по 30 мин, закончен | Comedy/Drama | IMDb 8.4, 288248 оценок | движок #18, совпало: смешно, много героев, ансамбль, каждая серия — отдельная история, дружба | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.82) | о чём: Fresh out of medical school, new doctors John \"J.D.\" Dorian, his best friend Christopher Turk, and Elliot Reid start their internship at Sacred Heart Hospital. There, they meet the harsh Chief of Medicine Dr. Bob Kelso, \nid=tt33049767 | Взрослые (Adults) | 2025 | 2 сез., 17 сер., по 22 мин, идёт | Comedy | IMDb 7.7, 14153 оценок | движок #19, совпало: смешно, дружба, много героев, ансамбль, лёгкое, весёлое | по тегам ближе всего к: Друзья (Friends) (0.42) | тегов мало, суди по тому, что знаешь | о чём: Adults is an ensemble comedy series about a group of twenty-somethings in New York trying to be good people, despite being neither \"good\" nor \"people\" yet. Samir, Billie, Paul Bake, Issa and Anton are five friends crashi\nid=tt7120662 | Девчонки из Дерри (Derry Girls) | 2018 | 3 сез., 19 сер., по 30 мин, закончен | Comedy | IMDb 8.5, 80546 оценок | движок #20, совпало: смешно, много героев, ансамбль, дружба, лёгкое, весёлое | по тегам ближе всего к: Друзья (Friends) (0.59) | о чём: 16-year-old Erin Quinn lives with her uncompromising mother, her long-suffering father and the fearsome ‘Granda Joe', a man whose love for his daughters and granddaughters is surpassed only by his contempt for his son-in\nid=tt0281491 | Всё ещё игра (Still Game) | 2002 | 9 сез., 63 сер., по 29 мин, закончен | Comedy | IMDb 8.9, 11636 оценок | движок #21, совпало: смешно, тёплое, доброе, дружба | по тегам ближе всего к: Друзья (Friends) (0.88) | о чём: Comedy in which lifelong friends cope with everything modern life has to throw at them.\nid=tt9214684 | Домоводство (Home Economics) | 2021 | 3 сез., 42 сер., по 30 мин, закончен | Comedy | IMDb 7, 7249 оценок | движок #22, совпало: смешно, тёплое, доброе, много героев, ансамбль, лёгкое, весёлое | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.66) | о чём: Home Economics looks at the relationship between three adult siblings: one in the 1 percent, one middle-class, and one barely holding on.\nid=tt14824792 | Третий лишний (Ted) | 2024 | 2 сез., 15 сер., по 30 мин, закончен | Comedy | IMDb 7.9, 50505 оценок | движок #23, совпало: смешно, тёплое, доброе, дружба | по тегам ближе всего к: Друзья (Friends) (0.60) | о чём: In this comedic prequel event series to the Ted films, it's 1993, and Ted the bear's moment of fame has passed. He's now living back home in Framingham, Massachusetts with his best friend, 16-year-old John Bennett, along\nid=tt0098904 | Сайнфелд (Seinfeld) | 1989 | 9 сез., 172 сер., по 22 мин, закончен | Comedy | IMDb 8.8, 389888 оценок | движок #24, совпало: смешно, много героев, ансамбль, дружба, сатира и ирония | по тегам ближе всего к: Офис (The Office) (0.90) | о чём: Seinfeld is the story of a fictionalized version of stand-up comedian Jerry Seinfeld, his life in New York City and his quirky group of friends who join him in wrestling with life's most perplexing, yet often trivial que\nid=tt0290988 | Парни из Трейлерпарка (Trailer Park Boys) | 2001 | 13 сез., 116 сер., по 30 мин, идёт | Comedy/Crime | IMDb 8.5, 58705 оценок | движок #25, совпало: смешно, много героев, ансамбль, дружба, тёплое, доброе, каждая серия — отдельная история | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.63) | о чём: Follow the booze-fueled misadventures of three longtime pals and petty serial criminals who run scams from their Nova Scotia trailer park.\nid=tt4955642 | В лучшем мире (The Good Place) | 2016 | 4 сез., 50 сер., по 22 мин, закончен | Comedy/Drama/Fantasy | IMDb 8.2, 226456 оценок | движок #26, совпало: смешно, тёплое, доброе, много героев, ансамбль, сильный финал, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.57) | о чём: The Good Place is a smart, unique comedy about what makes a good person. The show follows Eleanor Shellstrop, an ordinary woman who enters the afterlife and, thanks to some kind of error, is sent to the Good Place instea\nid=tt0237123 | Любовь на шестерых (Coupling) | 2000 | 4 сез., 28 сер., по 30 мин, закончен | Comedy/Romance | IMDb 8.5, 50612 оценок | движок #27, совпало: смешно, много героев, ансамбль, дружба, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.80) | тегов мало, суди по тому, что знаешь | о чём: Britcom about a group of six friends - three men and three women - and the ups and downs they encounter playing the 21st century dating game.\nid=tt1708446 | Taarak Mehta Ka Ooltah Chashmah | 2008 | 1 сез., 4577 сер., по 22 мин, идёт | Comedy/Drama/Family | IMDb 8.2, 15288 оценок | движок #28, совпало: тёплое, доброе, смешно, много героев, ансамбль, лёгкое, весёлое | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.55) | о чём: Taarak Mehta Ka Ooltah Chashmah is a story of Gokuldham Society where families from different cultures live in harmony, getting into the occasional trouble. And not to forget - all of these happen with a dash of humour. \nid=tt14218830 | Начальная школа «Эбботт» (Abbott Elementary) | 2021 | 6 сез., 102 сер., по 22 мин, идёт | Comedy | IMDb 8.2, 55944 оценок | движок #29, совпало: смешно, тёплое, доброе, много героев, ансамбль, любовная линия, сатира и ирония | по тегам ближе всего к: Офис (The Office) (0.65) | о чём: In this workplace comedy, a group of dedicated, passionate teachers — and a slightly tone-deaf principal — are brought together in a Philadelphia public school where, despite the odds stacked against them, they are deter\nid=tt1439629 | Сообщество (Community) | 2009 | 6 сез., 110 сер., по 22 мин, закончен | Comedy | IMDb 8.5, 315561 оценок | движок #30, совпало: смешно, много героев, ансамбль, дружба, сатира и ирония | по тегам ближе всего к: Офис (The Office) (0.93) | о чём: Community is a smart, exuberant comedy that is consistently ranked as one of the most inventive and original half-hours on television. This ensemble comedy centers around a tight-knit group of friends who all met at what\nid=tt4082744 | Искатели сокровищ (Detectorists) | 2014 | 3 сез., 20 сер., по 30 мин, закончен | Comedy | IMDb 8.6, 27292 оценок | движок #31, совпало: тёплое, доброе, смешно, дружба, маленький город | по тегам ближе всего к: Друзья (Friends) (0.67) | тегов мало, суди по тому, что знаешь | о чём: Comedy series about two friends who go in search of their hearts' desire with a couple of metal detectors.\nid=tt31183656 | Maamla Legal Hai | 2024 | 2 сез., 16 сер., по 33 мин, идёт | Comedy/Drama | IMDb 8, 13977 оценок | движок #32, совпало: смешно, много героев, ансамбль, каждая серия — отдельная история, лёгкое, весёлое | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.43) | тегов мало, суди по тому, что знаешь | о чём: Chaos collides with the letter of the law at District Court Patparganj, where quirky employees work to uphold justice — but not without a few objections.\nid=tt0083399 | Весёлая компания (Cheers) | 1982 | 11 сез., 270 сер., по 22 мин, закончен | Comedy/Drama | IMDb 8, 69191 оценок | движок #33, совпало: смешно, тёплое, доброе, много героев, ансамбль, любовная линия, сильный финал | по тегам ближе всего к: Друзья (Friends) (0.94) | о чём: Cheers takes viewers back to the Boston bar where everybody knows your name. As former baseball star Sam Malone and his colleague Diane Chambers fight their mutual attractions, they cater to their regulars including Norm\nid=tt10846104 | Мы - 'Lady Parts' (We Are Lady Parts) | 2021 | 2 сез., 12 сер., по 24 мин, идёт | Comedy/Music | IMDb 8.3, 7983 оценок | движок #34, совпало: смешно, много героев, ансамбль, дружба, лёгкое, весёлое | о чём: We Are Lady Parts shows the highs and lows of the band – Lady Parts – as seen through the eyes of Amina Hussain – a geeky microbiology PhD student, who's on the lookout for love and is recruited to be their unlikely lead\nid=tt8594324 | Призраки (Ghosts) | 2019 | 5 сез., 35 сер., по 30 мин, закончен | Comedy/Fantasy | IMDb 8.4, 34264 оценок | движок #35, совпало: смешно, тёплое, доброе, много героев, ансамбль | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.60) | о чём: The crumbling country pile of Button Hall is home to numerous restless spirits who have died there over the centuries - each ghost very much a product of their time, resigned to squabbling with each other for eternity ov\nid=tt3526078 | Шиттс Крик (Schitt's Creek) | 2015 | 6 сез., 80 сер., по 22 мин, закончен | Comedy | IMDb 8.5, 178057 оценок | движок #36, совпало: тёплое, доброе, смешно, сильный финал, маленький город | по тегам ближе всего к: Друзья (Friends) (0.81) | о чём: Schitt's Creek centers on a formerly filthy rich video store magnate Johnny Rose, his soap star wife Moira, and their two kids, über-hipster son David and socialite daughter Alexis, who suddenly find themselves broke. Th\nid=tt1178522 | Крошка Доррит (Little Dorrit) | 2008 | 1 сез., 14 сер., по 34 мин, закончен | Drama/Mystery/Romance | IMDb 8.1, 11854 оценок | движок #37, совпало: тёплое, доброе, много героев, ансамбль, дружба, можно смотреть не напрягаясь, лёгкое, весёлое, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.48) | о чём: Fourteen-part adaptation of Dickens' powerful story of love, honour, debt and hope in 1820s London, written by Andrew Davies.\nid=tt0159206 | Секс в большом городе (Sex and the City) | 1998 | 6 сез., 94 сер., по 30 мин, закончен | Comedy/Drama/Romance | IMDb 7.4, 163120 оценок | движок #38, совпало: смешно, много героев, ансамбль, дружба, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.89) | о чём: A candid, comic view of sex and relationships, Sex and the City stars Sarah Jessica Parker as Carrie Bradshaw, a New York-based writer who explores and experiences the unique world of Manhattan's dating scene, chroniclin\nid=tt8879940 | Мистический квест: Пир ворона (Mythic Quest) | 2020 | 4 сез., 41 сер., по 30 мин, закончен | Comedy | IMDb 7.6, 38640 оценок | движок #39, совпало: смешно, тёплое, доброе, много героев, ансамбль | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.73) | тегов мало, суди по тому, что знаешь | о чём: Mythic Quest follows a team of video game developers as they navigate the challenges of running a popular video game.\nid=tt11691774 | Убийства в одном здании (Only Murders in the Building) | 2021 | 7 сез., 61 сер., по 30 мин, идёт | Comedy/Crime/Drama | IMDb 8, 207973 оценок | движок #40, совпало: смешно, много героев, ансамбль, лёгкое, весёлое | по тегам ближе всего к: Бруклин 9-9 (Brooklyn Nine-Nine) (0.65) | о чём: Only Murders in the Building follows three New Yorkers who find they have a mutual interest in solving true crime – but limit their amateur sleuthing to only murders in their building.\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "tt13366604",
+        "tt2211129",
+        "tt10638036",
+        "tt10986410"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "tt1587678",
+            "reason": "Шестеро друзей, смешные бытовые истории и серии по 22 минуты — близко к тому, за что ты обожаешь «Друзей».",
+            "caveat": "Шутки летят быстро: для фона лучше сначала познакомиться с героями.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1826940",
+            "reason": "Соседи становятся близкими друзьями: много дурачеств и тёплой поддержки, как в любимых тобой «Друзьях».",
+            "caveat": "В начале чудачества Джесс могут казаться навязчивыми.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt14218830",
+            "reason": "Учителя помогают друг другу и вместе справляются с нелепицами на работе — знакомое по «Бруклину 9-9» тепло коллектива.",
+            "caveat": "Снято под документалку, как «Офис», который тебе просто нормально.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt9214684",
+            "reason": "Трое взрослых родственников и их семьи спорят, шутят и поддерживают друг друга — лёгкий ансамбль для твоего вечернего отдыха.",
+            "caveat": "Вместо компании друзей — семейные отношения и частые споры о деньгах.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен тёплый ситком с добрыми героями и сериями по 20–30 минут, чтобы смеяться и отдыхать, как с «Друзьями» и «Бруклином 9-9».",
+        "dropped": 0,
+        "filled": [],
+        "ms": 11120,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 7183,
+          "input_tokens_details": {
+            "cache_write_tokens": 7180,
+            "cached_tokens": 0
+          },
+          "output_tokens": 579,
+          "output_tokens_details": {
+            "reasoning_tokens": 110
+          },
+          "total_tokens": 7762
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.020156
+    },
+    {
+      "persona": "lena",
+      "mode": "lazy",
+      "domain": "series",
+      "state": {
+        "step": "result",
+        "domain": "series",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "solo",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": "short",
+          "leans": []
+        },
+        "stops": [],
+        "asked": [
+          "fact:popularity",
+          "fact:episode",
+          "fact:era"
+        ],
+        "shown": [
+          "tt0903747",
+          "tt0944947",
+          "tt4574334",
+          "tt1520211",
+          "tt0108778",
+          "tt1475582",
+          "tt7366338",
+          "tt1190634",
+          "tt5180504",
+          "tt0185906",
+          "tt0475784",
+          "tt2085059",
+          "tt8772296",
+          "tt8111088",
+          "tt0285403",
+          "tt11198330"
+        ],
+        "liked": [
+          "tt0108778",
+          "tt0285403"
+        ],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {
+          "tt0108778": {
+            "reaction": "love",
+            "reasons": [
+              "characters.ensemble",
+              "humor.funny"
+            ],
+            "issues": []
+          },
+          "tt0285403": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 20261021,
+        "firstPage": {
+          "marks": [
+            {
+              "id": "tt0108778",
+              "reaction": "love"
+            }
+          ],
+          "known": {}
+        }
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: посмотреть сериал.\nС кем: один.\nСегодня просил: серии по 20–30 минут.\n\nЗнакомые тайтлы:\n- Друзья (Friends), 1994: обожаю; за что: много героев, ансамбль, смешно\n- Клиника (Scrubs), 2001: нормально\n\nКандидаты (40):\nid=tt0386676 | Офис (The Office) | 2005 | 9 сез., 191 сер., по 22 мин, закончен | Comedy | IMDb 9, 856064 оценок | движок #1, совпало: много героев, ансамбль, смешно, длинный, сильная актёрская игра | по тегам ближе всего к: Друзья (Friends) (0.85) | о чём: Steve Carell stars in The Office , a fresh and funny mockumentary-style glimpse into the daily interactions of the eccentric workers at the Dunder Mifflin paper supply company. Based on the smash-hit British series of th\nid=tt0472954 | В Филадельфии всегда солнечно (It's Always Sunny in Philadelphia) | 2005 | 18 сез., 187 сер., по 22 мин, идёт | Comedy | IMDb 8.8, 286744 оценок | движок #2, совпало: много героев, ансамбль, смешно, длинный, дружба | по тегам ближе всего к: Клиника (Scrubs) (0.69) | о чём: It's Always Sunny in Philadelphia is an American comedy series about four friends in their late 20s with clear sociopathic tendencies who run an unsuccessful Irish bar, \"Paddy's Pub,\" in South Philadelphia. The series de\nid=tt0165598 | Шоу 70-х (That '70s Show) | 1998 | 8 сез., 200 сер., по 22 мин, закончен | Comedy/Drama/Romance | IMDb 8.1, 200426 оценок | движок #3, совпало: много героев, ансамбль, смешно, длинный, дружба, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.86) | о чём: Crank up the 8-track and flash back to a time when platform shoes and puka shells were all the rage in this hilarious retro-sitcom. For Eric, Kelso, Jackie, Hyde, Donna and Fez, a group of high school teens who spend mos\nid=tt2467372 | Бруклин 9-9 (Brooklyn Nine-Nine) | 2013 | 8 сез., 153 сер., по 22 мин, закончен | Comedy/Crime | IMDb 8.4, 425737 оценок | движок #4, совпало: много героев, ансамбль, смешно, длинный, тёплое, доброе, сильная актёрская игра, каждая серия — отдельная история | по тегам ближе всего к: Клиника (Scrubs) (0.82) | о чём: Brooklyn Nine-Nine is an ensemble comedy about a talented-but-carefree detective, a by-the-book police captain and their precinct colleagues. While based in the workplace, Brooklyn Nine-Nine is not really about the job –\nid=tt0098904 | Сайнфелд (Seinfeld) | 1989 | 9 сез., 172 сер., по 22 мин, закончен | Comedy | IMDb 8.8, 389888 оценок | движок #5, совпало: много героев, ансамбль, смешно, длинный, дружба | по тегам ближе всего к: Клиника (Scrubs) (0.87) | о чём: Seinfeld is the story of a fictionalized version of stand-up comedian Jerry Seinfeld, his life in New York City and his quirky group of friends who join him in wrestling with life's most perplexing, yet often trivial que\nid=tt1439629 | Сообщество (Community) | 2009 | 6 сез., 110 сер., по 22 мин, закончен | Comedy | IMDb 8.5, 315561 оценок | движок #6, совпало: много героев, ансамбль, смешно, длинный, дружба, сильная актёрская игра | по тегам ближе всего к: Друзья (Friends) (0.86) | о чём: Community is a smart, exuberant comedy that is consistently ranked as one of the most inventive and original half-hours on television. This ensemble comedy centers around a tight-knit group of friends who all met at what\nid=tt1826940 | Новенькая (New Girl) | 2011 | 7 сез., 146 сер., по 22 мин, закончен | Comedy/Romance | IMDb 7.8, 266862 оценок | движок #7, совпало: много героев, ансамбль, смешно, длинный, любовная линия, сильный финал, сильная актёрская игра | по тегам ближе всего к: Друзья (Friends) (0.93) | о чём: New Girl is a single-camera ensemble comedy starring Zooey Deschanel as Jess, an offbeat girl who - after a bad breakup - moves in with three single guys and essentially sets a bomb off in their lives.\nid=tt0898266 | Теория большого взрыва (The Big Bang Theory) | 2007 | 12 сез., 279 сер., по 22 мин, закончен | Comedy/Romance | IMDb 8.1, 948974 оценок | движок #8, совпало: много героев, ансамбль, смешно, длинный, любовная линия, сильная актёрская игра | по тегам ближе всего к: Друзья (Friends) (0.92) | о чём: The Big Bang Theory is a comedy about brilliant physicists, Leonard and Sheldon, who are the kind of \"beautiful minds\" that understand how the universe works. But none of that genius helps them interact with people, espe\nid=tt0088526 | Золотые девочки (The Golden Girls) | 1985 | 7 сез., 180 сер., по 30 мин, закончен | Comedy/Drama | IMDb 8.2, 53980 оценок | движок #9, совпало: много героев, ансамбль, смешно, длинный, дружба | по тегам ближе всего к: Клиника (Scrubs) (0.88) | о чём: The Golden Girls follows four South Florida seniors sharing a house, their dreams, and a whole lot of cheesecake. Bright, promiscuous, clueless, and hilarious, these lovely mismatched ladies form the perfect circle of fr\nid=tt0496424 | Студия 30 (30 Rock) | 2006 | 7 сез., 139 сер., по 22 мин, закончен | Comedy | IMDb 8.3, 140482 оценок | движок #10, совпало: много героев, ансамбль, смешно, длинный, сильный финал, странное, причудливое | по тегам ближе всего к: Клиника (Scrubs) (0.85) | о чём: Multiple award-winning comedy 30 Rock is told through the comedic voice of Emmy and two-time Golden Globe winner Tina Fey as variety show producer Liz Lemon. The series also features two-time Emmy and three-time Golden G\nid=tt0159206 | Секс в большом городе (Sex and the City) | 1998 | 6 сез., 94 сер., по 30 мин, закончен | Comedy/Drama/Romance | IMDb 7.4, 163120 оценок | движок #11, совпало: много героев, ансамбль, смешно, длинный, любовная линия, дружба | по тегам ближе всего к: Друзья (Friends) (0.89) | о чём: A candid, comic view of sex and relationships, Sex and the City stars Sarah Jessica Parker as Carrie Bradshaw, a New York-based writer who explores and experiences the unique world of Manhattan's dating scene, chroniclin\nid=tt4477976 | Супермаркет (Superstore) | 2015 | 6 сез., 113 сер., по 22 мин, закончен | Comedy | IMDb 7.8, 87202 оценок | движок #12, совпало: много героев, ансамбль, смешно, длинный, любовная линия, тёплое, доброе, дурашливый юмор | по тегам ближе всего к: Друзья (Friends) (0.90) | о чём: Superstore is a workplace comedy about a unique family of employees at a super-sized megastore. From the bright-eyed newbies and the seen-it-all veterans to the clueless summer hires and in-it-for-life managers, together\nid=tt11691774 | Убийства в одном здании (Only Murders in the Building) | 2021 | 7 сез., 61 сер., по 30 мин, идёт | Comedy/Crime/Drama | IMDb 8, 207973 оценок | движок #13, совпало: много героев, ансамбль, смешно, длинный, сильная актёрская игра | по тегам ближе всего к: Клиника (Scrubs) (0.59) | о чём: Only Murders in the Building follows three New Yorkers who find they have a mutual interest in solving true crime – but limit their amateur sleuthing to only murders in their building.\nid=tt11379026 | Призраки (Ghosts) | 2021 | 6 сез., 116 сер., по 21 мин, идёт | Comedy/Fantasy | IMDb 7.9, 52558 оценок | движок #14, совпало: много героев, ансамбль, смешно, длинный, тёплое, доброе | по тегам ближе всего к: Клиника (Scrubs) (0.61) | о чём: Samantha and Jay throw caution to the wind when they convert their recently inherited country estate into a bed-and-breakfast. Call it mislaid plans. Not only is the place falling apart, but it's also inhabited by spirit\nid=tt0112095 | Новостное радио (NewsRadio) | 1995 | 5 сез., 97 сер., по 23 мин, закончен | Comedy/Romance | IMDb 8, 18813 оценок | движок #15, совпало: много героев, ансамбль, смешно, длинный, любовная линия, дурашливый юмор, странное, причудливое | по тегам ближе всего к: Клиника (Scrubs) (0.87) | о чём: NewsRadio showcases the hilarious antics of the whimsical #2 news radio station in New York City. The corral of characters are eccentric and witty, and they surprise each other with their back-and-forth banter. Their wor\nid=tt1442437 | Американская семейка (Modern Family) | 2009 | 11 сез., 250 сер., по 22 мин, закончен | Comedy/Drama/Romance | IMDb 8.5, 549742 оценок | движок #16, совпало: много героев, ансамбль, смешно, длинный, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.80) | о чём: Modern Family revolves around three different types of families (nuclear, step- and same-sex) living in the Los Angeles area, who are interrelated through Jay Pritchett and his children, Claire Dunphy (née Pritchett) and\nid=tt7908628 | Чем мы занимаемся в тени (What We Do in the Shadows) | 2019 | 6 сез., 61 сер., по 30 мин, закончен | Comedy/Fantasy/Horror | IMDb 8.5, 129946 оценок | движок #17, совпало: смешно, много героев, ансамбль, длинный, дружба, сильная актёрская игра, странное, причудливое | по тегам ближе всего к: Друзья (Friends) (0.73) | о чём: Set in New York City, What We Do in the Shadows follows three vampires who have been roommates for hundreds and hundreds of years.\nid=tt0098830 | В живом цвете (In Living Color) | 1990 | 5 сез., 126 сер., по 30 мин, закончен | Comedy/Music | IMDb 8.2, 14541 оценок | движок #18, совпало: много героев, ансамбль, смешно, длинный | по тегам ближе всего к: Клиника (Scrubs) (0.84) | тегов мало, суди по тому, что знаешь | о чём: In 1989, Keenen Ivory Wayans set about making a pilot for something the likes of which had never been seen prior on US television. It wasn't just going to be a show performed by black people for black people but was to b\nid=tt0237123 | Любовь на шестерых (Coupling) | 2000 | 4 сез., 28 сер., по 30 мин, закончен | Comedy/Romance | IMDb 8.5, 50612 оценок | движок #19, совпало: много героев, ансамбль, смешно, любовная линия, дружба | по тегам ближе всего к: Друзья (Friends) (0.80) | тегов мало, суди по тому, что знаешь | о чём: Britcom about a group of six friends - three men and three women - and the ups and downs they encounter playing the 21st century dating game.\nid=tt1138475 | Гильдия (The Guild) | 2007 | 6 сез., 73 сер., по 4 мин, закончен | Comedy/Short | IMDb 8.2, 10923 оценок | движок #20, совпало: много героев, ансамбль, смешно, длинный | по тегам ближе всего к: Клиника (Scrubs) (0.82) | о чём: The Guild is a comedy web series about a group of online gamers. The show started in 2007, and for the first season, was solely supported by LOYAL FANS through Paypal, before Kickstarter was created. From seasons 2-5 the\nid=tt14218830 | Начальная школа «Эбботт» (Abbott Elementary) | 2021 | 6 сез., 102 сер., по 22 мин, идёт | Comedy | IMDb 8.2, 55944 оценок | движок #21, совпало: смешно, много героев, ансамбль, длинный, любовная линия, тёплое, доброе, сильная актёрская игра | по тегам ближе всего к: Друзья (Friends) (0.65) | о чём: In this workplace comedy, a group of dedicated, passionate teachers — and a slightly tone-deaf principal — are brought together in a Philadelphia public school where, despite the odds stacked against them, they are deter\nid=tt1518542 | Сарабхай против Сарабхай (Sarabhai V/S Sarabhai) | 2004 | 2 сез., 79 сер., по 30 мин, закончен | Comedy | IMDb 8.8, 20115 оценок | движок #22, совпало: много героев, ансамбль, смешно, длинный | по тегам ближе всего к: Клиника (Scrubs) (0.85) | тегов мало, суди по тому, что знаешь | о чём: The show revolves around the life of a fictional Gujarati family, the Sarabhais. They are portrayed as a typical family in the class of elite socialites of Mumbai.The family consists of Indravadan Sarabhai and his wife M\nid=tt0959601 | Всё включено (Benidorm) | 2007 | 10 сез., 74 сер., по 30 мин, закончен | Comedy | IMDb 7.6, 9069 оценок | движок #23, совпало: много героев, ансамбль, смешно, длинный | по тегам ближе всего к: Клиника (Scrubs) (0.88) | тегов мало, суди по тому, что знаешь | о чём: Comedy series following regular and first-time holidaymakers as they visit the Solana Resort in Benidorm. All the guests have one thing in common: a quest to get value for their hard-earned Euros.\nid=tt0111875 | Всякая всячина (All That) | 1994 | 11 сез., 218 сер., по 30 мин, закончен | Comedy/Family/Music | IMDb 7.5, 9046 оценок | движок #24, совпало: много героев, ансамбль, смешно, длинный | по тегам ближе всего к: Клиника (Scrubs) (0.77) | о чём: All That is an American live-action, sketch comedy-variety show that aired on the Nickelodeon cable television network featuring short comedic sketches and weekly musical guests. ork.\nid=tt0083399 | Весёлая компания (Cheers) | 1982 | 11 сез., 270 сер., по 22 мин, закончен | Comedy/Drama | IMDb 8, 69191 оценок | движок #25, совпало: смешно, много героев, ансамбль, длинный, любовная линия, тёплое, доброе, сильный финал | по тегам ближе всего к: Друзья (Friends) (0.94) | о чём: Cheers takes viewers back to the Boston bar where everybody knows your name. As former baseball star Sam Malone and his colleague Diane Chambers fight their mutual attractions, they cater to their regulars including Norm\nid=tt2211129 | Проект Минди (The Mindy Project) | 2012 | 6 сез., 117 сер., по 30 мин, закончен | Comedy | IMDb 7.5, 36855 оценок | движок #26, совпало: смешно, много героев, ансамбль, длинный, любовная линия, сильная актёрская игра, тёплое, доброе | по тегам ближе всего к: Друзья (Friends) (0.85) | о чём: The Mindy Project is a single-camera comedy series which follows a skilled OB/GYN navigating the tricky waters of both her personal and professional life.\nid=tt4647692 | Леттеркенни (Letterkenny) | 2016 | 12 сез., 81 сер., по 30 мин, закончен | Comedy | IMDb 8.5, 34701 оценок | движок #27, совпало: смешно, много героев, ансамбль, длинный, дурашливый юмор | по тегам ближе всего к: Клиника (Scrubs) (0.84) | о чём: Wayne is a good-ol' country boy in Letterkenny , Ontario trying to protect his homegrown way of life on the farm, against a world that is constantly evolving around him. The residents of Letterkenny belong to one of thre\nid=tt0106004 | Фрейзер (Frasier) | 1993 | 11 сез., 263 сер., по 22 мин, закончен | Comedy | IMDb 8.2, 104431 оценок | движок #28, совпало: смешно, много героев, ансамбль, длинный, дурашливый юмор | по тегам ближе всего к: Клиника (Scrubs) (0.86) | о чём: Frasier is a half-hour comedy series set in Seattle, which chronicles the lives of an eloquently pompous radio show host Dr. Frasier Crane, his brazen radio producer Roz and his competitive, high-brow brother Niles.\nid=tt0106056 | Холостые мужчины и незамужние женщины (Living Single) | 1993 | 5 сез., 118 сер., по 30 мин, закончен | Comedy | IMDb 7.8, 7773 оценок | движок #29, совпало: много героев, ансамбль, смешно, длинный, дружба | по тегам ближе всего к: Клиника (Scrubs) (0.89) | тегов мало, суди по тому, что знаешь | о чём: Six black 20-somethings -- four women and two men -- share their lives and loves in a Brooklyn brownstone. A trio of women share one of the apartments, receiving frequent visits from a fourth pal; meanwhile, two men who'\nid=tt0094535 | Красный карлик (Red Dwarf) | 1988 | 13 сез., 74 сер., по 30 мин, закончен | Comedy/Sci-Fi | IMDb 8.4, 39717 оценок | движок #30, совпало: смешно, много героев, ансамбль, длинный | по тегам ближе всего к: Клиника (Scrubs) (0.73) | о чём: Lost in space and light years away from earth is the Jupiter Mining Ship Red Dwarf . In the late 22nd century, an on-board radiation leak kills all of the crew except for low-ranking technician Dave Lister, who is in sus\nid=tt4384086 | Жизнь в деталях (Life in Pieces) | 2015 | 4 сез., 79 сер., по 22 мин, закончен | Comedy | IMDb 8, 19534 оценок | движок #31, совпало: много героев, ансамбль, смешно, длинный | по тегам ближе всего к: Клиника (Scrubs) (0.78) | тегов мало, суди по тому, что знаешь | о чём: Life in Pieces is a single-camera comedy about one big happy family and their sometimes awkward, often hilarious and ultimately beautiful milestone moments as told by its various members. Of the three siblings, middle ch\nid=tt0068098 | Чёртова служба в гoспитале МЭШ (M*A*S*H) | 1972 | 11 сез., 251 сер., по 25 мин, закончен | Comedy/Drama/War | IMDb 8.5, 70274 оценок | движок #32, совпало: много героев, ансамбль, смешно, длинный, дурашливый юмор, каждая серия — отдельная история | по тегам ближе всего к: Клиника (Scrubs) (0.76) | о чём: Loosely based on the real-life M*A*S*H unit 8055, life at the 4077 revolved around the day-to-day routines of Captain \"Hawkeye\" Pierce, Captain \"Trapper\" McIntyre, Lieutenant Colonel Henry Blake, Major Margaret Houlihan,\nid=tt1266020 | Парки и зоны отдыха (Parks and Recreation) | 2009 | 7 сез., 124 сер., по 22 мин, закончен | Comedy | IMDb 8.6, 320472 оценок | движок #33, совпало: много героев, ансамбль, смешно, длинный, сильная актёрская игра | по тегам ближе всего к: Друзья (Friends) (0.76) | о чём: Parks and Recreation is a comedy series based around the main character Leslie Knope (a bureaucrat) in the parks department of Pawnee.\nid=tt0096626 | Таблетка радости (The Kids in the Hall) | 1988 | 5 сез., 111 сер., по 25 мин, закончен | Comedy | IMDb 8.4, 11780 оценок | движок #34, совпало: смешно, много героев, ансамбль, длинный, странное, причудливое | по тегам ближе всего к: Клиника (Scrubs) (0.90) | тегов мало, суди по тому, что знаешь | о чём: Get ready for sketch comedy...Canadian style! The Kids In The Hall are a hilarious sketch comedy troupe. They got their name from a comedian named Jack Benny, who would often end a joke by saying: \"I got this from the ki\nid=tt0290988 | Парни из Трейлерпарка (Trailer Park Boys) | 2001 | 13 сез., 116 сер., по 30 мин, идёт | Comedy/Crime | IMDb 8.5, 58705 оценок | движок #35, совпало: много героев, ансамбль, смешно, длинный, дружба, тёплое, доброе, каждая серия — отдельная история | по тегам ближе всего к: Клиника (Scrubs) (0.65) | о чём: Follow the booze-fueled misadventures of three longtime pals and petty serial criminals who run scams from their Nova Scotia trailer park.\nid=tt0790772 | Правила совместной жизни (Rules of Engagement) | 2007 | 7 сез., 101 сер., по 22 мин, закончен | Comedy/Romance | IMDb 7.4, 38245 оценок | движок #36, совпало: смешно, много героев, ансамбль, длинный, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.90) | тегов мало, суди по тому, что знаешь | о чём: A comedy that follows two couples and a single guy as they navigate the jungles of dating, engagement and marriage.\nid=tt0090418 | Создавая женщину (Designing Women) | 1986 | 7 сез., 163 сер., по 30 мин, закончен | Comedy | IMDb 7.3, 8166 оценок | движок #37, совпало: много героев, ансамбль, смешно, длинный, дружба | по тегам ближе всего к: Клиника (Scrubs) (0.86) | о чём: Julia Sugarbaker, Mary Jo Shively, Charlene Frazier-Stillfield, and Suzanne Sugarbaker are associates at their design firm, Sugarbaker and Associates. Julia is the owner of and is very outspoken and strong-willed. Mary J\nid=tt7221388 | Кобра Кай (Cobra Kai) | 2018 | 6 сез., 65 сер., по 30 мин, закончен | Action/Comedy/Drama | IMDb 8.4, 247643 оценок | движок #38, совпало: много героев, ансамбль, смешно, длинный, сильная актёрская игра, быстрый темп | по тегам ближе всего к: Клиника (Scrubs) (0.78) | о чём: Thirty years after the events of the 1984 All Valley Karate Tournament, Johnny Lawrence's life has taken a rocky turn as he tries to forget a past that constantly haunts him. He seeks redemption by reopening the infamous\nid=tt4955642 | В лучшем мире (The Good Place) | 2016 | 4 сез., 50 сер., по 22 мин, закончен | Comedy/Drama/Fantasy | IMDb 8.2, 226456 оценок | движок #39, совпало: смешно, много героев, ансамбль, сильная актёрская игра, тёплое, доброе, сильный финал, любовная линия | по тегам ближе всего к: Друзья (Friends) (0.57) | о чём: The Good Place is a smart, unique comedy about what makes a good person. The show follows Eleanor Shellstrop, an ordinary woman who enters the afterlife and, thanks to some kind of error, is sent to the Good Place instea\nid=tt0115369 | Крученый город (Spin City) | 1996 | 6 сез., 145 сер., по 30 мин, закончен | Comedy | IMDb 7.3, 33158 оценок | движок #40, совпало: смешно, много героев, ансамбль, длинный, дружба | по тегам ближе всего к: Клиника (Scrubs) (0.91) | тегов мало, суди по тому, что знаешь | о чём: Spin City is a smart, sophisticated sitcom about the behind-the-scenes workings of City Hall in the biggest city in America. Workaholic Mike Flaherty is the Deputy Mayor of New York City, serving as Mayor Randall Winston\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "tt0386676",
+        "tt0472954",
+        "tt0165598",
+        "tt2467372"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "tt1826940",
+            "reason": "Как в «Друзьях», компания соседей становится семьёй, а юмор держится на химии всего ансамбля и взаимных подколах.",
+            "caveat": "В первых сериях Джесс заметно затмевает остальных.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt2467372",
+            "reason": "Если в «Друзьях» любишь ансамбль и шутки, здесь целый участок чудаков, чьи характеры смешно сталкиваются в каждой серии.",
+            "caveat": "Вместо посиделок в кафе — полицейские дела и рабочие споры.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0237123",
+            "reason": "Шестеро друзей и острые диалоги дают знакомое по «Друзьям» удовольствие от компании, где каждый смешон по-своему.",
+            "caveat": "Юмор заметно откровеннее: много разговоров о сексе.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt11379026",
+            "reason": "Твою любовь к большому смешному ансамблю поддержит дом, полный призраков разных эпох, с вечными спорами и дружбой.",
+            "caveat": "Юмор более условный и дурашливый, чем в «Друзьях».",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен смешной сериал с ярким ансамблем, как в «Друзьях», и сериями по 20–30 минут.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 7449,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 7006,
+          "input_tokens_details": {
+            "cache_write_tokens": 7003,
+            "cached_tokens": 0
+          },
+          "output_tokens": 442,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7448
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.018432
+    }
+  ]
+}

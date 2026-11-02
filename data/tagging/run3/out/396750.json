@@ -1,0 +1,8 @@
+{"appid": 396750, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Everspace is a 3D space shooter with roguelike elements"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Everspace is a 3D space shooter"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "In this game, the player is expected to die."}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "spend earned credits toward Perks"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "The player can find weapons and add-ons that can be used during the current run"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p1", "q": "The player is also given the ability to craft and upgrade various systems of their ship"}]}
+]}

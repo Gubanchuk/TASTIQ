@@ -1,0 +1,9 @@
+{"appid": 861540, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "is a roguelike deck-building game"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "The player takes one of six characters, which defines the type of equipment they will start with"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "the combat takes place in a turn-based manner"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p1", "q": "game show-like backdrop, where Lady Luck challenges adventurers, who have been turned into dice"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "to complete a dungeon with a rather unlikely chance of winning their freedom"}]},
+{"f": "cognitive.low", "r": 1, "ev": [{"id": "p3", "q": "a good introduction into roguelike deck-building games"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p2", "q": "Some slots have specific requirements, such as an odd or even number"}]}
+]}

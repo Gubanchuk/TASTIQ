@@ -1,0 +1,13 @@
+{"appid": 8980, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2009 action role-playing first-person shooter video game"}]},
+{"f": "loop.looting", "r": 3, "ev": [{"id": "p4", "q": "One of the key features of Borderlands is the randomly generated weapons and items"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "either in single-player or online cooperative gameplay"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "one-on-one duels anywhere in the game world"}, {"id": "p1", "q": "competitive PVP matches in designated areas"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "each playable character having distinctive class types and unique abilities for combat"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "As they gain levels"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p7", "q": "Borderlands is set in the distant future"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "The game features the ability to explore the in-game world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The game features the ability to explore the in-game world"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p1", "q": "The game itself is rendered in cartoon-style graphics"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "the use of two-person vehicles"}]}
+]}

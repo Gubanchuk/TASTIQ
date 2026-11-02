@@ -1,0 +1,9 @@
+{"appid": 1681430, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "RoboCop: Rogue City is a 2023 first-person shooter game"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p6", "q": "The RoboCop franchise depicts a dystopian near-future Detroit"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p6", "q": "Impoverished and overrun with criminal activity"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p3", "q": "The overall storyline and ending are also altered depending on decisions made by the player"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p3", "q": "by selecting between different dialogue options"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "The player can buy different abilities with experience points gained by completing objectives"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p8", "q": "praised the graphics, stating that the game made great use of Unreal Engine 5"}]}
+]}

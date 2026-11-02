@@ -1,0 +1,31 @@
+{
+  "id": "tt0179955",
+  "name": "Cat City",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 1986,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Cat City (; ) is a 1986 Hungarian adult animated science fiction comedy film, directed by Béla Ternovszky and written by József Nepp. The title Cat City was used in the United States distribution. The film was selected as the Hungarian entry for the Best Foreign Language Film at the 59th Academy Awards, but it was not nominated."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The film is a parody of several famous feature films, mainly the James Bond series. It tells the story of a special agent who is sent to the city of \"Pokyo\" to obtain the secret plans of a machine that could save mouse society. Of course, the cats not wanting this to happen, send four rat gangsters to stop this special agent, but they never end up proving as efficient as they initially seem. The film has developed a cult following in the years since its release. A musical based on the film premiered in December 2011."
+    },
+    {
+      "id": "p2",
+      "section": "Reception",
+      "text": "Gabriella Székely of Filmvilág gave a mixed review, calling it a \"stereotype Gangster film which ends with a happy ending.\""
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Cat_City"
+}

@@ -1,0 +1,8 @@
+{"id": "tt0156200", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an animated television series"}]},
+{"f": "audience.kids", "r": 3, "ev": [{"id": "s", "q": "has entertained over millions of toddlers"}]},
+{"f": "tone.feelgood", "r": 1, "ev": [{"id": "s", "q": "this delightful animated series"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p3", "q": "the baby elephant loses his mother to a hunter"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "s", "q": "Living in a huge mansion with his whole family of elephants"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p4", "q": "capture the essence of Jean de Brunhoff's understated watercolor illustrations"}]}
+]}

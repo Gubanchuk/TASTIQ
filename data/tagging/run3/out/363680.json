@@ -1,0 +1,8 @@
+{"appid": 363680, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a real-time tactics video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "It is set in the fictional universe of Warhammer 40,000"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "players will customize all aspects of their ships"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "Experience and promotions will also be awarded to ships"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p4", "q": "the Imperium fight against the forces of Chaos led by Warmaster Abaddon"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "each customization affecting the performances of the ship and the special abilities available during battle"}]}
+]}

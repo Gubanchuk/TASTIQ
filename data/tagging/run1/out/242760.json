@@ -1,0 +1,12 @@
+{"appid": 242760, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "d", "q": "terrifying first person survival horror simulator"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "Build, explore, survive in this terrifying first person survival horror simulator"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "a", "q": "Build a small shelter or a large ocean side fortress"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "a", "q": "Below ground explore a vast network of caves and underground lakes"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "a", "q": "Use stealth to evade enemies"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "a", "q": "engage them directly with crude weapons built from sticks and stones"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r236768990", "q": "this one is way more difficult, terrifying, gripping, horrific, savage, wild"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "r237968932", "q": "the last section of the game is so unfinished"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r237963125", "q": "the controls are the single worst part of this experience"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "r236743340", "q": "the story is interesting"}]}
+]}

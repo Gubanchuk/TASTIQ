@@ -1,0 +1,11 @@
+{"appid": 22380, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "a", "q": "across the heat-blasted Mojave Wasteland"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "a", "q": "Choose sides in the upcoming war"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "a", "q": "Explore the vast expanses of the desert wastelands"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r237868497", "q": "The story is perfect"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "r237868497", "q": "the npcs are hilarious"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "r237868497", "q": "the npcs are hilarious"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "a", "q": "being torn apart by warring factions vying for complete control"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "a", "q": "As you battle your way across the heat-blasted Mojave Wasteland"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "r237023822", "q": "being able to craft and mod weapons but not extensively is a nice touch"}]}
+]}

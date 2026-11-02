@@ -1,0 +1,9 @@
+{"appid": 1374490, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "taking place within the same fantasy world of Gielinor"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p0", "q": "is an open-world survival game"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "is a cooperative survival game for one to four players"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "is a cooperative survival game for one to four players"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "Players will have the option to set up bases across the land"}]},
+{"f": "loop.life_sim", "r": 1, "ev": [{"id": "p1", "q": "a farming skill will allow players to grow their own crops"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p5", "q": "visuals, soundtrack, and the simplicity of the tasks"}]}
+]}

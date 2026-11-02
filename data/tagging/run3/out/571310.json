@@ -1,0 +1,6 @@
+{"appid": 571310, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "exploring a vast underground mine"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p0", "q": "is an action-adventure platform video game"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "Any resources found can be traded in for cash in the game's hub world"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "Dorothy can gain abilities and weapons such as pressure bombs"}]}
+]}

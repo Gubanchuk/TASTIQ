@@ -1,0 +1,12 @@
+{
+  "appid": 325610,
+  "features": [
+    {"f": "loop.tactics", "r": 3, "ev": [{"id": "p10", "q": "praised the satisfying gameplay, outstanding tactical battles"}]},
+    {"f": "loop.management", "r": 2, "ev": [{"id": "p10", "q": "the heavy emphasis on political machinations"}]},
+    {"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "during what is now called Late Antiquity"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "stunning music, animation and sound-effect"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p10", "q": "praised the graphics, audio-design, and new additions"}]},
+    {"f": "difficulty.hard", "r": 1, "ev": [{"id": "p8", "q": "he criticized the extreme difficulty"}]},
+    {"f": "pace.draggy", "r": 1, "ev": [{"id": "p10", "q": "the excruciating build turn"}]}
+  ]
+}

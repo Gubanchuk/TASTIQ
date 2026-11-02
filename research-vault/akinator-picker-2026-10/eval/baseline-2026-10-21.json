@@ -1,0 +1,2632 @@
+{
+ "about": "Final dialogue states of the 12 persona runs of 2026-10-21 (table 1.1 of SUMMARY.md), saved by the agents' drivers. scripts/personas-verify.mjs compares src/stand/personas.js against them.",
+ "runs": {
+  "andrey careful": {
+   "driver": "games-driver.mjs p1 careful",
+   "seed": 162474,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "game"
+    },
+    {
+     "type": "choose",
+     "value": "windows"
+    },
+    {
+     "type": "genres",
+     "values": [
+      "loop.exploration",
+      "freedom.open_world",
+      "world.fantasy",
+      "world.scifi"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "steam:292030",
+      "steam:632470",
+      "steam:1328670",
+      "steam:383870",
+      "steam:501300",
+      "steam:1174180",
+      "steam:620",
+      "steam:1222140",
+      "steam:1086940",
+      "steam:319630"
+     ],
+     "shownIds": [
+      "steam:1903340",
+      "steam:239140",
+      "steam:413150",
+      "steam:1551360",
+      "steam:292030",
+      "steam:1091500",
+      "steam:374320",
+      "steam:400"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "story.central",
+      "characters.memorable",
+      "story.choices",
+      "world.living"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "story.central",
+      "characters.memorable",
+      "loop.dialogue",
+      "story.choices",
+      "humor.funny"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "characters.companions",
+      "story.choices",
+      "story.central",
+      "characters.memorable"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "steam:1245620",
+      "steam:2344520",
+      "steam:374320",
+      "steam:1085660",
+      "steam:812140"
+     ],
+     "shownIds": [
+      "steam:1332010",
+      "steam:444090",
+      "steam:281990",
+      "steam:227300",
+      "steam:271590",
+      "steam:435150",
+      "steam:105600",
+      "steam:4000"
+     ]
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "difficulty.hard",
+       "hard": true
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "progression.grind",
+       "hard": false
+      },
+      {
+       "f": "pace.repetitive",
+       "hard": false
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "today",
+     "values": [
+      "story",
+      "relax"
+     ],
+     "avoid": [
+      "hard"
+     ]
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "genres": [
+     "loop.exploration",
+     "freedom.open_world",
+     "world.fantasy",
+     "world.scifi"
+    ],
+    "shown": [
+     "steam:1903340",
+     "steam:239140",
+     "steam:413150",
+     "steam:1551360",
+     "steam:292030",
+     "steam:1091500",
+     "steam:374320",
+     "steam:400",
+     "steam:1332010",
+     "steam:444090",
+     "steam:281990",
+     "steam:227300",
+     "steam:271590",
+     "steam:435150",
+     "steam:105600",
+     "steam:4000"
+    ],
+    "liked": [
+     "steam:292030",
+     "steam:632470",
+     "steam:1328670"
+    ],
+    "disliked": [
+     "steam:1245620",
+     "steam:2344520"
+    ],
+    "whyIndex": 0,
+    "answers": {
+     "steam:292030": {
+      "reaction": "love",
+      "reasons": [
+       "story.central",
+       "characters.memorable",
+       "story.choices",
+       "world.living"
+      ],
+      "issues": []
+     },
+     "steam:632470": {
+      "reaction": "love",
+      "reasons": [
+       "story.central",
+       "characters.memorable",
+       "loop.dialogue",
+       "story.choices",
+       "humor.funny"
+      ],
+      "issues": []
+     },
+     "steam:1328670": {
+      "reaction": "love",
+      "reasons": [
+       "characters.companions",
+       "story.choices",
+       "story.central",
+       "characters.memorable"
+      ],
+      "issues": []
+     },
+     "steam:383870": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:501300": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:1174180": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:620": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:1222140": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:1086940": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:319630": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:1245620": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "difficulty.hard",
+        "hard": true
+       }
+      ],
+      "badQuality": false
+     },
+     "steam:2344520": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "progression.grind",
+        "hard": false
+       },
+       {
+        "f": "pace.repetitive",
+        "hard": false
+       }
+      ],
+      "badQuality": false
+     },
+     "steam:374320": {
+      "reaction": "dislike",
+      "issues": []
+     },
+     "steam:1085660": {
+      "reaction": "dislike",
+      "issues": []
+     },
+     "steam:812140": {
+      "reaction": "dislike",
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "story",
+      "relax"
+     ],
+     "avoid": [
+      "hard"
+     ],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 162474
+   }
+  },
+  "andrey lazy": {
+   "driver": "games-driver.mjs p1 lazy",
+   "seed": 58099,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "game"
+    },
+    {
+     "type": "choose",
+     "value": "windows"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "more",
+     "ids": [
+      "steam:374320",
+      "steam:1091500",
+      "steam:108600",
+      "steam:227300",
+      "steam:945360",
+      "steam:1903340",
+      "steam:730",
+      "steam:413150"
+     ]
+    },
+    {
+     "type": "more",
+     "ids": [
+      "steam:440",
+      "steam:271590",
+      "steam:739630",
+      "steam:4000",
+      "steam:1551360",
+      "steam:1623730",
+      "steam:2183900",
+      "steam:105600"
+     ]
+    },
+    {
+     "type": "more",
+     "ids": [
+      "steam:359550",
+      "steam:230410",
+      "steam:2358720",
+      "steam:444090",
+      "steam:648800",
+      "steam:1245620",
+      "steam:550",
+      "steam:553850"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "steam:292030",
+      "steam:1086940",
+      "steam:1174180"
+     ],
+     "shownIds": [
+      "steam:374320",
+      "steam:1091500",
+      "steam:108600",
+      "steam:227300",
+      "steam:945360",
+      "steam:1903340",
+      "steam:730",
+      "steam:413150",
+      "steam:440",
+      "steam:271590",
+      "steam:739630",
+      "steam:4000",
+      "steam:1551360",
+      "steam:1623730",
+      "steam:2183900",
+      "steam:105600",
+      "steam:359550",
+      "steam:230410",
+      "steam:2358720",
+      "steam:444090",
+      "steam:648800",
+      "steam:1245620",
+      "steam:550",
+      "steam:553850",
+      "steam:252490",
+      "steam:381210",
+      "steam:292030",
+      "steam:1086940",
+      "steam:346110",
+      "steam:1174180",
+      "steam:218620",
+      "steam:242760"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "story.central"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "characters.companions"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "characters.memorable"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "today",
+     "values": [
+      "story"
+     ],
+     "avoid": []
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "genres": [],
+    "shown": [
+     "steam:374320",
+     "steam:1091500",
+     "steam:108600",
+     "steam:227300",
+     "steam:945360",
+     "steam:1903340",
+     "steam:730",
+     "steam:413150",
+     "steam:440",
+     "steam:271590",
+     "steam:739630",
+     "steam:4000",
+     "steam:1551360",
+     "steam:1623730",
+     "steam:2183900",
+     "steam:105600",
+     "steam:359550",
+     "steam:230410",
+     "steam:2358720",
+     "steam:444090",
+     "steam:648800",
+     "steam:1245620",
+     "steam:550",
+     "steam:553850",
+     "steam:252490",
+     "steam:381210",
+     "steam:292030",
+     "steam:1086940",
+     "steam:346110",
+     "steam:1174180",
+     "steam:218620",
+     "steam:242760"
+    ],
+    "liked": [
+     "steam:292030",
+     "steam:1086940",
+     "steam:1174180"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+     "steam:292030": {
+      "reaction": "like",
+      "reasons": [
+       "story.central"
+      ],
+      "issues": []
+     },
+     "steam:1086940": {
+      "reaction": "like",
+      "reasons": [
+       "characters.companions"
+      ],
+      "issues": []
+     },
+     "steam:1174180": {
+      "reaction": "like",
+      "reasons": [
+       "characters.memorable"
+      ],
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "story"
+     ],
+     "avoid": [],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 58099
+   }
+  },
+  "danya careful": {
+   "driver": "games-driver.mjs p2 careful",
+   "seed": 355804,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "game"
+    },
+    {
+     "type": "choose",
+     "value": "windows"
+    },
+    {
+     "type": "genres",
+     "values": [
+      "social.pvp",
+      "social.coop",
+      "loop.shooting"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "steam:359550",
+      "steam:730",
+      "steam:1966720",
+      "steam:548430",
+      "steam:252950",
+      "steam:739630",
+      "steam:553850",
+      "steam:550",
+      "steam:945360",
+      "steam:1172470"
+     ],
+     "shownIds": [
+      "steam:1091500",
+      "steam:239140",
+      "steam:227300",
+      "steam:374320",
+      "steam:477160",
+      "steam:359550",
+      "steam:413150",
+      "steam:730"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "social.pvp",
+      "cognitive.high",
+      "tension.high"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "social.pvp",
+      "loop.shooting",
+      "tension.high",
+      "session.short",
+      "pace.fast"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "social.coop",
+      "humor.funny",
+      "tone.creepy",
+      "tension.high"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "steam:632470",
+      "steam:289070",
+      "steam:1158310",
+      "steam:413150",
+      "steam:1174180"
+     ],
+     "shownIds": [
+      "steam:440",
+      "steam:1238810",
+      "steam:1086940",
+      "steam:271590",
+      "steam:2183900",
+      "steam:620",
+      "steam:105600",
+      "steam:4000"
+     ]
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "loop.dialogue",
+       "hard": true
+      },
+      {
+       "f": "pace.slow",
+       "hard": false
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "issues",
+     "issues": [],
+     "badQuality": false
+    },
+    {
+     "type": "today",
+     "values": [
+      "friend",
+      "adrenaline"
+     ],
+     "avoid": []
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "genres": [
+     "social.pvp",
+     "social.coop",
+     "loop.shooting"
+    ],
+    "shown": [
+     "steam:1091500",
+     "steam:239140",
+     "steam:227300",
+     "steam:374320",
+     "steam:477160",
+     "steam:359550",
+     "steam:413150",
+     "steam:730",
+     "steam:440",
+     "steam:1238810",
+     "steam:1086940",
+     "steam:271590",
+     "steam:2183900",
+     "steam:620",
+     "steam:105600",
+     "steam:4000"
+    ],
+    "liked": [
+     "steam:359550",
+     "steam:730",
+     "steam:1966720"
+    ],
+    "disliked": [
+     "steam:632470",
+     "steam:289070"
+    ],
+    "whyIndex": 0,
+    "answers": {
+     "steam:359550": {
+      "reaction": "like",
+      "reasons": [
+       "social.pvp",
+       "cognitive.high",
+       "tension.high"
+      ],
+      "issues": []
+     },
+     "steam:730": {
+      "reaction": "love",
+      "reasons": [
+       "social.pvp",
+       "loop.shooting",
+       "tension.high",
+       "session.short",
+       "pace.fast"
+      ],
+      "issues": []
+     },
+     "steam:1966720": {
+      "reaction": "love",
+      "reasons": [
+       "social.coop",
+       "humor.funny",
+       "tone.creepy",
+       "tension.high"
+      ],
+      "issues": []
+     },
+     "steam:548430": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:252950": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:739630": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:553850": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:550": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:945360": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:1172470": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "steam:632470": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "loop.dialogue",
+        "hard": true
+       },
+       {
+        "f": "pace.slow",
+        "hard": false
+       }
+      ],
+      "badQuality": false
+     },
+     "steam:289070": {
+      "reaction": "dislike",
+      "issues": [],
+      "badQuality": false
+     },
+     "steam:1158310": {
+      "reaction": "dislike",
+      "issues": []
+     },
+     "steam:413150": {
+      "reaction": "dislike",
+      "issues": []
+     },
+     "steam:1174180": {
+      "reaction": "dislike",
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "friend",
+      "adrenaline"
+     ],
+     "avoid": [],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 355804
+   }
+  },
+  "danya lazy": {
+   "driver": "games-driver.mjs p2 lazy",
+   "seed": 667173,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "game"
+    },
+    {
+     "type": "choose",
+     "value": "windows"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "steam:730"
+     ],
+     "shownIds": [
+      "steam:1091500",
+      "steam:413150",
+      "steam:239140",
+      "steam:374320",
+      "steam:730",
+      "steam:1551360",
+      "steam:227300",
+      "steam:1238810"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "social.pvp"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "today",
+     "values": [
+      "friend"
+     ],
+     "avoid": []
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "genres": [],
+    "shown": [
+     "steam:1091500",
+     "steam:413150",
+     "steam:239140",
+     "steam:374320",
+     "steam:730",
+     "steam:1551360",
+     "steam:227300",
+     "steam:1238810"
+    ],
+    "liked": [
+     "steam:730"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+     "steam:730": {
+      "reaction": "like",
+      "reasons": [
+       "social.pvp"
+      ],
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "friend"
+     ],
+     "avoid": [],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 667173
+   }
+  },
+  "couple careful": {
+   "driver": "films-run.mjs couple careful",
+   "seed": 4242,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "film"
+    },
+    {
+     "type": "genres",
+     "values": [
+      "genre:Romance",
+      "genre:Drama",
+      "genre:Sci-Fi"
+     ]
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt0120737",
+      "tt4154796",
+      "tt1853728",
+      "tt0088763",
+      "tt0137523",
+      "tt0109830",
+      "tt0080684",
+      "tt0081505"
+     ]
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt2543164",
+      "tt2582802",
+      "tt0111161",
+      "tt2395427",
+      "tt2278388",
+      "tt0816692",
+      "tt1375666",
+      "tt0133093"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0816692",
+      "tt1375666",
+      "tt0338013",
+      "tt1798709",
+      "tt0112471",
+      "tt1856101"
+     ],
+     "shownIds": [
+      "tt0120737",
+      "tt4154796",
+      "tt1853728",
+      "tt0088763",
+      "tt0137523",
+      "tt0109830",
+      "tt0080684",
+      "tt0081505",
+      "tt2543164",
+      "tt2582802",
+      "tt0111161",
+      "tt2395427",
+      "tt2278388",
+      "tt0816692",
+      "tt1375666",
+      "tt0133093",
+      "tt0090605",
+      "tt0068646",
+      "tt0167260",
+      "tt0114369",
+      "tt0172495",
+      "tt0361748",
+      "tt0167261",
+      "tt0102926"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "world.space",
+      "cognitive.high",
+      "tone.epic",
+      "aesthetic.beautiful",
+      "ending.strong",
+      "aesthetic.soundtrack"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "story.complex",
+      "story.twist",
+      "cognitive.high",
+      "aesthetic.effects"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "characters.romance",
+      "tone.melancholic",
+      "story.nonlinear",
+      "tone.whimsical"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt0110912",
+      "tt7286456",
+      "tt0120815",
+      "tt0482571",
+      "tt0848228",
+      "tt0108052",
+      "tt0120689",
+      "tt0407887"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0418279",
+      "tt1099212"
+     ],
+     "shownIds": [
+      "tt0110912",
+      "tt7286456",
+      "tt0120815",
+      "tt0482571",
+      "tt0848228",
+      "tt0108052",
+      "tt0120689",
+      "tt0407887",
+      "tt0405159",
+      "tt0071562",
+      "tt0120338",
+      "tt0099685",
+      "tt4154756",
+      "tt1454468",
+      "tt0103064",
+      "tt0120382"
+     ]
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "story.weak",
+       "hard": false
+      },
+      {
+       "f": "humor.silly",
+       "hard": false
+      },
+      {
+       "f": "aesthetic.effects",
+       "hard": false
+      },
+      {
+       "f": "story.predictable",
+       "hard": false
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "characters.unlikeable",
+       "hard": false
+      },
+      {
+       "f": "story.predictable",
+       "hard": false
+      },
+      {
+       "f": "pace.draggy",
+       "hard": false
+      },
+      {
+       "f": "tone.cheesy",
+       "hard": true
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "today",
+     "values": [
+      "think"
+     ],
+     "avoid": [
+      "scary",
+      "long"
+     ]
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    },
+    {
+     "type": "fork",
+     "f": "humor.dark"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "film",
+    "platform": "windows",
+    "genres": [
+     "genre:Romance",
+     "genre:Drama",
+     "genre:Sci-Fi"
+    ],
+    "shown": [
+     "tt0120737",
+     "tt4154796",
+     "tt1853728",
+     "tt0088763",
+     "tt0137523",
+     "tt0109830",
+     "tt0080684",
+     "tt0081505",
+     "tt2543164",
+     "tt2582802",
+     "tt0111161",
+     "tt2395427",
+     "tt2278388",
+     "tt0816692",
+     "tt1375666",
+     "tt0133093",
+     "tt0090605",
+     "tt0068646",
+     "tt0167260",
+     "tt0114369",
+     "tt0172495",
+     "tt0361748",
+     "tt0167261",
+     "tt0102926",
+     "tt0110912",
+     "tt7286456",
+     "tt0120815",
+     "tt0482571",
+     "tt0848228",
+     "tt0108052",
+     "tt0120689",
+     "tt0407887",
+     "tt0405159",
+     "tt0071562",
+     "tt0120338",
+     "tt0099685",
+     "tt4154756",
+     "tt1454468",
+     "tt0103064",
+     "tt0120382"
+    ],
+    "liked": [
+     "tt0816692",
+     "tt1375666",
+     "tt0338013"
+    ],
+    "disliked": [
+     "tt0418279",
+     "tt1099212"
+    ],
+    "whyIndex": 0,
+    "answers": {
+     "tt0816692": {
+      "reaction": "love",
+      "reasons": [
+       "world.space",
+       "cognitive.high",
+       "tone.epic",
+       "aesthetic.beautiful",
+       "ending.strong",
+       "aesthetic.soundtrack"
+      ],
+      "issues": []
+     },
+     "tt1375666": {
+      "reaction": "like",
+      "reasons": [
+       "story.complex",
+       "story.twist",
+       "cognitive.high",
+       "aesthetic.effects"
+      ],
+      "issues": []
+     },
+     "tt0338013": {
+      "reaction": "love",
+      "reasons": [
+       "characters.romance",
+       "tone.melancholic",
+       "story.nonlinear",
+       "tone.whimsical"
+      ],
+      "issues": []
+     },
+     "tt1798709": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "tt0112471": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "tt1856101": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "tt0418279": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "story.weak",
+        "hard": false
+       },
+       {
+        "f": "humor.silly",
+        "hard": false
+       },
+       {
+        "f": "aesthetic.effects",
+        "hard": false
+       },
+       {
+        "f": "story.predictable",
+        "hard": false
+       }
+      ],
+      "badQuality": false
+     },
+     "tt1099212": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "characters.unlikeable",
+        "hard": false
+       },
+       {
+        "f": "story.predictable",
+        "hard": false
+       },
+       {
+        "f": "pace.draggy",
+        "hard": false
+       },
+       {
+        "f": "tone.cheesy",
+        "hard": true
+       }
+      ],
+      "badQuality": false
+     }
+    },
+    "corrections": [],
+    "preferences": [
+     {
+      "f": "humor.dark"
+     }
+    ],
+    "session": {
+     "moods": [
+      "think"
+     ],
+     "avoid": [
+      "scary",
+      "long"
+     ],
+     "notNow": [],
+     "asked": 1
+    },
+    "seed": 4242
+   }
+  },
+  "couple lazy": {
+   "driver": "films-run.mjs couple lazy",
+   "seed": 4242,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "film"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt0120737",
+      "tt0266697",
+      "tt0088763",
+      "tt1431045",
+      "tt1853728",
+      "tt2488496",
+      "tt0109830",
+      "tt0137523"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt1375666"
+     ],
+     "shownIds": [
+      "tt0120737",
+      "tt0266697",
+      "tt0088763",
+      "tt1431045",
+      "tt1853728",
+      "tt2488496",
+      "tt0109830",
+      "tt0137523",
+      "tt0167404",
+      "tt0208092",
+      "tt0080684",
+      "tt2582802",
+      "tt0468569",
+      "tt1375666",
+      "tt2395427",
+      "tt0110912"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "story.complex"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    },
+    {
+     "type": "fork",
+     "f": "characters.antihero"
+    },
+    {
+     "type": "fork",
+     "f": "world.dystopia"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "film",
+    "platform": "windows",
+    "genres": [],
+    "shown": [
+     "tt0120737",
+     "tt0266697",
+     "tt0088763",
+     "tt1431045",
+     "tt1853728",
+     "tt2488496",
+     "tt0109830",
+     "tt0137523",
+     "tt0167404",
+     "tt0208092",
+     "tt0080684",
+     "tt2582802",
+     "tt0468569",
+     "tt1375666",
+     "tt2395427",
+     "tt0110912"
+    ],
+    "liked": [
+     "tt1375666"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+     "tt1375666": {
+      "reaction": "like",
+      "reasons": [
+       "story.complex"
+      ],
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [
+     {
+      "f": "characters.antihero"
+     },
+     {
+      "f": "world.dystopia"
+     }
+    ],
+    "session": {
+     "moods": [],
+     "avoid": [],
+     "notNow": [],
+     "asked": 2
+    },
+    "seed": 4242
+   }
+  },
+  "cinephile careful": {
+   "driver": "films-run.mjs cinephile careful",
+   "seed": 4242,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "film"
+    },
+    {
+     "type": "genres",
+     "values": [
+      "genre:Drama",
+      "genre:Mystery"
+     ]
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt0120737",
+      "tt1853728",
+      "tt0169547",
+      "tt3315342",
+      "tt0246578",
+      "tt3659388",
+      "tt0253474",
+      "tt0167261"
+     ]
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt2278388",
+      "tt0068646",
+      "tt2543164",
+      "tt0167404",
+      "tt0137523",
+      "tt0110912",
+      "tt0109830",
+      "tt0167260"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0166924",
+      "tt0079944",
+      "tt0118694",
+      "tt0090756"
+     ],
+     "shownIds": [
+      "tt0120737",
+      "tt1853728",
+      "tt0169547",
+      "tt3315342",
+      "tt0246578",
+      "tt3659388",
+      "tt0253474",
+      "tt0167261",
+      "tt2278388",
+      "tt0068646",
+      "tt2543164",
+      "tt0167404",
+      "tt0137523",
+      "tt0110912",
+      "tt0109830",
+      "tt0167260",
+      "tt0111161",
+      "tt0075148",
+      "tt0114369",
+      "tt0172495",
+      "tt0102926",
+      "tt7286456",
+      "tt0361748",
+      "tt1130884"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "tone.whimsical",
+      "story.complex",
+      "tone.atmospheric",
+      "aesthetic.stylized"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "pace.slow",
+      "cognitive.high",
+      "aesthetic.beautiful",
+      "tone.atmospheric"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "aesthetic.stylized",
+      "tone.melancholic",
+      "aesthetic.beautiful",
+      "pace.slow",
+      "aesthetic.soundtrack"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt0107048",
+      "tt0120815",
+      "tt0482571",
+      "tt0108052",
+      "tt0071562",
+      "tt0120689",
+      "tt0407887",
+      "tt1454468"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt4154796",
+      "tt2109248"
+     ],
+     "shownIds": [
+      "tt0107048",
+      "tt0120815",
+      "tt0482571",
+      "tt0108052",
+      "tt0071562",
+      "tt0120689",
+      "tt0407887",
+      "tt1454468",
+      "tt0209144",
+      "tt0099685",
+      "tt0110413",
+      "tt0120382",
+      "tt0120586",
+      "tt0120338",
+      "tt0434409",
+      "tt0264464"
+     ]
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "story.predictable",
+       "hard": false
+      },
+      {
+       "f": "length.long",
+       "hard": false
+      },
+      {
+       "f": "aesthetic.effects",
+       "hard": true
+      },
+      {
+       "f": "world.superhero",
+       "hard": true
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "story.weak",
+       "hard": false
+      },
+      {
+       "f": "pace.draggy",
+       "hard": false
+      },
+      {
+       "f": "story.predictable",
+       "hard": false
+      },
+      {
+       "f": "aesthetic.effects",
+       "hard": true
+      },
+      {
+       "f": "world.superhero",
+       "hard": true
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "today",
+     "values": [
+      "think"
+     ],
+     "avoid": []
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    },
+    {
+     "type": "fork",
+     "f": "story.nonlinear"
+    },
+    {
+     "type": "fork",
+     "f": "world.space"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "film",
+    "platform": "windows",
+    "genres": [
+     "genre:Drama",
+     "genre:Mystery"
+    ],
+    "shown": [
+     "tt0120737",
+     "tt1853728",
+     "tt0169547",
+     "tt3315342",
+     "tt0246578",
+     "tt3659388",
+     "tt0253474",
+     "tt0167261",
+     "tt2278388",
+     "tt0068646",
+     "tt2543164",
+     "tt0167404",
+     "tt0137523",
+     "tt0110912",
+     "tt0109830",
+     "tt0167260",
+     "tt0111161",
+     "tt0075148",
+     "tt0114369",
+     "tt0172495",
+     "tt0102926",
+     "tt7286456",
+     "tt0361748",
+     "tt1130884",
+     "tt0107048",
+     "tt0120815",
+     "tt0482571",
+     "tt0108052",
+     "tt0071562",
+     "tt0120689",
+     "tt0407887",
+     "tt1454468",
+     "tt0209144",
+     "tt0099685",
+     "tt0110413",
+     "tt0120382",
+     "tt0120586",
+     "tt0120338",
+     "tt0434409",
+     "tt0264464"
+    ],
+    "liked": [
+     "tt0166924",
+     "tt0079944",
+     "tt0118694"
+    ],
+    "disliked": [
+     "tt4154796",
+     "tt2109248"
+    ],
+    "whyIndex": 0,
+    "answers": {
+     "tt0166924": {
+      "reaction": "love",
+      "reasons": [
+       "tone.whimsical",
+       "story.complex",
+       "tone.atmospheric",
+       "aesthetic.stylized"
+      ],
+      "issues": []
+     },
+     "tt0079944": {
+      "reaction": "love",
+      "reasons": [
+       "pace.slow",
+       "cognitive.high",
+       "aesthetic.beautiful",
+       "tone.atmospheric"
+      ],
+      "issues": []
+     },
+     "tt0118694": {
+      "reaction": "love",
+      "reasons": [
+       "aesthetic.stylized",
+       "tone.melancholic",
+       "aesthetic.beautiful",
+       "pace.slow",
+       "aesthetic.soundtrack"
+      ],
+      "issues": []
+     },
+     "tt0090756": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "tt4154796": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "story.predictable",
+        "hard": false
+       },
+       {
+        "f": "length.long",
+        "hard": false
+       },
+       {
+        "f": "aesthetic.effects",
+        "hard": true
+       },
+       {
+        "f": "world.superhero",
+        "hard": true
+       }
+      ],
+      "badQuality": false
+     },
+     "tt2109248": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "story.weak",
+        "hard": false
+       },
+       {
+        "f": "pace.draggy",
+        "hard": false
+       },
+       {
+        "f": "story.predictable",
+        "hard": false
+       },
+       {
+        "f": "aesthetic.effects",
+        "hard": true
+       },
+       {
+        "f": "world.superhero",
+        "hard": true
+       }
+      ],
+      "badQuality": false
+     }
+    },
+    "corrections": [],
+    "preferences": [
+     {
+      "f": "story.nonlinear"
+     },
+     {
+      "f": "world.space"
+     }
+    ],
+    "session": {
+     "moods": [
+      "think"
+     ],
+     "avoid": [],
+     "notNow": [],
+     "asked": 2
+    },
+    "seed": 4242
+   }
+  },
+  "cinephile lazy": {
+   "driver": "films-run.mjs cinephile lazy",
+   "seed": 4242,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "film"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "more",
+     "ids": [
+      "tt0120737",
+      "tt0266697",
+      "tt0088763",
+      "tt1431045",
+      "tt1853728",
+      "tt2488496",
+      "tt0109830",
+      "tt0137523"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0166924"
+     ],
+     "shownIds": [
+      "tt0120737",
+      "tt0266697",
+      "tt0088763",
+      "tt1431045",
+      "tt1853728",
+      "tt2488496",
+      "tt0109830",
+      "tt0137523",
+      "tt0167404",
+      "tt0208092",
+      "tt0080684",
+      "tt2582802",
+      "tt0468569",
+      "tt1375666",
+      "tt2395427",
+      "tt0110912"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "tone.whimsical"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    },
+    {
+     "type": "fork",
+     "f": "world.timetravel"
+    },
+    {
+     "type": "fork",
+     "f": "characters.coming_of_age"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "film",
+    "platform": "windows",
+    "genres": [],
+    "shown": [
+     "tt0120737",
+     "tt0266697",
+     "tt0088763",
+     "tt1431045",
+     "tt1853728",
+     "tt2488496",
+     "tt0109830",
+     "tt0137523",
+     "tt0167404",
+     "tt0208092",
+     "tt0080684",
+     "tt2582802",
+     "tt0468569",
+     "tt1375666",
+     "tt2395427",
+     "tt0110912"
+    ],
+    "liked": [
+     "tt0166924"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+     "tt0166924": {
+      "reaction": "like",
+      "reasons": [
+       "tone.whimsical"
+      ],
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [
+     {
+      "f": "world.timetravel"
+     },
+     {
+      "f": "characters.coming_of_age"
+     }
+    ],
+    "session": {
+     "moods": [],
+     "avoid": [],
+     "notNow": [],
+     "asked": 2
+    },
+    "seed": 4242
+   }
+  },
+  "lena careful": {
+   "driver": "series-cartoons-run.mjs lena careful",
+   "seed": 20261021,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "series"
+    },
+    {
+     "type": "genres",
+     "values": [
+      "genre:Comedy"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0108778",
+      "tt2467372",
+      "tt0386676",
+      "tt1266020",
+      "tt0285403"
+     ],
+     "shownIds": [
+      "tt0903747",
+      "tt4574334",
+      "tt0285403",
+      "tt9140560",
+      "tt7660850",
+      "tt1190634",
+      "tt10062292",
+      "tt10986410"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "humor.funny",
+      "tone.feelgood",
+      "characters.friendship",
+      "characters.ensemble",
+      "cognitive.low"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "humor.funny",
+      "tone.lighthearted",
+      "tone.feelgood",
+      "structure.procedural",
+      "length.short"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "humor.funny",
+      "characters.ensemble",
+      "cognitive.low"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0944947",
+      "tt1520211",
+      "tt0903747",
+      "tt5834204",
+      "tt8962124"
+     ],
+     "shownIds": [
+      "tt1869454",
+      "tt9018736",
+      "tt9432978",
+      "tt4955642",
+      "tt0898266",
+      "tt7767422",
+      "tt8962124",
+      "tt1632701"
+     ]
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "tension.high",
+       "hard": false
+      },
+      {
+       "f": "content.sexual",
+       "hard": false
+      },
+      {
+       "f": "content.violence",
+       "hard": true
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "tone.creepy",
+       "hard": false
+      },
+      {
+       "f": "world.postapoc",
+       "hard": false
+      },
+      {
+       "f": "content.violence",
+       "hard": true
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "today",
+     "values": [
+      "relax",
+      "laugh",
+      "background"
+     ],
+     "avoid": [
+      "violence",
+      "dark",
+      "scary"
+     ]
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "series",
+    "platform": "windows",
+    "genres": [
+     "genre:Comedy"
+    ],
+    "shown": [
+     "tt0903747",
+     "tt4574334",
+     "tt0285403",
+     "tt9140560",
+     "tt7660850",
+     "tt1190634",
+     "tt10062292",
+     "tt10986410",
+     "tt1869454",
+     "tt9018736",
+     "tt9432978",
+     "tt4955642",
+     "tt0898266",
+     "tt7767422",
+     "tt8962124",
+     "tt1632701"
+    ],
+    "liked": [
+     "tt0108778",
+     "tt2467372",
+     "tt0386676"
+    ],
+    "disliked": [
+     "tt0944947",
+     "tt1520211"
+    ],
+    "whyIndex": 0,
+    "answers": {
+     "tt0108778": {
+      "reaction": "love",
+      "reasons": [
+       "humor.funny",
+       "tone.feelgood",
+       "characters.friendship",
+       "characters.ensemble",
+       "cognitive.low"
+      ],
+      "issues": []
+     },
+     "tt2467372": {
+      "reaction": "love",
+      "reasons": [
+       "humor.funny",
+       "tone.lighthearted",
+       "tone.feelgood",
+       "structure.procedural",
+       "length.short"
+      ],
+      "issues": []
+     },
+     "tt0386676": {
+      "reaction": "like",
+      "reasons": [
+       "humor.funny",
+       "characters.ensemble",
+       "cognitive.low"
+      ],
+      "issues": []
+     },
+     "tt1266020": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "tt0285403": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "tt0944947": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "tension.high",
+        "hard": false
+       },
+       {
+        "f": "content.sexual",
+        "hard": false
+       },
+       {
+        "f": "content.violence",
+        "hard": true
+       }
+      ],
+      "badQuality": false
+     },
+     "tt1520211": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "tone.creepy",
+        "hard": false
+       },
+       {
+        "f": "world.postapoc",
+        "hard": false
+       },
+       {
+        "f": "content.violence",
+        "hard": true
+       }
+      ],
+      "badQuality": false
+     },
+     "tt0903747": {
+      "reaction": "dislike",
+      "issues": []
+     },
+     "tt5834204": {
+      "reaction": "dislike",
+      "issues": []
+     },
+     "tt8962124": {
+      "reaction": "dislike",
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "relax",
+      "laugh",
+      "background"
+     ],
+     "avoid": [
+      "violence",
+      "dark",
+      "scary"
+     ],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 20261021
+   }
+  },
+  "lena lazy": {
+   "driver": "series-cartoons-run.mjs lena lazy",
+   "seed": 20261021,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "series"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0285403"
+     ],
+     "shownIds": [
+      "tt0903747",
+      "tt0185906",
+      "tt4574334",
+      "tt0285403",
+      "tt2085059",
+      "tt5753856",
+      "tt1190634",
+      "tt8772296"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "humor.funny"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "today",
+     "values": [
+      "laugh"
+     ],
+     "avoid": []
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "series",
+    "platform": "windows",
+    "genres": [],
+    "shown": [
+     "tt0903747",
+     "tt0185906",
+     "tt4574334",
+     "tt0285403",
+     "tt2085059",
+     "tt5753856",
+     "tt1190634",
+     "tt8772296"
+    ],
+    "liked": [
+     "tt0285403"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+     "tt0285403": {
+      "reaction": "like",
+      "reasons": [
+       "humor.funny"
+      ],
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "laugh"
+     ],
+     "avoid": [],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 20261021
+   }
+  },
+  "dima careful": {
+   "driver": "series-cartoons-run.mjs dima careful",
+   "seed": 20261021,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "cartoon"
+    },
+    {
+     "type": "genres",
+     "values": [
+      "genre:Family",
+      "genre:Comedy",
+      "genre:Adventure"
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt2948356",
+      "tt3521164",
+      "tt0441773",
+      "tt0266543"
+     ],
+     "shownIds": [
+      "tt4633694",
+      "tt0910970",
+      "tt0101414",
+      "tt0417299",
+      "tt0126029",
+      "tt0266543",
+      "tt2096673",
+      "tt0107688"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "humor.funny",
+      "characters.friendship",
+      "content.family",
+      "cognitive.high",
+      "aesthetic.beautiful",
+      "story.mystery"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "world.music",
+      "aesthetic.beautiful",
+      "characters.female_lead",
+      "content.family",
+      "tone.feelgood"
+     ],
+     "love": true,
+     "issues": []
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "humor.funny",
+      "tone.lighthearted",
+      "content.family",
+      "pace.fast"
+     ],
+     "love": false,
+     "issues": [
+      {
+       "f": "tone.creepy",
+       "hard": false
+      }
+     ]
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt3121722",
+      "tt2293640",
+      "tt0327597"
+     ],
+     "shownIds": [
+      "tt0096697",
+      "tt0317219",
+      "tt0110357",
+      "tt9362722",
+      "tt1192628",
+      "tt0114709",
+      "tt0327597",
+      "tt0120630"
+     ]
+    },
+    {
+     "type": "issues",
+     "issues": [
+      {
+       "f": "pace.draggy",
+       "hard": false
+      },
+      {
+       "f": "story.predictable",
+       "hard": false
+      },
+      {
+       "f": "audience.kids",
+       "hard": false
+      }
+     ],
+     "badQuality": false
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "today",
+     "values": [
+      "family",
+      "laugh"
+     ],
+     "avoid": [
+      "scary",
+      "dark"
+     ]
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "cartoon",
+    "platform": "windows",
+    "genres": [
+     "genre:Family",
+     "genre:Comedy",
+     "genre:Adventure"
+    ],
+    "shown": [
+     "tt4633694",
+     "tt0910970",
+     "tt0101414",
+     "tt0417299",
+     "tt0126029",
+     "tt0266543",
+     "tt2096673",
+     "tt0107688",
+     "tt0096697",
+     "tt0317219",
+     "tt0110357",
+     "tt9362722",
+     "tt1192628",
+     "tt0114709",
+     "tt0327597",
+     "tt0120630"
+    ],
+    "liked": [
+     "tt2948356",
+     "tt3521164",
+     "tt0441773"
+    ],
+    "disliked": [
+     "tt3121722",
+     "tt2293640"
+    ],
+    "whyIndex": 0,
+    "answers": {
+     "tt2948356": {
+      "reaction": "love",
+      "reasons": [
+       "humor.funny",
+       "characters.friendship",
+       "content.family",
+       "cognitive.high",
+       "aesthetic.beautiful",
+       "story.mystery"
+      ],
+      "issues": []
+     },
+     "tt3521164": {
+      "reaction": "love",
+      "reasons": [
+       "world.music",
+       "aesthetic.beautiful",
+       "characters.female_lead",
+       "content.family",
+       "tone.feelgood"
+      ],
+      "issues": []
+     },
+     "tt0441773": {
+      "reaction": "like",
+      "reasons": [
+       "humor.funny",
+       "tone.lighthearted",
+       "content.family",
+       "pace.fast"
+      ],
+      "issues": [
+       {
+        "f": "tone.creepy",
+        "hard": false
+       }
+      ]
+     },
+     "tt0266543": {
+      "reaction": "like",
+      "reasons": []
+     },
+     "tt3121722": {
+      "reaction": "dislike",
+      "issues": [
+       {
+        "f": "pace.draggy",
+        "hard": false
+       },
+       {
+        "f": "story.predictable",
+        "hard": false
+       },
+       {
+        "f": "audience.kids",
+        "hard": false
+       }
+      ],
+      "badQuality": false
+     },
+     "tt2293640": {
+      "reaction": "dislike",
+      "issues": [],
+      "badQuality": false
+     },
+     "tt0327597": {
+      "reaction": "dislike",
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "family",
+      "laugh"
+     ],
+     "avoid": [
+      "scary",
+      "dark"
+     ],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 20261021
+   }
+  },
+  "dima lazy": {
+   "driver": "series-cartoons-run.mjs dima lazy",
+   "seed": 20261021,
+   "actions": [
+    {
+     "type": "choose",
+     "value": "cartoon"
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "pick",
+     "ids": [
+      "tt0266543"
+     ],
+     "shownIds": [
+      "tt4633694",
+      "tt0910970",
+      "tt0101414",
+      "tt0417299",
+      "tt0126029",
+      "tt0266543",
+      "tt2096673",
+      "tt0107688"
+     ]
+    },
+    {
+     "type": "reasons",
+     "values": [
+      "humor.funny"
+     ],
+     "love": false,
+     "issues": []
+    },
+    {
+     "type": "skip"
+    },
+    {
+     "type": "today",
+     "values": [
+      "family"
+     ],
+     "avoid": []
+    },
+    {
+     "type": "choose",
+     "value": "confirm"
+    }
+   ],
+   "finalState": {
+    "step": "result",
+    "domain": "cartoon",
+    "platform": "windows",
+    "genres": [],
+    "shown": [
+     "tt4633694",
+     "tt0910970",
+     "tt0101414",
+     "tt0417299",
+     "tt0126029",
+     "tt0266543",
+     "tt2096673",
+     "tt0107688"
+    ],
+    "liked": [
+     "tt0266543"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+     "tt0266543": {
+      "reaction": "like",
+      "reasons": [
+       "humor.funny"
+      ],
+      "issues": []
+     }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+     "moods": [
+      "family"
+     ],
+     "avoid": [],
+     "notNow": [],
+     "asked": 0
+    },
+    "seed": 20261021
+   }
+  }
+ }
+}

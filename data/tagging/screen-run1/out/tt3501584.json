@@ -1,0 +1,11 @@
+{"id": "tt3501584", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "an American supernatural procedural drama television series"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p0", "q": "supernatural procedural drama television series"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p5", "q": "dazzlingly, tirelessly witty"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p6", "q": "while skillfully satirizing modern society along the way"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "p0", "q": "a medical examiner for the Seattle Police who helps solve murders"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "ran for five seasons, ending on August 1, 2019"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p5", "q": "Rose McIver's performance as Liv"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "p9", "q": "The series finale was met with notable negative response"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p9", "q": "both the finale and final season as a whole seemed to have suffered"}]}
+]}

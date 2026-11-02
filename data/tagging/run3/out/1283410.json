@@ -1,0 +1,6 @@
+{"appid": 1283410, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "There are three main hand-to-hand weapon types: spears, swords, and axes"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "a genre that focuses on boss fights in which players must carefully time their attacks"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Players can customize Redgi with different skills and change their build"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p2", "q": "criticized some of the boss fights as \"barely disguised\" padding"}]}
+]}

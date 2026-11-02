@@ -1,0 +1,11 @@
+{"appid": 244160, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p5", "q": "in order to provide tactical advantages during combat"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "is focused on gathering resources, building military forces"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "the single-player mode consists of one story-driven campaign, broken up into levels"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "the science fiction game follows the Kushan exiles"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p8", "q": "The graphics were highly praised"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p1", "q": "Samuel Barber's 1936 Adagio for Strings, considered the defining theme of the game"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p10", "q": "The multiplayer gameplay was praised, especially against human opponents"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p2", "q": "opinions were divided on the plot and high difficulty"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "the overall theme is the same: Kill the enemy"}]}
+]}

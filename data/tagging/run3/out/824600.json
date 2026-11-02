@@ -1,0 +1,7 @@
+{"appid": 824600, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 first-person shooter video game"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p3", "q": "It is set in 1986 in an alternate reality Czechoslovakia"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p1", "q": "The story is set in Czechoslovakia following an unspecified disaster of 1986"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "Players explore and navigate to the exit of each level"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p5", "q": "that vexing final fight"}]}
+]}

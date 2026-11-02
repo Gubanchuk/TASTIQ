@@ -1,0 +1,11 @@
+{"appid": 201870, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p4", "q": "is an action-adventure, stealth game set in an open world environment"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "can freely explore Constantinople and complete side missions unrelated to the main storyline"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p6", "q": "it can be renovated by purchasing different stores"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "a mixture of combat, stealth, and exploration"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p5", "q": "allows Ezio to experiment with different shells and ingredients to create bombs"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p8", "q": "recruit Assassin initiates and call them for support during missions"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "The game's plot is set in a fictional history of real-world events"}, {"id": "p6", "q": "during the rise of the Ottoman Empire"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p12", "q": "some of the content isn't entirely worth exploring"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p13", "q": "looking out across miles of meticulously rendered game world"}]}
+]}

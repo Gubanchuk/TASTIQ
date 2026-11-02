@@ -1,0 +1,12 @@
+{"id": "tt2433738", "features": [
+{"f": "world.crime", "r": 2, "ev": [{"id": "p2", "q": "charged with the attempted murder of her husband"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p6", "q": "believed the show was more gritty and did not"}]},
+{"f": "content.violence", "r": 1, "ev": [{"id": "p7", "q": "the series sticks more closely to its violent, soapy, sexploitation Prisoner"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p7", "q": "the series sticks more closely to its violent, soapy, sexploitation Prisoner"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "the series shifted to emphasize more of an ensemble format"}]},
+{"f": "characters.female_lead", "r": 3, "ev": [{"id": "p7", "q": "fabulously strong, variably humane female characters"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p6", "q": "Sue 'Boomer' Jenkins as one of the show's standout characters"}]},
+{"f": "length.long", "r": 3, "ev": [{"id": "p0", "q": "with its 100th episode on 26 October 2021"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "it concluded on Showcase with its 100th episode on 26 October 2021"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p7", "q": "criticised the show for not being original"}]}
+]}

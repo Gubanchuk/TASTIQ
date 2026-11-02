@@ -1,0 +1,14 @@
+{"appid": 367520, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "d", "q": "Explore twisting caverns, battle tainted creatures and befriend bizarre bugs"}]},
+{"f": "loop.melee", "r": 3, "ev": [{"id": "a", "q": "Dodge, dash and slash your way through even the most deadly adversaries"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "r236383197", "q": "It has a low skill floor and an immensely high skill celing"}, {"id": "r237651551", "q": "dying 50 times trying to perfectly time absurd jump puzzles"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "d", "q": "through a vast ruined kingdom of insects and heroes"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "d", "q": "An epic action adventure"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "d", "q": "classic, hand-drawn 2D style"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r236276941", "q": "The soundtrack is amazing"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "r238060703", "q": "The art direction is beautiful"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "r236276941", "q": "The lore is also incredible"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "r236461109", "q": "long corridors with literally nothing"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "r236461109", "q": "traversing is monotone"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r237070518", "q": "replayability is insane"}]}
+]}

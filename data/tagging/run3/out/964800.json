@@ -1,0 +1,8 @@
+{"appid": 964800, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter game developed by Bounding Box Software"}]},
+{"f": "combat.fast", "r": 3, "ev": [{"id": "p1", "q": "engaging enemies in fast-paced combat using a variety of weapons"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The player must explore complex levels"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p3", "q": "In the future, humanity harnessed power from a hellish dimension"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p2", "q": "interactive levels, a gore system, and a dynamic soundtrack"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p2", "q": "apply shaders that give the game a pixelated look"}]}
+]}

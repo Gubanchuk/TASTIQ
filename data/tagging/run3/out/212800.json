@@ -1,0 +1,8 @@
+{"appid": 212800, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a shoot 'em up and indie game"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "picking up a crate gives one of 14 weapons, selected at random"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "the player can unlock new weapons, game modes and cosmetic character skins"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p2", "q": "The goal of the game is to survive as long as possible"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p1", "q": "Contact with an enemy results in immediate death"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p4", "q": "The challenge is fierce"}]}
+]}

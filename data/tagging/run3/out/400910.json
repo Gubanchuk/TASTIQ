@@ -1,0 +1,10 @@
+{"appid": 400910, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p1", "q": "in a side-scrolling platformer environment"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "Most of the game is spent exploring and collecting items"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "Collectable items range from upgrades to Erina and Ribbon's weapons"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Rabi-Ribi has been praised for the degree of customization it offers the player"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p2", "q": "a wide range of difficulty settings and modes to accommodate different skill levels"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "pitting the player against various bosses with dense bullet patterns"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p3", "q": "a fictional world where bunnies are worshiped"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p2", "q": "The game's soundtrack and originality have been met with approval"}]}
+]}

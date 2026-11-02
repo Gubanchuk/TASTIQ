@@ -1,0 +1,10 @@
+{"appid": 232430, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p0", "q": "is a first-person walking simulator video game"}]},
+{"f": "story.lore", "r": 3, "ev": [{"id": "p1", "q": "determine what has transpired by examining items, journals, and other items left around the various rooms"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "leaving her to piece together recent events"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p8", "q": "realistic, engrossing story that's beautifully told through environmental clues and audio narration"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "returning from overseas to her rural Oregon family home"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "Set in the year 1995, Gone Home puts the player in the role of a young woman"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p5", "q": "But she promises that she will one day see her again"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p4", "q": "the two became romantically involved"}]}
+]}

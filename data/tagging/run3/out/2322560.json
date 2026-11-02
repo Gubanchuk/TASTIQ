@@ -1,0 +1,9 @@
+{
+  "appid": 2322560,
+  "features": [
+    {"f": "story.choices", "r": 3, "ev": [{"id": "p2", "q": "make dialogue choices to advance the story, leading to different narrative branches"}]},
+    {"f": "characters.romance", "r": 3, "ev": [{"id": "p0", "q": "navigates romantic relationships with six female protagonists"}]},
+    {"f": "loop.dialogue", "r": 3, "ev": [{"id": "p2", "q": "make dialogue choices to advance the story"}]},
+    {"f": "characters.lone_hero", "r": 1, "ev": [{"id": "p0", "q": "The player assumes the role of Gu Yi"}]}
+  ]
+}

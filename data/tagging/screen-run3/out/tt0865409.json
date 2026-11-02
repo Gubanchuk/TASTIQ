@@ -1,0 +1,8 @@
+{"id": "tt0865409", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated television series created by Adam Reed"}]},
+{"f": "audience.adult", "r": 2, "ev": [{"id": "p0", "q": "is an American adult animated television series created by Adam Reed"}]},
+{"f": "humor.satire", "r": 3, "ev": [{"id": "p0", "q": "much of the show's humor focuses on parodying superhero and action-movie clichés"}]},
+{"f": "world.superhero", "r": 2, "ev": [{"id": "p0", "q": "a supervillain named Killface and his nemesis, a superhero named Awesome X"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "s", "q": "destroying the world seems like a lot of fun"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The second season premiered on August 26, 2007, and ended on March 23, 2008"}]}
+]}

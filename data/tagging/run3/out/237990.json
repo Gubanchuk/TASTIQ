@@ -1,0 +1,12 @@
+{"appid": 237990, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a tactical role-playing video game developed by Stoic"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "The interactive story changes depending on players' decisions"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "with the player controlling and being able to build up a party of characters with complementary abilities"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "Taking place in a fictional world inspired by Norse mythology"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p2", "q": "The hand-drawn animation and art-style featured in the game"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "The Banner Saga is a beautiful game, filled with interesting ideas and enjoyable battles"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "bleak, but beautiful soundtrack"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p10", "q": "tough, but rewarding combat system"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "the tedium of recurring encounters"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p11", "q": "calling The Banner Saga's battles onerous, arduous, plodding, and lethargic"}]}
+]}

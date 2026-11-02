@@ -1,0 +1,7 @@
+{"appid": 403190, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "The player is given the role of base architect as well as manager"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "guide the colonists to build a self-sufficient base"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Planetbase is a space simulation and strategy video game"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "The survival of the colony is challenged by natural disasters"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "have a constant supply of oxygen"}]}
+]}

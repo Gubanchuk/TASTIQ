@@ -1,0 +1,12 @@
+{
+  "appid": 40800,
+  "features": [
+    {"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "Super Meat Boy is a 2010 platformer game"}]},
+    {"f": "difficulty.hard", "r": 3, "ev": [{"id": "p8", "q": "the difficulty rides the perfect line between driving you utterly bonkers when you fail"}, {"id": "p10", "q": "depend a little too much on twitch reflexes and trial-and-error memorization"}]},
+    {"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p9", "q": "Critics gave high marks to the game's retro art direction and presentation"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p1", "q": "Critics lauded the game's controls, art, soundtrack, and challenging gameplay"}]},
+    {"f": "humor.funny", "r": 1, "ev": [{"id": "p10", "q": "there are some bits of toilet humor here and there that are duds"}]},
+    {"f": "freedom.sandbox", "r": 1, "ev": [{"id": "p0", "q": "The game also supports the creation of player-created levels"}]},
+    {"f": "tone.whimsical", "r": 2, "ev": [{"id": "p5", "q": "an intelligent fetus in a jar piloting a mechanical body"}]}
+  ]
+}

@@ -1,0 +1,9 @@
+{"appid": 216150, "features": [
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "Groups of players can band together in parties to hunt monsters and share rewards"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p2", "q": "introduced player versus player (PvP) and professions to the game"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "free-to-play, 2D, side-scrolling massively multiplayer online role-playing game"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p1", "q": "developing their characters' skills and abilities as is typical in role-playing video games"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p6", "q": "Players are able to acquire in-game professions, allowing them to craft equipment, accessories or potions"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "Created by these people with powers called the Overseers"}, {"id": "p4", "q": "a champion imbued with divine energy"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p1", "q": "Players traverse various worlds, including Maple World"}]}
+]}

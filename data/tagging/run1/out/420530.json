@@ -1,0 +1,131 @@
+{
+ "appid": 420530,
+ "features": [
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237538428",
+     "q": "The story and art were phenomenal"
+    },
+    {
+     "id": "r236738498",
+     "q": "a beautiful narrative about how fiction doesn't need to be real to matter to us"
+    }
+   ]
+  },
+  {
+   "f": "tone.melancholic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237538428",
+     "q": "Made me cry a bit"
+    },
+    {
+     "id": "r236446275",
+     "q": "this was on par of undertale's emotional feeling"
+    }
+   ]
+  },
+  {
+   "f": "tone.whimsical",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "OneShot is a surreal top down Puzzle/Adventure game with unique gameplay capabilities"
+    }
+   ]
+  },
+  {
+   "f": "tone.creepy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "parts of the game may induce some paranoia"
+    }
+   ]
+  },
+  {
+   "f": "loop.puzzles",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236500984",
+     "q": "the puzzle desings are great and out standing compared to other puzzle games"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236500984",
+     "q": "I had a lot of fun exploring its world"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237538428",
+     "q": "sound track and character design was also amazing"
+    },
+    {
+     "id": "r236738498",
+     "q": "a beautiful soundtrack"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.pixel",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236641849",
+     "q": "с прекрасным пиксель-артом и саундтреком"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235780374",
+     "q": "I beat it so quickly"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235708865",
+     "q": "fetch quest after fetch quest after fetch quest"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235959151",
+     "q": "There's too much walking around while trying to figure out what to do"
+    },
+    {
+     "id": "r235801051",
+     "q": "It's a lot of walking around trying to find a random item"
+    }
+   ]
+  }
+ ]
+}

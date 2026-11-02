@@ -1,0 +1,526 @@
+{
+  "state": {
+    "version": 1,
+    "id": "familiar-live-20261101-a",
+    "revision": 3,
+    "mode": "guided",
+    "phase": "review",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "familiar-live-20261101-a:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "rpg",
+            "label": "RPG"
+          }
+        ],
+        "text": "Сегодня хочу одиночную RPG на Windows с интересной историей, исследованием мира и развитием героя: пробовать разные билды, чувствовать рост возможностей. Не хочется постоянных повторов после смерти. Спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 прошёл; Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+        "kind": "answer",
+        "answer": "RPG; Сегодня хочу одиночную RPG на Windows с интересной историей, исследованием мира и развитием героя: пробовать разные билды, чувствовать рост возможностей. Не хочется постоянных повторов после смерти. Спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 прошёл; Cyberpunk 2077 только начал и могу вернуться, если он подходит."
+      },
+      {
+        "id": "familiar-live-20261101-a:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "familiar-live-20261101-a:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      }
+    ],
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Хочешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "story:interesting",
+        "text": "Хочется интересной истории.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "с интересной историей",
+        "feature": "story.central",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "exploration:world",
+        "text": "Хочется исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "исследованием мира",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:builds",
+        "text": "Хочется пробовать разные билды.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "пробовать разные билды",
+        "feature": "progression.builds",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:power",
+        "text": "Важно ощущать рост возможностей героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "чувствовать рост возможностей",
+        "feature": "progression.power",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "death:repetition",
+        "text": "Не хочется постоянных повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Не хочется постоянных повторов после смерти.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "companions:optional",
+        "text": "Спутники не обязательны.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Спутники не обязательны",
+        "feature": "characters.companions",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "realism:indifferent",
+        "text": "Реализм не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "реализм неважен",
+        "feature": "world.realistic",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "history:skyrim",
+        "text": "Skyrim пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": null,
+        "exposure": "finished"
+      },
+      {
+        "key": "history:rdr2",
+        "text": "Red Dead Redemption 2 пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": "steam:1174180",
+        "exposure": "finished"
+      },
+      {
+        "key": "history:cyberpunk",
+        "text": "Cyberpunk 2077 только начат.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": "started"
+      },
+      {
+        "key": "return:cyberpunk",
+        "text": "Готов вернуться к Cyberpunk 2077, если он подходит под сегодняшний запрос.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": null
+      }
+    ],
+    "question": null,
+    "summary": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+    "uncertainties": [],
+    "retractions": [],
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Хочешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "story:interesting",
+        "text": "Хочется интересной истории.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "с интересной историей",
+        "feature": "story.central",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "exploration:world",
+        "text": "Хочется исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "исследованием мира",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:builds",
+        "text": "Хочется пробовать разные билды.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "пробовать разные билды",
+        "feature": "progression.builds",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:power",
+        "text": "Важно ощущать рост возможностей героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "чувствовать рост возможностей",
+        "feature": "progression.power",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "death:repetition",
+        "text": "Не хочется постоянных повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Не хочется постоянных повторов после смерти.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "companions:optional",
+        "text": "Спутники не обязательны.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Спутники не обязательны",
+        "feature": "characters.companions",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "realism:indifferent",
+        "text": "Реализм не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "реализм неважен",
+        "feature": "world.realistic",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "history:skyrim",
+        "text": "Skyrim пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": null,
+        "exposure": "finished"
+      },
+      {
+        "key": "history:rdr2",
+        "text": "Red Dead Redemption 2 пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": "steam:1174180",
+        "exposure": "finished"
+      },
+      {
+        "key": "history:cyberpunk",
+        "text": "Cyberpunk 2077 только начат.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": "started"
+      },
+      {
+        "key": "return:cyberpunk",
+        "text": "Готов вернуться к Cyberpunk 2077, если он подходит под сегодняшний запрос.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": null
+      }
+    ],
+    "uncertainties": [],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "familiar-live-20261101-a:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "RPG; Сегодня хочу одиночную RPG на Windows с интересной историей, исследованием мира и развитием героя: пробовать разные билды, чувствовать рост возможностей. Не хочется постоянных повторов после смерти. Спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 прошёл; Cyberpunk 2077 только начал и могу вернуться, если он подходит."
+      },
+      {
+        "id": "familiar-live-20261101-a:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "familiar-live-20261101-a:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      }
+    ],
+    "type": "review"
+  }
+}

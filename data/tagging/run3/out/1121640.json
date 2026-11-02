@@ -1,0 +1,7 @@
+{"appid": 1121640, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "the player builds a village on the back of a large dinosaur"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "The Wandering Village is a city-building game"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "The player must continually respond to the changing environment"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p1", "q": "discover the cause of the world's post-apocalyptic state"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p7", "q": "gorgeous and captivating"}]}
+]}

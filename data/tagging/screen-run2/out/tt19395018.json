@@ -1,0 +1,10 @@
+{"id": "tt19395018", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a science fiction psychological thriller television series"}]},
+{"f": "world.space", "r": 3, "ev": [{"id": "s", "q": "an astronaut who returns to Earth after a disaster in space"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "s", "q": "a conspiracy-based psychological thriller drama"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p1", "q": "Solid performances and creepy atmosphere help Constellation engage"}]},
+{"f": "tone.atmospheric", "r": 1, "ev": [{"id": "p1", "q": "creepy atmosphere help Constellation engage"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "desperate quest to expose the truth about the hidden history of space travel"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p1", "q": "with some noticeable narrative turbulence along the way"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "the series was canceled after one season"}]}
+]}

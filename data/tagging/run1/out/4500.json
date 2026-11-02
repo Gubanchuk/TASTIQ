@@ -1,0 +1,16 @@
+{"appid": 4500, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "r237268939", "q": "пост-апокаліптичний шутер в пост-радянському Чорнобелі"}, {"id": "r235704778", "q": "to create a sense of tension and paranoia"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "a", "q": "Anomalies with precious artifacts, starving mutants and greedy thugs"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "r235704778", "q": "to create a sense of tension and paranoia"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "r237871254", "q": "Всё оружие очень неточное"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "a true stalker must not stop his search"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "a", "q": "Valuable trophies, equipment and supplies"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "a", "q": "To survive, a true stalker must not stop his search"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r235704778", "q": "The story is engaging and mysterious"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "r235704778", "q": "The characters are memorable and well-developed"}]},
+{"f": "world.living", "r": 3, "ev": [{"id": "r236387616", "q": "it has one of the best alive feeling worlds to this day"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "r234580148", "q": "Combat, movement, and overall gameplay have aged terribly"}, {"id": "r237871254", "q": "Всё оружие очень неточное"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "r232379463", "q": "you can't complete the game due to radiation"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r237871254", "q": "потом подступала скука"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "r237744234", "q": "Монолитовцев в углу я боюсь больше, чем женщин"}]}
+]}

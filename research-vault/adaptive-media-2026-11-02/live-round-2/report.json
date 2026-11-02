@@ -1,0 +1,2848 @@
+{
+  "cap": 0.6,
+  "maxCalls": 12,
+  "before": {
+    "upper": 2.0738544,
+    "calls": 183
+  },
+  "cases": [
+    {
+      "domain": "film",
+      "steps": [
+        {
+          "action": "answer",
+          "state": {
+            "version": 1,
+            "domain": "film",
+            "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4",
+            "revision": 2,
+            "mode": "guided",
+            "phase": "review",
+            "context": {
+              "company": "solo",
+              "childAge": null,
+              "minutes": 100,
+              "timeMode": "session",
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "contextEvidence": {
+              "company": {
+                "value": "solo",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "для одного взрослого"
+              },
+              "childAge": null,
+              "timeMode": {
+                "value": "session",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Сегодня есть 100 минут."
+              },
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": {
+                  "id": "direction",
+                  "title": "Какой фильм хочется сегодня?",
+                  "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+                  "options": [
+                    {
+                      "id": "comedy",
+                      "label": "Комедия"
+                    },
+                    {
+                      "id": "drama",
+                      "label": "Драма"
+                    },
+                    {
+                      "id": "thriller",
+                      "label": "Триллер"
+                    },
+                    {
+                      "id": "adventure",
+                      "label": "Приключения"
+                    },
+                    {
+                      "id": "fantasy",
+                      "label": "Фантастика"
+                    },
+                    {
+                      "id": "detective",
+                      "label": "Детектив"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Пока не могу решить, чего именно хочется посмотреть.",
+                "kind": "answer",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "acceptedContext": {
+                  "company": null,
+                  "childAge": null,
+                  "timeMode": null,
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": null
+              },
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "question": {
+                  "id": "desired_experience",
+                  "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+                  "why": "Можно начать с ощущения, а не выбирать жанр.",
+                  "options": [
+                    {
+                      "id": "lighthearted",
+                      "label": "Расслабиться и развеселиться"
+                    },
+                    {
+                      "id": "tension",
+                      "label": "Почувствовать напряжение"
+                    },
+                    {
+                      "id": "moving",
+                      "label": "Растрогаться"
+                    },
+                    {
+                      "id": "thoughtful",
+                      "label": "Получить пищу для размышлений"
+                    },
+                    {
+                      "id": "spectacle",
+                      "label": "Погрузиться в зрелищное приключение"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "kind": "answer",
+                "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "acceptedContext": {
+                  "company": {
+                    "value": "solo",
+                    "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                    "quote": "для одного взрослого"
+                  },
+                  "childAge": null,
+                  "timeMode": {
+                    "value": "session",
+                    "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                    "quote": "Сегодня есть 100 минут."
+                  },
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": {
+                  "minutes": 100,
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Сегодня есть 100 минут."
+                }
+              }
+            ],
+            "facts": [
+              {
+                "key": "lighthearted",
+                "text": "Хочется лёгкого настроения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "tone.lighthearted",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "comedy",
+                "text": "Хочется комедию.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "humor.funny",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "adventure",
+                "text": "Хочется лёгкого приключения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочется лёгкого приключения",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_violence",
+                "text": "Без жестокости.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости",
+                "feature": "content.violence",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_heavy_ending",
+                "text": "Без тяжёлого финала.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости и тяжёлого финала",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_rewatch",
+                "text": "Без пересмотра знакомых фильмов.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "без пересмотра знакомого",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              }
+            ],
+            "question": null,
+            "summary": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+            "uncertainties": [
+              "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+            ],
+            "retractions": [],
+            "sessionTime": {
+              "minutes": 100,
+              "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+              "quote": "Сегодня есть 100 минут."
+            },
+            "result": null,
+            "provisional": false,
+            "needsPlan": false,
+            "failedAction": null,
+            "familiar": {
+              "marked": [],
+              "keep": [],
+              "hidden": [],
+              "excluded": [],
+              "undo": null
+            },
+            "replacement": null,
+            "factRemovalUndo": null
+          },
+          "screen": {
+            "domain": "film",
+            "summary": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+            "facts": [
+              {
+                "key": "lighthearted",
+                "text": "Хочется лёгкого настроения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "tone.lighthearted",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "comedy",
+                "text": "Хочется комедию.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "humor.funny",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "adventure",
+                "text": "Хочется лёгкого приключения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочется лёгкого приключения",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_violence",
+                "text": "Без жестокости.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости",
+                "feature": "content.violence",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_heavy_ending",
+                "text": "Без тяжёлого финала.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости и тяжёлого финала",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_rewatch",
+                "text": "Без пересмотра знакомых фильмов.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "без пересмотра знакомого",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "context:company",
+                "text": "для одного взрослого",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "для одного взрослого",
+                "stance": "require",
+                "scope": "today",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "context:timeMode",
+                "text": "Сегодня есть 100 минут.",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Сегодня есть 100 минут.",
+                "stance": "require",
+                "scope": "today",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              }
+            ],
+            "uncertainties": [
+              "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+            ],
+            "context": {
+              "company": "solo",
+              "childAge": null,
+              "minutes": 100,
+              "timeMode": "session",
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "sessionTime": {
+              "minutes": 100,
+              "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+              "quote": "Сегодня есть 100 минут."
+            },
+            "canBack": true,
+            "canUndoFactRemoval": false,
+            "provisional": false,
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": "Какой фильм хочется сегодня?",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "superseded": false
+              },
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "question": "Какого впечатления тебе сейчас больше хочется от фильма?",
+                "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "superseded": false
+              }
+            ],
+            "type": "review"
+          }
+        },
+        {
+          "action": "confirm",
+          "state": {
+            "version": 1,
+            "domain": "film",
+            "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4",
+            "revision": 3,
+            "mode": "guided",
+            "phase": "result",
+            "context": {
+              "company": "solo",
+              "childAge": null,
+              "minutes": 100,
+              "timeMode": "session",
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "contextEvidence": {
+              "company": {
+                "value": "solo",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "для одного взрослого"
+              },
+              "childAge": null,
+              "timeMode": {
+                "value": "session",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Сегодня есть 100 минут."
+              },
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": {
+                  "id": "direction",
+                  "title": "Какой фильм хочется сегодня?",
+                  "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+                  "options": [
+                    {
+                      "id": "comedy",
+                      "label": "Комедия"
+                    },
+                    {
+                      "id": "drama",
+                      "label": "Драма"
+                    },
+                    {
+                      "id": "thriller",
+                      "label": "Триллер"
+                    },
+                    {
+                      "id": "adventure",
+                      "label": "Приключения"
+                    },
+                    {
+                      "id": "fantasy",
+                      "label": "Фантастика"
+                    },
+                    {
+                      "id": "detective",
+                      "label": "Детектив"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Пока не могу решить, чего именно хочется посмотреть.",
+                "kind": "answer",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "acceptedContext": {
+                  "company": null,
+                  "childAge": null,
+                  "timeMode": null,
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": null
+              },
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "question": {
+                  "id": "desired_experience",
+                  "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+                  "why": "Можно начать с ощущения, а не выбирать жанр.",
+                  "options": [
+                    {
+                      "id": "lighthearted",
+                      "label": "Расслабиться и развеселиться"
+                    },
+                    {
+                      "id": "tension",
+                      "label": "Почувствовать напряжение"
+                    },
+                    {
+                      "id": "moving",
+                      "label": "Растрогаться"
+                    },
+                    {
+                      "id": "thoughtful",
+                      "label": "Получить пищу для размышлений"
+                    },
+                    {
+                      "id": "spectacle",
+                      "label": "Погрузиться в зрелищное приключение"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "kind": "answer",
+                "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "acceptedContext": {
+                  "company": {
+                    "value": "solo",
+                    "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                    "quote": "для одного взрослого"
+                  },
+                  "childAge": null,
+                  "timeMode": {
+                    "value": "session",
+                    "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                    "quote": "Сегодня есть 100 минут."
+                  },
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": {
+                  "minutes": 100,
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Сегодня есть 100 минут."
+                }
+              }
+            ],
+            "facts": [
+              {
+                "key": "lighthearted",
+                "text": "Хочется лёгкого настроения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "tone.lighthearted",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "comedy",
+                "text": "Хочется комедию.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "humor.funny",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "adventure",
+                "text": "Хочется лёгкого приключения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочется лёгкого приключения",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_violence",
+                "text": "Без жестокости.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости",
+                "feature": "content.violence",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_heavy_ending",
+                "text": "Без тяжёлого финала.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости и тяжёлого финала",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_rewatch",
+                "text": "Без пересмотра знакомых фильмов.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "без пересмотра знакомого",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              }
+            ],
+            "question": null,
+            "summary": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+            "uncertainties": [
+              "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+            ],
+            "retractions": [],
+            "sessionTime": {
+              "minutes": 100,
+              "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+              "quote": "Сегодня есть 100 минут."
+            },
+            "result": {
+              "top": {
+                "id": "tt0096928",
+                "domain": "film",
+                "name": "Bill & Ted's Excellent Adventure",
+                "ru": "Невероятные приключения Билла и Теда",
+                "year": 1989,
+                "image": null,
+                "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Bill_%26_Ted.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                "kind": "film",
+                "series": [],
+                "genres": [
+                  "Adventure",
+                  "Comedy",
+                  "Music"
+                ],
+                "runtime": 90,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "IMDb 6.9",
+                "link": "https://www.imdb.com/title/tt0096928/",
+                "price": null,
+                "label": "try",
+                "labelText": "Вариант по твоему запросу",
+                "score": 2.686,
+                "parts": {
+                  "fit": 0,
+                  "penalty": 0,
+                  "mood": 2.561,
+                  "prior": 0.125
+                },
+                "mainAspect": null,
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                      "factIds": [
+                        "mood:humor.funny"
+                      ]
+                    },
+                    {
+                      "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                      "factIds": [
+                        "mood:tone.lighthearted"
+                      ]
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Зрители жалуются: слабый сюжет, дыры",
+                      "factIds": [
+                        "risk:flaw:story.weak"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "IMDb 6.9 из 10, 151 246 оценок",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "90 мин",
+                      "factIds": [
+                        "fact:runtime"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "mood:humor.funny",
+                    "type": "mood",
+                    "f": "humor.funny",
+                    "why": [
+                      "сегодня хочется: «Хочу лёгкую комедию»"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "genome:comedy",
+                        "kind": "genome",
+                        "q": "comedy",
+                        "rel": 0.945
+                      }
+                    ]
+                  },
+                  {
+                    "id": "mood:tone.lighthearted",
+                    "type": "mood",
+                    "f": "tone.lighthearted",
+                    "why": [
+                      "сегодня хочется: «Хочу лёгкую комедию»"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "genome:entertaining",
+                        "kind": "genome",
+                        "q": "entertaining",
+                        "rel": 0.684
+                      }
+                    ]
+                  },
+                  {
+                    "id": "risk:flaw:story.weak",
+                    "type": "risk_flaw",
+                    "f": "story.weak",
+                    "evidence": [
+                      {
+                        "id": "genome:dumb",
+                        "kind": "genome",
+                        "q": "dumb",
+                        "rel": 0.745
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.69,
+                    "total": 151246,
+                    "desc": "IMDb 6.9"
+                  },
+                  {
+                    "id": "fact:runtime",
+                    "type": "fact",
+                    "runtime": 90
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "yes",
+                    "text": "Фильм идёт 90 мин; сегодня есть 100 мин."
+                  },
+                  {
+                    "key": "excluded-features",
+                    "status": "unknown",
+                    "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                  }
+                ],
+                "ai": {
+                  "reason": "Путешествие Билла и Теда по эпохам — беззлобное приключение с нелепыми ситуациями, как раз под твоё лёгкое настроение.",
+                  "caveat": "Юмор нарочито дурашливый, герои — школьники.",
+                  "likelySeen": false,
+                  "own": false
+                }
+              },
+              "alternatives": [
+                {
+                  "id": "tt0274166",
+                  "domain": "film",
+                  "name": "Johnny English",
+                  "ru": "Агент Джонни Инглиш",
+                  "year": 2003,
+                  "image": null,
+                  "poster": "https://upload.wikimedia.org/wikipedia/en/9/92/Johnny_English_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                  "kind": "film",
+                  "series": [],
+                  "genres": [
+                    "Action",
+                    "Adventure",
+                    "Comedy"
+                  ],
+                  "runtime": 87,
+                  "seasons": null,
+                  "episodes": null,
+                  "status": null,
+                  "rating": "IMDb 6.3",
+                  "link": "https://www.imdb.com/title/tt0274166/",
+                  "price": null,
+                  "label": "try",
+                  "labelText": "Вариант по твоему запросу",
+                  "score": 2.786,
+                  "parts": {
+                    "fit": 0,
+                    "penalty": 0,
+                    "mood": 2.712,
+                    "prior": 0.074
+                  },
+                  "mainAspect": null,
+                  "explanation": {
+                    "reasons": [
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                        "factIds": [
+                          "mood:humor.funny"
+                        ]
+                      },
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                        "factIds": [
+                          "mood:tone.lighthearted"
+                        ]
+                      }
+                    ],
+                    "risks": [
+                      {
+                        "text": "Зрители жалуются: предсказуемо",
+                        "factIds": [
+                          "risk:flaw:story.predictable"
+                        ]
+                      },
+                      {
+                        "text": "Оценка IMDb 6.3: ниже, чем у большинства в каталоге",
+                        "factIds": [
+                          "risk:quality"
+                        ]
+                      }
+                    ],
+                    "info": [
+                      {
+                        "text": "IMDb 6.3 из 10, 187 569 оценок",
+                        "factIds": [
+                          "fact:reviews"
+                        ]
+                      },
+                      {
+                        "text": "87 мин",
+                        "factIds": [
+                          "fact:runtime"
+                        ]
+                      }
+                    ]
+                  },
+                  "facts": [
+                    {
+                      "id": "mood:humor.funny",
+                      "type": "mood",
+                      "f": "humor.funny",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:british comedy",
+                          "kind": "genome",
+                          "q": "british comedy",
+                          "rel": 0.71
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mood:tone.lighthearted",
+                      "type": "mood",
+                      "f": "tone.lighthearted",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:fun movie",
+                          "kind": "genome",
+                          "q": "fun movie",
+                          "rel": 0.383
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:flaw:story.predictable",
+                      "type": "risk_flaw",
+                      "f": "story.predictable",
+                      "evidence": [
+                        {
+                          "id": "genome:predictable",
+                          "kind": "genome",
+                          "q": "predictable",
+                          "rel": 0.637
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:quality",
+                      "type": "risk_quality",
+                      "ratio": 0.63,
+                      "desc": "IMDb 6.3"
+                    },
+                    {
+                      "id": "fact:reviews",
+                      "type": "fact",
+                      "ratio": 0.63,
+                      "total": 187569,
+                      "desc": "IMDb 6.3"
+                    },
+                    {
+                      "id": "fact:runtime",
+                      "type": "fact",
+                      "runtime": 87
+                    }
+                  ],
+                  "feasibility": [
+                    {
+                      "key": "minutes",
+                      "status": "yes",
+                      "text": "Фильм идёт 87 мин; сегодня есть 100 мин."
+                    },
+                    {
+                      "key": "excluded-features",
+                      "status": "unknown",
+                      "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                    }
+                  ],
+                  "ai": {
+                    "reason": "«Агент Джонни Инглиш» даёт шпионское приключение с погонями и комедией промахов вместо сурового боевика.",
+                    "caveat": "Есть комические потасовки и оружие; юмор строится на неловкости героя.",
+                    "likelySeen": false,
+                    "own": false
+                  }
+                },
+                {
+                  "id": "tt0356150",
+                  "domain": "film",
+                  "name": "EuroTrip",
+                  "ru": "Евротур",
+                  "year": 2004,
+                  "image": null,
+                  "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Eurotrip_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                  "kind": "film",
+                  "series": [],
+                  "genres": [
+                    "Comedy"
+                  ],
+                  "runtime": 92,
+                  "seasons": null,
+                  "episodes": null,
+                  "status": null,
+                  "rating": "IMDb 6.6",
+                  "link": "https://www.imdb.com/title/tt0356150/",
+                  "price": null,
+                  "label": "try",
+                  "labelText": "Вариант по твоему запросу",
+                  "score": 2.817,
+                  "parts": {
+                    "fit": 0,
+                    "penalty": 0,
+                    "mood": 2.712,
+                    "prior": 0.105
+                  },
+                  "mainAspect": null,
+                  "explanation": {
+                    "reasons": [
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                        "factIds": [
+                          "mood:humor.funny"
+                        ]
+                      },
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                        "factIds": [
+                          "mood:tone.lighthearted"
+                        ]
+                      }
+                    ],
+                    "risks": [
+                      {
+                        "text": "Зрители жалуются: слабый сюжет, дыры",
+                        "factIds": [
+                          "risk:flaw:story.weak"
+                        ]
+                      },
+                      {
+                        "text": "Зрители жалуются: предсказуемо",
+                        "factIds": [
+                          "risk:flaw:story.predictable"
+                        ]
+                      },
+                      {
+                        "text": "Оценка IMDb 6.6: ниже, чем у большинства в каталоге",
+                        "factIds": [
+                          "risk:quality"
+                        ]
+                      }
+                    ],
+                    "info": [
+                      {
+                        "text": "IMDb 6.6 из 10, 248 520 оценок",
+                        "factIds": [
+                          "fact:reviews"
+                        ]
+                      },
+                      {
+                        "text": "92 мин",
+                        "factIds": [
+                          "fact:runtime"
+                        ]
+                      }
+                    ]
+                  },
+                  "facts": [
+                    {
+                      "id": "mood:humor.funny",
+                      "type": "mood",
+                      "f": "humor.funny",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:comedy",
+                          "kind": "genome",
+                          "q": "comedy",
+                          "rel": 0.98
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mood:tone.lighthearted",
+                      "type": "mood",
+                      "f": "tone.lighthearted",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:fun",
+                          "kind": "genome",
+                          "q": "fun",
+                          "rel": 0.422
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:flaw:story.weak",
+                      "type": "risk_flaw",
+                      "f": "story.weak",
+                      "evidence": [
+                        {
+                          "id": "genome:dumb",
+                          "kind": "genome",
+                          "q": "dumb",
+                          "rel": 0.809
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:flaw:story.predictable",
+                      "type": "risk_flaw",
+                      "f": "story.predictable",
+                      "evidence": [
+                        {
+                          "id": "genome:predictable",
+                          "kind": "genome",
+                          "q": "predictable",
+                          "rel": 0.543
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:quality",
+                      "type": "risk_quality",
+                      "ratio": 0.66,
+                      "desc": "IMDb 6.6"
+                    },
+                    {
+                      "id": "fact:reviews",
+                      "type": "fact",
+                      "ratio": 0.66,
+                      "total": 248520,
+                      "desc": "IMDb 6.6"
+                    },
+                    {
+                      "id": "fact:runtime",
+                      "type": "fact",
+                      "runtime": 92
+                    }
+                  ],
+                  "feasibility": [
+                    {
+                      "key": "minutes",
+                      "status": "yes",
+                      "text": "Фильм идёт 92 мин; сегодня есть 100 мин."
+                    },
+                    {
+                      "key": "excluded-features",
+                      "status": "unknown",
+                      "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                    }
+                  ],
+                  "ai": {
+                    "reason": "«Евротур» — лёгкое путешествие по Европе, где каждая остановка оборачивается новой нелепостью: приключений здесь хватает.",
+                    "caveat": "Много сексуальных шуток и наготы; юмор местами грубый.",
+                    "likelySeen": false,
+                    "own": false
+                  }
+                },
+                {
+                  "id": "tt0061728",
+                  "domain": "film",
+                  "name": "What's Cooking in Paris",
+                  "ru": "Ресторан господина Септима",
+                  "year": 1966,
+                  "image": null,
+                  "poster": null,
+                  "kind": "film",
+                  "series": [],
+                  "genres": [
+                    "Action",
+                    "Comedy"
+                  ],
+                  "runtime": 85,
+                  "seasons": null,
+                  "episodes": null,
+                  "status": null,
+                  "rating": "IMDb 6.7",
+                  "link": "https://www.imdb.com/title/tt0061728/",
+                  "price": null,
+                  "label": "try",
+                  "labelText": "Вариант по твоему запросу",
+                  "score": 2.633,
+                  "parts": {
+                    "fit": 0,
+                    "penalty": 0,
+                    "mood": 2.57,
+                    "prior": 0.062
+                  },
+                  "mainAspect": null,
+                  "explanation": {
+                    "reasons": [
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                        "factIds": [
+                          "mood:humor.funny"
+                        ]
+                      },
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                        "factIds": [
+                          "mood:tone.lighthearted"
+                        ]
+                      }
+                    ],
+                    "risks": [
+                      {
+                        "text": "Оценка IMDb 6.7: ниже, чем у большинства в каталоге",
+                        "factIds": [
+                          "risk:quality"
+                        ]
+                      }
+                    ],
+                    "info": [
+                      {
+                        "text": "IMDb 6.7 из 10, 7 574 оценок",
+                        "factIds": [
+                          "fact:reviews"
+                        ]
+                      },
+                      {
+                        "text": "85 мин",
+                        "factIds": [
+                          "fact:runtime"
+                        ]
+                      }
+                    ]
+                  },
+                  "facts": [
+                    {
+                      "id": "mood:humor.funny",
+                      "type": "mood",
+                      "f": "humor.funny",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:comedy",
+                          "kind": "genome",
+                          "q": "comedy",
+                          "rel": 0.851
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mood:tone.lighthearted",
+                      "type": "mood",
+                      "f": "tone.lighthearted",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:entertaining",
+                          "kind": "genome",
+                          "q": "entertaining",
+                          "rel": 0.547
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:quality",
+                      "type": "risk_quality",
+                      "ratio": 0.67,
+                      "desc": "IMDb 6.7"
+                    },
+                    {
+                      "id": "fact:reviews",
+                      "type": "fact",
+                      "ratio": 0.67,
+                      "total": 7574,
+                      "desc": "IMDb 6.7"
+                    },
+                    {
+                      "id": "fact:runtime",
+                      "type": "fact",
+                      "runtime": 85
+                    }
+                  ],
+                  "feasibility": [
+                    {
+                      "key": "minutes",
+                      "status": "yes",
+                      "text": "Фильм идёт 85 мин; сегодня есть 100 мин."
+                    },
+                    {
+                      "key": "excluded-features",
+                      "status": "unknown",
+                      "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                    }
+                  ],
+                  "ai": {
+                    "reason": "«Ресторан господина Септима» превращает жизнь ресторатора в комическую интригу с погонями — под твоё желание лёгкого приключения.",
+                    "caveat": "Французская комедия 1960-х: много гримас, суеты и театральной игры.",
+                    "likelySeen": false,
+                    "own": false
+                  }
+                }
+              ],
+              "belief": 0.051,
+              "sieves": [
+                {
+                  "id": 1,
+                  "name": "Можно ли",
+                  "removed": 0
+                },
+                {
+                  "id": 2,
+                  "name": "Было ли",
+                  "removed": 0
+                },
+                {
+                  "id": 3,
+                  "name": "Сделано ли нормально",
+                  "removed": 10312
+                },
+                {
+                  "id": 4,
+                  "name": "Моё ли (жёсткие стопы)",
+                  "removed": 0
+                },
+                {
+                  "id": 5,
+                  "name": "Подходит ли сегодня (обязательное)",
+                  "removed": 15335
+                }
+              ],
+              "considered": 6525,
+              "taste": {
+                "confirmed": [],
+                "inferred": [],
+                "dislikes": [],
+                "hardNo": [],
+                "consumed": 0
+              },
+              "today": null,
+              "ai": {
+                "understood": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+                "model": "gpt-6.1-sol",
+                "shortlist": 60
+              }
+            },
+            "provisional": false,
+            "needsPlan": false,
+            "failedAction": null,
+            "familiar": {
+              "marked": [],
+              "keep": [],
+              "hidden": [],
+              "excluded": [],
+              "undo": null
+            },
+            "replacement": null,
+            "factRemovalUndo": null
+          },
+          "screen": {
+            "domain": "film",
+            "summary": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+            "facts": [
+              {
+                "key": "lighthearted",
+                "text": "Хочется лёгкого настроения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "tone.lighthearted",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "comedy",
+                "text": "Хочется комедию.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочу лёгкую комедию",
+                "feature": "humor.funny",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "adventure",
+                "text": "Хочется лёгкого приключения.",
+                "stance": "want",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Хочется лёгкого приключения",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_violence",
+                "text": "Без жестокости.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости",
+                "feature": "content.violence",
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_heavy_ending",
+                "text": "Без тяжёлого финала.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Без жестокости и тяжёлого финала",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "no_rewatch",
+                "text": "Без пересмотра знакомых фильмов.",
+                "stance": "exclude",
+                "scope": "today",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "без пересмотра знакомого",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "context:company",
+                "text": "для одного взрослого",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "для одного взрослого",
+                "stance": "require",
+                "scope": "today",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              },
+              {
+                "key": "context:timeMode",
+                "text": "Сегодня есть 100 минут.",
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Сегодня есть 100 минут.",
+                "stance": "require",
+                "scope": "today",
+                "feature": null,
+                "titleId": null,
+                "exposure": null,
+                "titleIntent": null
+              }
+            ],
+            "uncertainties": [
+              "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+            ],
+            "context": {
+              "company": "solo",
+              "childAge": null,
+              "minutes": 100,
+              "timeMode": "session",
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "sessionTime": {
+              "minutes": 100,
+              "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+              "quote": "Сегодня есть 100 минут."
+            },
+            "canBack": true,
+            "canUndoFactRemoval": false,
+            "provisional": false,
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": "Какой фильм хочется сегодня?",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "superseded": false
+              },
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "question": "Какого впечатления тебе сейчас больше хочется от фильма?",
+                "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "superseded": false
+              }
+            ],
+            "type": "result",
+            "result": {
+              "top": {
+                "id": "tt0096928",
+                "domain": "film",
+                "name": "Bill & Ted's Excellent Adventure",
+                "ru": "Невероятные приключения Билла и Теда",
+                "year": 1989,
+                "image": null,
+                "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Bill_%26_Ted.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                "kind": "film",
+                "series": [],
+                "genres": [
+                  "Adventure",
+                  "Comedy",
+                  "Music"
+                ],
+                "runtime": 90,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "IMDb 6.9",
+                "link": "https://www.imdb.com/title/tt0096928/",
+                "price": null,
+                "label": "try",
+                "labelText": "Вариант по твоему запросу",
+                "score": 2.686,
+                "parts": {
+                  "fit": 0,
+                  "penalty": 0,
+                  "mood": 2.561,
+                  "prior": 0.125
+                },
+                "mainAspect": null,
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                      "factIds": [
+                        "mood:humor.funny"
+                      ]
+                    },
+                    {
+                      "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                      "factIds": [
+                        "mood:tone.lighthearted"
+                      ]
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Зрители жалуются: слабый сюжет, дыры",
+                      "factIds": [
+                        "risk:flaw:story.weak"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "IMDb 6.9 из 10, 151 246 оценок",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "90 мин",
+                      "factIds": [
+                        "fact:runtime"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "mood:humor.funny",
+                    "type": "mood",
+                    "f": "humor.funny",
+                    "why": [
+                      "сегодня хочется: «Хочу лёгкую комедию»"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "genome:comedy",
+                        "kind": "genome",
+                        "q": "comedy",
+                        "rel": 0.945
+                      }
+                    ]
+                  },
+                  {
+                    "id": "mood:tone.lighthearted",
+                    "type": "mood",
+                    "f": "tone.lighthearted",
+                    "why": [
+                      "сегодня хочется: «Хочу лёгкую комедию»"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "genome:entertaining",
+                        "kind": "genome",
+                        "q": "entertaining",
+                        "rel": 0.684
+                      }
+                    ]
+                  },
+                  {
+                    "id": "risk:flaw:story.weak",
+                    "type": "risk_flaw",
+                    "f": "story.weak",
+                    "evidence": [
+                      {
+                        "id": "genome:dumb",
+                        "kind": "genome",
+                        "q": "dumb",
+                        "rel": 0.745
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.69,
+                    "total": 151246,
+                    "desc": "IMDb 6.9"
+                  },
+                  {
+                    "id": "fact:runtime",
+                    "type": "fact",
+                    "runtime": 90
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "yes",
+                    "text": "Фильм идёт 90 мин; сегодня есть 100 мин."
+                  },
+                  {
+                    "key": "excluded-features",
+                    "status": "unknown",
+                    "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                  }
+                ],
+                "ai": {
+                  "reason": "Путешествие Билла и Теда по эпохам — беззлобное приключение с нелепыми ситуациями, как раз под твоё лёгкое настроение.",
+                  "caveat": "Юмор нарочито дурашливый, герои — школьники.",
+                  "likelySeen": false,
+                  "own": false
+                }
+              },
+              "alternatives": [
+                {
+                  "id": "tt0274166",
+                  "domain": "film",
+                  "name": "Johnny English",
+                  "ru": "Агент Джонни Инглиш",
+                  "year": 2003,
+                  "image": null,
+                  "poster": "https://upload.wikimedia.org/wikipedia/en/9/92/Johnny_English_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                  "kind": "film",
+                  "series": [],
+                  "genres": [
+                    "Action",
+                    "Adventure",
+                    "Comedy"
+                  ],
+                  "runtime": 87,
+                  "seasons": null,
+                  "episodes": null,
+                  "status": null,
+                  "rating": "IMDb 6.3",
+                  "link": "https://www.imdb.com/title/tt0274166/",
+                  "price": null,
+                  "label": "try",
+                  "labelText": "Вариант по твоему запросу",
+                  "score": 2.786,
+                  "parts": {
+                    "fit": 0,
+                    "penalty": 0,
+                    "mood": 2.712,
+                    "prior": 0.074
+                  },
+                  "mainAspect": null,
+                  "explanation": {
+                    "reasons": [
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                        "factIds": [
+                          "mood:humor.funny"
+                        ]
+                      },
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                        "factIds": [
+                          "mood:tone.lighthearted"
+                        ]
+                      }
+                    ],
+                    "risks": [
+                      {
+                        "text": "Зрители жалуются: предсказуемо",
+                        "factIds": [
+                          "risk:flaw:story.predictable"
+                        ]
+                      },
+                      {
+                        "text": "Оценка IMDb 6.3: ниже, чем у большинства в каталоге",
+                        "factIds": [
+                          "risk:quality"
+                        ]
+                      }
+                    ],
+                    "info": [
+                      {
+                        "text": "IMDb 6.3 из 10, 187 569 оценок",
+                        "factIds": [
+                          "fact:reviews"
+                        ]
+                      },
+                      {
+                        "text": "87 мин",
+                        "factIds": [
+                          "fact:runtime"
+                        ]
+                      }
+                    ]
+                  },
+                  "facts": [
+                    {
+                      "id": "mood:humor.funny",
+                      "type": "mood",
+                      "f": "humor.funny",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:british comedy",
+                          "kind": "genome",
+                          "q": "british comedy",
+                          "rel": 0.71
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mood:tone.lighthearted",
+                      "type": "mood",
+                      "f": "tone.lighthearted",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:fun movie",
+                          "kind": "genome",
+                          "q": "fun movie",
+                          "rel": 0.383
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:flaw:story.predictable",
+                      "type": "risk_flaw",
+                      "f": "story.predictable",
+                      "evidence": [
+                        {
+                          "id": "genome:predictable",
+                          "kind": "genome",
+                          "q": "predictable",
+                          "rel": 0.637
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:quality",
+                      "type": "risk_quality",
+                      "ratio": 0.63,
+                      "desc": "IMDb 6.3"
+                    },
+                    {
+                      "id": "fact:reviews",
+                      "type": "fact",
+                      "ratio": 0.63,
+                      "total": 187569,
+                      "desc": "IMDb 6.3"
+                    },
+                    {
+                      "id": "fact:runtime",
+                      "type": "fact",
+                      "runtime": 87
+                    }
+                  ],
+                  "feasibility": [
+                    {
+                      "key": "minutes",
+                      "status": "yes",
+                      "text": "Фильм идёт 87 мин; сегодня есть 100 мин."
+                    },
+                    {
+                      "key": "excluded-features",
+                      "status": "unknown",
+                      "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                    }
+                  ],
+                  "ai": {
+                    "reason": "«Агент Джонни Инглиш» даёт шпионское приключение с погонями и комедией промахов вместо сурового боевика.",
+                    "caveat": "Есть комические потасовки и оружие; юмор строится на неловкости героя.",
+                    "likelySeen": false,
+                    "own": false
+                  }
+                },
+                {
+                  "id": "tt0356150",
+                  "domain": "film",
+                  "name": "EuroTrip",
+                  "ru": "Евротур",
+                  "year": 2004,
+                  "image": null,
+                  "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Eurotrip_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                  "kind": "film",
+                  "series": [],
+                  "genres": [
+                    "Comedy"
+                  ],
+                  "runtime": 92,
+                  "seasons": null,
+                  "episodes": null,
+                  "status": null,
+                  "rating": "IMDb 6.6",
+                  "link": "https://www.imdb.com/title/tt0356150/",
+                  "price": null,
+                  "label": "try",
+                  "labelText": "Вариант по твоему запросу",
+                  "score": 2.817,
+                  "parts": {
+                    "fit": 0,
+                    "penalty": 0,
+                    "mood": 2.712,
+                    "prior": 0.105
+                  },
+                  "mainAspect": null,
+                  "explanation": {
+                    "reasons": [
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                        "factIds": [
+                          "mood:humor.funny"
+                        ]
+                      },
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                        "factIds": [
+                          "mood:tone.lighthearted"
+                        ]
+                      }
+                    ],
+                    "risks": [
+                      {
+                        "text": "Зрители жалуются: слабый сюжет, дыры",
+                        "factIds": [
+                          "risk:flaw:story.weak"
+                        ]
+                      },
+                      {
+                        "text": "Зрители жалуются: предсказуемо",
+                        "factIds": [
+                          "risk:flaw:story.predictable"
+                        ]
+                      },
+                      {
+                        "text": "Оценка IMDb 6.6: ниже, чем у большинства в каталоге",
+                        "factIds": [
+                          "risk:quality"
+                        ]
+                      }
+                    ],
+                    "info": [
+                      {
+                        "text": "IMDb 6.6 из 10, 248 520 оценок",
+                        "factIds": [
+                          "fact:reviews"
+                        ]
+                      },
+                      {
+                        "text": "92 мин",
+                        "factIds": [
+                          "fact:runtime"
+                        ]
+                      }
+                    ]
+                  },
+                  "facts": [
+                    {
+                      "id": "mood:humor.funny",
+                      "type": "mood",
+                      "f": "humor.funny",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:comedy",
+                          "kind": "genome",
+                          "q": "comedy",
+                          "rel": 0.98
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mood:tone.lighthearted",
+                      "type": "mood",
+                      "f": "tone.lighthearted",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:fun",
+                          "kind": "genome",
+                          "q": "fun",
+                          "rel": 0.422
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:flaw:story.weak",
+                      "type": "risk_flaw",
+                      "f": "story.weak",
+                      "evidence": [
+                        {
+                          "id": "genome:dumb",
+                          "kind": "genome",
+                          "q": "dumb",
+                          "rel": 0.809
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:flaw:story.predictable",
+                      "type": "risk_flaw",
+                      "f": "story.predictable",
+                      "evidence": [
+                        {
+                          "id": "genome:predictable",
+                          "kind": "genome",
+                          "q": "predictable",
+                          "rel": 0.543
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:quality",
+                      "type": "risk_quality",
+                      "ratio": 0.66,
+                      "desc": "IMDb 6.6"
+                    },
+                    {
+                      "id": "fact:reviews",
+                      "type": "fact",
+                      "ratio": 0.66,
+                      "total": 248520,
+                      "desc": "IMDb 6.6"
+                    },
+                    {
+                      "id": "fact:runtime",
+                      "type": "fact",
+                      "runtime": 92
+                    }
+                  ],
+                  "feasibility": [
+                    {
+                      "key": "minutes",
+                      "status": "yes",
+                      "text": "Фильм идёт 92 мин; сегодня есть 100 мин."
+                    },
+                    {
+                      "key": "excluded-features",
+                      "status": "unknown",
+                      "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                    }
+                  ],
+                  "ai": {
+                    "reason": "«Евротур» — лёгкое путешествие по Европе, где каждая остановка оборачивается новой нелепостью: приключений здесь хватает.",
+                    "caveat": "Много сексуальных шуток и наготы; юмор местами грубый.",
+                    "likelySeen": false,
+                    "own": false
+                  }
+                },
+                {
+                  "id": "tt0061728",
+                  "domain": "film",
+                  "name": "What's Cooking in Paris",
+                  "ru": "Ресторан господина Септима",
+                  "year": 1966,
+                  "image": null,
+                  "poster": null,
+                  "kind": "film",
+                  "series": [],
+                  "genres": [
+                    "Action",
+                    "Comedy"
+                  ],
+                  "runtime": 85,
+                  "seasons": null,
+                  "episodes": null,
+                  "status": null,
+                  "rating": "IMDb 6.7",
+                  "link": "https://www.imdb.com/title/tt0061728/",
+                  "price": null,
+                  "label": "try",
+                  "labelText": "Вариант по твоему запросу",
+                  "score": 2.633,
+                  "parts": {
+                    "fit": 0,
+                    "penalty": 0,
+                    "mood": 2.57,
+                    "prior": 0.062
+                  },
+                  "mainAspect": null,
+                  "explanation": {
+                    "reasons": [
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «смешно»",
+                        "factIds": [
+                          "mood:humor.funny"
+                        ]
+                      },
+                      {
+                        "text": "Под настроение «сегодня хочется: «Хочу лёгкую комедию»»: «лёгкое, весёлое»",
+                        "factIds": [
+                          "mood:tone.lighthearted"
+                        ]
+                      }
+                    ],
+                    "risks": [
+                      {
+                        "text": "Оценка IMDb 6.7: ниже, чем у большинства в каталоге",
+                        "factIds": [
+                          "risk:quality"
+                        ]
+                      }
+                    ],
+                    "info": [
+                      {
+                        "text": "IMDb 6.7 из 10, 7 574 оценок",
+                        "factIds": [
+                          "fact:reviews"
+                        ]
+                      },
+                      {
+                        "text": "85 мин",
+                        "factIds": [
+                          "fact:runtime"
+                        ]
+                      }
+                    ]
+                  },
+                  "facts": [
+                    {
+                      "id": "mood:humor.funny",
+                      "type": "mood",
+                      "f": "humor.funny",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:comedy",
+                          "kind": "genome",
+                          "q": "comedy",
+                          "rel": 0.851
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mood:tone.lighthearted",
+                      "type": "mood",
+                      "f": "tone.lighthearted",
+                      "why": [
+                        "сегодня хочется: «Хочу лёгкую комедию»"
+                      ],
+                      "evidence": [
+                        {
+                          "id": "genome:entertaining",
+                          "kind": "genome",
+                          "q": "entertaining",
+                          "rel": 0.547
+                        }
+                      ]
+                    },
+                    {
+                      "id": "risk:quality",
+                      "type": "risk_quality",
+                      "ratio": 0.67,
+                      "desc": "IMDb 6.7"
+                    },
+                    {
+                      "id": "fact:reviews",
+                      "type": "fact",
+                      "ratio": 0.67,
+                      "total": 7574,
+                      "desc": "IMDb 6.7"
+                    },
+                    {
+                      "id": "fact:runtime",
+                      "type": "fact",
+                      "runtime": 85
+                    }
+                  ],
+                  "feasibility": [
+                    {
+                      "key": "minutes",
+                      "status": "yes",
+                      "text": "Фильм идёт 85 мин; сегодня есть 100 мин."
+                    },
+                    {
+                      "key": "excluded-features",
+                      "status": "unknown",
+                      "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                    }
+                  ],
+                  "ai": {
+                    "reason": "«Ресторан господина Септима» превращает жизнь ресторатора в комическую интригу с погонями — под твоё желание лёгкого приключения.",
+                    "caveat": "Французская комедия 1960-х: много гримас, суеты и театральной игры.",
+                    "likelySeen": false,
+                    "own": false
+                  }
+                }
+              ],
+              "belief": 0.051,
+              "sieves": [
+                {
+                  "id": 1,
+                  "name": "Можно ли",
+                  "removed": 0
+                },
+                {
+                  "id": 2,
+                  "name": "Было ли",
+                  "removed": 0
+                },
+                {
+                  "id": 3,
+                  "name": "Сделано ли нормально",
+                  "removed": 10312
+                },
+                {
+                  "id": 4,
+                  "name": "Моё ли (жёсткие стопы)",
+                  "removed": 0
+                },
+                {
+                  "id": 5,
+                  "name": "Подходит ли сегодня (обязательное)",
+                  "removed": 15335
+                }
+              ],
+              "considered": 6525,
+              "taste": {
+                "confirmed": [],
+                "inferred": [],
+                "dislikes": [],
+                "hardNo": [],
+                "consumed": 0
+              },
+              "today": null,
+              "ai": {
+                "understood": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+                "model": "gpt-6.1-sol",
+                "shortlist": 60
+              }
+            }
+          },
+          "feedbackState": {
+            "step": "result",
+            "domain": "film",
+            "platform": "windows",
+            "situation": {
+              "time": null,
+              "company": "solo",
+              "childAge": null,
+              "partySize": null,
+              "note": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+              "popularity": null,
+              "era": null,
+              "onlyEnded": false,
+              "episodeLength": null,
+              "leans": []
+            },
+            "stops": [],
+            "asked": [],
+            "shown": [],
+            "liked": [],
+            "disliked": [],
+            "whyIndex": 0,
+            "answers": {},
+            "corrections": [],
+            "preferences": [],
+            "session": {
+              "notNow": [],
+              "goalDriven": true,
+              "excludeSeries": false,
+              "goalWants": [
+                {
+                  "f": "tone.lighthearted",
+                  "evidence": "Хочу лёгкую комедию"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "Хочу лёгкую комедию"
+                }
+              ],
+              "goalAvoids": [
+                {
+                  "f": "content.violence",
+                  "evidence": "Без жестокости"
+                }
+              ],
+              "goalRequires": [],
+              "goalExcludes": [
+                {
+                  "f": "content.violence",
+                  "evidence": "Без жестокости"
+                }
+              ],
+              "genreWants": [],
+              "minutes": 100,
+              "maxRuntime": 100
+            },
+            "seed": 691404,
+            "conversation": {
+              "domain": "film",
+              "revision": 3,
+              "summary": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+              "facts": [
+                {
+                  "key": "lighthearted",
+                  "text": "Хочется лёгкого настроения.",
+                  "stance": "want",
+                  "scope": "today",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Хочу лёгкую комедию",
+                  "feature": "tone.lighthearted",
+                  "titleId": null,
+                  "exposure": null,
+                  "titleIntent": null
+                },
+                {
+                  "key": "comedy",
+                  "text": "Хочется комедию.",
+                  "stance": "want",
+                  "scope": "today",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Хочу лёгкую комедию",
+                  "feature": "humor.funny",
+                  "titleId": null,
+                  "exposure": null,
+                  "titleIntent": null
+                },
+                {
+                  "key": "adventure",
+                  "text": "Хочется лёгкого приключения.",
+                  "stance": "want",
+                  "scope": "today",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Хочется лёгкого приключения",
+                  "feature": null,
+                  "titleId": null,
+                  "exposure": null,
+                  "titleIntent": null
+                },
+                {
+                  "key": "no_violence",
+                  "text": "Без жестокости.",
+                  "stance": "exclude",
+                  "scope": "today",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Без жестокости",
+                  "feature": "content.violence",
+                  "titleId": null,
+                  "exposure": null,
+                  "titleIntent": null
+                },
+                {
+                  "key": "no_heavy_ending",
+                  "text": "Без тяжёлого финала.",
+                  "stance": "exclude",
+                  "scope": "today",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Без жестокости и тяжёлого финала",
+                  "feature": null,
+                  "titleId": null,
+                  "exposure": null,
+                  "titleIntent": null
+                },
+                {
+                  "key": "no_rewatch",
+                  "text": "Без пересмотра знакомых фильмов.",
+                  "stance": "exclude",
+                  "scope": "today",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "без пересмотра знакомого",
+                  "feature": null,
+                  "titleId": null,
+                  "exposure": null,
+                  "titleIntent": null
+                }
+              ],
+              "context": {
+                "company": "solo",
+                "childAge": null,
+                "minutes": 100,
+                "timeMode": "session",
+                "commitment": null,
+                "onlyEnded": null,
+                "format": null
+              },
+              "contextEvidence": {
+                "company": {
+                  "value": "solo",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "для одного взрослого"
+                },
+                "childAge": null,
+                "timeMode": {
+                  "value": "session",
+                  "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "quote": "Сегодня есть 100 минут."
+                },
+                "commitment": null,
+                "onlyEnded": null,
+                "format": null
+              },
+              "sessionTime": {
+                "minutes": 100,
+                "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "quote": "Сегодня есть 100 минут."
+              },
+              "uncertainties": [
+                "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+              ],
+              "retractions": [],
+              "familiarity": {
+                "returnToIds": [],
+                "hiddenIds": [],
+                "excludedIds": []
+              },
+              "turns": [
+                {
+                  "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                  "question": "Какой фильм хочется сегодня?",
+                  "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                  "kind": "answer",
+                  "superseded": false
+                },
+                {
+                  "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                  "question": "Какого впечатления тебе сейчас больше хочется от фильма?",
+                  "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                  "kind": "answer",
+                  "superseded": false
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "firstQuestion": {
+        "id": "desired_experience",
+        "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+        "why": "Можно начать с ощущения, а не выбирать жанр.",
+        "options": [
+          {
+            "id": "lighthearted",
+            "label": "Расслабиться и развеселиться"
+          },
+          {
+            "id": "tension",
+            "label": "Почувствовать напряжение"
+          },
+          {
+            "id": "moving",
+            "label": "Растрогаться"
+          },
+          {
+            "id": "thoughtful",
+            "label": "Получить пищу для размышлений"
+          },
+          {
+            "id": "spectacle",
+            "label": "Погрузиться в зрелищное приключение"
+          }
+        ],
+        "multiple": true,
+        "controls": [
+          "unknown",
+          "indifferent",
+          "none"
+        ]
+      },
+      "reusedReceipt": "adaptive-media-20261102:b4afaa264558156538dfb96d25729ea9308200ded39ca1bdf9b4979cb6b47540",
+      "originalReport": "live-round-1/report.json",
+      "passed": true,
+      "titles": [
+        "Невероятные приключения Билла и Теда",
+        "Агент Джонни Инглиш",
+        "Евротур",
+        "Ресторан господина Септима"
+      ]
+    },
+    {
+      "domain": "series",
+      "steps": [
+        {
+          "action": "broad-request",
+          "state": {
+            "version": 1,
+            "domain": "series",
+            "id": "394d1440-7db7-44b2-afca-5e4187336225",
+            "revision": 1,
+            "mode": "guided",
+            "phase": "talk",
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "contextEvidence": {
+              "company": null,
+              "childAge": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "turns": [
+              {
+                "id": "394d1440-7db7-44b2-afca-5e4187336225:1",
+                "question": {
+                  "id": "direction",
+                  "title": "Какой сериал хочется сегодня?",
+                  "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+                  "options": [
+                    {
+                      "id": "comedy",
+                      "label": "Комедия"
+                    },
+                    {
+                      "id": "drama",
+                      "label": "Драма"
+                    },
+                    {
+                      "id": "thriller",
+                      "label": "Триллер"
+                    },
+                    {
+                      "id": "adventure",
+                      "label": "Приключения"
+                    },
+                    {
+                      "id": "fantasy",
+                      "label": "Фантастика"
+                    },
+                    {
+                      "id": "detective",
+                      "label": "Детектив"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Пока не могу решить, чего именно хочется посмотреть.",
+                "kind": "answer",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "acceptedContext": {
+                  "company": null,
+                  "childAge": null,
+                  "timeMode": null,
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": null
+              }
+            ],
+            "facts": [],
+            "question": {
+              "id": "desired_experience",
+              "title": "Какого впечатления тебе сейчас больше хочется от сериала?",
+              "why": "Попробуем начать не с жанра, а с настроения.",
+              "options": [
+                {
+                  "id": "relax",
+                  "label": "Расслабиться и отдохнуть"
+                },
+                {
+                  "id": "laugh",
+                  "label": "Посмеяться"
+                },
+                {
+                  "id": "suspense",
+                  "label": "Увлечься и побыть в напряжении"
+                },
+                {
+                  "id": "emotion",
+                  "label": "Прочувствовать историю героев"
+                },
+                {
+                  "id": "think",
+                  "label": "Получить пищу для размышлений"
+                }
+              ],
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            },
+            "summary": "Ты пока не решил, какой сериал хочется посмотреть.",
+            "uncertainties": [
+              "Пока неизвестно, какое впечатление ты хочешь получить от сериала."
+            ],
+            "retractions": [],
+            "sessionTime": null,
+            "result": null,
+            "provisional": false,
+            "needsPlan": false,
+            "failedAction": null,
+            "familiar": {
+              "marked": [],
+              "keep": [],
+              "hidden": [],
+              "excluded": [],
+              "undo": null
+            },
+            "replacement": null,
+            "factRemovalUndo": null
+          },
+          "screen": {
+            "domain": "series",
+            "summary": "Ты пока не решил, какой сериал хочется посмотреть.",
+            "facts": [],
+            "uncertainties": [
+              "Пока неизвестно, какое впечатление ты хочешь получить от сериала."
+            ],
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "sessionTime": null,
+            "canBack": true,
+            "canUndoFactRemoval": false,
+            "provisional": false,
+            "turns": [
+              {
+                "id": "394d1440-7db7-44b2-afca-5e4187336225:1",
+                "question": "Какой сериал хочется сегодня?",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "superseded": false
+              }
+            ],
+            "type": "question",
+            "question": {
+              "id": "desired_experience",
+              "title": "Какого впечатления тебе сейчас больше хочется от сериала?",
+              "why": "Попробуем начать не с жанра, а с настроения.",
+              "options": [
+                {
+                  "id": "relax",
+                  "label": "Расслабиться и отдохнуть"
+                },
+                {
+                  "id": "laugh",
+                  "label": "Посмеяться"
+                },
+                {
+                  "id": "suspense",
+                  "label": "Увлечься и побыть в напряжении"
+                },
+                {
+                  "id": "emotion",
+                  "label": "Прочувствовать историю героев"
+                },
+                {
+                  "id": "think",
+                  "label": "Получить пищу для размышлений"
+                }
+              ],
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            }
+          }
+        },
+        {
+          "action": "answer",
+          "state": {
+            "version": 1,
+            "domain": "series",
+            "id": "394d1440-7db7-44b2-afca-5e4187336225",
+            "revision": 2,
+            "mode": "guided",
+            "phase": "talk",
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "contextEvidence": {
+              "company": null,
+              "childAge": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "turns": [
+              {
+                "id": "394d1440-7db7-44b2-afca-5e4187336225:1",
+                "question": {
+                  "id": "direction",
+                  "title": "Какой сериал хочется сегодня?",
+                  "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+                  "options": [
+                    {
+                      "id": "comedy",
+                      "label": "Комедия"
+                    },
+                    {
+                      "id": "drama",
+                      "label": "Драма"
+                    },
+                    {
+                      "id": "thriller",
+                      "label": "Триллер"
+                    },
+                    {
+                      "id": "adventure",
+                      "label": "Приключения"
+                    },
+                    {
+                      "id": "fantasy",
+                      "label": "Фантастика"
+                    },
+                    {
+                      "id": "detective",
+                      "label": "Детектив"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Пока не могу решить, чего именно хочется посмотреть.",
+                "kind": "answer",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "acceptedContext": {
+                  "company": null,
+                  "childAge": null,
+                  "timeMode": null,
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": null
+              },
+              {
+                "id": "394d1440-7db7-44b2-afca-5e4187336225:2",
+                "question": {
+                  "id": "desired_experience",
+                  "title": "Какого впечатления тебе сейчас больше хочется от сериала?",
+                  "why": "Попробуем начать не с жанра, а с настроения.",
+                  "options": [
+                    {
+                      "id": "relax",
+                      "label": "Расслабиться и отдохнуть"
+                    },
+                    {
+                      "id": "laugh",
+                      "label": "Посмеяться"
+                    },
+                    {
+                      "id": "suspense",
+                      "label": "Увлечься и побыть в напряжении"
+                    },
+                    {
+                      "id": "emotion",
+                      "label": "Прочувствовать историю героев"
+                    },
+                    {
+                      "id": "think",
+                      "label": "Получить пищу для размышлений"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Сегодня смотрю один. Хочу детективный сериал, серии до 45 минут, без натуралистичной жестокости. Готов на короткую законченную историю, несколько сезонов сейчас не хочу.",
+                "kind": "answer",
+                "answer": "Сегодня смотрю один. Хочу детективный сериал, серии до 45 минут, без натуралистичной жестокости. Готов на короткую законченную историю, несколько сезонов сейчас не хочу."
+              }
+            ],
+            "facts": [],
+            "question": {
+              "id": "experience",
+              "title": "Какое впечатление хочется получить?",
+              "options": [
+                {
+                  "id": "warm",
+                  "label": "Тёплая история"
+                },
+                {
+                  "id": "intrigue",
+                  "label": "Интрига"
+                },
+                {
+                  "id": "laugh",
+                  "label": "Посмеяться"
+                },
+                {
+                  "id": "adventure",
+                  "label": "Приключение"
+                }
+              ],
+              "why": "Направление можно уточнить своими словами.",
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            },
+            "summary": "",
+            "uncertainties": [
+              "Пока неизвестно, какое впечатление ты хочешь получить от сериала."
+            ],
+            "retractions": [],
+            "sessionTime": null,
+            "result": null,
+            "provisional": true,
+            "needsPlan": true,
+            "failedAction": "plan",
+            "familiar": {
+              "marked": [],
+              "keep": [],
+              "hidden": [],
+              "excluded": [],
+              "undo": null
+            },
+            "replacement": null,
+            "factRemovalUndo": null
+          },
+          "screen": {
+            "domain": "series",
+            "summary": "",
+            "facts": [],
+            "uncertainties": [
+              "Пока неизвестно, какое впечатление ты хочешь получить от сериала."
+            ],
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "sessionTime": null,
+            "canBack": true,
+            "canUndoFactRemoval": false,
+            "provisional": true,
+            "turns": [
+              {
+                "id": "394d1440-7db7-44b2-afca-5e4187336225:1",
+                "question": "Какой сериал хочется сегодня?",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "superseded": false
+              },
+              {
+                "id": "394d1440-7db7-44b2-afca-5e4187336225:2",
+                "question": "Какого впечатления тебе сейчас больше хочется от сериала?",
+                "answer": "Сегодня смотрю один. Хочу детективный сериал, серии до 45 минут, без натуралистичной жестокости. Готов на короткую законченную историю, несколько сезонов сейчас не хочу.",
+                "superseded": false
+              }
+            ],
+            "type": "question",
+            "question": {
+              "id": "experience",
+              "title": "Какое впечатление хочется получить?",
+              "options": [
+                {
+                  "id": "warm",
+                  "label": "Тёплая история"
+                },
+                {
+                  "id": "intrigue",
+                  "label": "Интрига"
+                },
+                {
+                  "id": "laugh",
+                  "label": "Посмеяться"
+                },
+                {
+                  "id": "adventure",
+                  "label": "Приключение"
+                }
+              ],
+              "why": "Направление можно уточнить своими словами.",
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            }
+          },
+          "error": "Это условие не подтверждено действующим ответом или уже снято.",
+          "retryable": true
+        }
+      ],
+      "firstQuestion": {
+        "id": "desired_experience",
+        "title": "Какого впечатления тебе сейчас больше хочется от сериала?",
+        "why": "Попробуем начать не с жанра, а с настроения.",
+        "options": [
+          {
+            "id": "relax",
+            "label": "Расслабиться и отдохнуть"
+          },
+          {
+            "id": "laugh",
+            "label": "Посмеяться"
+          },
+          {
+            "id": "suspense",
+            "label": "Увлечься и побыть в напряжении"
+          },
+          {
+            "id": "emotion",
+            "label": "Прочувствовать историю героев"
+          },
+          {
+            "id": "think",
+            "label": "Получить пищу для размышлений"
+          }
+        ],
+        "multiple": true,
+        "controls": [
+          "unknown",
+          "indifferent",
+          "none"
+        ]
+      }
+    }
+  ],
+  "stageCalls": 3,
+  "stageUsd": 0.036254,
+  "error": "series interpretation: Это условие не подтверждено действующим ответом или уже снято.",
+  "after": {
+    "upper": 2.1101084,
+    "calls": 186,
+    "uncertainReserve": 0
+  }
+}

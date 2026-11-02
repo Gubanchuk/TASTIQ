@@ -1,0 +1,9 @@
+{"id": "tt9663764", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 American superhero film"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "searching for the lost seventh kingdom of the seas"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p1", "q": "with a retro science fiction vibe"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p3", "q": "Jason Momoa remains a capable and committed leading man"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "p1", "q": "presented as a buddy comedy between Aquaman and Orm"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p3", "q": "sticks to familiar waters"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "certain plot elements and the humor became repetitive and boring"}]}
+]}

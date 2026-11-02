@@ -1,0 +1,9 @@
+{"id": "tt0362357", "features": [
+{"f": "characters.ensemble", "r": 3, "ev": [{"id": "p1", "q": "The show had an ensemble cast"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p2", "q": "a fictional division within London's Metropolitan Police tasked with re-investigating unsolved crimes"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "tasked with re-investigating unsolved crimes"}]},
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p2", "q": "Each episode focuses on a different investigation"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "British television police procedural comedy drama"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "New Tricks concluded after 12 series on 6 October 2015"}]},
+{"f": "tone.feelgood", "r": 1, "ev": [{"id": "p2", "q": "characters often coping with problems related to their age"}]}
+]}

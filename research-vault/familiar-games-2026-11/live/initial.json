@@ -1,0 +1,1964 @@
+{
+  "state": {
+    "version": 1,
+    "id": "familiar-live-20261101-a",
+    "revision": 4,
+    "mode": "guided",
+    "phase": "result",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "familiar-live-20261101-a:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "rpg",
+            "label": "RPG"
+          }
+        ],
+        "text": "Сегодня хочу одиночную RPG на Windows с интересной историей, исследованием мира и развитием героя: пробовать разные билды, чувствовать рост возможностей. Не хочется постоянных повторов после смерти. Спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 прошёл; Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+        "kind": "answer",
+        "answer": "RPG; Сегодня хочу одиночную RPG на Windows с интересной историей, исследованием мира и развитием героя: пробовать разные билды, чувствовать рост возможностей. Не хочется постоянных повторов после смерти. Спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 прошёл; Cyberpunk 2077 только начал и могу вернуться, если он подходит."
+      },
+      {
+        "id": "familiar-live-20261101-a:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "familiar-live-20261101-a:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      }
+    ],
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Хочешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "story:interesting",
+        "text": "Хочется интересной истории.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "с интересной историей",
+        "feature": "story.central",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "exploration:world",
+        "text": "Хочется исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "исследованием мира",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:builds",
+        "text": "Хочется пробовать разные билды.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "пробовать разные билды",
+        "feature": "progression.builds",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:power",
+        "text": "Важно ощущать рост возможностей героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "чувствовать рост возможностей",
+        "feature": "progression.power",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "death:repetition",
+        "text": "Не хочется постоянных повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Не хочется постоянных повторов после смерти.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "companions:optional",
+        "text": "Спутники не обязательны.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Спутники не обязательны",
+        "feature": "characters.companions",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "realism:indifferent",
+        "text": "Реализм не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "реализм неважен",
+        "feature": "world.realistic",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "history:skyrim",
+        "text": "Skyrim пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": null,
+        "exposure": "finished"
+      },
+      {
+        "key": "history:rdr2",
+        "text": "Red Dead Redemption 2 пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": "steam:1174180",
+        "exposure": "finished"
+      },
+      {
+        "key": "history:cyberpunk",
+        "text": "Cyberpunk 2077 только начат.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": "started"
+      },
+      {
+        "key": "return:cyberpunk",
+        "text": "Готов вернуться к Cyberpunk 2077, если он подходит под сегодняшний запрос.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": null
+      }
+    ],
+    "question": null,
+    "summary": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+    "uncertainties": [],
+    "retractions": [],
+    "result": {
+      "top": {
+        "id": "steam:1091500",
+        "domain": "game",
+        "name": "Cyberpunk 2077",
+        "ru": null,
+        "year": 2020,
+        "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+        "kind": "game",
+        "series": [],
+        "genres": [
+          "RPG"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "Very Positive",
+        "link": "https://store.steampowered.com/app/1091500/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 6.922,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 6.633,
+          "prior": 0.288
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+              "factIds": [
+                "mood:social.solo"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+              "factIds": [
+                "mood:story.central"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "87% положительных из 989 163 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 109 ч",
+              "factIds": [
+                "fact:hours"
+              ]
+            },
+            {
+              "text": "проверена для Steam Deck",
+              "factIds": [
+                "fact:deck"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:social.solo",
+            "type": "mood",
+            "f": "social.solo",
+            "why": [
+              "сегодня хочется: «Один»"
+            ],
+            "evidence": [
+              {
+                "id": "tag:Singleplayer",
+                "kind": "tag",
+                "q": "Singleplayer",
+                "votes": 4975
+              }
+            ]
+          },
+          {
+            "id": "mood:story.central",
+            "type": "mood",
+            "f": "story.central",
+            "why": [
+              "сегодня хочется: «с интересной историей»"
+            ],
+            "evidence": [
+              {
+                "id": "r236358845",
+                "q": "The story, characters, and worldbuilding are fantastic",
+                "kind": "review",
+                "thumb": "up",
+                "hours": 144,
+                "lang": "english",
+                "ru": "Сюжет, персонажи и мироустройство фантастические"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.87,
+            "total": 989163,
+            "desc": "Very Positive"
+          },
+          {
+            "id": "fact:hours",
+            "type": "fact",
+            "hours": 109
+          },
+          {
+            "id": "fact:deck",
+            "type": "fact",
+            "deck": "verified"
+          }
+        ],
+        "feasibility": [],
+        "ai": {
+          "reason": "Стоит вернуться: сюжетные задания, тайники Найт-Сити и билды через взлом, оружие или клинки отвечают твоему запросу.",
+          "caveat": "Для игры без частых переигрываний выбирай низкую или обычную сложность.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:292030",
+          "domain": "game",
+          "name": "The Witcher 3: Wild Hunt — Remastered",
+          "ru": "Ведьмак 3: Дикая Охота",
+          "year": 2015,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg?t=1790845156",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "The Witcher"
+          ],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/292030/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 6.04,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.642,
+            "prior": 0.397
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+                "factIds": [
+                  "mood:story.central"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "96% положительных из 905 685 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 117 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 6287
+                }
+              ]
+            },
+            {
+              "id": "mood:story.central",
+              "type": "mood",
+              "f": "story.central",
+              "why": [
+                "сегодня хочется: «с интересной историей»"
+              ],
+              "evidence": [
+                {
+                  "id": "r236953566",
+                  "q": "The story of Geralt is one for the ages",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 168,
+                  "lang": "english",
+                  "ru": "История Геральта достойна войти в анналы"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.964,
+              "total": 905685,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 117
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [],
+          "ai": {
+            "reason": "Истории в побочных заданиях поощряют исследование, а знаки, алхимия и фехтование дают разные пути развития героя.",
+            "caveat": "Билды меняют бой не так радикально, как в Cyberpunk; для спокойной игры есть лёгкий режим.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:22380",
+          "domain": "game",
+          "name": "Fallout: New Vegas",
+          "ru": null,
+          "year": 2010,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg?t=1765992876",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/22380/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/22380/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 6.066,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.681,
+            "prior": 0.385
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+                "factIds": [
+                  "mood:story.central"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "96% положительных из 262 715 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 35 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "играбельна на Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 2562
+                }
+              ]
+            },
+            {
+              "id": "mood:story.central",
+              "type": "mood",
+              "f": "story.central",
+              "why": [
+                "сегодня хочется: «с интересной историей»"
+              ],
+              "evidence": [
+                {
+                  "id": "r237868497",
+                  "q": "The story is perfect",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 61,
+                  "lang": "english",
+                  "ru": "Сюжет идеален"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.96,
+              "total": 262715,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 35
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "playable"
+            }
+          ],
+          "feasibility": [],
+          "ai": {
+            "reason": "Исследование Мохаве открывает истории фракций, а навыки и перки позволяют собрать бойца, дипломата или скрытного героя.",
+            "caveat": "Устаревшая стрельба и возможные вылеты; сохраняйся вручную и начни на низкой сложности.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:435150",
+          "domain": "game",
+          "name": "Divinity: Original Sin 2 - Definitive Edition",
+          "ru": "Divinity: Original Sin II",
+          "year": 2017,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/3f6ee788cb01bd65097c52399d536eb424b4876f/header.jpg?t=1765811123",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/435150/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Adventure",
+            "RPG",
+            "Strategy"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/435150/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 7.553,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 7.175,
+            "prior": 0.378
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «исследованием мира»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+                "factIds": [
+                  "mood:story.central"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: проседает к концу",
+                "factIds": [
+                  "risk:flaw:stability.falls_off"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "96% положительных из 206 909 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 79 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «исследованием мира»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "explore endless ways to interact with the world",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "исследуйте бесконечные способы взаимодействия с миром"
+                }
+              ]
+            },
+            {
+              "id": "mood:story.central",
+              "type": "mood",
+              "f": "story.central",
+              "why": [
+                "сегодня хочется: «с интересной историей»"
+              ],
+              "evidence": [
+                {
+                  "id": "r237081470",
+                  "q": "Очень клевый сюжет",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 211,
+                  "lang": "russian"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:stability.falls_off",
+              "type": "risk_flaw",
+              "f": "stability.falls_off",
+              "evidence": [
+                {
+                  "id": "r236355015",
+                  "q": "Game with an exceptionally good start that devolves into a tiresome slog",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 87,
+                  "lang": "english",
+                  "ru": "Игра с исключительно хорошим началом, которое превращается в утомительную рутину"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.956,
+              "total": 206909,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 79
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [],
+          "ai": {
+            "reason": "Исследование полных секретов карт и свободное сочетание школ умений дают простор для билдов и ощутимый рост возможностей.",
+            "caveat": "Бои пошаговые, управляешь отрядом; сюжетный режим поможет избежать частых перезагрузок.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.091,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 1
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 0
+        }
+      ],
+      "considered": 4380,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 1
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    },
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Хочешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "story:interesting",
+        "text": "Хочется интересной истории.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "с интересной историей",
+        "feature": "story.central",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "exploration:world",
+        "text": "Хочется исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "исследованием мира",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:builds",
+        "text": "Хочется пробовать разные билды.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "пробовать разные билды",
+        "feature": "progression.builds",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "progression:power",
+        "text": "Важно ощущать рост возможностей героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "чувствовать рост возможностей",
+        "feature": "progression.power",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "death:repetition",
+        "text": "Не хочется постоянных повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Не хочется постоянных повторов после смерти.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "companions:optional",
+        "text": "Спутники не обязательны.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Спутники не обязательны",
+        "feature": "characters.companions",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "realism:indifferent",
+        "text": "Реализм не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "реализм неважен",
+        "feature": "world.realistic",
+        "gameId": null,
+        "exposure": null
+      },
+      {
+        "key": "history:skyrim",
+        "text": "Skyrim пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": null,
+        "exposure": "finished"
+      },
+      {
+        "key": "history:rdr2",
+        "text": "Red Dead Redemption 2 пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+        "feature": null,
+        "gameId": "steam:1174180",
+        "exposure": "finished"
+      },
+      {
+        "key": "history:cyberpunk",
+        "text": "Cyberpunk 2077 только начат.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": "started"
+      },
+      {
+        "key": "return:cyberpunk",
+        "text": "Готов вернуться к Cyberpunk 2077, если он подходит под сегодняшний запрос.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "familiar-live-20261101-a:1",
+        "quote": "Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+        "feature": null,
+        "gameId": "steam:1091500",
+        "exposure": null
+      }
+    ],
+    "uncertainties": [],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "familiar-live-20261101-a:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "RPG; Сегодня хочу одиночную RPG на Windows с интересной историей, исследованием мира и развитием героя: пробовать разные билды, чувствовать рост возможностей. Не хочется постоянных повторов после смерти. Спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 прошёл; Cyberpunk 2077 только начал и могу вернуться, если он подходит."
+      },
+      {
+        "id": "familiar-live-20261101-a:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "familiar-live-20261101-a:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      }
+    ],
+    "type": "result",
+    "result": {
+      "top": {
+        "id": "steam:1091500",
+        "domain": "game",
+        "name": "Cyberpunk 2077",
+        "ru": null,
+        "year": 2020,
+        "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+        "kind": "game",
+        "series": [],
+        "genres": [
+          "RPG"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "Very Positive",
+        "link": "https://store.steampowered.com/app/1091500/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 6.922,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 6.633,
+          "prior": 0.288
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+              "factIds": [
+                "mood:social.solo"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+              "factIds": [
+                "mood:story.central"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "87% положительных из 989 163 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 109 ч",
+              "factIds": [
+                "fact:hours"
+              ]
+            },
+            {
+              "text": "проверена для Steam Deck",
+              "factIds": [
+                "fact:deck"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:social.solo",
+            "type": "mood",
+            "f": "social.solo",
+            "why": [
+              "сегодня хочется: «Один»"
+            ],
+            "evidence": [
+              {
+                "id": "tag:Singleplayer",
+                "kind": "tag",
+                "q": "Singleplayer",
+                "votes": 4975
+              }
+            ]
+          },
+          {
+            "id": "mood:story.central",
+            "type": "mood",
+            "f": "story.central",
+            "why": [
+              "сегодня хочется: «с интересной историей»"
+            ],
+            "evidence": [
+              {
+                "id": "r236358845",
+                "q": "The story, characters, and worldbuilding are fantastic",
+                "kind": "review",
+                "thumb": "up",
+                "hours": 144,
+                "lang": "english",
+                "ru": "Сюжет, персонажи и мироустройство фантастические"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.87,
+            "total": 989163,
+            "desc": "Very Positive"
+          },
+          {
+            "id": "fact:hours",
+            "type": "fact",
+            "hours": 109
+          },
+          {
+            "id": "fact:deck",
+            "type": "fact",
+            "deck": "verified"
+          }
+        ],
+        "feasibility": [],
+        "ai": {
+          "reason": "Стоит вернуться: сюжетные задания, тайники Найт-Сити и билды через взлом, оружие или клинки отвечают твоему запросу.",
+          "caveat": "Для игры без частых переигрываний выбирай низкую или обычную сложность.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:292030",
+          "domain": "game",
+          "name": "The Witcher 3: Wild Hunt — Remastered",
+          "ru": "Ведьмак 3: Дикая Охота",
+          "year": 2015,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg?t=1790845156",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "The Witcher"
+          ],
+          "genres": [
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/292030/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 6.04,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.642,
+            "prior": 0.397
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+                "factIds": [
+                  "mood:story.central"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "96% положительных из 905 685 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 117 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 6287
+                }
+              ]
+            },
+            {
+              "id": "mood:story.central",
+              "type": "mood",
+              "f": "story.central",
+              "why": [
+                "сегодня хочется: «с интересной историей»"
+              ],
+              "evidence": [
+                {
+                  "id": "r236953566",
+                  "q": "The story of Geralt is one for the ages",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 168,
+                  "lang": "english",
+                  "ru": "История Геральта достойна войти в анналы"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.964,
+              "total": 905685,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 117
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [],
+          "ai": {
+            "reason": "Истории в побочных заданиях поощряют исследование, а знаки, алхимия и фехтование дают разные пути развития героя.",
+            "caveat": "Билды меняют бой не так радикально, как в Cyberpunk; для спокойной игры есть лёгкий режим.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:22380",
+          "domain": "game",
+          "name": "Fallout: New Vegas",
+          "ru": null,
+          "year": 2010,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg?t=1765992876",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/22380/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "RPG"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/22380/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 6.066,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.681,
+            "prior": 0.385
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+                "factIds": [
+                  "mood:story.central"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "96% положительных из 262 715 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 35 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "играбельна на Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 2562
+                }
+              ]
+            },
+            {
+              "id": "mood:story.central",
+              "type": "mood",
+              "f": "story.central",
+              "why": [
+                "сегодня хочется: «с интересной историей»"
+              ],
+              "evidence": [
+                {
+                  "id": "r237868497",
+                  "q": "The story is perfect",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 61,
+                  "lang": "english",
+                  "ru": "Сюжет идеален"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.96,
+              "total": 262715,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 35
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "playable"
+            }
+          ],
+          "feasibility": [],
+          "ai": {
+            "reason": "Исследование Мохаве открывает истории фракций, а навыки и перки позволяют собрать бойца, дипломата или скрытного героя.",
+            "caveat": "Устаревшая стрельба и возможные вылеты; сохраняйся вручную и начни на низкой сложности.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:435150",
+          "domain": "game",
+          "name": "Divinity: Original Sin 2 - Definitive Edition",
+          "ru": "Divinity: Original Sin II",
+          "year": 2017,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/3f6ee788cb01bd65097c52399d536eb424b4876f/header.jpg?t=1765811123",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/435150/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Adventure",
+            "RPG",
+            "Strategy"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Overwhelmingly Positive",
+          "link": "https://store.steampowered.com/app/435150/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 7.553,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 7.175,
+            "prior": 0.378
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «исследованием мира»»: «исследование мира»",
+                "factIds": [
+                  "mood:loop.exploration"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «с интересной историей»»: «сильный сюжет»",
+                "factIds": [
+                  "mood:story.central"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: проседает к концу",
+                "factIds": [
+                  "risk:flaw:stability.falls_off"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "96% положительных из 206 909 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 79 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.exploration",
+              "type": "mood",
+              "f": "loop.exploration",
+              "why": [
+                "сегодня хочется: «исследованием мира»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "explore endless ways to interact with the world",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "исследуйте бесконечные способы взаимодействия с миром"
+                }
+              ]
+            },
+            {
+              "id": "mood:story.central",
+              "type": "mood",
+              "f": "story.central",
+              "why": [
+                "сегодня хочется: «с интересной историей»"
+              ],
+              "evidence": [
+                {
+                  "id": "r237081470",
+                  "q": "Очень клевый сюжет",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 211,
+                  "lang": "russian"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:stability.falls_off",
+              "type": "risk_flaw",
+              "f": "stability.falls_off",
+              "evidence": [
+                {
+                  "id": "r236355015",
+                  "q": "Game with an exceptionally good start that devolves into a tiresome slog",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 87,
+                  "lang": "english",
+                  "ru": "Игра с исключительно хорошим началом, которое превращается в утомительную рутину"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.956,
+              "total": 206909,
+              "desc": "Overwhelmingly Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 79
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [],
+          "ai": {
+            "reason": "Исследование полных секретов карт и свободное сочетание школ умений дают простор для билдов и ощутимый рост возможностей.",
+            "caveat": "Бои пошаговые, управляешь отрядом; сюжетный режим поможет избежать частых перезагрузок.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.091,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 1
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 0
+        }
+      ],
+      "considered": 4380,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 1
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    }
+  },
+  "feedbackState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов верну",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": []
+    },
+    "stops": [],
+    "asked": [],
+    "shown": [],
+    "liked": [],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:1174180": {
+        "reaction": "known",
+        "text": "Skyrim и Red Dead Redemption 2 прошёл"
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": [],
+      "goalDriven": true,
+      "excludeSeries": false,
+      "goalWants": [
+        {
+          "f": "social.solo",
+          "evidence": "Один"
+        },
+        {
+          "f": "story.central",
+          "evidence": "с интересной историей"
+        },
+        {
+          "f": "loop.exploration",
+          "evidence": "исследованием мира"
+        },
+        {
+          "f": "progression.builds",
+          "evidence": "пробовать разные билды"
+        },
+        {
+          "f": "progression.power",
+          "evidence": "чувствовать рост возможностей"
+        }
+      ],
+      "goalAvoids": [],
+      "goalRequires": [],
+      "goalExcludes": [],
+      "genreWants": [
+        "RPG"
+      ]
+    },
+    "seed": 93019,
+    "conversation": {
+      "revision": 4,
+      "summary": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+      "facts": [
+        {
+          "key": "direction:rpg",
+          "text": "Сегодня хочется RPG.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "RPG",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "platform:windows",
+          "text": "Играть будешь на Windows.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:2",
+          "quote": "ПК (Windows)",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "company:solo",
+          "text": "Хочешь играть один.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:3",
+          "quote": "Один",
+          "feature": "social.solo",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "story:interesting",
+          "text": "Хочется интересной истории.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "с интересной историей",
+          "feature": "story.central",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "exploration:world",
+          "text": "Хочется исследовать мир.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "исследованием мира",
+          "feature": "loop.exploration",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "progression:builds",
+          "text": "Хочется пробовать разные билды.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "пробовать разные билды",
+          "feature": "progression.builds",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "progression:power",
+          "text": "Важно ощущать рост возможностей героя.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "чувствовать рост возможностей",
+          "feature": "progression.power",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "death:repetition",
+          "text": "Не хочется постоянных повторов после смерти.",
+          "stance": "avoid",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "Не хочется постоянных повторов после смерти.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "companions:optional",
+          "text": "Спутники не обязательны.",
+          "stance": "indifferent",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "Спутники не обязательны",
+          "feature": "characters.companions",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "realism:indifferent",
+          "text": "Реализм не является критерием.",
+          "stance": "indifferent",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "реализм неважен",
+          "feature": "world.realistic",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "history:skyrim",
+          "text": "Skyrim пройден.",
+          "stance": "history",
+          "scope": "history",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+          "feature": null,
+          "gameId": null,
+          "exposure": "finished"
+        },
+        {
+          "key": "history:rdr2",
+          "text": "Red Dead Redemption 2 пройден.",
+          "stance": "history",
+          "scope": "history",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+          "feature": null,
+          "gameId": "steam:1174180",
+          "exposure": "finished"
+        },
+        {
+          "key": "history:cyberpunk",
+          "text": "Cyberpunk 2077 только начат.",
+          "stance": "history",
+          "scope": "history",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "Cyberpunk 2077 только начал",
+          "feature": null,
+          "gameId": "steam:1091500",
+          "exposure": "started"
+        },
+        {
+          "key": "return:cyberpunk",
+          "text": "Готов вернуться к Cyberpunk 2077, если он подходит под сегодняшний запрос.",
+          "stance": "conditional",
+          "scope": "today",
+          "sourceId": "familiar-live-20261101-a:1",
+          "quote": "Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+          "feature": null,
+          "gameId": "steam:1091500",
+          "exposure": null
+        }
+      ],
+      "uncertainties": [],
+      "retractions": [],
+      "familiarity": {
+        "returnToIds": [],
+        "hiddenIds": [],
+        "excludedIds": []
+      },
+      "turns": [
+        {
+          "id": "familiar-live-20261101-a:1",
+          "question": "Во что тянет сегодня?",
+          "answer": "RPG; Сегодня хочу одиночную RPG на Windows с интересной историей, исследованием мира и развитием героя: пробовать разные билды, чувствовать рост возможностей. Не хочется постоянных повторов после смерти. Спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 прошёл; Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "familiar-live-20261101-a:2",
+          "question": "Где будешь играть?",
+          "answer": "ПК (Windows)",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "familiar-live-20261101-a:3",
+          "question": "Будешь играть один или вместе с кем-то?",
+          "answer": "Один",
+          "kind": "answer",
+          "superseded": false
+        }
+      ]
+    }
+  }
+}

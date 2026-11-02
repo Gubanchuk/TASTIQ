@@ -1,0 +1,9 @@
+{"appid": 206500, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "free-to-play multiplayer online battle arena video game"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "solo (including challenges), co-op, player versus player (PvP), and survival"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "The player can build units and pick them up and can place them down on the battlefield"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p6", "q": "work as smoothly as a twin-stick arcade shooter"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "A player can choose between nine different AirMechs and various pilots, items, and parts"}]},
+{"f": "loop.management", "r": 1, "ev": [{"id": "p3", "q": "Players have one resource to manage, which is known as credits"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p6", "q": "mix of frenetic action and tactical gameplay"}]}
+]}

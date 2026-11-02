@@ -1,0 +1,6 @@
+{"id": "tt32093575", "features": [
+{"f": "humor.satire", "r": 3, "ev": [{"id": "p0", "q": "a 2026 American parody film directed by Michael Tiddes"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "a 2026 American parody film directed by Michael Tiddes"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p3", "q": "missing more than it cuts"}, {"id": "p3", "q": "self-referential callbacks and tired gags"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p3", "q": "Taking a stab at modern horror movies"}]}
+]}

@@ -1,0 +1,5 @@
+{"appid": 868360, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "Players are tasked with building and operating a hospital and treating patients' illnesses"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "Building consists of laying down foundation, building walls, adding floor tiles, doors, and windows"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "is a hospital simulation game that focuses on accurate medical procedures"}]}
+]}

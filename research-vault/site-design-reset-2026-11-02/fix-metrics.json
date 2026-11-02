@@ -1,0 +1,124 @@
+[
+  {
+    "concept": "conversation",
+    "screen": "result",
+    "viewport": "desktop",
+    "eyebrows": 0,
+    "height": 1360,
+    "list": [],
+    "mini": [],
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "conversation",
+    "screen": "question",
+    "viewport": "desktop",
+    "eyebrows": 0,
+    "height": 1127,
+    "list": [],
+    "mini": [],
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "conversation",
+    "screen": "landing-lower",
+    "viewport": "desktop",
+    "eyebrows": 0,
+    "height": 1145,
+    "list": [],
+    "mini": [
+      {
+        "status": "На потом",
+        "title": "Tom Clancy's Ghost Recon Wildlands"
+      },
+      {
+        "status": "На этот вечер",
+        "title": "Far Cry 5"
+      },
+      {
+        "status": "Уже знакомо",
+        "title": "Just Cause™ 3"
+      }
+    ],
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "catalogue",
+    "screen": "landing-lower",
+    "viewport": "desktop",
+    "eyebrows": 0,
+    "height": 1594,
+    "list": [
+      "Far Cry 5Far Cry 5На этот вечер",
+      "Just Cause™ 3Just Cause™ 3Уже знакомо",
+      "Fallout 4Fallout 4Уже знакомо"
+    ],
+    "mini": [],
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "conversation",
+    "screen": "result",
+    "viewport": "mobile",
+    "eyebrows": 0,
+    "height": 2043,
+    "list": [],
+    "mini": [],
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "conversation",
+    "screen": "question",
+    "viewport": "mobile",
+    "eyebrows": 0,
+    "height": 1597,
+    "list": [],
+    "mini": [],
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "conversation",
+    "screen": "landing-lower",
+    "viewport": "mobile",
+    "eyebrows": 0,
+    "height": 1914,
+    "list": [],
+    "mini": [
+      {
+        "status": "На потом",
+        "title": "Tom Clancy's Ghost Recon Wildlands"
+      },
+      {
+        "status": "На этот вечер",
+        "title": "Far Cry 5"
+      },
+      {
+        "status": "Уже знакомо",
+        "title": "Just Cause™ 3"
+      }
+    ],
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "catalogue",
+    "screen": "landing-lower",
+    "viewport": "mobile",
+    "eyebrows": 0,
+    "height": 2013,
+    "list": [
+      "Far Cry 5Far Cry 5На этот вечер",
+      "Just Cause™ 3Just Cause™ 3Уже знакомо",
+      "Fallout 4Fallout 4Уже знакомо"
+    ],
+    "mini": [],
+    "overflow": false,
+    "width": 390
+  }
+]

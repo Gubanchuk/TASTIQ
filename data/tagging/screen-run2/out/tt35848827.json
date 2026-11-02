@@ -1,0 +1,9 @@
+{"id": "tt35848827", "features": [
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p0", "q": "South Korean science fantasy romantic comedy television series"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p1", "q": "a subscription-based virtual reality application"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "p2", "q": "praise for the show’s conceptual charm"}]},
+{"f": "characters.unlikeable", "r": 1, "ev": [{"id": "p4", "q": "the acting is bad, but the visuals are a perfect fit"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p3", "q": "the production was hampered by a predictable plot"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p3", "q": "narrative that failed to utilize the leads’ emotional range"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p4", "q": "slow-paced script"}]}
+]}

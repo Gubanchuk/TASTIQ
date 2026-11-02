@@ -1,0 +1,7 @@
+{"appid": 1063420, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "The game is set in space with players controlling astronaut-like characters"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "each mission successfully completed will allow the player to upgrade their characters or their ship"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "Players can choose between several different roles on the ship"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p3", "q": "a timer starts, meaning players have to complete the mission in as little time as possible"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p1", "q": "on customizable spaceships to take on a collective of enemies"}]}
+]}

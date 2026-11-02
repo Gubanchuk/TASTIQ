@@ -1,0 +1,10 @@
+{"id": "tt3475734", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "based on the Marvel Comics character Peggy Carter"}]},
+{"f": "characters.female_lead", "r": 3, "ev": [{"id": "s", "q": "follows the story of Peggy Carter"}, {"id": "p4", "q": "Focusing on Peggy Carter as a person first and an action hero second"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p3", "q": "The first season takes place in 1946"}, {"id": "p1", "q": "a single woman in 1940s America"}]},
+{"f": "world.war", "r": 1, "ev": [{"id": "p3", "q": "in the aftermath of World War II"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p4", "q": "a winning, stylish drama with bursts of excitement"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p4", "q": "an undercurrent of cheeky fun"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "ABC canceled the series on May 12, 2016"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p8", "q": "the second season's cliffhanger ending had been left unresolved"}]}
+]}

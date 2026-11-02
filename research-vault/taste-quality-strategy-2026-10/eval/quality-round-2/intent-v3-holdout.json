@@ -1,0 +1,391 @@
+[
+  {
+    "id": "h01",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Сил мало, но мне сейчас хочется подумать над трудной задачей, а не расслабляться.",
+    "wants": [
+      [
+        "cognitive.high"
+      ]
+    ],
+    "noWants": [
+      "cognitive.low",
+      "tension.low",
+      "tone.cozy"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3049,
+        "input_tokens_details": {
+          "cache_write_tokens": 33,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 65,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3114
+      },
+      "ms": 3026,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Сил мало, но мне сейчас хочется подумать над трудной задачей, а не расслабляться.",
+        "wants": [
+          {
+            "f": "cognitive.high",
+            "evidence": "хочется подумать над трудной задачей"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "tone.serene",
+            "evidence": "а не расслабляться"
+          }
+        ],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "h02",
+    "split": "holdout",
+    "domain": "film",
+    "text": "Что-то мне скучно.",
+    "empty": true,
+    "clarify": true,
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2741,
+        "input_tokens_details": {
+          "cache_write_tokens": 18,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 50,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2791
+      },
+      "ms": 1734,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Что-то мне скучно.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Какое кино ты хочешь сегодня: смешное, напряжённое, спокойное или что-то другое?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "h03",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Гринд мне подходит только если он нужен для интересной истории, иначе нет.",
+    "noWants": [
+      "progression.grind"
+    ],
+    "noAvoids": [
+      "progression.grind"
+    ],
+    "clarify": true,
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3045,
+        "input_tokens_details": {
+          "cache_write_tokens": 29,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 197,
+        "output_tokens_details": {
+          "reasoning_tokens": 147
+        },
+        "total_tokens": 3242
+      },
+      "ms": 5738,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Гринд мне подходит только если он нужен для интересной истории, иначе нет.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Ты сегодня хочешь игру ради истории или просто допускаешь гринд, если он нужен для неё?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "h04",
+    "split": "holdout",
+    "domain": "film",
+    "text": "Вчера хотелось тяжёлой драмы. Сегодня хочу посмеяться, без грусти.",
+    "wants": [
+      [
+        "humor.funny"
+      ]
+    ],
+    "avoids": [
+      [
+        "tone.melancholic"
+      ]
+    ],
+    "noWants": [
+      "tone.melancholic",
+      "tone.dark"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2754,
+        "input_tokens_details": {
+          "cache_write_tokens": 31,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 62,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2816
+      },
+      "ms": 1791,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Вчера хотелось тяжёлой драмы. Сегодня хочу посмеяться, без грусти.",
+        "wants": [
+          {
+            "f": "humor.funny",
+            "evidence": "Сегодня хочу посмеяться"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "tone.melancholic",
+            "evidence": "без грусти"
+          }
+        ],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "h05",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Хочу не расслабиться, а попотеть над сложной игрой.",
+    "wants": [
+      [
+        "difficulty.hard",
+        "cognitive.high"
+      ]
+    ],
+    "noWants": [
+      "tension.low",
+      "cognitive.low"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3044,
+        "input_tokens_details": {
+          "cache_write_tokens": 28,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 100,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 3144
+      },
+      "ms": 2376,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу не расслабиться, а попотеть над сложной игрой.",
+        "wants": [
+          {
+            "f": "difficulty.hard",
+            "evidence": "попотеть над сложной игрой"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "tone.serene",
+            "evidence": "не расслабиться"
+          }
+        ],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "h06",
+    "split": "holdout",
+    "domain": "film",
+    "text": "На весь фильм сегодня есть не больше двух часов. Хочу спокойную историю.",
+    "wants": [
+      [
+        "tension.low"
+      ]
+    ],
+    "minutes": 120,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2751,
+        "input_tokens_details": {
+          "cache_write_tokens": 28,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 62,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2813
+      },
+      "ms": 1706,
+      "proposal": {
+        "version": 1,
+        "sourceText": "На весь фильм сегодня есть не больше двух часов. Хочу спокойную историю.",
+        "wants": [
+          {
+            "f": "tension.low",
+            "evidence": "Хочу спокойную историю."
+          }
+        ],
+        "avoids": [],
+        "time": {
+          "minutes": 120,
+          "evidence": "На весь фильм сегодня есть не больше двух часов."
+        }
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "h07",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Длинная игра нормально, возвращаться буду месяц. Сегодня могу поиграть только двадцать минут.",
+    "noWants": [
+      "length.short"
+    ],
+    "noAvoids": [
+      "length.long"
+    ],
+    "minutes": 20,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3049,
+        "input_tokens_details": {
+          "cache_write_tokens": 33,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 106,
+        "output_tokens_details": {
+          "reasoning_tokens": 59
+        },
+        "total_tokens": 3155
+      },
+      "ms": 3294,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Длинная игра нормально, возвращаться буду месяц. Сегодня могу поиграть только двадцать минут.",
+        "wants": [],
+        "avoids": [],
+        "time": {
+          "minutes": 20,
+          "evidence": "Сегодня могу поиграть только двадцать минут."
+        }
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "h08",
+    "split": "holdout",
+    "domain": "cartoon",
+    "text": "Не против грусти, но хочется доброго и тёплого мультфильма.",
+    "wants": [
+      [
+        "tone.feelgood"
+      ]
+    ],
+    "noAvoids": [
+      "tone.melancholic",
+      "ending.sad"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2756,
+        "input_tokens_details": {
+          "cache_write_tokens": 33,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 56,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2812
+      },
+      "ms": 2011,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не против грусти, но хочется доброго и тёплого мультфильма.",
+        "wants": [
+          {
+            "f": "tone.feelgood",
+            "evidence": "хочется доброго и тёплого мультфильма"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  }
+]

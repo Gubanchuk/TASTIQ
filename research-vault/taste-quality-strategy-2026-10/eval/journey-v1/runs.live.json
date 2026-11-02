@@ -1,0 +1,4978 @@
+{
+  "state": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [],
+      "intent": {
+        "version": 1,
+        "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+        "wants": [
+          {
+            "f": "pace.fast",
+            "evidence": "Хочу динамичные забеги"
+          },
+          {
+            "f": "progression.builds",
+            "evidence": "осваивать разные сборки"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "loop.dialogue",
+            "evidence": "Сейчас не хочется долгих разговоров"
+          },
+          {
+            "f": "stability.slow_start",
+            "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+          }
+        ],
+        "time": {
+          "minutes": 60,
+          "evidence": "На сегодня около часа"
+        },
+        "source": "confirmed"
+      }
+    },
+    "stops": [],
+    "asked": [
+      "pair:world.postapoc|length.short",
+      "pair:loop.melee|aesthetic.pixel",
+      "pair:world.scifi|aesthetic.beautiful"
+    ],
+    "shown": [
+      "steam:271590",
+      "steam:359550",
+      "steam:105600",
+      "steam:4000",
+      "steam:2358720",
+      "steam:1245620",
+      "steam:550",
+      "steam:413150"
+    ],
+    "liked": [
+      "steam:367520",
+      "steam:782330"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:367520": {
+        "reaction": "love",
+        "reasons": [
+          "difficulty.hard",
+          "loop.platforming"
+        ],
+        "issues": []
+      },
+      "steam:782330": {
+        "reaction": "love",
+        "reasons": [
+          "pace.fast",
+          "combat.fast",
+          "loop.shooting"
+        ],
+        "issues": []
+      },
+      "steam:1794680": {
+        "reaction": "like",
+        "reasons": [],
+        "issues": []
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 559435
+  },
+  "events": [
+    {
+      "at": "2026-10-31T18:07:45.507Z",
+      "path": "/api/ai/intent",
+      "input": {
+        "domain": "game",
+        "text": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+        "uid": "b825809a-1b48-4d79-bd6f-73e3fc9bc143"
+      },
+      "output": {
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 3084,
+          "input_tokens_details": {
+            "cache_write_tokens": 68,
+            "cached_tokens": 3013
+          },
+          "output_tokens": 237,
+          "output_tokens_details": {
+            "reasoning_tokens": 119
+          },
+          "total_tokens": 3321
+        },
+        "ms": 5223,
+        "proposal": {
+          "version": 1,
+          "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+          "wants": [
+            {
+              "f": "pace.fast",
+              "evidence": "Хочу динамичные забеги"
+            },
+            {
+              "f": "progression.builds",
+              "evidence": "осваивать разные сборки"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "loop.dialogue",
+              "evidence": "Сейчас не хочется долгих разговоров"
+            },
+            {
+              "f": "stability.slow_start",
+              "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+            }
+          ],
+          "time": {
+            "minutes": 60,
+            "evidence": "На сегодня около часа"
+          }
+        },
+        "clarification": null
+      }
+    },
+    {
+      "at": "2026-10-31T18:07:58.827Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "confirm_intent",
+          "intent": {
+            "version": 1,
+            "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "wants": [
+              {
+                "f": "pace.fast",
+                "evidence": "Хочу динамичные забеги"
+              },
+              {
+                "f": "progression.builds",
+                "evidence": "осваивать разные сборки"
+              }
+            ],
+            "avoids": [
+              {
+                "f": "loop.dialogue",
+                "evidence": "Сейчас не хочется долгих разговоров"
+              },
+              {
+                "f": "stability.slow_start",
+                "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+              }
+            ],
+            "time": {
+              "minutes": 60,
+              "evidence": "На сегодня около часа"
+            }
+          }
+        }
+      },
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Во что играл, и как?",
+          "hint": "Отметь, как тебе знакомые названия, затем нажми «Дальше». Все карточки заполнять не нужно.",
+          "extra": false,
+          "items": [
+            {
+              "id": "steam:271590",
+              "name": "Grand Theft Auto V Legacy",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:359550",
+              "name": "Tom Clancy's Rainbow Six Siege",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/359550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Free To Play"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:105600",
+              "name": "Terraria",
+              "ru": null,
+              "original": null,
+              "year": 2011,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:4000",
+              "name": "Garry's Mod",
+              "ru": null,
+              "original": null,
+              "year": 2006,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Casual",
+                "Indie",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:2358720",
+              "name": "Black Myth: Wukong",
+              "ru": null,
+              "original": null,
+              "year": 2024,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "RPG"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:1245620",
+              "name": "ELDEN RING",
+              "ru": null,
+              "original": null,
+              "year": 2022,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "RPG"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:550",
+              "name": "Left 4 Dead 2",
+              "ru": null,
+              "original": null,
+              "year": 2009,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:413150",
+              "name": "Stardew Valley",
+              "ru": null,
+              "original": null,
+              "year": 2016,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1786554168",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Indie",
+                "RPG",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не играл"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:07:59.938Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "react",
+          "marks": [
+            {
+              "id": "steam:367520",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:782330",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:1794680",
+              "reaction": "like"
+            }
+          ],
+          "known": {},
+          "shownIds": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала."
+        }
+      },
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «Hollow Knight»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:367520",
+            "name": "Hollow Knight",
+            "ru": null,
+            "original": null,
+            "year": 2017,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/3c3489495136b26b34f8a9543c7f5645b99d388c/header.jpg?t=1776125684",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "Adventure",
+              "Indie"
+            ],
+            "rating": "Overwhelmingly Positive"
+          },
+          "pair": [
+            {
+              "value": "difficulty.hard",
+              "label": "сложно, наказывает за ошибки"
+            },
+            {
+              "value": "aesthetic.soundtrack",
+              "label": "сильная музыка"
+            }
+          ],
+          "options": [
+            {
+              "value": "difficulty.hard",
+              "label": "сложно, наказывает за ошибки"
+            },
+            {
+              "value": "aesthetic.soundtrack",
+              "label": "сильная музыка"
+            },
+            {
+              "value": "aesthetic.stylized",
+              "label": "стилизованный визуал"
+            },
+            {
+              "value": "loop.exploration",
+              "label": "исследование мира"
+            },
+            {
+              "value": "loop.melee",
+              "label": "ближний бой"
+            },
+            {
+              "value": "loop.platforming",
+              "label": "платформинг"
+            },
+            {
+              "value": "story.lore",
+              "label": "история через мир и лор"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачная атмосфера"
+            },
+            {
+              "value": "story.central",
+              "label": "сильный сюжет"
+            },
+            {
+              "value": "combat.weighty",
+              "label": "весомый бой"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "1 из 2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:08:19.205Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "difficulty.hard",
+            "loop.platforming"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 1,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «DOOM Eternal»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:782330",
+            "name": "DOOM Eternal",
+            "ru": null,
+            "original": null,
+            "year": 2020,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/782330/feaf8293bcd2d078422faa547bc0d707c08f606e/header.jpg?t=1783432602",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/782330/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action"
+            ],
+            "rating": "Very Positive"
+          },
+          "pair": [
+            {
+              "value": "pace.fast",
+              "label": "быстрый темп"
+            },
+            {
+              "value": "aesthetic.soundtrack",
+              "label": "сильная музыка"
+            }
+          ],
+          "options": [
+            {
+              "value": "pace.fast",
+              "label": "быстрый темп"
+            },
+            {
+              "value": "aesthetic.soundtrack",
+              "label": "сильная музыка"
+            },
+            {
+              "value": "loop.shooting",
+              "label": "стрельба"
+            },
+            {
+              "value": "content.gore",
+              "label": "жестокость и кровь"
+            },
+            {
+              "value": "difficulty.hard",
+              "label": "сложно, наказывает за ошибки"
+            },
+            {
+              "value": "combat.fast",
+              "label": "быстрый зрелищный бой"
+            },
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос"
+            },
+            {
+              "value": "world.postapoc",
+              "label": "постапокалипсис"
+            },
+            {
+              "value": "loop.melee",
+              "label": "ближний бой"
+            },
+            {
+              "value": "loop.looting",
+              "label": "лут и снаряжение"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "2 из 2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:08:35.435Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 1,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "pace.fast",
+            "combat.fast",
+            "loop.shooting"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "output": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "stops",
+          "title": "Что точно не надо?",
+          "hint": "Такое не предложу совсем. Если всё можно, просто дальше.",
+          "options": [
+            {
+              "value": "content.gore",
+              "label": "кровь и жестокость"
+            },
+            {
+              "value": "tone.creepy",
+              "label": "страшное"
+            },
+            {
+              "value": "content.sexual",
+              "label": "откровенное"
+            },
+            {
+              "value": "social.pvp",
+              "label": "против других людей"
+            },
+            {
+              "value": "progression.grind",
+              "label": "гринд"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:08:38.465Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "stops",
+          "values": []
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "pair",
+          "qid": "pair:world.postapoc|length.short",
+          "title": "Что тебе важнее?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "world.postapoc",
+              "label": "постапокалипсис"
+            },
+            {
+              "value": "length.short",
+              "label": "короткая, на пару вечеров"
+            }
+          ],
+          "canSkip": true,
+          "progress": "1"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:08:50.608Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "pair:world.postapoc|length.short"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "pair",
+          "qid": "pair:loop.melee|aesthetic.pixel",
+          "title": "Что тебе важнее?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "loop.melee",
+              "label": "ближний бой"
+            },
+            {
+              "value": "aesthetic.pixel",
+              "label": "пиксель-арт"
+            }
+          ],
+          "canSkip": true,
+          "progress": "2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:09:23.087Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "pair:world.postapoc|length.short"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "pair:world.postapoc|length.short",
+            "pair:loop.melee|aesthetic.pixel"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "pair",
+          "qid": "pair:world.scifi|aesthetic.beautiful",
+          "title": "Что тебе важнее?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос"
+            },
+            {
+              "value": "aesthetic.beautiful",
+              "label": "красивая картинка"
+            }
+          ],
+          "canSkip": true,
+          "progress": "3"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:09:33.219Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "pair:world.postapoc|length.short",
+            "pair:loop.melee|aesthetic.pixel"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "pair:world.postapoc|length.short",
+            "pair:loop.melee|aesthetic.pixel",
+            "pair:world.scifi|aesthetic.beautiful"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "screen": {
+          "step": "result",
+          "title": "Вот что я подобрал",
+          "result": {
+            "top": {
+              "id": "steam:1229490",
+              "domain": "game",
+              "name": "ULTRAKILL",
+              "ru": "Ultrakill",
+              "year": 2020,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1792046802",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1229490/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Action",
+                "Indie",
+                "Early Access"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": "Overwhelmingly Positive",
+              "link": "https://store.steampowered.com/app/1229490/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 4.201,
+              "parts": {
+                "fit": 3.025,
+                "penalty": 0,
+                "mood": 0.777,
+                "prior": 0.399
+              },
+              "mainAspect": "combat",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                    "factIds": [
+                      "match:combat.fast"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                    "factIds": [
+                      "match:difficulty.hard"
+                    ]
+                  },
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «стрельба», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.shooting"
+                    ]
+                  },
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                    "factIds": [
+                      "match:pace.fast"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «сильная музыка» и «ближний бой». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:aesthetic.soundtrack",
+                      "match:loop.melee"
+                    ],
+                    "weak": true
+                  },
+                  {
+                    "text": "Под настроение «сегодня хочется: «осваивать разные сборки»»: «разные билды»",
+                    "factIds": [
+                      "mood:progression.builds"
+                    ]
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Ранний доступ: игра ещё не закончена",
+                    "factIds": [
+                      "risk:early_access"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "97% положительных из 247 292 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 24 ч",
+                    "factIds": [
+                      "fact:hours"
+                    ]
+                  },
+                  {
+                    "text": "проверена для Steam Deck",
+                    "factIds": [
+                      "fact:deck"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:combat.fast",
+                  "type": "match",
+                  "f": "combat.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r236714756",
+                      "q": "The movement, weapons, parrying, and combos make the combat ridiculously satisfying",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 1027,
+                      "lang": "english",
+                      "ru": "Передвижение, оружие, парирование и комбо делают бой невероятно приятным"
+                    },
+                    {
+                      "id": "r237739702",
+                      "q": "Every fight encourages you to stay aggressive",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 9,
+                      "lang": "english",
+                      "ru": "Каждый бой заставляет оставаться агрессивным"
+                    }
+                  ],
+                  "contribution": 0.6709196686422738
+                },
+                {
+                  "id": "match:difficulty.hard",
+                  "type": "match",
+                  "f": "difficulty.hard",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r237449071",
+                      "q": "it took 300+ hours before I could p-rank everything on brutal difficulty",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 358,
+                      "lang": "english",
+                      "ru": "потребовалось более 300 часов, чтобы получить P-ранг во всём на жёсткой сложности"
+                    },
+                    {
+                      "id": "r237739702",
+                      "q": "It is definitely harder than a normal shooter",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 9,
+                      "lang": "english",
+                      "ru": "Это определённо сложнее обычного шутера"
+                    }
+                  ],
+                  "contribution": 0.6290004519513839
+                },
+                {
+                  "id": "match:loop.shooting",
+                  "type": "match",
+                  "f": "loop.shooting",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "fast-paced ultraviolent old school FPS",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "быстрый, предельно жестокий шутер в старой школе"
+                    },
+                    {
+                      "id": "tag:FPS",
+                      "kind": "tag",
+                      "q": "FPS",
+                      "votes": 2298
+                    }
+                  ],
+                  "contribution": 0.4455954257782299
+                },
+                {
+                  "id": "match:pace.fast",
+                  "type": "match",
+                  "f": "pace.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Fast-Paced",
+                      "kind": "tag",
+                      "q": "Fast-Paced",
+                      "votes": 2371
+                    }
+                  ],
+                  "contribution": 0.43913369868052843
+                },
+                {
+                  "id": "match:aesthetic.soundtrack",
+                  "type": "match",
+                  "f": "aesthetic.soundtrack",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal",
+                    "Vampire Survivors"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r236714756",
+                      "q": "The soundtrack goes insanely hard too",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 1027,
+                      "lang": "english",
+                      "ru": "Саундтрек тоже безумно качественный"
+                    },
+                    {
+                      "id": "r237449071",
+                      "q": "with its banger soundtrack",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 358,
+                      "lang": "english",
+                      "ru": "с его убойным саундтреком"
+                    }
+                  ],
+                  "contribution": 0.2222731767816426
+                },
+                {
+                  "id": "match:loop.melee",
+                  "type": "match",
+                  "f": "loop.melee",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Character Action Game",
+                      "kind": "tag",
+                      "q": "Character Action Game",
+                      "votes": 2153
+                    }
+                  ],
+                  "contribution": 0.073343585784
+                },
+                {
+                  "id": "mood:progression.builds",
+                  "type": "mood",
+                  "f": "progression.builds",
+                  "why": [
+                    "сегодня хочется: «осваивать разные сборки»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "each with multiple available variations",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "каждое с несколькими доступными вариантами"
+                    }
+                  ]
+                },
+                {
+                  "id": "risk:early_access",
+                  "type": "risk_fact",
+                  "f": "completeness.unfinished"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.973,
+                  "total": 247292,
+                  "desc": "Overwhelmingly Positive"
+                },
+                {
+                  "id": "fact:hours",
+                  "type": "fact",
+                  "hours": 24
+                },
+                {
+                  "id": "fact:deck",
+                  "type": "fact",
+                  "deck": "verified"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 60 мин."
+                }
+              ]
+            },
+            "alternatives": [
+              {
+                "id": "steam:1888160",
+                "domain": "game",
+                "name": "ARMORED CORE™ VI FIRES OF RUBICON™",
+                "ru": "Armored Core VI: Fires of Rubicon",
+                "year": 2023,
+                "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888160/header.jpg?t=1748630736",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888160/library_600x900.jpg",
+                "kind": "game",
+                "series": [
+                  "Armored Core"
+                ],
+                "genres": [
+                  "Action"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "Very Positive",
+                "link": "https://store.steampowered.com/app/1888160/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 4.013,
+                "parts": {
+                  "fit": 2.405,
+                  "penalty": 0,
+                  "mood": 1.28,
+                  "prior": 0.327
+                },
+                "mainAspect": "difficulty",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                      "factIds": [
+                        "match:difficulty.hard"
+                      ]
+                    },
+                    {
+                      "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                      "factIds": [
+                        "match:combat.fast"
+                      ]
+                    },
+                    {
+                      "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                      "factIds": [
+                        "match:pace.fast"
+                      ]
+                    },
+                    {
+                      "text": "«DOOM Eternal»: ты отметил «стрельба», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.shooting"
+                      ]
+                    },
+                    {
+                      "text": "«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «сильная музыка» и «фантастика и космос». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:aesthetic.soundtrack",
+                        "match:world.scifi"
+                      ],
+                      "weak": true
+                    },
+                    {
+                      "text": "Под настроение «сегодня хочется: «осваивать разные сборки»»: «разные билды»",
+                      "factIds": [
+                        "mood:progression.builds"
+                      ]
+                    }
+                  ],
+                  "risks": [],
+                  "info": [
+                    {
+                      "text": "92% положительных из 86 432 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 31 ч",
+                      "factIds": [
+                        "fact:hours"
+                      ]
+                    },
+                    {
+                      "text": "играбельна на Steam Deck",
+                      "factIds": [
+                        "fact:deck"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:difficulty.hard",
+                    "type": "match",
+                    "f": "difficulty.hard",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Hollow Knight"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r236711562",
+                        "q": "it's understandable if some people expect this to be a difficult game",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 73,
+                        "lang": "english",
+                        "ru": "если некоторые ожидают, что это будет сложная игра, это понятно"
+                      },
+                      {
+                        "id": "tag:Souls-like",
+                        "kind": "tag",
+                        "q": "Souls-like",
+                        "votes": 643
+                      }
+                    ],
+                    "contribution": 0.6859328810811165
+                  },
+                  {
+                    "id": "match:combat.fast",
+                    "type": "match",
+                    "f": "combat.fast",
+                    "basis": "confirmed",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "a",
+                        "q": "fast-paced, omni-directional battles",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "динамичные бои во всех направлениях"
+                      },
+                      {
+                        "id": "r237178453",
+                        "q": "the look, the feel and pace of combat",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 15,
+                        "lang": "english",
+                        "ru": "внешний вид, ощущение и темп боя"
+                      }
+                    ],
+                    "contribution": 0.620973426643349
+                  },
+                  {
+                    "id": "match:pace.fast",
+                    "type": "match",
+                    "f": "pace.fast",
+                    "basis": "confirmed",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Fast-Paced",
+                        "kind": "tag",
+                        "q": "Fast-Paced",
+                        "votes": 687
+                      }
+                    ],
+                    "contribution": 0.43913369868052843
+                  },
+                  {
+                    "id": "match:loop.shooting",
+                    "type": "match",
+                    "f": "loop.shooting",
+                    "basis": "confirmed",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r237516742",
+                        "q": "pilot a robot at 400 km/h with double machine guns",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 14,
+                        "lang": "english",
+                        "ru": "управлять роботом на скорости 400 км/ч с двумя пулемётами"
+                      }
+                    ],
+                    "contribution": 0.25562971530454076
+                  },
+                  {
+                    "id": "match:aesthetic.soundtrack",
+                    "type": "match",
+                    "f": "aesthetic.soundtrack",
+                    "basis": "inferred",
+                    "sources": [
+                      "Hollow Knight",
+                      "DOOM Eternal",
+                      "Vampire Survivors"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r236711562",
+                        "q": "the extraordinary musical score",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 73,
+                        "lang": "english",
+                        "ru": "потрясающий музыкальный саундтрек"
+                      }
+                    ],
+                    "contribution": 0.12698793150963752
+                  },
+                  {
+                    "id": "match:world.scifi",
+                    "type": "match",
+                    "f": "world.scifi",
+                    "basis": "inferred",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r237516742",
+                        "q": "pilot a robot at 400 km/h",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 14,
+                        "lang": "english",
+                        "ru": "управляй роботом на скорости 400 км/ч"
+                      },
+                      {
+                        "id": "a",
+                        "q": "Players will pilot their mech in fast-paced, omni-directional battles",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "Игроки будут управлять своим мехом в быстрых всенаправленных сражениях"
+                      }
+                    ],
+                    "contribution": 0.06962268
+                  },
+                  {
+                    "id": "mood:progression.builds",
+                    "type": "mood",
+                    "f": "progression.builds",
+                    "why": [
+                      "сегодня хочется: «осваивать разные сборки»"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r237242052",
+                        "q": "There is something so fun about just piecing together builds",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 39,
+                        "lang": "english",
+                        "ru": "В самом процессе сборки билдов есть что-то очень увлекательное"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.917,
+                    "total": 86432,
+                    "desc": "Very Positive"
+                  },
+                  {
+                    "id": "fact:hours",
+                    "type": "fact",
+                    "hours": 31
+                  },
+                  {
+                    "id": "fact:deck",
+                    "type": "fact",
+                    "deck": "playable"
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "unknown",
+                    "text": "Не проверено, удобно ли прерваться через 60 мин."
+                  }
+                ]
+              },
+              {
+                "id": "steam:460950",
+                "domain": "game",
+                "name": "Katana ZERO",
+                "ru": null,
+                "year": 2019,
+                "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg?t=1761066027",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/460950/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Action",
+                  "Indie"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "Overwhelmingly Positive",
+                "link": "https://store.steampowered.com/app/460950/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 4.023,
+                "parts": {
+                  "fit": 3.097,
+                  "penalty": 0,
+                  "mood": 0.529,
+                  "prior": 0.398
+                },
+                "mainAspect": "combat",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                      "factIds": [
+                        "match:combat.fast"
+                      ]
+                    },
+                    {
+                      "text": "«Hollow Knight»: ты отметил «платформинг», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.platforming"
+                      ]
+                    },
+                    {
+                      "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                      "factIds": [
+                        "match:pace.fast"
+                      ]
+                    },
+                    {
+                      "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                      "factIds": [
+                        "match:difficulty.hard"
+                      ]
+                    },
+                    {
+                      "text": "«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «сильная музыка» и «ближний бой». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:aesthetic.soundtrack",
+                        "match:loop.melee"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Игроки жалуются: слабый финал",
+                      "factIds": [
+                        "risk:flaw:ending.weak"
+                      ]
+                    },
+                    {
+                      "text": "Игроки жалуются: недоделана",
+                      "factIds": [
+                        "risk:flaw:completeness.unfinished"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "98% положительных из 76 444 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 7 ч",
+                      "factIds": [
+                        "fact:hours"
+                      ]
+                    },
+                    {
+                      "text": "проверена для Steam Deck",
+                      "factIds": [
+                        "fact:deck"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:combat.fast",
+                    "type": "match",
+                    "f": "combat.fast",
+                    "basis": "confirmed",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "d",
+                        "q": "featuring breakneck action and instant-death combat",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "с бешеным экшеном и боем с мгновенной смертью"
+                      },
+                      {
+                        "id": "r236906525",
+                        "q": "the over the top combat gameplay",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 8,
+                        "lang": "english",
+                        "ru": "чрезмерно эффектный боевой геймплей"
+                      }
+                    ],
+                    "contribution": 0.7454662984914153
+                  },
+                  {
+                    "id": "match:loop.platforming",
+                    "type": "match",
+                    "f": "loop.platforming",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Hollow Knight"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "d",
+                        "q": "a stylish neo-noir, action-platformer",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "стильный нуарный экшен-платформер"
+                      },
+                      {
+                        "id": "r237884524",
+                        "q": "Extremely fun action platformer.",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 5,
+                        "lang": "english",
+                        "ru": "Невероятно весёлый экшен-платформер."
+                      }
+                    ],
+                    "contribution": 0.6387549108059488
+                  },
+                  {
+                    "id": "match:pace.fast",
+                    "type": "match",
+                    "f": "pace.fast",
+                    "basis": "confirmed",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "d",
+                        "q": "featuring breakneck action and instant-death combat",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "с бешеным экшеном и боем с мгновенной смертью"
+                      },
+                      {
+                        "id": "r237588294",
+                        "q": "it feels incredibly rewarding to move through a level on instinct",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 8,
+                        "lang": "english",
+                        "ru": "чувствуешь невероятное удовольствие, проходя уровень на инстинктах"
+                      }
+                    ],
+                    "contribution": 0.574972389472372
+                  },
+                  {
+                    "id": "match:difficulty.hard",
+                    "type": "match",
+                    "f": "difficulty.hard",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Hollow Knight"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Difficult",
+                        "kind": "tag",
+                        "q": "Difficult",
+                        "votes": 511
+                      }
+                    ],
+                    "contribution": 0.4614613457473211
+                  },
+                  {
+                    "id": "match:aesthetic.soundtrack",
+                    "type": "match",
+                    "f": "aesthetic.soundtrack",
+                    "basis": "inferred",
+                    "sources": [
+                      "Hollow Knight",
+                      "DOOM Eternal",
+                      "Vampire Survivors"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r236661495",
+                        "q": "the soundtrack, it all comes together perfectly",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 16,
+                        "lang": "english",
+                        "ru": "саундтрек, всё сходится идеально"
+                      },
+                      {
+                        "id": "r236906525",
+                        "q": "the hand crafted music",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 8,
+                        "lang": "english",
+                        "ru": "музыка ручной работы"
+                      }
+                    ],
+                    "contribution": 0.25384893855
+                  },
+                  {
+                    "id": "match:loop.melee",
+                    "type": "match",
+                    "f": "loop.melee",
+                    "basis": "inferred",
+                    "sources": [
+                      "Hollow Knight",
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "d",
+                        "q": "Slash, dash, and manipulate time to unravel your past",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "Руби, дэш и управляй временем, чтобы раскрыть своё прошлое"
+                      },
+                      {
+                        "id": "a",
+                        "q": "Deflect gunfire back at foes, dodge oncoming attacks",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "Отражай пули обратно во врагов, уклоняйся от атак"
+                      }
+                    ],
+                    "contribution": 0.13970206816000003
+                  },
+                  {
+                    "id": "risk:flaw:ending.weak",
+                    "type": "risk_flaw",
+                    "f": "ending.weak",
+                    "evidence": [
+                      {
+                        "id": "r237684739",
+                        "q": "I just wish the story had reached a proper climax before the ending",
+                        "kind": "review",
+                        "thumb": "down",
+                        "hours": 11,
+                        "lang": "english",
+                        "ru": "Жаль только, что история не дошла до настоящей кульминации перед финалом"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "risk:flaw:completeness.unfinished",
+                    "type": "risk_flaw",
+                    "f": "completeness.unfinished",
+                    "evidence": [
+                      {
+                        "id": "r237684739",
+                        "q": "it feels like there's still so many questions left to answer",
+                        "kind": "review",
+                        "thumb": "down",
+                        "hours": 11,
+                        "lang": "english",
+                        "ru": "ощущение, что остаётся ещё очень много вопросов без ответов"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.979,
+                    "total": 76444,
+                    "desc": "Overwhelmingly Positive"
+                  },
+                  {
+                    "id": "fact:hours",
+                    "type": "fact",
+                    "hours": 7
+                  },
+                  {
+                    "id": "fact:deck",
+                    "type": "fact",
+                    "deck": "verified"
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "unknown",
+                    "text": "Не проверено, удобно ли прерваться через 60 мин."
+                  }
+                ]
+              },
+              {
+                "id": "steam:1139900",
+                "domain": "game",
+                "name": "Ghostrunner",
+                "ru": null,
+                "year": 2020,
+                "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1139900/header.jpg?t=1786099137",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1139900/library_600x900.jpg",
+                "kind": "game",
+                "series": [
+                  "Ghostrunner"
+                ],
+                "genres": [
+                  "Action"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "Very Positive",
+                "link": "https://store.steampowered.com/app/1139900/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 4.087,
+                "parts": {
+                  "fit": 2.991,
+                  "penalty": 0,
+                  "mood": 0.777,
+                  "prior": 0.319
+                },
+                "mainAspect": "loop",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Hollow Knight»: ты отметил «платформинг», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.platforming"
+                      ]
+                    },
+                    {
+                      "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                      "factIds": [
+                        "match:combat.fast"
+                      ]
+                    },
+                    {
+                      "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                      "factIds": [
+                        "match:difficulty.hard"
+                      ]
+                    },
+                    {
+                      "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                      "factIds": [
+                        "match:pace.fast"
+                      ]
+                    },
+                    {
+                      "text": "«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «сильная музыка» и «ближний бой». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:aesthetic.soundtrack",
+                        "match:loop.melee"
+                      ],
+                      "weak": true
+                    },
+                    {
+                      "text": "Под настроение «сегодня хочется: «осваивать разные сборки»»: «разные билды»",
+                      "factIds": [
+                        "mood:progression.builds"
+                      ]
+                    }
+                  ],
+                  "risks": [],
+                  "info": [
+                    {
+                      "text": "91% положительных из 67 080 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 10 ч",
+                      "factIds": [
+                        "fact:hours"
+                      ]
+                    },
+                    {
+                      "text": "играбельна на Steam Deck",
+                      "factIds": [
+                        "fact:deck"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:loop.platforming",
+                    "type": "match",
+                    "f": "loop.platforming",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Hollow Knight"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r237529233",
+                        "q": "the movement mechanics are so addicting",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 14,
+                        "lang": "english",
+                        "ru": "механика движения невероятно затягивает"
+                      },
+                      {
+                        "id": "r236122438",
+                        "q": "The movement, slow mo, and slicing through enemies is just so good",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 11,
+                        "lang": "english",
+                        "ru": "Движение, замедление времени и рассечение врагов просто великолепны"
+                      }
+                    ],
+                    "contribution": 0.6387549108059488
+                  },
+                  {
+                    "id": "match:combat.fast",
+                    "type": "match",
+                    "f": "combat.fast",
+                    "basis": "confirmed",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "a",
+                        "q": "One-hit one-kill mechanics make combat fast and intense",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "механика «одного удара — одно убийство» делает бой быстрым и напряжённым"
+                      },
+                      {
+                        "id": "tag:Hack and Slash",
+                        "kind": "tag",
+                        "q": "Hack and Slash",
+                        "votes": 479
+                      }
+                    ],
+                    "contribution": 0.6150096962554176
+                  },
+                  {
+                    "id": "match:difficulty.hard",
+                    "type": "match",
+                    "f": "difficulty.hard",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Hollow Knight"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r238079111",
+                        "q": "The game is difficult, and the constant deaths can get frustrating really fast.",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 1,
+                        "lang": "english",
+                        "ru": "Игра сложная, а постоянная смерть может очень быстро начать раздражать."
+                      },
+                      {
+                        "id": "tag:Difficult",
+                        "kind": "tag",
+                        "q": "Difficult",
+                        "votes": 595
+                      }
+                    ],
+                    "contribution": 0.5748117543459756
+                  },
+                  {
+                    "id": "match:pace.fast",
+                    "type": "match",
+                    "f": "pace.fast",
+                    "basis": "confirmed",
+                    "sources": [
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Fast-Paced",
+                        "kind": "tag",
+                        "q": "Fast-Paced",
+                        "votes": 686
+                      }
+                    ],
+                    "contribution": 0.43913369868052843
+                  },
+                  {
+                    "id": "match:aesthetic.soundtrack",
+                    "type": "match",
+                    "f": "aesthetic.soundtrack",
+                    "basis": "inferred",
+                    "sources": [
+                      "Hollow Knight",
+                      "DOOM Eternal",
+                      "Vampire Survivors"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r235786217",
+                        "q": "the music is god tier for this type of gameplay",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 40,
+                        "lang": "english",
+                        "ru": "музыка для такого геймплея просто божественна"
+                      },
+                      {
+                        "id": "tag:Great Soundtrack",
+                        "kind": "tag",
+                        "q": "Great Soundtrack",
+                        "votes": 370
+                      }
+                    ],
+                    "contribution": 0.2086100115131274
+                  },
+                  {
+                    "id": "match:loop.melee",
+                    "type": "match",
+                    "f": "loop.melee",
+                    "basis": "inferred",
+                    "sources": [
+                      "Hollow Knight",
+                      "DOOM Eternal"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "a",
+                        "q": "Slice your enemies with a monomolecular katana",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "Разрубай врагов монофиламентной катаной"
+                      },
+                      {
+                        "id": "tag:Swordplay",
+                        "kind": "tag",
+                        "q": "Swordplay",
+                        "votes": 572
+                      }
+                    ],
+                    "contribution": 0.15297376463520002
+                  },
+                  {
+                    "id": "mood:progression.builds",
+                    "type": "mood",
+                    "f": "progression.builds",
+                    "why": [
+                      "сегодня хочется: «осваивать разные сборки»"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r235786217",
+                        "q": "you can use builds and different types of pretty swords",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 40,
+                        "lang": "english",
+                        "ru": "можно использовать билды и разные виды красивых мечей"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.912,
+                    "total": 67080,
+                    "desc": "Very Positive"
+                  },
+                  {
+                    "id": "fact:hours",
+                    "type": "fact",
+                    "hours": 10
+                  },
+                  {
+                    "id": "fact:deck",
+                    "type": "fact",
+                    "deck": "playable"
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "unknown",
+                    "text": "Не проверено, удобно ли прерваться через 60 мин."
+                  }
+                ]
+              }
+            ],
+            "belief": 0.222,
+            "sieves": [
+              {
+                "id": 1,
+                "name": "Можно ли",
+                "removed": 0
+              },
+              {
+                "id": 2,
+                "name": "Было ли",
+                "removed": 3
+              },
+              {
+                "id": 3,
+                "name": "Сделано ли нормально",
+                "removed": 571
+              },
+              {
+                "id": 4,
+                "name": "Моё ли (жёсткие стопы)",
+                "removed": 0
+              },
+              {
+                "id": 5,
+                "name": "Подходит ли сегодня (обязательное)",
+                "removed": 0
+              }
+            ],
+            "considered": 4378,
+            "taste": {
+              "confirmed": [
+                {
+                  "f": "difficulty.hard",
+                  "label": "сложно, наказывает за ошибки",
+                  "w": 0.96,
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "ids": [
+                    "steam:367520"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "combat.fast",
+                  "label": "быстрый зрелищный бой",
+                  "w": 0.85,
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "ids": [
+                    "steam:782330"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.platforming",
+                  "label": "платформинг",
+                  "w": 0.82,
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "ids": [
+                    "steam:367520"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "pace.fast",
+                  "label": "быстрый темп",
+                  "w": 0.82,
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "ids": [
+                    "steam:782330"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.shooting",
+                  "label": "стрельба",
+                  "w": 0.82,
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "ids": [
+                    "steam:782330"
+                  ],
+                  "preference": false
+                }
+              ],
+              "inferred": [
+                {
+                  "f": "aesthetic.soundtrack",
+                  "label": "сильная музыка",
+                  "w": 0.35,
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal",
+                    "Vampire Survivors"
+                  ],
+                  "ids": [
+                    "steam:367520",
+                    "steam:782330",
+                    "steam:1794680"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.melee",
+                  "label": "ближний бой",
+                  "w": 0.23,
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal"
+                  ],
+                  "ids": [
+                    "steam:367520",
+                    "steam:782330"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "story.central",
+                  "label": "сильный сюжет",
+                  "w": 0.2,
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal"
+                  ],
+                  "ids": [
+                    "steam:367520",
+                    "steam:782330"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "aesthetic.stylized",
+                  "label": "стилизованный визуал",
+                  "w": 0.17,
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "ids": [
+                    "steam:367520"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.exploration",
+                  "label": "исследование мира",
+                  "w": 0.17,
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "ids": [
+                    "steam:367520"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "world.fantasy",
+                  "label": "фэнтези",
+                  "w": 0.16,
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal"
+                  ],
+                  "ids": [
+                    "steam:367520",
+                    "steam:782330"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "length.endless",
+                  "label": "можно играть годами",
+                  "w": 0.11,
+                  "sources": [
+                    "Hollow Knight",
+                    "Vampire Survivors"
+                  ],
+                  "ids": [
+                    "steam:367520",
+                    "steam:1794680"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "tone.dark",
+                  "label": "мрачная атмосфера",
+                  "w": 0.11,
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "ids": [
+                    "steam:367520"
+                  ],
+                  "preference": false
+                }
+              ],
+              "dislikes": [],
+              "hardNo": [],
+              "consumed": 3
+            },
+            "today": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            },
+            "uncheckedContext": []
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:09:41.836Z",
+      "path": "/api/ai/pick",
+      "input": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+              "wants": [
+                {
+                  "f": "pace.fast",
+                  "evidence": "Хочу динамичные забеги"
+                },
+                {
+                  "f": "progression.builds",
+                  "evidence": "осваивать разные сборки"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "loop.dialogue",
+                  "evidence": "Сейчас не хочется долгих разговоров"
+                },
+                {
+                  "f": "stability.slow_start",
+                  "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+                }
+              ],
+              "time": {
+                "minutes": 60,
+                "evidence": "На сегодня около часа"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "pair:world.postapoc|length.short",
+            "pair:loop.melee|aesthetic.pixel",
+            "pair:world.scifi|aesthetic.beautiful"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:367520",
+            "steam:782330"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:367520": {
+              "reaction": "love",
+              "reasons": [
+                "difficulty.hard",
+                "loop.platforming"
+              ],
+              "issues": []
+            },
+            "steam:782330": {
+              "reaction": "love",
+              "reasons": [
+                "pace.fast",
+                "combat.fast",
+                "loop.shooting"
+              ],
+              "issues": []
+            },
+            "steam:1794680": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 559435
+        },
+        "wish": "",
+        "previous": [],
+        "uid": "b825809a-1b48-4d79-bd6f-73e3fc9bc143"
+      },
+      "output": {
+        "result": {
+          "top": {
+            "id": "steam:692890",
+            "domain": "game",
+            "name": "Roboquest",
+            "ru": null,
+            "year": 2023,
+            "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/692890/header.jpg",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/692890/library_600x900.jpg",
+            "kind": "game",
+            "series": [],
+            "genres": [
+              "Action",
+              "Indie"
+            ],
+            "runtime": null,
+            "seasons": null,
+            "episodes": null,
+            "status": null,
+            "rating": null,
+            "link": "https://store.steampowered.com/app/692890/",
+            "price": null,
+            "label": "likely",
+            "labelText": "Вероятно подойдёт",
+            "score": 3.102,
+            "parts": {
+              "fit": 1.817,
+              "penalty": 0,
+              "mood": 0.925,
+              "prior": 0.36
+            },
+            "mainAspect": "loop",
+            "explanation": {
+              "reasons": [
+                {
+                  "text": "«DOOM Eternal»: ты отметил «стрельба», здесь это тоже есть",
+                  "factIds": [
+                    "match:loop.shooting"
+                  ]
+                },
+                {
+                  "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                  "factIds": [
+                    "match:pace.fast"
+                  ]
+                },
+                {
+                  "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                  "factIds": [
+                    "match:combat.fast"
+                  ]
+                },
+                {
+                  "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                  "factIds": [
+                    "match:difficulty.hard"
+                  ]
+                },
+                {
+                  "text": "«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «сильная музыка» и «лут и снаряжение». Это ты не отмечал, вес слабый",
+                  "factIds": [
+                    "match:aesthetic.soundtrack",
+                    "match:loop.looting"
+                  ],
+                  "weak": true
+                },
+                {
+                  "text": "Под настроение «сегодня хочется: «осваивать разные сборки»»: «разные билды»",
+                  "factIds": [
+                    "mood:progression.builds"
+                  ]
+                }
+              ],
+              "risks": [],
+              "info": [
+                {
+                  "text": "95% положительных из 21 689 отзывов Steam",
+                  "factIds": [
+                    "fact:reviews"
+                  ]
+                }
+              ]
+            },
+            "facts": [
+              {
+                "id": "match:loop.shooting",
+                "type": "match",
+                "f": "loop.shooting",
+                "basis": "confirmed",
+                "sources": [
+                  "DOOM Eternal"
+                ],
+                "evidence": [
+                  {
+                    "id": "p1",
+                    "q": "Roboquest is a first-person shooter with rogue-lite elements",
+                    "kind": "wiki",
+                    "section": "Gameplay",
+                    "url": "https://en.wikipedia.org/wiki/Roboquest",
+                    "ru": "Roboquest — шутер от первого лица с элементами рогалика"
+                  },
+                  {
+                    "id": "tag:FPS",
+                    "kind": "tag",
+                    "q": "FPS",
+                    "votes": 344
+                  }
+                ],
+                "contribution": 0.4455954257782299
+              },
+              {
+                "id": "match:pace.fast",
+                "type": "match",
+                "f": "pace.fast",
+                "basis": "confirmed",
+                "sources": [
+                  "DOOM Eternal"
+                ],
+                "evidence": [
+                  {
+                    "id": "tag:Fast-Paced",
+                    "kind": "tag",
+                    "q": "Fast-Paced",
+                    "votes": 245
+                  }
+                ],
+                "contribution": 0.43913369868052843
+              },
+              {
+                "id": "match:combat.fast",
+                "type": "match",
+                "f": "combat.fast",
+                "basis": "confirmed",
+                "sources": [
+                  "DOOM Eternal"
+                ],
+                "evidence": [
+                  {
+                    "id": "tag:Bullet Hell",
+                    "kind": "tag",
+                    "q": "Bullet Hell",
+                    "votes": 197
+                  }
+                ],
+                "contribution": 0.3130958453663944
+              },
+              {
+                "id": "match:difficulty.hard",
+                "type": "match",
+                "f": "difficulty.hard",
+                "basis": "confirmed",
+                "sources": [
+                  "Hollow Knight"
+                ],
+                "evidence": [
+                  {
+                    "id": "tag:Bullet Hell",
+                    "kind": "tag",
+                    "q": "Bullet Hell",
+                    "votes": 197
+                  }
+                ],
+                "contribution": 0.24693583718920192
+              },
+              {
+                "id": "match:aesthetic.soundtrack",
+                "type": "match",
+                "f": "aesthetic.soundtrack",
+                "basis": "inferred",
+                "sources": [
+                  "Hollow Knight",
+                  "DOOM Eternal",
+                  "Vampire Survivors"
+                ],
+                "evidence": [
+                  {
+                    "id": "p3",
+                    "q": "Critics gave praise to the game's soundtrack",
+                    "kind": "wiki",
+                    "section": "Reception",
+                    "url": "https://en.wikipedia.org/wiki/Roboquest",
+                    "ru": "Критики высоко оценили саундтрек игры"
+                  }
+                ],
+                "contribution": 0.09972785554556866
+              },
+              {
+                "id": "match:loop.looting",
+                "type": "match",
+                "f": "loop.looting",
+                "basis": "inferred",
+                "sources": [
+                  "DOOM Eternal"
+                ],
+                "evidence": [
+                  {
+                    "id": "p1",
+                    "q": "Players collect various items, gadgets, and objects during runs",
+                    "kind": "wiki",
+                    "section": "Gameplay",
+                    "url": "https://en.wikipedia.org/wiki/Roboquest",
+                    "ru": "Игроки собирают в забегах различные предметы, гаджеты и объекты"
+                  },
+                  {
+                    "id": "tag:Looter Shooter",
+                    "kind": "tag",
+                    "q": "Looter Shooter",
+                    "votes": 211
+                  }
+                ],
+                "contribution": 0.0644905625
+              },
+              {
+                "id": "mood:progression.builds",
+                "type": "mood",
+                "f": "progression.builds",
+                "why": [
+                  "сегодня хочется: «осваивать разные сборки»"
+                ],
+                "evidence": [
+                  {
+                    "id": "p1",
+                    "q": "These upgrades can be synergized to create powerful builds",
+                    "kind": "wiki",
+                    "section": "Gameplay",
+                    "url": "https://en.wikipedia.org/wiki/Roboquest",
+                    "ru": "Эти улучшения можно комбинировать для создания мощных сборок"
+                  }
+                ]
+              },
+              {
+                "id": "fact:reviews",
+                "type": "fact",
+                "ratio": 0.954,
+                "total": 21689,
+                "desc": null
+              }
+            ],
+            "feasibility": [
+              {
+                "key": "minutes",
+                "status": "unknown",
+                "text": "Не проверено, удобно ли прерваться через 60 мин."
+              }
+            ],
+            "ai": {
+              "reason": "Roboquest сочетает подвижную стрельбу в духе DOOM Eternal с забегами, где оружие и улучшения меняют сборку.",
+              "caveat": "Часть возможностей открывается постепенно между попытками.",
+              "likelySeen": false,
+              "own": false
+            }
+          },
+          "alternatives": [
+            {
+              "id": "steam:588650",
+              "domain": "game",
+              "name": "Dead Cells",
+              "ru": null,
+              "year": 2018,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg?t=1779086887",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/588650/library_600x900.jpg",
+              "kind": "game",
+              "series": [
+                "Dead Cells"
+              ],
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": "Overwhelmingly Positive",
+              "link": "https://store.steampowered.com/app/588650/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 2.64,
+              "parts": {
+                "fit": 2.136,
+                "penalty": 0,
+                "mood": 0.11,
+                "prior": 0.394
+              },
+              "mainAspect": "difficulty",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                    "factIds": [
+                      "match:difficulty.hard"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight»: ты отметил «платформинг», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.platforming"
+                    ]
+                  },
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                    "factIds": [
+                      "match:combat.fast"
+                    ]
+                  },
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                    "factIds": [
+                      "match:pace.fast"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «ближний бой» и «можно играть годами». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:loop.melee",
+                      "match:length.endless"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Игроки жалуются: гринд",
+                    "factIds": [
+                      "risk:flaw:progression.grind"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "97% положительных из 184 456 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 16 ч",
+                    "factIds": [
+                      "fact:hours"
+                    ]
+                  },
+                  {
+                    "text": "проверена для Steam Deck",
+                    "factIds": [
+                      "fact:deck"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:difficulty.hard",
+                  "type": "match",
+                  "f": "difficulty.hard",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "Tough but fair combat",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "Сложный, но честный бой"
+                    },
+                    {
+                      "id": "r237314375",
+                      "q": "how difficult this game is",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 2,
+                      "lang": "english",
+                      "ru": "насколько сложна эта игра"
+                    }
+                  ],
+                  "contribution": 0.6290004519513839
+                },
+                {
+                  "id": "match:loop.platforming",
+                  "type": "match",
+                  "f": "loop.platforming",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "Dead Cells is a roguelite, metroidvania inspired, action-platformer",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "Dead Cells — рогалик, вдохновлённый метроидваниями, экшн-платформер"
+                    },
+                    {
+                      "id": "tag:Platformer",
+                      "kind": "tag",
+                      "q": "Platformer",
+                      "votes": 3558
+                    }
+                  ],
+                  "contribution": 0.574879419725354
+                },
+                {
+                  "id": "match:combat.fast",
+                  "type": "match",
+                  "f": "combat.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Hack and Slash",
+                      "kind": "tag",
+                      "q": "Hack and Slash",
+                      "votes": 3591
+                    }
+                  ],
+                  "contribution": 0.2683678674569095
+                },
+                {
+                  "id": "match:pace.fast",
+                  "type": "match",
+                  "f": "pace.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [],
+                  "contribution": 0.10065603074305733
+                },
+                {
+                  "id": "match:loop.melee",
+                  "type": "match",
+                  "f": "loop.melee",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "fight your way past its keepers in 2D souls-lite combat",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "пробивайся сквозь её стражей в 2D-бою в духе Souls-lite"
+                    },
+                    {
+                      "id": "tag:Hack and Slash",
+                      "kind": "tag",
+                      "q": "Hack and Slash",
+                      "votes": 3591
+                    }
+                  ],
+                  "contribution": 0.15297376463520002
+                },
+                {
+                  "id": "match:length.endless",
+                  "type": "match",
+                  "f": "length.endless",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight",
+                    "Vampire Survivors"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r235895007",
+                      "q": "Replayability is very high",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 18,
+                      "lang": "english",
+                      "ru": "Переигрывать очень интересно"
+                    },
+                    {
+                      "id": "r237658138",
+                      "q": "Tons of great replay ability",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 7,
+                      "lang": "english",
+                      "ru": "Огромная реиграбельность"
+                    }
+                  ],
+                  "contribution": 0.0726532534725
+                },
+                {
+                  "id": "risk:flaw:progression.grind",
+                  "type": "risk_flaw",
+                  "f": "progression.grind",
+                  "evidence": [
+                    {
+                      "id": "r238056288",
+                      "q": "The game is designed to be grindy by design",
+                      "kind": "review",
+                      "thumb": "down",
+                      "hours": 9,
+                      "lang": "english",
+                      "ru": "Игра изначально построена на гринде"
+                    }
+                  ]
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.97,
+                  "total": 184456,
+                  "desc": "Overwhelmingly Positive"
+                },
+                {
+                  "id": "fact:hours",
+                  "type": "fact",
+                  "hours": 16
+                },
+                {
+                  "id": "fact:deck",
+                  "type": "fact",
+                  "deck": "verified"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 60 мин."
+                }
+              ],
+              "ai": {
+                "reason": "Dead Cells соединяет любимые в Hollow Knight платформинг и цену ошибки с быстрыми забегами и разными сборками.",
+                "caveat": "После гибели забег начинается заново; открытое снаряжение остаётся доступным.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "steam:1229490",
+              "domain": "game",
+              "name": "ULTRAKILL",
+              "ru": "Ultrakill",
+              "year": 2020,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1792046802",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1229490/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Action",
+                "Indie",
+                "Early Access"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": "Overwhelmingly Positive",
+              "link": "https://store.steampowered.com/app/1229490/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 4.201,
+              "parts": {
+                "fit": 3.025,
+                "penalty": 0,
+                "mood": 0.777,
+                "prior": 0.399
+              },
+              "mainAspect": "combat",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                    "factIds": [
+                      "match:combat.fast"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                    "factIds": [
+                      "match:difficulty.hard"
+                    ]
+                  },
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «стрельба», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.shooting"
+                    ]
+                  },
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                    "factIds": [
+                      "match:pace.fast"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «сильная музыка» и «ближний бой». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:aesthetic.soundtrack",
+                      "match:loop.melee"
+                    ],
+                    "weak": true
+                  },
+                  {
+                    "text": "Под настроение «сегодня хочется: «осваивать разные сборки»»: «разные билды»",
+                    "factIds": [
+                      "mood:progression.builds"
+                    ]
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Ранний доступ: игра ещё не закончена",
+                    "factIds": [
+                      "risk:early_access"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "97% положительных из 247 292 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 24 ч",
+                    "factIds": [
+                      "fact:hours"
+                    ]
+                  },
+                  {
+                    "text": "проверена для Steam Deck",
+                    "factIds": [
+                      "fact:deck"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:combat.fast",
+                  "type": "match",
+                  "f": "combat.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r236714756",
+                      "q": "The movement, weapons, parrying, and combos make the combat ridiculously satisfying",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 1027,
+                      "lang": "english",
+                      "ru": "Передвижение, оружие, парирование и комбо делают бой невероятно приятным"
+                    },
+                    {
+                      "id": "r237739702",
+                      "q": "Every fight encourages you to stay aggressive",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 9,
+                      "lang": "english",
+                      "ru": "Каждый бой заставляет оставаться агрессивным"
+                    }
+                  ],
+                  "contribution": 0.6709196686422738
+                },
+                {
+                  "id": "match:difficulty.hard",
+                  "type": "match",
+                  "f": "difficulty.hard",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r237449071",
+                      "q": "it took 300+ hours before I could p-rank everything on brutal difficulty",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 358,
+                      "lang": "english",
+                      "ru": "потребовалось более 300 часов, чтобы получить P-ранг во всём на жёсткой сложности"
+                    },
+                    {
+                      "id": "r237739702",
+                      "q": "It is definitely harder than a normal shooter",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 9,
+                      "lang": "english",
+                      "ru": "Это определённо сложнее обычного шутера"
+                    }
+                  ],
+                  "contribution": 0.6290004519513839
+                },
+                {
+                  "id": "match:loop.shooting",
+                  "type": "match",
+                  "f": "loop.shooting",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "fast-paced ultraviolent old school FPS",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "быстрый, предельно жестокий шутер в старой школе"
+                    },
+                    {
+                      "id": "tag:FPS",
+                      "kind": "tag",
+                      "q": "FPS",
+                      "votes": 2298
+                    }
+                  ],
+                  "contribution": 0.4455954257782299
+                },
+                {
+                  "id": "match:pace.fast",
+                  "type": "match",
+                  "f": "pace.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Fast-Paced",
+                      "kind": "tag",
+                      "q": "Fast-Paced",
+                      "votes": 2371
+                    }
+                  ],
+                  "contribution": 0.43913369868052843
+                },
+                {
+                  "id": "match:aesthetic.soundtrack",
+                  "type": "match",
+                  "f": "aesthetic.soundtrack",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal",
+                    "Vampire Survivors"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r236714756",
+                      "q": "The soundtrack goes insanely hard too",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 1027,
+                      "lang": "english",
+                      "ru": "Саундтрек тоже безумно качественный"
+                    },
+                    {
+                      "id": "r237449071",
+                      "q": "with its banger soundtrack",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 358,
+                      "lang": "english",
+                      "ru": "с его убойным саундтреком"
+                    }
+                  ],
+                  "contribution": 0.2222731767816426
+                },
+                {
+                  "id": "match:loop.melee",
+                  "type": "match",
+                  "f": "loop.melee",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Character Action Game",
+                      "kind": "tag",
+                      "q": "Character Action Game",
+                      "votes": 2153
+                    }
+                  ],
+                  "contribution": 0.073343585784
+                },
+                {
+                  "id": "mood:progression.builds",
+                  "type": "mood",
+                  "f": "progression.builds",
+                  "why": [
+                    "сегодня хочется: «осваивать разные сборки»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "each with multiple available variations",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "каждое с несколькими доступными вариантами"
+                    }
+                  ]
+                },
+                {
+                  "id": "risk:early_access",
+                  "type": "risk_fact",
+                  "f": "completeness.unfinished"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.973,
+                  "total": 247292,
+                  "desc": "Overwhelmingly Positive"
+                },
+                {
+                  "id": "fact:hours",
+                  "type": "fact",
+                  "hours": 24
+                },
+                {
+                  "id": "fact:deck",
+                  "type": "fact",
+                  "deck": "verified"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 60 мин."
+                }
+              ],
+              "ai": {
+                "reason": "ULTRAKILL развивает любимый в DOOM Eternal скоростной бой: реакция, движение и сочетания оружия решают с первых минут.",
+                "caveat": "Это уровни с повторами, а не рогалик со случайными сборками.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "steam:1911610",
+              "domain": "game",
+              "name": "Windblown",
+              "ru": null,
+              "year": 2024,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1911610/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1911610/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Action",
+                "Indie",
+                "Early Access"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/1911610/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 2.372,
+              "parts": {
+                "fit": 1.453,
+                "penalty": 0,
+                "mood": 0.628,
+                "prior": 0.291
+              },
+              "mainAspect": "pace",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть",
+                    "factIds": [
+                      "match:pace.fast"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть",
+                    "factIds": [
+                      "match:difficulty.hard"
+                    ]
+                  },
+                  {
+                    "text": "«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть",
+                    "factIds": [
+                      "match:combat.fast"
+                    ]
+                  },
+                  {
+                    "text": "«Hollow Knight» и «DOOM Eternal»: ещё «ближний бой» и «исследование мира». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:loop.melee",
+                      "match:loop.exploration"
+                    ],
+                    "weak": true
+                  },
+                  {
+                    "text": "Под настроение «сегодня хочется: «осваивать разные сборки»»: «разные билды»",
+                    "factIds": [
+                      "mood:progression.builds"
+                    ]
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Ранний доступ: игра ещё не закончена",
+                    "factIds": [
+                      "risk:early_access"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "90% положительных из 8 453 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:pace.fast",
+                  "type": "match",
+                  "f": "pace.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Fast-Paced",
+                      "kind": "tag",
+                      "q": "Fast-Paced",
+                      "votes": 439
+                    }
+                  ],
+                  "contribution": 0.43913369868052843
+                },
+                {
+                  "id": "match:difficulty.hard",
+                  "type": "match",
+                  "f": "difficulty.hard",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Souls-like",
+                      "kind": "tag",
+                      "q": "Souls-like",
+                      "votes": 463
+                    }
+                  ],
+                  "contribution": 0.4115597286486699
+                },
+                {
+                  "id": "match:combat.fast",
+                  "type": "match",
+                  "f": "combat.fast",
+                  "basis": "confirmed",
+                  "sources": [
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Hack and Slash",
+                      "kind": "tag",
+                      "q": "Hack and Slash",
+                      "votes": 488
+                    }
+                  ],
+                  "contribution": 0.2683678674569095
+                },
+                {
+                  "id": "match:loop.melee",
+                  "type": "match",
+                  "f": "loop.melee",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight",
+                    "DOOM Eternal"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Hack and Slash",
+                      "kind": "tag",
+                      "q": "Hack and Slash",
+                      "votes": 488
+                    }
+                  ],
+                  "contribution": 0.10477655112
+                },
+                {
+                  "id": "match:loop.exploration",
+                  "type": "match",
+                  "f": "loop.exploration",
+                  "basis": "inferred",
+                  "sources": [
+                    "Hollow Knight"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p1",
+                      "q": "work together to explore the nearby Vortex",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Windblown",
+                      "ru": "вместе исследуют ближайший Вортекс"
+                    },
+                    {
+                      "id": "tag:Dungeon Crawler",
+                      "kind": "tag",
+                      "q": "Dungeon Crawler",
+                      "votes": 410
+                    }
+                  ],
+                  "contribution": 0.0580179528792
+                },
+                {
+                  "id": "mood:progression.builds",
+                  "type": "mood",
+                  "f": "progression.builds",
+                  "why": [
+                    "сегодня хочется: «осваивать разные сборки»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p1",
+                      "q": "The character can use up to two weapons with various combination attacks",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Windblown",
+                      "ru": "Персонаж может использовать до двух видов оружия с различными комбинированными атаками"
+                    }
+                  ]
+                },
+                {
+                  "id": "risk:early_access",
+                  "type": "risk_fact",
+                  "f": "completeness.unfinished"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.9,
+                  "total": 8453,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 60 мин."
+                }
+              ],
+              "ai": {
+                "reason": "Windblown даёт желанные быстрые забеги: рывки, смена оружия и сборки требуют активных действий, а не ожидания автоатак.",
+                "caveat": "Ранний доступ: содержание и баланс ещё меняются.",
+                "likelySeen": false,
+                "own": false
+              }
+            }
+          ],
+          "belief": 0.222,
+          "sieves": [
+            {
+              "id": 1,
+              "name": "Можно ли",
+              "removed": 0
+            },
+            {
+              "id": 2,
+              "name": "Было ли",
+              "removed": 3
+            },
+            {
+              "id": 3,
+              "name": "Сделано ли нормально",
+              "removed": 571
+            },
+            {
+              "id": 4,
+              "name": "Моё ли (жёсткие стопы)",
+              "removed": 0
+            },
+            {
+              "id": 5,
+              "name": "Подходит ли сегодня (обязательное)",
+              "removed": 0
+            }
+          ],
+          "considered": 4378,
+          "taste": {
+            "confirmed": [
+              {
+                "f": "difficulty.hard",
+                "label": "сложно, наказывает за ошибки",
+                "w": 0.96,
+                "sources": [
+                  "Hollow Knight"
+                ],
+                "ids": [
+                  "steam:367520"
+                ],
+                "preference": false
+              },
+              {
+                "f": "combat.fast",
+                "label": "быстрый зрелищный бой",
+                "w": 0.85,
+                "sources": [
+                  "DOOM Eternal"
+                ],
+                "ids": [
+                  "steam:782330"
+                ],
+                "preference": false
+              },
+              {
+                "f": "loop.platforming",
+                "label": "платформинг",
+                "w": 0.82,
+                "sources": [
+                  "Hollow Knight"
+                ],
+                "ids": [
+                  "steam:367520"
+                ],
+                "preference": false
+              },
+              {
+                "f": "pace.fast",
+                "label": "быстрый темп",
+                "w": 0.82,
+                "sources": [
+                  "DOOM Eternal"
+                ],
+                "ids": [
+                  "steam:782330"
+                ],
+                "preference": false
+              },
+              {
+                "f": "loop.shooting",
+                "label": "стрельба",
+                "w": 0.82,
+                "sources": [
+                  "DOOM Eternal"
+                ],
+                "ids": [
+                  "steam:782330"
+                ],
+                "preference": false
+              }
+            ],
+            "inferred": [
+              {
+                "f": "aesthetic.soundtrack",
+                "label": "сильная музыка",
+                "w": 0.35,
+                "sources": [
+                  "Hollow Knight",
+                  "DOOM Eternal",
+                  "Vampire Survivors"
+                ],
+                "ids": [
+                  "steam:367520",
+                  "steam:782330",
+                  "steam:1794680"
+                ],
+                "preference": false
+              },
+              {
+                "f": "loop.melee",
+                "label": "ближний бой",
+                "w": 0.23,
+                "sources": [
+                  "Hollow Knight",
+                  "DOOM Eternal"
+                ],
+                "ids": [
+                  "steam:367520",
+                  "steam:782330"
+                ],
+                "preference": false
+              },
+              {
+                "f": "story.central",
+                "label": "сильный сюжет",
+                "w": 0.2,
+                "sources": [
+                  "Hollow Knight",
+                  "DOOM Eternal"
+                ],
+                "ids": [
+                  "steam:367520",
+                  "steam:782330"
+                ],
+                "preference": false
+              },
+              {
+                "f": "aesthetic.stylized",
+                "label": "стилизованный визуал",
+                "w": 0.17,
+                "sources": [
+                  "Hollow Knight"
+                ],
+                "ids": [
+                  "steam:367520"
+                ],
+                "preference": false
+              },
+              {
+                "f": "loop.exploration",
+                "label": "исследование мира",
+                "w": 0.17,
+                "sources": [
+                  "Hollow Knight"
+                ],
+                "ids": [
+                  "steam:367520"
+                ],
+                "preference": false
+              },
+              {
+                "f": "world.fantasy",
+                "label": "фэнтези",
+                "w": 0.16,
+                "sources": [
+                  "Hollow Knight",
+                  "DOOM Eternal"
+                ],
+                "ids": [
+                  "steam:367520",
+                  "steam:782330"
+                ],
+                "preference": false
+              },
+              {
+                "f": "length.endless",
+                "label": "можно играть годами",
+                "w": 0.11,
+                "sources": [
+                  "Hollow Knight",
+                  "Vampire Survivors"
+                ],
+                "ids": [
+                  "steam:367520",
+                  "steam:1794680"
+                ],
+                "preference": false
+              },
+              {
+                "f": "tone.dark",
+                "label": "мрачная атмосфера",
+                "w": 0.11,
+                "sources": [
+                  "Hollow Knight"
+                ],
+                "ids": [
+                  "steam:367520"
+                ],
+                "preference": false
+              }
+            ],
+            "dislikes": [],
+            "hardNo": [],
+            "consumed": 3
+          },
+          "today": {
+            "version": 1,
+            "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "wants": [
+              {
+                "f": "pace.fast",
+                "evidence": "Хочу динамичные забеги"
+              },
+              {
+                "f": "progression.builds",
+                "evidence": "осваивать разные сборки"
+              }
+            ],
+            "avoids": [
+              {
+                "f": "loop.dialogue",
+                "evidence": "Сейчас не хочется долгих разговоров"
+              },
+              {
+                "f": "stability.slow_start",
+                "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+              }
+            ],
+            "time": {
+              "minutes": 60,
+              "evidence": "На сегодня около часа"
+            },
+            "source": "confirmed"
+          },
+          "spares": [],
+          "ai": {
+            "understood": "Тебе нужны быстрые забеги на час: разные сборки, наказание за ошибки и решающая роль реакции, без долгих разговоров и раскачки.",
+            "wish": "",
+            "model": "gpt-6.1-sol",
+            "shortlist": 40
+          }
+        }
+      }
+    }
+  ],
+  "visibleText": "Назад\nПодбор\nВот что я подобрал\n\nСравнил 4 378 игр после отсева.\n\nПонял так: Тебе нужны быстрые забеги на час: разные сборки, наказание за ошибки и решающая роль реакции, без долгих разговоров и раскачки. Без нейросети\n\nНа сегодня учёл: хочется быстрый темп; хочется разные билды; меньше разговоры и решения; меньше цепляет не сразу; есть 60 мин.\n\nВероятно подойдёт\nRoboquest\n2023\nRoboquest сочетает подвижную стрельбу в духе DOOM Eternal с забегами, где оружие и улучшения меняют сборку.\nЧасть возможностей открывается постепенно между попытками.\nЕщё 6 причин в подробностях\nНе проверено, удобно ли прерваться через 60 мин.\nВ «Моё»\nУже играл\nНе сейчас\nОткрыть в Steam\nВыбираю на сегодня\nПодходит на сегодня?\nПодходит ли сегодня\nНе проверено, удобно ли прерваться через 60 мин.\nПочему\n\n«DOOM Eternal»: ты отметил «стрельба», здесь это тоже есть\n\nСтатья в Википедии: «Roboquest — шутер от первого лица с элементами рогалика» источникоригинал\nЕщё 1 подтверждение\n\n«DOOM Eternal»: ты отметил «быстрый темп», здесь это тоже есть\n\nТег игроков Steam, 245 голосов оригинал\n\n«DOOM Eternal»: ты отметил «быстрый зрелищный бой», здесь это тоже есть\n\nТег игроков Steam, 197 голосов оригинал\n\n«Hollow Knight»: ты отметил «сложно, наказывает за ошибки», здесь это тоже есть\n\nТег игроков Steam, 197 голосов оригинал\n\n«Hollow Knight», «DOOM Eternal» и «Vampire Survivors»: ещё «сильная музыка» и «лут и снаряжение». Это ты не отмечал, вес слабый\n\nСтатья в Википедии: «Критики высоко оценили саундтрек игры» источникоригинал\nЕщё 2 подтверждения\n\nПод настроение «сегодня хочется: «осваивать разные сборки»»: «разные билды»\n\nСтатья в Википедии: «Эти улучшения можно комбинировать для создания мощных сборок» источникоригинал\nФакты\nэкшен, инди\nЕщё варианты\nD\nDead Cells\n2018\nDead Cells соединяет любимые в Hollow Knight платформинг и цену ошибки с быстрыми забегами и разными сборками.\nНе проверено, удобно ли прерваться через 60 мин.\nВероятно подойдёт\nУже играл\nU\nUltrakill\n2020\nULTRAKILL развивает любимый в DOOM Eternal скоростной бой: реакция, движение и сочетания оружия решают с первых минут.\nНе проверено, удобно ли прерваться через 60 мин.\nВероятно подойдёт\nУже играл\nW\nWindblown\n2024\nWindblown даёт желанные быстрые забеги: рывки, смена оружия и сборки требуют активных действий, а не ожидания автоатак.\nНе проверено, удобно ли прерваться через 60 мин.\nВероятно подойдёт\nУже играл\nНе то? Скажи словами\nПодобрать\nПоправить, что я понял о тебе\nПочему не показал…"
+}

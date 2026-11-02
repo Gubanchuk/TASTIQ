@@ -1,0 +1,9 @@
+{"appid": 35720, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p1", "q": "Trine 2 is a puzzle-platform game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "requiring the player to use the skills of the three characters"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "a simultaneous cooperative mode"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p5", "q": "The three heroes, Amadeus the wizard, Pontius the knight, and Zoya the thief"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "can be used to gain abilities through a skill tree for each character"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p5", "q": "a mysterious light that leads them into an enchanted forest"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p4", "q": "Scattered throughout the levels are also letters, poems, and documents"}]}
+]}

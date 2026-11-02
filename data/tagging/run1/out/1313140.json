@@ -1,0 +1,14 @@
+{"appid": 1313140, "features": [
+{"f": "humor.dark", "r": 2, "ev": [{"id": "r235848757", "q": "a lot of cute atrocities"}, {"id": "r237380044", "q": "commit unspeakable crimes against nature by night"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r237380044", "q": "sacrificing Steve because he wouldn't stop pooping on the floor."}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "r236779791", "q": "surprisingly cozy game to play and progress in"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "a", "q": "Collect and use resources to build new structures"}, {"id": "r236779791", "q": "The base building is really fun"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "r238159146", "q": "chill and fun cult management simulator"}, {"id": "r237380044", "q": "the management mechanics have no business being this entertaining"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "Explore a sprawling, randomly generated world"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "a", "q": "fight off hordes of enemies"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "a", "q": "Explore a sprawling, randomly generated world"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "d", "q": "Start your own cult in a land of false prophets"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "r237380044", "q": "The art style is adorable"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "r238159146", "q": "It is challenging, but not in a stressful way."}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r237477886", "q": "every day repetitive tasks that gets annoying after a while"}]}
+]}

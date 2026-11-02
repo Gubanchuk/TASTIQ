@@ -1,0 +1,6 @@
+{"appid": 627690, "features": [
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "managing a formation of unique champions with individual abilities"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "upgrade existing ones to strengthen the formation"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "Equipment can drop as loot, and be attached to specific champions"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is a 2018 incremental game based on Dungeons & Dragons"}]}
+]}

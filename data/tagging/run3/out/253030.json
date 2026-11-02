@@ -1,0 +1,11 @@
+{"appid": 253030, "features": [
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p0", "q": "dodging various objects on the way such as laser beams"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p0", "q": "The game ends either when the player hits an object and the ship gets destroyed"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "is a 2013 endless running video game"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "the player controls a solar-powered spaceship"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p2", "q": "minimalist landscape with abstract shapes"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p2", "q": "races through a minimalist landscape with abstract shapes and various obstacles"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p4", "q": "moves faster through more difficult obstacles"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p3", "q": "Gaining a level grants a reward that helps in future races"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p4", "q": "online scoreboards allow users to compare their performance to others"}]}
+]}

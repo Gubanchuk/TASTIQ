@@ -1,0 +1,7 @@
+{"appid": 1677280, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "the Tactical Pause system, which allows the player to pause a battle and queue up commands"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "is set in the Italian and North African theaters of World War II"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "the player's interactions with the game's various commanders can affect the narrative's ending"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "NPR criticized the repetitiveness of the Italian campaign"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p5", "q": "it makes for a vastly more approachable game"}]}
+]}

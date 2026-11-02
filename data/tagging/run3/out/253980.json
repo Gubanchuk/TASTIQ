@@ -1,0 +1,9 @@
+{"appid": 253980, "features": [
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "The player uses medieval and magical weapons to fight enemies"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "a third-person action-adventure game mixing puzzles, shooting, sword fights and more"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Set in a medieval fantasy realm"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p0", "q": "players can choose to take on the role of either"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p2", "q": "in a level-based structure"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p4", "q": "A group of men and women are sent on a perilous journey"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "the player collects gold and gems"}]}
+]}

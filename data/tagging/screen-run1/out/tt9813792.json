@@ -1,0 +1,10 @@
+{"id": "tt9813792", "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is an American science fiction horror television series"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "is an American science fiction horror television series"}]},
+{"f": "world.supernatural", "r": 2, "ev": [{"id": "s", "q": "the terrifying creatures that come out when the sun goes down"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "s", "q": "a nightmarish town that traps all those who enter"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "FROM unravels the mystery of a nightmarish town"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "plagued by terrifying nocturnal creatures from the surrounding forest"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p1", "q": "critical acclaim for its story, directing, and the performances of the cast"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p1", "q": "In April 2026, the series was renewed for a fifth and final season"}]}
+]}

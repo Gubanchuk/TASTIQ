@@ -1,0 +1,8 @@
+{"appid": 247020, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "The player controls the menu and running of a restaurant"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "missing steps or ingredients, adding wrong ingredients, and/or cooking it improperly"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "Scott also commented that the game was difficult"}, {"id": "p5", "q": "surprisingly difficult at times"}]},
+{"f": "pace.fast", "r": 1, "ev": [{"id": "p3", "q": "The day cycle includes rush hours at lunch and dinner"}]},
+{"f": "tone.cozy", "r": 1, "ev": [{"id": "p5", "q": "has a lot of charm"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p5", "q": "also called the game 'repetitive'"}]}
+]}

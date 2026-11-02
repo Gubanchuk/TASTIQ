@@ -1,0 +1,6 @@
+
+> tastiq@0.1.0 test:server
+> node test/server-smoke.mjs
+
+TASTIQ prototype: http://localhost:55781  (game 13)
+PASS: HTTP/static, AI picks + intent, feedback validation/privacy, in-flight sharing, cache, shared limits, isolated usage journal, disabled access. Paid requests: 0.

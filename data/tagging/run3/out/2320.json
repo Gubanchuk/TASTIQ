@@ -1,0 +1,8 @@
+{"appid": 2320, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 1997 first-person shooter game developed by id Software"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p7", "q": "Quake II takes place in a science fiction environment"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "It can be played as a free-for-all deathmatch game mode"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "a cooperative version of the single-player game"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p0", "q": "The player takes the role of a space marine"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p9", "q": "adrenaline-pumping, visceral, instantly gratifying action"}]}
+]}

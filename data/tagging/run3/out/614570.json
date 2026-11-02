@@ -1,0 +1,6 @@
+{"appid": 614570, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p3", "q": "If the player sneaks up on a foe, they can stab them to death quickly and quietly"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "The player character Billie Lurk is equipped with a short sword"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "has access to a variety of supernatural abilities"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p0", "q": "follows the former assassin Billie Lurk"}]}
+]}

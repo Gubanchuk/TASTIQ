@@ -1,0 +1,45 @@
+{
+ "appid": 1313860,
+ "features": [
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "more ways to team up on the street or in the stadium"
+    }
+   ]
+  },
+  {
+   "f": "social.pvp",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "team up with a friend online and compete for rewards"
+    }
+   ]
+  },
+  {
+   "f": "progression.collection",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "build your dream squad of players past and present"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r229947299",
+     "q": "a portion of it is not available because EA refuses to fund support for their game servers"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{"appid": 1190970, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "enables players to build and install items in the house manually"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "Sandbox mode allows players to design a house from scratch"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p1", "q": "These tasks must be completed in sequence"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "involves flipping real estate"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "the simple pleasure of popping bubble wrap"}]}
+]}

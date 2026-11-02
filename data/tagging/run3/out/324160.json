@@ -1,0 +1,12 @@
+{"appid": 324160, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p3", "q": "Clannad follows a branching plot line with multiple paths and endings"}]},
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p3", "q": "Much of its gameplay is spent on reading the story's narrative and dialogue"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "Much of its gameplay is spent on reading the story's narrative and dialogue"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "referring to the cast as some of the best"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p3", "q": "Clannad is a drama and romance visual novel"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p9", "q": "voted No. 2 in the Dengeki poll of the most emotional games of all time"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p10", "q": "many genuinely funny moments"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p0", "q": "Clannad was specifically made for all ages"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p5", "q": "takes place primarily at the fictional Hikarizaka Private High School in Japan"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p4", "q": "When the player completes a character's scenario, he or she receives an orb of light"}]}
+]}

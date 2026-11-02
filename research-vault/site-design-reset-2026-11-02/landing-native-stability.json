@@ -1,0 +1,44 @@
+[
+  {
+    "concept": "conversation",
+    "viewport": "desktop",
+    "before": 900,
+    "after": 900,
+    "stable": true
+  },
+  {
+    "concept": "showcase",
+    "viewport": "desktop",
+    "before": 900,
+    "after": 900,
+    "stable": true
+  },
+  {
+    "concept": "catalogue",
+    "viewport": "desktop",
+    "before": 900,
+    "after": 900,
+    "stable": true
+  },
+  {
+    "concept": "conversation",
+    "viewport": "mobile",
+    "before": 891,
+    "after": 891,
+    "stable": true
+  },
+  {
+    "concept": "showcase",
+    "viewport": "mobile",
+    "before": 891,
+    "after": 891,
+    "stable": true
+  },
+  {
+    "concept": "catalogue",
+    "viewport": "mobile",
+    "before": 891,
+    "after": 891,
+    "stable": true
+  }
+]

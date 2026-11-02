@@ -1,0 +1,9 @@
+{"id": "tt0099878", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 1990 American animated science fiction comedy film"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "animated science fiction comedy film"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "science fiction comedy film"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p5", "q": "appeal only to small children"}]},
+{"f": "world.music", "r": 1, "ev": [{"id": "p4", "q": "making a with-it musical for teen-agers"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p5", "q": "is overlong for animation fans"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p4", "q": "citing both the story and the animation as having"}]}
+]}

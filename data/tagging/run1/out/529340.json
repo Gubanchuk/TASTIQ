@@ -1,0 +1,109 @@
+{
+ "appid": 529340,
+ "features": [
+  {
+   "f": "loop.management",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Balance the competing interests in your society"
+    },
+    {
+     "id": "a",
+     "q": "Expand your industry to take advantage of lucrative goods"
+    }
+   ]
+  },
+  {
+   "f": "world.historical",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Lead dozens of world nations from 1836-1936"
+    },
+    {
+     "id": "d",
+     "q": "the exciting and transformative 19th century"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235762911",
+     "q": "There may be a little bit of a learning curve when starting out"
+    },
+    {
+     "id": "r235762911",
+     "q": "The mechanics are pretty well thought out"
+    }
+   ]
+  },
+  {
+   "f": "freedom.sandbox",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "the choice is yours"
+    },
+    {
+     "id": "r235762911",
+     "q": "you may choose to go down a very historical route or go wild"
+    }
+   ]
+  },
+  {
+   "f": "length.endless",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238124302",
+     "q": "with so much replayability"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235673652",
+     "q": "Bugs are going unfixed"
+    },
+    {
+     "id": "r237815596",
+     "q": "10 more years until this game is actually playable"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235803503",
+     "q": "Every time I play the terrible war systems cause a rage quit"
+    },
+    {
+     "id": "r235728938",
+     "q": "Фронты ломаются, генералы тупят, воевать нормально невозможно"
+    }
+   ]
+  },
+  {
+   "f": "loop.building",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237927867",
+     "q": "Строить заводы, чтобы строить заводы"
+    }
+   ]
+  }
+ ]
+}

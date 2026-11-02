@@ -1,0 +1,8 @@
+{"id": "tt0388644", "features": [
+{"f": "format.documentary", "r": 3, "ev": [{"id": "p0", "q": "English-language documentary television miniseries directed by Jean-Xavier de Lestrade"}]},
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "about the trial of Michael Peterson, who was convicted in 2003"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p4", "q": "The authorities disbelieved Peterson's story that Kathleen had fallen while drunk"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "p7", "q": "ended in Michael bludgeoning his wife to death"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p1", "q": "Camera crews were given access to the accused's extended family"}]},
+{"f": "characters.family", "r": 1, "ev": [{"id": "p6", "q": "Kathleen's two sisters, soon grew suspicious of Peterson"}]}
+]}

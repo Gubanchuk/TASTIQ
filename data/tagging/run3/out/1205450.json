@@ -1,0 +1,12 @@
+{"appid": 1205450, "features": [
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "features a variety of areas to explore"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "hack and slash combat"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p2", "q": "side quests to gain items or earn achievements"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p6", "q": "relentlessly silly script"}, {"id": "p6", "q": "praised the charm and humor"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p6", "q": "enjoyed the game's tone and dialogue"}]},
+{"f": "world.postapoc", "r": 1, "ev": [{"id": "p3", "q": "there was a nuclear holocaust that killed all humans"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p6", "q": "its story was too short"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p6", "q": "the game's puzzles lacked depth"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "much of the action [felt] repetitive"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p6", "q": "criticizing the controls"}, {"id": "p6", "q": "the sword's controls were floaty at times"}]}
+]}

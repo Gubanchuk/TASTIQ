@@ -1,0 +1,147 @@
+{
+ "appid": 204100,
+ "features": [
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235794015",
+     "q": "There is no other game with better shooting mechanics than Max Payne 3"
+    }
+   ]
+  },
+  {
+   "f": "combat.precise",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237535886",
+     "q": "Tight controls and fun gunplay"
+    }
+   ]
+  },
+  {
+   "f": "combat.weighty",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235794015",
+     "q": "Shooting bad guys has never, ever, felt so rewarding"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "with a dark and twisted story"
+    }
+   ]
+  },
+  {
+   "f": "tone.melancholic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "the tragedies that took his loved ones years ago are wounds that refuse to heal"
+    }
+   ]
+  },
+  {
+   "f": "world.modern",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "moves to São Paulo to protect a wealthy family"
+    }
+   ]
+  },
+  {
+   "f": "characters.lone_hero",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Max Payne finds himself alone on the streets of an unfamiliar city"
+    }
+   ]
+  },
+  {
+   "f": "ending.strong",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236488430",
+     "q": "one of the best final chapters in gaming"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237569700",
+     "q": "in-game music is perfection"
+    },
+    {
+     "id": "r236488430",
+     "q": "HEALTH's soundtrack with the whole game"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237549071",
+     "q": "this is visually the best in my humble opinion"
+    },
+    {
+     "id": "r235782649",
+     "q": "game looks good, plays fine and smooth"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237535886",
+     "q": "Unskippable cutscenes every few minutes that constantly interrupts the flow of gameplay"
+    },
+    {
+     "id": "r237544973",
+     "q": "the cur scenes are unskippable and really long and boring"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237535886",
+     "q": "The cover mechanic feels like an afterthought and is very clunky"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237455253",
+     "q": "Пройдя игру за 9 часов"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,422 @@
+{
+  "state": {
+    "version": 1,
+    "id": "overnight-20261101-01-replay",
+    "revision": 3,
+    "mode": "guided",
+    "phase": "review",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "rpg",
+            "label": "RPG"
+          }
+        ],
+        "text": "Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса.",
+        "kind": "answer",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      }
+    ],
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:replay",
+        "text": "Сегодня хочешь перепройти Skyrim.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Сегодня хочу перепройти Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": "replay"
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочется снова исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "снова исследовать мир",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:character_progression",
+        "text": "Хочется развивать героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "развивать героя",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "avoid:death_repetition",
+        "text": "Не хочется частых повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "но без частых повторов после смерти",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Играть будешь один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+    "uncertainties": [],
+    "retractions": [],
+    "sessionTime": {
+      "minutes": 30,
+      "sourceId": "overnight-20261101-01-replay:1",
+      "quote": "Сегодня есть полчаса."
+    },
+    "factRemovalUndo": null,
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Играть будешь один на ПК с Windows; сегодня есть полчаса.",
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочется RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "skyrim:replay",
+        "text": "Сегодня хочешь перепройти Skyrim.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Сегодня хочу перепройти Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": "replay"
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочется снова исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "снова исследовать мир",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:character_progression",
+        "text": "Хочется развивать героя.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "развивать героя",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "avoid:death_repetition",
+        "text": "Не хочется частых повторов после смерти.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "но без частых повторов после смерти",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играть будешь на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Играть будешь один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "uncertainties": [],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "sessionTime": {
+      "minutes": 30,
+      "sourceId": "overnight-20261101-01-replay:1",
+      "quote": "Сегодня есть полчаса."
+    },
+    "canUndoFactRemoval": false,
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      }
+    ],
+    "type": "review"
+  }
+}

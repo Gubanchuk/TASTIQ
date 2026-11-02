@@ -1,0 +1,19 @@
+{
+  "appid": 12200,
+  "features": [
+    {"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "Set in the fictional New England town of Bullworth"}]},
+    {"f": "freedom.open_world", "r": 2, "ev": [{"id": "p3", "q": "Bully is an action-adventure game set in an open world environment"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "with praise directed at its missions, narrative, characters, and soundtrack"}]},
+    {"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "Ashley admired the memorable cast and cinematic storytelling"}]},
+    {"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p0", "q": "the game follows juvenile delinquent student Jimmy Hopkins"}]},
+    {"f": "social.solo", "r": 2, "ev": [{"id": "p3", "q": "The game's single-player mode has the player control a high school student"}]},
+    {"f": "social.pvp", "r": 1, "ev": [{"id": "p1", "q": "lets two players compete for the highest score in different classes"}]},
+    {"f": "loop.melee", "r": 2, "ev": [{"id": "p5", "q": "The player can use melee attacks and weapons to fight enemies"}]},
+    {"f": "loop.driving", "r": 1, "ev": [{"id": "p5", "q": "The vehicles featured in the game include a skateboard, scooters, bicycles, and go-karts"}]},
+    {"f": "humor.funny", "r": 2, "ev": [{"id": "p10", "q": "regarded the game as an unusually successful comedy"}]},
+    {"f": "pace.draggy", "r": 1, "ev": [{"id": "p9", "q": "found the repeated travel between mission locations excessive"}]},
+    {"f": "stability.slow_start", "r": 1, "ev": [{"id": "p9", "q": "criticized the slow opening chapter"}]},
+    {"f": "combat.clunky", "r": 1, "ev": [{"id": "p11", "q": "Wilks found targeting less reliable"}]},
+    {"f": "ending.weak", "r": 1, "ev": [{"id": "p10", "q": "a disappointing ending detracted from them"}]}
+  ]
+}

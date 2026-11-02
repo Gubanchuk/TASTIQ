@@ -1,0 +1,12 @@
+{"appid": 2060130, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p2", "q": "The objective is to move the story forward by solving narrative-based puzzles"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "talking to non-player characters to acquire information"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "This can be done by exploring locations"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p4", "q": "The game also includes a simplified mode called"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p9", "q": "Some reviewers acknowledged the game had a reduced difficulty level"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p6", "q": "Several of the main characters of the series return for the game"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p8", "q": "in a storybook style that is extremely fitting"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "vibrant and lovely, capturing the spirit of the earlier games"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p5", "q": "fictional islands in the Caribbean around the Golden Age of Piracy"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p9", "q": "limited some opportunities for comedy"}]}
+]}

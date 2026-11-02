@@ -1,0 +1,8 @@
+{"id": "tt3230454", "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "an American post-apocalyptic comedy television series"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "s", "q": "is a single-camera comedy"}, {"id": "p4", "q": "meticulous in its comic details and pleasantly acted"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "as a small group of survivors"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "It ended with a cliffhanger episode, to be resolved in the fifth season"}]},
+{"f": "length.long", "r": 1, "ev": [{"id": "p1", "q": "the series aired 67 episodes over four seasons"}]},
+{"f": "characters.friendship", "r": 1, "ev": [{"id": "p5", "q": "the chemistry between Forte and Schaal"}]}
+]}

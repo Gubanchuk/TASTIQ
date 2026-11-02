@@ -1,0 +1,13 @@
+{"appid": 333640, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "The game takes place in a post-apocalyptic science fantasy setting"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "The game takes place in a post-apocalyptic science fantasy setting"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "The game takes place in a post-apocalyptic science fantasy setting"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "It is set in an open world that is partially pre-made and partially procedurally generated"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "can also choose to ignore it and play the game without following the pre-written plot"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "Players can choose to follow the main quest line"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "When creating a character, the player can choose between playing as a True Kin or a mutant"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "When creating a character, the player can choose between playing as a True Kin or a mutant"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "deeply simulated physical and political systems"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p2", "q": "At the start of each run, the game generates a set of historical events and group relationships"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p3", "q": "rated the game highly for being more accessible than other roguelikes"}]}
+]}

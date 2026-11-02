@@ -1,0 +1,9 @@
+{"appid": 233470, "features": [
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "they unlock technologies and graphical upgrades"}, {"id": "p3", "q": "the player gradually unlocks graphics, technologies and gameplay"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "The character moves in a world made up of dungeons, caverns, forests and villages"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p4", "q": "find hidden stars and cards that are scattered around the game world"}]},
+{"f": "loop.cards", "r": 1, "ev": [{"id": "p4", "q": "a collectible card game based on"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p3", "q": "simple pixelated graphics"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p7", "q": "Main criticisms concerned the play-time and the lack of variety"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p7", "q": "stops evolving much after 30 minutes"}]}
+]}

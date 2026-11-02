@@ -1,0 +1,3046 @@
+[
+  {
+    "caseId": "pair-1-evening-1",
+    "pairId": "pair-1",
+    "before": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу спокойную историю, без напряжения",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу спокойную историю, без напряжения",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу спокойную историю, без напряжения",
+          "wants": [
+            {
+              "f": "tension.low",
+              "evidence": "спокойную"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.high",
+              "evidence": "без напряжения"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    }
+  },
+  {
+    "caseId": "pair-1-evening-2",
+    "pairId": "pair-1",
+    "before": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу напряжённую историю, чтобы держала в напряжении, а не спокойный сюжет",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу напряжённую историю, чтобы держала в напряжении, а не спокойный сюжет",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу напряжённую историю, чтобы держала в напряжении, а не спокойный сюжет",
+          "wants": [
+            {
+              "f": "tension.high",
+              "evidence": "держала в напряжении"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.low",
+              "evidence": "не спокойный сюжет"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    }
+  },
+  {
+    "caseId": "pair-2-evening-1",
+    "pairId": "pair-2",
+    "before": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смешной кооператив, без соревнования",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смешной кооператив, без соревнования",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу смешной кооператив, без соревнования",
+          "wants": [
+            {
+              "f": "humor.funny",
+              "evidence": "смешной"
+            },
+            {
+              "f": "social.coop",
+              "evidence": "кооператив"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "social.pvp",
+              "evidence": "без соревнования"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    }
+  },
+  {
+    "caseId": "pair-2-evening-2",
+    "pairId": "pair-2",
+    "before": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу соревнование с другими игроками, не спокойное развлечение",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу соревнование с другими игроками, не спокойное развлечение",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу соревнование с другими игроками, не спокойное развлечение",
+          "wants": [
+            {
+              "f": "social.pvp",
+              "evidence": "соревнование с другими игроками"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.low",
+              "evidence": "не спокойное развлечение"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    }
+  },
+  {
+    "caseId": "pair-3-evening-1",
+    "pairId": "pair-3",
+    "before": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется смешного и лёгкого, без грусти",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется смешного и лёгкого, без грусти",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочется смешного и лёгкого, без грусти",
+          "wants": [
+            {
+              "f": "humor.funny",
+              "evidence": "смешного"
+            },
+            {
+              "f": "tone.lighthearted",
+              "evidence": "лёгкого"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tone.melancholic",
+              "evidence": "без грусти"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    }
+  },
+  {
+    "caseId": "pair-3-evening-2",
+    "pairId": "pair-3",
+    "before": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется грустной драмы, чтобы пробрало, без шуток",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется грустной драмы, чтобы пробрало, без шуток",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочется грустной драмы, чтобы пробрало, без шуток",
+          "wants": [
+            {
+              "f": "tone.melancholic",
+              "evidence": "грустной драмы, чтобы пробрало"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "humor.funny",
+              "evidence": "без шуток"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    }
+  },
+  {
+    "caseId": "pair-4-evening-1",
+    "pairId": "pair-4",
+    "before": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смотреть фоном, без необходимости вникать",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смотреть фоном, без необходимости вникать",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу смотреть фоном, без необходимости вникать",
+          "wants": [
+            {
+              "f": "cognitive.low",
+              "evidence": "без необходимости вникать"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "cognitive.high",
+              "evidence": "без необходимости вникать"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    }
+  },
+  {
+    "caseId": "pair-4-evening-2",
+    "pairId": "pair-4",
+    "before": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу внимательно следить за хитрым сюжетом, не фоновое шоу",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    },
+    "after": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу внимательно следить за хитрым сюжетом, не фоновое шоу",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу внимательно следить за хитрым сюжетом, не фоновое шоу",
+          "wants": [
+            {
+              "f": "cognitive.high",
+              "evidence": "внимательно следить за хитрым сюжетом"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "cognitive.low",
+              "evidence": "не фоновое шоу"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    }
+  }
+]

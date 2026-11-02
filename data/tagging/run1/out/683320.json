@@ -1,0 +1,15 @@
+{"appid": 683320, "features": [
+{"f": "tone.melancholic", "r": 3, "ev": [{"id": "r236272836", "q": "takes you through the stages of grief that the developer went through"}]},
+{"f": "tone.serene", "r": 3, "ev": [{"id": "a", "q": "GRIS is a serene and evocative experience"}, {"id": "r237522675", "q": "Расслабляющая и атмосферная игра"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "r237339788", "q": "The visuals and audio are amazing"}, {"id": "r236283219", "q": "visually stunning experience"}]},
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "r237809988", "q": "gorgeous gorgeous soundtrack"}, {"id": "a", "q": "an elegant original score"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "r236283219", "q": "The vibrant watercolor visuals"}]},
+{"f": "tension.low", "r": 3, "ev": [{"id": "a", "q": "free of danger, frustration or death"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "a", "q": "platforming sequences, and optional skill-based challenges"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "a", "q": "light puzzles, platforming sequences"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "Players will explore a meticulously designed world"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r236272836", "q": "Gameplay is minimal"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "a", "q": "The game can be enjoyed by anyone regardless of their spoken language"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r236272836", "q": "it is very moving and takes you through the stages of grief"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "r235665375", "q": "You just push forward and the story will progress"}]}
+]}

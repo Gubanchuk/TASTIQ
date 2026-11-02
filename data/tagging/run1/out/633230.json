@@ -1,0 +1,97 @@
+{
+ "appid": 633230,
+ "features": [
+  {
+   "f": "social.pvp",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "battle as a team of 4 to compete against other teams online"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238142778",
+     "q": "you get the game mostly for its multi player aspect"
+    }
+   ]
+  },
+  {
+   "f": "social.solo",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238142778",
+     "q": "there are some single player aspects to it too making it playable"
+    }
+   ]
+  },
+  {
+   "f": "characters.custom_hero",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236300649",
+     "q": "the fact that you can make your own character"
+    },
+    {
+     "id": "r237258550",
+     "q": "for character customisation"
+    }
+   ]
+  },
+  {
+   "f": "loop.looting",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237258550",
+     "q": "The weapon and items create a strong experience of different ninja style"
+    }
+   ]
+  },
+  {
+   "f": "story.minimal",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237487780",
+     "q": "there is no story mode"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237311034",
+     "q": "Кстати, онлайн буквально мёртвый"
+    },
+    {
+     "id": "r235927827",
+     "q": "no new single player missions at all"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237311034",
+     "q": "превратился в сплошной спам одних и тех же техник"
+    },
+    {
+     "id": "r235927827",
+     "q": "Same modes since release"
+    }
+   ]
+  }
+ ]
+}

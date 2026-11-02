@@ -1,0 +1,14 @@
+{"appid": 226700, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p3", "q": "The game incorporated survival elements like hunger and thirst"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p3", "q": "endure the hardships of a post-apocalyptic, zombie-infested world"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "an open world zombie video game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "playing against other users (PvP)"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "By collaborating with other players"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p0", "q": "features both first-person and third-person shooting perspectives"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p6", "q": "praised the character personalization"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "endure the hardships of a post-apocalyptic, zombie-infested world"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p3", "q": "the player's character would eventually die"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "the player's character would eventually die"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p11", "q": "many customers accused the developers of fraud because of key features that were advertised but not featured in the game"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p6", "q": "overall, the game looks terrific"}]}
+]}

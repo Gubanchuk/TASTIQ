@@ -1,0 +1,9 @@
+{"appid": 387860, "features": [
+{"f": "tone.dark", "r": 3, "ev": [{"id": "p3", "q": "dark, bleak game"}, {"id": "p0", "q": "the player performs the last routines of a suicidal man obsessed with a painting"}]},
+{"f": "tone.melancholic", "r": 3, "ev": [{"id": "p3", "q": "the emotional impact of its subject matter"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "the game is a horror-themed adventure game"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p3", "q": "disturbing and humorous tone"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "dark, sad, weird and funny first-person exploration game"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p1", "q": "The player assumes the role of Jacob Ernholtz"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p5", "q": "citing the monotony of the daily routines in the game"}]}
+]}

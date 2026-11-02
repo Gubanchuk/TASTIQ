@@ -1,0 +1,11 @@
+{"appid": 730310, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a 2018 hack and slash game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p2", "q": "an open-world hack-and-slash game played from a third-person perspective"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "A traversable map of China is implemented"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p2", "q": "with stealth elements"}]},
+{"f": "loop.life_sim", "r": 1, "ev": [{"id": "p4", "q": "The game also includes fishing, collecting resources to upgrade weapons and characters, camping"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p4", "q": "The player can customize and decorate hideouts with furniture bought from merchants"}]},
+{"f": "tone.epic", "r": 1, "ev": [{"id": "p8", "q": "the newfound spectacle of battle"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p8", "q": "lifeless open world"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p8", "q": "unenthusiastic voice acting, repetitive content"}]}
+]}

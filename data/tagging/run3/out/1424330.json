@@ -1,0 +1,9 @@
+{"appid": 1424330, "features": [
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "p1", "q": "pet simulation game where the player cares for wobbly dogs"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "can be edited and constructed as well"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p0", "q": "It is a pet simulation with sandbox elements"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "a fully functioning breeding system with traits being mixed together"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p3", "q": "the kind of brightly-colored fun"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p3", "q": "was endeared with its goofiness"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p3", "q": "more passive observation than puzzle"}]}
+]}

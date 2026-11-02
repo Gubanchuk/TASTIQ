@@ -1,0 +1,9 @@
+{"appid": 1096530, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "is a tactical role-playing game with turn-based combat"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "It is set in a fantasy world that was nearly destroyed in an apocalyptic event"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "Players create a party of four adventurers"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "Players can use pre-made characters or make their own"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p1", "q": "The plot is generally linear."}]},
+{"f": "world.postapoc", "r": 1, "ev": [{"id": "p1", "q": "nearly destroyed in an apocalyptic event a thousand years ago"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p1", "q": "or engage in banter with the other party members"}]}
+]}

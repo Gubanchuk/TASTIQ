@@ -1,0 +1,8 @@
+{"appid": 247080, "features": [
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "p0", "q": "an original soundtrack written by Danny Baranowsky"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "the player can only move their character or attack if they perform the action on the beat of the music"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p6", "q": "making deeper levels more challenging than earlier ones"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "explore several levels of an underground dungeon that are procedurally generated"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "they will collect new weapons, armor, usable items, and treasure"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "spend the diamonds on permanent upgrades"}]}
+]}

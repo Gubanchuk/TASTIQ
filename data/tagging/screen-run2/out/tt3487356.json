@@ -1,0 +1,8 @@
+{"id": "tt3487356", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American sitcom television series created by Kenya Barris"}]},
+{"f": "characters.family", "r": 3, "ev": [{"id": "p0", "q": "The show revolves around the wealthy Johnson family as they juggle personal, familial and sociopolitical issues"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "Ross received individual praise, winning the Golden Globe Award for Best Actress"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "p0", "q": "their choice to live in a wealthy, suburban white neighborhood"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p0", "q": "running for eight seasons with 175 episodes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p3", "q": "The series finale aired on April 19, 2022."}]}
+]}

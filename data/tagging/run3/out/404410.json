@@ -1,0 +1,8 @@
+{"appid": 404410, "features": [
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p0", "q": "can trade, transport passengers or fight pirates to earn money"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p6", "q": "Endless Sky takes place in the Milky Way galaxy"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Various aspects of ships can also be modified, including engines, weapons, shield generators and other outfits"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p0", "q": "There are also a few story lines that the player can choose to participate in"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p3", "q": "one human and one incomplete alien campaign"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p6", "q": "Various star systems are connected by hyperspace links"}]}
+]}

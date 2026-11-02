@@ -1,0 +1,7 @@
+{"id": "tt28093628", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated television series created by Joe Bennett"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated television series created by Joe Bennett"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "begin to unravel a conspiracy involving big pharma"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "p2", "q": "Two high school friends, Marshall and Frances, reconnect"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p1", "q": "The series has been renewed for a second season"}]}
+]}

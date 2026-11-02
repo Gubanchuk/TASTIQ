@@ -1,0 +1,11 @@
+{"appid": 916840, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a virtual reality first-person shooter survival horror game"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "Physics-based combat control how melee weapons are controlled"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "There is a linear crafting system at the home base"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p0", "q": "is a virtual reality first-person shooter survival horror game"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p5", "q": "The game is set in the flooded New Orleans after an outbreak"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p7", "q": "Even an event as rote as walking through an abandoned house is fear-inducing"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p7", "q": "PC Gamer liked the way tension increased throughout Saints & Sinners"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p7", "q": "ending depends entirely on the decisions you make throughout the campaign"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p5", "q": "who is either male or female depending on the player's choice"}]}
+]}

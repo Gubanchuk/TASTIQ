@@ -1,0 +1,11 @@
+{"appid": 1218210, "features": [
+{"f": "progression.collection", "r": 3, "ev": [{"id": "p1", "q": "the player collects and trains creatures called Coromon"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "Because each Coromon has only one elemental type, type matchups play a significant role in determining the outcome of encounters"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Gameplay centers on exploring different areas while solving environmental puzzles"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p1", "q": "Gameplay centers on exploring different areas while solving environmental puzzles"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Each Coromon has its own type, traits, and skills"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p4", "q": "several difficulty modes, ranging from Easy to Insane"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p4", "q": "A custom mode allows players to adjust individual mechanics, including healing limits"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "where players can participate in casual or ranked PvP matches"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "p6", "q": "and a reliance on grinding"}]}
+]}

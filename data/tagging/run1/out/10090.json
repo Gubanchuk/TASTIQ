@@ -1,0 +1,15 @@
+{"appid": 10090, "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "d", "q": "the most gritty and chaotic WWII combat ever experienced"}]},
+{"f": "tone.gritty", "r": 3, "ev": [{"id": "d", "q": "the most gritty and chaotic WWII combat ever experienced"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "r237853388", "q": "started to get darker and grittier"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "r237853388", "q": "gun play is fun, music is great"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r237853388", "q": "music is great"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "r236084447", "q": "Great graphics for it's time"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "the all new four-player cooperative campaign"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "a", "q": "The addictive competitive multiplayer has also been enhanced"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r236535342", "q": "the campaign for both Marines and Red Army were absolutely amazing"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "r237853388", "q": "it'll take you a handful of hours to complete"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "r236651000", "q": "you cannot play online anymore without modding even in private lobbies"}, {"id": "r237618562", "q": "you can't even play online with your friends unless you do a lot of work around it"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r237747394", "q": "the controls for this & that range from awkward to clunky"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "r237316120", "q": "даже на легком уровне сложности заставит потеть"}]}
+]}

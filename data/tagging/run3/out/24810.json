@@ -1,0 +1,5 @@
+{"appid": 24810, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "uses a turn-based system where the player issues higher-level orders"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p3", "q": "build and control their forces from a strategic, global level"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p7", "q": "a faction of cyborgs that only LEGION is capable of controlling"}]}
+]}

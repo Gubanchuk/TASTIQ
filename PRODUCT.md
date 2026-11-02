@@ -1,0 +1,53 @@
+# Product
+
+<!-- impeccable:product-schema 1 -->
+
+Source of these facts: the owner's Note Pad note and messages, the research in `research-vault/taste-recommender-logic-2026-10/SUMMARY.md`, and the working prototype. The owner delegated the interview ("сам всё выберешь"); lines marked *(inferred)* are conclusions from those sources, not confirmed answers.
+
+## Platform
+
+web
+
+## Users
+
+People who want to pick something to play or watch tonight and are tired of searching. The founder's own case: looking for a PC game for the evening and not finding one through lists and genre filters. Russian-speaking audience; the interface is in Russian. *(inferred)* They come with a concrete moment in mind ("что поиграть сегодня"), not to browse a catalog for its own sake.
+
+## Product Purpose
+
+A picker that asks a few questions step by step and returns one choice plus a few alternatives, each with the reason it fits this person and the risks. Domains in this version: games, films, series, cartoons. Anime and books are planned later. Success is that the person accepts a pick and it fits; the prototype logs every answer, pick and correction to measure that.
+
+## Positioning
+
+It picks by why a title worked for this person, not by genre. Taste is tied only to reasons the person confirmed ("за живой мир", "за неожиданные повороты"), dislikes are asked as complaints ("всё понятно заранее", "постоянно умирал"), and every stated reason in a pick is backed by a fact with a source: a quote from a review or article, a player or viewer tag, a catalog fact. The catalog and the hard limits belong to code; since 2026-10-28 an AI layer (OpenAI since 2026-10-31; historically Claude) chooses the final four from the shortlist the code leaves and adds one sentence per pick, marked on screen as the model's opinion. It never adds a title outside the catalog or past a sieve. Today it is open to everyone; later only to people who paid or were granted access by hand (`src/ai/access.js`).
+
+## Operating Context
+
+As implemented 2026-11-02: choose games / films / series / cartoons → describe today's wish in your own words or choose directions → useful adaptive questions, one per screen → check and correct the understanding → up to four catalog suggestions with reasons and caveats → save, choose for tonight or mark familiar and replace. Questions have neutral answers; the person can review early, go back, remove a condition or correct the wish. There is no fixed required number of questions. Games also ask platform/company. Viewing separates movie runtime, episode length, today's available time and commitment to a whole series. Cartoons do not imply children; child age is relevant only for viewing with children. A finished story does not automatically mean the entire series has ended. Used on a phone or laptop in the evening. The previous title-by-title path remains explicitly accessible, with its stored data preserved.
+
+The selected Conversation interface uses warm paper, a graphite navigation rail, copper accents, a separate understanding panel and central processing/recovery. The upper landing stays in its original design. The Library has plans (later / tonight / familiar), search and filters for all four domains, separate taste ratings, an archive of prior picks and Evenings for new choices and feedback. Moving a plan does not change taste. Familiarity does not imply dislike or a permanent exclusion.
+
+## Capabilities and Constraints
+
+- Catalogs: 4 952 Steam games, 32 126 films, 9 771 series, 1 916 cartoons; Russian names for most titles.
+- Images: Steam header images for games, TVmaze images for some series; Wikipedia poster thumbnails for the ~6 100 most popular films, series and cartoons (prototype only; a public launch needs a source licensed for display). Designs must work well without images.
+- Evidence types shown to people: review quote with thumbs and hours played, Steam player tag with vote count, MovieLens viewer tag with relevance %, Wikipedia quote, catalog fact (runtime, seasons, status).
+- Confidence labels set by code: "Сильное попадание", "Вероятно подойдёт", "Попробуй: мало данных о твоём вкусе".
+- Front end today: vanilla JS, no build step, `src/server/public` served by Node. Adaptive game state uses `/api/conversation`; domain-scoped film/series/cartoon state uses `/api/media-conversation`. Legacy `/api/dialogue` remains available. Resuming saved results does not call the model.
+- Adaptive free-text interpretation uses structured model proposals checked against exact active source quotes, explicit context and catalog identities. The person sees the understanding before picking. Unknown data stays unknown; reasons are labelled as the model's opinion. Legacy keyword parsing describes the previous path only.
+- AI picker on the result screen: OpenAI Responses API since 2026-10-31, configurable model (default gpt-6.1-sol, low effort). Falls back to the engine's picks on failure; «Не то? Скажи словами» asks again with a wish. Cost is estimated from usage, with per-browser and daily request limits. First live persona comparison: 10/36 fixed targets versus the engine's 3/36, 12 successful requests at an estimated $0.1929, API time about 9 s. This is not real-user validation or a guaranteed per-request price.
+
+## Brand Commitments
+
+Name: TASTIQ (backup name PICKORA). No logo or brand assets yet. Voice: direct, plain Russian, talks to the person on "ты"; no marketing tone.
+
+## Evidence on Hand
+
+Real catalog data and real quotes in `data/catalog.json` and `data/catalog-screen.json`; offline stand results in README.md. No users, testimonials, ratings of the product or press exist yet; nothing of that kind may be shown.
+
+## Product Principles
+
+1. One question at a time; never dump everything on one screen.
+2. Ask why, not which genre; genre only helps choose what to ask about.
+3. Every claim in a pick points to a fact the person can check; the AI sentence is labelled as the model's opinion, not a fact.
+4. Show risks, not only reasons; never fake confidence.
+5. Corrections are instant and visible: the person can always see and edit what the system believes about them.

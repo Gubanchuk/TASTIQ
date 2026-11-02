@@ -1,0 +1,11 @@
+{"id": "tt4179452", "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "a British historical drama television series"}]},
+{"f": "world.war", "r": 3, "ev": [{"id": "p1", "q": "the arrival of the Great Heathen Army in England"}]},
+{"f": "tone.epic", "r": 3, "ev": [{"id": "s", "q": "a show of heroic deeds and epic battles"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p5", "q": "a bloodthirsty appetite for violence"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "fuses beautiful cinematography and magnificent action sequences"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p4", "q": "with praise for its cast performances"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "The series concluded on 9 March 2022"}]},
+{"f": "story.complex", "r": 1, "ev": [{"id": "p6", "q": "a little convoluted"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p5", "q": "a proper cliffhanger"}]}
+]}

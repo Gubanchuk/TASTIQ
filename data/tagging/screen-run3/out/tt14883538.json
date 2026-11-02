@@ -1,0 +1,9 @@
+{"id": "tt14883538", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2025 French animated science fantasy film"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "is a 2025 French animated science fantasy film"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is a 2025 French animated science fantasy film"}]},
+{"f": "world.timetravel", "r": 2, "ev": [{"id": "p3", "q": "captivating time-travel adventure woven with family elements"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p3", "q": "captivating time-travel adventure woven with family elements"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p3", "q": "its expressive character design"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p3", "q": "the script is a touch too derivative for its own good"}]}
+]}

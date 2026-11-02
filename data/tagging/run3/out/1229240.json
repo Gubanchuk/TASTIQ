@@ -1,0 +1,8 @@
+{"appid": 1229240, "features": [
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p1", "q": "featuring pixel art visuals inspired by the 16-bit era"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "Battles are turn-based"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p3", "q": "with fantasy elements such as magic, dragons, and mechs"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p0", "q": "The game follows the story of unlikely heroes trying to stop war between three kingdoms"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "each character in the player's party has a standard attack, several special abilities"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "the overdrive meter can overheat"}]}
+]}

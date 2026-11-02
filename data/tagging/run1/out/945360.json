@@ -1,0 +1,13 @@
+{"appid": 945360, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "d", "q": "An online and local party game of teamwork and betrayal"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "a", "q": "Kill Crewmates and frame bystanders"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "a", "q": "prepare your spaceship for departure"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "a", "q": "Sneak through the vents to quickly move about the ship"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "r236466297", "q": "the whole game relies on talking and debating"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r236466297", "q": "creates pure comedy in every round"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "r236466297", "q": "for laughs and chaotic fun"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r235827488", "q": "every game is different so it has a lot of play-value"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "a", "q": "Pick your color, hat, visor, skin, and pet"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r236466297", "q": "The simple setup of doing tasks while trying to catch the Impostor"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "r236466297", "q": "The controls are easy to learn, so anyone can jump in and play immediately"}]}
+]}

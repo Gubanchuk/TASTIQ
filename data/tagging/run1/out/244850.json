@@ -1,0 +1,12 @@
+{"appid": 244850, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "d", "q": "design and build ships, stations, and planetary bases"}, {"id": "r237955321", "q": "Build, explore, and gather."}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "d", "q": "Explore planets and space, mine resources"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "d", "q": "mine resources, survive hazards, and engage in combat"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "d", "q": "Space Engineers is a sandbox engineering game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "a", "q": "grounded in real engineering and hard science fiction"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "a", "q": "realistic ships, stations, tools and systems"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "from small co-op outposts to huge community servers"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "a", "q": "so your engineering choices really matter"}]},
+{"f": "length.endless", "r": 3, "ev": [{"id": "r236513745", "q": "your imagination is the limit for how long you want to play for"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "r237939461", "q": "Делать там абсолютно нечего"}]}
+]}

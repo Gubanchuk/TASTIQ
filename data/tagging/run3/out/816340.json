@@ -1,0 +1,8 @@
+{"appid": 816340, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "is a tower defense game in a high-fantasy setting"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "The player takes control of a nation of elves as they defend themselves from their ancient enemies"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "build defensive towers on fixed locations around a path"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "Each hero has five different capabilities that can be upgraded"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p2", "q": "warriors better suited to fighting enemies in melee combat"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p3", "q": "the pacing of levels was too slow, and hurt the experience"}]}
+]}

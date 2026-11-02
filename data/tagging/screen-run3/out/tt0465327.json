@@ -1,0 +1,10 @@
+{"id": "tt0465327", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated television series created by Mark Dindal"}]},
+{"f": "world.school", "r": 3, "ev": [{"id": "p1", "q": "The choice of a high school setting was made"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "The series combines physical comedy with a self-aware tone"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "p0", "q": "The series combines physical comedy with a self-aware tone"}]},
+{"f": "characters.unlikeable", "r": 2, "ev": [{"id": "p2", "q": "others found the characters unlikable"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "several reviewers praised Eartha Kitt's voice acting"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p3", "q": "simple but attractive background designs that work well for TV delivery"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p2", "q": "for two seasons between January2006 and November2008"}]}
+]}

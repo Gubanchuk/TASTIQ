@@ -1,0 +1,16 @@
+{
+  "case": "coop-base-exploration",
+  "mode": "guided",
+  "scope": "Real browser to HTTP controller to OpenAI; isolated port and journal",
+  "beforeRun": true,
+  "request": "Хотим втроём строить базу и исследовать, без соревновательного PvP и постоянного наказания за ошибки.",
+  "context": { "platform": "windows", "company": "group", "partySize": "3" },
+  "acceptableTargets": ["Raft", "Grounded", "Valheim", "Core Keeper"],
+  "meaningChecks": [
+    "Cooperative play for three, not solo or competitive PvP",
+    "Building and exploration remain important",
+    "Difficulty tolerance is clarified instead of assuming permanent dislike of survival",
+    "Missing verified player capacity remains visible"
+  ],
+  "limit": "Diagnostic target overlap only, no human fit label; target titles are not passed to the application"
+}

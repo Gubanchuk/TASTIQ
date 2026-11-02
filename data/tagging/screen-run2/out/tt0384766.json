@@ -1,0 +1,8 @@
+{"id": "tt0384766", "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "Rome is an American-British historical drama television series"}]},
+{"f": "world.war", "r": 2, "ev": [{"id": "p4", "q": "The first season depicts Julius Caesar's civil war of 49 BC"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "decadent sets, delicious drama and a surprising amount of intimacy"}, {"id": "p9", "q": "most lavish dramatic series yet"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p7", "q": "behind all that gritty squalor the glory that was Rome gets lost"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p5", "q": "season two of Rome would be its last"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p8", "q": "commenting that season 2 was not as good as season 1"}]}
+]}

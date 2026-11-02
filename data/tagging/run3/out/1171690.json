@@ -1,0 +1,6 @@
+{"appid": 1171690, "features": [
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "supports three-player cooperative multiplayer"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p1", "q": "The game can be played solo"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "The game includes three large open world zones"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "reward players with better gears and resources"}]}
+]}

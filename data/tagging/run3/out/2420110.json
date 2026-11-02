@@ -1,0 +1,14 @@
+{"appid": 2420110, "features": [
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p3", "q": "Aloy's primary weapons of choice are bows and arrows"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p4", "q": "Aloy can also attack enemies in close proximity with her spear"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p5", "q": "players can freely explore the game world of Forbidden West"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p0", "q": "The player can explore the open world"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "Aloy can hide in tall grass, distract unsuspecting enemies"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p5", "q": "the player can sometimes choose from one of three dialogue options"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "The game's skills are divided into six different categories"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "set in a post-apocalyptic version of the Western United States"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "caused by a rogue robot swarm"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p2", "q": "praised the visuals, combat, quest design and the cast's performance"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "praised the visuals, combat, quest design and the cast's performance"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p10", "q": "praised the settlements for how lively they were"}]}
+]}

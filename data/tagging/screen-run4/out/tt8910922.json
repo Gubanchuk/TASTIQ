@@ -1,0 +1,15 @@
+{"id": "tt8910922", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated sitcom"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "The series follows a family of aliens"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p0", "q": "The series follows a family of aliens consisting of Korvo, Terry, Yumyulack, and Jesse"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "a family of aliens consisting of Korvo, Terry, Yumyulack, and Jesse"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p6", "q": "acclaimed the performances of the voice actors"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p5", "q": "Charming, hilarious, and surprisingly sincere"}]},
+{"f": "humor.satire", "r": 1, "ev": [{"id": "p12", "q": "a mad blend of pop-cultural references and meta-gags"}]},
+{"f": "content.profanity", "r": 2, "ev": [{"id": "p8", "q": "gave praise for its cursed language"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p8", "q": "level of violence depicted across its episodes"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p10", "q": "bright, bold, and, frankly, bananas in the best way"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p12", "q": "start to get repetitive at points"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p2", "q": "after six seasons consisting of 63 episodes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "concluded on October 13, 2025, after six seasons consisting of 63 episodes"}]}
+]}

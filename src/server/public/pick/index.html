@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#282a2c"><title>Выбор на вечер — TASTIQ</title>
+ <link rel="icon" href="data:,"><link rel="stylesheet" href="/pick/style.css"><link rel="stylesheet" href="/pick/workspace-legacy.css">
+ <link rel="stylesheet" href="/shared/conversation.css?v=conversation-production-3"><link rel="stylesheet" href="/pick/conversation.css?v=conversation-production-4">
+ <script type="module" src="/pick/app.js?v=conversation-production-3"></script>
+</head>
+<body class="legacy-workspace conversation-page">
+ <div class="app conversation-app" id="app">
+  <aside class="sidebar conversation-rail" id="sidebar" aria-label="Навигация">
+   <header class="legacy-header" id="legacy-header"><a class="conversation-brand" href="/" aria-label="TASTIQ, на главную">tastiq</a>
+    <nav class="legacy-sections conversation-links" aria-label="Основное"><button type="button" data-act="my-pick" id="workspace-pick" aria-current="page">Подобрать</button><a id="workspace-my" href="/library/">Библиотека</a></nav>
+   </header>
+   <button class="icon-btn sidebar-close" id="sidebar-close" type="button" aria-label="Закрыть" hidden></button>
+   <nav class="conversation-domains" id="side-domains" aria-label="Разделы"></nav>
+   <section id="side-steps" hidden aria-label="Подробные шаги"></section><section id="side-taste" hidden aria-label="Что я понял о тебе"></section>
+   <p class="conversation-rail-note">Освободи вечер<br>для самого вечера.</p>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+  <details class="legacy-context-panel" id="legacy-context" open><summary><span class="legacy-context-summary-copy"><span>Этот вечер</span><span id="legacy-context-caption">Ответы и условия</span></span><span class="legacy-context-toggle"><span class="legacy-context-more">Подробнее</span><span class="legacy-context-less">Свернуть</span><i aria-hidden="true"></i></span></summary><aside class="inspector" id="inspector" aria-label="Твой запрос"></aside></details>
+  <main class="main conversation-body" id="main">
+   <header class="toolbar" id="toolbar"><button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Разделы и шаги" hidden></button><button class="btn btn-plain back-btn" id="back-btn" type="button"></button><div class="toolbar-title" id="toolbar-title" aria-live="polite"></div><button class="btn btn-plain restart-btn" id="restart-btn" type="button"></button><div class="busy-bar" aria-hidden="true"></div></header>
+   <ol class="conversation-progress" id="legacy-progress" aria-label="Этапы подбора"></ol>
+   <section class="legacy-stage" id="legacy-stage" aria-label="Текущий шаг"><div class="content" id="content"></div><footer class="actionbar" id="actionbar"></footer>
+    <div class="legacy-thinking-layer" id="legacy-thinking" role="status" aria-live="polite" aria-labelledby="legacy-thinking-title" aria-describedby="legacy-thinking-description" tabindex="-1" hidden><div class="legacy-thinking"><span class="legacy-thinking-signal" aria-hidden="true"><span class="spinner"></span></span><h2 id="legacy-thinking-title">Разбираю пожелание</h2><p id="legacy-thinking-description">Учитываю то, чего хочется сегодня. Ответ можно будет проверить перед применением.</p></div></div>
+   </section>
+  </main>
+ </div>
+ <dialog class="sheet-dialog" id="confirm"><form method="dialog"><h2 id="confirm-title">Начать заново?</h2><p id="confirm-text">Ответы этого подбора сбросятся.</p><div class="dialog-actions"><button class="btn btn-secondary" value="cancel">Отмена</button><button class="btn btn-primary" value="ok" id="confirm-ok">Начать заново</button></div></form></dialog>
+ <div class="sr-only" id="announcer" aria-live="polite"></div>
+</body></html>

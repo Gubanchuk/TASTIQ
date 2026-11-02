@@ -1,0 +1,13 @@
+{"appid": 1809700, "features": [
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "p3", "q": "combines elements of traditional role-playing games and simulation games"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "a group of students investigating a temporal anomaly"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p5", "q": "dating multiple characters at the same time"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p7", "q": "allies and enemies take turns to attack"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p6", "q": "Tartarus is the game's main dungeon"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "fusing together multiple Personas"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p2", "q": "some found its combat and environments repetitive"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p12", "q": "with the overall dark tone"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "the player assumes the role of a high school student"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "a tower containing monsters called Shadows"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p12", "q": "you could play this for fifty, sixty, seventy, eighty hours or more"}]}
+]}

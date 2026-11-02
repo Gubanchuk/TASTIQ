@@ -1,0 +1,5451 @@
+[
+  {
+    "caseId": "pair-1-evening-1",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу спокойную историю, без напряжения",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу спокойную историю, без напряжения",
+          "wants": [
+            {
+              "f": "tension.low",
+              "evidence": "спокойную"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.high",
+              "evidence": "без напряжения"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "steam:914800",
+          "reason": "Coffee Talk даёт живые разговоры и личные драмы, которые ты любишь в Disco Elysium, но в спокойном ритме ночной кофейни.",
+          "caveat": "Ты скорее слушатель; влияние на историю скромнее, чем в любимых RPG.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:1118240",
+          "reason": "В Lake можно неспешно знакомиться с жителями городка и выбирать ответы: живые люди и разговоры без опасностей и спешки.",
+          "caveat": "Развозить почту придётся регулярно; сюжет камерный, без размаха любимых RPG.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:206440",
+          "reason": "To the Moon опирается на характеры, юмор в диалогах и личную драму — за это тебе запомнились Life Is Strange и Edith Finch.",
+          "caveat": "История линейная и очень слезливая; спокойный темп не означает лёгкую тему.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:481510",
+          "reason": "Night in the Woods цепляет текстом, дружескими перепалками и неблагополучным городком — близко к твоей любви к Disco Elysium.",
+          "caveat": "Позже появляются тревожные и пугающие сцены; на сегодня лучше неспешное начало.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Тебе нужна спокойная история с живыми героями и хорошими диалогами — без гринда, сложных боёв и постоянного напряжения.",
+      "dropped": 0,
+      "filled": [],
+      "ms": 13122,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 7421,
+        "input_tokens_details": {
+          "cache_write_tokens": 7418,
+          "cached_tokens": 0
+        },
+        "output_tokens": 612,
+        "output_tokens_details": {
+          "reasoning_tokens": 150
+        },
+        "total_tokens": 8033
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "steam:914800",
+        "reason": "Coffee Talk даёт живые разговоры и личные драмы, которые ты любишь в Disco Elysium, но в спокойном ритме ночной кофейни.",
+        "caveat": "Ты скорее слушатель; влияние на историю скромнее, чем в любимых RPG.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Coffee Talk",
+        "original": "Coffee Talk",
+        "year": 2020
+      },
+      {
+        "id": "steam:1118240",
+        "reason": "В Lake можно неспешно знакомиться с жителями городка и выбирать ответы: живые люди и разговоры без опасностей и спешки.",
+        "caveat": "Развозить почту придётся регулярно; сюжет камерный, без размаха любимых RPG.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "title": "Lake",
+        "original": "Lake",
+        "year": 2021
+      },
+      {
+        "id": "steam:206440",
+        "reason": "To the Moon опирается на характеры, юмор в диалогах и личную драму — за это тебе запомнились Life Is Strange и Edith Finch.",
+        "caveat": "История линейная и очень слезливая; спокойный темп не означает лёгкую тему.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "To the Moon",
+        "original": "To the Moon",
+        "year": 2012
+      },
+      {
+        "id": "steam:481510",
+        "reason": "Night in the Woods цепляет текстом, дружескими перепалками и неблагополучным городком — близко к твоей любви к Disco Elysium.",
+        "caveat": "Позже появляются тревожные и пугающие сцены; на сегодня лучше неспешное начало.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Night in the Woods",
+        "original": "Night in the Woods",
+        "year": 2017
+      }
+    ],
+    "shortlist": [
+      "steam:1113000",
+      "steam:578650",
+      "steam:435150",
+      "steam:207610",
+      "steam:481510",
+      "steam:1150690",
+      "steam:324160",
+      "steam:1088850",
+      "steam:391540",
+      "steam:1180660",
+      "steam:330830",
+      "steam:1089980",
+      "steam:1466640",
+      "steam:208580",
+      "steam:1091500",
+      "steam:3014080",
+      "steam:32370",
+      "steam:948740",
+      "steam:206440",
+      "steam:331470",
+      "steam:825630",
+      "steam:2676840",
+      "steam:2322560",
+      "steam:24980",
+      "steam:972660",
+      "steam:1158850",
+      "steam:2593370",
+      "steam:1451940",
+      "steam:1764390",
+      "steam:914800",
+      "steam:983970",
+      "steam:1401590",
+      "steam:1238040",
+      "steam:536220",
+      "steam:675260",
+      "steam:47810",
+      "steam:638970",
+      "steam:770810",
+      "steam:1443200",
+      "steam:2161700"
+    ],
+    "modelOutsideShortlist": [
+      "steam:1118240"
+    ]
+  },
+  {
+    "caseId": "pair-1-evening-1",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу спокойную историю, без напряжения",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу спокойную историю, без напряжения",
+          "wants": [
+            {
+              "f": "tension.low",
+              "evidence": "спокойную"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.high",
+              "evidence": "без напряжения"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    },
+    "result": {
+      "ms": 12246,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 1318,
+        "input_tokens_details": {
+          "cache_write_tokens": 1315,
+          "cached_tokens": 0
+        },
+        "output_tokens": 604,
+        "output_tokens_details": {
+          "reasoning_tokens": 157
+        },
+        "total_tokens": 1922
+      },
+      "understood": "Сегодня ты хочешь спокойную историю с живыми героями, без напряжения и гринда.",
+      "picks": [
+        {
+          "id": "steam:914800",
+          "title": "Coffee Talk",
+          "year": 2020,
+          "reason": "Ты ценишь текст и живых героев: здесь слушаешь посетителей ночной кофейни, готовишь напитки и узнаёшь их истории без боёв.",
+          "caveat": "Влияние на историю скромнее, чем в твоих любимых RPG; есть непростые личные темы.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:1055540",
+          "title": "A Short Hike",
+          "year": 2019,
+          "reason": "Для спокойного вечера — прогулка по острову, добродушные разговоры и маленькие истории встречных без наказания за ошибки.",
+          "caveat": "Общего сюжета и значимых решений немного; есть прыжки и поиск пути.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:1135690",
+          "title": "Unpacking",
+          "year": 2021,
+          "reason": "Ты ценишь запоминающиеся истории: здесь узнаёшь человека через вещи и переезды, спокойно обустраивая комнаты без таймера.",
+          "caveat": "Нет диалогов и сюжетных развилок; некоторые вещи нужно поставить в определённые места.",
+          "likelySeen": false,
+          "own": true
+        }
+      ],
+      "filled": [
+        "steam:1113000"
+      ],
+      "rejected": [
+        {
+          "title": "Tavern Talk",
+          "year": 2024,
+          "reason": "not-in-catalog"
+        }
+      ],
+      "dropped": 1
+    },
+    "cards": [
+      {
+        "id": "steam:914800",
+        "title": "Coffee Talk",
+        "year": 2020,
+        "reason": "Ты ценишь текст и живых героев: здесь слушаешь посетителей ночной кофейни, готовишь напитки и узнаёшь их истории без боёв.",
+        "caveat": "Влияние на историю скромнее, чем в твоих любимых RPG; есть непростые личные темы.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Coffee Talk"
+      },
+      {
+        "id": "steam:1055540",
+        "title": "A Short Hike",
+        "year": 2019,
+        "reason": "Для спокойного вечера — прогулка по острову, добродушные разговоры и маленькие истории встречных без наказания за ошибки.",
+        "caveat": "Общего сюжета и значимых решений немного; есть прыжки и поиск пути.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "A Short Hike"
+      },
+      {
+        "id": "steam:1135690",
+        "title": "Unpacking",
+        "year": 2021,
+        "reason": "Ты ценишь запоминающиеся истории: здесь узнаёшь человека через вещи и переезды, спокойно обустраивая комнаты без таймера.",
+        "caveat": "Нет диалогов и сюжетных развилок; некоторые вещи нужно поставить в определённые места.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Unpacking"
+      },
+      {
+        "id": "steam:1113000",
+        "origin": "fill",
+        "title": "Persona 4 Golden",
+        "original": "Persona 4 Golden",
+        "year": 2020
+      }
+    ],
+    "shortlist": [
+      "steam:1113000",
+      "steam:578650",
+      "steam:435150",
+      "steam:207610",
+      "steam:481510",
+      "steam:1150690",
+      "steam:324160",
+      "steam:1088850",
+      "steam:391540",
+      "steam:1180660",
+      "steam:330830",
+      "steam:1089980",
+      "steam:1466640",
+      "steam:208580",
+      "steam:1091500",
+      "steam:3014080",
+      "steam:32370",
+      "steam:948740",
+      "steam:206440",
+      "steam:331470",
+      "steam:825630",
+      "steam:2676840",
+      "steam:2322560",
+      "steam:24980",
+      "steam:972660",
+      "steam:1158850",
+      "steam:2593370",
+      "steam:1451940",
+      "steam:1764390",
+      "steam:914800",
+      "steam:983970",
+      "steam:1401590",
+      "steam:1238040",
+      "steam:536220",
+      "steam:675260",
+      "steam:47810",
+      "steam:638970",
+      "steam:770810",
+      "steam:1443200",
+      "steam:2161700"
+    ],
+    "modelOutsideShortlist": [
+      "steam:1055540",
+      "steam:1135690"
+    ]
+  },
+  {
+    "caseId": "pair-1-evening-2",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу напряжённую историю, чтобы держала в напряжении, а не спокойный сюжет",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу напряжённую историю, чтобы держала в напряжении, а не спокойный сюжет",
+          "wants": [
+            {
+              "f": "tension.high",
+              "evidence": "держала в напряжении"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.low",
+              "evidence": "не спокойный сюжет"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    },
+    "result": {
+      "ms": 12376,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 1331,
+        "input_tokens_details": {
+          "cache_write_tokens": 1328,
+          "cached_tokens": 0
+        },
+        "output_tokens": 632,
+        "output_tokens_details": {
+          "reasoning_tokens": 168
+        },
+        "total_tokens": 1963
+      },
+      "understood": "Сегодня ты хочешь напряжённую сюжетную игру для одного на Windows — без гринда и изнуряющих наказаний за ошибки.",
+      "picks": [
+        {
+          "id": "steam:1341820",
+          "title": "As Dusk Falls",
+          "year": 2022,
+          "reason": "Криминальная драма с заложниками: напряжение строится на людях и решениях, а твои выборы заметно меняют судьбы персонажей.",
+          "caveat": "Визуальная подача — преимущественно статичные иллюстрации; есть QTE.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:250320",
+          "title": "The Wolf Among Us",
+          "year": 2013,
+          "reason": "Мрачное расследование, неоднозначные герои и острые диалоги: близко твоей любви к персонажам, но с тревожной детективной интригой.",
+          "caveat": "Есть QTE и жестокие сцены; влияние решений на общий сюжет ограничено.",
+          "likelySeen": true,
+          "own": true
+        },
+        {
+          "id": "steam:282140",
+          "title": "SOMA",
+          "year": 2015,
+          "reason": "Подводный научно-фантастический хоррор держит тревогой и тяжёлыми вопросами о личности — здесь история важнее прокачки.",
+          "caveat": "Для меньшего риска гибели есть безопасный режим; хоррор и мрачные темы остаются.",
+          "likelySeen": false,
+          "own": true
+        }
+      ],
+      "filled": [
+        "steam:481510"
+      ],
+      "rejected": [
+        {
+          "title": "Heavy Rain",
+          "year": 2010,
+          "reason": "not-in-catalog"
+        }
+      ],
+      "dropped": 1
+    },
+    "cards": [
+      {
+        "id": "steam:1341820",
+        "title": "As Dusk Falls",
+        "year": 2022,
+        "reason": "Криминальная драма с заложниками: напряжение строится на людях и решениях, а твои выборы заметно меняют судьбы персонажей.",
+        "caveat": "Визуальная подача — преимущественно статичные иллюстрации; есть QTE.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "As Dusk Falls"
+      },
+      {
+        "id": "steam:250320",
+        "title": "The Wolf Among Us",
+        "year": 2013,
+        "reason": "Мрачное расследование, неоднозначные герои и острые диалоги: близко твоей любви к персонажам, но с тревожной детективной интригой.",
+        "caveat": "Есть QTE и жестокие сцены; влияние решений на общий сюжет ограничено.",
+        "likelySeen": true,
+        "own": true,
+        "origin": "model",
+        "original": "The Wolf Among Us"
+      },
+      {
+        "id": "steam:282140",
+        "title": "SOMA",
+        "year": 2015,
+        "reason": "Подводный научно-фантастический хоррор держит тревогой и тяжёлыми вопросами о личности — здесь история важнее прокачки.",
+        "caveat": "Для меньшего риска гибели есть безопасный режим; хоррор и мрачные темы остаются.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "SOMA"
+      },
+      {
+        "id": "steam:481510",
+        "origin": "fill",
+        "title": "Night in the Woods",
+        "original": "Night in the Woods",
+        "year": 2017
+      }
+    ],
+    "shortlist": [
+      "steam:481510",
+      "steam:435150",
+      "steam:207610",
+      "steam:1150690",
+      "steam:1113000",
+      "steam:391540",
+      "steam:578650",
+      "steam:3014080",
+      "steam:1466640",
+      "steam:324160",
+      "steam:1088850",
+      "steam:1180660",
+      "steam:2593370",
+      "steam:1451940",
+      "steam:330830",
+      "steam:1089980",
+      "steam:536220",
+      "steam:948740",
+      "steam:825630",
+      "steam:208580",
+      "steam:1091500",
+      "steam:32370",
+      "steam:261030",
+      "steam:206440",
+      "steam:812810",
+      "steam:331470",
+      "steam:2050650",
+      "steam:2676840",
+      "steam:24980",
+      "steam:1866180",
+      "steam:1158850",
+      "steam:388880",
+      "steam:1764390",
+      "steam:983970",
+      "steam:960990",
+      "steam:1443200",
+      "steam:412830",
+      "steam:1238040",
+      "steam:866800",
+      "steam:1677770"
+    ],
+    "modelOutsideShortlist": [
+      "steam:1341820",
+      "steam:250320",
+      "steam:282140"
+    ]
+  },
+  {
+    "caseId": "pair-1-evening-2",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу напряжённую историю, чтобы держала в напряжении, а не спокойный сюжет",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу напряжённую историю, чтобы держала в напряжении, а не спокойный сюжет",
+          "wants": [
+            {
+              "f": "tension.high",
+              "evidence": "держала в напряжении"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.low",
+              "evidence": "не спокойный сюжет"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют",
+          "issues": []
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир",
+          "issues": []
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "text": "за команду и Гарруса, и что выборы переносятся между частями",
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short",
+            "loop.dialogue",
+            "characters.memorable"
+          ],
+          "text": "короткая, на один вечер, разговоры по рации",
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [
+            "story.central",
+            "length.short"
+          ],
+          "text": "два часа, а помню годами",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "world.living"
+          ],
+          "text": "Артур Морган, лучший персонаж в играх",
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.memorable",
+            "story.central"
+          ],
+          "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает",
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [
+            "story.choices",
+            "story.central"
+          ],
+          "text": "кино, в котором сам решаешь",
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "characters.companions",
+            "characters.memorable",
+            "story.choices"
+          ],
+          "text": "компаньоны, каждый диалог событие",
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "tone.melancholic"
+          ],
+          "text": "за Макс и Хлою, рыдал",
+          "issues": []
+        },
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            }
+          ],
+          "text": "гринд ради гринда, сюжет кончился, дальше одно и то же"
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "text": "постоянно умирал, бесило"
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "progression.grind"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "story.minimal"
+            }
+          ],
+          "text": "непонятно, что происходит, одни и те же миссии, надо гриндить"
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "pace.repetitive"
+            },
+            {
+              "f": "length.long"
+            }
+          ],
+          "text": "огромная, затянуто, одно и то же"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 101
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "steam:250320",
+          "reason": "Как в Disco Elysium, здесь важны разговоры и неоднозначные герои, но расследование убийства быстрее затягивает в опасность.",
+          "caveat": "Много жестокости; решения меняют отношения сильнее, чем основной сюжет.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:207610",
+          "reason": "Привязанность к героям, как в Mass Effect, превращает решения под давлением в личную драму — спокойно здесь не будет.",
+          "caveat": "Жестокость и тяжёлые потери; развилок меньше, чем кажется.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:948740",
+          "reason": "Любовь к тексту и необычным героям Disco Elysium здесь встречается с напряжённым расследованием и переплетёнными ветками.",
+          "caveat": "Есть кровавые сцены, сексуальные шутки и головоломки с таймером.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:388880",
+          "reason": "Разговоры на ходу напоминают Firewatch, но сверхъестественная угроза добавляет нужную тебе сегодня тревогу.",
+          "caveat": "Камерная история: меньше глубины персонажей и масштаба решений, чем в любимых RPG.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Тебе нужна напряжённая история с живыми героями и весомыми решениями, без гринда и наказания за каждую ошибку.",
+      "dropped": 0,
+      "filled": [],
+      "ms": 12246,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 7261,
+        "input_tokens_details": {
+          "cache_write_tokens": 7258,
+          "cached_tokens": 0
+        },
+        "output_tokens": 689,
+        "output_tokens_details": {
+          "reasoning_tokens": 243
+        },
+        "total_tokens": 7950
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "steam:250320",
+        "reason": "Как в Disco Elysium, здесь важны разговоры и неоднозначные герои, но расследование убийства быстрее затягивает в опасность.",
+        "caveat": "Много жестокости; решения меняют отношения сильнее, чем основной сюжет.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "title": "The Wolf Among Us",
+        "original": "The Wolf Among Us",
+        "year": 2013
+      },
+      {
+        "id": "steam:207610",
+        "reason": "Привязанность к героям, как в Mass Effect, превращает решения под давлением в личную драму — спокойно здесь не будет.",
+        "caveat": "Жестокость и тяжёлые потери; развилок меньше, чем кажется.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "The Walking Dead: The Game",
+        "original": "The Walking Dead",
+        "year": 2012
+      },
+      {
+        "id": "steam:948740",
+        "reason": "Любовь к тексту и необычным героям Disco Elysium здесь встречается с напряжённым расследованием и переплетёнными ветками.",
+        "caveat": "Есть кровавые сцены, сексуальные шутки и головоломки с таймером.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "AI: The Somnium Files",
+        "original": "AI: The Somnium Files",
+        "year": 2019
+      },
+      {
+        "id": "steam:388880",
+        "reason": "Разговоры на ходу напоминают Firewatch, но сверхъестественная угроза добавляет нужную тебе сегодня тревогу.",
+        "caveat": "Камерная история: меньше глубины персонажей и масштаба решений, чем в любимых RPG.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Oxenfree",
+        "original": "Oxenfree",
+        "year": 2016
+      }
+    ],
+    "shortlist": [
+      "steam:481510",
+      "steam:435150",
+      "steam:207610",
+      "steam:1150690",
+      "steam:1113000",
+      "steam:391540",
+      "steam:578650",
+      "steam:3014080",
+      "steam:1466640",
+      "steam:324160",
+      "steam:1088850",
+      "steam:1180660",
+      "steam:2593370",
+      "steam:1451940",
+      "steam:330830",
+      "steam:1089980",
+      "steam:536220",
+      "steam:948740",
+      "steam:825630",
+      "steam:208580",
+      "steam:1091500",
+      "steam:32370",
+      "steam:261030",
+      "steam:206440",
+      "steam:812810",
+      "steam:331470",
+      "steam:2050650",
+      "steam:2676840",
+      "steam:24980",
+      "steam:1866180",
+      "steam:1158850",
+      "steam:388880",
+      "steam:1764390",
+      "steam:983970",
+      "steam:960990",
+      "steam:1443200",
+      "steam:412830",
+      "steam:1238040",
+      "steam:866800",
+      "steam:1677770"
+    ],
+    "modelOutsideShortlist": [
+      "steam:250320"
+    ]
+  },
+  {
+    "caseId": "pair-2-evening-1",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смешной кооператив, без соревнования",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу смешной кооператив, без соревнования",
+          "wants": [
+            {
+              "f": "humor.funny",
+              "evidence": "смешной"
+            },
+            {
+              "f": "social.coop",
+              "evidence": "кооператив"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "social.pvp",
+              "evidence": "без соревнования"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "steam:3241660",
+          "reason": "Как в любимой Lethal Company, вместе тащите добычу от монстров, а физика хрупких предметов превращает панику в смех.",
+          "caveat": "Онлайн на 1–6 игроков; монстры и потеря добычи могут заставить попотеть.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:274190",
+          "reason": "За любовь к стрельбе и угару в Deep Rock Galactic: вместе разносите уровни героями боевиков, без соперников-людей.",
+          "caveat": "Пиксельный вид сбоку вместо 3D; вместимость кооператива в каталоге не проверена.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:2881650",
+          "reason": "Твоё «страшно и смешно, с друзьями» из Lethal Company здесь становится съёмкой монстров и просмотром своих нелепых подвигов.",
+          "caveat": "Онлайн на 2–4 игроков; стрельбы почти нет, зато есть погони и внезапные нападения.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:774801",
+          "reason": "За быстрый темп Rocket League и кооперативную стрельбу Deep Rock Galactic: крабы с пушками вместе отбиваются от волн врагов.",
+          "caveat": "Юмор скорее в абсурде происходящего; вместимость кооператива не проверена.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Тебе нужен кооперативный угар с друзьями: страшно и смешно, как в Lethal Company, или бодрая стрельба — без борьбы друг с другом.",
+      "dropped": 0,
+      "filled": [],
+      "ms": 8951,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 7026,
+        "input_tokens_details": {
+          "cache_write_tokens": 7023,
+          "cached_tokens": 0
+        },
+        "output_tokens": 526,
+        "output_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "total_tokens": 7552
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "steam:3241660",
+        "reason": "Как в любимой Lethal Company, вместе тащите добычу от монстров, а физика хрупких предметов превращает панику в смех.",
+        "caveat": "Онлайн на 1–6 игроков; монстры и потеря добычи могут заставить попотеть.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "R.E.P.O.",
+        "original": "R.E.P.O.",
+        "year": 2025
+      },
+      {
+        "id": "steam:274190",
+        "reason": "За любовь к стрельбе и угару в Deep Rock Galactic: вместе разносите уровни героями боевиков, без соперников-людей.",
+        "caveat": "Пиксельный вид сбоку вместо 3D; вместимость кооператива в каталоге не проверена.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Broforce",
+        "original": "Broforce",
+        "year": 2015
+      },
+      {
+        "id": "steam:2881650",
+        "reason": "Твоё «страшно и смешно, с друзьями» из Lethal Company здесь становится съёмкой монстров и просмотром своих нелепых подвигов.",
+        "caveat": "Онлайн на 2–4 игроков; стрельбы почти нет, зато есть погони и внезапные нападения.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Content Warning",
+        "original": "Content Warning",
+        "year": 2024
+      },
+      {
+        "id": "steam:774801",
+        "reason": "За быстрый темп Rocket League и кооперативную стрельбу Deep Rock Galactic: крабы с пушками вместе отбиваются от волн врагов.",
+        "caveat": "Юмор скорее в абсурде происходящего; вместимость кооператива не проверена.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Crab Champions",
+        "original": "Crab Champions",
+        "year": 2023
+      }
+    ],
+    "shortlist": [
+      "steam:3097560",
+      "steam:274190",
+      "steam:1172620",
+      "steam:602960",
+      "steam:466240",
+      "steam:1782210",
+      "steam:700330",
+      "steam:3241660",
+      "steam:204340",
+      "steam:2567870",
+      "steam:49520",
+      "steam:2881650",
+      "steam:1097150",
+      "steam:204360",
+      "steam:728880",
+      "steam:4000",
+      "steam:1942280",
+      "steam:493900",
+      "steam:493520",
+      "steam:55230",
+      "steam:312530",
+      "steam:238430",
+      "steam:379720",
+      "steam:2835570",
+      "steam:10090",
+      "steam:1677740",
+      "steam:594650",
+      "steam:774801",
+      "steam:386940",
+      "steam:251570",
+      "steam:880940",
+      "steam:1158940",
+      "steam:1260320",
+      "steam:232090",
+      "steam:408900",
+      "steam:239140",
+      "steam:257420",
+      "steam:1010750",
+      "steam:1262240",
+      "steam:381210"
+    ],
+    "modelOutsideShortlist": []
+  },
+  {
+    "caseId": "pair-2-evening-1",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смешной кооператив, без соревнования",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу смешной кооператив, без соревнования",
+          "wants": [
+            {
+              "f": "humor.funny",
+              "evidence": "смешной"
+            },
+            {
+              "f": "social.coop",
+              "evidence": "кооператив"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "social.pvp",
+              "evidence": "без соревнования"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    },
+    "result": {
+      "ms": 11698,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 1260,
+        "input_tokens_details": {
+          "cache_write_tokens": 1257,
+          "cached_tokens": 0
+        },
+        "output_tokens": 588,
+        "output_tokens_details": {
+          "reasoning_tokens": 145
+        },
+        "total_tokens": 1848
+      },
+      "understood": "Сегодня ты хочешь смешной кооператив для компании, без соревнования с другими игроками.",
+      "picks": [
+        {
+          "id": "steam:3241660",
+          "title": "R.E.P.O.",
+          "year": 2025,
+          "reason": "Совместная переноска хрупкой добычи среди монстров рождает физический хаос — под твой запрос «страшно и смешно, с друзьями».",
+          "caveat": "Есть скримеры и напряжённые вылазки: юмор здесь соседствует с хоррором.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:2881650",
+          "title": "Content Warning",
+          "year": 2024,
+          "reason": "Вы вместе снимаете монстров и собственные неудачи; просмотр записи превращает пережитый страх в повод поржать компанией.",
+          "caveat": "Хоррор остаётся важной частью игры; смешные моменты во многом создаёте вы сами.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:477160",
+          "title": "Human: Fall Flat",
+          "year": 2016,
+          "reason": "Нелепая физика и совместное преодоление препятствий дают простор для дружеского угара без соперников.",
+          "caveat": "Это головоломки, а не экшен: на отдельных препятствиях темп может просесть.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "steam:42910",
+          "title": "Magicka",
+          "year": 2011,
+          "reason": "Вы смешиваете стихии и вместе отбиваетесь от врагов; нелепые ошибки с заклинаниями подходят под твой вкус к кооп-хаосу.",
+          "caveat": "Дружественный огонь неизбежен; сочетания стихий нужно освоить.",
+          "likelySeen": false,
+          "own": true
+        }
+      ],
+      "filled": [],
+      "rejected": [],
+      "dropped": 0
+    },
+    "cards": [
+      {
+        "id": "steam:3241660",
+        "title": "R.E.P.O.",
+        "year": 2025,
+        "reason": "Совместная переноска хрупкой добычи среди монстров рождает физический хаос — под твой запрос «страшно и смешно, с друзьями».",
+        "caveat": "Есть скримеры и напряжённые вылазки: юмор здесь соседствует с хоррором.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "R.E.P.O."
+      },
+      {
+        "id": "steam:2881650",
+        "title": "Content Warning",
+        "year": 2024,
+        "reason": "Вы вместе снимаете монстров и собственные неудачи; просмотр записи превращает пережитый страх в повод поржать компанией.",
+        "caveat": "Хоррор остаётся важной частью игры; смешные моменты во многом создаёте вы сами.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Content Warning"
+      },
+      {
+        "id": "steam:477160",
+        "title": "Human Fall Flat",
+        "year": 2016,
+        "reason": "Нелепая физика и совместное преодоление препятствий дают простор для дружеского угара без соперников.",
+        "caveat": "Это головоломки, а не экшен: на отдельных препятствиях темп может просесть.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Human Fall Flat"
+      },
+      {
+        "id": "steam:42910",
+        "title": "Magicka",
+        "year": 2011,
+        "reason": "Вы смешиваете стихии и вместе отбиваетесь от врагов; нелепые ошибки с заклинаниями подходят под твой вкус к кооп-хаосу.",
+        "caveat": "Дружественный огонь неизбежен; сочетания стихий нужно освоить.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Magicka"
+      }
+    ],
+    "shortlist": [
+      "steam:3097560",
+      "steam:274190",
+      "steam:1172620",
+      "steam:602960",
+      "steam:466240",
+      "steam:1782210",
+      "steam:700330",
+      "steam:3241660",
+      "steam:204340",
+      "steam:2567870",
+      "steam:49520",
+      "steam:2881650",
+      "steam:1097150",
+      "steam:204360",
+      "steam:728880",
+      "steam:4000",
+      "steam:1942280",
+      "steam:493900",
+      "steam:493520",
+      "steam:55230",
+      "steam:312530",
+      "steam:238430",
+      "steam:379720",
+      "steam:2835570",
+      "steam:10090",
+      "steam:1677740",
+      "steam:594650",
+      "steam:774801",
+      "steam:386940",
+      "steam:251570",
+      "steam:880940",
+      "steam:1158940",
+      "steam:1260320",
+      "steam:232090",
+      "steam:408900",
+      "steam:239140",
+      "steam:257420",
+      "steam:1010750",
+      "steam:1262240",
+      "steam:381210"
+    ],
+    "modelOutsideShortlist": [
+      "steam:477160",
+      "steam:42910"
+    ]
+  },
+  {
+    "caseId": "pair-2-evening-2",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу соревнование с другими игроками, не спокойное развлечение",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу соревнование с другими игроками, не спокойное развлечение",
+          "wants": [
+            {
+              "f": "social.pvp",
+              "evidence": "соревнование с другими игроками"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.low",
+              "evidence": "не спокойное развлечение"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    },
+    "result": {
+      "ms": 12222,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 1259,
+        "input_tokens_details": {
+          "cache_write_tokens": 1256,
+          "cached_tokens": 0
+        },
+        "output_tokens": 586,
+        "output_tokens_details": {
+          "reasoning_tokens": 140
+        },
+        "total_tokens": 1845
+      },
+      "understood": "Сегодня ты хочешь соревноваться с живыми соперниками в компании друзей: быстрый экшен, напряжение и азарт.",
+      "picks": [
+        {
+          "id": "steam:291550",
+          "title": "Brawlhalla",
+          "year": 2017,
+          "reason": "Динамичные драки с выбиванием за край арены: можно соперничать с друзьями или вместе против других людей, без медленной раскачки.",
+          "caveat": "Это платформенный файтинг, а не шутер; движение и атаки придётся освоить.",
+          "likelySeen": false,
+          "own": true
+        }
+      ],
+      "filled": [
+        "steam:466240",
+        "steam:1782210",
+        "steam:700330"
+      ],
+      "rejected": [
+        {
+          "title": "THE FINALS",
+          "year": 2023,
+          "reason": "not-in-catalog"
+        },
+        {
+          "title": "VALORANT",
+          "year": 2020,
+          "reason": "not-in-catalog"
+        },
+        {
+          "title": "Overwatch 2",
+          "year": 2022,
+          "reason": "not-in-catalog"
+        }
+      ],
+      "dropped": 3
+    },
+    "cards": [
+      {
+        "id": "steam:291550",
+        "title": "Brawlhalla",
+        "year": 2017,
+        "reason": "Динамичные драки с выбиванием за край арены: можно соперничать с друзьями или вместе против других людей, без медленной раскачки.",
+        "caveat": "Это платформенный файтинг, а не шутер; движение и атаки придётся освоить.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Brawlhalla"
+      },
+      {
+        "id": "steam:466240",
+        "origin": "fill",
+        "title": "Deceit",
+        "original": "Deceit",
+        "year": 2017
+      },
+      {
+        "id": "steam:1782210",
+        "origin": "fill",
+        "title": "Crab Game",
+        "original": "Crab Game",
+        "year": 2021
+      },
+      {
+        "id": "steam:700330",
+        "origin": "fill",
+        "title": "SCP: Secret Laboratory",
+        "original": "SCP: Secret Laboratory",
+        "year": 2017
+      }
+    ],
+    "shortlist": [
+      "steam:466240",
+      "steam:1782210",
+      "steam:700330",
+      "steam:1172620",
+      "steam:3097560",
+      "steam:602960",
+      "steam:274190",
+      "steam:594650",
+      "steam:333930",
+      "steam:312530",
+      "steam:381210",
+      "steam:238430",
+      "steam:1097150",
+      "steam:2835570",
+      "steam:2310",
+      "steam:1677740",
+      "steam:444200",
+      "steam:581320",
+      "steam:10090",
+      "steam:823130",
+      "steam:629760",
+      "steam:422970",
+      "steam:207140",
+      "steam:221100",
+      "steam:843380",
+      "steam:674940",
+      "steam:1942280",
+      "steam:880940",
+      "steam:323850",
+      "steam:418460",
+      "steam:239140",
+      "steam:437920",
+      "steam:1158940",
+      "steam:204360",
+      "steam:553310",
+      "steam:431240",
+      "steam:1785150",
+      "steam:379720",
+      "steam:1262240",
+      "steam:753650"
+    ],
+    "modelOutsideShortlist": [
+      "steam:291550"
+    ]
+  },
+  {
+    "caseId": "pair-2-evening-2",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу соревнование с другими игроками, не спокойное развлечение",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу соревнование с другими игроками, не спокойное развлечение",
+          "wants": [
+            {
+              "f": "social.pvp",
+              "evidence": "соревнование с другими игроками"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tension.low",
+              "evidence": "не спокойное развлечение"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды",
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "ржали до слёз, страшно и смешно, с друзьями",
+          "issues": []
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "humor.funny"
+          ],
+          "text": "лучший кооп, вчетвером, стрельба и угар",
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "humor.funny"
+          ],
+          "text": "футбол на машинах, быстро, орём в дискорде",
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "tone.creepy",
+            "tension.high"
+          ],
+          "text": "орать в микрофон на призрака",
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "loop.shooting"
+          ],
+          "text": "хаос, френдли-файр, угар",
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "loop.shooting",
+            "pace.fast"
+          ],
+          "text": "классика, вчетвером, быстро",
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "cognitive.high",
+            "tension.high"
+          ],
+          "text": "тактика, каждый раунд напряг",
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [
+            "social.coop",
+            "humor.funny",
+            "social.pvp"
+          ],
+          "text": "предавать друзей бесценно",
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [
+            "social.pvp",
+            "pace.fast",
+            "loop.shooting"
+          ],
+          "text": "движение, тройки, адреналин",
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow"
+            }
+          ],
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "session.long"
+            }
+          ],
+          "text": "один ход по пять минут, медленно, где экшен"
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "loop.management"
+            }
+          ],
+          "text": "таблицы и менеджмент, скучно"
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "ферма, медленно, друзья дропнули через час"
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.slow"
+            },
+            {
+              "f": "pace.draggy"
+            }
+          ],
+          "text": "красиво, но двадцать минут едешь на лошади, затянуто"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 102
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "steam:312530",
+          "reason": "Молниеносные перестрелки с нелепым оружием соединяют быстрые раунды CS2 и ваш любимый угар с друзьями.",
+          "caveat": "Сражаетесь друг против друга; вместимость лобби в каталоге не проверена.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:207140",
+          "reason": "Гонки с крюками и подставами дают знакомые по Rocket League скорость, борьбу за победу и крики в дискорде.",
+          "caveat": "Без стрельбы; вместимость лобби в каталоге не проверена.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "steam:700330",
+          "reason": "Побеги от монстров и бои между людьми соединяют страх и смех из Lethal Company с настоящим противостоянием игроков.",
+          "caveat": "Нужно освоить роли, после смерти бывает ожидание; вместимость группы не проверена.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Тебе нужно соревнование с людьми: азарт, быстрые схватки и повод орать в дискорде с друзьями, а не спокойный кооп.",
+      "dropped": 1,
+      "filled": [
+        "steam:466240"
+      ],
+      "ms": 10314,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 6983,
+        "input_tokens_details": {
+          "cache_write_tokens": 6980,
+          "cached_tokens": 0
+        },
+        "output_tokens": 596,
+        "output_tokens_details": {
+          "reasoning_tokens": 148
+        },
+        "total_tokens": 7579
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "steam:312530",
+        "reason": "Молниеносные перестрелки с нелепым оружием соединяют быстрые раунды CS2 и ваш любимый угар с друзьями.",
+        "caveat": "Сражаетесь друг против друга; вместимость лобби в каталоге не проверена.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Duck Game",
+        "original": "Duck Game",
+        "year": 2015
+      },
+      {
+        "id": "steam:207140",
+        "reason": "Гонки с крюками и подставами дают знакомые по Rocket League скорость, борьбу за победу и крики в дискорде.",
+        "caveat": "Без стрельбы; вместимость лобби в каталоге не проверена.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "SpeedRunners",
+        "original": "SpeedRunners",
+        "year": 2016
+      },
+      {
+        "id": "steam:700330",
+        "reason": "Побеги от монстров и бои между людьми соединяют страх и смех из Lethal Company с настоящим противостоянием игроков.",
+        "caveat": "Нужно освоить роли, после смерти бывает ожидание; вместимость группы не проверена.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "SCP: Secret Laboratory",
+        "original": "SCP: Secret Laboratory",
+        "year": 2017
+      },
+      {
+        "id": "steam:466240",
+        "origin": "fill",
+        "title": "Deceit",
+        "original": "Deceit",
+        "year": 2017
+      }
+    ],
+    "shortlist": [
+      "steam:466240",
+      "steam:1782210",
+      "steam:700330",
+      "steam:1172620",
+      "steam:3097560",
+      "steam:602960",
+      "steam:274190",
+      "steam:594650",
+      "steam:333930",
+      "steam:312530",
+      "steam:381210",
+      "steam:238430",
+      "steam:1097150",
+      "steam:2835570",
+      "steam:2310",
+      "steam:1677740",
+      "steam:444200",
+      "steam:581320",
+      "steam:10090",
+      "steam:823130",
+      "steam:629760",
+      "steam:422970",
+      "steam:207140",
+      "steam:221100",
+      "steam:843380",
+      "steam:674940",
+      "steam:1942280",
+      "steam:880940",
+      "steam:323850",
+      "steam:418460",
+      "steam:239140",
+      "steam:437920",
+      "steam:1158940",
+      "steam:204360",
+      "steam:553310",
+      "steam:431240",
+      "steam:1785150",
+      "steam:379720",
+      "steam:1262240",
+      "steam:753650"
+    ],
+    "modelOutsideShortlist": []
+  },
+  {
+    "caseId": "pair-3-evening-1",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется смешного и лёгкого, без грусти",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочется смешного и лёгкого, без грусти",
+          "wants": [
+            {
+              "f": "humor.funny",
+              "evidence": "смешного"
+            },
+            {
+              "f": "tone.lighthearted",
+              "evidence": "лёгкого"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tone.melancholic",
+              "evidence": "без грусти"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "tt0120917",
+          "reason": "Как в «Зверополисе», непохожим героям приходится стать друзьями, а шутки и перепалки смешат и детей, и взрослых.",
+          "caveat": "Рисованная классика; есть короткие погони с ягуарами и падения.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt0317219",
+          "reason": "Дружба, добрый юмор и яркий мир машин отвечают твоему запросу на лёгкий семейный вечер без тяжёлых тем.",
+          "caveat": "Середина неспешная; в гонках бывают аварии.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt0351283",
+          "reason": "Звериная компания и дружеские перепалки напоминают о «Зверополисе», а комические выходки — о «Кунг-фу Панде».",
+          "caveat": "Есть шуточные угрозы хищников; юмор более дурашливый, чем в «Зверополисе».",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt1490017",
+          "reason": "Как в «Зверополисе», яркий мир и шутки для двух возрастов сочетаются с историей, которую взрослому интересно обсуждать.",
+          "caveat": "Очень шумный темп, много погонь и игрушечных взрывов.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Тебе нужен смешной мультфильм для детей и взрослых: с дружбой, без тяжёлых тем и грусти, не скучный для тебя.",
+      "dropped": 0,
+      "filled": [],
+      "ms": 11869,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 6910,
+        "input_tokens_details": {
+          "cache_write_tokens": 6907,
+          "cached_tokens": 0
+        },
+        "output_tokens": 598,
+        "output_tokens_details": {
+          "reasoning_tokens": 139
+        },
+        "total_tokens": 7508
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "tt0120917",
+        "reason": "Как в «Зверополисе», непохожим героям приходится стать друзьями, а шутки и перепалки смешат и детей, и взрослых.",
+        "caveat": "Рисованная классика; есть короткие погони с ягуарами и падения.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Похождения императора",
+        "original": "The Emperor's New Groove",
+        "year": 2000
+      },
+      {
+        "id": "tt0317219",
+        "reason": "Дружба, добрый юмор и яркий мир машин отвечают твоему запросу на лёгкий семейный вечер без тяжёлых тем.",
+        "caveat": "Середина неспешная; в гонках бывают аварии.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Тачки",
+        "original": "Cars",
+        "year": 2006
+      },
+      {
+        "id": "tt0351283",
+        "reason": "Звериная компания и дружеские перепалки напоминают о «Зверополисе», а комические выходки — о «Кунг-фу Панде».",
+        "caveat": "Есть шуточные угрозы хищников; юмор более дурашливый, чем в «Зверополисе».",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Мадагаскар",
+        "original": "Madagascar",
+        "year": 2005
+      },
+      {
+        "id": "tt1490017",
+        "reason": "Как в «Зверополисе», яркий мир и шутки для двух возрастов сочетаются с историей, которую взрослому интересно обсуждать.",
+        "caveat": "Очень шумный темп, много погонь и игрушечных взрывов.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "ЛЕГО Фильм",
+        "original": "The Lego Movie",
+        "year": 2014
+      }
+    ],
+    "shortlist": [
+      "tt2245084",
+      "tt0126029",
+      "tt0120762",
+      "tt0120363",
+      "tt0120623",
+      "tt1772341",
+      "tt0101414",
+      "tt0268380",
+      "tt1490017",
+      "tt0398286",
+      "tt0110357",
+      "tt1217209",
+      "tt0317219",
+      "tt0103639",
+      "tt2294629",
+      "tt0097757",
+      "tt2953050",
+      "tt0844471",
+      "tt4116284",
+      "tt1985966",
+      "tt0780521",
+      "tt0275847",
+      "tt2096673",
+      "tt12801262",
+      "tt0317705",
+      "tt2267968",
+      "tt0120917",
+      "tt0397892",
+      "tt2709768",
+      "tt0061852",
+      "tt0910970",
+      "tt2948372",
+      "tt1453405",
+      "tt0048280",
+      "tt1979376",
+      "tt0396555",
+      "tt0076363",
+      "tt2277860",
+      "tt0351283",
+      "tt0120855"
+    ],
+    "modelOutsideShortlist": []
+  },
+  {
+    "caseId": "pair-3-evening-1",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется смешного и лёгкого, без грусти",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочется смешного и лёгкого, без грусти",
+          "wants": [
+            {
+              "f": "humor.funny",
+              "evidence": "смешного"
+            },
+            {
+              "f": "tone.lighthearted",
+              "evidence": "лёгкого"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "tone.melancholic",
+              "evidence": "без грусти"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    },
+    "result": {
+      "ms": 20858,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 998,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 891,
+        "output_tokens_details": {
+          "reasoning_tokens": 429
+        },
+        "total_tokens": 1889
+      },
+      "understood": "Сегодня ты хочешь посмотреть с детьми что-то смешное и лёгкое, без грусти, жути и тяжёлых тем.",
+      "picks": [
+        {
+          "id": "tt2872750",
+          "title": "Shaun the Sheep Movie",
+          "year": 2015,
+          "reason": "Визуальные шутки, командная дружба и городские приключения: есть над чем посмеяться и тебе, и детям.",
+          "caveat": "Есть погони и угрожающий ловец животных; чувствительным детям может быть тревожно.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "tt2452042",
+          "title": "The Peanuts Movie",
+          "year": 2015,
+          "reason": "Школьные приключения и фантазии Снупи дают мягкий юмор без мрачности; дружба здесь важнее побед.",
+          "caveat": "Герой переживает из-за неудач; темп спокойнее, чем в «Зверополисе».",
+          "likelySeen": false,
+          "own": true
+        }
+      ],
+      "filled": [
+        "tt2245084",
+        "tt0126029"
+      ],
+      "rejected": [
+        {
+          "title": "Presto",
+          "year": 2008,
+          "reason": "not-in-catalog"
+        },
+        {
+          "title": "For the Birds",
+          "year": 2000,
+          "reason": "not-in-catalog"
+        }
+      ],
+      "dropped": 2
+    },
+    "cards": [
+      {
+        "id": "tt2872750",
+        "title": "Барашек Шон",
+        "year": 2015,
+        "reason": "Визуальные шутки, командная дружба и городские приключения: есть над чем посмеяться и тебе, и детям.",
+        "caveat": "Есть погони и угрожающий ловец животных; чувствительным детям может быть тревожно.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Shaun the Sheep Movie"
+      },
+      {
+        "id": "tt2452042",
+        "title": "Снупи и мелочь пузатая в кино",
+        "year": 2015,
+        "reason": "Школьные приключения и фантазии Снупи дают мягкий юмор без мрачности; дружба здесь важнее побед.",
+        "caveat": "Герой переживает из-за неудач; темп спокойнее, чем в «Зверополисе».",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "The Peanuts Movie"
+      },
+      {
+        "id": "tt2245084",
+        "origin": "fill",
+        "title": "Город героев",
+        "original": "Big Hero 6",
+        "year": 2014
+      },
+      {
+        "id": "tt0126029",
+        "origin": "fill",
+        "title": "Шрек",
+        "original": "Shrek",
+        "year": 2001
+      }
+    ],
+    "shortlist": [
+      "tt2245084",
+      "tt0126029",
+      "tt0120762",
+      "tt0120363",
+      "tt0120623",
+      "tt1772341",
+      "tt0101414",
+      "tt0268380",
+      "tt1490017",
+      "tt0398286",
+      "tt0110357",
+      "tt1217209",
+      "tt0317219",
+      "tt0103639",
+      "tt2294629",
+      "tt0097757",
+      "tt2953050",
+      "tt0844471",
+      "tt4116284",
+      "tt1985966",
+      "tt0780521",
+      "tt0275847",
+      "tt2096673",
+      "tt12801262",
+      "tt0317705",
+      "tt2267968",
+      "tt0120917",
+      "tt0397892",
+      "tt2709768",
+      "tt0061852",
+      "tt0910970",
+      "tt2948372",
+      "tt1453405",
+      "tt0048280",
+      "tt1979376",
+      "tt0396555",
+      "tt0076363",
+      "tt2277860",
+      "tt0351283",
+      "tt0120855"
+    ],
+    "modelOutsideShortlist": [
+      "tt2872750",
+      "tt2452042"
+    ]
+  },
+  {
+    "caseId": "pair-3-evening-2",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется грустной драмы, чтобы пробрало, без шуток",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочется грустной драмы, чтобы пробрало, без шуток",
+          "wants": [
+            {
+              "f": "tone.melancholic",
+              "evidence": "грустной драмы, чтобы пробрало"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "humor.funny",
+              "evidence": "без шуток"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    },
+    "result": {
+      "ms": 18884,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 995,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 815,
+        "output_tokens_details": {
+          "reasoning_tokens": 340
+        },
+        "total_tokens": 1810
+      },
+      "understood": "Ты хочешь трогательный грустный мультфильм с детьми, без страшного и тяжёлых тем, а не привычную комедию.",
+      "picks": [],
+      "filled": [
+        "tt2245084",
+        "tt0101414",
+        "tt0110357",
+        "tt2096673"
+      ],
+      "rejected": [
+        {
+          "title": "The Snowman",
+          "year": 1982,
+          "reason": "not-in-catalog"
+        },
+        {
+          "title": "Crac!",
+          "year": 1981,
+          "reason": "not-in-catalog"
+        },
+        {
+          "title": "Mimi wo Sumaseba",
+          "year": 1995,
+          "reason": "not-in-catalog"
+        },
+        {
+          "title": "Omohide Poro Poro",
+          "year": 1991,
+          "reason": "not-in-catalog"
+        }
+      ],
+      "dropped": 4
+    },
+    "cards": [
+      {
+        "id": "tt2245084",
+        "origin": "fill",
+        "title": "Город героев",
+        "original": "Big Hero 6",
+        "year": 2014
+      },
+      {
+        "id": "tt0101414",
+        "origin": "fill",
+        "title": "Красавица и чудовище",
+        "original": "Beauty and the Beast",
+        "year": 1991
+      },
+      {
+        "id": "tt0110357",
+        "origin": "fill",
+        "title": "Король лев",
+        "original": "The Lion King",
+        "year": 1994
+      },
+      {
+        "id": "tt2096673",
+        "origin": "fill",
+        "title": "Головоломка",
+        "original": "Inside Out",
+        "year": 2015
+      }
+    ],
+    "shortlist": [
+      "tt2245084",
+      "tt0101414",
+      "tt0110357",
+      "tt2096673",
+      "tt0120363",
+      "tt0120762",
+      "tt0097757",
+      "tt2380307",
+      "tt0129167",
+      "tt2948372",
+      "tt0126029",
+      "tt1217209",
+      "tt0910970",
+      "tt0317219",
+      "tt2953050",
+      "tt1490017",
+      "tt0120623",
+      "tt0398286",
+      "tt0275847",
+      "tt1772341",
+      "tt2294629",
+      "tt2277860",
+      "tt1979376",
+      "tt0268380",
+      "tt12801262",
+      "tt0780521",
+      "tt1979388",
+      "tt0082406",
+      "tt0103639",
+      "tt1646971",
+      "tt0033563",
+      "tt0076363",
+      "tt0397892",
+      "tt2261287",
+      "tt0029583",
+      "tt2321405",
+      "tt0328880",
+      "tt0034492",
+      "tt0396555",
+      "tt2262345"
+    ],
+    "modelOutsideShortlist": []
+  },
+  {
+    "caseId": "pair-3-evening-2",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочется грустной драмы, чтобы пробрало, без шуток",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочется грустной драмы, чтобы пробрало, без шуток",
+          "wants": [
+            {
+              "f": "tone.melancholic",
+              "evidence": "грустной драмы, чтобы пробрало"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "humor.funny",
+              "evidence": "без шуток"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "characters.friendship",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful"
+          ],
+          "text": "и ребёнку смешно, и мне интересно, детектив",
+          "issues": []
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "world.music",
+            "aesthetic.beautiful",
+            "characters.female_lead",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "text": "дочка подпевает песням",
+          "issues": []
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "content.family",
+            "pace.fast"
+          ],
+          "text": "драки не страшные, ржали оба",
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt1323594": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0892769": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4729430": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark"
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "pace.draggy"
+            },
+            {
+              "f": "story.predictable"
+            }
+          ],
+          "text": "для совсем малышей, мне скучно, сто одинаковых серий"
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt0107688": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt3874544": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 103
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "tt12801262",
+          "reason": "Дружба, принятие непохожих и красивая картинка напоминают «Зверополис», а нежная грусть отвечает настроению вечера.",
+          "caveat": "Шутки остаются; есть травля и напряжённое спасение в воде.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt0317219",
+          "reason": "Как в любимом «Зверополисе», за ярким миром здесь стоят дружба и повод подумать; особенно трогает история забытого городка.",
+          "caveat": "Скорее комедия с грустной ноткой, чем драма; есть гоночные столкновения.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Тебе хочется растрогаться вместе с детьми, но без страшного и тяжёлых тем — поэтому выбираю мягкую грусть, а не тяжёлую драму.",
+      "dropped": 2,
+      "filled": [
+        "tt2245084",
+        "tt0101414"
+      ],
+      "ms": 18457,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 6913,
+        "input_tokens_details": {
+          "cache_write_tokens": 6910,
+          "cached_tokens": 0
+        },
+        "output_tokens": 781,
+        "output_tokens_details": {
+          "reasoning_tokens": 315
+        },
+        "total_tokens": 7694
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "tt12801262",
+        "reason": "Дружба, принятие непохожих и красивая картинка напоминают «Зверополис», а нежная грусть отвечает настроению вечера.",
+        "caveat": "Шутки остаются; есть травля и напряжённое спасение в воде.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Лука",
+        "original": "Luca",
+        "year": 2021
+      },
+      {
+        "id": "tt0317219",
+        "reason": "Как в любимом «Зверополисе», за ярким миром здесь стоят дружба и повод подумать; особенно трогает история забытого городка.",
+        "caveat": "Скорее комедия с грустной ноткой, чем драма; есть гоночные столкновения.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Тачки",
+        "original": "Cars",
+        "year": 2006
+      },
+      {
+        "id": "tt2245084",
+        "origin": "fill",
+        "title": "Город героев",
+        "original": "Big Hero 6",
+        "year": 2014
+      },
+      {
+        "id": "tt0101414",
+        "origin": "fill",
+        "title": "Красавица и чудовище",
+        "original": "Beauty and the Beast",
+        "year": 1991
+      }
+    ],
+    "shortlist": [
+      "tt2245084",
+      "tt0101414",
+      "tt0110357",
+      "tt2096673",
+      "tt0120363",
+      "tt0120762",
+      "tt0097757",
+      "tt2380307",
+      "tt0129167",
+      "tt2948372",
+      "tt0126029",
+      "tt1217209",
+      "tt0910970",
+      "tt0317219",
+      "tt2953050",
+      "tt1490017",
+      "tt0120623",
+      "tt0398286",
+      "tt0275847",
+      "tt1772341",
+      "tt2294629",
+      "tt2277860",
+      "tt1979376",
+      "tt0268380",
+      "tt12801262",
+      "tt0780521",
+      "tt1979388",
+      "tt0082406",
+      "tt0103639",
+      "tt1646971",
+      "tt0033563",
+      "tt0076363",
+      "tt0397892",
+      "tt2261287",
+      "tt0029583",
+      "tt2321405",
+      "tt0328880",
+      "tt0034492",
+      "tt0396555",
+      "tt2262345"
+    ],
+    "modelOutsideShortlist": []
+  },
+  {
+    "caseId": "pair-4-evening-1",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смотреть фоном, без необходимости вникать",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу смотреть фоном, без необходимости вникать",
+          "wants": [
+            {
+              "f": "cognitive.low",
+              "evidence": "без необходимости вникать"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "cognitive.high",
+              "evidence": "без необходимости вникать"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "tt1826940",
+          "reason": "Как в «Друзьях», здесь компания соседей, дружба и нелепые бытовые истории, за которыми легко следить вполуха.",
+          "caveat": "В первых сериях Джесс заметно более эксцентричная, чем остальные.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt14218830",
+          "reason": "Добрые учителя и отдельные школьные истории напоминают рабочую команду «Бруклина 9-9», а серии тоже короткие.",
+          "caveat": "Снято как «Офис», но неловкого юмора меньше.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt1587678",
+          "reason": "Шестеро друзей поддерживают друг друга и попадают в нелепости — знакомая по «Друзьям» компания на короткий вечерний отдых.",
+          "caveat": "Шутки летят быстро: при фоновом просмотре часть пройдёт мимо.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt9214684",
+          "reason": "Тёплые перепалки взрослых братьев и сестры дают добрый ансамбль и простые бытовые сюжеты для твоего «смотреть фоном».",
+          "caveat": "Разница в доходах и денежные заботы — постоянная тема шуток.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Тебе нужен тёплый ситком с короткими, понятными историями, чтобы отдыхать фоном, как под «Друзей» и «Бруклин 9-9».",
+      "dropped": 0,
+      "filled": [],
+      "ms": 9166,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 7528,
+        "input_tokens_details": {
+          "cache_write_tokens": 7525,
+          "cached_tokens": 0
+        },
+        "output_tokens": 511,
+        "output_tokens_details": {
+          "reasoning_tokens": 53
+        },
+        "total_tokens": 8039
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "tt1826940",
+        "reason": "Как в «Друзьях», здесь компания соседей, дружба и нелепые бытовые истории, за которыми легко следить вполуха.",
+        "caveat": "В первых сериях Джесс заметно более эксцентричная, чем остальные.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Новенькая",
+        "original": "New Girl",
+        "year": 2011
+      },
+      {
+        "id": "tt14218830",
+        "reason": "Добрые учителя и отдельные школьные истории напоминают рабочую команду «Бруклина 9-9», а серии тоже короткие.",
+        "caveat": "Снято как «Офис», но неловкого юмора меньше.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Начальная школа «Эбботт»",
+        "original": "Abbott Elementary",
+        "year": 2021
+      },
+      {
+        "id": "tt1587678",
+        "reason": "Шестеро друзей поддерживают друг друга и попадают в нелепости — знакомая по «Друзьям» компания на короткий вечерний отдых.",
+        "caveat": "Шутки летят быстро: при фоновом просмотре часть пройдёт мимо.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Счастливый конец",
+        "original": "Happy Endings",
+        "year": 2011
+      },
+      {
+        "id": "tt9214684",
+        "reason": "Тёплые перепалки взрослых братьев и сестры дают добрый ансамбль и простые бытовые сюжеты для твоего «смотреть фоном».",
+        "caveat": "Разница в доходах и денежные заботы — постоянная тема шуток.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Домоводство",
+        "original": "Home Economics",
+        "year": 2021
+      }
+    ],
+    "shortlist": [
+      "tt12004706",
+      "tt11769304",
+      "tt2211129",
+      "tt0290988",
+      "tt0165598",
+      "tt0053479",
+      "tt0088526",
+      "tt1587678",
+      "tt10638036",
+      "tt20449048",
+      "tt13366604",
+      "tt12759100",
+      "tt10986410",
+      "tt40197357",
+      "tt23488694",
+      "tt1826940",
+      "tt0362357",
+      "tt11379698",
+      "tt10590066",
+      "tt0098904",
+      "tt33049767",
+      "tt7120662",
+      "tt5788792",
+      "tt1439629",
+      "tt8404094",
+      "tt9214684",
+      "tt1600199",
+      "tt0237123",
+      "tt8594324",
+      "tt14218830",
+      "tt11691774",
+      "tt31183656",
+      "tt0491738",
+      "tt10846104",
+      "tt0238784",
+      "tt1708446",
+      "tt0083399",
+      "tt9174582",
+      "tt26670955",
+      "tt0281491"
+    ],
+    "modelOutsideShortlist": []
+  },
+  {
+    "caseId": "pair-4-evening-1",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу смотреть фоном, без необходимости вникать",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу смотреть фоном, без необходимости вникать",
+          "wants": [
+            {
+              "f": "cognitive.low",
+              "evidence": "без необходимости вникать"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "cognitive.high",
+              "evidence": "без необходимости вникать"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    },
+    "result": {
+      "ms": 12395,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 987,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 601,
+        "output_tokens_details": {
+          "reasoning_tokens": 173
+        },
+        "total_tokens": 1588
+      },
+      "understood": "Сегодня ты хочешь лёгкий, добрый сериал для фона, без напряжения и необходимости вникать.",
+      "picks": [
+        {
+          "id": "tt1587678",
+          "title": "Happy Endings",
+          "year": 2011,
+          "reason": "Шестеро друзей, бытовые нелепости и короткие ситкомные истории — близко к тому, за что ты любишь «Друзей».",
+          "caveat": "Шутки летят быстро: фоном часть можно пропустить.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "tt0090501",
+          "title": "Perfect Strangers",
+          "year": 1986,
+          "reason": "Два непохожих кузена учатся жить вместе: добродушный юмор и простые сюжеты подойдут тебе для отдыха фоном.",
+          "caveat": "Ситком старой школы: закадровый смех и много физической комедии.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "tt1826940",
+          "title": "New Girl",
+          "year": 2011,
+          "reason": "Дружба соседей по квартире и смешные бытовые истории дают тебе тёплый ансамбль без сложной интриги.",
+          "caveat": "Есть сквозные романтические линии и немало неловкого юмора.",
+          "likelySeen": true,
+          "own": true
+        },
+        {
+          "id": "tt1597420",
+          "title": "Melissa & Joey",
+          "year": 2010,
+          "reason": "Домашние хлопоты и перепалки хозяйки дома с нянем-мужчиной: простой ситком, который не требует от тебя разгадывать сюжет.",
+          "caveat": "Заметная доля сюжетов посвящена подросткам и свиданиям.",
+          "likelySeen": false,
+          "own": true
+        }
+      ],
+      "filled": [],
+      "rejected": [],
+      "dropped": 0
+    },
+    "cards": [
+      {
+        "id": "tt1587678",
+        "title": "Счастливый конец",
+        "year": 2011,
+        "reason": "Шестеро друзей, бытовые нелепости и короткие ситкомные истории — близко к тому, за что ты любишь «Друзей».",
+        "caveat": "Шутки летят быстро: фоном часть можно пропустить.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Happy Endings"
+      },
+      {
+        "id": "tt0090501",
+        "title": "Идеальные незнакомцы",
+        "year": 1986,
+        "reason": "Два непохожих кузена учатся жить вместе: добродушный юмор и простые сюжеты подойдут тебе для отдыха фоном.",
+        "caveat": "Ситком старой школы: закадровый смех и много физической комедии.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Perfect Strangers"
+      },
+      {
+        "id": "tt1826940",
+        "title": "Новенькая",
+        "year": 2011,
+        "reason": "Дружба соседей по квартире и смешные бытовые истории дают тебе тёплый ансамбль без сложной интриги.",
+        "caveat": "Есть сквозные романтические линии и немало неловкого юмора.",
+        "likelySeen": true,
+        "own": true,
+        "origin": "model",
+        "original": "New Girl"
+      },
+      {
+        "id": "tt1597420",
+        "title": "Мелисса и Джоуи",
+        "year": 2010,
+        "reason": "Домашние хлопоты и перепалки хозяйки дома с нянем-мужчиной: простой ситком, который не требует от тебя разгадывать сюжет.",
+        "caveat": "Заметная доля сюжетов посвящена подросткам и свиданиям.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Melissa & Joey"
+      }
+    ],
+    "shortlist": [
+      "tt12004706",
+      "tt11769304",
+      "tt2211129",
+      "tt0290988",
+      "tt0165598",
+      "tt0053479",
+      "tt0088526",
+      "tt1587678",
+      "tt10638036",
+      "tt20449048",
+      "tt13366604",
+      "tt12759100",
+      "tt10986410",
+      "tt40197357",
+      "tt23488694",
+      "tt1826940",
+      "tt0362357",
+      "tt11379698",
+      "tt10590066",
+      "tt0098904",
+      "tt33049767",
+      "tt7120662",
+      "tt5788792",
+      "tt1439629",
+      "tt8404094",
+      "tt9214684",
+      "tt1600199",
+      "tt0237123",
+      "tt8594324",
+      "tt14218830",
+      "tt11691774",
+      "tt31183656",
+      "tt0491738",
+      "tt10846104",
+      "tt0238784",
+      "tt1708446",
+      "tt0083399",
+      "tt9174582",
+      "tt26670955",
+      "tt0281491"
+    ],
+    "modelOutsideShortlist": [
+      "tt0090501",
+      "tt1597420"
+    ]
+  },
+  {
+    "caseId": "pair-4-evening-2",
+    "system": "direct",
+    "state": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу внимательно следить за хитрым сюжетом, не фоновое шоу",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу внимательно следить за хитрым сюжетом, не фоновое шоу",
+          "wants": [
+            {
+              "f": "cognitive.high",
+              "evidence": "внимательно следить за хитрым сюжетом"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "cognitive.low",
+              "evidence": "не фоновое шоу"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    },
+    "result": {
+      "ms": 18286,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 999,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 775,
+        "output_tokens_details": {
+          "reasoning_tokens": 309
+        },
+        "total_tokens": 1774
+      },
+      "understood": "Сегодня ты хочешь следить за хитросплетениями сюжета, но без крови, страшного и тяжёлых тем.",
+      "picks": [
+        {
+          "id": "tt0098833",
+          "title": "Jeeves and Wooster",
+          "year": 1990,
+          "reason": "Запутанные светские интриги, недоразумения и остроумные развязки: тебе будет за чем следить без мрачной криминальной истории.",
+          "caveat": "Темп неспешный, юмор — британский и старомодный.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "tt0367279",
+          "title": "Arrested Development",
+          "year": 2003,
+          "reason": "Переплетённые семейные махинации и шутки с отложенной развязкой требуют внимания; большой ансамбль отвечает твоей любви к нему.",
+          "caveat": "Герои эгоистичны; юмор язвительнее и неловче, чем в любимых тобой комедиях.",
+          "likelySeen": true,
+          "own": true
+        },
+        {
+          "id": "tt2575988",
+          "title": "Silicon Valley",
+          "year": 2014,
+          "reason": "Сделки, технические хитрости и ответные ходы конкурентов дают сюжет, в который нужно вникать, а не просто слушать фоном.",
+          "caveat": "Много грубой лексики и сексуальных шуток; деловые провалы создают напряжение.",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "tt2211457",
+          "title": "Blandings",
+          "year": 2013,
+          "reason": "Подмены, тайные планы и столкновения интересов складываются в лёгкий фарс: можно распутывать интригу без страшного.",
+          "caveat": "Интриги преимущественно внутри серий, а не одна большая загадка на сезон.",
+          "likelySeen": false,
+          "own": true
+        }
+      ],
+      "filled": [],
+      "rejected": [],
+      "dropped": 0
+    },
+    "cards": [
+      {
+        "id": "tt0098833",
+        "title": "Дживс и Вустер",
+        "year": 1990,
+        "reason": "Запутанные светские интриги, недоразумения и остроумные развязки: тебе будет за чем следить без мрачной криминальной истории.",
+        "caveat": "Темп неспешный, юмор — британский и старомодный.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Jeeves and Wooster"
+      },
+      {
+        "id": "tt0367279",
+        "title": "Задержка в развитии",
+        "year": 2003,
+        "reason": "Переплетённые семейные махинации и шутки с отложенной развязкой требуют внимания; большой ансамбль отвечает твоей любви к нему.",
+        "caveat": "Герои эгоистичны; юмор язвительнее и неловче, чем в любимых тобой комедиях.",
+        "likelySeen": true,
+        "own": true,
+        "origin": "model",
+        "original": "Arrested Development"
+      },
+      {
+        "id": "tt2575988",
+        "title": "Силиконовая долина",
+        "year": 2014,
+        "reason": "Сделки, технические хитрости и ответные ходы конкурентов дают сюжет, в который нужно вникать, а не просто слушать фоном.",
+        "caveat": "Много грубой лексики и сексуальных шуток; деловые провалы создают напряжение.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Silicon Valley"
+      },
+      {
+        "id": "tt2211457",
+        "title": "Замок Бландингс",
+        "year": 2013,
+        "reason": "Подмены, тайные планы и столкновения интересов складываются в лёгкий фарс: можно распутывать интригу без страшного.",
+        "caveat": "Интриги преимущественно внутри серий, а не одна большая загадка на сезон.",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "original": "Blandings"
+      }
+    ],
+    "shortlist": [
+      "tt12004706",
+      "tt11769304",
+      "tt1806234",
+      "tt2211129",
+      "tt0165598",
+      "tt0053479",
+      "tt0088526",
+      "tt1587678",
+      "tt10638036",
+      "tt20449048",
+      "tt12759100",
+      "tt10986410",
+      "tt40197357",
+      "tt23488694",
+      "tt1826940",
+      "tt0362357",
+      "tt11379698",
+      "tt10590066",
+      "tt0098904",
+      "tt33049767",
+      "tt7120662",
+      "tt5788792",
+      "tt1439629",
+      "tt8404094",
+      "tt9214684",
+      "tt1600199",
+      "tt0237123",
+      "tt8594324",
+      "tt14218830",
+      "tt11691774",
+      "tt31183656",
+      "tt0290988",
+      "tt0491738",
+      "tt10846104",
+      "tt0238784",
+      "tt1708446",
+      "tt0083399",
+      "tt9174582",
+      "tt0974077",
+      "tt26670955"
+    ],
+    "modelOutsideShortlist": [
+      "tt0098833",
+      "tt0367279",
+      "tt2575988",
+      "tt2211457"
+    ]
+  },
+  {
+    "caseId": "pair-4-evening-2",
+    "system": "hybrid",
+    "state": {
+      "step": "anchors",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "childAge": null,
+        "partySize": null,
+        "note": "Сегодня хочу внимательно следить за хитрым сюжетом, не фоновое шоу",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [],
+        "intent": {
+          "version": 1,
+          "sourceText": "Сегодня хочу внимательно следить за хитрым сюжетом, не фоновое шоу",
+          "wants": [
+            {
+              "f": "cognitive.high",
+              "evidence": "внимательно следить за хитрым сюжетом"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "cognitive.low",
+              "evidence": "не фоновое шоу"
+            }
+          ],
+          "time": null,
+          "source": "confirmed"
+        }
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [],
+      "shown": [],
+      "liked": [],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "characters.ensemble"
+          ],
+          "text": "можно включить любую серию фоном и отдыхать",
+          "issues": []
+        },
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "text": "добрые герои, короткие серии по 20 минут",
+          "issues": []
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny",
+            "characters.ensemble"
+          ],
+          "text": "неловкий юмор, не надо вникать, смотрю фоном",
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0460649": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [
+            "humor.funny"
+          ],
+          "text": "",
+          "issues": []
+        },
+        "tt4955642": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt1442437": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt4477976": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt3526078": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0898266": {
+          "reaction": "like",
+          "reasons": [],
+          "text": "",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tension.high"
+            },
+            {
+              "f": "content.sexual"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "бросила из-за жестокости, всех убивают"
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.creepy"
+            },
+            {
+              "f": "world.postapoc"
+            },
+            {
+              "f": "content.violence",
+              "hard": true
+            }
+          ],
+          "text": "зомби и кишки, страшно, выключила"
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        },
+        "tt8962124": {
+          "reaction": "dislike",
+          "issues": [],
+          "text": ""
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 104
+    },
+    "result": {
+      "picks": [
+        {
+          "id": "tt0098833",
+          "reason": "Запутанные затеи и остроумные развязки требуют внимания, а дружеский дуэт сохраняет добрый тон, который ты любишь в «Друзьях».",
+          "caveat": "Британская комедия в антураже 1920–1930-х; темп спокойнее, чем в «Бруклине».",
+          "likelySeen": false,
+          "own": true
+        },
+        {
+          "id": "tt1439629",
+          "reason": "Как в «Бруклине 9-9», здесь чудной дружный коллектив, но игры с жанрами и деталями делают просмотр не фоновым.",
+          "caveat": "Изобретательные сюжеты приходят не сразу; юмор бывает колким.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt0237123",
+          "reason": "Компания из шести друзей напоминает «Друзей», а разные версии событий и хитро сплетённые недоразумения требуют внимания.",
+          "caveat": "Много разговоров о сексе; это комедия головоломных ситуаций, а не детектив.",
+          "likelySeen": false,
+          "own": false
+        },
+        {
+          "id": "tt1600199",
+          "reason": "Дружба двух адвокатов и рабочие подколы близки «Бруклину 9-9», а нестандартные судебные ходы дают сюжетную интригу.",
+          "caveat": "Юридические хитрости скорее развлекательные, чем правдоподобные.",
+          "likelySeen": false,
+          "own": false
+        }
+      ],
+      "understood": "Сегодня тебе нужен хитро устроенный сюжет, за которым интересно следить, но с юмором и без жестокости, жути и тяжёлых тем.",
+      "dropped": 0,
+      "filled": [],
+      "ms": 13973,
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 7606,
+        "input_tokens_details": {
+          "cache_write_tokens": 7603,
+          "cached_tokens": 0
+        },
+        "output_tokens": 659,
+        "output_tokens_details": {
+          "reasoning_tokens": 177
+        },
+        "total_tokens": 8265
+      },
+      "shortlist": 40
+    },
+    "cards": [
+      {
+        "id": "tt0098833",
+        "reason": "Запутанные затеи и остроумные развязки требуют внимания, а дружеский дуэт сохраняет добрый тон, который ты любишь в «Друзьях».",
+        "caveat": "Британская комедия в антураже 1920–1930-х; темп спокойнее, чем в «Бруклине».",
+        "likelySeen": false,
+        "own": true,
+        "origin": "model",
+        "title": "Дживс и Вустер",
+        "original": "Jeeves and Wooster",
+        "year": 1990
+      },
+      {
+        "id": "tt1439629",
+        "reason": "Как в «Бруклине 9-9», здесь чудной дружный коллектив, но игры с жанрами и деталями делают просмотр не фоновым.",
+        "caveat": "Изобретательные сюжеты приходят не сразу; юмор бывает колким.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Сообщество",
+        "original": "Community",
+        "year": 2009
+      },
+      {
+        "id": "tt0237123",
+        "reason": "Компания из шести друзей напоминает «Друзей», а разные версии событий и хитро сплетённые недоразумения требуют внимания.",
+        "caveat": "Много разговоров о сексе; это комедия головоломных ситуаций, а не детектив.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Любовь на шестерых",
+        "original": "Coupling",
+        "year": 2000
+      },
+      {
+        "id": "tt1600199",
+        "reason": "Дружба двух адвокатов и рабочие подколы близки «Бруклину 9-9», а нестандартные судебные ходы дают сюжетную интригу.",
+        "caveat": "Юридические хитрости скорее развлекательные, чем правдоподобные.",
+        "likelySeen": false,
+        "own": false,
+        "origin": "model",
+        "title": "Компаньоны",
+        "original": "Franklin & Bash",
+        "year": 2011
+      }
+    ],
+    "shortlist": [
+      "tt12004706",
+      "tt11769304",
+      "tt1806234",
+      "tt2211129",
+      "tt0165598",
+      "tt0053479",
+      "tt0088526",
+      "tt1587678",
+      "tt10638036",
+      "tt20449048",
+      "tt12759100",
+      "tt10986410",
+      "tt40197357",
+      "tt23488694",
+      "tt1826940",
+      "tt0362357",
+      "tt11379698",
+      "tt10590066",
+      "tt0098904",
+      "tt33049767",
+      "tt7120662",
+      "tt5788792",
+      "tt1439629",
+      "tt8404094",
+      "tt9214684",
+      "tt1600199",
+      "tt0237123",
+      "tt8594324",
+      "tt14218830",
+      "tt11691774",
+      "tt31183656",
+      "tt0290988",
+      "tt0491738",
+      "tt10846104",
+      "tt0238784",
+      "tt1708446",
+      "tt0083399",
+      "tt9174582",
+      "tt0974077",
+      "tt26670955"
+    ],
+    "modelOutsideShortlist": [
+      "tt0098833"
+    ]
+  }
+]

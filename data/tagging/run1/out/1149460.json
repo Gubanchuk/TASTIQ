@@ -1,0 +1,17 @@
+{"appid": 1149460, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "ICARUS is a solo or multiplayer PvE survival game"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "d", "q": "Explore a savage wilderness in the aftermath of terraforming gone wrong"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "a", "q": "Endure a savage wilderness on Icarus"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "d", "q": "Explore, build, craft and hunt while seeking your fortune"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "to explore, harvest, craft and hunt while seeking their fortune"}]},
+{"f": "loop.life_sim", "r": 1, "ev": [{"id": "a", "q": "breed animals to pass down favorable traits"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "for up to eight co-op players"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "a", "q": "Go at it alone, invite up to 8 Steam friends"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r235780603", "q": "This game is fun (mostly) but challenging"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "a", "q": "Preparation and planning are everything"}]},
+{"f": "session.long", "r": 1, "ev": [{"id": "r237716001", "q": "this game is hard to stop playing"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r235780603", "q": "new things are constantly being added to the game"}, {"id": "r236653478", "q": "I still haven't unlocked everything in the base game"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "r235780603", "q": "If you don't like to grind"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "r236646895", "q": "the overall gameplay can become repetitive after a while"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "r236107929", "q": "Демоверсия за фулл-прайс"}, {"id": "r235886403", "q": "Игра сырая, но интересная"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 251150, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p3", "q": "Combat takes place on a grid and is turn-based"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "the player controls a cast of characters"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p6", "q": "rock-solid character writing"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p6", "q": "like any good JRPG it offers amusing writing, dynamic combat, interesting tasks, an absorbing narrative"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p4", "q": "they uncover a plot by Colonel Alan Richard"}]}
+]}

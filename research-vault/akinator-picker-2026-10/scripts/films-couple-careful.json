@@ -1,0 +1,1399 @@
+{
+ "persona": "couple",
+ "mode": "careful",
+ "screens": [
+  {
+   "n": 1,
+   "step": "domain",
+   "title": "Что хочешь?",
+   "options": [
+    "Поиграть",
+    "Посмотреть фильм",
+    "Посмотреть сериал",
+    "Посмотреть мультфильм"
+   ]
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "step": "genres",
+   "title": "Что обычно смотришь?",
+   "options": [
+    "драмы",
+    "комедии",
+    "боевики",
+    "криминал",
+    "мелодрамы",
+    "триллеры",
+    "ужасы",
+    "приключения",
+    "детективы",
+    "биографии",
+    "фэнтези",
+    "фантастика",
+    "документальное",
+    "историческое"
+   ]
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "genres",
+    "values": [
+     "genre:Romance",
+     "genre:Drama",
+     "genre:Sci-Fi"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Властелин колец: Братство кольца (2001)",
+    "Мстители: Финал (2019)",
+    "Джанго освобождённый (2012)",
+    "Назад в будущее (1985)",
+    "Бойцовский клуб (1999)",
+    "Форрест Гамп (1994)",
+    "Звёздные войны. Эпизод 5: Империя наносит ответный удар (1980)",
+    "Сияние (1980)"
+   ]
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt0120737",
+     "tt4154796",
+     "tt1853728",
+     "tt0088763",
+     "tt0137523",
+     "tt0109830",
+     "tt0080684",
+     "tt0081505"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Прибытие (2016)",
+    "Одержимость (2014)",
+    "Побег из Шоушенка (1994)",
+    "Мстители: Эра Альтрона (2015)",
+    "Отель «Гранд Будапешт» (2014)",
+    "Интерстеллар (2014)",
+    "Начало (2010)",
+    "Матрица (1999)"
+   ]
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt2543164",
+     "tt2582802",
+     "tt0111161",
+     "tt2395427",
+     "tt2278388",
+     "tt0816692",
+     "tt1375666",
+     "tt0133093"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Чужой 2 (1986)",
+    "Крёстный отец (1972)",
+    "Властелин колец: Возвращение короля (2003)",
+    "Семь (1995)",
+    "Гладиатор (2000)",
+    "Бесславные ублюдки (2009)",
+    "Властелин колец: Две крепости (2002)",
+    "Молчание ягнят (1991)"
+   ]
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0816692",
+     "tt1375666",
+     "tt0338013",
+     "tt1798709",
+     "tt0112471",
+     "tt1856101"
+    ],
+    "shownIds": [
+     "tt0120737",
+     "tt4154796",
+     "tt1853728",
+     "tt0088763",
+     "tt0137523",
+     "tt0109830",
+     "tt0080684",
+     "tt0081505",
+     "tt2543164",
+     "tt2582802",
+     "tt0111161",
+     "tt2395427",
+     "tt2278388",
+     "tt0816692",
+     "tt1375666",
+     "tt0133093",
+     "tt0090605",
+     "tt0068646",
+     "tt0167260",
+     "tt0114369",
+     "tt0172495",
+     "tt0361748",
+     "tt0167261",
+     "tt0102926"
+    ]
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Интерстеллар»?",
+   "options": [
+    "путешествия во времени",
+    "антиутопия",
+    "космос",
+    "фантастика",
+    "сложный, надо вникать",
+    "зрелищные спецэффекты",
+    "заставляет думать",
+    "эпичность и размах",
+    "красивая картинка",
+    "вдохновляет"
+   ]
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "world.space",
+     "cognitive.high",
+     "tone.epic",
+     "aesthetic.beautiful",
+     "ending.strong",
+     "aesthetic.soundtrack"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Начало»?",
+   "options": [
+    "фантастика",
+    "зрелищные спецэффекты",
+    "неожиданные повороты",
+    "быстрый темп",
+    "сложный, надо вникать",
+    "заставляет думать",
+    "сильная актёрская игра",
+    "странное, причудливое",
+    "держит в напряжении",
+    "фэнтези и магия"
+   ]
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "story.complex",
+     "story.twist",
+     "cognitive.high",
+     "aesthetic.effects"
+    ],
+    "love": false,
+    "issues": []
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Вечное сияние чистого разума»?",
+   "options": [
+    "нелинейный сюжет",
+    "сложный, надо вникать",
+    "стильно и необычно снято",
+    "заставляет думать",
+    "сильная актёрская игра",
+    "любовная линия",
+    "грустное, пробирает",
+    "странное, причудливое",
+    "красивая картинка",
+    "сильный финал"
+   ]
+  },
+  {
+   "n": 9,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "characters.romance",
+     "tone.melancholic",
+     "story.nonlinear",
+     "tone.whimsical"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "step": "disliked",
+   "title": "А что не зашло, хотя многие хвалят?",
+   "items": [
+    "Криминальное чтиво (1994)",
+    "Джокер (2019)",
+    "Спасти рядового Райана (1998)",
+    "Престиж (2006)",
+    "Мстители (2012)",
+    "Список Шиндлера (1993)",
+    "Зелёная миля (1999)",
+    "Отступники (2006)"
+   ]
+  },
+  {
+   "n": 10,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt0110912",
+     "tt7286456",
+     "tt0120815",
+     "tt0482571",
+     "tt0848228",
+     "tt0108052",
+     "tt0120689",
+     "tt0407887"
+    ]
+   },
+   "step": "disliked",
+   "title": "А что не зашло, хотя многие хвалят?",
+   "items": [
+    "Малышка на миллион (2004)",
+    "Крёстный отец 2 (1974)",
+    "Титаник (1997)",
+    "Славные парни (1990)",
+    "Мстители: Война бесконечности (2018)",
+    "Гравитация (2013)",
+    "Терминатор 2: Судный день (1991)",
+    "Шоу Трумана (1998)"
+   ]
+  },
+  {
+   "n": 11,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0418279",
+     "tt1099212"
+    ],
+    "shownIds": [
+     "tt0110912",
+     "tt7286456",
+     "tt0120815",
+     "tt0482571",
+     "tt0848228",
+     "tt0108052",
+     "tt0120689",
+     "tt0407887",
+     "tt0405159",
+     "tt0071562",
+     "tt0120338",
+     "tt0099685",
+     "tt4154756",
+     "tt1454468",
+     "tt0103064",
+     "tt0120382"
+    ]
+   },
+   "step": "why_not",
+   "title": "Что не понравилось в «Трансформеры»?",
+   "options": [
+    "одни спецэффекты, а смотреть нечего",
+    "тупые шутки",
+    "сюжет с дырами",
+    "всё понятно заранее",
+    "много крови и жестокости",
+    "всё время на нервах",
+    "затянуто, скучал",
+    "герои бесили"
+   ]
+  },
+  {
+   "n": 12,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "humor.silly",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "step": "why_not",
+   "title": "Что не понравилось в «Сумерки»?",
+   "options": [
+    "всё понятно заранее",
+    "герои бесили",
+    "сюжет с дырами",
+    "сопливо и наивно",
+    "затянуто, скучал",
+    "слили концовку"
+   ]
+  },
+  {
+   "n": 13,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "characters.unlikeable",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     },
+     {
+      "f": "pace.draggy",
+      "hard": false
+     },
+     {
+      "f": "tone.cheesy",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   },
+   "step": "today",
+   "title": "Что сегодня?",
+   "options": [
+    "Хочу расслабиться",
+    "Хочу посмеяться",
+    "Хочу пощекотать нервы",
+    "Хочу, чтобы пробрало",
+    "Хочу подумать",
+    "Фоном, не вникая",
+    "Смотрю с детьми",
+    "Коротко, на один вечер",
+    "Хочу засесть надолго"
+   ]
+  },
+  {
+   "n": 14,
+   "action": {
+    "type": "today",
+    "values": [
+     "think"
+    ],
+    "avoid": [
+     "scary",
+     "long"
+    ]
+   },
+   "step": "playback",
+   "title": "Вот как я тебя вижу",
+   "options": [
+    "Да, подбирай",
+    "Добавлю ещё, что зашло"
+   ]
+  },
+  {
+   "n": 15,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  },
+  {
+   "n": 16,
+   "action": {
+    "type": "fork",
+    "f": "humor.dark"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  }
+ ],
+ "result": {
+  "tag": "после развилки",
+  "top": {
+   "id": "tt0137523",
+   "name": "Бойцовский клуб",
+   "label": "likely",
+   "score": 10.49
+  },
+  "alternatives": [
+   {
+    "id": "tt0414993",
+    "name": "Фонтан",
+    "label": "likely",
+    "score": 9.83
+   },
+   {
+    "id": "tt0246578",
+    "name": "Донни Дарко",
+    "label": "likely",
+    "score": 9.757
+   },
+   {
+    "id": "tt0169547",
+    "name": "Красота по-американски",
+    "label": "likely",
+    "score": 9.154
+   }
+  ],
+  "fork": null,
+  "taste": {
+   "confirmed": [
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "w": 1.73,
+     "sources": [
+      "Интерстеллар",
+      "Начало"
+     ],
+     "ids": [
+      "tt0816692",
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "ending.strong",
+     "label": "сильный финал",
+     "w": 1.32,
+     "sources": [
+      "Интерстеллар"
+     ],
+     "ids": [
+      "tt0816692"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "w": 1.32,
+     "sources": [
+      "Вечное сияние чистого разума"
+     ],
+     "ids": [
+      "tt0338013"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "w": 1.32,
+     "sources": [
+      "Вечное сияние чистого разума"
+     ],
+     "ids": [
+      "tt0338013"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "w": 1.11,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "w": 0.96,
+     "sources": [
+      "Вечное сияние чистого разума"
+     ],
+     "ids": [
+      "tt0338013"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.epic",
+     "label": "эпичность и размах",
+     "w": 0.95,
+     "sources": [
+      "Интерстеллар"
+     ],
+     "ids": [
+      "tt0816692"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.twist",
+     "label": "неожиданные повороты",
+     "w": 0.89,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "world.space",
+     "label": "космос",
+     "w": 0.82,
+     "sources": [
+      "Интерстеллар"
+     ],
+     "ids": [
+      "tt0816692"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "w": 0.82,
+     "sources": [
+      "Интерстеллар"
+     ],
+     "ids": [
+      "tt0816692"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.soundtrack",
+     "label": "сильная музыка",
+     "w": 0.82,
+     "sources": [
+      "Интерстеллар"
+     ],
+     "ids": [
+      "tt0816692"
+     ],
+     "preference": false
+    },
+    {
+     "f": "characters.romance",
+     "label": "любовная линия",
+     "w": 0.82,
+     "sources": [
+      "Вечное сияние чистого разума"
+     ],
+     "ids": [
+      "tt0338013"
+     ],
+     "preference": false
+    },
+    {
+     "f": "humor.dark",
+     "label": "чёрный юмор",
+     "w": 0.61,
+     "sources": [],
+     "ids": [],
+     "preference": true
+    }
+   ],
+   "inferred": [
+    {
+     "f": "world.dystopia",
+     "label": "антиутопия",
+     "w": 0.5,
+     "sources": [
+      "Интерстеллар",
+      "Она",
+      "Бегущий по лезвию 2049"
+     ],
+     "ids": [
+      "tt0816692",
+      "tt1798709",
+      "tt1856101"
+     ],
+     "preference": false
+    },
+    {
+     "f": "characters.acting",
+     "label": "сильная актёрская игра",
+     "w": 0.5,
+     "sources": [
+      "Интерстеллар",
+      "Начало",
+      "Вечное сияние чистого разума",
+      "Она",
+      "Перед рассветом",
+      "Бегущий по лезвию 2049"
+     ],
+     "ids": [
+      "tt0816692",
+      "tt1375666",
+      "tt0338013",
+      "tt1798709",
+      "tt0112471",
+      "tt1856101"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tension.high",
+     "label": "держит в напряжении",
+     "w": 0.5,
+     "sources": [
+      "Интерстеллар",
+      "Начало",
+      "Вечное сияние чистого разума",
+      "Она",
+      "Бегущий по лезвию 2049"
+     ],
+     "ids": [
+      "tt0816692",
+      "tt1375666",
+      "tt0338013",
+      "tt1798709",
+      "tt1856101"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "w": 0.43,
+     "sources": [
+      "Начало",
+      "Вечное сияние чистого разума",
+      "Бегущий по лезвию 2049"
+     ],
+     "ids": [
+      "tt1375666",
+      "tt0338013",
+      "tt1856101"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.dark",
+     "label": "мрачная атмосфера",
+     "w": 0.4,
+     "sources": [
+      "Вечное сияние чистого разума",
+      "Она",
+      "Бегущий по лезвию 2049"
+     ],
+     "ids": [
+      "tt0338013",
+      "tt1798709",
+      "tt1856101"
+     ],
+     "preference": false
+    },
+    {
+     "f": "length.long",
+     "label": "длинный",
+     "w": 0.4,
+     "sources": [
+      "Интерстеллар",
+      "Бегущий по лезвию 2049"
+     ],
+     "ids": [
+      "tt0816692",
+      "tt1856101"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "w": 0.4,
+     "sources": [
+      "Интерстеллар",
+      "Вечное сияние чистого разума",
+      "Бегущий по лезвию 2049"
+     ],
+     "ids": [
+      "tt0816692",
+      "tt0338013",
+      "tt1856101"
+     ],
+     "preference": false
+    },
+    {
+     "f": "ending.sad",
+     "label": "горький финал",
+     "w": 0.31,
+     "sources": [
+      "Вечное сияние чистого разума",
+      "Она",
+      "Перед рассветом"
+     ],
+     "ids": [
+      "tt0338013",
+      "tt1798709",
+      "tt0112471"
+     ],
+     "preference": false
+    }
+   ],
+   "dislikes": [
+    {
+     "f": "story.weak",
+     "label": "сюжет с дырами",
+     "w": 1,
+     "sources": [
+      "Трансформеры"
+     ],
+     "ids": [
+      "tt0418279"
+     ],
+     "preference": false
+    },
+    {
+     "f": "humor.silly",
+     "label": "тупые шутки",
+     "w": 1,
+     "sources": [
+      "Трансформеры"
+     ],
+     "ids": [
+      "tt0418279"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.effects",
+     "label": "одни спецэффекты, а смотреть нечего",
+     "w": 1,
+     "sources": [
+      "Трансформеры"
+     ],
+     "ids": [
+      "tt0418279"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.predictable",
+     "label": "всё понятно заранее",
+     "w": 2,
+     "sources": [
+      "Трансформеры",
+      "Сумерки"
+     ],
+     "ids": [
+      "tt0418279",
+      "tt1099212"
+     ],
+     "preference": false
+    },
+    {
+     "f": "characters.unlikeable",
+     "label": "герои бесили",
+     "w": 1,
+     "sources": [
+      "Сумерки"
+     ],
+     "ids": [
+      "tt1099212"
+     ],
+     "preference": false
+    },
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучал",
+     "w": 1,
+     "sources": [
+      "Сумерки"
+     ],
+     "ids": [
+      "tt1099212"
+     ],
+     "preference": false
+    }
+   ],
+   "hardNo": [
+    {
+     "f": "tone.cheesy",
+     "label": "сопливо и наивно",
+     "w": 0,
+     "sources": [
+      "Сумерки"
+     ],
+     "ids": [
+      "tt1099212"
+     ],
+     "preference": false
+    }
+   ],
+   "consumed": 8
+  },
+  "considered": 21757,
+  "sieves": [
+   {
+    "id": 1,
+    "name": "Можно ли",
+    "removed": 0
+   },
+   {
+    "id": 2,
+    "name": "Было ли",
+    "removed": 8
+   },
+   {
+    "id": 3,
+    "name": "Сделано ли нормально",
+    "removed": 10287
+   },
+   {
+    "id": 4,
+    "name": "Моё ли (жёсткие стопы)",
+    "removed": 74
+   },
+   {
+    "id": 5,
+    "name": "Подходит ли сегодня (обязательное)",
+    "removed": 0
+   }
+  ]
+ },
+ "why": {
+  "tt0119177": {
+   "id": "tt0119177",
+   "name": "Gattaca",
+   "rank": 62,
+   "of": 21757,
+   "score": 7.595,
+   "parts": {
+    "fit": 7.993661781970953,
+    "penalty": 1.22385,
+    "mood": 0.614992,
+    "prior": 0.2106583863144786
+   },
+   "leaderScore": 10.49,
+   "matches": [
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 1.215,
+     "confirmed": true
+    },
+    {
+     "f": "ending.strong",
+     "label": "сильный финал",
+     "contribution": 0.939,
+     "confirmed": true
+    },
+    {
+     "f": "world.space",
+     "label": "космос",
+     "contribution": 0.841,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.582,
+     "confirmed": true
+    },
+    {
+     "f": "story.twist",
+     "label": "неожиданные повороты",
+     "contribution": 0.581,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.524,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "story.weak",
+     "label": "слабый сюжет, дыры",
+     "contribution": 0.636
+    },
+    {
+     "f": "aesthetic.effects",
+     "label": "зрелищные спецэффекты",
+     "contribution": 0.539
+    },
+    {
+     "f": "story.predictable",
+     "label": "предсказуемо",
+     "contribution": 0.032
+    },
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.016
+    }
+   ]
+  },
+  "tt2543164": {
+   "id": "tt2543164",
+   "name": "Arrival",
+   "rank": 14,
+   "of": 21757,
+   "score": 8.581,
+   "parts": {
+    "fit": 9.311609134328034,
+    "penalty": 1.403625,
+    "mood": 0.43022591999999993,
+    "prior": 0.24304376679556927
+   },
+   "leaderScore": 10.49,
+   "matches": [
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 1.215,
+     "confirmed": true
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.987,
+     "confirmed": true
+    },
+    {
+     "f": "ending.strong",
+     "label": "сильный финал",
+     "contribution": 0.939,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.845,
+     "confirmed": true
+    },
+    {
+     "f": "story.twist",
+     "label": "неожиданные повороты",
+     "contribution": 0.685,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.67,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "story.weak",
+     "label": "слабый сюжет, дыры",
+     "contribution": 0.716
+    },
+    {
+     "f": "aesthetic.effects",
+     "label": "зрелищные спецэффекты",
+     "contribution": 0.301
+    },
+    {
+     "f": "tone.cheesy",
+     "label": "наивно, слащаво",
+     "contribution": 0.226
+    },
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.125
+    },
+    {
+     "f": "story.predictable",
+     "label": "предсказуемо",
+     "contribution": 0.034
+    }
+   ]
+  },
+  "tt2194499": {
+   "id": "tt2194499",
+   "name": "About Time",
+   "rank": 2500,
+   "of": 21757,
+   "score": 3.216,
+   "parts": {
+    "fit": 3.913285510788066,
+    "penalty": 1.190582,
+    "mood": 0.27035999999999993,
+    "prior": 0.22317059382578489
+   },
+   "leaderScore": 10.49,
+   "matches": [
+    {
+     "f": "ending.strong",
+     "label": "сильный финал",
+     "contribution": 0.615,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.603,
+     "confirmed": true
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.506,
+     "confirmed": true
+    },
+    {
+     "f": "characters.romance",
+     "label": "любовная линия",
+     "contribution": 0.4,
+     "confirmed": true
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.3,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.soundtrack",
+     "label": "сильная музыка",
+     "contribution": 0.27,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "tone.cheesy",
+     "label": "наивно, слащаво",
+     "contribution": 0.747
+    },
+    {
+     "f": "story.weak",
+     "label": "слабый сюжет, дыры",
+     "contribution": 0.444
+    }
+   ]
+  },
+  "tt2884206": {
+   "id": "tt2884206",
+   "name": "I Origins",
+   "rank": 515,
+   "of": 21757,
+   "score": 5.591,
+   "parts": {
+    "fit": 4.7822139480519015,
+    "penalty": 0.15990000000000001,
+    "mood": 0.8079999999999999,
+    "prior": 0.1610018352231762
+   },
+   "leaderScore": 10.49,
+   "matches": [
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 1.215,
+     "confirmed": true
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.547,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.518,
+     "confirmed": true
+    },
+    {
+     "f": "characters.romance",
+     "label": "любовная линия",
+     "contribution": 0.439,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.423,
+     "confirmed": true
+    },
+    {
+     "f": "ending.strong",
+     "label": "сильный финал",
+     "contribution": 0.402,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "story.weak",
+     "label": "слабый сюжет, дыры",
+     "contribution": 0.12
+    },
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.04
+    }
+   ]
+  },
+  "tt0414993": {
+   "id": "tt0414993",
+   "name": "The Fountain",
+   "rank": 2,
+   "of": 21757,
+   "score": 9.83,
+   "parts": {
+    "fit": 8.816141818332381,
+    "penalty": 0.01575,
+    "mood": 0.87832,
+    "prior": 0.15108015992659102
+   },
+   "leaderScore": 10.49,
+   "matches": [
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 1.215,
+     "confirmed": true
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.987,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.862,
+     "confirmed": true
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.842,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.838,
+     "confirmed": true
+    },
+    {
+     "f": "world.space",
+     "label": "космос",
+     "contribution": 0.649,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "aesthetic.effects",
+     "label": "зрелищные спецэффекты",
+     "contribution": 0.009
+    },
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.007
+    }
+   ]
+  }
+ },
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [
+   "genre:Romance",
+   "genre:Drama",
+   "genre:Sci-Fi"
+  ],
+  "shown": [
+   "tt0120737",
+   "tt4154796",
+   "tt1853728",
+   "tt0088763",
+   "tt0137523",
+   "tt0109830",
+   "tt0080684",
+   "tt0081505",
+   "tt2543164",
+   "tt2582802",
+   "tt0111161",
+   "tt2395427",
+   "tt2278388",
+   "tt0816692",
+   "tt1375666",
+   "tt0133093",
+   "tt0090605",
+   "tt0068646",
+   "tt0167260",
+   "tt0114369",
+   "tt0172495",
+   "tt0361748",
+   "tt0167261",
+   "tt0102926",
+   "tt0110912",
+   "tt7286456",
+   "tt0120815",
+   "tt0482571",
+   "tt0848228",
+   "tt0108052",
+   "tt0120689",
+   "tt0407887",
+   "tt0405159",
+   "tt0071562",
+   "tt0120338",
+   "tt0099685",
+   "tt4154756",
+   "tt1454468",
+   "tt0103064",
+   "tt0120382"
+  ],
+  "liked": [
+   "tt0816692",
+   "tt1375666",
+   "tt0338013"
+  ],
+  "disliked": [
+   "tt0418279",
+   "tt1099212"
+  ],
+  "whyIndex": 0,
+  "answers": {
+   "tt0816692": {
+    "reaction": "love",
+    "reasons": [
+     "world.space",
+     "cognitive.high",
+     "tone.epic",
+     "aesthetic.beautiful",
+     "ending.strong",
+     "aesthetic.soundtrack"
+    ],
+    "issues": []
+   },
+   "tt1375666": {
+    "reaction": "like",
+    "reasons": [
+     "story.complex",
+     "story.twist",
+     "cognitive.high",
+     "aesthetic.effects"
+    ],
+    "issues": []
+   },
+   "tt0338013": {
+    "reaction": "love",
+    "reasons": [
+     "characters.romance",
+     "tone.melancholic",
+     "story.nonlinear",
+     "tone.whimsical"
+    ],
+    "issues": []
+   },
+   "tt1798709": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0112471": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt1856101": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0418279": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "humor.silly",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "tt1099212": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "characters.unlikeable",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     },
+     {
+      "f": "pace.draggy",
+      "hard": false
+     },
+     {
+      "f": "tone.cheesy",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   }
+  },
+  "corrections": [],
+  "preferences": [
+   {
+    "f": "humor.dark"
+   }
+  ],
+  "session": {
+   "moods": [
+    "think"
+   ],
+   "avoid": [
+    "scary",
+    "long"
+   ],
+   "notNow": [],
+   "asked": 1
+  },
+  "seed": 4242
+ }
+}

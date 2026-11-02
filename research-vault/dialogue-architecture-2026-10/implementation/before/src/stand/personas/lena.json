@@ -1,0 +1,53 @@
+{
+  "id": "lena",
+  "name": "Лена, 34, сериал",
+  "domain": "series",
+  "who": "Менеджер. Вторник, 21:30, после работы. Хочет включить лёгкий ситком, половину серий слушать фоном с телефоном в руках. «Игру престолов» бросила на втором сезоне из-за жестокости.",
+  "today": "Посмеяться, расслабиться, фоном; без жестокости и мрака.",
+  "situation": { "time": null, "company": "solo" },
+  "stops": ["content.violence", "content.disturbing", "tone.creepy"],
+  "prefer": ["humor.funny", "tone.feelgood", "tone.lighthearted", "cognitive.low", "tension.low", "structure.procedural"],
+  "facts": { "episode": "short" },
+  "source": "research-vault/akinator-picker-2026-10/raw/persona-series-cartoons.md, «Персона 1»",
+  "loved": [
+    { "id": "tt0108778", "name": "Друзья", "q": "Друзья", "love": true, "reasons": ["humor.funny", "tone.feelgood", "characters.friendship", "characters.ensemble"], "text": "можно включить любую серию фоном и отдыхать" },
+    { "id": "tt2467372", "name": "Бруклин 9-9", "q": "Бруклин 9-9", "love": true, "reasons": ["humor.funny", "tone.lighthearted", "tone.feelgood", "structure.procedural"], "text": "добрые герои, короткие серии по 20 минут" },
+    { "id": "tt0386676", "name": "Офис", "q": "Офис", "reasons": ["humor.funny", "characters.ensemble"], "text": "неловкий юмор, не надо вникать, смотрю фоном" },
+    { "id": "tt1266020", "name": "Парки и зоны отдыха", "q": "Парки и зоны отдыха" },
+    { "id": "tt0460649", "name": "Как я встретил вашу маму" },
+    { "id": "tt0285403", "name": "Клиника", "reasons": ["humor.funny"] },
+    { "id": "tt4955642", "name": "В лучшем мире" },
+    { "id": "tt1442437", "name": "Американская семейка" },
+    { "id": "tt4477976", "name": "Супермаркет" },
+    { "id": "tt3526078", "name": "Шиттс Крик" },
+    { "id": "tt0898266", "name": "Теория большого взрыва" }
+  ],
+  "disliked": [
+    { "id": "tt0944947", "name": "Игра престолов", "tried": true, "q": "Игра престолов", "issues": [{ "f": "tension.high" }, { "f": "content.sexual" }, { "f": "content.violence", "hard": true }], "text": "бросила из-за жестокости, всех убивают" },
+    { "id": "tt1520211", "name": "Ходячие мертвецы", "q": "Ходячие мертвецы", "issues": [{ "f": "tone.creepy" }, { "f": "world.postapoc" }, { "f": "content.violence", "hard": true }], "text": "зомби и кишки, страшно, выключила" },
+    { "id": "tt0903747", "name": "Во все тяжкие", "q": "Во все тяжкие" },
+    { "id": "tt5834204", "name": "Рассказ служанки", "q": "Рассказ служанки" },
+    { "id": "tt8962124", "name": "Эмили в Париже" }
+  ],
+  "alsoSeen": [],
+  "targets": [
+    { "id": "tt10986410", "name": "Тед Лассо" },
+    { "id": "tt1826940", "name": "Новенькая" },
+    { "id": "tt14218830", "name": "Начальная школа «Эбботт»" }
+  ],
+  "modes": {
+    "careful": {
+      "seed": 20261021,
+      "anchors": { "pages": 1, "love": true, "seen": true, "searchLoved": true, "searchDisliked": true, "searchFirst": true },
+      "why": { "text": "all", "expand": true },
+      "whyNot": { "text": "all" },
+      "stops": true,
+      "result": { "rate": true }
+    },
+    "lazy": {
+      "seed": 20261021,
+      "anchors": { "pages": 1, "maxTicks": 2, "love": true },
+      "why": { "screens": 1 }
+    }
+  }
+}

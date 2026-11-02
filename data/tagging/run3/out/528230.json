@@ -1,0 +1,9 @@
+{"appid": 528230, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a top-down shooter video game with roguelike elements"}, {"id": "p3", "q": "Reviewers praised the roguelike aspects, shooting and weapon handling gameplay"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "collecting upgrades and new weapons and equipment"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "choosing from one of eight classes, picking a sidearm, and choosing starting perks and equipment"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "It's possible to play in cooperative mode with one other player"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "humanity is threatened by malicious artificial intelligence"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p4", "q": "criticizing some aspects of the controls and user interface"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p3", "q": "potentially repetitive gameplay"}]}
+]}

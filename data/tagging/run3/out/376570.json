@@ -1,0 +1,12 @@
+{"appid": 376570, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "set in a fantasy/science fiction world on the fictional planet Nexus"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "fantasy/science fiction world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "leaving behind a wealth of technology and secrets for players to explore"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p6", "q": "These characters could move in an open, persistent world environment"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "player versus player combat"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p7", "q": "This tied into the gameplay in ways such as speed races and jumping puzzles"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "was a massively multiplayer online role-playing game"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p2", "q": "NCSoft announced the immediate closure of Carbine Studios"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p8", "q": "Reviewers praised the game for its own unique style and personality"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "p8", "q": "light-hearted flourish"}]}
+]}

@@ -1,0 +1,6 @@
+{"id": "tt0088563", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 1985 science fiction animated television series"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "science fiction animated television series"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "s", "q": "uncovers an international criminal organization known as V.E.N.O.M"}, {"id": "p2", "q": "obtaining money through either robbery, extortion, counterfeiting, kidnapping"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p5", "q": "at the expense of anything deeper in terms of plotting and characterization"}]}
+]}

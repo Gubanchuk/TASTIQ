@@ -1,0 +1,1953 @@
+{
+ "label": "Персона 2: синефил (Линч, Тарковский, Вонг Карвай; ненавидит громкие франшизы) — lazy",
+ "screens": 9,
+ "log": [
+  {
+   "n": 1,
+   "action": null,
+   "note": "открыли /pick/",
+   "screen": {
+    "step": "domain",
+    "title": "Что хочешь?",
+    "options": [
+     {
+      "value": "game",
+      "label": "Поиграть"
+     },
+     {
+      "value": "film",
+      "label": "Посмотреть фильм"
+     },
+     {
+      "value": "series",
+      "label": "Посмотреть сериал"
+     },
+     {
+      "value": "cartoon",
+      "label": "Посмотреть мультфильм"
+     }
+    ],
+    "later": [
+     "Почитать",
+     "Аниме"
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "note": "Посмотреть фильм",
+   "screen": {
+    "step": "genres",
+    "title": "Что обычно смотришь?",
+    "hint": "Это только чтобы спросить про знакомое. Подбирать буду не по жанру, а по тому, за что тебе заходит.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "genre:Drama",
+      "label": "драмы"
+     },
+     {
+      "value": "genre:Comedy",
+      "label": "комедии"
+     },
+     {
+      "value": "genre:Action",
+      "label": "боевики"
+     },
+     {
+      "value": "genre:Crime",
+      "label": "криминал"
+     },
+     {
+      "value": "genre:Romance",
+      "label": "мелодрамы"
+     },
+     {
+      "value": "genre:Thriller",
+      "label": "триллеры"
+     },
+     {
+      "value": "genre:Horror",
+      "label": "ужасы"
+     },
+     {
+      "value": "genre:Adventure",
+      "label": "приключения"
+     },
+     {
+      "value": "genre:Mystery",
+      "label": "детективы"
+     },
+     {
+      "value": "genre:Biography",
+      "label": "биографии"
+     },
+     {
+      "value": "genre:Fantasy",
+      "label": "фэнтези"
+     },
+     {
+      "value": "genre:Sci-Fi",
+      "label": "фантастика"
+     },
+     {
+      "value": "genre:Documentary",
+      "label": "документальное"
+     },
+     {
+      "value": "genre:History",
+      "label": "историческое"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "skip"
+   },
+   "note": "пропустил «что обычно смотришь»",
+   "screen": {
+    "step": "liked",
+    "title": "Что из этого смотрел, и зашло?",
+    "hint": "Отметь всё знакомое, что понравилось. Можно найти своё через поиск.",
+    "multi": true,
+    "search": true,
+    "canSkip": false,
+    "items": [
+     {
+      "id": "tt1853728",
+      "name": "Django Unchained",
+      "ru": "Джанго освобождённый",
+      "original": null,
+      "year": 2012,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Western"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt0167260",
+      "name": "The Lord of the Rings: The Return of the King",
+      "ru": "Властелин колец: Возвращение короля",
+      "original": null,
+      "year": 2003,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/4/48/Lord_Rings_Return_King.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Drama",
+       "Fantasy"
+      ],
+      "rating": "IMDb 9"
+     },
+     {
+      "id": "tt0816692",
+      "name": "Interstellar",
+      "ru": "Интерстеллар",
+      "original": null,
+      "year": 2014,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.7"
+     },
+     {
+      "id": "tt0088763",
+      "name": "Back to the Future",
+      "ru": "Назад в будущее",
+      "original": null,
+      "year": 1985,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Comedy",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt0169547",
+      "name": "American Beauty",
+      "ru": "Красота по-американски",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/9a/American_Beauty_1999_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 8.3"
+     },
+     {
+      "id": "tt2395427",
+      "name": "Avengers: Age of Ultron",
+      "ru": "Мстители: Эра Альтрона",
+      "original": null,
+      "year": 2015,
+      "image": null,
+      "poster": null,
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 7.3"
+     },
+     {
+      "id": "tt0208092",
+      "name": "Snatch",
+      "ru": "Большой куш",
+      "original": null,
+      "year": 2000,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a7/Snatch_ver4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Comedy",
+       "Crime"
+      ],
+      "rating": "IMDb 8.2"
+     },
+     {
+      "id": "tt0114369",
+      "name": "Seven",
+      "ru": "Семь",
+      "original": "Se7en",
+      "year": 1995,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama",
+       "Mystery"
+      ],
+      "rating": "IMDb 8.6"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "note": "liked page 1: Джанго освобождённый (2012) | Властелин колец: Возвращение короля (2003) | Интерстеллар (2014) | Назад в будущее (1985) | Красота по-американски (1999) | Мстители: Эра Альтрона (2015) | Большой куш (2000) | Семь (1995) → узнал и зашло: Интерстеллар (2014), Семь (1995)"
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0816692",
+     "tt0114369"
+    ],
+    "known": {},
+    "shownIds": [
+     "tt1853728",
+     "tt0167260",
+     "tt0816692",
+     "tt0088763",
+     "tt0169547",
+     "tt2395427",
+     "tt0208092",
+     "tt0114369"
+    ]
+   },
+   "note": "отметил Интерстеллар (2014), Семь (1995), дальше",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Интерстеллар»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt0816692",
+     "name": "Interstellar",
+     "ru": "Интерстеллар",
+     "original": null,
+     "year": 2014,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Adventure",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 8.7"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "world.timetravel",
+      "label": "путешествия во времени"
+     },
+     {
+      "value": "world.dystopia",
+      "label": "антиутопия"
+     },
+     {
+      "value": "world.space",
+      "label": "космос"
+     },
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "story.complex",
+      "label": "сложный, надо вникать"
+     },
+     {
+      "value": "aesthetic.effects",
+      "label": "зрелищные спецэффекты"
+     },
+     {
+      "value": "cognitive.high",
+      "label": "заставляет думать"
+     },
+     {
+      "value": "tone.epic",
+      "label": "эпичность и размах"
+     },
+     {
+      "value": "aesthetic.beautiful",
+      "label": "красивая картинка"
+     },
+     {
+      "value": "tone.inspiring",
+      "label": "вдохновляет"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "1 из 2"
+   }
+  },
+  {
+   "note": "why «Интерстеллар (2014)»: offered [путешествия во времени | антиутопия | космос | фантастика | сложный, надо вникать | зрелищные спецэффекты | заставляет думать | эпичность и размах | красивая картинка | вдохновляет] → ткнул «сложный, надо вникать»"
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "story.complex"
+    ],
+    "love": false,
+    "issues": []
+   },
+   "note": "один чип, дальше",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Семь»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt0114369",
+     "name": "Seven",
+     "ru": "Семь",
+     "original": "Se7en",
+     "year": 1995,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Crime",
+      "Drama",
+      "Mystery"
+     ],
+     "rating": "IMDb 8.6"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "tone.atmospheric",
+      "label": "атмосферное"
+     },
+     {
+      "value": "story.twist",
+      "label": "неожиданные повороты"
+     },
+     {
+      "value": "story.mystery",
+      "label": "загадка и расследование"
+     },
+     {
+      "value": "tone.dark",
+      "label": "мрачная атмосфера"
+     },
+     {
+      "value": "ending.strong",
+      "label": "сильный финал"
+     },
+     {
+      "value": "characters.acting",
+      "label": "сильная актёрская игра"
+     },
+     {
+      "value": "content.violence",
+      "label": "жестокость и кровь"
+     },
+     {
+      "value": "cognitive.high",
+      "label": "заставляет думать"
+     },
+     {
+      "value": "world.crime",
+      "label": "криминал"
+     },
+     {
+      "value": "tone.creepy",
+      "label": "жуть и страх"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "2 из 2"
+   }
+  },
+  {
+   "note": "why «Семь (1995)»: offered [атмосферное | неожиданные повороты | загадка и расследование | мрачная атмосфера | сильный финал | сильная актёрская игра | жестокость и кровь | заставляет думать | криминал | жуть и страх] → ткнул «атмосферное»"
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "tone.atmospheric"
+    ],
+    "love": false,
+    "issues": []
+   },
+   "note": "один чип, дальше",
+   "screen": {
+    "step": "disliked",
+    "title": "А что не зашло, хотя многие хвалят?",
+    "hint": "Если ничего такого не было, пропусти.",
+    "multi": true,
+    "search": true,
+    "canSkip": true,
+    "items": [
+     {
+      "id": "tt0109830",
+      "name": "Forrest Gump",
+      "ru": "Форрест Гамп",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Romance"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0167261",
+      "name": "The Lord of the Rings: The Two Towers",
+      "ru": "Властелин колец: Две крепости",
+      "original": null,
+      "year": 2002,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a1/Lord_Rings_Two_Towers.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Drama",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0325980",
+      "name": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "ru": "Пираты Карибского моря: Проклятие Чёрной жемчужины",
+      "original": null,
+      "year": 2003,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/89/Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Adventure",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.1"
+     },
+     {
+      "id": "tt0266697",
+      "name": "Kill Bill: Vol. 1",
+      "ru": "Убить Билла. Фильм 1",
+      "original": null,
+      "year": 2003,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Crime",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.2"
+     },
+     {
+      "id": "tt0111161",
+      "name": "The Shawshank Redemption",
+      "ru": "Побег из Шоушенка",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 9.3"
+     },
+     {
+      "id": "tt0468569",
+      "name": "The Dark Knight",
+      "ru": "Тёмный рыцарь",
+      "original": null,
+      "year": 2008,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Thriller"
+      ],
+      "rating": "IMDb 9.1"
+     },
+     {
+      "id": "tt0253474",
+      "name": "The Pianist",
+      "ru": "Пианист",
+      "original": null,
+      "year": 2002,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Pianist_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Biography",
+       "Drama",
+       "Music"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt0137523",
+      "name": "Fight Club",
+      "ru": "Бойцовский клуб",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.8"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "skip"
+   },
+   "note": "пропустил «что не зашло»",
+   "screen": {
+    "step": "today",
+    "title": "Что сегодня?",
+    "hint": "Это только на сегодня, во вкус не записывается.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "relax",
+      "label": "Хочу расслабиться"
+     },
+     {
+      "value": "laugh",
+      "label": "Хочу посмеяться"
+     },
+     {
+      "value": "thrill",
+      "label": "Хочу пощекотать нервы"
+     },
+     {
+      "value": "cry",
+      "label": "Хочу, чтобы пробрало"
+     },
+     {
+      "value": "think",
+      "label": "Хочу подумать"
+     },
+     {
+      "value": "background",
+      "label": "Фоном, не вникая"
+     },
+     {
+      "value": "family",
+      "label": "Смотрю с детьми"
+     },
+     {
+      "value": "short",
+      "label": "Коротко, на один вечер"
+     },
+     {
+      "value": "binge",
+      "label": "Хочу засесть надолго"
+     }
+    ],
+    "avoid": [
+     {
+      "value": "dark",
+      "label": "Ничего мрачного"
+     },
+     {
+      "value": "scary",
+      "label": "Ничего страшного"
+     },
+     {
+      "value": "violence",
+      "label": "Без жестокости"
+     },
+     {
+      "value": "sad",
+      "label": "Без слёз"
+     },
+     {
+      "value": "long",
+      "label": "Ничего длинного"
+     }
+    ]
+   }
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "skip"
+   },
+   "note": "пропустил «что сегодня»",
+   "screen": {
+    "step": "playback",
+    "title": "Вот как я тебя вижу",
+    "taste": {
+     "confirmed": [
+      {
+       "f": "tone.atmospheric",
+       "label": "атмосферное",
+       "w": 0.73,
+       "sources": [
+        "Семь"
+       ],
+       "ids": [
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.complex",
+       "label": "сложный, надо вникать",
+       "w": 0.72,
+       "sources": [
+        "Интерстеллар"
+       ],
+       "ids": [
+        "tt0816692"
+       ],
+       "preference": false
+      }
+     ],
+     "inferred": [
+      {
+       "f": "tension.high",
+       "label": "держит в напряжении",
+       "w": 0.34,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "cognitive.high",
+       "label": "заставляет думать",
+       "w": 0.34,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.acting",
+       "label": "сильная актёрская игра",
+       "w": 0.32,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "ending.strong",
+       "label": "сильный финал",
+       "w": 0.32,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.twist",
+       "label": "неожиданные повороты",
+       "w": 0.31,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.beautiful",
+       "label": "красивая картинка",
+       "w": 0.3,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.soundtrack",
+       "label": "сильная музыка",
+       "w": 0.26,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.whimsical",
+       "label": "странное, причудливое",
+       "w": 0.2,
+       "sources": [
+        "Интерстеллар",
+        "Семь"
+       ],
+       "ids": [
+        "tt0816692",
+        "tt0114369"
+       ],
+       "preference": false
+      }
+     ],
+     "dislikes": [],
+     "hardNo": [],
+     "consumed": 2
+    },
+    "today": [],
+    "lines": [
+     "Тебе важно: атмосферное (Семь); сложный, надо вникать (Интерстеллар).",
+     "Уже смотрел: 2, это не предложу."
+    ],
+    "options": [
+     {
+      "value": "confirm",
+      "label": "Да, подбирай"
+     },
+     {
+      "value": "more_liked",
+      "label": "Добавлю ещё, что зашло"
+     }
+    ]
+   }
+  },
+  {
+   "note": "playback lines:\n  > Тебе важно: атмосферное (Семь); сложный, надо вникать (Интерстеллар).\n  > Уже смотрел: 2, это не предложу."
+  },
+  {
+   "n": 9,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "note": "Да, подбирай",
+   "screen": {
+    "step": "result",
+    "title": "Вот что я подобрал",
+    "result": {
+     "top": {
+      "id": "tt0246578",
+      "domain": "film",
+      "name": "Donnie Darko",
+      "ru": "Донни Дарко",
+      "year": 2001,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Sci-Fi"
+      ],
+      "runtime": 113,
+      "seasons": null,
+      "episodes": null,
+      "status": null,
+      "rating": "IMDb 8",
+      "link": "https://www.imdb.com/title/tt0246578/",
+      "price": null,
+      "label": "likely",
+      "labelText": "Вероятно подойдёт",
+      "score": 3.907,
+      "parts": {
+       "fit": 3.655,
+       "penalty": 0,
+       "mood": 0,
+       "prior": 0.253
+      },
+      "mainAspect": "story",
+      "explanation": {
+       "reasons": [
+        {
+         "text": "Ты отметил «сложный, надо вникать» в Интерстеллар, здесь это тоже есть",
+         "factIds": [
+          "match:story.complex"
+         ]
+        },
+        {
+         "text": "Ты отметил «атмосферное» в Семь, здесь это тоже есть",
+         "factIds": [
+          "match:tone.atmospheric"
+         ]
+        },
+        {
+         "text": "Как в Интерстеллар и Семь, здесь «неожиданные повороты». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:story.twist"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Как в Интерстеллар и Семь, здесь «заставляет думать». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:cognitive.high"
+         ],
+         "weak": true
+        }
+       ],
+       "risks": [
+        {
+         "text": "Зрители жалуются: слабый финал",
+         "factIds": [
+          "risk:flaw:ending.weak"
+         ]
+        },
+        {
+         "text": "Зрители жалуются: слабый сюжет, дыры",
+         "factIds": [
+          "risk:flaw:story.weak"
+         ]
+        }
+       ],
+       "info": [
+        {
+         "text": "IMDb 8 из 10, 923 247 оценок",
+         "factIds": [
+          "fact:reviews"
+         ]
+        },
+        {
+         "text": "113 мин",
+         "factIds": [
+          "fact:runtime"
+         ]
+        }
+       ]
+      },
+      "facts": [
+       {
+        "id": "match:story.complex",
+        "type": "match",
+        "f": "story.complex",
+        "basis": "confirmed",
+        "sources": [
+         "Интерстеллар"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         },
+         {
+          "id": "genome:complex",
+          "kind": "genome",
+          "q": "complex",
+          "rel": 0.945
+         }
+        ],
+        "contribution": 0.542873019405304
+       },
+       {
+        "id": "match:tone.atmospheric",
+        "type": "match",
+        "f": "tone.atmospheric",
+        "basis": "confirmed",
+        "sources": [
+         "Семь"
+        ],
+        "evidence": [
+         {
+          "id": "genome:atmospheric",
+          "kind": "genome",
+          "q": "atmospheric",
+          "rel": 0.772
+         },
+         {
+          "id": "usertag:atmospheric",
+          "kind": "usertag",
+          "q": "atmospheric",
+          "n": 115
+         }
+        ],
+        "contribution": 0.5339660978380626
+       },
+       {
+        "id": "match:story.twist",
+        "type": "match",
+        "f": "story.twist",
+        "basis": "inferred",
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "evidence": [
+         {
+          "id": "genome:plot twist",
+          "kind": "genome",
+          "q": "plot twist",
+          "rel": 0.913
+         },
+         {
+          "id": "genome:suprisingly clever",
+          "kind": "genome",
+          "q": "suprisingly clever",
+          "rel": 0.44
+         }
+        ],
+        "contribution": 0.24235974890399997
+       },
+       {
+        "id": "match:cognitive.high",
+        "type": "match",
+        "f": "cognitive.high",
+        "basis": "inferred",
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         },
+         {
+          "id": "genome:existentialism",
+          "kind": "genome",
+          "q": "existentialism",
+          "rel": 0.896
+         }
+        ],
+        "contribution": 0.23899815954560003
+       },
+       {
+        "id": "risk:flaw:ending.weak",
+        "type": "risk_flaw",
+        "f": "ending.weak",
+        "evidence": [
+         {
+          "id": "genome:bad ending",
+          "kind": "genome",
+          "q": "bad ending",
+          "rel": 0.786
+         }
+        ]
+       },
+       {
+        "id": "risk:flaw:story.weak",
+        "type": "risk_flaw",
+        "f": "story.weak",
+        "evidence": [
+         {
+          "id": "genome:plot holes",
+          "kind": "genome",
+          "q": "plot holes",
+          "rel": 0.564
+         }
+        ]
+       },
+       {
+        "id": "fact:reviews",
+        "type": "fact",
+        "ratio": 0.8,
+        "total": 923247,
+        "desc": "IMDb 8"
+       },
+       {
+        "id": "fact:runtime",
+        "type": "fact",
+        "runtime": 113
+       }
+      ]
+     },
+     "alternatives": [
+      {
+       "id": "tt0468569",
+       "domain": "film",
+       "name": "The Dark Knight",
+       "ru": "Тёмный рыцарь",
+       "year": 2008,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Crime",
+        "Thriller"
+       ],
+       "runtime": 152,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 9.1",
+       "link": "https://www.imdb.com/title/tt0468569/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 3.755,
+       "parts": {
+        "fit": 3.383,
+        "penalty": 0,
+        "mood": 0,
+        "prior": 0.372
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Семь, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «сложный, надо вникать» в Интерстеллар, здесь это тоже есть",
+          "factIds": [
+           "match:story.complex"
+          ]
+         },
+         {
+          "text": "Как в Интерстеллар и Семь, здесь «неожиданные повороты». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:story.twist"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Интерстеллар и Семь, здесь «сильный финал». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:ending.strong"
+          ],
+          "weak": true
+         }
+        ],
+        "risks": [
+         {
+          "text": "Зрители жалуются: слабый сюжет, дыры",
+          "factIds": [
+           "risk:flaw:story.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 9.1 из 10, 3 241 275 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "152 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.657
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 153
+          }
+         ],
+         "contribution": 0.6201696839001889
+        },
+        {
+         "id": "match:story.complex",
+         "type": "match",
+         "f": "story.complex",
+         "basis": "confirmed",
+         "sources": [
+          "Интерстеллар"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.756
+          },
+          {
+           "id": "genome:complex",
+           "kind": "genome",
+           "q": "complex",
+           "rel": 0.892
+          }
+         ],
+         "contribution": 0.37743199495154395
+        },
+        {
+         "id": "match:story.twist",
+         "type": "match",
+         "f": "story.twist",
+         "basis": "inferred",
+         "sources": [
+          "Интерстеллар",
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:plot twist",
+           "kind": "genome",
+           "q": "plot twist",
+           "rel": 0.719
+          },
+          {
+           "id": "genome:suprisingly clever",
+           "kind": "genome",
+           "q": "suprisingly clever",
+           "rel": 0.719
+          }
+         ],
+         "contribution": 0.207676748916
+        },
+        {
+         "id": "match:ending.strong",
+         "type": "match",
+         "f": "ending.strong",
+         "basis": "inferred",
+         "sources": [
+          "Интерстеллар",
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:great ending",
+           "kind": "genome",
+           "q": "great ending",
+           "rel": 0.878
+          },
+          {
+           "id": "genome:powerful ending",
+           "kind": "genome",
+           "q": "powerful ending",
+           "rel": 0.797
+          }
+         ],
+         "contribution": 0.19601617500000001
+        },
+        {
+         "id": "risk:flaw:story.weak",
+         "type": "risk_flaw",
+         "f": "story.weak",
+         "evidence": [
+          {
+           "id": "genome:plot holes",
+           "kind": "genome",
+           "q": "plot holes",
+           "rel": 0.554
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.91,
+         "total": 3241275,
+         "desc": "IMDb 9.1"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 152
+        }
+       ]
+      },
+      {
+       "id": "tt0137523",
+       "domain": "film",
+       "name": "Fight Club",
+       "ru": "Бойцовский клуб",
+       "year": 1999,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+       ],
+       "runtime": 139,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 8.8",
+       "link": "https://www.imdb.com/title/tt0137523/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 3.871,
+       "parts": {
+        "fit": 3.529,
+        "penalty": 0,
+        "mood": 0,
+        "prior": 0.342
+       },
+       "mainAspect": "story",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «сложный, надо вникать» в Интерстеллар, здесь это тоже есть",
+          "factIds": [
+           "match:story.complex"
+          ]
+         },
+         {
+          "text": "Ты отметил «атмосферное» в Семь, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Как в Интерстеллар и Семь, здесь «неожиданные повороты». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:story.twist"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Интерстеллар и Семь, здесь «заставляет думать». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:cognitive.high"
+          ],
+          "weak": true
+         }
+        ],
+        "risks": [
+         {
+          "text": "Зрители жалуются: слабый финал",
+          "factIds": [
+           "risk:flaw:ending.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 8.8 из 10, 2 674 630 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "139 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:story.complex",
+         "type": "match",
+         "f": "story.complex",
+         "basis": "confirmed",
+         "sources": [
+          "Интерстеллар"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:complex",
+           "kind": "genome",
+           "q": "complex",
+           "rel": 0.911
+          }
+         ],
+         "contribution": 0.542873019405304
+        },
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.783
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 175
+          }
+         ],
+         "contribution": 0.5376871159414638
+        },
+        {
+         "id": "match:story.twist",
+         "type": "match",
+         "f": "story.twist",
+         "basis": "inferred",
+         "sources": [
+          "Интерстеллар",
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:plot twist",
+           "kind": "genome",
+           "q": "plot twist",
+           "rel": 0.985
+          },
+          {
+           "id": "genome:suprisingly clever",
+           "kind": "genome",
+           "q": "suprisingly clever",
+           "rel": 0.703
+          }
+         ],
+         "contribution": 0.24235974890399997
+        },
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "inferred",
+         "sources": [
+          "Интерстеллар",
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.978
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.857
+          }
+         ],
+         "contribution": 0.23899815954560003
+        },
+        {
+         "id": "risk:flaw:ending.weak",
+         "type": "risk_flaw",
+         "f": "ending.weak",
+         "evidence": [
+          {
+           "id": "genome:bad ending",
+           "kind": "genome",
+           "q": "bad ending",
+           "rel": 0.574
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.88,
+         "total": 2674630,
+         "desc": "IMDb 8.8"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 139
+        }
+       ]
+      },
+      {
+       "id": "tt1182345",
+       "domain": "film",
+       "name": "Moon",
+       "ru": "Луна 2112",
+       "year": 2009,
+       "image": null,
+       "poster": null,
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+       ],
+       "runtime": 97,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.8",
+       "link": "https://www.imdb.com/title/tt1182345/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 3.808,
+       "parts": {
+        "fit": 3.586,
+        "penalty": 0,
+        "mood": 0,
+        "prior": 0.222
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Семь, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «сложный, надо вникать» в Интерстеллар, здесь это тоже есть",
+          "factIds": [
+           "match:story.complex"
+          ]
+         },
+         {
+          "text": "Как в Интерстеллар и Семь, здесь «неожиданные повороты». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:story.twist"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Интерстеллар и Семь, здесь «заставляет думать». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:cognitive.high"
+          ],
+          "weak": true
+         }
+        ],
+        "risks": [
+         {
+          "text": "Зрители жалуются: слабый финал",
+          "factIds": [
+           "risk:flaw:ending.weak"
+          ]
+         },
+         {
+          "text": "Зрители жалуются: слабый сюжет, дыры",
+          "factIds": [
+           "risk:flaw:story.weak"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 7.8 из 10, 399 322 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "97 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.819
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 35
+          }
+         ],
+         "contribution": 0.5823393331822774
+        },
+        {
+         "id": "match:story.complex",
+         "type": "match",
+         "f": "story.complex",
+         "basis": "confirmed",
+         "sources": [
+          "Интерстеллар"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.962
+          },
+          {
+           "id": "genome:complex",
+           "kind": "genome",
+           "q": "complex",
+           "rel": 0.819
+          }
+         ],
+         "contribution": 0.4706709078243986
+        },
+        {
+         "id": "match:story.twist",
+         "type": "match",
+         "f": "story.twist",
+         "basis": "inferred",
+         "sources": [
+          "Интерстеллар",
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:plot twist",
+           "kind": "genome",
+           "q": "plot twist",
+           "rel": 0.919
+          },
+          {
+           "id": "genome:suprisingly clever",
+           "kind": "genome",
+           "q": "suprisingly clever",
+           "rel": 0.494
+          }
+         ],
+         "contribution": 0.24235974890399997
+        },
+        {
+         "id": "match:cognitive.high",
+         "type": "match",
+         "f": "cognitive.high",
+         "basis": "inferred",
+         "sources": [
+          "Интерстеллар",
+          "Семь"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.962
+          },
+          {
+           "id": "genome:existentialism",
+           "kind": "genome",
+           "q": "existentialism",
+           "rel": 0.891
+          }
+         ],
+         "contribution": 0.23899815954560003
+        },
+        {
+         "id": "risk:flaw:ending.weak",
+         "type": "risk_flaw",
+         "f": "ending.weak",
+         "evidence": [
+          {
+           "id": "genome:bad ending",
+           "kind": "genome",
+           "q": "bad ending",
+           "rel": 0.661
+          }
+         ]
+        },
+        {
+         "id": "risk:flaw:story.weak",
+         "type": "risk_flaw",
+         "f": "story.weak",
+         "evidence": [
+          {
+           "id": "genome:bad plot",
+           "kind": "genome",
+           "q": "bad plot",
+           "rel": 0.393
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.78,
+         "total": 399322,
+         "desc": "IMDb 7.8"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 97
+        }
+       ]
+      }
+     ],
+     "fork": {
+      "id": "fork:world.timetravel|pace.fast",
+      "text": "Что тебе важнее?",
+      "options": [
+       {
+        "f": "world.timetravel",
+        "label": "путешествия во времени",
+        "favours": "tt0246578"
+       },
+       {
+        "f": "pace.fast",
+        "label": "быстрый темп",
+        "favours": "tt0137523"
+       }
+      ],
+      "margin": 0.036310146420958755
+     },
+     "sieves": [
+      {
+       "id": 1,
+       "name": "Можно ли",
+       "removed": 0
+      },
+      {
+       "id": 2,
+       "name": "Было ли",
+       "removed": 2
+      },
+      {
+       "id": 3,
+       "name": "Сделано ли нормально",
+       "removed": 10288
+      },
+      {
+       "id": 4,
+       "name": "Моё ли (жёсткие стопы)",
+       "removed": 0
+      },
+      {
+       "id": 5,
+       "name": "Подходит ли сегодня (обязательное)",
+       "removed": 0
+      }
+     ],
+     "considered": 21836,
+     "taste": {
+      "confirmed": [
+       {
+        "f": "tone.atmospheric",
+        "label": "атмосферное",
+        "w": 0.73,
+        "sources": [
+         "Семь"
+        ],
+        "ids": [
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.complex",
+        "label": "сложный, надо вникать",
+        "w": 0.72,
+        "sources": [
+         "Интерстеллар"
+        ],
+        "ids": [
+         "tt0816692"
+        ],
+        "preference": false
+       }
+      ],
+      "inferred": [
+       {
+        "f": "tension.high",
+        "label": "держит в напряжении",
+        "w": 0.34,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "cognitive.high",
+        "label": "заставляет думать",
+        "w": 0.34,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.acting",
+        "label": "сильная актёрская игра",
+        "w": 0.32,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "ending.strong",
+        "label": "сильный финал",
+        "w": 0.32,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.twist",
+        "label": "неожиданные повороты",
+        "w": 0.31,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.beautiful",
+        "label": "красивая картинка",
+        "w": 0.3,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.soundtrack",
+        "label": "сильная музыка",
+        "w": 0.26,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.whimsical",
+        "label": "странное, причудливое",
+        "w": 0.2,
+        "sources": [
+         "Интерстеллар",
+         "Семь"
+        ],
+        "ids": [
+         "tt0816692",
+         "tt0114369"
+        ],
+        "preference": false
+       }
+      ],
+      "dislikes": [],
+      "hardNo": [],
+      "consumed": 2
+     }
+    }
+   }
+  },
+  {
+   "note": "fork shown («Что тебе важнее?» путешествия во времени / быстрый темп), lazy user ignores it"
+  }
+ ],
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [],
+  "shown": [
+   "tt1853728",
+   "tt0167260",
+   "tt0816692",
+   "tt0088763",
+   "tt0169547",
+   "tt2395427",
+   "tt0208092",
+   "tt0114369"
+  ],
+  "liked": [
+   "tt0816692",
+   "tt0114369"
+  ],
+  "disliked": [],
+  "whyIndex": 0,
+  "answers": {
+   "tt0816692": {
+    "reaction": "like",
+    "reasons": [
+     "story.complex"
+    ],
+    "issues": []
+   },
+   "tt0114369": {
+    "reaction": "like",
+    "reasons": [
+     "tone.atmospheric"
+    ],
+    "issues": []
+   }
+  },
+  "corrections": [],
+  "preferences": [],
+  "session": {
+   "moods": [],
+   "avoid": [],
+   "notNow": [],
+   "asked": 0
+  },
+  "seed": 203
+ }
+}

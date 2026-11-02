@@ -1,0 +1,9 @@
+{"appid": 241260, "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "is an adventure mystery video game"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "The game takes place in London and its suburbs in 1894 and 1895"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "The majority of the game involves exploring crime scenes and examining clues"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "a gameplay mechanic which involves linking pieces of information together"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "a gameplay mechanic which involves linking pieces of information together"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "making the moral choice of absolving or condemning them"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p7", "q": "in a wonderfully gritty direction"}]}
+]}

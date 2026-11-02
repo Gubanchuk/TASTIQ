@@ -1,0 +1,12 @@
+{"id": "tt9064858", "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is an American horror anthology television series"}]},
+{"f": "content.violence", "r": 3, "ev": [{"id": "p6", "q": "scenes of graphic racial violence"}]},
+{"f": "content.disturbing", "r": 3, "ev": [{"id": "p6", "q": "a black couple is blinded with hot pokers and burned alive"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "s", "q": "is set in 1953 and centers around Henry and Lucky Emory"}]},
+{"f": "world.supernatural", "r": 2, "ev": [{"id": "s", "q": "malevolent forces both real and supernatural"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "Deborah Ayorinde and Ashley Thomas' gripping performances"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "sustain a sufficient sense of terror"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p7", "q": "a keen commentary on generational scars"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p1", "q": "its performances and visuals were praised"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p4", "q": "suffers from an overcrowded narrative and too many themes"}, {"id": "p5", "q": "surprisingly unimaginative"}]}
+]}

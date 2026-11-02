@@ -1,0 +1,13 @@
+{"appid": 413410, "features": [
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p5", "q": "players converse with various characters and move the plot along"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p4", "q": "is a murder mystery game"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p10", "q": "Much of the focus within reviews involved positive feedback in regards to the narrative"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "he created a dark scenario that generated controversy"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p2", "q": "the amount of violence displayed among students"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "The game sees Makoto interact with other students to solve"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p1", "q": "the robot bear Monokuma"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p10", "q": "the cast of personalities and their truly diverse characteristics are what make the game"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p12", "q": "based on dating sim elements"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p13", "q": "Negative response often focused on the low difficulty"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p12", "q": "focused on the art style and character designs"}]}
+]}

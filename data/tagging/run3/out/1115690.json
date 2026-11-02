@@ -1,0 +1,11 @@
+{"appid": 1115690, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "rests heavily on binary choices"}, {"id": "p4", "q": "Eryk can decide whether to have Beryan and the Radovians executed"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "is a management game about ruling a kingdom"}, {"id": "p0", "q": "managing a small kingdom"}]},
+{"f": "pace.slow", "r": 2, "ev": [{"id": "p6", "q": "praising its slow pacing"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p6", "q": "praising the game's writing"}, {"id": "p7", "q": "the game's plot \"shined\""}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p7", "q": "praising the characterisation of the relationship between King Eryk and his family"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "a cruel and sadistic man who regularly abuses Lorsulia"}, {"id": "p4", "q": "has Lorsulia burned at the stake"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p7", "q": "most major events were somewhat railroaded"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p8", "q": "though she praised the game's visuals"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p4", "q": "conduct a magical ritual"}]}
+]}

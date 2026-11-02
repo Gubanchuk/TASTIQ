@@ -1,0 +1,16 @@
+{"id": "tt7216636", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "an American adult animated musical black comedy television series"}]},
+{"f": "humor.dark", "r": 3, "ev": [{"id": "p0", "q": "musical black comedy television series"}]},
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "crown princess of Hell"}]},
+{"f": "world.music", "r": 3, "ev": [{"id": "p8", "q": "Disney-esque musical numbers"}, {"id": "p8", "q": "a Broadway pop score"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p8", "q": "wickedly pointed adult humor"}]},
+{"f": "content.profanity", "r": 2, "ev": [{"id": "p8", "q": "copious potty mouths"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p4", "q": "who is a pornographic film actor"}]},
+{"f": "content.violence", "r": 1, "ev": [{"id": "p9", "q": "hit-or-miss gory humor"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p10", "q": "stylish and innovative animation"}]},
+{"f": "characters.acting", "r": 1, "ev": [{"id": "p9", "q": "skillful voice actors"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p8", "q": "brazenly colorful, queer-inclusive and fast-paced mishmash"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p10", "q": "criticized the writing as lacking"}, {"id": "p11", "q": "utterly confusing backstory/mythology"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p10", "q": "feel-good backstory belied by its grim premise"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p1", "q": "The series has been renewed for three additional seasons"}]}
+]}

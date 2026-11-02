@@ -1,0 +1,9 @@
+{"appid": 201790, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "a trap based action-tower defense video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "The game has emphasis on co-operative gameplay as the principal addition over the original"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "the player is given time to recover and place additional traps"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "the player selects a number of traps, spells, and equipment from their Spellbook"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "Skulls are used to improve traps and equipment"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p5", "q": "the players must hold off forty waves of orcs from all the various types in the game"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p7", "q": "called it a fun and quirky title"}]}
+]}

@@ -1,0 +1,11 @@
+{"appid": 860510, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "Little Nightmares II is a puzzle-platform horror adventure game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "discover its dark secrets"}, {"id": "p9", "q": "a perfectly grim world"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p2", "q": "encountering platforming situations and puzzles that must be solved to proceed"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "encountering platforming situations and puzzles that must be solved to proceed"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p2", "q": "must rely on stealth and the environment to evade larger foes"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "Through the character Mono, the player explores a 3D world"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "Critics praised its graphics, atmosphere, and quality of life improvements"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "Six is a computer-controlled character in this game"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p12", "q": "its hand cramping controls can be an obstacle at times"}]}
+]}

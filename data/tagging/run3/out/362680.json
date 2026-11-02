@@ -1,0 +1,9 @@
+{"appid": 362680, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "with psychological horror elements"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "she finds her parents brutally dismembered"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p1", "q": "There are bloody eyeballs on both sides of the screen"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "make the puzzles a seamless part of the story"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p1", "q": "occasionally with the option of choosing between different dialogue options"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p4", "q": "The story takes place in 1944"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p6", "q": "some plot threads were not satisfactorily concluded"}]}
+]}

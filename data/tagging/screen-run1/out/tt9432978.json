@@ -1,0 +1,11 @@
+{"id": "tt9432978", "features": [
+{"f": "world.school", "r": 3, "ev": [{"id": "p3", "q": "the life of aspiring engineering students"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p4", "q": "its on-point, deadpan humour"}]},
+{"f": "humor.deadpan", "r": 3, "ev": [{"id": "p4", "q": "its on-point, deadpan humour"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "It shows the life of students in the city"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p4", "q": "the acting performances of the show"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p1", "q": "praising its black & white setting, realism"}]},
+{"f": "tone.feelgood", "r": 2, "ev": [{"id": "p5", "q": "leave you with optimism"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p4", "q": "a relatably bittersweet aftertaste of existential battle"}]},
+{"f": "story.nonlinear", "r": 2, "ev": [{"id": "p4", "q": "deal with different narrative strands and coalesce them effortlessly"}]}
+]}

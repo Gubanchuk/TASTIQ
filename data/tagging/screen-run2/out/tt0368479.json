@@ -1,0 +1,9 @@
+{"id": "tt0368479", "features": [
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p0", "q": "an American police procedural crime drama television series"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "specializes in investigating cold cases, usually homicides"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "each episode would focus on a single investigation"}]},
+{"f": "story.nonlinear", "r": 2, "ev": [{"id": "p3", "q": "These interviews were accompanied by flashback sequences"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p3", "q": "the show examined many issues related to 20th-century history"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p7", "q": "after seven seasons and 156 episodes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p7", "q": "CBS announced the cancellation of the series after seven seasons"}]}
+]}

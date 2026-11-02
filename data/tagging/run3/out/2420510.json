@@ -1,0 +1,11 @@
+{
+  "appid": 2420510,
+  "features": [
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2022 roguelike shoot 'em up video game"}]},
+    {"f": "cognitive.low", "r": 2, "ev": [{"id": "p1", "q": "The player character will automatically attack nearby enemies"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Certain weapons can be combined when fully upgraded to create a more powerful weapon"}]},
+    {"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "Players unlock new characters through a gacha system"}]},
+    {"f": "loop.life_sim", "r": 2, "ev": [{"id": "p3", "q": "a farm life sim mode"}]},
+    {"f": "length.endless", "r": 1, "ev": [{"id": "p0", "q": "The game receives regular updates, adding new playable characters and gameplay content"}]}
+  ]
+}

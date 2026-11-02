@@ -1,0 +1,15 @@
+{
+  "appid": 207140,
+  "features": [
+    {"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "multiplayer side-scrolling racing game"}]},
+    {"f": "social.pvp", "r": 3, "ev": [{"id": "p2", "q": "Players compete with each other to outrun their opponents"}]},
+    {"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "Players can also form teams of 2 players before starting a match"}]},
+    {"f": "loop.platforming", "r": 2, "ev": [{"id": "p2", "q": "SpeedRunners is played as a fast-paced side-scroller"}]},
+    {"f": "pace.fast", "r": 2, "ev": [{"id": "p2", "q": "SpeedRunners is played as a fast-paced side-scroller"}]},
+    {"f": "session.short", "r": 2, "ev": [{"id": "p4", "q": "A player must win 3 rounds to win the match altogether"}]},
+    {"f": "progression.power", "r": 1, "ev": [{"id": "p6", "q": "Getting enough experience points causes the player to level up which unlocks new power-ups"}]},
+    {"f": "progression.collection", "r": 1, "ev": [{"id": "p5", "q": "most Characters come with 4 different Skins"}]},
+    {"f": "cognitive.low", "r": 2, "ev": [{"id": "p7", "q": "praised the game's simplicity"}]},
+    {"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p9", "q": "lacking story mode, having little content outside multiplayer"}]}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "frozenAt": "2026-11-01",
+  "purpose": "Small offline contract audit; synthetic interpretations are not human labels or a measurement of recommendation fit.",
+  "cases": [
+    {"id":"today-switch", "question":"Does a corrected today's goal replace the old genre without promoting past taste?", "passCriterion":"The validated corrected projection contains current direction feature wants and no old genre/history preferences; raw correction remains available to the picker. A feature-backed direction need not create a separate genre string."},
+    {"id":"neutral", "question":"Can a neutral answer become a negative preference?", "passCriterion":"Unknown, indifferent and none without additional text cannot support an avoid/exclude fact."},
+    {"id":"conditional", "question":"Does a conditional wish become a hard restriction?", "passCriterion":"A validated conditional fact remains in the conversation but creates no unconditional goalRequires/goalExcludes."},
+    {"id":"context-change", "question":"Can superseded company conditions reappear after editing the company?", "passCriterion":"Changing group to solo removes facts sourced from the old context; the old source cannot validate a new proposal."},
+    {"id":"finished-replay", "question":"Can an explicit current replay request reach candidates despite completed exposure?", "passCriterion":"A completed game explicitly targeted for today's replay is admissible; a merely similar-game reference must not gain this permission."},
+    {"id":"started-history", "question":"Does merely starting a game imply dislike or an exclusion?", "passCriterion":"Started exposure alone leaves the game eligible and adds no negative taste weights."},
+    {"id":"blocked-return", "question":"Does a deliberate return override a remembered block only for today without blocking the series?", "passCriterion":"Result keep permits the current work/editions; restart clears keep and preserves the explicit block; unrelated series entries remain eligible."},
+    {"id":"replace-undo", "question":"Can batch replacement, repeated transport and undo preserve the request and unaffected card?", "passCriterion":"One successful duplicate replacement invokes picker once, planner zero times; undo restores exact prior cards with no additional picker."},
+    {"id":"v1-error-resume", "question":"Can a restored old planner error answer the fallback question it displays?", "passCriterion":"Actionless restore is free and its visible fallback question accepts the next answer without stale-question error."},
+    {"id":"today-minutes", "question":"Does an explicit today's time budget reach feasibility checks separately from completion length?", "passCriterion":"A validated 30-minute current budget results in session.minutes=30 and an explicit unknown interruption warning; total completion hours alone do not create a session budget."},
+    {"id":"real-catalog-directions", "question":"Do distinct supported today's signals affect retrieval without violating platform and hard filters?", "passCriterion":"RPG/story, racing/driving and cooperative survival produce distinct scored shortlists; all shortlisted candidates pass current sieves. No particular title is required."},
+    {"id":"real-catalog-capacity", "question":"Are uncertain player counts kept distinguishable from confirmed capacity?", "passCriterion":"For a three-player group, every shortlisted card without verified capacity carries an unknown/conditional capacity check; verified impossible capacity never passes."}
+  ]
+}

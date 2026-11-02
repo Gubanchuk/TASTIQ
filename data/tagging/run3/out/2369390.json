@@ -1,0 +1,10 @@
+{"appid": 2369390, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Far Cry 6 is a 2021 open world first-person shooter game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p3", "q": "set in an open world environment navigable on foot or via various land, water, and air vehicles"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p3", "q": "set in an open world environment navigable on foot or via various land, water, and air vehicles"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p6", "q": "The player has the ability to construct and upgrade guerrilla bases"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p6", "q": "recruitable animals with a variety of abilities and perks tasked to assist the player in combat"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p7", "q": "Far Cry 6 takes place in 2021 in Yara, a fictional Caribbean island nation inspired by Cuba"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "primarily the Cuban Revolution of 1953–1959"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "The game is set on the fictional Caribbean island of Yara, ruled as a dictatorship"}]}
+]}

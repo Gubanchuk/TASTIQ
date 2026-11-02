@@ -1,0 +1,11 @@
+{"appid": 234650, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p6", "q": "Combat is turn based and includes tactical elements"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p2", "q": "The player can customize their character's gender and appearance"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "up to three other characters can be hired during missions"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "It takes place in the science fantasy setting of the Shadowrun tabletop role-playing game"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "It takes place in the science fantasy setting of the Shadowrun tabletop role-playing game"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p4", "q": "different statistics and skills give new dialogue options"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p4", "q": "While gameplay is mostly linear, some exploration is possible while completing objectives"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p4", "q": "some exploration is possible while completing objectives"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "players may optionally play as one of six pregenerated archetypes"}]}
+]}

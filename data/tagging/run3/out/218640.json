@@ -1,0 +1,9 @@
+{"appid": 218640, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "Lucius is a 2012 horror adventure video game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "who murders members of his household"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "McGuffin dismisses each subsequent death as an accident"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p5", "q": "Lucius betrays him by stabbing him in the back"}]},
+{"f": "world.historical", "r": 1, "ev": [{"id": "p1", "q": "On the night of June 6, 1966, Lucius Wagner is born"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p2", "q": "his newly acquired supernatural abilities"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p6", "q": "like testing a gameplay idea rather than a fully finished title"}]}
+]}

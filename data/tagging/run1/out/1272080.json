@@ -1,0 +1,89 @@
+{
+ "appid": 1272080,
+ "features": [
+  {
+   "f": "social.coop",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "PAYDAY 3 is a 1-to-4 player co-op FPS and the ultimate heist fantasy"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235864474",
+     "q": "Payday 3 now has some fun gunplay against the new reworked ai enemies"
+    }
+   ]
+  },
+  {
+   "f": "loop.stealth",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Gone without a trace or through a hail of bullets"
+    }
+   ]
+  },
+  {
+   "f": "world.modern",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "set in the most iconic city in the world"
+    }
+   ]
+  },
+  {
+   "f": "tension.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Cops, SWAT, and Special Units converge to shut you down"
+    }
+   ]
+  },
+  {
+   "f": "characters.companions",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Coordinate everything with a tight crew, find one along the way"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Build your own heister with custom looks, loadout, and skills"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237320693",
+     "q": "Многие не любят эту игру за малое количество контента"
+    },
+    {
+     "id": "r236216293",
+     "q": "сейчас контента значительно меньше, чем во второй"
+    }
+   ]
+  }
+ ]
+}

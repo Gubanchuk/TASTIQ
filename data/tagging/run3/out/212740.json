@@ -1,0 +1,9 @@
+{"appid": 212740, "features": [
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "is a massively multiplayer online role-playing game (MMORPG)"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p4", "q": "questing, crafting, and player versus player action"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p7", "q": "The two beings, Arun and Shara, titans of unimaginable power"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p4", "q": "typical MMORPG features such as questing, crafting"}]},
+{"f": "progression.grind", "r": 2, "ev": [{"id": "p9", "q": "the game's generic collect/kill/rendezvous quest grind to level up"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "lush, detailed graphics as the game's high points"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "The game's musical score received praise for its varied and emotionally charged tracks"}]}
+]}

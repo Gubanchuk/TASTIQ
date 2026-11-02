@@ -1,0 +1,4927 @@
+{
+  "state": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [],
+      "intent": {
+        "version": 1,
+        "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+        "wants": [
+          {
+            "f": "story.central",
+            "evidence": "Хочу погрузиться в историю"
+          },
+          {
+            "f": "story.mystery",
+            "evidence": "и загадку"
+          },
+          {
+            "f": "characters.memorable",
+            "evidence": "привязаться к героям"
+          }
+        ],
+        "avoids": [],
+        "time": {
+          "minutes": 90,
+          "evidence": "Сегодня час-полтора"
+        },
+        "source": "confirmed"
+      }
+    },
+    "stops": [],
+    "asked": [
+      "lean:length.short|length.long",
+      "pair:humor.funny|world.scifi",
+      "pair:characters.companions|loop.exploration"
+    ],
+    "shown": [
+      "steam:271590",
+      "steam:359550",
+      "steam:105600",
+      "steam:4000",
+      "steam:2358720",
+      "steam:1245620",
+      "steam:550",
+      "steam:413150"
+    ],
+    "liked": [
+      "steam:1222140",
+      "steam:319630"
+    ],
+    "disliked": [
+      "steam:1245620"
+    ],
+    "whyIndex": 0,
+    "answers": {
+      "steam:1222140": {
+        "reaction": "love",
+        "reasons": [
+          "story.choices",
+          "story.central",
+          "characters.memorable"
+        ],
+        "issues": []
+      },
+      "steam:319630": {
+        "reaction": "love",
+        "reasons": [
+          "story.central",
+          "story.choices",
+          "characters.memorable"
+        ],
+        "issues": []
+      },
+      "steam:1245620": {
+        "reaction": "dislike",
+        "issues": [
+          {
+            "f": "difficulty.hard",
+            "hard": false
+          }
+        ],
+        "badQuality": false
+      }
+    },
+    "corrections": [],
+    "preferences": [
+      {
+        "f": "loop.exploration",
+        "qid": "pair:characters.companions|loop.exploration"
+      }
+    ],
+    "session": {
+      "notNow": []
+    },
+    "seed": 281673
+  },
+  "events": [
+    {
+      "at": "2026-10-31T18:01:56.010Z",
+      "path": "/api/ai/intent",
+      "input": {
+        "domain": "game",
+        "text": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+        "uid": "b825809a-1b48-4d79-bd6f-73e3fc9bc143"
+      },
+      "output": {
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 3078,
+          "input_tokens_details": {
+            "cache_write_tokens": 3075,
+            "cached_tokens": 0
+          },
+          "output_tokens": 218,
+          "output_tokens_details": {
+            "reasoning_tokens": 127
+          },
+          "total_tokens": 3296
+        },
+        "ms": 7036,
+        "proposal": {
+          "version": 1,
+          "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+          "wants": [
+            {
+              "f": "story.central",
+              "evidence": "Хочу погрузиться в историю"
+            },
+            {
+              "f": "story.mystery",
+              "evidence": "и загадку"
+            },
+            {
+              "f": "characters.memorable",
+              "evidence": "привязаться к героям"
+            }
+          ],
+          "avoids": [],
+          "time": {
+            "minutes": 90,
+            "evidence": "Сегодня час-полтора"
+          }
+        },
+        "clarification": null
+      }
+    },
+    {
+      "at": "2026-10-31T18:02:09.302Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "confirm_intent",
+          "intent": {
+            "version": 1,
+            "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "wants": [
+              {
+                "f": "story.central",
+                "evidence": "Хочу погрузиться в историю"
+              },
+              {
+                "f": "story.mystery",
+                "evidence": "и загадку"
+              },
+              {
+                "f": "characters.memorable",
+                "evidence": "привязаться к героям"
+              }
+            ],
+            "avoids": [],
+            "time": {
+              "minutes": 90,
+              "evidence": "Сегодня час-полтора"
+            }
+          }
+        }
+      },
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Во что играл, и как?",
+          "hint": "Отметь, как тебе знакомые названия, затем нажми «Дальше». Все карточки заполнять не нужно.",
+          "extra": false,
+          "items": [
+            {
+              "id": "steam:271590",
+              "name": "Grand Theft Auto V Legacy",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:359550",
+              "name": "Tom Clancy's Rainbow Six Siege",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/359550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Free To Play"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:105600",
+              "name": "Terraria",
+              "ru": null,
+              "original": null,
+              "year": 2011,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:4000",
+              "name": "Garry's Mod",
+              "ru": null,
+              "original": null,
+              "year": 2006,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Casual",
+                "Indie",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:2358720",
+              "name": "Black Myth: Wukong",
+              "ru": null,
+              "original": null,
+              "year": 2024,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "RPG"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:1245620",
+              "name": "ELDEN RING",
+              "ru": null,
+              "original": null,
+              "year": 2022,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "RPG"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:550",
+              "name": "Left 4 Dead 2",
+              "ru": null,
+              "original": null,
+              "year": 2009,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:413150",
+              "name": "Stardew Valley",
+              "ru": null,
+              "original": null,
+              "year": 2016,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1786554168",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Indie",
+                "RPG",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не играл"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:02:12.346Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "react",
+          "marks": [
+            {
+              "id": "steam:1222140",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:319630",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:1245620",
+              "reaction": "dislike"
+            }
+          ],
+          "known": {},
+          "shownIds": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции."
+        }
+      },
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «Detroit: Become Human»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:1222140",
+            "name": "Detroit: Become Human",
+            "ru": null,
+            "original": null,
+            "year": 2020,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/header.jpg?t=1667468479",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "Adventure"
+            ],
+            "rating": "Overwhelmingly Positive"
+          },
+          "pair": [
+            {
+              "value": "story.choices",
+              "label": "выборы влияют на историю"
+            },
+            {
+              "value": "story.central",
+              "label": "сильный сюжет"
+            }
+          ],
+          "options": [
+            {
+              "value": "story.choices",
+              "label": "выборы влияют на историю"
+            },
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос"
+            },
+            {
+              "value": "story.central",
+              "label": "сильный сюжет"
+            },
+            {
+              "value": "aesthetic.beautiful",
+              "label": "красивая картинка"
+            },
+            {
+              "value": "characters.memorable",
+              "label": "живые персонажи"
+            },
+            {
+              "value": "tone.melancholic",
+              "label": "грусть и меланхолия"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачная атмосфера"
+            },
+            {
+              "value": "aesthetic.soundtrack",
+              "label": "сильная музыка"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "1 из 2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:02:21.464Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "story.choices",
+            "story.central",
+            "characters.memorable"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 1,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «Life Is Strange»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:319630",
+            "name": "Life is Strange - Episode 1",
+            "ru": "Life Is Strange",
+            "original": null,
+            "year": 2015,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/header.jpg?t=1772725755",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/319630/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "Adventure"
+            ],
+            "rating": "Overwhelmingly Positive"
+          },
+          "pair": [
+            {
+              "value": "tone.melancholic",
+              "label": "грусть и меланхолия"
+            },
+            {
+              "value": "ending.bittersweet",
+              "label": "горький финал"
+            }
+          ],
+          "options": [
+            {
+              "value": "story.choices",
+              "label": "выборы влияют на историю"
+            },
+            {
+              "value": "aesthetic.soundtrack",
+              "label": "сильная музыка"
+            },
+            {
+              "value": "tone.melancholic",
+              "label": "грусть и меланхолия"
+            },
+            {
+              "value": "story.central",
+              "label": "сильный сюжет"
+            },
+            {
+              "value": "story.mystery",
+              "label": "загадка и расследование"
+            },
+            {
+              "value": "ending.bittersweet",
+              "label": "горький финал"
+            },
+            {
+              "value": "characters.memorable",
+              "label": "живые персонажи"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "label": "щадящая сложность"
+            },
+            {
+              "value": "aesthetic.stylized",
+              "label": "стилизованный визуал"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачная атмосфера"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "2 из 2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:02:32.597Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 1,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "story.central",
+            "story.choices",
+            "characters.memorable"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "output": {
+        "state": {
+          "step": "why_not",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "why_not",
+          "title": "Что не так с «ELDEN RING»?",
+          "hint": "Один тап: мешало. Второй: «никогда, ни в чём».",
+          "item": {
+            "id": "steam:1245620",
+            "name": "ELDEN RING",
+            "ru": null,
+            "original": null,
+            "year": 2022,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "RPG"
+            ],
+            "rating": "Very Positive"
+          },
+          "options": [
+            {
+              "value": "difficulty.hard",
+              "label": "постоянно умирал, бесило"
+            },
+            {
+              "value": "tone.dark",
+              "label": "тяжёлое, мрачное настроение"
+            },
+            {
+              "value": "social.pvp",
+              "label": "надо играть против людей"
+            },
+            {
+              "value": "content.gore",
+              "label": "много крови и жестокости"
+            },
+            {
+              "value": "pace.repetitive",
+              "label": "одно и то же по кругу"
+            },
+            {
+              "value": "pace.draggy",
+              "label": "затянуто, скучно"
+            },
+            {
+              "value": "stability.slow_start",
+              "label": "долго не мог втянуться"
+            },
+            {
+              "value": "combat.clunky",
+              "label": "управление неудобное"
+            }
+          ],
+          "categories": [
+            {
+              "value": "social.coop",
+              "label": "кооператив"
+            },
+            {
+              "value": "freedom.open_world",
+              "label": "открытый мир"
+            },
+            {
+              "value": "world.fantasy",
+              "label": "фэнтези"
+            },
+            {
+              "value": "loop.exploration",
+              "label": "исследование мира"
+            },
+            {
+              "value": "loop.melee",
+              "label": "ближний бой"
+            },
+            {
+              "value": "combat.weighty",
+              "label": "весомый бой"
+            }
+          ],
+          "badQuality": true,
+          "tried": "Бросил, не доиграл",
+          "freeText": true,
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:02:37.662Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why_not",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "issues",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": false
+            }
+          ],
+          "badQuality": false,
+          "tried": false,
+          "text": ""
+        }
+      },
+      "output": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "stops",
+          "title": "Что точно не надо?",
+          "hint": "Такое не предложу совсем. Если всё можно, просто дальше.",
+          "options": [
+            {
+              "value": "content.gore",
+              "label": "кровь и жестокость"
+            },
+            {
+              "value": "tone.creepy",
+              "label": "страшное"
+            },
+            {
+              "value": "content.sexual",
+              "label": "откровенное"
+            },
+            {
+              "value": "social.pvp",
+              "label": "против других людей"
+            },
+            {
+              "value": "progression.grind",
+              "label": "гринд"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:02:40.721Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "stops",
+          "values": []
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "lean",
+          "qid": "lean:length.short|length.long",
+          "title": "Пройти за пару вечеров или на десятки часов?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "length.short",
+              "label": "за пару вечеров"
+            },
+            {
+              "value": "length.long",
+              "label": "на десятки часов"
+            }
+          ],
+          "canSkip": true,
+          "progress": "1"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:02:53.861Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "lean:length.short|length.long"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "pair",
+          "qid": "pair:humor.funny|world.scifi",
+          "title": "Что тебе важнее?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "много юмора"
+            },
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос"
+            }
+          ],
+          "canSkip": true,
+          "progress": "2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:03:42.619Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "lean:length.short|length.long"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "lean:length.short|length.long",
+            "pair:humor.funny|world.scifi"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "pair",
+          "qid": "pair:characters.companions|loop.exploration",
+          "title": "Что тебе важнее?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "characters.companions",
+              "label": "команда и спутники"
+            },
+            {
+              "value": "loop.exploration",
+              "label": "исследование мира"
+            }
+          ],
+          "canSkip": true,
+          "progress": "3"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:03:52.758Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "lean:length.short|length.long",
+            "pair:humor.funny|world.scifi"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "action": {
+          "type": "answer",
+          "qid": "pair:characters.companions|loop.exploration",
+          "value": "loop.exploration"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "lean:length.short|length.long",
+            "pair:humor.funny|world.scifi",
+            "pair:characters.companions|loop.exploration"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [
+            {
+              "f": "loop.exploration",
+              "qid": "pair:characters.companions|loop.exploration"
+            }
+          ],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "screen": {
+          "step": "result",
+          "title": "Вот что я подобрал",
+          "result": {
+            "top": {
+              "id": "steam:632470",
+              "domain": "game",
+              "name": "Disco Elysium - The Final Cut",
+              "ru": null,
+              "year": 2019,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/816ea59d6d8ac525f79a07c3a7afa94eddb3437c/header.jpg?t=1780913406",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "RPG"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": "Very Positive",
+              "link": "https://store.steampowered.com/app/632470/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 5.237,
+              "parts": {
+                "fit": 3.078,
+                "penalty": 0,
+                "mood": 1.82,
+                "prior": 0.339
+              },
+              "mainAspect": "characters",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «живые персонажи», здесь это тоже есть",
+                    "factIds": [
+                      "match:characters.memorable"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.choices"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.central"
+                    ]
+                  },
+                  {
+                    "text": "Ты сказал, что тебе важно «исследование мира», здесь это есть",
+                    "factIds": [
+                      "match:loop.exploration"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ещё «грусть и меланхолия» и «загадка и расследование». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:tone.melancholic",
+                      "match:story.mystery"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [],
+                "info": [
+                  {
+                    "text": "93% положительных из 132 216 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 37 ч",
+                    "factIds": [
+                      "fact:hours"
+                    ]
+                  },
+                  {
+                    "text": "проверена для Steam Deck",
+                    "factIds": [
+                      "fact:deck"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:characters.memorable",
+                  "type": "match",
+                  "f": "characters.memorable",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "d",
+                      "q": "Interrogate unforgettable characters",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "Допрашивать незабываемых персонажей"
+                    },
+                    {
+                      "id": "r237376329",
+                      "q": "writing that's among the best the medium has to offer",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 37,
+                      "lang": "english",
+                      "ru": "сценарий, который входит в число лучших в этом медиа"
+                    }
+                  ],
+                  "contribution": 1.1179172699456286
+                },
+                {
+                  "id": "match:story.choices",
+                  "type": "match",
+                  "f": "story.choices",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "Unprecedented freedom of choice",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "Беспрецедентная свобода выбора"
+                    },
+                    {
+                      "id": "tag:Choices Matter",
+                      "kind": "tag",
+                      "q": "Choices Matter",
+                      "votes": 1098
+                    }
+                  ],
+                  "contribution": 0.9066660938050977
+                },
+                {
+                  "id": "match:story.central",
+                  "type": "match",
+                  "f": "story.central",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r237376329",
+                      "q": "writing that's among the best the medium has to offer",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 37,
+                      "lang": "english",
+                      "ru": "сценарий, который входит в число лучших в этом медиа"
+                    },
+                    {
+                      "id": "tag:Story Rich",
+                      "kind": "tag",
+                      "q": "Story Rich",
+                      "votes": 1198
+                    }
+                  ],
+                  "contribution": 0.6481136523598259
+                },
+                {
+                  "id": "match:loop.exploration",
+                  "type": "match",
+                  "f": "loop.exploration",
+                  "basis": "preference",
+                  "sources": [],
+                  "evidence": [
+                    {
+                      "id": "tag:Exploration",
+                      "kind": "tag",
+                      "q": "Exploration",
+                      "votes": 470
+                    }
+                  ],
+                  "contribution": 0.16567679822895293
+                },
+                {
+                  "id": "match:tone.melancholic",
+                  "type": "match",
+                  "f": "tone.melancholic",
+                  "basis": "inferred",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r237508995",
+                      "q": "an emotional landscape that will honestly never quite recover",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 174,
+                      "lang": "english",
+                      "ru": "эмоциональный ландшафт, от которого, честно говоря, так и не оправишься"
+                    }
+                  ],
+                  "contribution": 0.16336728
+                },
+                {
+                  "id": "match:story.mystery",
+                  "type": "match",
+                  "f": "story.mystery",
+                  "basis": "inferred",
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Detective",
+                      "kind": "tag",
+                      "q": "Detective",
+                      "votes": 958
+                    }
+                  ],
+                  "contribution": 0.075839652
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.926,
+                  "total": 132216,
+                  "desc": "Very Positive"
+                },
+                {
+                  "id": "fact:hours",
+                  "type": "fact",
+                  "hours": 37
+                },
+                {
+                  "id": "fact:deck",
+                  "type": "fact",
+                  "deck": "verified"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 90 мин."
+                }
+              ]
+            },
+            "alternatives": [
+              {
+                "id": "steam:1113000",
+                "domain": "game",
+                "name": "Persona 4 Golden",
+                "ru": null,
+                "year": 2020,
+                "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113000/header.jpg?t=1763530422",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1113000/library_600x900.jpg",
+                "kind": "game",
+                "series": [
+                  "Persona"
+                ],
+                "genres": [
+                  "RPG"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "Overwhelmingly Positive",
+                "link": "https://store.steampowered.com/app/1113000/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 5.086,
+                "parts": {
+                  "fit": 2.865,
+                  "penalty": 0,
+                  "mood": 1.832,
+                  "prior": 0.389
+                },
+                "mainAspect": "characters",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «живые персонажи», здесь это тоже есть",
+                      "factIds": [
+                        "match:characters.memorable"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                      "factIds": [
+                        "match:story.central"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                      "factIds": [
+                        "match:story.choices"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ещё «грусть и меланхолия» и «загадка и расследование». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:tone.melancholic",
+                        "match:story.mystery"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Игроки жалуются: однообразно",
+                      "factIds": [
+                        "risk:flaw:pace.repetitive"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "97% положительных из 88 028 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 51 ч",
+                      "factIds": [
+                        "fact:hours"
+                      ]
+                    },
+                    {
+                      "text": "проверена для Steam Deck",
+                      "factIds": [
+                        "fact:deck"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:characters.memorable",
+                    "type": "match",
+                    "f": "characters.memorable",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r235705453",
+                        "q": "the most charismatic group I've seen in any game",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 106,
+                        "lang": "english",
+                        "ru": "самая харизматичная компания, которую я видел в какой-либо игре"
+                      },
+                      {
+                        "id": "r237380747",
+                        "q": "никому из персов не проникался как в этой игре",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 144,
+                        "lang": "russian"
+                      }
+                    ],
+                    "contribution": 1.3835609776554807
+                  },
+                  {
+                    "id": "match:story.central",
+                    "type": "match",
+                    "f": "story.central",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "d",
+                        "q": "kickstarted by a chain of serial murders",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "начинается с цепочки серийных убийств"
+                      },
+                      {
+                        "id": "a",
+                        "q": "delivering on enthralling storytelling and quintessential Persona gameplay",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "захватывающая история и фирменный геймплей Persona"
+                      }
+                    ],
+                    "contribution": 0.7475359312108718
+                  },
+                  {
+                    "id": "match:story.choices",
+                    "type": "match",
+                    "f": "story.choices",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Multiple Endings",
+                        "kind": "tag",
+                        "q": "Multiple Endings",
+                        "votes": 677
+                      }
+                    ],
+                    "contribution": 0.38580205508810017
+                  },
+                  {
+                    "id": "match:tone.melancholic",
+                    "type": "match",
+                    "f": "tone.melancholic",
+                    "basis": "inferred",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r237939762",
+                        "q": "suddenly i was saying goodbye to REAL FRIENDS when the credits rolled",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 55,
+                        "lang": "english",
+                        "ru": "внезапно я прощался с НАСТОЯЩИМИ ДРУЗЬЯМИ, когда пошли титры"
+                      },
+                      {
+                        "id": "r235736944",
+                        "q": "made me cry at the train station",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 103,
+                        "lang": "english",
+                        "ru": "довело меня до слёз на вокзале"
+                      }
+                    ],
+                    "contribution": 0.16143107520000002
+                  },
+                  {
+                    "id": "match:story.mystery",
+                    "type": "match",
+                    "f": "story.mystery",
+                    "basis": "inferred",
+                    "sources": [
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r237939762",
+                        "q": "Started as a basic murder mystery in a quiet town",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 55,
+                        "lang": "english",
+                        "ru": "Начиналось как простой детектив об убийствах в тихом городке"
+                      },
+                      {
+                        "id": "r235705453",
+                        "q": "trying to find out who´s the culprit is quite fun",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 106,
+                        "lang": "english"
+                      }
+                    ],
+                    "contribution": 0.12639941999999998
+                  },
+                  {
+                    "id": "risk:flaw:pace.repetitive",
+                    "type": "risk_flaw",
+                    "f": "pace.repetitive",
+                    "evidence": [
+                      {
+                        "id": "r235965806",
+                        "q": "le jeux est trop répétitif pour moi",
+                        "kind": "review",
+                        "thumb": "down",
+                        "hours": 44,
+                        "lang": "english"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.97,
+                    "total": 88028,
+                    "desc": "Overwhelmingly Positive"
+                  },
+                  {
+                    "id": "fact:hours",
+                    "type": "fact",
+                    "hours": 51
+                  },
+                  {
+                    "id": "fact:deck",
+                    "type": "fact",
+                    "deck": "verified"
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "unknown",
+                    "text": "Не проверено, удобно ли прерваться через 90 мин."
+                  }
+                ]
+              },
+              {
+                "id": "steam:481510",
+                "domain": "game",
+                "name": "Night in the Woods",
+                "ru": null,
+                "year": 2017,
+                "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/481510/header.jpg",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/481510/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Adventure"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": null,
+                "link": "https://store.steampowered.com/app/481510/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 4.756,
+                "parts": {
+                  "fit": 2.675,
+                  "penalty": 0,
+                  "mood": 1.737,
+                  "prior": 0.344
+                },
+                "mainAspect": "characters",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «живые персонажи», здесь это тоже есть",
+                      "factIds": [
+                        "match:characters.memorable"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                      "factIds": [
+                        "match:story.central"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                      "factIds": [
+                        "match:story.choices"
+                      ]
+                    },
+                    {
+                      "text": "Ты сказал, что тебе важно «исследование мира», здесь это есть",
+                      "factIds": [
+                        "match:loop.exploration"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ещё «грусть и меланхолия» и «загадка и расследование». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:tone.melancholic",
+                        "match:story.mystery"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Нет данных: длина",
+                      "factIds": [
+                        "gap:length"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "94% положительных из 18 741 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:characters.memorable",
+                    "type": "match",
+                    "f": "characters.memorable",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p9",
+                        "q": "Praise is mainly given to the writing and characters",
+                        "kind": "wiki",
+                        "section": "Reception",
+                        "url": "https://en.wikipedia.org/wiki/Night_in_the_Woods",
+                        "ru": "Похвалы в основном достаются сценарию и персонажам"
+                      }
+                    ],
+                    "contribution": 0.8384379524592213
+                  },
+                  {
+                    "id": "match:story.central",
+                    "type": "match",
+                    "f": "story.central",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p3",
+                        "q": "received critical praise for the soundtrack, story, dialogue, and characters",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Night_in_the_Woods",
+                        "ru": "получила критическую похвалу за саундтрек, сюжет, диалоги и персонажей"
+                      },
+                      {
+                        "id": "tag:Story Rich",
+                        "kind": "tag",
+                        "q": "Story Rich",
+                        "votes": 1171
+                      }
+                    ],
+                    "contribution": 0.6481136523598259
+                  },
+                  {
+                    "id": "match:story.choices",
+                    "type": "match",
+                    "f": "story.choices",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Choices Matter",
+                        "kind": "tag",
+                        "q": "Choices Matter",
+                        "votes": 942
+                      }
+                    ],
+                    "contribution": 0.6252869612448949
+                  },
+                  {
+                    "id": "match:loop.exploration",
+                    "type": "match",
+                    "f": "loop.exploration",
+                    "basis": "preference",
+                    "sources": [],
+                    "evidence": [
+                      {
+                        "id": "p5",
+                        "q": "explore, converse, see and touch",
+                        "kind": "wiki",
+                        "section": "Overview and gameplay",
+                        "url": "https://en.wikipedia.org/wiki/Night_in_the_Woods",
+                        "ru": "исследовать, разговаривать, смотреть и трогать"
+                      },
+                      {
+                        "id": "tag:Exploration",
+                        "kind": "tag",
+                        "q": "Exploration",
+                        "votes": 958
+                      }
+                    ],
+                    "contribution": 0.31498768810781985
+                  },
+                  {
+                    "id": "match:tone.melancholic",
+                    "type": "match",
+                    "f": "tone.melancholic",
+                    "basis": "inferred",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p7",
+                        "q": "as Mae's mental health slowly deteriorates with each dream",
+                        "kind": "wiki",
+                        "section": "Plot",
+                        "url": "https://en.wikipedia.org/wiki/Night_in_the_Woods",
+                        "ru": "поскольку психическое здоровье Мэй медленно ухудшается с каждым сном"
+                      }
+                    ],
+                    "contribution": 0.10896597576000001
+                  },
+                  {
+                    "id": "match:story.mystery",
+                    "type": "match",
+                    "f": "story.mystery",
+                    "basis": "inferred",
+                    "sources": [
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p7",
+                        "q": "After intensive investigation, the friends come across a mysterious group of cloaked figures in the woods",
+                        "kind": "wiki",
+                        "section": "Plot",
+                        "url": "https://en.wikipedia.org/wiki/Night_in_the_Woods",
+                        "ru": "После тщательного расследования друзья натыкаются на таинственную группу закутанных фигур в лесу"
+                      },
+                      {
+                        "id": "tag:Mystery",
+                        "kind": "tag",
+                        "q": "Mystery",
+                        "votes": 909
+                      }
+                    ],
+                    "contribution": 0.10162513368
+                  },
+                  {
+                    "id": "gap:length",
+                    "type": "gap",
+                    "what": "длина"
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.942,
+                    "total": 18741,
+                    "desc": null
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "unknown",
+                    "text": "Не проверено, удобно ли прерваться через 90 мин."
+                  }
+                ]
+              },
+              {
+                "id": "steam:1180660",
+                "domain": "game",
+                "name": "Tell Me Why",
+                "ru": "Tell me why",
+                "year": 2020,
+                "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1180660/header.jpg",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1180660/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Adventure",
+                  "Free To Play"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": null,
+                "link": "https://store.steampowered.com/app/1180660/",
+                "price": "бесплатно",
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 4.777,
+                "parts": {
+                  "fit": 2.897,
+                  "penalty": 0,
+                  "mood": 1.67,
+                  "prior": 0.21
+                },
+                "mainAspect": "story",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                      "factIds": [
+                        "match:story.choices"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «живые персонажи», здесь это тоже есть",
+                      "factIds": [
+                        "match:characters.memorable"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                      "factIds": [
+                        "match:story.central"
+                      ]
+                    },
+                    {
+                      "text": "Ты сказал, что тебе важно «исследование мира», здесь это есть",
+                      "factIds": [
+                        "match:loop.exploration"
+                      ]
+                    },
+                    {
+                      "text": "«Detroit: Become Human» и «Life Is Strange»: ещё «грусть и меланхолия» и «загадка и расследование». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:tone.melancholic",
+                        "match:story.mystery"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Нет данных: длина",
+                      "factIds": [
+                        "gap:length"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "83% положительных из 13 883 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:story.choices",
+                    "type": "match",
+                    "f": "story.choices",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p4",
+                        "q": "The player's decisions during their interactions with the aforementioned non-player characters",
+                        "kind": "wiki",
+                        "section": "Setting",
+                        "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                        "ru": "Решения игрока в ходе взаимодействия с упомянутыми неигровыми персонажами"
+                      },
+                      {
+                        "id": "tag:Choices Matter",
+                        "kind": "tag",
+                        "q": "Choices Matter",
+                        "votes": 335
+                      }
+                    ],
+                    "contribution": 0.9066660938050977
+                  },
+                  {
+                    "id": "match:characters.memorable",
+                    "type": "match",
+                    "f": "characters.memorable",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p2",
+                        "q": "praised the complex characters",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                        "ru": "хвалили сложных персонажей"
+                      }
+                    ],
+                    "contribution": 0.8384379524592213
+                  },
+                  {
+                    "id": "match:story.central",
+                    "type": "match",
+                    "f": "story.central",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p2",
+                        "q": "praised the complex characters, voice acting, narrative design and setting",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                        "ru": "хвалили сложных персонажей, озвучку, построение сюжета и сеттинг"
+                      },
+                      {
+                        "id": "tag:Story Rich",
+                        "kind": "tag",
+                        "q": "Story Rich",
+                        "votes": 287
+                      }
+                    ],
+                    "contribution": 0.6481136523598259
+                  },
+                  {
+                    "id": "match:loop.exploration",
+                    "type": "match",
+                    "f": "loop.exploration",
+                    "basis": "preference",
+                    "sources": [],
+                    "evidence": [
+                      {
+                        "id": "p6",
+                        "q": "while exploring the house",
+                        "kind": "wiki",
+                        "section": "Plot",
+                        "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                        "ru": "во время исследования дома"
+                      },
+                      {
+                        "id": "tag:Exploration",
+                        "kind": "tag",
+                        "q": "Exploration",
+                        "votes": 148
+                      }
+                    ],
+                    "contribution": 0.2784491162873128
+                  },
+                  {
+                    "id": "match:tone.melancholic",
+                    "type": "match",
+                    "f": "tone.melancholic",
+                    "basis": "inferred",
+                    "sources": [
+                      "Detroit: Become Human",
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p0",
+                        "q": "the narrative explores the twins' childhood trauma",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                        "ru": "сюжет раскрывает детскую травму близнецов"
+                      },
+                      {
+                        "id": "tag:Emotional",
+                        "kind": "tag",
+                        "q": "Emotional",
+                        "votes": 184
+                      }
+                    ],
+                    "contribution": 0.1473935904
+                  },
+                  {
+                    "id": "match:story.mystery",
+                    "type": "match",
+                    "f": "story.mystery",
+                    "basis": "inferred",
+                    "sources": [
+                      "Life Is Strange"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p0",
+                        "q": "investigate the death of their mother",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                        "ru": "расследовать смерть их матери"
+                      },
+                      {
+                        "id": "tag:Mystery",
+                        "kind": "tag",
+                        "q": "Mystery",
+                        "votes": 128
+                      }
+                    ],
+                    "contribution": 0.07764160213152
+                  },
+                  {
+                    "id": "gap:length",
+                    "type": "gap",
+                    "what": "длина"
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.825,
+                    "total": 13883,
+                    "desc": null
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "unknown",
+                    "text": "Не проверено, удобно ли прерваться через 90 мин."
+                  }
+                ]
+              }
+            ],
+            "belief": 0.143,
+            "sieves": [
+              {
+                "id": 1,
+                "name": "Можно ли",
+                "removed": 0
+              },
+              {
+                "id": 2,
+                "name": "Было ли",
+                "removed": 11
+              },
+              {
+                "id": 3,
+                "name": "Сделано ли нормально",
+                "removed": 570
+              },
+              {
+                "id": 4,
+                "name": "Моё ли (жёсткие стопы)",
+                "removed": 0
+              },
+              {
+                "id": 5,
+                "name": "Подходит ли сегодня (обязательное)",
+                "removed": 0
+              }
+            ],
+            "considered": 4371,
+            "taste": {
+              "confirmed": [
+                {
+                  "f": "story.choices",
+                  "label": "выборы влияют на историю",
+                  "w": 1.38,
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:1222140",
+                    "steam:319630"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "story.central",
+                  "label": "сильный сюжет",
+                  "w": 1.38,
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:1222140",
+                    "steam:319630"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "characters.memorable",
+                  "label": "живые персонажи",
+                  "w": 1.38,
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:1222140",
+                    "steam:319630"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.exploration",
+                  "label": "исследование мира",
+                  "w": 0.61,
+                  "sources": [],
+                  "ids": [],
+                  "preference": true
+                }
+              ],
+              "inferred": [
+                {
+                  "f": "tone.melancholic",
+                  "label": "грусть и меланхолия",
+                  "w": 0.24,
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:1222140",
+                    "steam:319630"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "world.scifi",
+                  "label": "фантастика и космос",
+                  "w": 0.18,
+                  "sources": [
+                    "Detroit: Become Human"
+                  ],
+                  "ids": [
+                    "steam:1222140"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "story.mystery",
+                  "label": "загадка и расследование",
+                  "w": 0.15,
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:319630"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "difficulty.forgiving",
+                  "label": "щадящая сложность",
+                  "w": 0.1,
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:319630"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "ending.bittersweet",
+                  "label": "горький финал",
+                  "w": 0.1,
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:319630"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "aesthetic.stylized",
+                  "label": "стилизованный визуал",
+                  "w": 0.1,
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "ids": [
+                    "steam:319630"
+                  ],
+                  "preference": false
+                }
+              ],
+              "dislikes": [
+                {
+                  "f": "difficulty.hard",
+                  "label": "постоянно умирал, бесило",
+                  "w": 1,
+                  "sources": [
+                    "ELDEN RING"
+                  ],
+                  "ids": [
+                    "steam:1245620"
+                  ],
+                  "preference": false
+                }
+              ],
+              "hardNo": [],
+              "consumed": 3
+            },
+            "today": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            },
+            "uncheckedContext": []
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:04:04.587Z",
+      "path": "/api/ai/pick",
+      "input": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+              "wants": [
+                {
+                  "f": "story.central",
+                  "evidence": "Хочу погрузиться в историю"
+                },
+                {
+                  "f": "story.mystery",
+                  "evidence": "и загадку"
+                },
+                {
+                  "f": "characters.memorable",
+                  "evidence": "привязаться к героям"
+                }
+              ],
+              "avoids": [],
+              "time": {
+                "minutes": 90,
+                "evidence": "Сегодня час-полтора"
+              },
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [
+            "lean:length.short|length.long",
+            "pair:humor.funny|world.scifi",
+            "pair:characters.companions|loop.exploration"
+          ],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [
+            "steam:1222140",
+            "steam:319630"
+          ],
+          "disliked": [
+            "steam:1245620"
+          ],
+          "whyIndex": 0,
+          "answers": {
+            "steam:1222140": {
+              "reaction": "love",
+              "reasons": [
+                "story.choices",
+                "story.central",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:319630": {
+              "reaction": "love",
+              "reasons": [
+                "story.central",
+                "story.choices",
+                "characters.memorable"
+              ],
+              "issues": []
+            },
+            "steam:1245620": {
+              "reaction": "dislike",
+              "issues": [
+                {
+                  "f": "difficulty.hard",
+                  "hard": false
+                }
+              ],
+              "badQuality": false
+            }
+          },
+          "corrections": [],
+          "preferences": [
+            {
+              "f": "loop.exploration",
+              "qid": "pair:characters.companions|loop.exploration"
+            }
+          ],
+          "session": {
+            "notNow": []
+          },
+          "seed": 281673
+        },
+        "wish": "",
+        "previous": [],
+        "uid": "b825809a-1b48-4d79-bd6f-73e3fc9bc143"
+      },
+      "output": {
+        "result": {
+          "top": {
+            "id": "steam:632470",
+            "domain": "game",
+            "name": "Disco Elysium - The Final Cut",
+            "ru": null,
+            "year": 2019,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/816ea59d6d8ac525f79a07c3a7afa94eddb3437c/header.jpg?t=1780913406",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/library_600x900.jpg",
+            "kind": "game",
+            "series": [],
+            "genres": [
+              "RPG"
+            ],
+            "runtime": null,
+            "seasons": null,
+            "episodes": null,
+            "status": null,
+            "rating": "Very Positive",
+            "link": "https://store.steampowered.com/app/632470/",
+            "price": null,
+            "label": "likely",
+            "labelText": "Вероятно подойдёт",
+            "score": 5.237,
+            "parts": {
+              "fit": 3.078,
+              "penalty": 0,
+              "mood": 1.82,
+              "prior": 0.339
+            },
+            "mainAspect": "characters",
+            "explanation": {
+              "reasons": [
+                {
+                  "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «живые персонажи», здесь это тоже есть",
+                  "factIds": [
+                    "match:characters.memorable"
+                  ]
+                },
+                {
+                  "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                  "factIds": [
+                    "match:story.choices"
+                  ]
+                },
+                {
+                  "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                  "factIds": [
+                    "match:story.central"
+                  ]
+                },
+                {
+                  "text": "Ты сказал, что тебе важно «исследование мира», здесь это есть",
+                  "factIds": [
+                    "match:loop.exploration"
+                  ]
+                },
+                {
+                  "text": "«Detroit: Become Human» и «Life Is Strange»: ещё «грусть и меланхолия» и «загадка и расследование». Это ты не отмечал, вес слабый",
+                  "factIds": [
+                    "match:tone.melancholic",
+                    "match:story.mystery"
+                  ],
+                  "weak": true
+                }
+              ],
+              "risks": [],
+              "info": [
+                {
+                  "text": "93% положительных из 132 216 отзывов Steam",
+                  "factIds": [
+                    "fact:reviews"
+                  ]
+                },
+                {
+                  "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 37 ч",
+                  "factIds": [
+                    "fact:hours"
+                  ]
+                },
+                {
+                  "text": "проверена для Steam Deck",
+                  "factIds": [
+                    "fact:deck"
+                  ]
+                }
+              ]
+            },
+            "facts": [
+              {
+                "id": "match:characters.memorable",
+                "type": "match",
+                "f": "characters.memorable",
+                "basis": "confirmed",
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "evidence": [
+                  {
+                    "id": "d",
+                    "q": "Interrogate unforgettable characters",
+                    "kind": "description",
+                    "thumb": null,
+                    "hours": null,
+                    "lang": null,
+                    "ru": "Допрашивать незабываемых персонажей"
+                  },
+                  {
+                    "id": "r237376329",
+                    "q": "writing that's among the best the medium has to offer",
+                    "kind": "review",
+                    "thumb": "up",
+                    "hours": 37,
+                    "lang": "english",
+                    "ru": "сценарий, который входит в число лучших в этом медиа"
+                  }
+                ],
+                "contribution": 1.1179172699456286
+              },
+              {
+                "id": "match:story.choices",
+                "type": "match",
+                "f": "story.choices",
+                "basis": "confirmed",
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "evidence": [
+                  {
+                    "id": "a",
+                    "q": "Unprecedented freedom of choice",
+                    "kind": "description",
+                    "thumb": null,
+                    "hours": null,
+                    "lang": null,
+                    "ru": "Беспрецедентная свобода выбора"
+                  },
+                  {
+                    "id": "tag:Choices Matter",
+                    "kind": "tag",
+                    "q": "Choices Matter",
+                    "votes": 1098
+                  }
+                ],
+                "contribution": 0.9066660938050977
+              },
+              {
+                "id": "match:story.central",
+                "type": "match",
+                "f": "story.central",
+                "basis": "confirmed",
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "evidence": [
+                  {
+                    "id": "r237376329",
+                    "q": "writing that's among the best the medium has to offer",
+                    "kind": "review",
+                    "thumb": "up",
+                    "hours": 37,
+                    "lang": "english",
+                    "ru": "сценарий, который входит в число лучших в этом медиа"
+                  },
+                  {
+                    "id": "tag:Story Rich",
+                    "kind": "tag",
+                    "q": "Story Rich",
+                    "votes": 1198
+                  }
+                ],
+                "contribution": 0.6481136523598259
+              },
+              {
+                "id": "match:loop.exploration",
+                "type": "match",
+                "f": "loop.exploration",
+                "basis": "preference",
+                "sources": [],
+                "evidence": [
+                  {
+                    "id": "tag:Exploration",
+                    "kind": "tag",
+                    "q": "Exploration",
+                    "votes": 470
+                  }
+                ],
+                "contribution": 0.16567679822895293
+              },
+              {
+                "id": "match:tone.melancholic",
+                "type": "match",
+                "f": "tone.melancholic",
+                "basis": "inferred",
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "evidence": [
+                  {
+                    "id": "r237508995",
+                    "q": "an emotional landscape that will honestly never quite recover",
+                    "kind": "review",
+                    "thumb": "up",
+                    "hours": 174,
+                    "lang": "english",
+                    "ru": "эмоциональный ландшафт, от которого, честно говоря, так и не оправишься"
+                  }
+                ],
+                "contribution": 0.16336728
+              },
+              {
+                "id": "match:story.mystery",
+                "type": "match",
+                "f": "story.mystery",
+                "basis": "inferred",
+                "sources": [
+                  "Life Is Strange"
+                ],
+                "evidence": [
+                  {
+                    "id": "tag:Detective",
+                    "kind": "tag",
+                    "q": "Detective",
+                    "votes": 958
+                  }
+                ],
+                "contribution": 0.075839652
+              },
+              {
+                "id": "fact:reviews",
+                "type": "fact",
+                "ratio": 0.926,
+                "total": 132216,
+                "desc": "Very Positive"
+              },
+              {
+                "id": "fact:hours",
+                "type": "fact",
+                "hours": 37
+              },
+              {
+                "id": "fact:deck",
+                "type": "fact",
+                "deck": "verified"
+              }
+            ],
+            "feasibility": [
+              {
+                "key": "minutes",
+                "status": "unknown",
+                "text": "Не проверено, удобно ли прерваться через 90 мин."
+              }
+            ],
+            "ai": {
+              "reason": "Расследование, исследование города и непростые отношения с напарником соединяют твою тягу к загадкам с важными выборами, как в Detroit.",
+              "caveat": "Много чтения; неудачные проверки часто открывают новые сцены, а не обрывают историю.",
+              "likelySeen": false,
+              "own": false
+            }
+          },
+          "alternatives": [
+            {
+              "id": "steam:1180660",
+              "domain": "game",
+              "name": "Tell Me Why",
+              "ru": "Tell me why",
+              "year": 2020,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1180660/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1180660/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Adventure",
+                "Free To Play"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/1180660/",
+              "price": "бесплатно",
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 4.777,
+              "parts": {
+                "fit": 2.897,
+                "penalty": 0,
+                "mood": 1.67,
+                "prior": 0.21
+              },
+              "mainAspect": "story",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.choices"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «живые персонажи», здесь это тоже есть",
+                    "factIds": [
+                      "match:characters.memorable"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.central"
+                    ]
+                  },
+                  {
+                    "text": "Ты сказал, что тебе важно «исследование мира», здесь это есть",
+                    "factIds": [
+                      "match:loop.exploration"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ещё «грусть и меланхолия» и «загадка и расследование». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:tone.melancholic",
+                      "match:story.mystery"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Нет данных: длина",
+                    "factIds": [
+                      "gap:length"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "83% положительных из 13 883 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:story.choices",
+                  "type": "match",
+                  "f": "story.choices",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p4",
+                      "q": "The player's decisions during their interactions with the aforementioned non-player characters",
+                      "kind": "wiki",
+                      "section": "Setting",
+                      "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                      "ru": "Решения игрока в ходе взаимодействия с упомянутыми неигровыми персонажами"
+                    },
+                    {
+                      "id": "tag:Choices Matter",
+                      "kind": "tag",
+                      "q": "Choices Matter",
+                      "votes": 335
+                    }
+                  ],
+                  "contribution": 0.9066660938050977
+                },
+                {
+                  "id": "match:characters.memorable",
+                  "type": "match",
+                  "f": "characters.memorable",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "praised the complex characters",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                      "ru": "хвалили сложных персонажей"
+                    }
+                  ],
+                  "contribution": 0.8384379524592213
+                },
+                {
+                  "id": "match:story.central",
+                  "type": "match",
+                  "f": "story.central",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "praised the complex characters, voice acting, narrative design and setting",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                      "ru": "хвалили сложных персонажей, озвучку, построение сюжета и сеттинг"
+                    },
+                    {
+                      "id": "tag:Story Rich",
+                      "kind": "tag",
+                      "q": "Story Rich",
+                      "votes": 287
+                    }
+                  ],
+                  "contribution": 0.6481136523598259
+                },
+                {
+                  "id": "match:loop.exploration",
+                  "type": "match",
+                  "f": "loop.exploration",
+                  "basis": "preference",
+                  "sources": [],
+                  "evidence": [
+                    {
+                      "id": "p6",
+                      "q": "while exploring the house",
+                      "kind": "wiki",
+                      "section": "Plot",
+                      "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                      "ru": "во время исследования дома"
+                    },
+                    {
+                      "id": "tag:Exploration",
+                      "kind": "tag",
+                      "q": "Exploration",
+                      "votes": 148
+                    }
+                  ],
+                  "contribution": 0.2784491162873128
+                },
+                {
+                  "id": "match:tone.melancholic",
+                  "type": "match",
+                  "f": "tone.melancholic",
+                  "basis": "inferred",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "the narrative explores the twins' childhood trauma",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                      "ru": "сюжет раскрывает детскую травму близнецов"
+                    },
+                    {
+                      "id": "tag:Emotional",
+                      "kind": "tag",
+                      "q": "Emotional",
+                      "votes": 184
+                    }
+                  ],
+                  "contribution": 0.1473935904
+                },
+                {
+                  "id": "match:story.mystery",
+                  "type": "match",
+                  "f": "story.mystery",
+                  "basis": "inferred",
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "investigate the death of their mother",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Tell_Me_Why_(video_game)",
+                      "ru": "расследовать смерть их матери"
+                    },
+                    {
+                      "id": "tag:Mystery",
+                      "kind": "tag",
+                      "q": "Mystery",
+                      "votes": 128
+                    }
+                  ],
+                  "contribution": 0.07764160213152
+                },
+                {
+                  "id": "gap:length",
+                  "type": "gap",
+                  "what": "длина"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.825,
+                  "total": 13883,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 90 мин."
+                }
+              ],
+              "ai": {
+                "reason": "Как в Life Is Strange, семейная тайна раскрывается через воспоминания, исследование знакомых мест и решения, меняющие отношения.",
+                "caveat": "Камерная история; тяжёлые темы детства и утраты.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "steam:388880",
+              "domain": "game",
+              "name": "Oxenfree",
+              "ru": null,
+              "year": 2016,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/388880/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/388880/library_600x900.jpg",
+              "kind": "game",
+              "series": [
+                "Oxenfree"
+              ],
+              "genres": [
+                "Adventure",
+                "Indie"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/388880/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 4.302,
+              "parts": {
+                "fit": 2.393,
+                "penalty": 0,
+                "mood": 1.597,
+                "prior": 0.312
+              },
+              "mainAspect": "story",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.choices"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.central"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «живые персонажи», здесь это тоже есть",
+                    "factIds": [
+                      "match:characters.memorable"
+                    ]
+                  },
+                  {
+                    "text": "Ты сказал, что тебе важно «исследование мира», здесь это есть",
+                    "factIds": [
+                      "match:loop.exploration"
+                    ]
+                  },
+                  {
+                    "text": "«Life Is Strange»: ещё «загадка и расследование» и «стилизованный визуал». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:story.mystery",
+                      "match:aesthetic.stylized"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Нет данных: длина",
+                    "factIds": [
+                      "gap:length"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "92% положительных из 11 840 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:story.choices",
+                  "type": "match",
+                  "f": "story.choices",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p5",
+                      "q": "the player's choices and relationships with the characters determine which of several possible endings",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Oxenfree",
+                      "ru": "выбор игрока и отношения с персонажами определяют одну из нескольких возможных концовок"
+                    },
+                    {
+                      "id": "tag:Choices Matter",
+                      "kind": "tag",
+                      "q": "Choices Matter",
+                      "votes": 417
+                    }
+                  ],
+                  "contribution": 0.9066660938050977
+                },
+                {
+                  "id": "match:story.central",
+                  "type": "match",
+                  "f": "story.central",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p1",
+                      "q": "the developers wanted to create a story-driven game without cutscenes",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Oxenfree",
+                      "ru": "разработчики хотели создать игру с сюжетом без роликов"
+                    },
+                    {
+                      "id": "tag:Story Rich",
+                      "kind": "tag",
+                      "q": "Story Rich",
+                      "votes": 504
+                    }
+                  ],
+                  "contribution": 0.6481136523598259
+                },
+                {
+                  "id": "match:characters.memorable",
+                  "type": "match",
+                  "f": "characters.memorable",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "critics praising the presentation and characters",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Oxenfree",
+                      "ru": "критики хвалят подачу и персонажей"
+                    }
+                  ],
+                  "contribution": 0.5592381142903006
+                },
+                {
+                  "id": "match:loop.exploration",
+                  "type": "match",
+                  "f": "loop.exploration",
+                  "basis": "preference",
+                  "sources": [],
+                  "evidence": [
+                    {
+                      "id": "p1",
+                      "q": "allowing players to roam the environment freely",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Oxenfree",
+                      "ru": "позволяя игрокам свободно перемещаться по окружению"
+                    }
+                  ],
+                  "contribution": 0.15152888147626672
+                },
+                {
+                  "id": "match:story.mystery",
+                  "type": "match",
+                  "f": "story.mystery",
+                  "basis": "inferred",
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "Alex and her friends must unravel the secrets of the island",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Oxenfree",
+                      "ru": "Алекс и её друзья должны раскрыть секреты острова"
+                    },
+                    {
+                      "id": "tag:Mystery",
+                      "kind": "tag",
+                      "q": "Mystery",
+                      "votes": 311
+                    }
+                  ],
+                  "contribution": 0.10162513368
+                },
+                {
+                  "id": "match:aesthetic.stylized",
+                  "type": "match",
+                  "f": "aesthetic.stylized",
+                  "basis": "inferred",
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p9",
+                      "q": "Destructoid called the game's watercolor art style",
+                      "kind": "wiki",
+                      "section": "Reception",
+                      "url": "https://en.wikipedia.org/wiki/Oxenfree",
+                      "ru": "Destructoid назвал художественный стиль игры акварельным"
+                    }
+                  ],
+                  "contribution": 0.026105686119900003
+                },
+                {
+                  "id": "gap:length",
+                  "type": "gap",
+                  "what": "длина"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.917,
+                  "total": 11840,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 90 мин."
+                }
+              ],
+              "ai": {
+                "reason": "Исследование тревожного острова, загадочные радиосигналы и разговоры друзей близки мистике и живым отношениям Life Is Strange.",
+                "caveat": "Диалоги идут на ходу: иногда нужно ответить до того, как разговор уйдёт дальше.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "steam:1205520",
+              "domain": "game",
+              "name": "Pentiment",
+              "ru": null,
+              "year": 2022,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1205520/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1205520/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Adventure",
+                "Casual"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/1205520/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 3.827,
+              "parts": {
+                "fit": 2.142,
+                "penalty": 0,
+                "mood": 1.337,
+                "prior": 0.348
+              },
+              "mainAspect": "story",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «выборы влияют на историю», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.choices"
+                    ]
+                  },
+                  {
+                    "text": "«Detroit: Become Human» и «Life Is Strange»: ты отметил «сильный сюжет», здесь это тоже есть",
+                    "factIds": [
+                      "match:story.central"
+                    ]
+                  },
+                  {
+                    "text": "Ты сказал, что тебе важно «исследование мира», здесь это есть",
+                    "factIds": [
+                      "match:loop.exploration"
+                    ]
+                  },
+                  {
+                    "text": "«Life Is Strange»: ещё «загадка и расследование» и «стилизованный визуал». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:story.mystery",
+                      "match:aesthetic.stylized"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Нет данных: длина",
+                    "factIds": [
+                      "gap:length"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "95% положительных из 7 746 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:story.choices",
+                  "type": "match",
+                  "f": "story.choices",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p7",
+                      "q": "each decision having its pros and cons",
+                      "kind": "wiki",
+                      "section": "Reception",
+                      "url": "https://en.wikipedia.org/wiki/Pentiment_(video_game)",
+                      "ru": "каждое решение имеет свои плюсы и минусы"
+                    },
+                    {
+                      "id": "p2",
+                      "q": "the player is meant to accuse an individual based on either who they think committed the crime",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Pentiment_(video_game)",
+                      "ru": "игрок должен обвинить человека, исходя из того, кого он считает совершившим преступление"
+                    }
+                  ],
+                  "contribution": 1.000459137991832
+                },
+                {
+                  "id": "match:story.central",
+                  "type": "match",
+                  "f": "story.central",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Detroit: Become Human",
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "The player is tasked with investigating the murders of prominent individuals",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Pentiment_(video_game)",
+                      "ru": "игрок должен расследовать убийства видных людей"
+                    },
+                    {
+                      "id": "tag:Story Rich",
+                      "kind": "tag",
+                      "q": "Story Rich",
+                      "votes": 218
+                    }
+                  ],
+                  "contribution": 0.6481136523598259
+                },
+                {
+                  "id": "match:loop.exploration",
+                  "type": "match",
+                  "f": "loop.exploration",
+                  "basis": "preference",
+                  "sources": [],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "After collecting physical proof and gleaning information from townsfolk",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Pentiment_(video_game)",
+                      "ru": "после сбора физических улик и сведений от горожан"
+                    },
+                    {
+                      "id": "tag:Exploration",
+                      "kind": "tag",
+                      "q": "Exploration",
+                      "votes": 188
+                    }
+                  ],
+                  "contribution": 0.31498768810781985
+                },
+                {
+                  "id": "match:story.mystery",
+                  "type": "match",
+                  "f": "story.mystery",
+                  "basis": "inferred",
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "The player is tasked with investigating the murders of prominent individuals",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Pentiment_(video_game)",
+                      "ru": "игрок должен расследовать убийства видных людей"
+                    },
+                    {
+                      "id": "tag:Investigation",
+                      "kind": "tag",
+                      "q": "Investigation",
+                      "votes": 212
+                    }
+                  ],
+                  "contribution": 0.10162513368
+                },
+                {
+                  "id": "match:aesthetic.stylized",
+                  "type": "match",
+                  "f": "aesthetic.stylized",
+                  "basis": "inferred",
+                  "sources": [
+                    "Life Is Strange"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p8",
+                      "q": "Polygon praised the art style",
+                      "kind": "wiki",
+                      "section": "Reception",
+                      "url": "https://en.wikipedia.org/wiki/Pentiment_(video_game)",
+                      "ru": "Polygon похвалил художественный стиль"
+                    },
+                    {
+                      "id": "tag:Stylized",
+                      "kind": "tag",
+                      "q": "Stylized",
+                      "votes": 199
+                    }
+                  ],
+                  "contribution": 0.0527417577
+                },
+                {
+                  "id": "gap:length",
+                  "type": "gap",
+                  "what": "длина"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.953,
+                  "total": 7746,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "unknown",
+                  "text": "Не проверено, удобно ли прерваться через 90 мин."
+                }
+              ],
+              "ai": {
+                "reason": "Расследуя убийство в баварском городке, ты узнаёшь жителей и принимаешь решения с долгими последствиями — без боёв и спешки.",
+                "caveat": "Медленное начало, много текста и непривычный рисунок под старинные рукописи.",
+                "likelySeen": false,
+                "own": false
+              }
+            }
+          ],
+          "belief": 0.143,
+          "sieves": [
+            {
+              "id": 1,
+              "name": "Можно ли",
+              "removed": 0
+            },
+            {
+              "id": 2,
+              "name": "Было ли",
+              "removed": 11
+            },
+            {
+              "id": 3,
+              "name": "Сделано ли нормально",
+              "removed": 570
+            },
+            {
+              "id": 4,
+              "name": "Моё ли (жёсткие стопы)",
+              "removed": 0
+            },
+            {
+              "id": 5,
+              "name": "Подходит ли сегодня (обязательное)",
+              "removed": 0
+            }
+          ],
+          "considered": 4371,
+          "taste": {
+            "confirmed": [
+              {
+                "f": "story.choices",
+                "label": "выборы влияют на историю",
+                "w": 1.38,
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:1222140",
+                  "steam:319630"
+                ],
+                "preference": false
+              },
+              {
+                "f": "story.central",
+                "label": "сильный сюжет",
+                "w": 1.38,
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:1222140",
+                  "steam:319630"
+                ],
+                "preference": false
+              },
+              {
+                "f": "characters.memorable",
+                "label": "живые персонажи",
+                "w": 1.38,
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:1222140",
+                  "steam:319630"
+                ],
+                "preference": false
+              },
+              {
+                "f": "loop.exploration",
+                "label": "исследование мира",
+                "w": 0.61,
+                "sources": [],
+                "ids": [],
+                "preference": true
+              }
+            ],
+            "inferred": [
+              {
+                "f": "tone.melancholic",
+                "label": "грусть и меланхолия",
+                "w": 0.24,
+                "sources": [
+                  "Detroit: Become Human",
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:1222140",
+                  "steam:319630"
+                ],
+                "preference": false
+              },
+              {
+                "f": "world.scifi",
+                "label": "фантастика и космос",
+                "w": 0.18,
+                "sources": [
+                  "Detroit: Become Human"
+                ],
+                "ids": [
+                  "steam:1222140"
+                ],
+                "preference": false
+              },
+              {
+                "f": "story.mystery",
+                "label": "загадка и расследование",
+                "w": 0.15,
+                "sources": [
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:319630"
+                ],
+                "preference": false
+              },
+              {
+                "f": "difficulty.forgiving",
+                "label": "щадящая сложность",
+                "w": 0.1,
+                "sources": [
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:319630"
+                ],
+                "preference": false
+              },
+              {
+                "f": "ending.bittersweet",
+                "label": "горький финал",
+                "w": 0.1,
+                "sources": [
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:319630"
+                ],
+                "preference": false
+              },
+              {
+                "f": "aesthetic.stylized",
+                "label": "стилизованный визуал",
+                "w": 0.1,
+                "sources": [
+                  "Life Is Strange"
+                ],
+                "ids": [
+                  "steam:319630"
+                ],
+                "preference": false
+              }
+            ],
+            "dislikes": [
+              {
+                "f": "difficulty.hard",
+                "label": "постоянно умирал, бесило",
+                "w": 1,
+                "sources": [
+                  "ELDEN RING"
+                ],
+                "ids": [
+                  "steam:1245620"
+                ],
+                "preference": false
+              }
+            ],
+            "hardNo": [],
+            "consumed": 3
+          },
+          "today": {
+            "version": 1,
+            "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "wants": [
+              {
+                "f": "story.central",
+                "evidence": "Хочу погрузиться в историю"
+              },
+              {
+                "f": "story.mystery",
+                "evidence": "и загадку"
+              },
+              {
+                "f": "characters.memorable",
+                "evidence": "привязаться к героям"
+              }
+            ],
+            "avoids": [],
+            "time": {
+              "minutes": 90,
+              "evidence": "Сегодня час-полтора"
+            },
+            "source": "confirmed"
+          },
+          "spares": [],
+          "ai": {
+            "understood": "Тебе нужна история с загадкой, живыми героями и исследованием без сложных боёв и проверки реакции; сегодня — начало на час-полтора.",
+            "wish": "",
+            "model": "gpt-6.1-sol",
+            "shortlist": 40
+          }
+        }
+      }
+    }
+  ],
+  "visibleText": "Назад\nПодбор\nЗаново\nВот что я подобрал\n\nСравнил 4 371 игра после отсева.\n\nПонял так: Тебе нужна история с загадкой, живыми героями и исследованием без сложных боёв и проверки реакции; сегодня — начало на час-полтора. Без нейросети\n\nНа сегодня учёл: хочется сильный сюжет; хочется загадка и расследование; хочется живые персонажи; есть 90 мин.\n\nВероятно подойдёт\nDisco Elysium - The Final Cut\n2019\nРасследование, исследование города и непростые отношения с напарником соединяют твою тягу к загадкам с важными выборами, как в Detroit.\nМного чтения; неудачные проверки часто открывают новые сцены, а не обрывают историю.\nЕщё 5 причин в подробностях\nНе проверено, удобно ли прерваться через 90 мин.\nУже играл\nЕщё варианты\nTell me why\n2020 · бесплатно\nКак в Life Is Strange, семейная тайна раскрывается через воспоминания, исследование знакомых мест и решения, меняющие отношения.\nНе проверено, удобно ли прерваться через 90 мин.\nВероятно подойдёт\nУже играл\nOxenfree\n2016\nИсследование тревожного острова, загадочные радиосигналы и разговоры друзей близки мистике и живым отношениям Life Is Strange.\nНе проверено, удобно ли прерваться через 90 мин.\nВероятно подойдёт\nУже играл\nPentiment\n2022\nРасследуя убийство в баварском городке, ты узнаёшь жителей и принимаешь решения с долгими последствиями — без боёв и спешки.\nНе проверено, удобно ли прерваться через 90 мин.\nВероятно подойдёт\nУже играл\nНе то? Скажи словами\nПодобрать\nПоправить, что я понял о тебе\nПочему не показал…"
+}

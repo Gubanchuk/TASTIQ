@@ -1,0 +1,11 @@
+{"appid": 807120, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a tactical role-playing game developed by Unfrozen"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "a necromancer who desires to raise hordes of undead"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "the game's stand-out feature is crafting new monsters"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p4", "q": "unlocking new units and discovering all the ways they complement each other is really fun"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "discovering all the ways they complement each other"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "the monsters' number of special abilities gives it depth"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p3", "q": "a polished, meaty dungeon-crawler for the slightly masochistic crowd"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p4", "q": "compared the horror elements negatively to Darkest Dungeon"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p3", "q": "Kelly cited these combat mechanics, and the \"lavish artwork\""}]}
+]}

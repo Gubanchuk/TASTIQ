@@ -1,0 +1,7 @@
+{"appid": 233720, "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p5", "q": "Rock, Paper, Shotgun praised the game's humour and fun"}, {"id": "p5", "q": "Eurogamer rated the game 7/10 and also praised its humour"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p5", "q": "Eurogamer rated the game 7/10 and also praised its humour"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "although the game was hard to control, this difficulty was"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p4", "q": "a fictional hospital somewhere in the fictitious United Kingdom town of Barnardshire in 1987"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p4", "q": "later operates on Bob inside a space station orbiting Earth"}]}
+]}

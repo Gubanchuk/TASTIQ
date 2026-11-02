@@ -1,0 +1,9 @@
+{"appid": 868270, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "was a 2022 first-person shooter video game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "a combination of player versus environment and player versus player"}, {"id": "p2", "q": "Players have to compete against each other"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "Set in a future where interstellar travel is possible"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "scavenging loot and completing quests before extracting"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "Any equipment not insured will be permanently lost in case of death"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p3", "q": "customising load-out and character appearance"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p8", "q": "PC Gamer lamented its formulaic design"}]}
+]}

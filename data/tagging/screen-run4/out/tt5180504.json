@@ -1,0 +1,14 @@
+{"id": "tt5180504", "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "is a fantasy drama television series"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "s", "q": "Geralt of Rivia, a solitary monster hunter"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p9", "q": "reminding the viewers of their daughter-father bond"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p5", "q": "Henry Cavill brings brawny charisma"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p6", "q": "plenty of blood and gore"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p6", "q": "some bare skin"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p5", "q": "subversive fantasy elements and dark humor"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p6", "q": "an original dark fantasy with some horror elements"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p7", "q": "praised the series for its action sequences"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "My destiny is to never watch this borefest ever again"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p5", "q": "the world of The Witcher at times feels only half-formed"}]},
+{"f": "stability.falls_off", "r": 2, "ev": [{"id": "p12", "q": "The Witcher overall is beginning to grow stale in a fourth season"}]}
+]}

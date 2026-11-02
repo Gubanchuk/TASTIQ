@@ -1,0 +1,9 @@
+{"id": "tt0108755", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated sitcom created and developed by Everett Peck"}]},
+{"f": "audience.adult", "r": 2, "ev": [{"id": "p0", "q": "is an American adult animated sitcom created and developed by Everett Peck"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p1", "q": "a unique blend of satire, dark humor, noir, and surrealism"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p1", "q": "a unique blend of satire, dark humor, noir, and surrealism"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "With the help of his pig partner, a sarcastic Duckman is solving crimes"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p1", "q": "It follows the surreal life and misadventures of Eric Tiberius Duckman"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p0", "q": "through September 6, 1997, for 4 seasons and 70 episodes"}]}
+]}

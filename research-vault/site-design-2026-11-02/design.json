@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T21:46:47.816Z",
+  "title": "Design System: TASTIQ — три невыбранных прототипа",
+  "extensions": {
+    "colorMeta": {
+      "comparison-ground": {
+        "role": "neutral",
+        "displayName": "comparison-ground",
+        "tonalRamp": [
+          "oklch(15.000% 0.02374 181.328)",
+          "oklch(26.429% 0.02374 181.328)",
+          "oklch(37.857% 0.02374 181.328)",
+          "oklch(49.286% 0.02374 181.328)",
+          "oklch(60.714% 0.02374 181.328)",
+          "oklch(72.143% 0.02374 181.328)",
+          "oklch(83.571% 0.02374 181.328)",
+          "oklch(95.000% 0.02374 181.328)"
+        ]
+      },
+      "frame-ground": {
+        "role": "neutral",
+        "displayName": "frame-ground",
+        "tonalRamp": [
+          "oklch(15.000% 0.03071 184.924)",
+          "oklch(26.429% 0.03071 184.924)",
+          "oklch(37.857% 0.03071 184.924)",
+          "oklch(49.286% 0.03071 184.924)",
+          "oklch(60.714% 0.03071 184.924)",
+          "oklch(72.143% 0.03071 184.924)",
+          "oklch(83.571% 0.03071 184.924)",
+          "oklch(95.000% 0.03071 184.924)"
+        ]
+      },
+      "shell-ink": {
+        "role": "neutral",
+        "displayName": "shell-ink",
+        "tonalRamp": [
+          "oklch(15.000% 0.01322 106.646)",
+          "oklch(26.429% 0.01322 106.646)",
+          "oklch(37.857% 0.01322 106.646)",
+          "oklch(49.286% 0.01322 106.646)",
+          "oklch(60.714% 0.01322 106.646)",
+          "oklch(72.143% 0.01322 106.646)",
+          "oklch(83.571% 0.01322 106.646)",
+          "oklch(95.000% 0.01322 106.646)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "card",
+        "tonalRamp": [
+          "oklch(15.000% 0.00818 91.480)",
+          "oklch(26.429% 0.00818 91.480)",
+          "oklch(37.857% 0.00818 91.480)",
+          "oklch(49.286% 0.00818 91.480)",
+          "oklch(60.714% 0.00818 91.480)",
+          "oklch(72.143% 0.00818 91.480)",
+          "oklch(83.571% 0.00818 91.480)",
+          "oklch(95.000% 0.00818 91.480)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "line",
+        "tonalRamp": [
+          "oklch(15.000% 0.01954 133.092)",
+          "oklch(26.429% 0.01954 133.092)",
+          "oklch(37.857% 0.01954 133.092)",
+          "oklch(49.286% 0.01954 133.092)",
+          "oklch(60.714% 0.01954 133.092)",
+          "oklch(72.143% 0.01954 133.092)",
+          "oklch(83.571% 0.01954 133.092)",
+          "oklch(95.000% 0.01954 133.092)"
+        ]
+      },
+      "on-action": {
+        "role": "primary",
+        "displayName": "on-action",
+        "tonalRamp": [
+          "oklch(15.000% 0.01073 95.159)",
+          "oklch(26.429% 0.01073 95.159)",
+          "oklch(37.857% 0.01073 95.159)",
+          "oklch(49.286% 0.01073 95.159)",
+          "oklch(60.714% 0.01073 95.159)",
+          "oklch(72.143% 0.01073 95.159)",
+          "oklch(83.571% 0.01073 95.159)",
+          "oklch(95.000% 0.01073 95.159)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "focus",
+        "tonalRamp": [
+          "oklch(15.000% 0.13454 119.275)",
+          "oklch(26.429% 0.13454 119.275)",
+          "oklch(37.857% 0.13454 119.275)",
+          "oklch(49.286% 0.13454 119.275)",
+          "oklch(60.714% 0.13454 119.275)",
+          "oklch(72.143% 0.13454 119.275)",
+          "oklch(83.571% 0.13454 119.275)",
+          "oklch(95.000% 0.13454 119.275)"
+        ]
+      },
+      "programme-shell": {
+        "role": "neutral",
+        "displayName": "programme-shell",
+        "tonalRamp": [
+          "oklch(15.000% 0.03402 183.073)",
+          "oklch(26.429% 0.03402 183.073)",
+          "oklch(37.857% 0.03402 183.073)",
+          "oklch(49.286% 0.03402 183.073)",
+          "oklch(60.714% 0.03402 183.073)",
+          "oklch(72.143% 0.03402 183.073)",
+          "oklch(83.571% 0.03402 183.073)",
+          "oklch(95.000% 0.03402 183.073)"
+        ]
+      },
+      "programme-shell-muted": {
+        "role": "neutral",
+        "displayName": "programme-shell-muted",
+        "tonalRamp": [
+          "oklch(15.000% 0.02480 163.012)",
+          "oklch(26.429% 0.02480 163.012)",
+          "oklch(37.857% 0.02480 163.012)",
+          "oklch(49.286% 0.02480 163.012)",
+          "oklch(60.714% 0.02480 163.012)",
+          "oklch(72.143% 0.02480 163.012)",
+          "oklch(83.571% 0.02480 163.012)",
+          "oklch(95.000% 0.02480 163.012)"
+        ]
+      },
+      "programme-paper": {
+        "role": "neutral",
+        "displayName": "programme-paper",
+        "tonalRamp": [
+          "oklch(15.000% 0.01237 91.519)",
+          "oklch(26.429% 0.01237 91.519)",
+          "oklch(37.857% 0.01237 91.519)",
+          "oklch(49.286% 0.01237 91.519)",
+          "oklch(60.714% 0.01237 91.519)",
+          "oklch(72.143% 0.01237 91.519)",
+          "oklch(83.571% 0.01237 91.519)",
+          "oklch(95.000% 0.01237 91.519)"
+        ]
+      },
+      "programme-ink": {
+        "role": "neutral",
+        "displayName": "programme-ink",
+        "tonalRamp": [
+          "oklch(15.000% 0.04073 172.490)",
+          "oklch(26.429% 0.04073 172.490)",
+          "oklch(37.857% 0.04073 172.490)",
+          "oklch(49.286% 0.04073 172.490)",
+          "oklch(60.714% 0.04073 172.490)",
+          "oklch(72.143% 0.04073 172.490)",
+          "oklch(83.571% 0.04073 172.490)",
+          "oklch(95.000% 0.04073 172.490)"
+        ]
+      },
+      "programme-muted": {
+        "role": "neutral",
+        "displayName": "programme-muted",
+        "tonalRamp": [
+          "oklch(15.000% 0.03403 163.301)",
+          "oklch(26.429% 0.03403 163.301)",
+          "oklch(37.857% 0.03403 163.301)",
+          "oklch(49.286% 0.03403 163.301)",
+          "oklch(60.714% 0.03403 163.301)",
+          "oklch(72.143% 0.03403 163.301)",
+          "oklch(83.571% 0.03403 163.301)",
+          "oklch(95.000% 0.03403 163.301)"
+        ]
+      },
+      "programme-accent": {
+        "role": "primary",
+        "displayName": "programme-accent",
+        "tonalRamp": [
+          "oklch(15.000% 0.10477 117.612)",
+          "oklch(26.429% 0.10477 117.612)",
+          "oklch(37.857% 0.10477 117.612)",
+          "oklch(49.286% 0.10477 117.612)",
+          "oklch(60.714% 0.10477 117.612)",
+          "oklch(72.143% 0.10477 117.612)",
+          "oklch(83.571% 0.10477 117.612)",
+          "oklch(95.000% 0.10477 117.612)"
+        ]
+      },
+      "programme-action": {
+        "role": "primary",
+        "displayName": "programme-action",
+        "tonalRamp": [
+          "oklch(15.000% 0.05112 166.086)",
+          "oklch(26.429% 0.05112 166.086)",
+          "oklch(37.857% 0.05112 166.086)",
+          "oklch(49.286% 0.05112 166.086)",
+          "oklch(60.714% 0.05112 166.086)",
+          "oklch(72.143% 0.05112 166.086)",
+          "oklch(83.571% 0.05112 166.086)",
+          "oklch(95.000% 0.05112 166.086)"
+        ]
+      },
+      "programme-action-hover": {
+        "role": "primary",
+        "displayName": "programme-action-hover",
+        "tonalRamp": [
+          "oklch(15.000% 0.04807 167.140)",
+          "oklch(26.429% 0.04807 167.140)",
+          "oklch(37.857% 0.04807 167.140)",
+          "oklch(49.286% 0.04807 167.140)",
+          "oklch(60.714% 0.04807 167.140)",
+          "oklch(72.143% 0.04807 167.140)",
+          "oklch(83.571% 0.04807 167.140)",
+          "oklch(95.000% 0.04807 167.140)"
+        ]
+      },
+      "programme-tint": {
+        "role": "neutral",
+        "displayName": "programme-tint",
+        "tonalRamp": [
+          "oklch(15.000% 0.02449 119.514)",
+          "oklch(26.429% 0.02449 119.514)",
+          "oklch(37.857% 0.02449 119.514)",
+          "oklch(49.286% 0.02449 119.514)",
+          "oklch(60.714% 0.02449 119.514)",
+          "oklch(72.143% 0.02449 119.514)",
+          "oklch(83.571% 0.02449 119.514)",
+          "oklch(95.000% 0.02449 119.514)"
+        ]
+      },
+      "cinema-shell": {
+        "role": "neutral",
+        "displayName": "cinema-shell",
+        "tonalRamp": [
+          "oklch(15.000% 0.02335 241.015)",
+          "oklch(26.429% 0.02335 241.015)",
+          "oklch(37.857% 0.02335 241.015)",
+          "oklch(49.286% 0.02335 241.015)",
+          "oklch(60.714% 0.02335 241.015)",
+          "oklch(72.143% 0.02335 241.015)",
+          "oklch(83.571% 0.02335 241.015)",
+          "oklch(95.000% 0.02335 241.015)"
+        ]
+      },
+      "cinema-shell-muted": {
+        "role": "neutral",
+        "displayName": "cinema-shell-muted",
+        "tonalRamp": [
+          "oklch(15.000% 0.01656 227.014)",
+          "oklch(26.429% 0.01656 227.014)",
+          "oklch(37.857% 0.01656 227.014)",
+          "oklch(49.286% 0.01656 227.014)",
+          "oklch(60.714% 0.01656 227.014)",
+          "oklch(72.143% 0.01656 227.014)",
+          "oklch(83.571% 0.01656 227.014)",
+          "oklch(95.000% 0.01656 227.014)"
+        ]
+      },
+      "cinema-paper": {
+        "role": "neutral",
+        "displayName": "cinema-paper",
+        "tonalRamp": [
+          "oklch(15.000% 0.01315 82.402)",
+          "oklch(26.429% 0.01315 82.402)",
+          "oklch(37.857% 0.01315 82.402)",
+          "oklch(49.286% 0.01315 82.402)",
+          "oklch(60.714% 0.01315 82.402)",
+          "oklch(72.143% 0.01315 82.402)",
+          "oklch(83.571% 0.01315 82.402)",
+          "oklch(95.000% 0.01315 82.402)"
+        ]
+      },
+      "cinema-ink": {
+        "role": "neutral",
+        "displayName": "cinema-ink",
+        "tonalRamp": [
+          "oklch(15.000% 0.03010 241.259)",
+          "oklch(26.429% 0.03010 241.259)",
+          "oklch(37.857% 0.03010 241.259)",
+          "oklch(49.286% 0.03010 241.259)",
+          "oklch(60.714% 0.03010 241.259)",
+          "oklch(72.143% 0.03010 241.259)",
+          "oklch(83.571% 0.03010 241.259)",
+          "oklch(95.000% 0.03010 241.259)"
+        ]
+      },
+      "cinema-muted": {
+        "role": "neutral",
+        "displayName": "cinema-muted",
+        "tonalRamp": [
+          "oklch(15.000% 0.02220 236.095)",
+          "oklch(26.429% 0.02220 236.095)",
+          "oklch(37.857% 0.02220 236.095)",
+          "oklch(49.286% 0.02220 236.095)",
+          "oklch(60.714% 0.02220 236.095)",
+          "oklch(72.143% 0.02220 236.095)",
+          "oklch(83.571% 0.02220 236.095)",
+          "oklch(95.000% 0.02220 236.095)"
+        ]
+      },
+      "cinema-accent": {
+        "role": "primary",
+        "displayName": "cinema-accent",
+        "tonalRamp": [
+          "oklch(15.000% 0.08032 88.405)",
+          "oklch(26.429% 0.08032 88.405)",
+          "oklch(37.857% 0.08032 88.405)",
+          "oklch(49.286% 0.08032 88.405)",
+          "oklch(60.714% 0.08032 88.405)",
+          "oklch(72.143% 0.08032 88.405)",
+          "oklch(83.571% 0.08032 88.405)",
+          "oklch(95.000% 0.08032 88.405)"
+        ]
+      },
+      "cinema-action": {
+        "role": "primary",
+        "displayName": "cinema-action",
+        "tonalRamp": [
+          "oklch(15.000% 0.04982 234.846)",
+          "oklch(26.429% 0.04982 234.846)",
+          "oklch(37.857% 0.04982 234.846)",
+          "oklch(49.286% 0.04982 234.846)",
+          "oklch(60.714% 0.04982 234.846)",
+          "oklch(72.143% 0.04982 234.846)",
+          "oklch(83.571% 0.04982 234.846)",
+          "oklch(95.000% 0.04982 234.846)"
+        ]
+      },
+      "cinema-action-hover": {
+        "role": "primary",
+        "displayName": "cinema-action-hover",
+        "tonalRamp": [
+          "oklch(15.000% 0.04675 231.674)",
+          "oklch(26.429% 0.04675 231.674)",
+          "oklch(37.857% 0.04675 231.674)",
+          "oklch(49.286% 0.04675 231.674)",
+          "oklch(60.714% 0.04675 231.674)",
+          "oklch(72.143% 0.04675 231.674)",
+          "oklch(83.571% 0.04675 231.674)",
+          "oklch(95.000% 0.04675 231.674)"
+        ]
+      },
+      "cinema-tint": {
+        "role": "neutral",
+        "displayName": "cinema-tint",
+        "tonalRamp": [
+          "oklch(15.000% 0.00751 197.027)",
+          "oklch(26.429% 0.00751 197.027)",
+          "oklch(37.857% 0.00751 197.027)",
+          "oklch(49.286% 0.00751 197.027)",
+          "oklch(60.714% 0.00751 197.027)",
+          "oklch(72.143% 0.00751 197.027)",
+          "oklch(83.571% 0.00751 197.027)",
+          "oklch(95.000% 0.00751 197.027)"
+        ]
+      },
+      "collection-shell": {
+        "role": "neutral",
+        "displayName": "collection-shell",
+        "tonalRamp": [
+          "oklch(15.000% 0.03645 187.002)",
+          "oklch(26.429% 0.03645 187.002)",
+          "oklch(37.857% 0.03645 187.002)",
+          "oklch(49.286% 0.03645 187.002)",
+          "oklch(60.714% 0.03645 187.002)",
+          "oklch(72.143% 0.03645 187.002)",
+          "oklch(83.571% 0.03645 187.002)",
+          "oklch(95.000% 0.03645 187.002)"
+        ]
+      },
+      "collection-paper": {
+        "role": "neutral",
+        "displayName": "collection-paper",
+        "tonalRamp": [
+          "oklch(15.000% 0.00859 84.573)",
+          "oklch(26.429% 0.00859 84.573)",
+          "oklch(37.857% 0.00859 84.573)",
+          "oklch(49.286% 0.00859 84.573)",
+          "oklch(60.714% 0.00859 84.573)",
+          "oklch(72.143% 0.00859 84.573)",
+          "oklch(83.571% 0.00859 84.573)",
+          "oklch(95.000% 0.00859 84.573)"
+        ]
+      },
+      "collection-ink": {
+        "role": "neutral",
+        "displayName": "collection-ink",
+        "tonalRamp": [
+          "oklch(15.000% 0.03186 183.175)",
+          "oklch(26.429% 0.03186 183.175)",
+          "oklch(37.857% 0.03186 183.175)",
+          "oklch(49.286% 0.03186 183.175)",
+          "oklch(60.714% 0.03186 183.175)",
+          "oklch(72.143% 0.03186 183.175)",
+          "oklch(83.571% 0.03186 183.175)",
+          "oklch(95.000% 0.03186 183.175)"
+        ]
+      },
+      "collection-muted": {
+        "role": "neutral",
+        "displayName": "collection-muted",
+        "tonalRamp": [
+          "oklch(15.000% 0.02576 167.995)",
+          "oklch(26.429% 0.02576 167.995)",
+          "oklch(37.857% 0.02576 167.995)",
+          "oklch(49.286% 0.02576 167.995)",
+          "oklch(60.714% 0.02576 167.995)",
+          "oklch(72.143% 0.02576 167.995)",
+          "oklch(83.571% 0.02576 167.995)",
+          "oklch(95.000% 0.02576 167.995)"
+        ]
+      },
+      "collection-accent": {
+        "role": "primary",
+        "displayName": "collection-accent",
+        "tonalRamp": [
+          "oklch(15.000% 0.07008 120.862)",
+          "oklch(26.429% 0.07008 120.862)",
+          "oklch(37.857% 0.07008 120.862)",
+          "oklch(49.286% 0.07008 120.862)",
+          "oklch(60.714% 0.07008 120.862)",
+          "oklch(72.143% 0.07008 120.862)",
+          "oklch(83.571% 0.07008 120.862)",
+          "oklch(95.000% 0.07008 120.862)"
+        ]
+      },
+      "collection-action": {
+        "role": "primary",
+        "displayName": "collection-action",
+        "tonalRamp": [
+          "oklch(15.000% 0.05425 176.362)",
+          "oklch(26.429% 0.05425 176.362)",
+          "oklch(37.857% 0.05425 176.362)",
+          "oklch(49.286% 0.05425 176.362)",
+          "oklch(60.714% 0.05425 176.362)",
+          "oklch(72.143% 0.05425 176.362)",
+          "oklch(83.571% 0.05425 176.362)",
+          "oklch(95.000% 0.05425 176.362)"
+        ]
+      },
+      "collection-action-hover": {
+        "role": "primary",
+        "displayName": "collection-action-hover",
+        "tonalRamp": [
+          "oklch(15.000% 0.04962 175.466)",
+          "oklch(26.429% 0.04962 175.466)",
+          "oklch(37.857% 0.04962 175.466)",
+          "oklch(49.286% 0.04962 175.466)",
+          "oklch(60.714% 0.04962 175.466)",
+          "oklch(72.143% 0.04962 175.466)",
+          "oklch(83.571% 0.04962 175.466)",
+          "oklch(95.000% 0.04962 175.466)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Лендинг",
+        "purpose": "Заголовок лендинга Программы и Крупного плана до mobile override."
+      },
+      "question": {
+        "displayName": "Вопрос",
+        "purpose": "Один вопрос внутри светлой поверхности."
+      },
+      "result-title": {
+        "displayName": "Программа / Результат",
+        "purpose": "Название ведущего варианта."
+      },
+      "cinema-result-title": {
+        "displayName": "Крупный план / Результат",
+        "purpose": "Крупное название поверх обложки."
+      },
+      "collection-result-title": {
+        "displayName": "Медиатека / Результат",
+        "purpose": "Название ведущего варианта в открытом светлом поле."
+      },
+      "library-title": {
+        "displayName": "Библиотека",
+        "purpose": "Общий desktop-заголовок; другие варианты и responsive overrides записаны в DESIGN.md."
+      },
+      "reason": {
+        "displayName": "Причина",
+        "purpose": "Объяснение ведущего результата, максимум 57ch."
+      },
+      "meta": {
+        "displayName": "Служебный текст",
+        "purpose": "Раздел, год, метаданные."
+      },
+      "action": {
+        "displayName": "Действие",
+        "purpose": "Общая основная и вторичная кнопка."
+      }
+    },
+    "shadows": [
+      {
+        "name": "landing-mini-shelf",
+        "value": "0 16px 30px #091b16",
+        "purpose": "Обложки малой полки на лендинге Программы и Крупного плана."
+      },
+      {
+        "name": "collection-mini-shelf",
+        "value": "0 10px 22px #10282022",
+        "purpose": "Обложки малой полки Медиатеки."
+      },
+      {
+        "name": "drawer",
+        "value": "-10px 0 40px #07171222",
+        "purpose": "Боковая панель подробностей."
+      },
+      {
+        "name": "toast",
+        "value": "0 8px 32px #07171233",
+        "purpose": "Локальный toast."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Фактический --ease."
+      },
+      {
+        "name": "control",
+        "value": "background .18s var(--ease),border-color .18s var(--ease)",
+        "purpose": "Кнопки и ответы; reduced motion отключает переходы."
+      },
+      {
+        "name": "surface",
+        "value": "background-color .25s var(--ease)",
+        "purpose": "Смена фона макета; reduced motion отключает переход."
+      },
+      {
+        "name": "cover-overlay",
+        "value": "opacity .18s",
+        "purpose": "Появление Подробнее на обложке при hover/focus."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "framed",
+        "value": "1450px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "stacked",
+        "value": "960px"
+      },
+      {
+        "name": "phone",
+        "value": "650px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "programme / Основное действие",
+      "kind": "button",
+      "refersTo": "programme-button-primary",
+      "description": "Неутверждённый вариант; заполненная кнопка на светлой рабочей поверхности.",
+      "html": "<span class=\"ds-programme\"><button class=\"ds-primary\">Дальше</button></span>",
+      "css": ".ds-programme{--action:#254b3c;--action-hover:#173b2e;display:inline-block;padding:8px}.ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:12px 18px;font:550 14px/1.4 Onest,Arial,sans-serif;border:1px solid transparent;border-radius:9px;background:var(--action);color:#fffdf5;cursor:pointer;transition:background .18s cubic-bezier(.16,1,.3,1),border-color .18s cubic-bezier(.16,1,.3,1)}.ds-primary:hover:not(:disabled){background:var(--action-hover)}.ds-primary:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}.ds-primary:disabled{opacity:.45;cursor:default}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "cinema / Основное действие",
+      "kind": "button",
+      "refersTo": "cinema-button-primary",
+      "description": "Неутверждённый вариант; заполненная кнопка на светлой рабочей поверхности.",
+      "html": "<span class=\"ds-cinema\"><button class=\"ds-primary\">Дальше</button></span>",
+      "css": ".ds-cinema{--action:#345568;--action-hover:#244454;display:inline-block;padding:8px}.ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:12px 18px;font:550 14px/1.4 Onest,Arial,sans-serif;border:1px solid transparent;border-radius:9px;background:var(--action);color:#fffdf5;cursor:pointer;transition:background .18s cubic-bezier(.16,1,.3,1),border-color .18s cubic-bezier(.16,1,.3,1)}.ds-primary:hover:not(:disabled){background:var(--action-hover)}.ds-primary:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}.ds-primary:disabled{opacity:.45;cursor:default}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "collection / Основное действие",
+      "kind": "button",
+      "refersTo": "collection-button-primary",
+      "description": "Неутверждённый вариант; заполненная кнопка на светлой рабочей поверхности.",
+      "html": "<span class=\"ds-collection\"><button class=\"ds-primary\">Дальше</button></span>",
+      "css": ".ds-collection{--action:#315f54;--action-hover:#214a40;display:inline-block;padding:8px}.ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:12px 18px;font:550 14px/1.4 Onest,Arial,sans-serif;border:1px solid transparent;border-radius:9px;background:var(--action);color:#fffdf5;cursor:pointer;transition:background .18s cubic-bezier(.16,1,.3,1),border-color .18s cubic-bezier(.16,1,.3,1)}.ds-primary:hover:not(:disabled){background:var(--action-hover)}.ds-primary:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}.ds-primary:disabled{opacity:.45;cursor:default}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Programme / Вторичное действие",
+      "kind": "button",
+      "description": "Прозрачное действие с рамкой на светлой поверхности.",
+      "html": "<button class=\"ds-secondary\">На потом</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:12px 18px;font:550 14px/1.4 Onest,Arial,sans-serif;color:var(--ink,#19382f);background:transparent;border:1px solid #c7d2c0;border-radius:9px;cursor:pointer;transition:background .18s cubic-bezier(.16,1,.3,1),border-color .18s cubic-bezier(.16,1,.3,1)}.ds-secondary:hover{background:var(--tint,#e6ebd9)}.ds-secondary:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+    },
+    {
+      "name": "Programme / Ответ своими словами",
+      "kind": "input",
+      "description": "Textarea внутри светлой поверхности вопроса; настоящее поле без runtime.",
+      "html": "<label class=\"ds-answer-label\" for=\"ds-answer\">Или расскажи своими словами</label><textarea class=\"ds-textarea\" id=\"ds-answer\" rows=\"3\" placeholder=\"Например: исследовать, иногда стрелять\"></textarea>",
+      "css": ".ds-answer-label{display:block;font:550 12px Onest,Arial,sans-serif;margin:26px 0 10px;color:var(--ink,#19382f)}.ds-textarea{width:100%;min-height:95px;resize:vertical;padding:15px;border:1px solid #bdc9b6;border-radius:10px;background:#fffdf7;color:var(--ink,#19382f);font:14px/1.6 Onest,Arial,sans-serif;caret-color:var(--action,#254b3c)}.ds-textarea::placeholder{color:#687c6a;opacity:1}.ds-textarea:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}"
+    },
+    {
+      "name": "Programme / Вариант ответа",
+      "kind": "button",
+      "description": "Выбранный ответ с authored SVG; не glyph icon.",
+      "html": "<button class=\"ds-option\" aria-pressed=\"true\"><span>Исследовать мир</span><span class=\"ds-mark\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"/></svg></span></button>",
+      "css": ".ds-option{display:inline-flex;align-items:center;justify-content:space-between;gap:9px;min-height:72px;padding:20px 17px;background:#e3eacf;color:var(--ink,#19382f);border:1px solid #708b55;border-radius:10px;font:14px/1.5 Onest,Arial,sans-serif;text-align:left;cursor:pointer;transition:background .18s cubic-bezier(.16,1,.3,1),border-color .18s cubic-bezier(.16,1,.3,1)}.ds-mark{display:grid;place-items:center;flex:none;width:24px;height:24px;border:1px solid #3d603a;border-radius:50%;background:#3d603a;color:#f6f5eb}.ds-mark svg{width:14px;height:14px}.ds-option:hover{border-color:#809c69}.ds-option:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-option{transition:none}}"
+    },
+    {
+      "name": "Библиотека / Фильтр раздела",
+      "kind": "chip",
+      "description": "Активная кнопка фильтра библиотеки; не статический чип сводки.",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">Игры</button>",
+      "css": ".ds-filter{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:9px 12px;border:0;border-radius:6px;background:#244c3d;color:#fffdf2;font:12px Onest,Arial,sans-serif;cursor:pointer}.ds-filter:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}"
+    },
+    {
+      "name": "Collection / Постоянная навигация",
+      "kind": "nav",
+      "description": "Тёмная desktop-навигация невыбранной Медиатеки.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Разделы макета\"><button aria-current=\"page\">Игры</button><button>Фильмы</button><button>Сериалы</button><button>Мультфильмы</button><button class=\"ds-library\">Библиотека</button></nav>",
+      "css": ".ds-rail{display:flex;flex-direction:column;gap:7px;width:164px;padding:23px;background:#183633;color:#eaf1e4;font-family:Onest,Arial,sans-serif}.ds-rail button{display:inline-flex;align-items:center;justify-content:flex-start;gap:13px;padding:13px 11px;min-height:45px;border:0;border-radius:7px;background:transparent;color:#d3e0d2;font:12px Onest,Arial,sans-serif;text-align:left;cursor:pointer}.ds-rail button[aria-current=page]{color:#193b30;background:#dcebb7}.ds-rail button:hover{background:#34544a;color:#fff}.ds-rail button:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}.ds-rail .ds-library{margin-top:30px;border-top:1px solid #52705f;padding-top:16px}"
+    },
+    {
+      "name": "Programme / Карточка альтернативы без изображения",
+      "kind": "card",
+      "description": "Фактический fallback: название вместо недоступной обложки, видимая причина и действие.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-poster\" aria-hidden=\"true\"><span>Название</span></div><div class=\"ds-copy\"><h3>Название</h3><p class=\"ds-meta\">Игра · год</p><p class=\"ds-reason\">Причина в настоящем подборе зависит от твоего ответа.</p><button class=\"ds-card-action\">На потом</button></div></article>",
+      "css": ".ds-card{background:var(--card,#fffdf7);color:var(--ink,#19382f);border-radius:var(--radius,18px);overflow:hidden;min-width:0;font-family:Onest,Arial,sans-serif}.ds-poster{display:flex;align-items:center;justify-content:center;text-align:center;aspect-ratio:2.1;padding:20px;background:#d8dfcb;color:#294537;font-size:22px;font-weight:600;line-height:1.2;overflow-wrap:anywhere}.ds-copy{padding:18px 18px 8px}.ds-copy h3{font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.025em;margin:0}.ds-meta{font-size:12px;line-height:1.6;color:var(--muted,#587064);margin:10px 0 0}.ds-reason{font-size:12px;line-height:1.7;margin:14px 0 0}.ds-card-action{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 8px;margin-top:15px;background:transparent;color:var(--ink,#19382f);border:1px solid #c7d2c0;border-radius:9px;font:550 12px/1.4 Onest,Arial,sans-serif;cursor:pointer}.ds-card-action:hover{background:var(--tint,#e6ebd9)}.ds-card-action:focus-visible{outline:3px solid #b4ca60;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Вечерняя программа / Крупный план / Медиатека — три невыбранных направления",
+    "overview": "Это запись реализованного сравнения, а не утверждённая система TASTIQ. Источник — `src/server/public/design/style.css`, `app.js` и `index.html`. Корневые `DESIGN.md` и `.impeccable/design.json` продолжают описывать действующее приложение. Перенос одного из вариантов требует выбора владельца.\n\n«Вечерняя программа» выделяет светлую рабочую карточку в хвойной сцене. «Крупный план» отдаёт ведущую область обложке на синем тёмном поле. «Медиатека» размещает светлую рабочую область рядом с постоянной тёмной навигацией. Во всех трёх Onest, тёплые поверхности, цветные каталожные обложки и отдельные действия сохранения и знакомства.",
+    "keyCharacteristics": [
+      "Три разные композиции для одних четырёх сцен: вопрос, варианты, библиотека, лендинг.",
+      "Светлая поверхность для чтения и ввода; тёмная область задаёт окружение или навигацию.",
+      "Этапы показаны прогрессом; «Назад» и «Начать заново» остаются отдельными действиями.",
+      "Демонстрационные данные и действия отделены от данных основного сайта."
+    ],
+    "rules": [
+      {
+        "name": "The Светлая работа Rule",
+        "body": "Вопросы и библиотечные контролы остаются на светлом поле во всех трёх вариантах; большая тёмная обложка принадлежит ведущему результату «Крупного плана».",
+        "section": "colors"
+      },
+      {
+        "name": "The Отдельный прогресс Rule",
+        "body": "Четыре этапа — элементы списка с текущим `aria-current=\"step\"`, линией и SVG-галочками; навигационные кнопки по разделам и действия возврата находятся вне списка.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "**Do** сохранять различия трёх композиций, пока владелец сравнивает направления.",
+      "**Do** показывать светлую рабочую поверхность, читаемое название и fallback обложки.",
+      "**Do** отделять глобальные разделы, прогресс подбора и действия возврата.",
+      "**Do** различать сохранение на потом, выбор на вечер и знакомство с названием.",
+      "**Do** сохранять демонстрационные подписи и изоляцию состояния прототипа."
+    ],
+    "donts": [
+      "**Don't** выдавать любой из этих вариантов за выбранную систему основного сайта.",
+      "**Don't** делать этапы похожими на кликабельные вкладки.",
+      "**Don't** заменять inline SVG шрифтовыми знаками в роли иконок.",
+      "**Don't** превращать демонстрационные списки, причины и историю в утверждения о данных владельца."
+    ]
+  }
+}

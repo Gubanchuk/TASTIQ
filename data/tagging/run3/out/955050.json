@@ -1,0 +1,9 @@
+{"appid": 955050, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter game"}]},
+{"f": "combat.fast", "r": 3, "ev": [{"id": "p3", "q": "the game will award letter grades to creative combinations similar to Devil May Cry"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Bright Memory is a first-person shooter with melee elements"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "Success in combat awards experience points that can be used to augment the character's skills"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "levitating land masses which are home to ancient creatures"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p3", "q": "some areas feature puzzles that need to be solved"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p5", "q": "criticized, as was the short length"}]}
+]}

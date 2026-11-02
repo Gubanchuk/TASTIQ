@@ -1,0 +1,39 @@
+@font-face{font-family:Golos;src:url('/assets/fonts/GolosText-Variable.ttf') format('truetype');font-weight:400 900;font-display:swap}
+@font-face{font-family:Unbounded;src:url('/assets/fonts/Unbounded-Variable.ttf') format('truetype');font-weight:200 900;font-display:swap}
+.landing-conversation,.landing-conversation-library{box-sizing:border-box;margin-inline:calc(-1 * var(--gutter));font-family:Golos,Arial,sans-serif}
+.landing-conversation *,.landing-conversation-library *{box-sizing:border-box}
+.landing-conversation{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:75px;background:#f5ece2;color:#2b2b2a;padding:75px 64px 70px}
+.landing-conversation h2,.landing-conversation-library h2{font-family:Unbounded,Golos,sans-serif;font-weight:500;letter-spacing:-.035em;font-size:clamp(29px,3vw,41px);line-height:1.3;margin:0 0 27px;text-wrap:balance}
+.landing-conversation-intro>p{max-width:44ch;font-size:15px;line-height:1.9;margin:0 0 27px;color:#625448}
+.landing-action{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:46px;border-radius:5px;padding:12px 19px;color:#fff;background:#b84025;text-decoration:none;font-size:13px;font-weight:550;line-height:1.5}
+.landing-action:hover{background:#a3351e;color:#fff}
+.landing-action svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.landing-action:focus-visible,.landing-library-card:focus-visible{outline:3px solid #257eaa;outline-offset:5px}
+.landing-conversation-intro .landing-media-note{font-size:12px;line-height:1.8;margin-top:23px;color:#716052;max-width:49ch}
+.landing-turn{margin-bottom:25px;font-size:15px;line-height:1.85}
+.landing-turn>span{display:block;margin-bottom:12px;font-size:12px;font-weight:550;color:#716052}
+.landing-turn p{margin:0;padding:0 15px}
+.landing-turn-yours{margin-left:20px}
+.landing-turn-yours p{padding:18px 20px;background:#eac7ab;border-radius:8px 8px 0 8px;color:#503b2d}
+.landing-example-note{font-size:12px;color:#6d5d50;line-height:1.8;margin:25px 0 0;max-width:55ch}
+.landing-conversation-library{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:55px;align-items:start;background:#282a2c;color:#fff4e6;padding:66px 64px 70px}
+.landing-conversation-library h2{font-size:clamp(27px,2.7vw,37px)}
+.landing-library-intro>p{font-size:14px;line-height:1.9;color:#d2c3b4;max-width:43ch;margin:0 0 27px}
+.landing-action-light{background:#efc6a3;color:#4e2e1d}
+.landing-action-light:hover{background:#ffdec0;color:#4e2e1d}
+.landing-library-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.landing-library-lane{min-width:0}
+.landing-library-lane h3{font-size:12px;line-height:1.5;font-weight:500;color:#d6bda5;border-bottom:1px solid #766b60;padding-bottom:15px;margin:0 0 20px}
+.landing-library-card{display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#352b22;background:#fffaf2;border-radius:4px;padding:11px;min-width:0}
+.landing-library-card .ph{width:100%;aspect-ratio:1.3;border:0;border-radius:2px;flex:none}
+.landing-library-card .ph img{width:100%;height:100%;object-fit:cover}
+.landing-library-card>span{display:block;font-size:12px;line-height:1.6}
+.landing-library-card strong{display:block;font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.landing-library-card>span>span{display:block;color:#776655;font-size:12px;margin-top:8px}
+.landing-library-note{font-size:12px;line-height:1.8;color:#d0bba7;margin:25px 0 0}
+.landing-library-empty{font-size:13px;line-height:1.7;color:#c9b29d;margin-top:25px}
+@media(max-width:1000px){.landing-conversation{padding:55px 35px;gap:40px}.landing-conversation-library{grid-template-columns:1fr;padding:50px 35px;gap:35px}.landing-library-board{max-width:780px}.landing-library-card{flex-direction:row;gap:13px}.landing-library-card .ph{width:65px;aspect-ratio:2/3}.landing-library-card strong{font-size:12px}}
+@media(max-width:640px){.landing-conversation{grid-template-columns:1fr;padding:43px 22px 45px;gap:34px}.landing-conversation h2{font-size:29px;line-height:1.35;margin-bottom:24px}.landing-conversation-intro>p{font-size:14px;line-height:1.85}.landing-action{font-size:12px;padding:12px 16px;min-height:46px}.landing-conversation-intro .landing-media-note{font-size:12px;line-height:1.85;margin-top:23px}.landing-turn{font-size:14px}.landing-turn-yours{margin-left:15px}.landing-example-note{font-size:12px;line-height:1.85}.landing-conversation-library{padding:43px 22px;gap:33px}.landing-conversation-library h2{font-size:28px;line-height:1.35}.landing-library-intro>p{font-size:13px;line-height:1.85}.landing-library-board{display:flex;flex-direction:column;gap:25px}.landing-library-lane h3{font-size:13px;margin-bottom:13px;padding-bottom:12px}.landing-library-card{display:grid;grid-template-columns:58px minmax(0,1fr);gap:16px;padding:13px;align-items:center}.landing-library-card .ph{width:58px;aspect-ratio:2/3}.landing-library-card strong{font-size:15px;line-height:1.4}.landing-library-empty{margin:15px 0}.landing-library-note{margin-top:22px}}
+@media(prefers-reduced-motion:reduce){.landing-conversation *,.landing-conversation-library *{scroll-behavior:auto!important;transition:none!important}}
+/* The renamed header link keeps its full label at the app panel's narrow width. */
+@media(max-width:360px){#my-link{padding-inline:8px}#my-link .count{display:none!important}}

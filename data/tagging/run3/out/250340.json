@@ -1,0 +1,6 @@
+{"appid": 250340, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "players build and play using Lego-like building blocks"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p0", "q": "is a sandbox game"}, {"id": "p2", "q": "giving players the freedom to design and construct elaborate structures"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "These structures can be built in either a single-player or multiplayer server"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p3", "q": "These can range from deathmatch to full games-within-a-game"}]}
+]}

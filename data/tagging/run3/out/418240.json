@@ -1,0 +1,12 @@
+{
+  "appid": 418240,
+  "features": [
+    {"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "a stealth-oriented real-time tactics video game"}]},
+    {"f": "loop.stealth", "r": 3, "ev": [{"id": "p2", "q": "Enemy guards have a visible cone of vision which the player must evade to remain undetected"}]},
+    {"f": "characters.companions", "r": 3, "ev": [{"id": "p2", "q": "The player commands a small team"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "each hero has unique abilities"}]},
+    {"f": "difficulty.hard", "r": 2, "ev": [{"id": "p3", "q": "the most difficult mode"}]},
+    {"f": "world.historical", "r": 2, "ev": [{"id": "p6", "q": "Mugen is the only character who can efficiently kill enemy samurai"}]},
+    {"f": "progression.collection", "r": 1, "ev": [{"id": "p3", "q": "Each mission also includes a set of"}]}
+  ]
+}

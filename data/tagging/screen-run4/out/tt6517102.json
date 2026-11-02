@@ -1,0 +1,17 @@
+{"id": "tt6517102", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "an American adult animated gothic action horror television series"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "gothic action horror television series"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "s", "q": "is a dark medieval fantasy"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "s", "q": "is a dark medieval fantasy"}]},
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p3", "q": "He summons an army of demons that overruns the country"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p8", "q": "a lot of bloody action"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "follow Trevor Belmont, Alucard and Sypha Belnades"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p5", "q": "Several reviews lauded the voice cast"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "offers spectacular visuals and a compelling adaptation"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "The art style is heavily influenced by Japanese animation"}]},
+{"f": "tone.atmospheric", "r": 2, "ev": [{"id": "p12", "q": "great fight scenes, dark atmosphere, brilliant writing"}]},
+{"f": "ending.strong", "r": 2, "ev": [{"id": "p11", "q": "deliver a satisfying ending without feeling rushed"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The series ended with the release of its fourth season"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p1", "q": "the pacing, particularly in the third and fourth seasons, garnered a polarized response"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p5", "q": "Castlevania is ripe with potential, but also burdened with clichés"}]}
+]}

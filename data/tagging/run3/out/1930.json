@@ -1,0 +1,11 @@
+{"appid": 1930, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "high fantasy action role-playing game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "The player is free to explore the game world"}, {"id": "p4", "q": "the player is free to choose to complete the quests of their liking"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "the player will encounter new teleports, caves, villages"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "the path chosen will have consequences on the outcome of the game"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "does not utilize fixed character classes"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p5", "q": "combine ingredients to make potions, weapon enhancements, traps, and bombs"}]},
+{"f": "world.living", "r": 1, "ev": [{"id": "p3", "q": "Most of the non-wilderness areas are densely populated"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p7", "q": "not finished, buggy as hell"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p7", "q": "the worst ending ever"}]}
+]}

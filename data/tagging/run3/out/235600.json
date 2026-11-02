@@ -1,0 +1,13 @@
+{"appid": 235600, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p3", "q": "The gameplay emphasizes stealth"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "Players can play a more aggressive run-and-gun game"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "a group of terrorists which is trying to coerce the United States into recalling all of its troops stationed abroad"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p11", "q": "the co-operative multiplayer mode had enough content for a separate game"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "An asymmetrical multiplayer mode, it pits two teams"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p5", "q": "the upgrades improve efficiency in completing missions"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p10", "q": "the game's story is superior to those of its predecessors"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "p2", "q": "criticism was directed at its graphics, lack of challenge, and ending"}, {"id": "p10", "q": "criticized its rushed ending"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p12", "q": "it is less challenging than its predecessors"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p2", "q": "praise for its level design, story, gameplay, combat, soundtrack, and multiplayer mode"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p12", "q": "unresponsive controls in certain segments"}]}
+]}

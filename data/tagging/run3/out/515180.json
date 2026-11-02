@@ -1,0 +1,9 @@
+{"appid": 515180, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "is a bus simulator game developed by Stillalive Studios"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "a sizable map of fictional modern city Seaside Valley"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "players are able to create their own bus lines"}]},
+{"f": "freedom.open_world", "r": 1, "ev": [{"id": "p1", "q": "requires players to complete different missions to unlock new districts"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p4", "q": "He considered the game to be quite relaxing"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p3", "q": "a lack of content, multiplayer bugs, and a boring campaign"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p3", "q": "a boring campaign"}]}
+]}

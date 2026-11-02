@@ -1,0 +1,12 @@
+{"appid": 2000950, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2019 first-person shooter game developed by Infinity Ward"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p1", "q": "The game takes place in a realistic and modern setting"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "The game takes place in a realistic and modern setting"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "The game's Special Ops mode features cooperative play missions"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "pits two teams of two players against each other"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "features tactically based moral choices whereupon the player is evaluated and assigned a score"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p8", "q": "The game includes an extensive weapons customization system"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p3", "q": "received praise for its gameplay, campaign, multiplayer, and graphics"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p6", "q": "to allow for a more tactical gameplay style"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "allows for new performance enhancements such as more detailed environments and ray-tracing capabilities"}]}
+]}

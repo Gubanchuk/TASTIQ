@@ -1,0 +1,8 @@
+{"appid": 1718570, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Through Castlevania-style combat, players can complete the main quest and explore the dungeon"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "Through Castlevania-style combat, players can complete the main quest and explore the dungeon"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "fleeing from a horde of demons attacking his hometown"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "a rich worldview and comprehensive plot full of thoughtful twists"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "fantastic job of endearing you to the main character’s companions"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p3", "q": "described the beginning of the game as \"quite mundane,\""}]}
+]}

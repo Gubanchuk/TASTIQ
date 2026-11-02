@@ -1,0 +1,9 @@
+{"appid": 1281800, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "point and click puzzle video games"}, {"id": "p5", "q": "solving point and click puzzles"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p3", "q": "examines the mysteries of Rusty Lake"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p7", "q": "Multiple outlets have commented upon the series' mythos"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p7", "q": "unparalleled as far as surreal horror goes"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "a series of surrealistic escape room"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p7", "q": "centres upon its artwork and atmosphere"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "anthropomorphic godlike beings and corrupted souls"}]}
+]}

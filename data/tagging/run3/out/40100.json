@@ -1,0 +1,8 @@
+{"appid": 40100, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Military science fiction video game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "Players can also build land, air, and sea factories"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "In both the skirmish and multiplayer modes"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p4", "q": "In the heavily-scripted campaign mode"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "so does the quality of their units"}]},
+{"f": "loop.management", "r": 1, "ev": [{"id": "p5", "q": "the economy systems play a role in that"}]}
+]}

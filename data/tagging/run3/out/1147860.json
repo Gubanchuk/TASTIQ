@@ -1,0 +1,12 @@
+{"appid": 1147860, "features": [
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "Half of the games feature a two-player mode, either versus or co-op"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "Half of the games feature a two-player mode, either versus or co-op"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p4", "q": "The games belong to genres including shoot 'em up, platformer, and role-playing"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p4", "q": "The games belong to genres including shoot 'em up, platformer, and role-playing"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p4", "q": "with one (Grimstone) estimated to take upwards of 60 hours to complete fully"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p5", "q": "Each game additionally includes a unique gift"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p6", "q": "a secret storyline about the fictional game development studio UFOSoft"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "between 1982 and 1989"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p2", "q": "the hidden 51st game, Miasma Tower, accessible via inputting commands in the in-game terminal"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p11", "q": "often in abstract, potentially absurdist contexts"}]}
+]}

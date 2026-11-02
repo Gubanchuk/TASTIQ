@@ -1,0 +1,14 @@
+{"id": "tt9140560", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "It is the first television series in the Marvel Cinematic Universe"}]},
+{"f": "tone.whimsical", "r": 3, "ev": [{"id": "p6", "q": "a wonderfully weird and strikingly bold step into the small screen"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p4", "q": "love letter to the golden age of television"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "The production used era-appropriate sets, costumes, and effects"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p10", "q": "The performances of Olsen, Bettany, Hahn, and Parris were all praised by critics"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p6", "q": "part off-kilter mystery"}, {"id": "p8", "q": "make its mystery elements compelling"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p7", "q": "focus on Wanda's grief and trauma"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p8", "q": "impressively spot-on tribute to the evolution of the American sitcom"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p10", "q": "as comic relief were also appreciated"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p4", "q": "because Wanda is searching for a family after losing her loved ones"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "ran for nine episodes, concluding on March 5"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "p9", "q": "criticized its ending for setting up future MCU projects rather than resolving its own story"}, {"id": "p2", "q": "though there was criticism for the finale"}]}
+]}

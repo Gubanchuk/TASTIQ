@@ -1,0 +1,7 @@
+{"appid": 767560, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "It is a third-person shooter with real-time PvP battles"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "real-time PvP battles"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Players operate BattleTech-like robots on a live battlefield"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p2", "q": "the feeling of being part of a squad taking on another team"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p2", "q": "But needs more robots, weapons and a better reward system"}]}
+]}

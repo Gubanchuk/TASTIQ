@@ -1,0 +1,15 @@
+{"appid": 1458140, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "which the player traverses in a station wagon"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "Pacific Drive is a 2024 survival game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p4", "q": "items used for these repairs can be crafted from resources found around the world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "The map is laid out in a graph of road junctions that the player can visit with their station wagon"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "The game is set in 1998 in the Olympic Exclusion Zone"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "a world filled with dangerous, incomprehensible anomalies"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p0", "q": "the player must attempt to avoid anomalies and obstacles"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p0", "q": "The vehicle can be repaired and customized at the player's garage"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p2", "q": "criticized its repetitive and difficult gameplay"}, {"id": "p11", "q": "felt the repetitive gameplay impacting the narrative pacing"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "praising its beauty and cohesivity"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p11", "q": "the soundtrack amplified the atmosphere"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p11", "q": "lauded the stylized visuals"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p2", "q": "praised its atmosphere, characters, and vehicle design"}]}
+]}

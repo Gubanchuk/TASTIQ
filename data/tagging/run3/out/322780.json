@@ -1,0 +1,7 @@
+{"appid": 322780, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "explore the game's vast open world of floating islands"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "explore the game's vast open world of floating islands"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p0", "q": "was a massively multiplayer sandbox video game"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "free-build an airship of any size and shape to traverse the world"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p0", "q": "was discontinued on July 26, 2019"}]}
+]}

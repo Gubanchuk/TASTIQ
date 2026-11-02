@@ -1,0 +1,4142 @@
+{
+  "at": "2026-10-31T18:51:07.416Z",
+  "paidCalls": 0,
+  "cases": [
+    {
+      "id": "story",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "nodes": [
+        {
+          "path": [],
+          "qid": "lean:cognitive.high|cognitive.low",
+          "text": "Подумать или отключить голову?",
+          "leader": "steam:1113000",
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "leader": "steam:632470"
+            },
+            {
+              "value": "cognitive.low",
+              "leader": "steam:1113000"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:1113000"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            }
+          ],
+          "qid": "lean:humor.funny|tone.dark",
+          "text": "Посмеяться или что-то мрачное?",
+          "leader": "steam:632470",
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "leader": "steam:1113000"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "steam:1113000"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:632470"
+            }
+          ]
+        }
+      ],
+      "terminal": [
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:humor.funny|tone.dark"
+          ],
+          "picked": [
+            "steam:1113000",
+            "steam:578650",
+            "steam:632470",
+            "steam:330830"
+          ],
+          "eligible": 4371
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:humor.funny|tone.dark"
+          ],
+          "picked": [
+            "steam:1113000",
+            "steam:632470",
+            "steam:1466640",
+            "steam:208580"
+          ],
+          "eligible": 4371
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:humor.funny|tone.dark"
+          ],
+          "picked": [
+            "steam:632470",
+            "steam:1113000",
+            "steam:208580",
+            "steam:207610"
+          ],
+          "eligible": 4371
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low"
+          ],
+          "picked": [
+            "steam:1113000",
+            "steam:632470",
+            "steam:330830",
+            "steam:1180660"
+          ],
+          "eligible": 4371
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low"
+          ],
+          "picked": [
+            "steam:1113000",
+            "steam:632470",
+            "steam:578650",
+            "steam:1180660"
+          ],
+          "eligible": 4371
+        }
+      ]
+    },
+    {
+      "id": "coop",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "nodes": [
+        {
+          "path": [],
+          "qid": "lean:cognitive.high|cognitive.low",
+          "text": "Подумать или отключить голову?",
+          "leader": "steam:572890",
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "leader": "steam:620"
+            },
+            {
+              "value": "cognitive.low",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:572890"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            }
+          ],
+          "qid": "fact:era",
+          "text": "Свежее или можно и старое?",
+          "leader": "steam:620",
+          "outcomes": [
+            {
+              "value": "new",
+              "leader": "steam:1426210"
+            },
+            {
+              "value": "any",
+              "leader": "steam:620"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:620"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            }
+          ],
+          "qid": "guess:steam:1426210",
+          "text": "В «It Takes Two» уже играл?",
+          "leader": "steam:1426210",
+          "outcomes": [
+            {
+              "value": "no",
+              "leader": "steam:1426210"
+            },
+            {
+              "value": "like",
+              "leader": "steam:2001120"
+            },
+            {
+              "value": "dislike",
+              "leader": "steam:837470"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:1426210"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            }
+          ],
+          "qid": "guess:steam:620",
+          "text": "В «Portal 2» уже играл?",
+          "leader": "steam:620",
+          "outcomes": [
+            {
+              "value": "no",
+              "leader": "steam:620"
+            },
+            {
+              "value": "like",
+              "leader": "steam:1426210"
+            },
+            {
+              "value": "dislike",
+              "leader": "steam:1426210"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:620"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            }
+          ],
+          "qid": "guess:steam:620",
+          "text": "В «Portal 2» уже играл?",
+          "leader": "steam:620",
+          "outcomes": [
+            {
+              "value": "no",
+              "leader": "steam:620"
+            },
+            {
+              "value": "like",
+              "leader": "steam:1426210"
+            },
+            {
+              "value": "dislike",
+              "leader": "steam:1426210"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:620"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            }
+          ],
+          "qid": "lean:tension.high|tension.low",
+          "text": "Адреналин или расслабиться?",
+          "leader": "steam:572890",
+          "outcomes": [
+            {
+              "value": "tension.high",
+              "leader": "steam:620"
+            },
+            {
+              "value": "tension.low",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:572890"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            }
+          ],
+          "qid": "fact:era",
+          "text": "Свежее или можно и старое?",
+          "leader": "steam:620",
+          "outcomes": [
+            {
+              "value": "new",
+              "leader": "steam:1426210"
+            },
+            {
+              "value": "any",
+              "leader": "steam:620"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:620"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            }
+          ],
+          "qid": "lean:difficulty.hard|difficulty.forgiving",
+          "text": "Чтобы было сложно или щадяще?",
+          "leader": "steam:572890",
+          "outcomes": [
+            {
+              "value": "difficulty.hard",
+              "leader": "steam:620"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:572890"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            }
+          ],
+          "qid": "lean:difficulty.hard|difficulty.forgiving",
+          "text": "Чтобы было сложно или щадяще?",
+          "leader": "steam:572890",
+          "outcomes": [
+            {
+              "value": "difficulty.hard",
+              "leader": "steam:620"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:572890"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            }
+          ],
+          "qid": "lean:difficulty.hard|difficulty.forgiving",
+          "text": "Чтобы было сложно или щадяще?",
+          "leader": "steam:572890",
+          "outcomes": [
+            {
+              "value": "difficulty.hard",
+              "leader": "steam:620"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:572890"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.hard"
+            }
+          ],
+          "qid": "fact:era",
+          "text": "Свежее или можно и старое?",
+          "leader": "steam:620",
+          "outcomes": [
+            {
+              "value": "new",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "any",
+              "leader": "steam:620"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:620"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.forgiving"
+            }
+          ],
+          "qid": "lean:tension.high|tension.low",
+          "text": "Адреналин или расслабиться?",
+          "leader": "steam:572890",
+          "outcomes": [
+            {
+              "value": "tension.high",
+              "leader": "steam:620"
+            },
+            {
+              "value": "tension.low",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:572890"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "skip"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:572890",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:620"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:572890"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:572890"
+            }
+          ]
+        }
+      ],
+      "terminal": [
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            },
+            {
+              "qid": "guess:steam:1426210",
+              "value": "no"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:1426210"
+          ],
+          "picked": [
+            "steam:1426210",
+            "steam:837470",
+            "steam:341800",
+            "steam:620"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            },
+            {
+              "qid": "guess:steam:1426210",
+              "value": "like"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:1426210"
+          ],
+          "picked": [
+            "steam:2001120",
+            "steam:837470",
+            "steam:341800",
+            "steam:620"
+          ],
+          "eligible": 951
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            },
+            {
+              "qid": "guess:steam:1426210",
+              "value": "dislike"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:1426210"
+          ],
+          "picked": [
+            "steam:837470",
+            "steam:2001120",
+            "steam:1515210",
+            "steam:341800"
+          ],
+          "eligible": 951
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            },
+            {
+              "qid": "guess:steam:1426210",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:1426210"
+          ],
+          "picked": [
+            "steam:1426210",
+            "steam:837470",
+            "steam:341800",
+            "steam:620"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "no"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:35700",
+            "steam:837470",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "like"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:1426210",
+            "steam:837470",
+            "steam:341800",
+            "steam:572890"
+          ],
+          "eligible": 951
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "dislike"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:1426210",
+            "steam:341800",
+            "steam:837470",
+            "steam:1515210"
+          ],
+          "eligible": 951
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:35700",
+            "steam:837470",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "no"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:35700",
+            "steam:837470",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "like"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:1426210",
+            "steam:837470",
+            "steam:341800",
+            "steam:572890"
+          ],
+          "eligible": 951
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "dislike"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:1426210",
+            "steam:341800",
+            "steam:837470",
+            "steam:1515210"
+          ],
+          "eligible": 951
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            },
+            {
+              "qid": "guess:steam:620",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "fact:era",
+            "guess:steam:620"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:35700",
+            "steam:837470",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "fact:era"
+          ],
+          "picked": [
+            "steam:1426210",
+            "steam:837470",
+            "steam:1335790",
+            "steam:620"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "fact:era"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:35700",
+            "steam:837470",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "fact:era"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:35700",
+            "steam:837470",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.hard"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:837470",
+            "steam:1426210",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.forgiving"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:837470"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:837470"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.hard"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:837470",
+            "steam:1426210",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.forgiving"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:837470"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:tension.high|tension.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:837470"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.hard"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "fact:era"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:2001120",
+            "steam:341800",
+            "steam:620"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.hard"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "fact:era"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:341800",
+            "steam:837470",
+            "steam:1426210"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.hard"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "fact:era"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:341800",
+            "steam:837470",
+            "steam:1426210"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.forgiving"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "lean:tension.high|tension.low"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:35700",
+            "steam:837470",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.forgiving"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "lean:tension.high|tension.low"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:837470"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.forgiving"
+            },
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "lean:tension.high|tension.low"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:837470"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:341800",
+            "steam:35700",
+            "steam:572890"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:35700",
+            "steam:620",
+            "steam:341800"
+          ],
+          "eligible": 952
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:341800"
+          ],
+          "eligible": 952
+        }
+      ]
+    },
+    {
+      "id": "runs",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "nodes": [],
+      "terminal": [
+        {
+          "path": [],
+          "asked": [],
+          "picked": [
+            "steam:1229490",
+            "steam:1888160",
+            "steam:460950",
+            "steam:1139900"
+          ],
+          "eligible": 4378
+        }
+      ]
+    },
+    {
+      "id": "no-taste",
+      "source": "authored offline context, frozen before implementation",
+      "nodes": [
+        {
+          "path": [],
+          "qid": "lean:tension.high|tension.low",
+          "text": "Адреналин или расслабиться?",
+          "leader": "steam:413150",
+          "outcomes": [
+            {
+              "value": "tension.high",
+              "leader": "steam:550"
+            },
+            {
+              "value": "tension.low",
+              "leader": "steam:413150"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:413150"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            }
+          ],
+          "qid": "lean:humor.funny|tone.dark",
+          "text": "Посмеяться или что-то мрачное?",
+          "leader": "steam:550",
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "leader": "steam:620"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "steam:220"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:550"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:620",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:550"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:2795000"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:620"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:220",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:367520"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:1901370"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:220"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:550",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:550"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:1717770"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:550"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            }
+          ],
+          "qid": "lean:cognitive.high|cognitive.low",
+          "text": "Подумать или отключить голову?",
+          "leader": "steam:413150",
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "leader": "steam:427520"
+            },
+            {
+              "value": "cognitive.low",
+              "leader": "steam:413150"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:413150"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:427520",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:427520"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:1708150"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:427520"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            }
+          ],
+          "qid": "lean:difficulty.hard|difficulty.forgiving",
+          "text": "Чтобы было сложно или щадяще?",
+          "leader": "steam:413150",
+          "outcomes": [
+            {
+              "value": "difficulty.hard",
+              "leader": "steam:2358720"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "leader": "steam:413150"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:413150"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:413150",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:413150"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:1586800"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:413150"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            }
+          ],
+          "qid": "lean:humor.funny|tone.dark",
+          "text": "Посмеяться или что-то мрачное?",
+          "leader": "steam:413150",
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "leader": "steam:620"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "steam:220"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:413150"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:620",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:550"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:2795000"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:620"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Известная игра или что-то менее известное?",
+          "leader": "steam:220",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "steam:367520"
+            },
+            {
+              "value": "niche",
+              "leader": "steam:1171370"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:220"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "qid": "lean:cognitive.high|cognitive.low",
+          "text": "Подумать или отключить голову?",
+          "leader": "steam:413150",
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "leader": "steam:427520"
+            },
+            {
+              "value": "cognitive.low",
+              "leader": "steam:1794680"
+            },
+            {
+              "value": "skip",
+              "leader": "steam:413150"
+            }
+          ]
+        }
+      ],
+      "terminal": [
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:550",
+            "steam:1289310",
+            "steam:264710",
+            "steam:508440"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:2795000",
+            "steam:2159210",
+            "steam:1649950",
+            "steam:1717770"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:1118200",
+            "steam:3590",
+            "steam:500"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:367520",
+            "steam:500",
+            "steam:1092790",
+            "steam:264710"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:1901370",
+            "steam:394970",
+            "steam:2128270",
+            "steam:3195790"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:220",
+            "steam:2218750",
+            "steam:238320",
+            "steam:200260"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:550",
+            "steam:264710",
+            "steam:2527500",
+            "steam:341800"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:1717770",
+            "steam:1349060",
+            "steam:341800",
+            "steam:251990"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.high"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:550",
+            "steam:304430",
+            "steam:264710",
+            "steam:341800"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:427520",
+            "steam:1040200",
+            "steam:435150",
+            "steam:646570"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:1708150",
+            "steam:342560",
+            "steam:1836730",
+            "steam:1043810"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:427520",
+            "steam:1040200",
+            "steam:1708150",
+            "steam:1931770"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.hard"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:2358720",
+            "steam:588030",
+            "steam:1353230",
+            "steam:1285670"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "difficulty.forgiving"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:413150",
+            "steam:1089980",
+            "steam:1836730",
+            "steam:1574820"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            },
+            {
+              "qid": "lean:difficulty.hard|difficulty.forgiving",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "picked": [
+            "steam:413150",
+            "steam:264200",
+            "steam:1353230",
+            "steam:1708150"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:413150",
+            "steam:2379780",
+            "steam:227300",
+            "steam:990630"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:1586800",
+            "steam:1708150",
+            "steam:1836730",
+            "steam:2162800"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "tension.low"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:cognitive.high|cognitive.low",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:413150",
+            "steam:1708150",
+            "steam:990630",
+            "steam:2379780"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:550",
+            "steam:1289310",
+            "steam:433340",
+            "steam:1118200"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:2795000",
+            "steam:2159210",
+            "steam:1055540",
+            "steam:1717770"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:620",
+            "steam:1118200",
+            "steam:3590",
+            "steam:550"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:367520",
+            "steam:220",
+            "steam:1092790",
+            "steam:1336490"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:1171370",
+            "steam:1367550",
+            "steam:3195790",
+            "steam:6910"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "steam:220",
+            "steam:2218750",
+            "steam:990630",
+            "steam:200260"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.high"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "lean:cognitive.high|cognitive.low"
+          ],
+          "picked": [
+            "steam:427520",
+            "steam:435150",
+            "steam:739630",
+            "steam:646570"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "cognitive.low"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "lean:cognitive.high|cognitive.low"
+          ],
+          "picked": [
+            "steam:1794680",
+            "steam:1307580",
+            "steam:1388880",
+            "steam:274190"
+          ],
+          "eligible": 4381
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:tension.high|tension.low",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:humor.funny|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:cognitive.high|cognitive.low",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:tension.high|tension.low",
+            "lean:humor.funny|tone.dark",
+            "lean:cognitive.high|cognitive.low"
+          ],
+          "picked": [
+            "steam:413150",
+            "steam:620",
+            "steam:646570",
+            "steam:550"
+          ],
+          "eligible": 4381
+        }
+      ]
+    },
+    {
+      "id": "calm-film",
+      "source": "authored offline context, frozen before implementation",
+      "nodes": [
+        {
+          "path": [],
+          "qid": "lean:humor.funny|tone.melancholic",
+          "text": "Поржать или чтобы пробрало?",
+          "leader": "tt0103767",
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "leader": "tt0084302"
+            },
+            {
+              "value": "tone.melancholic",
+              "leader": "tt0022100"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0103767"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Что-то известное или менее известное?",
+          "leader": "tt0084302",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "tt1119646"
+            },
+            {
+              "value": "niche",
+              "leader": "tt0084302"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0084302"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            }
+          ],
+          "qid": "lean:tone.feelgood|tone.dark",
+          "text": "Тёплое или мрачное?",
+          "leader": "tt0022100",
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "leader": "tt1028532"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "tt24082438"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0022100"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Что-то известное или менее известное?",
+          "leader": "tt1028532",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "tt1028532"
+            },
+            {
+              "value": "niche",
+              "leader": "tt0088178"
+            },
+            {
+              "value": "skip",
+              "leader": "tt1028532"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Что-то известное или менее известное?",
+          "leader": "tt24082438",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "tt0050083"
+            },
+            {
+              "value": "niche",
+              "leader": "tt24082438"
+            },
+            {
+              "value": "skip",
+              "leader": "tt24082438"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Что-то известное или менее известное?",
+          "leader": "tt0022100",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "tt0780504"
+            },
+            {
+              "value": "niche",
+              "leader": "tt1094594"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0022100"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            }
+          ],
+          "qid": "fact:popularity",
+          "text": "Что-то известное или менее известное?",
+          "leader": "tt0103767",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "tt0050976"
+            },
+            {
+              "value": "niche",
+              "leader": "tt0103767"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0103767"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "qid": "lean:tone.feelgood|tone.dark",
+          "text": "Тёплое или мрачное?",
+          "leader": "tt0050976",
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "leader": "tt0093779"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "tt0117951"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0050976"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "qid": "lean:tone.feelgood|tone.dark",
+          "text": "Тёплое или мрачное?",
+          "leader": "tt0103767",
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "leader": "tt11916302"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "tt24082438"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0103767"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "qid": "lean:tone.feelgood|tone.dark",
+          "text": "Тёплое или мрачное?",
+          "leader": "tt0103767",
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "leader": "tt1028532"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "tt24082438"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0103767"
+            }
+          ]
+        }
+      ],
+      "terminal": [
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt1119646",
+            "tt0067992",
+            "tt0147800",
+            "tt1156398"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt0084302",
+            "tt0092745",
+            "tt0116481",
+            "tt0120391"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt0084302",
+            "tt0067992",
+            "tt1119646",
+            "tt0035446"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt1028532",
+            "tt0091064",
+            "tt3263904",
+            "tt0299977"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt0088178",
+            "tt3445270",
+            "tt5895028",
+            "tt0174852"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt1028532",
+            "tt5895028",
+            "tt0091064",
+            "tt0299977"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt0050083",
+            "tt24082438",
+            "tt0077651",
+            "tt0299977"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt24082438",
+            "tt0015175",
+            "tt0025929",
+            "tt0988108"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt24082438",
+            "tt0050083",
+            "tt0084503",
+            "tt0063350"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt0780504",
+            "tt1028532",
+            "tt0091064",
+            "tt0381681"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt1094594",
+            "tt0020475",
+            "tt0015175",
+            "tt0424227"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "lean:tone.feelgood|tone.dark",
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt0022100",
+            "tt1028532",
+            "tt0085809",
+            "tt0372824"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0093779",
+            "tt3263904",
+            "tt1028532",
+            "tt0147800"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0117951",
+            "tt24082438",
+            "tt1182345",
+            "tt0077651"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0050976",
+            "tt0042876",
+            "tt0118694",
+            "tt0103767"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt11916302",
+            "tt0925248",
+            "tt0033045",
+            "tt1613023"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt24082438",
+            "tt0330243",
+            "tt0056049",
+            "tt0018526"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0103767",
+            "tt0045274",
+            "tt0046478",
+            "tt0100234"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt1028532",
+            "tt0147800",
+            "tt0093779",
+            "tt0104940"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt24082438",
+            "tt0117951",
+            "tt0103767",
+            "tt0063350"
+          ],
+          "eligible": 8165
+        },
+        {
+          "path": [
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0103767",
+            "tt0042876",
+            "tt0050976",
+            "tt0118694"
+          ],
+          "eligible": 8165
+        }
+      ]
+    },
+    {
+      "id": "short-series",
+      "source": "authored offline context, frozen before implementation",
+      "nodes": [
+        {
+          "path": [],
+          "qid": "fact:popularity",
+          "text": "Что-то известное или менее известное?",
+          "leader": "tt0386676",
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "leader": "tt0386676"
+            },
+            {
+              "value": "niche",
+              "leader": "tt9002164"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0386676"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            }
+          ],
+          "qid": "lean:humor.funny|tone.melancholic",
+          "text": "Поржать или чтобы пробрало?",
+          "leader": "tt0386676",
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "leader": "tt0386676"
+            },
+            {
+              "value": "tone.melancholic",
+              "leader": "tt0268093"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0386676"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            }
+          ],
+          "qid": "fact:era",
+          "text": "Свежее или можно и старое?",
+          "leader": "tt0386676",
+          "outcomes": [
+            {
+              "value": "new",
+              "leader": "tt10986410"
+            },
+            {
+              "value": "any",
+              "leader": "tt0386676"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0386676"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            }
+          ],
+          "qid": "fact:era",
+          "text": "Свежее или можно и старое?",
+          "leader": "tt0268093",
+          "outcomes": [
+            {
+              "value": "new",
+              "leader": "tt5288312"
+            },
+            {
+              "value": "any",
+              "leader": "tt0268093"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0268093"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            }
+          ],
+          "qid": "fact:era",
+          "text": "Свежее или можно и старое?",
+          "leader": "tt0386676",
+          "outcomes": [
+            {
+              "value": "new",
+              "leader": "tt10986410"
+            },
+            {
+              "value": "any",
+              "leader": "tt0386676"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0386676"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            }
+          ],
+          "qid": "fact:era",
+          "text": "Свежее или можно и старое?",
+          "leader": "tt0386676",
+          "outcomes": [
+            {
+              "value": "new",
+              "leader": "tt10986410"
+            },
+            {
+              "value": "any",
+              "leader": "tt0386676"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0386676"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            }
+          ],
+          "qid": "lean:humor.funny|tone.melancholic",
+          "text": "Поржать или чтобы пробрало?",
+          "leader": "tt10986410",
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "leader": "tt10986410"
+            },
+            {
+              "value": "tone.melancholic",
+              "leader": "tt5288312"
+            },
+            {
+              "value": "skip",
+              "leader": "tt10986410"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            }
+          ],
+          "qid": "lean:tone.feelgood|tone.dark",
+          "text": "Тёплое или мрачное?",
+          "leader": "tt0386676",
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "leader": "tt10986410"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "tt0096548"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0386676"
+            }
+          ]
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            }
+          ],
+          "qid": "lean:tone.feelgood|tone.dark",
+          "text": "Тёплое или мрачное?",
+          "leader": "tt0386676",
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "leader": "tt10986410"
+            },
+            {
+              "value": "tone.dark",
+              "leader": "tt0096548"
+            },
+            {
+              "value": "skip",
+              "leader": "tt0386676"
+            }
+          ]
+        }
+      ],
+      "terminal": [
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt10986410",
+            "tt4288182",
+            "tt14650074",
+            "tt7908628"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt0386676",
+            "tt10986410",
+            "tt0472954",
+            "tt0108778"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt0386676",
+            "tt10986410",
+            "tt0472954",
+            "tt0108778"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt5288312",
+            "tt8317568",
+            "tt8064302",
+            "tt8068860"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt0268093",
+            "tt5288312",
+            "tt0092383",
+            "tt1178522"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt0268093",
+            "tt5288312",
+            "tt0092383",
+            "tt1178522"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt10986410",
+            "tt5687612",
+            "tt14650074",
+            "tt7221388"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt0386676",
+            "tt0108778",
+            "tt10986410",
+            "tt0472954"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "mainstream"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "lean:humor.funny|tone.melancholic",
+            "fact:era"
+          ],
+          "picked": [
+            "tt0386676",
+            "tt0108778",
+            "tt10986410",
+            "tt0472954"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "niche"
+            }
+          ],
+          "asked": [
+            "fact:popularity"
+          ],
+          "picked": [
+            "tt9002164",
+            "tt7450814",
+            "tt10530900",
+            "tt0383795"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "humor.funny"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:humor.funny|tone.melancholic"
+          ],
+          "picked": [
+            "tt10986410",
+            "tt13675832",
+            "tt14650074",
+            "tt8595766"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "tone.melancholic"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:humor.funny|tone.melancholic"
+          ],
+          "picked": [
+            "tt5288312",
+            "tt8317568",
+            "tt8068860",
+            "tt8064302"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "new"
+            },
+            {
+              "qid": "lean:humor.funny|tone.melancholic",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:humor.funny|tone.melancholic"
+          ],
+          "picked": [
+            "tt10986410",
+            "tt7450814",
+            "tt9002164",
+            "tt5687612"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt10986410",
+            "tt10638036",
+            "tt3526078",
+            "tt15677150"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0096548",
+            "tt14403178",
+            "tt0442632",
+            "tt0904208"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "any"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.feelgood"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt10986410",
+            "tt10638036",
+            "tt3526078",
+            "tt15677150"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "tone.dark"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0096548",
+            "tt14403178",
+            "tt0442632",
+            "tt0904208"
+          ],
+          "eligible": 2424
+        },
+        {
+          "path": [
+            {
+              "qid": "fact:popularity",
+              "value": "skip"
+            },
+            {
+              "qid": "fact:era",
+              "value": "skip"
+            },
+            {
+              "qid": "lean:tone.feelgood|tone.dark",
+              "value": "skip"
+            }
+          ],
+          "asked": [
+            "fact:popularity",
+            "fact:era",
+            "lean:tone.feelgood|tone.dark"
+          ],
+          "picked": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "eligible": 2424
+        }
+      ]
+    }
+  ]
+}

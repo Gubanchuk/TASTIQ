@@ -1,0 +1,6 @@
+{"id": "tt1943524", "features": [
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p0", "q": "is an American procedural drama television series"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "the ability to see connections between seemingly unrelated events"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "Fox cancelled the series after its one limited season"}]},
+{"f": "world.war", "r": 1, "ev": [{"id": "s", "q": "an Iraq war vet suffers a brain injury"}]}
+]}

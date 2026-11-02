@@ -1,0 +1,9 @@
+{"id": "tt0485301", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "British science fiction television programme Torchwood, a spin-off from the long-running show Doctor Who"}]},
+{"f": "world.dystopia", "r": 2, "ev": [{"id": "p6", "q": "World governments force anyone who would normally have died into camps"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p9", "q": "the plot was stretched thin"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p8", "q": "a repetitive feel to mid-series episodes"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p10", "q": "ended with several cliffhangers"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p10", "q": "ended with several cliffhangers"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "the fourth and final series of the British science fiction television programme"}]}
+]}

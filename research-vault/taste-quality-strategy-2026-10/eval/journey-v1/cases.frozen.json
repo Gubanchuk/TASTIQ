@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "frozenAt": "2026-10-31",
+  "basis": "Authored before inspecting any result for these journeys. Target games are not supplied as examples to the recommender. UI answers follow each intent; unexpected suitable choices are reviewed separately. These are synthetic checks, not human satisfaction labels.",
+  "cases": [
+    {
+      "id": "story",
+      "company": "solo",
+      "wish": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+      "known": [{"id":"steam:1222140","query":"Detroit","reaction":"love","reason":"история, персонажи и выбор"},{"id":"steam:319630","query":"Life is Strange","reaction":"love","reason":"история, персонажи и выбор"},{"id":"steam:1245620","query":"ELDEN RING","reaction":"dislike","reason":"сейчас не хочу сложных боёв и реакции"}],
+      "targets": [{"id":"steam:383870","name":"Firewatch"},{"id":"steam:501300","name":"What Remains of Edith Finch"},{"id":"steam:258520","name":"The Vanishing of Ethan Carter"},{"id":"steam:388880","name":"Oxenfree"}],
+      "answerPolicy": "Prefer story, characters, mystery, exploration; no reflex challenge. Sadness/tension allowed. Do not ban violence globally. Solo Windows. No full-game duration constraint.",
+      "humanFit": null
+    },
+    {
+      "id": "coop",
+      "company": "friend",
+      "wish": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+      "known": [{"id":"steam:728880","query":"Overcooked! 2","reaction":"love","reason":"кооперация и общий результат"},{"id":"steam:1225570","query":"Unravel Two","reaction":"love","reason":"совместные задачи и приключение"},{"id":"steam:548430","query":"Deep Rock Galactic","reaction":"like","reason":"помощь друг другу"}],
+      "targets": [{"id":"steam:1426210","name":"It Takes Two"},{"id":"steam:620","name":"Portal 2"},{"id":"steam:477160","name":"Human Fall Flat"},{"id":"steam:865360","name":"We Were Here Together"}],
+      "answerPolicy": "Two friends Windows; hard stop PvP; prefer cooperation, puzzles, adventure. Humour welcome but not mandatory. No unverified local/online or age restriction.",
+      "humanFit": null
+    },
+    {
+      "id": "runs",
+      "company": "solo",
+      "wish": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+      "known": [{"id":"steam:367520","query":"Hollow Knight","reaction":"love","reason":"управление и вызов"},{"id":"steam:782330","query":"DOOM Eternal","reaction":"love","reason":"динамичные бои"},{"id":"steam:1794680","query":"Vampire Survivors","reaction":"like","reason":"повторные забеги и разные сборки"}],
+      "targets": [{"id":"steam:1145360","name":"Hades"},{"id":"steam:588650","name":"Dead Cells"},{"id":"steam:311690","name":"Enter the Gungeon"},{"id":"steam:692890","name":"Roboquest"}],
+      "answerPolicy": "Solo Windows; prefer challenge, action, mastery and replayability; no violence/horror hard bans. Avoid slow start and long dialogue only, not all narrative.",
+      "humanFit": null
+    }
+  ]
+}

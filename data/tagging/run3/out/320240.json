@@ -1,0 +1,12 @@
+{"appid": 320240, "features": [
+{"f": "tone.dark", "r": 3, "ev": [{"id": "p1", "q": "a crumbling dystopia on the verge of societal collapse"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p9", "q": "make these weirdos even creepier"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "retro-futuristic version of the mid-1960s, following an alternative version of World War II"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p5", "q": "Food is used to maintain nourishment or thirst"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p7", "q": "use stealth to sneak around the town and hide from pursuers"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p5", "q": "the player can collect melee weapons, items, food, and wealth"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "skill points which the player can allocate among a skill tree"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "The developers focused on creating a story with strong narratives"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "designing in-game decisions that are of moral gray areas and weight"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p9", "q": "The audio was received positively, with the voice-acting being singled out for praise"}]}
+]}

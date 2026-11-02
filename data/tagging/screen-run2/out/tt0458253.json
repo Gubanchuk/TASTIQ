@@ -1,0 +1,8 @@
+{"id": "tt0458253", "features": [
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p0", "q": "is an American police procedural television series starring Kyra Sedgwick"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "s", "q": "a special unit of the LAPD that handles sensitive, high-profile murder cases"}]},
+{"f": "characters.female_lead", "r": 2, "ev": [{"id": "s", "q": "Johnson manages to convert even her strongest adversaries"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "Kyra Sedgwick had made history as being the only actress in the history of television"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "her unique ability to get to the truth"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "The series ran on TNT from June 13, 2005, to August 13, 2012"}]}
+]}

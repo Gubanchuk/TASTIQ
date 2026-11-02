@@ -1,0 +1,133 @@
+{
+ "appid": 274190,
+ "features": [
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Unleash scores of unique weapons and set off incredible chain reactions of fire, napalm, and limbs"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235810724",
+     "q": "He tears enemies apart with melee attacks"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236155042",
+     "q": "Play this with your friends instead"
+    },
+    {
+     "id": "r237750908",
+     "q": "One of the best games I played for couch coop"
+    }
+   ]
+  },
+  {
+   "f": "social.solo",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238079580",
+     "q": "solo gameplay is still amazing nonetheless"
+    }
+   ]
+  },
+  {
+   "f": "social.pvp",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "face each other in several bombastic competitive modes"
+    }
+   ]
+  },
+  {
+   "f": "humor.funny",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r238079580",
+     "q": "It is hilarious, the satire is genius"
+    },
+    {
+     "id": "r237750908",
+     "q": "we laughed non stop for hours"
+    }
+   ]
+  },
+  {
+   "f": "tone.lighthearted",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238002928",
+     "q": "full of humour and simple fun gameplay"
+    }
+   ]
+  },
+  {
+   "f": "content.gore",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238052824",
+     "q": "Awesome game with blood and guts everywhere"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.low",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238052824",
+     "q": "easy to get to know"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235810724",
+     "q": "A huge part of the fun is discovering how each one completely re-contextualizes the way you play"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236155042",
+     "q": "it's also deceptively difficult"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236937414",
+     "q": "the loose controls are not ideal for an action platformer"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{"appid": 1157390, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a tactical role playing video game"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p1", "q": "Three more knights from a roster of twelve can accompany Mordred"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "It is a dark fantasy retelling of Arthurian legend"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p5", "q": "the grimdark atmosphere can make the game feel oppressive"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Knights can be upgraded through skill trees"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p5", "q": "the battles eventually became repetitive and felt like filler"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p5", "q": "felt like filler"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p5", "q": "a sumptuous story, and luscious visuals"}]}
+]}

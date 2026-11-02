@@ -1,0 +1,13 @@
+{
+  "appid": 1544020,
+  "features": [
+    {"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "a 2022 survival horror game"}]},
+    {"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "He is subsequently forced to fight for survival"}]},
+    {"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "as well as a melee system to dodge enemy attacks"}]},
+    {"f": "loop.shooting", "r": 1, "ev": [{"id": "p3", "q": "Jacob can use weapons to combat enemies"}]},
+    {"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "a starship captain who survives a crash landing on the Jovian moon Callisto"}]},
+    {"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "players assume the role of Jacob Lee from a third-person perspective"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "gradually learns the dark secrets of his captors"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Gameplay has players exploring a series of levels"}]}
+  ]
+}

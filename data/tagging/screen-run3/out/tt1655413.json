@@ -1,0 +1,7 @@
+{"id": "tt1655413", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2012 French adult animated musical comedy film"}]},
+{"f": "audience.adult", "r": 2, "ev": [{"id": "p0", "q": "is a 2012 French adult animated musical comedy film"}]},
+{"f": "world.music", "r": 2, "ev": [{"id": "p0", "q": "is a 2012 French adult animated musical comedy film"}]},
+{"f": "content.disturbing", "r": 2, "ev": [{"id": "p1", "q": "a shop that sells suicide adjuncts"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p1", "q": "in a dilapidated, near-future city"}]}
+]}

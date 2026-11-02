@@ -1,0 +1,584 @@
+{
+  "version": 1,
+  "snapshot": {
+    "state": {
+      "version": 1,
+      "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa",
+      "revision": 8,
+      "mode": "guided",
+      "phase": "review",
+      "context": {
+        "platform": "windows",
+        "company": "group",
+        "partySize": "3"
+      },
+      "turns": [
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "question": {
+            "id": "direction",
+            "title": "Во что тянет сегодня?",
+            "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+            "options": [
+              {
+                "id": "rpg",
+                "label": "RPG"
+              },
+              {
+                "id": "action",
+                "label": "Экшен"
+              },
+              {
+                "id": "shooter",
+                "label": "Шутер",
+                "feature": "loop.shooting"
+              },
+              {
+                "id": "strategy",
+                "label": "Стратегия"
+              },
+              {
+                "id": "simulation",
+                "label": "Симулятор"
+              },
+              {
+                "id": "racing",
+                "label": "Гонки",
+                "feature": "loop.driving"
+              },
+              {
+                "id": "puzzle",
+                "label": "Головоломки",
+                "feature": "loop.puzzles"
+              },
+              {
+                "id": "adventure",
+                "label": "Приключения"
+              },
+              {
+                "id": "survival",
+                "label": "Выживание",
+                "feature": "loop.survival"
+              },
+              {
+                "id": "horror",
+                "label": "Хоррор",
+                "feature": "tone.creepy"
+              },
+              {
+                "id": "open_world",
+                "label": "Открытый мир",
+                "feature": "freedom.open_world"
+              },
+              {
+                "id": "sandbox",
+                "label": "Песочница",
+                "feature": "freedom.sandbox"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [
+            {
+              "id": "survival",
+              "label": "Выживание"
+            }
+          ],
+          "text": "Хотим втроём строить базу и исследовать, без соревновательного PvP и постоянного наказания за ошибки.",
+          "kind": "answer",
+          "answer": "Выживание; Хотим втроём строить базу и исследовать, без соревновательного PvP и постоянного наказания за ошибки."
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:2",
+          "question": {
+            "id": "platform",
+            "title": "Где будешь играть?",
+            "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+            "options": [
+              {
+                "id": "windows",
+                "label": "ПК (Windows)"
+              },
+              {
+                "id": "mac",
+                "label": "Mac"
+              },
+              {
+                "id": "linux",
+                "label": "Linux"
+              },
+              {
+                "id": "deck",
+                "label": "Steam Deck"
+              }
+            ],
+            "multiple": false,
+            "controls": [],
+            "allowText": false
+          },
+          "selected": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            }
+          ],
+          "text": "",
+          "kind": "answer",
+          "answer": "ПК (Windows)"
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:3",
+          "question": {
+            "id": "company",
+            "title": "Будешь играть один или вместе с кем-то?",
+            "why": "Это поможет проверить доступные режимы.",
+            "options": [
+              {
+                "id": "solo",
+                "label": "Один"
+              },
+              {
+                "id": "friend",
+                "label": "Вдвоём, в кооперативе"
+              },
+              {
+                "id": "group",
+                "label": "Компанией"
+              }
+            ],
+            "multiple": false,
+            "controls": [],
+            "allowText": false
+          },
+          "selected": [
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "text": "",
+          "kind": "answer",
+          "answer": "Компанией"
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:4",
+          "question": {
+            "id": "party",
+            "title": "Сколько вас будет?",
+            "why": "Если вместимость не подтверждена, я отмечу это в результате.",
+            "options": [
+              {
+                "id": "2",
+                "label": "Двое"
+              },
+              {
+                "id": "3",
+                "label": "Трое"
+              },
+              {
+                "id": "4",
+                "label": "Четверо"
+              },
+              {
+                "id": "5+",
+                "label": "Пять и больше"
+              }
+            ],
+            "multiple": false,
+            "controls": [],
+            "allowText": false
+          },
+          "selected": [
+            {
+              "id": "3",
+              "label": "Трое"
+            }
+          ],
+          "text": "",
+          "kind": "answer",
+          "answer": "Трое"
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "question": {
+            "id": "extra",
+            "title": "Что ещё важно для этого выбора?",
+            "why": "Добавь то, чего не хватает в моём понимании. Я учту это и уточню дальше, если нужно.",
+            "options": [],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Главное — общее место, которое постепенно обустраиваем, и вылазки за открытиями. Бои можно, если можно снизить сложность. Не хочется каждый раз терять часы прогресса после смерти. Крафт и сбор ресурсов допустимы. Трое онлайн с разных компьютеров.",
+          "kind": "answer",
+          "answer": "Главное — общее место, которое постепенно обустраиваем, и вылазки за открытиями. Бои можно, если можно снизить сложность. Не хочется каждый раз терять часы прогресса после смерти. Крафт и сбор ресурсов допустимы. Трое онлайн с разных компьютеров."
+        }
+      ],
+      "facts": [
+        {
+          "key": "direction:survival",
+          "text": "Хочется выживания.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "Выживание",
+          "feature": "loop.survival",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "goal:building",
+          "text": "Главное — общая база, которую постепенно обустраиваете.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Главное — общее место, которое постепенно обустраиваем",
+          "feature": "loop.building",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "goal:exploration",
+          "text": "Хочется вылазок ради открытий.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "и вылазки за открытиями.",
+          "feature": "loop.exploration",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "mode:coop",
+          "text": "Нужна совместная игра.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "Хотим втроём строить базу и исследовать",
+          "feature": "social.coop",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "mode:no_competitive_pvp",
+          "text": "Без соревновательного PvP; необязательный PvP сам по себе не исключён.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "без соревновательного PvP",
+          "feature": "social.pvp",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "difficulty:no_constant_punishment",
+          "text": "Не хочется постоянного наказания за ошибки; это не исключает любую сложность.",
+          "stance": "avoid",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "без соревновательного PvP и постоянного наказания за ошибки",
+          "feature": "difficulty.hard",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "platform:windows",
+          "text": "Играть будете на ПК с Windows.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:2",
+          "quote": "ПК (Windows)",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "party:size",
+          "text": "Нужна возможность играть втроём.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:4",
+          "quote": "Трое",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "mode:online",
+          "text": "Нужна игра онлайн с разных компьютеров.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Трое онлайн с разных компьютеров.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "combat:adjustable",
+          "text": "Бои допустимы, если можно снизить сложность.",
+          "stance": "conditional",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Бои можно, если можно снизить сложность.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "death:progress_loss",
+          "text": "Не хочется регулярно терять часы прогресса после смерти.",
+          "stance": "avoid",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Не хочется каждый раз терять часы прогресса после смерти.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "crafting:acceptable",
+          "text": "Крафт и сбор ресурсов допустимы, но не названы самостоятельной целью.",
+          "stance": "conditional",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Крафт и сбор ресурсов допустимы.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        }
+      ],
+      "question": null,
+      "summary": "Ты ищешь выживание для троих онлайн на ПК с Windows: главное — общая база, которую постепенно обустраиваете, и вылазки ради открытий. Без соревновательного PvP и постоянного наказания за ошибки, особенно потери часов прогресса после смерти. Бои допустимы, если сложность можно снизить; крафт и сбор ресурсов тоже подходят.",
+      "uncertainties": [],
+      "retractions": [],
+      "result": null,
+      "provisional": false,
+      "needsPlan": false,
+      "feedbackState": null,
+      "failedAction": null
+    },
+    "screen": {
+      "summary": "Ты ищешь выживание для троих онлайн на ПК с Windows: главное — общая база, которую постепенно обустраиваете, и вылазки ради открытий. Без соревновательного PvP и постоянного наказания за ошибки, особенно потери часов прогресса после смерти. Бои допустимы, если сложность можно снизить; крафт и сбор ресурсов тоже подходят.",
+      "facts": [
+        {
+          "key": "direction:survival",
+          "text": "Хочется выживания.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "Выживание",
+          "feature": "loop.survival",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "goal:building",
+          "text": "Главное — общая база, которую постепенно обустраиваете.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Главное — общее место, которое постепенно обустраиваем",
+          "feature": "loop.building",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "goal:exploration",
+          "text": "Хочется вылазок ради открытий.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "и вылазки за открытиями.",
+          "feature": "loop.exploration",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "mode:coop",
+          "text": "Нужна совместная игра.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "Хотим втроём строить базу и исследовать",
+          "feature": "social.coop",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "mode:no_competitive_pvp",
+          "text": "Без соревновательного PvP; необязательный PvP сам по себе не исключён.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "без соревновательного PvP",
+          "feature": "social.pvp",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "difficulty:no_constant_punishment",
+          "text": "Не хочется постоянного наказания за ошибки; это не исключает любую сложность.",
+          "stance": "avoid",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "quote": "без соревновательного PvP и постоянного наказания за ошибки",
+          "feature": "difficulty.hard",
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "platform:windows",
+          "text": "Играть будете на ПК с Windows.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:2",
+          "quote": "ПК (Windows)",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "party:size",
+          "text": "Нужна возможность играть втроём.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:4",
+          "quote": "Трое",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "mode:online",
+          "text": "Нужна игра онлайн с разных компьютеров.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Трое онлайн с разных компьютеров.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "combat:adjustable",
+          "text": "Бои допустимы, если можно снизить сложность.",
+          "stance": "conditional",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Бои можно, если можно снизить сложность.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "death:progress_loss",
+          "text": "Не хочется регулярно терять часы прогресса после смерти.",
+          "stance": "avoid",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Не хочется каждый раз терять часы прогресса после смерти.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        },
+        {
+          "key": "crafting:acceptable",
+          "text": "Крафт и сбор ресурсов допустимы, но не названы самостоятельной целью.",
+          "stance": "conditional",
+          "scope": "today",
+          "sourceId": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "quote": "Крафт и сбор ресурсов допустимы.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null
+        }
+      ],
+      "uncertainties": [],
+      "context": {
+        "platform": "windows",
+        "company": "group",
+        "partySize": "3"
+      },
+      "canBack": true,
+      "provisional": false,
+      "turns": [
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:1",
+          "question": "Во что тянет сегодня?",
+          "answer": "Выживание; Хотим втроём строить базу и исследовать, без соревновательного PvP и постоянного наказания за ошибки."
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:2",
+          "question": "Где будешь играть?",
+          "answer": "ПК (Windows)"
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:3",
+          "question": "Будешь играть один или вместе с кем-то?",
+          "answer": "Компанией"
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:4",
+          "question": "Сколько вас будет?",
+          "answer": "Трое"
+        },
+        {
+          "id": "d1585cdf-f858-47ba-bb94-703d36b5a1aa:8",
+          "question": "Что ещё важно для этого выбора?",
+          "answer": "Главное — общее место, которое постепенно обустраиваем, и вылазки за открытиями. Бои можно, если можно снизить сложность. Не хочется каждый раз терять часы прогресса после смерти. Крафт и сбор ресурсов допустимы. Трое онлайн с разных компьютеров."
+        }
+      ],
+      "type": "review"
+    }
+  },
+  "drafts": {
+    "direction": {
+      "text": "Хотим втроём строить базу и исследовать, без соревновательного PvP и постоянного наказания за ошибки.",
+      "selected": [
+        "survival"
+      ],
+      "kind": "answer"
+    },
+    "platform": {
+      "text": "",
+      "selected": [
+        "windows"
+      ],
+      "kind": "answer"
+    },
+    "company": {
+      "text": "",
+      "selected": [
+        "group"
+      ],
+      "kind": "answer"
+    },
+    "party": {
+      "text": "",
+      "selected": [
+        "3"
+      ],
+      "kind": "answer"
+    },
+    "experience": {
+      "text": "",
+      "selected": [],
+      "kind": "answer"
+    },
+    "extra": {
+      "text": "Главное — общее место, которое постепенно обустраиваем, и вылазки за открытиями. Бои можно, если можно снизить сложность. Не хочется каждый раз терять часы прогресса после смерти. Крафт и сбор ресурсов допустимы. Трое онлайн с разных компьютеров.",
+      "selected": [],
+      "kind": "answer"
+    }
+  }
+}

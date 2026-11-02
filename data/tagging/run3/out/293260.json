@@ -1,0 +1,9 @@
+{"appid": 293260, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "combines elements of a digital collectible card game"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p5", "q": "these actions take into account the layout of the gameboard"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "there is a player-vs-player mode"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p6", "q": "included co-operative play with either two or three players"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p3", "q": "The player generates a party of up to three characters"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Each character has a deck of 36 cards which are determined by class, race, and their current equipment"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "using dungeon modules similar to those of Dungeons & Dragons"}]}
+]}

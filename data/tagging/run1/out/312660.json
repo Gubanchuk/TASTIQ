@@ -1,0 +1,135 @@
+{
+ "appid": 312660,
+ "features": [
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built"
+    }
+   ]
+  },
+  {
+   "f": "loop.stealth",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235893022",
+     "q": "the stealth and tactics make each mission exciting"
+    }
+   ]
+  },
+  {
+   "f": "loop.tactics",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Experience tactical third-person combat"
+    }
+   ]
+  },
+  {
+   "f": "world.historical",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236417601",
+     "q": "Set during World War II, Sniper Elite 4 puts players behind enemy lines in 1943 Italy"
+    }
+   ]
+  },
+  {
+   "f": "freedom.open_world",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236417601",
+     "q": "With large open levels"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236802781",
+     "q": "you can play the whole game in coop and have a great time with a friend"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.forgiving",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236171438",
+     "q": "maybe too easy sometimes on Normal Mode"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236707162",
+     "q": "Паркур чуть топорный, иной раз прыгнешь не туда, куда хочешь"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235893022",
+     "q": "atmospheric locations"
+    }
+   ]
+  },
+  {
+   "f": "story.minimal",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237401920",
+     "q": "Сюжет тут не особо прям вау, он тут есть для галочки"
+    }
+   ]
+  },
+  {
+   "f": "length.long",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Encounter hours of gripping gameplay in huge campaign levels"
+    }
+   ]
+  },
+  {
+   "f": "loop.looting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238128487",
+     "q": "You find weapons and ammo"
+    }
+   ]
+  },
+  {
+   "f": "characters.lone_hero",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238128487",
+     "q": "You are a lone gunman"
+    }
+   ]
+  }
+ ]
+}

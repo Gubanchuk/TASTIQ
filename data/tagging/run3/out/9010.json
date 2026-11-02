@@ -1,0 +1,9 @@
+{"appid": 9010, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2001 first-person shooter game developed by Gray Matter Studios"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p6", "q": "matching those used by each side in World War II"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p2", "q": "fights enemies including Nazi soldiers, undead, and experimental mutants"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "Stealth missions require players to sneak and take cover through levels"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p10", "q": "The game's multiplayer mode was considered by many to be a highlight"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p8", "q": "creepy atmosphere, nice environmental detail and excellent architecture"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "Many critics praised the game's graphics"}]}
+]}

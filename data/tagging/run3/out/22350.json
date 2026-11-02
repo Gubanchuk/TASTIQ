@@ -1,0 +1,12 @@
+{"appid": 22350, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2011 first-person shooter video game"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p1", "q": "Brink is a first-person shooter with a strong focus on parkour-style movement"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "players can play cooperatively or competitively"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p1", "q": "players can play cooperatively or competitively"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p6", "q": "is concerned primarily with building, repairing, and upgrading things"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p9", "q": "a unique, exciting art style"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p13", "q": "a combination of good looks, heavy customization"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p0", "q": "a floating city above the waters of a flooded Earth"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p10", "q": "The game was also criticized for being incomplete or unpolished"}, {"id": "p11", "q": "Brink is unfinished"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "Flat combat and a lack of variety"}]}
+]}

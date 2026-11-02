@@ -1,0 +1,11 @@
+{"appid": 1127400, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "construction and maintenance of defensive and offensive structures"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p0", "q": "real-time strategy, factory management, and tower defense game"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "a free and open-source real-time strategy"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p4", "q": "Apart from the campaign, there is an editor and sandbox mode"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p4", "q": "The primary single-player game mode is the campaign"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p8", "q": "the resource management aspects of the game can be complicated"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p5", "q": "there are cooperative servers (in which all players share a team and attempt to defeat computer-controlled enemies)"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p5", "q": "team and free-for-all PvP servers"}]},
+{"f": "length.long", "r": 1, "ev": [{"id": "p7", "q": "can keep you entertained for a long time"}]}
+]}

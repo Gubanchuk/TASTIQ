@@ -1,0 +1,6 @@
+{"id": "tt0460619", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American television sitcom created by Louis C.K."}]},
+{"f": "content.profanity", "r": 2, "ev": [{"id": "p1", "q": "the series uses considerable adult language"}]},
+{"f": "tone.gritty", "r": 1, "ev": [{"id": "p1", "q": "the show depicts the life of an average working class family"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "before canceling the show in September 2006"}]}
+]}

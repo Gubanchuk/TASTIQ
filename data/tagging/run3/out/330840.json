@@ -1,0 +1,9 @@
+{"appid": 330840, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "player choices and actions influence later events"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p8", "q": "praising the narrative, choice driven gameplay, and faithfulness to the source material"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p3", "q": "initiating conversation trees with non-player characters"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "episodic point-and-click graphic adventure fantasy drama video game"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p7", "q": "with decisions made by one character affecting the others"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p4", "q": "the presence and behavior of the non-player characters in later scenes is affected by the choices"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p5", "q": "requiring the player to respond to a series of quick time events"}]}
+]}

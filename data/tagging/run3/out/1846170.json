@@ -1,0 +1,11 @@
+{"appid": 1846170, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2022 submarine simulation horror game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "explores an ocean of blood on a desolate moon"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p3", "q": "pilots a midget submarine"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p6", "q": "The player navigates the Iron Lung through treacherous and narrow caves and trenches"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "scripted decreases in oxygen"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p6", "q": "The photographs reveal increasingly unusual features"}]},
+{"f": "ending.bittersweet", "r": 2, "ev": [{"id": "p7", "q": "meaning their mission was ultimately in vain"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p5", "q": "In a future where humanity has colonized space"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "exceptional sound design"}]}
+]}

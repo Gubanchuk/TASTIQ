@@ -1,0 +1,10 @@
+{
+  "appid": 1244460,
+  "features": [
+    {"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "a construction and management simulation video game"}]},
+    {"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "Players need to build enclosures, aviaries and lagoons"}]},
+    {"f": "world.living", "r": 1, "ev": [{"id": "p1", "q": "The game features a dynamic territory system"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p5", "q": "still boasts the most gorgeous dinosaurs ever made in a game"}]},
+    {"f": "cognitive.high", "r": 1, "ev": [{"id": "p1", "q": "that must be met to keep them healthy and satisfied"}]}
+  ]
+}

@@ -1,0 +1,9 @@
+{"appid": 857980, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "a science-fiction first-person shooter and roguelike video game"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "a science-fiction first-person shooter and roguelike video game"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p0", "q": "boarding and salvaging materials from spaceships"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p0", "q": "praised its comic-book art style, dark humor, and gameplay"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p0", "q": "praised its comic-book art style"}, {"id": "p4", "q": "its comic-book aesthetics"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "surviving in the dangerous Sargasso Nebula"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p4", "q": "it was \"repetitive\" with a \"weak story\""}]}
+]}

@@ -1,0 +1,7 @@
+{"id": "tt3560060", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is an American police procedural drama television series"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p0", "q": "is an American police procedural drama television series"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p1", "q": "settling for a slightly modernized twist on the same typical crimefighting scenarios"}]},
+{"f": "characters.acting", "r": 1, "ev": [{"id": "p1", "q": "While stocked with impressive talent"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "CBS canceled the series after two seasons"}]}
+]}

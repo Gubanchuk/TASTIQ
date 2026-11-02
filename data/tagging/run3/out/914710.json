@@ -1,0 +1,9 @@
+{"appid": 914710, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "melee armaments that allow for attacking enemies at close range"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p1", "q": "magic weapons that permit the wielder to fire off ranged attacks"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "In cooperative multiplayer, a second player can take control of either the cat or the dog"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p1", "q": "as they work together to reclaim their kingdoms from tyranny"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p4", "q": "praised the combat and story"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "a legendary weapon called the Kingsblade"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p4", "q": "considered the design of dungeons to be repetitive"}]}
+]}

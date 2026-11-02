@@ -1,0 +1,8 @@
+{"appid": 835960, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is a puzzle-adventure video game"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p7", "q": "its exploration of philosophy themes and its story"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p7", "q": "thoughtful, heartfelt, and deeply moving"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "the player must complete 8 different puzzles in each of the 12 main areas"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "a satisfying and beautiful puzzle game"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p5", "q": "referred to as the first companions"}]}
+]}

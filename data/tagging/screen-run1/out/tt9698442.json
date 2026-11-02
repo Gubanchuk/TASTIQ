@@ -1,0 +1,9 @@
+{"id": "tt9698442", "features": [
+{"f": "tension.high", "r": 3, "ev": [{"id": "p0", "q": "is a British psychological thriller television series"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "becomes a dark tale of suspense and twisted revelations"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "becomes a dark tale of suspense and twisted revelations"}]},
+{"f": "story.twist", "r": 2, "ev": [{"id": "p2", "q": "many twists may be unexpected"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p2", "q": "limited character development also leaves them feeling unearned"}, {"id": "p3", "q": "flits from the bland to the bizarre without being particularly convincing or compelling"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p3", "q": "can't make up for the yawning lulls"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p3", "q": "new erotic thriller"}]}
+]}

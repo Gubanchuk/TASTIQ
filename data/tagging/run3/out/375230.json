@@ -1,0 +1,6 @@
+{"appid": 375230, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "online third-person shooter video game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "The game is a player versus player online multiplayer action shooter"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "science fiction online third-person shooter video game"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p4", "q": "Each race has its own variety of classes"}]}
+]}

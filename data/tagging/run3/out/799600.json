@@ -1,0 +1,11 @@
+{"appid": 799600, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is an upcoming space sandbox video game"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p2", "q": "As a sandbox game, progression is freeform"}, {"id": "p1", "q": "where players design and build fleets of spaceships"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "Players design and build fleets of spaceships"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p3", "q": "described the crew management as interesting"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "The game supports a PvE mode in single-player or cooperative multiplayer"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p0", "q": "and a competitive PvP mode"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "Ships must be crewed and ship systems must be supplied with resources by those crew"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "the ability for players to design their own ships"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p3", "q": "while commenting that the game lacked variety"}]}
+]}

@@ -1,0 +1,10 @@
+{"appid": 1229380, "features": [
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "a living wooden doll"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "driven to insanity by countless years of boredom"}, {"id": "p11", "q": "darker secrets underneath"}]},
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "p9", "q": "praised the music in the game"}, {"id": "p9", "q": "found the game's musical score to be one of its highlights"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "The player must choose between killing them or leaving them"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p11", "q": "some mysteries in Everhood remain up for interpretation"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p10", "q": "praised the game's rhythm-based combat and humor"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p3", "q": "a diverse cast of characters"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p11", "q": "finding the game fairly short"}]}
+]}

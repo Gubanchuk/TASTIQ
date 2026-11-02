@@ -1,0 +1,11 @@
+{"appid": 948740, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p0", "q": "is a 2019 visual novel adventure video game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p5", "q": "solving puzzles to extract information"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "investigating Tokyo and exploring dream worlds"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "investigates a string of serial killings by entering suspects' memories"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p3", "q": "leading to multiple endings depending on choices the player makes"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "Set in near-future Tokyo"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "praise for its story, art direction, and characters"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p2", "q": "praise for its story, art direction, and characters"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p8", "q": "The art and character designs received approval as well"}]}
+]}

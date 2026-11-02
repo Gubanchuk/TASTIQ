@@ -1,0 +1,6 @@
+{"appid": 104900, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "Each iteration of Orion: Prelude is a first-person shooter with online cooperative multiplayer"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "armed players work together to defend generators against dinosaurs"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p7", "q": "for a rapid-fire, pick-up-and-play time-waster"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p3", "q": "Money, earned by killing the dinosaurs, could be used to buy upgrades"}]}
+]}

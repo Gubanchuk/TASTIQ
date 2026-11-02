@@ -1,0 +1,6 @@
+{"appid": 219890, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is a first-person puzzle-platform game"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p0", "q": "is a first-person puzzle-platform game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "the player controls the unnamed protagonist from a first-person perspective as they wander through levels"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "structures that seem otherwise impossible within normal three-dimensional space"}]}
+]}

@@ -1,0 +1,8 @@
+{"appid": 389430, "features": [
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "Knight Online enables players to group together and complete objectives"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "the monster leaves behind a loot box which may contain"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "collect experience points to gain levels and items that boost the stats of the character"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Knight Online has five character classes available for both nations"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "the four ork races that inhabit the world"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p2", "q": "can be attacked using melee attacks or skills"}]}
+]}

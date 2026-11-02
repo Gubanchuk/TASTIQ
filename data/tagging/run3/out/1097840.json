@@ -1,0 +1,8 @@
+{"appid": 1097840, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "Similar to its predecessor, the game is a third-person shooter"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p3", "q": "the game supports three-player local split screen or online cooperative gameplay"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p8", "q": "heavy-hitting multiplayer lineup of Versus, Versus Arcade, Horde"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "several hub worlds, which can be explored freely on foot or using a vehicle named the Skiff"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p2", "q": "they can use melee weapons such as the Lancer Assault Rifle"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p2", "q": "using a vehicle named the Skiff"}]}
+]}

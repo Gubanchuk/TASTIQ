@@ -1,0 +1,10 @@
+{"appid": 2310, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 1996 first-person shooter video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "futuristic military bases"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p6", "q": "The most popular multiplayer modes are all forms of deathmatch"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p6", "q": "they can either play the single-player campaign together in co-op (cooperative) mode"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "players explore levels, facing monsters and finding secret areas before reaching an exit"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p7", "q": "jump unnaturally high, and change direction while mid-air"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "praised the sound effects, atmospheric music, and graphics"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p8", "q": "genuinely unnerving sound effects"}]}
+]}

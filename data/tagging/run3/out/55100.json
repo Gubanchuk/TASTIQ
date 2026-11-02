@@ -1,0 +1,8 @@
+{"appid": 55100, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter video game"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "Players can earn points by completing objectives and increasing their number of kills"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p3", "q": "focused on large-scale, vehicle-based combat"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p6", "q": "Homefront is set in a near future dystopic United States in 2027"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "fighting against a Korean occupation of the Western United States"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p2", "q": "takes 4 to 10 hours to finish the game"}]}
+]}

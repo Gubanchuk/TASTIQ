@@ -1,0 +1,13 @@
+{"appid": 597760, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2019 survival horror video game"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p4", "q": "The player heals by using various food and drink items"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "fend them off or avoid them through various methods, such as stealth"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p7", "q": "very funny in its moment to moment"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p7", "q": "hybrid of horror and black comedy"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "must uncover the mystery of the witch"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "progress comes from exploring offices, solving environmental and inventory puzzles"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "solving environmental and inventory puzzles"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "Brian is stalked and assaulted by various creatures"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p2", "q": "a new employee at one of the world's largest corporations, Sintracorp"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p6", "q": "saving is a scarce, strategic resource"}]}
+]}

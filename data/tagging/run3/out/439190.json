@@ -1,0 +1,8 @@
+{"appid": 439190, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "using a combination of attack combos to defeat foes"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p8", "q": "to be repetitive with little variation in the types of enemies or the range of moves"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "go back and make different choices"}, {"id": "p5", "q": "the game will then present the player, through narration, with two or three options they can take the story"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "as Reynardo gains skills, earned by gaining experience points from combat"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Treasure chests hold material items that can be used to craft or improve one of several sword types"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "using a grappling hook to help cross open spaces between floating islands"}]}
+]}

@@ -1,0 +1,8 @@
+{"appid": 335240, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p2", "q": "The general objective of the Shaman is to help the other mice obtain the cheese"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "Bonus points are awarded for players who place first, second or third"}]},
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p1", "q": "such as wall jumping, long jumping, turn arounds, and corner jumping"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p2", "q": "to create buildings or contraptions such as bridges to cross gaps or various other obstacles"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p5", "q": "An in-game achievement system awards players with new titles and badges"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p4", "q": "Players can also create their own maps via an in-game editor"}]}
+]}

@@ -1,0 +1,12 @@
+{"appid": 300, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "team-based online first-person shooter multiplayer video game"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "team-based online first-person shooter multiplayer video game"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "Set in World War II"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "praised for its atmospheric and strategic gameplay"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p3", "q": "Player characters cannot afford to take much damage"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p8", "q": "tense and atmospheric"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p9", "q": "Criticism of the game principally revolved around the lack of content"}, {"id": "p2", "q": "criticized for the lack of content in it at the time of release"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "The game's graphics received praise"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "the game's audio work was also praised"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p5", "q": "Achievements unlocked and statistics from previously played games are displayed on the player's Steam profile page"}]}
+]}

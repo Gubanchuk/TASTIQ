@@ -1,0 +1,7 @@
+{"appid": 250260, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "focusing on exploration and comedy over puzzle-solving"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p1", "q": "focusing on exploration and comedy over puzzle-solving"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p1", "q": "is a single-player, first-person adventure game"}]},
+{"f": "tone.whimsical", "r": 3, "ev": [{"id": "p3", "q": "a surreal retro-futuristic, alternate reality"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p1", "q": "populated with a large number of interactive NPCs, each with their own action or gag"}]}
+]}

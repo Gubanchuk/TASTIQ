@@ -1,0 +1,14 @@
+{"appid": 377840, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "a medieval fantasy world called Gaia"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p0", "q": "a growing cast of characters on a quest"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p11", "q": "the characters were still engaging and sympathetic"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "exploring areas and interacting with non-player characters"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "which permanently increases combat attributes"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p6", "q": "Equipment worn by a character may also amplify their attributes"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "enjoyed the detailed animation and design of the semi-deformed graphical style"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p11", "q": "GameSpot found the characters amusing and full of humor"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p10", "q": "GameSpot approved of the simple learning curve"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p10", "q": "describes the battle system as having a tactical nature"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p10", "q": "disliked the lengthy combat pace and the repeated battles"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p0", "q": "The plot focuses on a war between nations"}]}
+]}

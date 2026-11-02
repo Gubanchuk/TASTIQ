@@ -1,0 +1,6 @@
+{"appid": 3244220, "features": [
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "that the player can collect and sell to a barn"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "The money earned from selling ores can then be used to upgrade the player's shovel"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p3", "q": "taps into a simple joy"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p2", "q": "in the backyard of their newly purchased house"}]}
+]}

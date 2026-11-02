@@ -1,0 +1,9 @@
+{"id": "tt2355844", "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "teen drama mystery-thriller television series"}]},
+{"f": "story.twist", "r": 3, "ev": [{"id": "s", "q": "A one-hour mystery full of twists and turns"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "s", "q": "A one-hour mystery full of twists and turns"}]},
+{"f": "world.school", "r": 2, "ev": [{"id": "s", "q": "a fellow student is found dead in her home"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p3", "q": "a compelling cast makes the grade"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p3", "q": "Twisted might offer below-average dialogue in terms of moody teen faire"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "Twisted would not be renewed for a second season"}]}
+]}

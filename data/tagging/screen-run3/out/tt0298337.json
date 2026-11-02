@@ -1,0 +1,7 @@
+{"id": "tt0298337", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2006 adult animated black comedy film"}]},
+{"f": "audience.adult", "r": 2, "ev": [{"id": "p0", "q": "is a 2006 adult animated black comedy film"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p0", "q": "is a 2006 adult animated black comedy film"}]},
+{"f": "content.disturbing", "r": 1, "ev": [{"id": "p2", "q": "animal cruelty and animal rights"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p3", "q": "depth of story was missing in the new version"}]}
+]}

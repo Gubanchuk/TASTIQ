@@ -1,0 +1,24 @@
+
+E:\project\TASTIQ\src\server\public\pick\game\index.html
+  [marquee] .skel::after — infinite horizontal loop animation "skel"
+    → Continuously auto-scrolling content demands attention it has not earned and hides half its content at any moment. Reserve motion for content that changes; let readers move at their own pace.
+
+1 anti-pattern found.
+
+── Advisory (not counted as failures) ──
+
+E:\project\TASTIQ\src\server\public\pick\game\index.html
+  [design-system-color] text color rgb(91, 91, 98) on span "Во что поиграть сегодня" is outside DESIGN.md colors
+    → A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.
+
+E:\project\TASTIQ\src\server\public\pick\game\style.css
+  line 16: [design-system-font-size] font-size: 1.2rem is off the DESIGN.md type ramp
+    → A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.
+  line 41: [design-system-font-size] font-size: 1rem is off the DESIGN.md type ramp
+    → A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.
+  line 82: [design-system-font-size] font-size: 1.2rem is off the DESIGN.md type ramp
+    → A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.
+  line 89: [design-system-font-size] font-size: 1.2rem is off the DESIGN.md type ramp
+    → A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.
+
+5 advisory notes. Suppress with --no-advisory.

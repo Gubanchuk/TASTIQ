@@ -1,0 +1,11 @@
+{"appid": 1150440, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a real-time tactics horror video game"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p7", "q": "using elements of the franchise to help build tension"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p7", "q": "capture the white-knuckle vibe of setting up perimeters"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p1", "q": "Players are encouraged to explore the moon station"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p1", "q": "Players need to issue commands to a squad of four colonial marines"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p1", "q": "The game features five starting character classes"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Set in the Alien universe"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p2", "q": "each mission in the game lasts"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p8", "q": "crouching and clicking other buttons aren't snappy"}]}
+]}

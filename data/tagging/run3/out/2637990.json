@@ -1,0 +1,9 @@
+{"appid": 2637990, "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p0", "q": "It is a comedic detective story"}, {"id": "p10", "q": "praised its charm and humor"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "investigate a case of stolen salami"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p5", "q": "players solve puzzles, called \"deducktions\""}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p7", "q": "The game takes two to three hours to complete."}, {"id": "p10", "q": "it only takes a few hours to complete"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p4", "q": "a city where all the residents are animals"}]},
+{"f": "story.choices", "r": 1, "ev": [{"id": "p7", "q": "players can choose how to end the game"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p6", "q": "interrogating non-player characters"}]}
+]}

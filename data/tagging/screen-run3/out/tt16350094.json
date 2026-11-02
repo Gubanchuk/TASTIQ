@@ -1,0 +1,11 @@
+{"id": "tt16350094", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated anthology superhero miniseries"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated anthology superhero miniseries"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated anthology superhero miniseries"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p1", "q": "Each episode serves as a standalone story"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p1", "q": "The tone of the stories vary from comedic to dramatic"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p4", "q": "transposing the original series' scabrous social commentary into a cartoonish medium"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p3", "q": "using various animation styles"}, {"id": "p1", "q": "each episode has its own animation style"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "praise going to the animation, voice acting, writing, humor and themes"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "p4", "q": "just as much devilish fun"}]}
+]}

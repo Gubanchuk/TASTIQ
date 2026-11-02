@@ -1,0 +1,13 @@
+{"appid": 12150, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2003 third-person shooter game"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "Praise focused on its action and story"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "featuring linear levels spread across three distinct chapters"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "criticism targeted its short length"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p4", "q": "that is adjusted automatically if the game is too difficult"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p3", "q": "the player gains access to more powerful weapons"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "the player assumes the role of returning protagonist Max Payne"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p12", "q": "a love interest complicating things"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "working again as a detective for the New York City Police Department"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p10", "q": "entertainingly dark third-person shooter"}, {"id": "p0", "q": "filled with death and betrayal"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p0", "q": "to resolve a conspiracy filled with death and betrayal"}]}
+]}

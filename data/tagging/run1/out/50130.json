@@ -1,0 +1,93 @@
+{
+ "appid": 50130,
+ "features": [
+  {
+   "f": "world.historical",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "World War II is raging in Europe and the architecture, cars, music and clothing all echo the period"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237370210",
+     "q": "the story is so good you don't care"
+    },
+    {
+     "id": "r235913611",
+     "q": "Одна из лучших сюжетных игр в которые я играл"
+    }
+   ]
+  },
+  {
+   "f": "loop.driving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "white-knuckle car chases"
+    },
+    {
+     "id": "r237559801",
+     "q": "The cars handle incredibly realistically"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Intense gunplay, white-knuckle car chases and visceral hand-to-hand combat"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "visceral hand-to-hand combat"
+    }
+   ]
+  },
+  {
+   "f": "loop.survival",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237559801",
+     "q": "You have to eat to recover your health after fights"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237370210",
+     "q": "The City Empire Bay looks fantastic"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237370210",
+     "q": "the radio great"
+    }
+   ]
+  }
+ ]
+}

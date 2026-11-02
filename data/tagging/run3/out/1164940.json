@@ -1,0 +1,12 @@
+{"appid": 1164940, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter video game"}, {"id": "p7", "q": "intense, satisfying gunplay"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p1", "q": "must initially rely exclusively on stealth"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p3", "q": "employ melee combat such as bashing enemies"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p7", "q": "magnificent horror sequences that should bring you flashbacks to FEAR 2"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p7", "q": "delivers stylish, bloody action"}, {"id": "p8", "q": "an excellent ultra-violent shooter"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p1", "q": "both human and paranormal"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p6", "q": "received praise for its soundtrack, graphics, gunplay, and movement"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p0", "q": "mostly positive reviews for its graphics, guns, and movement"}, {"id": "p7", "q": "highlighted graphics, gun variety, and aggressive playstyles"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p9", "q": "side missions that many found repetitive"}, {"id": "p9", "q": "each location often consists of the same set pieces"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p9", "q": "described it as 8 hours including side missions"}]}
+]}

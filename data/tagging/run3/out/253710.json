@@ -1,0 +1,10 @@
+{
+  "appid": 253710,
+  "features": [
+    {"f": "world.realistic", "r": 3, "ev": [{"id": "p1", "q": "recreate hunting wild animals in a manner as realistic as possible"}]},
+    {"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "Players must use natural cover to avoid detection by the animals"}]},
+    {"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "The core gameplay revolves around tracking and harvesting"}]},
+    {"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "The initial setting is on an open world island"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "requires the player to utilise the correct weapon for each hunt"}]}
+  ]
+}

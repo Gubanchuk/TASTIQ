@@ -1,0 +1,8 @@
+{"id": "tt2365946", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "s", "q": "the world's only female werewolf"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is a Canadian fantasy television series"}]},
+{"f": "characters.female_lead", "r": 2, "ev": [{"id": "s", "q": "follows the adventures of 28-year-old Elena Michaels, the world's only female werewolf"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "s", "q": "with her new love Clayton, until her life changed forever"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p1", "q": "obligations as a werewolf in upstate New York"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "Its third and final season finished in April 2016"}]}
+]}

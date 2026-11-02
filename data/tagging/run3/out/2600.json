@@ -1,0 +1,18 @@
+{"appid": 2600, "features": [
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "through early 21st-century Los Angeles"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "follows a human who is killed and revived as a fledgling vampire"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p4", "q": "players create a male or female vampire character by selecting a vampire clan"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "The selection of clan affects how the player is perceived in the game world"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p13", "q": "The website appreciated the breadth of dialogue options"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p12", "q": "Its writing was consistently praised by reviewers"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p13", "q": "GameSpot and GameSpy called the dialogue sharply written, with many memorable lines"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p11", "q": "a role-playing game so affected by player actions with everything"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p7", "q": "sneaking past guards and security cameras"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p7", "q": "Melee combat is third-person, with access to weapons such as katanas and sledgehammers"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p7", "q": "Ranged combat is first-person"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "The player builds their character by spending acquired points to increase their ratings"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p12", "q": "Reviewers appreciated the use of adult themes, such as sex and death"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "a recently discovered relic that heralds the end of all vampires"}]},
+{"f": "stability.falls_off", "r": 2, "ev": [{"id": "p11", "q": "later parts of the game were disappointing"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p11", "q": "rewarding exploration outside the main story"}]}
+]}

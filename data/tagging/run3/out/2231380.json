@@ -1,0 +1,13 @@
+{"appid": 2231380, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is an online tactical shooter video game developed by Ubisoft Paris"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p3", "q": "Breakpoint is a tactical shooter game set in an open world environment"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "the player can use stealth to silently"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p5", "q": "Players need to collect different resources in the game's world and use them to craft resources"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p5", "q": "The game places a larger emphasis on survival than Wildlands"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p6", "q": "The game's story features dialogue choices"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "A competitive multiplayer mode was released at launch"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p11", "q": "Although co-op play dilutes the boredom that sets in during repetitive missions"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p11", "q": "after a while this loop starts to feel repetitive and rather dull"}, {"id": "p12", "q": "most missions follow the same formula"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "Skell Technology, a military contractor based on Auroa"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p7", "q": "The game is set in the then-future year of 2025"}]}
+]}

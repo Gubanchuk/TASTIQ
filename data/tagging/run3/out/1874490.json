@@ -1,0 +1,13 @@
+{"appid": 1874490, "features": [
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "business simulation, as the player must manage their shop"}]},
+{"f": "loop.life_sim", "r": 2, "ev": [{"id": "p0", "q": "combines aspects of business sim, life sim and dating sim"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p1", "q": "the player can build relationships with other vendors"}]},
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p4", "q": "card-based haggling battles"}, {"id": "p1", "q": "deck building games as the player plays a minigame to bargain with customers"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "The game's actions primarily revolve around brewing and selling potions"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "based on a system of balancing ratios of components of ingredients"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "a touch too difficult"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p5", "q": "and repetitive halfway through"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p5", "q": "describing it as overly long"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p0", "q": "commended its complex gameplay and its graphical style"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "Set in a fantasy universe"}]}
+]}

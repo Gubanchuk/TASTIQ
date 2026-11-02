@@ -1,0 +1,469 @@
+{
+  "state": {
+    "version": 1,
+    "id": "overnight-20261101-01-reference",
+    "revision": 3,
+    "mode": "guided",
+    "phase": "talk",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "overnight-20261101-01-reference:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "rpg",
+            "label": "RPG"
+          }
+        ],
+        "text": "Skyrim прошёл. Сегодня хочу другую RPG с исследованием и интересной историей. Skyrim сегодня не предлагай. На полное прохождение готов потратить 30 часов, но сколько времени будет сегодня, пока не знаю.",
+        "kind": "answer",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу другую RPG с исследованием и интересной историей. Skyrim сегодня не предлагай. На полное прохождение готов потратить 30 часов, но сколько времени будет сегодня, пока не знаю."
+      },
+      {
+        "id": "overnight-20261101-01-reference:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-reference:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      }
+    ],
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочешь RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "Сегодня хочу другую RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочешь исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "с исследованием",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:story",
+        "text": "Хочешь интересную историю.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "интересной историей",
+        "feature": "story.central",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "history:skyrim",
+        "text": "Skyrim уже пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "exclude:skyrim",
+        "text": "Сегодня не предлагать Skyrim.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "Skyrim сегодня не предлагай.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "budget:completion",
+        "text": "На полное прохождение готов потратить 30 часов.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "На полное прохождение готов потратить 30 часов",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Будешь играть на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "question": {
+      "id": "exploration_structure",
+      "title": "Какое исследование тебе сейчас ближе?",
+      "why": "Ты хочешь и открытия, и интересную историю — уточним, какая структура лучше соединит их для тебя.",
+      "options": [
+        {
+          "id": "free_world",
+          "label": "Свободно бродить по большому миру, самому выбирать путь"
+        },
+        {
+          "id": "compact_locations",
+          "label": "Исследовать компактные, насыщенные локации по ходу истории"
+        },
+        {
+          "id": "story_path_secrets",
+          "label": "Идти по сюжету, иногда отвлекаясь на секреты"
+        }
+      ],
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ]
+    },
+    "summary": "Сегодня ты хочешь другую RPG на Windows для одиночной игры: с исследованием и интересной историей. Skyrim уже пройден и сегодня исключён. На полное прохождение готов потратить 30 часов; время сегодняшней сессии пока неизвестно.",
+    "uncertainties": [
+      "Время для сегодняшней игровой сессии пока неизвестно.",
+      "Пока неясно, насколько важна свобода исследования по сравнению с более направленным развитием истории."
+    ],
+    "retractions": [],
+    "sessionTime": null,
+    "factRemovalUndo": null,
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь другую RPG на Windows для одиночной игры: с исследованием и интересной историей. Skyrim уже пройден и сегодня исключён. На полное прохождение готов потратить 30 часов; время сегодняшней сессии пока неизвестно.",
+    "facts": [
+      {
+        "key": "direction:rpg",
+        "text": "Сегодня хочешь RPG.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "Сегодня хочу другую RPG",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочешь исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "с исследованием",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:story",
+        "text": "Хочешь интересную историю.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "интересной историей",
+        "feature": "story.central",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "history:skyrim",
+        "text": "Skyrim уже пройден.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "exclude:skyrim",
+        "text": "Сегодня не предлагать Skyrim.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "Skyrim сегодня не предлагай.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "budget:completion",
+        "text": "На полное прохождение готов потратить 30 часов.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:1",
+        "quote": "На полное прохождение готов потратить 30 часов",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Будешь играть на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company:solo",
+        "text": "Будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-reference:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "uncertainties": [
+      "Время для сегодняшней игровой сессии пока неизвестно.",
+      "Пока неясно, насколько важна свобода исследования по сравнению с более направленным развитием истории."
+    ],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "sessionTime": null,
+    "canUndoFactRemoval": false,
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "overnight-20261101-01-reference:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу другую RPG с исследованием и интересной историей. Skyrim сегодня не предлагай. На полное прохождение готов потратить 30 часов, но сколько времени будет сегодня, пока не знаю."
+      },
+      {
+        "id": "overnight-20261101-01-reference:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-reference:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      }
+    ],
+    "type": "question",
+    "question": {
+      "id": "exploration_structure",
+      "title": "Какое исследование тебе сейчас ближе?",
+      "why": "Ты хочешь и открытия, и интересную историю — уточним, какая структура лучше соединит их для тебя.",
+      "options": [
+        {
+          "id": "free_world",
+          "label": "Свободно бродить по большому миру, самому выбирать путь"
+        },
+        {
+          "id": "compact_locations",
+          "label": "Исследовать компактные, насыщенные локации по ходу истории"
+        },
+        {
+          "id": "story_path_secrets",
+          "label": "Идти по сюжету, иногда отвлекаясь на секреты"
+        }
+      ],
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ]
+    }
+  }
+}

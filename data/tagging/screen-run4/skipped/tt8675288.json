@@ -1,0 +1,26 @@
+{
+  "id": "tt8675288",
+  "name": "Fearless",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2020,
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Fearless (styled as Fe@rLeSS_) is a 2020 American animated science fiction action comedy film directed by Cory Edwards, written by Cory Edwards and John Murphy. The film was produced by Vanguard Animation, and was released on Netflix on August 14, 2020. Featuring the voices of Gabrielle Union, Jadakiss, Miguel J. Pimentel, Yara Shahidi and Miles Robbins, the story follows two high school seniors as they try to return three babies to the video game they came from after they mysteriously arrive on Earth. The film received mixed reviews."
+    },
+    {
+      "id": "p1",
+      "section": "Reception",
+      "text": "Writing for Polygon, Tasha Robinson wrote: \"Fearless isn’t terrible, but no one involved seems to have put in a level of effort that feels like they got up off that imaginary couch.\""
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Fearless_(2020_film)"
+}

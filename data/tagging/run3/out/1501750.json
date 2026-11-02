@@ -1,0 +1,15 @@
+{
+  "appid": 1501750,
+  "features": [
+    {"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "players can use melee weapons and magic to defeat enemies"}]},
+    {"f": "combat.weighty", "r": 2, "ev": [{"id": "p7", "q": "the game's greatest strength is probably combat and that it is a nice feel to hit a blow"}]},
+    {"f": "difficulty.hard", "r": 3, "ev": [{"id": "p1", "q": "the gameplay adapts elements from soulsborne games"}, {"id": "p8", "q": "but the rest to be too difficult"}]},
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p3", "q": "After eons under the rule of Adyr, dark god of the demonic Rhogar"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "the once-righteous Sentinels become corrupted and tyrannical themselves"}]},
+    {"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "The game's campaign can be completed cooperatively with another player"}]},
+    {"f": "social.pvp", "r": 1, "ev": [{"id": "p1", "q": "The game features a player-versus-player multiplayer mode"}]},
+    {"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p2", "q": "players can create and customize their own player avatar"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "choose from one of nine character classes"}]},
+    {"f": "freedom.open_world", "r": 1, "ev": [{"id": "p2", "q": "The game is set in an interconnected world"}]}
+  ]
+}

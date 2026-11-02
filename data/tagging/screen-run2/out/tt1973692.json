@@ -1,0 +1,8 @@
+{"id": "tt1973692", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is a Danish comedy-drama television series created by Christian Torpe"}]},
+{"f": "characters.female_lead", "r": 3, "ev": [{"id": "p1", "q": "a headstrong and unconventional teacher and single mother"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p1", "q": "a headstrong and unconventional teacher and single mother"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p3", "q": "Rita's personal and family life seems to need the same kind of assistance"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p3", "q": "with whom Rita has an on-again, off-again relationship"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "concluded on 20 July 2020"}]}
+]}

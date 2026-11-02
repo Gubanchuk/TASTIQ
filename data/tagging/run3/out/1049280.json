@@ -1,0 +1,7 @@
+{"appid": 1049280, "features": [
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "Each of them has a problem that the player has to solve in order to get the elusive bird"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "He is eventually joined by other characters"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p3", "q": "a nice walk through the world of Czech fairy tales"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "the player can apply multiple solutions by choosing another character or another item"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p3", "q": "fairy tales and humor"}]}
+]}

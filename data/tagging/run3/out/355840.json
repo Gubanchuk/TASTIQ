@@ -1,0 +1,7 @@
+{"appid": 355840, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p2", "q": "Of these, only the PvP team play mode was fully implemented before the game's shutdown"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "a free-to-play online first-person shooter"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p0", "q": "with role-playing and survival elements"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "anomalies and artifacts that reference the Russian science-fiction novel Roadside Picnic"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p0", "q": "ecological catastrophe that rendered much of the environment uninhabitable for humans"}]}
+]}

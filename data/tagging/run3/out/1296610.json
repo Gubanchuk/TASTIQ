@@ -1,0 +1,13 @@
+{"appid": 1296610, "features": [
+{"f": "loop.cards", "r": 2, "ev": [{"id": "p3", "q": "the game uses deck-building techniques as players strategically choose and discard"}]},
+{"f": "story.choices", "r": 1, "ev": [{"id": "p4", "q": "focused on what narrative choices the gamer makes"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "making each re-run of Peglin increasingly difficult"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p4", "q": "Every individual run has its own randomly generated map"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "Relics are collected throughout the game which will give the player a permanent power-up"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p4", "q": "Some floors are designated for giving loot or battles"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "There are four different goblin classes"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p5", "q": "the multi-stage Cruciball that hits its peak at level 20"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p2", "q": "designed in pixel-art graphics"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "Players must carefully balance their own attacks and health"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "the game uses turn-based RPG between the protagonist and monsters"}]}
+]}

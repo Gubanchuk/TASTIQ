@@ -1,0 +1,13 @@
+{"id": "tt1305591", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a 2011 American animated science fiction comedy film"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "p0", "q": "who sets out to save his mother on Mars after she is taken by Martians"}]},
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2011 American animated science fiction comedy film"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p6", "q": "the screenplay is delightful, by turns funny and emotional"}]},
+{"f": "characters.family", "r": 3, "ev": [{"id": "p6", "q": "Mom and kid reaffirm their love for each other"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p6", "q": "as befits a Disney family fable"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "splendid use of computer-generated motion-capture animation and 3-D effects"}]},
+{"f": "aesthetic.effects", "r": 2, "ev": [{"id": "p6", "q": "splendid use of computer-generated motion-capture animation and 3-D effects"}]},
+{"f": "tone.cheesy", "r": 1, "ev": [{"id": "p3", "q": "pure Disney cheese"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p9", "q": "He also noted a major plot hole"}]},
+{"f": "characters.unlikeable", "r": 1, "ev": [{"id": "p4", "q": "makes a whiny hero"}]}
+]}

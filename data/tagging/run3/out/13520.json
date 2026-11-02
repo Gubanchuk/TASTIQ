@@ -1,0 +1,9 @@
+{"appid": 13520, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "a 2004 first-person shooter video game"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "players can freely explore the game's world"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p1", "q": "due to the linear structure of missions"}, {"id": "p5", "q": "more traditional, linear gameplay"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "As Jack explores the islands"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "horrific genetic experiments"}, {"id": "p7", "q": "deformed creatures created by a mad scientist"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p6", "q": "The game included three multiplayer modes"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "being praised for its visuals"}]}
+]}

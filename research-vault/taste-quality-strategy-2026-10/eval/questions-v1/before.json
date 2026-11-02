@@ -1,0 +1,990 @@
+{
+  "at": "2026-10-31T18:39:38.127Z",
+  "cases": [
+    {
+      "id": "story",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "questions": [
+        {
+          "id": "lean:length.short|length.long",
+          "kind": "lean",
+          "text": "Пройти за пару вечеров или на десятки часов?",
+          "options": [
+            {
+              "value": "length.short",
+              "label": "за пару вечеров"
+            },
+            {
+              "value": "length.long",
+              "label": "на десятки часов"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.010286227399741055,
+          "leader": "steam:1113000",
+          "shown": [
+            "steam:1113000",
+            "steam:632470",
+            "steam:578650",
+            "steam:1180660"
+          ],
+          "outcomes": [
+            {
+              "value": "length.short",
+              "label": "за пару вечеров",
+              "leader": "steam:632470",
+              "leaderChanged": true,
+              "shown": [
+                "steam:632470",
+                "steam:1113000",
+                "steam:1180660",
+                "steam:578650"
+              ]
+            },
+            {
+              "value": "length.long",
+              "label": "на десятки часов",
+              "leader": "steam:632470",
+              "leaderChanged": true,
+              "shown": [
+                "steam:632470",
+                "steam:1113000",
+                "steam:1328670",
+                "steam:207610"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pair:humor.funny|world.scifi",
+          "kind": "pair",
+          "text": "Что тебе важнее?",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "много юмора"
+            },
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.14586255568330264,
+          "leader": "steam:1113000",
+          "shown": [
+            "steam:1113000",
+            "steam:632470",
+            "steam:578650",
+            "steam:1180660"
+          ],
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "label": "много юмора",
+              "leader": "steam:632470",
+              "leaderChanged": true,
+              "shown": [
+                "steam:632470",
+                "steam:1113000",
+                "steam:578650",
+                "steam:481510"
+              ]
+            },
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос",
+              "leader": "steam:1113000",
+              "leaderChanged": false,
+              "shown": [
+                "steam:1113000",
+                "steam:578650",
+                "steam:632470",
+                "steam:948740"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pair:characters.companions|loop.exploration",
+          "kind": "pair",
+          "text": "Что тебе важнее?",
+          "options": [
+            {
+              "value": "characters.companions",
+              "label": "команда и спутники"
+            },
+            {
+              "value": "loop.exploration",
+              "label": "исследование мира"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.12843089036480215,
+          "leader": "steam:1113000",
+          "shown": [
+            "steam:1113000",
+            "steam:632470",
+            "steam:578650",
+            "steam:1180660"
+          ],
+          "outcomes": [
+            {
+              "value": "characters.companions",
+              "label": "команда и спутники",
+              "leader": "steam:1113000",
+              "leaderChanged": false,
+              "shown": [
+                "steam:1113000",
+                "steam:578650",
+                "steam:632470",
+                "steam:207610"
+              ]
+            },
+            {
+              "value": "loop.exploration",
+              "label": "исследование мира",
+              "leader": "steam:632470",
+              "leaderChanged": true,
+              "shown": [
+                "steam:632470",
+                "steam:1113000",
+                "steam:481510",
+                "steam:1180660"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "steam:1113000",
+        "steam:632470",
+        "steam:578650",
+        "steam:1180660"
+      ],
+      "eligible": 4371,
+      "remainingQuestions": 20
+    },
+    {
+      "id": "coop",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "questions": [
+        {
+          "id": "lean:length.short|length.long",
+          "kind": "lean",
+          "text": "Пройти за пару вечеров или на десятки часов?",
+          "options": [
+            {
+              "value": "length.short",
+              "label": "за пару вечеров"
+            },
+            {
+              "value": "length.long",
+              "label": "на десятки часов"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.009707026586974976,
+          "leader": "steam:572890",
+          "shown": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:341800"
+          ],
+          "outcomes": [
+            {
+              "value": "length.short",
+              "label": "за пару вечеров",
+              "leader": "steam:572890",
+              "leaderChanged": false,
+              "shown": [
+                "steam:572890",
+                "steam:620",
+                "steam:35700",
+                "steam:341800"
+              ]
+            },
+            {
+              "value": "length.long",
+              "label": "на десятки часов",
+              "leader": "steam:1426210",
+              "leaderChanged": true,
+              "shown": [
+                "steam:1426210",
+                "steam:341800",
+                "steam:837470",
+                "steam:1335790"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:cognitive.high|cognitive.low",
+          "kind": "lean",
+          "text": "Подумать или отключить голову?",
+          "options": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.008730280772700105,
+          "leader": "steam:572890",
+          "shown": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:341800"
+          ],
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать",
+              "leader": "steam:620",
+              "leaderChanged": true,
+              "shown": [
+                "steam:620",
+                "steam:35700",
+                "steam:837470",
+                "steam:572890"
+              ]
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову",
+              "leader": "steam:572890",
+              "leaderChanged": false,
+              "shown": [
+                "steam:572890",
+                "steam:620",
+                "steam:35700",
+                "steam:837470"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:tension.high|tension.low",
+          "kind": "lean",
+          "text": "Адреналин или расслабиться?",
+          "options": [
+            {
+              "value": "tension.high",
+              "label": "адреналин"
+            },
+            {
+              "value": "tension.low",
+              "label": "расслабиться"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.008822855225365522,
+          "leader": "steam:572890",
+          "shown": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:341800"
+          ],
+          "outcomes": [
+            {
+              "value": "tension.high",
+              "label": "адреналин",
+              "leader": "steam:620",
+              "leaderChanged": true,
+              "shown": [
+                "steam:620",
+                "steam:35700",
+                "steam:341800",
+                "steam:837470"
+              ]
+            },
+            {
+              "value": "tension.low",
+              "label": "расслабиться",
+              "leader": "steam:572890",
+              "leaderChanged": false,
+              "shown": [
+                "steam:572890",
+                "steam:620",
+                "steam:35700",
+                "steam:837470"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "steam:572890",
+        "steam:620",
+        "steam:35700",
+        "steam:341800"
+      ],
+      "eligible": 952,
+      "remainingQuestions": 59
+    },
+    {
+      "id": "runs",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "questions": [
+        {
+          "id": "pair:world.postapoc|length.short",
+          "kind": "pair",
+          "text": "Что тебе важнее?",
+          "options": [
+            {
+              "value": "world.postapoc",
+              "label": "постапокалипсис"
+            },
+            {
+              "value": "length.short",
+              "label": "короткая, на пару вечеров"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.12262810753033326,
+          "leader": "steam:1229490",
+          "shown": [
+            "steam:1229490",
+            "steam:1888160",
+            "steam:460950",
+            "steam:1139900"
+          ],
+          "outcomes": [
+            {
+              "value": "world.postapoc",
+              "label": "постапокалипсис",
+              "leader": "steam:1139900",
+              "leaderChanged": true,
+              "shown": [
+                "steam:1139900",
+                "steam:1888160",
+                "steam:1229490",
+                "steam:460950"
+              ]
+            },
+            {
+              "value": "length.short",
+              "label": "короткая, на пару вечеров",
+              "leader": "steam:460950",
+              "leaderChanged": true,
+              "shown": [
+                "steam:460950",
+                "steam:1229490",
+                "steam:1139900",
+                "steam:1888160"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pair:loop.melee|aesthetic.pixel",
+          "kind": "pair",
+          "text": "Что тебе важнее?",
+          "options": [
+            {
+              "value": "loop.melee",
+              "label": "ближний бой"
+            },
+            {
+              "value": "aesthetic.pixel",
+              "label": "пиксель-арт"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.11987066351450792,
+          "leader": "steam:1229490",
+          "shown": [
+            "steam:1229490",
+            "steam:1888160",
+            "steam:460950",
+            "steam:1139900"
+          ],
+          "outcomes": [
+            {
+              "value": "loop.melee",
+              "label": "ближний бой",
+              "leader": "steam:1139900",
+              "leaderChanged": true,
+              "shown": [
+                "steam:1139900",
+                "steam:460950",
+                "steam:1229490",
+                "steam:1888160"
+              ]
+            },
+            {
+              "value": "aesthetic.pixel",
+              "label": "пиксель-арт",
+              "leader": "steam:460950",
+              "leaderChanged": true,
+              "shown": [
+                "steam:460950",
+                "steam:1888160",
+                "steam:1229490",
+                "steam:1139900"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pair:world.scifi|aesthetic.beautiful",
+          "kind": "pair",
+          "text": "Что тебе важнее?",
+          "options": [
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос"
+            },
+            {
+              "value": "aesthetic.beautiful",
+              "label": "красивая картинка"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.09572118956552655,
+          "leader": "steam:1229490",
+          "shown": [
+            "steam:1229490",
+            "steam:1888160",
+            "steam:460950",
+            "steam:1139900"
+          ],
+          "outcomes": [
+            {
+              "value": "world.scifi",
+              "label": "фантастика и космос",
+              "leader": "steam:1139900",
+              "leaderChanged": true,
+              "shown": [
+                "steam:1139900",
+                "steam:1888160",
+                "steam:1229490",
+                "steam:460950"
+              ]
+            },
+            {
+              "value": "aesthetic.beautiful",
+              "label": "красивая картинка",
+              "leader": "steam:1888160",
+              "leaderChanged": true,
+              "shown": [
+                "steam:1888160",
+                "steam:460950",
+                "steam:1139900",
+                "steam:1229490"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "steam:1229490",
+        "steam:1888160",
+        "steam:460950",
+        "steam:1139900"
+      ],
+      "eligible": 4378,
+      "remainingQuestions": 10
+    },
+    {
+      "id": "no-taste",
+      "source": "authored offline context, frozen before implementation",
+      "questions": [
+        {
+          "id": "lean:tension.high|tension.low",
+          "kind": "lean",
+          "text": "Адреналин или расслабиться?",
+          "options": [
+            {
+              "value": "tension.high",
+              "label": "адреналин"
+            },
+            {
+              "value": "tension.low",
+              "label": "расслабиться"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.01096540803435353,
+          "leader": "steam:413150",
+          "shown": [
+            "steam:413150",
+            "steam:620",
+            "steam:646570",
+            "steam:550"
+          ],
+          "outcomes": [
+            {
+              "value": "tension.high",
+              "label": "адреналин",
+              "leader": "steam:550",
+              "leaderChanged": true,
+              "shown": [
+                "steam:550",
+                "steam:304430",
+                "steam:264710",
+                "steam:341800"
+              ]
+            },
+            {
+              "value": "tension.low",
+              "label": "расслабиться",
+              "leader": "steam:413150",
+              "leaderChanged": false,
+              "shown": [
+                "steam:413150",
+                "steam:1708150",
+                "steam:990630",
+                "steam:2379780"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:freedom.open_world|freedom.linear",
+          "kind": "lean",
+          "text": "Открытый мир или чтобы вели по истории?",
+          "options": [
+            {
+              "value": "freedom.open_world",
+              "label": "открытый мир"
+            },
+            {
+              "value": "freedom.linear",
+              "label": "по истории"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.017879453361775433,
+          "leader": "steam:413150",
+          "shown": [
+            "steam:413150",
+            "steam:620",
+            "steam:646570",
+            "steam:550"
+          ],
+          "outcomes": [
+            {
+              "value": "freedom.open_world",
+              "label": "открытый мир",
+              "leader": "steam:413150",
+              "leaderChanged": false,
+              "shown": [
+                "steam:413150",
+                "steam:2532550",
+                "steam:264710",
+                "steam:1876590"
+              ]
+            },
+            {
+              "value": "freedom.linear",
+              "label": "по истории",
+              "leader": "steam:1567800",
+              "leaderChanged": true,
+              "shown": [
+                "steam:1567800",
+                "steam:2653790",
+                "steam:2620",
+                "steam:2378620"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:humor.funny|tone.dark",
+          "kind": "lean",
+          "text": "Посмеяться или что-то мрачное?",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "посмеяться"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.028177700846733877,
+          "leader": "steam:413150",
+          "shown": [
+            "steam:413150",
+            "steam:620",
+            "steam:646570",
+            "steam:550"
+          ],
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "label": "посмеяться",
+              "leader": "steam:620",
+              "leaderChanged": true,
+              "shown": [
+                "steam:620",
+                "steam:1118200",
+                "steam:3590",
+                "steam:550"
+              ]
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное",
+              "leader": "steam:220",
+              "leaderChanged": true,
+              "shown": [
+                "steam:220",
+                "steam:2218750",
+                "steam:990630",
+                "steam:200260"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "steam:413150",
+        "steam:620",
+        "steam:646570",
+        "steam:550"
+      ],
+      "eligible": 4381,
+      "remainingQuestions": 84
+    },
+    {
+      "id": "calm-film",
+      "source": "authored offline context, frozen before implementation",
+      "questions": [
+        {
+          "id": "lean:cognitive.high|cognitive.low",
+          "kind": "lean",
+          "text": "Чтобы подумать или не напрягаться?",
+          "options": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "не напрягаться"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.011222295447183228,
+          "leader": "tt0103767",
+          "shown": [
+            "tt0103767",
+            "tt0042876",
+            "tt0050976",
+            "tt0118694"
+          ],
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать",
+              "leader": "tt0050083",
+              "leaderChanged": true,
+              "shown": [
+                "tt0050083",
+                "tt0103767",
+                "tt0027977",
+                "tt0299977"
+              ]
+            },
+            {
+              "value": "cognitive.low",
+              "label": "не напрягаться",
+              "leader": "tt0147800",
+              "leaderChanged": true,
+              "shown": [
+                "tt0147800",
+                "tt0021749",
+                "tt0092890",
+                "tt1194612"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fact:popularity",
+          "kind": "fact",
+          "text": "То, о чём все говорят, или то, чего ты точно не видел?",
+          "options": [
+            {
+              "value": "mainstream",
+              "label": "о чём все говорят"
+            },
+            {
+              "value": "niche",
+              "label": "чего точно не видел"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.19284811325550066,
+          "leader": "tt0103767",
+          "shown": [
+            "tt0103767",
+            "tt0042876",
+            "tt0050976",
+            "tt0118694"
+          ],
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "label": "о чём все говорят",
+              "leader": "tt0050976",
+              "leaderChanged": true,
+              "shown": [
+                "tt0050976",
+                "tt0042876",
+                "tt0118694",
+                "tt0103767"
+              ]
+            },
+            {
+              "value": "niche",
+              "label": "чего точно не видел",
+              "leader": "tt0103767",
+              "leaderChanged": false,
+              "shown": [
+                "tt0103767",
+                "tt0045274",
+                "tt0046478",
+                "tt0100234"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pair:characters.romance|tension.high",
+          "kind": "pair",
+          "text": "Что тебе важнее?",
+          "options": [
+            {
+              "value": "characters.romance",
+              "label": "любовная линия"
+            },
+            {
+              "value": "tension.high",
+              "label": "держит в напряжении"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.108671932591208,
+          "leader": "tt0103767",
+          "shown": [
+            "tt0103767",
+            "tt0042876",
+            "tt0050976",
+            "tt0118694"
+          ],
+          "outcomes": [
+            {
+              "value": "characters.romance",
+              "label": "любовная линия",
+              "leader": "tt0118694",
+              "leaderChanged": true,
+              "shown": [
+                "tt0118694",
+                "tt0423866",
+                "tt0111495",
+                "tt0077405"
+              ]
+            },
+            {
+              "value": "tension.high",
+              "label": "держит в напряжении",
+              "leader": "tt0069762",
+              "leaderChanged": true,
+              "shown": [
+                "tt0069762",
+                "tt0050976",
+                "tt0042876",
+                "tt0068182"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "tt0103767",
+        "tt0042876",
+        "tt0050976",
+        "tt0118694"
+      ],
+      "eligible": 8165,
+      "remainingQuestions": 56
+    },
+    {
+      "id": "short-series",
+      "source": "authored offline context, frozen before implementation",
+      "questions": [
+        {
+          "id": "fact:popularity",
+          "kind": "fact",
+          "text": "То, о чём все говорят, или то, чего ты точно не видел?",
+          "options": [
+            {
+              "value": "mainstream",
+              "label": "о чём все говорят"
+            },
+            {
+              "value": "niche",
+              "label": "чего точно не видел"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.1974557722406507,
+          "leader": "tt0386676",
+          "shown": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "label": "о чём все говорят",
+              "leader": "tt0386676",
+              "leaderChanged": false,
+              "shown": [
+                "tt0386676",
+                "tt0108778",
+                "tt10986410",
+                "tt0472954"
+              ]
+            },
+            {
+              "value": "niche",
+              "label": "чего точно не видел",
+              "leader": "tt9002164",
+              "leaderChanged": true,
+              "shown": [
+                "tt9002164",
+                "tt7450814",
+                "tt10530900",
+                "tt0383795"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fact:era",
+          "kind": "fact",
+          "text": "Свежее или можно и старое?",
+          "options": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015"
+            },
+            {
+              "value": "any",
+              "label": "можно и старое"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.17600747587704735,
+          "leader": "tt0386676",
+          "shown": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "outcomes": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015",
+              "leader": "tt10986410",
+              "leaderChanged": true,
+              "shown": [
+                "tt10986410",
+                "tt7450814",
+                "tt9002164",
+                "tt5687612"
+              ]
+            },
+            {
+              "value": "any",
+              "label": "можно и старое",
+              "leader": "tt0386676",
+              "leaderChanged": false,
+              "shown": [
+                "tt0386676",
+                "tt0108778",
+                "tt0098904",
+                "tt10986410"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pair:characters.family|characters.romance",
+          "kind": "pair",
+          "text": "Что тебе важнее?",
+          "options": [
+            {
+              "value": "characters.family",
+              "label": "семья и отношения"
+            },
+            {
+              "value": "characters.romance",
+              "label": "любовная линия"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.09083081867827048,
+          "leader": "tt0386676",
+          "shown": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "outcomes": [
+            {
+              "value": "characters.family",
+              "label": "семья и отношения",
+              "leader": "tt0367279",
+              "leaderChanged": true,
+              "shown": [
+                "tt0367279",
+                "tt8595766",
+                "tt1442437",
+                "tt10530900"
+              ]
+            },
+            {
+              "value": "characters.romance",
+              "label": "любовная линия",
+              "leader": "tt0460649",
+              "leaderChanged": true,
+              "shown": [
+                "tt0460649",
+                "tt8317568",
+                "tt9059760",
+                "tt10638036"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "tt0386676",
+        "tt0108778",
+        "tt0098904",
+        "tt10986410"
+      ],
+      "eligible": 2424,
+      "remainingQuestions": 81
+    }
+  ],
+  "paidCalls": 0
+}

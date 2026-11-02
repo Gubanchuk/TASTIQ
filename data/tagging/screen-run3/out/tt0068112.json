@@ -1,0 +1,8 @@
+{"id": "tt0068112", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated mystery comedy television series"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "animated mystery comedy television series"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "solving crimes while rubbing elbows with various famous guest stars"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p1", "q": "each episode featured real world celebrities or well-known animated characters"}]},
+{"f": "characters.ensemble", "r": 1, "ev": [{"id": "p1", "q": "joining the Mystery, Inc. gang in solving mysteries"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p0", "q": "and ended on October 27, 1973"}]}
+]}

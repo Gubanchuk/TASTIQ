@@ -1,0 +1,8 @@
+{"appid": 1123050, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p0", "q": "is a 2021 Metroidvania video game"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p7", "q": "an accomplished Souls-like action RPG"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "Should the Spiral Heart choose to escape, they fight and slay Shidra"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "their destiny is to consume and destroy the world"}]},
+{"f": "tone.melancholic", "r": 1, "ev": [{"id": "p3", "q": "in the hopes that they will be preserved in its memories despite their destined end"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "one stone giant is shown breathing life"}]}
+]}

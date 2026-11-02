@@ -1,0 +1,12 @@
+{"appid": 2114740, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "Like its predecessor, Blasphemous 2 is a 2D side-scrolling Metroidvania action-adventure game"}, {"id": "p7", "q": "praised its exploration element"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p1", "q": "The world is filled with deadly traps, difficult platform sequences"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "a dual-wielded rapier and dagger with rapid strikes"}]},
+{"f": "combat.fast", "r": 1, "ev": [{"id": "p2", "q": "a dual-wielded rapier and dagger with rapid strikes"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p2", "q": "aiding players in discovering paths and solving puzzles"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "The game introduces several weapons, with each having its own reach, speed, special abilities and skill tree"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "The world is filled with deadly traps, difficult platform sequences"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "pain and suffering remained in the world"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p7", "q": "it more than makes up for with its bizarre world"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "Cvstodia experienced an age without gods or the Miracle's influence"}]}
+]}

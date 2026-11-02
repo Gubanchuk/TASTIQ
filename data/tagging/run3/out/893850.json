@@ -1,0 +1,15 @@
+{"appid": 893850, "features": [
+{"f": "pace.slow", "r": 3, "ev": [{"id": "p4", "q": "Interaction with the world is slow-paced"}, {"id": "p9", "q": "The Washington Post praised the slowness for allowing the player's mind to wander"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p9", "q": "he criticized the wait times as tedious"}, {"id": "p9", "q": "the sedate pacing would not be for everyone"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "The Shade can explore caves"}]},
+{"f": "loop.life_sim", "r": 2, "ev": [{"id": "p0", "q": "The Shade performs recreational activities, including reading and exploring"}]},
+{"f": "tone.melancholic", "r": 3, "ev": [{"id": "p1", "q": "the subterranean atmosphere and theme of loneliness"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p9", "q": "The Washington Post praised the slowness for allowing the player's mind to wander"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p10", "q": "described the game's atmosphere as \"gloomy\", \"lonely\" and \"eerie\""}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "after hearing the Kyffhäuser legend while visiting the Barbarossa Cave"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p1", "q": "to explore emotional themes in a narrative-driven story"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "The soundtrack also received praise from critics"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "The visuals were highlighted as a strength"}]},
+{"f": "ending.bittersweet", "r": 2, "ev": [{"id": "p7", "q": "The Shade can either commit suicide by throwing itself into the pit"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "The player controls the Shade, a lonely creature serving an elderly king"}]}
+]}

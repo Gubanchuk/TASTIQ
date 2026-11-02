@@ -1,0 +1,160 @@
+{
+  "paidCalls": 0,
+  "systems": {
+    "hybrid": {
+      "lists": 8,
+      "failedLists": 0,
+      "model": 29,
+      "fill": 3,
+      "engine": 0,
+      "dropped": 3,
+      "modelOutsideShortlist": 3,
+      "latencyMedianMs": 12057.5,
+      "costUsd": 0.165016
+    },
+    "direct": {
+      "lists": 8,
+      "failedLists": 0,
+      "model": 21,
+      "fill": 11,
+      "engine": 0,
+      "dropped": 11,
+      "modelOutsideShortlist": 16,
+      "latencyMedianMs": 12385.5,
+      "costUsd": 0.073214
+    }
+  },
+  "unresolved": [
+    {
+      "caseId": "pair-1-evening-1",
+      "system": "direct",
+      "title": "Tavern Talk",
+      "year": 2024,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-2-evening-2",
+      "system": "direct",
+      "title": "THE FINALS",
+      "year": 2023,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-2-evening-2",
+      "system": "direct",
+      "title": "VALORANT",
+      "year": 2020,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-2-evening-2",
+      "system": "direct",
+      "title": "Overwatch 2",
+      "year": 2022,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-2-evening-2",
+      "system": "hybrid",
+      "title": "THE FINALS",
+      "year": 2023,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-3-evening-1",
+      "system": "direct",
+      "title": "Presto",
+      "year": 2008,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-3-evening-1",
+      "system": "direct",
+      "title": "For the Birds",
+      "year": 2000,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "direct",
+      "title": "The Snowman",
+      "year": 1982,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "direct",
+      "title": "Crac!",
+      "year": 1981,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "direct",
+      "title": "Mimi wo Sumaseba",
+      "year": 1995,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "direct",
+      "title": "Omohide Poro Poro",
+      "year": 1991,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "hybrid",
+      "title": "Robot Dreams",
+      "year": 2023,
+      "diagnosis": "filtered",
+      "matchedId": "tt13429870",
+      "filter": {
+        "sieve": 5,
+        "reason": "нет «для всей семьи», а сегодня это обязательно",
+        "feature": "content.family"
+      }
+    },
+    {
+      "caseId": "pair-3-evening-2",
+      "system": "hybrid",
+      "title": "Whisper of the Heart",
+      "year": 1995,
+      "diagnosis": "no-exact-title-match",
+      "matchedId": null,
+      "filter": null
+    }
+  ],
+  "responseErrors": [],
+  "blindedCurrentCards": 53,
+  "humanLabels": 0,
+  "budget": {
+    "ceiling": 5,
+    "newCalls": 76,
+    "newUsd": 0.3354056,
+    "cumulativeUpper": 1.0515197,
+    "remainingLower": 3.9484803
+  }
+}

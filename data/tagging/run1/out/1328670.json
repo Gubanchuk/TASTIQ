@@ -1,0 +1,139 @@
+{
+ "appid": 1328670,
+ "features": [
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Heart-pounding action meets gripping interactive storytelling"
+    },
+    {
+     "id": "r235851611",
+     "q": "Narratively it's very strong"
+    }
+   ]
+  },
+  {
+   "f": "story.choices",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "your decisions have profound consequences on the action and the outcome"
+    }
+   ]
+  },
+  {
+   "f": "characters.companions",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237727093",
+     "q": "Компаньоны здесь не просто набор навыков и диалогов на фоне"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235704999",
+     "q": "Mass Effect для меня оказался в первую очередь игрой про персонажей"
+    }
+   ]
+  },
+  {
+   "f": "world.scifi",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235682029",
+     "q": "playing ME in its truest sci-fi core"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237441295",
+     "q": "there are more places to explore and more missions to complete"
+    }
+   ]
+  },
+  {
+   "f": "freedom.linear",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236542542",
+     "q": "excellent linear level design"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235851611",
+     "q": "gunning down and destroying everybody with biotics"
+    }
+   ]
+  },
+  {
+   "f": "loop.dialogue",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235851611",
+     "q": "Renegade interrupts will never stop being fun"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235682029",
+     "q": "the beautiful OSTs and the little chores have always been the game's highlights"
+    }
+   ]
+  },
+  {
+   "f": "length.long",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237988057",
+     "q": "Hundreds of hours between the standalones and console"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237281327",
+     "q": "третья часть по-прежнему кажется наиболее затянутой и скучной"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235851611",
+     "q": "the ME1 gameplay is a little rough around the edges"
+    }
+   ]
+  }
+ ]
+}

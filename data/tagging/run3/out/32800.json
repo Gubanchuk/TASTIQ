@@ -1,0 +1,10 @@
+{"appid": 32800, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p3", "q": "War in the North is an action role-playing hack and slash game"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "high fantasy novel The Lord of the Rings"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "players may issue orders to their AI companions"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "The game also features online co-op gameplay for up to three players"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "Characters gain experience by defeating enemies and completing quests"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p6", "q": "one skill point to use in their skill tree"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p2", "q": "criticizing the repetitive combat, weak storyline and poor character development"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "critics praising the graphics and tone"}]}
+]}

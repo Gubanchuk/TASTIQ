@@ -1,0 +1,190 @@
+[
+  {
+    "id": "s01",
+    "split": "dev",
+    "domain": "game",
+    "text": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+    "wants": [
+      [
+        "cognitive.high"
+      ]
+    ],
+    "noAvoids": [
+      "cognitive.high",
+      "difficulty.hard"
+    ],
+    "noWants": [
+      "cognitive.low"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3044,
+        "input_tokens_details": {
+          "cache_write_tokens": 3041,
+          "cached_tokens": 0
+        },
+        "output_tokens": 113,
+        "output_tokens_details": {
+          "reasoning_tokens": 45
+        },
+        "total_tokens": 3157
+      },
+      "ms": 3500,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+        "wants": [
+          {
+            "f": "loop.puzzles",
+            "evidence": "хочу сложные головоломки"
+          },
+          {
+            "f": "cognitive.high",
+            "evidence": "хочу сложные головоломки"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s02",
+    "split": "dev",
+    "domain": "film",
+    "text": "Не хочу жестокости по отношению к животным. Экшен с драками между людьми нормально.",
+    "noAvoids": [
+      "content.violence"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2756,
+        "input_tokens_details": {
+          "cache_write_tokens": 2753,
+          "cached_tokens": 0
+        },
+        "output_tokens": 58,
+        "output_tokens_details": {
+          "reasoning_tokens": 27
+        },
+        "total_tokens": 2814
+      },
+      "ms": 2158,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не хочу жестокости по отношению к животным. Экшен с драками между людьми нормально.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s03",
+    "split": "dev",
+    "domain": "film",
+    "text": "Не люблю пошлые шутки, но сегодня хочу остроумную комедию.",
+    "noAvoids": [
+      "humor.funny"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2755,
+        "input_tokens_details": {
+          "cache_write_tokens": 32,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 84,
+        "output_tokens_details": {
+          "reasoning_tokens": 31
+        },
+        "total_tokens": 2839
+      },
+      "ms": 2527,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не люблю пошлые шутки, но сегодня хочу остроумную комедию.",
+        "wants": [
+          {
+            "f": "humor.funny",
+            "evidence": "сегодня хочу остроумную комедию"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s04",
+    "split": "dev",
+    "domain": "game",
+    "text": "Хочу поспокойнее бои, но напряжённый сюжет.",
+    "wants": [
+      [
+        "tension.high"
+      ]
+    ],
+    "noWants": [
+      "tension.low"
+    ],
+    "noAvoids": [
+      "tension.high"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3042,
+        "input_tokens_details": {
+          "cache_write_tokens": 26,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 122,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 3164
+      },
+      "ms": 3441,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу поспокойнее бои, но напряжённый сюжет.",
+        "wants": [
+          {
+            "f": "tension.high",
+            "evidence": "напряжённый сюжет"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Под «поспокойнее бои» ты имеешь в виду более медленный темп, меньшую сложность или что-то другое?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  }
+]

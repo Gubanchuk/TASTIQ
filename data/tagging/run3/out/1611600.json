@@ -1,0 +1,8 @@
+{"appid": 1611600, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "real-time tactics and turn-based strategy video game"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "takes place in a Cold War gone hot setting along the Inner German Border"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "Players control individual units meant to represent historical military vehicles and infantry formations"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "multiplayer games scaling up to 10 versus 10"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p1", "q": "Single-player play takes the form of skirmishes against the AI"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Various battlegroups have different specializations, such as a focus on infantry combat or combined arms warfare"}]}
+]}

@@ -1,0 +1,12 @@
+{"appid": 391540, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "a", "q": "negotiate out of danger using the unique battle system"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "a", "q": "dodge enemy attacks in a style reminiscent of top-down shooters"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "r236116937", "q": "generally on the whole is on the easier side"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "a", "q": "Soulful, character-rich story with an emphasis on humor"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "r237564594", "q": "очень чёткие характеры у персонажей"}, {"id": "r236613877", "q": "персонажи казались живыми"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "a", "q": "Soulful, character-rich story with an emphasis on humor"}, {"id": "r236116937", "q": "does still elicit some laughs"}]},
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "a", "q": "Original art and soundtrack brimming with personality"}, {"id": "r237032502", "q": "very neat story and stunning soundtrack"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "a", "q": "Original art and soundtrack brimming with personality"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "r236116937", "q": "It will be emotional"}, {"id": "r236613877", "q": "даже после прохождения дельтаруна не было подобных эмоций"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "a", "q": "you control a human who falls underground into the world of monsters"}]}
+]}

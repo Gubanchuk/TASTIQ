@@ -1,0 +1,9 @@
+{"appid": 8000, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p5", "q": "Puzzles block progress through the levels until Lara solves them"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p1", "q": "Lara navigating linear levels, fighting enemies and solving puzzles"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p4", "q": "Lara can jump, climb and shimmy along ledges and vertical poles or ladders"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p6", "q": "Lara automatically locks on to enemies and fires with her equipped gun"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "While exploring, Lara can find large and small Medipacks"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p5", "q": "hidden artefacts and relics which unlock rewards such as costumes once collected"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p9", "q": "some \"unforgiving\" puzzles"}]}
+]}

@@ -1,0 +1,11 @@
+{"appid": 1465460, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "who scavenge buildings for essential resources"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p2", "q": "The game emphasizes resource management and strategic planning"}, {"id": "p0", "q": "Players manage groups of survivors"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "takes place in a post-apocalyptic world"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "causing the collapse of civilization within weeks"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p4", "q": "At some time in the modern world"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "adapt existing real-world buildings"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p2", "q": "balance exploration for supplies"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p3", "q": "vehicle acquisition for faster travel and combat"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "Players must strategically choose their headquarters location"}]}
+]}

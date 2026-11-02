@@ -1,0 +1,8 @@
+{"appid": 1042490, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "who must explore an island set in the Southern Pacific"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p2", "q": "players progress in the game by solving various puzzles"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "who has gone missing after embarking on an expedition"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p7", "q": "who praised the narrative and the island setting"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "The game is set in the 1930s"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p7", "q": "criticized some of the game's puzzles as being obtuse"}]}
+]}

@@ -1,0 +1,11 @@
+{"id": "tt3107288", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is an American superhero television series developed by Greg Berlanti"}]},
+{"f": "world.timetravel", "r": 3, "ev": [{"id": "p3", "q": "who traveled back in time to murder his mother, Nora Allen"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p12", "q": "The Flash benefits from its purposefully light atmosphere"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "ran for nine seasons until May 24, 2023"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p3", "q": "along with other metahumans who have also gained superhuman abilities"}]},
+{"f": "structure.serialized", "r": 2, "ev": [{"id": "p10", "q": "The eighth season opens with the five-part event"}]},
+{"f": "characters.acting", "r": 1, "ev": [{"id": "p12", "q": "praised the show's premise and cast"}]},
+{"f": "world.crime", "r": 1, "ev": [{"id": "p0", "q": "which he uses to fight criminals"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p2", "q": "became more mixed as the series went on"}]}
+]}

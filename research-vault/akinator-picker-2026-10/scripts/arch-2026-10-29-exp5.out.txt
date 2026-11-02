@@ -1,0 +1,12 @@
+=== (a) seenInfer sweep (result phase replayed; «как есть» before 29.10 = 0) ===
+seenInfer 0: targets shown 3/36, taps 13 (on disliked without rating 0), wall 5, median best 9.5 | cinephile-c best 1 [1,482,60] wall 0; cinephile-l best 39 [53,746,39] wall 0; danya-l best 106 [107,106,287] wall 0; dima-c best 11 [26,11,76] wall 2; dima-l best 24 [24,29,60] wall 1; lena-l best 21 [21,27,29] wall 2
+seenInfer 0.05: targets shown 3/36, taps 12 (on disliked without rating 0), wall 4, median best 9.5 | cinephile-c best 1 [1,481,60] wall 0; cinephile-l best 40 [54,749,40] wall 0; danya-l best 104 [104,107,275] wall 0; dima-c best 11 [26,11,76] wall 2; dima-l best 24 [24,26,56] wall 0; lena-l best 12 [28,12,16] wall 2
+seenInfer 0.125: targets shown 3/36, taps 11 (on disliked without rating 0), wall 3, median best 9.5 | cinephile-c best 1 [1,482,60] wall 0; cinephile-l best 39 [54,763,39] wall 0; danya-l best 101 [101,106,258] wall 0; dima-c best 11 [26,11,76] wall 2; dima-l best 20 [20,22,52] wall 0; lena-l best 11 [44,11,14] wall 1
+seenInfer 0.25: targets shown 3/36, taps 11 (on disliked without rating 0), wall 3, median best 7.5 | cinephile-c best 1 [1,485,60] wall 0; cinephile-l best 40 [55,790,40] wall 0; danya-l best 98 [98,109,225] wall 0; dima-c best 11 [26,11,76] wall 2; dima-l best 17 [18,17,49] wall 0; lena-l best 7 [69,7,12] wall 1
+seenInfer 0.5: targets shown 3/36, taps 11 (on disliked without rating 0), wall 3, median best 7.5 | cinephile-c best 1 [1,490,62] wall 0; cinephile-l best 42 [57,830,42] wall 0; danya-l best 90 [90,111,184] wall 0; dima-c best 11 [26,11,76] wall 2; dima-l best 12 [16,12,46] wall 0; lena-l best 3 [116,3,9] wall 1
+
+=== (b) length from hours: thresholds against LLM tags, story-like only ===
+≤10/≥40: agree 24, disagree 1 (PC Building Simulator 9ч/long), between 11 | head-500 tagged 228 → 282 (+24 short, +30 long)
+≤12/≥30: agree 28, disagree 2 (Raft 35ч/short; PC Building Simulator 9ч/long), between 6 | head-500 tagged 228 → 322 (+36 short, +58 long)
+≤12/≥40: agree 27, disagree 1 (PC Building Simulator 9ч/long), between 8 | head-500 tagged 228 → 294 (+36 short, +30 long)
+≤15/≥30: agree 28, disagree 5 (Raft 35ч/short; My Summer Car 13ч/long; Grand Theft Auto: San Andreas 14ч/long; SPORE™ 14ч/long; PC Building Simulator 9ч/long), between 3 | head-500 tagged 228 → 347 (+61 short, +58 long)

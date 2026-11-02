@@ -1,0 +1,15 @@
+{"appid": 440900, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "an open world survival game set in the mythical lands of Hyboria"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "a", "q": "Use the powerful building system to create anything from a small home to entire cities"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "a", "q": "Explore a vast and seamless world"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "d", "q": "set in the mythical lands of Hyboria"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "In single-player, co-op, or persistent multiplayer"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "a", "q": "fight to dominate your enemies in epic siege wars"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "r237986395", "q": "It's a lonely single player game."}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "r236586041", "q": "exploring new ruins and new environments"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r236586041", "q": "you can spend dozens of hours without even fully traversing the map"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "r235880469", "q": "breathtaking graphics that even got better with enhanced"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "a", "q": "Weather scouring sandstorms, shield yourself from intense temperatures"}]},
+{"f": "progression.grind", "r": 2, "ev": [{"id": "r236646859", "q": "it's fun for a few hours but then gets grindy and repetitive"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r236646859", "q": "then gets grindy and repetitive"}, {"id": "r237986395", "q": "Kill the same ten enemies, rebuild your weapons, die and do it again."}]}
+]}

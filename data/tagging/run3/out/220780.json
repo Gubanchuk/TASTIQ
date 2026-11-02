@@ -1,0 +1,10 @@
+{"appid": 220780, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Thomas Was Alone is a 2012 puzzle-platform game"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p0", "q": "Thomas Was Alone is a 2012 puzzle-platform game"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p6", "q": "praising the use of narration to give otherwise simplistic shapes personalities"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p7", "q": "The storytelling and characters were praised by reviewers specifically"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "The soundtrack was also complimented by some reviewers"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p6", "q": "to create a smooth learning curve over the otherwise short game"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p6", "q": "over the otherwise short game"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "several artificial intelligence routines to run out of control"}]}
+]}

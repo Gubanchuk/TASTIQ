@@ -1,0 +1,9 @@
+{"appid": 979110, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "manage and maintain one or more spaceships moving through space"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "Players must construct systems that allow crew to survive in space"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "to maintain levels of oxygen and heat"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "protect and maintain a spaceship in search of a planet to colonise"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p3", "q": "highlighted the \"retro aesthetics\" and granularity of its simulation gameplay"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p0", "q": "praise directed to its level of detail and depth of gameplay mechanics"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p0", "q": "criticism of its gameplay balance and completeness of some of its features"}]}
+]}

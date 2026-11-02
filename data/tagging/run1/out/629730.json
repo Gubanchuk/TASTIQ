@@ -1,0 +1,111 @@
+{
+ "appid": 629730,
+ "features": [
+  {
+   "f": "combat.weighty",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "full physics driven melee, ranged and magic combat"
+    },
+    {
+     "id": "r237238487",
+     "q": "далеко в плане физики боя на холодном оружии"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236331644",
+     "q": "Commit mass genocide againts people using swords"
+    }
+   ]
+  },
+  {
+   "f": "world.fantasy",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "built-for-VR medieval fantasy with full physics driven melee, ranged and magic combat"
+    }
+   ]
+  },
+  {
+   "f": "freedom.sandbox",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236769877",
+     "q": "The sandbox mode alone makes it worth it"
+    },
+    {
+     "id": "a",
+     "q": "Play in unrestricted sandbox mode to access all 76 weapons"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "with 78 skills to unlock"
+    }
+   ]
+  },
+  {
+   "f": "story.lore",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "dive into the deep lore of Byeth"
+    }
+   ]
+  },
+  {
+   "f": "story.minimal",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237740378",
+     "q": "It's just not a story-based game"
+    },
+    {
+     "id": "r236718179",
+     "q": "с сюжетом так себе точнее его там нет"
+    }
+   ]
+  },
+  {
+   "f": "length.endless",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237175067",
+     "q": "has pretty much infinite replayability"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236796352",
+     "q": "the game quickly feels stale repetitive"
+    },
+    {
+     "id": "r236275292",
+     "q": "Gets stale quickly"
+    }
+   ]
+  }
+ ]
+}

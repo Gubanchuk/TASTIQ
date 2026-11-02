@@ -1,0 +1,15 @@
+{"appid": 2280, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Doom is a 1993 first-person shooter game"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "The player assumes the role of a space marine"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "fighting through hordes of undead humans and invading demons"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p11", "q": "the level design, lighting effects, and sound effects combined to create a"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "started developing a darker game focused on fighting demons with technology"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "The 3D graphics and art style earned glowing reviews as well"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p11", "q": "Computer Gaming World also praised the music"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p7", "q": "two to four players team up to complete the main campaign"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "two to four players compete to kill the other players' characters as many times as possible"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p4", "q": "To finish a level, the player must traverse through labyrinthine areas to reach a marked exit room"}]},
+{"f": "story.minimal", "r": 3, "ev": [{"id": "p8", "q": "The campaign contains very few plot elements, with a minimal story"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "enemies moving and attacking faster than normal on the hardest difficulty setting"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p3", "q": "Its high level of graphic violence led to controversy"}]}
+]}

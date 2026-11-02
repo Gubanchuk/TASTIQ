@@ -1,0 +1,7 @@
+{"appid": 1207650, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p2", "q": "the player must decide how to lead the country"}]},
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p0", "q": "text-based government simulation visual novel"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p6", "q": "developing a successful planned economy"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p3", "q": "a historical parallel to mid-20th century Earth"}, {"id": "p0", "q": "set in the 1950s"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p9", "q": "perhaps the most realistic video game about politics"}, {"id": "p9", "q": "it is based on the real world of politics"}]}
+]}

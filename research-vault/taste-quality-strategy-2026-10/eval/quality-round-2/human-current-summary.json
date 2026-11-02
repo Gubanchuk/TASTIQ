@@ -1,0 +1,38 @@
+{
+  "hybrid": {
+    "lists": 8,
+    "failedLists": 0,
+    "shown": 32,
+    "engine": 0,
+    "model": 29,
+    "fill": 3,
+    "accept": 0,
+    "conditional": 0,
+    "reject": 0,
+    "unknown": 0,
+    "unreviewed": 32,
+    "fullyResolvedLists": 0,
+    "listsWithAccept": 0,
+    "decidable": 0,
+    "strictAcceptance": null,
+    "anyAcceptRate": null
+  },
+  "direct": {
+    "lists": 8,
+    "failedLists": 0,
+    "shown": 32,
+    "engine": 0,
+    "model": 22,
+    "fill": 10,
+    "accept": 0,
+    "conditional": 0,
+    "reject": 0,
+    "unknown": 0,
+    "unreviewed": 32,
+    "fullyResolvedLists": 0,
+    "listsWithAccept": 0,
+    "decidable": 0,
+    "strictAcceptance": null,
+    "anyAcceptRate": null
+  }
+}

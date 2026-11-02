@@ -1,0 +1,99 @@
+{
+ "appid": 1364780,
+ "features": [
+  {
+   "f": "loop.melee",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "highly evolved combat system with three control types - Classic, Modern and Dynamic"
+    }
+   ]
+  },
+  {
+   "f": "social.pvp",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236439836",
+     "q": "I never experienced any lags while playing ranked"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237513344",
+     "q": "Got throw loop in the corner and guess wrong on the last interaction"
+    }
+   ]
+  },
+  {
+   "f": "combat.precise",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236439836",
+     "q": "modern controls is actually helpful and solid"
+    }
+   ]
+  },
+  {
+   "f": "world.modern",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Explore the Streets in World Tour"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Take your avatar and explore Metro City and beyond"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.stylized",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236439836",
+     "q": "the game has a certain style which is awesome"
+    }
+   ]
+  },
+  {
+   "f": "length.long",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235736413",
+     "q": "It's very addictive and will have you playing for hours past your plan"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238001774",
+     "q": "Unfortunately, it is no longer supported"
+    },
+    {
+     "id": "r237297482",
+     "q": "Half the characters are missing"
+    }
+   ]
+  }
+ ]
+}

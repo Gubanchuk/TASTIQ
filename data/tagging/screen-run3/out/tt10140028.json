@@ -1,0 +1,9 @@
+{"id": "tt10140028", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated comedy television series created by Gabe Liedman"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated comedy television series created by Gabe Liedman"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p5", "q": "surprisingly gentle and humane"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "Panned by critics, Q-Force was not renewed for a second season"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p6", "q": "major losses for queer storytelling on television"}]},
+{"f": "characters.acting", "r": 1, "ev": [{"id": "p4", "q": "distinctive and expressive characters, and talented voice actors"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p4", "q": "dynamic animation from Titmouse"}]}
+]}

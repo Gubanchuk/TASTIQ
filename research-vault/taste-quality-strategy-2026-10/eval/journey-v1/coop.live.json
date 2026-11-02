@@ -1,0 +1,4083 @@
+{
+  "state": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "friend",
+      "childAge": null,
+      "partySize": null,
+      "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+      "popularity": null,
+      "era": "any",
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [
+        {
+          "f": "cognitive.high",
+          "against": "cognitive.low",
+          "label": "подумать"
+        }
+      ],
+      "intent": {
+        "version": 1,
+        "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+        "wants": [
+          {
+            "f": "social.coop",
+            "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+          },
+          {
+            "f": "humor.funny",
+            "evidence": "можно посмеяться"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "social.pvp",
+            "evidence": "Против других игроков не хотим."
+          }
+        ],
+        "time": null,
+        "source": "confirmed"
+      }
+    },
+    "stops": [
+      "social.pvp"
+    ],
+    "asked": [
+      "lean:length.short|length.long",
+      "lean:cognitive.high|cognitive.low",
+      "fact:era"
+    ],
+    "shown": [
+      "steam:730",
+      "steam:271590",
+      "steam:105600",
+      "steam:359550",
+      "steam:252490",
+      "steam:4000",
+      "steam:553850",
+      "steam:1245620"
+    ],
+    "liked": [
+      "steam:728880",
+      "steam:1225570"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:728880": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop"
+        ],
+        "issues": []
+      },
+      "steam:1225570": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop",
+          "loop.puzzles"
+        ],
+        "issues": []
+      },
+      "steam:548430": {
+        "reaction": "like",
+        "reasons": [],
+        "issues": []
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 445586
+  },
+  "events": [
+    {
+      "at": "2026-10-31T18:05:13.585Z",
+      "path": "/api/ai/intent",
+      "input": {
+        "domain": "game",
+        "text": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+        "uid": "b825809a-1b48-4d79-bd6f-73e3fc9bc143"
+      },
+      "output": {
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 3082,
+          "input_tokens_details": {
+            "cache_write_tokens": 66,
+            "cached_tokens": 3013
+          },
+          "output_tokens": 183,
+          "output_tokens_details": {
+            "reasoning_tokens": 85
+          },
+          "total_tokens": 3265
+        },
+        "ms": 5257,
+        "proposal": {
+          "version": 1,
+          "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+          "wants": [
+            {
+              "f": "social.coop",
+              "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+            },
+            {
+              "f": "humor.funny",
+              "evidence": "можно посмеяться"
+            }
+          ],
+          "avoids": [
+            {
+              "f": "social.pvp",
+              "evidence": "Против других игроков не хотим."
+            }
+          ],
+          "time": null
+        },
+        "clarification": null
+      }
+    },
+    {
+      "at": "2026-10-31T18:05:25.629Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "confirm_intent",
+          "intent": {
+            "version": 1,
+            "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "wants": [
+              {
+                "f": "social.coop",
+                "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+              },
+              {
+                "f": "humor.funny",
+                "evidence": "можно посмеяться"
+              }
+            ],
+            "avoids": [
+              {
+                "f": "social.pvp",
+                "evidence": "Против других игроков не хотим."
+              }
+            ],
+            "time": null
+          }
+        }
+      },
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Во что играл, и как?",
+          "hint": "Отметь, как тебе знакомые названия, затем нажми «Дальше». Все карточки заполнять не нужно.",
+          "extra": false,
+          "items": [
+            {
+              "id": "steam:730",
+              "name": "Counter-Strike 2",
+              "ru": null,
+              "original": null,
+              "year": 2012,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1791824795",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Free To Play"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:271590",
+              "name": "Grand Theft Auto V Legacy",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:105600",
+              "name": "Terraria",
+              "ru": null,
+              "original": null,
+              "year": 2011,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:359550",
+              "name": "Tom Clancy's Rainbow Six Siege",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/359550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Free To Play"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:252490",
+              "name": "Rust",
+              "ru": null,
+              "original": null,
+              "year": 2018,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1781536981",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/252490/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:4000",
+              "name": "Garry's Mod",
+              "ru": null,
+              "original": null,
+              "year": 2006,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Casual",
+                "Indie",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:553850",
+              "name": "HELLDIVERS™ 2",
+              "ru": null,
+              "original": null,
+              "year": 2024,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg?t=1792487611",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/553850/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action"
+              ],
+              "rating": "Mostly Positive"
+            },
+            {
+              "id": "steam:1245620",
+              "name": "ELDEN RING",
+              "ru": null,
+              "original": null,
+              "year": 2022,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "RPG"
+              ],
+              "rating": "Very Positive"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не играл"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:05:28.682Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "react",
+          "marks": [
+            {
+              "id": "steam:728880",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:1225570",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:548430",
+              "reaction": "like"
+            }
+          ],
+          "known": {},
+          "shownIds": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную."
+        }
+      },
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «Overcooked! 2»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:728880",
+            "name": "Overcooked! 2",
+            "ru": null,
+            "original": null,
+            "year": 2018,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/9305414f49b2f7aee7f7198dc507d6b66383fdd6/header.jpg?t=1789548883",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/728880/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "Casual",
+              "Indie"
+            ],
+            "rating": "Very Positive"
+          },
+          "pair": [
+            {
+              "value": "humor.funny",
+              "label": "много юмора"
+            },
+            {
+              "value": "length.short",
+              "label": "короткая, на пару вечеров"
+            }
+          ],
+          "options": [
+            {
+              "value": "social.coop",
+              "label": "кооператив"
+            },
+            {
+              "value": "humor.funny",
+              "label": "много юмора"
+            },
+            {
+              "value": "length.short",
+              "label": "короткая, на пару вечеров"
+            },
+            {
+              "value": "tone.lighthearted",
+              "label": "лёгкое весёлое настроение"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "можно не напрягать голову"
+            },
+            {
+              "value": "content.family",
+              "label": "без жести, подходит всем"
+            },
+            {
+              "value": "social.pvp",
+              "label": "соревнование с людьми"
+            },
+            {
+              "value": "freedom.linear",
+              "label": "линейная, ведут по истории"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "label": "щадящая сложность"
+            },
+            {
+              "value": "tension.high",
+              "label": "держит в напряжении"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "1 из 2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:05:42.908Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "social.coop"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 1,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «Unravel Two»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:1225570",
+            "name": "Unravel Two",
+            "ru": null,
+            "original": null,
+            "year": 2020,
+            "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1225570/header.jpg",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1225570/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "Adventure"
+            ],
+            "rating": null
+          },
+          "pair": [
+            {
+              "value": "tone.whimsical",
+              "label": "странное и причудливое"
+            },
+            {
+              "value": "characters.companions",
+              "label": "команда и спутники"
+            }
+          ],
+          "options": [
+            {
+              "value": "loop.puzzles",
+              "label": "головоломки"
+            },
+            {
+              "value": "social.coop",
+              "label": "кооператив"
+            },
+            {
+              "value": "loop.platforming",
+              "label": "платформинг"
+            },
+            {
+              "value": "tone.whimsical",
+              "label": "странное и причудливое"
+            },
+            {
+              "value": "characters.companions",
+              "label": "команда и спутники"
+            },
+            {
+              "value": "content.family",
+              "label": "без жести, подходит всем"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "2 из 2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:05:58.141Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 1,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "social.coop",
+            "loop.puzzles"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "output": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "stops",
+          "title": "Что точно не надо?",
+          "hint": "Такое не предложу совсем. Если всё можно, просто дальше.",
+          "options": [
+            {
+              "value": "content.gore",
+              "label": "кровь и жестокость"
+            },
+            {
+              "value": "tone.creepy",
+              "label": "страшное"
+            },
+            {
+              "value": "content.sexual",
+              "label": "откровенное"
+            },
+            {
+              "value": "social.pvp",
+              "label": "против других людей"
+            },
+            {
+              "value": "progression.grind",
+              "label": "гринд"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:06:09.308Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "stops",
+          "values": [
+            "social.pvp"
+          ]
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "lean",
+          "qid": "lean:length.short|length.long",
+          "title": "Пройти за пару вечеров или на десятки часов?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "length.short",
+              "label": "за пару вечеров"
+            },
+            {
+              "value": "length.long",
+              "label": "на десятки часов"
+            }
+          ],
+          "canSkip": true,
+          "progress": "1"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:06:22.496Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:length.short|length.long"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "lean",
+          "qid": "lean:cognitive.high|cognitive.low",
+          "title": "Подумать или отключить голову?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову"
+            }
+          ],
+          "canSkip": true,
+          "progress": "2"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:06:32.656Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:length.short|length.long"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "answer",
+          "qid": "lean:cognitive.high|cognitive.low",
+          "value": "cognitive.high"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [
+              {
+                "f": "cognitive.high",
+                "against": "cognitive.low",
+                "label": "подумать"
+              }
+            ],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:length.short|length.long",
+            "lean:cognitive.high|cognitive.low"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "fact",
+          "qid": "fact:era",
+          "title": "Свежее или можно и старое?",
+          "hint": "От ответа зависит, что будет первым.",
+          "options": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015"
+            },
+            {
+              "value": "any",
+              "label": "можно и старое"
+            }
+          ],
+          "canSkip": true,
+          "progress": "3"
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:06:41.804Z",
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [
+              {
+                "f": "cognitive.high",
+                "against": "cognitive.low",
+                "label": "подумать"
+              }
+            ],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:length.short|length.long",
+            "lean:cognitive.high|cognitive.low"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "action": {
+          "type": "answer",
+          "qid": "fact:era",
+          "value": "any"
+        }
+      },
+      "output": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": "any",
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [
+              {
+                "f": "cognitive.high",
+                "against": "cognitive.low",
+                "label": "подумать"
+              }
+            ],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:length.short|length.long",
+            "lean:cognitive.high|cognitive.low",
+            "fact:era"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "screen": {
+          "step": "result",
+          "title": "Вот что я подобрал",
+          "result": {
+            "top": {
+              "id": "steam:620",
+              "domain": "game",
+              "name": "Portal 2",
+              "ru": null,
+              "year": 2011,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/faffc0f560786e2f05104a8d2fac837c6969bf13/header.jpg?t=1790187113",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/620/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Action",
+                "Adventure"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": "Overwhelmingly Positive",
+              "link": "https://store.steampowered.com/app/620/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 3.019,
+              "parts": {
+                "fit": 1.466,
+                "penalty": 0,
+                "mood": 1.133,
+                "prior": 0.42
+              },
+              "mainAspect": "social",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                    "factIds": [
+                      "match:social.coop"
+                    ]
+                  },
+                  {
+                    "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.puzzles"
+                    ]
+                  },
+                  {
+                    "text": "«Overcooked! 2» и «Unravel Two»: ещё «много юмора» и «платформинг». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:humor.funny",
+                      "match:loop.platforming"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [],
+                "info": [
+                  {
+                    "text": "99% положительных из 468 742 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 11 ч",
+                    "factIds": [
+                      "fact:hours"
+                    ]
+                  },
+                  {
+                    "text": "проверена для Steam Deck",
+                    "factIds": [
+                      "fact:deck"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:social.coop",
+                  "type": "match",
+                  "f": "social.coop",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Overcooked! 2",
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "a",
+                      "q": "Complete two-person co-op: Multiplayer game featuring its own dedicated story",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "Кооператив на двоих: многопользовательская игра с собственной сюжетной линией"
+                    },
+                    {
+                      "id": "tag:Co-op",
+                      "kind": "tag",
+                      "q": "Co-op",
+                      "votes": 6260
+                    }
+                  ],
+                  "contribution": 0.7929662916712009
+                },
+                {
+                  "id": "match:loop.puzzles",
+                  "type": "match",
+                  "f": "loop.puzzles",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "d",
+                      "q": "design co-op puzzles for you and your friends",
+                      "kind": "description",
+                      "thumb": null,
+                      "hours": null,
+                      "lang": null,
+                      "ru": "создавай кооперативные головоломки для тебя и твоих друзей"
+                    },
+                    {
+                      "id": "tag:Puzzle",
+                      "kind": "tag",
+                      "q": "Puzzle",
+                      "votes": 7394
+                    }
+                  ],
+                  "contribution": 0.4906354768889559
+                },
+                {
+                  "id": "match:humor.funny",
+                  "type": "match",
+                  "f": "humor.funny",
+                  "basis": "inferred",
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "r236440527",
+                      "q": "a sprawling comedic masterpiece of puzzle design",
+                      "kind": "review",
+                      "thumb": "up",
+                      "hours": 98,
+                      "lang": "english",
+                      "ru": "грандиозный комедийный шедевр дизайна головоломок"
+                    },
+                    {
+                      "id": "tag:Funny",
+                      "kind": "tag",
+                      "q": "Funny",
+                      "votes": 6885
+                    }
+                  ],
+                  "contribution": 0.09831179680000002
+                },
+                {
+                  "id": "match:loop.platforming",
+                  "type": "match",
+                  "f": "loop.platforming",
+                  "basis": "inferred",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Platformer",
+                      "kind": "tag",
+                      "q": "Platformer",
+                      "votes": 7477
+                    }
+                  ],
+                  "contribution": 0.05582790000000001
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.987,
+                  "total": 468742,
+                  "desc": "Overwhelmingly Positive"
+                },
+                {
+                  "id": "fact:hours",
+                  "type": "fact",
+                  "hours": 11
+                },
+                {
+                  "id": "fact:deck",
+                  "type": "fact",
+                  "deck": "verified"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "players",
+                  "status": "unknown",
+                  "text": "Не проверено, можно ли играть всей компанией (2)."
+                }
+              ]
+            },
+            "alternatives": [
+              {
+                "id": "steam:35700",
+                "domain": "game",
+                "name": "Trine Enchanted Edition",
+                "ru": "Trine",
+                "year": 2009,
+                "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/35700/header.jpg",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/35700/library_600x900.jpg",
+                "kind": "game",
+                "series": [
+                  "Trine"
+                ],
+                "genres": [
+                  "Action",
+                  "Adventure",
+                  "Casual"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": null,
+                "link": "https://store.steampowered.com/app/35700/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 2.817,
+                "parts": {
+                  "fit": 1.414,
+                  "penalty": 0,
+                  "mood": 1.042,
+                  "prior": 0.36
+                },
+                "mainAspect": "social",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                      "factIds": [
+                        "match:social.coop"
+                      ]
+                    },
+                    {
+                      "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.puzzles"
+                      ]
+                    },
+                    {
+                      "text": "«Unravel Two»: ещё «платформинг» и «команда и спутники». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:loop.platforming",
+                        "match:characters.companions"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Нет данных: длина",
+                      "factIds": [
+                        "gap:length"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "96% положительных из 15 345 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:social.coop",
+                    "type": "match",
+                    "f": "social.coop",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Overcooked! 2",
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p2",
+                        "q": "There is also a cooperative play feature, whereby multiple players can join in at any time",
+                        "kind": "wiki",
+                        "section": "Gameplay",
+                        "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                        "ru": "Также есть функция кооперативной игры, при которой несколько игроков могут присоединиться в любой момент"
+                      },
+                      {
+                        "id": "p8",
+                        "q": "the multiplayer mode adds extra life to the game",
+                        "kind": "wiki",
+                        "section": "Reception and legacy",
+                        "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                        "ru": "мультиплеер добавляет игре новую жизнь"
+                      }
+                    ],
+                    "contribution": 0.7580757748376681
+                  },
+                  {
+                    "id": "match:loop.puzzles",
+                    "type": "match",
+                    "f": "loop.puzzles",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p0",
+                        "q": "who can battle enemies and solve environmental puzzles",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                        "ru": "которые могут сражаться с врагами и решать экологические головоломки"
+                      },
+                      {
+                        "id": "tag:Puzzle",
+                        "kind": "tag",
+                        "q": "Puzzle",
+                        "votes": 431
+                      }
+                    ],
+                    "contribution": 0.4906354768889559
+                  },
+                  {
+                    "id": "match:loop.platforming",
+                    "type": "match",
+                    "f": "loop.platforming",
+                    "basis": "inferred",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p0",
+                        "q": "Trine is a puzzle-platform video game",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                        "ru": "Trine — платформер-головоломка"
+                      },
+                      {
+                        "id": "tag:Platformer",
+                        "kind": "tag",
+                        "q": "Platformer",
+                        "votes": 635
+                      }
+                    ],
+                    "contribution": 0.08374185000000002
+                  },
+                  {
+                    "id": "match:characters.companions",
+                    "type": "match",
+                    "f": "characters.companions",
+                    "basis": "inferred",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p2",
+                        "q": "The player controls and switches between three different characters",
+                        "kind": "wiki",
+                        "section": "Gameplay",
+                        "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                        "ru": "Игрок управляет тремя разными персонажами и переключается между ними"
+                      }
+                    ],
+                    "contribution": 0.034432504315000015
+                  },
+                  {
+                    "id": "gap:length",
+                    "type": "gap",
+                    "what": "длина"
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.958,
+                    "total": 15345,
+                    "desc": null
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "players",
+                    "status": "unknown",
+                    "text": "Не проверено, можно ли играть всей компанией (2)."
+                  }
+                ]
+              },
+              {
+                "id": "steam:837470",
+                "domain": "game",
+                "name": "Untitled Goose Game",
+                "ru": null,
+                "year": 2020,
+                "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/837470/header.jpg",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/837470/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Action",
+                  "Indie"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": null,
+                "link": "https://store.steampowered.com/app/837470/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 2.796,
+                "parts": {
+                  "fit": 1.355,
+                  "penalty": 0,
+                  "mood": 1.077,
+                  "prior": 0.364
+                },
+                "mainAspect": "social",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                      "factIds": [
+                        "match:social.coop"
+                      ]
+                    },
+                    {
+                      "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.puzzles"
+                      ]
+                    },
+                    {
+                      "text": "«Overcooked! 2»: ещё «много юмора» и «лёгкое весёлое настроение». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:humor.funny",
+                        "match:tone.lighthearted"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [],
+                  "info": [
+                    {
+                      "text": "96% положительных из 22 104 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:social.coop",
+                    "type": "match",
+                    "f": "social.coop",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Overcooked! 2",
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p5",
+                        "q": "A co-operative multiplayer option, added in an update",
+                        "kind": "wiki",
+                        "section": "Gameplay",
+                        "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                        "ru": "Режим кооперативной игры для нескольких игроков, добавленный в обновлении"
+                      },
+                      {
+                        "id": "tag:Co-op",
+                        "kind": "tag",
+                        "q": "Co-op",
+                        "votes": 392
+                      }
+                    ],
+                    "contribution": 0.6875017748789312
+                  },
+                  {
+                    "id": "match:loop.puzzles",
+                    "type": "match",
+                    "f": "loop.puzzles",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p0",
+                        "q": "Players must use the goose's abilities to manipulate objects and non-player characters to complete objectives",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                        "ru": "Игрокам нужно использовать способности гуся, чтобы манипулировать предметами и неигровыми персонажами для выполнения задач"
+                      },
+                      {
+                        "id": "tag:Puzzle",
+                        "kind": "tag",
+                        "q": "Puzzle",
+                        "votes": 370
+                      }
+                    ],
+                    "contribution": 0.4906354768889559
+                  },
+                  {
+                    "id": "match:humor.funny",
+                    "type": "match",
+                    "f": "humor.funny",
+                    "basis": "inferred",
+                    "sources": [
+                      "Overcooked! 2"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p2",
+                        "q": "critics praising its gameplay and humour",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                        "ru": "критики хвалили игровой процесс и юмор"
+                      },
+                      {
+                        "id": "p6",
+                        "q": "praised its silliness",
+                        "kind": "wiki",
+                        "section": "Critical",
+                        "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                        "ru": "высоко оценили её абсурдность"
+                      }
+                    ],
+                    "contribution": 0.1080969288
+                  },
+                  {
+                    "id": "match:tone.lighthearted",
+                    "type": "match",
+                    "f": "tone.lighthearted",
+                    "basis": "inferred",
+                    "sources": [
+                      "Overcooked! 2"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p6",
+                        "q": "Game Informer praised the game for its silliness and creativity",
+                        "kind": "wiki",
+                        "section": "Critical",
+                        "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                        "ru": "Game Informer похвалил игру за её глупость и креативность"
+                      },
+                      {
+                        "id": "tag:Cute",
+                        "kind": "tag",
+                        "q": "Cute",
+                        "votes": 392
+                      }
+                    ],
+                    "contribution": 0.06842082584960002
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.958,
+                    "total": 22104,
+                    "desc": null
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "players",
+                    "status": "unknown",
+                    "text": "Не проверено, можно ли играть всей компанией (2)."
+                  }
+                ]
+              },
+              {
+                "id": "steam:572890",
+                "domain": "game",
+                "name": "Pikuniku",
+                "ru": null,
+                "year": 2019,
+                "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/572890/header.jpg",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/572890/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Action",
+                  "Adventure",
+                  "Casual"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": null,
+                "link": "https://store.steampowered.com/app/572890/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 2.801,
+                "parts": {
+                  "fit": 1.514,
+                  "penalty": 0,
+                  "mood": 0.932,
+                  "prior": 0.355
+                },
+                "mainAspect": "social",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                      "factIds": [
+                        "match:social.coop"
+                      ]
+                    },
+                    {
+                      "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.puzzles"
+                      ]
+                    },
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ещё «много юмора» и «платформинг». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:humor.funny",
+                        "match:loop.platforming"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Сегодня ты просил другое («подумать»), а здесь «можно не напрягать голову»",
+                      "factIds": [
+                        "risk:mood:cognitive.low"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "96% положительных из 10 001 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:social.coop",
+                    "type": "match",
+                    "f": "social.coop",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Overcooked! 2",
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p3",
+                        "q": "features a local co-op mode with 9 levels",
+                        "kind": "wiki",
+                        "section": "Co-op",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "включает локальный кооперативный режим на 9 уровней"
+                      },
+                      {
+                        "id": "tag:Co-op",
+                        "kind": "tag",
+                        "q": "Co-op",
+                        "votes": 105
+                      }
+                    ],
+                    "contribution": 0.6875017748789312
+                  },
+                  {
+                    "id": "match:loop.puzzles",
+                    "type": "match",
+                    "f": "loop.puzzles",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p2",
+                        "q": "is a puzzle and adventure game",
+                        "kind": "wiki",
+                        "section": "Single-player",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "это головоломка и приключение"
+                      },
+                      {
+                        "id": "tag:Puzzle",
+                        "kind": "tag",
+                        "q": "Puzzle",
+                        "votes": 121
+                      }
+                    ],
+                    "contribution": 0.4906354768889559
+                  },
+                  {
+                    "id": "match:humor.funny",
+                    "type": "match",
+                    "f": "humor.funny",
+                    "basis": "inferred",
+                    "sources": [
+                      "Overcooked! 2"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p12",
+                        "q": "extremely charming and funny throughout",
+                        "kind": "wiki",
+                        "section": "Reception",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "невероятно очаровательная и смешная на протяжении всей игры"
+                      },
+                      {
+                        "id": "tag:Funny",
+                        "kind": "tag",
+                        "q": "Funny",
+                        "votes": 94
+                      }
+                    ],
+                    "contribution": 0.09831179680000002
+                  },
+                  {
+                    "id": "match:loop.platforming",
+                    "type": "match",
+                    "f": "loop.platforming",
+                    "basis": "inferred",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p8",
+                        "q": "a pretty good mix of platforming and puzzle",
+                        "kind": "wiki",
+                        "section": "Reception",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "неплохое сочетание платформинга и головоломок"
+                      },
+                      {
+                        "id": "tag:Platformer",
+                        "kind": "tag",
+                        "q": "Platformer",
+                        "votes": 71
+                      }
+                    ],
+                    "contribution": 0.08374185000000002
+                  },
+                  {
+                    "id": "risk:mood:cognitive.low",
+                    "type": "risk_mood",
+                    "f": "cognitive.low",
+                    "why": [
+                      "подумать"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p13",
+                        "q": "easy to pick up and play",
+                        "kind": "wiki",
+                        "section": "Reception",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "легко освоить и играть"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.958,
+                    "total": 10001,
+                    "desc": null
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "players",
+                    "status": "unknown",
+                    "text": "Не проверено, можно ли играть всей компанией (2)."
+                  }
+                ]
+              }
+            ],
+            "belief": 0.119,
+            "sieves": [
+              {
+                "id": 1,
+                "name": "Можно ли",
+                "removed": 0
+              },
+              {
+                "id": 2,
+                "name": "Было ли",
+                "removed": 5
+              },
+              {
+                "id": 3,
+                "name": "Сделано ли нормально",
+                "removed": 571
+              },
+              {
+                "id": 4,
+                "name": "Моё ли (жёсткие стопы)",
+                "removed": 285
+              },
+              {
+                "id": 5,
+                "name": "Подходит ли сегодня (обязательное)",
+                "removed": 3139
+              }
+            ],
+            "considered": 952,
+            "taste": {
+              "confirmed": [
+                {
+                  "f": "social.coop",
+                  "label": "кооператив",
+                  "w": 1.38,
+                  "sources": [
+                    "Overcooked! 2",
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:728880",
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.puzzles",
+                  "label": "головоломки",
+                  "w": 0.82,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                }
+              ],
+              "inferred": [
+                {
+                  "f": "humor.funny",
+                  "label": "много юмора",
+                  "w": 0.17,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.platforming",
+                  "label": "платформинг",
+                  "w": 0.12,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "cognitive.low",
+                  "label": "можно не напрягать голову",
+                  "w": 0.11,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "tone.lighthearted",
+                  "label": "лёгкое весёлое настроение",
+                  "w": 0.11,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "tone.whimsical",
+                  "label": "странное и причудливое",
+                  "w": 0.07,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "characters.companions",
+                  "label": "команда и спутники",
+                  "w": 0.07,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "difficulty.forgiving",
+                  "label": "щадящая сложность",
+                  "w": 0.07,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "freedom.linear",
+                  "label": "линейная, ведут по истории",
+                  "w": 0.07,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                }
+              ],
+              "dislikes": [],
+              "hardNo": [
+                {
+                  "f": "social.pvp",
+                  "label": "надо играть против людей",
+                  "w": 0,
+                  "sources": [],
+                  "ids": [],
+                  "preference": false
+                }
+              ],
+              "consumed": 3
+            },
+            "today": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            },
+            "uncheckedContext": []
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-10-31T18:06:51.560Z",
+      "path": "/api/ai/pick",
+      "input": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "popularity": null,
+            "era": "any",
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [
+              {
+                "f": "cognitive.high",
+                "against": "cognitive.low",
+                "label": "подумать"
+              }
+            ],
+            "intent": {
+              "version": 1,
+              "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+              "wants": [
+                {
+                  "f": "social.coop",
+                  "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+                },
+                {
+                  "f": "humor.funny",
+                  "evidence": "можно посмеяться"
+                }
+              ],
+              "avoids": [
+                {
+                  "f": "social.pvp",
+                  "evidence": "Против других игроков не хотим."
+                }
+              ],
+              "time": null,
+              "source": "confirmed"
+            }
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:length.short|length.long",
+            "lean:cognitive.high|cognitive.low",
+            "fact:era"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 445586
+        },
+        "wish": "",
+        "previous": [],
+        "uid": "b825809a-1b48-4d79-bd6f-73e3fc9bc143"
+      },
+      "output": {
+        "result": {
+          "top": {
+            "id": "steam:2001120",
+            "domain": "game",
+            "name": "Split Fiction",
+            "ru": null,
+            "year": 2025,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001120/header.jpg?t=1763484567",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2001120/library_600x900.jpg",
+            "kind": "game",
+            "series": [],
+            "genres": [
+              "Action",
+              "Adventure"
+            ],
+            "runtime": null,
+            "seasons": null,
+            "episodes": null,
+            "status": null,
+            "rating": "Overwhelmingly Positive",
+            "link": "https://store.steampowered.com/app/2001120/",
+            "price": null,
+            "label": "likely",
+            "labelText": "Вероятно подойдёт",
+            "score": 2.78,
+            "parts": {
+              "fit": 1.326,
+              "penalty": 0,
+              "mood": 1.063,
+              "prior": 0.391
+            },
+            "mainAspect": "social",
+            "explanation": {
+              "reasons": [
+                {
+                  "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                  "factIds": [
+                    "match:social.coop"
+                  ]
+                },
+                {
+                  "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                  "factIds": [
+                    "match:loop.puzzles"
+                  ]
+                },
+                {
+                  "text": "«Unravel Two»: ещё «платформинг» и «команда и спутники». Это ты не отмечал, вес слабый",
+                  "factIds": [
+                    "match:loop.platforming",
+                    "match:characters.companions"
+                  ],
+                  "weak": true
+                },
+                {
+                  "text": "Под настроение «сегодня хочется: «можно посмеяться»»: «много юмора»",
+                  "factIds": [
+                    "mood:humor.funny"
+                  ]
+                }
+              ],
+              "risks": [],
+              "info": [
+                {
+                  "text": "97% положительных из 128 507 отзывов Steam",
+                  "factIds": [
+                    "fact:reviews"
+                  ]
+                },
+                {
+                  "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 15 ч",
+                  "factIds": [
+                    "fact:hours"
+                  ]
+                },
+                {
+                  "text": "проверена для Steam Deck",
+                  "factIds": [
+                    "fact:deck"
+                  ]
+                }
+              ]
+            },
+            "facts": [
+              {
+                "id": "match:social.coop",
+                "type": "match",
+                "f": "social.coop",
+                "basis": "confirmed",
+                "sources": [
+                  "Overcooked! 2",
+                  "Unravel Two"
+                ],
+                "evidence": [
+                  {
+                    "id": "d",
+                    "q": "a boundary-pushing co-op adventure",
+                    "kind": "description",
+                    "thumb": null,
+                    "hours": null,
+                    "lang": null,
+                    "ru": "смелое кооперативное приключение, раздвигающее границы"
+                  },
+                  {
+                    "id": "r238041210",
+                    "q": "High-budget co-op-only games are almost nonexistent",
+                    "kind": "review",
+                    "thumb": "up",
+                    "hours": 16,
+                    "lang": "english",
+                    "ru": "Высокобюджетных кооперативных игр почти не существует"
+                  }
+                ],
+                "contribution": 0.7929662916712009
+              },
+              {
+                "id": "match:loop.puzzles",
+                "type": "match",
+                "f": "loop.puzzles",
+                "basis": "confirmed",
+                "sources": [
+                  "Unravel Two"
+                ],
+                "evidence": [
+                  {
+                    "id": "r236460175",
+                    "q": "Amazing world creation , nice puzzels",
+                    "kind": "review",
+                    "thumb": "up",
+                    "hours": 23,
+                    "lang": "english",
+                    "ru": "Потрясающее создание мира, хорошие головоломки"
+                  },
+                  {
+                    "id": "tag:Puzzle-Platformer",
+                    "kind": "tag",
+                    "q": "Puzzle-Platformer",
+                    "votes": 66
+                  }
+                ],
+                "contribution": 0.32725386308493365
+              },
+              {
+                "id": "match:loop.platforming",
+                "type": "match",
+                "f": "loop.platforming",
+                "basis": "inferred",
+                "sources": [
+                  "Unravel Two"
+                ],
+                "evidence": [
+                  {
+                    "id": "tag:3D Platformer",
+                    "kind": "tag",
+                    "q": "3D Platformer",
+                    "votes": 281
+                  }
+                ],
+                "contribution": 0.08374185000000002
+              },
+              {
+                "id": "match:characters.companions",
+                "type": "match",
+                "f": "characters.companions",
+                "basis": "inferred",
+                "sources": [
+                  "Unravel Two"
+                ],
+                "evidence": [
+                  {
+                    "id": "a",
+                    "q": "rely on each other to break free with their memories in-tact",
+                    "kind": "description",
+                    "thumb": null,
+                    "hours": null,
+                    "lang": null,
+                    "ru": "полагаются друг на друга, чтобы вырваться на свободу с сохранёнными воспоминаниями"
+                  }
+                ],
+                "contribution": 0.034432504315000015
+              },
+              {
+                "id": "mood:humor.funny",
+                "type": "mood",
+                "f": "humor.funny",
+                "why": [
+                  "сегодня хочется: «можно посмеяться»"
+                ],
+                "evidence": [
+                  {
+                    "id": "tag:Funny",
+                    "kind": "tag",
+                    "q": "Funny",
+                    "votes": 40
+                  }
+                ]
+              },
+              {
+                "id": "fact:reviews",
+                "type": "fact",
+                "ratio": 0.969,
+                "total": 128507,
+                "desc": "Overwhelmingly Positive"
+              },
+              {
+                "id": "fact:hours",
+                "type": "fact",
+                "hours": 15
+              },
+              {
+                "id": "fact:deck",
+                "type": "fact",
+                "deck": "verified"
+              }
+            ],
+            "feasibility": [
+              {
+                "key": "players",
+                "status": "unknown",
+                "text": "Не проверено, можно ли играть всей компанией (2)."
+              }
+            ],
+            "ai": {
+              "reason": "Как в Unravel Two, продвижение строится на взаимопомощи, но способности и задачи постоянно меняются — есть что обсудить и освоить.",
+              "caveat": "Число игроков в каталоге не проверено; есть непростые прыжки и бои.",
+              "likelySeen": false,
+              "own": false
+            }
+          },
+          "alternatives": [
+            {
+              "id": "steam:95400",
+              "domain": "game",
+              "name": "ibb & obb",
+              "ru": "Ibb and Obb",
+              "year": 2014,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/95400/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/95400/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/95400/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 2.635,
+              "parts": {
+                "fit": 1.326,
+                "penalty": 0,
+                "mood": 1.021,
+                "prior": 0.288
+              },
+              "mainAspect": "social",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                    "factIds": [
+                      "match:social.coop"
+                    ]
+                  },
+                  {
+                    "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.puzzles"
+                    ]
+                  },
+                  {
+                    "text": "«Unravel Two» и «Overcooked! 2»: ещё «платформинг» и «лёгкое весёлое настроение». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:loop.platforming",
+                      "match:tone.lighthearted"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Нет данных: длина",
+                    "factIds": [
+                      "gap:length"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "90% положительных из 6 623 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:social.coop",
+                  "type": "match",
+                  "f": "social.coop",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Overcooked! 2",
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "The game is focused on cooperative play",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Ibb_%26_Obb",
+                      "ru": "Игра сосредоточена на кооперативной игре"
+                    },
+                    {
+                      "id": "tag:Co-op",
+                      "kind": "tag",
+                      "q": "Co-op",
+                      "votes": 222
+                    }
+                  ],
+                  "contribution": 0.6875017748789312
+                },
+                {
+                  "id": "match:loop.puzzles",
+                  "type": "match",
+                  "f": "loop.puzzles",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "is a puzzle-platform video game",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Ibb_%26_Obb",
+                      "ru": "— платформер-головоломка"
+                    },
+                    {
+                      "id": "tag:Puzzle",
+                      "kind": "tag",
+                      "q": "Puzzle",
+                      "votes": 143
+                    }
+                  ],
+                  "contribution": 0.4906354768889559
+                },
+                {
+                  "id": "match:loop.platforming",
+                  "type": "match",
+                  "f": "loop.platforming",
+                  "basis": "inferred",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "is a puzzle-platform video game",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Ibb_%26_Obb",
+                      "ru": "— платформер-головоломка"
+                    },
+                    {
+                      "id": "tag:Platformer",
+                      "kind": "tag",
+                      "q": "Platformer",
+                      "votes": 109
+                    }
+                  ],
+                  "contribution": 0.08223449670000002
+                },
+                {
+                  "id": "match:tone.lighthearted",
+                  "type": "match",
+                  "f": "tone.lighthearted",
+                  "basis": "inferred",
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Cute",
+                      "kind": "tag",
+                      "q": "Cute",
+                      "votes": 85
+                    }
+                  ],
+                  "contribution": 0.027924032478720003
+                },
+                {
+                  "id": "gap:length",
+                  "type": "gap",
+                  "what": "длина"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.9,
+                  "total": 6623,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "players",
+                  "status": "unknown",
+                  "text": "Не проверено, можно ли играть всей компанией (2)."
+                }
+              ],
+              "ai": {
+                "reason": "Ближе всего к любимому Unravel Two: совместные прыжки и головоломки с гравитацией, где без помощи напарника не продвинуться.",
+                "caveat": "Число игроков в каталоге не проверено; некоторые прыжки требуют точности.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "steam:1335790",
+              "domain": "game",
+              "name": "Operation: Tango",
+              "ru": "Operation Tango",
+              "year": 2021,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1335790/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1335790/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Adventure",
+                "Casual"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/1335790/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 2.479,
+              "parts": {
+                "fit": 1.324,
+                "penalty": 0,
+                "mood": 0.894,
+                "prior": 0.262
+              },
+              "mainAspect": "social",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                    "factIds": [
+                      "match:social.coop"
+                    ]
+                  },
+                  {
+                    "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.puzzles"
+                    ]
+                  },
+                  {
+                    "text": "«Overcooked! 2»: ещё «можно не напрягать голову» и «щадящая сложность». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:cognitive.low",
+                      "match:difficulty.forgiving"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Сегодня ты просил другое («подумать»), а здесь «можно не напрягать голову»",
+                    "factIds": [
+                      "risk:mood:cognitive.low"
+                    ]
+                  },
+                  {
+                    "text": "Нет данных: длина",
+                    "factIds": [
+                      "gap:length"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "87% положительных из 7 997 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:social.coop",
+                  "type": "match",
+                  "f": "social.coop",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Overcooked! 2",
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "Operation: Tango is a cooperative first-person video game",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Operation%3A_Tango",
+                      "ru": "Operation: Tango — кооперативный шутер от первого лица"
+                    },
+                    {
+                      "id": "p1",
+                      "q": "is an asymmetrical co-operative game",
+                      "kind": "wiki",
+                      "section": "Premise and gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Operation%3A_Tango",
+                      "ru": "— асимметричная кооперативная игра"
+                    }
+                  ],
+                  "contribution": 0.7580757748376681
+                },
+                {
+                  "id": "match:loop.puzzles",
+                  "type": "match",
+                  "f": "loop.puzzles",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "must work together to solve puzzles to bring down a hi-tech global menace",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Operation%3A_Tango",
+                      "ru": "должны вместе решать головоломки, чтобы победить высокотехнологичную глобальную угрозу"
+                    },
+                    {
+                      "id": "tag:Puzzle",
+                      "kind": "tag",
+                      "q": "Puzzle",
+                      "votes": 148
+                    }
+                  ],
+                  "contribution": 0.4906354768889559
+                },
+                {
+                  "id": "match:cognitive.low",
+                  "type": "match",
+                  "f": "cognitive.low",
+                  "basis": "inferred",
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Casual",
+                      "kind": "tag",
+                      "q": "Casual",
+                      "votes": 102
+                    }
+                  ],
+                  "contribution": 0.0306343296
+                },
+                {
+                  "id": "match:difficulty.forgiving",
+                  "type": "match",
+                  "f": "difficulty.forgiving",
+                  "basis": "inferred",
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Casual",
+                      "kind": "tag",
+                      "q": "Casual",
+                      "votes": 102
+                    }
+                  ],
+                  "contribution": 0.017573759999999997
+                },
+                {
+                  "id": "risk:mood:cognitive.low",
+                  "type": "risk_mood",
+                  "f": "cognitive.low",
+                  "why": [
+                    "подумать"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "tag:Casual",
+                      "kind": "tag",
+                      "q": "Casual",
+                      "votes": 102
+                    }
+                  ]
+                },
+                {
+                  "id": "gap:length",
+                  "type": "gap",
+                  "what": "длина"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.874,
+                  "total": 7997,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "players",
+                  "status": "unknown",
+                  "text": "Не проверено, можно ли играть всей компанией (2)."
+                }
+              ],
+              "ai": {
+                "reason": "Ваше «вместе решать задачи» здесь главное: агент и хакер видят разное и должны объяснять друг другу, что делать.",
+                "caveat": "Число игроков в каталоге не проверено; нужна постоянная голосовая связь.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "steam:837470",
+              "domain": "game",
+              "name": "Untitled Goose Game",
+              "ru": null,
+              "year": 2020,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/837470/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/837470/library_600x900.jpg",
+              "kind": "game",
+              "series": [],
+              "genres": [
+                "Action",
+                "Indie"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/837470/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 2.796,
+              "parts": {
+                "fit": 1.355,
+                "penalty": 0,
+                "mood": 1.077,
+                "prior": 0.364
+              },
+              "mainAspect": "social",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                    "factIds": [
+                      "match:social.coop"
+                    ]
+                  },
+                  {
+                    "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.puzzles"
+                    ]
+                  },
+                  {
+                    "text": "«Overcooked! 2»: ещё «много юмора» и «лёгкое весёлое настроение». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:humor.funny",
+                      "match:tone.lighthearted"
+                    ],
+                    "weak": true
+                  }
+                ],
+                "risks": [],
+                "info": [
+                  {
+                    "text": "96% положительных из 22 104 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:social.coop",
+                  "type": "match",
+                  "f": "social.coop",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Overcooked! 2",
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p5",
+                      "q": "A co-operative multiplayer option, added in an update",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                      "ru": "Режим кооперативной игры для нескольких игроков, добавленный в обновлении"
+                    },
+                    {
+                      "id": "tag:Co-op",
+                      "kind": "tag",
+                      "q": "Co-op",
+                      "votes": 392
+                    }
+                  ],
+                  "contribution": 0.6875017748789312
+                },
+                {
+                  "id": "match:loop.puzzles",
+                  "type": "match",
+                  "f": "loop.puzzles",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "Players must use the goose's abilities to manipulate objects and non-player characters to complete objectives",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                      "ru": "Игрокам нужно использовать способности гуся, чтобы манипулировать предметами и неигровыми персонажами для выполнения задач"
+                    },
+                    {
+                      "id": "tag:Puzzle",
+                      "kind": "tag",
+                      "q": "Puzzle",
+                      "votes": 370
+                    }
+                  ],
+                  "contribution": 0.4906354768889559
+                },
+                {
+                  "id": "match:humor.funny",
+                  "type": "match",
+                  "f": "humor.funny",
+                  "basis": "inferred",
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "critics praising its gameplay and humour",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                      "ru": "критики хвалили игровой процесс и юмор"
+                    },
+                    {
+                      "id": "p6",
+                      "q": "praised its silliness",
+                      "kind": "wiki",
+                      "section": "Critical",
+                      "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                      "ru": "высоко оценили её абсурдность"
+                    }
+                  ],
+                  "contribution": 0.1080969288
+                },
+                {
+                  "id": "match:tone.lighthearted",
+                  "type": "match",
+                  "f": "tone.lighthearted",
+                  "basis": "inferred",
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p6",
+                      "q": "Game Informer praised the game for its silliness and creativity",
+                      "kind": "wiki",
+                      "section": "Critical",
+                      "url": "https://en.wikipedia.org/wiki/Untitled_Goose_Game",
+                      "ru": "Game Informer похвалил игру за её глупость и креативность"
+                    },
+                    {
+                      "id": "tag:Cute",
+                      "kind": "tag",
+                      "q": "Cute",
+                      "votes": 392
+                    }
+                  ],
+                  "contribution": 0.06842082584960002
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.958,
+                  "total": 22104,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "players",
+                  "status": "unknown",
+                  "text": "Не проверено, можно ли играть всей компанией (2)."
+                }
+              ],
+              "ai": {
+                "reason": "Для вашего «можно посмеяться»: совместные гусиные пакости, отвлечение жителей и поиск способов стащить нужную вещь.",
+                "caveat": "Число игроков в каталоге не проверено; кооператив локальный, не обычный онлайн.",
+                "likelySeen": false,
+                "own": false
+              }
+            }
+          ],
+          "belief": 0.119,
+          "sieves": [
+            {
+              "id": 1,
+              "name": "Можно ли",
+              "removed": 0
+            },
+            {
+              "id": 2,
+              "name": "Было ли",
+              "removed": 5
+            },
+            {
+              "id": 3,
+              "name": "Сделано ли нормально",
+              "removed": 571
+            },
+            {
+              "id": 4,
+              "name": "Моё ли (жёсткие стопы)",
+              "removed": 285
+            },
+            {
+              "id": 5,
+              "name": "Подходит ли сегодня (обязательное)",
+              "removed": 3139
+            }
+          ],
+          "considered": 952,
+          "taste": {
+            "confirmed": [
+              {
+                "f": "social.coop",
+                "label": "кооператив",
+                "w": 1.38,
+                "sources": [
+                  "Overcooked! 2",
+                  "Unravel Two"
+                ],
+                "ids": [
+                  "steam:728880",
+                  "steam:1225570"
+                ],
+                "preference": false
+              },
+              {
+                "f": "loop.puzzles",
+                "label": "головоломки",
+                "w": 0.82,
+                "sources": [
+                  "Unravel Two"
+                ],
+                "ids": [
+                  "steam:1225570"
+                ],
+                "preference": false
+              }
+            ],
+            "inferred": [
+              {
+                "f": "humor.funny",
+                "label": "много юмора",
+                "w": 0.17,
+                "sources": [
+                  "Overcooked! 2"
+                ],
+                "ids": [
+                  "steam:728880"
+                ],
+                "preference": false
+              },
+              {
+                "f": "loop.platforming",
+                "label": "платформинг",
+                "w": 0.12,
+                "sources": [
+                  "Unravel Two"
+                ],
+                "ids": [
+                  "steam:1225570"
+                ],
+                "preference": false
+              },
+              {
+                "f": "cognitive.low",
+                "label": "можно не напрягать голову",
+                "w": 0.11,
+                "sources": [
+                  "Overcooked! 2"
+                ],
+                "ids": [
+                  "steam:728880"
+                ],
+                "preference": false
+              },
+              {
+                "f": "tone.lighthearted",
+                "label": "лёгкое весёлое настроение",
+                "w": 0.11,
+                "sources": [
+                  "Overcooked! 2"
+                ],
+                "ids": [
+                  "steam:728880"
+                ],
+                "preference": false
+              },
+              {
+                "f": "tone.whimsical",
+                "label": "странное и причудливое",
+                "w": 0.07,
+                "sources": [
+                  "Unravel Two"
+                ],
+                "ids": [
+                  "steam:1225570"
+                ],
+                "preference": false
+              },
+              {
+                "f": "characters.companions",
+                "label": "команда и спутники",
+                "w": 0.07,
+                "sources": [
+                  "Unravel Two"
+                ],
+                "ids": [
+                  "steam:1225570"
+                ],
+                "preference": false
+              },
+              {
+                "f": "difficulty.forgiving",
+                "label": "щадящая сложность",
+                "w": 0.07,
+                "sources": [
+                  "Overcooked! 2"
+                ],
+                "ids": [
+                  "steam:728880"
+                ],
+                "preference": false
+              },
+              {
+                "f": "freedom.linear",
+                "label": "линейная, ведут по истории",
+                "w": 0.07,
+                "sources": [
+                  "Overcooked! 2"
+                ],
+                "ids": [
+                  "steam:728880"
+                ],
+                "preference": false
+              }
+            ],
+            "dislikes": [],
+            "hardNo": [
+              {
+                "f": "social.pvp",
+                "label": "надо играть против людей",
+                "w": 0,
+                "sources": [],
+                "ids": [],
+                "preference": false
+              }
+            ],
+            "consumed": 3
+          },
+          "today": {
+            "version": 1,
+            "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "wants": [
+              {
+                "f": "social.coop",
+                "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+              },
+              {
+                "f": "humor.funny",
+                "evidence": "можно посмеяться"
+              }
+            ],
+            "avoids": [
+              {
+                "f": "social.pvp",
+                "evidence": "Против других игроков не хотим."
+              }
+            ],
+            "time": null,
+            "source": "confirmed"
+          },
+          "spares": [],
+          "ai": {
+            "understood": "Вам с другом нужно общее приключение без PvP, где надо помогать друг другу и вместе думать, а смешные моменты будут плюсом.",
+            "wish": "",
+            "model": "gpt-6.1-sol",
+            "shortlist": 40
+          }
+        }
+      }
+    }
+  ],
+  "visibleText": "Назад\nПодбор\nЗаново\nВот что я подобрал\n\nСравнил 952 игры после отсева.\n\nПонял так: Вам с другом нужно общее приключение без PvP, где надо помогать друг другу и вместе думать, а смешные моменты будут плюсом. Без нейросети\n\nНа сегодня учёл: хочется кооператив; хочется много юмора; меньше соревнование с людьми.\n\nВероятно подойдёт\nSplit Fiction\n2025\nКак в Unravel Two, продвижение строится на взаимопомощи, но способности и задачи постоянно меняются — есть что обсудить и освоить.\nЧисло игроков в каталоге не проверено; есть непростые прыжки и бои.\nЕщё 4 причины в подробностях\nНе проверено, можно ли играть всей компанией (2).\nУже играл\nЕщё варианты\nIbb and Obb\n2014\nБлиже всего к любимому Unravel Two: совместные прыжки и головоломки с гравитацией, где без помощи напарника не продвинуться.\nНе проверено, можно ли играть всей компанией (2).\nВероятно подойдёт\nУже играл\nOperation Tango\n2021\nВаше «вместе решать задачи» здесь главное: агент и хакер видят разное и должны объяснять друг другу, что делать.\nНе проверено, можно ли играть всей компанией (2).\nВероятно подойдёт\nУже играл\nUntitled Goose Game\n2020\nДля вашего «можно посмеяться»: совместные гусиные пакости, отвлечение жителей и поиск способов стащить нужную вещь.\nНе проверено, можно ли играть всей компанией (2).\nВероятно подойдёт\nУже играл\nНе то? Скажи словами\nПодобрать\nПоправить, что я понял о тебе\nПочему не показал…"
+}

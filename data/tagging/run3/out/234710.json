@@ -1,0 +1,9 @@
+{"appid": 234710, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "Poker Night 2 is a 2013 poker video game"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p1", "q": "is a computer-based poker simulation between an unseen silent participant"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "these characters provide humorous chatter between each other and towards the player"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p2", "q": "these characters provide humorous chatter between each other and towards the player"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p0", "q": "features characters from different franchises"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p1", "q": "competes in standard poker rules to try to eliminate all the other players"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p3", "q": "The game features unlockable in-game card, chip and table designs"}]}
+]}

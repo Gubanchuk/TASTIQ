@@ -1,0 +1,12 @@
+{"appid": 914800, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p2", "q": "Coffee Talk is a visual novel as its gameplay primarily consists of reading dialogue"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "To brew a drink, the player chooses three ingredients in order"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "the drinks made by the player can affect the game's plot"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p8", "q": "the character designs, seemingly inspired from anime, are unique"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p0", "q": "The game features pixel art inspired by 1990s anime"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "Several reviewers praised Coffee Talk's pixel art and lo-fi music"}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "p9", "q": "found Coffee Talk's gameplay relaxing and satisying"}]},
+{"f": "tension.low", "r": 2, "ev": [{"id": "p9", "q": "found Coffee Talk's gameplay relaxing and satisying"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "The game follows a barista working in a coffee shop in a fantasy version of Seattle"}, {"id": "p6", "q": "populated by a broad variety of fantasy races, such as elves, orcs, mermaids"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p9", "q": "strengthened the game's replayability for several reviewers"}]}
+]}

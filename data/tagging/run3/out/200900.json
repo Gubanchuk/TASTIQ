@@ -1,0 +1,12 @@
+{"appid": 200900, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "Cave Story features 2D platform mechanics"}, {"id": "p3", "q": "They progress by navigating platforming challenges and shooting enemies"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "explores in diverse cavernous areas in order to uncover his backstory"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p0", "q": "speaks to non-player characters scattered around the game world"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p0", "q": "powers up his weapons by collecting triangular experience crystals"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p0", "q": "to learn more about the world and its inhabitants"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p1", "q": "its compelling characters, setting, story, and gameplay"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "polished feel, engaging storyline, and compelling artwork"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p8", "q": "engrossing, challenging, and quite lengthy"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p8", "q": "engrossing, challenging, and quite lengthy"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "an artifact called the Demon Crown, which has vast magical powers"}]}
+]}

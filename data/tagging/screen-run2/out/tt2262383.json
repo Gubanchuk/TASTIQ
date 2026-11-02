@@ -1,0 +1,6 @@
+{"id": "tt2262383", "features": [
+{"f": "story.true", "r": 2, "ev": [{"id": "s", "q": "inspired by the true story of former Las Vegas Sheriff Ralph Lamb"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p2", "q": "Set in 1960's Las Vegas"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "historical crime drama television series"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "CBS canceled the series after one season"}]}
+]}

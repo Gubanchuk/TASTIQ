@@ -1,0 +1,13 @@
+{
+  "appid": 310560,
+  "features": [
+    {"f": "loop.driving", "r": 3, "ev": [{"id": "p1", "q": "Dirt Rally is a racing game focused on rallying and rallycross"}]},
+    {"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "is a racing simulation video game"}]},
+    {"f": "difficulty.hard", "r": 2, "ev": [{"id": "p6", "q": "highlighted the game's unforgiving nature"}, {"id": "p5", "q": "Beginners will find it to be quite difficult"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p7", "q": "The sound design in particular is excellent"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p5", "q": "praised the physics model, graphics, and the range of cars"}]},
+    {"f": "social.pvp", "r": 1, "ev": [{"id": "p1", "q": "as well as rallycross and player versus player multiplayer modes"}]},
+    {"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "Dirt Rally features a large number of vehicles in a wide variety of classes"}]},
+    {"f": "world.historical", "r": 1, "ev": [{"id": "p2", "q": "It contains cars from the 1960s, 70s, 80s, Group B, Group A"}]}
+  ]
+}

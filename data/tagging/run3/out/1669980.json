@@ -1,0 +1,15 @@
+{
+  "appid": 1669980,
+  "features": [
+    {"f": "loop.life_sim", "r": 3, "ev": [{"id": "p2", "q": "players spend time with the daughter and manage what daily activities she participates in"}]},
+    {"f": "tone.cozy", "r": 3, "ev": [{"id": "p3", "q": "as wholesome as parenting can get"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p7", "q": "praised the great storytelling, beautiful art style and diverse gameplay"}]},
+    {"f": "tone.melancholic", "r": 1, "ev": [{"id": "p1", "q": "takes care of his daughter alone after his wife died"}]},
+    {"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "chivalry, magic and alchemy are prevalent"}]},
+    {"f": "story.choices", "r": 2, "ev": [{"id": "p3", "q": "with multiple routes to be chosen from"}]},
+    {"f": "cognitive.low", "r": 2, "ev": [{"id": "p5", "q": "easy to play, with a relatively orthodox upbringing system"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "beautiful art style and diverse gameplay"}]},
+    {"f": "pace.repetitive", "r": 1, "ev": [{"id": "p7", "q": "criticized the design of playing repeatedly"}]},
+    {"f": "progression.builds", "r": 1, "ev": [{"id": "p2", "q": "learn more than a dozen skills"}]}
+  ]
+}

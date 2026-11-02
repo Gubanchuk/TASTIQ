@@ -1,0 +1,15 @@
+{"appid": 20920, "features": [
+{"f": "story.central", "r": 3, "ev": [{"id": "r236266752", "q": "The story is strong and has real consequences"}, {"id": "r236953397", "q": "An excellent story"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "a", "q": "featuring 4 different beginnings and 16 different endings"}, {"id": "r236934856", "q": "it leads you to several different paths that you have to decide"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "a", "q": "set in a fantasy world unlike any other"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "r236609196", "q": "Те самые живые персонажи, которых помнишь и любишь"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "a", "q": "featuring both melee and ranged options"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "a", "q": "Prepare for battle using a wide array of tactical options"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "a", "q": "cast magic and sneak up on your foes"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "d", "q": "not enough to stop a bloody conspiracy"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "r236953397", "q": "highly restrictive level design that makes one feel boxed in"}]},
+{"f": "combat.clunky", "r": 3, "ev": [{"id": "r236944251", "q": "The combat is incredibly janky"}, {"id": "r237690106", "q": "боевая система слишком кисельная и не отзывчивая"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r237120622", "q": "a great soundtrack"}, {"id": "r237934856", "q": "она тут просто великолепная"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "a", "q": "over 40 hours of narrative-driven gameplay"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "r236507911", "q": "The fights is a bit tough at the start"}]}
+]}

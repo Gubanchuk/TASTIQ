@@ -1,0 +1,316 @@
+[
+  {
+    "id": "d01",
+    "split": "dev",
+    "domain": "game",
+    "text": "Я устал, но хочу напряжённую историю с героями, без гринда. Есть 45 минут.",
+    "wants": [
+      [
+        "tension.high"
+      ],
+      [
+        "story.central"
+      ]
+    ],
+    "avoids": [
+      [
+        "progression.grind"
+      ]
+    ],
+    "noWants": [
+      "tension.low",
+      "tone.cozy"
+    ],
+    "minutes": 45
+  },
+  {
+    "id": "d02",
+    "split": "dev",
+    "domain": "game",
+    "text": "Я устал.",
+    "empty": true,
+    "clarify": true,
+    "minutes": null
+  },
+  {
+    "id": "d03",
+    "split": "dev",
+    "domain": "game",
+    "text": "Хочу сильную историю. Гринд иногда терпим.",
+    "wants": [
+      [
+        "story.central"
+      ]
+    ],
+    "noAvoids": [
+      "progression.grind"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "d04",
+    "split": "dev",
+    "domain": "game",
+    "text": "Если друзья придут, хочу кооператив. Если не придут — одиночную историю. Пока не знаю.",
+    "noWants": [
+      "social.coop",
+      "social.solo",
+      "story.central"
+    ],
+    "clarify": true,
+    "minutes": null
+  },
+  {
+    "id": "d05",
+    "split": "dev",
+    "domain": "game",
+    "text": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+    "wants": [
+      [
+        "cognitive.high"
+      ]
+    ],
+    "noAvoids": [
+      "cognitive.high"
+    ],
+    "noWants": [
+      "cognitive.low"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "d06",
+    "split": "dev",
+    "domain": "game",
+    "text": "Хочу короткую игру, чтобы пройти целиком за несколько вечеров. Сегодня никуда не спешу.",
+    "wants": [
+      [
+        "length.short"
+      ]
+    ],
+    "noWants": [
+      "session.short"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "d07",
+    "split": "dev",
+    "domain": "game",
+    "text": "Сегодня есть 30–45 минут. Хочу один короткий заход, общая длина игры не важна.",
+    "wants": [
+      [
+        "session.short"
+      ]
+    ],
+    "noWants": [
+      "length.short"
+    ],
+    "minutes": 45
+  },
+  {
+    "id": "d08",
+    "split": "dev",
+    "domain": "film",
+    "text": "Есть полтора часа. Хочу смешной фильм, без жестокости.",
+    "wants": [
+      [
+        "humor.funny"
+      ]
+    ],
+    "avoids": [
+      [
+        "content.violence"
+      ]
+    ],
+    "minutes": 90
+  },
+  {
+    "id": "d09",
+    "split": "dev",
+    "domain": "film",
+    "text": "Обычно люблю мрачное, но сегодня хочу лёгкую добрую комедию.",
+    "wants": [
+      [
+        "humor.funny"
+      ],
+      [
+        "tone.lighthearted",
+        "tone.feelgood"
+      ]
+    ],
+    "noWants": [
+      "tone.dark"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "d10",
+    "split": "dev",
+    "domain": "series",
+    "text": "Хочу сериал фоном, без необходимости внимательно следить за сложным сюжетом.",
+    "wants": [
+      [
+        "cognitive.low"
+      ]
+    ],
+    "noWants": [
+      "cognitive.high"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "d11",
+    "split": "dev",
+    "domain": "film",
+    "text": "Хочу напряжённый триллер, но не ужастик.",
+    "wants": [
+      [
+        "tension.high"
+      ]
+    ],
+    "noAvoids": [
+      "tension.high"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "d12",
+    "split": "dev",
+    "domain": "cartoon",
+    "text": "Хочется погрустить и чтобы пробрало. Шуток сегодня не надо.",
+    "wants": [
+      [
+        "tone.melancholic"
+      ]
+    ],
+    "avoids": [
+      [
+        "humor.funny"
+      ]
+    ],
+    "noWants": [
+      "tone.lighthearted"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "h01",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Сил мало, но мне сейчас хочется подумать над трудной задачей, а не расслабляться.",
+    "wants": [
+      [
+        "cognitive.high"
+      ]
+    ],
+    "noWants": [
+      "cognitive.low",
+      "tension.low",
+      "tone.cozy"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "h02",
+    "split": "holdout",
+    "domain": "film",
+    "text": "Что-то мне скучно.",
+    "empty": true,
+    "clarify": true,
+    "minutes": null
+  },
+  {
+    "id": "h03",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Гринд мне подходит только если он нужен для интересной истории, иначе нет.",
+    "noWants": [
+      "progression.grind"
+    ],
+    "noAvoids": [
+      "progression.grind"
+    ],
+    "clarify": true,
+    "minutes": null
+  },
+  {
+    "id": "h04",
+    "split": "holdout",
+    "domain": "film",
+    "text": "Вчера хотелось тяжёлой драмы. Сегодня хочу посмеяться, без грусти.",
+    "wants": [
+      [
+        "humor.funny"
+      ]
+    ],
+    "avoids": [
+      [
+        "tone.melancholic"
+      ]
+    ],
+    "noWants": [
+      "tone.melancholic",
+      "tone.dark"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "h05",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Хочу не расслабиться, а попотеть над сложной игрой.",
+    "wants": [
+      [
+        "difficulty.hard",
+        "cognitive.high"
+      ]
+    ],
+    "noWants": [
+      "tension.low",
+      "cognitive.low"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "h06",
+    "split": "holdout",
+    "domain": "film",
+    "text": "На весь фильм сегодня есть не больше двух часов. Хочу спокойную историю.",
+    "wants": [
+      [
+        "tension.low"
+      ]
+    ],
+    "minutes": 120
+  },
+  {
+    "id": "h07",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Длинная игра нормально, возвращаться буду месяц. Сегодня могу поиграть только двадцать минут.",
+    "noWants": [
+      "length.short"
+    ],
+    "noAvoids": [
+      "length.long"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "h08",
+    "split": "holdout",
+    "domain": "cartoon",
+    "text": "Не против грусти, но хочется доброго и тёплого мультфильма.",
+    "wants": [
+      [
+        "tone.feelgood"
+      ]
+    ],
+    "noAvoids": [
+      "tone.melancholic",
+      "ending.sad"
+    ],
+    "minutes": null
+  }
+]

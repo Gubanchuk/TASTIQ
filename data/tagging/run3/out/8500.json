@@ -1,0 +1,10 @@
+{"appid": 8500, "features": [
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p1", "q": "In its single, shared game world, players engage in unscripted economic competition"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "engage in unscripted economic competition, warfare, and political schemes with other players"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a space-based, persistent-world massively-multiplayer online role-playing game"}]},
+{"f": "length.endless", "r": 3, "ev": [{"id": "p0", "q": "persistent-world massively-multiplayer online role-playing game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "mining, piracy, manufacturing, trading, exploration, and combat"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p6", "q": "The game's primary mode of play is flying space ships"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "renowned for its scale and complexity in regard to player interactions"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p1", "q": "players engage in unscripted economic competition, warfare, and political schemes"}]}
+]}

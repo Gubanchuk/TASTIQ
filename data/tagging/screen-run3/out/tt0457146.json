@@ -1,0 +1,12 @@
+{"id": "tt0457146", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated sitcom created by Jim Fortier and Dave Willis"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated sitcom created by Jim Fortier and Dave Willis"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p3", "q": "The show often satirizes the history and culture of the American South"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p3", "q": "which usually results in a fair amount of destruction, mutilation, and death"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "p3", "q": "Dougal County is impoverished, with little amenities or industry"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "p3", "q": "Despite their many crimes, the Cuylers often go unpunished"}]},
+{"f": "characters.antihero", "r": 2, "ev": [{"id": "p1", "q": "The series revolves around the exploits of Early, a lazy, ornery alcoholic and frequent criminal"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p1", "q": "Early's son, Rusty, is good-natured and eager for his father's approval"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "ended on December 12, 2021, with a total of 132 episodes over the course of 13 seasons"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p0", "q": "with a total of 132 episodes over the course of 13 seasons"}]}
+]}

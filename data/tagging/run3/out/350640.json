@@ -1,0 +1,6 @@
+{"appid": 350640, "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "an adventure mystery video game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "the majority of the game involves exploring crime scenes and examining clues"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "linking pieces of information together, leading to possibilities for different deductions"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "Sherlock Holmes confronts dark family secrets"}]}
+]}

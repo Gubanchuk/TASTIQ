@@ -1,0 +1,7 @@
+{"appid": 1138660, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p2", "q": "a deck-building card combat system"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "Taking place in 19th century Russia"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "the game is heavily inspired by Russian and Komi folklore"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "choices made by the player will affect the plot and general progression"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p2", "q": "The players achieve that by solving puzzles"}]}
+]}

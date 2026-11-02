@@ -1,0 +1,9 @@
+{"id": "tt29552248", "features": [
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is a 2026 animated fantasy comedy film"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p4", "q": "fast pacing, and a standout comedic performance by Tracy Morgan"}]},
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2026 animated fantasy comedy film"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "p3", "q": "a fairly rote buddy comedy quest narrative"}]},
+{"f": "story.predictable", "r": 2, "ev": [{"id": "p4", "q": "very familiar formula"}, {"id": "p3", "q": "a fairly rote buddy comedy quest narrative"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "strong visual storytelling and its earnest message of community trust"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p5", "q": "effective fantasy story for all ages"}]}
+]}

@@ -1,0 +1,6 @@
+{"appid": 919640, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "is turn-based (unlike the previous game), with each turn being the equivalent of half a day"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "takes influence from World War II"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p1", "q": "The game includes single-player, multiplayer, and cooperative aspects"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "Multiplayer allows for up to twenty players in ten against ten battles"}]}
+]}

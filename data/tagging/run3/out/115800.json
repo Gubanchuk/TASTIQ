@@ -1,0 +1,6 @@
+{"appid": 115800, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "is a platform-adventure video game"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p1", "q": "Otus gains allies that accompany him during his journey"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "with the help of an owl cloak, they are given the ability to fly"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "uncovers the lost truth of the Owls"}]}
+]}

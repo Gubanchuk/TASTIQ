@@ -1,0 +1,11 @@
+{"appid": 303210, "features": [
+{"f": "story.central", "r": 3, "ev": [{"id": "p2", "q": "Many reviewers readily took to the narrative and the questions and ideas it raised on game development"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p4", "q": "trying to understand the nature of a person based on exploring files and documents"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p4", "q": "based on exploring files and documents on their computer"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p3", "q": "allowing the player to move about and explore the environment"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "Some areas include puzzle solving and conversation trees"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p3", "q": "Some areas include puzzle solving and conversation trees"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p5", "q": "Wreden felt concerned that Coda was feeling depressed and weighed down by game development"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p10", "q": "an odd, thoughtful and beautifully surreal game"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p5", "q": "eventually Coda's games took a darker tone"}]}
+]}

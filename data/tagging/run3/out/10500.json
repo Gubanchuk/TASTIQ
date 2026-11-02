@@ -1,0 +1,12 @@
+{
+  "appid": 10500,
+  "features": [
+    {"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "a turn-based strategy and real-time tactics video game"}]},
+    {"f": "loop.management", "r": 2, "ev": [{"id": "p3", "q": "focused on exploration, economics, politics, religion, the founding of colonies"}]},
+    {"f": "loop.exploration", "r": 1, "ev": [{"id": "p3", "q": "focused on exploration, economics, politics, religion"}]},
+    {"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "focuses on the early modern period of the 18th century"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "Praise was bestowed upon the extensive strategic breadth, accurate historical challenges and visual effects"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p9", "q": "each turn requires strategic thinking on multiple fronts"}]},
+    {"f": "combat.clunky", "r": 1, "ev": [{"id": "p13", "q": "stated that the controls were"}]}
+  ]
+}

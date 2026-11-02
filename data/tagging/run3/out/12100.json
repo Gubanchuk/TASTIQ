@@ -1,0 +1,13 @@
+{"appid": 12100, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p0", "q": "Its open world design lets the player freely roam Liberty City"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p0", "q": "Set in Liberty City, loosely based on New York City"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p7", "q": "The firearms include weapons such as the Micro Uzi"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p4", "q": "use vehicles to navigate the game world"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p11", "q": "featuring plot elements akin to a mob film"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "a world of crime, drugs, gang warfare, and corruption"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p2", "q": "for its violent and sexual content"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p2", "q": "for its violent and sexual content"}]},
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "p10", "q": "particularly praising the soundtrack, voice acting and sound design"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "generally pleasant to look at"}, {"id": "p2", "q": "received acclaim for its concept, gameplay, sound design, and visual fidelity"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p8", "q": "some criticism was directed at the controls"}, {"id": "p12", "q": "an awkward system that stymies play"}]}
+]}

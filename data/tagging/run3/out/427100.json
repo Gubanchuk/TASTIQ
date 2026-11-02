@@ -1,0 +1,8 @@
+{"appid": 427100, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p3", "q": "allowing players to drive them on highly detailed German motorways"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "Fernbus Simulator is set in Germany"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p3", "q": "The game also provides various licensed buses from MAN, VDL, Scania, and Neoplan"}]},
+{"f": "loop.management", "r": 1, "ev": [{"id": "p4", "q": "The player's job is to manage the allocated budget wisely"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p5", "q": "The design of the game has been praised in terms of atmosphere"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p5", "q": "bugs, missing textures, insufficient realism and a lack of long-term motivation"}]}
+]}

@@ -1,0 +1,8 @@
+{"appid": 39000, "features": [
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "is a simulation video game based on potential Moon base programs"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "playable either as single-player or multi-player with up to six players"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "A time limit of 25 minutes is set to repair the outpost"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p2", "q": "The player repairs equipment by doing mini-games"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p4", "q": "Players can also drive a lunar rover to travel across the map"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p6", "q": "feeling that it was too short and needed more diverse missions"}]}
+]}

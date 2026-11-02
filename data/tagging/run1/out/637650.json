@@ -1,0 +1,135 @@
+{
+ "appid": 637650,
+ "features": [
+  {
+   "f": "world.fantasy",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "the centre of the ultimate fantasy adventure"
+    }
+   ]
+  },
+  {
+   "f": "freedom.open_world",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "through a breathtaking open world"
+    }
+   ]
+  },
+  {
+   "f": "characters.companions",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Joined by your closest friends on the roadtrip of a lifetime"
+    },
+    {
+     "id": "r236477139",
+     "q": "a road trip with the boys"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "master the skills of weaponry, magic and team-based attacks"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "witness stunning landscapes and encounter larger-than-life beasts"
+    },
+    {
+     "id": "r236168732",
+     "q": "A deeply flawed, gorgeous, messy masterpiece of a road trip"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236953462",
+     "q": "OST is 9/10"
+    },
+    {
+     "id": "r236168732",
+     "q": "jamming to classic tracks"
+    }
+   ]
+  },
+  {
+   "f": "ending.strong",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236168732",
+     "q": "The ending is pretty decent"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.forgiving",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236168732",
+     "q": "the combat can easily be brute-forced just by spamming items"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237946091",
+     "q": "a rushed, incomplete masterpiece"
+    },
+    {
+     "id": "r235847111",
+     "q": "There are sections hacked off and sown together in this Frankenstein of a game"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235847111",
+     "q": "cutting down the padding and constant time wasters"
+    },
+    {
+     "id": "r235943876",
+     "q": "the vast majority of time was just spent running around"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238012582",
+     "q": "придётся выполнять однотипные задания"
+    }
+   ]
+  }
+ ]
+}

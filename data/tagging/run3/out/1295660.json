@@ -1,0 +1,16 @@
+{
+  "appid": 1295660,
+  "features": [
+    {"f": "loop.management", "r": 3, "ev": [{"id": "p3", "q": "The player oversees the growth of a human civilization"}]},
+    {"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "a 4X turn-based strategy video game"}]},
+    {"f": "world.historical", "r": 2, "ev": [{"id": "p4", "q": "The historical era system is simplified into the antiquity, exploration, and modern ages"}]},
+    {"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "founding new cities, building city improvements"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Players do this by exploring the world"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "Multiple victory conditions are available to the player"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "allows the player to select leaders and civilizations independently"}]},
+    {"f": "length.long", "r": 2, "ev": [{"id": "p1", "q": "through many in-game millennia"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "The game's visuals and sounds and diplomacy system overhaul were mostly praised"}]},
+    {"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p2", "q": "It received praise for its visuals, music"}]},
+    {"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p6", "q": "the overreliance on DLC to fix or add lacking features"}]}
+  ]
+}

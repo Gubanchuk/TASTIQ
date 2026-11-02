@@ -1,0 +1,633 @@
+[
+  {
+    "id": "d01",
+    "split": "dev",
+    "domain": "game",
+    "text": "Я устал, но хочу напряжённую историю с героями, без гринда. Есть 45 минут.",
+    "wants": [
+      [
+        "tension.high"
+      ],
+      [
+        "story.central"
+      ]
+    ],
+    "avoids": [
+      [
+        "progression.grind"
+      ]
+    ],
+    "noWants": [
+      "tension.low",
+      "tone.cozy"
+    ],
+    "minutes": 45,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3052,
+        "input_tokens_details": {
+          "cache_write_tokens": 36,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 112,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3164
+      },
+      "ms": 3243,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Я устал, но хочу напряжённую историю с героями, без гринда. Есть 45 минут.",
+        "wants": [
+          {
+            "f": "tension.high",
+            "evidence": "хочу напряжённую историю"
+          },
+          {
+            "f": "story.central",
+            "evidence": "хочу напряжённую историю"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "progression.grind",
+            "evidence": "без гринда"
+          }
+        ],
+        "time": {
+          "minutes": 45,
+          "evidence": "Есть 45 минут."
+        }
+      },
+      "clarification": "Под «с героями» ты имеешь в виду ярких персонажей, команду спутников или что-то другое?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d02",
+    "split": "dev",
+    "domain": "game",
+    "text": "Я устал.",
+    "empty": true,
+    "clarify": true,
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3032,
+        "input_tokens_details": {
+          "cache_write_tokens": 16,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 48,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3080
+      },
+      "ms": 2916,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Я устал.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Во что ты хочешь поиграть сегодня: какого настроения или игрового опыта тебе хочется?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d03",
+    "split": "dev",
+    "domain": "game",
+    "text": "Хочу сильную историю. Гринд иногда терпим.",
+    "wants": [
+      [
+        "story.central"
+      ]
+    ],
+    "noAvoids": [
+      "progression.grind"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3041,
+        "input_tokens_details": {
+          "cache_write_tokens": 25,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 44,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3085
+      },
+      "ms": 1781,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу сильную историю. Гринд иногда терпим.",
+        "wants": [
+          {
+            "f": "story.central",
+            "evidence": "Хочу сильную историю"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d04",
+    "split": "dev",
+    "domain": "game",
+    "text": "Если друзья придут, хочу кооператив. Если не придут — одиночную историю. Пока не знаю.",
+    "noWants": [
+      "social.coop",
+      "social.solo",
+      "story.central"
+    ],
+    "clarify": true,
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3052,
+        "input_tokens_details": {
+          "cache_write_tokens": 36,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 51,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3103
+      },
+      "ms": 2789,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Если друзья придут, хочу кооператив. Если не придут — одиночную историю. Пока не знаю.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Ты хочешь сейчас подобрать варианты для обоих случаев или дождаться, станет ли известно, придут ли друзья?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d05",
+    "split": "dev",
+    "domain": "game",
+    "text": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+    "wants": [
+      [
+        "cognitive.high"
+      ]
+    ],
+    "noAvoids": [
+      "cognitive.high"
+    ],
+    "noWants": [
+      "cognitive.low"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3044,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3041
+        },
+        "output_tokens": 101,
+        "output_tokens_details": {
+          "reasoning_tokens": 33
+        },
+        "total_tokens": 3145
+      },
+      "ms": 2113,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+        "wants": [
+          {
+            "f": "loop.puzzles",
+            "evidence": "хочу сложные головоломки"
+          },
+          {
+            "f": "cognitive.high",
+            "evidence": "хочу сложные головоломки"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d06",
+    "split": "dev",
+    "domain": "game",
+    "text": "Хочу короткую игру, чтобы пройти целиком за несколько вечеров. Сегодня никуда не спешу.",
+    "wants": [
+      [
+        "length.short"
+      ]
+    ],
+    "noWants": [
+      "session.short"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3051,
+        "input_tokens_details": {
+          "cache_write_tokens": 35,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 54,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3105
+      },
+      "ms": 1812,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу короткую игру, чтобы пройти целиком за несколько вечеров. Сегодня никуда не спешу.",
+        "wants": [
+          {
+            "f": "length.short",
+            "evidence": "Хочу короткую игру, чтобы пройти целиком за несколько вечеров."
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d07",
+    "split": "dev",
+    "domain": "game",
+    "text": "Сегодня есть 30–45 минут. Хочу один короткий заход, общая длина игры не важна.",
+    "wants": [
+      [
+        "session.short"
+      ]
+    ],
+    "noWants": [
+      "length.short"
+    ],
+    "minutes": 45,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3052,
+        "input_tokens_details": {
+          "cache_write_tokens": 36,
+          "cached_tokens": 3013
+        },
+        "output_tokens": 59,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3111
+      },
+      "ms": 2162,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Сегодня есть 30–45 минут. Хочу один короткий заход, общая длина игры не важна.",
+        "wants": [
+          {
+            "f": "session.short",
+            "evidence": "Хочу один короткий заход"
+          }
+        ],
+        "avoids": [],
+        "time": {
+          "minutes": 45,
+          "evidence": "Сегодня есть 30–45 минут."
+        }
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d08",
+    "split": "dev",
+    "domain": "film",
+    "text": "Есть полтора часа. Хочу смешной фильм, без жестокости.",
+    "wants": [
+      [
+        "humor.funny"
+      ]
+    ],
+    "avoids": [
+      [
+        "content.violence"
+      ]
+    ],
+    "minutes": 90,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2751,
+        "input_tokens_details": {
+          "cache_write_tokens": 28,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 73,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2824
+      },
+      "ms": 1703,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Есть полтора часа. Хочу смешной фильм, без жестокости.",
+        "wants": [
+          {
+            "f": "humor.funny",
+            "evidence": "Хочу смешной фильм"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "content.violence",
+            "evidence": "без жестокости"
+          }
+        ],
+        "time": {
+          "minutes": 90,
+          "evidence": "Есть полтора часа."
+        }
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d09",
+    "split": "dev",
+    "domain": "film",
+    "text": "Обычно люблю мрачное, но сегодня хочу лёгкую добрую комедию.",
+    "wants": [
+      [
+        "humor.funny"
+      ],
+      [
+        "tone.lighthearted",
+        "tone.feelgood"
+      ]
+    ],
+    "noWants": [
+      "tone.dark"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2754,
+        "input_tokens_details": {
+          "cache_write_tokens": 31,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 79,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2833
+      },
+      "ms": 1755,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Обычно люблю мрачное, но сегодня хочу лёгкую добрую комедию.",
+        "wants": [
+          {
+            "f": "tone.lighthearted",
+            "evidence": "сегодня хочу лёгкую добрую комедию"
+          },
+          {
+            "f": "tone.feelgood",
+            "evidence": "добрую"
+          },
+          {
+            "f": "humor.funny",
+            "evidence": "комедию"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d10",
+    "split": "dev",
+    "domain": "series",
+    "text": "Хочу сериал фоном, без необходимости внимательно следить за сложным сюжетом.",
+    "wants": [
+      [
+        "cognitive.low"
+      ]
+    ],
+    "noWants": [
+      "cognitive.high"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2753,
+        "input_tokens_details": {
+          "cache_write_tokens": 30,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2833
+      },
+      "ms": 2025,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу сериал фоном, без необходимости внимательно следить за сложным сюжетом.",
+        "wants": [
+          {
+            "f": "cognitive.low",
+            "evidence": "Хочу сериал фоном, без необходимости внимательно следить за сложным сюжетом."
+          }
+        ],
+        "avoids": [
+          {
+            "f": "story.complex",
+            "evidence": "без необходимости внимательно следить за сложным сюжетом"
+          }
+        ],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d11",
+    "split": "dev",
+    "domain": "film",
+    "text": "Хочу напряжённый триллер, но не ужастик.",
+    "wants": [
+      [
+        "tension.high"
+      ]
+    ],
+    "noAvoids": [
+      "tension.high"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2750,
+        "input_tokens_details": {
+          "cache_write_tokens": 27,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 63,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2813
+      },
+      "ms": 1853,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу напряжённый триллер, но не ужастик.",
+        "wants": [
+          {
+            "f": "tension.high",
+            "evidence": "Хочу напряжённый триллер"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "tone.creepy",
+            "evidence": "не ужастик"
+          }
+        ],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "d12",
+    "split": "dev",
+    "domain": "cartoon",
+    "text": "Хочется погрустить и чтобы пробрало. Шуток сегодня не надо.",
+    "wants": [
+      [
+        "tone.melancholic"
+      ]
+    ],
+    "avoids": [
+      [
+        "humor.funny"
+      ]
+    ],
+    "noWants": [
+      "tone.lighthearted"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2755,
+        "input_tokens_details": {
+          "cache_write_tokens": 32,
+          "cached_tokens": 2720
+        },
+        "output_tokens": 71,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2826
+      },
+      "ms": 1737,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочется погрустить и чтобы пробрало. Шуток сегодня не надо.",
+        "wants": [
+          {
+            "f": "tone.melancholic",
+            "evidence": "Хочется погрустить и чтобы пробрало"
+          }
+        ],
+        "avoids": [
+          {
+            "f": "humor.funny",
+            "evidence": "Шуток сегодня не надо"
+          }
+        ],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  }
+]

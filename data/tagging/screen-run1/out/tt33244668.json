@@ -1,0 +1,8 @@
+{"id": "tt33244668", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p3", "q": "It's hilarious, harmless, and puts a fun spin on a familiar formula"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p0", "q": "a meta-reboot of Anaconda (1997)"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p0", "q": "action-adventure comedy horror film"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p2", "q": "ripe for a raucous action-comedy"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "p0", "q": "The story follows a group of childhood friends"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p3", "q": "just family friendly enough to let kids have a good time"}]}
+]}

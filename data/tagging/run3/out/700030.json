@@ -1,0 +1,8 @@
+{"appid": 700030, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "supported full terraforming of the environment, free construction, a branched system of crafts"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p4", "q": "extremely realistic simulator of the Middle Ages"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "massively multiplayer online role-playing game in a medieval setting"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "Players were encouraged to collaborate via the game's guilds system"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "crafts, survival elements, a non-armored combat system"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p3", "q": "The combat system calculated damage based on weapon mass and velocity"}]}
+]}

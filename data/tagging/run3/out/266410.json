@@ -1,0 +1,7 @@
+{"appid": 266410, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p1", "q": "mimic real-life driving as closely as possible"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p0", "q": "The game simulates real world cars, tracks, and racing events"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "subscription-based online sim racing video game"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "All in-game sessions are hosted on the publisher's servers"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p4", "q": "criticized for not yet including features often found on other racing simulators"}, {"id": "p4", "q": "The graphics give the impression of an unfinished beta"}]}
+]}

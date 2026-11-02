@@ -1,0 +1,12 @@
+{"appid": 212500, "features": [
+{"f": "length.endless", "r": 3, "ev": [{"id": "p1", "q": "The game saw continued development, alternating between paid expansions and free updates"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "set in J. R. R. Tolkien's Middle-earth"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "Many world regions, group instances and seasonal festivals"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "which can be assigned in various configurations to customize personal playstyle"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "Players improve their characters by upgrading their equipment"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "The crafting system allows each character to master up to four professions"}]},
+{"f": "loop.life_sim", "r": 2, "ev": [{"id": "p3", "q": "significant emphasis is placed on cooking and agricultural farming"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "Legendary items, intended to stay with the player throughout the game"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p2", "q": "Players traverse the game world either on foot, using personal mounts"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p8", "q": "commented negatively on its weak PvP content"}]}
+]}

@@ -1,0 +1,13 @@
+{"appid": 1217060, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "d", "q": "is a level-based adventure game featuring FPS, Roguelite and RPG"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "r237481514", "q": "always a different build every time"}, {"id": "a", "q": "construct diverse Build through death cycle for different experience"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "d", "q": "use various weapons to explore procedurally-generated levels"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "d", "q": "You can play the game alone, or join 4-player coop."}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "r237481514", "q": "super fun to play singleplayer or with a group"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "a", "q": "Over 100 different items and various weapons"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "a", "q": "Unique art style"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r237863200", "q": "Been playing for years and still enjoying every run."}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "r237611760", "q": "The game has gotten much easier since the DLCs"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "r236044913", "q": "the absolutely breakneck pace of the game"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "r235695311", "q": "Много гринда и медленный геймплей"}]}
+]}

@@ -1,0 +1,8 @@
+{"appid": 239160, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p3", "q": "players must use stealth to overcome challenges"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "a dark fantasy world inspired by Victorian, Gothic, gaslight fantasy and steampunk aesthetics"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "a dark fantasy world inspired by Victorian, Gothic, gaslight fantasy and steampunk aesthetics"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "Levels contain coins and valuable objects which Garrett can steal"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "The player controls Garrett, a master thief"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p8", "q": "Most reviewers praised its stealth gameplay, level design, graphics, and replay value"}]}
+]}

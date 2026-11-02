@@ -1,0 +1,141 @@
+{
+ "appid": 617290,
+ "features": [
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Remnant: From the Ashes is a third-person survival action shooter"
+    },
+    {
+     "id": "r238046100",
+     "q": "Dark Souls with guns"
+    }
+   ]
+  },
+  {
+   "f": "world.postapoc",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "set in a post-apocalyptic world overrun by monstrous creatures"
+    }
+   ]
+  },
+  {
+   "f": "world.scifi",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "technology to open portals to other realms and alternate realities"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "The world has been thrown into chaos by an ancient evil from another dimension"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237604988",
+     "q": "It's best played with friends"
+    },
+    {
+     "id": "r236286829",
+     "q": "coop is very cool"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236286829",
+     "q": "Can be difficult but that's the name of the game"
+    },
+    {
+     "id": "r235685984",
+     "q": "the game can be hard"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235685984",
+     "q": "you build your character in order to make progress in the game"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235799326",
+     "q": "the game is short"
+    }
+   ]
+  },
+  {
+   "f": "length.endless",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235799326",
+     "q": "I have over 100 hours logged and I still didnt see everything"
+    },
+    {
+     "id": "r236073641",
+     "q": "the game does have some replay value"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235756113",
+     "q": "This game is super repetitive"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237428271",
+     "q": "Controls are a little weird"
+    }
+   ]
+  },
+  {
+   "f": "progression.grind",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235798892",
+     "q": "grinding and failure is a replacement for solid design"
+    }
+   ]
+  }
+ ]
+}

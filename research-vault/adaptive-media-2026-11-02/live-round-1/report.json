@@ -1,0 +1,494 @@
+{
+  "cap": 0.6,
+  "maxCalls": 12,
+  "before": {
+    "upper": 2.0484624,
+    "calls": 181
+  },
+  "cases": [
+    {
+      "domain": "film",
+      "steps": [
+        {
+          "action": "broad-request",
+          "state": {
+            "version": 1,
+            "domain": "film",
+            "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4",
+            "revision": 1,
+            "mode": "guided",
+            "phase": "talk",
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "contextEvidence": {
+              "company": null,
+              "childAge": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": {
+                  "id": "direction",
+                  "title": "Какой фильм хочется сегодня?",
+                  "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+                  "options": [
+                    {
+                      "id": "comedy",
+                      "label": "Комедия"
+                    },
+                    {
+                      "id": "drama",
+                      "label": "Драма"
+                    },
+                    {
+                      "id": "thriller",
+                      "label": "Триллер"
+                    },
+                    {
+                      "id": "adventure",
+                      "label": "Приключения"
+                    },
+                    {
+                      "id": "fantasy",
+                      "label": "Фантастика"
+                    },
+                    {
+                      "id": "detective",
+                      "label": "Детектив"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Пока не могу решить, чего именно хочется посмотреть.",
+                "kind": "answer",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "acceptedContext": {
+                  "company": null,
+                  "childAge": null,
+                  "timeMode": null,
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": null
+              }
+            ],
+            "facts": [],
+            "question": {
+              "id": "desired_experience",
+              "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+              "why": "Можно начать с ощущения, а не выбирать жанр.",
+              "options": [
+                {
+                  "id": "lighthearted",
+                  "label": "Расслабиться и развеселиться"
+                },
+                {
+                  "id": "tension",
+                  "label": "Почувствовать напряжение"
+                },
+                {
+                  "id": "moving",
+                  "label": "Растрогаться"
+                },
+                {
+                  "id": "thoughtful",
+                  "label": "Получить пищу для размышлений"
+                },
+                {
+                  "id": "spectacle",
+                  "label": "Погрузиться в зрелищное приключение"
+                }
+              ],
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            },
+            "summary": "Ты пока не определился, какой фильм хочется посмотреть.",
+            "uncertainties": [
+              "Пока неизвестно, какого впечатления ты хочешь от фильма."
+            ],
+            "retractions": [],
+            "sessionTime": null,
+            "result": null,
+            "provisional": false,
+            "needsPlan": false,
+            "failedAction": null,
+            "familiar": {
+              "marked": [],
+              "keep": [],
+              "hidden": [],
+              "excluded": [],
+              "undo": null
+            },
+            "replacement": null,
+            "factRemovalUndo": null
+          },
+          "screen": {
+            "domain": "film",
+            "summary": "Ты пока не определился, какой фильм хочется посмотреть.",
+            "facts": [],
+            "uncertainties": [
+              "Пока неизвестно, какого впечатления ты хочешь от фильма."
+            ],
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "sessionTime": null,
+            "canBack": true,
+            "canUndoFactRemoval": false,
+            "provisional": false,
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": "Какой фильм хочется сегодня?",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "superseded": false
+              }
+            ],
+            "type": "question",
+            "question": {
+              "id": "desired_experience",
+              "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+              "why": "Можно начать с ощущения, а не выбирать жанр.",
+              "options": [
+                {
+                  "id": "lighthearted",
+                  "label": "Расслабиться и развеселиться"
+                },
+                {
+                  "id": "tension",
+                  "label": "Почувствовать напряжение"
+                },
+                {
+                  "id": "moving",
+                  "label": "Растрогаться"
+                },
+                {
+                  "id": "thoughtful",
+                  "label": "Получить пищу для размышлений"
+                },
+                {
+                  "id": "spectacle",
+                  "label": "Погрузиться в зрелищное приключение"
+                }
+              ],
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            }
+          }
+        },
+        {
+          "action": "answer",
+          "state": {
+            "version": 1,
+            "domain": "film",
+            "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4",
+            "revision": 2,
+            "mode": "guided",
+            "phase": "talk",
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "contextEvidence": {
+              "company": null,
+              "childAge": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": {
+                  "id": "direction",
+                  "title": "Какой фильм хочется сегодня?",
+                  "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+                  "options": [
+                    {
+                      "id": "comedy",
+                      "label": "Комедия"
+                    },
+                    {
+                      "id": "drama",
+                      "label": "Драма"
+                    },
+                    {
+                      "id": "thriller",
+                      "label": "Триллер"
+                    },
+                    {
+                      "id": "adventure",
+                      "label": "Приключения"
+                    },
+                    {
+                      "id": "fantasy",
+                      "label": "Фантастика"
+                    },
+                    {
+                      "id": "detective",
+                      "label": "Детектив"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Пока не могу решить, чего именно хочется посмотреть.",
+                "kind": "answer",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "acceptedContext": {
+                  "company": null,
+                  "childAge": null,
+                  "timeMode": null,
+                  "commitment": null,
+                  "onlyEnded": null,
+                  "format": null
+                },
+                "acceptedTime": null
+              },
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "question": {
+                  "id": "desired_experience",
+                  "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+                  "why": "Можно начать с ощущения, а не выбирать жанр.",
+                  "options": [
+                    {
+                      "id": "lighthearted",
+                      "label": "Расслабиться и развеселиться"
+                    },
+                    {
+                      "id": "tension",
+                      "label": "Почувствовать напряжение"
+                    },
+                    {
+                      "id": "moving",
+                      "label": "Растрогаться"
+                    },
+                    {
+                      "id": "thoughtful",
+                      "label": "Получить пищу для размышлений"
+                    },
+                    {
+                      "id": "spectacle",
+                      "label": "Погрузиться в зрелищное приключение"
+                    }
+                  ],
+                  "multiple": true,
+                  "controls": [
+                    "unknown",
+                    "indifferent",
+                    "none"
+                  ]
+                },
+                "selected": [],
+                "text": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "kind": "answer",
+                "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого."
+              }
+            ],
+            "facts": [],
+            "question": {
+              "id": "experience",
+              "title": "Какое впечатление хочется получить?",
+              "options": [
+                {
+                  "id": "warm",
+                  "label": "Тёплая история"
+                },
+                {
+                  "id": "intrigue",
+                  "label": "Интрига"
+                },
+                {
+                  "id": "laugh",
+                  "label": "Посмеяться"
+                },
+                {
+                  "id": "adventure",
+                  "label": "Приключение"
+                }
+              ],
+              "why": "Направление можно уточнить своими словами.",
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            },
+            "summary": "",
+            "uncertainties": [
+              "Пока неизвестно, какого впечатления ты хочешь от фильма."
+            ],
+            "retractions": [],
+            "sessionTime": null,
+            "result": null,
+            "provisional": true,
+            "needsPlan": true,
+            "failedAction": "plan",
+            "familiar": {
+              "marked": [],
+              "keep": [],
+              "hidden": [],
+              "excluded": [],
+              "undo": null
+            },
+            "replacement": null,
+            "factRemovalUndo": null
+          },
+          "screen": {
+            "domain": "film",
+            "summary": "",
+            "facts": [],
+            "uncertainties": [
+              "Пока неизвестно, какого впечатления ты хочешь от фильма."
+            ],
+            "context": {
+              "company": null,
+              "childAge": null,
+              "minutes": null,
+              "timeMode": null,
+              "commitment": null,
+              "onlyEnded": null,
+              "format": null
+            },
+            "sessionTime": null,
+            "canBack": true,
+            "canUndoFactRemoval": false,
+            "provisional": true,
+            "turns": [
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+                "question": "Какой фильм хочется сегодня?",
+                "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+                "superseded": false
+              },
+              {
+                "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+                "question": "Какого впечатления тебе сейчас больше хочется от фильма?",
+                "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+                "superseded": false
+              }
+            ],
+            "type": "question",
+            "question": {
+              "id": "experience",
+              "title": "Какое впечатление хочется получить?",
+              "options": [
+                {
+                  "id": "warm",
+                  "label": "Тёплая история"
+                },
+                {
+                  "id": "intrigue",
+                  "label": "Интрига"
+                },
+                {
+                  "id": "laugh",
+                  "label": "Посмеяться"
+                },
+                {
+                  "id": "adventure",
+                  "label": "Приключение"
+                }
+              ],
+              "why": "Направление можно уточнить своими словами.",
+              "multiple": true,
+              "controls": [
+                "unknown",
+                "indifferent",
+                "none"
+              ]
+            }
+          },
+          "error": "Это условие не подтверждено действующим ответом или уже снято.",
+          "retryable": true
+        }
+      ],
+      "firstQuestion": {
+        "id": "desired_experience",
+        "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+        "why": "Можно начать с ощущения, а не выбирать жанр.",
+        "options": [
+          {
+            "id": "lighthearted",
+            "label": "Расслабиться и развеселиться"
+          },
+          {
+            "id": "tension",
+            "label": "Почувствовать напряжение"
+          },
+          {
+            "id": "moving",
+            "label": "Растрогаться"
+          },
+          {
+            "id": "thoughtful",
+            "label": "Получить пищу для размышлений"
+          },
+          {
+            "id": "spectacle",
+            "label": "Погрузиться в зрелищное приключение"
+          }
+        ],
+        "multiple": true,
+        "controls": [
+          "unknown",
+          "indifferent",
+          "none"
+        ]
+      }
+    }
+  ],
+  "stageCalls": 2,
+  "stageUsd": 0.025392,
+  "error": "film interpretation: Это условие не подтверждено действующим ответом или уже снято.",
+  "after": {
+    "upper": 2.0738544,
+    "calls": 183,
+    "uncertainReserve": 0
+  }
+}

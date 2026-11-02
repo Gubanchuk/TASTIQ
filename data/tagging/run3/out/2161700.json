@@ -1,0 +1,15 @@
+{
+  "appid": 2161700,
+  "features": [
+    {"f": "loop.life_sim", "r": 2, "ev": [{"id": "p3", "q": "retains its core hybrid of traditional role-playing and social simulation gameplay"}]},
+    {"f": "loop.dialogue", "r": 2, "ev": [{"id": "p4", "q": "strike individual conversations with every dorm resident"}]},
+    {"f": "characters.companions", "r": 2, "ev": [{"id": "p0", "q": "a group of like-minded Persona users"}]},
+    {"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "uncovering the mystery of the Dark Hour"}]},
+    {"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "the protagonist is a high school student returning to his home city"}]},
+    {"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "He soon gains the potential to summon a Persona"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "Exploration both around Tatsumi Port Island and within Tartarus"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "praising the game's quality of life improvements, voice cast, and soundtrack"}]},
+    {"f": "tone.melancholic", "r": 2, "ev": [{"id": "p0", "q": "a decade after his parents were killed in a car crash"}]},
+    {"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p11", "q": "for omitting certain features from the previous releases of Persona 3"}]}
+  ]
+}

@@ -1,0 +1,9 @@
+{"appid": 1209040, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "sci-fi battle royale video game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p2", "q": "traditional battle royale format"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "fancy weapons such as microwave guns"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "building various structures for defense"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p2", "q": "vertical climbing, parkour"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p3", "q": "There are many strategic options at players' disposal"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p2", "q": "detailed customization of characters"}]}
+]}

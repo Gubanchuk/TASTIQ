@@ -1,0 +1,735 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T23:38:57.530Z",
+  "title": "Design System: TASTIQ — Разговор",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "accent",
+        "tonalRamp": [
+          "oklch(15% 0.16042 34.12)",
+          "oklch(27% 0.16042 34.12)",
+          "oklch(39% 0.16042 34.12)",
+          "oklch(51% 0.16042 34.12)",
+          "oklch(63% 0.16042 34.12)",
+          "oklch(75% 0.16042 34.12)",
+          "oklch(87% 0.16042 34.12)",
+          "oklch(95% 0.16042 34.12)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "accent-hover",
+        "tonalRamp": [
+          "oklch(15% 0.14927 33.21)",
+          "oklch(27% 0.14927 33.21)",
+          "oklch(39% 0.14927 33.21)",
+          "oklch(51% 0.14927 33.21)",
+          "oklch(63% 0.14927 33.21)",
+          "oklch(75% 0.14927 33.21)",
+          "oklch(87% 0.14927 33.21)",
+          "oklch(95% 0.14927 33.21)"
+        ]
+      },
+      "game-accent-hover": {
+        "role": "primary",
+        "displayName": "game-accent-hover",
+        "tonalRamp": [
+          "oklch(15% 0.14281 33.63)",
+          "oklch(27% 0.14281 33.63)",
+          "oklch(39% 0.14281 33.63)",
+          "oklch(51% 0.14281 33.63)",
+          "oklch(63% 0.14281 33.63)",
+          "oklch(75% 0.14281 33.63)",
+          "oklch(87% 0.14281 33.63)",
+          "oklch(95% 0.14281 33.63)"
+        ]
+      },
+      "game-accent-press": {
+        "role": "primary",
+        "displayName": "game-accent-press",
+        "tonalRamp": [
+          "oklch(15% 0.12811 33.13)",
+          "oklch(27% 0.12811 33.13)",
+          "oklch(39% 0.12811 33.13)",
+          "oklch(51% 0.12811 33.13)",
+          "oklch(63% 0.12811 33.13)",
+          "oklch(75% 0.12811 33.13)",
+          "oklch(87% 0.12811 33.13)",
+          "oklch(95% 0.12811 33.13)"
+        ]
+      },
+      "accent-text": {
+        "role": "primary",
+        "displayName": "accent-text",
+        "tonalRamp": [
+          "oklch(15% 0.15059 33.45)",
+          "oklch(27% 0.15059 33.45)",
+          "oklch(39% 0.15059 33.45)",
+          "oklch(51% 0.15059 33.45)",
+          "oklch(63% 0.15059 33.45)",
+          "oklch(75% 0.15059 33.45)",
+          "oklch(87% 0.15059 33.45)",
+          "oklch(95% 0.15059 33.45)"
+        ]
+      },
+      "game-accent-text": {
+        "role": "primary",
+        "displayName": "game-accent-text",
+        "tonalRamp": [
+          "oklch(15% 0.13312 35.20)",
+          "oklch(27% 0.13312 35.20)",
+          "oklch(39% 0.13312 35.20)",
+          "oklch(51% 0.13312 35.20)",
+          "oklch(63% 0.13312 35.20)",
+          "oklch(75% 0.13312 35.20)",
+          "oklch(87% 0.13312 35.20)",
+          "oklch(95% 0.13312 35.20)"
+        ]
+      },
+      "on-accent": {
+        "role": "primary",
+        "displayName": "on-accent",
+        "tonalRamp": [
+          "oklch(15% 0.01023 67.71)",
+          "oklch(27% 0.01023 67.71)",
+          "oklch(39% 0.01023 67.71)",
+          "oklch(51% 0.01023 67.71)",
+          "oklch(63% 0.01023 67.71)",
+          "oklch(75% 0.01023 67.71)",
+          "oklch(87% 0.01023 67.71)",
+          "oklch(95% 0.01023 67.71)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "paper",
+        "tonalRamp": [
+          "oklch(15% 0.01653 70.53)",
+          "oklch(27% 0.01653 70.53)",
+          "oklch(39% 0.01653 70.53)",
+          "oklch(51% 0.01653 70.53)",
+          "oklch(63% 0.01653 70.53)",
+          "oklch(75% 0.01653 70.53)",
+          "oklch(87% 0.01653 70.53)",
+          "oklch(95% 0.01653 70.53)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "surface",
+        "tonalRamp": [
+          "oklch(15% 0.01302 71.33)",
+          "oklch(27% 0.01302 71.33)",
+          "oklch(39% 0.01302 71.33)",
+          "oklch(51% 0.01302 71.33)",
+          "oklch(63% 0.01302 71.33)",
+          "oklch(75% 0.01302 71.33)",
+          "oklch(87% 0.01302 71.33)",
+          "oklch(95% 0.01302 71.33)"
+        ]
+      },
+      "context": {
+        "role": "neutral",
+        "displayName": "context",
+        "tonalRamp": [
+          "oklch(15% 0.01917 67.58)",
+          "oklch(27% 0.01917 67.58)",
+          "oklch(39% 0.01917 67.58)",
+          "oklch(51% 0.01917 67.58)",
+          "oklch(63% 0.01917 67.58)",
+          "oklch(75% 0.01917 67.58)",
+          "oklch(87% 0.01917 67.58)",
+          "oklch(95% 0.01917 67.58)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "card",
+        "tonalRamp": [
+          "oklch(15% 0.00854 84.57)",
+          "oklch(27% 0.00854 84.57)",
+          "oklch(39% 0.00854 84.57)",
+          "oklch(51% 0.00854 84.57)",
+          "oklch(63% 0.00854 84.57)",
+          "oklch(75% 0.00854 84.57)",
+          "oklch(87% 0.00854 84.57)",
+          "oklch(95% 0.00854 84.57)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "field",
+        "tonalRamp": [
+          "oklch(15% 0.00693 88.64)",
+          "oklch(27% 0.00693 88.64)",
+          "oklch(39% 0.00693 88.64)",
+          "oklch(51% 0.00693 88.64)",
+          "oklch(63% 0.00693 88.64)",
+          "oklch(75% 0.00693 88.64)",
+          "oklch(87% 0.00693 88.64)",
+          "oklch(95% 0.00693 88.64)"
+        ]
+      },
+      "game-field": {
+        "role": "neutral",
+        "displayName": "game-field",
+        "tonalRamp": [
+          "oklch(15% 0.00958 72.66)",
+          "oklch(27% 0.00958 72.66)",
+          "oklch(39% 0.00958 72.66)",
+          "oklch(51% 0.00958 72.66)",
+          "oklch(63% 0.00958 72.66)",
+          "oklch(75% 0.00958 72.66)",
+          "oklch(87% 0.00958 72.66)",
+          "oklch(95% 0.00958 72.66)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "ink",
+        "tonalRamp": [
+          "oklch(15% 0.00179 106.51)",
+          "oklch(27% 0.00179 106.51)",
+          "oklch(39% 0.00179 106.51)",
+          "oklch(51% 0.00179 106.51)",
+          "oklch(63% 0.00179 106.51)",
+          "oklch(75% 0.00179 106.51)",
+          "oklch(87% 0.00179 106.51)",
+          "oklch(95% 0.00179 106.51)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "muted",
+        "tonalRamp": [
+          "oklch(15% 0.01204 67.55)",
+          "oklch(27% 0.01204 67.55)",
+          "oklch(39% 0.01204 67.55)",
+          "oklch(51% 0.01204 67.55)",
+          "oklch(63% 0.01204 67.55)",
+          "oklch(75% 0.01204 67.55)",
+          "oklch(87% 0.01204 67.55)",
+          "oklch(95% 0.01204 67.55)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "line",
+        "tonalRamp": [
+          "oklch(15% 0.01838 64.90)",
+          "oklch(27% 0.01838 64.90)",
+          "oklch(39% 0.01838 64.90)",
+          "oklch(51% 0.01838 64.90)",
+          "oklch(63% 0.01838 64.90)",
+          "oklch(75% 0.01838 64.90)",
+          "oklch(87% 0.01838 64.90)",
+          "oklch(95% 0.01838 64.90)"
+        ]
+      },
+      "context-line": {
+        "role": "neutral",
+        "displayName": "context-line",
+        "tonalRamp": [
+          "oklch(15% 0.02406 65.38)",
+          "oklch(27% 0.02406 65.38)",
+          "oklch(39% 0.02406 65.38)",
+          "oklch(51% 0.02406 65.38)",
+          "oklch(63% 0.02406 65.38)",
+          "oklch(75% 0.02406 65.38)",
+          "oklch(87% 0.02406 65.38)",
+          "oklch(95% 0.02406 65.38)"
+        ]
+      },
+      "game-separator": {
+        "role": "neutral",
+        "displayName": "game-separator",
+        "tonalRamp": [
+          "oklch(15% 0.02870 60.24)",
+          "oklch(27% 0.02870 60.24)",
+          "oklch(39% 0.02870 60.24)",
+          "oklch(51% 0.02870 60.24)",
+          "oklch(63% 0.02870 60.24)",
+          "oklch(75% 0.02870 60.24)",
+          "oklch(87% 0.02870 60.24)",
+          "oklch(95% 0.02870 60.24)"
+        ]
+      },
+      "game-fill": {
+        "role": "neutral",
+        "displayName": "game-fill",
+        "tonalRamp": [
+          "oklch(15% 0.02078 67.57)",
+          "oklch(27% 0.02078 67.57)",
+          "oklch(39% 0.02078 67.57)",
+          "oklch(51% 0.02078 67.57)",
+          "oklch(63% 0.02078 67.57)",
+          "oklch(75% 0.02078 67.57)",
+          "oklch(87% 0.02078 67.57)",
+          "oklch(95% 0.02078 67.57)"
+        ]
+      },
+      "game-fill-hover": {
+        "role": "neutral",
+        "displayName": "game-fill-hover",
+        "tonalRamp": [
+          "oklch(15% 0.02340 65.44)",
+          "oklch(27% 0.02340 65.44)",
+          "oklch(39% 0.02340 65.44)",
+          "oklch(51% 0.02340 65.44)",
+          "oklch(63% 0.02340 65.44)",
+          "oklch(75% 0.02340 65.44)",
+          "oklch(87% 0.02340 65.44)",
+          "oklch(95% 0.02340 65.44)"
+        ]
+      },
+      "game-fill-press": {
+        "role": "neutral",
+        "displayName": "game-fill-press",
+        "tonalRamp": [
+          "oklch(15% 0.03070 65.79)",
+          "oklch(27% 0.03070 65.79)",
+          "oklch(39% 0.03070 65.79)",
+          "oklch(51% 0.03070 65.79)",
+          "oklch(63% 0.03070 65.79)",
+          "oklch(75% 0.03070 65.79)",
+          "oklch(87% 0.03070 65.79)",
+          "oklch(95% 0.03070 65.79)"
+        ]
+      },
+      "game-choice-selected": {
+        "role": "neutral",
+        "displayName": "game-choice-selected",
+        "tonalRamp": [
+          "oklch(15% 0.03078 54.69)",
+          "oklch(27% 0.03078 54.69)",
+          "oklch(39% 0.03078 54.69)",
+          "oklch(51% 0.03078 54.69)",
+          "oklch(63% 0.03078 54.69)",
+          "oklch(75% 0.03078 54.69)",
+          "oklch(87% 0.03078 54.69)",
+          "oklch(95% 0.03078 54.69)"
+        ]
+      },
+      "game-chip": {
+        "role": "neutral",
+        "displayName": "game-chip",
+        "tonalRamp": [
+          "oklch(15% 0.01238 75.37)",
+          "oklch(27% 0.01238 75.37)",
+          "oklch(39% 0.01238 75.37)",
+          "oklch(51% 0.01238 75.37)",
+          "oklch(63% 0.01238 75.37)",
+          "oklch(75% 0.01238 75.37)",
+          "oklch(87% 0.01238 75.37)",
+          "oklch(95% 0.01238 75.37)"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "rail",
+        "tonalRamp": [
+          "oklch(15% 0.00466 247.99)",
+          "oklch(27% 0.00466 247.99)",
+          "oklch(39% 0.00466 247.99)",
+          "oklch(51% 0.00466 247.99)",
+          "oklch(63% 0.00466 247.99)",
+          "oklch(75% 0.00466 247.99)",
+          "oklch(87% 0.00466 247.99)",
+          "oklch(95% 0.00466 247.99)"
+        ]
+      },
+      "rail-text": {
+        "role": "neutral",
+        "displayName": "rail-text",
+        "tonalRamp": [
+          "oklch(15% 0.01452 74.41)",
+          "oklch(27% 0.01452 74.41)",
+          "oklch(39% 0.01452 74.41)",
+          "oklch(51% 0.01452 74.41)",
+          "oklch(63% 0.01452 74.41)",
+          "oklch(75% 0.01452 74.41)",
+          "oklch(87% 0.01452 74.41)",
+          "oklch(95% 0.01452 74.41)"
+        ]
+      },
+      "rail-hover": {
+        "role": "neutral",
+        "displayName": "rail-hover",
+        "tonalRamp": [
+          "oklch(15% 0.00220 247.89)",
+          "oklch(27% 0.00220 247.89)",
+          "oklch(39% 0.00220 247.89)",
+          "oklch(51% 0.00220 247.89)",
+          "oklch(63% 0.00220 247.89)",
+          "oklch(75% 0.00220 247.89)",
+          "oklch(87% 0.00220 247.89)",
+          "oklch(95% 0.00220 247.89)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "focus",
+        "tonalRamp": [
+          "oklch(15% 0.10557 235.19)",
+          "oklch(27% 0.10557 235.19)",
+          "oklch(39% 0.10557 235.19)",
+          "oklch(51% 0.10557 235.19)",
+          "oklch(63% 0.10557 235.19)",
+          "oklch(75% 0.10557 235.19)",
+          "oklch(87% 0.10557 235.19)",
+          "oklch(95% 0.10557 235.19)"
+        ]
+      },
+      "game-focus": {
+        "role": "primary",
+        "displayName": "game-focus",
+        "tonalRamp": [
+          "oklch(15% 0.14391 34.29)",
+          "oklch(27% 0.14391 34.29)",
+          "oklch(39% 0.14391 34.29)",
+          "oklch(51% 0.14391 34.29)",
+          "oklch(63% 0.14391 34.29)",
+          "oklch(75% 0.14391 34.29)",
+          "oklch(87% 0.14391 34.29)",
+          "oklch(95% 0.14391 34.29)"
+        ]
+      },
+      "known-line": {
+        "role": "neutral",
+        "displayName": "known-line",
+        "tonalRamp": [
+          "oklch(15% 0.03366 151.10)",
+          "oklch(27% 0.03366 151.10)",
+          "oklch(39% 0.03366 151.10)",
+          "oklch(51% 0.03366 151.10)",
+          "oklch(63% 0.03366 151.10)",
+          "oklch(75% 0.03366 151.10)",
+          "oklch(87% 0.03366 151.10)",
+          "oklch(95% 0.03366 151.10)"
+        ]
+      },
+      "liked-text": {
+        "role": "neutral",
+        "displayName": "liked-text",
+        "tonalRamp": [
+          "oklch(15% 0.06157 150.43)",
+          "oklch(27% 0.06157 150.43)",
+          "oklch(39% 0.06157 150.43)",
+          "oklch(51% 0.06157 150.43)",
+          "oklch(63% 0.06157 150.43)",
+          "oklch(75% 0.06157 150.43)",
+          "oklch(87% 0.06157 150.43)",
+          "oklch(95% 0.06157 150.43)"
+        ]
+      },
+      "disliked-text": {
+        "role": "neutral",
+        "displayName": "disliked-text",
+        "tonalRamp": [
+          "oklch(15% 0.14752 32.24)",
+          "oklch(27% 0.14752 32.24)",
+          "oklch(39% 0.14752 32.24)",
+          "oklch(51% 0.14752 32.24)",
+          "oklch(63% 0.14752 32.24)",
+          "oklch(75% 0.14752 32.24)",
+          "oklch(87% 0.14752 32.24)",
+          "oklch(95% 0.14752 32.24)"
+        ]
+      },
+      "frozen-bg": {
+        "role": "neutral",
+        "displayName": "frozen-bg",
+        "tonalRamp": [
+          "oklch(15% 0.00397 286.03)",
+          "oklch(27% 0.00397 286.03)",
+          "oklch(39% 0.00397 286.03)",
+          "oklch(51% 0.00397 286.03)",
+          "oklch(63% 0.00397 286.03)",
+          "oklch(75% 0.00397 286.03)",
+          "oklch(87% 0.00397 286.03)",
+          "oklch(95% 0.00397 286.03)"
+        ]
+      },
+      "frozen-ink": {
+        "role": "neutral",
+        "displayName": "frozen-ink",
+        "tonalRamp": [
+          "oklch(15% 0.00266 286.35)",
+          "oklch(27% 0.00266 286.35)",
+          "oklch(39% 0.00266 286.35)",
+          "oklch(51% 0.00266 286.35)",
+          "oklch(63% 0.00266 286.35)",
+          "oklch(75% 0.00266 286.35)",
+          "oklch(87% 0.00266 286.35)",
+          "oklch(95% 0.00266 286.35)"
+        ]
+      },
+      "frozen-action": {
+        "role": "neutral",
+        "displayName": "frozen-action",
+        "tonalRamp": [
+          "oklch(15% 0.19333 256.16)",
+          "oklch(27% 0.19333 256.16)",
+          "oklch(39% 0.19333 256.16)",
+          "oklch(51% 0.19333 256.16)",
+          "oklch(63% 0.19333 256.16)",
+          "oklch(75% 0.19333 256.16)",
+          "oklch(87% 0.19333 256.16)",
+          "oklch(95% 0.19333 256.16)"
+        ]
+      },
+      "frozen-light-bg": {
+        "role": "neutral",
+        "displayName": "frozen-light-bg",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(27% 0.00000 89.88)",
+          "oklch(39% 0.00000 89.88)",
+          "oklch(51% 0.00000 89.88)",
+          "oklch(63% 0.00000 89.88)",
+          "oklch(75% 0.00000 89.88)",
+          "oklch(87% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "frozen-light-ink": {
+        "role": "neutral",
+        "displayName": "frozen-light-ink",
+        "tonalRamp": [
+          "oklch(15% 0.00381 286.10)",
+          "oklch(27% 0.00381 286.10)",
+          "oklch(39% 0.00381 286.10)",
+          "oklch(51% 0.00381 286.10)",
+          "oklch(63% 0.00381 286.10)",
+          "oklch(75% 0.00381 286.10)",
+          "oklch(87% 0.00381 286.10)",
+          "oklch(95% 0.00381 286.10)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Библиотека",
+        "purpose": "Основной заголовок; responsive размеры в DESIGN."
+      },
+      "headline": {
+        "displayName": "Игровой вопрос",
+        "purpose": "Вопрос, понимание и результат."
+      },
+      "media-headline": {
+        "displayName": "Legacy-кино",
+        "purpose": "Оформление прежнего маршрута /pick/."
+      },
+      "landing-headline": {
+        "displayName": "Низ главной",
+        "purpose": "Только новые нижние секции."
+      },
+      "title": {
+        "displayName": "Предложение",
+        "purpose": "Название игры; кино24px, phone21px."
+      },
+      "body": {
+        "displayName": "Текст",
+        "purpose": "Body14px; локальные line-height описаны в DESIGN."
+      },
+      "label": {
+        "displayName": "Controls",
+        "purpose": "Подписи действий."
+      },
+      "meta": {
+        "displayName": "Метаданные",
+        "purpose": "Годы, counts, пояснения."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shared-pop",
+        "value": "0 8px 24px #22222220",
+        "purpose": "Общие всплывающие элементы."
+      },
+      {
+        "name": "game-pop",
+        "value": "0 12px 28px #40302424",
+        "purpose": "Игровое session menu."
+      },
+      {
+        "name": "library-notice",
+        "value": "0 12px 30px #30251a2c",
+        "purpose": "Временное фиксированное сообщение."
+      },
+      {
+        "name": "progress-line-mask",
+        "value": "0 0 0 5px var(--paper)",
+        "purpose": "Маска соединителя, не elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "library-state",
+        "value": "background .18s cubic-bezier(.16,1,.3,1), border-color .18s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Library button hover."
+      },
+      {
+        "name": "game-choice",
+        "value": "background-color .16s ease-out, border-color .16s ease-out",
+        "purpose": "Game choice state."
+      },
+      {
+        "name": "game-processing",
+        "value": "1.25s ease-in-out infinite; delays .15s/.3s",
+        "purpose": "Три bars7×28px, scaleY/opacity.45→1, без процента/ETA."
+      },
+      {
+        "name": "legacy-spinner",
+        "value": ".7s linear infinite",
+        "purpose": "Существующий spinner."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation:none!important; transition:none!important; scroll-behavior:auto!important",
+        "purpose": "Scoped app override; lower landing отключает transition/smooth scroll."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "library-narrow",
+        "value": "350px"
+      },
+      {
+        "name": "navigation-narrow",
+        "value": "360px"
+      },
+      {
+        "name": "landing-phone",
+        "value": "640px"
+      },
+      {
+        "name": "app-phone",
+        "value": "760px"
+      },
+      {
+        "name": "landing-stack",
+        "value": "1000px"
+      },
+      {
+        "name": "library-compact",
+        "value": "1100px"
+      },
+      {
+        "name": "picker-compact",
+        "value": "1150px"
+      },
+      {
+        "name": "library-wide",
+        "value": "1500px"
+      },
+      {
+        "name": "game-wide",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Основное действие игры",
+      "kind": "button",
+      "refersTo": "button-game-next",
+      "description": "Продолжение после ответа; min48px.",
+      "html": "<button class=\"ds-next\">Дальше <svg width=\"18\" height=\"18\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m8 5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-next{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;display:inline-flex;align-items:center;justify-content:space-between;gap:25px;min-width:150px;min-height:48px;padding:12px 17px;border:1px solid #b84025;border-radius:6px;background:#b84025;color:#fff9f3;cursor:pointer}.ds-next:hover:not(:disabled){background:#9d351f;border-color:#9d351f}.ds-next:focus-visible{outline:3px solid #a43b23;outline-offset:4px}.ds-next:disabled{opacity:.48;cursor:default}"
+    },
+    {
+      "name": "Вторичное действие",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Game secondary: прозрачный фон, медный focus.",
+      "html": "<button class=\"ds-secondary\">Повторить</button>",
+      "css": ".ds-secondary{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;min-height:44px;padding:10px 14px;border:1px solid #beac9e;border-radius:6px;background:transparent;color:#2b2b2a;cursor:pointer}.ds-secondary:hover:not(:disabled){background:#eadbce;border-color:#8c7868}.ds-secondary:focus-visible{outline:3px solid #a43b23;outline-offset:4px}.ds-secondary:disabled{opacity:.48;cursor:default}"
+    },
+    {
+      "name": "Подтверждённое желание",
+      "kind": "chip",
+      "refersTo": "context-chip",
+      "description": "Статичная часть сводки, не кнопка.",
+      "html": "<span class=\"ds-chip\">Спокойно проводить время</span>",
+      "css": ".ds-chip{display:inline-block;padding:5px 9px;border-radius:4px;background:#fff9f1;color:#493c32;font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.6;max-width:100%}"
+    },
+    {
+      "name": "Своими словами",
+      "kind": "input",
+      "refersTo": "field-game",
+      "description": "Многострочный ввод адаптивного разговора для игр и просмотра.",
+      "html": "<label class=\"ds-field\">Что хочется сегодня?<textarea class=\"ds-input\" placeholder=\"Расскажи своими словами\"></textarea></label>",
+      "css": ".ds-field{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;display:grid;gap:10px;color:#2b2b2a}.ds-input{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.75;width:100%;min-height:108px;padding:15px;border:1px solid #b9a797;border-radius:6px;background:#fffaf4;color:#2b2b2a;resize:vertical;caret-color:#b84025}.ds-input::placeholder{color:#74675c;opacity:1}.ds-input:focus-visible{outline:3px solid #a43b23;outline-offset:4px}"
+    },
+    {
+      "name": "Навигация",
+      "kind": "nav",
+      "refersTo": "rail-item-current",
+      "description": "Графитовый rail с активным разделом.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основное\"><a href=\"#pick\" aria-current=\"page\">Подобрать</a><a href=\"#library\">Библиотека</a></nav>",
+      "css": ".ds-nav{display:grid;gap:8px;background:#282a2c;padding:17px;width:164px;font-family:Golos,Arial,sans-serif}.ds-nav a{display:flex;align-items:center;min-height:44px;padding:10px 9px;border-radius:4px;font-size:12px;line-height:1.5;font-weight:500;color:#d8d1c8;text-decoration:none}.ds-nav a[aria-current=page]{background:#b84025;color:#fff}.ds-nav a:hover{background:#3c3d3e;color:#fff}.ds-nav a:focus-visible{outline:3px solid #257eaa;outline-offset:4px}"
+    },
+    {
+      "name": "Карточка библиотеки без обложки",
+      "kind": "card",
+      "refersTo": "library-card",
+      "description": "Текстовый fallback и перенос плана через native select.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-cover\" aria-hidden=\"true\">Без обложки</div><div><p class=\"ds-meta\">2023 · Игра</p><h3>Сохранённая игра</h3><select aria-label=\"План\" class=\"ds-plan\"><option>На потом</option><option>На этот вечер</option><option>Уже знакомо</option></select></div></article>",
+      "css": ".ds-card{display:grid;grid-template-columns:68px minmax(0,1fr);gap:14px;padding:13px;background:#fffcf6;border-radius:4px;color:#2b2b2a;font-family:Golos,Arial,sans-serif}.ds-cover{aspect-ratio:2/3;background:#e4d7c8;border-radius:3px;display:grid;place-items:center;padding:8px;color:#665546;text-align:center;font-size:12px;line-height:1.4;overflow-wrap:anywhere}.ds-meta{font-size:12px;line-height:1.6;color:#6b655f;margin:0}.ds-card h3{font-size:14px;line-height:1.45;letter-spacing:-.015em;font-weight:650;margin:6px 0 11px;overflow-wrap:anywhere}.ds-plan{font:inherit;font-size:12px;width:100%;min-height:44px;padding:8px 20px 8px 7px;border:0;border-radius:5px;background:#eee5da;color:#2b2b2a}.ds-plan:focus-visible{outline:2px solid #b84025;outline-offset:4px}"
+    },
+    {
+      "name": "Ответ",
+      "kind": "button",
+      "refersTo": "choice-game",
+      "description": "Состояние выбранного ответа с нарисованным check.",
+      "html": "<button class=\"ds-choice\" aria-pressed=\"true\">Один <svg width=\"18\" height=\"18\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m5 10 3 3 7-7\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-choice{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.6;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;width:100%;text-align:left;padding:16px;border:1px solid #c9b9ab;border-radius:6px;background:#fffaf4;color:#2b2b2a;cursor:pointer;transition:background-color .16s ease-out,border-color .16s ease-out}.ds-choice[aria-pressed=true]{background:#f5dfd1;border-color:#b84025;color:#81341f}.ds-choice:hover:not(:disabled){background:#efe0d3;border-color:#9e8571}.ds-choice:focus-visible{outline:3px solid #a43b23;outline-offset:4px}.ds-choice:disabled{opacity:.48}@media(prefers-reduced-motion:reduce){.ds-choice{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Разговор",
+    "overview": "Владелец выбрал работающий Conversation 02.11.2026: «Разговор давай этот сделаем». Выпущенный мир — графитовая навигация, тёплое светлое поле, широкие геометрические заголовки и медные действия. Понимание запроса доступно рядом с работой; реальные обложки помогают различать предложения. «Бумага» означает цвет плоской поверхности, а не нарисованную фактуру.\n\nЭта система действует на /pick/game/, /pick/, /library/ и двух новых нижних секциях главной. Источник — shared/conversation.css, pick/game/conversation.css, pick/conversation.css, library/style.css и landing-bottom.css относительно src/server/public/. Прежние правила нейтрального приложения заменены только в этой области. section.first, корневой style.css, исходные двери и footer сохраняют свой мир. В header разрешены «Библиотека»/новый href и компактное оформление этой ссылки при ≤360px; весь header не является byte-identical.",
+    "keyCharacteristics": [
+      "Фиксированная светлая рабочая тема с тёмной навигацией; она не переключается вместе с prefers-color-scheme исходной главной.",
+      "Unbounded задаёт голос заголовков, Golos — интерфейс и содержание.",
+      "Небольшие скругления, тональные области и тонкие линии; предложения читаются последовательными строками.",
+      "Состояния названы словами: выбранное, сохранённое, знакомое, ожидание и ошибка различимы без одного лишь цвета."
+    ],
+    "rules": [
+      {
+        "name": "The Scoped World Rule",
+        "body": "Новые правила применяются только в своей области; сохранённый верх главной не наследует Conversation.",
+        "section": "overview"
+      },
+      {
+        "name": "The State Has Words Rule",
+        "body": "Цвет поддерживает подпись, check, underline, границу или текущий шаг; он не заменяет смысл состояния.",
+        "section": "colors"
+      },
+      {
+        "name": "The Answer and Action Rule",
+        "body": "Продолжение остаётся в потоке сразу после ответов; оно не отделяется в footer окна.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "**Do** сохранять границу Conversation и исходного верха главной.",
+      "**Do** показывать состояние подписью и формой вместе с цветом.",
+      "**Do** оставлять вопрос, ответы и продолжение в одной рабочей колонке.",
+      "**Do** сохранять сводку запроса видимой на телефоне и обозначать раскрытие подробностей.",
+      "**Do** давать отсутствующей или сломанной обложке текстовый fallback; сохранять реальный источник изображения.",
+      "**Do** сохранять черновики, выделение, раскрытия и выбранные ответы при обновлениях и повторе."
+    ],
+    "donts": [
+      "**Don't** распространять новый фон, шрифт или display voice на frozen hero/header.",
+      "**Don't** возвращать выдаче прежнюю композицию «hero плюс сетка трёх альтернатив».",
+      "**Don't** смешивать планы библиотеки, вкусовую оценку и знакомство одним цветным статусом.",
+      "**Don't** подменять нарисованные иконки Unicode-глифами или добавлять декоративные надписи над заголовками.",
+      "**Don't** превращать временное ожидание в заявленный процент, ETA или доказательство качества рекомендаций.",
+      "**Don't** считать неизвестные возраст/время/свойства проверенными или тестовые локальные записи человеческими оценками."
+    ]
+  }
+}

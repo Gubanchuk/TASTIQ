@@ -1,0 +1,10 @@
+{"appid": 1128920, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p1", "q": "is a space combat video game"}, {"id": "p3", "q": "one of the best space shooters in years"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "across a series of star systems"}, {"id": "p3", "q": "expertly crafted space adventure"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "which can be freely explored by players"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "which can be freely explored by players"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "each of them has their own unique skills and abilities"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "Ship upgrades, such as new guns"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "players can collect their resources"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p3", "q": "lauding its combat, control and map design"}]}
+]}

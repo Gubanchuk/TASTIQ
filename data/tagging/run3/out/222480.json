@@ -1,0 +1,12 @@
+{"appid": 222480, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2012 survival horror game developed and published by Capcom"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "Revelations emphasizes survival, evasion, and exploration over fast-paced combat"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "Up to three firearms can be carried at one time"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Revelations emphasizes survival, evasion, and exploration over fast-paced combat"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p0", "q": "a series of episodes that involve solving puzzles and defeating enemies"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "In the multiplayer, players may fight their way through altered single-player scenarios"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p6", "q": "allow players to progress to higher and more challenging scenarios"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "Several critics declared the graphics some of the best on the Nintendo 3DS"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p1", "q": "praised its spooky setting, sound direction, and presentation"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p2", "q": "was criticized for its dated graphics and uneven controls"}]}
+]}

@@ -1,0 +1,13 @@
+{"appid": 110800, "features": [
+{"f": "story.central", "r": 3, "ev": [{"id": "p11", "q": "one of the strongest stories Rockstar's ever published"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "to uncover a major conspiracy involving prominent Los Angeles figures"}]},
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p5", "q": "During cases, the player interrogates suspects and witnesses to discover information"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "L.A. Noire is an action-adventure game with neo-noir and crime genre elements"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "Set in Los Angeles in 1947"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p9", "q": "praised for its facial animation, narrative, characters and performances"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "Reviewers praised the game's facial animation, with several calling it the best in any video game"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p3", "q": "with praise directed at the facial animation, narrative, characters, performances, music"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "The player may freely roam its interactive open world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "The player can also discover multiple landmarks based on real monuments from Los Angeles"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p7", "q": "While driving, the player can turn on the vehicle's siren"}]}
+]}

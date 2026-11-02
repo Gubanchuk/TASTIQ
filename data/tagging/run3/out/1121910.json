@@ -1,0 +1,7 @@
+{"appid": 1121910, "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "A parody of conventional dating sims"}]},
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p2", "q": "The player is presented with dialog choices"}]},
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p0", "q": "develop a romantic relationship with a fictionalized version"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p2", "q": "A single playthrough takes about an hour"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "portrayed as an attractive classmate at a cooking school"}]}
+]}

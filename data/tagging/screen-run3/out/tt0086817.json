@@ -1,0 +1,7 @@
+{"id": "tt0086817", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "s", "q": "a war between giant robots who could transform into vehicles, animals, and other objects"}, {"id": "p1", "q": "it depicts a war among giant robots"}]},
+{"f": "world.war", "r": 2, "ev": [{"id": "p1", "q": "it depicts a war among giant robots"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p1", "q": "a war among giant robots that can transform into vehicles"}]},
+{"f": "format.animation", "r": 3, "ev": [{"id": "s", "q": "Transformers is an animated television series depicting a war between"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p0", "q": "animated children's sci-fi action-adventure television series"}]}
+]}

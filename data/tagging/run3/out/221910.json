@@ -1,0 +1,11 @@
+{
+  "appid": 221910,
+  "features": [
+    {"f": "story.choices", "r": 3, "ev": [{"id": "p0", "q": "Depending on the choices made, the player will encounter different endings"}]},
+    {"f": "story.central", "r": 3, "ev": [{"id": "p2", "q": "Reviewers praised the game's narrative and commentary on player choice"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "begins to explore the building"}]},
+    {"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p0", "q": "a silent protagonist named Stanley"}]},
+    {"f": "humor.funny", "r": 2, "ev": [{"id": "p8", "q": "providing the right dry British wit"}]},
+    {"f": "length.short", "r": 2, "ev": [{"id": "p8", "q": "that only took a short amount of time for the player to experience"}]}
+  ]
+}

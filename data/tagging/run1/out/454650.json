@@ -1,0 +1,89 @@
+{
+ "appid": 454650,
+ "features": [
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "packed with thrilling action, epic battles, and endless customization options"
+    }
+   ]
+  },
+  {
+   "f": "characters.custom_hero",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Create your own character, explore Conton City"
+    },
+    {
+     "id": "r236048854",
+     "q": "character customization is fun"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "customize your character's appearance, abilities, and moveset"
+    }
+   ]
+  },
+  {
+   "f": "progression.collection",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236048854",
+     "q": "there are tons of quests, skills, and characters to unlock"
+    }
+   ]
+  },
+  {
+   "f": "social.pvp",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "battle against other players from around the world in epic showdowns"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237272124",
+     "q": "guys don't play this game because multiplayer is dead"
+    }
+   ]
+  },
+  {
+   "f": "progression.grind",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237338326",
+     "q": "the grind was pretty brutal at times"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237340536",
+     "q": "ебануто сложная боевка"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{"id": "tt0412175", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "is an American supernatural procedural drama series"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p1", "q": "a medium employed as a consultant for the Phoenix, Arizona, district attorney's office"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "p1", "q": "has worked with law enforcement agencies across the country in criminal investigations"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "s", "q": "is a strong-willed mother of three"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p3", "q": "The series finale aired on January 21, 2011"}]}
+]}

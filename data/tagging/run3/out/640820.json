@@ -1,0 +1,13 @@
+{"appid": 640820, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p4", "q": "Pathfinders unique aspect is an emphasis on realm-building"}, {"id": "p1", "q": "basic management involving city building"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p4", "q": "Settlements allow the player to construct different buildings"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "allows players to conduct combat either in pausable real-time or turn-based"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p3", "q": "a hero character they create"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "features a range of different party companions they can recruit"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "Character customization allows players to chose which class they can use"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p6", "q": "races and creatures in a similar context to that of the Dungeons & Dragons franchise"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "The alignment of the player's character provides notable additional choices"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p7", "q": "a harsh land often plagued by bandits and monsters"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p8", "q": "the gargantuan knowledge base you'll need to play most effectively"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p8", "q": "praised the game's engrossing story, depth and realm management feature"}]}
+]}

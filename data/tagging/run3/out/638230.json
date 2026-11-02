@@ -1,0 +1,12 @@
+{"appid": 638230, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "two players can meet and assist each other"}]},
+{"f": "tone.melancholic", "r": 3, "ev": [{"id": "p2", "q": "Critics have called it a moving and emotional experience"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p10", "q": "Journey received high acclaim from critics who praised the visual and auditory art direction"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "The soundtrack was nominated for the Best Score Soundtrack for Visual Media"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "the player controls a cloaked figure in a vast desert, traveling towards a distant mountain"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p6", "q": "Journey is a wordless story told through gameplay and visual-only cutscenes"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p6", "q": "they find the remnants of a once-thriving civilization"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p3", "q": "The player can jump with one button, or emit a wordless shout or musical note with another"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p12", "q": "Shaw was disappointed that the game was only a few hours long"}]},
+{"f": "pace.slow", "r": 1, "ev": [{"id": "p12", "q": "a deliberate, melancholic pace"}]}
+]}

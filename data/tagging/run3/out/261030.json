@@ -1,0 +1,10 @@
+{"appid": 261030, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p0", "q": "player choice in one episode will have a permanent impact on future story elements"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "initiate conversations with non-player characters via conversation trees"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p4", "q": "a zombie apocalypse has occurred, turning humans that are bitten or die into zombies"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "a zombie apocalypse has occurred, turning humans that are bitten or die into zombies"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p1", "q": "with particular praise going to the atmosphere, protagonist, and its sense of tension"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p1", "q": "with particular praise going to the atmosphere, protagonist, and its sense of tension"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p0", "q": "Clementine, who was the player's main companion during the first"}]},
+{"f": "content.gore", "r": 1, "ev": [{"id": "p5", "q": "She is forced to choose between shooting him or leaving him to reanimate"}]}
+]}

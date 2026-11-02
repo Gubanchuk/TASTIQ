@@ -1,0 +1,10 @@
+{"id": "tt30955489", "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "American survival horror film adapted from the 2015 video game"}]},
+{"f": "world.timetravel", "r": 3, "ev": [{"id": "p0", "q": "a secluded area embedded with a time loop mechanic"}]},
+{"f": "content.violence", "r": 1, "ev": [{"id": "p5", "q": "bloody if lightweight fun"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p4", "q": "the film was saved by its humor"}]},
+{"f": "humor.satire", "r": 1, "ev": [{"id": "p4", "q": "meta-commentary on the slasher genre"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p3", "q": "a lack of inspiration in each new variation"}, {"id": "p5", "q": "spits in the face of logic"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p6", "q": "enlivened by a strong troupe of young actors"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "a group of friends who end up in a secluded area"}]}
+]}

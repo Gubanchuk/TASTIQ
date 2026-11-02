@@ -1,0 +1,9 @@
+{"appid": 466240, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "a", "q": "tasked with taking down the other innocent players"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "d", "q": "action-filled, multiplayer first-person shooter"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "a", "q": "as the infected try to pick you off one by one"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "r237753618", "q": "трехмерное пространство хоррора от первого лица"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "a", "q": "A test of strategy and skill"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "a", "q": "innocents must work together to gather weapons"}]},
+{"f": "session.short", "r": 1, "ev": [{"id": "r237753618", "q": "Каждый матч длится три раунда"}]}
+]}

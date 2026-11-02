@@ -1,0 +1,52 @@
+{
+  "id": "dima",
+  "name": "Дима, 38, мультфильм с дочкой",
+  "domain": "cartoon",
+  "who": "Папа Маши (6 лет). Суббота, 19:00, выбирает полнометражный мультфильм на двоих. Ничего страшного (после «Коралины» дочь плохо спала), и чтобы самому не выть от скуки.",
+  "today": "С ребёнком, посмеяться; без страшного и мрачного.",
+  "situation": { "time": "any", "company": "kids" },
+  "stops": ["tone.creepy", "content.disturbing"],
+  "prefer": ["humor.funny", "tone.feelgood", "tone.lighthearted", "tension.low"],
+  "source": "research-vault/akinator-picker-2026-10/raw/persona-series-cartoons.md, «Персона 2»",
+  "loved": [
+    { "id": "tt2948356", "name": "Зверополис", "q": "Зверополис", "love": true, "reasons": ["humor.funny", "characters.friendship", "content.family", "cognitive.high", "aesthetic.beautiful"], "text": "и ребёнку смешно, и мне интересно, детектив" },
+    { "id": "tt3521164", "name": "Моана", "q": "Моана", "love": true, "reasons": ["world.music", "aesthetic.beautiful", "characters.female_lead", "content.family", "tone.feelgood"], "text": "дочка подпевает песням" },
+    { "id": "tt0441773", "name": "Кунг-фу Панда", "q": "Кунг-фу Панда", "reasons": ["humor.funny", "tone.lighthearted", "content.family", "pace.fast"], "text": "драки не страшные, ржали оба", "accept": ["tone.creepy"] },
+    { "id": "tt0114709", "name": "История игрушек" },
+    { "id": "tt0266543", "name": "В поисках Немо", "reasons": ["humor.funny"] },
+    { "id": "tt1323594", "name": "Гадкий я" },
+    { "id": "tt0198781", "name": "Корпорация монстров" },
+    { "id": "tt0892769", "name": "Как приручить дракона" },
+    { "id": "tt4729430", "name": "Клаус" },
+    { "id": "tt1049413", "name": "Вверх" },
+    { "id": "tt0435761", "name": "История игрушек: Большой побег" }
+  ],
+  "disliked": [
+    { "id": "tt0327597", "name": "Коралина в стране кошмаров", "q": "Коралина", "issues": [{ "f": "tone.dark" }, { "f": "tone.creepy", "hard": true }], "text": "ребёнок испугался, выключили на 20 минуте" },
+    { "id": "tt3121722", "name": "Щенячий патруль", "q": "Щенячий патруль", "issues": [{ "f": "pace.draggy" }, { "f": "story.predictable" }], "text": "для совсем малышей, мне скучно, сто одинаковых серий" },
+    { "id": "tt2293640", "name": "Миньоны", "q": "Миньоны" },
+    { "id": "tt0107688", "name": "Кошмар перед Рождеством" },
+    { "id": "tt3874544", "name": "Босс-молокосос" }
+  ],
+  "alsoSeen": [],
+  "targets": [
+    { "id": "tt12801262", "name": "Лука" },
+    { "id": "tt2953050", "name": "Энканто" },
+    { "id": "tt7979580", "name": "Митчеллы против машин" }
+  ],
+  "modes": {
+    "careful": {
+      "seed": 20261021,
+      "anchors": { "pages": 1, "love": true, "seen": true, "searchLoved": true, "searchDisliked": true, "searchFirst": true },
+      "why": { "text": "all", "expand": true },
+      "whyNot": { "text": "all" },
+      "stops": true,
+      "result": { "rate": true }
+    },
+    "lazy": {
+      "seed": 20261021,
+      "anchors": { "pages": 1, "maxTicks": 2, "love": true },
+      "why": { "screens": 1 }
+    }
+  }
+}

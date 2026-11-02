@@ -1,0 +1,5 @@
+{"appid": 927350, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "The player can form a group of four in order to pull off the heist"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "compete against a rival team to steal the treasure hidden in the keep's vault"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p1", "q": "Stealth is essential, as guards may call for reinforcements"}]}
+]}

@@ -1,0 +1,11 @@
+{"appid": 24200, "features": [
+{"f": "length.endless", "r": 3, "ev": [{"id": "p3", "q": "DC Universe Online has been actively updating through Game Updates"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p2", "q": "the first experience having to fight their way out of a Brainiac spaceship"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p1", "q": "The player creates a new, original character"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p1", "q": "interacts with the iconic heroes and villains of DC Comics"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "to increase their level and skill in various content"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "movement mode (flight, acrobatics, speed or skimming), weapon, and power"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p2", "q": "retrieving collectibles, and defending NPCs"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p4", "q": "a final battle between the world's greatest heroes and villains"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "The opening cinematic takes place in a war-torn future"}]}
+]}

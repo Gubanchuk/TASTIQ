@@ -1,0 +1,8 @@
+{"id": "tt18970454", "features": [
+{"f": "format.documentary", "r": 3, "ev": [{"id": "p0", "q": "is a two-part true crime documentary series released by Netflix"}]},
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "covers the life and career of the British television personality Jimmy Savile"}]},
+{"f": "content.disturbing", "r": 3, "ev": [{"id": "p2", "q": "unpleasant to watch"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "a slick and occasionally devastating portrait of Savile's evil life"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p1", "q": "a chilling examination of how a nation became enamored with a monster hiding in plain sight"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p0", "q": "two-part true crime documentary series"}]}
+]}

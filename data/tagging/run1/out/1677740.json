@@ -1,0 +1,11 @@
+{"appid": 1677740, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "a", "q": "Race against up to 32 players in fast-paced, chaotic matches"}, {"id": "d", "q": "a 32-player, fast-paced multiplayer party royale"}]},
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "d", "q": "dash, jump, and fall across hilarious obstacle courses"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "r237588915", "q": "playing with friends makes every round ten times more entertaining"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "r237588915", "q": "the matches are fast-paced"}, {"id": "r238018042", "q": "each game doesn't take long"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r237588915", "q": "easy to pick up"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "r237975114", "q": "its fun kids friendly free play on multiple divices"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "a", "q": "Unlock epic skins, hilarious emotes, and more to stand out from the crowd"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "r237588915", "q": "a chaotic, colorful party game"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "r237588915", "q": "surprisingly frustrating when you're one step away from qualifying"}]}
+]}

@@ -1,0 +1,295 @@
+{
+  "note": "12 unique frozen inputs assembled from fixed domain batches, not a new run or best-of selection. All complete requests verified offline against current code.",
+  "summary": {
+    "engine": 3,
+    "ai": 10,
+    "engineTop": 2,
+    "aiTop": 5,
+    "inShortlist": 19,
+    "engineSeen": 7,
+    "aiSeen": 4,
+    "usd": 0.16527390000000003,
+    "medianMs": 9671
+  },
+  "rows": [
+    {
+      "persona": "andrey",
+      "mode": "careful",
+      "domain": "game",
+      "engine": 0,
+      "ai": 0,
+      "engineTop": 0,
+      "aiTop": 0,
+      "inShortlist": 1,
+      "engineSeen": 0,
+      "aiSeen": 0,
+      "ms": 13454,
+      "usd": 0.019376,
+      "ids": [
+        "steam:330830",
+        "steam:874260",
+        "steam:1967430",
+        "steam:1089980"
+      ]
+    },
+    {
+      "persona": "andrey",
+      "mode": "lazy",
+      "domain": "game",
+      "engine": 0,
+      "ai": 0,
+      "engineTop": 0,
+      "aiTop": 0,
+      "inShortlist": 0,
+      "engineSeen": 0,
+      "aiSeen": 0,
+      "ms": 9694,
+      "usd": 0.016204,
+      "ids": [
+        "steam:330830",
+        "steam:597220",
+        "steam:1920780",
+        "steam:221910"
+      ]
+    },
+    {
+      "persona": "danya",
+      "mode": "careful",
+      "domain": "game",
+      "engine": 0,
+      "ai": 0,
+      "engineTop": 0,
+      "aiTop": 0,
+      "inShortlist": 2,
+      "engineSeen": 0,
+      "aiSeen": 0,
+      "ms": 10888,
+      "usd": 0.01813,
+      "ids": [
+        "steam:3241660",
+        "steam:312530",
+        "steam:700330",
+        "steam:207140"
+      ]
+    },
+    {
+      "persona": "danya",
+      "mode": "lazy",
+      "domain": "game",
+      "engine": 0,
+      "ai": 0,
+      "engineTop": 0,
+      "aiTop": 0,
+      "inShortlist": 1,
+      "engineSeen": 1,
+      "aiSeen": 1,
+      "ms": 9648,
+      "usd": 0.015216,
+      "ids": [
+        "steam:843380",
+        "steam:312530",
+        "steam:274190",
+        "steam:548430"
+      ]
+    },
+    {
+      "persona": "dima",
+      "mode": "careful",
+      "domain": "cartoon",
+      "engine": 0,
+      "ai": 1,
+      "engineTop": 0,
+      "aiTop": 0,
+      "inShortlist": 2,
+      "engineSeen": 1,
+      "aiSeen": 0,
+      "ms": 15614,
+      "usd": 0.020112,
+      "ids": [
+        "tt3470600",
+        "tt0317219",
+        "tt2872750",
+        "tt12801262"
+      ]
+    },
+    {
+      "persona": "dima",
+      "mode": "lazy",
+      "domain": "cartoon",
+      "engine": 0,
+      "ai": 1,
+      "engineTop": 0,
+      "aiTop": 1,
+      "inShortlist": 2,
+      "engineSeen": 1,
+      "aiSeen": 1,
+      "ms": 8649,
+      "usd": 0.01434,
+      "ids": [
+        "tt12801262",
+        "tt0120917",
+        "tt1323594",
+        "tt1490017"
+      ]
+    },
+    {
+      "persona": "cinephile",
+      "mode": "careful",
+      "domain": "film",
+      "engine": 1,
+      "ai": 1,
+      "engineTop": 1,
+      "aiTop": 1,
+      "inShortlist": 1,
+      "engineSeen": 1,
+      "aiSeen": 0,
+      "ms": 9839,
+      "usd": 0.0063346999999999995,
+      "ids": [
+        "tt1441395",
+        "tt1316540",
+        "tt0075612",
+        "tt0054632"
+      ]
+    },
+    {
+      "persona": "cinephile",
+      "mode": "lazy",
+      "domain": "film",
+      "engine": 0,
+      "ai": 0,
+      "engineTop": 0,
+      "aiTop": 0,
+      "inShortlist": 1,
+      "engineSeen": 1,
+      "aiSeen": 0,
+      "ms": 8218,
+      "usd": 0.0057782,
+      "ids": [
+        "tt2316411",
+        "tt0099871",
+        "tt4550098",
+        "tt1255953"
+      ]
+    },
+    {
+      "persona": "couple",
+      "mode": "careful",
+      "domain": "film",
+      "engine": 1,
+      "ai": 2,
+      "engineTop": 1,
+      "aiTop": 1,
+      "inShortlist": 2,
+      "engineSeen": 0,
+      "aiSeen": 1,
+      "ms": 7957,
+      "usd": 0.005529,
+      "ids": [
+        "tt2543164",
+        "tt0414993",
+        "tt0119177",
+        "tt1022603"
+      ]
+    },
+    {
+      "persona": "couple",
+      "mode": "lazy",
+      "domain": "film",
+      "engine": 0,
+      "ai": 2,
+      "engineTop": 0,
+      "aiTop": 1,
+      "inShortlist": 2,
+      "engineSeen": 0,
+      "aiSeen": 0,
+      "ms": 8024,
+      "usd": 0.005666,
+      "ids": [
+        "tt2543164",
+        "tt0454876",
+        "tt0119177",
+        "tt1483013"
+      ]
+    },
+    {
+      "persona": "lena",
+      "mode": "careful",
+      "domain": "series",
+      "engine": 1,
+      "ai": 2,
+      "engineTop": 0,
+      "aiTop": 0,
+      "inShortlist": 3,
+      "engineSeen": 0,
+      "aiSeen": 0,
+      "ms": 11120,
+      "usd": 0.020156,
+      "ids": [
+        "tt1587678",
+        "tt1826940",
+        "tt14218830",
+        "tt9214684"
+      ]
+    },
+    {
+      "persona": "lena",
+      "mode": "lazy",
+      "domain": "series",
+      "engine": 0,
+      "ai": 1,
+      "engineTop": 0,
+      "aiTop": 1,
+      "inShortlist": 2,
+      "engineSeen": 2,
+      "aiSeen": 1,
+      "ms": 7449,
+      "usd": 0.018432,
+      "ids": [
+        "tt1826940",
+        "tt2467372",
+        "tt0237123",
+        "tt11379026"
+      ]
+    }
+  ],
+  "paid": [
+    {
+      "file": "2026-10-31-ai-quality-replay.json",
+      "usd": 0.255214,
+      "calls": 12
+    },
+    {
+      "file": "2026-10-31-ai-quality-final.json",
+      "usd": 0.14122710000000002,
+      "calls": 12
+    },
+    {
+      "file": "2026-10-31-ai-film-quality-cinema.json",
+      "usd": 0.0233079,
+      "calls": 4
+    },
+    {
+      "file": "2026-10-31-ai-danya-party-context.json",
+      "usd": 0.017854,
+      "calls": 1
+    },
+    {
+      "file": "2026-10-31-ai-dima-family-context.json",
+      "usd": 0.019728,
+      "calls": 1
+    },
+    {
+      "file": "2026-10-31-ai-series-quality-series.json",
+      "usd": 0.038588,
+      "calls": 2
+    }
+  ],
+  "budget": {
+    "baselineUpperUsd": 0.19295,
+    "newUsd": 0.495919,
+    "calls": 44,
+    "totalUpperUsd": 0.688869,
+    "remainingLowerUsd": 0.31113100000000005
+  }
+}

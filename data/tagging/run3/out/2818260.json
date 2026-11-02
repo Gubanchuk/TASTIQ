@@ -1,0 +1,9 @@
+{"appid": 2818260, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "online survival shooter game"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p2", "q": "set in post-apocalyptic Norway"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "Vigor is an online free-to-play survival shooter game"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "Encounters with other players, although fighting them is not required"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "crates containing valuable loot such as weapon and consumable blueprints"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "upgrade an abandoned shelter that will protect the player"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p5", "q": "a radiation cloud sweeps the area after a certain amount of time"}]}
+]}

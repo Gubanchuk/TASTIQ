@@ -1,0 +1,9 @@
+{"appid": 1361320, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "by manipulating objects within it and solving its puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "examine and find various secrets within it"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "searching for any clues to the wealthy couple that once lived there"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p3", "q": "he finds notes left by Edward and Abigail, detailing their fate"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p5", "q": "The creepy touchscreen puzzle boxes are better than ever"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "There are interconnected puzzle elements between these rooms as well"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "At the turn of the 20th century, the player character enters Waldegrave Manor"}]}
+]}

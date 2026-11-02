@@ -1,0 +1,10 @@
+{"appid": 1583230, "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p0", "q": "High on Life is a 2022 comedic first-person shooter game"}, {"id": "p6", "q": "The game's crude and absurdist humor proved polarizing"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p6", "q": "settles into edgelord cynicism and the same tedious, punchdown humour as South Park"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p1", "q": "High on Life is a first-person shooter video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "It takes place in a science fiction world which features talking guns"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "it is possible to access previously unreachable areas, as in a Metroidvania"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p6", "q": "an irreverent, absurd shooter that manages to shine with its outrageous humor, silly setting and story"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p4", "q": "traversal and platforming sections, as well as puzzles"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p4", "q": "puzzles that are solved using the Gatlians' weapon abilities"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 258970, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a hack and slash dungeon crawl video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "allowing up to four-player multiplayer co-op gameplay"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "Thor the Warrior, Thyra the Valkyrie, Merlin the Wizard, or Questor the Elf"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The dungeons to be explored are part defined maps and part procedurally generated"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p3", "q": "but it'll get old fast for those who still remember slogging through the original"}]}
+]}

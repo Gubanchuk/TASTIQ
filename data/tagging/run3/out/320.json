@@ -1,0 +1,5 @@
+{"appid": 320, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "the player must kill other players to score points"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a multiplayer first-person shooter video game developed by Valve"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p6", "q": "fast play style"}]}
+]}

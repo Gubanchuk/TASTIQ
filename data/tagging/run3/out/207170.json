@@ -1,0 +1,11 @@
+{"appid": 207170, "features": [
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "a 3D grid-based, real-time dungeon crawler"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "Gameplay consists of a combination of puzzle solving and combat"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "Characters within the party gain experience for slaying creatures"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "Players control a party of one to four characters"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p6", "q": "a disembodied voice which comes to them in their sleep"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "left remembering routes and paths through the dungeon completely down to the player"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p3", "q": "Many of the harder puzzles throughout the game are designed as bonuses"}]},
+{"f": "story.lore", "r": 1, "ev": [{"id": "p6", "q": "finds notes from a previous wanderer of the dungeon named Toorum"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p9", "q": "Some reviewers commented negatively on the game's combat system"}]}
+]}

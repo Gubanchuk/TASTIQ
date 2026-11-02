@@ -1,0 +1,103 @@
+{
+ "appid": 246620,
+ "features": [
+  {
+   "f": "cognitive.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "a unique mix of high strategy and terrifyingly realistic simulation"
+    }
+   ]
+  },
+  {
+   "f": "world.realistic",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Plague Inc. is so realistic that the CDC even asked the developer to come"
+    }
+   ]
+  },
+  {
+   "f": "tone.creepy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237386997",
+     "q": "takes a terrifying real-world concept"
+    }
+   ]
+  },
+  {
+   "f": "humor.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237652314",
+     "q": "News ticker on top has funny real-world references and dark humor"
+    },
+    {
+     "id": "r237722095",
+     "q": "Humanity is the REAL disease"
+    }
+   ]
+  },
+  {
+   "f": "length.endless",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237386997",
+     "q": "The addition of custom scenarios and multiplayer makes it infinitely replayable"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236626505",
+     "q": "a decent way to kill some time"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237652314",
+     "q": "Tons of customization with genes and evolution traits"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236131286",
+     "q": "computer cheats you every time"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237652314",
+     "q": "Can get very repetitive once you figure out the optimal strategy for a disease"
+    },
+    {
+     "id": "r237520411",
+     "q": "you probably play the exact same way every single time"
+    }
+   ]
+  }
+ ]
+}

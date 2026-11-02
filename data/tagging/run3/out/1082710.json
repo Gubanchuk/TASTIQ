@@ -1,0 +1,9 @@
+{"appid": 1082710, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p2", "q": "Combat is played in a turn-based format"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "these characters can use their unique abilities to traverse the environment, solve puzzles, and find secrets"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p1", "q": "who praised its characters, combat system, presentation"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "There are three playable characters: Vi the bee"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "the mythical land of Bugaria in pursuit of the Everlasting Sapling"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p7", "q": "Another highlight of the game according to critics is the art style"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p1", "q": "but criticized its control issues"}]}
+]}

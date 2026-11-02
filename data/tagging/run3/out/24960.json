@@ -1,0 +1,13 @@
+{
+  "appid": 24960,
+  "features": [
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 first-person shooter game"}]},
+    {"f": "world.modern", "r": 3, "ev": [{"id": "p1", "q": "based in a contemporary modern warfare setting"}]},
+    {"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "Multiplayer maps, which allow for five different game modes"}]},
+    {"f": "loop.driving", "r": 2, "ev": [{"id": "p3", "q": "allowing the player to control certain vehicles, including ATVs, APCs, tanks, and helicopters"}]},
+    {"f": "world.living", "r": 2, "ev": [{"id": "p4", "q": "Bad Company 2 heavily emphasizes destructible environments"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p6", "q": "Bad Company 2 features a story-driven single-player campaign"}]},
+    {"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p6", "q": "For most of the narrative, the player takes control of Preston Marlowe"}]},
+    {"f": "social.coop", "r": 1, "ev": [{"id": "p1", "q": "The game is primarily a squad-level first-person shooter"}]}
+  ]
+}

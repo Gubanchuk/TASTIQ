@@ -1,0 +1,222 @@
+{
+  "at": "2026-11-01T00:37:05.910Z",
+  "method": "Real-catalog exact mentions through identity resolver and actual aiConversation with local injected stub; external API calls0",
+  "answerCharacters": 286,
+  "inputBytes": 15217,
+  "identityCount": 13,
+  "knownGames": [
+    {
+      "id": "steam:730",
+      "name": "Counter-Strike 2",
+      "ru": null,
+      "year": 2012,
+      "aliases": [
+        "Counter-Strike 2"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Counter-Strike 2",
+          "aliasId": "catalog:steam:730:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:578080",
+      "name": "PUBG: BATTLEGROUNDS",
+      "ru": null,
+      "year": 2017,
+      "aliases": [
+        "PUBG: BATTLEGROUNDS"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "PUBG: BATTLEGROUNDS",
+          "aliasId": "catalog:steam:578080:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:271590",
+      "name": "Grand Theft Auto V Legacy",
+      "ru": null,
+      "year": 2015,
+      "aliases": [
+        "Grand Theft Auto V Legacy"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Grand Theft Auto V Legacy",
+          "aliasId": "catalog:steam:271590:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:105600",
+      "name": "Terraria",
+      "ru": null,
+      "year": 2011,
+      "aliases": [
+        "Terraria"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Terraria",
+          "aliasId": "catalog:steam:105600:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:359550",
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "ru": null,
+      "year": 2015,
+      "aliases": [
+        "Tom Clancy's Rainbow Six Siege"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Tom Clancy's Rainbow Six Siege",
+          "aliasId": "catalog:steam:359550:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:252490",
+      "name": "Rust",
+      "ru": null,
+      "year": 2018,
+      "aliases": [
+        "Rust"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Rust",
+          "aliasId": "catalog:steam:252490:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:440",
+      "name": "Team Fortress 2",
+      "ru": null,
+      "year": 2007,
+      "aliases": [
+        "Team Fortress 2"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Team Fortress 2",
+          "aliasId": "catalog:steam:440:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:4000",
+      "name": "Garry's Mod",
+      "ru": null,
+      "year": 2006,
+      "aliases": [
+        "Garry's Mod"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Garry's Mod",
+          "aliasId": "catalog:steam:4000:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:2358720",
+      "name": "Black Myth: Wukong",
+      "ru": null,
+      "year": 2024,
+      "aliases": [
+        "Black Myth: Wukong"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Black Myth: Wukong",
+          "aliasId": "catalog:steam:2358720:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:1245620",
+      "name": "ELDEN RING",
+      "ru": null,
+      "year": 2022,
+      "aliases": [
+        "ELDEN RING"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "ELDEN RING",
+          "aliasId": "catalog:steam:1245620:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:553850",
+      "name": "HELLDIVERS™ 2",
+      "ru": null,
+      "year": 2024,
+      "aliases": [
+        "HELLDIVERS™ 2"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "HELLDIVERS™ 2",
+          "aliasId": "catalog:steam:553850:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:1172470",
+      "name": "Apex Legends™",
+      "ru": "Apex Legends",
+      "year": 2020,
+      "aliases": [
+        "Apex Legends"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Apex Legends",
+          "aliasId": "catalog:steam:1172470:name"
+        }
+      ]
+    },
+    {
+      "id": "steam:550",
+      "name": "Left 4 Dead 2",
+      "ru": null,
+      "year": 2009,
+      "aliases": [
+        "Left 4 Dead 2"
+      ],
+      "evidence": [
+        {
+          "sourceId": "identity-size-diagnostic:1",
+          "quote": "Left 4 Dead 2",
+          "aliasId": "catalog:steam:550:name"
+        }
+      ]
+    }
+  ],
+  "localStubCalls": 1,
+  "externalApiCalls": 0,
+  "identityCap": 64,
+  "byteCap": 240000,
+  "factCap": 16
+}

@@ -1,0 +1,11 @@
+{"id": "tt1888075", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is a comedy crime television series created by Robert Thorogood"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "The plots combine gentle murder mystery with primarily"}]},
+{"f": "story.predictable", "r": 2, "ev": [{"id": "p8", "q": "with most criticism directed towards its formulaic structure"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p7", "q": "an undemanding detective show, with nice Caribbean scenery"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p7", "q": "an undemanding detective show, with nice Caribbean scenery"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "nice Caribbean scenery"}]},
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p2", "q": "Each episode begins with a pre-credits sequence showing the events leading up to a murder"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p0", "q": "Don Gilet (Series 14-present)"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "p0", "q": "The series is set on the small fictional Caribbean island of Saint Marie"}]}
+]}

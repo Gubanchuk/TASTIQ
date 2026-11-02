@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "src/server/public/drafts/index.html"
+        ],
+        "createdAt": "2026-10-21T04:29:24.057Z",
+        "reason": "Claude: grouped list rows are full-bleed links with their own 14px/16px padding, so text is inset; the ul is the list-group container from DESIGN.md"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "src/server/public/drafts/landing-evening/index.html"
+        ],
+        "createdAt": "2026-10-21T04:48:38.689Z",
+        "reason": "Claude: the child flush with the replay bar's bottom border is the 2px progress line drawn on that edge, not text"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{"appid": 394970, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p0", "q": "side-scrolling stealth-action video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "with a wide arsenal of guns at their disposal"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p5", "q": "fast-paced violent action"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "a dark, crime-filled world"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p3", "q": "Sometimes the player is tasked with assassinating gang leaders"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "spend these souls with the Ferryman to acquire new weapons"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p4", "q": "can be listened to in the safe house, offering the player deeper insight"}]}
+]}

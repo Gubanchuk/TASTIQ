@@ -1,0 +1,8 @@
+{"appid": 374040, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p5", "q": "combines exploration and building elements"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p5", "q": "combines exploration and building elements"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "It provides a multiplayer sandbox environment"}, {"id": "p7", "q": "lauded the pleasing art style, crafting options, and cooperative play"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p5", "q": "It provides a multiplayer sandbox environment"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p7", "q": "lauded the pleasing art style"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p7", "q": "taking minor issue with finicky controls"}]}
+]}

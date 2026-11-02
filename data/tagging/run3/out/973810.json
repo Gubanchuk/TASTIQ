@@ -1,0 +1,9 @@
+{"appid": 973810, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "players are tasked to explore ARY-26, a colorful planet"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p3", "q": "to see if it would be suitable for future human colonization"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "defeated using weapons such as laser guns"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "collect the resources needed to craft new items and upgrades"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "The player's main task is to catalogue various alien flora and fauna"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "The game can be played cooperatively with another player"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p2", "q": "which enable the players to reach previously inaccessible areas"}]}
+]}

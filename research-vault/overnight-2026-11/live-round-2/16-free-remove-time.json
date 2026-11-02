@@ -1,0 +1,469 @@
+{
+  "state": {
+    "version": 1,
+    "id": "overnight-20261101-01-replay",
+    "revision": 7,
+    "mode": "guided",
+    "phase": "review",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "rpg",
+            "label": "RPG"
+          }
+        ],
+        "text": "Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса.",
+        "kind": "answer",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      },
+      {
+        "id": "overnight-20261101-01-replay:5",
+        "question": {
+          "id": "correction:5",
+          "title": "Что нужно изменить?",
+          "why": "",
+          "options": [],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [],
+        "text": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен.",
+        "kind": "answer",
+        "answer": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен."
+      }
+    ],
+    "facts": [
+      {
+        "key": "skyrim_finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_rpg",
+        "text": "Сегодня ты не хочешь RPG.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_skyrim",
+        "text": "Сегодня Skyrim исключён из выбора.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "driving",
+        "text": "Хочешь гонки, нравится управлять машиной.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Хочу гонки: нравится управлять машиной",
+        "feature": "loop.driving",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "quick_race_access",
+        "text": "Хочешь быстро начинать заезды без обязательной длинной карьеры.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "быстро начинать заезды, без обязательной длинной карьеры",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "total_length_indifferent",
+        "text": "Общая длина игры не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Общая длина игры неважна.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "optional_story",
+        "text": "Сюжет желателен, но не обязателен.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Сюжет — хорошо, если есть, но он не обязателен.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform_windows",
+        "text": "Будешь играть на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "solo",
+        "text": "Будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "",
+    "uncertainties": [],
+    "retractions": [
+      {
+        "kind": "session_time",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Сегодня есть 45 минут.",
+        "at": "overnight-20261101-01-replay:5"
+      }
+    ],
+    "sessionTime": null,
+    "factRemovalUndo": null,
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Исключить: Сегодня ты не хочешь RPG.; Исключить: Сегодня Skyrim исключён из выбора.; Хочется: Хочешь гонки, нравится управлять машиной.; Обязательно: Хочешь быстро начинать заезды без обязательной длинной карьеры.; Неважно: Общая длина игры не является критерием.; Хочется: Сюжет желателен, но не обязателен.; Обязательно: Будешь играть на ПК с Windows.; Хочется: Будешь играть один.",
+    "facts": [
+      {
+        "key": "skyrim_finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_rpg",
+        "text": "Сегодня ты не хочешь RPG.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_skyrim",
+        "text": "Сегодня Skyrim исключён из выбора.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "driving",
+        "text": "Хочешь гонки, нравится управлять машиной.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Хочу гонки: нравится управлять машиной",
+        "feature": "loop.driving",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "quick_race_access",
+        "text": "Хочешь быстро начинать заезды без обязательной длинной карьеры.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "быстро начинать заезды, без обязательной длинной карьеры",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "total_length_indifferent",
+        "text": "Общая длина игры не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Общая длина игры неважна.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "optional_story",
+        "text": "Сюжет желателен, но не обязателен.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Сюжет — хорошо, если есть, но он не обязателен.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform_windows",
+        "text": "Будешь играть на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "solo",
+        "text": "Будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "uncertainties": [],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "sessionTime": null,
+    "canUndoFactRemoval": false,
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      },
+      {
+        "id": "overnight-20261101-01-replay:5",
+        "question": "Что нужно изменить?",
+        "answer": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен."
+      }
+    ],
+    "type": "review"
+  }
+}

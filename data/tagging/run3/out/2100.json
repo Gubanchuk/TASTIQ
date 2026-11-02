@@ -1,0 +1,10 @@
+{"appid": 2100, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "Developing a character for resilience and strength for melee combat is still possible"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p2", "q": "can sneak up behind unaware enemies and perform a lethal backstab maneuver"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p2", "q": "can use it to snipe enemies from a distance"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "one of three skill trees: Combat, Magic, and Miscellaneous"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "opposing teams battle each other and earn points"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "The player controls Sareth, the apprentice of the wizard Phenrig"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p8", "q": "repetitive gameplay, predictable story, and poor multiplayer"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "praised the PC version for the sheer fun factor and beautiful graphics"}]}
+]}

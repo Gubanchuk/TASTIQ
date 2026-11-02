@@ -1,0 +1,9 @@
+{"appid": 899440, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "an action role-playing game with hack and slash gameplay"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "Companion characters, which are controlled by artificial intelligence, assist in combat"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "The game can be played cooperatively with four other players"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Players are equipped with God Arc weapons which can be transformed"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p6", "q": "criticized the game's difficulty curve"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p6", "q": "enjoyed the game's characters and story"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "somewhat unvaried content keep it from being the best it could be"}]}
+]}

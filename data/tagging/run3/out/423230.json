@@ -1,0 +1,11 @@
+{"appid": 423230, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "action shoot 'em up video game"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "attacking the bosses up close through melee or afar with ranged projectiles"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p2", "q": "Gameplay focuses around dodging bullets, parrying attacks to regain health"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p2", "q": "Furi is a fast-paced action game"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p2", "q": "The game is set in a series of linear closed world environments"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "There are three possible endings depending on the choices made by the player"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "colorful, retro, science fiction setting"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "spends his existence receiving endless torture within a highly advanced prison"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p7", "q": "citing a lack of engagement in the environment"}]}
+]}

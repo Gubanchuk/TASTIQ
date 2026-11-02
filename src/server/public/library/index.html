@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#282a2c">
+  <title>Библиотека — TASTIQ</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/shared/conversation.css?v=conversation-production-3">
+  <link rel="stylesheet" href="/library/style.css?v=conversation-production-3">
+  <script type="module" src="/library/app.js?v=conversation-production-3"></script>
+</head>
+<body class="conversation-page library-page">
+  <a class="library-skip" href="#library-content">К библиотеке</a>
+  <div class="conversation-app">
+    <aside class="conversation-rail">
+      <a class="conversation-brand" href="/" aria-label="TASTIQ, на главную">tastiq<span aria-hidden="true"></span></a>
+      <nav class="conversation-links" aria-label="Основная навигация">
+        <a href="/pick/game/"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H9l-4 4V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Подобрать</a>
+        <a href="/library/" aria-current="page"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Библиотека</a>
+      </nav>
+      <nav class="conversation-domains" aria-label="Что подобрать">
+        <a href="/pick/game/">Игры</a>
+        <a href="/pick/watch/?domain=film">Фильмы</a>
+        <a href="/pick/watch/?domain=series">Сериалы</a>
+        <a href="/pick/watch/?domain=cartoon">Мультфильмы</a>
+      </nav>
+      <p class="conversation-rail-note">Освободи вечер<br>для самого вечера.</p>
+    </aside>
+    <div class="conversation-body">
+      <main class="board-library" id="library-content" tabindex="-1">
+        <header class="board-heading"><div><h1>Библиотека</h1><p>Хорошие планы на твой вечер.</p></div><a class="library-button primary" href="/pick/game/">Подобрать ещё <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></header>
+        <div id="library-app" aria-busy="true"><p class="library-loading" role="status">Открываем сохранённое на этом устройстве…</p></div>
+        <noscript><p class="library-empty">Включи JavaScript, чтобы увидеть сохранённые названия в этом браузере.</p></noscript>
+      </main>
+    </div>
+  </div>
+  <div class="library-notice" id="library-notice" role="status" hidden></div>
+</body>
+</html>

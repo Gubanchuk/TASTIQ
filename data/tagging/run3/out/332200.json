@@ -1,0 +1,10 @@
+{"appid": 332200, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "The game focuses on action and exploration"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p7", "q": "praising its huge variety of weapons"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p7", "q": "encouraging players to reach 100% completion"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "wakes up in an ancient and high-tech world"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p11", "q": "a vast, open world divided into distinct rooms"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p9", "q": "the game doesn't have enough distant and memorable regions"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p9", "q": "challenging boss encounters"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "occasionally breathtaking scenery"}]}
+]}

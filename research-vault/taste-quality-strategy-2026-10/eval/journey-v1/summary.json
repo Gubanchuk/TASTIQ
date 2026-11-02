@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-31T18:25:52.623Z",
+  "budget": {
+    "cumulativeUpper": 1.1916883,
+    "remainingLower": 3.8083117,
+    "successfulCalls": 135,
+    "batchUsd": 0.1401686
+  },
+  "rows": [
+    {
+      "id": "story",
+      "engineHits": 0,
+      "v1Hits": 1,
+      "v2Hits": 1,
+      "modelPicks": 4,
+      "filled": 0,
+      "targetsEligible": 4,
+      "targetsInShortlist": 2
+    },
+    {
+      "id": "coop",
+      "engineHits": 1,
+      "v1Hits": 0,
+      "v2Hits": 2,
+      "modelPicks": 4,
+      "filled": 0,
+      "targetsEligible": 4,
+      "targetsInShortlist": 3
+    },
+    {
+      "id": "runs",
+      "engineHits": 0,
+      "v1Hits": 2,
+      "v2Hits": 2,
+      "modelPicks": 4,
+      "filled": 0,
+      "targetsEligible": 4,
+      "targetsInShortlist": 3
+    }
+  ],
+  "sha256": {
+    "cases.frozen.json": "0a273fa541e49fc30e9daa73748d481853fea861e4a4b5ada6dd2960862177eb",
+    "story.live.json": "5e50c599daa63d8a56a3bbbd3697158d509ca52d1bb31c712bcf6ff38da695dd",
+    "coop.live.json": "96e7e30091cbb18212efff0723aedc39c5cd67e0e5cb10de5951b03516b23120",
+    "runs.live.json": "7812374b839f6764a3ca37098d56a789bf5af57fe4200a3318e66c878c9acbb5"
+  }
+}

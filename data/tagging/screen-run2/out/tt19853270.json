@@ -1,0 +1,9 @@
+{"id": "tt19853270", "features": [
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "is a true crime drama television miniseries"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "accused of the murders of his wife, Maggie, and their son, Paul"}]},
+{"f": "characters.family", "r": 3, "ev": [{"id": "p3", "q": "the Murdaughs' dysfunction, privilege, and criminal activity"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p3", "q": "praising Patricia Arquette's portrayal of Maggie Murdaugh"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p3", "q": "profoundly compelling character study"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "depicting the consequences of the family's abuse of wealth and influence"}]},
+{"f": "content.disturbing", "r": 1, "ev": [{"id": "p0", "q": "depicts the events leading up to the double murder"}]}
+]}

@@ -1,0 +1,12 @@
+{"appid": 376210, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "Experience fierce open world survival gameplay as you attempt to stay alive on an unforgiving island inhabited by dinosaurs!"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "d", "q": "Experience fierce open world survival gameplay"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "Explore vast landscapes of dense forest and open plains"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "a", "q": "The Isle is intended to be a gritty, open-world survival horror game."}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "r236098827", "q": "У меня позвоночник в трусы свернулся от страха"}, {"id": "r235685190", "q": "Sometimes it gives the vibes of a horror game"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "r235685190", "q": "The game has a lot of realism and cool stuff to it"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "a", "q": "Your mistakes will be punished."}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "r235685190", "q": "especially to play with friends"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "a", "q": "grow into a stronger, more capable"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "r237056535", "q": "essentially downloading a four year old outdated version"}]}
+]}

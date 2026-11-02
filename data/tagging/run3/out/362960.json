@@ -1,0 +1,9 @@
+{"appid": 362960, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "player choices have a more meaningful effect on the game's story"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "they can recruit a number of companions"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p2", "q": "Tyranny takes place on Terratus, a high fantasy world"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "The game starts after the evil overlord Kyros has already conquered the world"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p2", "q": "a god-like being of immeasurable power"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p7", "q": "as well as its world building and mysteries"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p7", "q": "the abrupt end to the story"}]}
+]}

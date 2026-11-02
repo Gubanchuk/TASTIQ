@@ -1,0 +1,9 @@
+{"appid": 285920, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "an open-world construction sandbox game with action elements"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p1", "q": "The gameplay utilizes a construction sandbox focusing on vehicular combat and resource management"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "an open-world construction sandbox game with action elements"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "Wheel blocks in contact with ground enable driving"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "focusing on vehicular combat and resource management"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p4", "q": "has a focus on futuristic technology"}, {"id": "p0", "q": "interplanetary mining operations"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p6", "q": "unintuitive camera controls, clumsy driving performance, and frustrating combat"}]}
+]}

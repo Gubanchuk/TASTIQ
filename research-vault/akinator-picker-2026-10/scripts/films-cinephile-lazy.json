@@ -1,0 +1,722 @@
+{
+ "persona": "cinephile",
+ "mode": "lazy",
+ "screens": [
+  {
+   "n": 1,
+   "step": "domain",
+   "title": "Что хочешь?",
+   "options": [
+    "Поиграть",
+    "Посмотреть фильм",
+    "Посмотреть сериал",
+    "Посмотреть мультфильм"
+   ]
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "step": "genres",
+   "title": "Что обычно смотришь?",
+   "options": [
+    "драмы",
+    "комедии",
+    "боевики",
+    "криминал",
+    "мелодрамы",
+    "триллеры",
+    "ужасы",
+    "приключения",
+    "детективы",
+    "биографии",
+    "фэнтези",
+    "фантастика",
+    "документальное",
+    "историческое"
+   ]
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "skip"
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Властелин колец: Братство кольца (2001)",
+    "Убить Билла. Фильм 1 (2003)",
+    "Назад в будущее (1985)",
+    "Дэдпул (2016)",
+    "Джанго освобождённый (2012)",
+    "Звёздные войны: Пробуждение Силы (2015)",
+    "Форрест Гамп (1994)",
+    "Бойцовский клуб (1999)"
+   ]
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt0120737",
+     "tt0266697",
+     "tt0088763",
+     "tt1431045",
+     "tt1853728",
+     "tt2488496",
+     "tt0109830",
+     "tt0137523"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Шестое чувство (1999)",
+    "Большой куш (2000)",
+    "Звёздные войны. Эпизод 5: Империя наносит ответный удар (1980)",
+    "Одержимость (2014)",
+    "Тёмный рыцарь (2008)",
+    "Начало (2010)",
+    "Мстители: Эра Альтрона (2015)",
+    "Криминальное чтиво (1994)"
+   ]
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0166924"
+    ],
+    "shownIds": [
+     "tt0120737",
+     "tt0266697",
+     "tt0088763",
+     "tt1431045",
+     "tt1853728",
+     "tt2488496",
+     "tt0109830",
+     "tt0137523",
+     "tt0167404",
+     "tt0208092",
+     "tt0080684",
+     "tt2582802",
+     "tt0468569",
+     "tt1375666",
+     "tt2395427",
+     "tt0110912"
+    ]
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Малхолланд Драйв»?",
+   "options": [
+    "нелинейный сюжет",
+    "атмосферное",
+    "неожиданные повороты",
+    "сложный, надо вникать",
+    "стильно и необычно снято",
+    "загадка и расследование",
+    "мрачная атмосфера",
+    "странное, причудливое",
+    "красивая картинка",
+    "жуть и страх"
+   ]
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "tone.whimsical"
+    ],
+    "love": false,
+    "issues": []
+   },
+   "step": "disliked",
+   "title": "А что не зашло, хотя многие хвалят?",
+   "items": [
+    "Побег из Шоушенка (1994)",
+    "Матрица (1999)",
+    "Крёстный отец (1972)",
+    "Властелин колец: Возвращение короля (2003)",
+    "Тёмный рыцарь: Возрождение легенды (2012)",
+    "Властелин колец: Две крепости (2002)",
+    "Семь (1995)",
+    "Гладиатор (2000)"
+   ]
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "skip"
+   },
+   "step": "today",
+   "title": "Что сегодня?",
+   "options": [
+    "Хочу расслабиться",
+    "Хочу посмеяться",
+    "Хочу пощекотать нервы",
+    "Хочу, чтобы пробрало",
+    "Хочу подумать",
+    "Фоном, не вникая",
+    "Смотрю с детьми",
+    "Коротко, на один вечер",
+    "Хочу засесть надолго"
+   ]
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "skip"
+   },
+   "step": "playback",
+   "title": "Вот как я тебя вижу",
+   "options": [
+    "Да, подбирай",
+    "Добавлю ещё, что зашло"
+   ]
+  },
+  {
+   "n": 9,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  },
+  {
+   "n": 10,
+   "action": {
+    "type": "fork",
+    "f": "world.timetravel"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  },
+  {
+   "n": 11,
+   "action": {
+    "type": "fork",
+    "f": "characters.coming_of_age"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  }
+ ],
+ "result": {
+  "tag": "после развилки 2",
+  "top": {
+   "id": "tt0246578",
+   "name": "Донни Дарко",
+   "label": "strong",
+   "score": 3.3
+  },
+  "alternatives": [
+   {
+    "id": "tt0209144",
+    "name": "Помни",
+    "label": "likely",
+    "score": 2.674
+   },
+   {
+    "id": "tt0304141",
+    "name": "Гарри Поттер и узник Азкабана",
+    "label": "likely",
+    "score": 1.979
+   },
+   {
+    "id": "tt0485947",
+    "name": "Господин Никто",
+    "label": "likely",
+    "score": 2.376
+   }
+  ],
+  "fork": null,
+  "taste": {
+   "confirmed": [
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "w": 0.61,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "world.timetravel",
+     "label": "путешествия во времени",
+     "w": 0.61,
+     "sources": [],
+     "ids": [],
+     "preference": true
+    },
+    {
+     "f": "characters.coming_of_age",
+     "label": "взросление",
+     "w": 0.61,
+     "sources": [],
+     "ids": [],
+     "preference": true
+    }
+   ],
+   "inferred": [
+    {
+     "f": "story.mystery",
+     "label": "загадка и расследование",
+     "w": 0.19,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "w": 0.17,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "w": 0.17,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "w": 0.17,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "w": 0.17,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.dark",
+     "label": "мрачная атмосфера",
+     "w": 0.17,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "w": 0.17,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.creepy",
+     "label": "жуть и страх",
+     "w": 0.17,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    }
+   ],
+   "dislikes": [],
+   "hardNo": [],
+   "consumed": 1
+  },
+  "considered": 21837,
+  "sieves": [
+   {
+    "id": 1,
+    "name": "Можно ли",
+    "removed": 0
+   },
+   {
+    "id": 2,
+    "name": "Было ли",
+    "removed": 1
+   },
+   {
+    "id": 3,
+    "name": "Сделано ли нормально",
+    "removed": 10288
+   },
+   {
+    "id": 4,
+    "name": "Моё ли (жёсткие стопы)",
+    "removed": 0
+   },
+   {
+    "id": 5,
+    "name": "Подходит ли сегодня (обязательное)",
+    "removed": 0
+   }
+  ]
+ },
+ "why": {
+  "tt1441395": {
+   "id": "tt1441395",
+   "name": "Under the Skin",
+   "rank": 217,
+   "of": 21837,
+   "score": 1.504,
+   "parts": {
+    "fit": 1.4308989224110336,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.07355000983155272
+   },
+   "leaderScore": 3.3,
+   "matches": [
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.388,
+     "confirmed": true
+    },
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "contribution": 0.148,
+     "confirmed": false
+    },
+    {
+     "f": "tone.dark",
+     "label": "мрачная атмосфера",
+     "contribution": 0.124,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 0.121,
+     "confirmed": false
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.12,
+     "confirmed": false
+    },
+    {
+     "f": "tone.creepy",
+     "label": "жуть и страх",
+     "contribution": 0.106,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  },
+  "tt2076220": {
+   "id": "tt2076220",
+   "name": "Holy Motors",
+   "rank": 884,
+   "of": 21837,
+   "score": 1.134,
+   "parts": {
+    "fit": 1.0159635065414336,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.11803295208756633
+   },
+   "leaderScore": 3.3,
+   "matches": [
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.388,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.111,
+     "confirmed": false
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.103,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.095,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.094,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 0.09,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  },
+  "tt7984734": {
+   "id": "tt7984734",
+   "name": "The Lighthouse",
+   "rank": 101,
+   "of": 21837,
+   "score": 1.675,
+   "parts": {
+    "fit": 1.5030079612448668,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.17208371567149502
+   },
+   "leaderScore": 3.3,
+   "matches": [
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.388,
+     "confirmed": true
+    },
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "contribution": 0.148,
+     "confirmed": false
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.121,
+     "confirmed": false
+    },
+    {
+     "f": "tone.dark",
+     "label": "мрачная атмосфера",
+     "contribution": 0.116,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 0.11,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.097,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  },
+  "tt0054632": {
+   "id": "tt0054632",
+   "name": "Last Year at Marienbad",
+   "rank": 240,
+   "of": 21837,
+   "score": 1.476,
+   "parts": {
+    "fit": 1.3193331644016335,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.15690527298944745
+   },
+   "leaderScore": 3.3,
+   "matches": [
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.388,
+     "confirmed": true
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.147,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 0.129,
+     "confirmed": false
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.101,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.094,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.081,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  },
+  "tt0060176": {
+   "id": "tt0060176",
+   "name": "Blow-Up",
+   "rank": 293,
+   "of": 21837,
+   "score": 1.422,
+   "parts": {
+    "fit": 1.2631554979952335,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.15895556138166086
+   },
+   "leaderScore": 3.3,
+   "matches": [
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.388,
+     "confirmed": true
+    },
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "contribution": 0.148,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 0.129,
+     "confirmed": false
+    },
+    {
+     "f": "story.mystery",
+     "label": "загадка и расследование",
+     "contribution": 0.104,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.094,
+     "confirmed": false
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.078,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  }
+ },
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [],
+  "shown": [
+   "tt0120737",
+   "tt0266697",
+   "tt0088763",
+   "tt1431045",
+   "tt1853728",
+   "tt2488496",
+   "tt0109830",
+   "tt0137523",
+   "tt0167404",
+   "tt0208092",
+   "tt0080684",
+   "tt2582802",
+   "tt0468569",
+   "tt1375666",
+   "tt2395427",
+   "tt0110912"
+  ],
+  "liked": [
+   "tt0166924"
+  ],
+  "disliked": [],
+  "whyIndex": 0,
+  "answers": {
+   "tt0166924": {
+    "reaction": "like",
+    "reasons": [
+     "tone.whimsical"
+    ],
+    "issues": []
+   }
+  },
+  "corrections": [],
+  "preferences": [
+   {
+    "f": "world.timetravel"
+   },
+   {
+    "f": "characters.coming_of_age"
+   }
+  ],
+  "session": {
+   "moods": [],
+   "avoid": [],
+   "notNow": [],
+   "asked": 2
+  },
+  "seed": 4242
+ }
+}

@@ -1,0 +1,14 @@
+{"appid": 234080, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "uses melee skills to defeat enemies and solves puzzles"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p5", "q": "platforming and puzzles are a key component"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p5", "q": "platforming and puzzles are a key component"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p5", "q": "The player can explore the levels in order to find hidden items"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "vampires and werewolves are recurring enemies in the game"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "Set in Southern Europe during the Middle Ages"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "combat, visuals, music, and art direction"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p1", "q": "The music was composed by Spanish composer Óscar Araujo"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "with particular praise for its story, combat, visuals, music, and art direction"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p6", "q": "A dark spell has stopped the souls of the deceased from leaving"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "the player controls the main character, Gabriel Belmont"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "which can be used to purchase combos or to augment the player's abilities further"}]}
+]}

@@ -1,0 +1,199 @@
+{
+ "appid": 1621690,
+ "features": [
+  {
+   "f": "loop.building",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237044359",
+     "q": "Complex base building"
+    },
+    {
+     "id": "r237489978",
+     "q": "Building is fun"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237489978",
+     "q": "Exploring it is a lot of fun"
+    }
+   ]
+  },
+  {
+   "f": "loop.life_sim",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236207232",
+     "q": "There's farming, cooking and fishing"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236207232",
+     "q": "You can do damage with melee, ranged, magic, and summoners"
+    }
+   ]
+  },
+  {
+   "f": "progression.collection",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236207232",
+     "q": "You can get a ton of neat collectible items to decorate your base"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237044359",
+     "q": "Large builds variety"
+    },
+    {
+     "id": "r236343944",
+     "q": "одно прохождение ты играешь за лучника, второе за мага, третие за воина"
+    }
+   ]
+  },
+  {
+   "f": "progression.power",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237044359",
+     "q": "you can level up items so they become viable even in the end game"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "for 1-8 players"
+    },
+    {
+     "id": "r235814908",
+     "q": "Invited friends to play the game"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.pixel",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237044359",
+     "q": "Beautiful pixel graphics"
+    },
+    {
+     "id": "r237539204",
+     "q": "visual pixel style"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236361040",
+     "q": "the music is atmospheric"
+    },
+    {
+     "id": "r235814908",
+     "q": "Relaxing music 10/10"
+    }
+   ]
+  },
+  {
+   "f": "tone.serene",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237539204",
+     "q": "Pretty nice and peaceful game"
+    },
+    {
+     "id": "r237489872",
+     "q": "relaxing and addicting"
+    }
+   ]
+  },
+  {
+   "f": "length.endless",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237016065",
+     "q": "Goated game that is still receiving additional content"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236072924",
+     "q": "приятная графика, музыкальное сопровождение и шикарная работа с освещением"
+    }
+   ]
+  },
+  {
+   "f": "loop.survival",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236343944",
+     "q": "Моя любимая выживалка, очень сильно вот нравится такой дизайн, атфосфера"
+    }
+   ]
+  },
+  {
+   "f": "world.empty",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236361040",
+     "q": "The world is too big for its own good"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236361040",
+     "q": "Every biome has only a couple of different enemies, very similar dungeons and a subbiome"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237489978",
+     "q": "not being able to see what's happening during combat"
+    }
+   ]
+  }
+ ]
+}

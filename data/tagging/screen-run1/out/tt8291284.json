@@ -1,0 +1,8 @@
+{"id": "tt8291284", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "an American science fiction television series created by Scott B. Smith"}]},
+{"f": "world.dystopia", "r": 1, "ev": [{"id": "s", "q": "technology has started to subtly alter society"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "s", "q": "Flynne discovers a hidden connection to a very different reality"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p2", "q": "single-minded focus on its lofty ideas"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p2", "q": "comes at the expense of character or coherence"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p1", "q": "In August 2023, the series was canceled by Amazon Prime Video"}]}
+]}

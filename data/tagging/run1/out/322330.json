@@ -1,0 +1,11 @@
+{"appid": 322330, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "d", "q": "Fight, Farm, Build and Explore Together"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "uncompromising wilderness survival game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "a", "q": "Gather resources to craft items and build structures that match your survival style"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "Enter a strange and unexplored world full of odd creatures, hidden dangers, and ancient secrets"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "r237546002", "q": "this game does not contain any merciful entities"}]},
+{"f": "tone.gritty", "r": 1, "ev": [{"id": "a", "q": "survive the harsh environment"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "r236419242", "q": "Hard game but alot of fun"}, {"id": "r238126593", "q": "Games that are hard can be really fun"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r237611564", "q": "I've got 99 problems, but food ain't one"}, {"id": "r236419242", "q": "hate your friends for not taking a survival game seriously"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "r238126593", "q": "Unless you know literally every aspect of this game, where to go, what to do and how to do it"}]}
+]}

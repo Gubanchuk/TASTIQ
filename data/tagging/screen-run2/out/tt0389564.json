@@ -1,0 +1,8 @@
+{"id": "tt0389564", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a science fiction television series produced by CBS Paramount Network Television"}]},
+{"f": "world.supernatural", "r": 2, "ev": [{"id": "p3", "q": "begin to manifest paranormal abilities, such as telekinesis, telepathy and precognition"}]},
+{"f": "world.timetravel", "r": 1, "ev": [{"id": "p7", "q": "a certain faction from the future wants to see history changed"}]},
+{"f": "structure.serialized", "r": 2, "ev": [{"id": "p5", "q": "By the second season, it is revealed that all 4400 have a fictional neurotransmitter"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p2", "q": "Ryland assigns Tom Baldwin and Diana Skouris as the lead team to investigate the 4400"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p10", "q": "would not be returning for a fifth season"}]}
+]}

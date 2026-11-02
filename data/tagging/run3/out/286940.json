@@ -1,0 +1,6 @@
+{"appid": 286940, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is an online free-to-play first-person shooter game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "Most modes consist of a red team and a blue team"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "Players rank up after receiving enough experience points"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p2", "q": "Various modern-themed weapons are available"}]}
+]}

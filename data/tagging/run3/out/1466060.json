@@ -1,0 +1,9 @@
+{"appid": 1466060, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "a dark fantasy reimagining of Arthurian legend"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p0", "q": "is an open-world action role-playing video game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p6", "q": "praising its world design, exploration gameplay, and narrative"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p4", "q": "The player then has multiple choices"}, {"id": "p5", "q": "Any other choice makes Caradoc fight the player"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p6", "q": "praising its world design, exploration gameplay, and narrative"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "Arthur and Merlin performed desperate human experiments"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p7", "q": "problems with item looting"}]}
+]}

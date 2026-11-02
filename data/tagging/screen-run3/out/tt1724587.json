@@ -1,0 +1,8 @@
+{"id": "tt1724587", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "s", "q": "Hal Jordan is recruited to go on a long-term space mission"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "s", "q": "The two forces will clash in a battle of power rings"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p2", "q": "with a bold, sleek design that more than anything resembles The Incredibles"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p1", "q": "The series was cancelled after one season due to poor toy sales"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 1262560, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "is a 2012 racing game developed by Criterion Games"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p3", "q": "is set in an open world environment"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "compete against other racers in three types of events"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "the police deploy vehicles and tactics to stop the player's car and arrest the player"}]},
+{"f": "story.minimal", "r": 2, "ev": [{"id": "p3", "q": "the 2012 Most Wanted does not contain a story"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p4", "q": "their cars are added to the player's roster"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p5", "q": "Fairhaven resembles a regular city"}]}
+]}

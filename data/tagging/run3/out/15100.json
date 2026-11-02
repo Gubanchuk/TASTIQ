@@ -1,0 +1,11 @@
+{"appid": 15100, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p2", "q": "social stealth (the ability to use crowds of people and the environment to hide from enemies)"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "taking place primarily during the Third Crusade in the Holy Land in 1191"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "counter-based hack-and-slash combat"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "a large open world comprising various regions of the Holy Land"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p5", "q": "scaling the sides of buildings to climb to higher vantage points"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "critics praising its storytelling, visuals, art design, and originality"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p3", "q": "criticism mostly focused on the repetitive nature of its gameplay"}, {"id": "p10", "q": "quite amazingly repetitive"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p1", "q": "through a machine called the Animus"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p3", "q": "critics praising its storytelling, visuals, art design, and originality"}]}
+]}

@@ -1,0 +1,15 @@
+{
+  "appid": 302510,
+  "features": [
+    {"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "Gameplay revolves around Marius using his sword to strike enemies and shield to deflect attacks"}]},
+    {"f": "combat.weighty", "r": 2, "ev": [{"id": "p11", "q": "the sense of weight and impact"}]},
+    {"f": "combat.fast", "r": 2, "ev": [{"id": "p4", "q": "Combat is combo-based, and rewards are given to players for building a long combo"}]},
+    {"f": "pace.repetitive", "r": 2, "ev": [{"id": "p11", "q": "was too repetitive for players to enjoy"}]},
+    {"f": "social.coop", "r": 2, "ev": [{"id": "p6", "q": "There is also a co-operative multiplayer mode"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p10", "q": "The game's story also received praise from most critics"}]},
+    {"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "Set in an alternate version of Ancient Rome"}]},
+    {"f": "tone.epic", "r": 2, "ev": [{"id": "p4", "q": "Marius is involved in large-scale battles"}]},
+    {"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p9", "q": "The game's visuals received critical acclaim"}]},
+    {"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "criticized for its short length"}]}
+  ]
+}

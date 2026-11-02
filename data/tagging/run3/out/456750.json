@@ -1,0 +1,6 @@
+{"appid": 456750, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "The Room Three is a 2015 puzzle video game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "allowing the player to look around rooms from a spot"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "the player reveals new secrets and puzzles towards reaching the game's conclusion"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "Depending on how the player uses these devices alongside the Craftsman's Key"}]}
+]}

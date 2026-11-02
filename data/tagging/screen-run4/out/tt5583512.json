@@ -1,0 +1,9 @@
+{"id": "tt5583512", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is a Canadian crime drama television series"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p2", "q": "The investigation widens when another missing person case with similar patterns"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p5", "q": "a gripping, superbly made crime drama"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p2", "q": "is a troubled and brooding police officer in Algonquin Bay"}]},
+{"f": "content.disturbing", "r": 1, "ev": [{"id": "p3", "q": "Soon mutilated bodies, in accordance with some occult religious rituals, are discovered"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "s", "q": "a chilling hunt for a brutal killer"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The fourth and final season adapts the sixth novel"}]}
+]}

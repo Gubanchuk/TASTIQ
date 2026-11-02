@@ -1,0 +1,11 @@
+{"appid": 8850, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter video game"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "using weapons and an array of genetic modifications"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p7", "q": "Plasmids grant powers such as telekinesis"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "takes place in the dystopian underwater city of Rapture"}, {"id": "p3", "q": "Class conflict and civil war were exacerbated by the side effects of ADAM abuse"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "praise directed at its narrative, themes, art style, characters, endings and gameplay"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p6", "q": "The ending is influenced by how the player interacted with Little Sisters"}]},
+{"f": "stability.slow_start", "r": 2, "ev": [{"id": "p2", "q": "Criticisms included a slow start"}, {"id": "p10", "q": "Criticism included a slow start to the story"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p11", "q": "considered the mode to be undifferentiated from other shooters, and based on luck rather than strategy"}]},
+{"f": "tone.melancholic", "r": 1, "ev": [{"id": "p12", "q": "offering more emotional moments"}]}
+]}

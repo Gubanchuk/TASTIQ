@@ -1,0 +1,18 @@
+{"appid": 22300, "features": [
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p0", "q": "the player can engage in combat with a variety of weapons"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p0", "q": "Fallout 3 features a freely explorable open world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "Fallout 3 features an open world map that the player can freely explore"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p6", "q": "Whenever the player commits an action that is deemed either good or bad"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p11", "q": "Edge liked the central story"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p6", "q": "Certain companions can only be recruited if the player meets the companion's karmic expectation"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p4", "q": "the player can customize their character's physical appearance by choosing their gender and race"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Critics praised Fallout 3 open-ended gameplay and flexible character-leveling system"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "200 years after a devastating nuclear war"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p6", "q": "The player's karma affects how other characters perceive them"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "favored an oppressive and bleak atmosphere"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p0", "q": "The player can also initiate conversations with non-player characters"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p11", "q": "The AI and stiff character animations are another common point of criticism"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "praised the art direction and the attention to details"}]},
+{"f": "length.long", "r": 3, "ev": [{"id": "p3", "q": "estimates there are over 100 hours of content in Fallout 3"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p10", "q": "did not like the way the endings were not enough constructed around player's actions and decisions"}]}
+]}

@@ -1,0 +1,10 @@
+{"appid": 267530, "features": [
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "Regular Builders are unable to construct objects out of piles of Lego pieces"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p12", "q": "disliked the platforming gameplay sections"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p12", "q": "the \"great\" comedy"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p13", "q": "many of the hilarious characters fresh off the screen"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "p9", "q": "delivers it all in a charming package"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p7", "q": "praising the graphics, characters, and soundtrack"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "called it a \"visual marvel\""}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p7", "q": "devolve into tedium and busywork"}]}
+]}

@@ -1,0 +1,14 @@
+{
+  "appid": 312530,
+  "features": [
+    {"f": "social.pvp", "r": 3, "ev": [{"id": "p3", "q": "The game is primarily played in multiplayer"}]},
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "features primarily shooting and platforming mechanics"}]},
+    {"f": "loop.platforming", "r": 2, "ev": [{"id": "p2", "q": "features primarily shooting and platforming mechanics"}]},
+    {"f": "social.solo", "r": 1, "ev": [{"id": "p4", "q": "the game has a single-player 'arcade' mode"}]},
+    {"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "The game features a simple control scheme"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p7", "q": "high-level gameplay utilizing exploits and advanced techniques to elevate the skill ceiling"}]},
+    {"f": "progression.collection", "r": 1, "ev": [{"id": "p4", "q": "which can be used to unlock in-game hats and game modifiers"}]},
+    {"f": "humor.funny", "r": 1, "ev": [{"id": "p6", "q": "their funny failures"}]},
+    {"f": "combat.precise", "r": 1, "ev": [{"id": "p5", "q": "praising the nuances of the game's combat and controls"}]}
+  ]
+}

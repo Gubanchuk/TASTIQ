@@ -1,0 +1,11 @@
+{"appid": 312670, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2018 cooperative third-person shooter game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "a huge emphasis on cooperative gameplay"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p0", "q": "the player fights against different mythological enemies and solves puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "The game features branching levels which encourage exploration"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p1", "q": "Players have a large arsenal of weapons at their disposal"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "the player assumes the role of an adventurer in the 1930s"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "fight against different mythological enemies like mummies, giant scorpions and minotaurs"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "can team up with three other players"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p1", "q": "The game's four playable characters, who can be customized"}]}
+]}

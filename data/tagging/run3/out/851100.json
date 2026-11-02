@@ -1,0 +1,14 @@
+{"appid": 851100, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p3", "q": "The game tasks the player with navigating through a large mansion"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p3", "q": "maneuvering through puzzle gauntlets"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p3", "q": "It takes inspiration from the Touhou Project series of bullet hell shooter video games"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p9", "q": "emphasis on fast-paced, aggressive fighting as both engaging and exhilarating"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p9", "q": "called the game's overall difficulty well-balanced"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p10", "q": "Critics acclaimed the game's artistic presentation"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p10", "q": "responded positively to its pixel art visuals"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "Further praise was offered to the soundtrack"}]},
+{"f": "length.short", "r": 3, "ev": [{"id": "p12", "q": "Touhou Luna Nights brevity was a point of criticism"}, {"id": "p2", "q": "but critiqued its short length"}]},
+{"f": "story.minimal", "r": 1, "ev": [{"id": "p11", "q": "Its story was seen as simple, yet overall satisfactory"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p7", "q": "which houses numerous occult creatures"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "can be permanently upgraded using an in-game currency"}]}
+]}

@@ -1,0 +1,52 @@
+{
+  "id": "andrey",
+  "name": "Андрей, 31",
+  "domain": "game",
+  "platform": "windows",
+  "who": "Работает полный день, вечером 1–2 часа за ПК. Любит сюжетные игры с персонажами, ненавидит гринд и сложность «умри сто раз».",
+  "today": "Час-полтора, хочет историю с персонажами, не напрягаться, что-то, что можно проходить по часу за вечер и закончить.",
+  "situation": { "company": "solo" },
+  "stops": ["progression.grind"],
+  "prefer": ["characters.memorable", "story.central", "story.choices", "loop.dialogue", "length.short", "humor.funny", "characters.companions", "world.living", "tension.low", "difficulty.forgiving"],
+  "source": "research-vault/akinator-picker-2026-10/raw/persona-games.md, «Персона 1»",
+  "loved": [
+    { "id": "steam:632470", "name": "Disco Elysium", "q": "Disco Elysium", "love": true, "reasons": ["story.central", "characters.memorable", "loop.dialogue", "story.choices", "humor.funny"], "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют" },
+    { "id": "steam:292030", "name": "The Witcher 3", "q": "Ведьмак 3", "love": true, "reasons": ["story.central", "characters.memorable", "story.choices", "world.living"], "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир" },
+    { "id": "steam:1328670", "name": "Mass Effect Legendary Edition", "q": "Mass Effect", "love": true, "reasons": ["characters.companions", "story.choices", "story.central", "characters.memorable"], "text": "за команду и Гарруса, и что выборы переносятся между частями" },
+    { "id": "steam:383870", "name": "Firewatch", "q": "Firewatch", "reasons": ["story.central", "length.short", "loop.dialogue", "characters.memorable"], "text": "короткая, на один вечер, разговоры по рации" },
+    { "id": "steam:501300", "name": "What Remains of Edith Finch", "q": "Edith Finch", "reasons": ["story.central", "length.short"], "text": "два часа, а помню годами" },
+    { "id": "steam:1174180", "name": "Red Dead Redemption 2", "q": "Red Dead Redemption 2", "love": true, "reasons": ["characters.memorable", "story.central", "world.living"], "text": "Артур Морган, лучший персонаж в играх" },
+    { "id": "steam:620", "name": "Portal 2", "q": "Portal 2", "reasons": ["humor.funny", "characters.memorable", "story.central"], "text": "смешно, Уитли и ГЛаДОС, голова работает, но не напрягает" },
+    { "id": "steam:1222140", "name": "Detroit: Become Human", "q": "Detroit", "reasons": ["story.choices", "story.central"], "text": "кино, в котором сам решаешь" },
+    { "id": "steam:1086940", "name": "Baldur's Gate 3", "q": "Baldur", "love": true, "reasons": ["characters.companions", "characters.memorable", "story.choices"], "text": "компаньоны, каждый диалог событие" },
+    { "id": "steam:319630", "name": "Life is Strange", "q": "Life is Strange", "reasons": ["characters.memorable", "story.central", "tone.melancholic"], "text": "за Макс и Хлою, рыдал" }
+  ],
+  "disliked": [
+    { "id": "steam:1245620", "name": "Elden Ring", "q": "Elden Ring", "issues": [{ "f": "difficulty.hard", "hard": true }], "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше" },
+    { "id": "steam:2344520", "name": "Diablo IV", "q": "Diablo", "issues": [{ "f": "progression.grind" }, { "f": "pace.repetitive" }], "text": "гринд ради гринда, сюжет кончился, дальше одно и то же" },
+    { "id": "steam:374320", "name": "Dark Souls III", "q": "Dark Souls 3", "issues": [{ "f": "difficulty.hard", "hard": true }], "text": "постоянно умирал, бесило" },
+    { "id": "steam:1085660", "name": "Destiny 2", "q": "Destiny 2", "issues": [{ "f": "progression.grind" }, { "f": "pace.repetitive" }, { "f": "story.minimal" }], "text": "непонятно, что происходит, одни и те же миссии, надо гриндить" },
+    { "id": "steam:812140", "name": "Assassin's Creed Odyssey", "q": "Odyssey", "issues": [{ "f": "pace.draggy" }, { "f": "pace.repetitive" }, { "f": "length.long" }], "text": "огромная, затянуто, одно и то же" }
+  ],
+  "alsoSeen": [],
+  "targets": [
+    { "id": "steam:388880", "name": "Oxenfree" },
+    { "id": "steam:481510", "name": "Night in the Woods" },
+    { "id": "steam:1578650", "name": "Citizen Sleeper" }
+  ],
+  "modes": {
+    "careful": {
+      "seed": 162474,
+      "anchors": { "pages": 1, "love": true, "seen": true, "searchLoved": true, "searchDisliked": true },
+      "why": { "text": "all", "expand": true },
+      "whyNot": { "text": "negatives" },
+      "stops": true,
+      "result": { "rate": true }
+    },
+    "lazy": {
+      "seed": 58099,
+      "anchors": { "pages": 6, "untilHit": true, "love": true },
+      "why": {}
+    }
+  }
+}

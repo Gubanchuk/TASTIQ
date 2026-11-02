@@ -1,0 +1,26 @@
+{
+  "id": "tt14596212",
+  "name": "Hello Tomorrow!",
+  "kind": "series",
+  "domain": "series",
+  "year": 2023,
+  "genres": [
+    "Comedy",
+    "Drama",
+    "Sci-Fi"
+  ],
+  "s": "Hello Tomorrow! is set in a retro-futuristic world, where charismatic salesman Jack Billings leads a team of fellow sales associates determined to revitalize their customers' lives by hawking timeshares on the moon.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Hello Tomorrow! is an American science fiction comedy-drama television series that premiered on Apple TV+ on February 17, 2023. It stars Billy Crudup."
+    },
+    {
+      "id": "p1",
+      "section": "Reception",
+      "text": "The review aggregation website Rotten Tomatoes reported a 54% approval rating based on 52 reviews, with an average rating of 6.10/10. The website's critical consensus states, \"Hello Tomorrow! is visually striking enough to periodically distract from its rambling story and thinly sketched characters, but overall, this first season fails to live up to its potential.\" Metacritic, which uses a weighted average, assigned a score of 60 out of 100 based on 26 critics, indicating \"Mixed or average reviews\"."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Hello_Tomorrow!"
+}

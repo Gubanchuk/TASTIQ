@@ -1,0 +1,14 @@
+{
+  "appid": 501300,
+  "features": [
+    {"f": "loop.exploration", "r": 3, "ev": [{"id": "p3", "q": "the player explores the Finch house and surrounding wilderness"}]},
+    {"f": "story.central", "r": 3, "ev": [{"id": "p2", "q": "receiving praise for its immersive storytelling, characters, and presentation"}]},
+    {"f": "story.lore", "r": 2, "ev": [{"id": "p3", "q": "narrative-related objects such as books, clutter, and decorations"}]},
+    {"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "she uncovers her family's mysterious past"}]},
+    {"f": "tone.melancholic", "r": 3, "ev": [{"id": "p1", "q": "learns about the series of deaths that eventually caused the complete collapse of her family structure"}, {"id": "p11", "q": "Touching, sad, and brilliant"}]},
+    {"f": "tone.creepy", "r": 1, "ev": [{"id": "p13", "q": "as a spooky, logical evolution of the Gone Homes"}]},
+    {"f": "world.fantasy", "r": 1, "ev": [{"id": "p1", "q": "The magical realist story touches on themes of free will"}]},
+    {"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "through a semi-linear series of rooms"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "What Remains of Edith Finch is a gorgeous experience"}]}
+  ]
+}

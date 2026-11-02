@@ -1,0 +1,7 @@
+{"appid": 2012510, "features": [
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p1", "q": "is a real-time strategy game set in a post-apocalyptic world"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "constructing bases, building up troops, upgrading units and buildings"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "balanced, competitive one-on-ones for more advanced players"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p1", "q": "make a typically complex genre accessible to new audiences"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p4", "q": "the overarching storyline interesting"}]}
+]}

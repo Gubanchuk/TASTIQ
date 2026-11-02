@@ -1,0 +1,17 @@
+{
+  "appid": 236430,
+  "features": [
+    {"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "deemed its boss battles and combat mechanics inferior"}]},
+    {"f": "difficulty.hard", "r": 3, "ev": [{"id": "p3", "q": "known for its difficulty"}]},
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "follows an undead traveler searching for a cure to their affliction"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "praising its story, atmosphere, world design and visuals"}]},
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "Character abilities are based on their level in each attribute"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Character abilities are based on their level in each attribute"}]},
+    {"f": "loop.looting", "r": 1, "ev": [{"id": "p6", "q": "the chance of finding items from fallen enemies increases"}]},
+    {"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "players have the choice between co-operative play"}]},
+    {"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "player-versus-player through"}]},
+    {"f": "story.lore", "r": 2, "ev": [{"id": "p7", "q": "flavor text from items, and world design"}]},
+    {"f": "length.endless", "r": 1, "ev": [{"id": "p6", "q": "Dark Souls II features a more robust new game plus mode than Dark Souls"}]},
+    {"f": "combat.clunky", "r": 1, "ev": [{"id": "p8", "q": "some were critical of the boss quality, combat mechanics, and increased difficulty"}]}
+  ]
+}

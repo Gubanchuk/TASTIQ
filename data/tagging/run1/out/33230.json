@@ -1,0 +1,103 @@
+{
+ "appid": 33230,
+ "features": [
+  {
+   "f": "world.historical",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "set in the pristine, yet brutal, backdrop of a Renaissance Italy"
+    },
+    {
+     "id": "r236835057",
+     "q": "I thoroughly enjoyed my time exploring Renaissance Italy"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238095425",
+     "q": "amazing maps design, exploration and 100%-ing are much more fun and satisfying"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r238008424",
+     "q": "The story is peak, with a lot of depth"
+    },
+    {
+     "id": "r237148224",
+     "q": "The story and the game is peak"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238008424",
+     "q": "The character's got charm, a very good backstory, and very good character development"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237148224",
+     "q": "The cities are really cool and the atmosphere is really nice"
+    }
+   ]
+  },
+  {
+   "f": "loop.platforming",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235945436",
+     "q": "All that running and climbing gets hectic after some time"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238008424",
+     "q": "The combat is still very repetitive"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238008424",
+     "q": "The movement is still bad-ish, especially when the character just jumps randomly"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235977639",
+     "q": "Multiplayer no longer supported"
+    }
+   ]
+  }
+ ]
+}

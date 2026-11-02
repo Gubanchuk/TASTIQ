@@ -1,0 +1,500 @@
+{
+  "captureMethod": "CUA getScreenshot; originals unedited",
+  "limitations": "Native dimensions differ from CSS viewport. Natural scroll position varies. Not full-document or pixel-fidelity evidence. Tiny advanced-fallback files outside this explicit list are excluded.",
+  "captures": [
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\final-pending-desktop-native.png",
+      "width": 1248,
+      "height": 900,
+      "format": "JPEG",
+      "sha256": "31e9d8c147b0a7c6e8a3ffc7bdbac3e2e34ab132451b40e98b0dbe51823de4e8",
+      "dom": {
+        "name": "final-pending-desktop-native",
+        "broken": 0,
+        "height": 900,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\final-pending-mobile-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "5a7265638568da8191c25fcfb0dad4097d569a0651de5080b9dec7fc6d674d55",
+      "dom": null,
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\final-error-friendly-mobile-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "91fd72c3f561b3b5e7f23bc3a429335ed90aa41044bb1777863a36dbb441a6cf",
+      "dom": {
+        "name": "final-error-friendly-mobile-native",
+        "broken": 0,
+        "height": 1187,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-error-friendly-desktop-native.png",
+      "width": 1248,
+      "height": 900,
+      "format": "JPEG",
+      "sha256": "57ce077afdb4a5dbd1ca167659d9ab8ab200d5abfb6a32dab5a9b43b68b0fc5c",
+      "dom": {
+        "name": "verified-error-friendly-desktop-native",
+        "broken": 0,
+        "height": 900,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-film-result-desktop-native.png",
+      "width": 1238,
+      "height": 893,
+      "format": "JPEG",
+      "sha256": "3130418181027be6ed3efd7dbddbbf256fb8c9cef04b2e5fd8d378c05c8b4288",
+      "dom": {
+        "name": "verified-film-result-desktop-native",
+        "broken": 0,
+        "height": 2478,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-film-result-mobile-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "68ad1aafb002661d1939d79f166af6cbf487639a2a2ceff63c97408a9b2f6d85",
+      "dom": {
+        "name": "verified-film-result-mobile-native",
+        "broken": 0,
+        "height": 3620,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-game-model-question-desktop-native.png",
+      "width": 1238,
+      "height": 893,
+      "format": "JPEG",
+      "sha256": "940f8efed399d443d4c16fffbf0ca3487f2172ebdf31ae8ea8cbbe3024865b11",
+      "dom": {
+        "name": "verified-game-model-question-desktop-native",
+        "broken": 0,
+        "height": 1037,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-game-result-desktop-native.png",
+      "width": 1238,
+      "height": 893,
+      "format": "JPEG",
+      "sha256": "4bc7a367e9147ba3217e852ddabed8c7a10e00f049103d36beb8425d900dae1f",
+      "dom": {
+        "name": "verified-game-result-desktop-native",
+        "broken": 0,
+        "height": 2468,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-game-result-mobile-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "d8fe1e55562802e45bd33e78f1761feaf8b1c4fc1c10f726798cf831cce82fd8",
+      "dom": {
+        "name": "verified-game-result-mobile-native",
+        "broken": 0,
+        "height": 3473,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-library-all4-desktop-native.png",
+      "width": 1233,
+      "height": 889,
+      "format": "JPEG",
+      "sha256": "4f6d0e0e8c6fd1bb938f95a2e18ef2b42d11297f8e4b521296e1dfc851b05207",
+      "dom": {
+        "name": "verified-library-all4-desktop-native",
+        "broken": 0,
+        "height": 1421,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-library-all4-mobile-native.png",
+      "width": 375,
+      "height": 812,
+      "format": "JPEG",
+      "sha256": "53811050efce8ade30015aa889face031730498a82544dfd342a8d13f9d4944e",
+      "dom": {
+        "name": "verified-library-all4-mobile-native",
+        "broken": 0,
+        "height": 1628,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-library-evenings-mobile-native.png",
+      "width": 375,
+      "height": 812,
+      "format": "JPEG",
+      "sha256": "9b87c80dd839328be4cabb8e26d85fe6f638d12126a03ee0e431f3cca197aa86",
+      "dom": {
+        "name": "verified-library-evenings-mobile-native",
+        "broken": 0,
+        "height": 1525,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-series-model-question-mobile-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "493ce7d3f32a9613ada2ed8b53998fd0f2525a4853017c1b78ec233a2239052f",
+      "dom": {
+        "name": "verified-series-model-question-mobile-native",
+        "broken": 0,
+        "height": 1471,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-series-clarification-mobile-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "b82fc1b1e52244b395c8b72c135b69f10c575b037c2b690407660e9a045690b6",
+      "dom": {
+        "name": "verified-series-clarification-mobile-native",
+        "broken": 0,
+        "height": 1421,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-series-result-desktop-native.png",
+      "width": 1238,
+      "height": 893,
+      "format": "JPEG",
+      "sha256": "3142e8f3b0e09693bcbd8f51d4824a0edd7b37dc7f6762f3a46ef063adea9aab",
+      "dom": {
+        "name": "verified-series-result-desktop-native",
+        "broken": 0,
+        "height": 2545,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-series-result-mobile-top-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "270a7c46b90c7c43369e07450d4b6e88f98403a2245cc115767e0fd76c9c9f05",
+      "dom": {
+        "name": "verified-series-result-mobile-top-native",
+        "broken": 0,
+        "height": 3714,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-series-result-mobile-card-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "1432d3b33938346ca534d9636255be2488a538b10a3109f6c4d06a20ec08edb9",
+      "dom": {
+        "name": "verified-series-result-mobile-card-native",
+        "broken": 0,
+        "height": 3693,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-cartoon-model-question-desktop-native.png",
+      "width": 1238,
+      "height": 893,
+      "format": "JPEG",
+      "sha256": "938bdaceda9ca44b1394b66e9008570c3eaa09b17bba37225aaeb01a2a04f8f1",
+      "dom": {
+        "name": "verified-cartoon-model-question-desktop-native",
+        "broken": 0,
+        "height": 1013,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-cartoon-review-desktop-native.png",
+      "width": 1248,
+      "height": 900,
+      "format": "JPEG",
+      "sha256": "a86805a63052ef8837f932de2f41d1028082ab40a8d314befc7334a8a2a34c2d",
+      "dom": {
+        "name": "verified-cartoon-review-desktop-native",
+        "broken": 0,
+        "height": 900,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-cartoon-result-desktop-native.png",
+      "width": 1238,
+      "height": 893,
+      "format": "JPEG",
+      "sha256": "16890f8ca320f9b5077048b0f634ad8c95733e5a6729b7497bd11acbadb3d661",
+      "dom": {
+        "name": "verified-cartoon-result-desktop-native",
+        "broken": 0,
+        "height": 1587,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-cartoon-result-mobile-top-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "bb8cda7a66925e9c2e2abc2e66af67cf27ff90078e785e2ac45ddac4dc3c75dd",
+      "dom": {
+        "name": "verified-cartoon-result-mobile-top-native",
+        "broken": 0,
+        "height": 2583,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\verified-cartoon-result-mobile-card-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "9f483968e1664985afdee51c2d9037fb77b304c9d106c156d60b7c6161e5bc32",
+      "dom": {
+        "name": "verified-cartoon-result-mobile-card-native",
+        "broken": 0,
+        "height": 2583,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\fix-cartoon-context-desktop-native.png",
+      "width": 1238,
+      "height": 893,
+      "format": "JPEG",
+      "sha256": "dfd09ae331119de292d10fb9fccbe9dd3a49a3bf6ca17c2220c4f1aa4e60fe0d",
+      "dom": {
+        "name": "fix-cartoon-context-desktop-native",
+        "broken": 0,
+        "height": 1519,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\fix-cartoon-context-mobile-native.png",
+      "width": 380,
+      "height": 822,
+      "format": "JPEG",
+      "sha256": "16c98cab8280c4198732b6177050f308e4b92c90ee0dd7f7e2c1889faf8354ef",
+      "dom": {
+        "name": "fix-cartoon-context-mobile-native",
+        "broken": 0,
+        "height": 2869,
+        "overflow": false,
+        "viewportHeight": 844,
+        "width": 390,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\fix-library-archive-desktop-native.png",
+      "width": 1248,
+      "height": 900,
+      "format": "JPEG",
+      "sha256": "88fe1793a8b7b1437e30eb421b929c14d0fcbce7c629bdd490e96c867cf02539",
+      "dom": {
+        "name": "fix-library-archive-desktop-native",
+        "broken": 0,
+        "height": 900,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\fix-library-archive-319-native.png",
+      "width": 304,
+      "height": 705,
+      "format": "JPEG",
+      "sha256": "1e5e937c6cc25c22e3decb016ad7acd44dee506f14fc586f3f404e4df8be59a2",
+      "dom": {
+        "name": "fix-library-archive-319-native",
+        "broken": 0,
+        "height": 772,
+        "overflow": false,
+        "viewportHeight": 740,
+        "width": 319,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\fix-library-all4-desktop-native.png",
+      "width": 1233,
+      "height": 889,
+      "format": "JPEG",
+      "sha256": "89f0d74155384593600aee47e0ad1ab46c14a080c9c9421a4c5f531bdb41dc70",
+      "dom": {
+        "name": "fix-library-all4-desktop-native",
+        "broken": 0,
+        "height": 1421,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    },
+    {
+      "path": "E:\\project\\TASTIQ\\research-vault\\adaptive-media-2026-11-02\\fix-library-media-familiar-native.png",
+      "width": 1233,
+      "height": 889,
+      "format": "JPEG",
+      "sha256": "8fb40177ab2571eed636366830642948614c4f5a8bc22b34bbc2e10f8dc8e6ed",
+      "dom": {
+        "name": "fix-library-media-familiar-native",
+        "broken": 0,
+        "height": 1787,
+        "overflow": false,
+        "viewportHeight": 900,
+        "width": 1280,
+        "capture": "native viewport"
+      },
+      "coverage": "native viewport, partial document"
+    }
+  ],
+  "libraryFilters": [
+    {
+      "domain": "game",
+      "titles": [
+        "A Short Hike"
+      ]
+    },
+    {
+      "domain": "film",
+      "titles": [
+        "Невероятные приключения Билла и Теда"
+      ]
+    },
+    {
+      "domain": "series",
+      "titles": [
+        "Charlie Chopra & The Mystery of Solang Valley"
+      ]
+    },
+    {
+      "domain": "cartoon",
+      "titles": [
+        "Медвежонок Винни и его друзья"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{"appid": 375910, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "a futuristic city-building video game"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "city-building and economic simulation game"}, {"id": "p1", "q": "to maintain their economy"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "the game is set in the future"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p1", "q": "must compete against other corporations in developing future technologies"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p6", "q": "lack of randomly generated maps, combat only in side missions and lack of multiplayer"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p6", "q": "While most reviews have praised for its graphics and animations"}]}
+]}

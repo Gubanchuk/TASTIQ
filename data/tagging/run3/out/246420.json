@@ -1,0 +1,10 @@
+{"appid": 246420, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p4", "q": "Each tower type has its own distinct strengths"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p0", "q": "the player can place defensive towers around to fight off the approaching monsters"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p4", "q": "Each tower type can be improved three times before the player must choose between two final upgrades"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "IGN and Paste applauded the graphics"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p8", "q": "set a lighthearted mood that complimented the gameplay"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p10", "q": "who considered the game challenging"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "Kingdom Rush is a tower defense game set in a medieval fantasy setting"}]},
+{"f": "characters.lone_hero", "r": 1, "ev": [{"id": "p5", "q": "the player is also given control of a single hero unit"}]}
+]}

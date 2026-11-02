@@ -1,0 +1,129 @@
+{
+ "appid": 48000,
+ "features": [
+  {
+   "f": "tone.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236758959",
+     "q": "stuck in a dark, gloomy forest all alone"
+    }
+   ]
+  },
+  {
+   "f": "tone.creepy",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237381216",
+     "q": "brilliantly creepy atmosphere"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.stylized",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237382035",
+     "q": "Striking black-and-white minimalist art style"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236403447",
+     "q": "The ambiance and sound design is masterful too"
+    }
+   ]
+  },
+  {
+   "f": "loop.puzzles",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237382035",
+     "q": "cleverly designed physics puzzles"
+    },
+    {
+     "id": "r237255753",
+     "q": "The puzzles are REALLY cool though"
+    }
+   ]
+  },
+  {
+   "f": "loop.platforming",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237112503",
+     "q": "the movement and platforming feel much more natural and satisfying"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236403447",
+     "q": "It can be brutal and you will die several times"
+    }
+   ]
+  },
+  {
+   "f": "freedom.linear",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236184282",
+     "q": "Completely linear with nothing to explore"
+    }
+   ]
+  },
+  {
+   "f": "story.minimal",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237382035",
+     "q": "narrative is extremely minimalist with no clear exposition"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237381216",
+     "q": "for a game you can complete in a couple days"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238135228",
+     "q": "the controls suck"
+    }
+   ]
+  },
+  {
+   "f": "story.mystery",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237834051",
+     "q": "даже после прохождения остается многое непонятным"
+    }
+   ]
+  }
+ ]
+}

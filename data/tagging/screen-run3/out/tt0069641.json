@@ -1,0 +1,7 @@
+{"id": "tt0069641", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated television series about a team of superheroes"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "based on the Justice League of America and associated comic book characters"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "about a team of superheroes"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p0", "q": "Nine seasons, comprising a total of 93 episodes"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p0", "q": "which ran from 1973 to 1985 on ABC"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 1124300, "features": [
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "Players lead their civilization across six major eras of human civilization"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "uses a tactical role-playing game approach for detailed resolution of these battles"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "the player selects one of ten civilization types based on historical societies"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p6", "q": "I hate being locked into a certain playstyle before I've ever seen the map"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "Building out cities follows a similar model from Amplitude's Endless Legend game"}]}
+]}

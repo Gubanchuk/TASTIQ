@@ -1,0 +1,11 @@
+{"appid": 718670, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "is a card-based simulation video game"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "while carefully avoiding deaths arising from starvation, despair, madness"}]},
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p1", "q": "In a 1920s Lovecraftian horror setting"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "one of several 1920s European capitals, chiefly one resembling London"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p5", "q": "the lore of the game is revealed through a variety of explorations to different ruins"}]},
+{"f": "story.minimal", "r": 1, "ev": [{"id": "p5", "q": "The game lacks a central plot structure that the player follows"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "Success requires partial familiarization with an intricate"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p8", "q": "it could take too long to make meaningful progress"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p8", "q": "TouchArcade enjoyed the visual style of the game"}]}
+]}

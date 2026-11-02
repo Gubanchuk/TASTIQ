@@ -1,0 +1,11 @@
+{
+  "appid": 228380,
+  "features": [
+    {"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "Wreckfest is a racing video game"}]},
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "Players are also able to buy vehicles, customise vehicles, and perform upgrades"}]},
+    {"f": "social.pvp", "r": 1, "ev": [{"id": "p3", "q": "The game features three modes: career, multiplayer and custom events"}]},
+    {"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "affects the driving dynamics of vehicles in a realistic fashion"}]},
+    {"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p3", "q": "select from a variety of assist levels"}]},
+    {"f": "loop.tactics", "r": 1, "ev": [{"id": "p4", "q": "find a balance between defensive tactics"}]}
+  ]
+}

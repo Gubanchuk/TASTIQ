@@ -1,0 +1,11 @@
+{"appid": 1054490, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "card-driven, board game"}]},
+{"f": "cognitive.low", "r": 3, "ev": [{"id": "p7", "q": "Wingspan's accessibility was strongly praised"}, {"id": "p7", "q": "strikes the perfect balance between strategy and ease"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "The strategic decisions for the game were also praised"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "selected to resemble real-life characteristics"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "field guide-caliber illustrations"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p5", "q": "it also offers solo mode where a single player can compete"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p5", "q": "a cooperative variant of automa"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p0", "q": "players compete to attract birds to their wildlife preserves"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p3", "q": "represented by 170 individually illustrated cards"}]}
+]}

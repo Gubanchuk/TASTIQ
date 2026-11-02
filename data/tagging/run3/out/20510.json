@@ -1,0 +1,8 @@
+{"appid": 20510, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2008 first-person shooter survival horror video game with role-playing elements"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p3", "q": "This game combines elements of first-person shooters"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p3", "q": "ammo-scavenging in a frightening atmosphere with powerful monsters"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p6", "q": "a deepened weapon customization system"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "a forbidden territory surrounding the Chernobyl Nuclear Power Plant"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "Careful choice of faction alignment needs to be considered in some parts of the story"}]}
+]}

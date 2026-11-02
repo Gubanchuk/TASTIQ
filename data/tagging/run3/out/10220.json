@@ -1,0 +1,8 @@
+{"appid": 10220, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2011 third-person shooter video game"}, {"id": "p3", "q": "uses various firearms and melee weapons to defeat enemies"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p3", "q": "uses various firearms and melee weapons to defeat enemies"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "The gameplay is much more linear and mission based"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "The karma system allows for different paths through the game's story"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p10", "q": "mean spirited and lacking in heart"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p10", "q": "looks good, sounds great and is often funny"}]}
+]}

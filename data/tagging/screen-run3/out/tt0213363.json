@@ -1,0 +1,10 @@
+{"id": "tt0213363", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an animated television series"}]},
+{"f": "humor.silly", "r": 3, "ev": [{"id": "p1", "q": "The cartoon relies on slapstick humour"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "the comedic exploits and burlesque adventures"}]},
+{"f": "cognitive.low", "r": 1, "ev": [{"id": "p0", "q": "The show employs the use of silent comedy"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p1", "q": "It ended in January 2019"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p1", "q": "having released seven seasons and 169 half-hour episodes"}]},
+{"f": "world.historical", "r": 1, "ev": [{"id": "p4", "q": "based on an important place and time in history"}]},
+{"f": "content.violence", "r": 1, "ev": [{"id": "p6", "q": "slapstick comedy and physical violence among its mutually contentious characters"}]}
+]}

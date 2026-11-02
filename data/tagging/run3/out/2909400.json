@@ -1,0 +1,11 @@
+{"appid": 2909400, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p6", "q": "Rebirth expands on the hybrid of action-focused melee combat and the Active Time Battle (ATB) system"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "combines real-time action with strategic and role-playing elements"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p6", "q": "a party of characters that can be freely switched between during gameplay"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p5", "q": "expanding upon character development and the overall narrative structure"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p6", "q": "with a more open-ended overworld"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p6", "q": "The game features real-time exploration and combat"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p7", "q": "Shinra Electric Power Company, which controls the megalopolis of Midgar by weaponizing the Lifestream"}]},
+{"f": "tone.epic", "r": 3, "ev": [{"id": "p7", "q": "seeks to summon Meteor to wound the Planet"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p7", "q": "end the tyranny of the Shinra Electric Power Company"}]}
+]}

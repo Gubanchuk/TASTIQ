@@ -1,0 +1,9 @@
+{"appid": 242640, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p1", "q": "is a stealth game where the player must keep to the shadows to survive"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p7", "q": "a satisfying tension that few games can match"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p7", "q": "feels stiff and unwieldy, making battle a painful experience whether you win or lose"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "all divided into six talent trees"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "he suffers from confused memories and a voice in his head that prods him on"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "a massive flying fortress held aloft by the magic of the World Tree"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p2", "q": "will adapt their behavior dynamically, depending on the player's actions"}]}
+]}

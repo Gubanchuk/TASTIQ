@@ -1,0 +1,6 @@
+{"appid": 1202130, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "defend a remote mining colony against an invasion of insectoid aliens"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "As players progress through the campaign, more powerful units become available"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p1", "q": "focus mostly on powerful ranged attacks"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p2", "q": "the first half of the campaign was unchallenging"}]}
+]}

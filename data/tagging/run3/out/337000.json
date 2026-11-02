@@ -1,0 +1,18 @@
+{
+  "appid": 337000,
+  "features": [
+    {"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "action role-playing game with first-person shooter and stealth mechanics"}]},
+    {"f": "loop.stealth", "r": 3, "ev": [{"id": "p5", "q": "Adam can take a stealthy approach, avoiding guards and security devices"}]},
+    {"f": "loop.dialogue", "r": 2, "ev": [{"id": "p7", "q": "Adam converses with NPCs about the main and side quests"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "It features exploration and combat in environments connected to the main hub of Prague"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p0", "q": "allow customization of the main character's abilities with Praxis Kits"}]},
+    {"f": "story.choices", "r": 2, "ev": [{"id": "p7", "q": "choosing the correct option can help complete objectives"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "who praised its narrative, graphics and gameplay"}]},
+    {"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "using the series' recurring cyberpunk setting and conspiracy theory motif"}]},
+    {"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "the series' recurring cyberpunk setting"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "the story's darker themes"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "Kelly praised the graphics and called the level design"}]},
+    {"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p11", "q": "Reiner was positive about the visuals and music"}]},
+    {"f": "length.short", "r": 1, "ev": [{"id": "p3", "q": "Criticism focused on the brevity of its campaign"}]}
+  ]
+}

@@ -1,0 +1,10 @@
+{"appid": 1382330, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "Koei Tecmo's hack and slash Dynasty Warriors series"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "the turn-based Persona-battling aspect of the latter"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p4", "q": "Players can form an active party of a maximum of four members"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "These Personas can then be brought to the Velvet Room, where they can be fused to create new Personas"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p4", "q": "players can use stealth to avoid enemies"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p4", "q": "the need to solve puzzles to progress"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p6", "q": "return to Tokyo for a reunion with the other Phantom Thieves of Hearts"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "investigate a series of mysterious events involving people across Japan"}]}
+]}

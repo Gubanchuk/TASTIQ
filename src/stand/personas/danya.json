@@ -1,0 +1,52 @@
+{
+  "id": "danya",
+  "name": "Даня, 19",
+  "domain": "game",
+  "platform": "windows",
+  "who": "Студент, почти каждый вечер онлайн с тремя друзьями. Любит соревновательное и кооп, не любит медленное и текстовое.",
+  "today": "Трое друзей в дискорде, хотят что-то новое вчетвером, кооп или против друг друга, смешное или напряжённое.",
+  "situation": { "company": "group" },
+  "stops": [],
+  "prefer": ["social.coop", "social.pvp", "humor.funny", "pace.fast", "tension.high", "loop.shooting", "session.short", "tone.creepy", "cognitive.low"],
+  "source": "research-vault/akinator-picker-2026-10/raw/persona-games.md, «Персона 2»",
+  "loved": [
+    { "id": "steam:730", "name": "Counter-Strike 2", "q": "Counter-Strike 2", "love": true, "reasons": ["social.pvp", "loop.shooting", "tension.high", "session.short", "pace.fast"], "text": "катки с пацанами, клатчи, адреналин, быстрые раунды" },
+    { "id": "steam:1966720", "name": "Lethal Company", "q": "Lethal Company", "love": true, "reasons": ["social.coop", "humor.funny", "tone.creepy", "tension.high"], "text": "ржали до слёз, страшно и смешно, с друзьями" },
+    { "id": "steam:548430", "name": "Deep Rock Galactic", "q": "Deep Rock Galactic", "love": true, "reasons": ["social.coop", "loop.shooting", "humor.funny"], "text": "лучший кооп, вчетвером, стрельба и угар" },
+    { "id": "steam:252950", "name": "Rocket League", "q": "Rocket League", "love": true, "reasons": ["social.pvp", "pace.fast", "humor.funny"], "text": "футбол на машинах, быстро, орём в дискорде" },
+    { "id": "steam:739630", "name": "Phasmophobia", "q": "Phasmophobia", "reasons": ["social.coop", "tone.creepy", "tension.high"], "text": "орать в микрофон на призрака" },
+    { "id": "steam:553850", "name": "Helldivers 2", "q": "Helldivers 2", "reasons": ["social.coop", "humor.funny", "loop.shooting"], "text": "хаос, френдли-файр, угар" },
+    { "id": "steam:550", "name": "Left 4 Dead 2", "q": "Left 4 Dead 2", "reasons": ["social.coop", "loop.shooting", "pace.fast"], "text": "классика, вчетвером, быстро" },
+    { "id": "steam:359550", "name": "Rainbow Six Siege", "q": "Rainbow Six Siege", "reasons": ["social.pvp", "cognitive.high", "tension.high"], "text": "тактика, каждый раунд напряг" },
+    { "id": "steam:945360", "name": "Among Us", "q": "Among Us", "reasons": ["social.coop", "humor.funny", "social.pvp"], "text": "предавать друзей бесценно" },
+    { "id": "steam:1172470", "name": "Apex Legends", "q": "Apex", "reasons": ["social.pvp", "pace.fast", "loop.shooting"], "text": "движение, тройки, адреналин" }
+  ],
+  "disliked": [
+    { "id": "steam:632470", "name": "Disco Elysium", "q": "Disco Elysium", "issues": [{ "f": "loop.dialogue", "hard": true }, { "f": "pace.slow" }], "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое" },
+    { "id": "steam:289070", "name": "Civilization VI", "q": "Civilization VI", "issues": [{ "f": "pace.slow" }, { "f": "session.long" }], "text": "один ход по пять минут, медленно, где экшен" },
+    { "id": "steam:1158310", "name": "Crusader Kings III", "q": "Crusader Kings", "issues": [{ "f": "pace.slow" }, { "f": "loop.management" }], "text": "таблицы и менеджмент, скучно" },
+    { "id": "steam:413150", "name": "Stardew Valley", "q": "Stardew", "issues": [{ "f": "pace.slow" }, { "f": "pace.draggy" }], "text": "ферма, медленно, друзья дропнули через час" },
+    { "id": "steam:1174180", "name": "Red Dead Redemption 2", "q": "Red Dead", "issues": [{ "f": "pace.slow" }, { "f": "pace.draggy" }], "text": "красиво, но двадцать минут едешь на лошади, затянуто" }
+  ],
+  "alsoSeen": [],
+  "targets": [
+    { "id": "steam:2881650", "name": "Content Warning" },
+    { "id": "steam:632360", "name": "Risk of Rain 2" },
+    { "id": "steam:594650", "name": "Hunt: Showdown 1896" }
+  ],
+  "modes": {
+    "careful": {
+      "seed": 355804,
+      "anchors": { "pages": 1, "love": true, "seen": true, "searchLoved": true, "searchDisliked": true },
+      "why": { "text": "all", "expand": true },
+      "whyNot": { "text": "negatives" },
+      "stops": true,
+      "result": { "rate": true }
+    },
+    "lazy": {
+      "seed": 667173,
+      "anchors": { "pages": 2, "untilHit": true, "love": true },
+      "why": {}
+    }
+  }
+}

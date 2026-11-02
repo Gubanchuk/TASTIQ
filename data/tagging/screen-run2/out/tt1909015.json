@@ -1,0 +1,8 @@
+{"id": "tt1909015", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p2", "q": "infiltrates the gang of Bulgarian mafia boss"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "offers viewers a dynamic and tense atmosphere"}]},
+{"f": "tone.atmospheric", "r": 2, "ev": [{"id": "p3", "q": "offers viewers a dynamic and tense atmosphere"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p5", "q": "graphic violence, sexual situations, profanity and drug use"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p5", "q": "graphic violence, sexual situations, profanity and drug use"}]},
+{"f": "content.profanity", "r": 2, "ev": [{"id": "p5", "q": "graphic violence, sexual situations, profanity and drug use"}]}
+]}

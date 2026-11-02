@@ -1,0 +1,8 @@
+{"appid": 823500, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Boneworks is a 2019 first-person shooter virtual reality game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p6", "q": "creative ways of completing puzzles"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "rogue cybersecurity director who escapes into an unfinished simulated universe"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p1", "q": "battling through surreal architecture and mysterious scenes"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p5", "q": "Heavier objects, and objects with more momentum, deal more damage"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p10", "q": "the content not being paced well"}]}
+]}

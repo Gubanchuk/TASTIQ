@@ -1,0 +1,8 @@
+{"id": "tt2296682", "features": [
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "Dracula is a horror drama television series"}]},
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "a reimagining of Bram Stoker's 1897 novel Dracula"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "claims to bring modern science to Victorian society"}]},
+{"f": "story.revenge", "r": 2, "ev": [{"id": "p2", "q": "he seeks revenge on the Order of the Dragon"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "It was cancelled after one season"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p1", "q": "The series was given a straight-to-series commitment of ten episodes"}]}
+]}

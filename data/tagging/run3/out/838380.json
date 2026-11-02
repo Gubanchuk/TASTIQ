@@ -1,0 +1,11 @@
+{"appid": 838380, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p0", "q": "is a 2019 fighting game developed by Team Ninja"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p4", "q": "The juggling ground-bounce system in this game is also being enhanced to extend juggle combos"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p9", "q": "great-feeling, easy-to-pick-up combat"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p4", "q": "The game is supposed to be more accessible for newcomers"}, {"id": "p1", "q": "beginner-friendly tutorials"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p9", "q": "beneath its skimpy outfits"}]},
+{"f": "content.gore", "r": 1, "ev": [{"id": "p3", "q": "The game adds blood effects and new violence physics"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p3", "q": "marks the first time for the series to have costume customization mode"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p9", "q": "a strong sense of visual style"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p1", "q": "emphasizing the absence of online lobbies at launch"}]}
+]}

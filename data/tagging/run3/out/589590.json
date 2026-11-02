@@ -1,0 +1,11 @@
+{"appid": 589590, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is an indie abstract puzzle adventure game"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p4", "q": "By making different choices in each attempt"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "with the main goal of finding out what happened to a missing classmate"}]},
+{"f": "humor.dark", "r": 3, "ev": [{"id": "p9", "q": "often praised for its writing and dark humor"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p2", "q": "praise for its writing and comedy"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p7", "q": "Collectible cards can be found throughout the game"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p11", "q": "requires some thought while not bogging you down with obtuse puzzles"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p2", "q": "criticism was directed at the repetition of dialogue and sometimes of entire quests"}]},
+{"f": "tone.melancholic", "r": 1, "ev": [{"id": "p2", "q": "inspired by painful childhood memories"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 1201240, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "real-time, beat 'em up action game"}]},
+{"f": "progression.collection", "r": 3, "ev": [{"id": "p2", "q": "It features hundreds of collectible characters"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "which can be leveled up and used in combat"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "story and coop (PvE) and PVP"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "story and coop (PvE) and PVP"}]}
+]}

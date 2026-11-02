@@ -1,0 +1,14 @@
+{"appid": 24980, "features": [
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p6", "q": "The game uses an over-the-shoulder perspective akin to a third-person shooter"}, {"id": "p1", "q": "further emphasized third-person shooter aspects"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p6", "q": "Combat in Mass Effect 2 is squad-based, and a maximum of two squad members may accompany the player"}, {"id": "p0", "q": "must assemble and gain the loyalty of a diverse team"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p2", "q": "praised for its presentation and cinematography, diverse and complex characters"}, {"id": "p8", "q": "Substantial praise was given to the game's diverse characters, interactive storytelling, voice acting and art design"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p8", "q": "Substantial praise was given to the game's diverse characters, interactive storytelling, voice acting and art design"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "The game takes place within the Milky Way galaxy during the 22nd century"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "a galaxy map the player can explore to find and complete quests"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "The game features six different character classes for the player to choose from"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p3", "q": "the player determines Shepard's gender, appearance, military background, combat training, and first name"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p9", "q": "Mass Effect 2 is more detailed and darker than its predecessor"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "deep reds and glowing indigos saturate certain scenes, making them richer and more sinister"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p1", "q": "Mass Effect composer Jack Wall returned to compose Mass Effect 2s music"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "Powers provide enhanced combat capabilities"}]}
+]}

@@ -1,0 +1,31 @@
+{
+  "id": "tt0241100",
+  "name": "The Fantastic Four",
+  "kind": "series",
+  "domain": "cartoon",
+  "year": 1978,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "s": "The super-elastic Mr. Fantastic, the force field-wielding Invisible Girl, the orange rock-covered Thing and the data-crammed robot Herbie make up a team of superheroes dedicated to thwarting would-be world-dominating villains.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "The New Fantastic Four (on-screen title: The Fantastic Four) is an American animated series produced by DePatie–Freleng Enterprises and Marvel Comics Animation in 1978. It is the second animated series based on Marvel's comic book series Fantastic Four, following a 1967 series produced by Hanna-Barbera Productions."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The 1978 series replaced Johnny Storm with a robot named H.E.R.B.I.E. (Humanoid Experimental Robot, B-type, Integrated Electronics) as the rights to the Human Torch were tied up with Universal Pictures at the time for a proposed film that was never made."
+    },
+    {
+      "id": "p2",
+      "section": "lead",
+      "text": "Ownership of the series passed to Disney in 2001 when Disney acquired Fox Kids Worldwide, which also includes Marvel Productions."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/The_New_Fantastic_Four"
+}

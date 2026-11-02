@@ -1,0 +1,8 @@
+{"appid": 1182620, "features": [
+{"f": "story.central", "r": 2, "ev": [{"id": "p7", "q": "Gao's writing is always impeccable"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "experiencing double murders and mysterious time loops"}, {"id": "p0", "q": "ends up in a murder case inside a mansion"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p4", "q": "Quincy and Lynri fall in love and start dating"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p3", "q": "research on encoding human memories into computers"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p1", "q": "these features are only used for jokes"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p1", "q": "Players navigate Quincy through story events"}]}
+]}

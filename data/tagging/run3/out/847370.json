@@ -1,0 +1,14 @@
+{"appid": 847370, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "the player can wall-run, ride zip-lines, and grind rails to swiftly navigate through the city"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p0", "q": "Along with a large arsenal of weapons"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p9", "q": "praised the game's comedic elements"}, {"id": "p9", "q": "appreciated the humor"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p9", "q": "The game's tone was praised by reviewers"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p7", "q": "an eight-player co-operative multiplayer mode called the Chaos Squad"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p12", "q": "The game's art style was applauded"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p12", "q": "praised the colorful graphics and the different graphical effects"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p6", "q": "players unlock more weapons by"}, {"id": "p11", "q": "praised the arsenal of weapons featured in the game"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p11", "q": "benefited by the Amps system, which added additional complexity to them"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p1", "q": "The game is set in a post-apocalyptic future"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p5", "q": "encourages players to defeat enemies in a fast-paced way"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p4", "q": "which is free for players to explore at any time"}]}
+]}

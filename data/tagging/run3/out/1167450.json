@@ -1,0 +1,7 @@
+{"appid": 1167450, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "After a moon collided with the Planet, it radiated a special energy that turned artificial intelligence against humanity"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p1", "q": "The player avatar's stats, abilities, and appearance can be customized in the Hangar"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "create their custom Arsenal using body parts bought or collected throughout the game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "engages in battle with other mech enemies"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "for both single player and online cooperative multiplayer"}]}
+]}

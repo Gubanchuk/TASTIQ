@@ -1,0 +1,14 @@
+{"id": "tt9398466", "features": [
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p0", "q": "an Indian police procedural crime drama television series"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "police procedural crime drama television series"}]},
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "The first season is set in the aftermath of the 2012 Delhi gang rape"}, {"id": "p2", "q": "the real-life case that inspired it"}]},
+{"f": "tone.gritty", "r": 3, "ev": [{"id": "p7", "q": "grim, gritty and grounded in the everyday"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p7", "q": "unsettling and enthralling by turns"}]},
+{"f": "content.disturbing", "r": 2, "ev": [{"id": "p6", "q": "An expertly told, hard-to-watch true crime series"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p9", "q": "critiques included graphic violence and formulaic storytelling"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p8", "q": "Shefali Shah is reason number one"}, {"id": "p8", "q": "widespread appreciation for their performances in the series"}]},
+{"f": "characters.female_lead", "r": 2, "ev": [{"id": "p3", "q": "Deputy Commissioner of Police (DCP) Vartika Chaturvedi leads the investigation"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p9", "q": "a critique of systemic biases against marginalized communities"}, {"id": "p10", "q": "social commentary disguised as a police drama"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p6", "q": "it won't let go of anyone who watches"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p10", "q": "the slightly predictable conclusion"}]}
+]}

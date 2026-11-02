@@ -1,0 +1,8 @@
+{"appid": 233980, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "is a role-playing platformer video game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "is a role-playing platformer game with Metroidvania elements and nonlinear gameplay"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "Players can use a number of melee and ranged weapons and armors as determined by their level"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "can be used to purchase powerful equipment such as laser guns, flamethrowers, and rocket launchers"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p2", "q": "Players can use a number of melee and ranged weapons"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p2", "q": "Simple crafting for potions is also available in limited locations"}]}
+]}

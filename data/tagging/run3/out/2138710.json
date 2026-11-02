@@ -1,0 +1,11 @@
+{"appid": 2138710, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "is an action beat 'em up game played from a third-person perspective"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p2", "q": "Basic attack moves can be chained together, though some combos may grant players additional tactical opportunities"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "As they age, their attacks will be more powerful, but they will have less health"}]},
+{"f": "progression.grind", "r": 2, "ev": [{"id": "p8", "q": "the game eventually became a tiresome grind"}, {"id": "p9", "q": "forces players to grind for an extended period of time"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p8", "q": "Sifu is a challenge worth taking on and overcoming"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p1", "q": "with praise for its combat, environments, and story"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "Set in China, players control the child of a martial arts school's sifu"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p0", "q": "Set in China, players control the child of a martial arts school's sifu"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "It's a story of vengeance with a little heart at the end"}]}
+]}

@@ -1,0 +1,248 @@
+[
+  {
+    "concept": "conversation",
+    "screen": "result",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 1360,
+    "overflow": false,
+    "width": 1440,
+    "eyebrows": 0,
+    "list": [],
+    "mini": []
+  },
+  {
+    "concept": "conversation",
+    "screen": "library",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 1823,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "conversation",
+    "screen": "question",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 1127,
+    "overflow": false,
+    "width": 1440,
+    "eyebrows": 0,
+    "list": [],
+    "mini": []
+  },
+  {
+    "concept": "conversation",
+    "screen": "landing",
+    "viewport": "desktop",
+    "broken": 0,
+    "overflow": false,
+    "width": 1440,
+    "note": "Full landing screenshot invalid due to screenshot API iframe mutation; use landing-top native + landing-lower screenshots, landing-native-stability.json."
+  },
+  {
+    "concept": "showcase",
+    "screen": "result",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 2406,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "showcase",
+    "screen": "library",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 2807,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "showcase",
+    "screen": "question",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 1272,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "showcase",
+    "screen": "landing",
+    "viewport": "desktop",
+    "broken": 0,
+    "overflow": false,
+    "width": 1440,
+    "note": "Full landing screenshot invalid due to screenshot API iframe mutation; use landing-top native + landing-lower screenshots, landing-native-stability.json."
+  },
+  {
+    "concept": "catalogue",
+    "screen": "result",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 1243,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "catalogue",
+    "screen": "library",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 1892,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "catalogue",
+    "screen": "question",
+    "viewport": "desktop",
+    "broken": 0,
+    "frame": null,
+    "height": 1127,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "concept": "catalogue",
+    "screen": "landing",
+    "viewport": "desktop",
+    "broken": 0,
+    "overflow": false,
+    "width": 1440,
+    "note": "Full landing screenshot invalid due to screenshot API iframe mutation; use landing-top native + landing-lower screenshots, landing-native-stability.json."
+  },
+  {
+    "concept": "conversation",
+    "screen": "result",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 2043,
+    "overflow": false,
+    "width": 390,
+    "eyebrows": 0,
+    "list": [],
+    "mini": []
+  },
+  {
+    "concept": "conversation",
+    "screen": "library",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 2350,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "conversation",
+    "screen": "question",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 1597,
+    "overflow": false,
+    "width": 390,
+    "eyebrows": 0,
+    "list": [],
+    "mini": []
+  },
+  {
+    "concept": "conversation",
+    "screen": "landing",
+    "viewport": "mobile",
+    "broken": 0,
+    "overflow": false,
+    "width": 390,
+    "note": "Full landing screenshot invalid due to screenshot API iframe mutation; use landing-top native + landing-lower screenshots, landing-native-stability.json."
+  },
+  {
+    "concept": "showcase",
+    "screen": "result",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 3341,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "showcase",
+    "screen": "library",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 2910,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "showcase",
+    "screen": "question",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 1527,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "showcase",
+    "screen": "landing",
+    "viewport": "mobile",
+    "broken": 0,
+    "overflow": false,
+    "width": 390,
+    "note": "Full landing screenshot invalid due to screenshot API iframe mutation; use landing-top native + landing-lower screenshots, landing-native-stability.json."
+  },
+  {
+    "concept": "catalogue",
+    "screen": "result",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 1578,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "catalogue",
+    "screen": "library",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 2702,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "catalogue",
+    "screen": "question",
+    "viewport": "mobile",
+    "broken": 0,
+    "frame": null,
+    "height": 1466,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "concept": "catalogue",
+    "screen": "landing",
+    "viewport": "mobile",
+    "broken": 0,
+    "overflow": false,
+    "width": 390,
+    "note": "Full landing screenshot invalid due to screenshot API iframe mutation; use landing-top native + landing-lower screenshots, landing-native-stability.json."
+  }
+]

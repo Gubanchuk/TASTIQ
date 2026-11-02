@@ -1,0 +1,15 @@
+{"appid": 2515020, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "an action-based combat system involving melee and magic-based attacks"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "The game features segmented open environments"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "a rotating party of AI-controlled companions"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "highly positive about the story and characters"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p3", "q": "The game was praised by critics for its story"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "Yoshida's aim was for a dark fantasy storyline"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "currently divided between six nations who hold power through access to magical Crystals and Dominants"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "lauded the detail and variety of the game's graphics"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p11", "q": "Soken's score for the game met with high praise"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p5", "q": "stringing them together into different combo attacks"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p12", "q": "praising the variety of ability combinations possible later into the game"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p6", "q": "that offers accessories to simplify combat and strengthen the characters"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p10", "q": "after a slow start filled with worldbuilding and unfamiliar terminology"}]}
+]}

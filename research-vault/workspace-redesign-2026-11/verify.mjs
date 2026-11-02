@@ -1,0 +1,27 @@
+// Read-only checks of the frozen landing and actual local verification inputs.
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync,copyFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
+const root=fileURLToPath(new URL('../..',import.meta.url)),out=resolve(root,'research-vault/workspace-redesign-2026-11');
+const json=file=>JSON.parse(readFileSync(resolve(root,file),'utf8').replace(/^\uFEFF/,''));
+const sha=file=>createHash('sha256').update(readFileSync(resolve(root,file))).digest('hex');
+const frozen=json('research-vault/workspace-redesign-2026-11/landing-before.json');
+const landing=Object.fromEntries(Object.keys(frozen).map(file=>[file,sha(file)]));
+assert.deepEqual(landing,frozen,'the root landing must be byte-identical');
+const budget=json('research-vault/taste-quality-strategy-2026-10/eval/quality-round-2/budget.json');
+const findings=json('research-vault/workspace-redesign-2026-11/impeccable-detect.json');
+const stopped=process.argv.includes('--fixture-stopped');
+const prior=stopped?json('research-vault/workspace-redesign-2026-11/verification.json'):null;
+if(stopped)await assert.rejects(fetch('http://127.0.0.1:5180/__test/status'));
+const browser=stopped?{...prior.browser,stopped:true}:await(await fetch('http://127.0.0.1:5180/__test/status')).json();
+assert.equal(browser.paidCalls,0);
+const sourceFiles=['src/server/public/pick/game/index.html','src/server/public/pick/game/app.js','src/server/public/pick/game/workspace.css','src/server/public/pick/game/pending-view.js','src/server/public/pick/index.html','src/server/public/pick/app.js','src/server/public/pick/workspace-legacy.css'];
+const sources=Object.fromEntries(sourceFiles.map(file=>[file,sha(file)]));
+if(stopped)assert.deepEqual(sources,prior.sources,'UI source changed after finish-review captures');
+const result={at:new Date().toISOString(),landingUnchanged:true,landing,sources,browser,apiCallsByThisUiWork:0,apiCostUsdByThisUiWork:0,budget:{cumulativeUpper:budget.cumulativeUpper,successfulCalls:budget.successfulCalls,uncertainReserve:budget.uncertainReserve,remainingLower:budget.remainingLower,grantBaselineUpper:1.5782519,grantRemainingLower:Number((11.5782519-budget.cumulativeUpper-budget.uncertainReserve).toFixed(7))},detector:{runs:1,count:findings.length,byRule:Object.fromEntries([...new Set(findings.map(f=>f.antipattern))].map(rule=>[rule,findings.filter(f=>f.antipattern===rule).length]))}};
+writeFileSync(resolve(out,'verification.json'),JSON.stringify(result,null,2)+'\n');
+mkdirSync(resolve(root,'.impeccable/review'),{recursive:true});
+for(const [from,to]of [['game-next-final.png','desktop.png'],['game-question-mobile.png','mobile.png'],['in-app-final.png','user-651.png'],['owner-result-final.png','user-1920.png'],['game-thinking-desktop.png','game-thinking.png'],['film-thinking-mobile-final.png','film-thinking-mobile.png']])copyFileSync(resolve(out,from),resolve(root,'.impeccable/review',to));
+console.log(JSON.stringify({landingUnchanged:true,apiCallsByThisUiWork:0,budget:result.budget,detector:result.detector}));

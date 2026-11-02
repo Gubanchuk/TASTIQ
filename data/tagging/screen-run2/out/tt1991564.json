@@ -1,0 +1,8 @@
+{"id": "tt1991564", "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p0", "q": "is an American comedy television series"}]},
+{"f": "world.superhero", "r": 2, "ev": [{"id": "s", "q": "a secret underground lab with three experiments, super-human teens"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "s", "q": "the high-tech home he shares with his inventor stepdad"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "s", "q": "his inventor stepdad, Donald Davenport, his mom, Tasha"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p1", "q": "too many lapses in logic"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "aired on Disney XD from February 27, 2012 to February 3, 2016"}]}
+]}

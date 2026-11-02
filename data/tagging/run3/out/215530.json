@@ -1,0 +1,10 @@
+{"appid": 215530, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p5", "q": "the game's variety in tower defense scenarios and classes"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "The game is set in a gothic-noir 19th-century Eastern Europe"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "monsters, magic and weird technology"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "intentionally anachronistic humor and gadgetry"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "intentionally anachronistic humor and gadgetry"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p7", "q": "class variety, and customization options"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p1", "q": "filled with evil creatures that this science has created"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p5", "q": "criticizing the slow intro and cluttered narrative"}]}
+]}

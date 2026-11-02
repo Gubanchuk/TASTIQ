@@ -1,0 +1,9 @@
+{"appid": 1238820, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2011 first-person shooter game developed by DICE"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "single-player, co-operative and multiplayer modes"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p6", "q": "Battlefield 3s multiplayer matches see players take on one of four roles"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p4", "q": "The maps cover urban streets, metropolitan downtown areas, and open landscapes"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p10", "q": "great variety of vehicles"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "praised the graphics and multiplayer game"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p9", "q": "stating that the campaign was \"tactically linear\""}]}
+]}

@@ -1,0 +1,220 @@
+{
+  "synthetic": true,
+  "productionJournalUntouched": true,
+  "aiAccess": "off",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "checks": {
+    "bookmarkNotChoice": true,
+    "tasteUnchanged": true,
+    "htmlEscaped": true,
+    "offlineReloadOnlineDelivery": true,
+    "reloadDeduplicates": true,
+    "restartSeparatesDialogues": true,
+    "noHorizontalOverflow": true
+  },
+  "summary": {
+    "runs": 2,
+    "dialogues": 2,
+    "fit": {
+      "accept": 0,
+      "conditional": 0,
+      "reject": 1,
+      "unknown": 0,
+      "unreviewed": 7,
+      "decidable": 1,
+      "strictAcceptance": 0
+    },
+    "choice": {
+      "runs": 1,
+      "dialogues": 1,
+      "cards": 1
+    },
+    "started": {
+      "runs": 0,
+      "dialogues": 0,
+      "cards": 0
+    },
+    "outcomes": {
+      "liked": 0,
+      "mixed": 0,
+      "disliked": 0,
+      "not_started": 1,
+      "unreported": 0
+    },
+    "afterUse": {
+      "decided": 0,
+      "positiveRate": null
+    },
+    "reasons": {
+      "time": 1
+    },
+    "byOrigin": {
+      "model": {
+        "shown": 0,
+        "fit": {
+          "accept": 0,
+          "conditional": 0,
+          "reject": 0,
+          "unknown": 0,
+          "unreviewed": 0,
+          "decidable": 0,
+          "strictAcceptance": null
+        },
+        "chosen": 0,
+        "started": 0
+      },
+      "fill": {
+        "shown": 0,
+        "fit": {
+          "accept": 0,
+          "conditional": 0,
+          "reject": 0,
+          "unknown": 0,
+          "unreviewed": 0,
+          "decidable": 0,
+          "strictAcceptance": null
+        },
+        "chosen": 0,
+        "started": 0
+      },
+      "engine": {
+        "shown": 8,
+        "fit": {
+          "accept": 0,
+          "conditional": 0,
+          "reject": 1,
+          "unknown": 0,
+          "unreviewed": 7,
+          "decidable": 1,
+          "strictAcceptance": 0
+        },
+        "chosen": 1,
+        "started": 0
+      }
+    },
+    "duplicates": 0,
+    "invalid": 0,
+    "conflicts": 0
+  },
+  "privacy": {
+    "sourceNoteAttached": false,
+    "aiExplanationAttached": false,
+    "explicitReviewTextSent": true
+  },
+  "aiEvents": 0,
+  "paidCalls": 0,
+  "screenshots": [
+    ".playwright-mcp/evening-feedback-desktop.png",
+    ".playwright-mcp/evening-feedback-mobile.png"
+  ],
+  "postReview": {
+    "synthetic": true,
+    "persistence": "IndexedDB readwrite transactions; localStorage is a cache",
+    "concurrentRounds": 4,
+    "expectedRevisionIncrease": 8,
+    "actualRevisionIncrease": 8,
+    "draftSurvivesFitChoiceAndStorageEvent": true,
+    "unsubmittedDraftExcludedFromPayload": true,
+    "explicitSubmitVerified": true,
+    "offlineReloadRetry": true,
+    "noHorizontalOverflow": true,
+    "summary": {
+      "runs": 1,
+      "dialogues": 1,
+      "fit": {
+        "accept": 0,
+        "conditional": 0,
+        "reject": 0,
+        "unknown": 1,
+        "unreviewed": 3,
+        "decidable": 0,
+        "strictAcceptance": null
+      },
+      "choice": {
+        "runs": 1,
+        "dialogues": 1,
+        "cards": 1
+      },
+      "started": {
+        "runs": 1,
+        "dialogues": 1,
+        "cards": 1
+      },
+      "outcomes": {
+        "liked": 1,
+        "mixed": 0,
+        "disliked": 0,
+        "not_started": 0,
+        "unreported": 0
+      },
+      "afterUse": {
+        "decided": 1,
+        "positiveRate": 1
+      },
+      "reasons": {},
+      "byOrigin": {
+        "model": {
+          "shown": 0,
+          "fit": {
+            "accept": 0,
+            "conditional": 0,
+            "reject": 0,
+            "unknown": 0,
+            "unreviewed": 0,
+            "decidable": 0,
+            "strictAcceptance": null
+          },
+          "chosen": 0,
+          "started": 0
+        },
+        "fill": {
+          "shown": 0,
+          "fit": {
+            "accept": 0,
+            "conditional": 0,
+            "reject": 0,
+            "unknown": 0,
+            "unreviewed": 0,
+            "decidable": 0,
+            "strictAcceptance": null
+          },
+          "chosen": 0,
+          "started": 0
+        },
+        "engine": {
+          "shown": 4,
+          "fit": {
+            "accept": 0,
+            "conditional": 0,
+            "reject": 0,
+            "unknown": 1,
+            "unreviewed": 3,
+            "decidable": 0,
+            "strictAcceptance": null
+          },
+          "chosen": 1,
+          "started": 1
+        }
+      },
+      "duplicates": 1,
+      "invalid": 0,
+      "conflicts": 0
+    },
+    "paidCalls": 0,
+    "aiEvents": 0,
+    "journal": "browser-final-journal.ndjson",
+    "screenshots": [
+      ".playwright-mcp/evening-feedback-final-desktop.png",
+      ".playwright-mcp/evening-feedback-final-mobile.png"
+    ]
+  }
+}

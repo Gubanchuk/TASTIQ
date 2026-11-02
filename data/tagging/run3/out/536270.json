@@ -1,0 +1,9 @@
+{"appid": 536270, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "is a survival game played from a third-person view"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "Set in prehistoric Africa"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "new areas are opened up for players to explore"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "an open world filled with threats"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p7", "q": "frustrated with the repetition present in Ancestors' gameplay"}, {"id": "p7", "q": "Sharpening that stick for the 20th time is little more than a chore"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p6", "q": "the controls were unnecessarily difficult to use"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p6", "q": "IGN liked the visuals"}]}
+]}

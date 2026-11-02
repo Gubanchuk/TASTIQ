@@ -1,0 +1,11 @@
+{"id": "tt1985443", "features": [
+{"f": "world.western", "r": 3, "ev": [{"id": "p0", "q": "is a 2012 American three-part Western television miniseries"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "starting during the Civil War in 1863"}]},
+{"f": "world.war", "r": 2, "ev": [{"id": "s", "q": "Close friends and comrades during the Civil War"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p2", "q": "a violent and gritty spectacle"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p2", "q": "a violent and gritty spectacle"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p3", "q": "full of stand-out performances from great actors"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p1", "q": "The miniseries recounts the feud between the Hatfields and McCoys"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p4", "q": "the pacing sags at times, and recriminations can get repetitive"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p7", "q": "It's an uninteresting one, peopled with almost criminally bland characters"}]}
+]}

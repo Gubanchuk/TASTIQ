@@ -1,0 +1,11 @@
+{"appid": 200210, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "a", "q": "Join forces with players from around the globe in real-time co-op gameplay"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "d", "q": "free-to-play MMO bullet hell game"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "r238031224", "q": "Dungeons and Loot"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "a", "q": "Every decision matters as you navigate a high-stakes environment"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r236932334", "q": "this game torments me with repeated drops and tragic deaths"}]},
+{"f": "progression.grind", "r": 2, "ev": [{"id": "r238074543", "q": "spent an entire month grinding every day"}, {"id": "r238031224", "q": "grind to lvl 20 then try and increase your stats"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "d", "q": "pixelated Realm of the Mad God"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r238031224", "q": "A very simple bullet hell"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r237862485", "q": "Game is constantly changing"}]}
+]}

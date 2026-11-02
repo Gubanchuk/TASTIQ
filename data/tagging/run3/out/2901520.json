@@ -1,0 +1,6 @@
+{"appid": 2901520, "features": [
+{"f": "story.choices", "r": 2, "ev": [{"id": "p0", "q": "Players choose from three characters and navigate a branching dialogue system leading to five possible endings"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p0", "q": "navigate a branching dialogue system"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "a middle-aged man signs up on a fictional government platform to receive a personal alt girl"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p4", "q": "criticized the game for its drawn-out narrative, underdeveloped plot, and lack of quality humor"}]}
+]}

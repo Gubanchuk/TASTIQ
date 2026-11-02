@@ -1,0 +1,6 @@
+{"appid": 342180, "features": [
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p0", "q": "Arizona Sunshine is a zombie survival first-person shooter video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p3", "q": "The controllers are used to manipulate virtual firearms"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p5", "q": "trigger a large zombie horde from which the player has to defend themselves"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p4", "q": "On higher levels, zombies can spawn in larger numbers"}]}
+]}

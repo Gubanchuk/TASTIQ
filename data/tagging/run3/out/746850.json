@@ -1,0 +1,10 @@
+{"appid": 746850, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Cloudpunk is a cyberpunk adventure game"}]},
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p1", "q": "maneuver a HOVA (flying car), through a futuristic city"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "explore parts of the city on foot"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "the player can make decisions that influence the outcome"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "suffers from extreme social stratification"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "the city is a consistently surprising visual treat"}, {"id": "p7", "q": "praised the Blade Runner-esque aesthetic"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p7", "q": "the wide variety of characters"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p7", "q": "some dialogs drag on too long"}]}
+]}

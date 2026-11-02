@@ -1,0 +1,7 @@
+{"id": "tt0187635", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is the third animated television series"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "s", "q": "a brilliant quartet of amazing superheroes"}, {"id": "p0", "q": "based on Marvel's comic book series of the same name"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "s", "q": "during a scientific mission to outer space on a starship test flight"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "s", "q": "during a scientific mission to outer space on a starship test flight"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "s", "q": "a brilliant quartet of amazing superheroes"}]}
+]}

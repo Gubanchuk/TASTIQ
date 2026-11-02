@@ -1,0 +1,10 @@
+{"appid": 49540, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Aliens: Colonial Marines is a 2013 first-person shooter"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p3", "q": "based on the Alien science fiction horror film series"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p3", "q": "science fiction horror film series"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "campaign mode that supports both single-player and cooperative gameplay"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p0", "q": "a multiplayer mode in which players compete in different scenarios"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "Colonial Marine ranks unlock weapon upgrades for use in both the campaign and the competitive multiplayer modes"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "Xenomorphs are fast and primarily attack with their claws or by spitting acid"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "features 11 missions that involve players moving from one checkpoint to another"}]}
+]}

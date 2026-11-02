@@ -1,0 +1,8 @@
+{"appid": 2933080, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 cooperative first-person shooter video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p2", "q": "cooperates with either other players or AI-controlled teammates"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "The players need to collect enough loot from the target"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p3", "q": "The player allocates gang members to fight turf wars"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p4", "q": "Rockay City itself is set in a Florida reminiscent of Miami Vice"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p6", "q": "the stealth system to the game was overly finicky and not well-supported"}]}
+]}

@@ -1,0 +1,8 @@
+{"id": "tt0397138", "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p0", "q": "Corner Gas is a Canadian television sitcom created by Brent Butt"}]},
+{"f": "humor.deadpan", "r": 2, "ev": [{"id": "s", "q": "get up to a whole lot of nothing"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "s", "q": "Following the adventures of a bunch of nobodies"}]},
+{"f": "world.smalltown", "r": 3, "ev": [{"id": "p1", "q": "in the fictional prairie town of Dog River, Saskatchewan"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "The series completed its run following broadcast of its sixth season"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p2", "q": "with a total of 107 episodes"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 2478970, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "travels through a series of ancient ruins and tombs in search of ancient artefacts"}]},
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p2", "q": "jump forwards and backwards, shimmy along ledges"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "Lara is equipped with two pistols with infinite ammo by default"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "Critics praised the updated visuals"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p5", "q": "Barker called the game's modern controls"}, {"id": "p5", "q": "retained tank controls for being"}]}
+]}

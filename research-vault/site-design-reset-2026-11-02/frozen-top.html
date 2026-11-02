@@ -1,0 +1,57 @@
+<header class="top">
+    <div class="top-in">
+      <a class="brand" href="/" aria-label="TASTIQ, на главную">TASTIQ</a>
+      <nav class="top-nav" aria-label="Основное">
+        <a class="btn btn-plain" id="my-link" href="/pick/#my">Моё<span class="count num" id="my-count" hidden></span></a>
+        <a class="btn btn-primary" id="pick-btn" href="/pick/">Подобрать</a>
+      </nav>
+    </div>
+  </header>
+<section class="first" aria-labelledby="hero-title">
+      <div class="intro">
+        <h1 id="hero-title">Подберу игру или кино на&nbsp;вечер&nbsp;— по тому, за что тебе нравится</h1>
+        <p class="sub">Спрошу, что тебе зашло и за что. Дам один вариант и три запасных&nbsp;— с&nbsp;причинами, рисками и фактами, которые можно проверить.</p>
+      </div>
+
+      <nav class="doors" id="doors" aria-label="Что подобрать" tabindex="-1">
+        <a class="door" data-domain="game" href="/pick/?start=game">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Поиграть</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="door" data-domain="film" href="/pick/?start=film">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Посмотреть фильм</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="door" data-domain="series" href="/pick/?start=series">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Сериал</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="door" data-domain="cartoon" href="/pick/?start=cartoon">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Мультфильм</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+      </nav>
+
+      <ul class="later" aria-label="Скоро">
+        <li class="slot" aria-disabled="true">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+          <span>Почитать</span><span class="pill">скоро</span>
+        </li>
+        <li class="slot" aria-disabled="true">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.5 2 5.4 5.6.4-4.3 3.7 1.4 5.6L12 15.5l-4.7 3.1 1.4-5.6-4.3-3.7 5.6-.4Z"/></svg>
+          <span>Аниме</span><span class="pill">скоро</span>
+        </li>
+      </ul>
+    </section>

@@ -1,0 +1,12 @@
+{"appid": 1944430, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 survival horror video game"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "must maintain the base's power while collecting resources and ammo"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p7", "q": "praised the tension present in the resource management mechanics"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "The game is set in World War I"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "one that gives players more freedom to explore and approach their objectives"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p2", "q": "the game's world will respond to the player's action"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "The base is dimly lit"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p7", "q": "told over old documents"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "PC Gamer enjoyed the sound design of the title"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p1", "q": "but ammo is very scarce"}]}
+]}

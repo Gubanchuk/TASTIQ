@@ -1,0 +1,14 @@
+{"appid": 1967430, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Players solve environmental puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "gathering information by navigating through the city"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "uncover the truth of Sissel's death"}, {"id": "p1", "q": "creating a mystery beyond what the conventions of Ace Attorney had allowed"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p9", "q": "The game's story and characters were highly praised"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p9", "q": "found the characters endearing and many-layered"}]},
+{"f": "ending.strong", "r": 2, "ev": [{"id": "p9", "q": "culminate in a rewarding and memorable conclusion"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p10", "q": "praised the game's art direction and animation"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "praise for its characters, art direction, animation, music, and story"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p9", "q": "spins its tragic themes into comedic moments"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "an amnesiac ghost with supernatural powers"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "when players complete a chapter, the next one is unlocked"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p11", "q": "despite their relative simplicity and mild difficulty"}]}
+]}

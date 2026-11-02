@@ -1,0 +1,8 @@
+{"appid": 1030210, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "in a high fantasy world"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "using hack and slash with a variety of weapons"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "collect new items and treasure"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Torchlight III is a dungeon crawler"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p4", "q": "overly familiar and crushingly linear"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p4", "q": "crafting your ideal character builds"}]}
+]}

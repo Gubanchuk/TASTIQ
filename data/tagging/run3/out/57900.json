@@ -1,0 +1,12 @@
+{"appid": 57900, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2011 first-person shooter game"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "features pop culture references, toilet humor, and adult content"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p4", "q": "such as strip clubs and the ability to urinate"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p4", "q": "players compete in games such as deathmatch, capture the flag and king of the hill"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p8", "q": "Criticism focused on the long loading times, clunky controls"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p9", "q": "spent simply walking from one fight to another through uninspired corridors"}, {"id": "p9", "q": "found the design tedious"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "Players control Duke Nukem, a 1980s-style action hero"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "as he comes out of retirement to battle an alien invasion"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p3", "q": "combines combat, exploration and puzzle-solving"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p3", "q": "Some areas feature boss fights, fetch quests and driving sequences"}]}
+]}

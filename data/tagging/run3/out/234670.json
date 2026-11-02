@@ -1,0 +1,9 @@
+{"appid": 234670, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a fighting game developed by CyberConnect2"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p5", "q": "The assisting characters can aid the playable one with thirteen combos"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p5", "q": "a player can choose two characters to assist the player character in battle"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p1", "q": "options to increase battle difficulty"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p10", "q": "Its cinematic boss battles were praised, particularly those exploring the series' background"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "improved graphics and controls"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p10", "q": "due to the amount of dialogue and length of cutscenes"}]}
+]}

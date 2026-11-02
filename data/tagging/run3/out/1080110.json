@@ -1,0 +1,7 @@
+{
+  "appid": 1080110,
+  "features": [
+    {"f": "loop.driving", "r": 3, "ev": [{"id": "p2", "q": "split-screen racing, accessibility for newcomers, and the racing itself"}]},
+    {"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p2", "q": "accessibility for newcomers"}]}
+  ]
+}

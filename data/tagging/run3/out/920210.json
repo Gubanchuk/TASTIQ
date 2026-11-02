@@ -1,0 +1,10 @@
+{"appid": 920210, "features": [
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "a wide range of fully explorable planets"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p3", "q": "Planets and moons featured in the game include Naboo, Tatooine, Coruscant"}]},
+{"f": "tone.lighthearted", "r": 3, "ev": [{"id": "p1", "q": "praise for its graphics, level design and humor"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p1", "q": "praise for its graphics, level design and humor"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "do not feature collectibles like minikits or True Jedi"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p3", "q": "a wide range of fully explorable planets"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p2", "q": "totaling 45 levels"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p6", "q": "story-focused levels"}]}
+]}

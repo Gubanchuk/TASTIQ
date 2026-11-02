@@ -1,0 +1,11 @@
+{"appid": 2461850, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "it features combo-based combat, as well as puzzles"}]},
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p6", "q": "The game features psychological horror elements"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "utilizing puzzles and runes to advance"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "Exploration is a significant aspect of gameplay"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p12", "q": "bleak, distressing, and unmissable"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "set in 9th century Iceland, drawing inspiration from Norse mythology"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "praised its art direction, visuals and sound design"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p9", "q": "delivers a performance of determination to battle through fear and self-loathing"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p2", "q": "some noted pacing issues"}]}
+]}

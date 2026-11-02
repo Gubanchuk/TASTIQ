@@ -1,0 +1,7 @@
+{"id": "tt0376390", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated television series developed by Spike Brandt and Tony Cervone"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "It is a comic science fiction series"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "s", "q": "yet incompetent space captain Duck Dodgers"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "It is a comic science fiction series"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The series ended production in 2005 after its third season"}]}
+]}

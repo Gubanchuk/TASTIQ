@@ -1,0 +1,7 @@
+{"appid": 289950, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "to build several types of buildings"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "learns to drive the basic heavy machinery of the game, including trucks and excavators"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "manage their contractor company"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "The game features open world, and the player unlocks the locations as they discover them"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "beautifully detailed and incredibly fun"}]}
+]}

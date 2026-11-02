@@ -1,0 +1,9 @@
+{
+  "appid": 334230,
+  "features": [
+    {"f": "social.pvp", "r": 2, "ev": [{"id": "p0", "q": "an online multiplayer game with social deduction"}]},
+    {"f": "cognitive.high", "r": 3, "ev": [{"id": "p4", "q": "teamwork, communication, deduction and deception"}, {"id": "p8", "q": "criticize the game for being too complicated"}]},
+    {"f": "loop.dialogue", "r": 2, "ev": [{"id": "p4", "q": "teamwork, communication, deduction and deception"}]},
+    {"f": "cognitive.low", "r": 1, "ev": [{"id": "p8", "q": "easy to get the hang of"}]}
+  ]
+}

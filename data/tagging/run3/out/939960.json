@@ -1,0 +1,9 @@
+{"appid": 939960, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Far Cry New Dawn is a 2019 first-person shooter video game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "a large open world modeled after Far Cry 5s map"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "AI or co-op companions"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "increased reliance on crafting items from limited supplies"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "Players can embark on treasure hunts and liberate different enemy encampments"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p0", "q": "is silent and highly customizable"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "the game follows a group of survivors as they attempt to rebuild their community"}]}
+]}

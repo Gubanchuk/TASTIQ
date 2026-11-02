@@ -1,0 +1,7 @@
+{"id": "tt0106140", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an animated television series"}]},
+{"f": "world.dystopia", "r": 3, "ev": [{"id": "s", "q": "In a post-apocalyptic and dystopian future, all life has been challenged by oppression and tyranny"}, {"id": "p1", "q": "rules over it as a polluted industrial dystopia"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "s", "q": "In a post-apocalyptic and dystopian future"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "the show features a darker and more dramatic tone"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p12", "q": "giving Sonic the role of deus ex machina to deal with every episode's conflict"}]}
+]}

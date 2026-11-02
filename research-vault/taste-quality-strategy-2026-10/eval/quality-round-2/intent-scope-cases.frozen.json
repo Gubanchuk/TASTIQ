@@ -1,0 +1,125 @@
+[
+  {
+    "id": "s01",
+    "split": "dev",
+    "domain": "game",
+    "text": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+    "wants": [
+      [
+        "cognitive.high"
+      ]
+    ],
+    "noAvoids": [
+      "cognitive.high",
+      "difficulty.hard"
+    ],
+    "noWants": [
+      "cognitive.low"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "s02",
+    "split": "dev",
+    "domain": "film",
+    "text": "Не хочу жестокости по отношению к животным. Экшен с драками между людьми нормально.",
+    "noAvoids": [
+      "content.violence"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "s03",
+    "split": "dev",
+    "domain": "film",
+    "text": "Не люблю пошлые шутки, но сегодня хочу остроумную комедию.",
+    "noAvoids": [
+      "humor.funny"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "s04",
+    "split": "dev",
+    "domain": "game",
+    "text": "Хочу поспокойнее бои, но напряжённый сюжет.",
+    "wants": [
+      [
+        "tension.high"
+      ]
+    ],
+    "noWants": [
+      "tension.low"
+    ],
+    "noAvoids": [
+      "tension.high"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "s05",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Не хочу длинных заставок. Сама игра вполне может быть длинной.",
+    "noAvoids": [
+      "length.long",
+      "session.long",
+      "story.central"
+    ],
+    "noWants": [
+      "length.short"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "s06",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Не хочу думать о прокачке персонажа. Хочу трудные логические задачи.",
+    "wants": [
+      [
+        "cognitive.high",
+        "loop.puzzles"
+      ]
+    ],
+    "noAvoids": [
+      "cognitive.high",
+      "difficulty.hard"
+    ],
+    "noWants": [
+      "cognitive.low"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "s07",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Хочу спокойную историю, но сложные бои меня не пугают.",
+    "wants": [
+      [
+        "tension.low",
+        "story.central"
+      ]
+    ],
+    "noAvoids": [
+      "difficulty.hard"
+    ],
+    "minutes": null
+  },
+  {
+    "id": "s08",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Хочу историю, никакого гринда в начале. Дальше гринд терпим.",
+    "wants": [
+      [
+        "story.central"
+      ]
+    ],
+    "noAvoids": [
+      "progression.grind"
+    ],
+    "minutes": null
+  }
+]

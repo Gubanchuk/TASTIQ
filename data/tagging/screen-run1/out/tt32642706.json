@@ -1,0 +1,8 @@
+{"id": "tt32642706", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "police officers in the Miami-Dade Police Department narcotics unit"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "p3", "q": "to texturize a friendship tested by greed"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p3", "q": "Ben Affleck and Matt Damon's classic chemistry"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p1", "q": "team members suspect each other of trying to steal a large sum of cash"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "p1", "q": "is inspired by the true story of Miami-Dade County Police Captain"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p3", "q": "more likely to disappoint others with clichés and overly long"}]}
+]}

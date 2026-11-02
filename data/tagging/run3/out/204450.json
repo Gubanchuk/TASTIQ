@@ -1,0 +1,15 @@
+{
+  "appid": 204450,
+  "features": [
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Western-themed first-person shooter"}]},
+    {"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "a bounty hunter in the American West during the second half of the 19th century"}]},
+    {"f": "story.central", "r": 3, "ev": [{"id": "p3", "q": "critics praising the storytelling"}]},
+    {"f": "tone.whimsical", "r": 2, "ev": [{"id": "p5", "q": "Silas often revises the story, which can result in abrupt changes to the in-game environment"}]},
+    {"f": "humor.funny", "r": 2, "ev": [{"id": "p3", "q": "the voice acting, and the humor"}]},
+    {"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p9", "q": "Many of the cutscenes employ a comic book aesthetic"}]},
+    {"f": "ending.weak", "r": 1, "ev": [{"id": "p3", "q": "Criticisms focused on a predictable ending"}]},
+    {"f": "combat.clunky", "r": 1, "ev": [{"id": "p3", "q": "some critics took issue with the controls"}]},
+    {"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p4", "q": "only one player character available"}]},
+    {"f": "freedom.linear", "r": 2, "ev": [{"id": "p4", "q": "must be completed sequentially as the player moves through the map"}]}
+  ]
+}

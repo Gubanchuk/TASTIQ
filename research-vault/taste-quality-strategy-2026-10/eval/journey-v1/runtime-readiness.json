@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-31T18:29:33.545Z",
+  "url": "http://localhost:5177/pick/",
+  "ai": {
+    "enabled": true,
+    "reason": null,
+    "locked": false,
+    "model": "gpt-6.1-sol"
+  },
+  "domains": {
+    "game": 4952,
+    "film": 32172,
+    "series": 9773,
+    "cartoon": 1867
+  },
+  "snapshotAction": true,
+  "navigation": true,
+  "paidCallsInHealthCheck": 0
+}

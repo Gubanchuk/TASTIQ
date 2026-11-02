@@ -1,0 +1,10 @@
+{"id": "tt9170108", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is an American science fiction drama television series"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "s", "q": "the human race teeters on the edge of extinction"}]},
+{"f": "world.war", "r": 1, "ev": [{"id": "p2", "q": "after the Earth is destroyed by a great war"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p3", "q": "Bristling with imagination and otherworldly imagery"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p3", "q": "is a bloody exploration of artificial intelligence and religious belief"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "that will stimulate the eye and mind"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p3", "q": "worry that the momentum drags"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p1", "q": "By June 2022, the series was cancelled"}]}
+]}

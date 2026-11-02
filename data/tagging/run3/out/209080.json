@@ -1,0 +1,8 @@
+{"appid": 209080, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "a steampunk/dieselpunk, multiplayer, first-person shooter that focuses on airship combat"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p5", "q": "the Squid is the fastest ship in the game which allows its commander to outmaneuver enemy ships"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "Each airship is controlled by up to four players"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "with each member of the crew taking a specific role"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Players can choose three different classes: gunner, engineer or pilot"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p2", "q": "focuses on airship combat"}]}
+]}

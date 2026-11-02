@@ -1,0 +1,22 @@
+[
+  {
+    "name": "library",
+    "height": 1157,
+    "overflow": false,
+    "width": 319
+  },
+  {
+    "name": "game",
+    "height": 1081,
+    "overflow": false,
+    "width": 319
+  },
+  {
+    "name": "landing",
+    "height": 3075,
+    "overflow": false,
+    "width": 319,
+    "initialOverflow": true,
+    "note": "After the documented <=360 library-link compact rule, DOM was rechecked: no horizontal overflow; matched-landing-319.png was recaptured."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "appid": 312520,
+  "features": [
+    {"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "is a 2017 survival-platform video game"}]},
+    {"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "as it fights for survival in a derelict and hostile environment"}]},
+    {"f": "world.postapoc", "r": 2, "ev": [{"id": "p3", "q": "takes place in a post-apocalyptic, industrial environment"}]},
+    {"f": "tone.creepy", "r": 2, "ev": [{"id": "p10", "q": "Its atmosphere was considered sinister and elegant"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "The slugcat freely explores screens shown individually"}]},
+    {"f": "social.pvp", "r": 1, "ev": [{"id": "p6", "q": "multiplayer arena mode, where up to four players battle each other"}]},
+    {"f": "freedom.sandbox", "r": 1, "ev": [{"id": "p6", "q": "a sandbox mode, where the player freely spawns and interacts with objects and creatures"}]},
+    {"f": "world.living", "r": 3, "ev": [{"id": "p1", "q": "creatures act independently from the player and perpetually roam the environment"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "The player is given little explicit guidance"}]},
+    {"f": "difficulty.hard", "r": 3, "ev": [{"id": "p8", "q": "characterized its gameplay as harsh"}]},
+    {"f": "combat.clunky", "r": 2, "ev": [{"id": "p8", "q": "calling its deaths unavoidable, controls sloppy"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "IGN described the slugcat's animations as beautiful and reactive"}]},
+    {"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p1", "q": "adopting an adaptive low-fi and electronic soundtrack"}]}
+  ]
+}

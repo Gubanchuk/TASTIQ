@@ -1,0 +1,146 @@
+[
+  {
+    "direction": "programme",
+    "scene": "result",
+    "height": 1725,
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "scene": "library",
+    "height": 1990,
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "scene": "question",
+    "height": 1426,
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "scene": "landing",
+    "height": 2450,
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "scene": "result",
+    "height": 1854,
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "scene": "library",
+    "height": 2000,
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "scene": "question",
+    "height": 1426,
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "scene": "landing",
+    "height": 2554,
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "scene": "result",
+    "height": 1633,
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "scene": "library",
+    "height": 1997,
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "scene": "question",
+    "height": 1357,
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "scene": "landing",
+    "height": 2196,
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "scene": "result",
+    "height": 2778,
+    "width": 390
+  },
+  {
+    "direction": "programme",
+    "scene": "library",
+    "height": 2739,
+    "width": 390
+  },
+  {
+    "direction": "programme",
+    "scene": "question",
+    "height": 1735,
+    "width": 390
+  },
+  {
+    "direction": "programme",
+    "scene": "landing",
+    "height": 2789,
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "scene": "result",
+    "height": 2769,
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "scene": "library",
+    "height": 2739,
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "scene": "question",
+    "height": 1735,
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "scene": "landing",
+    "height": 2845,
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "scene": "result",
+    "height": 2679,
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "scene": "library",
+    "height": 2752,
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "scene": "question",
+    "height": 1593,
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "scene": "landing",
+    "height": 2789,
+    "width": 390
+  }
+]

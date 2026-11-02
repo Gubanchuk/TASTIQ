@@ -1,0 +1,11 @@
+{"appid": 1832640, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "a", "q": "match-3 games developed using cel-shading techniques"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "d", "q": "Ponder on your choices because each of them will determine the fate of all"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "d", "q": "Enter the parallel worlds enriched by the stories"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "d", "q": "developed using cel-shading techniques powered by Unreal Engine 4"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "a", "q": "A female vampire who spent sixty years in solitude in the manor"}]},
+{"f": "world.postapoc", "r": 1, "ev": [{"id": "a", "q": "A villager turned wanderer in a post-apocalyptic world"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "r236011868", "q": "ВН с элементами 3D"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "r236011868", "q": "это мертвый проект"}]},
+{"f": "tone.serene", "r": 1, "ev": [{"id": "r236694964", "q": "Прикольная игра отдохнуть"}]}
+]}

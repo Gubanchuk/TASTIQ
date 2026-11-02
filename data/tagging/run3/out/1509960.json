@@ -1,0 +1,7 @@
+{"appid": 1509960, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "Pico Park is a cooperative multiplayer, action-puzzle independent game"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p3", "q": "Pico Park is a cooperative local/online multiplayer action puzzle game"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "players compete against each other instead of cooperating"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p9", "q": "the gimmicks allow everyone to share the same joy with more experienced players guiding less experienced players"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p9", "q": "the game looks enjoyable even when players are three generations apart"}]}
+]}

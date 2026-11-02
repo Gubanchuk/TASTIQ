@@ -1,0 +1,12 @@
+{"appid": 17570, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p6", "q": "is achieved through melee strikes, blocking and ranged attacks"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "multiplayer team-based first-person action video game"}, {"id": "p3", "q": "three teams competing for an objective"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p8", "q": "serve to encourage cooperation between players"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p3", "q": "Players can choose between one of four classes"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "truly breathtaking views"}, {"id": "p10", "q": "awe inspiring visuals"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "some of the best mood setting music to be had in a video game"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "Medieval, Norse and Caribbean environments"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p9", "q": "the rampant silliness and absurd title"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p8", "q": "the balanced implementation of ranged combat versus melee combat"}, {"id": "p10", "q": "the reworked melee system as effective"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p8", "q": "criticised the melee combat element as needing work"}]}
+]}

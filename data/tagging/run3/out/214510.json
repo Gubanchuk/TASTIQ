@@ -1,0 +1,16 @@
+{"appid": 214510, "features": [
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "is allowed to freely explore the game world"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p4", "q": "which spans the entire world of Middle-Earth minus Mirkwood and the lands south of Mordor"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "players can collect and use numerous magical items"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p1", "q": "taking players through the epic story events"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p1", "q": "re-imagined with the humour and endless variety of Lego play"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p1", "q": "some scenes from the films have been altered to become more family friendly"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p5", "q": "where players can create custom characters"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p5", "q": "the player can unlock and buy characters by finding them throughout Middle-Earth"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p5", "q": "the player completes puzzles to find their character tokens"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p3", "q": "either through basic melee combos or firing projectiles"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p5", "q": "creates items using the player's Mithril Bricks and Blueprints"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "mostly praising the story, humour and visuals"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p1", "q": "The game utilises music and voice acting taken from all three films"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p7", "q": "mostly praising the story, humour and visuals"}]}
+]}

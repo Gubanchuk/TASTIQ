@@ -1,0 +1,17 @@
+{"appid": 1252330, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Deathloop is a 2021 first-person shooter game developed by Arkane Lyon"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p6", "q": "players can use stealth tactics to silently"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "players can freely explore each location to find clues"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p5", "q": "A clue found by Colt may inform the player of their tasks in the next location"}]},
+{"f": "cognitive.high", "r": 3, "ev": [{"id": "p9", "q": "players are rewarded for carefully planning and understanding the system and rules"}]},
+{"f": "world.living", "r": 3, "ev": [{"id": "p4", "q": "The routines of the people in a particular district vary depending on the time of day"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p6", "q": "Each location in Deathloop is also a sandbox that provides alternative paths for players"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p9", "q": "the ease of navigation and combat significantly increase as players gain more powers"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p11", "q": "described Deathloop as a \"fascinating mashup of styles and vibes\""}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p11", "q": "The art direction received acclaim"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p11", "q": "He also praised the soundtrack for being"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p11", "q": "glorious picture of a ruinous, elitist society and spectacle"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p12", "q": "described the two as his favourite protagonists of the year"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p12", "q": "calling the interactions between Colt and Julianna entertaining and humorous"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "Deathloop has a multiplayer mode in which the player can alternatively play as Julianna"}]}
+]}

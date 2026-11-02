@@ -1,0 +1,10 @@
+{"appid": 701160, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p3", "q": "Players control a mounted monarch who must build their kingdom and defend it from the Greed"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "to fend off waves of Greed attacking the kingdom at night"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "Kingdom Two Crowns features single-player and cooperative multiplayer modes"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p9", "q": "singled out the pixel art as captivating"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "gaining praise for its strategic gameplay, artwork, and cooperative play"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p9", "q": "it would win over players with its tranquility"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p1", "q": "The developers chose to lessen the difficulty of the previous games' roguelike mechanics"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p3", "q": "the monarch exploring and building during the day"}]}
+]}

@@ -1,0 +1,14 @@
+{
+  "CheckedAt": "2026-11-02T01:31:43.9709396Z",
+  "MainPort": 5177,
+  "MainPid": 22148,
+  "MainAI": {
+    "enabled": true,
+    "reason": null,
+    "locked": false,
+    "model": "gpt-6.1-sol"
+  },
+  "MainHttp": 200,
+  "QA5180Listening": false,
+  "QA5181Listening": false
+}

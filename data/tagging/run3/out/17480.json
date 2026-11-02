@@ -1,0 +1,8 @@
+{"appid": 17480, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p3", "q": "constructing building and factories, gathering resources and training armies"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p4", "q": "Warring factions harvest resources using vulnerable collectors"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p5", "q": "The single-player campaign is fully co-operative"}, {"id": "p9", "q": "citing a strong cooperative and multiplayer component"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "These can be played online, with another player"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p3", "q": "the game is set in an alternate reality from World War II"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p7", "q": "The game also features experience points that are used to upgrade unit types"}]}
+]}

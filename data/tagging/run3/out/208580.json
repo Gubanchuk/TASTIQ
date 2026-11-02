@@ -1,0 +1,14 @@
+{"appid": 208580, "features": [
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p6", "q": "The player can travel with up to two party members at a time"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p3", "q": "Particular praise was given to the character of Kreia"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p7", "q": "The player makes choices that turn the Exile to either the light side or the dark side"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "praise was given to the story, characters, and writing"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Like its predecessor, it is set in the Star Wars universe"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p4", "q": "features pausable real-time combat"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p5", "q": "The player can use a variety of melee and ranged weapons, including swords and firearms"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p4", "q": "The game starts with a character creation screen with several choices to make"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "add-ons to the Jedi classes that were established in Knights of the Old Republic"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "There are 30 new Force powers, which are manifestations of the Force"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p6", "q": "Players can loot corpses and various environmental objects"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p3", "q": "as well as being launched in an incomplete state"}]}
+]}

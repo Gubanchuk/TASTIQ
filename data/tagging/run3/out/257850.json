@@ -1,0 +1,11 @@
+{"appid": 257850, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p4", "q": "The Drifter is equipped with a phase-shifted hard light energy sword"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "Weaponry includes long-range guns and area attacks"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p3", "q": "rendered in a pixel art style"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p5", "q": "Praise was given to the game's visuals, sound design and combat mechanics"}, {"id": "p6", "q": "The visual presentation of Hyper Light Drifter is second to none"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p5", "q": "Praise was given to the game's visuals, sound design and combat mechanics"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p6", "q": "fluid, demanding, and fair"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p4", "q": "The player faces increasingly difficult monsters, both in number and ability"}]},
+{"f": "tone.melancholic", "r": 1, "ev": [{"id": "p3", "q": "The story concept was inspired by lead developer Alx Preston's heart disease"}]},
+{"f": "story.minimal", "r": 1, "ev": [{"id": "p7", "q": "the minimalism of the game's storytelling method"}]}
+]}

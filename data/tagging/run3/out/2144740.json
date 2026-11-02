@@ -1,0 +1,8 @@
+{"appid": 2144740, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "is an action platform video game developed by One More Level"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "While a sword is the player's primary weapon"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p2", "q": "Ghostrunner 2 introduces vehicular combat"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p1", "q": "which can be used in both combat scenarios and solving puzzles"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "a group of violent cyber ninja AI cult"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p2", "q": "they can purchase upgrades that further enhance Jack's abilities"}]}
+]}

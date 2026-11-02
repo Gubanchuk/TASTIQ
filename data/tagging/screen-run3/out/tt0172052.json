@@ -1,0 +1,10 @@
+{"id": "tt0172052", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated television series"}]},
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "s", "q": "half-witch Sabrina Spellman"}, {"id": "p2", "q": "extremely powerful and complex spells"}]},
+{"f": "world.school", "r": 2, "ev": [{"id": "s", "q": "wreaks middle school havoc"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p3", "q": "Parents need to know that this tween cartoon"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "s", "q": "her hilariously miscast spells"}, {"id": "p3", "q": "features similar lighthearted witch humor"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p2", "q": "Sabrina lives with her two paternal witch aunts"}]},
+{"f": "characters.coming_of_age", "r": 2, "ev": [{"id": "p3", "q": "the trials and tribulations of being a tween"}]},
+{"f": "characters.friendship", "r": 1, "ev": [{"id": "p3", "q": "Many of the characters set positive examples of what it means to be a good friend"}]}
+]}

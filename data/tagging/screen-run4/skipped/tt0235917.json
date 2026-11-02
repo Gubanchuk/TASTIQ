@@ -1,0 +1,31 @@
+{
+  "id": "tt0235917",
+  "name": "Dora the Explorer",
+  "kind": "series",
+  "domain": "cartoon",
+  "year": 2000,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "s": "This play-along, animated adventure series stars Dora, a seven-year-old Latina heroine who asks preschoolers for their help on her adventures. Along the way, they'll meet friends, overcome obstacles and learn a little Spanish!",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Dora the Explorer is an American children's animated television series in the Dora the Explorer franchise, created by Chris Gifford, Valerie Walsh Valdes, and Eric Weiner that premiered on Nickelodeon on August 14, 2000, and ended on August 9, 2019. The series was produced by Nickelodeon Animation Studio."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The series focuses on the adventures of a Latina girl named Dora and her monkey friend Boots, with a particular emphasis on the Spanish language. The series is presented in the style of both an interactive CD-ROM game and a point-and-click adventure game, with gimmicks such as Dora asking the viewer to help her by showing the current items in her inventory and asking the viewer which one is best for the current scenario."
+    },
+    {
+      "id": "p2",
+      "section": "lead",
+      "text": "The series is currently scheduled to receive a live-action version for older viewers on Paramount+."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Dora_the_Explorer_(TV_series)"
+}

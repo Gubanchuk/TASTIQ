@@ -1,0 +1,9 @@
+{"appid": 610370, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p2", "q": "real-time tactics stealth video game"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a 2020 real-time tactics video game"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p0", "q": "a bounty hunter who assembles a posse of allies"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p8", "q": "helps to define their individual personalities"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p8", "q": "gave charm to an otherwise standard Western"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p8", "q": "gave the player freedom to take risks without consequence"}]},
+{"f": "freedom.sandbox", "r": 1, "ev": [{"id": "p9", "q": "Though they're impressive stealth sandboxes"}]}
+]}

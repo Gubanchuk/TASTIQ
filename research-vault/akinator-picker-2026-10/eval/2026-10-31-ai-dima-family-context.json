@@ -1,0 +1,300 @@
+{
+  "date": "2026-10-31",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "detailed": 40,
+  "discovery": {
+    "game": 0,
+    "cartoon": 0
+  },
+  "summary": {
+    "engine": 0,
+    "ai": 1,
+    "engineTop": 0,
+    "aiTop": 0,
+    "targets": 3,
+    "inShortlist": 2,
+    "ms": [
+      14370
+    ],
+    "usd": 0.019728,
+    "own": 2,
+    "ownHits": 0,
+    "engineSeen": 1,
+    "aiSeen": 0,
+    "flagged": 0,
+    "flaggedSeen": 0
+  },
+  "attempted": 1,
+  "errors": 0,
+  "unknownUsage": 0,
+  "records": [
+    {
+      "persona": "dima",
+      "mode": "careful",
+      "domain": "cartoon",
+      "state": {
+        "step": "result",
+        "domain": "cartoon",
+        "platform": "windows",
+        "situation": {
+          "time": "any",
+          "company": "kids",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [
+            {
+              "f": "humor.funny",
+              "against": "tone.melancholic",
+              "label": "поржать"
+            }
+          ],
+          "childAge": "preschool"
+        },
+        "stops": [
+          "tone.creepy",
+          "content.disturbing"
+        ],
+        "asked": [
+          "lean:humor.funny|tone.melancholic",
+          "pair:characters.coming_of_age|world.superhero",
+          "pair:world.fantasy|pace.fast"
+        ],
+        "shown": [
+          "tt0910970",
+          "tt0110357",
+          "tt1049413",
+          "tt0266543",
+          "tt0114709",
+          "tt0198781",
+          "tt0435761",
+          "tt2096673"
+        ],
+        "liked": [
+          "tt2948356",
+          "tt3521164"
+        ],
+        "disliked": [
+          "tt0327597"
+        ],
+        "whyIndex": 0,
+        "answers": {
+          "tt2948356": {
+            "reaction": "love",
+            "reasons": [
+              "characters.friendship",
+              "humor.funny",
+              "content.family",
+              "cognitive.high",
+              "aesthetic.beautiful",
+              "story.mystery"
+            ],
+            "issues": [],
+            "text": "и ребёнку смешно, и мне интересно, детектив"
+          },
+          "tt3521164": {
+            "reaction": "love",
+            "reasons": [
+              "characters.female_lead",
+              "world.music",
+              "aesthetic.beautiful",
+              "content.family",
+              "tone.feelgood"
+            ],
+            "issues": [],
+            "text": "дочка подпевает песням"
+          },
+          "tt0441773": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0327597": {
+            "reaction": "dislike",
+            "issues": [
+              {
+                "f": "tone.dark",
+                "hard": false
+              },
+              {
+                "f": "tone.creepy",
+                "hard": true
+              }
+            ],
+            "badQuality": false,
+            "text": "ребёнок испугался, выключили на 20 минуте"
+          },
+          "tt3121722": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "tt2293640": {
+            "reaction": "dislike",
+            "issues": []
+          },
+          "tt1049413": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0266543": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0114709": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0198781": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0435761": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [
+          {
+            "f": "pace.fast",
+            "qid": "pair:world.fantasy|pace.fast"
+          }
+        ],
+        "session": {
+          "notNow": []
+        },
+        "seed": 20261021
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Distinguish the person's explicitly confirmed reasons from weak inferred overlap. Tonight's soft lean (e.g. \"посмеяться\") should shape a story game they would love, not replace their main reasons with a collection of jokes. Explicit hard stops always win; a caveat is not permission to violate them.\n- Playtime at the moment of a Steam review is NOT completion time or the desired length of one session. Never treat it as either. A tagged length is an estimate; use reliable title knowledge and state uncertainty instead of inventing exact hours.\n- Detailed and compact discovery candidates have the same eligibility. The discovery list is deliberately wider; do not favour a title just because it has more tags, a fuller description, or an earlier engine rank. Check the compact titles against the person's main confirmed reasons too.\n- For a family evening, prioritize age suitability and tolerable intensity over pace or laughs. If age is unknown, do not invent it or guarantee \"nothing scary\"; choose cautious options and mention relevant frightening scenes.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: посмотреть мультфильм.\nВремя: сколько угодно.\nС кем: с детьми.\nВозраст детей: до 7 лет.\nСегодня просил: сегодня: поржать.\nТочно не надо: страшное, тяжёлые темы.\n\nЗнакомые тайтлы:\n- Зверополис (Zootopia), 2016: обожаю; за что: дружба, смешно, для всей семьи, заставляет думать, красивая картинка, загадка и расследование; своими словами: «и ребёнку смешно, и мне интересно, детектив»\n- Моана (Moana), 2016: обожаю; за что: сильная героиня, музыка и мюзикл, красивая картинка, для всей семьи, тёплое, доброе; своими словами: «дочка подпевает песням»\n- Кунг-фу Панда (Kung Fu Panda), 2008: нормально\n- Коралина в стране кошмаров (Coraline), 2009: не моё; что мешало: мрачная атмосфера, жуть и страх (никогда); своими словами: «ребёнок испугался, выключили на 20 минуте»\n- Щенячий патруль (PAW Patrol), 2013: не моё\n- Миньоны (Minions), 2015: не моё\n- Вверх (Up), 2009: нормально\n- В поисках Немо (Finding Nemo), 2003: нормально\n- История игрушек (Toy Story), 1995: нормально\n- Корпорация монстров (Monsters, Inc.), 2001: нормально\n- История игрушек: Большой побег (Toy Story 3), 2010: нормально\n\nНа вопрос «что важнее» выбрал: быстрый темп.\n\nКандидаты (40):\nid=tt2245084 | Город героев (Big Hero 6) | 2014 | 102 мин | Action/Adventure/Animation | IMDb 7.8, 563743 оценок | движок #1, подтверждено: тёплое, доброе, дружба, красивая картинка, для всей семьи, быстрый темп, смешно, слабый вывод: счастливый финал, взросление, сильная музыка | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.87)\nid=tt0120762 | Мулан (Mulan) | 1998 | 87 мин | Adventure/Animation/Comedy | IMDb 7.7, 352208 оценок | движок #2, подтверждено: для всей семьи, сильная героиня, тёплое, доброе, музыка и мюзикл, красивая картинка, дружба, слабый вывод: сильная музыка, взросление, счастливый финал | по тегам ближе всего к: Моана (Moana) (0.86)\nid=tt0126029 | Шрек (Shrek) | 2001 | 90 мин | Adventure/Animation/Comedy | IMDb 7.9, 824295 оценок | движок #4, подтверждено: для всей семьи, тёплое, доброе, красивая картинка, дружба, смешно, быстрый темп, слабый вывод: сильная музыка, счастливый финал, зрелищные спецэффекты | по тегам ближе всего к: История игрушек (Toy Story) (0.90)\nid=tt0892769 | Как приручить дракона (How to Train Your Dragon) | 2010 | 98 мин | Action/Adventure/Animation | IMDb 8.1, 911989 оценок | движок #3, подтверждено: тёплое, доброе, дружба, для всей семьи, красивая картинка, смешно, быстрый темп, слабый вывод: сильная музыка, взросление, счастливый финал | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.89)\nid=tt0101414 | Красавица и чудовище (Beauty and the Beast) | 1991 | 84 мин | Animation/Family/Fantasy | IMDb 8, 510694 оценок | движок #5, подтверждено: для всей семьи, тёплое, доброе, красивая картинка, музыка и мюзикл, сильная героиня, дружба, слабый вывод: сильная музыка, счастливый финал, вдохновляет | по тегам ближе всего к: Моана (Moana) (0.81)\nid=tt0120363 | История игрушек 2 (Toy Story 2) | 1999 | 92 мин | Adventure/Animation/Comedy | IMDb 7.9, 687009 оценок | движок #6, подтверждено: для всей семьи, дружба, тёплое, доброе, красивая картинка, смешно, быстрый темп, слабый вывод: счастливый финал, сильная музыка, сильный финал | по тегам ближе всего к: История игрушек (Toy Story) (0.95)\nid=tt0110357 | Король лев (The Lion King) | 1994 | 88 мин | Adventure/Animation/Drama | IMDb 8.5, 1282456 оценок | движок #7, подтверждено: для всей семьи, красивая картинка, дружба, тёплое, доброе, музыка и мюзикл, заставляет думать, слабый вывод: взросление, сильная музыка, вдохновляет | по тегам ближе всего к: Моана (Moana) (0.84)\nid=tt4729430 | Клаус (Klaus) | 2019 | 96 мин | Adventure/Animation/Comedy | IMDb 8.2, 243871 оценок | движок #8, подтверждено: тёплое, доброе, для всей семьи, красивая картинка, дружба, смешно, заставляет думать, слабый вывод: сильная музыка, счастливый финал, сильный финал | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.86)\nid=tt0398286 | Рапунцель: Запутанная история (Tangled) | 2010 | 100 мин | Adventure/Animation/Comedy | IMDb 7.7, 555847 оценок | движок #9, подтверждено: для всей семьи, красивая картинка, тёплое, доброе, музыка и мюзикл, смешно, сильная героиня, слабый вывод: счастливый финал, сильная музыка, зрелищные спецэффекты | по тегам ближе всего к: Моана (Moana) (0.86)\nid=tt2953050 | Энканто (Encanto) | 2021 | 102 мин | Animation/Comedy/Family | IMDb 7.2, 302802 оценок | движок #10, подтверждено: тёплое, доброе, красивая картинка, для всей семьи, музыка и мюзикл, смешно, дружба, слабый вывод: сильная музыка, взросление, счастливый финал | по тегам ближе всего к: Моана (Moana) (0.90)\nid=tt2294629 | Холодное сердце (Frozen) | 2013 | 102 мин | Adventure/Animation/Comedy | IMDb 7.4, 723296 оценок | движок #11, подтверждено: тёплое, доброе, для всей семьи, красивая картинка, музыка и мюзикл, дружба, смешно, слабый вывод: сильная музыка, счастливый финал, неожиданные повороты | по тегам ближе всего к: Моана (Moana) (0.83)\nid=tt1490017 | ЛЕГО Фильм (The Lego Movie) | 2014 | 100 мин | Action/Adventure/Animation | IMDb 7.7, 422506 оценок | движок #12, подтверждено: красивая картинка, для всей семьи, тёплое, доброе, дружба, быстрый темп, заставляет думать, слабый вывод: сильная музыка, неожиданные повороты, сильный финал | по тегам ближе всего к: Зверополис (Zootopia) (0.82)\nid=tt0317219 | Тачки (Cars) | 2006 | 116 мин | Adventure/Animation/Comedy | IMDb 7.3, 552355 оценок | движок #13, подтверждено: для всей семьи, дружба, тёплое, доброе, красивая картинка, смешно, быстрый темп, слабый вывод: сильная музыка, счастливый финал, зрелищные спецэффекты | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.85)\nid=tt1772341 | Ральф (Wreck-It Ralph) | 2012 | 101 мин | Adventure/Animation/Comedy | IMDb 7.7, 507175 оценок | движок #14, подтверждено: для всей семьи, красивая картинка, дружба, тёплое, доброе, заставляет думать, быстрый темп, слабый вывод: сильная музыка, счастливый финал, вдохновляет | по тегам ближе всего к: Корпорация монстров (Monsters, Inc.) (0.88)\nid=tt0120623 | Приключения Флика (A Bug's Life) | 1998 | 95 мин | Adventure/Animation/Comedy | IMDb 7.2, 342469 оценок | движок #15, подтверждено: для всей семьи, тёплое, доброе, красивая картинка, дружба, быстрый темп, смешно, слабый вывод: счастливый финал, взросление, сильная музыка | по тегам ближе всего к: Корпорация монстров (Monsters, Inc.) (0.89)\nid=tt1323594 | Гадкий я (Despicable Me) | 2010 | 95 мин | Adventure/Animation/Comedy | IMDb 7.6, 642415 оценок | движок #16, подтверждено: для всей семьи, тёплое, доброе, красивая картинка, дружба, смешно, быстрый темп, слабый вывод: сильная музыка, счастливый финал, вдохновляет | по тегам ближе всего к: Кунг-фу Панда (Kung Fu Panda) (0.89)\nid=tt2948372 | Душа (Soul) | 2020 | 100 мин | Adventure/Animation/Comedy | IMDb 8, 459975 оценок | движок #17, подтверждено: тёплое, доброе, красивая картинка, для всей семьи, заставляет думать, дружба, смешно, слабый вывод: сильная музыка, сильный финал, счастливый финал | по тегам ближе всего к: Вверх (Up) (0.88)\nid=tt1217209 | Храбрая сердцем (Brave) | 2012 | 93 мин | Action/Adventure/Animation | IMDb 7.1, 487128 оценок | движок #18, подтверждено: для всей семьи, тёплое, доброе, сильная героиня, красивая картинка, дружба, смешно, слабый вывод: взросление, счастливый финал, сильная музыка | по тегам ближе всего к: Моана (Moana) (0.80)\nid=tt0097757 | Русалочка (The Little Mermaid) | 1989 | 83 мин | Adventure/Animation/Family | IMDb 7.6, 316327 оценок | движок #19, подтверждено: для всей семьи, сильная героиня, музыка и мюзикл, тёплое, доброе, красивая картинка, дружба, слабый вывод: сильная музыка, счастливый финал, сильный финал | по тегам ближе всего к: Моана (Moana) (0.80)\nid=tt0268380 | Ледниковый период (Ice Age) | 2002 | 81 мин | Adventure/Animation/Comedy | IMDb 7.5, 574350 оценок | движок #20, подтверждено: для всей семьи, дружба, тёплое, доброе, красивая картинка, смешно, быстрый темп, слабый вывод: сильная музыка, счастливый финал, зрелищные спецэффекты, против: мрачная атмосфера | по тегам ближе всего к: Корпорация монстров (Monsters, Inc.) (0.93)\nid=tt2096673 | Головоломка (Inside Out) | 2015 | 95 мин | Adventure/Animation/Comedy | IMDb 8.1, 936434 оценок | движок #21, подтверждено: для всей семьи, тёплое, доброе, красивая картинка, дружба, заставляет думать, смешно, слабый вывод: взросление, сильная музыка, счастливый финал, против: мрачная атмосфера | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.84)\nid=tt0910970 | ВАЛЛ·И (WALL·E) | 2008 | 98 мин | Adventure/Animation/Family | IMDb 8.4, 1346537 оценок | движок #22, подтверждено: для всей семьи, тёплое, доброе, красивая картинка, заставляет думать, дружба, смешно, слабый вывод: счастливый финал, сильная музыка, вдохновляет, против: мрачная атмосфера | по тегам ближе всего к: Вверх (Up) (0.79)\nid=tt0103639 | Аладдин (Aladdin) | 1992 | 90 мин | Adventure/Animation/Comedy | IMDb 8, 507018 оценок | движок #23, подтверждено: для всей семьи, музыка и мюзикл, красивая картинка, тёплое, доброе, дружба, смешно, слабый вывод: сильная музыка, счастливый финал, взросление | по тегам ближе всего к: История игрушек (Toy Story) (0.81)\nid=tt2380307 | Тайна Коко (Coco) | 2017 | 105 мин | Adventure/Animation/Drama | IMDb 8.4, 731332 оценок | движок #24, подтверждено: тёплое, доброе, красивая картинка, для всей семьи, музыка и мюзикл, дружба, заставляет думать, слабый вывод: сильная музыка, счастливый финал, вдохновляет, против: жуть и страх | по тегам ближе всего к: Вверх (Up) (0.83)\nid=tt0780521 | Принцесса и лягушка (The Princess and the Frog) | 2009 | 97 мин | Adventure/Animation/Comedy | IMDb 7.2, 191163 оценок | движок #25, подтверждено: для всей семьи, музыка и мюзикл, тёплое, доброе, сильная героиня, красивая картинка, дружба, слабый вывод: сильная музыка, счастливый финал, вдохновляет | по тегам ближе всего к: Моана (Moana) (0.88)\nid=tt4116284 | Лего Фильм: Бэтмен (The Lego Batman Movie) | 2017 | 104 мин | Action/Adventure/Animation | IMDb 7.3, 198561 оценок | движок #26, подтверждено: тёплое, доброе, красивая картинка, для всей семьи, быстрый темп, смешно, дружба, слабый вывод: сильная музыка, сильная актёрская игра, супергерои | по тегам ближе всего к: Кунг-фу Панда (Kung Fu Panda) (0.77)\nid=tt2709768 | Тайная жизнь домашних животных (The Secret Life of Pets) | 2016 | 86 мин | Adventure/Animation/Comedy | IMDb 6.5, 239859 оценок | движок #27, подтверждено: для всей семьи, дружба, красивая картинка, тёплое, доброе, смешно, быстрый темп, слабый вывод: сильная музыка, сильная актёрская игра, счастливый финал | по тегам ближе всего к: Кунг-фу Панда (Kung Fu Panda) (0.84)\nid=tt0844471 | Облачно, возможны осадки в виде фрикаделек (Cloudy with a Chance of Meatballs) | 2009 | 90 мин | Adventure/Animation/Comedy | IMDb 6.9, 291169 оценок | движок #28, подтверждено: для всей семьи, красивая картинка, тёплое, доброе, смешно, быстрый темп, слабый вывод: зрелищные спецэффекты, сильная музыка, счастливый финал | по тегам ближе всего к: Кунг-фу Панда (Kung Fu Panda) (0.85)\nid=tt5848272 | Ральф против Интернета (Ralph Breaks the Internet) | 2018 | 112 мин | Adventure/Animation/Comedy | IMDb 7, 210129 оценок | движок #29, подтверждено: дружба, для всей семьи, тёплое, доброе, красивая картинка, смешно, быстрый темп, слабый вывод: сильная музыка, счастливый финал, вдохновляет | по тегам ближе всего к: Зверополис (Zootopia) (0.86)\nid=tt12801262 | Лука (Luca) | 2021 | 95 мин | Adventure/Animation/Comedy | IMDb 7.4, 229158 оценок | движок #30, подтверждено: дружба, для всей семьи, тёплое, доброе, красивая картинка, смешно, заставляет думать, слабый вывод: взросление, сильная музыка, счастливый финал | по тегам ближе всего к: Корпорация монстров (Monsters, Inc.) (0.87)\nid=tt2277860 | В поисках Дори (Finding Dory) | 2016 | 97 мин | Adventure/Animation/Comedy | IMDb 7.2, 341324 оценок | движок #31, подтверждено: тёплое, доброе, для всей семьи, дружба, красивая картинка, смешно, заставляет думать, слабый вывод: сильная музыка, счастливый финал, сильный финал | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.88)\nid=tt0129167 | Стальной гигант (The Iron Giant) | 1999 | 86 мин | Action/Adventure/Animation | IMDb 8.1, 266838 оценок | движок #32, подтверждено: дружба, для всей семьи, красивая картинка, тёплое, доброе, заставляет думать, быстрый темп, слабый вывод: сильная музыка, сильный финал, вдохновляет, против: мрачная атмосфера | по тегам ближе всего к: Корпорация монстров (Monsters, Inc.) (0.77)\nid=tt1979376 | История игрушек 4 (Toy Story 4) | 2019 | 100 мин | Adventure/Animation/Comedy | IMDb 7.6, 332223 оценок | движок #33, подтверждено: дружба, для всей семьи, тёплое, доброе, красивая картинка, смешно, заставляет думать, слабый вывод: сильная музыка, счастливый финал, сильная актёрская игра | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.88)\nid=tt0275847 | Лило и Стич (Lilo & Stitch) | 2002 | 85 мин | Adventure/Animation/Comedy | IMDb 7.4, 247946 оценок | движок #34, подтверждено: для всей семьи, тёплое, доброе, дружба, смешно, быстрый темп, заставляет думать, слабый вывод: счастливый финал, вдохновляет, сильная музыка | по тегам ближе всего к: Корпорация монстров (Monsters, Inc.) (0.88)\nid=tt2267968 | Кунг-фу Панда 3 (Kung Fu Panda 3) | 2016 | 95 мин | Action/Adventure/Animation | IMDb 7.1, 224573 оценок | движок #35, подтверждено: для всей семьи, красивая картинка, быстрый темп, смешно, тёплое, доброе, дружба, слабый вывод: вдохновляет, сильная музыка, счастливый финал | по тегам ближе всего к: Кунг-фу Панда (Kung Fu Panda) (0.90)\nid=tt2261287 | Балерина (Leap!) | 2016 | 89 мин | Adventure/Animation/Comedy | IMDb 6.8, 27301 оценок | движок #36, подтверждено: дружба, для всей семьи, музыка и мюзикл, тёплое, доброе, красивая картинка, смешно, слабый вывод: сильная музыка, вдохновляет, сильный финал | по тегам ближе всего к: Корпорация монстров (Monsters, Inc.) (0.73)\nid=tt0317705 | Суперсемейка (The Incredibles) | 2004 | 115 мин | Action/Adventure/Animation | IMDb 8, 920763 оценок | движок #37, подтверждено: для всей семьи, тёплое, доброе, красивая картинка, быстрый темп, заставляет думать, смешно, слабый вывод: сильная музыка, зрелищные спецэффекты, сильный финал, против: мрачная атмосфера | по тегам ближе всего к: Кунг-фу Панда (Kung Fu Panda) (0.80)\nid=tt0061852 | Книга джунглей (The Jungle Book) | 1967 | 78 мин | Adventure/Animation/Comedy | IMDb 7.6, 216214 оценок | движок #38, подтверждено: для всей семьи, музыка и мюзикл, дружба, красивая картинка, тёплое, доброе, смешно, слабый вывод: сильная музыка, счастливый финал, сильный финал | по тегам ближе всего к: История игрушек (Toy Story) (0.80)\nid=tt0120855 | Тарзан (Tarzan) | 1999 | 88 мин | Adventure/Animation/Comedy | IMDb 7.3, 273087 оценок | движок #39, подтверждено: для всей семьи, красивая картинка, тёплое, доброе, быстрый темп, дружба, смешно, слабый вывод: сильная музыка, счастливый финал, зрелищные спецэффекты | по тегам ближе всего к: История игрушек (Toy Story) (0.88)\nid=tt0397892 | Вольт (Bolt) | 2008 | 96 мин | Adventure/Animation/Comedy | IMDb 6.8, 252134 оценок | движок #40, подтверждено: для всей семьи, тёплое, доброе, дружба, красивая картинка, смешно, быстрый темп, слабый вывод: счастливый финал, сильная музыка, зрелищные спецэффекты | по тегам ближе всего к: В поисках Немо (Finding Nemo) (0.82)\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "tt2245084",
+        "tt0120762",
+        "tt0126029",
+        "tt0892769"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "tt1449283",
+            "reason": "Поиски хвоста и забавная путаница дадут загадку после «Зверополиса», а короткие песенки — повод подпевать после «Моаны».",
+            "caveat": "Рисованный и уютный, а не стремительный; выдуманный Бука может слегка насторожить.",
+            "likelySeen": false,
+            "own": true
+          },
+          {
+            "id": "tt0317219",
+            "reason": "Как в «Зверополисе», за шутками и ярким миром здесь история о дружбе и о том, почему первое впечатление бывает неверным.",
+            "caveat": "В середине темп спокойнее; на гонках есть аварии.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt12801262",
+            "reason": "Дружба непохожих героев напоминает «Зверополис», а летний городок и детские проделки поддержат желание посмеяться вместе.",
+            "caveat": "Есть задиристый хулиган и опасные моменты во время гонки.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt2452042",
+            "reason": "На ваше «поржать» — фантазии Снупи и школьные неловкости, а доброта и поддержка друзей перекликаются с любимым «Зверополисом».",
+            "caveat": "Детектива и песен почти нет; в фантазиях Снупи есть мультяшные воздушные бои.",
+            "likelySeen": false,
+            "own": true
+          }
+        ],
+        "understood": "Тебе нужен смешной и добрый мультфильм для детей до 7 лет: чтобы взрослым тоже было интересно, с песнями или загадкой, без жути.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 14370,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 6374,
+          "input_tokens_details": {
+            "cache_write_tokens": 6371,
+            "cached_tokens": 0
+          },
+          "output_tokens": 698,
+          "output_tokens_details": {
+            "reasoning_tokens": 212
+          },
+          "total_tokens": 7072
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.019728
+    }
+  ]
+}

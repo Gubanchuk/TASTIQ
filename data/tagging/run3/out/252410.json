@@ -1,0 +1,7 @@
+{"appid": 252410, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p2", "q": "is a 2D platform game that revolves around mining for resources and ores"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "to investigate the mines underneath the old Western town"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "The player collects ores and resources which can be brought back to the surface"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "When the player progresses in the game, new abilities are unlocked"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "a small Western-Steampunk mining town called Tumbleton"}]}
+]}

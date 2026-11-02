@@ -1,0 +1,8 @@
+{"appid": 644830, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "Players can utilize a variety of melee weapons to defeat enemies"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p1", "q": "whose limbs can be targeted and removed individually"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "set in a dystopian future where humans have exhausted the world's resources"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "bringing mankind to the brink of extinction"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "they can collect and equip the weapons, armor enhancements or tech left by them"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "allows players to customize the appearances and gender of their player avatar"}]}
+]}

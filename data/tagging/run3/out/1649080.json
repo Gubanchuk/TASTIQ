@@ -1,0 +1,6 @@
+{"appid": 1649080, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "is a business simulation game"}, {"id": "p3", "q": "Financial management remains an important gameplay pillar"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "the player must build various educational rooms"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p3", "q": "The game features a sandbox mode where the players can build their school freely"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p2", "q": "The pupils fall into different archetypes, and their personalities are procedurally generated"}]}
+]}

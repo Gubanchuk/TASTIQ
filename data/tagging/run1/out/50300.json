@@ -1,0 +1,141 @@
+{
+ "appid": 50300,
+ "features": [
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236875057",
+     "q": "A Shooter That Cares More About Its Story Than Its Shooting"
+    },
+    {
+     "id": "r237612180",
+     "q": "Story is fantastic"
+    },
+    {
+     "id": "r236644182",
+     "q": "A tragic and deeply haunting storyline"
+    }
+   ]
+  },
+  {
+   "f": "story.choices",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "unimaginable choices affecting human life must be made"
+    }
+   ]
+  },
+  {
+   "f": "ending.strong",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238117952",
+     "q": "The plot twist in the end made it all so epic"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236644182",
+     "q": "genuinely heavy, bleak, and suffocating war atmosphere"
+    }
+   ]
+  },
+  {
+   "f": "tone.gritty",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236644182",
+     "q": "exposing the harsh realities of war"
+    }
+   ]
+  },
+  {
+   "f": "tone.melancholic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236644182",
+     "q": "A tragic and deeply haunting storyline"
+    }
+   ]
+  },
+  {
+   "f": "world.postapoc",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "set in a ruined Dubai"
+    }
+   ]
+  },
+  {
+   "f": "world.modern",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "A Third-Person modern military Shooter"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "A Third-Person modern military Shooter"
+    },
+    {
+     "id": "r236875057",
+     "q": "sniping enemies from a distance is genuinely satisfying"
+    }
+   ]
+  },
+  {
+   "f": "loop.tactics",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "tactical squad-based Delta Force gameplay"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237964388",
+     "q": "the same button for run and cover"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236744102",
+     "q": "The gameplay is same from beginning to the end"
+    },
+    {
+     "id": "r236744102",
+     "q": "it gets mundane over time"
+    }
+   ]
+  }
+ ]
+}

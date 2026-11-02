@@ -1,0 +1,10 @@
+{"appid": 3097560, "features": [
+{"f": "tension.high", "r": 3, "ev": [{"id": "r238081567", "q": "tense games at the table"}, {"id": "r236396193", "q": "surprisingly tense once everyone starts trying to read each other"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "r237021452", "q": "fantastic game to play with friends"}, {"id": "r237962206", "q": "With friends its very fun and relaxing"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "d", "q": "where lying and bluffing are key to victory"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "d", "q": "set in a sketchy bar where the games are as dangerous as the patrons"}]},
+{"f": "loop.cards", "r": 2, "ev": [{"id": "a", "q": "Players take turns playing a card face down and declaring its value"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r237588762", "q": "Every round creates hilarious, unpredictable moments"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r237962206", "q": "can get pretty boring after playing for too long"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "r237439329", "q": "can't even update it more than once every like 10 months"}]}
+]}

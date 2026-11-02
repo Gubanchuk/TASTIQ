@@ -1,0 +1,7 @@
+{"appid": 24780, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "players must manage its finances, environment, and quality of life for its residents"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "Players can zone different areas of land as commercial, industrial, or residential development"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p6", "q": "God mode allows players to design or terraform a selected tract of land"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p4", "q": "Neighbor cities play a larger role than in the previous versions of the game"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p2", "q": "criticized for its difficulty and its demands on computer performance"}]}
+]}

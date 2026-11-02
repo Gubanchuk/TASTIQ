@@ -1,0 +1,9 @@
+{"id": "tt14833612", "features": [
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is an American adult animated dark fantasy action television series"}]},
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p2", "q": "prevent the apocalyptic rise of a god-like Vampire Messiah"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p2", "q": "Set in 1792 during the French Revolution"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "adult animated dark fantasy action television series"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p2", "q": "prevent the apocalyptic rise of a god-like Vampire Messiah"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "adult animated dark fantasy action television series"}]},
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "with animation services provided by DR Movie"}]}
+]}

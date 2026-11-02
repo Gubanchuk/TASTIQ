@@ -1,0 +1,10 @@
+{"appid": 690640, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p1", "q": "It is a 2.5D platformer with a focus on physics puzzles"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "with a focus on physics puzzles"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "The player character in the game is, story-wise, three characters in one"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p7", "q": "Coming back to the traditional style of co-op gameplay"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p7", "q": "one of the most gorgeous looking 2.5D games of 2019"}, {"id": "p8", "q": "Outrageously pretty and newly refined"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "medieval fantasy location"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p4", "q": "optional abilities that the player can purchase using tokens collected"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p7", "q": "a lack of difficulty stand in the way"}]}
+]}

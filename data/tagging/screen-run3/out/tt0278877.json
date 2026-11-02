@@ -1,0 +1,8 @@
+{"id": "tt0278877", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated science fiction comedy television series"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated science fiction comedy television series"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "is an American adult animated science fiction comedy television series"}]},
+{"f": "humor.satire", "r": 3, "ev": [{"id": "p1", "q": "The show was a satirical parody of both the original Sealab series"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "p2", "q": "received positive reviews from critics for its surreal humor"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "with the final episode airing on April 24, 2005"}]}
+]}

@@ -1,0 +1,15 @@
+{"appid": 704450, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p9", "q": "did not care for the turn-based combat system"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "set in the fantasy world of the Forgotten Realms campaign setting"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p4", "q": "The game provides a set of ready-made characters, or the player may create one from scratch"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p5", "q": "such as the Henchman's or Aribeth's tales"}]},
+{"f": "length.long", "r": 3, "ev": [{"id": "p3", "q": "It comprises approximately sixty hours of gameplay"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p7", "q": "A robust multiplayer component separates Neverwinter Nights from previous Dungeons & Dragons games"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p7", "q": "combat arenas (player versus player modules)"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "making them improve more rapidly and continue to make the game easier as the player progresses"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "then choose skills and feats that would work well with that class in the game"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p10", "q": "GamePro noted the game's graphics as being"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p10", "q": "praised its voice acting and music"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p8", "q": "praised it for its campaign, its Aurora toolset, and its graphics"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p7", "q": "whole servers dedicated to sexually oriented roleplay"}]}
+]}

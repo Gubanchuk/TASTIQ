@@ -1,0 +1,11 @@
+{"appid": 999220, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2020 survival horror video game"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p2", "q": "Fear overwhelms Tasi when she walks completely in the dark"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "must wander through desert caves and ancient tombs"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "Players also need to solve various puzzles to progress in the game"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p2", "q": "Solving puzzles, hiding from monsters, and managing light sources can control her fear"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "lurk in the game's oppressive darkness"}]},
+{"f": "content.gore", "r": 1, "ev": [{"id": "p2", "q": "Grotesque images also pop up on the screen"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "The game is set in March 1937"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p3", "q": "an alien device that allows her to travel to an alien world"}]}
+]}

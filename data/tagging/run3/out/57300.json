@@ -1,0 +1,13 @@
+{"appid": 57300, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 survival horror adventure game"}]},
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p5", "q": "he must either avoid being seen, run away or hide"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "while avoiding various hazards and solving puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "must explore the dark and foreboding Castle Brennenburg"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p9", "q": "to create a constant sense of dread"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p9", "q": "Critics unanimously lauded Amnesia for its oppressive, terrifying atmosphere"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p12", "q": "the engaging backstory revealed through notes and flashbacks"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "The sound design was a standout feature"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p13", "q": "detailed environments and moody lighting"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "p12", "q": "The narrative's resolution was a point of criticism"}, {"id": "p12", "q": "the climax feels vague or unsatisfying"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p6", "q": "in which several gameplay mechanics are altered to create a more challenging experience"}]}
+]}

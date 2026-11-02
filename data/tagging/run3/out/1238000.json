@@ -1,0 +1,17 @@
+{"appid": 1238000, "features": [
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p7", "q": "finishing loyalty missions for Ryder's squadmates"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p4", "q": "Both Ryders' appearances and first names can be determined by the player"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p6", "q": "the player can interact with characters in Mass Effect: Andromeda using a radial command menu"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "placed an emphasis on exploration"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p8", "q": "The game's primary planets have open world environments"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p8", "q": "While driving the Nomad, the player has the ability to scan the planet's terrain"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "the player instead has free rein to assign any skills they want and build towards a specialty"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p11", "q": "he enjoyed the combat shooting mechanics"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p13", "q": "praised Mass Effect: Andromeda for its larger-scale visuals"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p13", "q": "the game's atmosphere was enhanced by its score"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "The game is set within the Andromeda Galaxy during the 29th century"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p1", "q": "BioWare incorporated a lighter tone than previous installments in the series"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p12", "q": "it took too long to establish an easily identifiable conflict"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p13", "q": "there were too many repetitive, inconsequential quests"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p1", "q": "The game is the largest in the series"}]}
+]}

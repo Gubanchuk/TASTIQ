@@ -1,0 +1,126 @@
+[
+  {
+    "name": "game-result-desktop",
+    "broken": 0,
+    "height": 1827,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "game-result-mobile",
+    "broken": 0,
+    "height": 2495,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "game-question-desktop",
+    "broken": 0,
+    "height": 900,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "game-question-mobile",
+    "broken": 0,
+    "height": 1022,
+    "overflow": false,
+    "width": 390,
+    "captureValid": false,
+    "captureFile": "invalid-camera-game-question-mobile-390.png",
+    "note": "DOM metrics were valid; full image was camera-distorted and excluded."
+  },
+  {
+    "name": "film-result-desktop",
+    "broken": 0,
+    "height": 2737,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "film-result-mobile",
+    "broken": 0,
+    "height": 3486,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "film-question-desktop",
+    "broken": 0,
+    "height": 900,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "film-question-mobile",
+    "broken": 0,
+    "height": 844,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "library-desktop",
+    "broken": 0,
+    "height": 981,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "library-mobile",
+    "broken": 0,
+    "height": 1185,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "landing-desktop",
+    "broken": 0,
+    "height": 2031,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "landing-mobile",
+    "broken": 0,
+    "height": 2781,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "error-desktop",
+    "broken": 0,
+    "height": 900,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "error-mobile",
+    "broken": 0,
+    "height": 1140,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "pending-desktop",
+    "broken": 0,
+    "height": 900,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "name": "pending-mobile",
+    "broken": 0,
+    "height": 909,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "game-question-mobile-319",
+    "width": 319,
+    "height": 1081,
+    "overflow": false,
+    "broken": 0,
+    "captureValid": true,
+    "captureFile": "final-game-question-mobile-319.png"
+  }
+]

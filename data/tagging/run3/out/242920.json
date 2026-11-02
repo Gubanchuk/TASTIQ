@@ -1,0 +1,12 @@
+{
+  "appid": 242920,
+  "features": [
+    {"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "is a city-building video game"}]},
+    {"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "careful resource management and survival as an isolated and growing society"}]},
+    {"f": "loop.survival", "r": 3, "ev": [{"id": "p3", "q": "Hazards in the game come in the form of harsh weather conditions, fires, depression, starvation"}]},
+    {"f": "difficulty.hard", "r": 2, "ev": [{"id": "p0", "q": "praising graphics and difficulty early in the game"}]},
+    {"f": "tone.gritty", "r": 1, "ev": [{"id": "p3", "q": "Hazards in the game come in the form of harsh weather conditions"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "The player must balance the use of resources against the town's growth"}]},
+    {"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p8", "q": "no proper end game goal to keep players engaged"}]}
+  ]
+}

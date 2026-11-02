@@ -1,0 +1,7 @@
+{"appid": 1163550, "features": [
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "The game follows two distinct plotlines"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "The story begins with Tsubasa Oozora training with his team"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "allowing players to create their character and level up"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "create their character and level up in a fashion similar to the FIFA series' Player Career mode"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p1", "q": "includes offline and online multiplayer modes"}]}
+]}

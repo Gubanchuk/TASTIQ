@@ -1,0 +1,166 @@
+[
+  {
+    "file": "final-error-desktop.png",
+    "width": 1440,
+    "height": 900,
+    "sha256": "686ea4df0711b098a5a65e92fd7cf9363522b8fe211a3df6add5e1e21187bdd6",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-error-mobile.png",
+    "width": 390,
+    "height": 1140,
+    "sha256": "2acb6872fcb68357b6580ad03d913a15885845caca036c565ff7d0d2a728b517",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-film-question-desktop.png",
+    "width": 1440,
+    "height": 900,
+    "sha256": "05554b4ee3bb6e28e61d7a896c3fa8ed32b2751ccef4934c2d6ad1be04efbe72",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-film-question-mobile.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "e1cad5dffc7b128f443debf5d98c9fd8b44defbbd398f28416834329a0474160",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-film-result-desktop.png",
+    "width": 1440,
+    "height": 2737,
+    "sha256": "4f5b13ed6bc81722cf8da49468b6dcfcce20754e2bbe2671cb2c06aee4f5a9d0",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-film-result-mobile.png",
+    "width": 390,
+    "height": 3486,
+    "sha256": "30f7edfe3febea3aa19ce5f6082395d76b7a3c777684e353db9cf7da2df23c3f",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-game-question-desktop.png",
+    "width": 1440,
+    "height": 900,
+    "sha256": "49126eebb171002fc48aacaf0389b8d8a2cebdb784f1e3b239cd0f1e16ffb5b1",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-game-question-mobile-319.png",
+    "width": 319,
+    "height": 1081,
+    "sha256": "01b32c1fa4609a24246a66016286d8e97e8a2d0f48e459de1288af3f4270a469",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-game-result-desktop.png",
+    "width": 1440,
+    "height": 1827,
+    "sha256": "8e4b19015875df43aa1bb06062a7d1a5d299a7e169e97c74468a971c2bf1f489",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-game-result-mobile.png",
+    "width": 390,
+    "height": 2495,
+    "sha256": "81a97a563a55d19be942648c1e126bf455956f934ed7be7c64ed405b7c77976a",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-landing-desktop.png",
+    "width": 1440,
+    "height": 2031,
+    "sha256": "4166e1bf7be8d1f19c579d9fc5d8af33221511db37bf7d4bcdcc34ad7db33ed0",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-landing-mobile.png",
+    "width": 390,
+    "height": 2781,
+    "sha256": "5954ce15990142e73ec408aff082468cd9a89de41b58b2a03315734917b0bcd2",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-library-desktop.png",
+    "width": 1440,
+    "height": 981,
+    "sha256": "3deb70e0f4bd5233b7b976ef2ea5ec4762b769e5c2e027c0e25ac97df04bb5f0",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-library-mobile.png",
+    "width": 390,
+    "height": 1185,
+    "sha256": "52e854263505168b5dde45466580b98a17b994ad7ba7ae8cd70c86740aee71c0",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-pending-desktop.png",
+    "width": 1440,
+    "height": 900,
+    "sha256": "e4d38fd90277c4aff7b30a3a603849630408ef267bd659da902e4bc51a4441f1",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-pending-mobile.png",
+    "width": 390,
+    "height": 909,
+    "sha256": "9b9d5966c8d1123219a3d8ac06c417bfe157c1f18d0243b01680c4309997f60e",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "game-question-mobile-native.png",
+    "width": 380,
+    "height": 822,
+    "sha256": "5867e34886e80e5cdd76114ef37abcc551540e4a062436102618c9ee4ae291a4",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "matched-library-319.png",
+    "width": 319,
+    "height": 1157,
+    "sha256": "5ce6f4d315b8f97df2c0b9925952f21c3ee1266d50395c29ab8a8b3b25b54e1e",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "matched-landing-319.png",
+    "width": 319,
+    "height": 3075,
+    "sha256": "677a38ffc8dfbb8eeec832241e43d7e37d24be395ee2199da302984949a285b2",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "production-library-native.png",
+    "width": 1234,
+    "height": 712,
+    "sha256": "742a275fb237c90a7d699a204113d4b5c3108a6888cb3bb1f996ecb9d9ab8b42",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-reviewfix-film-context-open-mobile.png",
+    "width": 390,
+    "height": 3728,
+    "sha256": "21aa3818b63f3cd63f81a68fb78559052e3c0bf8700eebc48b85f93618d3f1f6",
+    "scope": "Two material visual findings: explicit mobile context disclosure and search icon inset.",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-reviewfix-film-result-desktop.png",
+    "width": 1440,
+    "height": 2737,
+    "sha256": "0427656ca04eb32399c2e315f34e8bf61942f7b23773fbc38dd327eaf323d956",
+    "scope": "Two material visual findings: explicit mobile context disclosure and search icon inset.",
+    "encoding": "JPEG"
+  },
+  {
+    "file": "final-reviewfix-film-result-mobile.png",
+    "width": 390,
+    "height": 3497,
+    "sha256": "280b119b549d2b8d4b22bc6a97efb2aba9d3079b08b17e512163dc3e5a15933a",
+    "scope": "Two material visual findings: explicit mobile context disclosure and search icon inset.",
+    "encoding": "JPEG"
+  }
+]

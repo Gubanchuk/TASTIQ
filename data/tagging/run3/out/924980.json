@@ -1,0 +1,12 @@
+{"appid": 924980, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p4", "q": "The party fights using light and heavy melee attacks when within range"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p0", "q": "making use of character classes"}, {"id": "p5", "q": "a post-game storyline with its own class"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p3", "q": "the other two functioning as companions"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p7", "q": "joyful moments of whimsy and weirdness"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "Fighting enemies is rewarded with experience points, which raise a character's health"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p5", "q": "Also found are Item Seeds, which can be planted in special pots in towns"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "p9", "q": "Wallace found the experience enjoyable despite needing to grind for levels"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p9", "q": "found exploring the map dull due to a lack of interesting finds"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p8", "q": "\"shiny, colorful picture book aesthetic\""}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "praise going to its redesigned combat and soundtrack"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 650700, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p4", "q": "is an exploration-based adventure game with no dialogue, combat, or plot"}]},
+{"f": "story.minimal", "r": 3, "ev": [{"id": "p4", "q": "with no dialogue, combat, or plot"}]},
+{"f": "tone.whimsical", "r": 3, "ev": [{"id": "p0", "q": "is a 2004 surrealist adventure game"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p7", "q": "the game's pixel-art style influenced a movement of indie horror games"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p7", "q": "received positive critical reception for its unique, surrealist visual style"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p7", "q": "He also praised the game's music and sound design"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p9", "q": "unusual visual style and oppressive tone"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 394510, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Helldivers is a 2015 top-down shooter video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p9", "q": "fantastic cooperative action"}, {"id": "p9", "q": "Helldivers is one of the best co-op action experiences you can have"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "the player must fight or sneak through enemy-controlled territory"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p2", "q": "the player needs to coordinate their actions during chaotic combat"}, {"id": "p5", "q": "resulting in continuous waves of enemy reinforcements"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p8", "q": "isn't easy, but this throwback to classic top down shooters is still a good time"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "players can choose their loadouts (sets of weapons, equipment, and gear)"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p9", "q": "missions and story are lacking"}]}
+]}

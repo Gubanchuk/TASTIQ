@@ -1,0 +1,10 @@
+{"appid": 395170, "features": [
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "2D indie psychological horror game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "steeped in perpetual darkness"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p8", "q": "focuses on creating a tense atmosphere"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p5", "q": "Puzzles often consist of collecting a certain object from the environment"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p9", "q": "a bit repetitive"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p9", "q": "relied on tension, themes and its simple art style"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "as well as the music, enhanced the dread"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p8", "q": "their criticism focused on clunky inventory controls"}]}
+]}

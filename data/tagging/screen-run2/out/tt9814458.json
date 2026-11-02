@@ -1,0 +1,10 @@
+{"id": "tt9814458", "features": [
+{"f": "world.music", "r": 3, "ev": [{"id": "p0", "q": "is an Indian musical romantic drama television series"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p0", "q": "musical romantic drama television series"}]},
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "p1", "q": "soundtrack album received positive reviews from critics"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "praising the performances of the cast"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p0", "q": "Exploring the debate of music being a discipline versus a means of liberation"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p6", "q": "Padding up that wafer-thin story with inanities and songs"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p6", "q": "the writing suffers from attention deficit disorder"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p5", "q": "10 episodes, each over 40 minutes"}]}
+]}

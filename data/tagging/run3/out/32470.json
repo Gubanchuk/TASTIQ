@@ -1,0 +1,14 @@
+{
+  "appid": 32470,
+  "features": [
+    {"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "is a 2006 real-time strategy video game"}]},
+    {"f": "loop.management", "r": 2, "ev": [{"id": "p3", "q": "Grand strategy, production, and resource management are facilitated"}]},
+    {"f": "loop.building", "r": 2, "ev": [{"id": "p6", "q": "The player can build more buildings and defenses"}]},
+    {"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "space battles are fought with starfighter squadrons and large spacecraft"}]},
+    {"f": "freedom.linear", "r": 2, "ev": [{"id": "p5", "q": "The storyline campaign follows a semi-open linear path"}]},
+    {"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p3", "q": "Galactic Conquest is the sandbox campaign"}]},
+    {"f": "pace.repetitive", "r": 1, "ev": [{"id": "p8", "q": "the repetitive nature of the fights"}]},
+    {"f": "progression.grind", "r": 1, "ev": [{"id": "p9", "q": "be prepared to grind out your victories"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p8", "q": "Star Wars: Empire at War definitely scores big in terms of style"}]}
+  ]
+}

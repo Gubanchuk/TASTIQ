@@ -1,0 +1,8 @@
+{"appid": 352720, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "The Universim is a planet management game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "Firstly an Epicenter must be built and other buildings will be developed around it"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p2", "q": "have the ability to make their own decisions and do things their own way"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p0", "q": "it has the player take the role of God to guide the development of civilization"}]},
+{"f": "world.historical", "r": 1, "ev": [{"id": "p1", "q": "Initially the game starts in the Stone Age"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p2", "q": "Meteor crashes and forest fires can wreak havoc upon civilizations"}]}
+]}

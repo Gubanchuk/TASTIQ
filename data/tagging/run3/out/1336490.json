@@ -1,0 +1,8 @@
+{"appid": 1336490, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p2", "q": "building villages around the Smoldering City before the storm grows stronger again"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p2", "q": "Players must gather resources from the forest and craft them into goods"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p3", "q": "Villagers may abandon the village due to discontent or die by hunger"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "The game is set in a fantasy world"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p0", "q": "has a short playtime with goals players must achieve"}]},
+{"f": "tone.cozy", "r": 1, "ev": [{"id": "p7", "q": "for its coziness and praised the depth, strategic options, and replayability"}]}
+]}

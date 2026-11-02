@@ -1,0 +1,8 @@
+{"id": "tt22797582", "features": [
+{"f": "format.documentary", "r": 3, "ev": [{"id": "s", "q": "in this true-crime docuseries"}]},
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "The series covers the March 2015 kidnapping of Denise Huskins"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is a true crime television series"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "a detective connects another home invasion in Dublin, California"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "Equal parts infuriating and suspenseful"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p2", "q": "making a horrifying crime even worse"}]}
+]}

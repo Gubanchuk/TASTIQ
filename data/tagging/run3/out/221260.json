@@ -1,0 +1,10 @@
+{"appid": 221260, "features": [
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p1", "q": "Little Inferno is classified as a sandbox game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "Little Inferno is a sandbox-oriented puzzle video game"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p5", "q": "the player is presented with a list of the game's 99 possible Combos"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p6", "q": "the story is told through letters from various characters"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p1", "q": "has no states of failure"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p7", "q": "reporting the city's bleak weather throughout the game"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p6", "q": "mysterious letters from an apparition resembling her"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "the repetitive nature of the mechanics"}]}
+]}

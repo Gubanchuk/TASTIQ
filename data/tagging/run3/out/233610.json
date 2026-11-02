@@ -1,0 +1,6 @@
+{"appid": 233610, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "is a 2018 science fiction racing game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "through a neon, Cyberpunk like world"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p1", "q": "is an atmospheric racing platformer"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "Distance has a multiplayer mode where players can race against other players"}]}
+]}

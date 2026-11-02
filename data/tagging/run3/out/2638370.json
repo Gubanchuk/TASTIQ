@@ -1,0 +1,13 @@
+{"appid": 2638370, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p3", "q": "is a 2D survival horror adventure game"}]},
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p1", "q": "The game emphasizes stealth, exploration, and puzzle-solving"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "solves point-and-click style puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The game emphasizes stealth, exploration, and puzzle-solving"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "Detection results in a jumpscare and respawn at the last checkpoint"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p0", "q": "featuring retro-inspired 16-bit pixel art"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "The audio design was also praised"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "critics praising its story and stealth mechanics"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "with multiple endings influenced by player choices"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "across a linear five-day and five-night campaign"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "while noting minor bugs and a relatively short campaign"}]}
+]}

@@ -1,0 +1,479 @@
+{
+  "state": {
+    "version": 1,
+    "id": "overnight-20261101-02-unknown",
+    "revision": 4,
+    "mode": "guided",
+    "phase": "talk",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "overnight-20261101-02-unknown:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [],
+        "text": "",
+        "kind": "unknown",
+        "answer": "Пока не знаю"
+      },
+      {
+        "id": "overnight-20261101-02-unknown:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-02-unknown:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      },
+      {
+        "id": "overnight-20261101-02-unknown:4",
+        "question": {
+          "id": "desired_experience",
+          "title": "Какого ощущения тебе сейчас хочется от игры?",
+          "why": "Начнём не с жанра, а с того, что могло бы тебя увлечь сегодня.",
+          "options": [
+            {
+              "id": "unwind",
+              "label": "Расслабиться и выдохнуть"
+            },
+            {
+              "id": "story",
+              "label": "Увлечься историей"
+            },
+            {
+              "id": "explore",
+              "label": "Открывать места и секреты"
+            },
+            {
+              "id": "challenge",
+              "label": "Преодолевать сложные испытания"
+            },
+            {
+              "id": "plan",
+              "label": "Обдумывать решения и строить планы"
+            },
+            {
+              "id": "create",
+              "label": "Создавать что-то своё"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [],
+        "text": "Хочется спокойно исследовать и находить новое. Бои не обязательны; если они есть, то пусть будут редкими. Не хочется сегодня постоянного напряжения.",
+        "kind": "answer",
+        "answer": "Хочется спокойно исследовать и находить новое. Бои не обязательны; если они есть, то пусть будут редкими. Не хочется сегодня постоянного напряжения."
+      }
+    ],
+    "facts": [
+      {
+        "key": "platform",
+        "text": "Играешь на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company.solo",
+        "text": "Сегодня будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "exploration",
+        "text": "Хочется исследовать и находить новое.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Хочется спокойно исследовать и находить новое.",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "calm.exploration",
+        "text": "Хочется спокойного исследования.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Хочется спокойно исследовать и находить новое.",
+        "feature": "tone.serene",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "combat.rare",
+        "text": "Бои необязательны; если они есть, хочется редких столкновений.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Бои не обязательны; если они есть, то пусть будут редкими.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "tension.avoid",
+        "text": "Сегодня не хочется постоянного напряжения.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Не хочется сегодня постоянного напряжения.",
+        "feature": "tension.high",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "question": {
+      "id": "exploration.discovery",
+      "title": "Что тебе интереснее находить во время исследования?",
+      "why": "Это поможет понять, чем игра должна увлекать тебя без частых боёв.",
+      "options": [
+        {
+          "id": "places",
+          "label": "Необычные места и красивые виды"
+        },
+        {
+          "id": "secrets",
+          "label": "Тайники и скрытые маршруты"
+        },
+        {
+          "id": "stories",
+          "label": "Следы прошлого и истории мира"
+        },
+        {
+          "id": "puzzles",
+          "label": "Загадки, которые постепенно разгадываешь"
+        },
+        {
+          "id": "discoveries",
+          "label": "Новых существ и необычные явления"
+        }
+      ],
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ]
+    },
+    "summary": "Сегодня ты хочешь играть один на ПК: спокойно исследовать мир и находить новое, без постоянного напряжения. Бои необязательны, а если есть — пусть будут редкими.",
+    "uncertainties": [
+      "Пока неясно, какие открытия больше привлекают тебя в исследовании."
+    ],
+    "retractions": [],
+    "sessionTime": null,
+    "factRemovalUndo": null,
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь играть один на ПК: спокойно исследовать мир и находить новое, без постоянного напряжения. Бои необязательны, а если есть — пусть будут редкими.",
+    "facts": [
+      {
+        "key": "platform",
+        "text": "Играешь на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "company.solo",
+        "text": "Сегодня будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "exploration",
+        "text": "Хочется исследовать и находить новое.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Хочется спокойно исследовать и находить новое.",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "calm.exploration",
+        "text": "Хочется спокойного исследования.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Хочется спокойно исследовать и находить новое.",
+        "feature": "tone.serene",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "combat.rare",
+        "text": "Бои необязательны; если они есть, хочется редких столкновений.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Бои не обязательны; если они есть, то пусть будут редкими.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "tension.avoid",
+        "text": "Сегодня не хочется постоянного напряжения.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-unknown:4",
+        "quote": "Не хочется сегодня постоянного напряжения.",
+        "feature": "tension.high",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "uncertainties": [
+      "Пока неясно, какие открытия больше привлекают тебя в исследовании."
+    ],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "sessionTime": null,
+    "canUndoFactRemoval": false,
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "overnight-20261101-02-unknown:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "Пока не знаю"
+      },
+      {
+        "id": "overnight-20261101-02-unknown:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-02-unknown:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      },
+      {
+        "id": "overnight-20261101-02-unknown:4",
+        "question": "Какого ощущения тебе сейчас хочется от игры?",
+        "answer": "Хочется спокойно исследовать и находить новое. Бои не обязательны; если они есть, то пусть будут редкими. Не хочется сегодня постоянного напряжения."
+      }
+    ],
+    "type": "question",
+    "question": {
+      "id": "exploration.discovery",
+      "title": "Что тебе интереснее находить во время исследования?",
+      "why": "Это поможет понять, чем игра должна увлекать тебя без частых боёв.",
+      "options": [
+        {
+          "id": "places",
+          "label": "Необычные места и красивые виды"
+        },
+        {
+          "id": "secrets",
+          "label": "Тайники и скрытые маршруты"
+        },
+        {
+          "id": "stories",
+          "label": "Следы прошлого и истории мира"
+        },
+        {
+          "id": "puzzles",
+          "label": "Загадки, которые постепенно разгадываешь"
+        },
+        {
+          "id": "discoveries",
+          "label": "Новых существ и необычные явления"
+        }
+      ],
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ]
+    }
+  }
+}

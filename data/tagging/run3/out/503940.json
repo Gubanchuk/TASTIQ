@@ -1,0 +1,6 @@
+{"appid": 503940, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "railroad construction and management simulation game"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "buy various locomotives to serve cities and industries"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "takes place in the United States from 1830 to 1930"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "sandbox mode and challenge mode"}]}
+]}

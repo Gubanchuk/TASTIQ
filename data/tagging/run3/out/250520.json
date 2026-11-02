@@ -1,0 +1,13 @@
+{"appid": 250520, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "It features turn-based combat"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "an item crafting system"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p1", "q": "It is a classless system with multiple levels of customization"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "character customization"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p1", "q": "is a post-apocalyptic role-playing game"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p2", "q": "The game is set in the far future"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "focused on combat and exploration"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "Base ability scores determine a character's core potential"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "can vary dramatically depending on the player's choices"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p2", "q": "where conflicting factions struggle violently to survive in the harsh underground conditions"}]},
+{"f": "loop.survival", "r": 1, "ev": [{"id": "p2", "q": "The scarcest resources in Underrail are food and living space"}]}
+]}

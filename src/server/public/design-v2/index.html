@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#202329"><title>TASTIQ — новые структуры интерфейса</title>
+ <link rel="icon" href="data:,"><link rel="stylesheet" href="/design-v2/style.css?v=5">
+ <script type="module" src="/design-v2/app.js?v=5"></script>
+</head>
+<body>
+ <header class="lab" id="lab">
+  <a class="lab-brand" href="/design-v2/">TASTIQ <span>/ новые макеты</span></a>
+  <nav class="concepts" aria-label="Выбрать структуру"><button data-concept="all" aria-pressed="true">Рядом</button><button data-concept="conversation" aria-pressed="false">1. Разговор</button><button data-concept="showcase" aria-pressed="false">2. Витрина</button><button data-concept="catalogue" aria-pressed="false">3. Сравнение</button></nav>
+  <nav class="screens" aria-label="Экран сравнения"><button data-screen="result" aria-pressed="false">Выдача</button><button data-screen="library" aria-pressed="true">Библиотека</button><button data-screen="question" aria-pressed="false">Вопрос</button><button data-screen="landing" aria-pressed="false">Низ лендинга</button></nav>
+ </header>
+ <div class="lab-note" id="lab-note"><span>Макеты: демонстрационные данные, без платного API.</span><span>Верх лендинга — исходный во всех вариантах.</span></div>
+ <div id="app"><p class="loading">Открываю новые макеты…</p></div>
+ <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

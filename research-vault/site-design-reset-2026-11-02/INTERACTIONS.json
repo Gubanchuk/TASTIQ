@@ -1,0 +1,32 @@
+{
+  "catalogue": {
+    "selected_detail": "Fallout 4",
+    "search": "Марсианин — одна строка",
+    "move": "tonight",
+    "delete": "empty state",
+    "undo": "Марсианин, tonight restored",
+    "sort": "title",
+    "film_filter": [
+      "Интерстеллар",
+      "Марсианин",
+      "Отель «Гранд Будапешт»"
+    ]
+  },
+  "conversation": {
+    "move": "Ghost Recon moved want → tonight",
+    "mobile_lane": "tonight active, Far Cry + Ghost Recon"
+  },
+  "showcase": {
+    "type_filter": "series",
+    "expand": "first poster",
+    "move": "known",
+    "status_filter": [
+      "Разделение"
+    ]
+  },
+  "question": {
+    "all_three": "initial Next disabled; answer → enabled → result",
+    "progress_buttons": 0
+  },
+  "isolation": "Static content GET only. Prototype records in memory; localStorage only optional tastiq.design-choice.v2."
+}

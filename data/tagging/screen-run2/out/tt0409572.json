@@ -1,0 +1,9 @@
+{"id": "tt0409572", "features": [
+{"f": "world.western", "r": 3, "ev": [{"id": "p0", "q": "is a 2005 American Western television miniseries"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "the period of expansion of the United States in the American frontier from 1825 to 1890"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p2", "q": "The show has a large ensemble cast, with about 250 speaking parts"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p1", "q": "through the momentous events of American expansion"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p1", "q": "The plot follows the story of two families, one white American and one Native American"}]},
+{"f": "tone.inspiring", "r": 2, "ev": [{"id": "s", "q": "captures the hopes and perseverance of both the explorers who risked everything"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p0", "q": "with six two-hour episodes"}]}
+]}

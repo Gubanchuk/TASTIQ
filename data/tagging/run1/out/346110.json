@@ -1,0 +1,11 @@
+{"appid": 346110, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "you must learn to survive"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "a", "q": "craft items, grow crops, research technologies, and build shelters"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "r236428110", "q": "thousands of hours building, taming, exploring, fighting"}]},
+{"f": "length.endless", "r": 3, "ev": [{"id": "r236428110", "q": "I spent thousands of hours building"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "team up with or prey on hundreds of other players"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "a", "q": "team up with or prey on hundreds of other players"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "a", "q": "stranded naked, freezing and starving on the shores of a mysterious island"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "a", "q": "kill or tame & breed the leviathan dinosaurs"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "a", "q": "over 100+ creatures can be tamed using a challenging capture-&-affinity process"}]}
+]}

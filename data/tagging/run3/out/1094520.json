@@ -1,0 +1,9 @@
+{"appid": 1094520, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "a fantasy blend of pre-modern Turkic, Chinese, Mongolian, and Arabic cultures"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p0", "q": "battle, recruit troops, manage a fief, and explore dungeons"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "The player may choose one among eight classes or create their own"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p0", "q": "The player controls a customized character to battle"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "The game features both story-driven campaign and sandbox mode"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p3", "q": "the isometric strategy-oriented gameplay of League of Legends"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p0", "q": "manage a fief, and explore dungeons"}]}
+]}

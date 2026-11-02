@@ -1,0 +1,12 @@
+{
+  "appid": 310950,
+  "features": [
+    {"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "Street Fighter V is a 2016 fighting game"}]},
+    {"f": "combat.fast", "r": 2, "ev": [{"id": "p2", "q": "perform super combos known as Critical Arts"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "adds four new techniques: V-Skills, V-Reversals, V-Triggers, and V-Shifts"}]},
+    {"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "two fighters use a variety of attacks and special abilities to knock out their opponent"}]},
+    {"f": "progression.collection", "r": 2, "ev": [{"id": "p0", "q": "The game featured 16 characters at launch"}]},
+    {"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p1", "q": "criticizing its lack of content and characters"}]},
+    {"f": "story.minimal", "r": 1, "ev": [{"id": "p10", "q": "The Story Mode is barely a narrative"}]}
+  ]
+}

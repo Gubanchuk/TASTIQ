@@ -1,0 +1,12 @@
+{"appid": 825630, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p3", "q": "The story consists of multiple branches, which lead to different endings"}]},
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p3", "q": "is a visual novel, where the player reads through the story"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p9", "q": "Critics generally liked the story"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "most new characters were good additions and felt fully realized"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p9", "q": "exciting, somber, heart-wrenching, and thought-provoking"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p11", "q": "some considering it too complex"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p4", "q": "accidentally have discovered time travel through the use of a microwave oven and a phone"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p4", "q": "set in Akihabara, Tokyo"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p12", "q": "with Carden calling the visuals \"utterly impressive\""}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p12", "q": "the music, which he said is perfectly matched to each scene's tone"}]}
+]}

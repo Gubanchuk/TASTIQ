@@ -1,0 +1,9 @@
+{"appid": 1928980, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "survive in a gaslamp fantasy world set in the Victorian era"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "As a survival game, players must find food to eat"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "gather resources to craft tools"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "It can be played single-player, or up to six people can play cooperatively"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p2", "q": "Non-player characters can be recruited to assist during fights"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "they enjoyed getting lost in the world and exploring"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p3", "q": "software bugs were probably going to be a problem during early access"}]}
+]}

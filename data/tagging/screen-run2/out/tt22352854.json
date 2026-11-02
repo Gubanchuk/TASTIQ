@@ -1,0 +1,8 @@
+{"id": "tt22352854", "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "Set in 1945, during the occupation of Gyeongseong"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "s", "q": "grim era under colonial rule"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "s", "q": "face a monster born out of human greed"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "historical mystery-horror television series"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p4", "q": "the slow pacing of the previous season"}]},
+{"f": "world.war", "r": 1, "ev": [{"id": "p1", "q": "tested biological and chemical weapons on civilians during World War II"}]}
+]}

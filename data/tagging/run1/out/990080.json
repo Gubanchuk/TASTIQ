@@ -1,0 +1,16 @@
+{"appid": 990080, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "a", "q": "set in the world first introduced in the Harry Potter books"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "d", "q": "immersive, open-world action RPG"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "r236741323", "q": "Exploring the castle, discovering secret rooms"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "r236855581", "q": "They slowly layered on more items to collect"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "r236230000", "q": "it is a collecting simulator"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "r236123873", "q": "Combat is engaging, well weighted/good feedback and smooth combo's"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "r235737349", "q": "It's beautiful vibrant world will have you hooked"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r235737349", "q": "The music is superb"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r236193767", "q": "there is a good story to back it up"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r236193767", "q": "it starts to feel extremely repetitive near the end"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "r237831860", "q": "padded out by very tedious gameplay"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "a", "q": "upgrade talents and become the wizard you want to be"}]},
+{"f": "world.empty", "r": 2, "ev": [{"id": "r237749203", "q": "Игра слишком пустая"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "r236230000", "q": "in a single-player OFFLINE game"}]}
+]}

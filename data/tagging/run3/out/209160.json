@@ -1,0 +1,8 @@
+{"appid": 209160, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Call of Duty: Ghosts is a 2013 first-person shooter game developed by Infinity Ward"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p6", "q": "features several staple multiplayer game modes, including Team Deathmatch, Kill Confirmed, Search and Destroy"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p7", "q": "Extinction is a 4-player co-op mode"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p5", "q": "This mode can be played either solo or with other players"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "The single-player campaign follows a protracted high-tech war against a dictatorial united South America"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p5", "q": "A squad consists of ten different customizable characters"}]}
+]}

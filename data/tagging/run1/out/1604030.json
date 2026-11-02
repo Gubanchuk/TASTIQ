@@ -1,0 +1,18 @@
+{"appid": 1604030, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "a", "q": "hiding from the scorching sun to survive"}, {"id": "r237082914", "q": "one of the best survival RPGs out there"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "a", "q": "Build a mighty castle worthy of your name"}, {"id": "r236132722", "q": "basebuilding is awesome"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "r236655135", "q": "fighting is challenging"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "Explore a vast world teeming with mythical horrors and danger"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "a", "q": "A Gothic Open-World"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "a", "q": "Fear the light - Rule the night"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "a", "q": "challenge supernatural beings, drinking their blood to steal their power"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "r236655135", "q": "Played the game in co-op with a friend"}, {"id": "a", "q": "Make allies or enemies online or play solo locally"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "r236655135", "q": "skipping completely the PVP part"}]},
+{"f": "companions", "r": 1, "ev": [{"id": "a", "q": "Traverse the world with vampire comrades"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "r236655135", "q": "So freaking gorgeous"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "r236132722", "q": "gradually growing in power"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "r237137307", "q": "Kinda sucks that it's dead now"}, {"id": "r236889727", "q": "they abandoned the bug fixing"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r237146211", "q": "Repetitive and terrible as a solo game"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r236889727", "q": "game is just a slog before you even finish first act"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "r236889727", "q": "only way to get new items is random paper grinding"}]}
+]}

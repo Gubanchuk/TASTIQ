@@ -1,0 +1,103 @@
+{
+ "appid": 760160,
+ "features": [
+  {
+   "f": "social.pvp",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "free-to-play battle royale game"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "dive straight into battle all guns blazing"
+    }
+   ]
+  },
+  {
+   "f": "world.fantasy",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Use your supernatural powers, weapons, and wit"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "rally your friends to join you"
+    }
+   ]
+  },
+  {
+   "f": "pace.fast",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "visceral, fast-paced fights where teamplay and strategy are essential"
+    }
+   ]
+  },
+  {
+   "f": "characters.custom_hero",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Customize your appearance with stylish outfits, timeless hairdos, piercings or tattoos"
+    }
+   ]
+  },
+  {
+   "f": "loop.platforming",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235751743",
+     "q": "cool parkour ruined by dead matchmaking"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235837733",
+     "q": "dark gothic aesthetic make it an absolute gem"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237108587",
+     "q": "they gotta bring it back and maintenance it properly"
+    },
+    {
+     "id": "r236707437",
+     "q": "Sad to see this game is over"
+    },
+    {
+     "id": "r235824420",
+     "q": "серверы были закрыты"
+    }
+   ]
+  }
+ ]
+}

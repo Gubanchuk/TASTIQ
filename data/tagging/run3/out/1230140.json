@@ -1,0 +1,9 @@
+{"appid": 1230140, "features": [
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p0", "q": "is a 2020 visual novel game"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p5", "q": "The reviewer praised it for its engaging, emotionally driven story"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "In the bad ending of the game, Natsuki fails to stop Atri"}]},
+{"f": "ending.bittersweet", "r": 2, "ev": [{"id": "p4", "q": "loses all her memories and emotions and ceases operation two days after"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "awaken a young android girl named Atri who claims to only have 45 days"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p2", "q": "a sudden rise in sea levels floods the majority of the world and ends human civilization"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p5", "q": "its engaging, emotionally driven story"}]}
+]}

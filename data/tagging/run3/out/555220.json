@@ -1,0 +1,8 @@
+{"appid": 555220, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "2D atmospheric horror side-scroller set in 1960s Taiwan under martial law"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "set in 1960s Taiwan under martial law"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p2", "q": "the protagonists unveil mysteries that slowly reveal the dark past of the cursed school"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "The place they once knew has changed in unsettling ways"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p7", "q": "every facet of Detention moves in one harmonious lockstep towards an unavoidable tragedy"}]},
+{"f": "ending.bittersweet", "r": 2, "ev": [{"id": "p6", "q": "Ray hangs herself, and the auditorium fades into its abandoned state"}]}
+]}

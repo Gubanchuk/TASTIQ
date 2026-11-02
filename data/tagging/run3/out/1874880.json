@@ -1,0 +1,11 @@
+{"appid": 1874880, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Arma Reforger is an open-world tactical shooter game"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "Gameplay is set on expansive open world maps"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p1", "q": "Arma Reforger is a realistic tactical shooter"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "The game is set in the late Cold War period"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "Arma Reforger is a realistic tactical shooter"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "Co-op missions (called Combat Ops) can be played solo"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "The Conflict multiplayer game mode pits three of the game's factions against each other"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "featuring photorealistic land and water environments"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "featuring accurate and deadly weapons that are affected by external ballistics and recoil"}]}
+]}

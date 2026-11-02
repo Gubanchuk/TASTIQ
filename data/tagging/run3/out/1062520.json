@@ -1,0 +1,9 @@
+{"appid": 1062520, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p4", "q": "Players build their town by constructing new buildings"}]},
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "p0", "q": "survival life simulation game designed by Queensland-based indie developer"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p3", "q": "The game features survival elements, with most actions depleting energy"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "The objective of Dinkum is to explore and expand a small town"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "a remote island inspired by the Australian outback"}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "p9", "q": "wholesome and good-natured"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p11", "q": "cute and compact"}]}
+]}

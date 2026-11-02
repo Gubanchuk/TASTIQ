@@ -1,0 +1,15 @@
+{
+  "appid": 200710,
+  "features": [
+    {"f": "loop.looting", "r": 3, "ev": [{"id": "p2", "q": "numerous types of monsters to fight for experience and loot"}]},
+    {"f": "progression.builds", "r": 3, "ev": [{"id": "p2", "q": "With the ability to pursue different unique builds"}]},
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "takes place in a fantasy world"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "randomly generated dungeons for the player to explore"}]},
+    {"f": "social.coop", "r": 2, "ev": [{"id": "p4", "q": "an all-new cooperative multiplayer mode has been added"}]},
+    {"f": "social.pvp", "r": 1, "ev": [{"id": "p4", "q": "Optional PVP (player versus player) has been confirmed by Runic"}]},
+    {"f": "social.solo", "r": 1, "ev": [{"id": "p1", "q": "with both single-player and multi-player support"}]},
+    {"f": "length.long", "r": 2, "ev": [{"id": "p6", "q": "the player treks across large geographical areas"}]},
+    {"f": "world.living", "r": 1, "ev": [{"id": "p2", "q": "Other new features include time of day cycles, weather effects"}]},
+    {"f": "tone.dark", "r": 1, "ev": [{"id": "p1", "q": "as he searches for a cure to his illness which has driven him insane"}]}
+  ]
+}

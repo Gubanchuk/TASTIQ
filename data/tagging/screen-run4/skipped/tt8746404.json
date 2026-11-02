@@ -1,0 +1,31 @@
+{
+  "id": "tt8746404",
+  "name": "Marmaduke",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2022,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Marmaduke is a 2022 animated comedy film directed by Mark Dippé, and co-directed by Phil Nibbelink, Youngki Lee, and Matt Whelan, based on the comic strip of the same name by Paul and Brad Anderson. It stars Pete Davidson as Marmaduke, along with J.K. Simmons, Brian Hull, Shelby Young, David Koechner and Julie Nathanson. The film is an international co-production of the United States, Canada, Hong Kong, South Korea, and the United Kingdom."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "It was released by SC Films in international countries and on Netflix in the United States on May 6, 2022. The film was widely panned by critics and audiences, with criticisms aimed towards its animation, screenplay, story, characters, voice acting, visuals and humor."
+    },
+    {
+      "id": "p2",
+      "section": "Critical response",
+      "text": "Aurora Amidon of Paste Magazine criticized the formulaic and predictable plot, but praised the voice acting of Davidson, Simmons, and Koechner. For his role in the film, Pete Davidson was nominated for Worst Actor at the Golden Raspberry Awards."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Marmaduke_(2022_film)"
+}

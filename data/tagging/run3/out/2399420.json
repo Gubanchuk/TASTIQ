@@ -1,0 +1,8 @@
+{"appid": 2399420, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "is a sim racing video game"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "is an officially licensed simulation of the FIA World Endurance Championship"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "the degree of communication via the handling model about how the car is behaving"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p4", "q": "Players can compete in daily races, limited timed special events"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p4", "q": "Race Weekend is Le Mans Ultimates single-player mode"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p6", "q": "criticizing the game's lack of single-player features, such as no career mode feature"}]}
+]}

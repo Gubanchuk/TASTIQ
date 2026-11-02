@@ -1,0 +1,9 @@
+{"appid": 278360, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p2", "q": "is a first-person platforming game that emphasizes exploration and traversal"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "is a first-person platforming game that emphasizes exploration and traversal"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p8", "q": "may find A Story About My Uncle too easy"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p9", "q": "at odds with the difficulty late in-game"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p8", "q": "story itself is a light-hearted, innocent magical romp"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "a mysterious world of floating islands, glowing crystals, and intelligent amphibian-like creatures"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "environments are varied and beautifully done"}]}
+]}

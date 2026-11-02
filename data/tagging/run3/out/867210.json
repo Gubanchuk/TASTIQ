@@ -1,0 +1,8 @@
+{"appid": 867210, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "The strategy part of the game involves kingdom management"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "as well as turn-based combat skirmishes"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "constructing and improving buildings"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "The adventure part is supported by the unique fantasy setting and story"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p1", "q": "combination of 2D pixel art style, 3D environments, and volumetric lighting"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p0", "q": "It allows players to choose from four unique factions"}]}
+]}

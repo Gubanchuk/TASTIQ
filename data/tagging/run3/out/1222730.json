@@ -1,0 +1,9 @@
+{"appid": 1222730, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "a space combat game set in the Star Wars universe"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "Star Wars: Squadrons is a space combat game, played from a first-person perspective"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p8", "q": "praising the combat and flight mechanics"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p4", "q": "Dogfight, which is a team deathmatch mode that supports 10 players"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p0", "q": "The game features both multiplayer game modes and a single-player campaign"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "they can unlock new weapons, shields, upgrades and various cosmetic items"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p2", "q": "they can utilise the movement of power between the ship's functions of weaponry, shields and engines"}]}
+]}

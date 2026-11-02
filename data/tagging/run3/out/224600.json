@@ -1,0 +1,9 @@
+{"appid": 224600, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a massively multiplayer online third-person shooter"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "Defiance took place on a terraformed Earth several years into the future"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p7", "q": "a good foundation for a console MMO"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p7", "q": "yet another big open world filled with weapons to collect and creatures to kill"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p7", "q": "filled with weapons to collect and creatures to kill"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "Characters come from one of four Origins"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p7", "q": "it was of a flavourless variety I could have derived from any number of other third-person"}]}
+]}

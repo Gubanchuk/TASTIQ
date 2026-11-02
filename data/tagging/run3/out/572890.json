@@ -1,0 +1,12 @@
+{"appid": 572890, "features": [
+{"f": "tone.whimsical", "r": 3, "ev": [{"id": "p11", "q": "is an odd game, yes, but it is a fun, relaxing one to boot"}, {"id": "p11", "q": "in its colorful, quirky world"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p10", "q": "It's a simple game with a ton of heart"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p12", "q": "extremely charming and funny throughout"}]},
+{"f": "tension.low", "r": 2, "ev": [{"id": "p11", "q": "it is a fun, relaxing one to boot"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p13", "q": "easy to pick up and play"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p2", "q": "is a puzzle and adventure game"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p8", "q": "a pretty good mix of platforming and puzzle"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "features a local co-op mode with 9 levels"}]},
+{"f": "length.short", "r": 3, "ev": [{"id": "p8", "q": "very short (less than 5 hours of play)"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p13", "q": "could stand to have a little more content"}]}
+]}

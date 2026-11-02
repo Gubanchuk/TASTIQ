@@ -1,0 +1,7 @@
+{"id": "tt0061301", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a superhero animated television series"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "based on the Spider-Man comic book series"}, {"id": "s", "q": "decides to become a crime-fighting, costumed superhero"}]},
+{"f": "characters.coming_of_age", "r": 2, "ev": [{"id": "s", "q": "the insecurities resulting from being a teenager"}]},
+{"f": "world.school", "r": 2, "ev": [{"id": "p2", "q": "Peter Parker, a high school student"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p2", "q": "must deal with family tragedies, personal problems and the insecurity of youth"}]}
+]}

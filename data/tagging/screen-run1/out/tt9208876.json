@@ -1,0 +1,12 @@
+{"id": "tt9208876", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "It is the second television series in the Marvel Cinematic Universe"}]},
+{"f": "characters.friendship", "r": 3, "ev": [{"id": "p5", "q": "part action-packed superhero epic, part awkward buddy-comedy"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p5", "q": "part awkward buddy-comedy"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "critics highlighting the actors' chemistry"}, {"id": "p10", "q": "the sparky rapport between stars Anthony Mackie and Sebastian Stan"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p10", "q": "Packed with blockbuster action and deft character beats"}]},
+{"f": "aesthetic.effects", "r": 2, "ev": [{"id": "p12", "q": "to mount big, muscular action in productions for Disney+"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p10", "q": "mature social commentary"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p12", "q": "often felt rushed and lacked some depth in its analysis of race and power"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p13", "q": "The pacing of the series received some criticism"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "ran for six episodes until April 23"}]}
+]}

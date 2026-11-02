@@ -1,0 +1,103 @@
+{
+ "appid": 851850,
+ "features": [
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237121468",
+     "q": "What it does best is walking you through the main beats of the storyline"
+    },
+    {
+     "id": "r237430941",
+     "q": "Great game to follow the DBZ story with great side quests"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237121468",
+     "q": "combat is fun but basic and repetative"
+    }
+   ]
+  },
+  {
+   "f": "loop.life_sim",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Go fishing to relax after a big battle"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "explore the city, or take off and fly to the farthest horizon"
+    }
+   ]
+  },
+  {
+   "f": "freedom.open_world",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235698268",
+     "q": "cool open world"
+    }
+   ]
+  },
+  {
+   "f": "world.empty",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236351959",
+     "q": "the world feels empty and lifeless"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236936201",
+     "q": "The fighting part of this game is straight up stank"
+    },
+    {
+     "id": "r236936201",
+     "q": "a clunky fighting system"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236079637",
+     "q": "it's like you are playing fetch with your dog"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237526691",
+     "q": "this game is like 75% cutscenes and 25% gameplay"
+    }
+   ]
+  }
+ ]
+}

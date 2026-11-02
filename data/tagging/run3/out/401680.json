@@ -1,0 +1,11 @@
+{"appid": 401680, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "isometric shoot 'em up video game"}]},
+{"f": "content.gore", "r": 3, "ev": [{"id": "p2", "q": "The game sparked controversy for its violence and gore"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "as he commits mass murder in the town of Paradise, Arizona"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p7", "q": "hellish images of bondage and confinement inside an asylum"}]},
+{"f": "humor.dark", "r": 1, "ev": [{"id": "p11", "q": "tongue-in-cheek shooting action"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p2", "q": "for its short length, unconventional controls, and repetitive gameplay"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p2", "q": "for its short length, unconventional controls, and repetitive gameplay"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p6", "q": "an unidentified man (commonly referred to as the \"Postal Dude\" or \"Postal Guy\")"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p6", "q": "In the fictional Arizona town of Paradise"}]}
+]}

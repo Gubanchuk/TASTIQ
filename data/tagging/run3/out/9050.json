@@ -1,0 +1,12 @@
+{"appid": 9050, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2004 first-person shooter survival horror game"}]},
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p5", "q": "incorporate several horror elements, the most prominent of which is darkness"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "Doom 3 is set on Mars in 2145"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "open a gateway to Hell"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p4", "q": "Doom 3s more story-centered approach"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "Much praise was given to the quality of Doom 3s graphics and presentation"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p5", "q": "forcing the player to choose between being able to see or having a readied weapon"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p8", "q": "Doom 3 was released with a four-player multiplayer element, featuring four game modes"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p12", "q": "including a two player co-operative multiplayer mode"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "Several reviews were critical of a perceived repetitiveness in gameplay after a while"}]}
+]}

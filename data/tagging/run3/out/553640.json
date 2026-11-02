@@ -1,0 +1,7 @@
+{"appid": 553640, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "Icey is a 2D side-scrolling hack-and-slash video game"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p2", "q": "can perform quick combos with their sword"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p0", "q": "can be played in a linear manner from beginning to end like a typical game"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "elevated by its unusual meta-commentary"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p3", "q": "but criticizing its short length"}, {"id": "p3", "q": "while the game is short"}]}
+]}

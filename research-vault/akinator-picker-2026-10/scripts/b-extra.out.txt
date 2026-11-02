@@ -1,0 +1,65 @@
+[extra-film-1440-light/1] liked-after-genre-skip
+NOTE liked: skip button present? 0; Дальше disabled with 0 picks? true
+[extra-film-1440-light/2] search-miss
+NOTE search miss text: Е
+Если сегодня вторник, то это должна быть Бельгия (фильм)
+1969 · приключения, комедия
+П
+Приключения Тома Сойера (фильм, 1938)
+1938 · приключения, драма
+Т
+Тони (фильм)
+1935 · криминал, драма
+[extra-film-1440-light/3] search-english
+NOTE search english "inception": Начало
+2010 · приключения, фантастика
+NOTE search "матр": Матрица
+1999 · боевик, фантастика
+Матрица: Перезагрузка
+2003 · боевик, фантастика
+Матрица: Революция
+2003 · боевик, фантастика
+Матрица: Воскрешение
+2021 · боеви
+[extra-film-1440-light/4] liked-after-3-more
+NOTE Enter on liked moved to step: liked
+[extra-film-1440-light/5] why-1-via-enter
+[extra-film-1440-light/6] why-1-after-reload
+NOTE after reload at why: step=why title=За что тебе зашло «Семь»? back enabled=true
+[extra-film-1440-light/7] playback-skip-all
+NOTE playback (skip-all) content: Вот как я тебя вижу Что-то не так? Убери лишнее. Причин ты пока не назвал, поэтому подбор будет примерный. Уже смотрел: 1, это не предложу.
+NOTE playback (skip-all) inspector: Похоже, тебе ещё нравится Это общее у того, что тебе зашло. Ты это не отмечал, поэтому вес слабый. криминал Семь загадка и расследование Семь мрачная атмосфера Семь держит в напряжении Семь жуть и страх Семь сильная актёрская игра Семь сильный финал Семь неожиданные повороты Семь
+[extra-film-1440-light/8] more-liked-screen
+NOTE after «Добавлю ещё»: step=liked title=Что из этого смотрел, и зашло? cards=8
+NOTE back from more-liked: step=playback
+[extra-film-1440-light/9] result-skip-all
+NOTE result (skip-all) hint: Сравнил 21 837 фильмов после отсева. | hero: Попробуй: мало данных о твоём вкусе Бойцовский клуб 1999 · 2 ч 19 мин Ещё 2 причины в подробностях
+NOTE result (skip-all) labels: ["Попробуй: мало данных о твоём вкусе","Попробуй: мало данных о твоём вкусе","Попробуй: мало данных о твоём вкусе","Попробуй: мало данных о твоём вкусе","Попробуй: мало данных о твоём вкусе","Попробуй: мало данных о твоём вкусе"]
+NOTE result (skip-all) fork: Что тебе важнее? От ответа зависит, что будет первым. быстрый темп загадка и расследование Одинаково
+NOTE result scroll heights: content=1380 inspector=980 viewport=900
+[extra-film-1440-light/10] result-content-scroll-700
+[extra-film-1440-light/11] result-inspector-scroll-800
+[extra-film-1440-light/12] result-evidence-expanded
+NOTE expanded evidence: Ещё 1 подтверждение Зрители MovieLens, релевантность 70%: «suprisingly clever»
+NOTE detail link: https://www.imdb.com/title/tt0137523/
+NOTE reasons: Как в Семь, здесь «неожиданные повороты». Ты это не отмечал, поэтому вес слабый Зрители MovieLens, релевантность 99%: «plot twist» Ещё 1 подтверждение Зрители MovieLens, релевантность 70%: «suprisingly clever» Как в Семь, здесь «атмосферное». Ты это не отмечал, поэтому вес слабый Зрители MovieLens, релевантность 78%: «atmospheric» Ещё 1 подтверждение || Зрители жалуются: слабый финал Зрители MovieLens, релевантность 57%: «bad ending»
+[extra-film-1440-light/13] whynot-liked-title
+NOTE whynot for liked «Семь»: «Семь» отсеяно на шаге «Было ли»: уже смотрел.
+[extra-series-390-dark/1] playback-phone
+[extra-series-390-dark/2] drawer-steps-open
+[extra-series-390-dark/3] result-phone
+NOTE phone hero text: Вероятно подойдёт Гражданская война 1990 · 1 ч 30 мин · 1 сезон, 9 серий Ещё 5 причин в подробностях
+NOTE phone hero reasons visible: 0
+NOTE phone fork box: {"x":16,"y":156.546875,"width":358,"height":211} segs=3
+NOTE phone result page height: 2933
+[extra-series-390-dark/4] alt-tapped-phone
+NOTE after alt tap scrollY=1036
+[extra-series-390-dark/5] drawer-open-result
+[extra-series-390-dark/6] landing-from-drawer
+[extra-series-390-dark/7] my-phone
+NOTE my phone title=Моё tabs=["Буду смотреть / играть0","Зашло0","Не зашло0","История1"]
+[extra-series-390-dark/8] back-to-dialogue-from-my
+NOTE after «К подбору»: step=result title=Вот что я подобрал
+[extra-series-390-dark/9] landing-podobrat-click
+NOTE landing «Подобрать» → url=http://localhost:5173/ scrollY=0
+DONE

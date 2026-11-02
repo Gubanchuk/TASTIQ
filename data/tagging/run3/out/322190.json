@@ -1,0 +1,10 @@
+{"appid": 322190, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "turn-based tactics shooter video game"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "board, loot, and shoot their way through enemy spaceships"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p5", "q": "The primary objective in missions is often to loot the enemy ship"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p5", "q": "A signature feature of the game is Hats"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "sets out on a space adventure"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p3", "q": "players manually aim their characters' weapons"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "emphasizes skill over chance"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p8", "q": "charming characters"}]}
+]}

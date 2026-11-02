@@ -1,0 +1,14 @@
+{"appid": 1203220, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "a", "q": "battle your enemies with punishing combos, parries and grit"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "d", "q": "team up with friends in fast-paced melee fights"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "d", "q": "team up with friends in fast-paced melee fights"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "a", "q": "Dynamic, fast-paced and ever shifting"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "a", "q": "Dynamic, fast-paced and ever shifting"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "a", "q": "Wall run, swoop down, and zip across mountains and buildings with ease"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "d", "q": "Dive into the legends of the Far East"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r236326934", "q": "has a steep learning curve and is very punishing when making a mistake"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "r237656237", "q": "high skill ceiling gameplay"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "r236507575", "q": "The parry system is the most inconsistent mechanic"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r236386798", "q": "Аудиодизайн не просто дополняет происходящее"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "a", "q": "a beautiful landscape inspired by Far Eastern legends"}]}
+]}

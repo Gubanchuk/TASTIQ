@@ -1,0 +1,12 @@
+{"appid": 612880, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2017 first-person shooter game"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "set in an alternate history that takes place in 1961"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "Both stealth and confrontation are viable combat tactics"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p9", "q": "Blazkowicz became progressively stronger and more efficient in combat"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p2", "q": "Particular praise was directed at the characters, narrative, cast performance"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p11", "q": "The story of the game received critical acclaim"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p6", "q": "Anya, Blazkowicz's love interest"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p11", "q": "juxtaposed heavy themes with humor"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p6", "q": "a sadistic Nazi commander who captures Caroline"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p10", "q": "the game became progressively zany"}]}
+]}

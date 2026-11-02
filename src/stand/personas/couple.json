@@ -1,0 +1,57 @@
+{
+  "id": "couple",
+  "name": "Лена и Дима, пара",
+  "domain": "film",
+  "who": "31 и 33 года, пятница, один фильм на двоих, два часа максимум. Лена любит умные мелодрамы, Дима фантастику. Нужно то, что понравится обоим.",
+  "today": "Что-то, где обоим есть за что зацепиться: про чувства, но с идеей или фантастикой; не страшное, не длинное.",
+  "situation": { "time": "two", "company": "pair" },
+  "stops": ["tone.creepy"],
+  "prefer": ["characters.romance", "cognitive.high", "world.scifi", "story.complex", "tone.melancholic", "story.twist", "aesthetic.beautiful", "story.dialogue", "tension.low"],
+  "source": "research-vault/akinator-picker-2026-10/raw/persona-films.md, «Персона 1»",
+  "loved": [
+    { "id": "tt0338013", "name": "Вечное сияние чистого разума", "q": "вечное сияние", "love": true, "reasons": ["characters.romance", "tone.melancholic", "story.nonlinear", "tone.whimsical", "characters.acting", "cognitive.high"], "text": "про любовь, но по-умному и без соплей, грустно и странно" },
+    { "id": "tt0816692", "name": "Интерстеллар", "q": "интерстеллар", "love": true, "reasons": ["world.space", "cognitive.high", "tone.epic", "aesthetic.soundtrack", "ending.strong", "aesthetic.beautiful"], "text": "про космос и про отца с дочкой, музыка и финал до мурашек" },
+    { "id": "tt1798709", "name": "Она", "q": "она", "reasons": ["characters.romance", "tone.melancholic", "cognitive.high", "world.scifi", "characters.acting"], "text": "тихая, грустная, про одиночество и любовь, заставляет думать" },
+    { "id": "tt1375666", "name": "Начало", "q": "начало", "reasons": ["story.complex", "story.twist", "cognitive.high", "aesthetic.effects", "tension.high"] },
+    { "id": "tt0112471", "name": "Перед рассветом", "q": "перед рассветом", "reasons": ["story.dialogue", "characters.romance", "tone.melancholic", "cognitive.high"] },
+    { "id": "tt1856101", "name": "Бегущий по лезвию 2049", "q": "бегущий по лезвию 2049", "reasons": ["aesthetic.beautiful", "tone.atmospheric", "world.scifi", "cognitive.high", "aesthetic.soundtrack"] },
+    { "id": "tt0335266", "name": "Трудности перевода", "q": "трудности перевода", "reasons": ["tone.melancholic", "tone.atmospheric", "characters.acting", "aesthetic.beautiful"] },
+    { "id": "tt3659388", "name": "Марсианин", "q": "марсианин", "reasons": ["world.space", "humor.funny", "tone.inspiring", "tension.high"] },
+    { "id": "tt3783958", "name": "Ла-Ла Ленд", "q": "ла-ла ленд", "reasons": ["aesthetic.soundtrack", "characters.romance", "tone.melancholic", "aesthetic.beautiful"] },
+    { "id": "tt0470752", "name": "Из машины", "q": "из машины", "reasons": ["story.twist", "tension.high", "cognitive.high", "world.scifi"] }
+  ],
+  "disliked": [
+    { "id": "tt0418279", "name": "Трансформеры", "q": "трансформеры", "issues": [{ "f": "story.weak" }, { "f": "humor.silly" }, { "f": "aesthetic.effects" }, { "f": "story.predictable" }] },
+    { "id": "tt1099212", "name": "Сумерки", "q": "сумерки", "issues": [{ "f": "characters.unlikeable" }, { "f": "story.predictable" }, { "f": "pace.draggy" }, { "f": "tone.cheesy", "hard": true }] },
+    { "id": "tt2322441", "name": "Пятьдесят оттенков серого", "q": "пятьдесят оттенков", "issues": [{ "f": "story.weak" }, { "f": "content.sexual" }] },
+    { "id": "tt1840309", "name": "Дивергент", "q": "дивергент", "issues": [{ "f": "story.predictable" }, { "f": "story.weak" }] }
+  ],
+  "alsoSeen": [
+    { "id": "tt0137523", "name": "Бойцовский клуб" },
+    { "id": "tt1022603", "name": "500 дней лета" },
+    { "id": "tt0169547", "name": "Красота по-американски" },
+    { "id": "tt0133093", "name": "Матрица" },
+    { "id": "tt0468569", "name": "Тёмный рыцарь" },
+    { "id": "tt0434409", "name": "«V» значит Вендетта" }
+  ],
+  "targets": [
+    { "id": "tt0119177", "name": "Гаттака" },
+    { "id": "tt2543164", "name": "Прибытие" },
+    { "id": "tt2194499", "name": "Бойфренд из будущего" }
+  ],
+  "modes": {
+    "careful": {
+      "seed": 4242,
+      "anchors": { "pages": 3, "love": true, "seen": true, "searchLoved": 4, "searchDisliked": 2 },
+      "why": { "maxChips": 4, "text": "reasons", "expand": true },
+      "whyNot": {},
+      "stops": true,
+      "result": { "rate": true }
+    },
+    "lazy": {
+      "seed": 4242,
+      "anchors": { "pages": 2, "love": true },
+      "why": {}
+    }
+  }
+}

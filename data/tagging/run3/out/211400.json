@@ -1,0 +1,17 @@
+{"appid": 211400, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "side-scrolling cinematic platforming survival horror video game"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "side-scrolling cinematic platforming survival horror video game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p12", "q": "The Walking Deads grim atmosphere"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p1", "q": "in the aftermath of a zombie apocalypse"}]},
+{"f": "world.historical", "r": 1, "ev": [{"id": "p1", "q": "Set in Seattle in 1986"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p5", "q": "Sprinting, melee combat, and hanging from objects deplete the player's stamina meter"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p4", "q": "Gameplay primarily consists of platforming and solving puzzles"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p4", "q": "the player is encouraged to avoid Shadows as much as possible, rather than engaging them in combat"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p4", "q": "fire axe to execute short-range melee attacks"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p2", "q": "critics praising the graphics and atmosphere"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p2", "q": "condemning the game's brevity and linearity"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "is unable to enter any environments off the aligned path"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p10", "q": "frantic, dizzying, four- to five-hour rush"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p10", "q": "you feel a constant, adrenaline-fueled urge to just"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p10", "q": "commending the gameplay, difficulty level, and the pacing"}]}
+]}

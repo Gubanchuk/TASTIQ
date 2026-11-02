@@ -1,0 +1,8 @@
+{"appid": 1432860, "features": [
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "p0", "q": "Sun Haven is a 2023 farm life sim action role-playing game"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p1", "q": "farm, fish, mine and romance NPCs"}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "p2", "q": "the game is 'cozy'"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "more magical and fantastic"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p1", "q": "this game features three other towns that the player will discover"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p2", "q": "the storyline is rich"}]}
+]}

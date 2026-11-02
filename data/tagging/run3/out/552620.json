@@ -1,0 +1,6 @@
+{"appid": 552620, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "is a post-apocalyptic role-playing video game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "The wastes are dangerous and filled with gangsters, mutants, stalkers"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "which disappeared during the investigation of the mysterious bunker #317"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "sent him out to explore in search of a special squad"}]}
+]}

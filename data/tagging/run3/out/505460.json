@@ -1,0 +1,9 @@
+{"appid": 505460, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "Foxhole is a cooperative sandbox massively-multiplayer action-strategy video game"}, {"id": "p7", "q": "the marvel of watching so many players working together"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "Players can align with one of two opposing factions"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p0", "q": "Foxhole is a cooperative sandbox massively-multiplayer action-strategy video game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p0", "q": "building and managing fortifications"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "Foxhole's setting is inspired by early 20th century warfare"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p5", "q": "wars can go on for weeks or months"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "There is a heavy reliance on coordinated logistics in the game"}]}
+]}

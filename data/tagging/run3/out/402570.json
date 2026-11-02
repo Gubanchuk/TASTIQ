@@ -1,0 +1,8 @@
+{"appid": 402570, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "a free-to-play turn-based tactics game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "player versus player, turn-based tactics battles"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p3", "q": "populated with humans, hybrids, and robots controlled by powerful Trusts"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p8", "q": "with the strategic thought process of chess"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p2", "q": "Each Season is a period of real time during which the player can level up an account"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p0", "q": "it shut down on June 28, 2019"}]}
+]}

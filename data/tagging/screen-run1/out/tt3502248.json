@@ -1,0 +1,11 @@
+{"id": "tt3502248", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "an American police procedural television series"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p5", "q": "maintains the series' mastery over mystery"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "some rousing, suspenseful turns"}]},
+{"f": "tone.atmospheric", "r": 2, "ev": [{"id": "p4", "q": "it captures Connelly's Los Angeles"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p2", "q": "sharpened by gritty atmosphere"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p4", "q": "nicely built out of smirks and smolders"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p4", "q": "biggest stumbling block is that it's stubbornly slow-paced"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "The seventh and final season was released on June 25, 2021"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p4", "q": "did not like the similarities to many other police shows"}]}
+]}

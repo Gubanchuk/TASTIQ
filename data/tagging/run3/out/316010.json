@@ -1,0 +1,9 @@
+{"appid": 316010, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "based on the popular collectible card game"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p1", "q": "build a card library using both in-game rewards and microtransactions to purchase new cards and boosters"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "online battles with other players"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p6", "q": "Those new to Magic will find it easy to dive in and learn the intricacies of deck-building"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "free-form deck construction"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "the origin story of five different Planeswalkers"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p1", "q": "includes a story mode that follows the origin story of five of the game's Planeswalkers"}]}
+]}

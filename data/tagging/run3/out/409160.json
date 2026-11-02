@@ -1,0 +1,7 @@
+{"appid": 409160, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "Dr. Langeskov is an exploration game"}]},
+{"f": "length.short", "r": 3, "ev": [{"id": "p1", "q": "Dr. Langeskov is roughly 20 minutes in length."}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p0", "q": "narrative-driven story about a heist"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p5", "q": "the narrator is not omniscient but unsound"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p5", "q": "He had high praise for Amstell's performance as narrator"}]}
+]}

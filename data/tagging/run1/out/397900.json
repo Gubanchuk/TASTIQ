@@ -1,0 +1,7 @@
+{"appid": 397900, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "d", "q": "compete against players from around the world"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "r238019530", "q": "especially when playing with friends"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "r238019530", "q": "players purchase properties, collect rent, and attempt to bankrupt their opponents"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "d", "q": "Easy to learn, fun to master"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "d", "q": "perfect for quick matches"}]}
+]}

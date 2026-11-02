@@ -1,0 +1,9 @@
+{"appid": 361300, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a beat 'em up video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "using guns, melee weapons or their bare fists to take out enemies"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "single-player or local multiplayer co-op for up to four players"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "set in an alternate 1980s Soviet Union ruled by the Russian Mafia"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p1", "q": "fill their syringes with the drug from these enemies' corpses"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "Determining that the Soviet government is working with the mafia to spread and sell Nekro"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p3", "q": "killing all scientists and security in their way"}]}
+]}

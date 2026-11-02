@@ -1,0 +1,7 @@
+{"appid": 1283400, "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p2", "q": "In an alternate version of the French Revolution"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "which can be used to upgrade weapons and skills"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p1", "q": "which allows the player to manually adjust various factors of gameplay in order to lower the difficulty"}]},
+{"f": "combat.fast", "r": 1, "ev": [{"id": "p1", "q": "The player is encouraged to play aggressively"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p2", "q": "an army of clockwork automatons"}]}
+]}

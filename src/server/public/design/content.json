@@ -1,0 +1,164 @@
+{
+  "game": [
+    {
+      "id": "steam:552520",
+      "title": "Far Cry 5",
+      "original": "Far Cry® 5",
+      "year": 2018,
+      "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/552520/library_600x900.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/0dbbd22689fafc2b5b86996257a8e115ff935e81/header.jpg?t=1785365694",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "domain": "game"
+    },
+    {
+      "id": "steam:225540",
+      "title": "Just Cause™ 3",
+      "original": "Just Cause™ 3",
+      "year": 2015,
+      "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/225540/library_600x900.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/225540/header.jpg?t=1782912719",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "domain": "game"
+    },
+    {
+      "id": "steam:377160",
+      "title": "Fallout 4",
+      "original": "Fallout 4",
+      "year": 2015,
+      "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/library_600x900.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1786648137",
+      "genres": [
+        "RPG"
+      ],
+      "domain": "game"
+    },
+    {
+      "id": "steam:460930",
+      "title": "Tom Clancy's Ghost Recon Wildlands",
+      "original": "Tom Clancy's Ghost Recon® Wildlands",
+      "year": 2017,
+      "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/460930/library_600x900.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1790268185",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "domain": "game"
+    },
+    {
+      "id": "steam:264710",
+      "title": "Subnautica",
+      "original": "Subnautica",
+      "year": 2018,
+      "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/264710/library_600x900.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg?t=1777456112",
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "domain": "game"
+    },
+    {
+      "id": "steam:632470",
+      "title": "Disco Elysium - The Final Cut",
+      "original": "Disco Elysium - The Final Cut",
+      "year": 2019,
+      "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/library_600x900.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/816ea59d6d8ac525f79a07c3a7afa94eddb3437c/header.jpg?t=1780913406",
+      "genres": [
+        "RPG"
+      ],
+      "domain": "game"
+    }
+  ],
+  "film": [
+    {
+      "id": "tt0816692",
+      "title": "Интерстеллар",
+      "original": "Interstellar",
+      "year": 2014,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": null,
+      "genres": [
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "domain": "film"
+    },
+    {
+      "id": "tt2278388",
+      "title": "Отель «Гранд Будапешт»",
+      "original": "The Grand Budapest Hotel",
+      "year": 2014,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Grand_Budapest_Hotel.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "domain": "film"
+    },
+    {
+      "id": "tt3659388",
+      "title": "Марсианин",
+      "original": "The Martian",
+      "year": 2015,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": null,
+      "genres": [
+        "Adventure",
+        "Drama"
+      ],
+      "domain": "film"
+    }
+  ],
+  "series": [
+    {
+      "id": "tt11280740",
+      "title": "Разделение",
+      "original": "Severance",
+      "year": 2022,
+      "poster": null,
+      "image": "https://static.tvmaze.com/uploads/images/medium_portrait/548/1371406.jpg",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "domain": "series"
+    },
+    {
+      "id": "tt10986410",
+      "title": "Тед Лассо",
+      "original": "Ted Lasso",
+      "year": 2020,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/7/73/Tedlassotitlecard.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "https://static.tvmaze.com/uploads/images/medium_portrait/634/1585930.jpg",
+      "genres": [
+        "Comedy",
+        "Sport"
+      ],
+      "domain": "series"
+    }
+  ],
+  "cartoon": [
+    {
+      "id": "tt2948372",
+      "title": "Душа",
+      "original": "Soul",
+      "year": 2020,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/3/39/Soul_%282020_film%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": null,
+      "genres": [
+        "Adventure",
+        "Animation"
+      ],
+      "domain": "cartoon"
+    }
+  ]
+}

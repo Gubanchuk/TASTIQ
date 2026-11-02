@@ -1,0 +1,11 @@
+{"appid": 799960, "features": [
+{"f": "length.endless", "r": 3, "ev": [{"id": "p0", "q": "is a 2008 massively multiplayer online role-playing game (MMORPG)"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p4", "q": "two teams made up of one to four players or computer enemies on each team"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "Players can duel each other in the PvP arena and some houses"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "in a turn-based combat system, similar to collectible card games"}]},
+{"f": "loop.cards", "r": 2, "ev": [{"id": "p0", "q": "similar to collectible card games"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Players take on the role of student wizards who must save the Spiral"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "each complete with their own set of unique spells and playstyles"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "they gain new badge titles and automatic increases in their base statistics"}]},
+{"f": "loop.life_sim", "r": 2, "ev": [{"id": "p5", "q": "Hobbies such as training pets, fishing, and gardening require energy"}]}
+]}

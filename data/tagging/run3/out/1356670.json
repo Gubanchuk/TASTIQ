@@ -1,0 +1,9 @@
+{"appid": 1356670, "features": [
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "p2", "q": "a farming simulator where the player must grow rice in a small paddy"}]},
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "side scrolling hack and slash platforming levels"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p2", "q": "side scrolling hack and slash platforming levels"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "Each rice harvest permanently increases Sakuna's stats"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p5", "q": "The game takes place in a world where two realms exist"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p3", "q": "with enemies becoming more powerful and dangerous once night falls"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "while also looking after a small group of human characters"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 1179210, "features": [
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "The game is similar to a first-person shooter"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p0", "q": "but critiqued the controls and length"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p3", "q": "criticizing the game's short length"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p4", "q": "disliking how the game controlled and perceived repetitiveness"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p4", "q": "It's extremely fun to go on this absurd rampage"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p3", "q": "citing the game's art style, concept and setting"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p3", "q": "highlighting the game's sound design"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 323470, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "Fighters can traverse the levels free-roaming in large spaces and can fight on ground, in the air and underwater"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p2", "q": "players are able to customize their character's race, gender, facial hair, body features, clothing"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p7", "q": "unique story and customizable characters"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "take on cooperative, time-traveling missions"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p7", "q": "noting the repetitiveness of in-game missions"}, {"id": "p8", "q": "the general game design from balancing issues to repetitiveness is heavily criticized"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p8", "q": "while also criticizing its loose controls, repetitiveness and unbalanced gameplay"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "giving praise for the game's fighting mechanics and aesthetics"}]}
+]}

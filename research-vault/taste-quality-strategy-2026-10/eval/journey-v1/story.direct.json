@@ -1,0 +1,57 @@
+{
+  "ms": 14724,
+  "model": "gpt-6.1-sol",
+  "usage": {
+    "input_tokens": 656,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 649,
+    "output_tokens_details": {
+      "reasoning_tokens": 205
+    },
+    "total_tokens": 1305
+  },
+  "understood": "Ты хочешь на час-полтора погрузиться в сюжетную загадку с живыми героями и исследованием, без сложных боёв и проверки реакции.",
+  "picks": [
+    {
+      "id": "steam:336140",
+      "title": "Unavowed",
+      "year": 2018,
+      "reason": "Расследования в мистическом Нью-Йорке, напарники с личными историями и значимые решения — близко к тому, что ты любишь.",
+      "caveat": "Есть непростые логические загадки, но нет боёв на реакцию.",
+      "likelySeen": false,
+      "own": true
+    },
+    {
+      "id": "steam:1205520",
+      "title": "Pentiment",
+      "year": 2022,
+      "reason": "Исследуй городок, собирай свидетельства и узнавай его жителей: загадка раскрывается через разговоры и твои решения.",
+      "caveat": "Много чтения; за сегодняшний сеанс ты увидишь лишь начало большой истории.",
+      "likelySeen": false,
+      "own": true
+    },
+    {
+      "id": "steam:1182310",
+      "title": "The Excavation of Hob's Barrow",
+      "year": 2022,
+      "reason": "Раскопки, тайны деревни и настороженные жители дают исследование и тревожную историю без боевой проверки реакции.",
+      "caveat": "Фолк-хоррор с мрачными образами; предметные головоломки могут задержать.",
+      "likelySeen": false,
+      "own": true
+    }
+  ],
+  "filled": [
+    "steam:632470"
+  ],
+  "rejected": [
+    {
+      "title": "The Blackwell Legacy",
+      "year": 2006,
+      "reason": "not-in-catalog"
+    }
+  ],
+  "dropped": 1
+}

@@ -1,0 +1,9 @@
+{"id": "tt0457229", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is an American crime drama television series created by Blake Masters"}, {"id": "p0", "q": "is a gangster involved with New England's Irish Mob"}]},
+{"f": "characters.family", "r": 3, "ev": [{"id": "p7", "q": "The series focuses on the concept of brotherhood through the antagonistic relationship between the Caffee brothers"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p10", "q": "Critics praised the central performances of Clarke and Isaacs"}]},
+{"f": "characters.antihero", "r": 2, "ev": [{"id": "p9", "q": "the morally grey areas inhabited by the characters"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p11", "q": "some viewers may find the series too glum and patient in its storytelling"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p11", "q": "some viewers may find the series too glum and patient in its storytelling"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "Showtime later confirmed was the last"}]}
+]}

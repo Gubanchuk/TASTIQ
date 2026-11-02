@@ -1,0 +1,7 @@
+{"id": "tt0115378", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p0", "q": "it has been acclaimed for its writing, voice acting, maturity, and modernization"}]},
+{"f": "characters.ensemble", "r": 1, "ev": [{"id": "p3", "q": "Several episodes involve Superman encountering other superheroes in the DC universe"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p0", "q": "originally aired on Kids' WB from September 6, 1996, to February 12, 2000"}]}
+]}

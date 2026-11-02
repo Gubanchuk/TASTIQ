@@ -1,0 +1,9 @@
+{"appid": 901735, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p3", "q": "players take on the role of a lord who rules over a medieval castle"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p3", "q": "players place buildings or features"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "Military units are directly controlled individually or in groups"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "the player again develops a stronghold in the Middle Ages"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "allowing players to torture unruly peasants"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p3", "q": "so player micromanagement is minimal"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p5", "q": "the 2017 re-release on Steam has full multiplayer support"}]}
+]}

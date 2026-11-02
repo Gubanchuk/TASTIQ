@@ -1,0 +1,10 @@
+{"id": "tt35064818", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "Indian Hindi-language crime drama thriller television series"}]},
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "based on the 2019 non-fiction book Black Warrant: Confessions of a Tihar Jailer by Sunil Gupta"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "is based on historical events told from the perspective of Sunil Gupta"}]},
+{"f": "tone.gritty", "r": 3, "ev": [{"id": "s", "q": "the drama reveals the raw and unfiltered reality of prison life"}, {"id": "p4", "q": "Black Warrant is a grim, discomfiting series"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "Black Warrant is a grim, discomfiting series"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p4", "q": "He was also appreciative of the performances of Bhat, Zahan Kapoor, and Rajendra Gupta"}]},
+{"f": "content.violence", "r": 1, "ev": [{"id": "p3", "q": "brutalities of prison life"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p1", "q": "The series, consisting of seven episodes"}]}
+]}

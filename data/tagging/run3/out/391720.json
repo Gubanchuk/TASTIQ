@@ -1,0 +1,11 @@
+{"appid": 391720, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2016 psychological horror adventure game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "a psychologically disturbed painter who is trying to complete his magnum opus"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p6", "q": "This tragic event triggered a decline in the Painter's mental health"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "revealing secrets about his past"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p1", "q": "is story-driven and revolves around puzzle-solving and exploration"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "is story-driven and revolves around puzzle-solving and exploration"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "is story-driven and revolves around puzzle-solving and exploration"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "provide regular jump scares common to games of this genre"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p5", "q": "Set sometime after World War I in the UK"}]}
+]}

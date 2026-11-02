@@ -1,0 +1,755 @@
+{
+  "at": "2026-10-31T18:10:36.031Z",
+  "rows": [
+    {
+      "id": "story",
+      "targets": [
+        {
+          "id": "steam:383870",
+          "name": "Firewatch",
+          "inShortlist": true,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:383870",
+            "name": "Firewatch",
+            "rank": 20,
+            "of": 4371,
+            "score": 4.059,
+            "parts": {
+              "fit": 2.2296184948397517,
+              "penalty": 0,
+              "mood": 1.5148092474198758,
+              "prior": 0.3141988233052261
+            },
+            "leaderScore": 5.237,
+            "matches": [
+              {
+                "f": "story.central",
+                "label": "сильный сюжет",
+                "contribution": 0.715,
+                "confirmed": true
+              },
+              {
+                "f": "characters.memorable",
+                "label": "живые персонажи",
+                "contribution": 0.559,
+                "confirmed": true
+              },
+              {
+                "f": "story.choices",
+                "label": "выборы влияют на историю",
+                "contribution": 0.469,
+                "confirmed": true
+              },
+              {
+                "f": "loop.exploration",
+                "label": "исследование мира",
+                "contribution": 0.315,
+                "confirmed": false
+              },
+              {
+                "f": "story.mystery",
+                "label": "загадка и расследование",
+                "contribution": 0.102,
+                "confirmed": false
+              },
+              {
+                "f": "tone.melancholic",
+                "label": "грусть и меланхолия",
+                "contribution": 0.034,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:501300",
+          "name": "What Remains of Edith Finch",
+          "inShortlist": false,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:501300",
+            "name": "What Remains of Edith Finch",
+            "rank": 136,
+            "of": 4371,
+            "score": 2.711,
+            "parts": {
+              "fit": 1.2949369223403657,
+              "penalty": 0,
+              "mood": 1.0474684611701828,
+              "prior": 0.3685065980658377
+            },
+            "leaderScore": 5.237,
+            "matches": [
+              {
+                "f": "story.central",
+                "label": "сильный сюжет",
+                "contribution": 0.648,
+                "confirmed": true
+              },
+              {
+                "f": "loop.exploration",
+                "label": "исследование мира",
+                "contribution": 0.315,
+                "confirmed": false
+              },
+              {
+                "f": "tone.melancholic",
+                "label": "грусть и меланхолия",
+                "contribution": 0.232,
+                "confirmed": false
+              },
+              {
+                "f": "story.mystery",
+                "label": "загадка и расследование",
+                "contribution": 0.099,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:258520",
+          "name": "The Vanishing of Ethan Carter",
+          "inShortlist": false,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:258520",
+            "name": "The Vanishing of Ethan Carter",
+            "rank": 290,
+            "of": 4371,
+            "score": 2.27,
+            "parts": {
+              "fit": 1.0647264741476457,
+              "penalty": 0,
+              "mood": 0.9323632370738228,
+              "prior": 0.2727153780191511
+            },
+            "leaderScore": 5.237,
+            "matches": [
+              {
+                "f": "story.central",
+                "label": "сильный сюжет",
+                "contribution": 0.648,
+                "confirmed": true
+              },
+              {
+                "f": "loop.exploration",
+                "label": "исследование мира",
+                "contribution": 0.315,
+                "confirmed": false
+              },
+              {
+                "f": "story.mystery",
+                "label": "загадка и расследование",
+                "contribution": 0.102,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:388880",
+          "name": "Oxenfree",
+          "inShortlist": true,
+          "engine": false,
+          "hybrid": true,
+          "why": {
+            "id": "steam:388880",
+            "name": "Oxenfree",
+            "rank": 10,
+            "of": 4371,
+            "score": 4.302,
+            "parts": {
+              "fit": 2.3932775617313906,
+              "penalty": 0,
+              "mood": 1.5966387808656952,
+              "prior": 0.3119545281311038
+            },
+            "leaderScore": 5.237,
+            "matches": [
+              {
+                "f": "story.choices",
+                "label": "выборы влияют на историю",
+                "contribution": 0.907,
+                "confirmed": true
+              },
+              {
+                "f": "story.central",
+                "label": "сильный сюжет",
+                "contribution": 0.648,
+                "confirmed": true
+              },
+              {
+                "f": "characters.memorable",
+                "label": "живые персонажи",
+                "contribution": 0.559,
+                "confirmed": true
+              },
+              {
+                "f": "loop.exploration",
+                "label": "исследование мира",
+                "contribution": 0.152,
+                "confirmed": false
+              },
+              {
+                "f": "story.mystery",
+                "label": "загадка и расследование",
+                "contribution": 0.102,
+                "confirmed": false
+              },
+              {
+                "f": "aesthetic.stylized",
+                "label": "стилизованный визуал",
+                "contribution": 0.026,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "engine": [
+        "steam:632470",
+        "steam:1113000",
+        "steam:481510",
+        "steam:1180660"
+      ],
+      "hybrid": [
+        "steam:632470",
+        "steam:1180660",
+        "steam:388880",
+        "steam:1205520"
+      ],
+      "humanFit": null
+    },
+    {
+      "id": "coop",
+      "targets": [
+        {
+          "id": "steam:1426210",
+          "name": "It Takes Two",
+          "inShortlist": true,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:1426210",
+            "name": "It Takes Two",
+            "rank": 2,
+            "of": 952,
+            "score": 2.901,
+            "parts": {
+              "fit": 1.4155547517898077,
+              "penalty": 0,
+              "mood": 1.1077773758949039,
+              "prior": 0.37789328759944735
+            },
+            "leaderScore": 3.019,
+            "matches": [
+              {
+                "f": "social.coop",
+                "label": "кооператив",
+                "contribution": 0.793,
+                "confirmed": true
+              },
+              {
+                "f": "loop.puzzles",
+                "label": "головоломки",
+                "contribution": 0.472,
+                "confirmed": true
+              },
+              {
+                "f": "loop.platforming",
+                "label": "платформинг",
+                "contribution": 0.056,
+                "confirmed": false
+              },
+              {
+                "f": "humor.funny",
+                "label": "много юмора",
+                "contribution": 0.049,
+                "confirmed": false
+              },
+              {
+                "f": "characters.companions",
+                "label": "команда и спутники",
+                "contribution": 0.034,
+                "confirmed": false
+              },
+              {
+                "f": "difficulty.forgiving",
+                "label": "щадящая сложность",
+                "contribution": 0.008,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:620",
+          "name": "Portal 2",
+          "inShortlist": true,
+          "engine": true,
+          "hybrid": false,
+          "why": {
+            "id": "steam:620",
+            "name": "Portal 2",
+            "rank": 1,
+            "of": 952,
+            "score": 3.019,
+            "parts": {
+              "fit": 1.4661527583601568,
+              "penalty": 0,
+              "mood": 1.1330763791800784,
+              "prior": 0.4199348053927873
+            },
+            "leaderScore": 3.019,
+            "matches": [
+              {
+                "f": "social.coop",
+                "label": "кооператив",
+                "contribution": 0.793,
+                "confirmed": true
+              },
+              {
+                "f": "loop.puzzles",
+                "label": "головоломки",
+                "contribution": 0.491,
+                "confirmed": true
+              },
+              {
+                "f": "humor.funny",
+                "label": "много юмора",
+                "contribution": 0.098,
+                "confirmed": false
+              },
+              {
+                "f": "loop.platforming",
+                "label": "платформинг",
+                "contribution": 0.056,
+                "confirmed": false
+              },
+              {
+                "f": "loop.shooting",
+                "label": "стрельба",
+                "contribution": 0.016,
+                "confirmed": false
+              },
+              {
+                "f": "world.scifi",
+                "label": "фантастика и космос",
+                "contribution": 0.012,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:477160",
+          "name": "Human Fall Flat",
+          "inShortlist": true,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:477160",
+            "name": "Human Fall Flat",
+            "rank": 29,
+            "of": 952,
+            "score": 2.184,
+            "parts": {
+              "fit": 1.7358978719504805,
+              "penalty": 0.8,
+              "mood": 0.8807489359752403,
+              "prior": 0.36738945262255246
+            },
+            "leaderScore": 3.019,
+            "matches": [
+              {
+                "f": "social.coop",
+                "label": "кооператив",
+                "contribution": 0.793,
+                "confirmed": true
+              },
+              {
+                "f": "loop.puzzles",
+                "label": "головоломки",
+                "contribution": 0.571,
+                "confirmed": true
+              },
+              {
+                "f": "humor.funny",
+                "label": "много юмора",
+                "contribution": 0.115,
+                "confirmed": false
+              },
+              {
+                "f": "tone.lighthearted",
+                "label": "лёгкое весёлое настроение",
+                "contribution": 0.087,
+                "confirmed": false
+              },
+              {
+                "f": "loop.platforming",
+                "label": "платформинг",
+                "contribution": 0.084,
+                "confirmed": false
+              },
+              {
+                "f": "tone.whimsical",
+                "label": "странное и причудливое",
+                "contribution": 0.047,
+                "confirmed": false
+              }
+            ],
+            "penalties": [
+              {
+                "f": "social.pvp",
+                "label": "соревнование с людьми",
+                "contribution": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "id": "steam:865360",
+          "name": "We Were Here Together",
+          "inShortlist": false,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:865360",
+            "name": "We Were Here Together",
+            "rank": 132,
+            "of": 952,
+            "score": 1.88,
+            "parts": {
+              "fit": 0.9348613563566733,
+              "penalty": 0,
+              "mood": 0.7219906781783367,
+              "prior": 0.22289035777237862
+            },
+            "leaderScore": 3.019,
+            "matches": [
+              {
+                "f": "social.coop",
+                "label": "кооператив",
+                "contribution": 0.476,
+                "confirmed": true
+              },
+              {
+                "f": "loop.puzzles",
+                "label": "головоломки",
+                "contribution": 0.343,
+                "confirmed": true
+              },
+              {
+                "f": "freedom.linear",
+                "label": "линейная, ведут по истории",
+                "contribution": 0.046,
+                "confirmed": false
+              },
+              {
+                "f": "cognitive.low",
+                "label": "можно не напрягать голову",
+                "contribution": 0.027,
+                "confirmed": false
+              },
+              {
+                "f": "tension.high",
+                "label": "держит в напряжении",
+                "contribution": 0.018,
+                "confirmed": false
+              },
+              {
+                "f": "difficulty.forgiving",
+                "label": "щадящая сложность",
+                "contribution": 0.015,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "engine": [
+        "steam:620",
+        "steam:35700",
+        "steam:837470",
+        "steam:572890"
+      ],
+      "hybrid": [
+        "steam:2001120",
+        "steam:95400",
+        "steam:1335790",
+        "steam:837470"
+      ],
+      "humanFit": null
+    },
+    {
+      "id": "runs",
+      "targets": [
+        {
+          "id": "steam:1145360",
+          "name": "Hades",
+          "inShortlist": false,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:1145360",
+            "name": "Hades",
+            "rank": 123,
+            "of": 4378,
+            "score": 1.95,
+            "parts": {
+              "fit": 1.2446478938619403,
+              "penalty": 0,
+              "mood": 0.29668160000000005,
+              "prior": 0.40908198751846025
+            },
+            "leaderScore": 4.201,
+            "matches": [
+              {
+                "f": "combat.fast",
+                "label": "быстрый зрелищный бой",
+                "contribution": 0.268,
+                "confirmed": true
+              },
+              {
+                "f": "difficulty.hard",
+                "label": "сложно, наказывает за ошибки",
+                "contribution": 0.246,
+                "confirmed": true
+              },
+              {
+                "f": "aesthetic.soundtrack",
+                "label": "сильная музыка",
+                "contribution": 0.212,
+                "confirmed": false
+              },
+              {
+                "f": "loop.melee",
+                "label": "ближний бой",
+                "contribution": 0.153,
+                "confirmed": false
+              },
+              {
+                "f": "story.central",
+                "label": "сильный сюжет",
+                "contribution": 0.096,
+                "confirmed": false
+              },
+              {
+                "f": "world.fantasy",
+                "label": "фэнтези",
+                "contribution": 0.085,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:588650",
+          "name": "Dead Cells",
+          "inShortlist": true,
+          "engine": false,
+          "hybrid": true,
+          "why": {
+            "id": "steam:588650",
+            "name": "Dead Cells",
+            "rank": 20,
+            "of": 4378,
+            "score": 2.64,
+            "parts": {
+              "fit": 2.135793557990786,
+              "penalty": 0,
+              "mood": 0.11002320000000002,
+              "prior": 0.3940238673717307
+            },
+            "leaderScore": 4.201,
+            "matches": [
+              {
+                "f": "difficulty.hard",
+                "label": "сложно, наказывает за ошибки",
+                "contribution": 0.629,
+                "confirmed": true
+              },
+              {
+                "f": "loop.platforming",
+                "label": "платформинг",
+                "contribution": 0.575,
+                "confirmed": true
+              },
+              {
+                "f": "combat.fast",
+                "label": "быстрый зрелищный бой",
+                "contribution": 0.268,
+                "confirmed": true
+              },
+              {
+                "f": "loop.melee",
+                "label": "ближний бой",
+                "contribution": 0.153,
+                "confirmed": false
+              },
+              {
+                "f": "pace.fast",
+                "label": "быстрый темп",
+                "contribution": 0.101,
+                "confirmed": true
+              },
+              {
+                "f": "length.endless",
+                "label": "можно играть годами",
+                "contribution": 0.073,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:311690",
+          "name": "Enter the Gungeon",
+          "inShortlist": true,
+          "engine": false,
+          "hybrid": false,
+          "why": {
+            "id": "steam:311690",
+            "name": "Enter the Gungeon",
+            "rank": 14,
+            "of": 4378,
+            "score": 2.826,
+            "parts": {
+              "fit": 1.793308585663432,
+              "penalty": 0,
+              "mood": 0.6664,
+              "prior": 0.3660235338954789
+            },
+            "leaderScore": 4.201,
+            "matches": [
+              {
+                "f": "difficulty.hard",
+                "label": "сложно, наказывает за ошибки",
+                "contribution": 0.686,
+                "confirmed": true
+              },
+              {
+                "f": "loop.shooting",
+                "label": "стрельба",
+                "contribution": 0.511,
+                "confirmed": true
+              },
+              {
+                "f": "combat.fast",
+                "label": "быстрый зрелищный бой",
+                "contribution": 0.313,
+                "confirmed": true
+              },
+              {
+                "f": "length.endless",
+                "label": "можно играть годами",
+                "contribution": 0.065,
+                "confirmed": false
+              },
+              {
+                "f": "aesthetic.soundtrack",
+                "label": "сильная музыка",
+                "contribution": 0.063,
+                "confirmed": false
+              },
+              {
+                "f": "loop.looting",
+                "label": "лут и снаряжение",
+                "contribution": 0.051,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "id": "steam:692890",
+          "name": "Roboquest",
+          "inShortlist": true,
+          "engine": false,
+          "hybrid": true,
+          "why": {
+            "id": "steam:692890",
+            "name": "Roboquest",
+            "rank": 8,
+            "of": 4378,
+            "score": 3.102,
+            "parts": {
+              "fit": 1.8165282263115483,
+              "penalty": 0,
+              "mood": 0.9248000000000001,
+              "prior": 0.3602345529036253
+            },
+            "leaderScore": 4.201,
+            "matches": [
+              {
+                "f": "loop.shooting",
+                "label": "стрельба",
+                "contribution": 0.446,
+                "confirmed": true
+              },
+              {
+                "f": "pace.fast",
+                "label": "быстрый темп",
+                "contribution": 0.439,
+                "confirmed": true
+              },
+              {
+                "f": "combat.fast",
+                "label": "быстрый зрелищный бой",
+                "contribution": 0.313,
+                "confirmed": true
+              },
+              {
+                "f": "difficulty.hard",
+                "label": "сложно, наказывает за ошибки",
+                "contribution": 0.247,
+                "confirmed": true
+              },
+              {
+                "f": "aesthetic.soundtrack",
+                "label": "сильная музыка",
+                "contribution": 0.1,
+                "confirmed": false
+              },
+              {
+                "f": "loop.looting",
+                "label": "лут и снаряжение",
+                "contribution": 0.064,
+                "confirmed": false
+              }
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "engine": [
+        "steam:1229490",
+        "steam:1888160",
+        "steam:460950",
+        "steam:1139900"
+      ],
+      "hybrid": [
+        "steam:692890",
+        "steam:588650",
+        "steam:1229490",
+        "steam:1911610"
+      ],
+      "humanFit": null
+    }
+  ]
+}

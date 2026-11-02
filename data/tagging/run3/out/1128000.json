@@ -1,0 +1,11 @@
+{"appid": 1128000, "features": [
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "the player explores a large voxel-based world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "the player explores a large voxel-based world"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "The world is populated with monsters and creatures that can be killed"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "can be killed for better armor and weapons"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "which results in stronger stats and abilities"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "allows players to choose specializations which best suit their playstyle"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p2", "q": "The game features character creation, which involves the player first choosing a race and sex"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p3", "q": "criticized the repetitiveness of the game"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p3", "q": "the alpha version was praised by Rock Paper Shotgun for its compulsion loop and visuals"}]}
+]}

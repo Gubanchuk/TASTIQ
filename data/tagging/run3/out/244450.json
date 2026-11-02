@@ -1,0 +1,9 @@
+{
+  "appid": 244450,
+  "features": [
+    {"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "a real-time tactics and real-time strategy game"}]},
+    {"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "set in World War II"}]},
+    {"f": "social.solo", "r": 2, "ev": [{"id": "p1", "q": "features single player skirmish modes"}]},
+    {"f": "loop.stealth", "r": 1, "ev": [{"id": "p1", "q": "sniper stealth missions"}]}
+  ]
+}

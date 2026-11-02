@@ -1,0 +1,137 @@
+{
+ "appid": 1284190,
+ "features": [
+  {
+   "f": "loop.survival",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "A space survival open world terraforming crafting game"
+    }
+   ]
+  },
+  {
+   "f": "loop.building",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Survive, gather resources, and build your base"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235721179",
+     "q": "as the planet changes it opens new areas to explore and new discoveries to make"
+    }
+   ]
+  },
+  {
+   "f": "tone.serene",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236625486",
+     "q": "Honestly the most relaxing game I've ever played"
+    },
+    {
+     "id": "r236075147",
+     "q": "if you're looking for something chill and singleplayer, this is it"
+    }
+   ]
+  },
+  {
+   "f": "tone.creepy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235721179",
+     "q": "The whole thing is somewhat haunting at times"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238054986",
+     "q": "I felt so hopeless all the way through"
+    }
+   ]
+  },
+  {
+   "f": "story.lore",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235721179",
+     "q": "The lore is beautiful"
+    },
+    {
+     "id": "r237251680",
+     "q": "the lore is interesting"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237359850",
+     "q": "long-term visual gratification"
+    }
+   ]
+  },
+  {
+   "f": "length.long",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235721179",
+     "q": "You're not done when you've finished the first planet either"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237075163",
+     "q": "The core loop feels extremely tedious"
+    },
+    {
+     "id": "r236068249",
+     "q": "it's too tedious to recommend to friends with limited gaming time"
+    }
+   ]
+  },
+  {
+   "f": "world.scifi",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "A space survival open world terraforming crafting game"
+    }
+   ]
+  },
+  {
+   "f": "freedom.open_world",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "A space survival open world terraforming crafting game"
+    }
+   ]
+  }
+ ]
+}

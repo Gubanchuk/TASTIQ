@@ -1,0 +1,11 @@
+{"appid": 209650, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Call of Duty: Advanced Warfare is a 2014 first-person shooter game published by Activision"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "The game's story features a futuristic setting, set between 2054 and 2061"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p6", "q": "allows up to four players to engage in a wave-based match against A.I.-controlled enemies"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p10", "q": "varied multiplayer modes"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "allowing players to pick weapons, attachments, perks and score-streaks within a total of 13 allocation points"}, {"id": "p10", "q": "extensive multiplayer weapon customization"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "the player is given a certain number of upgrade points"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "unprecedented amount of fast movement, extensive multiplayer weapon customization, excellent visuals"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p12", "q": "coherent and fast-paced campaign, smart storytelling"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p12", "q": "lifelike characters and movie-like presentation"}]}
+]}

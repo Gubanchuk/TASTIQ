@@ -1,0 +1,8 @@
+{"id": "tt0486657", "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "is a dark fantasy television series based on the fantasy book series of the same name"}]},
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "recounts investigations into supernatural disturbances in modern-day Chicago"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "chronicles the cases of no ordinary detective"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "p0", "q": "follows private investigator and wizard Harry Dresden"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p1", "q": "The series ran for a single season of 12 episodes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "Sci Fi Channel revealed on August 3 that The Dresden Files was canceled"}]}
+]}

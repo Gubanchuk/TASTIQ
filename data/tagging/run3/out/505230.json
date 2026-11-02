@@ -1,0 +1,7 @@
+{"appid": 505230, "features": [
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "a 2019 horror-themed role-playing game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "may become infected or abandoned throughout the game as a result of the plague"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p7", "q": "The player must manage a variety of needs in order to stay alive"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p8", "q": "criticized its unforgiving survival mechanics"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p8", "q": "criticized its unforgiving survival mechanics and clunky combat"}]}
+]}

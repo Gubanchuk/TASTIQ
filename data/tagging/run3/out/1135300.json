@@ -1,0 +1,7 @@
+{"appid": 1135300, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a turn-based tactical role-playing game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "participates in both world exploration and tactical turn-based battles"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p3", "q": "combat was both fun and challenging"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p3", "q": "dull overworld activities"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p3", "q": "slow movement speed, janky movement, sterile characters"}]}
+]}

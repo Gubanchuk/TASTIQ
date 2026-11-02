@@ -1,0 +1,208 @@
+[
+  {
+    "id": "s05",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Не хочу длинных заставок. Сама игра вполне может быть длинной.",
+    "noAvoids": [
+      "length.long",
+      "session.long",
+      "story.central"
+    ],
+    "noWants": [
+      "length.short"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2022,
+        "input_tokens_details": {
+          "cache_write_tokens": 28,
+          "cached_tokens": 1991
+        },
+        "output_tokens": 183,
+        "output_tokens_details": {
+          "reasoning_tokens": 136
+        },
+        "total_tokens": 2205
+      },
+      "ms": 5142,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не хочу длинных заставок. Сама игра вполне может быть длинной.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Хочется меньше сюжетных вставок вообще или только без длинных заставок?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s06",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Не хочу думать о прокачке персонажа. Хочу трудные логические задачи.",
+    "wants": [
+      [
+        "cognitive.high",
+        "loop.puzzles"
+      ]
+    ],
+    "noAvoids": [
+      "cognitive.high",
+      "difficulty.hard"
+    ],
+    "noWants": [
+      "cognitive.low"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2025,
+        "input_tokens_details": {
+          "cache_write_tokens": 31,
+          "cached_tokens": 1991
+        },
+        "output_tokens": 160,
+        "output_tokens_details": {
+          "reasoning_tokens": 69
+        },
+        "total_tokens": 2185
+      },
+      "ms": 3812,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не хочу думать о прокачке персонажа. Хочу трудные логические задачи.",
+        "wants": [
+          {
+            "f": "loop.puzzles",
+            "evidence": "Хочу трудные логические задачи."
+          },
+          {
+            "f": "cognitive.high",
+            "evidence": "Хочу трудные логические задачи."
+          }
+        ],
+        "avoids": [
+          {
+            "f": "progression.builds",
+            "evidence": "Не хочу думать о прокачке персонажа."
+          }
+        ],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s07",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Хочу спокойную историю, но сложные бои меня не пугают.",
+    "wants": [
+      [
+        "tension.low",
+        "story.central"
+      ]
+    ],
+    "noAvoids": [
+      "difficulty.hard"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2023,
+        "input_tokens_details": {
+          "cache_write_tokens": 29,
+          "cached_tokens": 1991
+        },
+        "output_tokens": 115,
+        "output_tokens_details": {
+          "reasoning_tokens": 54
+        },
+        "total_tokens": 2138
+      },
+      "ms": 3136,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу спокойную историю, но сложные бои меня не пугают.",
+        "wants": [
+          {
+            "f": "tone.serene",
+            "evidence": "Хочу спокойную историю"
+          },
+          {
+            "f": "story.central",
+            "evidence": "Хочу спокойную историю"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s08",
+    "split": "holdout",
+    "domain": "game",
+    "text": "Хочу историю, никакого гринда в начале. Дальше гринд терпим.",
+    "wants": [
+      [
+        "story.central"
+      ]
+    ],
+    "noAvoids": [
+      "progression.grind"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2026,
+        "input_tokens_details": {
+          "cache_write_tokens": 32,
+          "cached_tokens": 1991
+        },
+        "output_tokens": 230,
+        "output_tokens_details": {
+          "reasoning_tokens": 176
+        },
+        "total_tokens": 2256
+      },
+      "ms": 5292,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу историю, никакого гринда в начале. Дальше гринд терпим.",
+        "wants": [
+          {
+            "f": "story.central",
+            "evidence": "Хочу историю"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Как долго после начала игры гринд должен отсутствовать?"
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  }
+]

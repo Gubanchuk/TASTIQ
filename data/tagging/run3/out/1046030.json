@@ -1,0 +1,10 @@
+{"appid": 1046030, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "players earn points by strategically placing buildings from their inventory onto a procedurally generated island"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p8", "q": "Reviewers praised the game's intentionally simple mechanics"}]},
+{"f": "tone.serene", "r": 3, "ev": [{"id": "p9", "q": "calling the game relaxing or meditative"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p3", "q": "minimalist design: low poly visuals, relaxing sound design"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "as well as its minimalist, low-poly visual aesthetic and relaxing soundtrack"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "Visual style was a draw that affected the way some reviewers played"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p9", "q": "Many enjoyed the ability to play in short sessions"}]},
+{"f": "session.long", "r": 1, "ev": [{"id": "p9", "q": "Others felt the game was suitable for long sessions in and of itself"}]}
+]}

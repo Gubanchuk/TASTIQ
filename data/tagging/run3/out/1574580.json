@@ -1,0 +1,14 @@
+{"appid": 1574580, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Gameplay involves the completion of puzzles by matching the details of customer requests of plants"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "progress the story by exploring locations on a grid-based map"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p5", "q": "creating elixirs and antidotes by combining the properties of several plants"}]},
+{"f": "loop.life_sim", "r": 1, "ev": [{"id": "p8", "q": "stocking shelves, chatting with customers, watering plants"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p8", "q": "even with all the creepy mysteries to unearth"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p8", "q": "vibe along with the serene-but-slightly-spooky atmosphere"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p7", "q": "quiet, meticulous, delightful, dark and beguiling"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p7", "q": "tactile interface and effective sound design"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "an officer investigating the murder"}]},
+{"f": "pace.slow", "r": 1, "ev": [{"id": "p8", "q": "mixed on the merits of the slow pace of the gameplay"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p8", "q": "the gameplay itself (stocking shelves, chatting with customers, watering plants) is tedious"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p8", "q": "repetitive main gameplay loop"}]}
+]}

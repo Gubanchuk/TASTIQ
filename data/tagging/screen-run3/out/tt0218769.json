@@ -1,0 +1,9 @@
+{"id": "tt0218769", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated sitcom"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p6", "q": "Humor relies on slapstick comedy and moderate off-color humor"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "p6", "q": "Humor relies on slapstick comedy and moderate off-color humor"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p6", "q": "parodies of popular culture and other shows"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "p2", "q": "two animal frenemies"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p4", "q": "In the series finale, I.R. is finally presented as the true star of the show"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p1", "q": "The entire series includes 79 episodes overall"}]}
+]}

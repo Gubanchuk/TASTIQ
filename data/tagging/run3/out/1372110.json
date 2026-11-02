@@ -1,0 +1,6 @@
+{"appid": 1372110, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "is a 3D fighting game in which players can fight against each other"}, {"id": "p0", "q": "is a fighting game developed by CyberConnect2"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "allows players to compete against each other using 40 characters"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "Players can also use Flash Cancels to deplete their own Heart Heat Gauge"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p0", "q": "using 40 characters taken from the first eight story arcs"}]}
+]}

@@ -1,0 +1,9 @@
+{"id": "tt3673480", "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "is a 2020 American historical drama television miniseries"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "p0", "q": "Focusing on John Brown's attack on American slavery"}]},
+{"f": "world.war", "r": 2, "ev": [{"id": "p1", "q": "but it was one of the events that led to the American Civil War"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p3", "q": "Ethan Hawke dazzles in The Good Lord Bird"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "If you really study this character, he asks a lot of you philosophically"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "s", "q": "told from the point of view of Onion, an enslaved teenager"}]},
+{"f": "characters.ensemble", "r": 1, "ev": [{"id": "p1", "q": "John Brown's (Ethan Hawke) motley crew of abolitionist soldiers"}]}
+]}

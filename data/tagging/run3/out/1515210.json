@@ -1,0 +1,7 @@
+{"appid": 1515210, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "It is a cooperative multiplayer game where two people must share clues to solve puzzles"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "Two players cooperate to solve puzzles"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p2", "q": "an exciting and creepy mystery"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "an exciting and creepy mystery"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "a satisfying couple of hours of good communication and cooperative puzzle solving"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 241600, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "is a 2013 platform game with roguelike elements"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "Characters have the default ability to jump and slash with their sword"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "explore a randomly generated dungeon"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "Gold can be found by smashing pieces of furniture, opening chests, or defeating enemies"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "can be used to improve the character's equipment and abilities"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "unlock and upgrade new classes that may be carried by one of the heirs"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p7", "q": "insanely hard for the unprepared"}, {"id": "p7", "q": "difficulty may be a turnoff to those who get frustrated easily"}]}
+]}

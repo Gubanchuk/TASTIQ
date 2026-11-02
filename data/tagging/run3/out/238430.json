@@ -1,0 +1,9 @@
+{"appid": 238430, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a survival horror first-person shooter video game"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "is a survival horror first-person shooter video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "Contagion is a multiplayer focused game with three different game modes"}, {"id": "p3", "q": "Escape is a cooperative game mode in which a team of up to 8 players"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "in which players fight each other"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p2", "q": "A.I.-controlled zombies wander the level"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "the players will have to fend off a horde with the resources found in that area"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p3", "q": "while completing various mission objectives in a linear order"}]}
+]}

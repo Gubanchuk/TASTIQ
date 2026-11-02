@@ -1,0 +1,12 @@
+{"appid": 70400, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "charged by the fairy Tear to run an item shop out of her house"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p0", "q": "bargaining and haggling with clients for goods"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p0", "q": "accompanying an adventurer into randomly generated dungeons to acquire goods to sell"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "Recettear takes place in a fantasy setting"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p9", "q": "frequently funny in an internet message board kind of way"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p9", "q": "the tone is bubbly and frequently funny"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p0", "q": "with the goal of paying back the debt within a fixed deadline"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p8", "q": "found the dungeon crawling somewhat repetitive"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p6", "q": "the player can continue the game indefinitely"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p4", "q": "allowing for improvement of the shop and selling benefits once higher levels are gained"}]}
+]}

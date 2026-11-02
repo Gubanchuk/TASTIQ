@@ -1,0 +1,9 @@
+{"id": "tt1998372", "features": [
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "based on the 2003 non-fiction book by Jon Krakauer about the case of brothers Ron and Dan Lafferty"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "two detectives investigating a brutal murder"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "is shaken when investigating the murder of a Latter-day Saint mother"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p1", "q": "particularly for the performances of Garfield and Wyatt Russell"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p0", "q": "is an American true crime drama television miniseries"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p0", "q": "two detectives investigating a brutal murder"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p3", "q": "gets bogged down by an overabundance of backstory"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 732690, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "virtual reality (VR) survival horror game"}, {"id": "p9", "q": "one of the scariest VR horror games"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p10", "q": "Critics called Help Wanted tense and unsettling"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "perform tasks without being caught and jumpscared by homicidal animatronic characters"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p4", "q": "the player solves puzzles to fix a ventilation shaft"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p0", "q": "is an anthology of minigames where the player must complete tasks"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p9", "q": "Reviewers found Help Wanted accessible"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p2", "q": "some found the jumpscares repetitive"}, {"id": "p11", "q": "the game became repetitive despite the number of levels"}]}
+]}

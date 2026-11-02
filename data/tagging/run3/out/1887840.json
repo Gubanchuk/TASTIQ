@@ -1,0 +1,11 @@
+{"appid": 1887840, "features": [
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "though it is set to Hard by default"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p1", "q": "allows players to change the difficulty at any time"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "combating various polluted foes by dodging their attacks and waiting for an opening to strike"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "The underwater world is a web of interconnected environments"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p2", "q": "Kril possesses a more advanced platforming moveset"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p2", "q": "a skill tree is unlocked through an NPC called the Moon Snail"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p3", "q": "his ability to use Umami, a kind of magic"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "makes sea creatures mindlessly hostile and nihilistic"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p4", "q": "a garbage patch called Trash Island passes over and rains garbage"}]}
+]}

@@ -1,0 +1,446 @@
+diff --git a/test/conversation-ai.test.js b/test/conversation-ai.test.js
+new file mode 100644
+index 0000000..3f03771
+--- /dev/null
++++ b/test/conversation-ai.test.js
+@@ -0,0 +1,141 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import { AI } from '../src/ai/config.js';
++import { aiConversation } from '../src/ai/conversation.js';
++import { OpenAIError } from '../src/ai/openai.js';
++import { fixtureCatalog } from './fixture.js';
++
++const run = aiConversation;
++const catalog = fixtureCatalog();
++const question = { id: 'experience', title: 'Что хочется делать сегодня?', why: 'Чтобы понять сегодняшний запрос.', options: [{ id: 'explore', label: 'Исследовать' }, { id: 'story', label: 'Следить за историей' }], multiple: true, controls: ['unknown', 'indifferent', 'none'] };
++const words = 'Оба. В Cyberpunk только начал, могу вернуться; реализм не важен. Не приписывай мне спутников из BG3.';
++const state = () => ({ version: 1, id: 'dialogue-1', revision: 3, mode: 'guided', phase: 'talk', context: { platform: 'pc', company: 'solo', partySize: 1 }, turns: [{ id: 't3', question, selected: question.options, text: words, kind: 'answer', answer: `Исследовать; Следить за историей. ${words}` }], facts: [{ key: 'realism', text: 'Реализм не важен', stance: 'indifferent', scope: 'today', sourceId: 't3', quote: 'реализм не важен', feature: null, gameId: null, exposure: null }], question, summary: 'Уточняем сегодняшний запрос.', uncertainties: ['Неясно, какой темп нужен сегодня.'], retractions: [{ key: 'companions', sourceId: 't1' }], result: null });
++const proposal = () => ({ summary: 'Сегодня хочется исследовать мир и следить за историей; реализм не важен.', facts: state().facts, uncertainties: ['Темп пока не выяснен.'], action: 'question', question: { ...question, id: 'pace', title: 'Какой темп сейчас ближе?', options: [{ id: 'calm', label: 'Спокойный' }, { id: 'varied', label: 'Чередование' }] } });
++const response = (value = proposal(), extra = {}) => ({ id: 'resp-stub', status: 'completed', model: 'stub-model', usage: { input_tokens: 123, output_tokens: 45 }, output: [{ type: 'message', role: 'assistant', status: 'completed', content: [{ type: 'output_text', text: JSON.stringify(value), annotations: [] }] }], ...extra });
++
++test('planner sends exact active evidence, corrections and feature definitions in one private request', async () => {
++  let request, calls = 0;
++  const original = state();
++  original.profile = { favorite: 'must-not-import-old-taste' };
++  original.result = { secret: 'must-not-send-result' };
++  const before = structuredClone(original);
++  const result = await run(catalog, original, { api: async body => { calls++; request = body; return response(); } });
++  assert.equal(calls, 1);
++  assert.deepEqual(result.proposal, proposal());
++  assert.deepEqual(result.usage, { input_tokens: 123, output_tokens: 45 });
++  assert.equal(result.model, 'stub-model');
++  assert.ok(Number.isFinite(result.ms));
++  const input = JSON.parse(request.input);
++  assert.deepEqual(input.turns, original.turns);
++  assert.deepEqual(input.facts, original.facts);
++  assert.deepEqual(input.retractions, [{ key: 'companions', sourceId: 't1' }]);
++  assert.deepEqual(input.context, { platform: 'pc', company: 'solo', partySize: 1 });
++  assert.deepEqual(input.question, question);
++  assert.equal(input.mode, 'guided');
++  assert.ok(input.features.some(f => f.id === 'session.short' && typeof f.def === 'string'));
++  assert.doesNotMatch(request.input, /must-not-/);
++  assert.equal(request.store, false);
++  assert.equal(request.model, AI.model);
++  assert.equal(request.reasoning.effort, AI.effort);
++  assert.deepEqual(original, before);
++});
++
++test('strict schema describes the whole fact snapshot and neutral multi-choice question contract', async () => {
++  let request;
++  await run(catalog, state(), { api: async body => { request = body; return response(); } });
++  const format = request.text.format, schema = format.schema;
++  assert.equal(format.type, 'json_schema');
++  assert.equal(format.strict, true);
++  assert.deepEqual(schema.required.toSorted(), ['action', 'facts', 'question', 'summary', 'uncertainties']);
++  const fact = schema.properties.facts.items;
++  assert.deepEqual(fact.required.toSorted(), ['exposure', 'feature', 'gameId', 'key', 'quote', 'scope', 'sourceId', 'stance', 'text']);
++  assert.deepEqual(fact.properties.stance.enum, ['want', 'avoid', 'require', 'exclude', 'indifferent', 'unknown', 'conditional', 'history']);
++  assert.ok(fact.properties.feature.anyOf.some(s => s.enum?.includes('session.short')));
++  assert.ok(fact.properties.feature.anyOf.some(s => s.type === 'null'));
++  assert.deepEqual(fact.properties.exposure.enum, ['unplayed', 'started', 'finished', 'dropped', null]);
++  const q = schema.properties.question.anyOf.find(s => s.type === 'object');
++  assert.equal(q.properties.multiple.type, 'boolean');
++  assert.deepEqual(q.properties.controls.items.enum, ['unknown', 'indifferent', 'none']);
++  function strictObjects(node) {
++    if (!node || typeof node !== 'object') return;
++    if (node.type === 'object') {
++      assert.equal(node.additionalProperties, false);
++      assert.deepEqual([...node.required].sort(), Object.keys(node.properties).sort());
++    }
++    for (const child of Object.values(node)) if (Array.isArray(child)) child.forEach(strictObjects); else strictObjects(child);
++  }
++  strictObjects(schema);
++});
++
++test('free baseline retains the same evidence and schema but delegates sequence to the model', async () => {
++  const requests = [];
++  for (const mode of ['guided', 'free']) await run(catalog, { ...state(), mode }, { api: async body => { requests.push(body); return response(); } });
++  assert.deepEqual(requests[0].text, requests[1].text);
++  assert.equal(requests[0].model, requests[1].model);
++  assert.deepEqual(requests[0].reasoning, requests[1].reasoning);
++  const guided = JSON.parse(requests[0].input), free = JSON.parse(requests[1].input);
++  assert.deepEqual({ ...guided, mode: 'free' }, free);
++  assert.match(requests[1].instructions, /model controls.*sequenc/i);
++  assert.match(requests[0].instructions, /guided.*invariant/i);
++});
++
++test('a review remains a proposal and original full natural answers are not truncated', async () => {
++  let request;
++  const original = state();
++  original.turns[0].text = 'Есть нюанс: '.padEnd(1500, 'я');
++  original.turns[0].answer = `${original.turns[0].text} — и это важно`;
++  const review = { ...proposal(), action: 'review', question: null };
++  const result = await run(catalog, original, { api: async body => { request = body; return response(review); } });
++  assert.deepEqual(result.proposal, review);
++  assert.equal(JSON.parse(request.input).turns[0].answer, original.turns[0].answer);
++  assert.equal(original.phase, 'talk');
++});
++
++test('explicit title matches supply usable IDs without importing catalog properties or invented exposure', async () => {
++  let request;
++  const original = state();
++  await run(catalog, original, {
++    knownGames: [{ id: 'cp2077', name: 'Cyberpunk 2077', ru: 'Киберпанк 2077', year: 2020, mechanics: 'invented-mechanic-must-not-leak', liked: true, exposure: 'finished' }],
++    api: async body => { request = body; return response(); },
++  });
++  const input = JSON.parse(request.input);
++  assert.deepEqual(input.knownGames, [{ id: 'cp2077', name: 'Cyberpunk 2077', ru: 'Киберпанк 2077', year: 2020 }]);
++  assert.deepEqual(input.turns, original.turns);
++  assert.doesNotMatch(request.input, /invented-mechanic-must-not-leak/);
++  assert.equal(input.knownGames[0].exposure, undefined);
++  assert.equal(input.knownGames[0].liked, undefined);
++  assert.equal((await run(catalog, original, { knownGames: Array(13).fill({ id: 'a', name: 'A' }), api: async () => assert.fail('oversized identity context must not spend') })).notRequested, true);
++});
++
++test('budget and oversized context are rejected before spending rather than silently dropping evidence', async () => {
++  const noCall = async () => assert.fail('this input must not spend');
++  for (const maxCostUsd of [0, -1, NaN, 0.000001]) assert.equal((await run(catalog, state(), { api: noCall, maxCostUsd })).notRequested, true);
++  assert.equal((await run(null, state(), { api: noCall })).notRequested, true);
++  assert.equal((await run(catalog, null, { api: noCall })).notRequested, true);
++  assert.equal((await run(catalog, { ...state(), turns: Array(25).fill(state().turns[0]) }, { api: noCall })).notRequested, true);
++  const tooLong = state(); tooLong.turns[0].text = 'x'.repeat(300_000);
++  assert.equal((await run(catalog, tooLong, { api: noCall })).notRequested, true);
++});
++
++test('malformed, refusal, incomplete and empty replies preserve usage and make no second paid call', async () => {
++  const replies = [response(null), response({}), response({ ...proposal(), action: 'recommend' }), response({ ...proposal(), question: null }), response({ ...proposal(), facts: 'bad' }), response({}, { status: 'incomplete' }), response({}, { output: [] }), response({}, { output: [{ type: 'message', content: [{ type: 'refusal', refusal: 'no' }] }] }), response({}, { output: [{ type: 'message', content: [{ type: 'output_text', text: '{broken' }] }] })];
++  for (const reply of replies) {
++    let calls = 0;
++    const result = await run(catalog, state(), { api: async () => { calls++; return reply; } });
++    assert.equal(calls, 1);
++    assert.ok(result.error);
++    assert.equal(result.proposal, undefined);
++    assert.deepEqual(result.usage, { input_tokens: 123, output_tokens: 45 });
++  }
++});
++
++test('transport failures are safe, preserve explicit OpenAI message and never retry', async () => {
++  for (const error of [new OpenAIError('нейросеть не ответила вовремя'), new Error('secret-provider-detail')]) {
++    let calls = 0;
++    const result = await run(catalog, state(), { api: async () => { calls++; throw error; } });
++    assert.equal(calls, 1);
++    assert.ok(result.error);
++    assert.doesNotMatch(result.error, /secret-provider-detail/);
++    if (error instanceof OpenAIError) assert.match(result.error, /вовремя/);
++  }
++});
+diff --git a/test/conversation-client.test.js b/test/conversation-client.test.js
+new file mode 100644
+index 0000000..ba63f7c
+--- /dev/null
++++ b/test/conversation-client.test.js
+@@ -0,0 +1,58 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import { createConversationClient, CONVERSATION_KEY } from '../src/server/public/shared/conversation-client.js';
++
++const storage=()=>{const map=new Map();return {getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};};
++const state=(revision=0,id='one')=>({version:1,id,revision,mode:'guided',phase:'talk',turns:[],facts:[],context:{},question:{id:'direction',title:'Что сегодня?',options:[],controls:['unknown']}});
++const response=(revision=0,id='one')=>({state:state(revision,id),screen:{type:'question',question:state().question,canBack:revision>0}});
++const ok=data=>({ok:true,json:async()=>data});
++const defer=()=>{let resolve;const promise=new Promise(r=>resolve=r);return {promise,resolve};};
++
++test('start and reload only send actionless resume and retain typed draft',async()=>{
++ const store=storage(),bodies=[];const fetch=async(_,opts)=>{bodies.push(JSON.parse(opts.body));return ok(response());};
++ const first=createConversationClient({fetch,storage:store});await first.start();first.saveDraft('direction',{text:'Хочу историю',selected:['story']});
++ const restored=createConversationClient({fetch,storage:store});assert.equal(restored.draft('direction').text,'Хочу историю');await restored.start();
++ assert.equal(bodies.length,2);assert.equal(bodies[1].action,undefined);assert.equal(bodies[1].state.id,'one');assert.ok(store.getItem(CONVERSATION_KEY));
++});
++test('back invalidates a pending answer even if it resolves after the back',async()=>{
++ const slow=defer();let count=0;const client=createConversationClient({storage:storage(),fetch:async()=>++count===1?ok(response(2)):count===2?slow.promise:ok(response(3))});
++ await client.start();const pending=client.send({type:'answer',questionId:'direction',selected:[],text:'старый ответ'});await client.send({type:'back'});slow.resolve(ok(response(4)));await pending;assert.equal(client.state.revision,3);
++});
++test('restart invalidates late answer for old identity',async()=>{
++ const slow=defer();let count=0;const client=createConversationClient({storage:storage(),fetch:async()=>++count===1?ok(response()):count===2?slow.promise:ok(response(0,'new'))});
++ await client.start();const pending=client.send({type:'answer'});await client.send({type:'restart'});slow.resolve(ok(response(1)));await pending;assert.equal(client.state.id,'new');
++});
++test('response from a different conversation or older revision is rejected',async()=>{
++ let next=response(4);const client=createConversationClient({storage:storage(),fetch:async()=>ok(next)});await client.start();next=response(3);await client.send({type:'review'});assert.equal(client.state.revision,4);assert.ok(client.error);next=response(5,'other');await client.send({type:'review'});assert.equal(client.state.id,'one');
++});
++test('network retry repeats identical input rather than replaying as a new answer',async()=>{
++ const bodies=[];let fail=false;const client=createConversationClient({storage:storage(),fetch:async(_,opts)=>{bodies.push(opts.body);if(fail){fail=false;throw Error('offline');}return ok(response(bodies.length));}});
++ await client.start();fail=true;await client.send({type:'answer',questionId:'direction',text:'История',selected:[]});assert.ok(client.error);await client.retry();assert.equal(bodies[1],bodies[2]);assert.equal(client.error,null);
++});
++test('drafts survive pending render and failed request; restart clears them',async()=>{
++ const client=createConversationClient({storage:storage(),fetch:async()=>ok(response())});await client.start();client.saveDraft('direction',{text:'Не потерять',selected:['story']});await client.send({type:'review'});assert.equal(client.draft('direction').text,'Не потерять');await client.send({type:'restart'});assert.equal(client.draft('direction').text,'');
++});
++test('corrupt storage and unavailable storage fall back to memory',async()=>{
++ const store={getItem:()=>'{bad',setItem:()=>{throw Error();}};const client=createConversationClient({storage:store,fetch:async()=>ok(response())});await client.start();client.saveDraft('direction',{text:'Текст'});assert.equal(client.draft('direction').text,'Текст');assert.equal(client.persistent,false);
++});
++test('starting from saved error never retries paid action on reload',async()=>{
++ const store=storage();let fail=false;const bodies=[];const fetch=async(_,opts)=>{bodies.push(JSON.parse(opts.body));if(fail)throw Error();return ok(response());};
++ const first=createConversationClient({fetch,storage:store});await first.start();fail=true;await first.send({type:'confirm'});fail=false;const second=createConversationClient({fetch,storage:store});await second.start();assert.equal(bodies.at(-1).action,undefined);
++});
++test('planner failure with a committed answer retries from returned state, keeping draft',async()=>{
++ const bodies=[];const client=createConversationClient({storage:storage(),fetch:async(_,opts)=>{
++  bodies.push(JSON.parse(opts.body));return ok(bodies.length===2?{...response(1),error:'Модель недоступна',retryable:true}:response(bodies.length));
++ }});await client.start();client.saveDraft('direction',{text:'Спокойная стратегия',selected:[]});
++ await client.send({type:'answer',questionId:'direction',text:'Спокойная стратегия',selected:[]});assert.ok(client.error);
++ const committed=client.state;await client.retry();assert.deepEqual(bodies[2].action,{type:'retry'});assert.deepEqual(bodies[2].state,committed);assert.equal(client.draft('direction').text,'Спокойная стратегия');
++});
++test('failed restart retry accepts the fresh conversation identity and clears drafts',async()=>{
++ let count=0;const client=createConversationClient({storage:storage(),fetch:async()=>{
++  count++;if(count===2)throw Error('offline');return ok(count===1?response():response(0,'new'));
++ }});await client.start();client.saveDraft('direction',{text:'Старый ответ'});await client.send({type:'restart'});assert.ok(client.error);await client.retry();assert.equal(client.state.id,'new');assert.equal(client.draft('direction').text,'');
++});
++test('malformed saved draft is safe and never grows beyond input limits',()=>{
++ const store=storage();store.setItem(CONVERSATION_KEY,JSON.stringify({version:1,drafts:{direction:{text:4,selected:'story',kind:'invalid'}}}));
++ const client=createConversationClient({storage:store});assert.deepEqual(client.draft('direction'),{text:'',selected:[],kind:'answer'});
++ client.saveDraft('direction',{text:'я'.repeat(1700),selected:['story',null,5],kind:'none'});assert.equal(client.draft('direction').text.length,1600);assert.deepEqual(client.draft('direction').selected,['story']);
++});
+diff --git a/test/conversation-service.test.js b/test/conversation-service.test.js
+new file mode 100644
+index 0000000..1662578
+--- /dev/null
++++ b/test/conversation-service.test.js
+@@ -0,0 +1,54 @@
++import {test} from 'node:test';
++import assert from 'node:assert/strict';
++import {createConversationService} from '../src/server/conversation-service.js';
++import {newConversation,answerConversation,applyConversationProposal} from '../src/core/conversation.js';
++import {fixtureCatalog} from './fixture.js';
++const catalog=fixtureCatalog(), catalogs={game:catalog};
++const reply=(s,id,text='')=>answerConversation(s,{type:'answer',questionId:s.question.id,selected:id?[id]:[],text,kind:'answer'});
++function pending(){let s=newConversation({id:'service'});s=reply(s,'rpg');s=reply(s,'windows');return reply(s,'solo');}
++const q={id:'experience',title:'Что хочется от игры?',why:'Уточним цель',options:[],multiple:true,controls:['unknown','indifferent','none']};
++const proposal={summary:'Ищем RPG',facts:[],uncertainties:[],action:'question',question:q};
++const goodPlan=async()=>({proposal,usage:{input_tokens:100,output_tokens:50},model:'stub'});
++test('initial and actionless restore never trigger paid planning',async()=>{
++  let calls=0;const service=createConversationService({catalogs,plan:async()=>{calls++;return goodPlan();}});
++  const start=await service({mode:'free'}); assert.equal(start.state.mode,'free');assert.equal(start.screen.question.id,'direction');
++  await service({state:pending()});assert.equal(calls,0);
++});
++test('duplicate requests share in-flight planner and successful cache',async()=>{
++  let calls=0,release;const wait=new Promise(r=>release=r);
++  const service=createConversationService({catalogs,plan:async()=>{calls++;await wait;return goodPlan();}});
++  const body={state:pending(),action:{type:'retry'}};
++  const a=service(body),b=service(body);release(); const [x,y]=await Promise.all([a,b]);
++  assert.equal(calls,1);assert.deepEqual(x,y);assert.equal(x.screen.question.id,'experience');
++  await service(body);assert.equal(calls,1);
++});
++test('failed interpretation preserves the answer and offers explicit retry without accepting invented evidence',async()=>{
++  const service=createConversationService({catalogs,plan:async()=>({error:'проверочный отказ'})});
++  const out=await service({state:pending(),action:{type:'retry'}});
++  assert.equal(out.state.turns.length,3);assert.equal(out.retryable,true);assert.equal(out.state.failedAction,'plan');
++  assert.ok(out.screen.question);assert.match(out.error,/отказ/);
++});
++test('review is free and confirmed final picks use the same adapter for both modes',async()=>{
++  let plans=0,picks=0,seen=[];
++  const service=createConversationService({catalogs,plan:async()=>{plans++;return goodPlan();},pick:async(_,s)=>{picks++;seen.push(s);return {picks:[{id:'2',reason:'По словам',caveat:'Есть риск'}],understood:'Понял'};}});
++  for(const mode of ['guided','free']){
++    const state={...pending(),id:mode,mode};const review=await service({state,action:{type:'review'}});
++    assert.equal(review.screen.type,'review');
++    const out=await service({state:review.state,action:{type:'confirm'}});
++    assert.equal(out.screen.type,'result');assert.equal(out.screen.result.top.id,'2');assert.ok(out.feedbackState);
++  }
++  assert.equal(plans,0);assert.equal(picks,2);assert.deepEqual(seen[0].session,seen[1].session);
++});
++test('stale question action is rejected before any paid call',async()=>{
++  let calls=0;const service=createConversationService({catalogs,plan:async()=>{calls++;return goodPlan();}});
++  await assert.rejects(()=>service({state:newConversation(),action:{type:'answer',questionId:'wrong',text:'test'}}),/уже изменился/);
++  assert.equal(calls,0);
++});
++test('disabled AI provides explicit local recovery and provisional engine results, without spending',async()=>{
++  let calls=0;const service=createConversationService({catalogs,access:()=>({allowed:false,reason:'AI выключен'}),spend:()=>calls++,plan:goodPlan});
++  const out=await service({state:pending(),action:{type:'retry'}});
++  assert.equal(calls,0);assert.ok(out.screen.question);assert.equal(out.retryable,false);
++  const review=await service({state:out.state,action:{type:'review'}});
++  const result=await service({state:review.state,action:{type:'confirm'}});
++  assert.equal(result.screen.type,'result');assert.equal(result.screen.provisional,true);assert.equal(calls,0);
++});
+diff --git a/test/conversation-view.test.js b/test/conversation-view.test.js
+new file mode 100644
+index 0000000..ffddcff
+--- /dev/null
++++ b/test/conversation-view.test.js
+@@ -0,0 +1,13 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {feasibilityHtml} from '../src/server/public/pick/game/feasibility.js';
++
++test('card warnings visibly retain unknown, conditional and incompatible conditions',()=>{
++ const html=feasibilityHtml([{status:'yes',text:'Подтверждено'},{status:'unknown',text:'Вместимость не подтверждена'},{status:'conditional',text:'Нужен отдельный режим'},{status:'no',text:'Только два игрока'}]);
++ for(const text of ['Проверь перед выбором','Не подтверждено','Вместимость не подтверждена','Есть условие','Нужен отдельный режим','Не подходит по условию','Только два игрока'])assert.ok(html.includes(text));
++ assert.ok(!html.includes('Подтверждено'));
++});
++test('feasibility text is escaped and empty or verified-only conditions add no warning',()=>{
++ assert.equal(feasibilityHtml(), '');assert.equal(feasibilityHtml([{status:'yes',text:'Можно'}]),'');assert.equal(feasibilityHtml([{status:'unknown',text:'  '}]),'');
++ const html=feasibilityHtml([{status:'unknown',text:'<img src=x onerror="bad()"> & факт'}]);assert.ok(!html.includes('<img'));assert.ok(html.includes('&lt;img'));assert.ok(html.includes('&amp; факт'));
++});
+diff --git a/test/conversation.test.js b/test/conversation.test.js
+new file mode 100644
+index 0000000..475b00e
+--- /dev/null
++++ b/test/conversation.test.js
+@@ -0,0 +1,150 @@
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { newConversation, answerConversation, applyConversationProposal, conversationScreen, conversationToLegacy } from '../src/core/conversation.js';
++import { fixtureCatalog, game } from './fixture.js';
++import { makeCatalog } from '../src/core/catalog.js';
++import { computeIdf } from '../src/core/idf.js';
++import { rankAll } from '../src/core/recommend.js';
++import { profileOf, sessionOf } from '../src/core/dialogue.js';
++import { describePerson, systemFor } from '../src/ai/prompt.js';
++
++const catalog = fixtureCatalog();
++const reply = (s, selected = [], text = '', kind = 'answer') => answerConversation(s, {type:'answer',questionId:s.question.id,selected,text,kind});
++function ready(mode='guided') {
++  let s = newConversation({id:'test-evening',mode});
++  s=reply(s,['rpg','open_world']); s=reply(s,['windows']); s=reply(s,['solo']);
++  return s;
++}
++const q = (id='experience') => ({id,title:'Что хочется получать от игры?',why:'Уточним желаемый опыт',options:[{id:'story',label:'Истории'},{id:'builds',label:'Развивать героя'}],multiple:true,controls:['unknown','indifferent','none']});
++const proposal = (facts=[], question=q()) => ({summary:'Ищем игру на сегодняшний вечер',facts,uncertainties:[],action:question?'question':'review',question});
++const fact = (s, patch={}) => ({key:'goal',text:'Нужна история',stance:'want',scope:'today',sourceId:s.turns.at(-1).id,quote:s.turns.at(-1).answer,feature:'story.central',gameId:null,exposure:null,...patch});
++function said(text,kind='answer') {
++  let s=ready(); s=applyConversationProposal(s,proposal(),catalog.dict).state;
++  return reply(s,[],text,kind);
++}
++
++test('game entry asks direction first, preserves both choices and offers own words',()=>{
++  let s=newConversation({id:'entry'});
++  assert.equal(s.phase,'direction'); assert.ok(s.question.options.some(o=>o.id==='rpg'));
++  s=reply(s,['rpg','open_world'],'Можно с необычными историями');
++  assert.equal(s.phase,'platform'); assert.equal(s.turns[0].selected.length,2);
++  assert.match(s.turns[0].answer,/RPG/); assert.match(s.turns[0].answer,/необычными историями/);
++});
++
++test('unknown, indifferent and none are not translated into negative preferences',()=>{
++  for(const kind of ['unknown','indifferent','none']) {
++    const s=said('',kind);
++    const out=applyConversationProposal(s,proposal([fact(s,{stance:'avoid'})],null),catalog.dict);
++    assert.ok(out.error,kind); assert.deepEqual(out.state.facts,s.facts);
++  }
++});
++
++test('invalid evidence rejects interpretation and its dependent question atomically',()=>{
++  const s=said('Хочу историю');
++  const out=applyConversationProposal(s,proposal([fact(s,{quote:'люблю спутников'})],q('companions')),catalog.dict);
++  assert.ok(out.error); assert.equal(out.state.revision,s.revision); assert.notEqual(out.state.question?.id,'companions');
++});
++
++test('stale planner reply and retracted facts cannot revive discarded meaning',()=>{
++  let s=said('Хочу историю');
++  const f=fact(s); s=applyConversationProposal(s,proposal([f],null),catalog.dict).state;
++  const oldRevision=s.revision;
++  s=answerConversation(s,{type:'remove_fact',key:f.key});
++  assert.equal(s.facts.length,0); assert.ok(s.revision>oldRevision);
++  assert.ok(applyConversationProposal(s,proposal([f],null),catalog.dict).error);
++  assert.ok(applyConversationProposal(s,proposal([],q()),catalog.dict,oldRevision).error);
++});
++
++test('back removes answer and dependent facts, monotonic version invalidates late responses',()=>{
++  let s=said('Хочу историю'); const last=s.turns.at(-1).id;
++  s=applyConversationProposal(s,proposal([fact(s)],null),catalog.dict).state;
++  const rev=s.revision; s=answerConversation(s,{type:'back'});
++  assert.ok(s.revision>rev); assert.ok(!s.turns.some(t=>t.id===last)); assert.ok(!s.facts.some(f=>f.sourceId===last));
++  assert.equal(conversationScreen(s).type,'question'); assert.equal(s.question.id,'experience');
++});
++
++test('guided mode rejects a resolved repeated question, free baseline leaves sequencing to model',()=>{
++  const s=said('Хочу историю');
++  assert.ok(applyConversationProposal(s,proposal([fact(s)],q()),catalog.dict).error);
++  assert.ok(!applyConversationProposal({...s,mode:'free'},proposal([fact(s)],q()),catalog.dict).error);
++});
++
++test('a single genre is insufficient to declare understanding; preview remains available',()=>{
++  const s=ready(); const out=applyConversationProposal(s,proposal([],null),catalog.dict);
++  assert.ok(out.error); const preview=answerConversation(s,{type:'review'});
++  assert.equal(conversationScreen(preview).type,'review'); assert.equal(conversationScreen(preview).provisional,true);
++});
++
++test('early preview keeps a reachable required context question instead of a dead review',()=>{
++  const s=newConversation({id:'early'}), next=answerConversation(s,{type:'review'});
++  assert.equal(conversationScreen(next).type,'question');assert.equal(next.question.id,'direction');
++  const platform=reply(s,['rpg']);const preview=answerConversation(platform,{type:'review'});
++  assert.equal(preview.phase,'platform');
++});
++
++test('a free correction invalidates previous derived preferences until interpreted again',()=>{
++  let s=said('Хочу историю');s=applyConversationProposal(s,proposal([fact(s)],null),catalog.dict).state;
++  s=answerConversation(s,{type:'correct',text:'Передумал, теперь хочу гонки'});
++  assert.equal(s.facts.length,0);assert.equal(s.summary,'');assert.equal(s.needsPlan,true);
++  assert.ok(s.turns.some(t=>t.answer.includes('Хочу историю')),'source history retained for reinterpretation');
++});
++
++test('today goals outrank historical feature preferences and indifference never becomes avoid',()=>{
++  const items=[game(1,'Большой мир',{'freedom.open_world':1}),game(2,'Линейная история',{'freedom.linear':1})];
++  const cat=makeCatalog({items,...computeIdf(items),stats:{}},'game');
++  const s=said('Обычно открытый мир, сегодня линейную, реализм неважен');
++  const out=applyConversationProposal(s,proposal([
++    fact(s,{key:'past',scope:'history',feature:'freedom.open_world',quote:'Обычно открытый мир'}),
++    fact(s,{key:'today',feature:'freedom.linear',quote:'сегодня линейную'}),
++    fact(s,{key:'realism',stance:'indifferent',feature:'tone.gritty',quote:'реализм неважен'}),
++  ],null),cat.dict);
++  assert.ok(!out.error); const legacy=conversationToLegacy(out.state,cat.dict);
++  const session=sessionOf(legacy), ranked=rankAll(cat,profileOf(legacy),session).ranked;
++  assert.equal(ranked[0].game.id,'2'); assert.ok(!session.goalAvoids.some(x=>x.f==='tone.gritty'));
++});
++
++test('started game remains available to continue; finished game excluded without excluding entire series',()=>{
++  const items=[game(1,'Начатая',{'story.central':1}),game(2,'Пройденная',{'story.central':1}),game(3,'Новая часть',{'story.central':1})];
++  items[1].series=['shared']; items[2].series=['shared'];
++  const cat=makeCatalog({items,...computeIdf(items),stats:{}},'game');
++  const s=said('Первую только начал, вторую прошёл');
++  const out=applyConversationProposal(s,proposal([
++    fact(s,{key:'started',stance:'history',scope:'history',feature:null,gameId:'1',exposure:'started',quote:'Первую только начал'}),
++    fact(s,{key:'finished',stance:'history',scope:'history',feature:null,gameId:'2',exposure:'finished',quote:'вторую прошёл'}),
++  ],null),cat.dict);
++  const legacy=conversationToLegacy(out.state,cat.dict), ids=rankAll(cat,profileOf(legacy),sessionOf(legacy)).ranked.map(r=>r.game.id);
++  assert.ok(ids.includes('1')); assert.ok(!ids.includes('2')); assert.ok(ids.includes('3'));
++});
++
++test('full raw meaning survives into final prompt beyond old 300 character note',()=>{
++  const tail='Самое важное — хочу вернуться к начатой игре'; const s=said('Мне интересно '.repeat(45)+tail);
++  const out=applyConversationProposal(s,proposal([fact(s,{quote:tail,text:tail,feature:null})],null),catalog.dict);
++  assert.match(describePerson(conversationToLegacy(out.state,catalog.dict),catalog),/хочу вернуться к начатой игре/);
++});
++
++test('adaptive final picker is not instructed to keep today inside historical taste',()=>{
++  const text=systemFor(conversationToLegacy(ready(),catalog.dict));
++  assert.ok(!text.includes('Start from the titles the person loves'));
++  assert.ok(!text.includes('not replace their main reasons'));
++  assert.match(text,/today.*goal/i);
++});
++
++test('explicit excluded title is removed even when it was only started',()=>{
++  const s=said('Первую только начал, но сегодня её не предлагай');
++  const out=applyConversationProposal(s,proposal([fact(s,{key:'no-title',stance:'exclude',gameId:'1',exposure:'started',feature:null})],null),catalog.dict);
++  const legacy=conversationToLegacy(out.state,catalog.dict);
++  assert.ok(sessionOf(legacy).notNow.includes('1'));
++  assert.ok(!rankAll(catalog,profileOf(legacy),sessionOf(legacy)).ranked.some(r=>r.game.id==='1'));
++});
++
++test('editing company invalidates facts sourced from superseded context, including later proposals',()=>{
++  let s=newConversation({id:'company-edit'});s=reply(s,['rpg']);s=reply(s,['windows']);s=reply(s,['friend']);
++  const source=s.turns.at(-1);
++  s=applyConversationProposal(s,proposal(),catalog.dict).state;s=reply(s,[],'Хочу историю');
++  const coop=fact(s,{key:'cooperation',stance:'require',feature:'social.coop',sourceId:source.id,quote:source.answer});
++  s=applyConversationProposal(s,proposal([coop],null),catalog.dict).state;
++  s=answerConversation(s,{type:'context',company:'solo'});
++  assert.ok(!s.facts.some(f=>f.key===coop.key));
++  assert.ok(!sessionOf(conversationToLegacy(s,catalog.dict)).goalRequires.some(x=>x.f==='social.coop'));
++  assert.ok(applyConversationProposal(s,proposal([coop],null),catalog.dict).error);
++});

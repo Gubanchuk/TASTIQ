@@ -1,0 +1,13 @@
+{"id": "tt2580046", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a French animated superhero television series created by Thomas Astruc"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is a French animated superhero television series created by Thomas Astruc"}]},
+{"f": "world.school", "r": 3, "ev": [{"id": "s", "q": "Normal high school kids by day, protectors of Paris by night"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "using magical jewelry known as the"}]},
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p4", "q": "Marinette and Adrien struggle with their feelings for each other"}, {"id": "p7", "q": "leading them to starting a romantic relationship"}]},
+{"f": "characters.family", "r": 1, "ev": [{"id": "p5", "q": "is Adrien's father, Gabriel Agreste"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p9", "q": "the gathering of a team of heroes"}]},
+{"f": "structure.serialized", "r": 2, "ev": [{"id": "p8", "q": "In the sixth season, Marinette struggles with the morality of hiding the truth"}]},
+{"f": "aesthetic.effects", "r": 1, "ev": [{"id": "p13", "q": "commended the fight sequences and CGI animation"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p13", "q": "the characters are so charming that the tropey aspects of the show are merely a lot of fun"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p10", "q": "it was retooled for a younger target audience"}]}
+]}

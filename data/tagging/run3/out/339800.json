@@ -1,0 +1,11 @@
+{"appid": 339800, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p2", "q": "they will play a tile matching game where they must match sets of three or more identical tokens"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p1", "q": "The player can interact with women by talking to them and giving them gifts"}]},
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p0", "q": "The game follows the dating adventures of the main character as they try to woo several different women"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p1", "q": "each of whom has her own distinct personalities and preferences"}]},
+{"f": "content.sexual", "r": 3, "ev": [{"id": "p0", "q": "tile-matching and dating sim adult video game"}, {"id": "p6", "q": "Due to its strong sexual content and themes"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "its characters are drawn in anime art style"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "that can be used to upgrade the player's stats"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "After a successful date, the player is rewarded with a picture of the woman"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p4", "q": "Destructoid criticized the game's conversations as lacking in variety"}]}
+]}

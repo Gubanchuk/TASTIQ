@@ -1,0 +1,8 @@
+{"id": "tt32612507", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "a 2026 supernatural horror film written and directed by Lee Cronin"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p4", "q": "is just The Exorcist with gauze"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p3", "q": "injects some juicy gore and personal stakes"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p3", "q": "get entombed by a padded running time"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p4", "q": "Cronin's version really made a mess of an Exorcist movie"}]},
+{"f": "characters.family", "r": 1, "ev": [{"id": "p0", "q": "The film follows a family who is reunited with their long-missing"}]}
+]}

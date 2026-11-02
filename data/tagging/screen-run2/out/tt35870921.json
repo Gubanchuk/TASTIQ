@@ -1,0 +1,13 @@
+{"id": "tt35870921", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "Hindi-language crime thriller television series"}]},
+{"f": "tone.gritty", "r": 3, "ev": [{"id": "p7", "q": "works due to its gripping narrative, atmospheric treatment and strong performances"}, {"id": "p6", "q": "gritty, atmospheric and impeccably performed"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "s", "q": "Set in 1978, when such brutality was rare and shocking"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "p1", "q": "Inspired by the Ranga–Billa case"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p5", "q": "excessive violence is disturbing"}]},
+{"f": "content.disturbing", "r": 2, "ev": [{"id": "p6", "q": "Raakh is unsettling, disturbing, and difficult to watch at times"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "s", "q": "exploring the disturbing psyche of the men behind the crime"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p11", "q": "It arrives as a procedural, operates as a thriller and lands as horror"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p11", "q": "It arrives as a procedural, operates as a thriller and lands as horror"}]},
+{"f": "structure.procedural", "r": 1, "ev": [{"id": "p11", "q": "It arrives as a procedural, operates as a thriller and lands as horror"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p5", "q": "one of his best performances so far"}]}
+]}

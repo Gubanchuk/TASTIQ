@@ -1,0 +1,11 @@
+{"appid": 2058180, "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "It follows private detective Takayuki Yagami as he investigates a serial murder case"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "Many praised the game's plot, side content and combat"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p11", "q": "The plot was generally well received"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p6", "q": "players must follow a suspect while avoiding being seen"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p5", "q": "Judgment features a combat system where players can change between two different fighting styles"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p5", "q": "can perform brutal takedowns of enemies"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p7", "q": "inspired by dating sim games"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p11", "q": "its balance of seriousness and comedy"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p4", "q": "Kamurocho, a fictional district of Tokyo, Japan"}]}
+]}

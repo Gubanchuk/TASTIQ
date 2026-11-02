@@ -1,0 +1,127 @@
+{
+ "appid": 261570,
+ "features": [
+  {
+   "f": "aesthetic.beautiful",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "a visually stunning action-platformer crafted by Moon Studios for PC"
+    },
+    {
+     "id": "r237850290",
+     "q": "Absolutely beautiful game"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.stylized",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Featuring hand-painted artwork, meticulously animated character performance"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237932183",
+     "q": "paired with a MASTERPIECE kind of soundtrack"
+    },
+    {
+     "id": "r237850290",
+     "q": "The artwork, atmosphere, music, and magical forest are simply amazing"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237850290",
+     "q": "The story is touching and beautifully told without tons of dialogue"
+    }
+   ]
+  },
+  {
+   "f": "tone.melancholic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "explores a deeply emotional story about love and sacrifice"
+    },
+    {
+     "id": "r236183998",
+     "q": "пронзительную до слез историю"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "The forest of Nibel is dying"
+    }
+   ]
+  },
+  {
+   "f": "loop.platforming",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237940174",
+     "q": "More platforming and puzzles versus boss fights"
+    }
+   ]
+  },
+  {
+   "f": "loop.puzzles",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237940174",
+     "q": "More platforming and puzzles versus boss fights"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237932183",
+     "q": "the story, platforming, exploration, and combat are smooth and enjoyable"
+    }
+   ]
+  },
+  {
+   "f": "world.living",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237983597",
+     "q": "the environment feels alive"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236590217",
+     "q": "You need pixel perfect jumps and attacks to go through most of the level"
+    }
+   ]
+  }
+ ]
+}

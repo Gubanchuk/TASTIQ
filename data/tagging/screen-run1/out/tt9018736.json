@@ -1,0 +1,12 @@
+{"id": "tt9018736", "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "is an American fantasy action-adventure television series"}]},
+{"f": "world.war", "r": 2, "ev": [{"id": "p3", "q": "The series is set in a war-torn world"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p6", "q": "fast-moving, action-packed, with decent fight scenes"}]},
+{"f": "aesthetic.effects", "r": 2, "ev": [{"id": "p2", "q": "praised the visual effects, action sequences, musical score, and cultural representation"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "praised the visual effects, action sequences, musical score, and cultural representation"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p6", "q": "this is aimed at children so the characters and plot are broadly drawn"}]},
+{"f": "characters.friendship", "r": 1, "ev": [{"id": "p3", "q": "With his new companions Katara and Sokka"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p2", "q": "The third and final season is set to premiere in 2027"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p2", "q": "criticized the writing, pacing, and some performances"}]},
+{"f": "characters.unlikeable", "r": 1, "ev": [{"id": "p2", "q": "criticized the writing, pacing, and some performances"}]}
+]}

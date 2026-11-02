@@ -1,0 +1,149 @@
+{
+ "appid": 409710,
+ "features": [
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "BioShock is a shooter unlike any other, loaded with unique weapons and tactics"
+    }
+   ]
+  },
+  {
+   "f": "loop.exploration",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236323386",
+     "q": "really loved the atmosphere and exploration"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237720602",
+     "q": "The story is very well done for a game with barely any cutscenes"
+    },
+    {
+     "id": "r238021075",
+     "q": "Интригующий сюжет, ради которого выслушиваешь абсолютно все аудиодневники"
+    }
+   ]
+  },
+  {
+   "f": "story.lore",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236418716",
+     "q": "large amounts of lore that you can piece together from the environment"
+    }
+   ]
+  },
+  {
+   "f": "story.mystery",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236418716",
+     "q": "piecing together the mystery & the tragedy"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238021075",
+     "q": "Окружение, которое задаёт невероятно гнетущее и мрачное настроение"
+    }
+   ]
+  },
+  {
+   "f": "tone.creepy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237329234",
+     "q": "This game terrified me as a kid"
+    }
+   ]
+  },
+  {
+   "f": "world.scifi",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235784153",
+     "q": "Перед нами предстает на редкость качественный, динамичный фантастический боевик"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237720602",
+     "q": "very beautiful even in todays standards"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.stylized",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237720602",
+     "q": "I love the art style"
+    }
+   ]
+  },
+  {
+   "f": "loop.looting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235784153",
+     "q": "заставляет собирать бесконечный лут"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237720602",
+     "q": "the variety of weapons and powers the player can choose to solve their problems"
+    }
+   ]
+  },
+  {
+   "f": "loop.puzzles",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235784153",
+     "q": "игра постоянно подкидывает загадки"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236323390",
+     "q": "swapping hands between weapons and Plasmids can feel a bit tricky"
+    }
+   ]
+  }
+ ]
+}

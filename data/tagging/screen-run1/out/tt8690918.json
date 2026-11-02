@@ -1,0 +1,10 @@
+{"id": "tt8690918", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is an American science fiction comedy-drama television series"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p2", "q": "finds fresh humor in a familiar framework"}]},
+{"f": "humor.dark", "r": 1, "ev": [{"id": "s", "q": "a dark, twisted and comedic fish-out-of-water story"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "a perfect showcase for Alan Tudyk's singular comedic skills"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "p1", "q": "After crash-landing on Earth in a small Colorado town"}]},
+{"f": "tone.feelgood", "r": 2, "ev": [{"id": "p1", "q": "He develops compassion for humanity and ends up defending them from other extraterrestrial threats"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "In July 2025, it was confirmed that the fourth season would be its last"}]},
+{"f": "structure.slow_start", "r": 1, "ev": [{"id": "p2", "q": "takes a minute to settle into its skin"}]}
+]}

@@ -1,0 +1,10 @@
+{"appid": 1601580, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "to build and manage a city during a catastrophic"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p0", "q": "making morally and politically controversial choices to ensure its survival"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "Players can now construct districts instead of individual buildings"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "Players can access the Idea Tree to investigate new research options"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "in an alternate history early 20th century"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "a catastrophic, worldwide volcanic winter that almost completely destroyed human civilization"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p3", "q": "the game also features a sandbox mode named"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p0", "q": "volcanic winter that almost completely destroyed human civilization"}]}
+]}

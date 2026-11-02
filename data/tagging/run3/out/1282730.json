@@ -1,0 +1,14 @@
+{
+  "appid": 1282730,
+  "features": [
+    {"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "the player changes the world by placing cards instead of directly controlling a character"}]},
+    {"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "the building phase (when resources are used)"}]},
+    {"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "beating enemies can also yield new equipment for the hero"}]},
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "the player working to upgrade the hero's equipment"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "The game contains three separate classes: warrior, necromancer and rogue"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "Placing terrain features next to each other can also modify their effect"}]},
+    {"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p6", "q": "the 1980s aesthetic of the game"}]},
+    {"f": "freedom.sandbox", "r": 1, "ev": [{"id": "p6", "q": "Critics praised the freedom to create unique worlds"}]},
+    {"f": "stability.falls_off", "r": 1, "ev": [{"id": "p6", "q": "the lack of new ones hurt the later game"}]}
+  ]
+}

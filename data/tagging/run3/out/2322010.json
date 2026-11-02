@@ -1,0 +1,13 @@
+{"appid": 2322010, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p5", "q": "The player primarily controls the character Kratos in combo-based combat and puzzle game elements"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p5", "q": "The player primarily controls the character Kratos in combo-based combat and puzzle game elements"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p7", "q": "helping in combat, traversal, finding treasures, exploration, and puzzle-solving"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Loosely based on Norse mythology, the game is set in mythical ancient Scandinavia"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p0", "q": "features series protagonist, Kratos, and his now teenage son, Atreus"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p3", "q": "critics praising its storytelling, characters, emotional weight, visuals, level design"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p3", "q": "critics praising its storytelling, characters, emotional weight, visuals, level design"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p3", "q": "critics praising its storytelling, characters, emotional weight, visuals, level design"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p4", "q": "The gameplay is similar to the previous installment, God of War (2018), including being single-player-only"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p8", "q": "upgrade existing armor and weapons with better perks"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "p13", "q": "the game's \"most tedious aspect\""}]}
+]}

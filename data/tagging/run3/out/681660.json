@@ -1,0 +1,5 @@
+{"appid": 681660, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "Bless is set in a fantasy world"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "Players can join PvP castle sieges"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p1", "q": "Players can choose their character's race and class"}]}
+]}

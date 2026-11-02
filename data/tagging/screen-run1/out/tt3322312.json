@@ -1,0 +1,10 @@
+{"id": "tt3322312", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "based on the Marvel Comics character Daredevil"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p1", "q": "a masked vigilante by night"}]},
+{"f": "tone.gritty", "r": 3, "ev": [{"id": "p4", "q": "excels as an effective superhero origin story, a gritty procedural"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p6", "q": "the welcome return of Vincent D'Onofrio's menacing Kingpin"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "begins tediously slow but gradually generates comic book thrills"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p5", "q": "Bolstered by some impressive action"}, {"id": "p7", "q": "gripping choreography that tells a complete story from beginning to end"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p3", "q": "uncovering a conspiracy of the criminal underworld"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p9", "q": "Netflix canceled the series after three seasons"}]}
+]}

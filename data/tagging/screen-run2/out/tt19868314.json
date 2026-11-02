@@ -1,0 +1,11 @@
+{"id": "tt19868314", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "a serial killer who preyed on women looking to get married"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "s", "q": "Sub-inspector Anjali Bhaati is tasked with leading the investigation"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "s", "q": "a riveting game of cat and mouse"}]},
+{"f": "characters.female_lead", "r": 2, "ev": [{"id": "s", "q": "Sub-inspector Anjali Bhaati is tasked with leading the investigation"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p13", "q": "makes one think deeply as to where we are going wrong as humans"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "It boasts of powerful performances"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p8", "q": "Predictable as these machinations may be"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p5", "q": "It all goes to pot in the climax, which felt rushed and underwhelming"}]},
+{"f": "content.disturbing", "r": 1, "ev": [{"id": "s", "q": "the seemingly clear-cut suicides may be the work of a serial killer"}]}
+]}

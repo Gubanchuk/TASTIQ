@@ -1,0 +1,6 @@
+{"appid": 2427700, "features": [
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "The items consist of many different shapes and sizes, and they may interact with one another"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "At the start of the game, the player chooses from four classes"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "warned that the game lacked enough items to make doing multiple runs interesting"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "the player's character battles against another player's character asynchronously without player control"}]}
+]}

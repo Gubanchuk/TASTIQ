@@ -1,0 +1,12 @@
+{"id": "tt8999762", "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "a 2024 epic period drama film"}]},
+{"f": "tone.epic", "r": 3, "ev": [{"id": "p4", "q": "an amazing and engrossing epic"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p3", "q": "suffused with Adrien Brody's soulful performance"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p4", "q": "stunningly shot by cinematographer Lol Crawley and superbly designed by Judy Becker"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p5", "q": "praised its cinematography, editing, and score"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "The film was shot using the VistaVision format"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p12", "q": "a deeply thought-provoking story about the collapse of the American dream"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p9", "q": "dizzying in its savagery about cracks in the foundation of the American dream"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p4", "q": "how dizzyingly sensual and sexual it all is"}]},
+{"f": "length.long", "r": 3, "ev": [{"id": "p13", "q": "a sprawling, majestic, 3 1/2-hour epic"}]}
+]}

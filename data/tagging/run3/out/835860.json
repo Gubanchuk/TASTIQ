@@ -1,0 +1,8 @@
+{"appid": 835860, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p2", "q": "The player is the captain of a large spacecraft"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "gameplay involves large amounts of strategy and positioning"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "uses projectile weapons to attack"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "Other players may choose to heal a damaged teammate"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "The player is able to choose between several classes of ships, each with drawbacks and advantages"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p1", "q": "the game would be put offline on March 19, 2023"}]}
+]}

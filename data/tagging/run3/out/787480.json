@@ -1,0 +1,8 @@
+{"appid": 787480, "features": [
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "They are visual novel adventure games"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p2", "q": "where the player searches for clues and persons related to the case"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "seek out contradictions in testimonies during cross-examination"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p7", "q": "lacked the charm of the original pixelated artstyle"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "appreciated that the sound was left in its chiptune state"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p1", "q": "but thought it was missing features such as a text log"}]}
+]}

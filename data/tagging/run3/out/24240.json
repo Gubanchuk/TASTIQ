@@ -1,0 +1,10 @@
+{
+  "appid": 24240,
+  "features": [
+    {"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "Payday: The Heist is a cooperative first-person shooter game"}]},
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "players use a variety of firearms to complete objectives"}]},
+    {"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "The game focuses on four robbers"}]},
+    {"f": "world.modern", "r": 2, "ev": [{"id": "p3", "q": "Their first heist took place at the First World Bank"}]},
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "increased level cap, and a player upgrade tree"}]}
+  ]
+}

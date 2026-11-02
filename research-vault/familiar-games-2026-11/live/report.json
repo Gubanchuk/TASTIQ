@@ -1,0 +1,225 @@
+{
+  "batchId": "familiar-live-20261101",
+  "capUsd": 0.6,
+  "maxRequests": 3,
+  "synthetic": true,
+  "humanFitMeasured": false,
+  "checks": [
+    "Marking two games is free.",
+    "Two marked slots replaced; original request and all retained card objects unchanged.",
+    "No removed game edition returned as a replacement.",
+    "Actionless restore, undo and explicit keep-return add no API requests."
+  ],
+  "status": "pass",
+  "summary": "Сегодня ты хочешь одиночную RPG на Windows: интересную историю, исследование мира, разные билды и ощутимый рост возможностей героя. Не хочется постоянных повторов после смерти; спутники не обязательны, реализм неважен. Skyrim и Red Dead Redemption 2 ты прошёл, а к начатому Cyberpunk 2077 готов вернуться, если он подходит.",
+  "facts": [
+    {
+      "key": "direction:rpg",
+      "text": "Сегодня хочется RPG.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "RPG",
+      "feature": null,
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "platform:windows",
+      "text": "Играть будешь на Windows.",
+      "stance": "require",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:2",
+      "quote": "ПК (Windows)",
+      "feature": null,
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "company:solo",
+      "text": "Хочешь играть один.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:3",
+      "quote": "Один",
+      "feature": "social.solo",
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "story:interesting",
+      "text": "Хочется интересной истории.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "с интересной историей",
+      "feature": "story.central",
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "exploration:world",
+      "text": "Хочется исследовать мир.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "исследованием мира",
+      "feature": "loop.exploration",
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "progression:builds",
+      "text": "Хочется пробовать разные билды.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "пробовать разные билды",
+      "feature": "progression.builds",
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "progression:power",
+      "text": "Важно ощущать рост возможностей героя.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "чувствовать рост возможностей",
+      "feature": "progression.power",
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "death:repetition",
+      "text": "Не хочется постоянных повторов после смерти.",
+      "stance": "avoid",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Не хочется постоянных повторов после смерти.",
+      "feature": null,
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "companions:optional",
+      "text": "Спутники не обязательны.",
+      "stance": "indifferent",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Спутники не обязательны",
+      "feature": "characters.companions",
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "realism:indifferent",
+      "text": "Реализм не является критерием.",
+      "stance": "indifferent",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "реализм неважен",
+      "feature": "world.realistic",
+      "gameId": null,
+      "exposure": null
+    },
+    {
+      "key": "history:skyrim",
+      "text": "Skyrim пройден.",
+      "stance": "history",
+      "scope": "history",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+      "feature": null,
+      "gameId": null,
+      "exposure": "finished"
+    },
+    {
+      "key": "history:rdr2",
+      "text": "Red Dead Redemption 2 пройден.",
+      "stance": "history",
+      "scope": "history",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+      "feature": null,
+      "gameId": "steam:1174180",
+      "exposure": "finished"
+    },
+    {
+      "key": "history:cyberpunk",
+      "text": "Cyberpunk 2077 только начат.",
+      "stance": "history",
+      "scope": "history",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Cyberpunk 2077 только начал",
+      "feature": null,
+      "gameId": "steam:1091500",
+      "exposure": "started"
+    },
+    {
+      "key": "return:cyberpunk",
+      "text": "Готов вернуться к Cyberpunk 2077, если он подходит под сегодняшний запрос.",
+      "stance": "conditional",
+      "scope": "today",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Cyberpunk 2077 только начал и могу вернуться, если он подходит.",
+      "feature": null,
+      "gameId": "steam:1091500",
+      "exposure": null
+    }
+  ],
+  "modelAction": "review",
+  "initial": [
+    {
+      "id": "steam:1091500",
+      "title": "Cyberpunk 2077"
+    },
+    {
+      "id": "steam:292030",
+      "title": "Ведьмак 3: Дикая Охота"
+    },
+    {
+      "id": "steam:22380",
+      "title": "Fallout: New Vegas"
+    },
+    {
+      "id": "steam:435150",
+      "title": "Divinity: Original Sin II"
+    }
+  ],
+  "after": [
+    {
+      "id": "steam:2623190",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "reason": "Свободное исследование, магия и задания гильдий дают простор для разных билдов и историй за пределами основного сюжета.",
+      "caveat": "Враги растут в уровне вместе с тобой; если бои утомляют, снижай сложность."
+    },
+    {
+      "id": "steam:578650",
+      "title": "The Outer Worlds",
+      "reason": "Разветвлённые задания, исследование колоний и билды через речь, науку или оружие соединяют историю с развитием героя.",
+      "caveat": "Вместо бесшовного мира — отдельные области; для спокойной игры не выбирай «Сверхновую»."
+    },
+    {
+      "id": "steam:22380",
+      "title": "Fallout: New Vegas",
+      "reason": "Исследование Мохаве открывает истории фракций, а навыки и перки позволяют собрать бойца, дипломата или скрытного героя.",
+      "caveat": "Устаревшая стрельба и возможные вылеты; сохраняйся вручную и начни на низкой сложности."
+    },
+    {
+      "id": "steam:435150",
+      "title": "Divinity: Original Sin II",
+      "reason": "Исследование полных секретов карт и свободное сочетание школ умений дают простор для билдов и ощутимый рост возможностей.",
+      "caveat": "Бои пошаговые, управляешь отрядом; сюжетный режим поможет избежать частых перезагрузок."
+    }
+  ],
+  "requests": 3,
+  "successfulCallsAdded": 3,
+  "costUsd": 0.0506206,
+  "uncertainReserve": 0,
+  "cumulativeUpper": 1.6288725,
+  "successfulCalls": 157,
+  "remainingOriginalGuard": 3.3711275,
+  "additionalSpentUpper": 0.0506206,
+  "additionalRemainingLower": 9.9493794
+}

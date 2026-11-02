@@ -1,0 +1,8 @@
+{"id": "tt0395843", "features": [
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p0", "q": "is an American police procedural television series that aired on CBS"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "they unveil the circumstances behind mysterious and unusual deaths"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "unveil the circumstances behind mysterious and unusual deaths"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p0", "q": "for nine seasons and 197 original episodes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p3", "q": "The series aired its final episode on February 22, 2013"}]},
+{"f": "characters.ensemble", "r": 1, "ev": [{"id": "s", "q": "leads a crime-solving team of police officers and forensics specialists"}]}
+]}

@@ -1,0 +1,12 @@
+{"id": "tt3205802", "features": [
+{"f": "world.crime", "r": 2, "ev": [{"id": "p1", "q": "becomes involved in a complex murder plot"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "becomes involved in a complex murder plot"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "s", "q": "suspense-driven legal thriller"}, {"id": "p7", "q": "Tense and taut, How to Get Away with Murder continues to step-up its game"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p2", "q": "Davis received widespread critical acclaim for her performance in the series"}]},
+{"f": "characters.female_lead", "r": 2, "ev": [{"id": "p9", "q": "Viola Davis became the first black woman to win a Primetime Emmy Award"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p1", "q": "The series features an ensemble cast including"}]},
+{"f": "story.twist", "r": 2, "ev": [{"id": "p4", "q": "delivers thrills with melodramatic twists and a captivating lead"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "concluded on May 14, 2020"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p4", "q": "isn't conceptually original"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p6", "q": "adding preposterous fuel to an addictive fire"}]}
+]}

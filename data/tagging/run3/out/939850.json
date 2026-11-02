@@ -1,0 +1,11 @@
+{"appid": 939850, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "a 2019 interactive drama and survival horror video game"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p4", "q": "the player makes decisions that change the course of the narrative"}, {"id": "p5", "q": "The narrative adapts to these losses so that the game continues until the conclusion"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "The player manages the relationships between the protagonists"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p9", "q": "Several critics cited the multiplayer modes as the game's strongest asset"}, {"id": "p7", "q": "Shared Story allows two players to experience the campaign cooperatively online"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p9", "q": "created suspense when players are separated and forced to make blind decisions"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p6", "q": "the player can examine environmental clues"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p10", "q": "The character movement and camera design frustrated several critics"}]},
+{"f": "stability.falls_off", "r": 2, "ev": [{"id": "p8", "q": "transforms the second half of the story into a less engaging experience"}]},
+{"f": "world.historical", "r": 1, "ev": [{"id": "p0", "q": "to find a sunken World War II plane"}]}
+]}

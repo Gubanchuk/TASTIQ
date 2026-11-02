@@ -1,0 +1,14 @@
+{
+  "appid": 107100,
+  "features": [
+    {"f": "story.central", "r": 3, "ev": [{"id": "p2", "q": "primarily for its story, art direction, narration, and music"}]},
+    {"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "floating, fantasy-themed environments"}]},
+    {"f": "world.postapoc", "r": 2, "ev": [{"id": "p7", "q": "takes place in the aftermath of the Calamity"}]},
+    {"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "a hand-painted art style"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "the well-written narration, excellent music, and bright visuals"}]},
+    {"f": "loop.building", "r": 2, "ev": [{"id": "p5", "q": "they can add one of six structures to the Bastion"}]},
+    {"f": "characters.lone_hero", "r": 1, "ev": [{"id": "p7", "q": "a silent protagonist"}]},
+    {"f": "tone.dark", "r": 1, "ev": [{"id": "p0", "q": "in the wake of an apocalyptic Calamity"}]},
+    {"f": "progression.power", "r": 1, "ev": [{"id": "p5", "q": "to buy materials and upgrade weapons"}]}
+  ]
+}

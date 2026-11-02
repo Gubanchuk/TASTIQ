@@ -1,0 +1,15 @@
+{"appid": 7670, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "BioShock is a 2007 first-person shooter video game"}]},
+{"f": "tone.dark", "r": 3, "ev": [{"id": "p4", "q": "The conflict turns Rapture into a war-torn dystopia"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p2", "q": "particularly praised by critics for its narrative, themes, visual design, setting, and gameplay"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p1", "q": "the game borrows concepts from the survival horror genre"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "an underwater city built in the 1940s"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "a genetic material which grants superhuman powers"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "as well as moral choices of saving or killing characters"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p6", "q": "Ryan reveals the truth of Jack's origins"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p1", "q": "giving the player different approaches in engaging enemies such as by stealth"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p0", "q": "a genetic material which grants superhuman powers"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "giving the player different approaches in engaging enemies"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "elements of the graphics, such as the water, were commended for their quality"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "stunning soundtrack and audio effects"}]}
+]}

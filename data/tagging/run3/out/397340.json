@@ -1,0 +1,8 @@
+{"appid": 397340, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "build aircraft, vehicles, and other contraptions"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "build aircraft, vehicles, and other contraptions"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p6", "q": "realistic flight challenges, sandbox mode and the amount of building options"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p4", "q": "The game's physics simulation means that lift, thrust, drag, center of mass"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "The game provides a scripting language/editor named Funky Trees"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p0", "q": "the main downfalls mentioned the most being the \"slippery controls\""}]}
+]}

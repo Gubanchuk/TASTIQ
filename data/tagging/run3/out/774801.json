@@ -1,0 +1,9 @@
+{"appid": 774801, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p1", "q": "players take control of a crab and use firearms to destroy other crabs"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "the player can choose from a selection of stacking upgrades"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "stacking upgrades to their weapon, health, armor, grenades or melee attacks"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "allowing players to play with up to 3 other friends"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "which featured a 3D animated music video of dancing crabs"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p0", "q": "which featured a 3D animated music video of dancing crabs"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p3", "q": "Critics praised the game's fast-paced gameplay"}]}
+]}

@@ -1,0 +1,15 @@
+{"appid": 460950, "features": [
+{"f": "combat.fast", "r": 3, "ev": [{"id": "d", "q": "featuring breakneck action and instant-death combat"}]},
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "d", "q": "a stylish neo-noir, action-platformer"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "d", "q": "beautifully brutal acrobatic display"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r236906525", "q": "The meticulously crafted story and its logic"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "a", "q": "An enigmatic story told through cinematic sequences"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "r237841840", "q": "a Soulslike puzzler where death rewinds time"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "r236687462", "q": "The game is a little short"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "r236906525", "q": "the neon atmosphere and the hand crafted music"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r236661495", "q": "the soundtrack, it all comes together perfectly"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "r237684739", "q": "I just wish the story had reached a proper climax before the ending"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "r237684739", "q": "it feels like there's still so many questions left to answer"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r237794062", "q": "The movement feels floaty and it as well as attacking feels inconsistent"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "r237973752", "q": "Here's a room, kill everyone in it"}]}
+]}

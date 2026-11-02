@@ -1,0 +1,9 @@
+{"appid": 637090, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "BattleTech is a mech turn-based strategy video game"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p1", "q": "selecting each mech's model, armor, pilot, armaments, and skills"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "leading a team of powerful combat vehicles called battlemechs"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "controls a team of four mechs"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p1", "q": "locked in a devastating war"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "The player selects each mech's chassis, the weapons and armor mounted on that chassis"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p0", "q": "a player versus player multiplayer mode"}]}
+]}

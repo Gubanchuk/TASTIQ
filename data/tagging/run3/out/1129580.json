@@ -1,0 +1,13 @@
+{
+  "appid": 1129580,
+  "features": [
+    {"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "from the viewpoint of common people in the Middle Ages"}]},
+    {"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "The player's task is to build this village"}]},
+    {"f": "loop.survival", "r": 2, "ev": [{"id": "p3", "q": "Recruited villagers need basic provisions like housing, food, and firewood"}]},
+    {"f": "loop.management", "r": 2, "ev": [{"id": "p3", "q": "decides which materials they should produce, and manage fields"}]},
+    {"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p7", "q": "the freedom it offers in gameplay and building"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "appealing graphical design"}]},
+    {"f": "story.mystery", "r": 1, "ev": [{"id": "p1", "q": "the mystery behind his demise"}]},
+    {"f": "pace.repetitive", "r": 1, "ev": [{"id": "p7", "q": "the quests for lacking depth and variety"}]}
+  ]
+}

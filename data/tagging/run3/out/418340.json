@@ -1,0 +1,7 @@
+{"appid": 418340, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "four-player co-op hack and slash video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "four-player co-op hack and slash video game"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "experience points that allow the player to upgrade their character's status"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p4", "q": "calling it overly short and lacking in content"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p4", "q": "calling it overly short"}]}
+]}

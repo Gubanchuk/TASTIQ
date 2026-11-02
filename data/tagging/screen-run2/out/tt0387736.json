@@ -1,0 +1,6 @@
+{"id": "tt0387736", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a military science fiction television miniseries"}]},
+{"f": "world.war", "r": 3, "ev": [{"id": "s", "q": "When a full-scale war is engaged by the evil Scarran Empire"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "s", "q": "human astronaut John Crichton, once sucked into the Peacekeeper galaxy through a wormhole"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "it aimed to wrap up the cliffhanger and tie up some elements of the series"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 215470, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "an asymmetrical multiplayer game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p0", "q": "Human gameplay takes the form of a first-person shooter"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p2", "q": "Dinosaurs can hide in bushes and wait to attack humans"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p9", "q": "trying to outmaneuver a giant Tyrannosaurus and somehow making it out alive is thrilling"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p7", "q": "A lack of content and some technical issues"}, {"id": "p7", "q": "feeling like a $15 beta rather than an official release"}]}
+]}

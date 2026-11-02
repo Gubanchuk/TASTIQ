@@ -1,0 +1,10 @@
+{"appid": 1432050, "features": [
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p1", "q": "The skills and the abilities of different Forms can be combined to create devastating attacks"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "As players explore the overworld and dungeons which are procedurally generated"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "The game can be played solo, or in a cooperative multiplayer mode"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p1", "q": "The game can be played solo"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "players may find treasure chests and hidden keys"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p4", "q": "Every dungeon sports a dangerous modifier, which often upset my preferred loadout"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p4", "q": "Destructoid liked the cartoon-inspired visuals"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p4", "q": "injects a ton of personality into basically every facet of its being"}]}
+]}

@@ -1,0 +1,99 @@
+{
+ "appid": 813820,
+ "features": [
+  {
+   "f": "social.pvp",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "experience a new kind of battle royale"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Mount up alone or with a team"
+    }
+   ]
+  },
+  {
+   "f": "world.fantasy",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "explore a fantasy world while outrunning the deadly fog"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Customize your Champion each game with the abilities best suited for the battle at hand"
+    }
+   ]
+  },
+  {
+   "f": "loop.looting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "loot fantastic weapons and magical abilities"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Go traditional with shotguns and snipers"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237496626",
+     "q": "May this project rest in peace!"
+    },
+    {
+     "id": "r237078962",
+     "q": "I wish it was still around so I can get on randomly for quick matches"
+    }
+   ]
+  },
+  {
+   "f": "tone.melancholic",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236321548",
+     "q": "Столько эмоций, столько воспоминаний"
+    }
+   ]
+  },
+  {
+   "f": "humor.funny",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236219011",
+     "q": "он превращается в смешную курочку"
+    }
+   ]
+  }
+ ]
+}

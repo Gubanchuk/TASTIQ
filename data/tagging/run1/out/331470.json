@@ -1,0 +1,10 @@
+{"appid": 331470, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "d", "q": "Visual novel loved by many"}, {"id": "r236936547", "q": "began my love for visual novels"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "a", "q": "solve the camp's mysteries"}, {"id": "r236936547", "q": "The mystery, the atmosphere, the music"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "r236936547", "q": "the different routes"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "a", "q": "and maybe even find love"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "r236936547", "q": "a Soviet summer camp"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "r236606986", "q": "светлой грустью и мотивацией"}, {"id": "r235824504", "q": "на 45 секунде пошли слёзы"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r237655581", "q": "Некоторые композиции настолько хорошо вписываются в происходящее"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r236082175", "q": "затянутая визуальная новелла"}]}
+]}

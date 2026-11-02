@@ -1,0 +1,8 @@
+{"appid": 40300, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "The temple is home to ancient beings known as Titans"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p7", "q": "After exploring the island and meeting its inhabitants"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p7", "q": "the player can choose a faction with which to align"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p10", "q": "praising for its hard yet rewarding gameplay"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p10", "q": "the combat mechanics being messy while fighting hordes"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "impressive graphics and solid voice acting"}]}
+]}

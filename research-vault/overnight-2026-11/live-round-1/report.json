@@ -1,0 +1,56 @@
+{
+  "scope": "overnight-20261101-01",
+  "capUsd": 1.2,
+  "maxRequests": 10,
+  "synthetic": true,
+  "humanFitMeasured": false,
+  "status": "failed",
+  "checks": [
+    "Short finished alias + explicit replay survives through real planner/picker; 30 minutes reach feasibility.",
+    "Reference/exclusion stays excluded; total playthrough hours are not today session time."
+  ],
+  "questions": [],
+  "replay": [
+    {
+      "id": "steam:489830",
+      "title": "The Elder Scrolls V: Skyrim Special Edition"
+    },
+    {
+      "id": "steam:2623190",
+      "title": "The Elder Scrolls IV: Oblivion Remastered"
+    },
+    {
+      "id": "steam:377160",
+      "title": "Fallout 4"
+    },
+    {
+      "id": "steam:292030",
+      "title": "Ведьмак 3: Дикая Охота"
+    }
+  ],
+  "error": "Цитата времени не сохраняет условия исходного ответа.",
+  "failedStage": "05-correction-plan",
+  "requests": 4,
+  "codeBefore": {
+    "src/core/conversation.js": "0e291c895547a87f3ef4e188a5fa091c87d421485de2b5c892e415ee320b54dc",
+    "src/core/session-time.js": "dfbaa4c1a52b35c29c4351fbb22397e4aacfcd14f0193610dc7bfdcaa9166cba",
+    "src/server/conversation-service.js": "cd02d80c88c4596e20a4090efd3bfdc5d963e9248a7ef3c0878ca78d8f96ae2f",
+    "src/server/conversation-game-identity.js": "2362f1274d0578378deea3617ab4b6a7e2462c20bd0debae47fe295b38e0baef",
+    "src/ai/conversation.js": "72c4d83f39eb5ab22f2622aa72ad4e79876ad35c67f7ca7e222c964e313eb9d0",
+    "src/ai/prompt.js": "315a74e199c7a67d1bdb384c693e5546eca2c34b04b431596e4324bf5efdcd3c"
+  },
+  "codeAfter": {
+    "src/core/conversation.js": "0e291c895547a87f3ef4e188a5fa091c87d421485de2b5c892e415ee320b54dc",
+    "src/core/session-time.js": "dfbaa4c1a52b35c29c4351fbb22397e4aacfcd14f0193610dc7bfdcaa9166cba",
+    "src/server/conversation-service.js": "cd02d80c88c4596e20a4090efd3bfdc5d963e9248a7ef3c0878ca78d8f96ae2f",
+    "src/server/conversation-game-identity.js": "2362f1274d0578378deea3617ab4b6a7e2462c20bd0debae47fe295b38e0baef",
+    "src/ai/conversation.js": "72c4d83f39eb5ab22f2622aa72ad4e79876ad35c67f7ca7e222c964e313eb9d0",
+    "src/ai/prompt.js": "315a74e199c7a67d1bdb384c693e5546eca2c34b04b431596e4324bf5efdcd3c"
+  },
+  "costUsd": 0.0745916,
+  "successfulCallsAdded": 4,
+  "cumulativeUpper": 1.7034641,
+  "successfulCalls": 161,
+  "uncertainReserve": 0,
+  "additionalRemainingLower": 9.8747878
+}

@@ -1,0 +1,11 @@
+{"appid": 2677660, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p4", "q": "are larger, sandbox locations which can be explored freely by the player"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p5", "q": "The player can choose to use stealth tactics, such as crouching and hiding behind cover"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p9", "q": "The puzzle system, and especially the hint system, were applauded"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "The story follows archaeologist Indiana Jones in 1937"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "the player assumes control of archaeologist Indiana Jones"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p10", "q": "gripping and memorable global conspiracy plot"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "a group of mysterious sites around the world that form a perfect circle"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p10", "q": "slightly slapstick Indiana Jones humour"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p10", "q": "Some criticized the pacing"}]}
+]}

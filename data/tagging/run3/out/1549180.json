@@ -1,0 +1,9 @@
+{"appid": 1549180, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "an online asymmetric multiplayer survival horror game"}, {"id": "p2", "q": "was a four-versus-one asymmetrical horror game"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "make the action tense, challenging"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p2", "q": "in order to hide from the killer"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "where they would die if not rescued by another Survivor"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "The game's plot is left deliberately mysterious"}]},
+{"f": "story.lore", "r": 1, "ev": [{"id": "p1", "q": "has its own mysterious lore"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p2", "q": "was a four-versus-one asymmetrical horror game"}]}
+]}

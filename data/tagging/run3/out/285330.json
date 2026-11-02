@@ -1,0 +1,5 @@
+{"appid": 285330, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p2", "q": "The player satisfies park visitors' needs by building facilities and services"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p2", "q": "players manage amusement parks and attempt to meet various goals"}]},
+{"f": "freedom.sandbox", "r": 1, "ev": [{"id": "p4", "q": "A scenario editor is introduced, which allows players to create their own scenarios"}]}
+]}

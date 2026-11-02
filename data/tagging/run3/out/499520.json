@@ -1,0 +1,8 @@
+{"appid": 499520, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "The Turing Test is a puzzle video game with gameplay experienced from a first-person perspective"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "control mobile robots that can be used to explore levels"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p3", "q": "In the far future, engineer Ava Turing"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p5", "q": "T.O.M. eventually reveals that the Europa ground team had found a microorganism"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p5", "q": "to make sure the Europa team could never return to Earth"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "these are designed to be solved by a combination of human and artificial intelligence"}]}
+]}

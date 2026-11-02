@@ -1,0 +1,9 @@
+{"appid": 1340990, "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p2", "q": "in the mid-19th century during Bakumatsu"}]},
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "Combat features a wide array of weapons common during the Boshin war, such as katanas"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p1", "q": "allows players to create a custom character"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "The game features story choices at key moments, allowing players to side with or fight against"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "various Boshin war firearms"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Historic cities Yokohama, Kyoto and Edo can be explored"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "as well as a three player cooperative multiplayer mode"}]}
+]}

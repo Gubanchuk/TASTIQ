@@ -1,0 +1,6 @@
+{"appid": 1937500, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "campus management simulation game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "must build the campus from scratch"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "a sandbox mode which allows them to build their school with little to no limitation"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p2", "q": "before it becomes a monotonous routine"}]}
+]}

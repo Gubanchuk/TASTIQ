@@ -1,0 +1,15 @@
+{"appid": 1151640, "features": [
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "r237612162", "q": "в постапокалиптическом мире, где цивилизация пала"}, {"id": "a", "q": "a world ruled by deadly Machines"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "r237612162", "q": "а планету населяют роботизированные звери"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "r235805406", "q": "shooting stuff with arrows is always fun"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "a", "q": "Unleash devastating, tactical attacks against unique Machines"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "r238127845", "q": "the world is great to explore"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "a", "q": "explore an open world teeming with wildlife and danger"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "r238127845", "q": "The story is brilliant"}, {"id": "r237985378", "q": "Great story, fun gameplay"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "r237985378", "q": "the mystery plot as you slowly discover what happened to make the world like this"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "r236380035", "q": "the graphics and the scenery are beautiful"}]},
+{"f": "pace.repetitive", "r": 3, "ev": [{"id": "r236380035", "q": "the gameplay gets repetitive even at the beginning"}, {"id": "r237503126", "q": "it became repetitive for me after only two hours"}, {"id": "r236171136", "q": "It is a game with repetitive moments"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "r237503126", "q": "The main missions are tedious"}, {"id": "r236380035", "q": "the side quests are boring"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "r236380035", "q": "it has nothing special in it"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r236171136", "q": "the control breaks"}]}
+]}

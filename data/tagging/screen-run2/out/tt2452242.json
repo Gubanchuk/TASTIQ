@@ -1,0 +1,12 @@
+{"id": "tt2452242", "features": [
+{"f": "humor.dark", "r": 3, "ev": [{"id": "p0", "q": "is an American black comedy action television series"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "s", "q": "an intoxicated, corrupt cop-turned-hit man"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "s", "q": "a tiny, relentlessly positive, imaginary blue winged horse"}]},
+{"f": "characters.antihero", "r": 2, "ev": [{"id": "s", "q": "an intoxicated, corrupt cop-turned-hit man"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "s", "q": "a world of casual murder, soulless sex and betrayal"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "s", "q": "a world of casual murder, soulless sex and betrayal"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p2", "q": "Happy reveals that Hailey is Nick's estranged daughter"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "the series was cancelled by Syfy after two seasons"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p3", "q": "make for a gritty, dark comedy"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p3", "q": "appealingly oddball concept"}]}
+]}

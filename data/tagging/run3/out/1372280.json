@@ -1,0 +1,6 @@
+{"appid": 1372280, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a 2021 2D fighting game"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "combinations of the directional and attack buttons"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p7", "q": "the game was accessible thanks to its combo mechanics"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p9", "q": "Type Lumina was included in the main event of EVO 2022"}]}
+]}

@@ -1,0 +1,26 @@
+{
+  "id": "tt0179552",
+  "name": "The Adventures of Tintin",
+  "kind": "series",
+  "domain": "cartoon",
+  "year": 1991,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "s": "This animated series tells of the adventures of boy reporter Tintin, his dog, Snowy, and their friend Captain Haddock. From the stories by Herge.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "The Adventures of Tintin is an animated television series co-produced and animated by French animation studio Ellipse Programme and Canadian studio Nelvana. The series is based on the comic book series of the same name by Belgian cartoonist Hergé (). 39 half-hour episodes were produced over the course of three seasons, originally airing in France, Canada and the United States between 1991 and 1992. Beginning in 1992, the series was syndicated to various other countries, including the United Kingdom, Australia, South Africa, Poland, the Czech Republic, Brazil and Indonesia."
+    },
+    {
+      "id": "p1",
+      "section": "Reception",
+      "text": "Along with fans, critics have praised the series for being \"generally faithful\" to the originals, with compositions having been actually taken directly from the panels in the original comic books."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/The_Adventures_of_Tintin_(TV_series)"
+}

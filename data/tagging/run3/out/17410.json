@@ -1,0 +1,17 @@
+{
+  "appid": 17410,
+  "features": [
+    {"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "first-person action-adventure platform game"}]},
+    {"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "Set in a near-future city"}]},
+    {"f": "tone.dark", "r": 1, "ev": [{"id": "p6", "q": "The city's state of bliss is achieved by an oppressive regime"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "The game's visuals and soundtrack were praised very positively"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p9", "q": "The game's visuals and soundtrack were praised very positively"}]},
+    {"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p1", "q": "give the game a unique art style"}]},
+    {"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "performing a linear sequence of acrobatic maneuvers"}]},
+    {"f": "session.short", "r": 1, "ev": [{"id": "p5", "q": "time trial mode where the player must complete courses as fast as possible"}]},
+    {"f": "difficulty.hard", "r": 2, "ev": [{"id": "p10", "q": "The game's trial and error gameplay frustrated some critics"}]},
+    {"f": "combat.precise", "r": 2, "ev": [{"id": "p10", "q": "The gameplay was praised for its responsive controls and immersive first-person perspective"}]},
+    {"f": "combat.clunky", "r": 1, "ev": [{"id": "p2", "q": "criticized its trial and error gameplay, combat mechanics, and restrictive levels"}]},
+    {"f": "characters.lone_hero", "r": 1, "ev": [{"id": "p3", "q": "control the protagonist, Faith Connors, from a first-person perspective"}]}
+  ]
+}

@@ -1,0 +1,10 @@
+{"appid": 102500, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p4", "q": "explore the fantasy realm of the Faelands"}, {"id": "p8", "q": "a time when unknown magic is beginning to manifest"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p6", "q": "Character customization focuses on skills and enhancements unlocked through three Ability trees"}, {"id": "p0", "q": "The playstyle is customized through a combination of weapons types"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p4", "q": "The Fateless One's gender, appearance, and race"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "players exploring the Faelands of Amalur, completing quests"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p5", "q": "Available weapons include two sword types, two types of daggers, bows, hammers"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "with many highlighting its gameplay and graphic design"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p10", "q": "When mentioned, the audio was praised."}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "despite noting some issues with repetitive quest design"}]}
+]}

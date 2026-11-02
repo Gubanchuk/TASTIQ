@@ -1,0 +1,6 @@
+{"appid": 221640, "features": [
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p2", "q": "The pace of the game progressively gets more difficult the longer the player has survived"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p2", "q": "the entire level must be restarted if the player makes a mistake"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "the game features a chiptune soundtrack"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "The player must pivot their triangle left or right into an opening in order to survive"}]}
+]}

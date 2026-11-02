@@ -1,0 +1,11 @@
+{"id": "tt2309295", "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is an American horror television series"}]},
+{"f": "world.supernatural", "r": 1, "ev": [{"id": "p1", "q": "The show examines the strange happenings in Hemlock Grove"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "s", "q": "where the darkest evils hide in plain sight"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "the two work together to shed light on the case"}]},
+{"f": "story.weak", "r": 3, "ev": [{"id": "p6", "q": "Hemlock Grove is an ugly, unpleasant affair that throws crazy ideas together without much forethought"}]},
+{"f": "characters.unlikeable", "r": 2, "ev": [{"id": "p8", "q": "poor acting, slow plot development"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p8", "q": "poor acting, slow plot development"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p7", "q": "doubling down on its splashy gore"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p3", "q": "a third and final 10-episode season"}]}
+]}

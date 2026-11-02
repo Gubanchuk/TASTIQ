@@ -1,0 +1,14 @@
+{"appid": 1954200, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "the player uses Kena's staff for light, heavy, and charged attacks"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p10", "q": "Several critics found the game's exploration and puzzles to be satisfying, imaginative, and rewarding"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p10", "q": "Several critics found the game's exploration and puzzles to be satisfying, imaginative, and rewarding"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p0", "q": "collecting small spirit companions known as the Rot"}, {"id": "p11", "q": "The game's Rot creatures were praised by critics"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p9", "q": "Reviewers particularly praised the game's artistic design"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "particular praise directed at its artistic design, original music"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p9", "q": "several drew comparisons to the films of Pixar, DreamWorks Animation, and Studio Ghibli"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "uses her magical abilities to help deceased people move from the physical to the spirit world"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p2", "q": "an exciting, often heartbreaking journey"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p12", "q": "found the game's narrative to be powerful and emotional"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "others felt the puzzles became repetitive"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p10", "q": "feel awkward and clumsy"}]}
+]}

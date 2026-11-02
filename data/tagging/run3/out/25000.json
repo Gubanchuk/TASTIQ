@@ -1,0 +1,5 @@
+{"appid": 25000, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p4", "q": "uses a hand-to-hand combat system that bases attacks and counters on timing"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p3", "q": "an unknown number of years after the fall of the human race"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p1", "q": "The player character is Turner, an anthropomorphic rabbit with combat skills"}]}
+]}

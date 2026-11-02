@@ -1,0 +1,24 @@
+{
+  "dateLocal": "2026-11-01",
+  "browser": "existing Chrome via native CUA; isolated localhost5178 origin",
+  "model": "deterministic injected stub; real catalog, controller and UI",
+  "paidChecks": 0,
+  "userStateTouched": false,
+  "viewports": ["1440x900", "1024x900", "390x705", "446x705"],
+  "observed": [
+    "Direction, mandatory platform, company, own answer, review and final result completed by clicks.",
+    "Two marked cards replaced in one operation; untouched Subnautica and chosen Satisfactory retained.",
+    "Undo, keep-return and reload left stub plan/pick counters unchanged.",
+    "All four familiar cards replaced without replaying questions.",
+    "Injected picker error retained cards/marks and offered visible sticky retry.",
+    "Socket response dropped after accepted mark; explicit retry recovered both mark and familiarity record.",
+    "Enter on choose and start retained focus on same action/card after rerender.",
+    "Unsaved retained Omori note survived neighbour replacement; later note and latest unchosen state survived undo.",
+    "Correction draft survived reload. Explicit future exclusion was removed and erroneous library mark deleted without resurrection on reload.",
+    "Exactly one correction form and one primary footer action in final result; no active skeleton elements.",
+    "No horizontal overflow at tested widths; final390 footer77px, desktop one primary action.",
+    "Final console warning/error log empty. Fixture tab closed, viewport reset and fixture server stopped."
+  ],
+  "offlineOnly": ["no candidates", "partial candidate pool", "sole candidate without paid picker", "edition/series and hard-exclusion precedence"],
+  "limits": "No new real model-backed replacement was tested. Synthetic picks and screen checks do not establish human fit."
+}

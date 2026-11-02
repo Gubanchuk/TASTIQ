@@ -1,0 +1,10 @@
+{"appid": 352400, "features": [
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "Gameplay consists of the player solving puzzles."}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "The game incorporates a two-player cooperation mode."}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p5", "q": "the scenes are depicted in a more humorous manner"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p5", "q": "as the game was intended for a younger audience"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p1", "q": "The game features more than 100 unlockable characters to play as"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p10", "q": "enjoyed the game's colorful graphics"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p10", "q": "its use of theme songs from the films"}]},
+{"f": "pace.fast", "r": 1, "ev": [{"id": "p8", "q": "praised the PC version for its fast pacing"}]}
+]}

@@ -1,0 +1,79 @@
+{
+ "appid": 1147560,
+ "features": [
+  {
+   "f": "progression.builds",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r238046027",
+     "q": "Tons of build variety"
+    },
+    {
+     "id": "r237492776",
+     "q": "every run feels new when you play different builds"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "his formidable fighting skills"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236187436",
+     "q": "the art overall is amazing"
+    }
+   ]
+  },
+  {
+   "f": "world.fantasy",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238067176",
+     "q": "The fantasy is spaced-out, intriguing, and keeps you asking questions"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236187436",
+     "q": "It's pretty difficult, but it's still a lot of fun"
+    }
+   ]
+  },
+  {
+   "f": "story.minimal",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236187436",
+     "q": "The story is just ok"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237143741",
+     "q": "понял что тут ужасное управление"
+    }
+   ]
+  }
+ ]
+}

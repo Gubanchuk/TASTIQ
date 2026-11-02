@@ -1,0 +1,254 @@
+[
+  {
+    "direction": "programme",
+    "heading": "Вот во что поиграть сегодня",
+    "images": 4,
+    "loaded": 4,
+    "overflow": false,
+    "scene": "result",
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "heading": "Твоя библиотека",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "library",
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "heading": "Что хочется делать в этом мире?",
+    "images": 0,
+    "loaded": 0,
+    "overflow": false,
+    "scene": "question",
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "heading": "Вечер свободен.Что выберем?",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "landing",
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "heading": "Вот во что поиграть сегодня",
+    "images": 4,
+    "loaded": 4,
+    "overflow": false,
+    "scene": "result",
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "heading": "Твоя библиотека",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "library",
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "heading": "Что хочется делать в этом мире?",
+    "images": 0,
+    "loaded": 0,
+    "overflow": false,
+    "scene": "question",
+    "width": 1440
+  },
+  {
+    "direction": "cinema",
+    "heading": "Вечер свободен.Что выберем?",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "landing",
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "heading": "Вот во что поиграть сегодня",
+    "images": 4,
+    "loaded": 4,
+    "overflow": false,
+    "scene": "result",
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "heading": "Твоя библиотека",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "library",
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "heading": "Что хочется делать в этом мире?",
+    "images": 0,
+    "loaded": 0,
+    "overflow": false,
+    "scene": "question",
+    "width": 1440
+  },
+  {
+    "direction": "collection",
+    "heading": "Вечер свободен.Что выберем?",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "landing",
+    "width": 1440
+  },
+  {
+    "direction": "programme",
+    "heading": "Вот во что поиграть сегодня",
+    "images": 4,
+    "loaded": 4,
+    "overflow": false,
+    "scene": "result",
+    "width": 390
+  },
+  {
+    "direction": "programme",
+    "heading": "Твоя библиотека",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "library",
+    "width": 390
+  },
+  {
+    "direction": "programme",
+    "heading": "Что хочется делать в этом мире?",
+    "images": 0,
+    "loaded": 0,
+    "overflow": false,
+    "scene": "question",
+    "width": 390
+  },
+  {
+    "direction": "programme",
+    "heading": "Вечер свободен.Что выберем?",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "landing",
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "heading": "Вот во что поиграть сегодня",
+    "images": 4,
+    "loaded": 4,
+    "overflow": false,
+    "scene": "result",
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "heading": "Твоя библиотека",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "library",
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "heading": "Что хочется делать в этом мире?",
+    "images": 0,
+    "loaded": 0,
+    "overflow": false,
+    "scene": "question",
+    "width": 390
+  },
+  {
+    "direction": "cinema",
+    "heading": "Вечер свободен.Что выберем?",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "landing",
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "heading": "Вот во что поиграть сегодня",
+    "images": 4,
+    "loaded": 4,
+    "overflow": false,
+    "scene": "result",
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "heading": "Твоя библиотека",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "library",
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "heading": "Что хочется делать в этом мире?",
+    "images": 0,
+    "loaded": 0,
+    "overflow": false,
+    "scene": "question",
+    "width": 390
+  },
+  {
+    "direction": "collection",
+    "heading": "Вечер свободен.Что выберем?",
+    "images": 7,
+    "loaded": 7,
+    "overflow": false,
+    "scene": "landing",
+    "width": 390
+  },
+  {
+    "direction": "programme",
+    "overflow": false,
+    "scene": "library",
+    "width": 1024
+  },
+  {
+    "direction": "cinema",
+    "overflow": false,
+    "scene": "library",
+    "width": 1024
+  },
+  {
+    "direction": "collection",
+    "overflow": false,
+    "scene": "library",
+    "width": 1024
+  },
+  {
+    "direction": "programme",
+    "overflow": false,
+    "scene": "library",
+    "width": 446
+  },
+  {
+    "direction": "cinema",
+    "overflow": false,
+    "scene": "library",
+    "width": 446
+  },
+  {
+    "direction": "collection",
+    "overflow": false,
+    "scene": "library",
+    "width": 446
+  }
+]

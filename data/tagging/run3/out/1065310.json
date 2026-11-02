@@ -1,0 +1,8 @@
+{"appid": 1065310, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p1", "q": "Evil West is a third-person shooter"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "He also has access to various melee attacks"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "must protect the American frontier from supernatural monstrosities"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "capable of breaking the magical Glamours"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p3", "q": "vampires that prey on humanity"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p3", "q": "Working together with retired agent Edgar Gravenor"}]}
+]}

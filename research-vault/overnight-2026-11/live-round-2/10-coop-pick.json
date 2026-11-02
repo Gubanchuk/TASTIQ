@@ -1,0 +1,2148 @@
+{
+  "state": {
+    "version": 1,
+    "id": "overnight-20261101-02-coop",
+    "revision": 5,
+    "mode": "guided",
+    "phase": "result",
+    "context": {
+      "platform": "windows",
+      "company": "group",
+      "partySize": "3"
+    },
+    "turns": [
+      {
+        "id": "overnight-20261101-02-coop:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "survival",
+            "label": "Выживание"
+          }
+        ],
+        "text": "Нас трое, играем вместе онлайн на Windows. Хотим исследовать мир и построить общую базу. Бои допустимы, если можно снизить сложность; постоянных потерь ресурсов не хочется. Крафт допустим, но это не главная цель. Сегодня есть 1 час 30 минут.",
+        "kind": "answer",
+        "answer": "Выживание; Нас трое, играем вместе онлайн на Windows. Хотим исследовать мир и построить общую базу. Бои допустимы, если можно снизить сложность; постоянных потерь ресурсов не хочется. Крафт допустим, но это не главная цель. Сегодня есть 1 час 30 минут."
+      },
+      {
+        "id": "overnight-20261101-02-coop:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-02-coop:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "group",
+            "label": "Компанией"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Компанией"
+      },
+      {
+        "id": "overnight-20261101-02-coop:4",
+        "question": {
+          "id": "party",
+          "title": "Сколько вас будет?",
+          "why": "Если вместимость не подтверждена, я отмечу это в результате.",
+          "options": [
+            {
+              "id": "2",
+              "label": "Двое"
+            },
+            {
+              "id": "3",
+              "label": "Трое"
+            },
+            {
+              "id": "4",
+              "label": "Четверо"
+            },
+            {
+              "id": "5+",
+              "label": "Пять и больше"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "3",
+            "label": "Трое"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Трое"
+      }
+    ],
+    "facts": [
+      {
+        "key": "direction:survival",
+        "text": "Сегодня хочется выживания.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Выживание",
+        "feature": "loop.survival",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "party:online_three",
+        "text": "Нужна совместная онлайн-игра для троих.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Нас трое, играем вместе онлайн на Windows.",
+        "feature": "social.coop",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играете на Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочется исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Хотим исследовать мир и построить общую базу.",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:shared_base",
+        "text": "Хочется построить общую базу.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Хотим исследовать мир и построить общую базу.",
+        "feature": "loop.building",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "combat:adjustable",
+        "text": "Бои допустимы, если можно снизить сложность.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Бои допустимы, если можно снизить сложность",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "losses:resources",
+        "text": "Не хочется постоянных потерь ресурсов.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "постоянных потерь ресурсов не хочется",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "crafting:secondary",
+        "text": "Крафт допустим, но не является главной целью.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Крафт допустим, но это не главная цель.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "Сегодня ты хочешь выживание для троих онлайн на Windows: вместе исследовать мир и построить общую базу. Бои допустимы при возможности снизить сложность, а постоянных потерь ресурсов не хочется. Крафт допустим, но не должен быть главной целью. На сегодняшнюю игру есть 90 минут.",
+    "uncertainties": [],
+    "retractions": [],
+    "sessionTime": {
+      "minutes": 90,
+      "sourceId": "overnight-20261101-02-coop:1",
+      "quote": "Сегодня есть 1 час 30 минут."
+    },
+    "factRemovalUndo": null,
+    "result": {
+      "top": {
+        "id": "steam:1284190",
+        "domain": "game",
+        "name": "The Planet Crafter",
+        "ru": null,
+        "year": 2024,
+        "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/header.jpg?t=1788266415",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1284190/library_600x900.jpg",
+        "kind": "game",
+        "series": [],
+        "genres": [
+          "Adventure"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "Overwhelmingly Positive",
+        "link": "https://store.steampowered.com/app/1284190/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 7.176,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 6.8,
+          "prior": 0.376
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «Играем компанией»: «кооператив»",
+              "factIds": [
+                "mood:social.coop"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «Выживание»»: «выживание»",
+              "factIds": [
+                "mood:loop.survival"
+              ]
+            }
+          ],
+          "risks": [
+            {
+              "text": "Игроки жалуются: затянуто, провисает",
+              "factIds": [
+                "risk:flaw:pace.draggy"
+              ]
+            }
+          ],
+          "info": [
+            {
+              "text": "96% положительных из 74 810 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 39 ч",
+              "factIds": [
+                "fact:hours"
+              ]
+            },
+            {
+              "text": "проверена для Steam Deck",
+              "factIds": [
+                "fact:deck"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:social.coop",
+            "type": "mood",
+            "f": "social.coop",
+            "why": [
+              "Играем компанией",
+              "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+            ],
+            "evidence": [
+              {
+                "id": "a",
+                "q": "alone or with up to 10+ friends in online co-op",
+                "kind": "description",
+                "thumb": null,
+                "hours": null,
+                "lang": null,
+                "ru": "в одиночку или с компанией до 10+ друзей в онлайн-кооперативе"
+              }
+            ]
+          },
+          {
+            "id": "mood:loop.survival",
+            "type": "mood",
+            "f": "loop.survival",
+            "why": [
+              "сегодня хочется: «Выживание»"
+            ],
+            "evidence": [
+              {
+                "id": "d",
+                "q": "A space survival open world terraforming crafting game",
+                "kind": "description",
+                "thumb": null,
+                "hours": null,
+                "lang": null,
+                "ru": "Космическая выживалка с открытым миром, терраформированием и крафтом"
+              }
+            ]
+          },
+          {
+            "id": "risk:flaw:pace.draggy",
+            "type": "risk_flaw",
+            "f": "pace.draggy",
+            "evidence": [
+              {
+                "id": "r237075163",
+                "q": "The core loop feels extremely tedious",
+                "kind": "review",
+                "thumb": "down",
+                "hours": 61,
+                "lang": "english",
+                "ru": "Основной игровой цикл ощущается крайне утомительным"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.96,
+            "total": 74810,
+            "desc": "Overwhelmingly Positive"
+          },
+          {
+            "id": "fact:hours",
+            "type": "fact",
+            "hours": 39
+          },
+          {
+            "id": "fact:deck",
+            "type": "fact",
+            "deck": "verified"
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          },
+          {
+            "key": "minutes",
+            "status": "unknown",
+            "text": "Не проверено, удобно ли прерваться через 90 мин."
+          }
+        ],
+        "ai": {
+          "reason": "В The Planet Crafter исследование планеты и обустройство базы обходятся без боёв; для мягкого выживания есть Relaxed.",
+          "caveat": "Вместимость онлайн-группы не проверена; сбор ресурсов и крафт занимают заметное место.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:648800",
+          "domain": "game",
+          "name": "Raft",
+          "ru": null,
+          "year": 2022,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg?t=1727184011",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/648800/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Adventure",
+            "Indie",
+            "Simulation"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/648800/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 5.719,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.367,
+            "prior": 0.352
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «Играем компанией»: «кооператив»",
+                "factIds": [
+                  "mood:social.coop"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хотим исследовать мир и построить общую базу.»»: «строительство и крафт»",
+                "factIds": [
+                  "mood:loop.building"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "93% положительных из 380 083 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 35 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "играбельна на Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.coop",
+              "type": "mood",
+              "f": "social.coop",
+              "why": [
+                "Играем компанией",
+                "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "Survive by yourself or with friends in online co-op",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Выживайте в одиночку или с друзьями в онлайн-кооперативе"
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.building",
+              "type": "mood",
+              "f": "loop.building",
+              "why": [
+                "сегодня хочется: «Хотим исследовать мир и построить общую базу.»"
+              ],
+              "evidence": [
+                {
+                  "id": "d",
+                  "q": "build your own floating home",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "постройте собственный плавучий дом"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.93,
+              "total": 380083,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 35
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "playable"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "players",
+              "status": "unknown",
+              "text": "Не проверено, можно ли играть всей компанией (3)."
+            },
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 90 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В Raft плот становится вашей общей базой для экспедиций к островам, а мирный режим убирает нападения животных.",
+            "caveat": "Вместимость онлайн-группы не проверена; начало занято сбором мусора и добычей еды.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:962130",
+          "domain": "game",
+          "name": "Grounded",
+          "ru": null,
+          "year": 2022,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/962130/header.jpg?t=1768264530",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/962130/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/962130/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 5.923,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.618,
+            "prior": 0.305
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «Играем компанией»: «кооператив»",
+                "factIds": [
+                  "mood:social.coop"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хотим исследовать мир и построить общую базу.»»: «строительство и крафт»",
+                "factIds": [
+                  "mood:loop.building"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: гринд",
+                "factIds": [
+                  "risk:flaw:progression.grind"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "90% положительных из 96 231 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 31 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.coop",
+              "type": "mood",
+              "f": "social.coop",
+              "why": [
+                "Играем компанией",
+                "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+              ],
+              "evidence": [
+                {
+                  "id": "r236129311",
+                  "q": "A perfect game to play with friends and family in small groups",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 53,
+                  "lang": "english",
+                  "ru": "идеальная игра для друзей и семьи в небольших группах"
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.building",
+              "type": "mood",
+              "f": "loop.building",
+              "why": [
+                "сегодня хочется: «Хотим исследовать мир и построить общую базу.»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "Explore, build and survive together",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Исследуй, строй и выживай вместе"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:progression.grind",
+              "type": "risk_flaw",
+              "f": "progression.grind",
+              "evidence": [
+                {
+                  "id": "r237781969",
+                  "q": "there is way to much grinding res",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 55,
+                  "lang": "english",
+                  "ru": "слишком много гринда, честно говоря"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.897,
+              "total": 96231,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 31
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "players",
+              "status": "unknown",
+              "text": "Не проверено, можно ли играть всей компанией (3)."
+            },
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 90 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Grounded предлагает исследовать огромный сад и строить базу; в настройках можно ослабить бои и отключить потерю рюкзака.",
+            "caveat": "Вместимость онлайн-группы не проверена; даже при мягких настройках встречаются пауки.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:892970",
+          "domain": "game",
+          "name": "Valheim",
+          "ru": null,
+          "year": 2026,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/1888731b59362fca6c026cdbafa3dfffd45c3146/header_alt_assets_6.jpg?t=1791544831",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/892970/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 6.428,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 6.067,
+            "prior": 0.36
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «Играем компанией»: «кооператив»",
+                "factIds": [
+                  "mood:social.coop"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хотим исследовать мир и построить общую базу.»»: «строительство и крафт»",
+                "factIds": [
+                  "mood:loop.building"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: недоделана",
+                "factIds": [
+                  "risk:flaw:completeness.unfinished"
+                ]
+              },
+              {
+                "text": "Игроки жалуются: затянуто, провисает",
+                "factIds": [
+                  "risk:flaw:pace.draggy"
+                ]
+              },
+              {
+                "text": "Игроки жалуются: гринд",
+                "factIds": [
+                  "risk:flaw:progression.grind"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "94% положительных из 561 520 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 207 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.coop",
+              "type": "mood",
+              "f": "social.coop",
+              "why": [
+                "Играем компанией",
+                "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+              ],
+              "evidence": [
+                {
+                  "id": "d",
+                  "q": "A collaborative exploration and survival game for 1-10 players",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Игра для совместного исследования и выживания для 1–10 игроков"
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.building",
+              "type": "mood",
+              "f": "loop.building",
+              "why": [
+                "сегодня хочется: «Хотим исследовать мир и построить общую базу.»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "Raise Viking longhouses and build bases",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Строй викингские длинные дома и возводи базы"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:completeness.unfinished",
+              "type": "risk_flaw",
+              "f": "completeness.unfinished",
+              "evidence": [
+                {
+                  "id": "r237353690",
+                  "q": "This doesn't feel like a 1.0 release",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 149,
+                  "lang": "english",
+                  "ru": "это не ощущается как релиз 1.0"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:pace.draggy",
+              "type": "risk_flaw",
+              "f": "pace.draggy",
+              "evidence": [
+                {
+                  "id": "r236363682",
+                  "q": "the game becomes increasingly tedious",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 173,
+                  "lang": "english",
+                  "ru": "игра становится всё более утомительной"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:progression.grind",
+              "type": "risk_flaw",
+              "f": "progression.grind",
+              "evidence": [
+                {
+                  "id": "r235693089",
+                  "q": "it still demands a ridiculous amount of unnecessary grinding",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 149,
+                  "lang": "english",
+                  "ru": "всё равно требует нелепого количества ненужного гринда"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.935,
+              "total": 561520,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 207
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "players",
+              "status": "unknown",
+              "text": "Не проверено, можно ли играть всей компанией (3)."
+            },
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 90 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В Valheim можно строить общий дом и открывать новые берега, снизив сложность боёв и потери при смерти настройками мира.",
+            "caveat": "Вместимость онлайн-группы не проверена; отключите рейды, чтобы не терять базу.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.104,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 3277
+        }
+      ],
+      "considered": 1104,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь выживание для троих онлайн на Windows: вместе исследовать мир и построить общую базу. Бои допустимы при возможности снизить сложность, а постоянных потерь ресурсов не хочется. Крафт допустим, но не должен быть главной целью. На сегодняшнюю игру есть 90 минут.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    },
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь выживание для троих онлайн на Windows: вместе исследовать мир и построить общую базу. Бои допустимы при возможности снизить сложность, а постоянных потерь ресурсов не хочется. Крафт допустим, но не должен быть главной целью. На сегодняшнюю игру есть 90 минут.",
+    "facts": [
+      {
+        "key": "direction:survival",
+        "text": "Сегодня хочется выживания.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Выживание",
+        "feature": "loop.survival",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "party:online_three",
+        "text": "Нужна совместная онлайн-игра для троих.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Нас трое, играем вместе онлайн на Windows.",
+        "feature": "social.coop",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform:windows",
+        "text": "Играете на Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:exploration",
+        "text": "Хочется исследовать мир.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Хотим исследовать мир и построить общую базу.",
+        "feature": "loop.exploration",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "goal:shared_base",
+        "text": "Хочется построить общую базу.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Хотим исследовать мир и построить общую базу.",
+        "feature": "loop.building",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "combat:adjustable",
+        "text": "Бои допустимы, если можно снизить сложность.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Бои допустимы, если можно снизить сложность",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "losses:resources",
+        "text": "Не хочется постоянных потерь ресурсов.",
+        "stance": "avoid",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "постоянных потерь ресурсов не хочется",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "crafting:secondary",
+        "text": "Крафт допустим, но не является главной целью.",
+        "stance": "conditional",
+        "scope": "today",
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Крафт допустим, но это не главная цель.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "uncertainties": [],
+    "context": {
+      "platform": "windows",
+      "company": "group",
+      "partySize": "3"
+    },
+    "sessionTime": {
+      "minutes": 90,
+      "sourceId": "overnight-20261101-02-coop:1",
+      "quote": "Сегодня есть 1 час 30 минут."
+    },
+    "canUndoFactRemoval": false,
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "overnight-20261101-02-coop:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "Выживание; Нас трое, играем вместе онлайн на Windows. Хотим исследовать мир и построить общую базу. Бои допустимы, если можно снизить сложность; постоянных потерь ресурсов не хочется. Крафт допустим, но это не главная цель. Сегодня есть 1 час 30 минут."
+      },
+      {
+        "id": "overnight-20261101-02-coop:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-02-coop:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Компанией"
+      },
+      {
+        "id": "overnight-20261101-02-coop:4",
+        "question": "Сколько вас будет?",
+        "answer": "Трое"
+      }
+    ],
+    "type": "result",
+    "result": {
+      "top": {
+        "id": "steam:1284190",
+        "domain": "game",
+        "name": "The Planet Crafter",
+        "ru": null,
+        "year": 2024,
+        "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/header.jpg?t=1788266415",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1284190/library_600x900.jpg",
+        "kind": "game",
+        "series": [],
+        "genres": [
+          "Adventure"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "Overwhelmingly Positive",
+        "link": "https://store.steampowered.com/app/1284190/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 7.176,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 6.8,
+          "prior": 0.376
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «Играем компанией»: «кооператив»",
+              "factIds": [
+                "mood:social.coop"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «Выживание»»: «выживание»",
+              "factIds": [
+                "mood:loop.survival"
+              ]
+            }
+          ],
+          "risks": [
+            {
+              "text": "Игроки жалуются: затянуто, провисает",
+              "factIds": [
+                "risk:flaw:pace.draggy"
+              ]
+            }
+          ],
+          "info": [
+            {
+              "text": "96% положительных из 74 810 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 39 ч",
+              "factIds": [
+                "fact:hours"
+              ]
+            },
+            {
+              "text": "проверена для Steam Deck",
+              "factIds": [
+                "fact:deck"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:social.coop",
+            "type": "mood",
+            "f": "social.coop",
+            "why": [
+              "Играем компанией",
+              "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+            ],
+            "evidence": [
+              {
+                "id": "a",
+                "q": "alone or with up to 10+ friends in online co-op",
+                "kind": "description",
+                "thumb": null,
+                "hours": null,
+                "lang": null,
+                "ru": "в одиночку или с компанией до 10+ друзей в онлайн-кооперативе"
+              }
+            ]
+          },
+          {
+            "id": "mood:loop.survival",
+            "type": "mood",
+            "f": "loop.survival",
+            "why": [
+              "сегодня хочется: «Выживание»"
+            ],
+            "evidence": [
+              {
+                "id": "d",
+                "q": "A space survival open world terraforming crafting game",
+                "kind": "description",
+                "thumb": null,
+                "hours": null,
+                "lang": null,
+                "ru": "Космическая выживалка с открытым миром, терраформированием и крафтом"
+              }
+            ]
+          },
+          {
+            "id": "risk:flaw:pace.draggy",
+            "type": "risk_flaw",
+            "f": "pace.draggy",
+            "evidence": [
+              {
+                "id": "r237075163",
+                "q": "The core loop feels extremely tedious",
+                "kind": "review",
+                "thumb": "down",
+                "hours": 61,
+                "lang": "english",
+                "ru": "Основной игровой цикл ощущается крайне утомительным"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.96,
+            "total": 74810,
+            "desc": "Overwhelmingly Positive"
+          },
+          {
+            "id": "fact:hours",
+            "type": "fact",
+            "hours": 39
+          },
+          {
+            "id": "fact:deck",
+            "type": "fact",
+            "deck": "verified"
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "players",
+            "status": "unknown",
+            "text": "Не проверено, можно ли играть всей компанией (3)."
+          },
+          {
+            "key": "minutes",
+            "status": "unknown",
+            "text": "Не проверено, удобно ли прерваться через 90 мин."
+          }
+        ],
+        "ai": {
+          "reason": "В The Planet Crafter исследование планеты и обустройство базы обходятся без боёв; для мягкого выживания есть Relaxed.",
+          "caveat": "Вместимость онлайн-группы не проверена; сбор ресурсов и крафт занимают заметное место.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:648800",
+          "domain": "game",
+          "name": "Raft",
+          "ru": null,
+          "year": 2022,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg?t=1727184011",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/648800/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Adventure",
+            "Indie",
+            "Simulation"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/648800/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 5.719,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.367,
+            "prior": 0.352
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «Играем компанией»: «кооператив»",
+                "factIds": [
+                  "mood:social.coop"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хотим исследовать мир и построить общую базу.»»: «строительство и крафт»",
+                "factIds": [
+                  "mood:loop.building"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "93% положительных из 380 083 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 35 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "играбельна на Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.coop",
+              "type": "mood",
+              "f": "social.coop",
+              "why": [
+                "Играем компанией",
+                "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "Survive by yourself or with friends in online co-op",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Выживайте в одиночку или с друзьями в онлайн-кооперативе"
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.building",
+              "type": "mood",
+              "f": "loop.building",
+              "why": [
+                "сегодня хочется: «Хотим исследовать мир и построить общую базу.»"
+              ],
+              "evidence": [
+                {
+                  "id": "d",
+                  "q": "build your own floating home",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "постройте собственный плавучий дом"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.93,
+              "total": 380083,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 35
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "playable"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "players",
+              "status": "unknown",
+              "text": "Не проверено, можно ли играть всей компанией (3)."
+            },
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 90 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В Raft плот становится вашей общей базой для экспедиций к островам, а мирный режим убирает нападения животных.",
+            "caveat": "Вместимость онлайн-группы не проверена; начало занято сбором мусора и добычей еды.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:962130",
+          "domain": "game",
+          "name": "Grounded",
+          "ru": null,
+          "year": 2022,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/962130/header.jpg?t=1768264530",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/962130/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/962130/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 5.923,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 5.618,
+            "prior": 0.305
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «Играем компанией»: «кооператив»",
+                "factIds": [
+                  "mood:social.coop"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хотим исследовать мир и построить общую базу.»»: «строительство и крафт»",
+                "factIds": [
+                  "mood:loop.building"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: гринд",
+                "factIds": [
+                  "risk:flaw:progression.grind"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "90% положительных из 96 231 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 31 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.coop",
+              "type": "mood",
+              "f": "social.coop",
+              "why": [
+                "Играем компанией",
+                "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+              ],
+              "evidence": [
+                {
+                  "id": "r236129311",
+                  "q": "A perfect game to play with friends and family in small groups",
+                  "kind": "review",
+                  "thumb": "up",
+                  "hours": 53,
+                  "lang": "english",
+                  "ru": "идеальная игра для друзей и семьи в небольших группах"
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.building",
+              "type": "mood",
+              "f": "loop.building",
+              "why": [
+                "сегодня хочется: «Хотим исследовать мир и построить общую базу.»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "Explore, build and survive together",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Исследуй, строй и выживай вместе"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:progression.grind",
+              "type": "risk_flaw",
+              "f": "progression.grind",
+              "evidence": [
+                {
+                  "id": "r237781969",
+                  "q": "there is way to much grinding res",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 55,
+                  "lang": "english",
+                  "ru": "слишком много гринда, честно говоря"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.897,
+              "total": 96231,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 31
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "players",
+              "status": "unknown",
+              "text": "Не проверено, можно ли играть всей компанией (3)."
+            },
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 90 мин."
+            }
+          ],
+          "ai": {
+            "reason": "Grounded предлагает исследовать огромный сад и строить базу; в настройках можно ослабить бои и отключить потерю рюкзака.",
+            "caveat": "Вместимость онлайн-группы не проверена; даже при мягких настройках встречаются пауки.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:892970",
+          "domain": "game",
+          "name": "Valheim",
+          "ru": null,
+          "year": 2026,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/1888731b59362fca6c026cdbafa3dfffd45c3146/header_alt_assets_6.jpg?t=1791544831",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/892970/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/892970/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 6.428,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 6.067,
+            "prior": 0.36
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «Играем компанией»: «кооператив»",
+                "factIds": [
+                  "mood:social.coop"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хотим исследовать мир и построить общую базу.»»: «строительство и крафт»",
+                "factIds": [
+                  "mood:loop.building"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Игроки жалуются: недоделана",
+                "factIds": [
+                  "risk:flaw:completeness.unfinished"
+                ]
+              },
+              {
+                "text": "Игроки жалуются: затянуто, провисает",
+                "factIds": [
+                  "risk:flaw:pace.draggy"
+                ]
+              },
+              {
+                "text": "Игроки жалуются: гринд",
+                "factIds": [
+                  "risk:flaw:progression.grind"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "94% положительных из 561 520 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 207 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "проверена для Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:social.coop",
+              "type": "mood",
+              "f": "social.coop",
+              "why": [
+                "Играем компанией",
+                "сегодня хочется: «Нас трое, играем вместе онлайн на Windows.»"
+              ],
+              "evidence": [
+                {
+                  "id": "d",
+                  "q": "A collaborative exploration and survival game for 1-10 players",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Игра для совместного исследования и выживания для 1–10 игроков"
+                }
+              ]
+            },
+            {
+              "id": "mood:loop.building",
+              "type": "mood",
+              "f": "loop.building",
+              "why": [
+                "сегодня хочется: «Хотим исследовать мир и построить общую базу.»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "Raise Viking longhouses and build bases",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Строй викингские длинные дома и возводи базы"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:completeness.unfinished",
+              "type": "risk_flaw",
+              "f": "completeness.unfinished",
+              "evidence": [
+                {
+                  "id": "r237353690",
+                  "q": "This doesn't feel like a 1.0 release",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 149,
+                  "lang": "english",
+                  "ru": "это не ощущается как релиз 1.0"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:pace.draggy",
+              "type": "risk_flaw",
+              "f": "pace.draggy",
+              "evidence": [
+                {
+                  "id": "r236363682",
+                  "q": "the game becomes increasingly tedious",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 173,
+                  "lang": "english",
+                  "ru": "игра становится всё более утомительной"
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:progression.grind",
+              "type": "risk_flaw",
+              "f": "progression.grind",
+              "evidence": [
+                {
+                  "id": "r235693089",
+                  "q": "it still demands a ridiculous amount of unnecessary grinding",
+                  "kind": "review",
+                  "thumb": "down",
+                  "hours": 149,
+                  "lang": "english",
+                  "ru": "всё равно требует нелепого количества ненужного гринда"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.935,
+              "total": 561520,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 207
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "verified"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "players",
+              "status": "unknown",
+              "text": "Не проверено, можно ли играть всей компанией (3)."
+            },
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 90 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В Valheim можно строить общий дом и открывать новые берега, снизив сложность боёв и потери при смерти настройками мира.",
+            "caveat": "Вместимость онлайн-группы не проверена; отключите рейды, чтобы не терять базу.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.104,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 3277
+        }
+      ],
+      "considered": 1104,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь выживание для троих онлайн на Windows: вместе исследовать мир и построить общую базу. Бои допустимы при возможности снизить сложность, а постоянных потерь ресурсов не хочется. Крафт допустим, но не должен быть главной целью. На сегодняшнюю игру есть 90 минут.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    }
+  },
+  "feedbackState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "group",
+      "childAge": null,
+      "partySize": "3",
+      "note": "Сегодня ты хочешь выживание для троих онлайн на Windows: вместе исследовать мир и построить общую базу. Бои допустимы при возможности снизить сложность, а постоянных потерь ресурсов не хочется. Крафт допустим, но не должен быть главной целью. На сегодняшнюю игру есть 90 минут.",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": []
+    },
+    "stops": [],
+    "asked": [],
+    "shown": [],
+    "liked": [],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {},
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": [],
+      "goalDriven": true,
+      "excludeSeries": false,
+      "goalWants": [
+        {
+          "f": "loop.survival",
+          "evidence": "Выживание"
+        },
+        {
+          "f": "social.coop",
+          "evidence": "Нас трое, играем вместе онлайн на Windows."
+        },
+        {
+          "f": "loop.exploration",
+          "evidence": "Хотим исследовать мир и построить общую базу."
+        },
+        {
+          "f": "loop.building",
+          "evidence": "Хотим исследовать мир и построить общую базу."
+        }
+      ],
+      "goalAvoids": [],
+      "minutes": 90,
+      "goalRequires": [
+        {
+          "f": "social.coop",
+          "evidence": "Нас трое, играем вместе онлайн на Windows."
+        }
+      ],
+      "goalExcludes": [],
+      "genreWants": []
+    },
+    "seed": 652444,
+    "conversation": {
+      "revision": 5,
+      "summary": "Сегодня ты хочешь выживание для троих онлайн на Windows: вместе исследовать мир и построить общую базу. Бои допустимы при возможности снизить сложность, а постоянных потерь ресурсов не хочется. Крафт допустим, но не должен быть главной целью. На сегодняшнюю игру есть 90 минут.",
+      "facts": [
+        {
+          "key": "direction:survival",
+          "text": "Сегодня хочется выживания.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:1",
+          "quote": "Выживание",
+          "feature": "loop.survival",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "party:online_three",
+          "text": "Нужна совместная онлайн-игра для троих.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:1",
+          "quote": "Нас трое, играем вместе онлайн на Windows.",
+          "feature": "social.coop",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "platform:windows",
+          "text": "Играете на Windows.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:2",
+          "quote": "ПК (Windows)",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "goal:exploration",
+          "text": "Хочется исследовать мир.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:1",
+          "quote": "Хотим исследовать мир и построить общую базу.",
+          "feature": "loop.exploration",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "goal:shared_base",
+          "text": "Хочется построить общую базу.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:1",
+          "quote": "Хотим исследовать мир и построить общую базу.",
+          "feature": "loop.building",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "combat:adjustable",
+          "text": "Бои допустимы, если можно снизить сложность.",
+          "stance": "conditional",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:1",
+          "quote": "Бои допустимы, если можно снизить сложность",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "losses:resources",
+          "text": "Не хочется постоянных потерь ресурсов.",
+          "stance": "avoid",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:1",
+          "quote": "постоянных потерь ресурсов не хочется",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "crafting:secondary",
+          "text": "Крафт допустим, но не является главной целью.",
+          "stance": "conditional",
+          "scope": "today",
+          "sourceId": "overnight-20261101-02-coop:1",
+          "quote": "Крафт допустим, но это не главная цель.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        }
+      ],
+      "sessionTime": {
+        "minutes": 90,
+        "sourceId": "overnight-20261101-02-coop:1",
+        "quote": "Сегодня есть 1 час 30 минут."
+      },
+      "uncertainties": [],
+      "retractions": [],
+      "familiarity": {
+        "returnToIds": [],
+        "hiddenIds": [],
+        "excludedIds": []
+      },
+      "turns": [
+        {
+          "id": "overnight-20261101-02-coop:1",
+          "question": "Во что тянет сегодня?",
+          "answer": "Выживание; Нас трое, играем вместе онлайн на Windows. Хотим исследовать мир и построить общую базу. Бои допустимы, если можно снизить сложность; постоянных потерь ресурсов не хочется. Крафт допустим, но это не главная цель. Сегодня есть 1 час 30 минут.",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-02-coop:2",
+          "question": "Где будешь играть?",
+          "answer": "ПК (Windows)",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-02-coop:3",
+          "question": "Будешь играть один или вместе с кем-то?",
+          "answer": "Компанией",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-02-coop:4",
+          "question": "Сколько вас будет?",
+          "answer": "Трое",
+          "kind": "answer",
+          "superseded": false
+        }
+      ]
+    }
+  }
+}

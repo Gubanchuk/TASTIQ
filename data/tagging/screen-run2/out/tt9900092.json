@@ -1,0 +1,9 @@
+{"id": "tt9900092", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "is an American supernatural drama television series"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "They train in combat magic"}]},
+{"f": "characters.female_lead", "r": 3, "ev": [{"id": "p1", "q": "takes place in a women-dominated world"}]},
+{"f": "world.war", "r": 2, "ev": [{"id": "p0", "q": "three witches conscripted into the U.S. Army"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "Taylor Hickson as Raelle Collar, Jessica Sutton as Tally Craven"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "renewed for a third and final season"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p2", "q": "ambitious ideas are overwhelmed by the sheer too-muchness of it all"}]}
+]}

@@ -1,0 +1,18 @@
+{"appid":50300,"features":[
+{"f":"story.central","r":3,"ev":[{"id":"r236137078","q":"Достойная игра с сильным сюжетом"},{"id":"r237612180","q":"Gameplay is pretty basic but Story is fantastic"},{"id":"r237964388","q":"The story is the most important part and is excellent"}]},
+{"f":"story.choices","r":2,"ev":[{"id":"a","q":"where unimaginable choices affecting human life must be made"},{"id":"r237964388","q":"just to try the alternative options and endings"}]},
+{"f":"tone.dark","r":3,"ev":[{"id":"r236644182","q":"a genuinely heavy, bleak, and suffocating war atmosphere"},{"id":"r238113980","q":"Морально крайне тяжелая видеоигра"},{"id":"r236726168","q":"Только трупы, разрушения и благие намерения"}]},
+{"f":"tone.melancholic","r":2,"ev":[{"id":"r236644182","q":"A tragic and deeply haunting storyline"},{"id":"r238113980","q":"оставляет странное послевкусие после прохождения"}]},
+{"f":"ending.strong","r":2,"ev":[{"id":"r238117952","q":"The plot twist in the end made it all so epic."},{"id":"r236644182","q":"exposing the harsh realities of war through mind-bending plot twists"}]},
+{"f":"loop.shooting","r":3,"ev":[{"id":"d","q":"A Third-Person modern military Shooter"},{"id":"r236875057","q":"sniping enemies from a distance is genuinely satisfying"}]},
+{"f":"world.modern","r":2,"ev":[{"id":"d","q":"A Third-Person modern military Shooter designed to challenge players' morality"},{"id":"a","q":"set in a ruined Dubai"}]},
+{"f":"world.postapoc","r":2,"ev":[{"id":"a","q":"the city lies buried under sand"},{"id":"a","q":"It’s been 6 months since Dubai was wiped off the map by a cataclysmic sandstorm."}]},
+{"f":"loop.tactics","r":1,"ev":[{"id":"a","q":"tactical squad-based Delta Force gameplay"}]},
+{"f":"characters.companions","r":1,"ev":[{"id":"r237964388","q":"teammates are really helpful most of times"}]},
+{"f":"pace.repetitive","r":2,"ev":[{"id":"r236744102","q":"The gameplay is same from beginning to the end."},{"id":"r236624316","q":"a very primitive shooting range against hundreds of bots appearing almost from nowhere in waves"}]},
+{"f":"difficulty.hard","r":1,"ev":[{"id":"r237964388","q":"I played it in suicide mission (hard difficulty) at first"}]},
+{"f":"tension.high","r":1,"ev":[{"id":"r237964388","q":"playing in suicide is stressful after a while"}]},
+{"f":"combat.clunky","r":1,"ev":[{"id":"r237964388","q":"Two things I hated was the same button for run and cover"}]},
+{"f":"social.pvp","r":1,"ev":[{"id":"a","q":"a variety of multiplayer modes and maps"}]},
+{"f":"story.mystery","r":1,"ev":[{"id":"a","q":"a mysterious radio signal is picked-up from Dubai"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 543460, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p2", "q": "the game features an open world setting"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "a goal to explore the environment and battle against hordes of the undead"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "separate buttons for shooting and melee attacks"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "is set in a rebuilt Willamette, Colorado during the Winter holiday season"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p5", "q": "convinces him to help her investigate a military compound"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "p9", "q": "comic book-like animations and campy tone"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p1", "q": "a decline in overall quality and some technical problems were cited as negatives"}]}
+]}

@@ -1,0 +1,12 @@
+{"appid": 1764390, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p2", "q": "The player's choices determine the details and ultimate ending"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p0", "q": "with reviewers praising the characters, gameplay, and story"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p6", "q": "praised Bad End Theaters characters, gameplay, and story"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "mysterious letters are unlocked hinting at the nature"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "contrast with the dark storylines of the theater"}]},
+{"f": "ending.bittersweet", "r": 2, "ev": [{"id": "p3", "q": "featuring the main cast dying together"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p0", "q": "is a 2021 visual novel video game"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "The characters act in a world of humans and demons"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p4", "q": "The game has a retro chiptune soundtrack and expressive pixel art"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p4", "q": "The game has a retro chiptune soundtrack"}]}
+]}

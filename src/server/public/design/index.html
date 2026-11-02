@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#142d2b">
+  <title>Три направления TASTIQ</title>
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="/assets/fonts/Onest-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/design/style.css">
+  <script type="module" src="/design/app.js"></script>
+</head>
+<body data-design="programme">
+  <a class="skip" href="#preview">К макету</a>
+  <header class="compare">
+    <div class="compare-title"><strong>TASTIQ <span>/ дизайн</span></strong><p>Три направления. Попробуй вопрос, выдачу и библиотеку.</p></div>
+    <div class="directions" role="group" aria-label="Направление дизайна">
+      <button data-direction="programme" aria-pressed="true">1. Вечерняя программа</button>
+      <button data-direction="cinema" aria-pressed="false">2. Крупный план</button>
+      <button data-direction="collection" aria-pressed="false">3. Медиатека</button>
+    </div>
+    <div class="compare-bottom"><div class="scenes" role="group" aria-label="Экран макета"><button data-scene="question" aria-pressed="false">Вопрос</button><button data-scene="result" aria-pressed="true">Варианты</button><button data-scene="library" aria-pressed="false">Библиотека</button><button data-scene="landing" aria-pressed="false">Лендинг</button></div><p>Кликабельный макет · подбор и оплата API выключены</p></div>
+  </header>
+  <div class="direction-caption" id="direction-caption"></div>
+  <div id="preview" class="preview" tabindex="-1"><p class="loading">Открываю макеты…</p></div>
+  <footer class="decision"><div><strong id="decision-title">Вечерняя программа</strong><p id="decision-description"></p></div><button id="choose" class="choose">Выбираю это направление <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><p id="choice-status" role="status" aria-live="polite"></p></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

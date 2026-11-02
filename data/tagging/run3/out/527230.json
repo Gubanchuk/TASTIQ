@@ -1,0 +1,10 @@
+{"appid": 527230, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p3", "q": "combat is turn-based, with combat being initiated"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "Gameplay revolves around exploration, clearing dungeons, and collecting new gear"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p0", "q": "collecting new gear and weapons"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "with both co-op and single-player modes being available"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "a party is created by the player or players, ranging from one to three characters in size"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "The cosmetic appearance of each character can be chosen"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p1", "q": "the character's class, which determines starting weapons and gear"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "could create some especially difficult scenarios for the player"}]}
+]}

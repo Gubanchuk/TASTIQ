@@ -1,0 +1,11 @@
+{"appid": 10150, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p2", "q": "set in an open world based on modern-day Manhattan"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p2", "q": "based on modern-day Manhattan"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "He can perform various melee attacks"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p1", "q": "gaining praise for its originality, storytelling, and engaging gameplay"}, {"id": "p8", "q": "intriguing storyline and protagonist"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "attempts to uncover his mysterious past"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p0", "q": "players control an amnesiac shapeshifter named Alex Mercer"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p1", "q": "criticized for its control scheme"}, {"id": "p8", "q": "occasionally fiddly controls"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p8", "q": "an entirely different type of sandbox"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p8", "q": "mature, science-fiction superhero fantasy"}]}
+]}

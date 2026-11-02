@@ -1,0 +1,10 @@
+{"id": "tt9319668", "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "is a multilingual German mystery science fiction television series"}, {"id": "p5", "q": "an atmospheric mystery"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "is a multilingual German mystery science fiction television series"}]},
+{"f": "tone.atmospheric", "r": 2, "ev": [{"id": "p5", "q": "an atmospheric mystery"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p5", "q": "delivers a suspenseful journey"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "s", "q": "will turn their passage to the promised land into a horrifying nightmare"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "Set in 1899, the series follows the diverse and secretive passengers"}]},
+{"f": "completeness.unfinished", "r": 3, "ev": [{"id": "p0", "q": "The series was cancelled in January 2023"}, {"id": "p2", "q": "dead series with unfinished conclusions"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p5", "q": "even if it may never reach a satisfying destination"}]}
+]}

@@ -1,0 +1,20 @@
+{"appid": 480490, "features": [
+{"f": "social.solo", "r": 2, "ev": [{"id": "r237189173", "q": "Masterclass in player agency and narrative for a single-player game"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "r237203341", "q": "Stealth, skill checks, weapons, powers, and environmental objects"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "r236656436", "q": "Explore a space station (inside, outside, crawl spaces, everywhere)"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "r236656436", "q": "be a loot goblin and scavenge everything"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "r237355705", "q": "RPG system, gives you more ways to play the game"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "r237189173", "q": "The amount of paths and options put other games to shame"}, {"id": "r237036974", "q": "the various paths the game offer you to an obstacle"}]},
+{"f": "ending.strong", "r": 2, "ev": [{"id": "r237189173", "q": "Ending is truly something to behold"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "r237281388", "q": "the final ending felt a bit disappointing"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "a", "q": "set out to unravel the clues you've left behind"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "r237203341", "q": "The story was also a standout"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "d", "q": "a space station orbiting the moon in the year 2032"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "r237394704", "q": "hits just the right balance of creepy, cinematic, futuristic"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "r237787074", "q": "Не тяжелая, но ооооочень красивая."}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "r237394704", "q": "plain old FPS"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "r235826224", "q": "The controls being this shallow and slow"}, {"id": "r236382699", "q": "Gunplay felt akward, as ammo was too scarce"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r237311233", "q": "the pace is really stale after intro"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "r236382699", "q": "It is also a shame that enemies lacked variety"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "r237394704", "q": "Quick save/restore sorta made it a bit too easy"}]}
+]}

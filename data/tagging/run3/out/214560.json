@@ -1,0 +1,10 @@
+{"appid": 214560, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p0", "q": "is a side-scrolling stealth platform game developed by Klei Entertainment"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p3", "q": "consists of stealth-oriented 2D platforming"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p1", "q": "Cutscenes for the game are rendered in a Saturday-morning cartoon animation style"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "praising the game's visual and audio atmosphere"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p6", "q": "Before each mission the player is taken to an upgrade screen, where they can spend their honor in three sections"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "a conflict between ancient ninja tradition and modern technology"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p1", "q": "follows the story of a nameless ninja in the present day"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p11", "q": "minor control issues and frustrating gameplay moments"}]}
+]}

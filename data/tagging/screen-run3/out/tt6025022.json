@@ -1,0 +1,8 @@
+{"id": "tt6025022", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "an American animated superhero television series"}]},
+{"f": "characters.ensemble", "r": 3, "ev": [{"id": "p2", "q": "the show features a greatly expanded League"}, {"id": "p2", "q": "in the first episode, well over 50 characters appear"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "It is the eighth and final series of the DC Animated Universe"}, {"id": "p0", "q": "and ended on May 13, 2006"}]},
+{"f": "story.complex", "r": 2, "ev": [{"id": "p1", "q": "it is the most continuity-heavy show of the DC Animated Universe"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p3", "q": "was unafraid to be the wildest, biggest, comic-book-iest show it could be"}]},
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "an American animated superhero television series"}]}
+]}

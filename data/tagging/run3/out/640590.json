@@ -1,0 +1,10 @@
+{"appid": 640590, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p10", "q": "this game is a lot more combat-focused than others"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p10", "q": "Players zip back and forth between enemies, building up combos in fluid motions"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "this game allows up four players to play in"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p10", "q": "The Battle Maps are a fun way to duke it out with friends and family"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p2", "q": "primarily fighting enemies, solving puzzles, and collecting Lego 'studs'"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p6", "q": "funny dialogue and entertaining movie clips"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p8", "q": "a poorly thought out ending"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p9", "q": "Story missions seem pretty darn linear"}]}
+]}

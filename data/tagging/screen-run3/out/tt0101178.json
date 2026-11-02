@@ -1,0 +1,14 @@
+{"id": "tt0101178", "features": [
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p6", "q": "Dark and Dadaist, The Ren & Stimpy Show pioneered an animation aesthetic"}]},
+{"f": "tone.whimsical", "r": 3, "ev": [{"id": "p1", "q": "for its visuals, animation, and surreal nature"}, {"id": "s", "q": "lots of bizarre and outrageous adventures"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "p3", "q": "The show extensively features off-color and absurdist humor, as well as slapstick"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p1", "q": "significant controversy for its dark humor, sexual innuendo, adult humor, violence"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p1", "q": "adult humor, violence, and shock value"}]},
+{"f": "content.disturbing", "r": 2, "ev": [{"id": "p6", "q": "undeniably disturbing for all ages"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p12", "q": "The characters became a cultural touchstone in the mid-1990s"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "The series received widespread critical acclaim for its visuals, animation"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p10", "q": "the use of grotesque close-ups, and a shift in cartoon color palettes to richer, more harmonious colors"}]},
+{"f": "audience.adult", "r": 2, "ev": [{"id": "p1", "q": "for its dark humor, sexual innuendo, adult humor"}]},
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated comedy television series"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p0", "q": "with its last episode running on MTV on October 20, 1996"}]}
+]}

@@ -1,0 +1,8 @@
+{"id": "tt9224104", "features": [
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "is a 2023 science fiction action film"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p3", "q": "suffers from a disjointed story that drifts for too long"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p3", "q": "that drifts for too long"}, {"id": "p4", "q": "this is one of the dullest films of the year"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p5", "q": "piling on one ridiculous conceit after another at such a pace"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "p5", "q": "Meg 2 is confident in its schlock"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p3", "q": "delivering a few campy thrills"}]}
+]}

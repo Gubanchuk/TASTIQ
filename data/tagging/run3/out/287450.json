@@ -1,0 +1,7 @@
+{"appid": 287450, "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "is based on the entirety of history, taking place from the ancient era to the modern age"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p7", "q": "Five tactical formations are also available"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p4", "q": "gather resources, or build or repair damaged buildings"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p6", "q": "Gameplay focuses heavily on creating a balance between offense, defense, and economy"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p10", "q": "things can become pretty unwieldy in massive battles"}]}
+]}

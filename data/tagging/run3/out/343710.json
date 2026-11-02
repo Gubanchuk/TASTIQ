@@ -1,0 +1,10 @@
+{"appid": 343710, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "Kholat is a survival horror game"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "who is tracing the steps of a group of nine Russian college students"}, {"id": "p3", "q": "They also begin collecting a series of coordinates which lead them to more clues"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p4", "q": "Piecing together the notes"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p3", "q": "The player explores a wide range of notable locations scattered across a vast valley"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p3", "q": "scattered across a vast valley"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "who must be avoided at all costs"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "a mysterious paranormal phenomenon called"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "The game is based on the Dyatlov Pass incident, a true event"}]}
+]}

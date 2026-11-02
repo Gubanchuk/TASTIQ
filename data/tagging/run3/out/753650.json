@@ -1,0 +1,9 @@
+{"appid": 753650, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "an online multiplayer tactical first-person shooter video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "The game's core revolves around teamwork and communication"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "allowing players to draw a \"playbook\" during the planning phase"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "a team of five players on defense versus a team of five players on offense"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "requiring players to focus on map strategy during the tactical window"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "it is set in a cyberpunk dystopia"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p0", "q": "The visuals are inspired by 1990s arcade light gun games"}]}
+]}

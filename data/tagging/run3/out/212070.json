@@ -1,0 +1,10 @@
+{"appid": 212070, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "The core of the game is PvP spaceships battles"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "PvE (Co-Op) missions and an open world"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "The core of the game is PvP spaceships battles, PvE (Co-Op) missions and an open world"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "free-to-play dynamic massively multiplayer online space action game"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Each player can develop abilities, establish specialized skills, and perfect tactics"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p3", "q": "Each player can develop abilities, establish specialized skills, and perfect tactics"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p7", "q": "travel around the various systems and sectors"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p0", "q": "free-to-play dynamic massively multiplayer online space action game"}]}
+]}

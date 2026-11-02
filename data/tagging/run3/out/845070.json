@@ -1,0 +1,11 @@
+{"appid": 845070, "features": [
+{"f": "story.central", "r": 2, "ev": [{"id": "p0", "q": "praising the narrative, main character, and script"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p0", "q": "praising the narrative, main character, and script"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p1", "q": "struggling with the death of Chris's mother"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p1", "q": "The player assumes the role of a young boy named Chris Eriksen"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "affect some parts of Life Is Strange 2"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p2", "q": "exploring an imagined planet"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p2", "q": "Dialogue trees are used to respond to non-player characters"}]},
+{"f": "ending.weak", "r": 1, "ev": [{"id": "p4", "q": "Makedonski disliked that it ended on a"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p4", "q": "accused the game of being too short"}]}
+]}

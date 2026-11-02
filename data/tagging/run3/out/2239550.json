@@ -1,0 +1,15 @@
+{"appid": 2239550, "features": [
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "taking place within an open world setting based upon London"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "consisting of a combination of shooting, driving, stealth, and hacking puzzles"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "consisting of a combination of shooting, driving, stealth, and hacking puzzles"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p1", "q": "consisting of a combination of shooting, driving, stealth, and hacking puzzles"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p1", "q": "consisting of a combination of shooting, driving, stealth, and hacking puzzles"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p5", "q": "Those recruited become operatives that the player can freely switch to at any time"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "allowing up to four players to complete missions or explore London together"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p7", "q": "competitive mode, where players controlling miniature spiderbot gadgets fight in free for all matches"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "a futuristic, dystopian London"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "a futuristic, dystopian London"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "Albion, an oppressive private military company"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p10", "q": "offers a novel way to experience an open world, with its interconnected NPCs"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "the repetitive nature of missions"}]}
+]}

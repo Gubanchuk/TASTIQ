@@ -1,0 +1,8 @@
+{"id": "tt2281375", "features": [
+{"f": "world.music", "r": 3, "ev": [{"id": "p0", "q": "is an American musical drama television series"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p1", "q": "The series chronicles the lives of various fictitious country music singers"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "s", "q": "are their family, friends and, in some cases, lovers"}]},
+{"f": "characters.female_lead", "r": 2, "ev": [{"id": "s", "q": "follows Rayna Jaymes and Juliette Barnes"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "s", "q": "in some cases, lovers"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p2", "q": "and the series ended on July 26, 2018"}]}
+]}

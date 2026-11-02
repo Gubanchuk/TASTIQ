@@ -1,0 +1,11 @@
+{"id": "tt2049116", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "s", "q": "the brutal Neapolitan crime organisation the Camorra"}]},
+{"f": "tone.dark", "r": 3, "ev": [{"id": "p7", "q": "Aggressively dark, focused to the point of claustrophobia"}]},
+{"f": "tone.gritty", "r": 3, "ev": [{"id": "s", "q": "this gritty Italian crime drama"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p1", "q": "while also fighting a brutal civil war"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p7", "q": "is significantly more frightening than others in its genre"}]},
+{"f": "tone.atmospheric", "r": 2, "ev": [{"id": "p6", "q": "critical acclaim for its characterization, pacing, atmosphere, acting, directing, and writing"}]},
+{"f": "characters.antihero", "r": 2, "ev": [{"id": "p8", "q": "It makes them seem likable, which is dangerous"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p4", "q": "find themselves at odds with their own families"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "The series ran for five seasons totaling 58 episodes until 17 December 2021"}]}
+]}

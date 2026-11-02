@@ -1,0 +1,8 @@
+{"id": "tt3514324", "features": [
+{"f": "pace.fast", "r": 2, "ev": [{"id": "s", "q": "is a high-octane drama about eccentric genius Walter O'Brien"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "s", "q": "inspired by a true story"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "s", "q": "his team of brilliant misfits"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p2", "q": "Typical procedural plot lines"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p2", "q": "Typical procedural plot lines"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "CBS cancelled the series after four seasons"}]}
+]}

@@ -1,0 +1,9 @@
+{"id": "tt9764386", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "is a Spanish mystery horror television series"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "is a Spanish mystery horror television series"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "the mystery seemingly related to a coin he owns"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p5", "q": "phantasmagoric visuals and viscera"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p4", "q": "just the right amount of absurdity"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p2", "q": "Max had not renewed the series"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p6", "q": "the disjointed plots"}]}
+]}

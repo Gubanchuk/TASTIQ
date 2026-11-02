@@ -1,0 +1,7 @@
+{"appid": 345180, "features": [
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p3", "q": "Players can tweak their character by changing freely different weapon classes"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Each weapon class offers one basic and two special attacks which can be combined"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "The setting of the game resembles Gothic-fantasy fairy tale"}, {"id": "p1", "q": "a demon hunter who arrives in the fantasy city of Zagoravia"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "The game world is divided in large areas"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "p2", "q": "The game features jump mechanic which is used in combat and in solving vertical puzzles"}]}
+]}

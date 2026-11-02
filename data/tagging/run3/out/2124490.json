@@ -1,0 +1,19 @@
+{
+  "appid": 2124490,
+  "features": [
+    {"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "a 2024 survival horror game"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p6", "q": "Shrouded in a thick fog"}]},
+    {"f": "tone.melancholic", "r": 2, "ev": [{"id": "p4", "q": "each representing a segment of James's psychological and emotional journey"}]},
+    {"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "creating a tense, immersive experience"}]},
+    {"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "Silent Hill 2 features multiple endings based on how players behave throughout the game"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "praised its story, graphics, atmospheric setting, performances"}]},
+    {"f": "loop.puzzles", "r": 3, "ev": [{"id": "p5", "q": "The game features numerous puzzles"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "Players explore detailed, dimly lit environments using a flashlight and map to navigate"}]},
+    {"f": "loop.melee", "r": 2, "ev": [{"id": "p4", "q": "Players have access to several melee weapons such as a plank and a steel pipe"}]},
+    {"f": "loop.shooting", "r": 1, "ev": [{"id": "p4", "q": "and firearms such as a pistol and a shotgun"}]},
+    {"f": "combat.clunky", "r": 2, "ev": [{"id": "p11", "q": "clunky combat doesn't work with a new camera angle"}, {"id": "p11", "q": "clumsy pipe swinging and wobbly aiming"}]},
+    {"f": "pace.draggy", "r": 1, "ev": [{"id": "p11", "q": "padded with backtracking"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "Silent Hill 2's atmosphere and graphics were highlighted by critics"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "Also praised was the overhaul of the soundtrack"}]}
+  ]
+}

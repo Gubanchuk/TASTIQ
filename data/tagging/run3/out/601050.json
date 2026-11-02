@@ -1,0 +1,8 @@
+{"appid": 601050, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a 2018 hack and slash video game developed by Omega Force"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p5", "q": "The game features cel-shaded graphics, fast-paced aerial combat"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p5", "q": "The game features cel-shaded graphics"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "a story-mode that's entirely playable in co-op"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p5", "q": "as well as a character creator"}]},
+{"f": "loop.life_sim", "r": 1, "ev": [{"id": "p5", "q": "players can befriend and bond with the series' cast of characters"}]}
+]}

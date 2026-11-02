@@ -1,0 +1,1003 @@
+{
+  "date": "2026-10-31",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "detailed": 40,
+  "discovery": {
+    "game": 0,
+    "cartoon": 0
+  },
+  "summary": {
+    "engine": 2,
+    "ai": 5,
+    "engineTop": 2,
+    "aiTop": 3,
+    "targets": 12,
+    "inShortlist": 6,
+    "ms": [
+      9839,
+      8218,
+      7957,
+      8024
+    ],
+    "usd": 0.0233079,
+    "own": 0,
+    "ownHits": 0,
+    "engineSeen": 2,
+    "aiSeen": 1,
+    "flagged": 0,
+    "flaggedSeen": 0
+  },
+  "attempted": 4,
+  "errors": 0,
+  "unknownUsage": 0,
+  "records": [
+    {
+      "persona": "cinephile",
+      "mode": "careful",
+      "domain": "film",
+      "state": {
+        "step": "result",
+        "domain": "film",
+        "platform": "windows",
+        "situation": {
+          "time": "any",
+          "company": "solo",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [
+            {
+              "f": "tone.dark",
+              "against": "tone.feelgood",
+              "label": "мрачное"
+            },
+            {
+              "f": "pace.slow",
+              "against": "pace.fast",
+              "label": "неторопливое"
+            }
+          ]
+        },
+        "stops": [],
+        "asked": [
+          "lean:tone.feelgood|tone.dark",
+          "lean:pace.fast|pace.slow"
+        ],
+        "shown": [
+          "tt0111161",
+          "tt0468569",
+          "tt1375666",
+          "tt0137523",
+          "tt0816692",
+          "tt0109830",
+          "tt0110912",
+          "tt0133093",
+          "tt0325980",
+          "tt0169547",
+          "tt0088763",
+          "tt0114369",
+          "tt1853728",
+          "tt0167261",
+          "tt0266697",
+          "tt2582802",
+          "tt0208092",
+          "tt1119646",
+          "tt0120737",
+          "tt0167260",
+          "tt0172495",
+          "tt0993846",
+          "tt1345836",
+          "tt0361748"
+        ],
+        "liked": [
+          "tt0166924",
+          "tt0079944"
+        ],
+        "disliked": [
+          "tt4154796"
+        ],
+        "whyIndex": 0,
+        "answers": {
+          "tt0137523": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0166924": {
+            "reaction": "love",
+            "reasons": [
+              "story.nonlinear",
+              "tone.atmospheric",
+              "tone.whimsical",
+              "story.complex",
+              "aesthetic.stylized"
+            ],
+            "issues": [],
+            "text": "за авторский почерк, сновидческое, ничего не объясняет и не надо"
+          },
+          "tt0079944": {
+            "reaction": "love",
+            "reasons": [
+              "pace.slow",
+              "cognitive.high",
+              "aesthetic.beautiful",
+              "story.dialogue"
+            ],
+            "issues": [],
+            "text": "медленно, созерцательно, каждый кадр как картина, философия"
+          },
+          "tt0118694": {
+            "reaction": "love",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0090756": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt4154796": {
+            "reaction": "dislike",
+            "issues": [
+              {
+                "f": "story.predictable",
+                "hard": false
+              },
+              {
+                "f": "length.long",
+                "hard": false
+              },
+              {
+                "f": "aesthetic.effects",
+                "hard": true
+              },
+              {
+                "f": "world.superhero",
+                "hard": true
+              }
+            ],
+            "badQuality": false
+          },
+          "tt2109248": {
+            "reaction": "dislike",
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 4242
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: посмотреть фильм.\nВремя: сколько угодно.\nС кем: один.\nСегодня просил: сегодня: мрачное; сегодня: неторопливое.\n\nЗнакомые тайтлы:\n- Бойцовский клуб (Fight Club), 1999: нормально\n- Малхолланд Драйв (Mulholland Drive), 2001: обожаю; за что: нелинейный сюжет, атмосферное, странное, причудливое, сложный, надо вникать, стильно и необычно снято; своими словами: «за авторский почерк, сновидческое, ничего не объясняет и не надо»\n- Сталкер (Stalker), 1979: обожаю; за что: неторопливое, заставляет думать, красивая картинка, держится на диалогах; своими словами: «медленно, созерцательно, каждый кадр как картина, философия»\n- Любовное настроение (In the Mood for Love), 2000: обожаю\n- Синий бархат (Blue Velvet), 1986: нормально\n- Мстители: Финал (Avengers: Endgame), 2019: не моё; что мешало: предсказуемо, длинный, зрелищные спецэффекты (никогда), супергерои (никогда)\n- Трансформеры: Эпоха истребления (Transformers: Age of Extinction), 2014: не моё\n\nКандидаты (40):\nid=tt1441395 | Побудь в моей шкуре (Under the Skin) | 2013 | 108 мин | Drama/Horror/Mystery | IMDb 6.3, 174059 оценок | движок #1, совпало: атмосферное, неторопливое, стильно и необычно снято, заставляет думать, сложный, надо вникать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.85)\nid=tt0062229 | Самурай (Le Samouraï) | 1967 | 101 мин | Crime/Drama/Thriller | IMDb 8, 67574 оценок | движок #2, совпало: атмосферное, неторопливое, стильно и необычно снято, заставляет думать, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Синий бархат (Blue Velvet) (0.77)\nid=tt0246578 | Донни Дарко (Donnie Darko) | 2001 | 113 мин | Drama/Mystery/Sci-Fi | IMDb 8, 923247 оценок | движок #3, совпало: атмосферное, стильно и необычно снято, заставляет думать, нелинейный сюжет, сложный, надо вникать, странное, причудливое, против: супергерои, зрелищные спецэффекты | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.80)\nid=tt0414993 | Фонтан (The Fountain) | 2006 | 97 мин | Drama/Mystery/Romance | IMDb 7.1, 259993 оценок | движок #4, совпало: атмосферное, нелинейный сюжет, заставляет думать, неторопливое, стильно и необычно снято, сложный, надо вникать, против: зрелищные спецэффекты | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.79)\nid=tt0460829 | Внутренняя империя (Inland Empire) | 2006 | 180 мин | Drama/Fantasy/Mystery | IMDb 6.8, 70193 оценок | движок #5, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, неторопливое, сложный, надо вникать, заставляет думать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.80)\nid=tt0065571 | Конформист (The Conformist) | 1970 | 113 мин | Drama | IMDb 7.9, 39882 оценок | движок #6, совпало: атмосферное, заставляет думать, стильно и необычно снято, неторопливое, нелинейный сюжет, красивая картинка | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.81)\nid=tt0469494 | Нефть (There Will Be Blood) | 2007 | 158 мин | Drama | IMDb 8.2, 722012 оценок | движок #7, совпало: атмосферное, неторопливое, стильно и необычно снято, заставляет думать, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.82)\nid=tt0042876 | Расёмон (Rashomon) | 1950 | 88 мин | Crime/Drama/Mystery | IMDb 8.1, 199322 оценок | движок #8, совпало: нелинейный сюжет, заставляет думать, стильно и необычно снято, неторопливое, атмосферное, сложный, надо вникать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.82)\nid=tt0069762 | Пустоши (Badlands) | 1973 | 94 мин | Action/Crime/Drama | IMDb 7.7, 85804 оценок | движок #9, совпало: атмосферное, стильно и необычно снято, неторопливое, заставляет думать, красивая картинка, странное, причудливое | по тегам ближе всего к: Синий бархат (Blue Velvet) (0.81)\nid=tt0074486 | Голова-ластик (Eraserhead) | 1977 | 89 мин | Fantasy/Horror | IMDb 7.2, 146290 оценок | движок #10, совпало: атмосферное, стильно и необычно снято, заставляет думать, нелинейный сюжет, сложный, надо вникать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.81)\nid=tt0116922 | Шоссе в никуда (Lost Highway) | 1997 | 134 мин | Drama/Mystery/Thriller | IMDb 7.6, 174089 оценок | движок #11, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, сложный, надо вникать, заставляет думать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.95)\nid=tt2084989 | Примесь (Upstream Color) | 2013 | 96 мин | Drama/Mystery/Sci-Fi | IMDb 6.5, 36382 оценок | движок #12, совпало: атмосферное, заставляет думать, нелинейный сюжет, неторопливое, стильно и необычно снято, красивая картинка | по тегам ближе всего к: Сталкер (Stalker) (0.79)\nid=tt0072443 | Зеркало (The Mirror) | 1975 | 107 мин | Biography/Drama | IMDb 7.9, 58718 оценок | движок #13, совпало: атмосферное, заставляет думать, нелинейный сюжет, неторопливое, стильно и необычно снято, странное, причудливое | по тегам ближе всего к: Сталкер (Stalker) (0.76)\nid=tt4016934 | Служанка (The Handmaiden) | 2016 | 145 мин | Drama/Romance/Thriller | IMDb 8.1, 209510 оценок | движок #14, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, неторопливое, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.85)\nid=tt0780504 | Драйв (Drive) | 2011 | 100 мин | Action/Drama | IMDb 7.8, 776875 оценок | движок #15, совпало: атмосферное, стильно и необычно снято, заставляет думать, неторопливое, красивая картинка, сложный, надо вникать, против: предсказуемо | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.85)\nid=tt0060827 | Персона (Persona) | 1966 | 83 мин | Drama/Thriller | IMDb 8, 142627 оценок | движок #16, совпало: стильно и необычно снято, заставляет думать, неторопливое, атмосферное, сложный, надо вникать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.77)\nid=tt0477348 | Старикам тут не место (No Country for Old Men) | 2007 | 122 мин | Crime/Drama/Thriller | IMDb 8.2, 1218858 оценок | движок #17, совпало: атмосферное, заставляет думать, неторопливое, стильно и необычно снято, сложный, надо вникать, красивая картинка | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.89)\nid=tt0335266 | Трудности перевода (Lost in Translation) | 2003 | 102 мин | Comedy/Drama | IMDb 7.7, 536107 оценок | движок #18, совпало: атмосферное, неторопливое, стильно и необычно снято, заставляет думать, красивая картинка, странное, причудливое | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.88)\nid=tt0338013 | Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind) | 2004 | 108 мин | Drama/Romance/Sci-Fi | IMDb 8.3, 1200041 оценок | движок #19, совпало: нелинейный сюжет, стильно и необычно снято, заставляет думать, атмосферное, сложный, надо вникать, странное, причудливое, против: зрелищные спецэффекты | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.83)\nid=tt0063278 | Маркета Лазарова (Marketa Lazarová) | 1967 | 162 мин | Drama/History/Romance | IMDb 7.8, 6828 оценок | движок #20, совпало: атмосферное, стильно и необычно снято, нелинейный сюжет, неторопливое, заставляет думать, странное, причудливое | по тегам ближе всего к: Сталкер (Stalker) (0.78)\nid=tt0364569 | Олдбой (Oldboy) | 2003 | 120 мин | Action/Drama/Mystery | IMDb 8.3, 736016 оценок | движок #21, совпало: стильно и необычно снято, неторопливое, заставляет думать, странное, причудливое, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.88)\nid=tt0054632 | В прошлом году в Мариенбаде (Last Year at Marienbad) | 1961 | 94 мин | Drama/Mystery/Romance | IMDb 7.6, 27413 оценок | движок #22, совпало: стильно и необычно снято, заставляет думать, нелинейный сюжет, неторопливое, странное, причудливое, атмосферное | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.76)\nid=tt0112913 | Падшие ангелы (Fallen Angels) | 1995 | 99 мин | Comedy/Crime/Drama | IMDb 7.5, 61697 оценок | движок #23, совпало: стильно и необычно снято, атмосферное, заставляет думать, неторопливое, нелинейный сюжет, красивая картинка | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.79)\nid=tt2316411 | Враг (Enemy) | 2013 | 91 мин | Drama/Mystery/Thriller | IMDb 6.8, 245550 оценок | движок #24, совпало: атмосферное, стильно и необычно снято, заставляет думать, нелинейный сюжет, сложный, надо вникать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.90)\nid=tt0069293 | Солярис (Solaris) | 1972 | 167 мин | Adventure/Drama/Mystery | IMDb 7.9, 105553 оценок | движок #25, совпало: атмосферное, неторопливое, заставляет думать, стильно и необычно снято, странное, причудливое, сложный, надо вникать | по тегам ближе всего к: Сталкер (Stalker) (0.83)\nid=tt0101829 | Европа (Europa) | 1991 | 108 мин | Crime/Drama/Thriller | IMDb 7.5, 24963 оценок | движок #26, совпало: атмосферное, стильно и необычно снято, неторопливое, заставляет думать, странное, причудливое, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.76)\nid=tt0361862 | Машинист (The Machinist) | 2004 | 101 мин | Drama/Thriller | IMDb 7.6, 447839 оценок | движок #27, совпало: атмосферное, стильно и необычно снято, заставляет думать, сложный, надо вникать, нелинейный сюжет, странное, причудливое, против: предсказуемо | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.93)\nid=tt0093191 | Небо над Берлином (Wings of Desire) | 1987 | 128 мин | Drama/Fantasy/Romance | IMDb 7.9, 85143 оценок | движок #28, совпало: атмосферное, заставляет думать, неторопливое, стильно и необычно снято, странное, причудливое, красивая картинка | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.86)\nid=tt0050976 | Седьмая печать (The Seventh Seal) | 1957 | 96 мин | Drama/Fantasy | IMDb 8.1, 218529 оценок | движок #29, совпало: атмосферное, заставляет думать, неторопливое, стильно и необычно снято, красивая картинка, странное, причудливое | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.78)\nid=tt0112817 | Мертвец (Dead Man) | 1995 | 121 мин | Adventure/Drama/Western | IMDb 7.5, 110113 оценок | движок #30, совпало: атмосферное, заставляет думать, неторопливое, стильно и необычно снято, странное, причудливое, красивая картинка | по тегам ближе всего к: Синий бархат (Blue Velvet) (0.71)\nid=tt0120263 | Песни со второго этажа (Songs from the Second Floor) | 2000 | 98 мин | Comedy/Drama | IMDb 7.5, 21793 оценок | движок #31, совпало: стильно и необычно снято, неторопливое, заставляет думать, нелинейный сюжет, странное, причудливое, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.70)\nid=tt0075612 | 3 женщины (3 Women) | 1977 | 124 мин | Drama/Mystery/Thriller | IMDb 7.7, 20254 оценок | движок #32, совпало: атмосферное, стильно и необычно снято, заставляет думать, неторопливое, странное, причудливое, сложный, надо вникать | по тегам ближе всего к: Синий бархат (Blue Velvet) (0.85)\nid=tt1856101 | Бегущий по лезвию 2049 (Blade Runner 2049) | 2017 | 164 мин | Action/Drama/Mystery | IMDb 8, 772933 оценок | движок #33, совпало: атмосферное, стильно и необычно снято, заставляет думать, неторопливое, красивая картинка, нелинейный сюжет, против: зрелищные спецэффекты | по тегам ближе всего к: Сталкер (Stalker) (0.78)\nid=tt0077405 | Дни жатвы (Days of Heaven) | 1978 | 94 мин | Drama/Romance | IMDb 7.7, 70246 оценок | движок #34, совпало: атмосферное, заставляет думать, неторопливое, стильно и необычно снято, красивая картинка, странное, причудливое | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.84)\nid=tt0071360 | Разговор (The Conversation) | 1974 | 113 мин | Drama/Mystery/Thriller | IMDb 7.7, 138191 оценок | движок #35, совпало: неторопливое, атмосферное, заставляет думать, сложный, надо вникать, стильно и необычно снято, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.84)\nid=tt0050613 | Трон в крови (Throne of Blood) | 1957 | 110 мин | Drama | IMDb 8, 61177 оценок | движок #36, совпало: атмосферное, стильно и необычно снято, заставляет думать, неторопливое, держится на диалогах, красивая картинка | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.76)\nid=tt1316540 | Туринская лошадь (The Turin Horse) | 2011 | 155 мин | Drama | IMDb 7.7, 21853 оценок | движок #37, совпало: атмосферное, заставляет думать, стильно и необычно снято, неторопливое, красивая картинка, странное, причудливое | по тегам ближе всего к: Сталкер (Stalker) (0.86)\nid=tt0060107 | Андрей Рублёв (Andrei Rublev) | 1966 | 205 мин | Biography/Drama/History | IMDb 8, 61380 оценок | движок #38, совпало: атмосферное, заставляет думать, неторопливое, стильно и необычно снято, красивая картинка, мрачная атмосфера | по тегам ближе всего к: Сталкер (Stalker) (0.73)\nid=tt0063759 | Час волка (Hour of the Wolf) | 1968 | 88 мин | Drama/Horror/Mystery | IMDb 7.5, 25598 оценок | движок #39, совпало: атмосферное, стильно и необычно снято, заставляет думать, странное, причудливое, неторопливое, красивая картинка | по тегам ближе всего к: Синий бархат (Blue Velvet) (0.76)\nid=tt0212712 | 2046 | 2004 | 129 мин | Drama/Romance/Sci-Fi | IMDb 7.4, 65133 оценок | движок #40, совпало: атмосферное, неторопливое, стильно и необычно снято, заставляет думать, красивая картинка, нелинейный сюжет | по тегам ближе всего к: Любовное настроение (In the Mood for Love) (0.85)\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "tt1441395",
+        "tt0062229",
+        "tt0246578",
+        "tt0414993"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "tt1441395",
+            "reason": "Чужой взгляд, тревожный звук и долгие молчаливые сцены соединяют сновидческую необъяснимость «Малхолланд Драйв» с созерцательностью.",
+            "caveat": "Есть телесный ужас; диалогов и философских разговоров почти нет.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1316540",
+            "reason": "Если в «Сталкере» любишь медленное созерцание и каждый кадр как картину, здесь это доведено до почти бессловесного отчаяния.",
+            "caveat": "Предельно аскетично: повторяющийся быт, почти никакого сюжетного движения.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0075612",
+            "reason": "Как в любимом «Малхолланд Драйв», женские образы и личности перетекают друг в друга по логике сна, без обязательных объяснений.",
+            "caveat": "Начинается как неспешная бытовая драма; тревога нарастает исподволь.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0054632",
+            "reason": "Твоя любовь к снам без объяснений в «Малхолланд Драйв» здесь встретится с геометрией кадров и застывшим временем.",
+            "caveat": "Холодная театральная манера и повторы реплик могут держать на расстоянии.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен мрачный, неторопливый фильм с авторским почерком: чтобы смотреть как сон, всматриваться в кадры и не требовать разгадки.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 9839,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 5590,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 5587
+          },
+          "output_tokens": 577,
+          "output_tokens_details": {
+            "reasoning_tokens": 90
+          },
+          "total_tokens": 6167
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.0063346999999999995
+    },
+    {
+      "persona": "cinephile",
+      "mode": "lazy",
+      "domain": "film",
+      "state": {
+        "step": "result",
+        "domain": "film",
+        "platform": "windows",
+        "situation": {
+          "time": "any",
+          "company": "solo",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [
+            {
+              "f": "tone.dark",
+              "against": "tone.feelgood",
+              "label": "мрачное"
+            },
+            {
+              "f": "tone.melancholic",
+              "against": "humor.funny",
+              "label": "чтобы пробрало"
+            }
+          ]
+        },
+        "stops": [],
+        "asked": [
+          "lean:tone.feelgood|tone.dark",
+          "lean:humor.funny|tone.melancholic",
+          "fact:era"
+        ],
+        "shown": [
+          "tt0111161",
+          "tt0468569",
+          "tt1375666",
+          "tt0137523",
+          "tt0816692",
+          "tt0109830",
+          "tt0110912",
+          "tt0133093",
+          "tt0325980",
+          "tt0169547",
+          "tt0088763",
+          "tt0114369",
+          "tt1853728",
+          "tt0167261",
+          "tt0266697",
+          "tt2582802",
+          "tt0208092",
+          "tt1119646",
+          "tt0120737",
+          "tt0167260",
+          "tt0172495",
+          "tt0993846",
+          "tt1345836",
+          "tt0361748",
+          "tt0068646",
+          "tt0102926",
+          "tt0372784",
+          "tt7286456",
+          "tt0482571",
+          "tt1130884",
+          "tt0120815",
+          "tt0108052"
+        ],
+        "liked": [
+          "tt0166924"
+        ],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {
+          "tt0166924": {
+            "reaction": "love",
+            "reasons": [
+              "story.nonlinear",
+              "tone.atmospheric"
+            ],
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 4242,
+        "firstPage": {
+          "marks": [
+            {
+              "id": "tt0166924",
+              "reaction": "love"
+            }
+          ],
+          "known": {}
+        }
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: посмотреть фильм.\nВремя: сколько угодно.\nС кем: один.\nСегодня просил: сегодня: мрачное; сегодня: чтобы пробрало.\n\nЗнакомые тайтлы:\n- Малхолланд Драйв (Mulholland Drive), 2001: обожаю; за что: нелинейный сюжет, атмосферное\n\nКандидаты (40):\nid=tt0246578 | Донни Дарко (Donnie Darko) | 2001 | 113 мин | Drama/Mystery/Sci-Fi | IMDb 8, 923247 оценок | движок #1, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, сложный, надо вникать, мрачная атмосфера, стильно и необычно снято | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.80)\nid=tt4016934 | Служанка (The Handmaiden) | 2016 | 145 мин | Drama/Romance/Thriller | IMDb 8.1, 209510 оценок | движок #2, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, стильно и необычно снято, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.85)\nid=tt0361862 | Машинист (The Machinist) | 2004 | 101 мин | Drama/Thriller | IMDb 7.6, 447839 оценок | движок #3, совпало: атмосферное, нелинейный сюжет, неожиданные повороты, сложный, надо вникать, стильно и необычно снято, мрачная атмосфера | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.93)\nid=tt0116922 | Шоссе в никуда (Lost Highway) | 1997 | 134 мин | Drama/Mystery/Thriller | IMDb 7.6, 174089 оценок | движок #4, совпало: нелинейный сюжет, атмосферное, сложный, надо вникать, стильно и необычно снято, загадка и расследование, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.95)\nid=tt2316411 | Враг (Enemy) | 2013 | 91 мин | Drama/Mystery/Thriller | IMDb 6.8, 245550 оценок | движок #5, совпало: нелинейный сюжет, атмосферное, сложный, надо вникать, стильно и необычно снято, неожиданные повороты, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.90)\nid=tt0317248 | Город Бога (City of God) | 2002 | 130 мин | Crime/Drama | IMDb 8.6, 885296 оценок | движок #6, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, мрачная атмосфера, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.71)\nid=tt0180093 | Реквием по мечте (Requiem for a Dream) | 2000 | 102 мин | Drama | IMDb 8.3, 987909 оценок | движок #7, совпало: атмосферное, нелинейный сюжет, мрачная атмосфера, красивая картинка, заставляет думать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.83)\nid=tt0137523 | Бойцовский клуб (Fight Club) | 1999 | 139 мин | Crime/Drama/Thriller | IMDb 8.8, 2674630 оценок | движок #8, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, сложный, надо вникать, стильно и необычно снято, мрачная атмосфера | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.77)\nid=tt0482571 | Престиж (The Prestige) | 2006 | 130 мин | Drama/Mystery/Sci-Fi | IMDb 8.5, 1635159 оценок | движок #9, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, сложный, надо вникать, мрачная атмосфера, загадка и расследование | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.76)\nid=tt0090756 | Синий бархат (Blue Velvet) | 1986 | 120 мин | Crime/Drama/Mystery | IMDb 7.7, 250358 оценок | движок #10, совпало: атмосферное, нелинейный сюжет, мрачная атмосфера, стильно и необычно снято, странное, причудливое, загадка и расследование | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.89)\nid=tt0209144 | Помни (Memento) | 2000 | 113 мин | Mystery/Thriller | IMDb 8.4, 1463820 оценок | движок #11, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, сложный, надо вникать, загадка и расследование, мрачная атмосфера | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.80)\nid=tt0477348 | Старикам тут не место (No Country for Old Men) | 2007 | 122 мин | Crime/Drama/Thriller | IMDb 8.2, 1218858 оценок | движок #12, совпало: атмосферное, нелинейный сюжет, мрачная атмосфера, неожиданные повороты, сложный, надо вникать, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.78)\nid=tt0947798 | Чёрный лебедь (Black Swan) | 2010 | 108 мин | Drama/Thriller | IMDb 8, 900046 оценок | движок #13, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, мрачная атмосфера, сложный, надо вникать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.86)\nid=tt0099871 | Лестница Иакова (Jacob's Ladder) | 1990 | 113 мин | Drama/Horror/Mystery | IMDb 7.4, 131598 оценок | движок #14, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, сложный, надо вникать, странное, причудливое, жуть и страх | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.84)\nid=tt1130884 | Остров проклятых (Shutter Island) | 2010 | 138 мин | Mystery/Thriller | IMDb 8.2, 1692190 оценок | движок #15, совпало: атмосферное, нелинейный сюжет, неожиданные повороты, сложный, надо вникать, стильно и необычно снято, мрачная атмосфера | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.88)\nid=tt0364569 | Олдбой (Oldboy) | 2003 | 120 мин | Action/Drama/Mystery | IMDb 8.3, 736016 оценок | движок #16, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, стильно и необычно снято, мрачная атмосфера, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.86)\nid=tt0114746 | 12 обезьян (12 Monkeys) | 1995 | 129 мин | Mystery/Sci-Fi/Thriller | IMDb 8, 685971 оценок | движок #17, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, сложный, надо вникать, мрачная атмосфера, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.70)\nid=tt0460829 | Внутренняя империя (Inland Empire) | 2006 | 180 мин | Drama/Fantasy/Mystery | IMDb 6.8, 70193 оценок | движок #18, совпало: нелинейный сюжет, атмосферное, сложный, надо вникать, мрачная атмосфера, стильно и необычно снято, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.80)\nid=tt2543164 | Прибытие (Arrival) | 2016 | 116 мин | Drama/Mystery/Sci-Fi | IMDb 7.9, 883745 оценок | движок #19, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, красивая картинка, сложный, надо вникать, заставляет думать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.71)\nid=tt0469494 | Нефть (There Will Be Blood) | 2007 | 158 мин | Drama | IMDb 8.2, 722012 оценок | движок #20, совпало: атмосферное, нелинейный сюжет, мрачная атмосфера, красивая картинка, сложный, надо вникать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.75)\nid=tt0338013 | Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind) | 2004 | 108 мин | Drama/Romance/Sci-Fi | IMDb 8.3, 1200041 оценок | движок #21, совпало: нелинейный сюжет, атмосферное, сложный, надо вникать, стильно и необычно снято, странное, причудливое, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.76)\nid=tt0401792 | Город грехов (Sin City) | 2005 | 124 мин | Crime/Thriller | IMDb 8, 825073 оценок | движок #22, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, мрачная атмосфера, красивая картинка, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.71)\nid=tt2872718 | Стрингер (Nightcrawler) | 2014 | 117 мин | Crime/Drama/Thriller | IMDb 7.8, 684973 оценок | движок #23, совпало: атмосферное, нелинейный сюжет, мрачная атмосфера, стильно и необычно снято, красивая картинка, неожиданные повороты | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.78)\nid=tt0114369 | Семь (Seven) | 1995 | 127 мин | Crime/Drama/Mystery | IMDb 8.6, 2070123 оценок | движок #24, совпало: атмосферное, нелинейный сюжет, неожиданные повороты, мрачная атмосфера, загадка и расследование, стильно и необычно снято | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.82)\nid=tt0353969 | Воспоминания об убийстве (Memories of Murder) | 2003 | 131 мин | Crime/Drama/Mystery | IMDb 8.1, 277287 оценок | движок #25, совпало: атмосферное, нелинейный сюжет, загадка и расследование, мрачная атмосфера, неожиданные повороты, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.78)\nid=tt0457430 | Лабиринт Фавна (Pan's Labyrinth) | 2006 | 118 мин | Drama/Fantasy/War | IMDb 8.2, 755472 оценок | движок #26, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, мрачная атмосфера, странное, причудливое, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.71)\nid=tt0414993 | Фонтан (The Fountain) | 2006 | 97 мин | Drama/Mystery/Romance | IMDb 7.1, 259993 оценок | движок #27, совпало: нелинейный сюжет, атмосферное, сложный, надо вникать, странное, причудливое, красивая картинка, стильно и необычно снято | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.72)\nid=tt0780504 | Драйв (Drive) | 2011 | 100 мин | Action/Drama | IMDb 7.8, 776875 оценок | движок #28, совпало: атмосферное, стильно и необычно снято, мрачная атмосфера, красивая картинка, заставляет думать, неожиданные повороты | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.70)\nid=tt1392214 | Пленницы (Prisoners) | 2013 | 153 мин | Crime/Drama/Mystery | IMDb 8.2, 964217 оценок | движок #29, совпало: атмосферное, нелинейный сюжет, мрачная атмосфера, неожиданные повороты, загадка и расследование, сложный, надо вникать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.73)\nid=tt1590089 | Признания (Confessions) | 2010 | 106 мин | Drama/Thriller | IMDb 7.6, 45815 оценок | движок #30, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, мрачная атмосфера, стильно и необычно снято, сложный, надо вникать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.82)\nid=tt1182345 | Луна 2112 (Moon) | 2009 | 97 мин | Drama/Mystery/Sci-Fi | IMDb 7.8, 399322 оценок | движок #31, совпало: атмосферное, неожиданные повороты, мрачная атмосфера, сложный, надо вникать, нелинейный сюжет, заставляет думать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.71)\nid=tt1255953 | Пожары (Incendies) | 2010 | 131 мин | Drama/Mystery/War | IMDb 8.3, 261611 оценок | движок #32, совпало: нелинейный сюжет, атмосферное, неожиданные повороты, мрачная атмосфера, сложный, надо вникать, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.76)\nid=tt4550098 | Под покровом ночи (Nocturnal Animals) | 2016 | 116 мин | Drama/Thriller | IMDb 7.4, 346553 оценок | движок #33, совпало: нелинейный сюжет, атмосферное, стильно и необычно снято, неожиданные повороты, сложный, надо вникать, заставляет думать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.86)\nid=tt0112682 | Город потерянных детей (The City of Lost Children) | 1995 | 112 мин | Adventure/Drama/Fantasy | IMDb 7.4, 75464 оценок | движок #34, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, мрачная атмосфера, странное, причудливое, красивая картинка | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.70)\nid=tt0083658 | Бегущий по лезвию (Blade Runner) | 1982 | 117 мин | Action/Drama/Sci-Fi | IMDb 8.1, 894441 оценок | движок #35, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, мрачная атмосфера, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.67)\nid=tt0042876 | Расёмон (Rashomon) | 1950 | 88 мин | Crime/Drama/Mystery | IMDb 8.1, 199322 оценок | движок #36, совпало: нелинейный сюжет, атмосферное, мрачная атмосфера, стильно и необычно снято, сложный, надо вникать, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.82)\nid=tt0074486 | Голова-ластик (Eraserhead) | 1977 | 89 мин | Fantasy/Horror | IMDb 7.2, 146290 оценок | движок #37, совпало: атмосферное, нелинейный сюжет, сложный, надо вникать, стильно и необычно снято, мрачная атмосфера, странное, причудливое | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.81)\nid=tt1856101 | Бегущий по лезвию 2049 (Blade Runner 2049) | 2017 | 164 мин | Action/Drama/Mystery | IMDb 8, 772933 оценок | движок #38, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, мрачная атмосфера, красивая картинка, заставляет думать | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.72)\nid=tt0089881 | Ран (Ran) | 1985 | 160 мин | Action/Drama/War | IMDb 8.2, 155398 оценок | движок #39, совпало: атмосферное, нелинейный сюжет, стильно и необычно снято, красивая картинка, мрачная атмосфера, грустное, пробирает | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.65)\nid=tt7984734 | Маяк (The Lighthouse) | 2019 | 109 мин | Drama/Fantasy/Horror | IMDb 7.3, 311871 оценок | движок #40, совпало: атмосферное, нелинейный сюжет, сложный, надо вникать, мрачная атмосфера, странное, причудливое, стильно и необычно снято | по тегам ближе всего к: Малхолланд Драйв (Mulholland Drive) (0.87)\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "tt0246578",
+        "tt4016934",
+        "tt0361862",
+        "tt0116922"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "tt2316411",
+            "reason": "Во «Враге» тревожная атмосфера и ускользающая логика сна близки «Малхолланд Драйв»: важнее всматриваться, чем искать разгадку.",
+            "caveat": "Медленный темп; однозначных объяснений не будет.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0099871",
+            "reason": "«Лестница Иакова» превращает привычный мир в мучительный кошмар — близко к Линчу по атмосфере и отвечает твоему «чтобы пробрало».",
+            "caveat": "Есть пугающие телесные образы и тяжёлая тема утраты.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt4550098",
+            "reason": "«Под покровом ночи» соединяет несколько слоёв истории и холодную красоту с тревогой — за это тебе и нравится «Малхолланд Драйв».",
+            "caveat": "Есть тяжёлая сцена дорожного насилия; сюрреализма почти нет.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1255953",
+            "reason": "«Пожары» переплетают прошлое и настоящее в мрачную семейную загадку, а по твоему «чтобы пробрало» это самый болезненный вариант.",
+            "caveat": "Военное и сексуальное насилие; вместо логики сна — реалистичная трагедия.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен мрачный фильм, который проберёт и затянет в зыбкую реальность, как «Малхолланд Драйв».",
+        "dropped": 0,
+        "filled": [],
+        "ms": 8218,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 5425,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 5422
+          },
+          "output_tokens": 523,
+          "output_tokens_details": {
+            "reasoning_tokens": 42
+          },
+          "total_tokens": 5948
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.0057782
+    },
+    {
+      "persona": "couple",
+      "mode": "careful",
+      "domain": "film",
+      "state": {
+        "step": "result",
+        "domain": "film",
+        "platform": "windows",
+        "situation": {
+          "time": "two",
+          "company": "pair",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": []
+        },
+        "stops": [
+          "tone.creepy"
+        ],
+        "asked": [
+          "lean:pace.fast|pace.slow"
+        ],
+        "shown": [
+          "tt0111161",
+          "tt0468569",
+          "tt1375666",
+          "tt0137523",
+          "tt0816692",
+          "tt0109830",
+          "tt0110912",
+          "tt0133093",
+          "tt0325980",
+          "tt0169547",
+          "tt0088763",
+          "tt0114369",
+          "tt1853728",
+          "tt0167261",
+          "tt0266697",
+          "tt2582802",
+          "tt0208092",
+          "tt1119646",
+          "tt0120737",
+          "tt0167260",
+          "tt0172495",
+          "tt0993846",
+          "tt1345836",
+          "tt0361748"
+        ],
+        "liked": [
+          "tt0816692",
+          "tt0338013"
+        ],
+        "disliked": [
+          "tt0418279"
+        ],
+        "whyIndex": 0,
+        "answers": {
+          "tt0468569": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt1375666": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0137523": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0816692": {
+            "reaction": "love",
+            "reasons": [
+              "tone.epic",
+              "world.space",
+              "cognitive.high",
+              "aesthetic.beautiful",
+              "ending.strong",
+              "aesthetic.soundtrack"
+            ],
+            "issues": [],
+            "text": "про космос и про отца с дочкой, музыка и финал до мурашек"
+          },
+          "tt0133093": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0169547": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0338013": {
+            "reaction": "love",
+            "reasons": [
+              "story.nonlinear",
+              "characters.romance",
+              "tone.melancholic",
+              "tone.whimsical"
+            ],
+            "issues": [],
+            "text": "про любовь, но по-умному и без соплей, грустно и странно"
+          },
+          "tt1798709": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0112471": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt1856101": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          },
+          "tt0418279": {
+            "reaction": "dislike",
+            "issues": [
+              {
+                "f": "story.weak",
+                "hard": false
+              },
+              {
+                "f": "humor.silly",
+                "hard": false
+              },
+              {
+                "f": "aesthetic.effects",
+                "hard": false
+              },
+              {
+                "f": "story.predictable",
+                "hard": false
+              }
+            ],
+            "badQuality": false
+          },
+          "tt1099212": {
+            "reaction": "dislike",
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 4242
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: посмотреть фильм.\nВремя: часа два.\nС кем: вдвоём.\nТочно не надо: страшное.\n\nЗнакомые тайтлы:\n- Тёмный рыцарь (The Dark Knight), 2008: нормально\n- Начало (Inception), 2010: нормально\n- Бойцовский клуб (Fight Club), 1999: нормально\n- Интерстеллар (Interstellar), 2014: обожаю; за что: эпичность и размах, космос, заставляет думать, красивая картинка, сильный финал, сильная музыка; своими словами: «про космос и про отца с дочкой, музыка и финал до мурашек»\n- Матрица (The Matrix), 1999: нормально\n- Красота по-американски (American Beauty), 1999: нормально\n- Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind), 2004: обожаю; за что: нелинейный сюжет, любовная линия, грустное, пробирает, странное, причудливое; своими словами: «про любовь, но по-умному и без соплей, грустно и странно»\n- Она (Her), 2013: нормально\n- Перед рассветом (Before Sunrise), 1995: нормально\n- Бегущий по лезвию 2049 (Blade Runner 2049), 2017: нормально\n- Трансформеры (Transformers), 2007: не моё; что мешало: слабый сюжет, дыры, дурашливый юмор, зрелищные спецэффекты, предсказуемо\n- Сумерки (Twilight), 2008: не моё\n\nКандидаты (40):\nid=tt2543164 | Прибытие (Arrival) | 2016 | 116 мин | Drama/Mystery/Sci-Fi | IMDb 7.9, 883745 оценок | движок #1, совпало: заставляет думать, нелинейный сюжет, сильный финал, грустное, пробирает, космос, странное, причудливое, против: жуть и страх, предсказуемо | по тегам ближе всего к: Интерстеллар (Interstellar) (0.83)\nid=tt0266697 | Убить Билла. Фильм 1 (Kill Bill: Vol. 1) | 2003 | 111 мин | Action/Crime/Thriller | IMDb 8.2, 1329458 оценок | движок #2, совпало: нелинейный сюжет, заставляет думать, эпичность и размах, сильный финал, сильная музыка, странное, причудливое | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.89)\nid=tt0080684 | Звёздные войны. Эпизод 5: Империя наносит ответный удар (Star Wars: Episode V - The Empire Strikes Back) | 1980 | 124 мин | Adventure/Fantasy/Sci-Fi | IMDb 8.7, 1529630 оценок | движок #3, совпало: эпичность и размах, космос, сильный финал, заставляет думать, сильная музыка, красивая картинка, против: жуть и страх | по тегам ближе всего к: Матрица (The Matrix) (0.83)\nid=tt0414993 | Фонтан (The Fountain) | 2006 | 97 мин | Drama/Mystery/Romance | IMDb 7.1, 259993 оценок | движок #4, совпало: заставляет думать, нелинейный сюжет, странное, причудливое, грустное, пробирает, космос, красивая картинка, против: жуть и страх | по тегам ближе всего к: Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind) (0.83)\nid=tt0317248 | Город Бога (City of God) | 2002 | 130 мин | Crime/Drama | IMDb 8.6, 885296 оценок | движок #5, совпало: сильный финал, заставляет думать, грустное, пробирает, нелинейный сюжет, красивая картинка, сильная музыка, против: жуть и страх, дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.88)\nid=tt0119177 | Гаттака (Gattaca) | 1997 | 106 мин | Drama/Sci-Fi/Thriller | IMDb 7.7, 352004 оценок | движок #6, совпало: заставляет думать, сильный финал, космос, красивая картинка, странное, причудливое, грустное, пробирает, против: предсказуемо | по тегам ближе всего к: Интерстеллар (Interstellar) (0.84)\nid=tt1022603 | 500 дней летa (500 Days of Summer) | 2009 | 95 мин | Comedy/Drama/Romance | IMDb 7.6, 629510 оценок | движок #7, совпало: нелинейный сюжет, сильный финал, странное, причудливое, грустное, пробирает, заставляет думать, сильная музыка | по тегам ближе всего к: Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind) (0.82)\nid=tt1182345 | Луна 2112 (Moon) | 2009 | 97 мин | Drama/Mystery/Sci-Fi | IMDb 7.8, 399322 оценок | движок #8, совпало: заставляет думать, космос, сильный финал, грустное, пробирает, странное, причудливое, красивая картинка, против: жуть и страх | по тегам ближе всего к: Интерстеллар (Interstellar) (0.80)\nid=tt0130827 | Беги, Лола, беги (Run Lola Run) | 1998 | 80 мин | Action/Crime/Thriller | IMDb 7.6, 218783 оценок | движок #9, совпало: заставляет думать, нелинейный сюжет, странное, причудливое, сильный финал, сильная музыка, красивая картинка | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.79)\nid=tt0364569 | Олдбой (Oldboy) | 2003 | 120 мин | Action/Drama/Mystery | IMDb 8.3, 736016 оценок | движок #10, совпало: сильный финал, странное, причудливое, грустное, пробирает, заставляет думать, сильная музыка, красивая картинка, против: жуть и страх | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.88)\nid=tt0780504 | Драйв (Drive) | 2011 | 100 мин | Action/Drama | IMDb 7.8, 776875 оценок | движок #11, совпало: заставляет думать, грустное, пробирает, сильный финал, сильная музыка, странное, причудливое, красивая картинка, против: предсказуемо | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.85)\nid=tt0114746 | 12 обезьян (12 Monkeys) | 1995 | 129 мин | Mystery/Sci-Fi/Thriller | IMDb 8, 685971 оценок | движок #12, совпало: сильный финал, нелинейный сюжет, странное, причудливое, заставляет думать, сложный, надо вникать, грустное, пробирает | по тегам ближе всего к: Бегущий по лезвию 2049 (Blade Runner 2049) (0.75)\nid=tt0209144 | Помни (Memento) | 2000 | 113 мин | Mystery/Thriller | IMDb 8.4, 1463820 оценок | движок #13, совпало: нелинейный сюжет, сильный финал, заставляет думать, странное, причудливое, грустное, пробирает, сложный, надо вникать, против: жуть и страх | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.85)\nid=tt0477348 | Старикам тут не место (No Country for Old Men) | 2007 | 122 мин | Crime/Drama/Thriller | IMDb 8.2, 1218858 оценок | движок #14, совпало: заставляет думать, сильный финал, грустное, пробирает, красивая картинка, странное, причудливое, сильная музыка, против: жуть и страх | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.89)\nid=tt0114814 | Подозрительные лица (The Usual Suspects) | 1995 | 106 мин | Crime/Drama/Mystery | IMDb 8.5, 1259282 оценок | движок #15, совпало: сильный финал, заставляет думать, нелинейный сюжет, сильная музыка, красивая картинка, сложный, надо вникать, против: жуть и страх, предсказуемо | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.87)\nid=tt0120586 | Американская история Икс (American History X) | 1998 | 119 мин | Crime/Drama | IMDb 8.5, 1290491 оценок | движок #16, совпало: заставляет думать, сильный финал, грустное, пробирает, нелинейный сюжет, сильная музыка, красивая картинка, против: дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.86)\nid=tt0180093 | Реквием по мечте (Requiem for a Dream) | 2000 | 102 мин | Drama | IMDb 8.3, 987909 оценок | движок #17, совпало: заставляет думать, сильный финал, грустное, пробирает, странное, причудливое, сильная музыка, красивая картинка, против: жуть и страх, дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.85)\nid=tt0319061 | Крупная рыба (Big Fish) | 2003 | 125 мин | Adventure/Drama/Fantasy | IMDb 7.9, 480956 оценок | движок #18, совпало: заставляет думать, сильный финал, странное, причудливое, грустное, пробирает, красивая картинка, сильная музыка, против: предсказуемо, дурашливый юмор | по тегам ближе всего к: Красота по-американски (American Beauty) (0.77)\nid=tt0211915 | Амели (Amélie) | 2001 | 122 мин | Comedy/Romance | IMDb 8.2, 849018 оценок | движок #19, совпало: странное, причудливое, заставляет думать, грустное, пробирает, сильная музыка, сильный финал, красивая картинка | по тегам ближе всего к: Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind) (0.80)\nid=tt0206634 | Дитя человеческое (Children of Men) | 2006 | 109 мин | Drama/Sci-Fi/Thriller | IMDb 7.9, 573796 оценок | движок #20, совпало: заставляет думать, сильный финал, грустное, пробирает, красивая картинка, странное, причудливое, антиутопия | по тегам ближе всего к: Бегущий по лезвию 2049 (Blade Runner 2049) (0.84)\nid=tt0105236 | Бешеные псы (Reservoir Dogs) | 1992 | 99 мин | Crime/Drama/Thriller | IMDb 8.2, 1185003 оценок | движок #21, совпало: нелинейный сюжет, сильный финал, сильная музыка, заставляет думать, странное, причудливое, неожиданные повороты, против: дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.90)\nid=tt0083658 | Бегущий по лезвию (Blade Runner) | 1982 | 117 мин | Action/Drama/Sci-Fi | IMDb 8.1, 894441 оценок | движок #22, совпало: заставляет думать, грустное, пробирает, странное, причудливое, сильный финал, сильная музыка, красивая картинка, против: жуть и страх, предсказуемо | по тегам ближе всего к: Матрица (The Matrix) (0.88)\nid=tt2582802 | Одержимость (Whiplash) | 2014 | 106 мин | Drama/Music | IMDb 8.5, 1188247 оценок | движок #23, совпало: сильный финал, сильная музыка, заставляет думать, грустное, пробирает, красивая картинка, неожиданные повороты, против: предсказуемо | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.81)\nid=tt1010048 | Миллионер из трущоб (Slumdog Millionaire) | 2008 | 120 мин | Crime/Drama/Romance | IMDb 8, 917191 оценок | движок #24, совпало: нелинейный сюжет, сильный финал, заставляет думать, грустное, пробирает, красивая картинка, сильная музыка, против: предсказуемо | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.73)\nid=tt0110413 | Леон (Léon: The Professional) | 1994 | 110 мин | Action/Crime/Drama | IMDb 8.5, 1370385 оценок | движок #25, совпало: странное, причудливое, сильный финал, грустное, пробирает, заставляет думать, сильная музыка, любовная линия, против: жуть и страх, предсказуемо | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.85)\nid=tt0076759 | Звёздные войны: Эпизод 4 - Новая надежда (Star Wars: Episode IV - A New Hope) | 1977 | 121 мин | Action/Adventure/Fantasy | IMDb 8.6, 1594390 оценок | движок #26, совпало: эпичность и размах, космос, заставляет думать, сильный финал, сильная музыка, красивая картинка, против: жуть и страх | по тегам ближе всего к: Матрица (The Matrix) (0.80)\nid=tt4550098 | Под покровом ночи (Nocturnal Animals) | 2016 | 116 мин | Drama/Thriller | IMDb 7.4, 346553 оценок | движок #27, совпало: заставляет думать, сильный финал, нелинейный сюжет, грустное, пробирает, странное, причудливое, красивая картинка, против: жуть и страх, дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.85)\nid=tt0117951 | На игле (Trainspotting) | 1996 | 93 мин | Crime/Drama | IMDb 8.1, 776602 оценок | движок #28, совпало: заставляет думать, странное, причудливое, сильный финал, сильная музыка, грустное, пробирает, красивая картинка, против: дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.86)\nid=tt0401792 | Город грехов (Sin City) | 2005 | 124 мин | Crime/Thriller | IMDb 8, 825073 оценок | движок #29, совпало: странное, причудливое, нелинейный сюжет, сильный финал, красивая картинка, заставляет думать, сильная музыка, против: жуть и страх | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.88)\nid=tt0335266 | Трудности перевода (Lost in Translation) | 2003 | 102 мин | Comedy/Drama | IMDb 7.7, 536107 оценок | движок #30, совпало: заставляет думать, грустное, пробирает, странное, причудливое, красивая картинка, сильная музыка, сильный финал | по тегам ближе всего к: Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind) (0.82)\nid=tt0333766 | Страна садов (Garden State) | 2004 | 102 мин | Comedy/Drama/Romance | IMDb 7.4, 228779 оценок | движок #31, совпало: заставляет думать, сильный финал, странное, причудливое, грустное, пробирает, сильная музыка, красивая картинка, против: дурашливый юмор | по тегам ближе всего к: Красота по-американски (American Beauty) (0.82)\nid=tt0448134 | Пекло (Sunshine) | 2007 | 107 мин | Sci-Fi/Thriller | IMDb 7.2, 291464 оценок | движок #32, совпало: космос, заставляет думать, сильный финал, странное, причудливое, красивая картинка, сильная музыка, против: жуть и страх | по тегам ближе всего к: Интерстеллар (Interstellar) (0.83)\nid=tt0780536 | Залечь на дно в Брюгге (In Bruges) | 2008 | 107 мин | Comedy/Crime/Drama | IMDb 7.9, 499405 оценок | движок #33, совпало: заставляет думать, сильный финал, грустное, пробирает, странное, причудливое, красивая картинка, сильная музыка, против: дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.88)\nid=tt0315733 | 21 грaмм (21 Grams) | 2003 | 124 мин | Crime/Drama/Thriller | IMDb 7.6, 254223 оценок | движок #34, совпало: нелинейный сюжет, грустное, пробирает, сильный финал, заставляет думать, странное, причудливое, сложный, надо вникать | по тегам ближе всего к: Красота по-американски (American Beauty) (0.79)\nid=tt0082971 | Индиана Джонс: В поисках утраченного ковчега (Raiders of the Lost Ark) | 1981 | 115 мин | Adventure | IMDb 8.4, 1123813 оценок | движок #35, совпало: эпичность и размах, сильный финал, заставляет думать, красивая картинка, космос, сильная музыка, против: дурашливый юмор, жуть и страх | по тегам ближе всего к: Матрица (The Matrix) (0.78)\nid=tt1334260 | Не отпускай меня (Never Let Me Go) | 2010 | 103 мин | Drama/Romance/Sci-Fi | IMDb 7.1, 161615 оценок | движок #36, совпало: заставляет думать, грустное, пробирает, красивая картинка, странное, причудливое, любовная линия, антиутопия | по тегам ближе всего к: Она (Her) (0.89)\nid=tt2397535 | Патруль времени (Predestination) | 2014 | 97 мин | Action/Drama/Sci-Fi | IMDb 7.4, 342304 оценок | движок #37, совпало: сильный финал, заставляет думать, космос, странное, причудливое, нелинейный сюжет, красивая картинка, против: предсказуемо | по тегам ближе всего к: Начало (Inception) (0.80)\nid=tt0268126 | Адаптация (Adaptation.) | 2002 | 115 мин | Comedy/Drama | IMDb 7.6, 215090 оценок | движок #38, совпало: заставляет думать, странное, причудливое, сильный финал, грустное, пробирает, нелинейный сюжет, сильная музыка | по тегам ближе всего к: Красота по-американски (American Beauty) (0.84)\nid=tt0190332 | Крадущийся тигр, затаившийся дракон (Crouching Tiger, Hidden Dragon) | 2000 | 120 мин | Action/Adventure/Drama | IMDb 7.8, 298351 оценок | движок #39, совпало: эпичность и размах, заставляет думать, красивая картинка, грустное, пробирает, сильный финал, нелинейный сюжет | по тегам ближе всего к: Вечное сияние чистого разума (Eternal Sunshine of the Spotless Mind) (0.77)\nid=tt1060256 | Ичи (Ichi) | 2008 | 120 мин | Action/Crime/Drama | IMDb 6.5, 4136 оценок | движок #40, совпало: грустное, пробирает, эпичность и размах, странное, причудливое, заставляет думать, нелинейный сюжет, сильный финал, против: жуть и страх, дурашливый юмор | по тегам ближе всего к: Бойцовский клуб (Fight Club) (0.81)\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "tt2543164",
+        "tt0266697",
+        "tt0080684",
+        "tt0414993"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "tt2543164",
+            "reason": "Как в «Интерстелларе», большая научная загадка здесь становится личной историей о семье, а музыка усиливает переживания.",
+            "caveat": "Темп неспешный; первые встречи с неизвестным могут тревожить.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0414993",
+            "reason": "Соединяет космические образы и мощную музыку «Интерстеллара» со странной, грустной любовью «Вечного сияния».",
+            "caveat": "Много символов: это скорее поэма о любви и смерти, чем научная фантастика.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0119177",
+            "reason": "Для любви к «Интерстеллару»: мечта о космосе, сильная музыка и человеческая история, которая важнее технологий.",
+            "caveat": "Вместо космического размаха — сдержанная земная драма.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1022603",
+            "reason": "Как «Вечное сияние», собирает любовь из перемешанных воспоминаний и спорит с тем, как мы помним отношения.",
+            "caveat": "Легче по тону: больше иронии и поп-музыки, меньше странности и боли.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен фильм на двоих: умная фантастика или необычная любовь, чтобы пробрало, с красивой картинкой и без страшного.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 7957,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 5933,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 5930
+          },
+          "output_tokens": 493,
+          "output_tokens_details": {
+            "reasoning_tokens": 41
+          },
+          "total_tokens": 6426
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.005529
+    },
+    {
+      "persona": "couple",
+      "mode": "lazy",
+      "domain": "film",
+      "state": {
+        "step": "result",
+        "domain": "film",
+        "platform": "windows",
+        "situation": {
+          "time": "two",
+          "company": "pair",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [
+            {
+              "f": "tension.low",
+              "against": "tension.high",
+              "label": "спокойное"
+            }
+          ]
+        },
+        "stops": [],
+        "asked": [
+          "lean:pace.fast|pace.slow",
+          "lean:tone.feelgood|tone.dark",
+          "lean:tension.high|tension.low"
+        ],
+        "shown": [
+          "tt0111161",
+          "tt0468569",
+          "tt1375666",
+          "tt0137523",
+          "tt0816692",
+          "tt0109830",
+          "tt0110912",
+          "tt0133093",
+          "tt0325980",
+          "tt0169547",
+          "tt0088763",
+          "tt0114369",
+          "tt1853728",
+          "tt0167261",
+          "tt0266697",
+          "tt2582802"
+        ],
+        "liked": [
+          "tt0816692",
+          "tt1375666"
+        ],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {
+          "tt1375666": {
+            "reaction": "like",
+            "reasons": [
+              "aesthetic.effects"
+            ],
+            "issues": []
+          },
+          "tt0816692": {
+            "reaction": "love",
+            "reasons": [
+              "tone.epic"
+            ],
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 4242
+      },
+      "request": {
+        "model": "gpt-6.1-sol",
+        "max_output_tokens": 8000,
+        "reasoning": {
+          "effort": "low"
+        },
+        "text": {
+          "format": {
+            "type": "json_schema",
+            "name": "tastiq_picks",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "understood": {
+                  "type": "string"
+                },
+                "picks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "caveat": {
+                        "type": "string"
+                      },
+                      "likelySeen": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title",
+                      "year",
+                      "reason",
+                      "caveat",
+                      "likelySeen"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "understood",
+                "picks"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "instructions": "You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.\n\nYou get the person's answers and a shortlist of candidates. The shortlist comes from a rule-based engine: it already removed everything the person ruled out (hard stops, episode length, time limit, titles they have seen, platform). The engine ranks by tags that can be thin or wrong, so do not trust its order; judge each candidate yourself.\n\nHow to judge:\n- Start from the titles the person loves and what they said about them, then the ones they found \"нормально\", then the ones they disliked and why.\n- Use what you know about the candidates: tone, humour, pacing, era and look, length, how close each is to the loved titles, what fans of the loved titles usually think of it. A title from a very different era than everything they love needs a reason to be picked.\n- Respect tonight's answers (company, moods, facts like \"по 20–30 минут\", \"свежее\") and the wish, if one is given. A wish outranks the engine's order.\n- Prefer one clear best match first, then three different good options, not four copies of one show.\n- Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.\n- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.\n\nWrite in Russian, plain and specific, like a friend who knows both titles. Each reason: one sentence, at most 140 characters, and it names what in this title matches what the person said or loved (a title of theirs or their words). No spoilers, no marketing words (\"шедевр\", \"must-see\", \"идеально\"), no rating numbers. A caveat is an honest warning in at most 90 characters (e.g. \"первый сезон раскачивается медленно\"), or an empty string when there is nothing to warn about. For a pick from the shortlist leave title empty and year 0. \"understood\" is one sentence of at most 140 characters, addressed to the person, saying what you took from their answers (\"Тебе нужен лёгкий ситком с добрыми героями, без мрака\").",
+        "input": "Что ищет: посмотреть фильм.\nВремя: часа два.\nС кем: вдвоём.\nСегодня просил: сегодня: спокойное.\n\nЗнакомые тайтлы:\n- Начало (Inception), 2010: нормально; за что: зрелищные спецэффекты\n- Интерстеллар (Interstellar), 2014: обожаю; за что: эпичность и размах\n\nКандидаты (40):\nid=tt0076759 | Звёздные войны: Эпизод 4 - Новая надежда (Star Wars: Episode IV - A New Hope) | 1977 | 121 мин | Action/Adventure/Fantasy | IMDb 8.6, 1594390 оценок | движок #1, совпало: эпичность и размах, зрелищные спецэффекты, космос, фантастика, красивая картинка, заставляет думать | по тегам ближе всего к: Начало (Inception) (0.74)\nid=tt0796366 | Звёздный путь (Star Trek) | 2009 | 127 мин | Action/Adventure/Sci-Fi | IMDb 7.9, 642166 оценок | движок #2, совпало: зрелищные спецэффекты, эпичность и размах, путешествия во времени, космос, фантастика, красивая картинка | по тегам ближе всего к: Начало (Inception) (0.72)\nid=tt0080684 | Звёздные войны. Эпизод 5: Империя наносит ответный удар (Star Wars: Episode V - The Empire Strikes Back) | 1980 | 124 мин | Adventure/Fantasy/Sci-Fi | IMDb 8.7, 1529630 оценок | движок #3, совпало: эпичность и размах, зрелищные спецэффекты, космос, фантастика, неожиданные повороты, красивая картинка | по тегам ближе всего к: Начало (Inception) (0.77)\nid=tt1182345 | Луна 2112 (Moon) | 2009 | 97 мин | Drama/Mystery/Sci-Fi | IMDb 7.8, 399322 оценок | движок #4, совпало: зрелищные спецэффекты, антиутопия, космос, фантастика, заставляет думать, неожиданные повороты | по тегам ближе всего к: Интерстеллар (Interstellar) (0.80)\nid=tt1104001 | Трон: Наследие (Tron: Legacy) | 2010 | 125 мин | Action/Adventure/Sci-Fi | IMDb 6.8, 390537 оценок | движок #5, совпало: эпичность и размах, зрелищные спецэффекты, фантастика, антиутопия, красивая картинка, космос | по тегам ближе всего к: Интерстеллар (Interstellar) (0.61)\nid=tt0082971 | Индиана Джонс: В поисках утраченного ковчега (Raiders of the Lost Ark) | 1981 | 115 мин | Adventure | IMDb 8.4, 1123813 оценок | движок #6, совпало: эпичность и размах, зрелищные спецэффекты, красивая картинка, сильный финал, сильная актёрская игра, заставляет думать | по тегам ближе всего к: Начало (Inception) (0.73)\nid=tt2543164 | Прибытие (Arrival) | 2016 | 116 мин | Drama/Mystery/Sci-Fi | IMDb 7.9, 883745 оценок | движок #7, совпало: зрелищные спецэффекты, путешествия во времени, фантастика, заставляет думать, неожиданные повороты, красивая картинка | по тегам ближе всего к: Интерстеллар (Interstellar) (0.83)\nid=tt0242653 | Матрица: Революция (The Matrix Revolutions) | 2003 | 129 мин | Action/Sci-Fi | IMDb 6.8, 581579 оценок | движок #8, совпало: зрелищные спецэффекты, эпичность и размах, антиутопия, фантастика, заставляет думать, красивая картинка | по тегам ближе всего к: Начало (Inception) (0.69)\nid=tt0800369 | Тор (Thor) | 2011 | 115 мин | Action/Fantasy | IMDb 7, 987982 оценок | движок #9, совпало: эпичность и размах, зрелищные спецэффекты, красивая картинка, космос, постапокалипсис, фантастика | по тегам ближе всего к: Начало (Inception) (0.53)\nid=tt0190332 | Крадущийся тигр, затаившийся дракон (Crouching Tiger, Hidden Dragon) | 2000 | 120 мин | Action/Adventure/Drama | IMDb 7.8, 298351 оценок | движок #10, совпало: эпичность и размах, зрелищные спецэффекты, красивая картинка, сильная актёрская игра, атмосферное, заставляет думать | по тегам ближе всего к: Начало (Inception) (0.74)\nid=tt0414993 | Фонтан (The Fountain) | 2006 | 97 мин | Drama/Mystery/Romance | IMDb 7.1, 259993 оценок | движок #11, совпало: эпичность и размах, сложный, надо вникать, заставляет думать, космос, красивая картинка, фантастика | по тегам ближе всего к: Начало (Inception) (0.70)\nid=tt0439884 | Мир без воров (A World Without Thieves) | 2004 | 113 мин | Action/Crime/Drama | IMDb 7.2, 5964 оценок | движок #12, совпало: зрелищные спецэффекты, эпичность и размах, заставляет думать, красивая картинка, сильный финал, сильная актёрская игра | по тегам ближе всего к: Начало (Inception) (0.77)\nid=tt1201607 | Гарри Поттер и Дары смерти: Часть II (Harry Potter and the Deathly Hallows: Part 2) | 2011 | 130 мин | Adventure/Family/Fantasy | IMDb 8.1, 1066683 оценок | движок #13, совпало: эпичность и размах, зрелищные спецэффекты, красивая картинка, сильный финал, атмосферное, сильная актёрская игра | по тегам ближе всего к: Начало (Inception) (0.49)\nid=tt0299977 | Герой (Hero) | 2002 | 94 мин | Action/Adventure/Drama | IMDb 7.9, 195713 оценок | движок #14, совпало: эпичность и размах, красивая картинка, зрелищные спецэффекты, атмосферное, заставляет думать, сложный, надо вникать | по тегам ближе всего к: Начало (Inception) (0.63)\nid=tt0083658 | Бегущий по лезвию (Blade Runner) | 1982 | 117 мин | Action/Drama/Sci-Fi | IMDb 8.1, 894441 оценок | движок #15, совпало: зрелищные спецэффекты, антиутопия, фантастика, заставляет думать, красивая картинка, сложный, надо вникать | по тегам ближе всего к: Начало (Inception) (0.74)\nid=tt2015381 | Стражи Галактики (Guardians of the Galaxy) | 2014 | 121 мин | Action/Adventure/Comedy | IMDb 8, 1389507 оценок | движок #16, совпало: зрелищные спецэффекты, эпичность и размах, космос, фантастика, сильная музыка, красивая картинка | по тегам ближе всего к: Начало (Inception) (0.64)\nid=tt2103281 | Планета обезьян: Революция (Dawn of the Planet of the Apes) | 2014 | 130 мин | Action/Adventure/Drama | IMDb 7.6, 516272 оценок | движок #17, совпало: зрелищные спецэффекты, эпичность и размах, антиутопия, фантастика, заставляет думать, красивая картинка | по тегам ближе всего к: Интерстеллар (Interstellar) (0.72)\nid=tt0118929 | Тёмный город (Dark City) | 1998 | 100 мин | Fantasy/Mystery/Sci-Fi | IMDb 7.5, 229314 оценок | движок #18, совпало: зрелищные спецэффекты, антиутопия, фантастика, сложный, надо вникать, заставляет думать, красивая картинка | по тегам ближе всего к: Начало (Inception) (0.78)\nid=tt0119177 | Гаттака (Gattaca) | 1997 | 106 мин | Drama/Sci-Fi/Thriller | IMDb 7.7, 352004 оценок | движок #19, совпало: зрелищные спецэффекты, антиутопия, космос, фантастика, заставляет думать, красивая картинка | по тегам ближе всего к: Интерстеллар (Interstellar) (0.84)\nid=tt1631867 | Грань будущего (Edge of Tomorrow) | 2014 | 113 мин | Action/Adventure/Sci-Fi | IMDb 7.9, 819046 оценок | движок #20, совпало: зрелищные спецэффекты, путешествия во времени, фантастика, антиутопия, эпичность и размах, красивая картинка | по тегам ближе всего к: Интерстеллар (Interstellar) (0.74)\nid=tt0448134 | Пекло (Sunshine) | 2007 | 107 мин | Sci-Fi/Thriller | IMDb 7.2, 291464 оценок | движок #21, совпало: зрелищные спецэффекты, космос, фантастика, заставляет думать, красивая картинка, неожиданные повороты | по тегам ближе всего к: Интерстеллар (Interstellar) (0.83)\nid=tt0107290 | Парк юрского периода (Jurassic Park) | 1993 | 127 мин | Adventure/Sci-Fi | IMDb 8.2, 1203485 оценок | движок #22, совпало: зрелищные спецэффекты, эпичность и размах, фантастика, красивая картинка, заставляет думать, держит в напряжении | по тегам ближе всего к: Начало (Inception) (0.72)\nid=tt1483013 | Обливион (Oblivion) | 2013 | 124 мин | Action/Adventure/Sci-Fi | IMDb 7, 592346 оценок | движок #23, совпало: зрелищные спецэффекты, антиутопия, космос, фантастика, красивая картинка, неожиданные повороты | по тегам ближе всего к: Интерстеллар (Interstellar) (0.82)\nid=tt0416449 | 300 спартанцев (300) | 2006 | 117 мин | Action/Drama | IMDb 7.6, 923550 оценок | движок #24, совпало: эпичность и размах, зрелищные спецэффекты, красивая картинка, атмосферное, сильная музыка, держит в напряжении | по тегам ближе всего к: Начало (Inception) (0.53)\nid=tt1211837 | Доктор Стрэндж (Doctor Strange) | 2016 | 115 мин | Action/Adventure/Fantasy | IMDb 7.5, 901652 оценок | движок #25, совпало: зрелищные спецэффекты, эпичность и размах, путешествия во времени, красивая картинка, странное, причудливое, постапокалипсис | по тегам ближе всего к: Начало (Inception) (0.63)\nid=tt1392190 | Безумный Макс: Дорога ярости (Mad Max: Fury Road) | 2015 | 120 мин | Action/Adventure/Sci-Fi | IMDb 8.1, 1224719 оценок | движок #26, совпало: зрелищные спецэффекты, эпичность и размах, антиутопия, фантастика, красивая картинка, постапокалипсис | по тегам ближе всего к: Начало (Inception) (0.72)\nid=tt0119116 | Пятый элемент (The Fifth Element) | 1997 | 126 мин | Action/Adventure/Sci-Fi | IMDb 7.6, 553438 оценок | движок #27, совпало: зрелищные спецэффекты, антиутопия, космос, фантастика, эпичность и размах, красивая картинка | по тегам ближе всего к: Интерстеллар (Interstellar) (0.65)\nid=tt0088763 | Назад в будущее (Back to the Future) | 1985 | 116 мин | Adventure/Comedy/Sci-Fi | IMDb 8.5, 1482917 оценок | движок #28, совпало: зрелищные спецэффекты, эпичность и размах, путешествия во времени, фантастика, сильная музыка, сильный финал | по тегам ближе всего к: Начало (Inception) (0.74)\nid=tt1136608 | Район No 9 (District 9) | 2009 | 112 мин | Action/Sci-Fi/Thriller | IMDb 7.9, 759179 оценок | движок #29, совпало: зрелищные спецэффекты, фантастика, заставляет думать, антиутопия, космос, красивая картинка | по тегам ближе всего к: Интерстеллар (Interstellar) (0.80)\nid=tt1276104 | Петля времени (Looper) | 2012 | 119 мин | Action/Drama/Sci-Fi | IMDb 7.4, 634059 оценок | движок #30, совпало: зрелищные спецэффекты, путешествия во времени, антиутопия, фантастика, сложный, надо вникать, красивая картинка | по тегам ближе всего к: Начало (Inception) (0.84)\nid=tt0088247 | Терминатор (The Terminator) | 1984 | 107 мин | Action/Adventure/Sci-Fi | IMDb 8.1, 1021957 оценок | движок #31, совпало: зрелищные спецэффекты, путешествия во времени, эпичность и размах, антиутопия, фантастика, сильный финал | по тегам ближе всего к: Интерстеллар (Interstellar) (0.73)\nid=tt0246578 | Донни Дарко (Donnie Darko) | 2001 | 113 мин | Drama/Mystery/Sci-Fi | IMDb 8, 923247 оценок | движок #32, совпало: путешествия во времени, фантастика, сложный, надо вникать, заставляет думать, неожиданные повороты, сильная музыка | по тегам ближе всего к: Начало (Inception) (0.68)\nid=tt0371746 | Железный человек (Iron Man) | 2008 | 126 мин | Action/Adventure/Sci-Fi | IMDb 7.9, 1255367 оценок | движок #33, совпало: зрелищные спецэффекты, эпичность и размах, фантастика, красивая картинка, неожиданные повороты, заставляет думать | по тегам ближе всего к: Начало (Inception) (0.63)\nid=tt0470752 | Из машины (Ex Machina) | 2014 | 108 мин | Drama/Sci-Fi/Thriller | IMDb 7.7, 647651 оценок | движок #34, совпало: зрелищные спецэффекты, фантастика, антиутопия, заставляет думать, неожиданные повороты, сложный, надо вникать | по тегам ближе всего к: Интерстеллар (Interstellar) (0.80)\nid=tt0379786 | Миссия «Серенити» (Serenity) | 2005 | 119 мин | Action/Adventure/Sci-Fi | IMDb 7.8, 317651 оценок | движок #35, совпало: зрелищные спецэффекты, антиутопия, космос, фантастика, красивая картинка, странное, причудливое | по тегам ближе всего к: Начало (Inception) (0.67)\nid=tt1054122 | Гоемон (Goemon) | 2009 | 128 мин | Action/Drama/History | IMDb 6.6, 5685 оценок | движок #36, совпало: эпичность и размах, зрелищные спецэффекты, красивая картинка, сильная музыка, грустное, пробирает, странное, причудливое | по тегам ближе всего к: Начало (Inception) (0.63)\nid=tt1454468 | Гравитация (Gravity) | 2013 | 91 мин | Drama/Sci-Fi/Thriller | IMDb 7.7, 908250 оценок | движок #37, совпало: зрелищные спецэффекты, космос, фантастика, красивая картинка, заставляет думать, держит в напряжении | по тегам ближе всего к: Интерстеллар (Interstellar) (0.73)\nid=tt0457430 | Лабиринт Фавна (Pan's Labyrinth) | 2006 | 118 мин | Drama/Fantasy/War | IMDb 8.2, 755472 оценок | движок #38, совпало: зрелищные спецэффекты, эпичность и размах, красивая картинка, неожиданные повороты, заставляет думать, сильная актёрская игра | по тегам ближе всего к: Начало (Inception) (0.65)\nid=tt0096446 | Уиллоу (Willow) | 1988 | 126 мин | Action/Adventure/Drama | IMDb 7.2, 139790 оценок | движок #39, совпало: эпичность и размах, зрелищные спецэффекты, космос, красивая картинка, фантастика, сильный финал | по тегам ближе всего к: Начало (Inception) (0.56)\nid=tt0454876 | Жизнь Пи (Life of Pi) | 2012 | 127 мин | Adventure/Drama/Family | IMDb 7.9, 707337 оценок | движок #40, совпало: зрелищные спецэффекты, эпичность и размах, заставляет думать, красивая картинка, странное, причудливое, сильный финал | по тегам ближе всего к: Начало (Inception) (0.71)\n\nВыбери ровно 4 разных тайтла, первый — лучший. Бери из списка (id копируй из строки кандидата) или не больше 2 своих (id пустой, название и год).",
+        "store": false,
+        "service_tier": "default"
+      },
+      "engine": [
+        "tt0076759",
+        "tt0796366",
+        "tt0080684",
+        "tt1182345"
+      ],
+      "ai": {
+        "picks": [
+          {
+            "id": "tt2543164",
+            "reason": "Как «Интерстеллар», соединяет масштаб космического события с личной историей, но разворачивается неспешно.",
+            "caveat": "Есть тревожные сцены и сильная грусть; спокойный темп не означает лёгкую историю.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0454876",
+            "reason": "Океанские просторы и фантастическая красота отвечают любви к размаху «Интерстеллара», а ритм часто созерцательный.",
+            "caveat": "Есть тяжёлые эпизоды выживания и гибель животных.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt0119177",
+            "reason": "Для спокойного вечера — сдержанная фантастика о стремлении к звёздам: вместо размаха «Интерстеллара» здесь личная мечта.",
+            "caveat": "Фильм 1997 года: визуально строгий, без космических панорам и обилия спецэффектов.",
+            "likelySeen": false,
+            "own": false
+          },
+          {
+            "id": "tt1483013",
+            "reason": "Пустынные пейзажи и просторные кадры поддержат любовь к размаху «Интерстеллара», между схватками много тишины.",
+            "caveat": "Не совсем спокойный вариант: есть перестрелки и погони.",
+            "likelySeen": false,
+            "own": false
+          }
+        ],
+        "understood": "Тебе нужен спокойный фильм на двоих: с красивыми масштабными образами, как в «Интерстелларе», но без непрерывного экшена.",
+        "dropped": 0,
+        "filled": [],
+        "ms": 8024,
+        "model": "gpt-6.1-sol",
+        "usage": {
+          "input_tokens": 5203,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 5200
+          },
+          "output_tokens": 514,
+          "output_tokens_details": {
+            "reasoning_tokens": 50
+          },
+          "total_tokens": 5717
+        },
+        "shortlist": 40
+      },
+      "estimatedUsd": 0.005666
+    }
+  ]
+}

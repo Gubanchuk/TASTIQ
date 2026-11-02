@@ -1,0 +1,9 @@
+{"appid": 404680, "features": [
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "the player solves puzzles and unlocks powers that open up more areas of the map"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "the player solves puzzles and unlocks powers that open up more areas of the map"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "quick sword attack, slow punch attack, slower charge attack, and roll"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "set in a science-fiction world filled with bizarre wildlife"}]},
+{"f": "story.lore", "r": 3, "ev": [{"id": "p3", "q": "The story line of Hob is expressed through environmental storytelling"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "beautiful Zelda-like puzzler with fun combat elements"}, {"id": "p8", "q": "a gorgeous world eager to be explored"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p8", "q": "fun, if occasionally clumsy, action"}]}
+]}

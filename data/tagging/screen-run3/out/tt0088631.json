@@ -1,0 +1,8 @@
+{"id": "tt0088631", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated science fantasy television series"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is an American animated science fantasy television series"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "follows the adventures of a group of catlike humanoid aliens"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "s", "q": "the group, which was led by Jaga, had to set a course for the nearest planet"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p0", "q": "Season 1 of the show aired in 1985, consisting of 65 episodes"}, {"id": "p0", "q": "Seasons 2, 3, and 4 each contained twenty episodes"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "s", "q": "The inhabitants of the planet Thundera evacuate just before it is destroyed"}]}
+]}

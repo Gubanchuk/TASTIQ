@@ -1,0 +1,9 @@
+{"appid": 15120, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "It is a first-person shooter video game"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p1", "q": "having the player create their own character to play through the campaign"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "support cooperative multiplayer which can have up to three players"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p7", "q": "two new adversarial modes"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "teammates can cover each other as they advance"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "The player assumes the role of Bishop, a member of the Rainbow squad"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p5", "q": "Present in all game modes is a multi-dimensional advancement system"}]}
+]}

@@ -1,0 +1,26 @@
+{
+  "id": "tt0187819",
+  "name": "Doug's 1st Movie",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 1999,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Doug's 1st Movie is a 1999 American animated comedy film based on the television series Doug created by Jim Jinkins. Directed by Maurice Joyce and written by Ken Scarborough, the film stars the regular television cast of Tom McHugh, Fred Newman, Chris Phillips, Constance Shulman, Frank Welker, Alice Playten, Guy Hadley, and Doris Belack. The plot follows Doug Funnie and Skeeter Valentine as they try to save a friendly monster, found in Lucky Duck Lake, from Bill Bluff, all while Doug tries to juggle his romance with Patti Mayonnaise and competition from Guy Graham before the school's Valentine's Day dance."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The film was released by Walt Disney Pictures on March 26, 1999; the theatrical release was accompanied by the Mickey Mouse Works short, Donald's Dynamite: Opera Box. Although the film received mixed-to-negative reviews from critics, it grossed $19.4 million worldwide making it a moderate success. No further Doug feature films were produced after."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Doug's_1st_Movie"
+}

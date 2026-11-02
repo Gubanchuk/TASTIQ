@@ -1,0 +1,7 @@
+{"appid": 300380, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "is a vehicular combat racing video game"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "In addition to the melee weapons featured in Road Rash"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "introduces firearms in the players options for weapons as well"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "The game will feature split screen multiplayer modes"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p1", "q": "the arcade-like simplicity and silliness of the Road Rash games"}]}
+]}

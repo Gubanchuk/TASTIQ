@@ -1,0 +1,9 @@
+{"appid": 249050, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "The game plays out in primarily a turn-based manner"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "Industry is used primarily in the construction of turrets and resource generators"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p4", "q": "if this drops to zero, the crystal is destroyed and the game is over"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "each with more difficult monsters that appear"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "At the start of each game, the player selects two characters"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p6", "q": "the player can unlock additional characters for starting the game"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p7", "q": "the experience will be mostly the same"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 1029780, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p6", "q": "Settlement construction is fully three-dimensional represented as voxels"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p4", "q": "Players are required to construct and manage a settlement"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p7", "q": "Survival mechanics require players to manage food production, storage, and seasonal changes"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "Set in an alternate history 14th century Britain"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "Players assign tasks and priorities rather than directly controlling characters"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p5", "q": "Players may customise their initial settlers by selecting their appearance, background traits, skills, and perks"}]},
+{"f": "world.living", "r": 1, "ev": [{"id": "p7", "q": "Settlers possess individual moods and personalities that must be managed"}]}
+]}

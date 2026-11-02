@@ -1,0 +1,6 @@
+{"appid": 593600, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "PixARK is a survival video game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "mining resources, making objects, building structures and defending themselves"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "the player can manipulate and adapt the world by removing or adding blocks"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p1", "q": "The world has several areas such as jungle, desert and caves"}]}
+]}

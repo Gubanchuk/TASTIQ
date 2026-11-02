@@ -1,0 +1,105 @@
+{
+ "appid": 10180,
+ "features": [
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "continues the gripping and heart-racing action as players face off against a new threat"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "supports 2-player co-operative play online"
+    }
+   ]
+  },
+  {
+   "f": "social.pvp",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236363035",
+     "q": "absolutely grinding the multiplayer until I prestiged all 10 times"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236595537",
+     "q": "story is very good"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238009122",
+     "q": "literally Hans Zimmer doing the score"
+    }
+   ]
+  },
+  {
+   "f": "tone.epic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "a new threat dedicated to bringing the world to the brink of collapse"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.low",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238033067",
+     "q": "Very easy game to pick up and put down"
+    }
+   ]
+  },
+  {
+   "f": "length.endless",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238033067",
+     "q": "after over 2300 hours of play time"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.forgiving",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236595537",
+     "q": "checkpoints are forgiving"
+    }
+   ]
+  },
+  {
+   "f": "loop.driving",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235714871",
+     "q": "погоня на снегоходах все идеально"
+    }
+   ]
+  }
+ ]
+}

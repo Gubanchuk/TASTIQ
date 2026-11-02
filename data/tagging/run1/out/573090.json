@@ -1,0 +1,87 @@
+{
+ "appid": 573090,
+ "features": [
+  {
+   "f": "loop.building",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236667463",
+     "q": "I can spend entire days building and tweaking my creations in this game"
+    },
+    {
+     "id": "r237489234",
+     "q": "Игра для тех, кто любит много времени проводить за настройкой своих творений"
+    }
+   ]
+  },
+  {
+   "f": "loop.driving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Take your custom-designed, block-based and programmable vehicles into fierce oceanic storms"
+    }
+   ]
+  },
+  {
+   "f": "world.realistic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236682712",
+     "q": "довольно хорошую физику воды"
+    }
+   ]
+  },
+  {
+   "f": "progression.power",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Career mode focuses on progression and an overarching plot"
+    }
+   ]
+  },
+  {
+   "f": "freedom.sandbox",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Play the game how you want"
+    },
+    {
+     "id": "a",
+     "q": "you are not limited by the survival and realism rules"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235656931",
+     "q": "trying to control your boat is ridiculous"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236445932",
+     "q": "you will learn slowly without watching youtube vides"
+    },
+    {
+     "id": "r236682712",
+     "q": "строить чаще всего учишься по гайдам"
+    }
+   ]
+  }
+ ]
+}

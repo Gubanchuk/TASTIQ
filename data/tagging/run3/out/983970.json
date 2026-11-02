@@ -1,0 +1,13 @@
+{"appid": 983970, "features": [
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "Haven focuses on Yu and Kay, two fugitives in love"}]},
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p1", "q": "The game is about two lovers, Yu and Kay"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "or play in co-op multiplayer with another person"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "or play in co-op multiplayer with another person"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "with survival game elements"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p7", "q": "He praised the game's exploration"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p7", "q": "charming and unusual sci-fi RPG"}]},
+{"f": "world.empty", "r": 2, "ev": [{"id": "p7", "q": "criticized the game's \"small, desolately sparse zones\""}, {"id": "p8", "q": "criticized the game world as lacking variety"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p8", "q": "calling exploration \"more like a chore than something compelling\""}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "The game has several endings"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p5", "q": "being brainwashed and memory wiped"}]}
+]}

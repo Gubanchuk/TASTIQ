@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-01T01:00:49.545Z",
+  "method": "Exact saved real response through local validator/core only, no model retry",
+  "receiptId": "overnight-20261101-01:2d8ab0f030feb022017025fcd0891ff86589a725d377d63506516ad6d3bf48be",
+  "originalFailure": "Цитата времени не сохраняет условия исходного ответа.",
+  "sourceAnswer": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен.",
+  "sessionTime": {
+    "minutes": 45,
+    "sourceId": "overnight-20261101-01-replay:5",
+    "quote": "Сегодня есть 45 минут."
+  },
+  "acceptedPhase": "review",
+  "checks": {
+    "wholeProposalAccepted": true,
+    "drivingGoalPreserved": true,
+    "noOldRpgPositive": true,
+    "noOldReplayOverride": true,
+    "todaySkyrimExcludePreserved": true
+  },
+  "externalApiCalls": 0
+}

@@ -1,0 +1,6 @@
+{"appid": 990630, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "The Last Campfire is a puzzle game"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p1", "q": "which removes most of the puzzles in the game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "As the player saves all the Forlorns in an area, new areas will be unlocked"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p1", "q": "fellow forlorn souls who have lost hope to find their purposes"}]}
+]}

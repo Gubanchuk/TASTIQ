@@ -1,0 +1,140 @@
+[
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": "text color rgb(91, 91, 98) on span \"Подбор игры\" is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgb(91, 91, 98)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": "border-radius 9px on button \"Моё\" is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "9px"
+  },
+  {
+    "antipattern": "marquee",
+    "name": "Auto-scrolling marquee",
+    "description": "Continuously auto-scrolling content demands attention it has not earned and hides half its content at any moment. Reserve motion for content that changes; let readers move at their own pace.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": ".skel::after — infinite horizontal loop animation \"skel\""
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\workspace.css",
+    "line": 5,
+    "snippet": "border-radius: 9px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "9px"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\workspace.css",
+    "line": 11,
+    "snippet": "border-radius: 20px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "20px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\workspace.css",
+    "line": 13,
+    "snippet": "font-size: 2rem is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "2rem"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\workspace.css",
+    "line": 23,
+    "snippet": "border-radius: 9px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "9px"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\workspace.css",
+    "line": 56,
+    "snippet": "border-radius: 6px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "6px"
+  },
+  {
+    "antipattern": "cramped-padding",
+    "name": "Cramped padding",
+    "description": "Text is too close to the edge of its container. Two shapes: (1) an element with its own text where the space between the rendered text and the border box is too small for the font size, and (2) a wrapper whose children's text lands flush against a visible boundary (border, outline, or non-transparent background) with nothing to inset it. Add at least 8px (ideally 12–16px) of space inside bordered, outlined, or colored containers.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\index.html",
+    "line": 0,
+    "snippet": "<div> \"sidebar-head\": children flush against border-bottom on bottom (no inset)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\index.html",
+    "line": 0,
+    "snippet": "text color rgb(91, 91, 98) on button \"Подбор\" is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgb(91, 91, 98)"
+  },
+  {
+    "antipattern": "marquee",
+    "name": "Auto-scrolling marquee",
+    "description": "Continuously auto-scrolling content demands attention it has not earned and hides half its content at any moment. Reserve motion for content that changes; let readers move at their own pace.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\index.html",
+    "line": 0,
+    "snippet": ".skel::after — infinite horizontal loop animation \"skel\""
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\workspace-legacy.css",
+    "line": 21,
+    "snippet": "border-radius: 18px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "18px"
+  }
+]

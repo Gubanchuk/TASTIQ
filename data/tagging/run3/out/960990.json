@@ -1,0 +1,7 @@
+{"appid": 960990, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p7", "q": "As the player makes choices throughout the game, the gameplay's plot is revealed"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p9", "q": "Critics praised Page's character portrayal of Jodie Holmes"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "an incorporeal entity named Aiden: a separate soul linked to Jodie since birth"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p5", "q": "Conversation prompts float in the air"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p10", "q": "you'll never be truly challenged by the gameplay"}]}
+]}

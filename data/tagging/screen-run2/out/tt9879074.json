@@ -1,0 +1,8 @@
+{"id": "tt9879074", "features": [
+{"f": "format.documentary", "r": 3, "ev": [{"id": "p0", "q": "is an American Netflix documentary series directed by Chris Smith"}]},
+{"f": "story.true", "r": 3, "ev": [{"id": "p1", "q": "depicts the disappearance of three-year-old Madeleine McCann"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "It explores the media, the investigation, and the McCanns"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p2", "q": "criticised the series for being too long, filled with irrelevant details"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p1", "q": "The series comprises eight episodes"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "s", "q": "morphs into a nightmare when one of the children disappears from her bed"}]}
+]}

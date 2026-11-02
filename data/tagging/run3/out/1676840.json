@@ -1,0 +1,6 @@
+{"appid": 1676840, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a tactical role-playing game developed by IronOak Games"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "losing causes players to restart the game"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "there can be up to four members in each party"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p1", "q": "Combat takes place on a grid, similar to digital tabletop"}]}
+]}

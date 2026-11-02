@@ -1,0 +1,15 @@
+{
+  "appid": 225080,
+  "features": [
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "takes place in a fantasy world filled with fictitious creatures such as orcs and trolls"}]},
+    {"f": "story.central", "r": 3, "ev": [{"id": "p0", "q": "due to its heavy narrative"}, {"id": "p7", "q": "praised the game and its touching story and inventive controls"}]},
+    {"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "to complete various puzzles"}]},
+    {"f": "characters.companions", "r": 3, "ev": [{"id": "p1", "q": "manipulating the two brothers at the same time"}]},
+    {"f": "tone.melancholic", "r": 3, "ev": [{"id": "p2", "q": "standing at the tombstone of his dead mother who drowned at sea"}]},
+    {"f": "ending.bittersweet", "r": 3, "ev": [{"id": "p4", "q": "A short time afterwards, Naiee and his father mourn at the tombstones of both the mother and Naia"}]},
+    {"f": "tone.creepy", "r": 1, "ev": [{"id": "p3", "q": "she reveals herself as a monstrous spider creature"}]},
+    {"f": "length.short", "r": 2, "ev": [{"id": "p6", "q": "Short but immensely satisfying"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "It praised the visual style, pace and story"}]},
+    {"f": "pace.slow", "r": 1, "ev": [{"id": "p6", "q": "flows at its own rather sedate pace"}]}
+  ]
+}

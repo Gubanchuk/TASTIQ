@@ -1,0 +1,8 @@
+{"appid": 1113120, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "the player can construct the required structures inside the interior"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p7", "q": "the effect of the game's production chain management"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p0", "q": "city building survival simulation video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "a mobile space station traveling across space in search for a suitable planet"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p8", "q": "incredibly detailed mechanics"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p7", "q": "the amount of time required to stay in place to complete chapter-closing tasks"}]}
+]}

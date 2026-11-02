@@ -1,0 +1,8 @@
+{"appid": 1084160, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p3", "q": "turn-based tactics video game"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "Each member of the player's squad has their own unique backstories and personalities"}, {"id": "p1", "q": "preferences to who they will and will not work with"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "a wide selection of real-world firearms and melee weapons"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "a wide selection of real-world firearms and melee weapons"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p1", "q": "with the option of stealth to weaken enemies"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p0", "q": "uncovering a conspiracy behind the paramilitaries"}]}
+]}

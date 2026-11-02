@@ -1,0 +1,10 @@
+{"appid": 544750, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "two weapon-wielding combatants battling against one another"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "allows players to create a custom character, known as the Conduit"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p7", "q": "Both Game Informer and EGM praised the story modes"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "shaping the fate of the world through player choices"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p7", "q": "highlighted the music and the character roster"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "lauded the environments"}]},
+{"f": "length.long", "r": 1, "ev": [{"id": "p7", "q": "will provide hours upon hours of fantastic single-player content"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p7", "q": "The new mechanics add new layers of strategy and mind games"}]}
+]}

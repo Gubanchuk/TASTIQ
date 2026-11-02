@@ -1,0 +1,7 @@
+{"appid": 252870, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a science fiction space exploration video game"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "exploring a procedurally generated galaxy"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "There can only be one member of each class in the five person crew"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "classes that earn experience points and talent points"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p4", "q": "The Pilot is responsible for maneuvering the ship"}]}
+]}

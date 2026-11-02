@@ -1,0 +1,739 @@
+{
+  "at": "2026-10-31T18:44:31.629Z",
+  "cases": [
+    {
+      "id": "story",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "questions": [
+        {
+          "id": "lean:cognitive.high|cognitive.low",
+          "kind": "lean",
+          "text": "Подумать или отключить голову?",
+          "options": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.04396305273655576,
+          "leader": "steam:1113000",
+          "shown": [
+            "steam:1113000",
+            "steam:632470",
+            "steam:578650",
+            "steam:1180660"
+          ],
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать",
+              "leader": "steam:632470",
+              "leaderChanged": true,
+              "shown": [
+                "steam:632470",
+                "steam:1113000",
+                "steam:208580",
+                "steam:207610"
+              ]
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову",
+              "leader": "steam:1113000",
+              "leaderChanged": false,
+              "shown": [
+                "steam:1113000",
+                "steam:632470",
+                "steam:330830",
+                "steam:1180660"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "steam:1113000",
+        "steam:632470",
+        "steam:578650",
+        "steam:1180660"
+      ],
+      "eligible": 4371,
+      "remainingQuestions": 3
+    },
+    {
+      "id": "coop",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "questions": [
+        {
+          "id": "lean:cognitive.high|cognitive.low",
+          "kind": "lean",
+          "text": "Подумать или отключить голову?",
+          "options": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.05500567271175294,
+          "leader": "steam:572890",
+          "shown": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:341800"
+          ],
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать",
+              "leader": "steam:620",
+              "leaderChanged": true,
+              "shown": [
+                "steam:620",
+                "steam:35700",
+                "steam:837470",
+                "steam:572890"
+              ]
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову",
+              "leader": "steam:572890",
+              "leaderChanged": false,
+              "shown": [
+                "steam:572890",
+                "steam:620",
+                "steam:35700",
+                "steam:837470"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:difficulty.hard|difficulty.forgiving",
+          "kind": "lean",
+          "text": "Чтобы было сложно или щадяще?",
+          "options": [
+            {
+              "value": "difficulty.hard",
+              "label": "сложно, с вызовом"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "label": "щадяще"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.06241532204591049,
+          "leader": "steam:572890",
+          "shown": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:341800"
+          ],
+          "outcomes": [
+            {
+              "value": "difficulty.hard",
+              "label": "сложно, с вызовом",
+              "leader": "steam:620",
+              "leaderChanged": true,
+              "shown": [
+                "steam:620",
+                "steam:341800",
+                "steam:837470",
+                "steam:1426210"
+              ]
+            },
+            {
+              "value": "difficulty.forgiving",
+              "label": "щадяще",
+              "leader": "steam:572890",
+              "leaderChanged": false,
+              "shown": [
+                "steam:572890",
+                "steam:620",
+                "steam:35700",
+                "steam:837470"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fact:popularity",
+          "kind": "fact",
+          "text": "Известная игра или что-то менее известное?",
+          "options": [
+            {
+              "value": "mainstream",
+              "label": "более известное"
+            },
+            {
+              "value": "niche",
+              "label": "менее известное"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.19365661801225542,
+          "leader": "steam:572890",
+          "shown": [
+            "steam:572890",
+            "steam:620",
+            "steam:35700",
+            "steam:341800"
+          ],
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "label": "более известное",
+              "leader": "steam:620",
+              "leaderChanged": true,
+              "shown": [
+                "steam:620",
+                "steam:341800",
+                "steam:35700",
+                "steam:572890"
+              ]
+            },
+            {
+              "value": "niche",
+              "label": "менее известное",
+              "leader": "steam:572890",
+              "leaderChanged": false,
+              "shown": [
+                "steam:572890",
+                "steam:35700",
+                "steam:620",
+                "steam:341800"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "steam:572890",
+        "steam:620",
+        "steam:35700",
+        "steam:341800"
+      ],
+      "eligible": 952,
+      "remainingQuestions": 1
+    },
+    {
+      "id": "runs",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "questions": [],
+      "final": [
+        "steam:1229490",
+        "steam:1888160",
+        "steam:460950",
+        "steam:1139900"
+      ],
+      "eligible": 4378,
+      "remainingQuestions": 5
+    },
+    {
+      "id": "no-taste",
+      "source": "authored offline context, frozen before implementation",
+      "questions": [
+        {
+          "id": "lean:tension.high|tension.low",
+          "kind": "lean",
+          "text": "Адреналин или расслабиться?",
+          "options": [
+            {
+              "value": "tension.high",
+              "label": "адреналин"
+            },
+            {
+              "value": "tension.low",
+              "label": "расслабиться"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.058885823802302006,
+          "leader": "steam:413150",
+          "shown": [
+            "steam:413150",
+            "steam:620",
+            "steam:646570",
+            "steam:550"
+          ],
+          "outcomes": [
+            {
+              "value": "tension.high",
+              "label": "адреналин",
+              "leader": "steam:550",
+              "leaderChanged": true,
+              "shown": [
+                "steam:550",
+                "steam:304430",
+                "steam:264710",
+                "steam:341800"
+              ]
+            },
+            {
+              "value": "tension.low",
+              "label": "расслабиться",
+              "leader": "steam:413150",
+              "leaderChanged": false,
+              "shown": [
+                "steam:413150",
+                "steam:1708150",
+                "steam:990630",
+                "steam:2379780"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:humor.funny|tone.dark",
+          "kind": "lean",
+          "text": "Посмеяться или что-то мрачное?",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "посмеяться"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.09254992405208906,
+          "leader": "steam:413150",
+          "shown": [
+            "steam:413150",
+            "steam:620",
+            "steam:646570",
+            "steam:550"
+          ],
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "label": "посмеяться",
+              "leader": "steam:620",
+              "leaderChanged": true,
+              "shown": [
+                "steam:620",
+                "steam:1118200",
+                "steam:3590",
+                "steam:550"
+              ]
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное",
+              "leader": "steam:220",
+              "leaderChanged": true,
+              "shown": [
+                "steam:220",
+                "steam:2218750",
+                "steam:990630",
+                "steam:200260"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:cognitive.high|cognitive.low",
+          "kind": "lean",
+          "text": "Подумать или отключить голову?",
+          "options": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.07597185356927927,
+          "leader": "steam:413150",
+          "shown": [
+            "steam:413150",
+            "steam:620",
+            "steam:646570",
+            "steam:550"
+          ],
+          "outcomes": [
+            {
+              "value": "cognitive.high",
+              "label": "подумать",
+              "leader": "steam:427520",
+              "leaderChanged": true,
+              "shown": [
+                "steam:427520",
+                "steam:435150",
+                "steam:739630",
+                "steam:646570"
+              ]
+            },
+            {
+              "value": "cognitive.low",
+              "label": "отключить голову",
+              "leader": "steam:1794680",
+              "leaderChanged": true,
+              "shown": [
+                "steam:1794680",
+                "steam:1307580",
+                "steam:1388880",
+                "steam:274190"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "steam:413150",
+        "steam:620",
+        "steam:646570",
+        "steam:550"
+      ],
+      "eligible": 4381,
+      "remainingQuestions": 3
+    },
+    {
+      "id": "calm-film",
+      "source": "authored offline context, frozen before implementation",
+      "questions": [
+        {
+          "id": "lean:humor.funny|tone.melancholic",
+          "kind": "lean",
+          "text": "Поржать или чтобы пробрало?",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "поржать"
+            },
+            {
+              "value": "tone.melancholic",
+              "label": "чтобы пробрало"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.02834794394820861,
+          "leader": "tt0103767",
+          "shown": [
+            "tt0103767",
+            "tt0042876",
+            "tt0050976",
+            "tt0118694"
+          ],
+          "outcomes": [
+            {
+              "value": "humor.funny",
+              "label": "поржать",
+              "leader": "tt0084302",
+              "leaderChanged": true,
+              "shown": [
+                "tt0084302",
+                "tt0067992",
+                "tt1119646",
+                "tt0035446"
+              ]
+            },
+            {
+              "value": "tone.melancholic",
+              "label": "чтобы пробрало",
+              "leader": "tt0022100",
+              "leaderChanged": true,
+              "shown": [
+                "tt0022100",
+                "tt1028532",
+                "tt0085809",
+                "tt0372824"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fact:popularity",
+          "kind": "fact",
+          "text": "Известное кино или что-то менее известное?",
+          "options": [
+            {
+              "value": "mainstream",
+              "label": "более известное"
+            },
+            {
+              "value": "niche",
+              "label": "менее известное"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.19284811325550066,
+          "leader": "tt0103767",
+          "shown": [
+            "tt0103767",
+            "tt0042876",
+            "tt0050976",
+            "tt0118694"
+          ],
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "label": "более известное",
+              "leader": "tt0050976",
+              "leaderChanged": true,
+              "shown": [
+                "tt0050976",
+                "tt0042876",
+                "tt0118694",
+                "tt0103767"
+              ]
+            },
+            {
+              "value": "niche",
+              "label": "менее известное",
+              "leader": "tt0103767",
+              "leaderChanged": false,
+              "shown": [
+                "tt0103767",
+                "tt0045274",
+                "tt0046478",
+                "tt0100234"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:tone.feelgood|tone.dark",
+          "kind": "lean",
+          "text": "Тёплое или мрачное?",
+          "options": [
+            {
+              "value": "tone.feelgood",
+              "label": "тёплое"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.04380443463306083,
+          "leader": "tt0103767",
+          "shown": [
+            "tt0103767",
+            "tt0042876",
+            "tt0050976",
+            "tt0118694"
+          ],
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "label": "тёплое",
+              "leader": "tt1028532",
+              "leaderChanged": true,
+              "shown": [
+                "tt1028532",
+                "tt0147800",
+                "tt0093779",
+                "tt0104940"
+              ]
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное",
+              "leader": "tt24082438",
+              "leaderChanged": true,
+              "shown": [
+                "tt24082438",
+                "tt0117951",
+                "tt0103767",
+                "tt0063350"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "tt0103767",
+        "tt0042876",
+        "tt0050976",
+        "tt0118694"
+      ],
+      "eligible": 8165,
+      "remainingQuestions": 0
+    },
+    {
+      "id": "short-series",
+      "source": "authored offline context, frozen before implementation",
+      "questions": [
+        {
+          "id": "fact:popularity",
+          "kind": "fact",
+          "text": "Известное кино или что-то менее известное?",
+          "options": [
+            {
+              "value": "mainstream",
+              "label": "более известное"
+            },
+            {
+              "value": "niche",
+              "label": "менее известное"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.1974557722406507,
+          "leader": "tt0386676",
+          "shown": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "outcomes": [
+            {
+              "value": "mainstream",
+              "label": "более известное",
+              "leader": "tt0386676",
+              "leaderChanged": false,
+              "shown": [
+                "tt0386676",
+                "tt0108778",
+                "tt10986410",
+                "tt0472954"
+              ]
+            },
+            {
+              "value": "niche",
+              "label": "менее известное",
+              "leader": "tt9002164",
+              "leaderChanged": true,
+              "shown": [
+                "tt9002164",
+                "tt7450814",
+                "tt10530900",
+                "tt0383795"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fact:era",
+          "kind": "fact",
+          "text": "Свежее или можно и старое?",
+          "options": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015"
+            },
+            {
+              "value": "any",
+              "label": "можно и старое"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.17600747587704735,
+          "leader": "tt0386676",
+          "shown": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "outcomes": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015",
+              "leader": "tt10986410",
+              "leaderChanged": true,
+              "shown": [
+                "tt10986410",
+                "tt7450814",
+                "tt9002164",
+                "tt5687612"
+              ]
+            },
+            {
+              "value": "any",
+              "label": "можно и старое",
+              "leader": "tt0386676",
+              "leaderChanged": false,
+              "shown": [
+                "tt0386676",
+                "tt0108778",
+                "tt0098904",
+                "tt10986410"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lean:tone.feelgood|tone.dark",
+          "kind": "lean",
+          "text": "Тёплое или мрачное?",
+          "options": [
+            {
+              "value": "tone.feelgood",
+              "label": "тёплое"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное"
+            }
+          ],
+          "estimatedChanges": true,
+          "gain": 0.03958975020956057,
+          "leader": "tt0386676",
+          "shown": [
+            "tt0386676",
+            "tt0108778",
+            "tt0098904",
+            "tt10986410"
+          ],
+          "outcomes": [
+            {
+              "value": "tone.feelgood",
+              "label": "тёплое",
+              "leader": "tt10986410",
+              "leaderChanged": true,
+              "shown": [
+                "tt10986410",
+                "tt10638036",
+                "tt3526078",
+                "tt15677150"
+              ]
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное",
+              "leader": "tt0096548",
+              "leaderChanged": true,
+              "shown": [
+                "tt0096548",
+                "tt14403178",
+                "tt0442632",
+                "tt0904208"
+              ]
+            }
+          ]
+        }
+      ],
+      "final": [
+        "tt0386676",
+        "tt0108778",
+        "tt0098904",
+        "tt10986410"
+      ],
+      "eligible": 2424,
+      "remainingQuestions": 1
+    }
+  ],
+  "paidCalls": 0
+}

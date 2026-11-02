@@ -1,0 +1,10 @@
+{"appid": 526160, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "The Wild Eight is a survival game with cooperative multiplayer"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "players must craft tools and the basic necessities of life, such as shelter"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "up to eight survivors band together to assist each other"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p1", "q": "The Wild Eight can be played in single-player"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p0", "q": "stranded in the harsh wilderness of Alaska"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p0", "q": "stranded in the harsh wilderness of Alaska and must cooperate to survive"}]},
+{"f": "content.gore", "r": 1, "ev": [{"id": "p1", "q": "They can also cook and eat their own corpse"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p2", "q": "the reviewer said he never survived long enough to find any quests"}]}
+]}

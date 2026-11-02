@@ -1,0 +1,7 @@
+{"id": "tt24163532", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is an American crime drama television series"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p1", "q": "work together to stop two serial arsonists"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "s", "q": "Inspired by true events"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "commanding turns from Taron Egerton and Jurnee Smollett"}]},
+{"f": "structure.slow_start", "r": 1, "ev": [{"id": "p2", "q": "Smoke obscures its appeal with coy plotting until it eventually lights a fire under its story"}]}
+]}

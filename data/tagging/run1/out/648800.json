@@ -1,0 +1,13 @@
+{"appid": 648800, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "d", "q": "battle to survive a perilous voyage across a vast sea"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "d", "q": "build your own floating home"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "a", "q": "Survive by yourself or with friends in online co-op"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "set sail towards forgotten and dangerous islands"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "r236752830", "q": "the amount of story islands and lore it includes"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "r237865127", "q": "Very good to just chill for a couple hours"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "r237865127", "q": "Game is a fun sandbox type with a nautical theme"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "r237700528", "q": "Fun and relatively short experience"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "r236752830", "q": "The graphics and overall quality are top notch"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r237542735", "q": "the actual gameplay quickly becomes an exercise in dealing with the same tedious annoyances over and over again"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r237700528", "q": "the clunky UI and bad combat"}]}
+]}

@@ -1,0 +1,6 @@
+{"appid": 593280, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p2", "q": "an island kingdom ruled by cats"}, {"id": "p3", "q": "defeated Felingard's evil dragons a long time ago"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "dungeon crawling, and equipment progression"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "set in an open world kingdom called Felingard"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p3", "q": "After exploring a number of ruins throughout Felingard"}]}
+]}

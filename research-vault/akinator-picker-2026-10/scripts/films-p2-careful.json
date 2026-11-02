@@ -1,0 +1,4997 @@
+{
+ "label": "Персона 2: синефил (Линч, Тарковский, Вонг Карвай; ненавидит громкие франшизы) — careful",
+ "screens": 13,
+ "log": [
+  {
+   "n": 1,
+   "action": null,
+   "note": "открыли /pick/",
+   "screen": {
+    "step": "domain",
+    "title": "Что хочешь?",
+    "options": [
+     {
+      "value": "game",
+      "label": "Поиграть"
+     },
+     {
+      "value": "film",
+      "label": "Посмотреть фильм"
+     },
+     {
+      "value": "series",
+      "label": "Посмотреть сериал"
+     },
+     {
+      "value": "cartoon",
+      "label": "Посмотреть мультфильм"
+     }
+    ],
+    "later": [
+     "Почитать",
+     "Аниме"
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "note": "Посмотреть фильм",
+   "screen": {
+    "step": "genres",
+    "title": "Что обычно смотришь?",
+    "hint": "Это только чтобы спросить про знакомое. Подбирать буду не по жанру, а по тому, за что тебе заходит.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "genre:Drama",
+      "label": "драмы"
+     },
+     {
+      "value": "genre:Comedy",
+      "label": "комедии"
+     },
+     {
+      "value": "genre:Action",
+      "label": "боевики"
+     },
+     {
+      "value": "genre:Crime",
+      "label": "криминал"
+     },
+     {
+      "value": "genre:Romance",
+      "label": "мелодрамы"
+     },
+     {
+      "value": "genre:Thriller",
+      "label": "триллеры"
+     },
+     {
+      "value": "genre:Horror",
+      "label": "ужасы"
+     },
+     {
+      "value": "genre:Adventure",
+      "label": "приключения"
+     },
+     {
+      "value": "genre:Mystery",
+      "label": "детективы"
+     },
+     {
+      "value": "genre:Biography",
+      "label": "биографии"
+     },
+     {
+      "value": "genre:Fantasy",
+      "label": "фэнтези"
+     },
+     {
+      "value": "genre:Sci-Fi",
+      "label": "фантастика"
+     },
+     {
+      "value": "genre:Documentary",
+      "label": "документальное"
+     },
+     {
+      "value": "genre:History",
+      "label": "историческое"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "genres",
+    "values": [
+     "genre:Drama",
+     "genre:Mystery"
+    ]
+   },
+   "note": "Нажал «драмы», «детективы». Хотел бы «авторское / арт-хаус / азиатское» — нет такой кнопки → genre:Drama, genre:Mystery",
+   "screen": {
+    "step": "liked",
+    "title": "Что из этого смотрел, и зашло?",
+    "hint": "Отметь всё знакомое, что понравилось. Можно найти своё через поиск.",
+    "multi": true,
+    "search": true,
+    "canSkip": false,
+    "items": [
+     {
+      "id": "tt0120737",
+      "name": "The Lord of the Rings: The Fellowship of the Ring",
+      "ru": "Властелин колец: Братство кольца",
+      "original": null,
+      "year": 2001,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Drama",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.9"
+     },
+     {
+      "id": "tt0246578",
+      "name": "Donnie Darko",
+      "ru": "Донни Дарко",
+      "original": null,
+      "year": 2001,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8"
+     },
+     {
+      "id": "tt0111161",
+      "name": "The Shawshank Redemption",
+      "ru": "Побег из Шоушенка",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 9.3"
+     },
+     {
+      "id": "tt0169547",
+      "name": "American Beauty",
+      "ru": "Красота по-американски",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/9a/American_Beauty_1999_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama"
+      ],
+      "rating": "IMDb 8.3"
+     },
+     {
+      "id": "tt1853728",
+      "name": "Django Unchained",
+      "ru": "Джанго освобождённый",
+      "original": null,
+      "year": 2012,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Western"
+      ],
+      "rating": "IMDb 8.5"
+     },
+     {
+      "id": "tt0434409",
+      "name": "V for Vendetta",
+      "ru": "«V» значит Вендетта",
+      "original": null,
+      "year": 2005,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/9f/Vforvendettamov.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Action",
+       "Drama",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 8.1"
+     },
+     {
+      "id": "tt2543164",
+      "name": "Arrival",
+      "ru": "Прибытие",
+      "original": null,
+      "year": 2016,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Sci-Fi"
+      ],
+      "rating": "IMDb 7.9"
+     },
+     {
+      "id": "tt0253474",
+      "name": "The Pianist",
+      "ru": "Пианист",
+      "original": null,
+      "year": 2002,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Pianist_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Biography",
+       "Drama",
+       "Music"
+      ],
+      "rating": "IMDb 8.5"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "note": "liked page shows: Властелин колец: Братство кольца (2001) | Донни Дарко (2001) | Побег из Шоушенка (1994) | Красота по-американски (1999) | Джанго освобождённый (2012) | «V» значит Вендетта (2005) | Прибытие (2016) | Пианист (2002). Из них узнали и зашло: ничего. Остальное нашли через поиск."
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0166924",
+     "tt0079944",
+     "tt0118694",
+     "tt0109424",
+     "tt0060827",
+     "tt0087884",
+     "tt0478304",
+     "tt0090756",
+     "tt0072443",
+     "tt0212712"
+    ],
+    "known": {},
+    "shownIds": [
+     "tt0120737",
+     "tt0246578",
+     "tt0111161",
+     "tt0169547",
+     "tt1853728",
+     "tt0434409",
+     "tt2543164",
+     "tt0253474"
+    ]
+   },
+   "note": "Нашёл через поиск: Малхолланд Драйв, Сталкер, Любовное настроение, Чунгкингский экспресс, Персона, Париж Техас, Древо жизни, Синий бархат, Зеркало, 2046",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Малхолланд Драйв»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt0166924",
+     "name": "Mulholland Drive",
+     "ru": "Малхолланд Драйв",
+     "original": "Mulholland Dr.",
+     "year": 2001,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/0/0f/Mulholland.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Drama",
+      "Mystery",
+      "Thriller"
+     ],
+     "rating": "IMDb 7.9"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "story.nonlinear",
+      "label": "нелинейный сюжет"
+     },
+     {
+      "value": "tone.atmospheric",
+      "label": "атмосферное"
+     },
+     {
+      "value": "story.twist",
+      "label": "неожиданные повороты"
+     },
+     {
+      "value": "story.complex",
+      "label": "сложный, надо вникать"
+     },
+     {
+      "value": "aesthetic.stylized",
+      "label": "стильно и необычно снято"
+     },
+     {
+      "value": "story.mystery",
+      "label": "загадка и расследование"
+     },
+     {
+      "value": "tone.dark",
+      "label": "мрачная атмосфера"
+     },
+     {
+      "value": "tone.whimsical",
+      "label": "странное, причудливое"
+     },
+     {
+      "value": "aesthetic.beautiful",
+      "label": "красивая картинка"
+     },
+     {
+      "value": "tone.creepy",
+      "label": "жуть и страх"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "1 из 3"
+   }
+  },
+  {
+   "note": "why «Малхолланд Драйв (2001)»: offered [нелинейный сюжет | атмосферное | неожиданные повороты | сложный, надо вникать | стильно и необычно снято | загадка и расследование | мрачная атмосфера | странное, причудливое | красивая картинка | жуть и страх]; persona says: «сон, который не надо разгадывать, а надо прожить; жуть под глянцем»; chosen [\"tone.whimsical\",\"story.complex\",\"tone.atmospheric\",\"aesthetic.stylized\",\"story.nonlinear\",\"tone.dark\",\"tone.creepy\",\"story.mystery\"]; wanted but not offered: cognitive.high | free text «сюрреалистично, атмосферно, стильно снято, загадка без ответа» → parse: +странное, причудливое, атмосферное, загадка и расследование, стильно и необычно снято; −—; understood=true"
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "tone.whimsical",
+     "story.complex",
+     "tone.atmospheric",
+     "aesthetic.stylized",
+     "story.nonlinear",
+     "tone.dark",
+     "tone.creepy",
+     "story.mystery"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "note": "«сон, который не надо разгадывать, а надо прожить; жуть под глянцем»",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Сталкер»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt0079944",
+     "name": "Stalker",
+     "ru": "Сталкер",
+     "original": null,
+     "year": 1979,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/d/d4/Stalker_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Drama",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 8"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "world.dystopia",
+      "label": "антиутопия"
+     },
+     {
+      "value": "pace.slow",
+      "label": "неторопливое"
+     },
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "tone.dark",
+      "label": "мрачная атмосфера"
+     },
+     {
+      "value": "cognitive.high",
+      "label": "заставляет думать"
+     },
+     {
+      "value": "tone.whimsical",
+      "label": "странное, причудливое"
+     },
+     {
+      "value": "aesthetic.beautiful",
+      "label": "красивая картинка"
+     },
+     {
+      "value": "story.dialogue",
+      "label": "держится на диалогах"
+     },
+     {
+      "value": "world.postapoc",
+      "label": "постапокалипсис"
+     },
+     {
+      "value": "tone.atmospheric",
+      "label": "атмосферное"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "2 из 3"
+   }
+  },
+  {
+   "note": "why «Сталкер (1979)»: offered [антиутопия | неторопливое | фантастика | мрачная атмосфера | заставляет думать | странное, причудливое | красивая картинка | держится на диалогах | постапокалипсис | атмосферное]; persona says: «три часа тишины, каждый кадр — картина, разговоры о вере»; chosen [\"pace.slow\",\"cognitive.high\",\"tone.atmospheric\",\"aesthetic.beautiful\",\"story.dialogue\",\"world.scifi\"]; wanted but not offered: aesthetic.stylized, tone.melancholic | free text «неторопливое, созерцательное, философское, каждый кадр красив» → parse: +неторопливое, красивая картинка, заставляет думать; −—; understood=true"
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "pace.slow",
+     "cognitive.high",
+     "tone.atmospheric",
+     "aesthetic.beautiful",
+     "story.dialogue",
+     "world.scifi"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "note": "«три часа тишины, каждый кадр — картина, разговоры о вере»",
+   "screen": {
+    "step": "why",
+    "title": "За что тебе зашло «Любовное настроение»?",
+    "hint": "Выбери то, ради чего ты бы это повторил. Остальное не считается.",
+    "item": {
+     "id": "tt0118694",
+     "name": "In the Mood for Love",
+     "ru": "Любовное настроение",
+     "original": "Fa yeung nin wah",
+     "year": 2000,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/4/45/In_the_Mood_for_Love_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Drama",
+      "Romance"
+     ],
+     "rating": "IMDb 8"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "tone.atmospheric",
+      "label": "атмосферное"
+     },
+     {
+      "value": "aesthetic.stylized",
+      "label": "стильно и необычно снято"
+     },
+     {
+      "value": "characters.romance",
+      "label": "любовная линия"
+     },
+     {
+      "value": "tone.melancholic",
+      "label": "грустное, пробирает"
+     },
+     {
+      "value": "aesthetic.beautiful",
+      "label": "красивая картинка"
+     },
+     {
+      "value": "tension.low",
+      "label": "спокойное, без нервов"
+     },
+     {
+      "value": "pace.slow",
+      "label": "неторопливое"
+     },
+     {
+      "value": "ending.sad",
+      "label": "горький финал"
+     },
+     {
+      "value": "cognitive.high",
+      "label": "заставляет думать"
+     },
+     {
+      "value": "tone.whimsical",
+      "label": "странное, причудливое"
+     }
+    ],
+    "love": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "3 из 3"
+   }
+  },
+  {
+   "note": "why «Любовное настроение (2000)»: offered [атмосферное | стильно и необычно снято | любовная линия | грустное, пробирает | красивая картинка | спокойное, без нервов | неторопливое | горький финал | заставляет думать | странное, причудливое]; persona says: «ничего не происходит, а сердце рвётся; цвет, музыка, платья»; chosen [\"aesthetic.beautiful\",\"aesthetic.stylized\",\"tone.melancholic\",\"pace.slow\",\"characters.romance\",\"tone.atmospheric\",\"aesthetic.soundtrack\"]; wanted but not offered: aesthetic.soundtrack, world.historical | free text «красиво, музыка, медленно, грустно, стильно» → parse: +грустное, пробирает, неторопливое, красивая картинка, стильно и необычно снято, сильная музыка; −—; understood=true"
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "aesthetic.beautiful",
+     "aesthetic.stylized",
+     "tone.melancholic",
+     "pace.slow",
+     "characters.romance",
+     "tone.atmospheric",
+     "aesthetic.soundtrack"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "note": "«ничего не происходит, а сердце рвётся; цвет, музыка, платья»",
+   "screen": {
+    "step": "disliked",
+    "title": "А что не зашло, хотя многие хвалят?",
+    "hint": "Если ничего такого не было, пропусти.",
+    "multi": true,
+    "search": true,
+    "canSkip": true,
+    "items": [
+     {
+      "id": "tt0167261",
+      "name": "The Lord of the Rings: The Two Towers",
+      "ru": "Властелин колец: Две крепости",
+      "original": null,
+      "year": 2002,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/a1/Lord_Rings_Two_Towers.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Adventure",
+       "Drama",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0120689",
+      "name": "The Green Mile",
+      "ru": "Зелёная миля",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/e/e2/The_Green_Mile_%28movie_poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama",
+       "Fantasy"
+      ],
+      "rating": "IMDb 8.6"
+     },
+     {
+      "id": "tt0116282",
+      "name": "Fargo",
+      "ru": "Фарго",
+      "original": null,
+      "year": 1996,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/3/33/Fargo_%281996_movie_poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.1"
+     },
+     {
+      "id": "tt0137523",
+      "name": "Fight Club",
+      "ru": "Бойцовский клуб",
+      "original": null,
+      "year": 1999,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama",
+       "Thriller"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0109830",
+      "name": "Forrest Gump",
+      "ru": "Форрест Гамп",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Romance"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0071562",
+      "name": "The Godfather Part II",
+      "ru": "Крёстный отец 2",
+      "original": null,
+      "year": 1974,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/0/03/Godfather_part_ii.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama"
+      ],
+      "rating": "IMDb 9"
+     },
+     {
+      "id": "tt0110912",
+      "name": "Pulp Fiction",
+      "ru": "Криминальное чтиво",
+      "original": null,
+      "year": 1994,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Crime",
+       "Drama"
+      ],
+      "rating": "IMDb 8.8"
+     },
+     {
+      "id": "tt0405159",
+      "name": "Million Dollar Baby",
+      "ru": "Малышка на миллион",
+      "original": null,
+      "year": 2004,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/d3/Million_Dollar_Baby_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Sport"
+      ],
+      "rating": "IMDb 8.1"
+     }
+    ],
+    "more": true
+   }
+  },
+  {
+   "note": "disliked page shows: Властелин колец: Две крепости (2002) | Зелёная миля (1999) | Фарго (1996) | Бойцовский клуб (1999) | Форрест Гамп (1994) | Крёстный отец 2 (1974) | Криминальное чтиво (1994) | Малышка на миллион (2004)"
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt4154796",
+     "tt2109248",
+     "tt2820852",
+     "tt0369610",
+     "tt2527338"
+    ],
+    "known": {},
+    "shownIds": [
+     "tt0167261",
+     "tt0120689",
+     "tt0116282",
+     "tt0137523",
+     "tt0109830",
+     "tt0071562",
+     "tt0110912",
+     "tt0405159"
+    ]
+   },
+   "note": "Нашёл через поиск: Мстители: Финал, Трансформеры: Эпоха истребления, Форсаж 7, Мир Юрского периода, Скайуокер. Восход",
+   "screen": {
+    "step": "why_not",
+    "title": "Что не понравилось в «Мстители: Финал»?",
+    "hint": "Один клик: не нравится. Второй: «никогда, ни в чём».",
+    "item": {
+     "id": "tt4154796",
+     "name": "Avengers: Endgame",
+     "ru": "Мстители: Финал",
+     "original": null,
+     "year": 2019,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+     ],
+     "rating": "IMDb 8.4"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "length.long",
+      "label": "длинно, устал смотреть"
+     },
+     {
+      "value": "content.violence",
+      "label": "много крови и жестокости"
+     },
+     {
+      "value": "tension.high",
+      "label": "всё время на нервах"
+     },
+     {
+      "value": "content.disturbing",
+      "label": "неприятно смотреть"
+     },
+     {
+      "value": "aesthetic.effects",
+      "label": "одни спецэффекты, а смотреть нечего"
+     },
+     {
+      "value": "story.complex",
+      "label": "запутался, не понял, что происходит"
+     },
+     {
+      "value": "pace.draggy",
+      "label": "затянуто, скучал"
+     },
+     {
+      "value": "story.predictable",
+      "label": "всё понятно заранее"
+     }
+    ],
+    "categories": [
+     {
+      "value": "world.superhero",
+      "label": "супергерои"
+     },
+     {
+      "value": "world.timetravel",
+      "label": "путешествия во времени"
+     },
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "story.revenge",
+      "label": "месть"
+     },
+     {
+      "value": "world.postapoc",
+      "label": "постапокалипсис"
+     },
+     {
+      "value": "world.space",
+      "label": "космос"
+     }
+    ],
+    "badQuality": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "1 из 2"
+   }
+  },
+  {
+   "note": "why_not «Мстители: Финал (2019)»: complaints offered [длинно, устал смотреть | много крови и жестокости | всё время на нервах | неприятно смотреть | одни спецэффекты, а смотреть нечего | запутался, не понял, что происходит | затянуто, скучал | всё понятно заранее]; categories [супергерои | путешествия во времени | фантастика | месть | постапокалипсис | космос]; persona says: «три часа CGI-драки и шуточек; супергероев — никогда»; chosen [{\"f\":\"aesthetic.effects\",\"hard\":false},{\"f\":\"world.superhero\",\"hard\":true}]; wanted but not offered: humor.silly, story.weak"
+  },
+  {
+   "n": 9,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "world.superhero",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   },
+   "note": "«три часа CGI-драки и шуточек; супергероев — никогда»",
+   "screen": {
+    "step": "why_not",
+    "title": "Что не понравилось в «Трансформеры: Эпоха истребления»?",
+    "hint": "Один клик: не нравится. Второй: «никогда, ни в чём».",
+    "item": {
+     "id": "tt2109248",
+     "name": "Transformers: Age of Extinction",
+     "ru": "Трансформеры: Эпоха истребления",
+     "original": null,
+     "year": 2014,
+     "image": null,
+     "poster": "https://upload.wikimedia.org/wikipedia/en/0/0f/Transformers_Age_of_Extinction_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "kind": "film",
+     "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+     ],
+     "rating": "IMDb 5.6"
+    },
+    "multi": true,
+    "options": [
+     {
+      "value": "length.long",
+      "label": "длинно, устал смотреть"
+     },
+     {
+      "value": "story.weak",
+      "label": "сюжет с дырами"
+     },
+     {
+      "value": "aesthetic.effects",
+      "label": "одни спецэффекты, а смотреть нечего"
+     },
+     {
+      "value": "story.predictable",
+      "label": "всё понятно заранее"
+     },
+     {
+      "value": "pace.draggy",
+      "label": "затянуто, скучал"
+     },
+     {
+      "value": "characters.unlikeable",
+      "label": "герои бесили"
+     },
+     {
+      "value": "ending.weak",
+      "label": "слили концовку"
+     }
+    ],
+    "categories": [
+     {
+      "value": "world.scifi",
+      "label": "фантастика"
+     },
+     {
+      "value": "world.superhero",
+      "label": "супергерои"
+     },
+     {
+      "value": "story.revenge",
+      "label": "месть"
+     },
+     {
+      "value": "world.dystopia",
+      "label": "антиутопия"
+     },
+     {
+      "value": "world.space",
+      "label": "космос"
+     },
+     {
+      "value": "world.postapoc",
+      "label": "постапокалипсис"
+     }
+    ],
+    "badQuality": true,
+    "freeText": true,
+    "canSkip": true,
+    "progress": "2 из 2"
+   }
+  },
+  {
+   "note": "why_not «Трансформеры: Эпоха истребления (2014)»: complaints offered [длинно, устал смотреть | сюжет с дырами | одни спецэффекты, а смотреть нечего | всё понятно заранее | затянуто, скучал | герои бесили | слили концовку]; categories [фантастика | супергерои | месть | антиутопия | космос | постапокалипсис]; persona says: «шум, взрывы, сюжета нет»; chosen [{\"f\":\"aesthetic.effects\",\"hard\":false},{\"f\":\"story.weak\",\"hard\":false},{\"f\":\"characters.unlikeable\",\"hard\":false}]; wanted but not offered: humor.silly"
+  },
+  {
+   "n": 10,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "characters.unlikeable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "note": "«шум, взрывы, сюжета нет»",
+   "screen": {
+    "step": "today",
+    "title": "Что сегодня?",
+    "hint": "Это только на сегодня, во вкус не записывается.",
+    "multi": true,
+    "canSkip": true,
+    "options": [
+     {
+      "value": "relax",
+      "label": "Хочу расслабиться"
+     },
+     {
+      "value": "laugh",
+      "label": "Хочу посмеяться"
+     },
+     {
+      "value": "thrill",
+      "label": "Хочу пощекотать нервы"
+     },
+     {
+      "value": "cry",
+      "label": "Хочу, чтобы пробрало"
+     },
+     {
+      "value": "think",
+      "label": "Хочу подумать"
+     },
+     {
+      "value": "background",
+      "label": "Фоном, не вникая"
+     },
+     {
+      "value": "family",
+      "label": "Смотрю с детьми"
+     },
+     {
+      "value": "short",
+      "label": "Коротко, на один вечер"
+     },
+     {
+      "value": "binge",
+      "label": "Хочу засесть надолго"
+     }
+    ],
+    "avoid": [
+     {
+      "value": "dark",
+      "label": "Ничего мрачного"
+     },
+     {
+      "value": "scary",
+      "label": "Ничего страшного"
+     },
+     {
+      "value": "violence",
+      "label": "Без жестокости"
+     },
+     {
+      "value": "sad",
+      "label": "Без слёз"
+     },
+     {
+      "value": "long",
+      "label": "Ничего длинного"
+     }
+    ]
+   }
+  },
+  {
+   "note": "today offered moods [Хочу расслабиться | Хочу посмеяться | Хочу пощекотать нервы | Хочу, чтобы пробрало | Хочу подумать | Фоном, не вникая | Смотрю с детьми | Коротко, на один вечер | Хочу засесть надолго], avoid [Ничего мрачного | Ничего страшного | Без жестокости | Без слёз | Ничего длинного]; persona: «Хочу подумать». Хотел бы сказать «медленное, малоизвестное, чего не видел, без франшиз» — такого нет"
+  },
+  {
+   "n": 11,
+   "action": {
+    "type": "today",
+    "values": [
+     "think"
+    ],
+    "avoid": []
+   },
+   "note": "«Хочу подумать». Хотел бы сказать «медленное, малоизвестное, чего не видел, без франшиз» — такого нет",
+   "screen": {
+    "step": "playback",
+    "title": "Вот как я тебя вижу",
+    "taste": {
+     "confirmed": [
+      {
+       "f": "tone.atmospheric",
+       "label": "атмосферное",
+       "w": 2.25,
+       "sources": [
+        "Малхолланд Драйв",
+        "Сталкер",
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0166924",
+        "tt0079944",
+        "tt0118694"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.stylized",
+       "label": "стильно и необычно снято",
+       "w": 1.88,
+       "sources": [
+        "Малхолланд Драйв",
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0166924",
+        "tt0118694"
+       ],
+       "preference": false
+      },
+      {
+       "f": "pace.slow",
+       "label": "неторопливое",
+       "w": 1.88,
+       "sources": [
+        "Сталкер",
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0079944",
+        "tt0118694"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.beautiful",
+       "label": "красивая картинка",
+       "w": 1.38,
+       "sources": [
+        "Сталкер",
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0079944",
+        "tt0118694"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.nonlinear",
+       "label": "нелинейный сюжет",
+       "w": 1.32,
+       "sources": [
+        "Малхолланд Драйв"
+       ],
+       "ids": [
+        "tt0166924"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.dark",
+       "label": "мрачная атмосфера",
+       "w": 1.32,
+       "sources": [
+        "Малхолланд Драйв"
+       ],
+       "ids": [
+        "tt0166924"
+       ],
+       "preference": false
+      },
+      {
+       "f": "cognitive.high",
+       "label": "заставляет думать",
+       "w": 1.32,
+       "sources": [
+        "Сталкер"
+       ],
+       "ids": [
+        "tt0079944"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.melancholic",
+       "label": "грустное, пробирает",
+       "w": 1.32,
+       "sources": [
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0118694"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.creepy",
+       "label": "жуть и страх",
+       "w": 1.21,
+       "sources": [
+        "Малхолланд Драйв"
+       ],
+       "ids": [
+        "tt0166924"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.romance",
+       "label": "любовная линия",
+       "w": 1.16,
+       "sources": [
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0118694"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.mystery",
+       "label": "загадка и расследование",
+       "w": 1.01,
+       "sources": [
+        "Малхолланд Драйв"
+       ],
+       "ids": [
+        "tt0166924"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.dialogue",
+       "label": "держится на диалогах",
+       "w": 0.95,
+       "sources": [
+        "Сталкер"
+       ],
+       "ids": [
+        "tt0079944"
+       ],
+       "preference": false
+      },
+      {
+       "f": "tone.whimsical",
+       "label": "странное, причудливое",
+       "w": 0.82,
+       "sources": [
+        "Малхолланд Драйв"
+       ],
+       "ids": [
+        "tt0166924"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.complex",
+       "label": "сложный, надо вникать",
+       "w": 0.82,
+       "sources": [
+        "Малхолланд Драйв"
+       ],
+       "ids": [
+        "tt0166924"
+       ],
+       "preference": false
+      },
+      {
+       "f": "world.scifi",
+       "label": "фантастика",
+       "w": 0.82,
+       "sources": [
+        "Сталкер"
+       ],
+       "ids": [
+        "tt0079944"
+       ],
+       "preference": false
+      },
+      {
+       "f": "aesthetic.soundtrack",
+       "label": "сильная музыка",
+       "w": 0.82,
+       "sources": [
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0118694"
+       ],
+       "preference": false
+      }
+     ],
+     "inferred": [
+      {
+       "f": "tension.low",
+       "label": "спокойное, без нервов",
+       "w": 0.5,
+       "sources": [
+        "Сталкер",
+        "Любовное настроение",
+        "Чyнгкингский экспресс",
+        "Персона",
+        "Париж, Техас",
+        "Древо жизни",
+        "Синий бархат",
+        "Зеркало",
+        "2046"
+       ],
+       "ids": [
+        "tt0079944",
+        "tt0118694",
+        "tt0109424",
+        "tt0060827",
+        "tt0087884",
+        "tt0478304",
+        "tt0090756",
+        "tt0072443",
+        "tt0212712"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.family",
+       "label": "семья и отношения",
+       "w": 0.28,
+       "sources": [
+        "Париж, Техас",
+        "Древо жизни"
+       ],
+       "ids": [
+        "tt0087884",
+        "tt0478304"
+       ],
+       "preference": false
+      },
+      {
+       "f": "humor.dark",
+       "label": "чёрный юмор",
+       "w": 0.24,
+       "sources": [
+        "Малхолланд Драйв",
+        "Синий бархат"
+       ],
+       "ids": [
+        "tt0166924",
+        "tt0090756"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.memorable",
+       "label": "живые, сложные персонажи",
+       "w": 0.22,
+       "sources": [
+        "Персона",
+        "Париж, Техас"
+       ],
+       "ids": [
+        "tt0060827",
+        "tt0087884"
+       ],
+       "preference": false
+      },
+      {
+       "f": "ending.sad",
+       "label": "горький финал",
+       "w": 0.21,
+       "sources": [
+        "Любовное настроение",
+        "Париж, Техас"
+       ],
+       "ids": [
+        "tt0118694",
+        "tt0087884"
+       ],
+       "preference": false
+      },
+      {
+       "f": "length.short",
+       "label": "короткий",
+       "w": 0.2,
+       "sources": [
+        "Персона"
+       ],
+       "ids": [
+        "tt0060827"
+       ],
+       "preference": false
+      },
+      {
+       "f": "world.smalltown",
+       "label": "маленький город",
+       "w": 0.17,
+       "sources": [
+        "Синий бархат"
+       ],
+       "ids": [
+        "tt0090756"
+       ],
+       "preference": false
+      },
+      {
+       "f": "world.music",
+       "label": "музыка и мюзикл",
+       "w": 0.1,
+       "sources": [
+        "Любовное настроение"
+       ],
+       "ids": [
+        "tt0118694"
+       ],
+       "preference": false
+      }
+     ],
+     "dislikes": [
+      {
+       "f": "aesthetic.effects",
+       "label": "одни спецэффекты, а смотреть нечего",
+       "w": 2,
+       "sources": [
+        "Мстители: Финал",
+        "Трансформеры: Эпоха истребления"
+       ],
+       "ids": [
+        "tt4154796",
+        "tt2109248"
+       ],
+       "preference": false
+      },
+      {
+       "f": "story.weak",
+       "label": "сюжет с дырами",
+       "w": 1,
+       "sources": [
+        "Трансформеры: Эпоха истребления"
+       ],
+       "ids": [
+        "tt2109248"
+       ],
+       "preference": false
+      },
+      {
+       "f": "characters.unlikeable",
+       "label": "герои бесили",
+       "w": 1,
+       "sources": [
+        "Трансформеры: Эпоха истребления"
+       ],
+       "ids": [
+        "tt2109248"
+       ],
+       "preference": false
+      }
+     ],
+     "hardNo": [
+      {
+       "f": "world.superhero",
+       "label": "супергерои",
+       "w": 0,
+       "sources": [
+        "Мстители: Финал"
+       ],
+       "ids": [
+        "tt4154796"
+       ],
+       "preference": false
+      }
+     ],
+     "consumed": 15
+    },
+    "today": [
+     "Хочу подумать"
+    ],
+    "lines": [
+     "Тебе важно: атмосферное (Малхолланд Драйв, Сталкер, Любовное настроение); стильно и необычно снято (Малхолланд Драйв, Любовное настроение); неторопливое (Сталкер, Любовное настроение); красивая картинка (Сталкер, Любовное настроение); нелинейный сюжет (Малхолланд Драйв); мрачная атмосфера (Малхолланд Драйв); заставляет думать (Сталкер); грустное, пробирает (Любовное настроение); жуть и страх (Малхолланд Драйв); любовная линия (Любовное настроение); загадка и расследование (Малхолланд Драйв); держится на диалогах (Сталкер); странное, причудливое (Малхолланд Драйв); сложный, надо вникать (Малхолланд Драйв); фантастика (Сталкер); сильная музыка (Любовное настроение).",
+     "Не нравится: одни спецэффекты, а смотреть нечего (Мстители: Финал, Трансформеры: Эпоха истребления); сюжет с дырами (Трансформеры: Эпоха истребления); герои бесили (Трансформеры: Эпоха истребления).",
+     "Никогда: супергерои.",
+     "Сегодня: Хочу подумать.",
+     "Уже смотрел: 15, это не предложу."
+    ],
+    "options": [
+     {
+      "value": "confirm",
+      "label": "Да, подбирай"
+     },
+     {
+      "value": "more_liked",
+      "label": "Добавлю ещё, что зашло"
+     }
+    ]
+   }
+  },
+  {
+   "note": "playback lines:\n  > Тебе важно: атмосферное (Малхолланд Драйв, Сталкер, Любовное настроение); стильно и необычно снято (Малхолланд Драйв, Любовное настроение); неторопливое (Сталкер, Любовное настроение); красивая картинка (Сталкер, Любовное настроение); нелинейный сюжет (Малхолланд Драйв); мрачная атмосфера (Малхолланд Драйв); заставляет думать (Сталкер); грустное, пробирает (Любовное настроение); жуть и страх (Малхолланд Драйв); любовная линия (Любовное настроение); загадка и расследование (Малхолланд Драйв); держится на диалогах (Сталкер); странное, причудливое (Малхолланд Драйв); сложный, надо вникать (Малхолланд Драйв); фантастика (Сталкер); сильная музыка (Любовное настроение).\n  > Не нравится: одни спецэффекты, а смотреть нечего (Мстители: Финал, Трансформеры: Эпоха истребления); сюжет с дырами (Трансформеры: Эпоха истребления); герои бесили (Трансформеры: Эпоха истребления).\n  > Никогда: супергерои.\n  > Сегодня: Хочу подумать.\n  > Уже смотрел: 15, это не предложу."
+  },
+  {
+   "n": 12,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "note": "Да, подбирай",
+   "screen": {
+    "step": "result",
+    "title": "Вот что я подобрал",
+    "result": {
+     "top": {
+      "id": "tt0246578",
+      "domain": "film",
+      "name": "Donnie Darko",
+      "ru": "Донни Дарко",
+      "year": 2001,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Sci-Fi"
+      ],
+      "runtime": 113,
+      "seasons": null,
+      "episodes": null,
+      "status": null,
+      "rating": "IMDb 8",
+      "link": "https://www.imdb.com/title/tt0246578/",
+      "price": null,
+      "label": "likely",
+      "labelText": "Вероятно подойдёт",
+      "score": 13.019,
+      "parts": {
+       "fit": 12.079,
+       "penalty": 0.406,
+       "mood": 1.094,
+       "prior": 0.253
+      },
+      "mainAspect": "tone",
+      "explanation": {
+       "reasons": [
+        {
+         "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+         "factIds": [
+          "match:tone.atmospheric"
+         ]
+        },
+        {
+         "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+         "factIds": [
+          "match:aesthetic.stylized"
+         ]
+        },
+        {
+         "text": "Ты отметил «нелинейный сюжет» в Малхолланд Драйв, здесь это тоже есть",
+         "factIds": [
+          "match:story.nonlinear"
+         ]
+        },
+        {
+         "text": "Ты отметил «мрачная атмосфера» в Малхолланд Драйв, здесь это тоже есть",
+         "factIds": [
+          "match:tone.dark"
+         ]
+        },
+        {
+         "text": "Как в Малхолланд Драйв и Синий бархат, здесь «чёрный юмор». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:humor.dark"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Как в Синий бархат, здесь «маленький город». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:world.smalltown"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+         "factIds": [
+          "mood:cognitive.high"
+         ]
+        },
+        {
+         "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+         "factIds": [
+          "mood:story.complex"
+         ]
+        }
+       ],
+       "risks": [
+        {
+         "text": "В Трансформеры: Эпоха истребления тебе не понравилось: «сюжет с дырами». Здесь это тоже есть",
+         "factIds": [
+          "risk:dislike:story.weak"
+         ]
+        },
+        {
+         "text": "Зрители жалуются: слабый финал",
+         "factIds": [
+          "risk:flaw:ending.weak"
+         ]
+        }
+       ],
+       "info": [
+        {
+         "text": "IMDb 8 из 10, 923 247 оценок",
+         "factIds": [
+          "fact:reviews"
+         ]
+        },
+        {
+         "text": "113 мин",
+         "factIds": [
+          "fact:runtime"
+         ]
+        }
+       ]
+      },
+      "facts": [
+       {
+        "id": "match:tone.atmospheric",
+        "type": "match",
+        "f": "tone.atmospheric",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв",
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "evidence": [
+         {
+          "id": "genome:atmospheric",
+          "kind": "genome",
+          "q": "atmospheric",
+          "rel": 0.772
+         },
+         {
+          "id": "usertag:atmospheric",
+          "kind": "usertag",
+          "q": "atmospheric",
+          "n": 115
+         }
+        ],
+        "contribution": 1.654601717638346
+       },
+       {
+        "id": "match:aesthetic.stylized",
+        "type": "match",
+        "f": "aesthetic.stylized",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв",
+         "Любовное настроение"
+        ],
+        "evidence": [
+         {
+          "id": "genome:art house",
+          "kind": "genome",
+          "q": "art house",
+          "rel": 0.634
+         },
+         {
+          "id": "genome:artistic",
+          "kind": "genome",
+          "q": "artistic",
+          "rel": 0.566
+         }
+        ],
+        "contribution": 1.3296174095636173
+       },
+       {
+        "id": "match:story.nonlinear",
+        "type": "match",
+        "f": "story.nonlinear",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "evidence": [
+         {
+          "id": "genome:alternate endings",
+          "kind": "genome",
+          "q": "alternate endings",
+          "rel": 0.637
+         },
+         {
+          "id": "genome:multiple storylines",
+          "kind": "genome",
+          "q": "multiple storylines",
+          "rel": 0.4
+         }
+        ],
+        "contribution": 1.04447788752215
+       },
+       {
+        "id": "match:tone.dark",
+        "type": "match",
+        "f": "tone.dark",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "evidence": [
+         {
+          "id": "genome:bleak",
+          "kind": "genome",
+          "q": "bleak",
+          "rel": 0.594
+         },
+         {
+          "id": "genome:dark",
+          "kind": "genome",
+          "q": "dark",
+          "rel": 0.944
+         }
+        ],
+        "contribution": 0.951939489064864
+       },
+       {
+        "id": "match:humor.dark",
+        "type": "match",
+        "f": "humor.dark",
+        "basis": "inferred",
+        "sources": [
+         "Малхолланд Драйв",
+         "Синий бархат"
+        ],
+        "evidence": [
+         {
+          "id": "genome:black comedy",
+          "kind": "genome",
+          "q": "black comedy",
+          "rel": 0.364
+         },
+         {
+          "id": "genome:dark comedy",
+          "kind": "genome",
+          "q": "dark comedy",
+          "rel": 0.444
+         }
+        ],
+        "contribution": 0.16683015959999997
+       },
+       {
+        "id": "match:world.smalltown",
+        "type": "match",
+        "f": "world.smalltown",
+        "basis": "inferred",
+        "sources": [
+         "Синий бархат"
+        ],
+        "evidence": [
+         {
+          "id": "genome:suburbia",
+          "kind": "genome",
+          "q": "suburbia",
+          "rel": 0.803
+         }
+        ],
+        "contribution": 0.09995158124999998
+       },
+       {
+        "id": "mood:cognitive.high",
+        "type": "mood",
+        "f": "cognitive.high",
+        "why": [
+         "Хочу подумать"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         }
+        ]
+       },
+       {
+        "id": "mood:story.complex",
+        "type": "mood",
+        "f": "story.complex",
+        "why": [
+         "Хочу подумать"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         }
+        ]
+       },
+       {
+        "id": "risk:dislike:story.weak",
+        "type": "risk_dislike",
+        "f": "story.weak",
+        "sources": [
+         "Трансформеры: Эпоха истребления"
+        ],
+        "evidence": [
+         {
+          "id": "genome:plot holes",
+          "kind": "genome",
+          "q": "plot holes",
+          "rel": 0.564
+         }
+        ]
+       },
+       {
+        "id": "risk:flaw:ending.weak",
+        "type": "risk_flaw",
+        "f": "ending.weak",
+        "evidence": [
+         {
+          "id": "genome:bad ending",
+          "kind": "genome",
+          "q": "bad ending",
+          "rel": 0.786
+         }
+        ]
+       },
+       {
+        "id": "fact:reviews",
+        "type": "fact",
+        "ratio": 0.8,
+        "total": 923247,
+        "desc": "IMDb 8"
+       },
+       {
+        "id": "fact:runtime",
+        "type": "fact",
+        "runtime": 113
+       }
+      ]
+     },
+     "alternatives": [
+      {
+       "id": "tt1441395",
+       "domain": "film",
+       "name": "Under the Skin",
+       "ru": "Побудь в моей шкуре",
+       "year": 2013,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/6/64/Under_the_Skin_poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Horror",
+        "Mystery"
+       ],
+       "runtime": 108,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 6.3",
+       "link": "https://www.imdb.com/title/tt1441395/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 12.964,
+       "parts": {
+        "fit": 11.91,
+        "penalty": 0,
+        "mood": 0.981,
+        "prior": 0.074
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «неторопливое» в Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:pace.slow"
+          ]
+         },
+         {
+          "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ]
+         },
+         {
+          "text": "Ты отметил «мрачная атмосфера» в Малхолланд Драйв, здесь это тоже есть",
+          "factIds": [
+           "match:tone.dark"
+          ]
+         },
+         {
+          "text": "Как в Сталкер, Любовное настроение, Чyнгкингский экспресс, Персона, Париж, Техас, Древо жизни, Синий бархат, Зеркало и 2046, здесь «спокойное, без нервов». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tension.low"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Синий бархат, здесь «суровый реализм». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tone.gritty"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+          "factIds": [
+           "mood:cognitive.high"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [
+         {
+          "text": "Зрители жалуются: затянуто, скучно",
+          "factIds": [
+           "risk:flaw:pace.draggy"
+          ]
+         },
+         {
+          "text": "Оценка IMDb 6.3: ниже, чем у большинства в каталоге",
+          "factIds": [
+           "risk:quality"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 6.3 из 10, 174 059 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "108 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.648
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 41
+          }
+         ],
+         "contribution": 1.9217209264092288
+        },
+        {
+         "id": "match:pace.slow",
+         "type": "match",
+         "f": "pace.slow",
+         "basis": "confirmed",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.991
+          },
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.885
+          }
+         ],
+         "contribution": 1.7410407169108766
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.991
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.737
+          }
+         ],
+         "contribution": 1.312786809442559
+        },
+        {
+         "id": "match:tone.dark",
+         "type": "match",
+         "f": "tone.dark",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bleak",
+           "kind": "genome",
+           "q": "bleak",
+           "rel": 0.837
+          },
+          {
+           "id": "genome:dark",
+           "kind": "genome",
+           "q": "dark",
+           "rel": 0.692
+          }
+         ],
+         "contribution": 0.951939489064864
+        },
+        {
+         "id": "match:tension.low",
+         "type": "match",
+         "f": "tension.low",
+         "basis": "inferred",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение",
+          "Чyнгкингский экспресс",
+          "Персона",
+          "Париж, Техас",
+          "Древо жизни",
+          "Синий бархат",
+          "Зеркало",
+          "2046"
+         ],
+         "evidence": [
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.885
+          }
+         ],
+         "contribution": 0.3178875
+        },
+        {
+         "id": "match:tone.gritty",
+         "type": "match",
+         "f": "tone.gritty",
+         "basis": "inferred",
+         "sources": [
+          "Синий бархат"
+         ],
+         "evidence": [
+          {
+           "id": "genome:harsh",
+           "kind": "genome",
+           "q": "harsh",
+           "rel": 0.426
+          },
+          {
+           "id": "genome:visceral",
+           "kind": "genome",
+           "q": "visceral",
+           "rel": 0.735
+          }
+         ],
+         "contribution": 0.030526996500000004
+        },
+        {
+         "id": "mood:cognitive.high",
+         "type": "mood",
+         "f": "cognitive.high",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.923
+          }
+         ]
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.923
+          }
+         ]
+        },
+        {
+         "id": "risk:flaw:pace.draggy",
+         "type": "risk_flaw",
+         "f": "pace.draggy",
+         "evidence": [
+          {
+           "id": "genome:boring!",
+           "kind": "genome",
+           "q": "boring!",
+           "rel": 0.673
+          }
+         ]
+        },
+        {
+         "id": "risk:quality",
+         "type": "risk_quality",
+         "ratio": 0.63,
+         "desc": "IMDb 6.3"
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.63,
+         "total": 174059,
+         "desc": "IMDb 6.3"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 108
+        }
+       ]
+      },
+      {
+       "id": "tt0414993",
+       "domain": "film",
+       "name": "The Fountain",
+       "ru": "Фонтан",
+       "year": 2006,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/e/ee/Fountain_poster_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Mystery",
+        "Romance"
+       ],
+       "runtime": 97,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.1",
+       "link": "https://www.imdb.com/title/tt0414993/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 12.821,
+       "parts": {
+        "fit": 11.585,
+        "penalty": 0.018,
+        "mood": 1.102,
+        "prior": 0.151
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «неторопливое» в Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:pace.slow"
+          ]
+         },
+         {
+          "text": "Ты отметил «нелинейный сюжет» в Малхолланд Драйв, здесь это тоже есть",
+          "factIds": [
+           "match:story.nonlinear"
+          ]
+         },
+         {
+          "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ]
+         },
+         {
+          "text": "Как в Сталкер, Любовное настроение, Чyнгкингский экспресс, Персона, Париж, Техас, Древо жизни, Синий бархат, Зеркало и 2046, здесь «спокойное, без нервов». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tension.low"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Любовное настроение и Париж, Техас, здесь «горький финал». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:ending.sad"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+          "factIds": [
+           "mood:cognitive.high"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 7.1 из 10, 259 993 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "97 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.622
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 81
+          }
+         ],
+         "contribution": 1.9217209264092288
+        },
+        {
+         "id": "match:pace.slow",
+         "type": "match",
+         "f": "pace.slow",
+         "basis": "confirmed",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.642
+          },
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.907
+          }
+         ],
+         "contribution": 1.3928325735287013
+        },
+        {
+         "id": "match:story.nonlinear",
+         "type": "match",
+         "f": "story.nonlinear",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв"
+         ],
+         "evidence": [
+          {
+           "id": "genome:multiple storylines",
+           "kind": "genome",
+           "q": "multiple storylines",
+           "rel": 0.588
+          },
+          {
+           "id": "genome:non-linear",
+           "kind": "genome",
+           "q": "non-linear",
+           "rel": 0.814
+          }
+         ],
+         "contribution": 1.3564852023049143
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.642
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.912
+          }
+         ],
+         "contribution": 1.122040008070563
+        },
+        {
+         "id": "match:tension.low",
+         "type": "match",
+         "f": "tension.low",
+         "basis": "inferred",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение",
+          "Чyнгкингский экспресс",
+          "Персона",
+          "Париж, Техас",
+          "Древо жизни",
+          "Синий бархат",
+          "Зеркало",
+          "2046"
+         ],
+         "evidence": [
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.907
+          }
+         ],
+         "contribution": 0.3178875
+        },
+        {
+         "id": "match:ending.sad",
+         "type": "match",
+         "f": "ending.sad",
+         "basis": "inferred",
+         "sources": [
+          "Любовное настроение",
+          "Париж, Техас"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.472
+          },
+          {
+           "id": "genome:tragedy",
+           "kind": "genome",
+           "q": "tragedy",
+           "rel": 0.457
+          }
+         ],
+         "contribution": 0.027813005639999992
+        },
+        {
+         "id": "mood:cognitive.high",
+         "type": "mood",
+         "f": "cognitive.high",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.98
+          }
+         ]
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.98
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.71,
+         "total": 259993,
+         "desc": "IMDb 7.1"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 97
+        }
+       ]
+      },
+      {
+       "id": "tt0069762",
+       "domain": "film",
+       "name": "Badlands",
+       "ru": "Пустоши",
+       "year": 1973,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/e/e6/Badlands_movie_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+       ],
+       "runtime": 94,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.7",
+       "link": "https://www.imdb.com/title/tt0069762/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 12.253,
+       "parts": {
+        "fit": 11.249,
+        "penalty": 0,
+        "mood": 0.816,
+        "prior": 0.188
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ]
+         },
+         {
+          "text": "Ты отметил «неторопливое» в Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:pace.slow"
+          ]
+         },
+         {
+          "text": "Ты отметил «мрачная атмосфера» в Малхолланд Драйв, здесь это тоже есть",
+          "factIds": [
+           "match:tone.dark"
+          ]
+         },
+         {
+          "text": "Как в Сталкер, Любовное настроение, Чyнгкингский экспресс, Персона, Париж, Техас, Древо жизни, Синий бархат, Зеркало и 2046, здесь «спокойное, без нервов». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tension.low"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Персона и Париж, Техас, здесь «живые, сложные персонажи». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:characters.memorable"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+          "factIds": [
+           "mood:cognitive.high"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 7.7 из 10, 85 804 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "94 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.722
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 19
+          }
+         ],
+         "contribution": 1.9217209264092288
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.653
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.657
+          }
+         ],
+         "contribution": 1.4025500100882038
+        },
+        {
+         "id": "match:pace.slow",
+         "type": "match",
+         "f": "pace.slow",
+         "basis": "confirmed",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.653
+          },
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.976
+          }
+         ],
+         "contribution": 1.3928325735287013
+        },
+        {
+         "id": "match:tone.dark",
+         "type": "match",
+         "f": "tone.dark",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bleak",
+           "kind": "genome",
+           "q": "bleak",
+           "rel": 0.952
+          },
+          {
+           "id": "genome:dark",
+           "kind": "genome",
+           "q": "dark",
+           "rel": 0.66
+          }
+         ],
+         "contribution": 0.951939489064864
+        },
+        {
+         "id": "match:tension.low",
+         "type": "match",
+         "f": "tension.low",
+         "basis": "inferred",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение",
+          "Чyнгкингский экспресс",
+          "Персона",
+          "Париж, Техас",
+          "Древо жизни",
+          "Синий бархат",
+          "Зеркало",
+          "2046"
+         ],
+         "evidence": [
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.976
+          },
+          {
+           "id": "genome:understated",
+           "kind": "genome",
+           "q": "understated",
+           "rel": 0.517
+          }
+         ],
+         "contribution": 0.36578255
+        },
+        {
+         "id": "match:characters.memorable",
+         "type": "match",
+         "f": "characters.memorable",
+         "basis": "inferred",
+         "sources": [
+          "Персона",
+          "Париж, Техас"
+         ],
+         "evidence": [
+          {
+           "id": "genome:character study",
+           "kind": "genome",
+           "q": "character study",
+           "rel": 0.817
+          }
+         ],
+         "contribution": 0.15382160415
+        },
+        {
+         "id": "mood:cognitive.high",
+         "type": "mood",
+         "f": "cognitive.high",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.666
+          }
+         ]
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.666
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.77,
+         "total": 85804,
+         "desc": "IMDb 7.7"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 94
+        }
+       ]
+      }
+     ],
+     "fork": {
+      "id": "fork:world.timetravel|tension.low",
+      "text": "Что тебе важнее?",
+      "options": [
+       {
+        "f": "world.timetravel",
+        "label": "путешествия во времени",
+        "favours": "tt0246578"
+       },
+       {
+        "f": "tension.low",
+        "label": "спокойное, без нервов",
+        "favours": "tt1441395"
+       }
+      ],
+      "margin": 0.05560935476633411
+     },
+     "sieves": [
+      {
+       "id": 1,
+       "name": "Можно ли",
+       "removed": 0
+      },
+      {
+       "id": 2,
+       "name": "Было ли",
+       "removed": 15
+      },
+      {
+       "id": 3,
+       "name": "Сделано ли нормально",
+       "removed": 10287
+      },
+      {
+       "id": 4,
+       "name": "Моё ли (жёсткие стопы)",
+       "removed": 145
+      },
+      {
+       "id": 5,
+       "name": "Подходит ли сегодня (обязательное)",
+       "removed": 0
+      }
+     ],
+     "considered": 21679,
+     "taste": {
+      "confirmed": [
+       {
+        "f": "tone.atmospheric",
+        "label": "атмосферное",
+        "w": 2.25,
+        "sources": [
+         "Малхолланд Драйв",
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0166924",
+         "tt0079944",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.stylized",
+        "label": "стильно и необычно снято",
+        "w": 1.88,
+        "sources": [
+         "Малхолланд Драйв",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0166924",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "pace.slow",
+        "label": "неторопливое",
+        "w": 1.88,
+        "sources": [
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0079944",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.beautiful",
+        "label": "красивая картинка",
+        "w": 1.38,
+        "sources": [
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0079944",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.nonlinear",
+        "label": "нелинейный сюжет",
+        "w": 1.32,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.dark",
+        "label": "мрачная атмосфера",
+        "w": 1.32,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "cognitive.high",
+        "label": "заставляет думать",
+        "w": 1.32,
+        "sources": [
+         "Сталкер"
+        ],
+        "ids": [
+         "tt0079944"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.melancholic",
+        "label": "грустное, пробирает",
+        "w": 1.32,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.creepy",
+        "label": "жуть и страх",
+        "w": 1.21,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.romance",
+        "label": "любовная линия",
+        "w": 1.16,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.mystery",
+        "label": "загадка и расследование",
+        "w": 1.01,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.dialogue",
+        "label": "держится на диалогах",
+        "w": 0.95,
+        "sources": [
+         "Сталкер"
+        ],
+        "ids": [
+         "tt0079944"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.whimsical",
+        "label": "странное, причудливое",
+        "w": 0.82,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.complex",
+        "label": "сложный, надо вникать",
+        "w": 0.82,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.scifi",
+        "label": "фантастика",
+        "w": 0.82,
+        "sources": [
+         "Сталкер"
+        ],
+        "ids": [
+         "tt0079944"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.soundtrack",
+        "label": "сильная музыка",
+        "w": 0.82,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       }
+      ],
+      "inferred": [
+       {
+        "f": "tension.low",
+        "label": "спокойное, без нервов",
+        "w": 0.5,
+        "sources": [
+         "Сталкер",
+         "Любовное настроение",
+         "Чyнгкингский экспресс",
+         "Персона",
+         "Париж, Техас",
+         "Древо жизни",
+         "Синий бархат",
+         "Зеркало",
+         "2046"
+        ],
+        "ids": [
+         "tt0079944",
+         "tt0118694",
+         "tt0109424",
+         "tt0060827",
+         "tt0087884",
+         "tt0478304",
+         "tt0090756",
+         "tt0072443",
+         "tt0212712"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.family",
+        "label": "семья и отношения",
+        "w": 0.28,
+        "sources": [
+         "Париж, Техас",
+         "Древо жизни"
+        ],
+        "ids": [
+         "tt0087884",
+         "tt0478304"
+        ],
+        "preference": false
+       },
+       {
+        "f": "humor.dark",
+        "label": "чёрный юмор",
+        "w": 0.24,
+        "sources": [
+         "Малхолланд Драйв",
+         "Синий бархат"
+        ],
+        "ids": [
+         "tt0166924",
+         "tt0090756"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.memorable",
+        "label": "живые, сложные персонажи",
+        "w": 0.22,
+        "sources": [
+         "Персона",
+         "Париж, Техас"
+        ],
+        "ids": [
+         "tt0060827",
+         "tt0087884"
+        ],
+        "preference": false
+       },
+       {
+        "f": "ending.sad",
+        "label": "горький финал",
+        "w": 0.21,
+        "sources": [
+         "Любовное настроение",
+         "Париж, Техас"
+        ],
+        "ids": [
+         "tt0118694",
+         "tt0087884"
+        ],
+        "preference": false
+       },
+       {
+        "f": "length.short",
+        "label": "короткий",
+        "w": 0.2,
+        "sources": [
+         "Персона"
+        ],
+        "ids": [
+         "tt0060827"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.smalltown",
+        "label": "маленький город",
+        "w": 0.17,
+        "sources": [
+         "Синий бархат"
+        ],
+        "ids": [
+         "tt0090756"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.music",
+        "label": "музыка и мюзикл",
+        "w": 0.1,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       }
+      ],
+      "dislikes": [
+       {
+        "f": "aesthetic.effects",
+        "label": "одни спецэффекты, а смотреть нечего",
+        "w": 2,
+        "sources": [
+         "Мстители: Финал",
+         "Трансформеры: Эпоха истребления"
+        ],
+        "ids": [
+         "tt4154796",
+         "tt2109248"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.weak",
+        "label": "сюжет с дырами",
+        "w": 1,
+        "sources": [
+         "Трансформеры: Эпоха истребления"
+        ],
+        "ids": [
+         "tt2109248"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.unlikeable",
+        "label": "герои бесили",
+        "w": 1,
+        "sources": [
+         "Трансформеры: Эпоха истребления"
+        ],
+        "ids": [
+         "tt2109248"
+        ],
+        "preference": false
+       }
+      ],
+      "hardNo": [
+       {
+        "f": "world.superhero",
+        "label": "супергерои",
+        "w": 0,
+        "sources": [
+         "Мстители: Финал"
+        ],
+        "ids": [
+         "tt4154796"
+        ],
+        "preference": false
+       }
+      ],
+      "consumed": 15
+     }
+    }
+   }
+  },
+  {
+   "note": "fork: «Что тебе важнее?» путешествия во времени / спокойное, без нервов → persona answers world.timetravel"
+  },
+  {
+   "n": 13,
+   "action": {
+    "type": "fork",
+    "f": "world.timetravel"
+   },
+   "note": "ответ на развилку",
+   "screen": {
+    "step": "result",
+    "title": "Вот что я подобрал",
+    "result": {
+     "top": {
+      "id": "tt0246578",
+      "domain": "film",
+      "name": "Donnie Darko",
+      "ru": "Донни Дарко",
+      "year": 2001,
+      "image": null,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "kind": "film",
+      "genres": [
+       "Drama",
+       "Mystery",
+       "Sci-Fi"
+      ],
+      "runtime": 113,
+      "seasons": null,
+      "episodes": null,
+      "status": null,
+      "rating": "IMDb 8",
+      "link": "https://www.imdb.com/title/tt0246578/",
+      "price": null,
+      "label": "likely",
+      "labelText": "Вероятно подойдёт",
+      "score": 13.719,
+      "parts": {
+       "fit": 12.778,
+       "penalty": 0.406,
+       "mood": 1.094,
+       "prior": 0.253
+      },
+      "mainAspect": "tone",
+      "explanation": {
+       "reasons": [
+        {
+         "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+         "factIds": [
+          "match:tone.atmospheric"
+         ]
+        },
+        {
+         "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+         "factIds": [
+          "match:aesthetic.stylized"
+         ]
+        },
+        {
+         "text": "Ты отметил «нелинейный сюжет» в Малхолланд Драйв, здесь это тоже есть",
+         "factIds": [
+          "match:story.nonlinear"
+         ]
+        },
+        {
+         "text": "Ты отметил «мрачная атмосфера» в Малхолланд Драйв, здесь это тоже есть",
+         "factIds": [
+          "match:tone.dark"
+         ]
+        },
+        {
+         "text": "Как в Малхолланд Драйв и Синий бархат, здесь «чёрный юмор». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:humor.dark"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Как в Синий бархат, здесь «маленький город». Ты это не отмечал, поэтому вес слабый",
+         "factIds": [
+          "match:world.smalltown"
+         ],
+         "weak": true
+        },
+        {
+         "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+         "factIds": [
+          "mood:cognitive.high"
+         ]
+        },
+        {
+         "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+         "factIds": [
+          "mood:story.complex"
+         ]
+        }
+       ],
+       "risks": [
+        {
+         "text": "В Трансформеры: Эпоха истребления тебе не понравилось: «сюжет с дырами». Здесь это тоже есть",
+         "factIds": [
+          "risk:dislike:story.weak"
+         ]
+        },
+        {
+         "text": "Зрители жалуются: слабый финал",
+         "factIds": [
+          "risk:flaw:ending.weak"
+         ]
+        }
+       ],
+       "info": [
+        {
+         "text": "IMDb 8 из 10, 923 247 оценок",
+         "factIds": [
+          "fact:reviews"
+         ]
+        },
+        {
+         "text": "113 мин",
+         "factIds": [
+          "fact:runtime"
+         ]
+        }
+       ]
+      },
+      "facts": [
+       {
+        "id": "match:tone.atmospheric",
+        "type": "match",
+        "f": "tone.atmospheric",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв",
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "evidence": [
+         {
+          "id": "genome:atmospheric",
+          "kind": "genome",
+          "q": "atmospheric",
+          "rel": 0.772
+         },
+         {
+          "id": "usertag:atmospheric",
+          "kind": "usertag",
+          "q": "atmospheric",
+          "n": 115
+         }
+        ],
+        "contribution": 1.654601717638346
+       },
+       {
+        "id": "match:aesthetic.stylized",
+        "type": "match",
+        "f": "aesthetic.stylized",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв",
+         "Любовное настроение"
+        ],
+        "evidence": [
+         {
+          "id": "genome:art house",
+          "kind": "genome",
+          "q": "art house",
+          "rel": 0.634
+         },
+         {
+          "id": "genome:artistic",
+          "kind": "genome",
+          "q": "artistic",
+          "rel": 0.566
+         }
+        ],
+        "contribution": 1.3296174095636173
+       },
+       {
+        "id": "match:story.nonlinear",
+        "type": "match",
+        "f": "story.nonlinear",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "evidence": [
+         {
+          "id": "genome:alternate endings",
+          "kind": "genome",
+          "q": "alternate endings",
+          "rel": 0.637
+         },
+         {
+          "id": "genome:multiple storylines",
+          "kind": "genome",
+          "q": "multiple storylines",
+          "rel": 0.4
+         }
+        ],
+        "contribution": 1.04447788752215
+       },
+       {
+        "id": "match:tone.dark",
+        "type": "match",
+        "f": "tone.dark",
+        "basis": "confirmed",
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "evidence": [
+         {
+          "id": "genome:bleak",
+          "kind": "genome",
+          "q": "bleak",
+          "rel": 0.594
+         },
+         {
+          "id": "genome:dark",
+          "kind": "genome",
+          "q": "dark",
+          "rel": 0.944
+         }
+        ],
+        "contribution": 0.951939489064864
+       },
+       {
+        "id": "match:humor.dark",
+        "type": "match",
+        "f": "humor.dark",
+        "basis": "inferred",
+        "sources": [
+         "Малхолланд Драйв",
+         "Синий бархат"
+        ],
+        "evidence": [
+         {
+          "id": "genome:black comedy",
+          "kind": "genome",
+          "q": "black comedy",
+          "rel": 0.364
+         },
+         {
+          "id": "genome:dark comedy",
+          "kind": "genome",
+          "q": "dark comedy",
+          "rel": 0.444
+         }
+        ],
+        "contribution": 0.16683015959999997
+       },
+       {
+        "id": "match:world.smalltown",
+        "type": "match",
+        "f": "world.smalltown",
+        "basis": "inferred",
+        "sources": [
+         "Синий бархат"
+        ],
+        "evidence": [
+         {
+          "id": "genome:suburbia",
+          "kind": "genome",
+          "q": "suburbia",
+          "rel": 0.803
+         }
+        ],
+        "contribution": 0.09995158124999998
+       },
+       {
+        "id": "mood:cognitive.high",
+        "type": "mood",
+        "f": "cognitive.high",
+        "why": [
+         "Хочу подумать"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         }
+        ]
+       },
+       {
+        "id": "mood:story.complex",
+        "type": "mood",
+        "f": "story.complex",
+        "why": [
+         "Хочу подумать"
+        ],
+        "evidence": [
+         {
+          "id": "genome:cerebral",
+          "kind": "genome",
+          "q": "cerebral",
+          "rel": 0.978
+         }
+        ]
+       },
+       {
+        "id": "risk:dislike:story.weak",
+        "type": "risk_dislike",
+        "f": "story.weak",
+        "sources": [
+         "Трансформеры: Эпоха истребления"
+        ],
+        "evidence": [
+         {
+          "id": "genome:plot holes",
+          "kind": "genome",
+          "q": "plot holes",
+          "rel": 0.564
+         }
+        ]
+       },
+       {
+        "id": "risk:flaw:ending.weak",
+        "type": "risk_flaw",
+        "f": "ending.weak",
+        "evidence": [
+         {
+          "id": "genome:bad ending",
+          "kind": "genome",
+          "q": "bad ending",
+          "rel": 0.786
+         }
+        ]
+       },
+       {
+        "id": "fact:reviews",
+        "type": "fact",
+        "ratio": 0.8,
+        "total": 923247,
+        "desc": "IMDb 8"
+       },
+       {
+        "id": "fact:runtime",
+        "type": "fact",
+        "runtime": 113
+       }
+      ]
+     },
+     "alternatives": [
+      {
+       "id": "tt0414993",
+       "domain": "film",
+       "name": "The Fountain",
+       "ru": "Фонтан",
+       "year": 2006,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/e/ee/Fountain_poster_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Mystery",
+        "Romance"
+       ],
+       "runtime": 97,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.1",
+       "link": "https://www.imdb.com/title/tt0414993/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 13.226,
+       "parts": {
+        "fit": 11.991,
+        "penalty": 0.018,
+        "mood": 1.102,
+        "prior": 0.151
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «неторопливое» в Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:pace.slow"
+          ]
+         },
+         {
+          "text": "Ты отметил «нелинейный сюжет» в Малхолланд Драйв, здесь это тоже есть",
+          "factIds": [
+           "match:story.nonlinear"
+          ]
+         },
+         {
+          "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ]
+         },
+         {
+          "text": "Как в Сталкер, Любовное настроение, Чyнгкингский экспресс, Персона, Париж, Техас, Древо жизни, Синий бархат, Зеркало и 2046, здесь «спокойное, без нервов». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tension.low"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Любовное настроение и Париж, Техас, здесь «горький финал». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:ending.sad"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+          "factIds": [
+           "mood:cognitive.high"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 7.1 из 10, 259 993 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "97 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.622
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 81
+          }
+         ],
+         "contribution": 1.9217209264092288
+        },
+        {
+         "id": "match:pace.slow",
+         "type": "match",
+         "f": "pace.slow",
+         "basis": "confirmed",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.642
+          },
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.907
+          }
+         ],
+         "contribution": 1.3928325735287013
+        },
+        {
+         "id": "match:story.nonlinear",
+         "type": "match",
+         "f": "story.nonlinear",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв"
+         ],
+         "evidence": [
+          {
+           "id": "genome:multiple storylines",
+           "kind": "genome",
+           "q": "multiple storylines",
+           "rel": 0.588
+          },
+          {
+           "id": "genome:non-linear",
+           "kind": "genome",
+           "q": "non-linear",
+           "rel": 0.814
+          }
+         ],
+         "contribution": 1.3564852023049143
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.642
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.912
+          }
+         ],
+         "contribution": 1.122040008070563
+        },
+        {
+         "id": "match:tension.low",
+         "type": "match",
+         "f": "tension.low",
+         "basis": "inferred",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение",
+          "Чyнгкингский экспресс",
+          "Персона",
+          "Париж, Техас",
+          "Древо жизни",
+          "Синий бархат",
+          "Зеркало",
+          "2046"
+         ],
+         "evidence": [
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.907
+          }
+         ],
+         "contribution": 0.3178875
+        },
+        {
+         "id": "match:ending.sad",
+         "type": "match",
+         "f": "ending.sad",
+         "basis": "inferred",
+         "sources": [
+          "Любовное настроение",
+          "Париж, Техас"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bittersweet",
+           "kind": "genome",
+           "q": "bittersweet",
+           "rel": 0.472
+          },
+          {
+           "id": "genome:tragedy",
+           "kind": "genome",
+           "q": "tragedy",
+           "rel": 0.457
+          }
+         ],
+         "contribution": 0.027813005639999992
+        },
+        {
+         "id": "mood:cognitive.high",
+         "type": "mood",
+         "f": "cognitive.high",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.98
+          }
+         ]
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.98
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.71,
+         "total": 259993,
+         "desc": "IMDb 7.1"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 97
+        }
+       ]
+      },
+      {
+       "id": "tt1441395",
+       "domain": "film",
+       "name": "Under the Skin",
+       "ru": "Побудь в моей шкуре",
+       "year": 2013,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/6/64/Under_the_Skin_poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Drama",
+        "Horror",
+        "Mystery"
+       ],
+       "runtime": 108,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 6.3",
+       "link": "https://www.imdb.com/title/tt1441395/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 12.964,
+       "parts": {
+        "fit": 11.91,
+        "penalty": 0,
+        "mood": 0.981,
+        "prior": 0.074
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «неторопливое» в Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:pace.slow"
+          ]
+         },
+         {
+          "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ]
+         },
+         {
+          "text": "Ты отметил «мрачная атмосфера» в Малхолланд Драйв, здесь это тоже есть",
+          "factIds": [
+           "match:tone.dark"
+          ]
+         },
+         {
+          "text": "Как в Сталкер, Любовное настроение, Чyнгкингский экспресс, Персона, Париж, Техас, Древо жизни, Синий бархат, Зеркало и 2046, здесь «спокойное, без нервов». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tension.low"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Синий бархат, здесь «суровый реализм». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tone.gritty"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+          "factIds": [
+           "mood:cognitive.high"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [
+         {
+          "text": "Зрители жалуются: затянуто, скучно",
+          "factIds": [
+           "risk:flaw:pace.draggy"
+          ]
+         },
+         {
+          "text": "Оценка IMDb 6.3: ниже, чем у большинства в каталоге",
+          "factIds": [
+           "risk:quality"
+          ]
+         }
+        ],
+        "info": [
+         {
+          "text": "IMDb 6.3 из 10, 174 059 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "108 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.648
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 41
+          }
+         ],
+         "contribution": 1.9217209264092288
+        },
+        {
+         "id": "match:pace.slow",
+         "type": "match",
+         "f": "pace.slow",
+         "basis": "confirmed",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.991
+          },
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.885
+          }
+         ],
+         "contribution": 1.7410407169108766
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.991
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.737
+          }
+         ],
+         "contribution": 1.312786809442559
+        },
+        {
+         "id": "match:tone.dark",
+         "type": "match",
+         "f": "tone.dark",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bleak",
+           "kind": "genome",
+           "q": "bleak",
+           "rel": 0.837
+          },
+          {
+           "id": "genome:dark",
+           "kind": "genome",
+           "q": "dark",
+           "rel": 0.692
+          }
+         ],
+         "contribution": 0.951939489064864
+        },
+        {
+         "id": "match:tension.low",
+         "type": "match",
+         "f": "tension.low",
+         "basis": "inferred",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение",
+          "Чyнгкингский экспресс",
+          "Персона",
+          "Париж, Техас",
+          "Древо жизни",
+          "Синий бархат",
+          "Зеркало",
+          "2046"
+         ],
+         "evidence": [
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.885
+          }
+         ],
+         "contribution": 0.3178875
+        },
+        {
+         "id": "match:tone.gritty",
+         "type": "match",
+         "f": "tone.gritty",
+         "basis": "inferred",
+         "sources": [
+          "Синий бархат"
+         ],
+         "evidence": [
+          {
+           "id": "genome:harsh",
+           "kind": "genome",
+           "q": "harsh",
+           "rel": 0.426
+          },
+          {
+           "id": "genome:visceral",
+           "kind": "genome",
+           "q": "visceral",
+           "rel": 0.735
+          }
+         ],
+         "contribution": 0.030526996500000004
+        },
+        {
+         "id": "mood:cognitive.high",
+         "type": "mood",
+         "f": "cognitive.high",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.923
+          }
+         ]
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.923
+          }
+         ]
+        },
+        {
+         "id": "risk:flaw:pace.draggy",
+         "type": "risk_flaw",
+         "f": "pace.draggy",
+         "evidence": [
+          {
+           "id": "genome:boring!",
+           "kind": "genome",
+           "q": "boring!",
+           "rel": 0.673
+          }
+         ]
+        },
+        {
+         "id": "risk:quality",
+         "type": "risk_quality",
+         "ratio": 0.63,
+         "desc": "IMDb 6.3"
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.63,
+         "total": 174059,
+         "desc": "IMDb 6.3"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 108
+        }
+       ]
+      },
+      {
+       "id": "tt0069762",
+       "domain": "film",
+       "name": "Badlands",
+       "ru": "Пустоши",
+       "year": 1973,
+       "image": null,
+       "poster": "https://upload.wikimedia.org/wikipedia/en/e/e6/Badlands_movie_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+       "kind": "film",
+       "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+       ],
+       "runtime": 94,
+       "seasons": null,
+       "episodes": null,
+       "status": null,
+       "rating": "IMDb 7.7",
+       "link": "https://www.imdb.com/title/tt0069762/",
+       "price": null,
+       "label": "likely",
+       "labelText": "Вероятно подойдёт",
+       "score": 12.253,
+       "parts": {
+        "fit": 11.249,
+        "penalty": 0,
+        "mood": 0.816,
+        "prior": 0.188
+       },
+       "mainAspect": "tone",
+       "explanation": {
+        "reasons": [
+         {
+          "text": "Ты отметил «атмосферное» в Малхолланд Драйв, Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:tone.atmospheric"
+          ]
+         },
+         {
+          "text": "Ты отметил «стильно и необычно снято» в Малхолланд Драйв и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:aesthetic.stylized"
+          ]
+         },
+         {
+          "text": "Ты отметил «неторопливое» в Сталкер и Любовное настроение, здесь это тоже есть",
+          "factIds": [
+           "match:pace.slow"
+          ]
+         },
+         {
+          "text": "Ты отметил «мрачная атмосфера» в Малхолланд Драйв, здесь это тоже есть",
+          "factIds": [
+           "match:tone.dark"
+          ]
+         },
+         {
+          "text": "Как в Сталкер, Любовное настроение, Чyнгкингский экспресс, Персона, Париж, Техас, Древо жизни, Синий бархат, Зеркало и 2046, здесь «спокойное, без нервов». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:tension.low"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Как в Персона и Париж, Техас, здесь «живые, сложные персонажи». Ты это не отмечал, поэтому вес слабый",
+          "factIds": [
+           "match:characters.memorable"
+          ],
+          "weak": true
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «заставляет думать»",
+          "factIds": [
+           "mood:cognitive.high"
+          ]
+         },
+         {
+          "text": "Под настроение «Хочу подумать»: «сложный, надо вникать»",
+          "factIds": [
+           "mood:story.complex"
+          ]
+         }
+        ],
+        "risks": [],
+        "info": [
+         {
+          "text": "IMDb 7.7 из 10, 85 804 оценок",
+          "factIds": [
+           "fact:reviews"
+          ]
+         },
+         {
+          "text": "94 мин",
+          "factIds": [
+           "fact:runtime"
+          ]
+         }
+        ]
+       },
+       "facts": [
+        {
+         "id": "match:tone.atmospheric",
+         "type": "match",
+         "f": "tone.atmospheric",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:atmospheric",
+           "kind": "genome",
+           "q": "atmospheric",
+           "rel": 0.722
+          },
+          {
+           "id": "usertag:atmospheric",
+           "kind": "usertag",
+           "q": "atmospheric",
+           "n": 19
+          }
+         ],
+         "contribution": 1.9217209264092288
+        },
+        {
+         "id": "match:aesthetic.stylized",
+         "type": "match",
+         "f": "aesthetic.stylized",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.653
+          },
+          {
+           "id": "genome:artistic",
+           "kind": "genome",
+           "q": "artistic",
+           "rel": 0.657
+          }
+         ],
+         "contribution": 1.4025500100882038
+        },
+        {
+         "id": "match:pace.slow",
+         "type": "match",
+         "f": "pace.slow",
+         "basis": "confirmed",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение"
+         ],
+         "evidence": [
+          {
+           "id": "genome:art house",
+           "kind": "genome",
+           "q": "art house",
+           "rel": 0.653
+          },
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.976
+          }
+         ],
+         "contribution": 1.3928325735287013
+        },
+        {
+         "id": "match:tone.dark",
+         "type": "match",
+         "f": "tone.dark",
+         "basis": "confirmed",
+         "sources": [
+          "Малхолланд Драйв"
+         ],
+         "evidence": [
+          {
+           "id": "genome:bleak",
+           "kind": "genome",
+           "q": "bleak",
+           "rel": 0.952
+          },
+          {
+           "id": "genome:dark",
+           "kind": "genome",
+           "q": "dark",
+           "rel": 0.66
+          }
+         ],
+         "contribution": 0.951939489064864
+        },
+        {
+         "id": "match:tension.low",
+         "type": "match",
+         "f": "tension.low",
+         "basis": "inferred",
+         "sources": [
+          "Сталкер",
+          "Любовное настроение",
+          "Чyнгкингский экспресс",
+          "Персона",
+          "Париж, Техас",
+          "Древо жизни",
+          "Синий бархат",
+          "Зеркало",
+          "2046"
+         ],
+         "evidence": [
+          {
+           "id": "genome:meditative",
+           "kind": "genome",
+           "q": "meditative",
+           "rel": 0.976
+          },
+          {
+           "id": "genome:understated",
+           "kind": "genome",
+           "q": "understated",
+           "rel": 0.517
+          }
+         ],
+         "contribution": 0.36578255
+        },
+        {
+         "id": "match:characters.memorable",
+         "type": "match",
+         "f": "characters.memorable",
+         "basis": "inferred",
+         "sources": [
+          "Персона",
+          "Париж, Техас"
+         ],
+         "evidence": [
+          {
+           "id": "genome:character study",
+           "kind": "genome",
+           "q": "character study",
+           "rel": 0.817
+          }
+         ],
+         "contribution": 0.15382160415
+        },
+        {
+         "id": "mood:cognitive.high",
+         "type": "mood",
+         "f": "cognitive.high",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.666
+          }
+         ]
+        },
+        {
+         "id": "mood:story.complex",
+         "type": "mood",
+         "f": "story.complex",
+         "why": [
+          "Хочу подумать"
+         ],
+         "evidence": [
+          {
+           "id": "genome:cerebral",
+           "kind": "genome",
+           "q": "cerebral",
+           "rel": 0.666
+          }
+         ]
+        },
+        {
+         "id": "fact:reviews",
+         "type": "fact",
+         "ratio": 0.77,
+         "total": 85804,
+         "desc": "IMDb 7.7"
+        },
+        {
+         "id": "fact:runtime",
+         "type": "fact",
+         "runtime": 94
+        }
+       ]
+      }
+     ],
+     "fork": {
+      "id": "fork:characters.antihero|world.space",
+      "text": "Что тебе важнее?",
+      "options": [
+       {
+        "f": "characters.antihero",
+        "label": "антигерой",
+        "favours": "tt0246578"
+       },
+       {
+        "f": "world.space",
+        "label": "космос",
+        "favours": "tt0414993"
+       }
+      ],
+      "margin": 0.49233378655999793
+     },
+     "sieves": [
+      {
+       "id": 1,
+       "name": "Можно ли",
+       "removed": 0
+      },
+      {
+       "id": 2,
+       "name": "Было ли",
+       "removed": 15
+      },
+      {
+       "id": 3,
+       "name": "Сделано ли нормально",
+       "removed": 10287
+      },
+      {
+       "id": 4,
+       "name": "Моё ли (жёсткие стопы)",
+       "removed": 145
+      },
+      {
+       "id": 5,
+       "name": "Подходит ли сегодня (обязательное)",
+       "removed": 0
+      }
+     ],
+     "considered": 21679,
+     "taste": {
+      "confirmed": [
+       {
+        "f": "tone.atmospheric",
+        "label": "атмосферное",
+        "w": 2.25,
+        "sources": [
+         "Малхолланд Драйв",
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0166924",
+         "tt0079944",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.stylized",
+        "label": "стильно и необычно снято",
+        "w": 1.88,
+        "sources": [
+         "Малхолланд Драйв",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0166924",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "pace.slow",
+        "label": "неторопливое",
+        "w": 1.88,
+        "sources": [
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0079944",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.beautiful",
+        "label": "красивая картинка",
+        "w": 1.38,
+        "sources": [
+         "Сталкер",
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0079944",
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.nonlinear",
+        "label": "нелинейный сюжет",
+        "w": 1.32,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.dark",
+        "label": "мрачная атмосфера",
+        "w": 1.32,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "cognitive.high",
+        "label": "заставляет думать",
+        "w": 1.32,
+        "sources": [
+         "Сталкер"
+        ],
+        "ids": [
+         "tt0079944"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.melancholic",
+        "label": "грустное, пробирает",
+        "w": 1.32,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.creepy",
+        "label": "жуть и страх",
+        "w": 1.21,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.romance",
+        "label": "любовная линия",
+        "w": 1.16,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.mystery",
+        "label": "загадка и расследование",
+        "w": 1.01,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.dialogue",
+        "label": "держится на диалогах",
+        "w": 0.95,
+        "sources": [
+         "Сталкер"
+        ],
+        "ids": [
+         "tt0079944"
+        ],
+        "preference": false
+       },
+       {
+        "f": "tone.whimsical",
+        "label": "странное, причудливое",
+        "w": 0.82,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.complex",
+        "label": "сложный, надо вникать",
+        "w": 0.82,
+        "sources": [
+         "Малхолланд Драйв"
+        ],
+        "ids": [
+         "tt0166924"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.scifi",
+        "label": "фантастика",
+        "w": 0.82,
+        "sources": [
+         "Сталкер"
+        ],
+        "ids": [
+         "tt0079944"
+        ],
+        "preference": false
+       },
+       {
+        "f": "aesthetic.soundtrack",
+        "label": "сильная музыка",
+        "w": 0.82,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.timetravel",
+        "label": "путешествия во времени",
+        "w": 0.61,
+        "sources": [],
+        "ids": [],
+        "preference": true
+       }
+      ],
+      "inferred": [
+       {
+        "f": "tension.low",
+        "label": "спокойное, без нервов",
+        "w": 0.5,
+        "sources": [
+         "Сталкер",
+         "Любовное настроение",
+         "Чyнгкингский экспресс",
+         "Персона",
+         "Париж, Техас",
+         "Древо жизни",
+         "Синий бархат",
+         "Зеркало",
+         "2046"
+        ],
+        "ids": [
+         "tt0079944",
+         "tt0118694",
+         "tt0109424",
+         "tt0060827",
+         "tt0087884",
+         "tt0478304",
+         "tt0090756",
+         "tt0072443",
+         "tt0212712"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.family",
+        "label": "семья и отношения",
+        "w": 0.28,
+        "sources": [
+         "Париж, Техас",
+         "Древо жизни"
+        ],
+        "ids": [
+         "tt0087884",
+         "tt0478304"
+        ],
+        "preference": false
+       },
+       {
+        "f": "humor.dark",
+        "label": "чёрный юмор",
+        "w": 0.24,
+        "sources": [
+         "Малхолланд Драйв",
+         "Синий бархат"
+        ],
+        "ids": [
+         "tt0166924",
+         "tt0090756"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.memorable",
+        "label": "живые, сложные персонажи",
+        "w": 0.22,
+        "sources": [
+         "Персона",
+         "Париж, Техас"
+        ],
+        "ids": [
+         "tt0060827",
+         "tt0087884"
+        ],
+        "preference": false
+       },
+       {
+        "f": "ending.sad",
+        "label": "горький финал",
+        "w": 0.21,
+        "sources": [
+         "Любовное настроение",
+         "Париж, Техас"
+        ],
+        "ids": [
+         "tt0118694",
+         "tt0087884"
+        ],
+        "preference": false
+       },
+       {
+        "f": "length.short",
+        "label": "короткий",
+        "w": 0.2,
+        "sources": [
+         "Персона"
+        ],
+        "ids": [
+         "tt0060827"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.smalltown",
+        "label": "маленький город",
+        "w": 0.17,
+        "sources": [
+         "Синий бархат"
+        ],
+        "ids": [
+         "tt0090756"
+        ],
+        "preference": false
+       },
+       {
+        "f": "world.music",
+        "label": "музыка и мюзикл",
+        "w": 0.1,
+        "sources": [
+         "Любовное настроение"
+        ],
+        "ids": [
+         "tt0118694"
+        ],
+        "preference": false
+       }
+      ],
+      "dislikes": [
+       {
+        "f": "aesthetic.effects",
+        "label": "одни спецэффекты, а смотреть нечего",
+        "w": 2,
+        "sources": [
+         "Мстители: Финал",
+         "Трансформеры: Эпоха истребления"
+        ],
+        "ids": [
+         "tt4154796",
+         "tt2109248"
+        ],
+        "preference": false
+       },
+       {
+        "f": "story.weak",
+        "label": "сюжет с дырами",
+        "w": 1,
+        "sources": [
+         "Трансформеры: Эпоха истребления"
+        ],
+        "ids": [
+         "tt2109248"
+        ],
+        "preference": false
+       },
+       {
+        "f": "characters.unlikeable",
+        "label": "герои бесили",
+        "w": 1,
+        "sources": [
+         "Трансформеры: Эпоха истребления"
+        ],
+        "ids": [
+         "tt2109248"
+        ],
+        "preference": false
+       }
+      ],
+      "hardNo": [
+       {
+        "f": "world.superhero",
+        "label": "супергерои",
+        "w": 0,
+        "sources": [
+         "Мстители: Финал"
+        ],
+        "ids": [
+         "tt4154796"
+        ],
+        "preference": false
+       }
+      ],
+      "consumed": 15
+     }
+    }
+   }
+  }
+ ],
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [
+   "genre:Drama",
+   "genre:Mystery"
+  ],
+  "shown": [
+   "tt0120737",
+   "tt0246578",
+   "tt0111161",
+   "tt0169547",
+   "tt1853728",
+   "tt0434409",
+   "tt2543164",
+   "tt0253474",
+   "tt0167261",
+   "tt0120689",
+   "tt0116282",
+   "tt0137523",
+   "tt0109830",
+   "tt0071562",
+   "tt0110912",
+   "tt0405159"
+  ],
+  "liked": [
+   "tt0166924",
+   "tt0079944",
+   "tt0118694"
+  ],
+  "disliked": [
+   "tt4154796",
+   "tt2109248"
+  ],
+  "whyIndex": 0,
+  "answers": {
+   "tt0166924": {
+    "reaction": "love",
+    "reasons": [
+     "tone.whimsical",
+     "story.complex",
+     "tone.atmospheric",
+     "aesthetic.stylized",
+     "story.nonlinear",
+     "tone.dark",
+     "tone.creepy",
+     "story.mystery"
+    ],
+    "issues": []
+   },
+   "tt0079944": {
+    "reaction": "love",
+    "reasons": [
+     "pace.slow",
+     "cognitive.high",
+     "tone.atmospheric",
+     "aesthetic.beautiful",
+     "story.dialogue",
+     "world.scifi"
+    ],
+    "issues": []
+   },
+   "tt0118694": {
+    "reaction": "love",
+    "reasons": [
+     "aesthetic.beautiful",
+     "aesthetic.stylized",
+     "tone.melancholic",
+     "pace.slow",
+     "characters.romance",
+     "tone.atmospheric",
+     "aesthetic.soundtrack"
+    ],
+    "issues": []
+   },
+   "tt0109424": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0060827": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0087884": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0478304": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0090756": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0072443": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt0212712": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt4154796": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "world.superhero",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   },
+   "tt2109248": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "aesthetic.effects",
+      "hard": false
+     },
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "characters.unlikeable",
+      "hard": false
+     }
+    ],
+    "badQuality": false
+   },
+   "tt2820852": {
+    "reaction": "dislike",
+    "issues": []
+   },
+   "tt0369610": {
+    "reaction": "dislike",
+    "issues": []
+   },
+   "tt2527338": {
+    "reaction": "dislike",
+    "issues": []
+   }
+  },
+  "corrections": [],
+  "preferences": [
+   {
+    "f": "world.timetravel"
+   }
+  ],
+  "session": {
+   "moods": [
+    "think"
+   ],
+   "avoid": [],
+   "notNow": [],
+   "asked": 1
+  },
+  "seed": 202
+ }
+}

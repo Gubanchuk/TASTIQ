@@ -1,0 +1,9 @@
+{"appid": 578620, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a 2019 virtual reality hack and slash video game"}]},
+{"f": "content.gore", "r": 3, "ev": [{"id": "p1", "q": "allows the player to chop a limb off to disable or kill an enemy"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "p1", "q": "The game features a dismemberment system"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "The player is a gladiator who fights opponents to death in arena"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p1", "q": "If the player takes damage, the edge of the screen turns red"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p3", "q": "You can see through Gorns handful of levels in a few hours"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p3", "q": "you can't help but wish there was something a little meatier here"}]}
+]}

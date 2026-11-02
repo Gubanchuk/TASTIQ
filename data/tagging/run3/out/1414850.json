@@ -1,0 +1,6 @@
+{"appid": 1414850, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "Characters have three different types of attacks"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "with players battling on different stages"}, {"id": "p2", "q": "supports local and online multiplayer for up to four players"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p2", "q": "The game also features a single-player arcade mode"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p4", "q": "criticized the game's presentation and lack of content"}]}
+]}

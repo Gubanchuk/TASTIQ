@@ -1,0 +1,8 @@
+{"appid": 897450, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "is a 2020 sandbox survival video game"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p1", "q": "The Survivalists is a sandbox survival on a desert island"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "Players must build a home, craft items"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p1", "q": "raid temples for loot"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p1", "q": "Co-operative gameplay with up to four players is also supported"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p3", "q": "there's just not a whole lot left to do"}]}
+]}

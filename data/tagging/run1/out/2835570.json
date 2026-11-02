@@ -1,0 +1,13 @@
+{"appid": 2835570, "features": [
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "a", "q": "playing the odds same as you"}, {"id": "r235751269", "q": "Хорошая игра, основанная на просчёте вероятностей"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "r235857122", "q": "Simple, cheap, and insanely tense."}, {"id": "r236305364", "q": "Simple idea, insane tension"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "a", "q": "Shoot Your Friends"}, {"id": "a", "q": "Bargain. Beg. Betray."}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "Take a seat at the new 4-way multiplayer table"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r237440820", "q": "Everything could go wrong."}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "r235857122", "q": "Shooting yourself in the head with a blank"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "a", "q": "Welcome to the underground nightclub"}]},
+{"f": "aesthetic.soundtrack", "r": 3, "ev": [{"id": "r235857122", "q": "The music slaps, too."}, {"id": "r237038570", "q": "the soundtrack bops"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "r237038570", "q": "I love the graphical art style that this game has"}]},
+{"f": "session.short", "r": 3, "ev": [{"id": "a", "q": "15 to 20-minute intense playtime"}, {"id": "r237038570", "q": "Each round is short, lasting no more than 20 minutes"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "r236245025", "q": "потом просто гринд"}]}
+]}

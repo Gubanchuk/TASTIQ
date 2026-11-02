@@ -1,0 +1,10 @@
+{"appid": 337320, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "Players are able to attack NPCs using physical actions, throwing objects such as ashtrays"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p2", "q": "all non-playable characters the targets of toggleable weapons"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "with the ultimate goal of becoming the last player alive"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "Developed on the Unity Engine, with the use of voxels"}]},
+{"f": "progression.grind", "r": 2, "ev": [{"id": "p1", "q": "criticism for its lengthy progression time"}, {"id": "p9", "q": "the lengthy time it takes to unlock special moves"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p6", "q": "One of four available classes is chosen by the player"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p2", "q": "places the player in various locations dependent on the level, including a bar or disco"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p1", "q": "unbalanced difficulty without changing difficulty settings"}]}
+]}

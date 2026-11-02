@@ -1,0 +1,109 @@
+{
+ "appid": 414700,
+ "features": [
+  {
+   "f": "tone.creepy",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235992406",
+     "q": "The atmosphere is terrifying, the sound design is incredible"
+    },
+    {
+     "id": "r237459047",
+     "q": "the scenery and the atmosphere were incredibly creepy"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "a darkness so deep that no one could shed light upon it"
+    }
+   ]
+  },
+  {
+   "f": "tension.high",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235992406",
+     "q": "the constant feeling that something is about to go horribly wrong"
+    }
+   ]
+  },
+  {
+   "f": "loop.stealth",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236288708",
+     "q": "Stealth barely works"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236364282",
+     "q": "Great story that links into the first Outlast game once you read the lore"
+    }
+   ]
+  },
+  {
+   "f": "story.lore",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237018161",
+     "q": "i wanted to keep playing to find out more of the lore"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236364282",
+     "q": "Characters are interesting and well written"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236364282",
+     "q": "Soundtrack is good"
+    }
+   ]
+  },
+  {
+   "f": "freedom.linear",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238117153",
+     "q": "the game is linear so you still have to go perfectly where and when it wants you to go"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236364282",
+     "q": "A bit too short"
+    }
+   ]
+  }
+ ]
+}

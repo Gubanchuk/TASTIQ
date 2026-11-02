@@ -1,0 +1,7 @@
+{"appid": 357190, "features": [
+{"f": "combat.fast", "r": 3, "ev": [{"id": "p3", "q": "an arcade-style fighting game"}, {"id": "p3", "q": "character assists, special moves, and hyper combos"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "to engage in one-on-one combat"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p6", "q": "providing smoother online play"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p5", "q": "is a free downloadable single-player and multiplayer team-based mode"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p10", "q": "he criticized the lack of new features and modes"}]}
+]}

@@ -1,0 +1,10 @@
+{"id": "tt8466564", "features": [
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "is an American space opera television miniseries"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "p0", "q": "is an American space opera television miniseries"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p2", "q": "praise directed towards McGregor's performance"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p2", "q": "the character-driven narrative"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p5", "q": "a surprisingly emotional chapter in the larger Star Wars saga"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p6", "q": "praised the action sequences of the second"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p2", "q": "although the writing received some criticism"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "criticized the slower pace of the first episode"}]}
+]}

@@ -1,0 +1,8 @@
+{"appid": 21000, "features": [
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "primarily fighting enemies, solving puzzles, and collecting Lego"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p2", "q": "players must assemble Lego objects to proceed further"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p3", "q": "the player exploring miniature versions of Wayne Manor and Arkham Asylum to collect studs"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "p4", "q": "players can create their own character using parts from characters already unlocked"}]},
+{"f": "world.realistic", "r": 1, "ev": [{"id": "p2", "q": "The game is set in Gotham City, with mainly realistic environments"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p7", "q": "the game has plenty of replay value"}]}
+]}

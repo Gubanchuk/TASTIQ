@@ -1,0 +1,9 @@
+{"appid": 248860, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "is a survival role-playing video game"}, {"id": "p2", "q": "post-apocalyptic outdoor survival simulation"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "in a ruined, post-apocalyptic world"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p0", "q": "Ruined towns can be scavenged for supplies"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "each turn equals an in-game hour"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p6", "q": "lives the harsh life of a wastelander"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p5", "q": "praised the game's storytelling and survival mechanics"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "the difficulty of these mechanics can get in the way"}]}
+]}

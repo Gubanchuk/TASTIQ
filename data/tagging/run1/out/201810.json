@@ -1,0 +1,99 @@
+{
+ "appid": 201810,
+ "features": [
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "reignites the series that created the first-person shooter genre"
+    }
+   ]
+  },
+  {
+   "f": "world.historical",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236421920",
+     "q": "Nazi Germany has won the most deadliest war in human history"
+    },
+    {
+     "id": "a",
+     "q": "sends players across Europe on a personal mission to bring down the Nazi war machine"
+    }
+   ]
+  },
+  {
+   "f": "world.scifi",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "battle high-tech Nazi legions, and take control of super-weapons"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236288529",
+     "q": "with a great story, combat system, perk system and soundtrack"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "featuring memorable characters"
+    }
+   ]
+  },
+  {
+   "f": "loop.stealth",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236609369",
+     "q": "tactical fights (sneak or guns blazing)"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.stylized",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237798054",
+     "q": "Я офигел от того как они заморочились со стилизацией"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236288529",
+     "q": "Great perk system"
+    }
+   ]
+  },
+  {
+   "f": "social.solo",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236982382",
+     "q": "Простое одиночное месиво и крутая кампания"
+    }
+   ]
+  }
+ ]
+}

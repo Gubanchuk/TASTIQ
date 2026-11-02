@@ -1,0 +1,7 @@
+{"appid": 444640, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p2", "q": "The game is a tower defense game"}, {"id": "p1", "q": "by placing towers or road items along it"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "Every tower can be upgraded to increase power and other capabilities"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p3", "q": "The higher the difficulty the player plays on, the fewer lives they have"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "criticized for its lack of replayability"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p7", "q": "described the game as cheerful and addictive"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 532110, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p2", "q": "the player solves puzzles by clicking and swiping"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "\"dark and strange\", containing signature elements of the Rusty Lake series"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p3", "q": "widely described as \"ghoulish and weird\""}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p3", "q": "funny and unsettling moments"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p3", "q": "particularly difficult and weird solutions to puzzles"}]}
+]}

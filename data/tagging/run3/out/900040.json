@@ -1,0 +1,8 @@
+{"appid": 900040, "features": [
+{"f": "combat.clunky", "r": 3, "ev": [{"id": "p2", "q": "\"clunky and janky, but compelling\""}, {"id": "p2", "q": "the combat is \"clunky, imprecise, and annoying\""}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "post-apocalyptic, science fantasy setting"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "gives people powers equivalent to magic"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p1", "q": "post-apocalyptic, science fantasy setting"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "which players can use to explore the open world"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Gaining levels allows Jax to increase his attributes"}]}
+]}

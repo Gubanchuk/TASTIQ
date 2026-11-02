@@ -1,0 +1,1800 @@
+{
+  "state": {
+    "version": 1,
+    "id": "overnight-20261101-01-replay",
+    "revision": 6,
+    "mode": "guided",
+    "phase": "result",
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": {
+          "id": "direction",
+          "title": "Во что тянет сегодня?",
+          "why": "Можно выбрать несколько направлений, описать своё или пока не знать.",
+          "options": [
+            {
+              "id": "rpg",
+              "label": "RPG"
+            },
+            {
+              "id": "action",
+              "label": "Экшен"
+            },
+            {
+              "id": "shooter",
+              "label": "Шутер",
+              "feature": "loop.shooting"
+            },
+            {
+              "id": "strategy",
+              "label": "Стратегия"
+            },
+            {
+              "id": "simulation",
+              "label": "Симулятор"
+            },
+            {
+              "id": "racing",
+              "label": "Гонки",
+              "feature": "loop.driving"
+            },
+            {
+              "id": "puzzle",
+              "label": "Головоломки",
+              "feature": "loop.puzzles"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "survival",
+              "label": "Выживание",
+              "feature": "loop.survival"
+            },
+            {
+              "id": "horror",
+              "label": "Хоррор",
+              "feature": "tone.creepy"
+            },
+            {
+              "id": "open_world",
+              "label": "Открытый мир",
+              "feature": "freedom.open_world"
+            },
+            {
+              "id": "sandbox",
+              "label": "Песочница",
+              "feature": "freedom.sandbox"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [
+          {
+            "id": "rpg",
+            "label": "RPG"
+          }
+        ],
+        "text": "Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса.",
+        "kind": "answer",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": {
+          "id": "platform",
+          "title": "Где будешь играть?",
+          "why": "Сейчас в каталоге игры для компьютера и Steam Deck.",
+          "options": [
+            {
+              "id": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "id": "mac",
+              "label": "Mac"
+            },
+            {
+              "id": "linux",
+              "label": "Linux"
+            },
+            {
+              "id": "deck",
+              "label": "Steam Deck"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "windows",
+            "label": "ПК (Windows)"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": {
+          "id": "company",
+          "title": "Будешь играть один или вместе с кем-то?",
+          "why": "Это поможет проверить доступные режимы.",
+          "options": [
+            {
+              "id": "solo",
+              "label": "Один"
+            },
+            {
+              "id": "friend",
+              "label": "Вдвоём, в кооперативе"
+            },
+            {
+              "id": "group",
+              "label": "Компанией"
+            }
+          ],
+          "multiple": false,
+          "controls": [],
+          "allowText": false
+        },
+        "selected": [
+          {
+            "id": "solo",
+            "label": "Один"
+          }
+        ],
+        "text": "",
+        "kind": "answer",
+        "answer": "Один"
+      },
+      {
+        "id": "overnight-20261101-01-replay:5",
+        "question": {
+          "id": "correction:5",
+          "title": "Что нужно изменить?",
+          "why": "",
+          "options": [],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [],
+        "text": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен.",
+        "kind": "answer",
+        "answer": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен."
+      }
+    ],
+    "facts": [
+      {
+        "key": "skyrim_finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_rpg",
+        "text": "Сегодня ты не хочешь RPG.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_skyrim",
+        "text": "Сегодня Skyrim исключён из выбора.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "driving",
+        "text": "Хочешь гонки, нравится управлять машиной.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Хочу гонки: нравится управлять машиной",
+        "feature": "loop.driving",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "quick_race_access",
+        "text": "Хочешь быстро начинать заезды без обязательной длинной карьеры.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "быстро начинать заезды, без обязательной длинной карьеры",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "total_length_indifferent",
+        "text": "Общая длина игры не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Общая длина игры неважна.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "optional_story",
+        "text": "Сюжет желателен, но не обязателен.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Сюжет — хорошо, если есть, но он не обязателен.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform_windows",
+        "text": "Будешь играть на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "solo",
+        "text": "Будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "Сегодня ты хочешь гонки на ПК, в одиночку: получать удовольствие от управления машиной и быстро переходить к заездам, без обязательной длинной карьеры. Есть 45 минут. Общая длина игры неважна, сюжет будет плюсом, но не обязателен. RPG и Skyrim сегодня не рассматриваем.",
+    "uncertainties": [],
+    "retractions": [],
+    "sessionTime": {
+      "minutes": 45,
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "Сегодня есть 45 минут."
+    },
+    "factRemovalUndo": null,
+    "result": {
+      "top": {
+        "id": "steam:1328660",
+        "domain": "game",
+        "name": "Need for Speed Hot Pursuit Remastered",
+        "ru": null,
+        "year": 2020,
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1328660/header.jpg",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1328660/library_600x900.jpg",
+        "kind": "game",
+        "series": [
+          "Need for Speed",
+          "Need for Speed Hot Pursuit"
+        ],
+        "genres": [
+          "Action",
+          "Racing"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": null,
+        "link": "https://store.steampowered.com/app/1328660/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 2.792,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 2.603,
+          "prior": 0.189
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+              "factIds": [
+                "mood:loop.driving"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+              "factIds": [
+                "mood:social.solo"
+              ]
+            }
+          ],
+          "risks": [
+            {
+              "text": "Нет данных: длина",
+              "factIds": [
+                "gap:length"
+              ]
+            }
+          ],
+          "info": [
+            {
+              "text": "81% положительных из 11 515 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:loop.driving",
+            "type": "mood",
+            "f": "loop.driving",
+            "why": [
+              "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+            ],
+            "evidence": [
+              {
+                "id": "p0",
+                "q": "is a 2010 racing video game",
+                "kind": "wiki",
+                "section": "lead",
+                "url": "https://en.wikipedia.org/wiki/Need_for_Speed%3A_Hot_Pursuit_Remastered",
+                "ru": "видеоигра о гонках 2010 года"
+              }
+            ]
+          },
+          {
+            "id": "mood:social.solo",
+            "type": "mood",
+            "f": "social.solo",
+            "why": [
+              "сегодня хочется: «Один»"
+            ],
+            "evidence": [
+              {
+                "id": "p5",
+                "q": "both single-player and multiplayer game modes",
+                "kind": "wiki",
+                "section": "PS3, Xbox 360, Microsoft Windows",
+                "url": "https://en.wikipedia.org/wiki/Need_for_Speed%3A_Hot_Pursuit_Remastered",
+                "ru": "как одиночный, так и многопользовательский режимы"
+              }
+            ]
+          },
+          {
+            "id": "gap:length",
+            "type": "gap",
+            "what": "длина"
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.807,
+            "total": 11515,
+            "desc": null
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "unknown",
+            "text": "Не проверено, удобно ли прерваться через 45 мин."
+          }
+        ],
+        "ai": {
+          "reason": "В Hot Pursuit короткие заезды и погони запускаются с карты событий: можно сразу гонять, не погружаясь в длинный сюжет.",
+          "caveat": "Управление аркадное; машины и события открываются постепенно.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:244210",
+          "domain": "game",
+          "name": "Assetto Corsa",
+          "ru": null,
+          "year": 2014,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244210/header.jpg?t=1782208838",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/244210/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "Assetto Corsa"
+          ],
+          "genres": [
+            "Indie",
+            "Racing",
+            "Simulation"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/244210/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.883,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.538,
+            "prior": 0.346
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+                "factIds": [
+                  "mood:loop.driving"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "93% положительных из 175 407 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 7 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "не поддерживается на Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.driving",
+              "type": "mood",
+              "f": "loop.driving",
+              "why": [
+                "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "The advanced physics engine is being designed to provide a very realistic driving experience",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Продвинутый физический движок создан для очень реалистичного ощущения вождения"
+                }
+              ]
+            },
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": []
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.929,
+              "total": 175407,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 7
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "unsupported"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 45 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В Assetto Corsa можно выбрать машину и трассу вне карьеры и посвятить вечер самому управлению.",
+            "caveat": "Симулятор требователен к вождению; настройка управления может отнять время.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:2990",
+          "domain": "game",
+          "name": "FlatOut 2",
+          "ru": null,
+          "year": 2006,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2990/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2990/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "FlatOut"
+          ],
+          "genres": [
+            "Racing"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": null,
+          "link": "https://store.steampowered.com/app/2990/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.747,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.382,
+            "prior": 0.365
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+                "factIds": [
+                  "mood:loop.driving"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Нет данных: длина",
+                "factIds": [
+                  "gap:length"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "96% положительных из 18 660 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.driving",
+              "type": "mood",
+              "f": "loop.driving",
+              "why": [
+                "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+              ],
+              "evidence": [
+                {
+                  "id": "p0",
+                  "q": "is an action racing video game",
+                  "kind": "wiki",
+                  "section": "lead",
+                  "url": "https://en.wikipedia.org/wiki/FlatOut_2",
+                  "ru": "это гоночная аркадная видеоигра"
+                }
+              ]
+            },
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 289
+                }
+              ]
+            },
+            {
+              "id": "gap:length",
+              "type": "gap",
+              "what": "длина"
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.961,
+              "total": 18660,
+              "desc": null
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 45 мин."
+            }
+          ],
+          "ai": {
+            "reason": "FlatOut 2 предлагает одиночные быстрые гонки без карьеры: заезды по грунту, столкновения и ощутимый вес машины.",
+            "caveat": "Графика возрастная, а соперники часто толкаются и сбивают с траектории.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:550320",
+          "domain": "game",
+          "name": "art of rally",
+          "ru": null,
+          "year": 2020,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/550320/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/550320/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "Indie",
+            "Racing"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": null,
+          "link": "https://store.steampowered.com/app/550320/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.699,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.382,
+            "prior": 0.316
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+                "factIds": [
+                  "mood:loop.driving"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Нет данных: длина",
+                "factIds": [
+                  "gap:length"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "93% положительных из 5 516 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.driving",
+              "type": "mood",
+              "f": "loop.driving",
+              "why": [
+                "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+              ],
+              "evidence": [
+                {
+                  "id": "p2",
+                  "q": "Art of Rally is a racing game played in a top-down perspective",
+                  "kind": "wiki",
+                  "section": "Gameplay",
+                  "url": "https://en.wikipedia.org/wiki/Art_of_Rally",
+                  "ru": "Art of Rally — гоночная игра с видом сверху"
+                }
+              ]
+            },
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 97
+                }
+              ]
+            },
+            {
+              "id": "gap:length",
+              "type": "gap",
+              "what": "длина"
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.927,
+              "total": 5516,
+              "desc": null
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 45 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В art of rally есть отдельные заезды на время: можно сразу заняться поворотами и заносами без прохождения карьеры.",
+            "caveat": "Камера смотрит издалека сверху; к управлению заносом нужно привыкнуть.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.078,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 2
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 0
+        }
+      ],
+      "considered": 4379,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 2
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь гонки на ПК, в одиночку: получать удовольствие от управления машиной и быстро переходить к заездам, без обязательной длинной карьеры. Есть 45 минут. Общая длина игры неважна, сюжет будет плюсом, но не обязателен. RPG и Skyrim сегодня не рассматриваем.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    },
+    "provisional": false,
+    "needsPlan": false,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "feedbackState": null,
+    "failedAction": null
+  },
+  "screen": {
+    "summary": "Сегодня ты хочешь гонки на ПК, в одиночку: получать удовольствие от управления машиной и быстро переходить к заездам, без обязательной длинной карьеры. Есть 45 минут. Общая длина игры неважна, сюжет будет плюсом, но не обязателен. RPG и Skyrim сегодня не рассматриваем.",
+    "facts": [
+      {
+        "key": "skyrim_finished",
+        "text": "Ты уже прошёл Skyrim.",
+        "stance": "history",
+        "scope": "history",
+        "sourceId": "overnight-20261101-01-replay:1",
+        "quote": "Skyrim прошёл.",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": "finished",
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_rpg",
+        "text": "Сегодня ты не хочешь RPG.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "exclude_skyrim",
+        "text": "Сегодня Skyrim исключён из выбора.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "сегодня уже не RPG и не Skyrim",
+        "feature": null,
+        "gameId": "steam:72850",
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "driving",
+        "text": "Хочешь гонки, нравится управлять машиной.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Хочу гонки: нравится управлять машиной",
+        "feature": "loop.driving",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "quick_race_access",
+        "text": "Хочешь быстро начинать заезды без обязательной длинной карьеры.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "быстро начинать заезды, без обязательной длинной карьеры",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "total_length_indifferent",
+        "text": "Общая длина игры не является критерием.",
+        "stance": "indifferent",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Общая длина игры неважна.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "optional_story",
+        "text": "Сюжет желателен, но не обязателен.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Сюжет — хорошо, если есть, но он не обязателен.",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "platform_windows",
+        "text": "Будешь играть на ПК с Windows.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:2",
+        "quote": "ПК (Windows)",
+        "feature": null,
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      },
+      {
+        "key": "solo",
+        "text": "Будешь играть один.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "overnight-20261101-01-replay:3",
+        "quote": "Один",
+        "feature": "social.solo",
+        "gameId": null,
+        "exposure": null,
+        "gameIntent": null
+      }
+    ],
+    "uncertainties": [],
+    "context": {
+      "platform": "windows",
+      "company": "solo",
+      "partySize": null
+    },
+    "sessionTime": {
+      "minutes": 45,
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "Сегодня есть 45 минут."
+    },
+    "canUndoFactRemoval": false,
+    "canBack": true,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "overnight-20261101-01-replay:1",
+        "question": "Во что тянет сегодня?",
+        "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса."
+      },
+      {
+        "id": "overnight-20261101-01-replay:2",
+        "question": "Где будешь играть?",
+        "answer": "ПК (Windows)"
+      },
+      {
+        "id": "overnight-20261101-01-replay:3",
+        "question": "Будешь играть один или вместе с кем-то?",
+        "answer": "Один"
+      },
+      {
+        "id": "overnight-20261101-01-replay:5",
+        "question": "Что нужно изменить?",
+        "answer": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен."
+      }
+    ],
+    "type": "result",
+    "result": {
+      "top": {
+        "id": "steam:1328660",
+        "domain": "game",
+        "name": "Need for Speed Hot Pursuit Remastered",
+        "ru": null,
+        "year": 2020,
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1328660/header.jpg",
+        "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1328660/library_600x900.jpg",
+        "kind": "game",
+        "series": [
+          "Need for Speed",
+          "Need for Speed Hot Pursuit"
+        ],
+        "genres": [
+          "Action",
+          "Racing"
+        ],
+        "runtime": null,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": null,
+        "link": "https://store.steampowered.com/app/1328660/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 2.792,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 2.603,
+          "prior": 0.189
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+              "factIds": [
+                "mood:loop.driving"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+              "factIds": [
+                "mood:social.solo"
+              ]
+            }
+          ],
+          "risks": [
+            {
+              "text": "Нет данных: длина",
+              "factIds": [
+                "gap:length"
+              ]
+            }
+          ],
+          "info": [
+            {
+              "text": "81% положительных из 11 515 отзывов Steam",
+              "factIds": [
+                "fact:reviews"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:loop.driving",
+            "type": "mood",
+            "f": "loop.driving",
+            "why": [
+              "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+            ],
+            "evidence": [
+              {
+                "id": "p0",
+                "q": "is a 2010 racing video game",
+                "kind": "wiki",
+                "section": "lead",
+                "url": "https://en.wikipedia.org/wiki/Need_for_Speed%3A_Hot_Pursuit_Remastered",
+                "ru": "видеоигра о гонках 2010 года"
+              }
+            ]
+          },
+          {
+            "id": "mood:social.solo",
+            "type": "mood",
+            "f": "social.solo",
+            "why": [
+              "сегодня хочется: «Один»"
+            ],
+            "evidence": [
+              {
+                "id": "p5",
+                "q": "both single-player and multiplayer game modes",
+                "kind": "wiki",
+                "section": "PS3, Xbox 360, Microsoft Windows",
+                "url": "https://en.wikipedia.org/wiki/Need_for_Speed%3A_Hot_Pursuit_Remastered",
+                "ru": "как одиночный, так и многопользовательский режимы"
+              }
+            ]
+          },
+          {
+            "id": "gap:length",
+            "type": "gap",
+            "what": "длина"
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.807,
+            "total": 11515,
+            "desc": null
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "unknown",
+            "text": "Не проверено, удобно ли прерваться через 45 мин."
+          }
+        ],
+        "ai": {
+          "reason": "В Hot Pursuit короткие заезды и погони запускаются с карты событий: можно сразу гонять, не погружаясь в длинный сюжет.",
+          "caveat": "Управление аркадное; машины и события открываются постепенно.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "steam:244210",
+          "domain": "game",
+          "name": "Assetto Corsa",
+          "ru": null,
+          "year": 2014,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244210/header.jpg?t=1782208838",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/244210/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "Assetto Corsa"
+          ],
+          "genres": [
+            "Indie",
+            "Racing",
+            "Simulation"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "Very Positive",
+          "link": "https://store.steampowered.com/app/244210/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.883,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.538,
+            "prior": 0.346
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+                "factIds": [
+                  "mood:loop.driving"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "93% положительных из 175 407 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 7 ч",
+                "factIds": [
+                  "fact:hours"
+                ]
+              },
+              {
+                "text": "не поддерживается на Steam Deck",
+                "factIds": [
+                  "fact:deck"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.driving",
+              "type": "mood",
+              "f": "loop.driving",
+              "why": [
+                "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+              ],
+              "evidence": [
+                {
+                  "id": "a",
+                  "q": "The advanced physics engine is being designed to provide a very realistic driving experience",
+                  "kind": "description",
+                  "thumb": null,
+                  "hours": null,
+                  "lang": null,
+                  "ru": "Продвинутый физический движок создан для очень реалистичного ощущения вождения"
+                }
+              ]
+            },
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": []
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.929,
+              "total": 175407,
+              "desc": "Very Positive"
+            },
+            {
+              "id": "fact:hours",
+              "type": "fact",
+              "hours": 7
+            },
+            {
+              "id": "fact:deck",
+              "type": "fact",
+              "deck": "unsupported"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 45 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В Assetto Corsa можно выбрать машину и трассу вне карьеры и посвятить вечер самому управлению.",
+            "caveat": "Симулятор требователен к вождению; настройка управления может отнять время.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:2990",
+          "domain": "game",
+          "name": "FlatOut 2",
+          "ru": null,
+          "year": 2006,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2990/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2990/library_600x900.jpg",
+          "kind": "game",
+          "series": [
+            "FlatOut"
+          ],
+          "genres": [
+            "Racing"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": null,
+          "link": "https://store.steampowered.com/app/2990/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.747,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.382,
+            "prior": 0.365
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+                "factIds": [
+                  "mood:loop.driving"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Нет данных: длина",
+                "factIds": [
+                  "gap:length"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "96% положительных из 18 660 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.driving",
+              "type": "mood",
+              "f": "loop.driving",
+              "why": [
+                "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+              ],
+              "evidence": [
+                {
+                  "id": "p0",
+                  "q": "is an action racing video game",
+                  "kind": "wiki",
+                  "section": "lead",
+                  "url": "https://en.wikipedia.org/wiki/FlatOut_2",
+                  "ru": "это гоночная аркадная видеоигра"
+                }
+              ]
+            },
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 289
+                }
+              ]
+            },
+            {
+              "id": "gap:length",
+              "type": "gap",
+              "what": "длина"
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.961,
+              "total": 18660,
+              "desc": null
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 45 мин."
+            }
+          ],
+          "ai": {
+            "reason": "FlatOut 2 предлагает одиночные быстрые гонки без карьеры: заезды по грунту, столкновения и ощутимый вес машины.",
+            "caveat": "Графика возрастная, а соперники часто толкаются и сбивают с траектории.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "steam:550320",
+          "domain": "game",
+          "name": "art of rally",
+          "ru": null,
+          "year": 2020,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/550320/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/550320/library_600x900.jpg",
+          "kind": "game",
+          "series": [],
+          "genres": [
+            "Action",
+            "Indie",
+            "Racing"
+          ],
+          "runtime": null,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": null,
+          "link": "https://store.steampowered.com/app/550320/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.699,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.382,
+            "prior": 0.316
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу гонки: нравится управлять машиной»»: «езда и гонки»",
+                "factIds": [
+                  "mood:loop.driving"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Один»»: «одиночная игра»",
+                "factIds": [
+                  "mood:social.solo"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Нет данных: длина",
+                "factIds": [
+                  "gap:length"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "93% положительных из 5 516 отзывов Steam",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:loop.driving",
+              "type": "mood",
+              "f": "loop.driving",
+              "why": [
+                "сегодня хочется: «Хочу гонки: нравится управлять машиной»"
+              ],
+              "evidence": [
+                {
+                  "id": "p2",
+                  "q": "Art of Rally is a racing game played in a top-down perspective",
+                  "kind": "wiki",
+                  "section": "Gameplay",
+                  "url": "https://en.wikipedia.org/wiki/Art_of_Rally",
+                  "ru": "Art of Rally — гоночная игра с видом сверху"
+                }
+              ]
+            },
+            {
+              "id": "mood:social.solo",
+              "type": "mood",
+              "f": "social.solo",
+              "why": [
+                "сегодня хочется: «Один»"
+              ],
+              "evidence": [
+                {
+                  "id": "tag:Singleplayer",
+                  "kind": "tag",
+                  "q": "Singleplayer",
+                  "votes": 97
+                }
+              ]
+            },
+            {
+              "id": "gap:length",
+              "type": "gap",
+              "what": "длина"
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.927,
+              "total": 5516,
+              "desc": null
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "unknown",
+              "text": "Не проверено, удобно ли прерваться через 45 мин."
+            }
+          ],
+          "ai": {
+            "reason": "В art of rally есть отдельные заезды на время: можно сразу заняться поворотами и заносами без прохождения карьеры.",
+            "caveat": "Камера смотрит издалека сверху; к управлению заносом нужно привыкнуть.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.078,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 2
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 571
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 0
+        }
+      ],
+      "considered": 4379,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 2
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты хочешь гонки на ПК, в одиночку: получать удовольствие от управления машиной и быстро переходить к заездам, без обязательной длинной карьеры. Есть 45 минут. Общая длина игры неважна, сюжет будет плюсом, но не обязателен. RPG и Skyrim сегодня не рассматриваем.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    }
+  },
+  "feedbackState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "Сегодня ты хочешь гонки на ПК, в одиночку: получать удовольствие от управления машиной и быстро переходить к заездам, без обязательной длинной карьеры. Есть 45 минут. Общая длина игры неважна, сюжет будет плюсом, но не обязателен. RPG и Skyrim сегодня не рассматриваем.",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": []
+    },
+    "stops": [],
+    "asked": [],
+    "shown": [],
+    "liked": [],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:72850": {
+        "reaction": "known",
+        "text": "Skyrim прошёл."
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": [
+        "steam:489830",
+        "steam:72850"
+      ],
+      "goalDriven": true,
+      "excludeSeries": false,
+      "goalWants": [
+        {
+          "f": "loop.driving",
+          "evidence": "Хочу гонки: нравится управлять машиной"
+        },
+        {
+          "f": "social.solo",
+          "evidence": "Один"
+        }
+      ],
+      "goalAvoids": [],
+      "minutes": 45,
+      "goalRequires": [],
+      "goalExcludes": [],
+      "genreWants": []
+    },
+    "seed": 386542,
+    "conversation": {
+      "revision": 6,
+      "summary": "Сегодня ты хочешь гонки на ПК, в одиночку: получать удовольствие от управления машиной и быстро переходить к заездам, без обязательной длинной карьеры. Есть 45 минут. Общая длина игры неважна, сюжет будет плюсом, но не обязателен. RPG и Skyrim сегодня не рассматриваем.",
+      "facts": [
+        {
+          "key": "skyrim_finished",
+          "text": "Ты уже прошёл Skyrim.",
+          "stance": "history",
+          "scope": "history",
+          "sourceId": "overnight-20261101-01-replay:1",
+          "quote": "Skyrim прошёл.",
+          "feature": null,
+          "gameId": "steam:72850",
+          "exposure": "finished",
+          "gameIntent": null
+        },
+        {
+          "key": "exclude_rpg",
+          "text": "Сегодня ты не хочешь RPG.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:5",
+          "quote": "сегодня уже не RPG и не Skyrim",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "exclude_skyrim",
+          "text": "Сегодня Skyrim исключён из выбора.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:5",
+          "quote": "сегодня уже не RPG и не Skyrim",
+          "feature": null,
+          "gameId": "steam:72850",
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "driving",
+          "text": "Хочешь гонки, нравится управлять машиной.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:5",
+          "quote": "Хочу гонки: нравится управлять машиной",
+          "feature": "loop.driving",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "quick_race_access",
+          "text": "Хочешь быстро начинать заезды без обязательной длинной карьеры.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:5",
+          "quote": "быстро начинать заезды, без обязательной длинной карьеры",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "total_length_indifferent",
+          "text": "Общая длина игры не является критерием.",
+          "stance": "indifferent",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:5",
+          "quote": "Общая длина игры неважна.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "optional_story",
+          "text": "Сюжет желателен, но не обязателен.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:5",
+          "quote": "Сюжет — хорошо, если есть, но он не обязателен.",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "platform_windows",
+          "text": "Будешь играть на ПК с Windows.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:2",
+          "quote": "ПК (Windows)",
+          "feature": null,
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        },
+        {
+          "key": "solo",
+          "text": "Будешь играть один.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "overnight-20261101-01-replay:3",
+          "quote": "Один",
+          "feature": "social.solo",
+          "gameId": null,
+          "exposure": null,
+          "gameIntent": null
+        }
+      ],
+      "sessionTime": {
+        "minutes": 45,
+        "sourceId": "overnight-20261101-01-replay:5",
+        "quote": "Сегодня есть 45 минут."
+      },
+      "uncertainties": [],
+      "retractions": [],
+      "familiarity": {
+        "returnToIds": [],
+        "hiddenIds": [],
+        "excludedIds": []
+      },
+      "turns": [
+        {
+          "id": "overnight-20261101-01-replay:1",
+          "question": "Во что тянет сегодня?",
+          "answer": "RPG; Skyrim прошёл. Сегодня хочу перепройти Skyrim: снова исследовать мир и развивать героя, но без частых повторов после смерти. Сегодня есть полчаса.",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-01-replay:2",
+          "question": "Где будешь играть?",
+          "answer": "ПК (Windows)",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-01-replay:3",
+          "question": "Будешь играть один или вместе с кем-то?",
+          "answer": "Один",
+          "kind": "answer",
+          "superseded": false
+        },
+        {
+          "id": "overnight-20261101-01-replay:5",
+          "question": "Что нужно изменить?",
+          "answer": "Поправка: сегодня уже не RPG и не Skyrim. Хочу гонки: нравится управлять машиной и быстро начинать заезды, без обязательной длинной карьеры. Сегодня есть 45 минут. Общая длина игры неважна. Сюжет — хорошо, если есть, но он не обязателен.",
+          "kind": "answer",
+          "superseded": false
+        }
+      ]
+    }
+  }
+}

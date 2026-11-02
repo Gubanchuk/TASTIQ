@@ -1,0 +1,6 @@
+{"appid": 78000, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is a tile-matching puzzle video game"}]},
+{"f": "cognitive.low", "r": 3, "ev": [{"id": "p2", "q": "swapping two adjacent gems to form a line of three or more gems of the same color"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p4", "q": "Bejeweled 3 features an achievement system known as Badges"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p5", "q": "the difficulty of unlocking each game mode has been reduced drastically"}]}
+]}

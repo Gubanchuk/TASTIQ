@@ -1,0 +1,11 @@
+{"appid": 250760, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p3", "q": "Shovel Knight is a 2D side-scrolling platform game with an 8-bit graphical style"}, {"id": "p0", "q": "is a platform game developed and published by Yacht Club Games"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "The player can further use treasure to buy useful upgrades for Shovel Knight's health"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p3", "q": "with an 8-bit graphical style"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "gorgeous graphics, an incredible soundtrack and endearing characters"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "gorgeous graphics, an incredible soundtrack and endearing characters"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p8", "q": "gorgeous graphics, an incredible soundtrack and endearing characters"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "Completing the game unlocks a more difficult New Game Plus mode"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Shovel Knight can attack with his shovel, dig through dirt blocks, unearth treasure"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p3", "q": "Levels are themed around the individual knights of the Order of No Quarter"}]}
+]}

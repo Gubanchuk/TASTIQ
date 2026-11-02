@@ -1,0 +1,10 @@
+{"appid": 834910, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "Atlas is a survival MMO video game"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p3", "q": "In order to build something, enough resources must be gathered"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "PvP allows the other players to attack at any time"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p5", "q": "Atlas encourages the players to connect in groups named companies"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "hunting for treasures and exploring"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "where the goal is to live as long as possible"}]},
+{"f": "world.living", "r": 1, "ev": [{"id": "p4", "q": "The islands contain a world full of creatures"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p2", "q": "requires the player to manage four"}]}
+]}

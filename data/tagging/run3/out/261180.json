@@ -1,0 +1,8 @@
+{"appid": 261180, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "up to four players face off against each other in an arena"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "a lot of fun to play on the couch with friends"}, {"id": "p2", "q": "couch co-op games"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p1", "q": "With each consecutive hit, the ball will speed up more"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "easy to learn, spectacular to watch and complex to master"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p1", "q": "If Mario Tennis and Smash Bros. had a baby"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "spectacular to watch"}]}
+]}

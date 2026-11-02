@@ -1,0 +1,9 @@
+{"appid": 18500, "features": [
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "Good tower placement is the key strategic object of the game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "Tower construction is limited to specific platforms"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Each tower has unique trade-offs that affect ideal placement"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p9", "q": "charming and challenging experience"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p10", "q": "lamented there being only 20 levels"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p7", "q": "the aliens attempt to steal power cores"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "might find the game a little repetitive"}]}
+]}

@@ -1,0 +1,10 @@
+{"id": "tt10364034", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 French animated musical romantic superhero film"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 French animated musical romantic superhero film"}]},
+{"f": "world.music", "r": 2, "ev": [{"id": "p5", "q": "The whole is embellished with songs, like in a Disney"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p0", "q": "is a 2023 French animated musical romantic superhero film"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "praised the animation, soundtrack, and action sequences"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p6", "q": "but it is visually impressive"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p2", "q": "criticized the simplistic screenplay, humor and story"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p6", "q": "blends into a traditional narration without any real originality"}]}
+]}

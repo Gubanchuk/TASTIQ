@@ -1,0 +1,14 @@
+{"appid": 32370, "features": [
+{"f": "story.central", "r": 3, "ev": [{"id": "p3", "q": "Knights of the Old Republic received critical acclaim for its characters, story, and sound"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p3", "q": "Knights of the Old Republic received critical acclaim for its characters, story, and sound"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p3", "q": "Knights of the Old Republic received critical acclaim for its characters, story, and sound"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p5", "q": "Combat is round-based; time is divided into discrete rounds"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Players choose from three basic character classes (Scout, Soldier or Scoundrel)"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "Feats and Force powers are generally unlocked upon level-up"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p6", "q": "the player can have up to two companions in their party"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "must venture to different planets in the galaxy to defeat Malak"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "similar to magic spells in fantasy games"}]},
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p7", "q": "Non-combat interaction with other characters in the game world is based upon a dialogue menu system"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p8", "q": "The alignment system tracks actions and speech"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p5", "q": "Combat actions are calculated using Dungeons & Dragons rules, particularly the d20 System"}]}
+]}

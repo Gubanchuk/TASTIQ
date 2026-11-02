@@ -1,0 +1,6 @@
+{"id": "tt2402061", "features": [
+{"f": "story.mystery", "r": 3, "ev": [{"id": "s", "q": "investigate two seemingly unrelated murders"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is an American crime drama television series"}]},
+{"f": "structure.serialized", "r": 2, "ev": [{"id": "p0", "q": "the show follows a single case across an entire season"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "aired for three seasons from June 9, 2014 to September 4, 2016"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 714120, "features": [
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "is a 2019 horror adventure video game"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p0", "q": "a dark sense of humor"}, {"id": "p1", "q": "numerous elements of shock humor"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p3", "q": "At certain points in the game the player has to make choices for Misfortune"}, {"id": "p4", "q": "there is no right or wrong, only consequences"}]},
+{"f": "content.sexual", "r": 1, "ev": [{"id": "p1", "q": "nudity, profanity, grave robbery, strip clubs"}]},
+{"f": "content.gore", "r": 1, "ev": [{"id": "p1", "q": "traffic collisions, cruelty to animals"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p6", "q": "praised the game's art style and thematic aspects"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p6", "q": "relatively short length"}, {"id": "p9", "q": "it took me about 2.5 hours to emerge from the other side"}]}
+]}

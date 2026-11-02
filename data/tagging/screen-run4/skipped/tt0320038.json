@@ -1,0 +1,31 @@
+{
+  "id": "tt0320038",
+  "name": "John Doe",
+  "kind": "series",
+  "domain": "series",
+  "year": 2002,
+  "genres": [
+    "Drama",
+    "Mystery",
+    "Sci-Fi"
+  ],
+  "s": "A man who knows literally everything---except his own identity---helps the Seattle police solve crimes as he tries to figure out who he is and where he came from.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "John Doe is an American science fiction drama television series that aired on Fox during the 2002–2003 TV season."
+    },
+    {
+      "id": "p1",
+      "section": "Synopsis",
+      "text": "In the opening scene of the series' pilot episode, a mysterious man awakens on an island off the coast of Seattle, Washington, naked, with absolutely no memory of who he is or how he got there. Apart from the details of his own past, \"John Doe\", as he comes to call himself, seems to have access to the sum total of all human knowledge: he knows how many dimples are on a golf ball, the population of Morocco, and other such obscure (and not-so-obscure) facts. He has expert knowledge on everything from the stock market to computers. John attempts to find clues about his past by using his unusual ability while also helping to solve crimes with the Seattle police department. It becomes clear that …"
+    },
+    {
+      "id": "p2",
+      "section": "Reception",
+      "text": "On Metacritic, the series has a score of 65 out of 100 based on 22 reviews, indicating \"generally favorable reviews\". On Rotten Tomatoes, the series has an approval rating of 73% with an average rating of 7/10 based on 26 reviews, with a critical consensus stating: \"John Doe overcomes its somewhat dubious premise with an alluring sense of mystery and a nuanced performance from Dominic Purcell.\" Phil Gallo of Variety wrote, \"It's so stylishly executed, with Mimi Leder's direction, a crisp script and magnetic lead by Dominic Purcell, that the John Doe indeed has a solid identity.\""
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/John_Doe_(TV_series)"
+}

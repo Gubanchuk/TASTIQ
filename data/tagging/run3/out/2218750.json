@@ -1,0 +1,9 @@
+{"appid": 2218750, "features": [
+{"f": "session.short", "r": 3, "ev": [{"id": "p2", "q": "survive combat against waves of enemies in 30 minute runs"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "Halls of Torment is a fantasy role-playing game (RPG)"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "Characters are controlled from an isometric perspective in a pre-rendered, hellish environment"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p1", "q": "grainy character sprites, low fidelity voice-overs"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "Experience points can be invested into stats such as health, regen, attack speed"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Before starting a run, players can select from a roster of 11 characters"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "a chest that offers the choice between three different pieces of armor or jewelry"}]}
+]}

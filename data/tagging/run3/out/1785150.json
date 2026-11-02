@@ -1,0 +1,8 @@
+{"appid": 1785150, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "deck-building first-person shooter video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "which cause the animals to fight in 1v1 or 2v2 deathmatches"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "which cause the animals to fight in 1v1 or 2v2 deathmatches"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "quick to learn, quick to play"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p1", "q": "Battles go for up to five rounds"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "p2", "q": "progress was a bit slow as a result"}]}
+]}

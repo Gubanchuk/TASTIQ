@@ -1,0 +1,79 @@
+{
+ "appid": 307780,
+ "features": [
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236811562",
+     "q": "Зашёл подраться с другом, вышел с новым пониманием того, как устроен человеческий скелет"
+    }
+   ]
+  },
+  {
+   "f": "social.pvp",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238018047",
+     "q": "absolutely crushing them in both Casual and Ranked modes"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237749160",
+     "q": "excellent character roster"
+    },
+    {
+     "id": "r237769563",
+     "q": "good character design"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237769563",
+     "q": "Really good aesthetics"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "players can choose from multiple variations of each character impacting both strategy and fighting style"
+    }
+   ]
+  },
+  {
+   "f": "content.gore",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236442526",
+     "q": "its gruesome spectacle"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238124261",
+     "q": "the input does not work i put combo in no response just sits there"
+    }
+   ]
+  }
+ ]
+}

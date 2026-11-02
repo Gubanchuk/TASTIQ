@@ -1,0 +1,7 @@
+{"id": "tt0452718", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is an American science fiction television series created by Jonas and Josh Pate"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "s", "q": "unearths a government cover-up operation"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p3", "q": "a horrific howl tears apart a South African lighthouse"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "ended its run on February 6"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p8", "q": "encompasses possible implications of genetic engineering, and modern biotechnology"}]}
+]}

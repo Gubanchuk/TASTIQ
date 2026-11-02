@@ -1,0 +1,9 @@
+{"appid": 33930, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Bohemia Interactive's tactical shooter Arma 2"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "command units like a real-time strategy game"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p1", "q": "Players are allowed to perform duties that real soldiers would perform during combat"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "tank commander or pilot of a combat helicopter"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p2", "q": "United States Army military equipment"}, {"id": "p4", "q": "U.S. and NATO forces are sent in to prevent the attack"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p5", "q": "boasts all the beauty, realism, and action of the original"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p5", "q": "its steep learning curve might deter people from playing"}, {"id": "p5", "q": "understanding the layout and functionality of complex communication menus"}]}
+]}

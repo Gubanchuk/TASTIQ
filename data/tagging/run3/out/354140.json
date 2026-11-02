@@ -1,0 +1,9 @@
+{"appid": 354140, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "point-and-click survival horror video game"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p0", "q": "must defend themself from a decrepit animatronic called Springtrap"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p5", "q": "These minigames provide backstory for the series."}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "affects which of two endings the player receives upon completing the game"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p9", "q": "Other critics praised the character of Springtrap"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p9", "q": "called the gameplay simpler than previous titles"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "believed that the phantom animatronics lacked their original personalities and felt repetitious"}]}
+]}

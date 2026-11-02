@@ -1,0 +1,8 @@
+{"appid": 1140270, "features": [
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p0", "q": "Players attempt to romance monsters"}, {"id": "p1", "q": "players compete to romance a non-player character monster"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p1", "q": "often result in black humor"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p2", "q": "praised the gameplay, writing, humor, and multiplayer"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "Up to four players can compete"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p1", "q": "a single player can play alone"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p1", "q": "tone down the game's emphasis on various potential triggers, such as sex and drug use"}]}
+]}

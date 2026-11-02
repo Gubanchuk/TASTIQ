@@ -1,0 +1,38 @@
+{
+  "without-intent": {
+    "lists": 8,
+    "failedLists": 0,
+    "shown": 32,
+    "engine": 32,
+    "model": 0,
+    "fill": 0,
+    "accept": 0,
+    "conditional": 0,
+    "reject": 0,
+    "unknown": 0,
+    "unreviewed": 32,
+    "fullyResolvedLists": 0,
+    "listsWithAccept": 0,
+    "decidable": 0,
+    "strictAcceptance": null,
+    "anyAcceptRate": null
+  },
+  "confirmed-intent": {
+    "lists": 8,
+    "failedLists": 0,
+    "shown": 32,
+    "engine": 32,
+    "model": 0,
+    "fill": 0,
+    "accept": 0,
+    "conditional": 0,
+    "reject": 0,
+    "unknown": 0,
+    "unreviewed": 32,
+    "fullyResolvedLists": 0,
+    "listsWithAccept": 0,
+    "decidable": 0,
+    "strictAcceptance": null,
+    "anyAcceptRate": null
+  }
+}

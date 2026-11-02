@@ -1,0 +1,9 @@
+{"appid": 4920, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "two opposing teams of players"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p0", "q": "combines first-person shooter and real-time strategy rules"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "plays the game in a Real-time strategy perspective"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "The commander can place buildings, research upgrades"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "It is set in a science fiction universe"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p1", "q": "Aliens rely primarily on melee attacks"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p1", "q": "evolve into higher lifeforms"}]}
+]}

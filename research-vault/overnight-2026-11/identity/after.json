@@ -1,0 +1,441 @@
+{
+  "at": "2026-11-01T00:35:13.128Z",
+  "catalogItems": 4952,
+  "method": "Local real-catalog deterministic identity + saved live fact replay. API calls0.",
+  "cases": [
+    {
+      "text": "Skyrim",
+      "matches": [
+        {
+          "id": "steam:72850",
+          "work": "elder scrolls v skyrim",
+          "sourceId": "diagnostic",
+          "quote": "Skyrim",
+          "aliasId": "curated:skyrim-base-v1:catalog:steam:72850:name",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Скайрим",
+      "matches": [
+        {
+          "id": "steam:72850",
+          "work": "elder scrolls v skyrim",
+          "sourceId": "diagnostic",
+          "quote": "Скайрим",
+          "aliasId": "catalog:steam:72850:alias:0",
+          "start": 0,
+          "end": 7
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "RDR2",
+      "matches": [
+        {
+          "id": "steam:1174180",
+          "work": "red dead redemption 2",
+          "sourceId": "diagnostic",
+          "quote": "RDR2",
+          "aliasId": "catalog:steam:1174180:alias:1",
+          "start": 0,
+          "end": 4
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "BG3",
+      "matches": [
+        {
+          "id": "steam:1086940",
+          "work": "baldurs gate 3",
+          "sourceId": "diagnostic",
+          "quote": "BG3",
+          "aliasId": "curated:baldurs-gate-3-v1:catalog:steam:1086940:name",
+          "start": 0,
+          "end": 3
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Ведьмак3",
+      "matches": [
+        {
+          "id": "steam:292030",
+          "work": "witcher 3 wild hunt",
+          "sourceId": "diagnostic",
+          "quote": "Ведьмак3",
+          "aliasId": "curated:witcher-3-v1:catalog:steam:292030:name",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Ведьмак 3",
+      "matches": [
+        {
+          "id": "steam:292030",
+          "work": "witcher 3 wild hunt",
+          "sourceId": "diagnostic",
+          "quote": "Ведьмак 3",
+          "aliasId": "curated:witcher-3-v1:catalog:steam:292030:name",
+          "start": 0,
+          "end": 9
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "The Elder Scrolls V: Skyrim Special Edition",
+      "matches": [
+        {
+          "id": "steam:489830",
+          "work": "elder scrolls v skyrim",
+          "sourceId": "diagnostic",
+          "quote": "The Elder Scrolls V: Skyrim Special Edition",
+          "aliasId": "catalog:steam:489830:name",
+          "start": 0,
+          "end": 43
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Baldur’s Gate 3",
+      "matches": [
+        {
+          "id": "steam:1086940",
+          "work": "baldurs gate 3",
+          "sourceId": "diagnostic",
+          "quote": "Baldur’s Gate 3",
+          "aliasId": "catalog:steam:1086940:name",
+          "start": 0,
+          "end": 15
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Red Dead Redemption 2",
+      "matches": [
+        {
+          "id": "steam:1174180",
+          "work": "red dead redemption 2",
+          "sourceId": "diagnostic",
+          "quote": "Red Dead Redemption 2",
+          "aliasId": "catalog:steam:1174180:name",
+          "start": 0,
+          "end": 21
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "control",
+      "matches": [],
+      "ambiguous": []
+    },
+    {
+      "text": "portal",
+      "matches": [],
+      "ambiguous": []
+    },
+    {
+      "text": "Я хочу контроль над героем, а не портал в другой мир",
+      "matches": [],
+      "ambiguous": []
+    },
+    {
+      "text": "Portal 2",
+      "matches": [
+        {
+          "id": "steam:620",
+          "work": "portal 2",
+          "sourceId": "diagnostic",
+          "quote": "Portal 2",
+          "aliasId": "catalog:steam:620:name",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Skyrim Special Edition",
+      "matches": [
+        {
+          "id": "steam:489830",
+          "work": "elder scrolls v skyrim",
+          "sourceId": "diagnostic",
+          "quote": "Skyrim Special Edition",
+          "aliasId": "catalog:steam:489830:alias:0",
+          "start": 0,
+          "end": 22
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "The Elder Scrolls V: Skyrim",
+      "matches": [
+        {
+          "id": "steam:72850",
+          "work": "elder scrolls v skyrim",
+          "sourceId": "diagnostic",
+          "quote": "The Elder Scrolls V: Skyrim",
+          "aliasId": "catalog:steam:72850:name",
+          "start": 0,
+          "end": 27
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Portal 2 прошёл",
+      "matches": [
+        {
+          "id": "steam:620",
+          "work": "portal 2",
+          "sourceId": "diagnostic",
+          "quote": "Portal 2",
+          "aliasId": "catalog:steam:620:name",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Играл в «Portal»",
+      "matches": [
+        {
+          "id": "steam:400",
+          "work": "portal",
+          "sourceId": "diagnostic",
+          "quote": "Portal",
+          "aliasId": "catalog:steam:400:name",
+          "start": 9,
+          "end": 15
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Control прошёл",
+      "matches": [
+        {
+          "id": "steam:870780",
+          "work": "Q54935655",
+          "sourceId": "diagnostic",
+          "quote": "Control",
+          "aliasId": "curated:control-v1:catalog:steam:870780:name",
+          "start": 0,
+          "end": 7
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "CONTROL Ultimate Edition",
+      "matches": [
+        {
+          "id": "steam:870780",
+          "work": "Q54935655",
+          "sourceId": "diagnostic",
+          "quote": "CONTROL Ultimate Edition",
+          "aliasId": "catalog:steam:870780:name",
+          "start": 0,
+          "end": 24
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Skyrim VR",
+      "matches": [
+        {
+          "id": "steam:611670",
+          "work": "elder scrolls v skyrim vr",
+          "sourceId": "diagnostic",
+          "quote": "Skyrim VR",
+          "aliasId": "catalog:steam:611670:alias:0",
+          "start": 0,
+          "end": 9
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "Балдурс Гейт 3",
+      "matches": [
+        {
+          "id": "steam:1086940",
+          "work": "baldurs gate 3",
+          "sourceId": "diagnostic",
+          "quote": "Балдурс Гейт 3",
+          "aliasId": "curated:baldurs-gate-3-v1:catalog:steam:1086940:name",
+          "start": 0,
+          "end": 14
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "text": "РДР2",
+      "matches": [
+        {
+          "id": "steam:1174180",
+          "work": "red dead redemption 2",
+          "sourceId": "diagnostic",
+          "quote": "РДР2",
+          "aliasId": "curated:red-dead-2-v1:catalog:steam:1174180:name",
+          "start": 0,
+          "end": 4
+        }
+      ],
+      "ambiguous": []
+    }
+  ],
+  "enabledRules": [
+    {
+      "id": "skyrim-base-v1",
+      "targets": [
+        {
+          "id": "steam:72850",
+          "name": "The Elder Scrolls V: Skyrim",
+          "work": "elder scrolls v skyrim"
+        }
+      ]
+    },
+    {
+      "id": "baldurs-gate-3-v1",
+      "targets": [
+        {
+          "id": "steam:1086940",
+          "name": "Baldur's Gate 3",
+          "work": "baldurs gate 3"
+        }
+      ]
+    },
+    {
+      "id": "red-dead-2-v1",
+      "targets": [
+        {
+          "id": "steam:1174180",
+          "name": "Red Dead Redemption 2",
+          "work": "red dead redemption 2"
+        }
+      ]
+    },
+    {
+      "id": "witcher-3-v1",
+      "targets": [
+        {
+          "id": "steam:292030",
+          "name": "The Witcher 3: Wild Hunt — Remastered",
+          "work": "witcher 3 wild hunt"
+        }
+      ]
+    },
+    {
+      "id": "control-v1",
+      "targets": [
+        {
+          "id": "steam:870780",
+          "name": "CONTROL Ultimate Edition",
+          "work": "Q54935655"
+        }
+      ]
+    }
+  ],
+  "live": {
+    "knownGames": [
+      {
+        "id": "steam:72850",
+        "name": "The Elder Scrolls V: Skyrim",
+        "ru": null,
+        "year": 2011,
+        "aliases": [
+          "Skyrim"
+        ],
+        "evidence": [
+          {
+            "sourceId": "familiar-live-20261101-a:1",
+            "quote": "Skyrim",
+            "aliasId": "curated:skyrim-base-v1:catalog:steam:72850:name"
+          }
+        ]
+      },
+      {
+        "id": "steam:1174180",
+        "name": "Red Dead Redemption 2",
+        "ru": null,
+        "year": 2019,
+        "aliases": [
+          "Red Dead Redemption 2"
+        ],
+        "evidence": [
+          {
+            "sourceId": "familiar-live-20261101-a:1",
+            "quote": "Red Dead Redemption 2",
+            "aliasId": "catalog:steam:1174180:name"
+          }
+        ]
+      },
+      {
+        "id": "steam:1091500",
+        "name": "Cyberpunk 2077",
+        "ru": null,
+        "year": 2020,
+        "aliases": [
+          "Cyberpunk 2077"
+        ],
+        "evidence": [
+          {
+            "sourceId": "familiar-live-20261101-a:1",
+            "quote": "Cyberpunk 2077",
+            "aliasId": "catalog:steam:1091500:name"
+          }
+        ]
+      }
+    ],
+    "beforeSkyrim": {
+      "key": "history:skyrim",
+      "text": "Skyrim пройден.",
+      "stance": "history",
+      "scope": "history",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+      "feature": null,
+      "gameId": null,
+      "exposure": "finished"
+    },
+    "afterSkyrim": {
+      "key": "history:skyrim",
+      "text": "Skyrim пройден.",
+      "stance": "history",
+      "scope": "history",
+      "sourceId": "familiar-live-20261101-a:1",
+      "quote": "Skyrim и Red Dead Redemption 2 прошёл",
+      "feature": null,
+      "gameId": "steam:72850",
+      "exposure": "finished"
+    },
+    "excludedEditions": [
+      "steam:489830",
+      "steam:72850"
+    ],
+    "vrNotConsumed": true,
+    "rankedContainsFinished": false,
+    "returnOverrideAllowed": true,
+    "explicitTodayExclusionStillWins": true
+  }
+}

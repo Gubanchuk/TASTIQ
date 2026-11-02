@@ -1,0 +1,10 @@
+{"appid": 671510, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "Desolate is a survival game set in an open world environment"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "set in an open world environment"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "which allow them to create new items and equipment"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p2", "q": "combat is mostly melee-based, with ammo for firearms being very rare"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "with up to four-player co-operative multiplayer"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Most of the gameplay is built around combat, exploration and campaign storyline progression"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "which can be used to unlock various abilities and enhancements in one of the three skill trees"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p5", "q": "Desolate takes place in Russia during the Soviet era"}]}
+]}

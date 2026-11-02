@@ -1,0 +1,10 @@
+{"appid": 2111190, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a single-player first-person shooter and roguelite game"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p0", "q": "is a single-player first-person shooter"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p6", "q": "incredibly fast action"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p1", "q": "who has 10 seconds to navigate each floor"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "Players can acquire upgrades and weapons between floors"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p1", "q": "Obtainable weapons include a revolver, shotgun, rifle"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p3", "q": "The game is set in the year 2095"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p6", "q": "thanks to its solid world-building, awesome visuals"}]}
+]}

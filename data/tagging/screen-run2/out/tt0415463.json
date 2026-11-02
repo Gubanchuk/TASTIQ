@@ -1,0 +1,8 @@
+{"id": "tt0415463", "features": [
+{"f": "world.school", "r": 3, "ev": [{"id": "p1", "q": "Pacific Coast Academy, a fictional boarding school in Southern California"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American teen situational comedy-drama television series"}]},
+{"f": "characters.friendship", "r": 2, "ev": [{"id": "p5", "q": "the group of friends grow closer together"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p5", "q": "some are platonic, others not so much"}]},
+{"f": "length.long", "r": 1, "ev": [{"id": "p0", "q": "spanning a total of 61 episodes across four seasons"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "It aired from January 9, 2005, to May 2, 2008"}]}
+]}

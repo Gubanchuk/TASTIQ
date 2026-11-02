@@ -1,0 +1,6 @@
+{"appid": 1016920, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p3", "q": "up to four players cooperate to create a railroad to keep a train"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p4", "q": "To lay down rails for the train, the players must extract resources from the environment"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p3", "q": "The game has five game modes: endless, versus, fast, sandbox, and time"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p4", "q": "Upgrades enable exploration of new biomes and help the players extract materials"}]}
+]}

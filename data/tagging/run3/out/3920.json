@@ -1,0 +1,9 @@
+{"appid": 3920, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "an improved turn-based land combat system"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p8", "q": "sailing from destination to destination around the Caribbean islands"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "The player must choose one of five different skills at the start"}]},
+{"f": "story.choices", "r": 1, "ev": [{"id": "p6", "q": "which nation to sail with at the beginning"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p9", "q": "described the stylized look as adding life to the experience"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p9", "q": "the repetitive nature of the gameplay over time"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p2", "q": "includes some multiplayer capabilities"}]}
+]}

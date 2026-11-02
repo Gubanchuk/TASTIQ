@@ -1,0 +1,11 @@
+{"appid": 368260, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a 2022 tactical role-playing game"}]},
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p3", "q": "Combat is turn-based, mixed with deck-building"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p3", "q": "players choose three heroes to take into battle"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p0", "q": "Players are able to create their own superhero named"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "as she attempts to bring her master, Chthon, back to life"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p6", "q": "allowing players to upgrade the Abbey with new rooms and areas"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "Players can customize the Hunter and their superpowers from over 40 different abilities"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "interacting with them became repetitive and exhausting"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p10", "q": "battle preparations each morning could feel like a"}]}
+]}

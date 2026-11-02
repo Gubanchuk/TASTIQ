@@ -1,0 +1,9 @@
+{"appid": 1049890, "features": [
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "Soulslike third-person 3D action shooter game"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p0", "q": "is a 2022 Soulslike 3D action shooter video game"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p2", "q": "being more forgiving and adding health and mana regeneration"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p2", "q": "spells that are acquired and upgraded throughout the game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "exploring an ancient castle"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p4", "q": "praised its \"cute\" character design"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p1", "q": "single-player Soulslike third-person 3D action shooter game"}]}
+]}

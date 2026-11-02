@@ -1,0 +1,10 @@
+{"id": "tt1936532", "features": [
+{"f": "structure.procedural", "r": 3, "ev": [{"id": "p0", "q": "is an American police procedural television series"}]},
+{"f": "world.crime", "r": 3, "ev": [{"id": "p3", "q": "the trial of serial killer Phillip Stroh"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p3", "q": "adds more drama to Raydor's personal life"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p4", "q": "The series stars numerous cast members continuing in their roles"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p7", "q": "modulated and cool, but with a blue-flame intensity"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The final season premiered on October 31, 2017, and ended on January 9, 2018"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p1", "q": "with a total of 105 episodes"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p7", "q": "nice balance between the tragic and comic"}]}
+]}

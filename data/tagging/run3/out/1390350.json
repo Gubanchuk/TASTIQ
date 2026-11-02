@@ -1,0 +1,14 @@
+{"appid": 1390350, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p0", "q": "puzzle-platform video game"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p9", "q": "its ingenious puzzle design"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "encourages players to explore and revisit areas"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "the open and interconnected map space"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p5", "q": "collecting ant larvae, flies, pollen and baby spiders"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p3", "q": "laser shooting eyes which can be used to damage enemies"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p8", "q": "whimsical and fun gameplay"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p9", "q": "Webbed chose joy"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "its solid and jovial soundtrack"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "it has a simple, non-linear gameplay style"}, {"id": "p9", "q": "its easy gameplay fluidity"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p4", "q": "It has a frequent check-pointing system"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p9", "q": "ultimately short and sweet"}]}
+]}

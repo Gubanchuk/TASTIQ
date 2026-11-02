@@ -1,0 +1,12 @@
+{"appid": 274520, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2017 survival horror video game"}, {"id": "p9", "q": "praised the game for not relying on jumpscares"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "survive in a hideout against encroaching enemies"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "stealth and combat, as well as multiple storyline branches"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p4", "q": "crafting new items and upgrades at the workbench"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p4", "q": "Planning a defensive strategy is key"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p6", "q": "The storyline is shaped based on how the player reacts to the requests and actions of NPCs"}]},
+{"f": "freedom.open_world", "r": 1, "ev": [{"id": "p3", "q": "It features a semi-open world"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p7", "q": "killing and causing victims to transform into monsters and abominations"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p7", "q": "set somewhere in Poland in the late 1980s"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "Higher difficulties have higher penalties for death such as the loss of lives or permanent death"}]}
+]}

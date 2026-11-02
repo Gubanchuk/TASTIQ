@@ -1,0 +1,11 @@
+{"appid": 1527950, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "Wartales is a tactical role-playing game developed by Shiro Games"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p0", "q": "Players manage a mercenary band as it attempts to survive"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "There are elements of survival games, where characters gather necessary resources"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "a low fantasy world that is trying to recover from a plague"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "a medieval land suffers shortages and banditry"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "The game has an open world in which players traverse an overworld map"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "Wartales is a tactical role-playing game with sandbox gameplay"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "praised its emergent gameplay and ability to create interesting anecdotes"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "Wartales is a deep and richly rewarding exercise in party creation"}]}
+]}

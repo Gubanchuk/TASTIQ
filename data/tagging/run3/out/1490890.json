@@ -1,0 +1,8 @@
+{"appid": 1490890, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p0", "q": "is a fighting action-adventure game developed by CyberConnect2"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "The Hinokami Chronicles also features a versus mode"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p2", "q": "the game's single player story mode follows Tanjiro Kamado"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "faces off against various demons"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p3", "q": "Six characters were later added via free updates"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p2", "q": "The story features some exploration elements"}]}
+]}

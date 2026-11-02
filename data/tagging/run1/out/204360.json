@@ -1,0 +1,18 @@
+{"appid": 204360, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "a", "q": "Hack, slash, and smash your way to victory"}, {"id": "r236278334", "q": "the combat is simple but works really well"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "a", "q": "Play with up to four friends locally or online"}, {"id": "r237268688", "q": "Игра максимально заточена под кооп"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "r236278334", "q": "the game does not take itself too seriously"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r236510192", "q": "шутки милые и реально смешные"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "a", "q": "Level up your character with skill points and adjust Strength, Magic, Defense, and Agility"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "a", "q": "Unlock more than 25 characters and over 40 different weapons"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "a", "q": "battle other players in team matches or free-for-all"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "a", "q": "Intuitive magic and combo system: unlock an arsenal of new attacks"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r237532467", "q": "the OST, wow it's absolutely amazing"}, {"id": "r236510192", "q": "Анимация офигенная, музыка шикарная"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "r236626331", "q": "Love the art style"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r237268688", "q": "заучивать какие-то комбинации не требуется"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "r237018982", "q": "местами она почему-то оказалась даже сложнее, чем ожидалось"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "r238043184", "q": "очень короткая игра"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "a", "q": "Collect adorable animal orbs for your companions"}]},
+{"f": "characters.custom_hero", "r": 1, "ev": [{"id": "r237018982", "q": "с новым DLC вообще можно нарисовать собственного персонажа"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "r238065275", "q": "ele acaba ficando repetitivo"}]}
+]}

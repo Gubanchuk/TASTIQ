@@ -1,0 +1,7 @@
+{"appid": 80, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Counter-Strike: Condition Zero is a first-person shooter video game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p2", "q": "is a tactical, team-based first-person shooter featuring two opposing teams"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "is a tactical, team-based first-person shooter featuring two opposing teams"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p0", "q": "It also includes two single-player campaigns"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p5", "q": "is a separate, linear single-player game mode"}]}
+]}

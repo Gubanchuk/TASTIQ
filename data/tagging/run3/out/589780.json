@@ -1,0 +1,7 @@
+{"appid": 589780, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "is an adventure game set in a cyberpunk world"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "allows him to probe them for information"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p4", "q": "it is here that Akara reveals that they are an AI of uncertain origin"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p3", "q": "the implants that the player chooses to insert will have an effect"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "p3", "q": "the player crafts different sets of implants made of biomass"}]}
+]}

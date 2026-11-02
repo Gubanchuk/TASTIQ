@@ -1,0 +1,11 @@
+{"appid": 692850, "features": [
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p3", "q": "a labyrinthine series of rooms presented as a platform game"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p3", "q": "The game follows the Metroidvania-style gameplay"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Miriam is able to use various weapons to perform melee or ranged attacks"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p4", "q": "gains new weapons, armor and accessories throughout the game by defeating monsters and looting chests"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p4", "q": "The equipment can be changed on the fly via menu screens"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p6", "q": "humans forcibly fused with demonically charged crystals"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p6", "q": "takes place in 19th-century England during the Industrial Revolution"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p7", "q": "England infested by a new horde of demons"}]},
+{"f": "characters.companions", "r": 1, "ev": [{"id": "p7", "q": "Accompanied by her caretaker Johannes"}]}
+]}

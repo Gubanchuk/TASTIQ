@@ -1,0 +1,16 @@
+{"appid": 17460, "features": [
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p6", "q": "The game uses an over the shoulder perspective akin to a third-person shooter"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p6", "q": "Combat in Mass Effect is squad-based and two squad members accompany the player"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p3", "q": "Shepard's gender, appearance, military background, combat-training and first name are determined by the player"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p8", "q": "The game's interactive storytelling and cinematic design were highlighted very positively"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "could make important decisions and impact the story of the game in numerous ways"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "takes place within the Milky Way galaxy in the year 2183"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "generally involve space exploration"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p5", "q": "an all-terrain infantry fighting vehicle called the M35 Mako"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "The combat was designed to offer the tactics and customization of a role-playing game"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "There are six different character classes for the player to choose from"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p10", "q": "strives so hard to be taken seriously that it winds up feeling relentlessly dour"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p13", "q": "a cutscene containing partial nudity and sexual activity is shown"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p13", "q": "the player can develop a romantic relationship with a non-player character"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p10", "q": "noted the game's slow start and overwhelming setting"}]}
+]}

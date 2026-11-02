@@ -1,0 +1,9 @@
+{"appid": 674940, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "d", "q": "physics-based couch/online fighting game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "a", "q": "Fight it out against your friends or find random sticks from around the world"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "r237718396", "q": "pure fun if you playing it with your best friend"}, {"id": "r235803868", "q": "you definitely need friends to play"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "r238123533", "q": "really fun easy to play game"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "r238118386", "q": "Great short fun"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "r235803868", "q": "the gameplay is goofy by design"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "r237807988", "q": "It gets stale after a while"}]}
+]}

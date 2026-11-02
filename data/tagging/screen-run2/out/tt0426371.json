@@ -1,0 +1,10 @@
+{"id": "tt0426371", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American teen sitcom created by Danny Kallis and Jim Geoghan"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p3", "q": "The identical twins often cause mischief at their residence"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p3", "q": "The identical twins often cause mischief at their residence"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p3", "q": "their divorced mother Carey sings and performs in the hotel lounge"}]},
+{"f": "world.school", "r": 1, "ev": [{"id": "p4", "q": "Zack and Cody's school, Cheevers High"}]},
+{"f": "humor.silly", "r": 1, "ev": [{"id": "p4", "q": "Zack and Cody often get in trouble and come up with ideas to get out of it"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p1", "q": "to have more than 65 episodes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "aired on Disney Channel from March 18, 2005, to September 1, 2008"}]}
+]}

@@ -1,0 +1,15 @@
+{"appid": 629760, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "a", "q": "the brutal and satisfying melee combat"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "a", "q": "Enter a hectic battlefield of up to 64 players"}, {"id": "r237190555", "q": "Frontline is pure chaos, with catapults, horses and a hundred dudes running at each other"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "a", "q": "rain arrows from above"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "r236645711", "q": "the overly unresponsive controls"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "r237190555", "q": "The learning curve is steep, but once it clicks, duels feel great."}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "a", "q": "Feel the impact of every blow"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "a", "q": "Visceral and gory combat"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "d", "q": "Create your mercenary and fight in brutal battles"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "d", "q": "is a multiplayer medieval slasher"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "Fight waves of enemies alongside your friends in the cooperative Horde mode"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "d", "q": "experience fast paced combat, castle sieges, cavalry charges"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r237976972", "q": "hard as hell really"}]},
+{"f": "loop.building", "r": 1, "ev": [{"id": "a", "q": "or even sit back and build fortifications"}]}
+]}

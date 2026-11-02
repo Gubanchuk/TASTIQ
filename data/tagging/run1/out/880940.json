@@ -1,0 +1,77 @@
+{
+ "appid": 880940,
+ "features": [
+  {
+   "f": "social.pvp",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Pummel friends or AI using a wide array of absurd items"
+    },
+    {
+     "id": "r237661642",
+     "q": "got to punch my friend to death"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236527008",
+     "q": "Super fun to play with friends"
+    }
+   ]
+  },
+  {
+   "f": "humor.funny",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236835688",
+     "q": "you'll suffocate from laughter"
+    },
+    {
+     "id": "r236899395",
+     "q": "Hilarious violent party game for small or big groups of players"
+    }
+   ]
+  },
+  {
+   "f": "tone.lighthearted",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236899395",
+     "q": "Hilarious violent party game for small or big groups of players"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236279255",
+     "q": "The games started feeling repetitive pretty quickly"
+    },
+    {
+     "id": "r235712383",
+     "q": "A lot of the minigames seem to follow a pattern"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237191361",
+     "q": "нужно расширить выбор карт и предметов"
+    }
+   ]
+  }
+ ]
+}

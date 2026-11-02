@@ -1,0 +1,8 @@
+{"appid": 1451190, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "Undisputed is a fighting game based on the sport of boxing"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "allows players to become the undisputed champion of the world"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "50 different attributes and traits"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p6", "q": "The realism of the game and it's RPG-approach to fight preparation"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p6", "q": "the poor punch tracking and hit detection"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p1", "q": "Support for the game has ceased"}]}
+]}

@@ -1,0 +1,8 @@
+{"appid": 1840080, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p1", "q": "is a 3D real-time strategy game set in space"}, {"id": "p2", "q": "a vast hyperspace gate network developed by an ancient race"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "combat gameplay is built around an effective 3D ballistics system"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p1", "q": "giving solo gameplay an important role"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "The game includes a new co-op mode"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p1", "q": "the game boasts an extensive campaign mode"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p5", "q": "balances incredibly technical gameplay with streamlined mechanics"}]}
+]}

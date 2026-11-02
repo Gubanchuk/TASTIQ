@@ -1,0 +1,8 @@
+{"appid": 236690, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a turn-based fantasy sports video game"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p4", "q": "originate with the Human, Orc, Dwarf, Dark Elf and Skaven"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "The game features both a solo campaign and a multiplayer mode"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p1", "q": "The game features both a solo campaign and a multiplayer mode"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p5", "q": "injects his witty commentary alongside analyst"}]},
+{"f": "loop.management", "r": 1, "ev": [{"id": "p6", "q": "The Player Marketplace allows players to be both bought and sold"}]}
+]}

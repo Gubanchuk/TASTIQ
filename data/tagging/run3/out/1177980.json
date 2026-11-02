@@ -1,0 +1,8 @@
+{"appid": 1177980, "features": [
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The player has to navigate the cat back to its owner's apartment"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "can also interact with the city via many typical cat actions"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "lost within a large Japanese city"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p1", "q": "Hats can also be found by locating hidden capsules around the city"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p1", "q": "catching birds, jumping into boxes and trash cans"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p3", "q": "praising its art style, quests, and animations"}]}
+]}

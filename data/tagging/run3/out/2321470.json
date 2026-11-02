@@ -1,0 +1,10 @@
+{
+  "appid": 2321470,
+  "features": [
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a shoot 'em up video game"}]},
+    {"f": "progression.power", "r": 3, "ev": [{"id": "p0", "q": "in order to gain experience and increase their weapon's power"}, {"id": "p1", "q": "there will be a selection of upgrades that the player can choose from"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Players can choose from the four familiar Dwarf classes"}]},
+    {"f": "social.solo", "r": 2, "ev": [{"id": "p0", "q": "on a solo mission to mine ore"}]},
+    {"f": "world.scifi", "r": 1, "ev": [{"id": "p1", "q": "the procedurally generated planet Hoxxes IV"}]}
+  ]
+}

@@ -1,0 +1,9 @@
+{"appid": 1170950, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p0", "q": "open-world, PvP/PvE sandbox MMORPG"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p0", "q": "player-controlled, sandbox-style game design"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "open-world, PvP/PvE sandbox MMORPG"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "sandbox MMORPG developed and published by the Swedish indie developer Star Vault"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "There are ten different races for the player to choose from"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "a skill and attribute system similar to the Elder Scrolls series"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "an orc-human hybrid, five human races, two elf-like races"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 1216710, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "narrative-driven puzzle game"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p4", "q": "Choices appear throughout the campaign"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p1", "q": "to gather information and uncover the truth"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p9", "q": "the story design reflected contemporary issues"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p7", "q": "Titan Matrix is a major information technology corporation"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p9", "q": "praised the game for its sense of realism"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "reconstruct the timeline of events, and reason toward a conclusion"}]}
+]}

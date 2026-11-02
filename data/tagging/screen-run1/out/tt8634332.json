@@ -1,0 +1,10 @@
+{"id": "tt8634332", "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p8", "q": "preaches a riotously funny gospel"}, {"id": "p7", "q": "the results are this uproariously funny"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p6", "q": "darkly hilarious pews"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "p0", "q": "is an American crime comedy-drama television series"}]},
+{"f": "characters.family", "r": 3, "ev": [{"id": "p0", "q": "The series follows a famous and dysfunctional family of televangelists"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p1", "q": "Eli and his immature adult children, Jesse, Judy, and Kelvin"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p8", "q": "what might be its darkest installment yet"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p7", "q": "can be as messy as its title characters"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "The series concluded on May 4, 2025, after airing four seasons and 36 episodes"}]}
+]}

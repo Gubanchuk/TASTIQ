@@ -1,0 +1,157 @@
+{
+ "appid": 678960,
+ "features": [
+  {
+   "f": "characters.companions",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Team up with an AI partner or a friend in co-op multiplayer"
+    },
+    {
+     "id": "r235821672",
+     "q": "Your AI companion will help you with bosses and mobs"
+    }
+   ]
+  },
+  {
+   "f": "characters.custom_hero",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237396962",
+     "q": "very detailed character creator and customization"
+    },
+    {
+     "id": "r237088939",
+     "q": "im here just for the character customization lol"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237674235",
+     "q": "Character design is nice and all characters are likable"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.stylized",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236752902",
+     "q": "Code Vein is unique between all kinds of souls-like games because of its anime style"
+    }
+   ]
+  },
+  {
+   "f": "tension.low",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237695856",
+     "q": "low pressure soul-like game"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.forgiving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235821672",
+     "q": "works well for both casual and experienced players"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237396962",
+     "q": "but some bosses will really test you"
+    }
+   ]
+  },
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Choose from various weapons such as bayonets, axes, spears, and more"
+    }
+   ]
+  },
+  {
+   "f": "loop.looting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237674235",
+     "q": "Upgrade materials drop pretty often, so you can try out different weapons/armors pretty much nonstop"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237396962",
+     "q": "build variety thanks to the ability to inherit skills from other Blood Codes"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237655023",
+     "q": "it's slow and clunky and is not satisfying at all"
+    },
+    {
+     "id": "r236361910",
+     "q": "The movement and combat feels like Roblox"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237043858",
+     "q": "Это одни и те же враги, которым немного поменяли скины"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.high",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237043858",
+     "q": "Слишком много всяких разных механик упаковали в одну игру"
+    }
+   ]
+  },
+  {
+   "f": "tone.melancholic",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237088939",
+     "q": "I will never forget the pain of Anime Londo as long as I live"
+    }
+   ]
+  }
+ ]
+}

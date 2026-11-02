@@ -1,0 +1,13 @@
+{"appid": 235540, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p3", "q": "is a co-op-focused first-person shooter action video game"}, {"id": "p7", "q": "players staying together is essential"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p3", "q": "is a co-op-focused first-person shooter action video game"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "others favor melee weapons like swords"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "The game is set in the Warhammer Fantasy universe"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "Set during an apocalyptic event called the End Times"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p0", "q": "which determine the weapons they will receive as reward"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p9", "q": "all the characters featured in the game are unique, and none of them are boring"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p7", "q": "players staying together is essential"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p4", "q": "progress from one side of a level to another"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "The Metro praised the level-design and the quality of the graphics"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p11", "q": "some of its maps are frustratingly difficult"}]}
+]}

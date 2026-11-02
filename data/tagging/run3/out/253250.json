@@ -1,0 +1,10 @@
+{"appid": 253250, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "Stonehearth is a 2018 city-building game"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "players manage a colony of people"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "Stonehearth features a procedurally-generated world"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "defending them from the dangers like orcs and skeletons"}]},
+{"f": "loop.survival", "r": 1, "ev": [{"id": "p1", "q": "caring for their hearthlings including, feeding, sheltering, and defending them"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p7", "q": "acknowledged that the early access release was buggy"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "raised the issue of repetitiveness in the game"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "calling it lackadaisical"}]}
+]}

@@ -1,0 +1,31 @@
+{
+  "id": "tt0095715",
+  "name": "Alice",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 1988,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Alice is a 1988 surrealist dark fantasy film written and directed by Jan Švankmajer. Its original Czech title is Něco z Alenky, which means \"Something from Alice\". It is a loose adaptation of Lewis Carroll's first Alice book, Alice's Adventures in Wonderland (1865), about a girl who chases a white rabbit into a bizarre fantasy land. Alice is played by Kristýna Kohoutová. The film combines live-action with stop-motion animation, and is distinguished by its dark production-design."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "For Švankmajer, a prolific director of short films for more than two decades, Alice became his first venture into feature-length filmmaking. The director had been disappointed by other adaptations of Carroll's book, which interpret it as a fairy tale. His aim was instead to make the story play out like an amoral dream. The film won the feature-film-award at the 1989 Annecy International animated Film Festival."
+    },
+    {
+      "id": "p2",
+      "section": "Critical response",
+      "text": "In The New York Times, Caryn James wrote that although Švankmajer \"strips away all sweetness and light, he does not violate Lewis Carroll's story\", and called Alice an \"extraordinary film [which] explores the story's dark undercurrents\". James described the animation as \"remarkably fluid\" and held forward the dynamics of the film, which contrasts visually captivating elements with superficiality: \"Mr. Švankmajer never lets us forget we are watching a film in which an actress plays Alice telling a story\", although, \"with its extreme close-ups, its constant motion and its smooth animation, the film is so visually active that it distracts us from a heavy-handed fact - this is a world of …"
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Alice_(1988_film)"
+}

@@ -1,0 +1,2178 @@
+{
+  "at": "2026-10-31T18:52:45.614Z",
+  "source": "actual mobile UI clicks, no taste, time short, AI_ACCESS=off",
+  "questions": [
+    "Поржать или чтобы пробрало?",
+    "Что-то известное или менее известное?",
+    "Свежее или можно и старое?"
+  ],
+  "finalState": {
+    "step": "result",
+    "domain": "film",
+    "platform": "windows",
+    "situation": {
+      "time": "short",
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [],
+      "intent": null
+    },
+    "stops": [],
+    "asked": [
+      "lean:humor.funny|tone.melancholic",
+      "fact:popularity",
+      "fact:era"
+    ],
+    "shown": [
+      "tt0111161",
+      "tt0468569",
+      "tt1375666",
+      "tt0137523",
+      "tt0816692",
+      "tt0109830",
+      "tt0110912",
+      "tt0133093",
+      "tt0241527",
+      "tt1853728",
+      "tt0169547",
+      "tt0114369",
+      "tt0266697",
+      "tt0208092",
+      "tt0076759",
+      "tt2395427"
+    ],
+    "liked": [],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {},
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 879185,
+    "firstPage": {
+      "marks": [],
+      "known": {}
+    }
+  },
+  "text": "Назад\nПодбор\nВот что я подобрал\n\nСравнил 5 608 фильмов после отсева.\n\nВозмутительный класс\n1975\nПопробуй: мало данных о твоём вкусе\nВозмутительный класс\n1975 · 1 ч 25 мин\nЕщё 3 варианта ↓\nВ «Моё»\nУже смотрел\nНе сейчас\nОткрыть на IMDb\nВыбираю на сегодня\nПодходит на сегодня?\nПодходит ли сегодня\nФильм идёт 85 мин; сегодня есть 95 мин.\nФакты\nкомедия\nЕщё варианты\nТ\nТропы славы\n1957 · 1 ч 28 мин\nПопробуй: мало данных о твоём вкусе\nУже смотрел\nО\nОгни большого города\n1931 · 1 ч 27 мин\nПопробуй: мало данных о твоём вкусе\nУже смотрел\nД\nДэвид Аттенборо: Жизнь на нашей планете\n2020 · 1 ч 23 мин\nПопробуй: мало данных о твоём вкусе\nУже смотрел\nПочему не показал…",
+  "events": [
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": "any",
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [
+              {
+                "f": "difficulty.forgiving",
+                "against": "difficulty.hard",
+                "label": "щадяще"
+              }
+            ],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark",
+            "fact:era",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "restart"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "domain",
+          "domain": null,
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "screen": {
+          "step": "domain",
+          "title": "Что хочешь?",
+          "options": [
+            {
+              "value": "game",
+              "label": "Поиграть"
+            },
+            {
+              "value": "film",
+              "label": "Посмотреть фильм"
+            },
+            {
+              "value": "series",
+              "label": "Посмотреть сериал"
+            },
+            {
+              "value": "cartoon",
+              "label": "Посмотреть мультфильм"
+            }
+          ],
+          "later": [
+            "Почитать",
+            "Аниме"
+          ]
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "restart",
+        "data": {
+          "from": "result",
+          "step": "domain",
+          "domain": null,
+          "asked": 0,
+          "action": {
+            "type": "restart"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "domain",
+          "domain": null,
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "action": {
+          "type": "choose",
+          "value": "film"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "time",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "screen": {
+          "step": "time",
+          "title": "Сколько есть времени?",
+          "options": [
+            {
+              "value": "short",
+              "label": "до полутора часов"
+            },
+            {
+              "value": "two",
+              "label": "часа два"
+            },
+            {
+              "value": "any",
+              "label": "сколько угодно"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "choose",
+        "data": {
+          "from": "domain",
+          "step": "time",
+          "domain": "film",
+          "asked": 0,
+          "action": {
+            "type": "choose",
+            "value": "film"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "time",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "action": {
+          "type": "choose",
+          "value": "short"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "company",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "screen": {
+          "step": "company",
+          "title": "Один или с кем-то?",
+          "options": [
+            {
+              "value": "solo",
+              "label": "один"
+            },
+            {
+              "value": "pair",
+              "label": "вдвоём"
+            },
+            {
+              "value": "kids",
+              "label": "с детьми"
+            },
+            {
+              "value": "group",
+              "label": "компанией"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "choose",
+        "data": {
+          "from": "time",
+          "step": "company",
+          "domain": "film",
+          "asked": 0,
+          "action": {
+            "type": "choose",
+            "value": "short"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "company",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "action": {
+          "type": "choose",
+          "value": "solo"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Что смотрел, и как?",
+          "hint": "Отметь, как тебе знакомые названия, затем нажми «Дальше». Все карточки заполнять не нужно.",
+          "extra": false,
+          "items": [
+            {
+              "id": "tt0111161",
+              "name": "The Shawshank Redemption",
+              "ru": "Побег из Шоушенка",
+              "original": null,
+              "year": 1994,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Drama"
+              ],
+              "rating": "IMDb 9.3"
+            },
+            {
+              "id": "tt0468569",
+              "name": "The Dark Knight",
+              "ru": "Тёмный рыцарь",
+              "original": null,
+              "year": 2008,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Crime",
+                "Thriller"
+              ],
+              "rating": "IMDb 9.1"
+            },
+            {
+              "id": "tt1375666",
+              "name": "Inception",
+              "ru": "Начало",
+              "original": null,
+              "year": 2010,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Adventure",
+                "Sci-Fi",
+                "Thriller"
+              ],
+              "rating": "IMDb 8.8"
+            },
+            {
+              "id": "tt0137523",
+              "name": "Fight Club",
+              "ru": "Бойцовский клуб",
+              "original": null,
+              "year": 1999,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Crime",
+                "Drama",
+                "Thriller"
+              ],
+              "rating": "IMDb 8.8"
+            },
+            {
+              "id": "tt0816692",
+              "name": "Interstellar",
+              "ru": "Интерстеллар",
+              "original": null,
+              "year": 2014,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Adventure",
+                "Sci-Fi"
+              ],
+              "rating": "IMDb 8.7"
+            },
+            {
+              "id": "tt0109830",
+              "name": "Forrest Gump",
+              "ru": "Форрест Гамп",
+              "original": null,
+              "year": 1994,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Drama",
+                "Romance"
+              ],
+              "rating": "IMDb 8.8"
+            },
+            {
+              "id": "tt0110912",
+              "name": "Pulp Fiction",
+              "ru": "Криминальное чтиво",
+              "original": null,
+              "year": 1994,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Crime",
+                "Drama"
+              ],
+              "rating": "IMDb 8.8"
+            },
+            {
+              "id": "tt0133093",
+              "name": "The Matrix",
+              "ru": "Матрица",
+              "original": null,
+              "year": 1999,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Action",
+                "Sci-Fi"
+              ],
+              "rating": "IMDb 8.7"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не видел"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "choose",
+        "data": {
+          "from": "company",
+          "step": "anchors",
+          "domain": "film",
+          "asked": 0,
+          "action": {
+            "type": "choose",
+            "value": "solo"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185
+        },
+        "action": {
+          "type": "react",
+          "marksMode": "snapshot",
+          "marks": [],
+          "known": {},
+          "shownIds": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093"
+          ],
+          "note": ""
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Может, что-то из этого знаешь?",
+          "hint": "Пока отмечено мало, и подбор выйдет наугад. Отметь, что знаешь. Если ничего, жми «Дальше».",
+          "extra": true,
+          "items": [
+            {
+              "id": "tt0241527",
+              "name": "Harry Potter and the Sorcerer's Stone",
+              "ru": "Гарри Поттер и философский камень",
+              "original": null,
+              "year": 2001,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Adventure",
+                "Family",
+                "Fantasy"
+              ],
+              "rating": "IMDb 7.7"
+            },
+            {
+              "id": "tt1853728",
+              "name": "Django Unchained",
+              "ru": "Джанго освобождённый",
+              "original": null,
+              "year": 2012,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Drama",
+                "Western"
+              ],
+              "rating": "IMDb 8.5"
+            },
+            {
+              "id": "tt0169547",
+              "name": "American Beauty",
+              "ru": "Красота по-американски",
+              "original": null,
+              "year": 1999,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/9/9a/American_Beauty_1999_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Drama"
+              ],
+              "rating": "IMDb 8.3"
+            },
+            {
+              "id": "tt0114369",
+              "name": "Seven",
+              "ru": "Семь",
+              "original": "Se7en",
+              "year": 1995,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Crime",
+                "Drama",
+                "Mystery"
+              ],
+              "rating": "IMDb 8.6"
+            },
+            {
+              "id": "tt0266697",
+              "name": "Kill Bill: Vol. 1",
+              "ru": "Убить Билла. Фильм 1",
+              "original": null,
+              "year": 2003,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Action",
+                "Crime",
+                "Thriller"
+              ],
+              "rating": "IMDb 8.2"
+            },
+            {
+              "id": "tt0208092",
+              "name": "Snatch",
+              "ru": "Большой куш",
+              "original": null,
+              "year": 2000,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/a/a7/Snatch_ver4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Comedy",
+                "Crime"
+              ],
+              "rating": "IMDb 8.2"
+            },
+            {
+              "id": "tt0076759",
+              "name": "Star Wars: Episode IV - A New Hope",
+              "ru": "Звёздные войны: Эпизод 4 - Новая надежда",
+              "original": "Star Wars",
+              "year": 1977,
+              "image": null,
+              "poster": "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+              "kind": "film",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Fantasy"
+              ],
+              "rating": "IMDb 8.6"
+            },
+            {
+              "id": "tt2395427",
+              "name": "Avengers: Age of Ultron",
+              "ru": "Мстители: Эра Альтрона",
+              "original": null,
+              "year": 2015,
+              "image": null,
+              "poster": null,
+              "kind": "film",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+              ],
+              "rating": "IMDb 7.3"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не видел"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "react",
+        "data": {
+          "from": "anchors",
+          "step": "anchors",
+          "domain": "film",
+          "asked": 0,
+          "action": {
+            "type": "react",
+            "marksMode": "snapshot",
+            "marks": [],
+            "known": {},
+            "shownIds": [
+              "tt0111161",
+              "tt0468569",
+              "tt1375666",
+              "tt0137523",
+              "tt0816692",
+              "tt0109830",
+              "tt0110912",
+              "tt0133093"
+            ],
+            "note": ""
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "action": {
+          "type": "react",
+          "marksMode": "snapshot",
+          "marks": [],
+          "known": {},
+          "shownIds": [
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "note": ""
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "stops",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "screen": {
+          "step": "stops",
+          "title": "Что точно не надо?",
+          "hint": "Такое не предложу совсем. Если всё можно, просто дальше.",
+          "options": [
+            {
+              "value": "content.violence",
+              "label": "кровь и жестокость"
+            },
+            {
+              "value": "tone.creepy",
+              "label": "страшное"
+            },
+            {
+              "value": "content.sexual",
+              "label": "откровенные сцены"
+            },
+            {
+              "value": "content.disturbing",
+              "label": "тяжёлые темы"
+            },
+            {
+              "value": "content.profanity",
+              "label": "мат"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "react",
+        "data": {
+          "from": "anchors",
+          "step": "stops",
+          "domain": "film",
+          "asked": 0,
+          "action": {
+            "type": "react",
+            "marksMode": "snapshot",
+            "marks": [],
+            "known": {},
+            "shownIds": [
+              "tt0241527",
+              "tt1853728",
+              "tt0169547",
+              "tt0114369",
+              "tt0266697",
+              "tt0208092",
+              "tt0076759",
+              "tt2395427"
+            ],
+            "note": ""
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "stops",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "lean",
+          "qid": "lean:humor.funny|tone.melancholic",
+          "title": "Поржать или чтобы пробрало?",
+          "hint": "Выбери, чего хочется сегодня. Если оба варианта подходят — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "поржать"
+            },
+            {
+              "value": "tone.melancholic",
+              "label": "чтобы пробрало"
+            }
+          ],
+          "canSkip": true,
+          "progress": "1"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "skip",
+        "data": {
+          "from": "stops",
+          "step": "ask",
+          "domain": "film",
+          "asked": 0,
+          "action": {
+            "type": "skip"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [
+            "lean:humor.funny|tone.melancholic"
+          ],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "fact",
+          "qid": "fact:popularity",
+          "title": "Что-то известное или менее известное?",
+          "hint": "Уточним, что тебе подходит сегодня. Если не важно — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "mainstream",
+              "label": "более известное"
+            },
+            {
+              "value": "niche",
+              "label": "менее известное"
+            }
+          ],
+          "canSkip": true,
+          "progress": "2"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "skip",
+        "data": {
+          "from": "ask",
+          "qid": "lean:humor.funny|tone.melancholic",
+          "step": "ask",
+          "domain": "film",
+          "asked": 1,
+          "action": {
+            "type": "skip"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [
+            "lean:humor.funny|tone.melancholic"
+          ],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity"
+          ],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "fact",
+          "qid": "fact:era",
+          "title": "Свежее или можно и старое?",
+          "hint": "Уточним, что тебе подходит сегодня. Если не важно — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015"
+            },
+            {
+              "value": "any",
+              "label": "можно и старое"
+            }
+          ],
+          "canSkip": true,
+          "progress": "3"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "skip",
+        "data": {
+          "from": "ask",
+          "qid": "fact:popularity",
+          "step": "ask",
+          "domain": "film",
+          "asked": 2,
+          "action": {
+            "type": "skip"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity"
+          ],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "result",
+          "domain": "film",
+          "platform": "windows",
+          "situation": {
+            "time": "short",
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [
+            "lean:humor.funny|tone.melancholic",
+            "fact:popularity",
+            "fact:era"
+          ],
+          "shown": [
+            "tt0111161",
+            "tt0468569",
+            "tt1375666",
+            "tt0137523",
+            "tt0816692",
+            "tt0109830",
+            "tt0110912",
+            "tt0133093",
+            "tt0241527",
+            "tt1853728",
+            "tt0169547",
+            "tt0114369",
+            "tt0266697",
+            "tt0208092",
+            "tt0076759",
+            "tt2395427"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 879185,
+          "firstPage": {
+            "marks": [],
+            "known": {}
+          }
+        },
+        "screen": {
+          "step": "result",
+          "title": "Вот что я подобрал",
+          "result": {
+            "top": {
+              "id": "tt0252487",
+              "domain": "film",
+              "name": "The Chaos Class",
+              "ru": "Возмутительный класс",
+              "year": 1975,
+              "image": null,
+              "poster": null,
+              "kind": "film",
+              "series": [],
+              "genres": [
+                "Comedy"
+              ],
+              "runtime": 85,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": "IMDb 9.1",
+              "link": "https://www.imdb.com/title/tt0252487/",
+              "price": null,
+              "label": "try",
+              "labelText": "Попробуй: мало данных о твоём вкусе",
+              "score": 0.298,
+              "parts": {
+                "fit": 0,
+                "penalty": 0,
+                "mood": 0,
+                "prior": 0.298
+              },
+              "mainAspect": null,
+              "explanation": {
+                "reasons": [],
+                "risks": [],
+                "info": [
+                  {
+                    "text": "IMDb 9.1 из 10, 46 863 оценок",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "85 мин",
+                    "factIds": [
+                      "fact:runtime"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.91,
+                  "total": 46863,
+                  "desc": "IMDb 9.1"
+                },
+                {
+                  "id": "fact:runtime",
+                  "type": "fact",
+                  "runtime": 85
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "yes",
+                  "text": "Фильм идёт 85 мин; сегодня есть 95 мин."
+                }
+              ]
+            },
+            "alternatives": [
+              {
+                "id": "tt0050825",
+                "domain": "film",
+                "name": "Paths of Glory",
+                "ru": "Тропы славы",
+                "year": 1957,
+                "image": null,
+                "poster": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Paths_of_Glory_%281957_poster%29.jpg/500px-Paths_of_Glory_%281957_poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "kind": "film",
+                "series": [],
+                "genres": [
+                  "Drama",
+                  "War"
+                ],
+                "runtime": 88,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "IMDb 8.4",
+                "link": "https://www.imdb.com/title/tt0050825/",
+                "price": null,
+                "label": "try",
+                "labelText": "Попробуй: мало данных о твоём вкусе",
+                "score": 0.269,
+                "parts": {
+                  "fit": 0,
+                  "penalty": 0,
+                  "mood": 0,
+                  "prior": 0.269
+                },
+                "mainAspect": null,
+                "explanation": {
+                  "reasons": [],
+                  "risks": [],
+                  "info": [
+                    {
+                      "text": "IMDb 8.4 из 10, 243 479 оценок",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "88 мин",
+                      "factIds": [
+                        "fact:runtime"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.84,
+                    "total": 243479,
+                    "desc": "IMDb 8.4"
+                  },
+                  {
+                    "id": "fact:runtime",
+                    "type": "fact",
+                    "runtime": 88
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "yes",
+                    "text": "Фильм идёт 88 мин; сегодня есть 95 мин."
+                  }
+                ]
+              },
+              {
+                "id": "tt0021749",
+                "domain": "film",
+                "name": "City Lights",
+                "ru": "Огни большого города",
+                "year": 1931,
+                "image": null,
+                "poster": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/City_Lights_%281931_theatrical_poster_-_retouched%29.jpg/500px-City_Lights_%281931_theatrical_poster_-_retouched%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "kind": "film",
+                "series": [],
+                "genres": [
+                  "Comedy",
+                  "Drama",
+                  "Romance"
+                ],
+                "runtime": 87,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "IMDb 8.5",
+                "link": "https://www.imdb.com/title/tt0021749/",
+                "price": null,
+                "label": "try",
+                "labelText": "Попробуй: мало данных о твоём вкусе",
+                "score": 0.276,
+                "parts": {
+                  "fit": 0,
+                  "penalty": 0,
+                  "mood": 0,
+                  "prior": 0.276
+                },
+                "mainAspect": null,
+                "explanation": {
+                  "reasons": [],
+                  "risks": [
+                    {
+                      "text": "Зрители жалуются: наивно, слащаво",
+                      "factIds": [
+                        "risk:flaw:tone.cheesy"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "IMDb 8.5 из 10, 218 843 оценок",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "87 мин",
+                      "factIds": [
+                        "fact:runtime"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "risk:flaw:tone.cheesy",
+                    "type": "risk_flaw",
+                    "f": "tone.cheesy",
+                    "evidence": [
+                      {
+                        "id": "genome:sentimental",
+                        "kind": "genome",
+                        "q": "sentimental",
+                        "rel": 0.833
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.85,
+                    "total": 218843,
+                    "desc": "IMDb 8.5"
+                  },
+                  {
+                    "id": "fact:runtime",
+                    "type": "fact",
+                    "runtime": 87
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "yes",
+                    "text": "Фильм идёт 87 мин; сегодня есть 95 мин."
+                  }
+                ]
+              },
+              {
+                "id": "tt11989890",
+                "domain": "film",
+                "name": "David Attenborough: A Life on Our Planet",
+                "ru": "Дэвид Аттенборо: Жизнь на нашей планете",
+                "year": 2020,
+                "image": null,
+                "poster": null,
+                "kind": "film",
+                "series": [],
+                "genres": [
+                  "Biography",
+                  "Documentary"
+                ],
+                "runtime": 83,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "IMDb 8.9",
+                "link": "https://www.imdb.com/title/tt11989890/",
+                "price": null,
+                "label": "try",
+                "labelText": "Попробуй: мало данных о твоём вкусе",
+                "score": 0.274,
+                "parts": {
+                  "fit": 0,
+                  "penalty": 0,
+                  "mood": 0,
+                  "prior": 0.274
+                },
+                "mainAspect": null,
+                "explanation": {
+                  "reasons": [],
+                  "risks": [],
+                  "info": [
+                    {
+                      "text": "IMDb 8.9 из 10, 36 489 оценок",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "83 мин",
+                      "factIds": [
+                        "fact:runtime"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.89,
+                    "total": 36489,
+                    "desc": "IMDb 8.9"
+                  },
+                  {
+                    "id": "fact:runtime",
+                    "type": "fact",
+                    "runtime": 83
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "minutes",
+                    "status": "yes",
+                    "text": "Фильм идёт 83 мин; сегодня есть 95 мин."
+                  }
+                ]
+              }
+            ],
+            "belief": 0.031,
+            "sieves": [
+              {
+                "id": 1,
+                "name": "Можно ли",
+                "removed": 0
+              },
+              {
+                "id": 2,
+                "name": "Было ли",
+                "removed": 0
+              },
+              {
+                "id": 3,
+                "name": "Сделано ли нормально",
+                "removed": 10312
+              },
+              {
+                "id": 4,
+                "name": "Моё ли (жёсткие стопы)",
+                "removed": 0
+              },
+              {
+                "id": 5,
+                "name": "Подходит ли сегодня (обязательное)",
+                "removed": 16252
+              }
+            ],
+            "considered": 5608,
+            "taste": {
+              "confirmed": [],
+              "inferred": [],
+              "dislikes": [],
+              "hardNo": [],
+              "consumed": 0
+            },
+            "today": null,
+            "uncheckedContext": []
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "skip",
+        "data": {
+          "from": "ask",
+          "qid": "fact:era",
+          "step": "result",
+          "domain": "film",
+          "asked": 3,
+          "action": {
+            "type": "skip"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/feedback",
+      "input": {
+        "run": {
+          "version": 1,
+          "id": "b9185040-568f-40aa-bb88-86ec882999ce",
+          "dialogueId": "f48bc1f4-6d2d-4264-9eba-c08a7aa14dca",
+          "domain": "film",
+          "revision": 0,
+          "at": "2026-10-31T18:52:45.560Z",
+          "updatedAt": "2026-10-31T18:52:45.560Z",
+          "context": {
+            "platform": null,
+            "time": "short",
+            "company": "solo",
+            "partySize": null,
+            "childAge": null,
+            "wants": [],
+            "avoids": [],
+            "stops": [],
+            "minutes": null
+          },
+          "cards": [
+            {
+              "id": "tt0252487",
+              "title": "Возмутительный класс",
+              "origin": "engine"
+            },
+            {
+              "id": "tt0050825",
+              "title": "Тропы славы",
+              "origin": "engine"
+            },
+            {
+              "id": "tt0021749",
+              "title": "Огни большого города",
+              "origin": "engine"
+            },
+            {
+              "id": "tt11989890",
+              "title": "Дэвид Аттенборо: Жизнь на нашей планете",
+              "origin": "engine"
+            }
+          ],
+          "responses": []
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true,
+        "id": "b9185040-568f-40aa-bb88-86ec882999ce",
+        "revision": 0
+      }
+    }
+  ],
+  "errors": []
+}

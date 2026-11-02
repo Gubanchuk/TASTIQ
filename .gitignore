@@ -1,0 +1,30 @@
+node_modules/
+.env
+.env.*
+!.env.example
+# Raw downloads from Steam, SteamSpy and Wikidata: reproducible with npm run data:*
+data/raw/
+# Tagging inputs contain review texts; outputs are kept
+data/tagging/*/in/
+data/journal.ndjson
+
+# Rejected design variants of round 2, kept locally until the owner confirms deletion
+archive/
+
+# Workstation settings and temporary browser/test artifacts stay local.
+.idea/*
+!.idea/.gitignore
+.playwright-mcp/
+.qa-tmp/
+.impeccable/live/
+.impeccable/review/
+.impeccable/critique/
+
+# Runtime journals, billing receipts and private evaluation keys are not source fixtures.
+data/runtime/
+data/api-test-authorization-*.json
+**/*.private.json
+**/budget*.json
+**/budget.lock
+*.ndjson
+*.log

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "scope": "Original release years verified for a specific Steam app. Not a rule to equate arbitrary remakes or same-name games.",
+  "games": {
+    "960910": {
+      "title": "Heavy Rain",
+      "originalYear": 2010,
+      "steamYear": 2020,
+      "checkedAt": "2026-10-31",
+      "originalSource": "https://blog.playstation.com/2010/01/08/heavy-rain-officially-releasing-on-february-23/",
+      "portSource": "https://store.steampowered.com/app/960910/Heavy_Rain/",
+      "identitySource": "https://www.quanticdream.com/en/heavy-rain"
+    }
+  }
+}

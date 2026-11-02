@@ -1,0 +1,10 @@
+{"appid": 10680, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 first-person shooter video game"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "players face off in various game types in various ways"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "p2", "q": "There are three campaigns in the game"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p6", "q": "The Predator's gameplay is more based on stealth and tactics"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Aliens fight in close-quarters combat with their claws and tails"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "discovers an ancient Predator Pyramid and hopes to unlock the advanced technology"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p8", "q": "pull a guy's spine out while he screams for mercy"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p7", "q": "criticized the odd melee system and how the marines could knock back an alien"}]}
+]}

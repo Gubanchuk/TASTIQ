@@ -1,0 +1,8 @@
+{"appid": 236370, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a discontinued science fiction first-person shooter video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a discontinued science fiction first-person shooter video game"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "up to four players in drop-in/drop-out co-op"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "Some of the PvP modes offered are Deathmatch, Team Deathmatch"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "their co-op campaign would have featured tactical game-play"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p6", "q": "offering survival sandbox gameplay"}]}
+]}

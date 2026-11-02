@@ -1,0 +1,8 @@
+{"appid": 365360, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "a tactical role-playing game"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "Players establish a mercenary company in a fantasy world"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "a fantasy world inspired by medieval Germany"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "a fantasy world inspired by medieval Germany"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p2", "q": "Commenting on the game's punishing difficulty"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "Early game recruits are frequently drunks, criminals, and people who have crippled limbs"}]}
+]}

@@ -1,0 +1,7 @@
+{"appid": 382310, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "Eco is a multiplayer survival game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "players have to work together to create a civilization"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p0", "q": "work together to create a civilization on a virtual planet"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "cutting too many trees reduces the amount of air pollution that can be mitigated"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p2", "q": "The game world in Eco is threatened with an impending meteor impact"}]}
+]}

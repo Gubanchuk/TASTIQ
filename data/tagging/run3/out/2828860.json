@@ -1,0 +1,12 @@
+{"appid": 2828860, "features": [
+{"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "is a cooperative tactical, survival-horror, extraction-shooter video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "first person shooting along with survival mechanics"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "first person shooting along with survival mechanics"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p1", "q": "The game encourages stealth"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "exploring hazardous maps to collect resources"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "may have to think carefully before firing their weapons"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "is a cooperative tactical, survival-horror, extraction-shooter video game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "in a dystopian world dominated by warring superstates"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "colossal war machines"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p4", "q": "while also noting its ongoing early access status and remaining technical issues"}]}
+]}

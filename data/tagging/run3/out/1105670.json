@@ -1,0 +1,8 @@
+{"appid": 1105670, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "takes place in a dark fantasy, post-apocalyptic world"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p1", "q": "post-apocalyptic world ravaged by war and magic"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "roguelite, tactical role-playing game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "turning city after city into ruins engulfed in purple flames"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p2", "q": "marches the undead corpses of those killed"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "along with a ragtag team of heroes"}]}
+]}

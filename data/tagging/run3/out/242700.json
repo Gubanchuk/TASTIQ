@@ -1,0 +1,9 @@
+{"appid": 242700, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p4", "q": "engaging in one-on-one combat to deplete their opponent's life gauge"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p12", "q": "fast, destructive, and extremely accessible"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "Online multiplayer modes include King of the Hill"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p10", "q": "Ingenito praised the story mode"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p10", "q": "nails the spectacle of a superhero brawl"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p0", "q": "Superman has become a tyrant and established a new world order"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "end Superman's totalitarian regime"}]}
+]}

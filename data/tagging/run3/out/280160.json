@@ -1,0 +1,8 @@
+{"appid": 280160, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p0", "q": "is an action-adventure stealth video game"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "mystical warriors with the power to control the light"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p1", "q": "reach the end of all thirteen open-world chapters in order"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Scrolls can be spent to unlock various useful skills"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p2", "q": "swordsmen circled by a torch that kills the player on contact"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p5", "q": "they trigger strange memories in him"}]}
+]}

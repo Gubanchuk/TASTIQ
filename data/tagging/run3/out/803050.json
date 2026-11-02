@@ -1,0 +1,8 @@
+{"appid": 803050, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "is a city-building game"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p2", "q": "colony builder narrative game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "The player takes the role of AMI, an artificial intelligence"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "a very engaging story and a super cast of actors"}]},
+{"f": "story.choices", "r": 1, "ev": [{"id": "p3", "q": "nonlinear narrative to fit a strategy game"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p2", "q": "has a stellar esthetic"}, {"id": "p3", "q": "slick aesthetics"}]}
+]}

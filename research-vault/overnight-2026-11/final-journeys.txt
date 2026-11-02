@@ -1,0 +1,13 @@
+{"id":"today-switch","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"neutral","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"conditional","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"context-change","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"finished-replay","status":"pass","kind":"explicit-return-bridge","error":null}
+{"id":"started-history","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"blocked-return","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"replace-undo","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"v1-error-resume","status":"pass","kind":"deterministic-contract","error":null}
+{"id":"today-minutes","status":"pass","kind":"structured-time-bridge","error":null}
+{"id":"real-catalog-directions","status":"pass","kind":"real-catalog-diagnostics","error":null}
+{"id":"real-catalog-capacity","status":"pass","kind":"real-catalog-diagnostics","error":null}
+{"cases":12,"passed":12,"failed":0,"catalogItems":4952,"paidApiCalls":0,"humanFit":null}

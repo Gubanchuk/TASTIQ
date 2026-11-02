@@ -1,0 +1,11 @@
+{"appid": 1401590, "features": [
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 life simulation adventure game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "other resources can be crafted into materials or furniture at a crafting station"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "The player can explore the valley to gather resources"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "a magical valley populated by various Disney and Pixar characters"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p2", "q": "The game features nonlinear gameplay similar to Nintendo's Animal Crossing games"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "liked the presence of the Disney characters that lived in the titular Dreamlight Valley"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p8", "q": "appealing for both kids and adults alike"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "appreciating the music, story and gameplay"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p8", "q": "asserted the story manages to be clever and creative"}]}
+]}

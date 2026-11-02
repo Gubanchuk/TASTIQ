@@ -1,0 +1,9 @@
+{"appid": 1284410, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p0", "q": "Gwent: The Witcher Card Game is a 2018 digital collectible card game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "Gwent is a turn-based card game between two players"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "Gwent is a turn-based card game between two players"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Each deck is built with a chosen faction combined with a unique leader ability"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p4", "q": "Rewards include crafting materials for cards and card packs"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "Each card can potentially have multiple special abilities"}]},
+{"f": "session.short", "r": 2, "ev": [{"id": "p1", "q": "that can last two to three rounds"}]}
+]}

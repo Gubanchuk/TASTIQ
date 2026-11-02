@@ -1,0 +1,11 @@
+{"id": "tt0055683", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p6", "q": "the series shares its main science fiction theme with Funderful Suburbia"}, {"id": "p1", "q": "elaborate robotic contraptions, aliens, holograms, and whimsical inventions"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "p1", "q": "the Jetsons live in a comical version of the space age"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p1", "q": "elaborate robotic contraptions, aliens, holograms, and whimsical inventions"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p5", "q": "Daily life is leisurely, assisted by numerous labor-saving devices"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p4", "q": "the Jetsons are a family residing in Orbit City"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p10", "q": "now and then quite funny"}]},
+{"f": "world.dystopia", "r": 1, "ev": [{"id": "p13", "q": "The Jetsons is a perfect dystopia, built on the corpses of a billions-strong underclass"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p3", "q": "No further specials or episodes of the show were produced after 1989"}]},
+{"f": "content.family", "r": 1, "ev": [{"id": "s", "q": "a half-hour family sitcom projecting contemporary American culture"}]}
+]}

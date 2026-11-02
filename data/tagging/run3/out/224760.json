@@ -1,0 +1,10 @@
+{"appid": 224760, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "The player rotates between these four 2D views to realign platforms and solve puzzles"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p3", "q": "two-dimensional (2D) puzzle platform game"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p2", "q": "Reviewers commended the game's emphasis on discovery and freedom"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p5", "q": "Fez features a pixelated art style and a limited color palette reminiscent of the 8-bit era"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p7", "q": "citing its pixelated look, chiptune soundtrack, and ways of clueing the player"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p4", "q": "One of the game's recurring themes is an ancient civilization"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p9", "q": "found its reliance on backtracking, particularly in the endgame, tedious"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p5", "q": "Fez has no enemies, bosses, or punishments for failure"}]}
+]}

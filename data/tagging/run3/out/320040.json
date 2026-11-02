@@ -1,0 +1,9 @@
+{"appid": 320040, "features": [
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "A co-op, roguelike action role-playing game"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "the fantasy land of Issaria"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "The game's endings can differ widely depending on the choices the characters make"}, {"id": "p3", "q": "The story of the game is non-linear, and changes depending on the actions of players"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p1", "q": "The areas of the game are procedurally generated and will differ for each playthrough"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p0", "q": "criticized the short length and lack of combat depth"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "the gameplay is unbalanced with repetitive and \"overpowered\" moves"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p5", "q": "calling the game's writing \"gorgeous\" and the world \"atmospheric\""}]}
+]}

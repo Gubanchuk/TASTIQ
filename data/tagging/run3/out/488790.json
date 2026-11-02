@@ -1,0 +1,11 @@
+{"appid": 488790, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p6", "q": "The Fractured but Whole retains the turn-based combat of the previous game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The New Kid is able to freely explore South Park"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "The New Kid and up to three allies fight their enemies"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "choose from up to ten superhero archetypes"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p7", "q": "allowing them to use strands of DNA to boost attributes"}]},
+{"f": "tone.lighthearted", "r": 3, "ev": [{"id": "p10", "q": "well balanced comedy and humor"}]},
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p10", "q": "well balanced comedy and humor"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p12", "q": "prioritizing strategic thinking over reflexes"}]},
+{"f": "difficulty.forgiving", "r": 1, "ev": [{"id": "p13", "q": "Others called the combat too easy, even at the highest difficulty setting"}]}
+]}

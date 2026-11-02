@@ -1,0 +1,13 @@
+{"id": "tt8179402", "features": [
+{"f": "world.school", "r": 3, "ev": [{"id": "s", "q": "a group of teens navigate rivalry, romance and supernatural studies at Alfea"}]},
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "a supernatural teen drama television series"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p9", "q": "The worldbuilding is exciting"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p3", "q": "The series features an ensemble cast based on the characters of the animated show"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "s", "q": "rivalry, romance and supernatural studies"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p3", "q": "In November 2022, the series was canceled after two seasons"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p6", "q": "leaving the series on an unresolved cliffhanger"}]},
+{"f": "story.predictable", "r": 2, "ev": [{"id": "p8", "q": "criticized the series for relying too much on clichés"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p8", "q": "criticized the plot and the poor CGI quality"}]},
+{"f": "tone.gritty", "r": 1, "ev": [{"id": "p8", "q": "do we need yet another dark and gritty remake"}]},
+{"f": "characters.acting", "r": 1, "ev": [{"id": "p8", "q": "praised the cast but criticized the plot"}]}
+]}

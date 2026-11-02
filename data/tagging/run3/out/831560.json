@@ -1,0 +1,9 @@
+{"appid": 831560, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "hack and slash video game"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p2", "q": "techniques that allow characters to perform special feats to overcome enemies"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p5", "q": "a three-versus-three competitive multiplayer mode"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p6", "q": "Zeus, the king of Olympus, decides to bring them back for an unclear purpose"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p6", "q": "the heroes of the Three Kingdoms and Sengoku period"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Each character has a class type that determines their ability: Power, Speed, and Technique"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "the player is given control of a three-man team"}]}
+]}

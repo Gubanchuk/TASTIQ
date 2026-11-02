@@ -1,0 +1,13 @@
+{"appid": 12140, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2001 third-person shooter game"}]},
+{"f": "tone.gritty", "r": 3, "ev": [{"id": "p0", "q": "The game features a gritty neo-noir style"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "to solve the murder of his family"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "investigating a mysterious new designer drug"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "use of noir storytelling devices"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p0", "q": "former New York City Police Department (NYPD) detective Max Payne"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p6", "q": "which increases damage taken while limiting health and ammo supplies"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "have a linear route that players must follow"}, {"id": "p2", "q": "criticized its linear level design"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p2", "q": "criticized its linear level design and short length"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "praised the game's atmosphere, level and sound design"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "players assume the role of the game's titular character"}]}
+]}

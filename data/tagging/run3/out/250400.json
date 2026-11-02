@@ -1,0 +1,5 @@
+{"appid": 250400, "features": [
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p1", "q": "gather materials, craft weapons, and make it off the island without dying"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p2", "q": "shipwrecked on one of four zombie-infested islands that form an archipelago"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "both can be played with up to two players"}]}
+]}

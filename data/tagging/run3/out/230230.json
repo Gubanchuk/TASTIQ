@@ -1,0 +1,13 @@
+{"appid": 230230, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p2", "q": "The game touts turn-based action and adventure"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "cooperative multiplayer, an interactive world"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "allowing players to create their own single-player and multiplayer adventures"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p3", "q": "The customizable protagonists of the game are a pair of"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p3", "q": "they find Cyseal under siege by orcs and undead"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "to investigate the murder of a town councilor by a suspected Sourcerer"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p4", "q": "they learn from them that the Source had originally been a benevolent magic"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p4", "q": "corrupted by the Void, an evil force from outside of the material world"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p6", "q": "with the caveat that they should be up for a challenge"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "praised the game for its complex systems, beautiful world"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "praised the game for its complex systems"}]}
+]}

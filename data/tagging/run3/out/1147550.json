@@ -1,0 +1,7 @@
+{"appid": 1147550, "features": [
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p5", "q": "The player uses the vision mixer to select which camera feed to broadcast"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "from 1984 to 1991"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p3", "q": "a fictional country with similarities to the United Kingdom"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "increasingly authoritarian dystopian fashion"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p8", "q": "satirical over-the-top content video segments"}]}
+]}

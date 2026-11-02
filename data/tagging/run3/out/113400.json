@@ -1,0 +1,15 @@
+{
+  "appid": 113400,
+  "features": [
+    {"f": "world.modern", "r": 3, "ev": [{"id": "p3", "q": "takes place in the modern-day city of San Paro"}]},
+    {"f": "social.pvp", "r": 3, "ev": [{"id": "p6", "q": "pure player versus player (PvP) environments"}]},
+    {"f": "freedom.open_world", "r": 3, "ev": [{"id": "p0", "q": "an open world multiplayer online video game"}]},
+    {"f": "social.coop", "r": 2, "ev": [{"id": "p0", "q": "players can form sub-groups in either faction and carry out missions"}]},
+    {"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "the two sides fighting one another in missions"}]},
+    {"f": "world.living", "r": 2, "ev": [{"id": "p5", "q": "with their own pedestrian AI and a dynamic day/night cycle"}]},
+    {"f": "length.endless", "r": 2, "ev": [{"id": "p5", "q": "fully persistent portions of San Paro"}]},
+    {"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p9", "q": "the game feeling unfinished and underdeveloped"}]},
+    {"f": "loop.driving", "r": 1, "ev": [{"id": "p5", "q": "Upgrades, equipment, weapons, vehicles and clothing can be purchased"}]},
+    {"f": "progression.power", "r": 1, "ev": [{"id": "p4", "q": "used to upgrade weapons, vehicles, and their character appearances"}]}
+  ]
+}

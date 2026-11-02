@@ -1,0 +1,8 @@
+{"appid": 1062090, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "Players build cities, using dams and irrigation systems to manage water"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p2", "q": "This makes resource storage and planning important for survival"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p1", "q": "Players control a colony of beavers in a post-apocalyptic wasteland where humans have died out"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p0", "q": "Players help a colony of beavers survive resource shortages"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p5", "q": "engineering-focused design was frequently highlighted as a standout feature"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p6", "q": "its onboarding and early progression could feel challenging for new players"}]}
+]}

@@ -1,0 +1,121 @@
+{
+  "summary": "Сегодня ты хочешь гонки на ПК в одиночку: получать удовольствие от управления машиной и быстро переходить к заездам, без обязательной длинной карьеры. Есть 45 минут. Общая длина игры неважна, сюжет будет плюсом, но не обязателен. RPG и Skyrim сегодня не рассматриваем.",
+  "facts": [
+    {
+      "key": "skyrim_finished",
+      "text": "Ты уже прошёл Skyrim.",
+      "stance": "history",
+      "scope": "history",
+      "sourceId": "overnight-20261101-01-replay:1",
+      "quote": "Skyrim прошёл.",
+      "feature": null,
+      "gameId": "steam:72850",
+      "exposure": "finished",
+      "gameIntent": null
+    },
+    {
+      "key": "platform",
+      "text": "Сегодня играешь на ПК с Windows.",
+      "stance": "require",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:2",
+      "quote": "ПК (Windows)",
+      "feature": null,
+      "gameId": null,
+      "exposure": null,
+      "gameIntent": null
+    },
+    {
+      "key": "company",
+      "text": "Сегодня хочешь играть один.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:3",
+      "quote": "Один",
+      "feature": "social.solo",
+      "gameId": null,
+      "exposure": null,
+      "gameIntent": null
+    },
+    {
+      "key": "exclude_rpg",
+      "text": "Сегодня не хочешь RPG.",
+      "stance": "exclude",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "сегодня уже не RPG и не Skyrim",
+      "feature": null,
+      "gameId": null,
+      "exposure": null,
+      "gameIntent": null
+    },
+    {
+      "key": "exclude_skyrim",
+      "text": "Сегодня не хочешь играть в Skyrim.",
+      "stance": "exclude",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "сегодня уже не RPG и не Skyrim",
+      "feature": null,
+      "gameId": "steam:72850",
+      "exposure": null,
+      "gameIntent": null
+    },
+    {
+      "key": "racing",
+      "text": "Хочешь гонки ради управления машиной.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "Хочу гонки: нравится управлять машиной",
+      "feature": "loop.driving",
+      "gameId": null,
+      "exposure": null,
+      "gameIntent": null
+    },
+    {
+      "key": "quick_race_access",
+      "text": "Хочешь быстро начинать заезды, без обязательной длинной карьеры.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "быстро начинать заезды, без обязательной длинной карьеры",
+      "feature": null,
+      "gameId": null,
+      "exposure": null,
+      "gameIntent": null
+    },
+    {
+      "key": "total_length_indifferent",
+      "text": "Общая продолжительность игры не является критерием.",
+      "stance": "indifferent",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "Общая длина игры неважна.",
+      "feature": null,
+      "gameId": null,
+      "exposure": null,
+      "gameIntent": null
+    },
+    {
+      "key": "optional_story",
+      "text": "Сюжет будет плюсом, но его наличие не обязательно.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "overnight-20261101-01-replay:5",
+      "quote": "Сюжет — хорошо, если есть, но он не обязателен.",
+      "feature": null,
+      "gameId": null,
+      "exposure": null,
+      "gameIntent": null
+    }
+  ],
+  "uncertainties": [],
+  "action": "review",
+  "question": null,
+  "sessionTime": {
+    "minutes": 45,
+    "sourceId": "overnight-20261101-01-replay:5",
+    "quote": "Сегодня есть 45 минут."
+  }
+}

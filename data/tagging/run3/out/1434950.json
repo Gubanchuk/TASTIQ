@@ -1,0 +1,8 @@
+{"appid": 1434950, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "the dieselpunk post-apocalyptic world of Elaat"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "The setting of Gerat is based on the Middle East and Central Asia"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p0", "q": "commanding a fleet of metal airships"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "the intricacy of systems such as the ship building and intelligence gathering mechanics"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p6", "q": "many also criticized the steep learning curve"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "which unlocks additional choice options"}]}
+]}

@@ -1,0 +1,9 @@
+{"id": "tt2288064", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "follows the lives of a family of witches"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "s", "q": "centers on the mysterious Beauchamp family"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "Freya and Ingrid are initially unaware of their magical powers"}]},
+{"f": "tone.cheesy", "r": 2, "ev": [{"id": "p4", "q": "soapy, silly adaptation of Melissa de la Cruz's best-seller"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p4", "q": "populated by wooden actors and feeble plotlines"}]},
+{"f": "characters.unlikeable", "r": 1, "ev": [{"id": "p4", "q": "populated by wooden actors and feeble plotlines"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The series finale aired on October 5, 2014"}]}
+]}

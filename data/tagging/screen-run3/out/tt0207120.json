@@ -1,0 +1,7 @@
+{"id": "tt0207120", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an animated television series"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "features the Marvel comic book superhero Spider-Man"}]},
+{"f": "world.dystopia", "r": 2, "ev": [{"id": "p3", "q": "racial purity, totalitarianism, and conflict between species"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p4", "q": "critics also pointed out weaknesses in writing, pacing, and unresolved storylines"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p0", "q": "the last ending on a cliffhanger"}]}
+]}

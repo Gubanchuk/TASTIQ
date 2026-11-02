@@ -1,0 +1,10 @@
+{"id": "tt2406376", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is an American crime drama television series"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p2", "q": "intelligent mystery and spellbinding drama"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "Thanks to beautiful cinematography and unique, captivating characters"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p4", "q": "unique, captivating characters"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p4", "q": "a chilling murder mystery"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p5", "q": "to concoct creepy, suspenseful scenes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "the series was not renewed for a third season"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p5", "q": "The Bridge still feels like a show caught between two masters"}]}
+]}

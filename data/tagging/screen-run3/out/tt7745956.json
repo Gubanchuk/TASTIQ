@@ -1,0 +1,17 @@
+{"id": "tt7745956", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series developed by ND Stevenson"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series developed by ND Stevenson"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "s", "q": "a magic sword that transforms her into the mythical warrior princess She-Ra"}]},
+{"f": "world.dystopia", "r": 2, "ev": [{"id": "p3", "q": "decides to join the Rebellion in the fight against the Horde"}]},
+{"f": "characters.female_lead", "r": 3, "ev": [{"id": "p8", "q": "the reboot sets itself apart from the 1980s series by its almost entirely female cast"}]},
+{"f": "characters.antihero", "r": 3, "ev": [{"id": "p9", "q": "the convincing portrayal of the anti-hero Catra"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p1", "q": "the complex relationship between She-Ra and her best friend-turned-archenemy Catra"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p8", "q": "the core cast of Adora and her close friends"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p7", "q": "it is Adora and Catra's love for each other"}]},
+{"f": "structure.serialized", "r": 3, "ev": [{"id": "p8", "q": "The first season of the serialized She-Ra reboot"}]},
+{"f": "completeness.ended", "r": 3, "ev": [{"id": "p2", "q": "having released 52 episodes over 5 seasons"}, {"id": "p7", "q": "The fifth and final season follows Adora's journey to liberate Etheria"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p7", "q": "save the universe from his tyrannical reign"}]},
+{"f": "content.disturbing", "r": 1, "ev": [{"id": "p9", "q": "the series addresses such themes as abusive relationships and overcoming trauma"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p11", "q": "the importance of featuring LGBTQ+ representation in kids animation"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p12", "q": "The show was also influenced by sci-fi in the 1970s and 1980s"}]}
+]}

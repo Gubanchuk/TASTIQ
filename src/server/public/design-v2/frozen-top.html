@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head><base href="/"><style>.how,.example,.again,.foot{display:none!important}body{overflow:hidden}</style><script src="/design-v2/frozen-top.js?v=2" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#151517" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <title>TASTIQ — что поиграть или посмотреть сегодня</title>
+  <meta name="description" content="Спрошу, что тебе зашло и за что, и подберу один вариант и три запасных — с причинами, рисками и фактами, которые можно проверить.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#doors">К выбору</a>
+
+  <header class="top">
+    <div class="top-in">
+      <a class="brand" href="/" aria-label="TASTIQ, на главную">TASTIQ</a>
+      <nav class="top-nav" aria-label="Основное">
+        <a class="btn btn-plain" id="my-link" href="/pick/#my">Моё<span class="count num" id="my-count" hidden></span></a>
+        <a class="btn btn-primary" id="pick-btn" href="/pick/">Подобрать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="first" aria-labelledby="hero-title">
+      <div class="intro">
+        <h1 id="hero-title">Подберу игру или кино на&nbsp;вечер&nbsp;— по тому, за что тебе нравится</h1>
+        <p class="sub">Спрошу, что тебе зашло и за что. Дам один вариант и три запасных&nbsp;— с&nbsp;причинами, рисками и фактами, которые можно проверить.</p>
+      </div>
+
+      <nav class="doors" id="doors" aria-label="Что подобрать" tabindex="-1">
+        <a class="door" data-domain="game" href="/pick/?start=game">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Поиграть</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="door" data-domain="film" href="/pick/?start=film">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Посмотреть фильм</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="door" data-domain="series" href="/pick/?start=series">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Сериал</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+        <a class="door" data-domain="cartoon" href="/pick/?start=cartoon">
+          <span class="wall" aria-hidden="true"></span>
+          <span class="door-label">
+            <span class="door-text"><span class="door-title">Мультфильм</span><span class="door-count num"></span></span>
+            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a>
+      </nav>
+
+      <ul class="later" aria-label="Скоро">
+        <li class="slot" aria-disabled="true">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+          <span>Почитать</span><span class="pill">скоро</span>
+        </li>
+        <li class="slot" aria-disabled="true">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.5 2 5.4 5.6.4-4.3 3.7 1.4 5.6L12 15.5l-4.7 3.1 1.4-5.6-4.3-3.7 5.6-.4Z"/></svg>
+          <span>Аниме</span><span class="pill">скоро</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="how" aria-labelledby="how-title">
+      <h2 id="how-title">Как я подбираю</h2>
+      <ol class="steps">
+        <li class="step">
+          <div class="step-text">
+            <h3>Отмечаешь знакомое, я спрашиваю за что</h3>
+            <p>Не жанр, а причину: сюжет, персонажи, атмосфера. Главный вес у того, что ты отметил сам.</p>
+          </div>
+          <div class="frag" id="frag-why"></div>
+        </li>
+        <li class="step">
+          <div class="step-text">
+            <h3>И что не зашло — твоими словами</h3>
+            <p>Жалобы — обычными словами, без терминов: один тап «мешало», второй «никогда». Если не уверен, уточню, что тебе сегодня ближе.</p>
+          </div>
+          <div class="frag" id="frag-complaint"></div>
+        </li>
+        <li class="step">
+          <div class="step-text">
+            <h3>Под каждой причиной — факт</h3>
+            <p>Цитата из отзыва, тег игроков или зрителей, факт из каталога. Риски показываю рядом, а не прячу. Что я понял о тебе, видно там же, любую строку можно убрать.</p>
+          </div>
+          <div class="frag" id="frag-reason"></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="example" aria-labelledby="example-title">
+      <div class="example-head">
+        <h2 id="example-title">Пример: такие ответы — такой подбор</h2>
+        <p class="note" id="example-note">Настоящий ответ подборщика на каталоге игр. Ответы — пример, не чьи-то реальные.</p>
+      </div>
+      <div class="example-body">
+        <dl class="answers" id="answers"></dl>
+        <article class="result" id="result" aria-label="Подбор"></article>
+      </div>
+    </section>
+
+    <section class="again" aria-labelledby="again-title">
+      <h2 id="again-title">Что подберём сегодня?</h2>
+      <nav class="doors doors-compact" id="doors-again" aria-labelledby="again-title"></nav>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-in">
+      <span class="brand brand-s">TASTIQ</span>
+      <p>Откуда факты: отзывы и теги игроков Steam, теги зрителей MovieLens, Википедия, оценки IMDb. Картинки: Steam, TVmaze, Википедия.</p>
+    </div>
+  </footer>
+</body>
+</html>

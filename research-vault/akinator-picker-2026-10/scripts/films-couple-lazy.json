@@ -1,0 +1,722 @@
+{
+ "persona": "couple",
+ "mode": "lazy",
+ "screens": [
+  {
+   "n": 1,
+   "step": "domain",
+   "title": "Что хочешь?",
+   "options": [
+    "Поиграть",
+    "Посмотреть фильм",
+    "Посмотреть сериал",
+    "Посмотреть мультфильм"
+   ]
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "step": "genres",
+   "title": "Что обычно смотришь?",
+   "options": [
+    "драмы",
+    "комедии",
+    "боевики",
+    "криминал",
+    "мелодрамы",
+    "триллеры",
+    "ужасы",
+    "приключения",
+    "детективы",
+    "биографии",
+    "фэнтези",
+    "фантастика",
+    "документальное",
+    "историческое"
+   ]
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "skip"
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Властелин колец: Братство кольца (2001)",
+    "Убить Билла. Фильм 1 (2003)",
+    "Назад в будущее (1985)",
+    "Дэдпул (2016)",
+    "Джанго освобождённый (2012)",
+    "Звёздные войны: Пробуждение Силы (2015)",
+    "Форрест Гамп (1994)",
+    "Бойцовский клуб (1999)"
+   ]
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt0120737",
+     "tt0266697",
+     "tt0088763",
+     "tt1431045",
+     "tt1853728",
+     "tt2488496",
+     "tt0109830",
+     "tt0137523"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Шестое чувство (1999)",
+    "Большой куш (2000)",
+    "Звёздные войны. Эпизод 5: Империя наносит ответный удар (1980)",
+    "Одержимость (2014)",
+    "Тёмный рыцарь (2008)",
+    "Начало (2010)",
+    "Мстители: Эра Альтрона (2015)",
+    "Криминальное чтиво (1994)"
+   ]
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt1375666"
+    ],
+    "shownIds": [
+     "tt0120737",
+     "tt0266697",
+     "tt0088763",
+     "tt1431045",
+     "tt1853728",
+     "tt2488496",
+     "tt0109830",
+     "tt0137523",
+     "tt0167404",
+     "tt0208092",
+     "tt0080684",
+     "tt2582802",
+     "tt0468569",
+     "tt1375666",
+     "tt2395427",
+     "tt0110912"
+    ]
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Начало»?",
+   "options": [
+    "фантастика",
+    "зрелищные спецэффекты",
+    "неожиданные повороты",
+    "быстрый темп",
+    "сложный, надо вникать",
+    "заставляет думать",
+    "сильная актёрская игра",
+    "странное, причудливое",
+    "держит в напряжении",
+    "фэнтези и магия"
+   ]
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "story.complex"
+    ],
+    "love": false,
+    "issues": []
+   },
+   "step": "disliked",
+   "title": "А что не зашло, хотя многие хвалят?",
+   "items": [
+    "Побег из Шоушенка (1994)",
+    "Матрица (1999)",
+    "Крёстный отец (1972)",
+    "Властелин колец: Возвращение короля (2003)",
+    "Тёмный рыцарь: Возрождение легенды (2012)",
+    "Властелин колец: Две крепости (2002)",
+    "Семь (1995)",
+    "Гладиатор (2000)"
+   ]
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "skip"
+   },
+   "step": "today",
+   "title": "Что сегодня?",
+   "options": [
+    "Хочу расслабиться",
+    "Хочу посмеяться",
+    "Хочу пощекотать нервы",
+    "Хочу, чтобы пробрало",
+    "Хочу подумать",
+    "Фоном, не вникая",
+    "Смотрю с детьми",
+    "Коротко, на один вечер",
+    "Хочу засесть надолго"
+   ]
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "skip"
+   },
+   "step": "playback",
+   "title": "Вот как я тебя вижу",
+   "options": [
+    "Да, подбирай",
+    "Добавлю ещё, что зашло"
+   ]
+  },
+  {
+   "n": 9,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  },
+  {
+   "n": 10,
+   "action": {
+    "type": "fork",
+    "f": "characters.antihero"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  },
+  {
+   "n": 11,
+   "action": {
+    "type": "fork",
+    "f": "world.dystopia"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  }
+ ],
+ "result": {
+  "tag": "после развилки 2",
+  "top": {
+   "id": "tt0133093",
+   "name": "Матрица",
+   "label": "strong",
+   "score": 3.429
+  },
+  "alternatives": [
+   {
+    "id": "tt0137523",
+    "name": "Бойцовский клуб",
+    "label": "likely",
+    "score": 3.036
+   },
+   {
+    "id": "tt0468569",
+    "name": "Тёмный рыцарь",
+    "label": "likely",
+    "score": 3.025
+   },
+   {
+    "id": "tt0434409",
+    "name": "«V» значит Вендетта",
+    "label": "likely",
+    "score": 3.01
+   }
+  ],
+  "fork": null,
+  "taste": {
+   "confirmed": [
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "w": 0.61,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "characters.antihero",
+     "label": "антигерой",
+     "w": 0.61,
+     "sources": [],
+     "ids": [],
+     "preference": true
+    },
+    {
+     "f": "world.dystopia",
+     "label": "антиутопия",
+     "w": 0.61,
+     "sources": [],
+     "ids": [],
+     "preference": true
+    }
+   ],
+   "inferred": [
+    {
+     "f": "tension.high",
+     "label": "держит в напряжении",
+     "w": 0.19,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "world.scifi",
+     "label": "фантастика",
+     "w": 0.19,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "pace.fast",
+     "label": "быстрый темп",
+     "w": 0.17,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "w": 0.17,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.effects",
+     "label": "зрелищные спецэффекты",
+     "w": 0.17,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "w": 0.17,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "w": 0.17,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    },
+    {
+     "f": "characters.acting",
+     "label": "сильная актёрская игра",
+     "w": 0.17,
+     "sources": [
+      "Начало"
+     ],
+     "ids": [
+      "tt1375666"
+     ],
+     "preference": false
+    }
+   ],
+   "dislikes": [],
+   "hardNo": [],
+   "consumed": 1
+  },
+  "considered": 21837,
+  "sieves": [
+   {
+    "id": 1,
+    "name": "Можно ли",
+    "removed": 0
+   },
+   {
+    "id": 2,
+    "name": "Было ли",
+    "removed": 1
+   },
+   {
+    "id": 3,
+    "name": "Сделано ли нормально",
+    "removed": 10288
+   },
+   {
+    "id": 4,
+    "name": "Моё ли (жёсткие стопы)",
+    "removed": 0
+   },
+   {
+    "id": 5,
+    "name": "Подходит ли сегодня (обязательное)",
+    "removed": 0
+   }
+  ]
+ },
+ "why": {
+  "tt0119177": {
+   "id": "tt0119177",
+   "name": "Gattaca",
+   "rank": 44,
+   "of": 21837,
+   "score": 2.286,
+   "parts": {
+    "fit": 2.0750042824528228,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.2106583863144786
+   },
+   "leaderScore": 3.429,
+   "matches": [
+    {
+     "f": "world.dystopia",
+     "label": "антиутопия",
+     "contribution": 0.624,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.32,
+     "confirmed": true
+    },
+    {
+     "f": "world.scifi",
+     "label": "фантастика",
+     "contribution": 0.135,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.121,
+     "confirmed": false
+    },
+    {
+     "f": "story.twist",
+     "label": "неожиданные повороты",
+     "contribution": 0.113,
+     "confirmed": false
+    },
+    {
+     "f": "ending.strong",
+     "label": "сильный финал",
+     "contribution": 0.106,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  },
+  "tt2543164": {
+   "id": "tt2543164",
+   "name": "Arrival",
+   "rank": 106,
+   "of": 21837,
+   "score": 1.957,
+   "parts": {
+    "fit": 1.713465985615401,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.24304376679556927
+   },
+   "leaderScore": 3.429,
+   "matches": [
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.368,
+     "confirmed": true
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.142,
+     "confirmed": false
+    },
+    {
+     "f": "world.scifi",
+     "label": "фантастика",
+     "contribution": 0.135,
+     "confirmed": false
+    },
+    {
+     "f": "story.twist",
+     "label": "неожиданные повороты",
+     "contribution": 0.133,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.121,
+     "confirmed": false
+    },
+    {
+     "f": "world.dystopia",
+     "label": "антиутопия",
+     "contribution": 0.108,
+     "confirmed": true
+    }
+   ],
+   "penalties": []
+  },
+  "tt2194499": {
+   "id": "tt2194499",
+   "name": "About Time",
+   "rank": 2262,
+   "of": 21837,
+   "score": 0.83,
+   "parts": {
+    "fit": 0.6064762810638752,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.22317059382578489
+   },
+   "leaderScore": 3.429,
+   "matches": [
+    {
+     "f": "world.fantasy",
+     "label": "фэнтези и магия",
+     "contribution": 0.093,
+     "confirmed": false
+    },
+    {
+     "f": "characters.acting",
+     "label": "сильная актёрская игра",
+     "contribution": 0.077,
+     "confirmed": false
+    },
+    {
+     "f": "ending.strong",
+     "label": "сильный финал",
+     "contribution": 0.07,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.05,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.soundtrack",
+     "label": "сильная музыка",
+     "contribution": 0.048,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.046,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  },
+  "tt2884206": {
+   "id": "tt2884206",
+   "name": "I Origins",
+   "rank": 799,
+   "of": 21837,
+   "score": 1.233,
+   "parts": {
+    "fit": 1.0722603358055696,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.1610018352231762
+   },
+   "leaderScore": 3.429,
+   "matches": [
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.285,
+     "confirmed": true
+    },
+    {
+     "f": "world.dystopia",
+     "label": "антиутопия",
+     "contribution": 0.138,
+     "confirmed": true
+    },
+    {
+     "f": "world.scifi",
+     "label": "фантастика",
+     "contribution": 0.123,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.121,
+     "confirmed": false
+    },
+    {
+     "f": "characters.acting",
+     "label": "сильная актёрская игра",
+     "contribution": 0.094,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.073,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  },
+  "tt0414993": {
+   "id": "tt0414993",
+   "name": "The Fountain",
+   "rank": 249,
+   "of": 21837,
+   "score": 1.67,
+   "parts": {
+    "fit": 1.5187957068782951,
+    "penalty": 0,
+    "mood": 0,
+    "prior": 0.15108015992659102
+   },
+   "leaderScore": 3.429,
+   "matches": [
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.461,
+     "confirmed": true
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.142,
+     "confirmed": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.121,
+     "confirmed": false
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.11,
+     "confirmed": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.106,
+     "confirmed": false
+    },
+    {
+     "f": "world.scifi",
+     "label": "фантастика",
+     "contribution": 0.102,
+     "confirmed": false
+    }
+   ],
+   "penalties": []
+  }
+ },
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [],
+  "shown": [
+   "tt0120737",
+   "tt0266697",
+   "tt0088763",
+   "tt1431045",
+   "tt1853728",
+   "tt2488496",
+   "tt0109830",
+   "tt0137523",
+   "tt0167404",
+   "tt0208092",
+   "tt0080684",
+   "tt2582802",
+   "tt0468569",
+   "tt1375666",
+   "tt2395427",
+   "tt0110912"
+  ],
+  "liked": [
+   "tt1375666"
+  ],
+  "disliked": [],
+  "whyIndex": 0,
+  "answers": {
+   "tt1375666": {
+    "reaction": "like",
+    "reasons": [
+     "story.complex"
+    ],
+    "issues": []
+   }
+  },
+  "corrections": [],
+  "preferences": [
+   {
+    "f": "characters.antihero"
+   },
+   {
+    "f": "world.dystopia"
+   }
+  ],
+  "session": {
+   "moods": [],
+   "avoid": [],
+   "notNow": [],
+   "asked": 2
+  },
+  "seed": 4242
+ }
+}

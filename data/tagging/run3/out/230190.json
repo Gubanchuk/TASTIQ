@@ -1,0 +1,8 @@
+{"appid": 230190, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "players build dungeons containing deadly traps to kill adventuring heroes"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p2", "q": "The game requires micromanagement to keep minions working"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "a realm protected by the goddess Kira"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p0", "q": "It includes a campaign, sandbox mode, and online multiplayer"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p0", "q": "It includes a campaign, sandbox mode, and online multiplayer"}]},
+{"f": "tone.whimsical", "r": 1, "ev": [{"id": "p1", "q": "fourth wall breaking narrator Richard Ridings"}]}
+]}

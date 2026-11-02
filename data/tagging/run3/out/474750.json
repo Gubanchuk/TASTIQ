@@ -1,0 +1,13 @@
+{"appid": 474750, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p3", "q": "The player chooses between two responses to the supplicant"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p4", "q": "Each decision has an effect on the power of one of the kingdom's four aspects"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p10", "q": "the simple controls with the cards were well-suited for mobile gameplay"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p10", "q": "would lead to overthinking"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "the game ends and the player starts another reign with a new monarch"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p5", "q": "Completing tasks in each reign allows the player to unlock new cards"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p8", "q": "Reigns was more of a whimsical experience than a serious strategy game"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p9", "q": "the game was humorous and weird"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "Some reviewers said that the gameplay felt repetitive"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p0", "q": "players control a medieval king"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p6", "q": "meets a ghost called the Spirit of the Fallen"}]}
+]}

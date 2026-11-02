@@ -1,0 +1,13 @@
+{"appid": 1238040, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "Set in the world of Thedas, players assume the role of Hawke, a human mage"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p4", "q": "players are accompanied by different companions, who can be recruited into Hawke's party"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p12", "q": "Critics praised the companions featured in the game"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p7", "q": "players will make many decisions that lead to different consequences"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p9", "q": "praised the game's combat noting it was faster than its predecessor"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p7", "q": "Outside combat, players engage in dialogue, asking or answering questions"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p6", "q": "A skill tree is present for players to unlock talents in a non-linear manner"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p3", "q": "Hawke's sex and appearance can be customized"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p5", "q": "players encounter different containers and loot"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "p7", "q": "flirt with non-playable characters"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p9", "q": "the console controls' imprecision"}]}
+]}

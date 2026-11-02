@@ -1,0 +1,14 @@
+{
+  "appid": 476600,
+  "features": [
+    {"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2017 first-person shooter game"}]},
+    {"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "the first title in the series to be set primarily during World War II"}]},
+    {"f": "social.pvp", "r": 2, "ev": [{"id": "p9", "q": "The multiplayer was praised for returning to boots-on-the-ground gameplay"}]},
+    {"f": "progression.builds", "r": 2, "ev": [{"id": "p8", "q": "Players can choose one of five (later eight) divisions"}]},
+    {"f": "characters.companions", "r": 2, "ev": [{"id": "p6", "q": "The player is accompanied by friendly troops throughout the game"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p3", "q": "Praise was given towards its story"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "They also chose to include atrocities and Nazi concentration camps in the campaign mode"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p3", "q": "Praise was given towards its story, the changes to combat, multiplayer modes, and visuals"}]},
+    {"f": "loop.driving", "r": 1, "ev": [{"id": "p5", "q": "In some parts of the campaign, players are able to control vehicles"}]}
+  ]
+}

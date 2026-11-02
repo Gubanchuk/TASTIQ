@@ -1,0 +1,10 @@
+{"id": "tt8714904", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "is an American crime drama television series"}]},
+{"f": "story.true", "r": 2, "ev": [{"id": "p1", "q": "It dramatizes the creation and rise of the Guadalajara Cartel in the 1980s"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "It dramatizes the creation and rise of the Guadalajara Cartel in the 1980s"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "Dangerous, thrilling, and highly addictive"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "showcasing electric performances from Diego Luna"}]},
+{"f": "characters.unlikeable", "r": 1, "ev": [{"id": "p2", "q": "Michael Penà spends the majority of the season staring off into the void"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p3", "q": "is definitely more violent"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "renewed the series for a third and final season"}]}
+]}

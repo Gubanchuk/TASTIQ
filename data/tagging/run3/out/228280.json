@@ -1,0 +1,7 @@
+{"appid": 228280, "features": [
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p6", "q": "All of the original characters that can join the player's party"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p6", "q": "the player creates a character and takes them across the game's setting"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p6", "q": "the Forgotten Realms continent of Faerûn"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "five class kits - the Dwarven Defender, Shadowdancer"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p6", "q": "The main story, too, is still retained"}]}
+]}

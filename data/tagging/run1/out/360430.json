@@ -1,0 +1,151 @@
+{
+ "appid": 360430,
+ "features": [
+  {
+   "f": "world.historical",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Part three of the Mafia crime saga - 1968, New Bordeaux, LA"
+    },
+    {
+     "id": "r237561820",
+     "q": "If you are into the 1960s and sandbox games this is the game for you"
+    }
+   ]
+  },
+  {
+   "f": "world.living",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "A vast world ruled by the mob and detailed with the sights and sounds of the era"
+    },
+    {
+     "id": "r237140264",
+     "q": "The world also has a lot of small details that make it look more alive"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r237140264",
+     "q": "The music selection is nice and suits the time period"
+    },
+    {
+     "id": "r237561820",
+     "q": "while listening to classics of the era"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237140264",
+     "q": "The graphics have some nice details, especially the facial animations"
+    }
+   ]
+  },
+  {
+   "f": "loop.driving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237561820",
+     "q": "You will be driving around in amazing modeled cars"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237561820",
+     "q": "you have a wide choice of firearms to terrorize those who have taken from you"
+    }
+   ]
+  },
+  {
+   "f": "loop.stealth",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Choose your own play-style; brute force, blazing guns or stalk-and-kill tactics"
+    }
+   ]
+  },
+  {
+   "f": "loop.management",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Build a new criminal empire your way by deciding which lieutenants you reward, and which you betray"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r238026853",
+     "q": "Everything feels repetitive, and the gameplay gets stale pretty quickly"
+    },
+    {
+     "id": "r236565504",
+     "q": "painfully tedious and repetitive mission design"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236863805",
+     "q": "игра моментально скатывается в невыносимо унылый симулятор зачистки одинаковых сараев"
+    }
+   ]
+  },
+  {
+   "f": "world.empty",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236565504",
+     "q": "but hollow and lifeless if you stare at any part of it too long"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236565504",
+     "q": "the gunplay is under baked and is frustrating at times"
+    }
+   ]
+  },
+  {
+   "f": "progression.grind",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236240316",
+     "q": "пришлось качать мод для улучшения игры (убирание гринда)"
+    }
+   ]
+  }
+ ]
+}

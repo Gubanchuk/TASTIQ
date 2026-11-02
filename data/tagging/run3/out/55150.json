@@ -1,0 +1,9 @@
+{"appid": 55150, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "Its gameplay focuses on a hybrid shooting and melee combat model"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2011 third-person shooter hack and slash video game"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p9", "q": "It offers a fast-paced, gory start to a promising new franchise"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p5", "q": "The Orks are an alien race of brutish looters"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p6", "q": "the game also features an 8-vs-8 online multiplayer mode"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p6", "q": "a 4-player cooperative survival mode"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p9", "q": "criticized the campaign, claiming that it was linear"}]}
+]}

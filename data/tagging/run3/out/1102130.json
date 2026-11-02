@@ -1,0 +1,14 @@
+{"appid": 1102130, "features": [
+{"f": "story.central", "r": 3, "ev": [{"id": "p0", "q": "story-driven minigame compilation video game"}, {"id": "p6", "q": "standing out with a story about love and diversity"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "Puzzles are used to reinforce pieces of Florence's life"}]},
+{"f": "loop.life_sim", "r": 2, "ev": [{"id": "p1", "q": "lives her daily routine"}]},
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p4", "q": "begin to take their relationship more seriously"}, {"id": "p7", "q": "to fall in love for the first time"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p8", "q": "the emotional component of the game resonate with the player"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p7", "q": "a truly beautiful product"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p2", "q": "praised the game's art-style, music, and narrative structure"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p3", "q": "A single play-through of Florence takes approximately 30"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "The game plays out linearly"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "p2", "q": "received some criticism for its ending"}, {"id": "p9", "q": "traded one easy cliché for another"}]},
+{"f": "ending.bittersweet", "r": 2, "ev": [{"id": "p9", "q": "the narcissistic pursuit of their real passion, art, that wins out in the end"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p4", "q": "a monotonous routine of working at her job"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 2678990, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "the player manages and designs a street"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p0", "q": "they can build various shops, buildings, and parks to complete missions"}]},
+{"f": "length.short", "r": 3, "ev": [{"id": "p0", "q": "the short length has been criticised"}, {"id": "p5", "q": "Reviewers criticised the game's short length"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p5", "q": "some elements feel repetitive"}, {"id": "p5", "q": "the game's loop is repetitive"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p0", "q": "The game's art style has been lauded"}, {"id": "p6", "q": "pastel looks are anime-inspired"}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "p1", "q": "It also includes cosy and city-building elements"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p3", "q": "The sandbox mode features two different modes"}]}
+]}

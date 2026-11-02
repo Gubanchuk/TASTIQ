@@ -1,0 +1,562 @@
+{
+  "runs": [
+    {
+      "run": "run1",
+      "games": 500,
+      "features": 5200,
+      "kept": 5193,
+      "unknownFeature": 1,
+      "badRelevance": 0,
+      "noValidEvidence": 0,
+      "evidence": 6018,
+      "badEvidenceId": 0,
+      "notVerbatim": 0,
+      "tooLong": 0,
+      "riskCapped": 78,
+      "appidMismatch": 0,
+      "unreadable": 0
+    },
+    {
+      "run": "run2",
+      "games": 80,
+      "features": 1161,
+      "kept": 1161,
+      "unknownFeature": 0,
+      "badRelevance": 0,
+      "noValidEvidence": 0,
+      "evidence": 1974,
+      "badEvidenceId": 0,
+      "notVerbatim": 0,
+      "tooLong": 0,
+      "riskCapped": 11,
+      "appidMismatch": 0,
+      "unreadable": 0
+    },
+    {
+      "run": "run3",
+      "games": 1574,
+      "features": 10688,
+      "kept": 10664,
+      "unknownFeature": 0,
+      "badRelevance": 0,
+      "noValidEvidence": 22,
+      "evidence": 11125,
+      "badEvidenceId": 0,
+      "notVerbatim": 28,
+      "tooLong": 0,
+      "riskCapped": 98,
+      "appidMismatch": 0,
+      "unreadable": 0
+    }
+  ],
+  "agreement": {
+    "sharedGames": 80,
+    "perFeature": {
+      "social.pvp": {
+        "both": 27,
+        "oneOnly": 4,
+        "closeWhenBoth": 27,
+        "presenceAgreement": 0.8709677419354839
+      },
+      "characters.custom_hero": {
+        "both": 6,
+        "oneOnly": 9,
+        "closeWhenBoth": 6,
+        "presenceAgreement": 0.4
+      },
+      "progression.collection": {
+        "both": 4,
+        "oneOnly": 10,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.2857142857142857
+      },
+      "humor.funny": {
+        "both": 16,
+        "oneOnly": 7,
+        "closeWhenBoth": 16,
+        "presenceAgreement": 0.6956521739130435
+      },
+      "length.endless": {
+        "both": 30,
+        "oneOnly": 15,
+        "closeWhenBoth": 29,
+        "presenceAgreement": 0.6666666666666666
+      },
+      "completeness.unfinished": {
+        "both": 15,
+        "oneOnly": 8,
+        "closeWhenBoth": 14,
+        "presenceAgreement": 0.6521739130434783
+      },
+      "characters.memorable": {
+        "both": 16,
+        "oneOnly": 10,
+        "closeWhenBoth": 16,
+        "presenceAgreement": 0.6153846153846154
+      },
+      "progression.builds": {
+        "both": 14,
+        "oneOnly": 15,
+        "closeWhenBoth": 14,
+        "presenceAgreement": 0.4827586206896552
+      },
+      "tone.lighthearted": {
+        "both": 3,
+        "oneOnly": 9,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.25
+      },
+      "difficulty.forgiving": {
+        "both": 9,
+        "oneOnly": 14,
+        "closeWhenBoth": 9,
+        "presenceAgreement": 0.391304347826087
+      },
+      "cognitive.high": {
+        "both": 13,
+        "oneOnly": 7,
+        "closeWhenBoth": 13,
+        "presenceAgreement": 0.65
+      },
+      "social.coop": {
+        "both": 25,
+        "oneOnly": 7,
+        "closeWhenBoth": 25,
+        "presenceAgreement": 0.78125
+      },
+      "world.postapoc": {
+        "both": 8,
+        "oneOnly": 1,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.8888888888888888
+      },
+      "tone.creepy": {
+        "both": 8,
+        "oneOnly": 3,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.7272727272727273
+      },
+      "loop.shooting": {
+        "both": 22,
+        "oneOnly": 5,
+        "closeWhenBoth": 22,
+        "presenceAgreement": 0.8148148148148148
+      },
+      "loop.melee": {
+        "both": 16,
+        "oneOnly": 3,
+        "closeWhenBoth": 16,
+        "presenceAgreement": 0.8421052631578947
+      },
+      "pace.fast": {
+        "both": 1,
+        "oneOnly": 9,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.1
+      },
+      "tension.high": {
+        "both": 7,
+        "oneOnly": 14,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.3333333333333333
+      },
+      "social.solo": {
+        "both": 12,
+        "oneOnly": 14,
+        "closeWhenBoth": 12,
+        "presenceAgreement": 0.46153846153846156
+      },
+      "combat.precise": {
+        "both": 2,
+        "oneOnly": 11,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.15384615384615385
+      },
+      "difficulty.hard": {
+        "both": 21,
+        "oneOnly": 15,
+        "closeWhenBoth": 21,
+        "presenceAgreement": 0.5833333333333334
+      },
+      "progression.grind": {
+        "both": 10,
+        "oneOnly": 6,
+        "closeWhenBoth": 10,
+        "presenceAgreement": 0.625
+      },
+      "loop.tactics": {
+        "both": 11,
+        "oneOnly": 3,
+        "closeWhenBoth": 11,
+        "presenceAgreement": 0.7857142857142857
+      },
+      "loop.management": {
+        "both": 8,
+        "oneOnly": 5,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.6153846153846154
+      },
+      "loop.building": {
+        "both": 16,
+        "oneOnly": 7,
+        "closeWhenBoth": 16,
+        "presenceAgreement": 0.6956521739130435
+      },
+      "cognitive.low": {
+        "both": 5,
+        "oneOnly": 9,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.35714285714285715
+      },
+      "session.short": {
+        "both": 1,
+        "oneOnly": 6,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.14285714285714285
+      },
+      "aesthetic.beautiful": {
+        "both": 33,
+        "oneOnly": 10,
+        "closeWhenBoth": 33,
+        "presenceAgreement": 0.7674418604651163
+      },
+      "aesthetic.soundtrack": {
+        "both": 20,
+        "oneOnly": 15,
+        "closeWhenBoth": 20,
+        "presenceAgreement": 0.5714285714285714
+      },
+      "world.historical": {
+        "both": 12,
+        "oneOnly": 2,
+        "closeWhenBoth": 12,
+        "presenceAgreement": 0.8571428571428571
+      },
+      "tension.low": {
+        "both": 1,
+        "oneOnly": 6,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.14285714285714285
+      },
+      "tone.serene": {
+        "both": 3,
+        "oneOnly": 6,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.3333333333333333
+      },
+      "pace.draggy": {
+        "both": 13,
+        "oneOnly": 6,
+        "closeWhenBoth": 13,
+        "presenceAgreement": 0.6842105263157895
+      },
+      "tone.epic": {
+        "both": 3,
+        "oneOnly": 10,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.23076923076923078
+      },
+      "progression.power": {
+        "both": 0,
+        "oneOnly": 10,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "loop.exploration": {
+        "both": 23,
+        "oneOnly": 14,
+        "closeWhenBoth": 23,
+        "presenceAgreement": 0.6216216216216216
+      },
+      "stability.falls_off": {
+        "both": 3,
+        "oneOnly": 6,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.3333333333333333
+      },
+      "tone.gritty": {
+        "both": 5,
+        "oneOnly": 6,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.45454545454545453
+      },
+      "tone.dark": {
+        "both": 19,
+        "oneOnly": 17,
+        "closeWhenBoth": 19,
+        "presenceAgreement": 0.5277777777777778
+      },
+      "story.central": {
+        "both": 25,
+        "oneOnly": 7,
+        "closeWhenBoth": 25,
+        "presenceAgreement": 0.78125
+      },
+      "length.short": {
+        "both": 7,
+        "oneOnly": 3,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.7
+      },
+      "combat.clunky": {
+        "both": 23,
+        "oneOnly": 7,
+        "closeWhenBoth": 23,
+        "presenceAgreement": 0.7666666666666667
+      },
+      "content.gore": {
+        "both": 0,
+        "oneOnly": 7,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "pace.repetitive": {
+        "both": 21,
+        "oneOnly": 7,
+        "closeWhenBoth": 21,
+        "presenceAgreement": 0.75
+      },
+      "characters.companions": {
+        "both": 5,
+        "oneOnly": 6,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.45454545454545453
+      },
+      "freedom.linear": {
+        "both": 3,
+        "oneOnly": 5,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.375
+      },
+      "freedom.open_world": {
+        "both": 10,
+        "oneOnly": 8,
+        "closeWhenBoth": 10,
+        "presenceAgreement": 0.5555555555555556
+      },
+      "loop.driving": {
+        "both": 13,
+        "oneOnly": 1,
+        "closeWhenBoth": 13,
+        "presenceAgreement": 0.9285714285714286
+      },
+      "length.long": {
+        "both": 4,
+        "oneOnly": 9,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.3076923076923077
+      },
+      "world.modern": {
+        "both": 7,
+        "oneOnly": 5,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.5833333333333334
+      },
+      "characters.lone_hero": {
+        "both": 1,
+        "oneOnly": 12,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.07692307692307693
+      },
+      "loop.life_sim": {
+        "both": 1,
+        "oneOnly": 5,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.16666666666666666
+      },
+      "freedom.sandbox": {
+        "both": 11,
+        "oneOnly": 9,
+        "closeWhenBoth": 11,
+        "presenceAgreement": 0.55
+      },
+      "world.living": {
+        "both": 3,
+        "oneOnly": 5,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.375
+      },
+      "world.realistic": {
+        "both": 4,
+        "oneOnly": 6,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.4
+      },
+      "pace.slow": {
+        "both": 0,
+        "oneOnly": 2,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "story.choices": {
+        "both": 8,
+        "oneOnly": 2,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.8
+      },
+      "world.scifi": {
+        "both": 15,
+        "oneOnly": 0,
+        "closeWhenBoth": 15,
+        "presenceAgreement": 1
+      },
+      "tone.whimsical": {
+        "both": 6,
+        "oneOnly": 7,
+        "closeWhenBoth": 6,
+        "presenceAgreement": 0.46153846153846156
+      },
+      "loop.stealth": {
+        "both": 10,
+        "oneOnly": 2,
+        "closeWhenBoth": 10,
+        "presenceAgreement": 0.8333333333333334
+      },
+      "loop.puzzles": {
+        "both": 8,
+        "oneOnly": 3,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.7272727272727273
+      },
+      "combat.fast": {
+        "both": 5,
+        "oneOnly": 5,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.5
+      },
+      "loop.looting": {
+        "both": 12,
+        "oneOnly": 6,
+        "closeWhenBoth": 12,
+        "presenceAgreement": 0.6666666666666666
+      },
+      "story.lore": {
+        "both": 3,
+        "oneOnly": 11,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.21428571428571427
+      },
+      "aesthetic.stylized": {
+        "both": 11,
+        "oneOnly": 5,
+        "closeWhenBoth": 11,
+        "presenceAgreement": 0.6875
+      },
+      "ending.strong": {
+        "both": 2,
+        "oneOnly": 6,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.25
+      },
+      "tone.melancholic": {
+        "both": 8,
+        "oneOnly": 2,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.8
+      },
+      "story.mystery": {
+        "both": 5,
+        "oneOnly": 9,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.35714285714285715
+      },
+      "combat.weighty": {
+        "both": 1,
+        "oneOnly": 2,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.3333333333333333
+      },
+      "loop.survival": {
+        "both": 7,
+        "oneOnly": 4,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.6363636363636364
+      },
+      "world.fantasy": {
+        "both": 9,
+        "oneOnly": 8,
+        "closeWhenBoth": 9,
+        "presenceAgreement": 0.5294117647058824
+      },
+      "aesthetic.pixel": {
+        "both": 2,
+        "oneOnly": 1,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.6666666666666666
+      },
+      "world.empty": {
+        "both": 3,
+        "oneOnly": 3,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.5
+      },
+      "story.minimal": {
+        "both": 3,
+        "oneOnly": 5,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.375
+      },
+      "ending.bittersweet": {
+        "both": 1,
+        "oneOnly": 5,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.16666666666666666
+      },
+      "loop.platforming": {
+        "both": 8,
+        "oneOnly": 0,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 1
+      },
+      "humor.dark": {
+        "both": 2,
+        "oneOnly": 2,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.5
+      },
+      "content.family": {
+        "both": 0,
+        "oneOnly": 2,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "ending.weak": {
+        "both": 2,
+        "oneOnly": 3,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.4
+      },
+      "loop.dialogue": {
+        "both": 1,
+        "oneOnly": 4,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.2
+      },
+      "tone.cozy": {
+        "both": 4,
+        "oneOnly": 5,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.4444444444444444
+      },
+      "content.sexual": {
+        "both": 1,
+        "oneOnly": 2,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.3333333333333333
+      },
+      "stability.slow_start": {
+        "both": 2,
+        "oneOnly": 1,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.6666666666666666
+      },
+      "characters.romance": {
+        "both": 0,
+        "oneOnly": 2,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      }
+    },
+    "overallPresenceAgreement": 0.5752143413873734
+  }
+}

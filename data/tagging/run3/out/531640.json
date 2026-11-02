@@ -1,0 +1,6 @@
+{"appid": 531640, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p1", "q": "a turn-based card game between two opponents"}, {"id": "p7", "q": "PC Gamer praised the use of 'instant' cards that can be played during your opponent's turn"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "The game takes place in a Weird West fantasy setting"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "either Player vs. Player, or Player vs. a computer-controlled opponent"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p1", "q": "to collect cards for use in their decks"}]}
+]}

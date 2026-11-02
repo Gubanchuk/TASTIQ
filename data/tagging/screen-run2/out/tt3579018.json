@@ -1,0 +1,10 @@
+{"id": "tt3579018", "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "an American fantasy drama television series developed for NBC"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "Dark and brooding, but also confusing and contrived"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p2", "q": "Dark and brooding, but also confusing and contrived"}]},
+{"f": "world.supernatural", "r": 2, "ev": [{"id": "s", "q": "the wrath of a growing cauldron of witches"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "s", "q": "Epic, romantic and fantastical"}]},
+{"f": "characters.romance", "r": 1, "ev": [{"id": "s", "q": "Epic, romantic and fantastical"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p0", "q": "received a 10-episode order by NBC in April 2015"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "NBC canceled the series after one season"}]}
+]}

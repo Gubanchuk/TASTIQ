@@ -1,0 +1,9 @@
+{"appid": 380, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Half-Life 2: Episode One is a 2006 first-person shooter game developed and published by Valve"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "The gameplay is broken up between combat-oriented challenges and physics-based puzzles"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p2", "q": "the co-operative gameplay with Alyx received particular praise"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p4", "q": "Alyx Vance, Gordon's companion, was designed for co-operative play"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p9", "q": "the strength of Alyx as a companion"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p7", "q": "the Combine is attempting to accelerate its destruction to send a transmission back to their homeworld"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p10", "q": "Episode One takes roughly 4–6 hours to complete"}]}
+]}

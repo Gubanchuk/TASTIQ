@@ -1,0 +1,8 @@
+{"appid": 475550, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p3", "q": "Every decision that a player makes, affects the way the story unfolds"}]},
+{"f": "tone.dark", "r": 3, "ev": [{"id": "p0", "q": "life in a totalitarian police state, in which privacy does not exist"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p5", "q": "Gameplay will prove uncomplicated for everyone who has ever dealt with classic adventure games"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p6", "q": "held back by repetition"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p7", "q": "an interesting set of characters and soundtrack to boot"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p6", "q": "With great art and music and plenty of choices"}]}
+]}

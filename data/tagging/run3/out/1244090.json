@@ -1,0 +1,18 @@
+{"appid": 1244090, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p5", "q": "Battles are turn-based, with no time limit on turns"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "The characters can freely run, swim, and climb the terrain"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p3", "q": "the player can converse with locals to procure items and services"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p3", "q": "solve puzzles and challenges"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "stopped or mitigated by attacking with the element types"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p7", "q": "increases the level of all characters, increasing their damage, defense, and health"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p6", "q": "Different characters have different elemental affinities"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p4", "q": "In co-op mode, each player controls one of the three characters"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p0", "q": "using two-dimensional pixel art"}, {"id": "p11", "q": "all praised the pixel art"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p2", "q": "acclaim for its graphics and music"}, {"id": "p11", "q": "Polygon and Eurogamer said it was beautiful"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p11", "q": "The graphics, aesthetics, and music were universally praised"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p10", "q": "an approachable and endearing story"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p0", "q": "on a quest to destroy powerful monsters called Dwellers"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "set primarily on an archipelago of islands in a fantasy world"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p3", "q": "The game world is divided between an overworld map"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p9", "q": "found battles to be repetitive"}]}
+]}

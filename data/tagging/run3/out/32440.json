@@ -1,0 +1,9 @@
+{"appid": 32440, "features": [
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p2", "q": "The gameplay itself is a fusion of action-adventure, platform and puzzles to solve"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "The gameplay itself is a fusion of action-adventure, platform and puzzles to solve"}]},
+{"f": "progression.collection", "r": 3, "ev": [{"id": "p6", "q": "there are 160 gold bricks to collect"}, {"id": "p6", "q": "players are also collecting Gold Bricks"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p3", "q": "players walk amongst popular characters from the films"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p2", "q": "Rebel attack on the second Death Star above Endor"}]},
+{"f": "freedom.open_world", "r": 1, "ev": [{"id": "p3", "q": "the hub world takes place in the Mos Eisley Cantina where players are free to roam"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p3", "q": "the two-player arcade"}]}
+]}

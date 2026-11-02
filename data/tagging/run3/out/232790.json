@@ -1,0 +1,9 @@
+{"appid": 232790, "features": [
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p2", "q": "talk to non-player characters to learn more about the game world"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p8", "q": "a common criticism of the frustrating difficulty of the puzzles"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p8", "q": "a common criticism of the frustrating difficulty of the puzzles"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p7", "q": "grounded while approaching absurdity and adversity with brave, heartfelt sincerity"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p7", "q": "beautiful game with wonderful and funny writing"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "beautiful game with wonderful and funny writing"}]},
+{"f": "ending.weak", "r": 2, "ev": [{"id": "p8", "q": "for its re-use of locations from Act 1 and lackluster ending"}]}
+]}

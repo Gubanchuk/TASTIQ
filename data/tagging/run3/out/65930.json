@@ -1,0 +1,11 @@
+{"appid": 65930, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "tactical third-person shooter video game"}, {"id": "p4", "q": "players can hide behind and switch between cover"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p0", "q": "As a tactical shooter, players can use the battle focus mode to issue commands"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p0", "q": "issue commands to two other agents accompanying the protagonist"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "choose one of four different classes for them"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p10", "q": "Critics noted the game's challenging nature"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p6", "q": "The game is set in late 1962 at the height of the Cold War"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "to repel an alien invasion"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p2", "q": "praising the game's tactical elements and art style"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "p12", "q": "criticized the XCOM base for being empty"}]}
+]}

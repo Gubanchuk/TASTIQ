@@ -1,0 +1,5 @@
+{"appid": 1170880, "features": [
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "progress their skill tree"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "The dead in this world can reincarnate as ghosts"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p1", "q": "The player controls a singular player character, Lavender"}]}
+]}

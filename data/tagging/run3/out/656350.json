@@ -1,0 +1,9 @@
+{"appid": 656350, "features": [
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "exploring a procedurally generated series of rooms on each level"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p1", "q": "collecting items and power-ups in order to defeat bosses"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p4", "q": "The focus on items and character builds is a core element of the gameplay"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "The discovery of powerful items called \"relics\" will greatly impact the probability of success"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p1", "q": "the player's characters may often die as a result of being overcome by the game's challenges"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p1", "q": "a dark and dangerous mine"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p7", "q": "he criticized the imprecise aiming"}]}
+]}

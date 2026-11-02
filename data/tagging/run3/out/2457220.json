@@ -1,0 +1,9 @@
+{"appid": 2457220, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p1", "q": "Players can use magic, melee weapons, and firearms to defeat enemies"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p1", "q": "including dual-wielding pistols or wands"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "The game also features several skill trees for unlocking new abilities"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "how companions assist in combat and questing"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p2", "q": "Decisions made throughout the game affect both the storyline"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p3", "q": "the fantasy world of Eora"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "tasked with investigating a mysterious plague known as the"}]}
+]}

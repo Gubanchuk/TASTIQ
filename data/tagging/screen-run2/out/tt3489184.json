@@ -1,0 +1,12 @@
+{"id": "tt3489184", "features": [
+{"f": "world.supernatural", "r": 3, "ev": [{"id": "p0", "q": "an American supernatural superhero television series developed by Daniel Cerone"}]},
+{"f": "world.superhero", "r": 2, "ev": [{"id": "p0", "q": "an American supernatural superhero television series developed by Daniel Cerone"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p5", "q": "Constantine's creepy atmosphere, high-stakes action, and splendid special effects"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p5", "q": "high-stakes action, and splendid special effects combine with a welcome touch of humor"}]},
+{"f": "aesthetic.effects", "r": 2, "ev": [{"id": "p5", "q": "splendid special effects combine with a welcome touch of humor to overcome narrative flaws"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p5", "q": "combine with a welcome touch of humor to overcome narrative flaws"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p6", "q": "Fowler again praised Ryan's performance, described the season as engaging"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p6", "q": "criticized the episode shifting and team members randomly disappearing"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p6", "q": "criticized the pacing"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "It premiered on October 24, 2014 and concluded on February 13, 2015"}]}
+]}

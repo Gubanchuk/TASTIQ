@@ -1,0 +1,7 @@
+{"appid": 237110, "features": [
+{"f": "content.gore", "r": 3, "ev": [{"id": "p2", "q": "Due to its extremely violent content"}, {"id": "p9", "q": "over-the-top, bloody, and bursting with content"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p4", "q": "two levels can be used to interrupt a combo attack"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p3", "q": "Principal gameplay involves one-on-one 2.5D-style fighting"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p5", "q": "tag team fighting, and an online mode"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p10", "q": "one of the most in-depth story modes to grace a fighting game"}]}
+]}

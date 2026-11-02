@@ -1,0 +1,6 @@
+{"appid": 2185060, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "is a business simulation game"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "allows players to build partition walls, providing them with more flexibility"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p1", "q": "build up its collection of exhibits"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p3", "q": "an endless star scoring system"}]}
+]}

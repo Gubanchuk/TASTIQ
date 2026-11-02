@@ -1,0 +1,10 @@
+{"id": "tt31510819", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "a crime drama television series created by Ronan Bennett"}]},
+{"f": "characters.family", "r": 3, "ev": [{"id": "s", "q": "MobLand follows two generations of gangsters"}, {"id": "p2", "q": "the Harrigan family, a North London crime family"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p5", "q": "Tom Hardy's gruff charisma is put to good use"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "the explosive escalation of a bloody gang war"}]},
+{"f": "content.violence", "r": 1, "ev": [{"id": "p3", "q": "a bloody gang war between two dominant crime syndicates"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p5", "q": "hardly reinvents the genre but nails its conventions"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p1", "q": "In September 2026, the series was renewed for a third season"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p6", "q": "Guy Ritchie at his utmost sinister, funny, and intriguing best"}]}
+]}

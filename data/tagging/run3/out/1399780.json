@@ -1,0 +1,6 @@
+{"appid": 1399780, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "class-based third-person shooter video game"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "projectile-based PvP shooter"}, {"id": "p2", "q": "Game modes included battle royale"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "gauntlets that fired magical spells in place of guns"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Players could choose from one of six elemental classes"}]}
+]}

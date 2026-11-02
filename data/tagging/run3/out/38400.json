@@ -1,0 +1,16 @@
+{"appid": 38400, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "post-apocalyptic and retro-futuristic world"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "set in a mid-22nd century post-apocalyptic and retro-futuristic world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "the player explores the game world from a trimetric perspective"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p0", "q": "They interact with other survivors, some of whom give them quests"}]},
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p6", "q": "Combat is turn based and uses an action-point system"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Each statistic may range from one to ten, provided their sum does not exceed 40"}]},
+{"f": "characters.custom_hero", "r": 3, "ev": [{"id": "p3", "q": "The player begins by selecting one of three characters, or one with player-customized attributes"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p4", "q": "The game has companions that the player can recruit for exploration and combat"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p5", "q": "Many quests feature multiple solutions"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p10", "q": "Computer Games Strategy Plus found the mix of satire and grit well-executed"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p5", "q": "The first main quest has a time limit of 150 in-game days"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p5", "q": "they can often be completed through diplomacy, combat, or stealth"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p10", "q": "Butcher said the game's appearance, sound, and ambient music delivered a believable environment"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p2", "q": "Fallout received acclaim for its open-ended gameplay"}]}
+]}

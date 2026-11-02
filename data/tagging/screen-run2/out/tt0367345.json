@@ -1,0 +1,12 @@
+{"id": "tt0367345", "features": [
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "is an American fantasy family drama television series"}]},
+{"f": "characters.family", "r": 3, "ev": [{"id": "p3", "q": "the relationships within the Girardi family"}]},
+{"f": "characters.coming_of_age", "r": 2, "ev": [{"id": "p5", "q": "a coming-of-age saga of a teenager"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p9", "q": "there was across-the-board praise for Amber Tamblyn"}]},
+{"f": "tone.feelgood", "r": 2, "ev": [{"id": "p7", "q": "genuine heart, wit devoid of crassness"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p7", "q": "both thought through and open-ended, and it should prove especially rewarding"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p12", "q": "CBS canceled it on May 18, 2005"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p12", "q": "The cancellation meant the show ended on a cliffhanger"}, {"id": "p12", "q": "Fan campaigns ensued to have it reinstated"}]},
+{"f": "structure.serialized", "r": 1, "ev": [{"id": "p3", "q": "Various storylines that span multiple episodes"}]},
+{"f": "world.crime", "r": 1, "ev": [{"id": "p5", "q": "a gritty police show"}]}
+]}

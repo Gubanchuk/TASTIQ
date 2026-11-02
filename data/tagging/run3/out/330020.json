@@ -1,0 +1,7 @@
+{"appid": 330020, "features": [
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "granting improvements to themselves and other family members"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Each family member has its own playstyle and gameplay mechanics"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "Players take on the role of members of the Bergson family"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "defend it from an evil called the Corruption"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "traverse a number of procedurally generated dungeons"}]}
+]}

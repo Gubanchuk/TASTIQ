@@ -1,0 +1,7 @@
+{"appid": 1213700, "features": [
+{"f": "story.minimal", "r": 3, "ev": [{"id": "p0", "q": "The game contains no dialog or narrative"}]},
+{"f": "combat.clunky", "r": 3, "ev": [{"id": "p4", "q": "it had innate issues with the controls"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "who praised its art design and soundtrack"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p1", "q": "who praised its art design and soundtrack"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "a fox that gains the powers of a spirit after collapsing from exhaustion"}]}
+]}

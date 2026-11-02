@@ -1,0 +1,7 @@
+{"appid": 973580, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a tactical shooter stealth video game"}]},
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p0", "q": "tactical shooter stealth video game"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "contains four tiers, which can be unlocked tier-by-tier by spending money"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p3", "q": "Siberia has claimed its independence after a war with Russia and Mongolia"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p1", "q": "uses mission-based gameplay, instead of focusing on open world format"}]}
+]}

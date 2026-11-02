@@ -1,0 +1,7 @@
+{"appid": 2400, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "Each player is assigned a quarry, and the object is to murder them"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p1", "q": "the object is to murder them with nobody watching"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p0", "q": "is a first-person shooter video game"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "The game is set on a 1920s recreational cruise ship"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p2", "q": "A mysterious man named Mr. X has handed out free tickets"}]}
+]}

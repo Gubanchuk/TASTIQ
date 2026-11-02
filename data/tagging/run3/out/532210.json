@@ -1,0 +1,14 @@
+{"appid": 532210, "features": [
+{"f": "story.central", "r": 3, "ev": [{"id": "p2", "q": "Critics praised the story, the relationship between Sean and Daniel"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p3", "q": "Sean is presented with numerous choices throughout the game"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p10", "q": "McCarthy remarked that the game is at its best when Daniel and Sean are bonding with each other"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "Many of Sean's actions teach Daniel lessons that influence his worldview"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p3", "q": "The player takes control of a teenager named Sean Diaz"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p3", "q": "who interact with Sean via dialogue trees"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p10", "q": "heartbreakingly accurate brotherhood simulator"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "the story is mostly grounded in reality"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "explore contemporary social issues such as racism, gun violence, and bigotry"}]},
+{"f": "pace.slow", "r": 2, "ev": [{"id": "p11", "q": "by slowing down the story to offer times that are more contemplative"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p11", "q": "the slow moments can be so slow that they grind the game to a halt"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p12", "q": "Heather Wald of GamesRadar+ said Episode 1 was a"}]}
+]}

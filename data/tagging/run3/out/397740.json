@@ -1,0 +1,8 @@
+{"appid": 397740, "features": [
+{"f": "tone.whimsical", "r": 3, "ev": [{"id": "p0", "q": "The game uses claymation graphics to depict a surreal world"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p0", "q": "The game uses claymation graphics to depict a surreal world"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "Exploring the town and its adjacent mountain reaches an area filled with ruins"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p2", "q": "with the player's goals primarily represented through environmental design"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p6", "q": "silly and funny and occasionally gruesome"}]},
+{"f": "content.gore", "r": 1, "ev": [{"id": "p6", "q": "occasionally gruesome"}]}
+]}

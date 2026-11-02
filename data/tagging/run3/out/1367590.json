@@ -1,0 +1,8 @@
+{"appid": 1367590, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2021 survival horror video game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "solve puzzles, and use improvised weapons to combat monsters"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "The player explores an abandoned hospital"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "ritually sacrificing sets of twins kidnapped from the town of Winterlake"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p2", "q": "Prompted by nightmares to find out what has happened to the girls"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p3", "q": "She encounters horribly disfigured, vaguely humanoid monsters"}]}
+]}

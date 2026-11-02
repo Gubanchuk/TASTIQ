@@ -1,0 +1,12 @@
+{"appid": 1608230, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p2", "q": "Both of them must work together in order to traverse the game's world and solve various puzzles"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p2", "q": "is a puzzle-platforming game with a side-scrolling perspective"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p3", "q": "must rely on stealth tactics to avoid being detected"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p2", "q": "Throughout her adventure, she is accompanied by a cat-like creature named Mui"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "a fictional planet invaded by hostile alien machines"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p1", "q": "Critics praised the game's art direction, storytelling, music, and sound design"}, {"id": "p5", "q": "a beautiful adventure full of mystery, suspense, and charm"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p5", "q": "the game's handpainted visual style"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p1", "q": "praised the game's art direction, storytelling, music, and sound design"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p5", "q": "a beautiful adventure full of mystery, suspense, and charm"}]},
+{"f": "length.short", "r": 1, "ev": [{"id": "p1", "q": "aimed towards the lack of innovation in its puzzles and short length"}]}
+]}

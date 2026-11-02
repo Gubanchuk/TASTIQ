@@ -1,0 +1,7 @@
+{"id": "tt0122365", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated comedy television series"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American animated comedy television series"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "s", "q": "still determined to cheat in their own ineffectual way"}]},
+{"f": "world.sports", "r": 1, "ev": [{"id": "s", "q": "a series of car competitions in which 11 racers compete"}]},
+{"f": "completeness.ended", "r": 1, "ev": [{"id": "p0", "q": "It aired on CBS as part of its Saturday-morning schedule from September 14, 1968, to January 4, 1969"}]}
+]}

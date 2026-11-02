@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {makeCatalog} from '../../../src/core/catalog.js';
+import {createConversationGameIdentity} from '../../../src/server/conversation-game-identity.js';
+import {newConversation} from '../../../src/core/conversation.js';
+import {aiConversation} from '../../../src/ai/conversation.js';
+const raw=JSON.parse(readFileSync(new URL('../../../data/catalog.json',import.meta.url),'utf8'));
+const catalog=makeCatalog(raw,'game'),works=new Set();
+const chosen=catalog.items.filter(g=>{if(works.has(g.work))return false;works.add(g.work);return true;}).slice(0,13);
+const text='Сегодня хочу сюжетную игру. Уже знакомы: '+chosen.map(g=>`«${g.name}»`).join('; ');
+const state={...newConversation({id:'identity-size-diagnostic',mode:'free'}),turns:[{id:'identity-size-diagnostic:1',question:{id:'reference'},answer:text}],revision:1};
+const resolved=createConversationGameIdentity(catalog).resolve(state);assert.equal(resolved.knownGames.length,13);
+let localStubCalls=0,bytes=0;
+const out=await aiConversation(catalog,state,{knownGames:resolved.knownGames,api:async request=>{
+ localStubCalls++;const input=JSON.parse(request.input);assert.equal(input.knownGames.length,13);bytes=Buffer.byteLength(request.input,'utf8');
+ return {status:'completed',model:'offline-stub',usage:{input_tokens:0,output_tokens:0},output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({summary:'Offline size check',facts:[],uncertainties:[],action:'review',question:null})}]}]};
+}});
+assert.equal(out.error,undefined);assert.equal(localStubCalls,1);assert.ok(bytes<240000);
+const report={at:new Date().toISOString(),method:'Real-catalog exact mentions through identity resolver and actual aiConversation with local injected stub; external API calls0',answerCharacters:text.length,inputBytes:bytes,identityCount:13,knownGames:resolved.knownGames,localStubCalls,externalApiCalls:0,identityCap:64,byteCap:240000,factCap:16};
+writeFileSync(new URL('./size.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
+process.stdout.write(JSON.stringify({answerCharacters:text.length,inputBytes:bytes,identityCount:13,localStubCalls,externalApiCalls:0}));

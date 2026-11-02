@@ -1,0 +1,11 @@
+{"appid": 1290000, "features": [
+{"f": "tone.serene", "r": 3, "ev": [{"id": "a", "q": "Absorb the relaxing atmosphere and stress-free pace"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "r237841170", "q": "Enormously fun and utterly ridiculous"}]},
+{"f": "tension.low", "r": 3, "ev": [{"id": "a", "q": "no time pressure or final score"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "play with friends in Online Co-Op"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "a", "q": "Relax, unwind in single player"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r237885252", "q": "sink 100s of hours into"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "a", "q": "everyone can pick up and play"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "d", "q": "soothing sounds of high-pressure water"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "r235586473", "q": "boils down to a 'hold M1' simulator"}]}
+]}

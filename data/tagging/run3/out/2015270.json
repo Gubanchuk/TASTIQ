@@ -1,0 +1,8 @@
+{"appid": 2015270, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a beat 'em up video game developed and published by Klei Entertainment"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p1", "q": "movements can be chained together to form combos"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "supports four-player cooperative multiplayer"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "both of which can be upgraded extensively"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "which enables them to become more efficient in combat"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p1", "q": "To unlock the next biome, all the boss characters"}]}
+]}

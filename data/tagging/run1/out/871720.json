@@ -1,0 +1,75 @@
+{
+ "appid": 871720,
+ "features": [
+  {
+   "f": "tone.creepy",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "trapped alone in an office fending off killer animatronics"
+    }
+   ]
+  },
+  {
+   "f": "tension.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237541942",
+     "q": "this game is about surviiving ngights at freddies without dying"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238059011",
+     "q": "50/20 mode is IMPOSSIBLE max i have gotten is like 1 min without dying"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "you will have to master other tools as well if you want to complete the ultimate challenges"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237402782",
+     "q": "amazing game to play with friends"
+    }
+   ]
+  },
+  {
+   "f": "progression.collection",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Unlockable office skins"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237545184",
+     "q": "игра надоедает,ведь тупо уже нечего делать"
+    }
+   ]
+  }
+ ]
+}

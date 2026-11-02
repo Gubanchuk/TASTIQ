@@ -1,0 +1,9 @@
+{"id": "tt9174558", "features": [
+{"f": "story.true", "r": 3, "ev": [{"id": "p0", "q": "Based on the non-fiction book Dopesick: Dealers, Doctors, and the Drug Company that Addicted America"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p1", "q": "particular praise for the performances of the cast"}, {"id": "p3", "q": "strong performances from Michael Keaton and Kaitlyn Dever"}]},
+{"f": "tone.gritty", "r": 2, "ev": [{"id": "p3", "q": "an empathetic approach to the very real people impacted by the opioid crisis"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "make for harrowing drama"}]},
+{"f": "story.nonlinear", "r": 2, "ev": [{"id": "p2", "q": "The narrative takes place across different points in time"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p2", "q": "centers around numerous intertwining storylines"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "concluded on November 17, 2021, after eight episodes"}]}
+]}

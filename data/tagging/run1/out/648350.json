@@ -1,0 +1,97 @@
+{
+ "appid": 648350,
+ "features": [
+  {
+   "f": "loop.management",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Control the big picture with deep management tools"
+    },
+    {
+     "id": "r235993363",
+     "q": "feels exactly like what you'd want from a Jurassic Park management game"
+    }
+   ]
+  },
+  {
+   "f": "loop.building",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235993363",
+     "q": "Building enclosures, breeding dinosaurs and watching everything come together"
+    },
+    {
+     "id": "r237195003",
+     "q": "Fun park building"
+    }
+   ]
+  },
+  {
+   "f": "world.scifi",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Bioengineer dinosaurs that think, feel and react intelligently to the world around them"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237195003",
+     "q": "Beautiful dinosaurs"
+    },
+    {
+     "id": "r236198866",
+     "q": "the dinosaurs look amazing"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "featuring iconic characters from across the franchise"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.forgiving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235993363",
+     "q": "most of the challenges become fairly straightforward"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238118687",
+     "q": "Controls is a little bit odd"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236133959",
+     "q": "this game has basically been abandoned by its devs"
+    }
+   ]
+  }
+ ]
+}

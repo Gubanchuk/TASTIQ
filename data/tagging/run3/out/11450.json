@@ -1,0 +1,10 @@
+{"appid": 11450, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p2", "q": "Overlord is set in a fantasy world"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p7", "q": "The player's choices will influence your corruption level, either raising or lowering it"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "simultaneously controlling the Overlord and an army of goblin-like minions"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "new rooms and spells become available for use"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p9", "q": "The satire is funny, and the evil is deliciously over-the-top"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p9", "q": "evil, yet light-hearted, humor"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p6", "q": "Armour and weapons can be purchased or improved in the forge"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p11", "q": "the controls not being able to keep up with the game's pace"}]}
+]}

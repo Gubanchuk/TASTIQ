@@ -1,0 +1,80 @@
+[
+  {
+    "concept": "conversation",
+    "viewport": "desktop",
+    "before": {
+      "frame": 900,
+      "height": 2097
+    },
+    "after": {
+      "frame": 965,
+      "height": 2163
+    },
+    "stable": false
+  },
+  {
+    "concept": "showcase",
+    "viewport": "desktop",
+    "before": {
+      "frame": 900,
+      "height": 2449
+    },
+    "after": {
+      "frame": 965,
+      "height": 2514
+    },
+    "stable": false
+  },
+  {
+    "concept": "catalogue",
+    "viewport": "desktop",
+    "before": {
+      "frame": 900,
+      "height": 2565
+    },
+    "after": {
+      "frame": 965,
+      "height": 2630
+    },
+    "stable": false
+  },
+  {
+    "concept": "conversation",
+    "viewport": "mobile",
+    "before": {
+      "frame": 891,
+      "height": 2892
+    },
+    "after": {
+      "frame": 965,
+      "height": 2941
+    },
+    "stable": false
+  },
+  {
+    "concept": "showcase",
+    "viewport": "mobile",
+    "before": {
+      "frame": 891,
+      "height": 2970
+    },
+    "after": {
+      "frame": 965,
+      "height": 3034
+    },
+    "stable": false
+  },
+  {
+    "concept": "catalogue",
+    "viewport": "mobile",
+    "before": {
+      "frame": 891,
+      "height": 2992
+    },
+    "after": {
+      "frame": 965,
+      "height": 3030
+    },
+    "stable": false
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "scope": "Steam PC, обычные режимы без модификаций. Это небольшой проверенный набор, не полный каталог.",
+  "games": {
+    "1426210": { "title": "It Takes Two", "min": 2, "max": 2, "coverage": "standard", "mode": "совместная игра", "source": "https://www.ea.com/games/it-takes-two/it-takes-two/features", "checkedAt": "2026-10-31" },
+    "2881650": { "title": "Content Warning", "min": 2, "max": 4, "coverage": "standard", "mode": "онлайн-кооператив", "source": "https://store.steampowered.com/app/2881650/Content_Warning/", "checkedAt": "2026-10-31" },
+    "3241660": { "title": "R.E.P.O.", "min": 1, "max": 6, "coverage": "standard", "mode": "онлайн-кооператив", "source": "https://store.steampowered.com/app/3241660/REPO/", "checkedAt": "2026-10-31" },
+    "594650": { "title": "Hunt: Showdown 1896", "min": 1, "max": 3, "coverage": "mode-only", "mode": "Bounty Hunt", "source": "https://www.huntshowdown.com/player-guide/en_US", "checkedAt": "2026-10-31" },
+    "962130": { "title": "Grounded", "min": 1, "max": 4, "coverage": "standard", "mode": "онлайн-кооператив", "source": "https://store.steampowered.com/app/962130/Grounded/", "checkedAt": "2026-11-01" },
+    "892970": { "title": "Valheim", "min": 1, "max": 10, "coverage": "standard", "mode": "кооперативный сервер", "source": "https://www.valheimgame.com/faq/", "checkedAt": "2026-11-01" },
+    "1203620": { "title": "Enshrouded", "min": 1, "max": 16, "coverage": "standard", "mode": "онлайн-кооператив", "source": "https://enshrouded.com/en-US/FAQ", "checkedAt": "2026-11-01" }
+  }
+}

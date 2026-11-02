@@ -1,0 +1,11 @@
+{"appid": 2406770, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "Bodycam is an upcoming multiplayer first-person shooter video game"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p2", "q": "Bodycam is a tactical shooter played from an ultra-realistic first-person perspective"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "Bodycam is a tactical shooter played from an ultra-realistic first-person perspective"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "Bodycam has been praised for its realistic graphics, sound design, and gun play"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p6", "q": "Bodycam has been praised for its realistic graphics, sound design, and gun play"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p1", "q": "simulated to imitate real footage from police and military bodycams"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "Weapon handling relies on simulated physical inertia and procedural recoil"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p4", "q": "Team Deathmatch, Versus, Hard point, Gun game, Deathmatch, Zombies"}]},
+{"f": "loop.driving", "r": 1, "ev": [{"id": "p5", "q": "players can choose between arcade-style handling and a driving or flight simulation mode"}]}
+]}

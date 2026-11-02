@@ -1,0 +1,9 @@
+{"appid": 206190, "features": [
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p0", "q": "is a stealth-based puzzle-platform video game"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p5", "q": "From here, the player can rewire these controls"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p4", "q": "The player, as Conway, can run and climb on walls"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "gradually uncovers a murder mystery in his search for the real killer"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "The game is set in the near future"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p3", "q": "Initially missions are provided in a linear order"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p7", "q": "its short length was a common criticism"}]}
+]}

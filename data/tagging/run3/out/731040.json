@@ -1,0 +1,7 @@
+{"appid": 731040, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p1", "q": "must explore the planet Regis III for her missing crewmates"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "aid her survival in the alien landscape"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "branching narrative with an emphasis on player choice"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p1", "q": "while facing an unknown threat"}]},
+{"f": "characters.lone_hero", "r": 2, "ev": [{"id": "p1", "q": "the player assumes control of astrobiologist Yasna"}]}
+]}

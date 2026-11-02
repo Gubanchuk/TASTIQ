@@ -1,0 +1,820 @@
+{
+  "film": {
+    "receiptId": "resp_0299223206d53dc9016ae7dc2e491c87d28ca081ce84b11c82",
+    "sourceSha256": "e76599c65b5264727a9f1e37a24d091cbcfcf2e35f0107a42026c408c46f6cb2",
+    "state": {
+      "version": 1,
+      "domain": "film",
+      "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4",
+      "revision": 2,
+      "mode": "guided",
+      "phase": "talk",
+      "context": {
+        "company": null,
+        "childAge": null,
+        "minutes": null,
+        "timeMode": null,
+        "commitment": null,
+        "onlyEnded": null,
+        "format": null
+      },
+      "contextEvidence": {
+        "company": null,
+        "childAge": null,
+        "timeMode": null,
+        "commitment": null,
+        "onlyEnded": null,
+        "format": null
+      },
+      "turns": [
+        {
+          "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:1",
+          "question": {
+            "id": "direction",
+            "title": "Какой фильм хочется сегодня?",
+            "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+            "options": [
+              {
+                "id": "comedy",
+                "label": "Комедия"
+              },
+              {
+                "id": "drama",
+                "label": "Драма"
+              },
+              {
+                "id": "thriller",
+                "label": "Триллер"
+              },
+              {
+                "id": "adventure",
+                "label": "Приключения"
+              },
+              {
+                "id": "fantasy",
+                "label": "Фантастика"
+              },
+              {
+                "id": "detective",
+                "label": "Детектив"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Пока не могу решить, чего именно хочется посмотреть.",
+          "kind": "answer",
+          "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+          "acceptedContext": {
+            "company": null,
+            "childAge": null,
+            "timeMode": null,
+            "commitment": null,
+            "onlyEnded": null,
+            "format": null
+          },
+          "acceptedTime": null
+        },
+        {
+          "id": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "question": {
+            "id": "desired_experience",
+            "title": "Какого впечатления тебе сейчас больше хочется от фильма?",
+            "why": "Можно начать с ощущения, а не выбирать жанр.",
+            "options": [
+              {
+                "id": "lighthearted",
+                "label": "Расслабиться и развеселиться"
+              },
+              {
+                "id": "tension",
+                "label": "Почувствовать напряжение"
+              },
+              {
+                "id": "moving",
+                "label": "Растрогаться"
+              },
+              {
+                "id": "thoughtful",
+                "label": "Получить пищу для размышлений"
+              },
+              {
+                "id": "spectacle",
+                "label": "Погрузиться в зрелищное приключение"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого.",
+          "kind": "answer",
+          "answer": "Хочу лёгкую комедию для одного взрослого. Сегодня есть 100 минут. Без жестокости и тяжёлого финала. Хочется лёгкого приключения, без пересмотра знакомого."
+        }
+      ],
+      "facts": [],
+      "question": {
+        "id": "experience",
+        "title": "Какое впечатление хочется получить?",
+        "options": [
+          {
+            "id": "warm",
+            "label": "Тёплая история"
+          },
+          {
+            "id": "intrigue",
+            "label": "Интрига"
+          },
+          {
+            "id": "laugh",
+            "label": "Посмеяться"
+          },
+          {
+            "id": "adventure",
+            "label": "Приключение"
+          }
+        ],
+        "why": "Направление можно уточнить своими словами.",
+        "multiple": true,
+        "controls": [
+          "unknown",
+          "indifferent",
+          "none"
+        ]
+      },
+      "summary": "",
+      "uncertainties": [
+        "Пока неизвестно, какого впечатления ты хочешь от фильма."
+      ],
+      "retractions": [],
+      "sessionTime": null,
+      "result": null,
+      "provisional": true,
+      "needsPlan": true,
+      "failedAction": "plan",
+      "familiar": {
+        "marked": [],
+        "keep": [],
+        "hidden": [],
+        "excluded": [],
+        "undo": null
+      },
+      "replacement": null,
+      "factRemovalUndo": null
+    },
+    "proposal": {
+      "summary": "Ты хочешь лёгкую комедию с приключением, смотришь один. Сегодня есть 100 минут. Без жестокости, тяжёлого финала и пересмотра знакомых фильмов.",
+      "facts": [
+        {
+          "key": "lighthearted",
+          "text": "Хочется лёгкого настроения.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "Хочу лёгкую комедию",
+          "feature": "tone.lighthearted",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "comedy",
+          "text": "Хочется комедию.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "Хочу лёгкую комедию",
+          "feature": "humor.funny",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "adventure",
+          "text": "Хочется лёгкого приключения.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "Хочется лёгкого приключения",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "no_violence",
+          "text": "Без жестокости.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "Без жестокости",
+          "feature": "content.violence",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "no_heavy_ending",
+          "text": "Без тяжёлого финала.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "Без жестокости и тяжёлого финала",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "no_rewatch",
+          "text": "Без пересмотра знакомых фильмов.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "без пересмотра знакомого",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        }
+      ],
+      "uncertainties": [],
+      "action": "review",
+      "question": null,
+      "context": {
+        "company": {
+          "value": "solo",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "для одного взрослого"
+        },
+        "childAge": null,
+        "timeMode": {
+          "value": "session",
+          "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+          "quote": "Сегодня есть 100 минут."
+        },
+        "commitment": null,
+        "onlyEnded": null,
+        "format": null
+      },
+      "sessionTime": {
+        "minutes": 100,
+        "sourceId": "8c8bf187-37f0-46f3-8e3c-5a13c34e21c4:2",
+        "quote": "Сегодня есть 100 минут."
+      }
+    }
+  },
+  "series": {
+    "receiptId": "resp_0527ef1b4e250236016ae7dcf8e33887d28cf1f3f36e95e6d9",
+    "sourceSha256": "2cb80922643dad54d72681ba79e43468565acb8ad6a1b77918bcdc0842b9b8b0",
+    "state": {
+      "version": 1,
+      "domain": "series",
+      "id": "394d1440-7db7-44b2-afca-5e4187336225",
+      "revision": 2,
+      "mode": "guided",
+      "phase": "talk",
+      "context": {
+        "company": null,
+        "childAge": null,
+        "minutes": null,
+        "timeMode": null,
+        "commitment": null,
+        "onlyEnded": null,
+        "format": null
+      },
+      "contextEvidence": {
+        "company": null,
+        "childAge": null,
+        "timeMode": null,
+        "commitment": null,
+        "onlyEnded": null,
+        "format": null
+      },
+      "turns": [
+        {
+          "id": "394d1440-7db7-44b2-afca-5e4187336225:1",
+          "question": {
+            "id": "direction",
+            "title": "Какой сериал хочется сегодня?",
+            "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+            "options": [
+              {
+                "id": "comedy",
+                "label": "Комедия"
+              },
+              {
+                "id": "drama",
+                "label": "Драма"
+              },
+              {
+                "id": "thriller",
+                "label": "Триллер"
+              },
+              {
+                "id": "adventure",
+                "label": "Приключения"
+              },
+              {
+                "id": "fantasy",
+                "label": "Фантастика"
+              },
+              {
+                "id": "detective",
+                "label": "Детектив"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Пока не могу решить, чего именно хочется посмотреть.",
+          "kind": "answer",
+          "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+          "acceptedContext": {
+            "company": null,
+            "childAge": null,
+            "timeMode": null,
+            "commitment": null,
+            "onlyEnded": null,
+            "format": null
+          },
+          "acceptedTime": null
+        },
+        {
+          "id": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "question": {
+            "id": "desired_experience",
+            "title": "Какого впечатления тебе сейчас больше хочется от сериала?",
+            "why": "Попробуем начать не с жанра, а с настроения.",
+            "options": [
+              {
+                "id": "relax",
+                "label": "Расслабиться и отдохнуть"
+              },
+              {
+                "id": "laugh",
+                "label": "Посмеяться"
+              },
+              {
+                "id": "suspense",
+                "label": "Увлечься и побыть в напряжении"
+              },
+              {
+                "id": "emotion",
+                "label": "Прочувствовать историю героев"
+              },
+              {
+                "id": "think",
+                "label": "Получить пищу для размышлений"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Сегодня смотрю один. Хочу детективный сериал, серии до 45 минут, без натуралистичной жестокости. Готов на короткую законченную историю, несколько сезонов сейчас не хочу.",
+          "kind": "answer",
+          "answer": "Сегодня смотрю один. Хочу детективный сериал, серии до 45 минут, без натуралистичной жестокости. Готов на короткую законченную историю, несколько сезонов сейчас не хочу."
+        }
+      ],
+      "facts": [],
+      "question": {
+        "id": "experience",
+        "title": "Какое впечатление хочется получить?",
+        "options": [
+          {
+            "id": "warm",
+            "label": "Тёплая история"
+          },
+          {
+            "id": "intrigue",
+            "label": "Интрига"
+          },
+          {
+            "id": "laugh",
+            "label": "Посмеяться"
+          },
+          {
+            "id": "adventure",
+            "label": "Приключение"
+          }
+        ],
+        "why": "Направление можно уточнить своими словами.",
+        "multiple": true,
+        "controls": [
+          "unknown",
+          "indifferent",
+          "none"
+        ]
+      },
+      "summary": "",
+      "uncertainties": [
+        "Пока неизвестно, какое впечатление ты хочешь получить от сериала."
+      ],
+      "retractions": [],
+      "sessionTime": null,
+      "result": null,
+      "provisional": true,
+      "needsPlan": true,
+      "failedAction": "plan",
+      "familiar": {
+        "marked": [],
+        "keep": [],
+        "hidden": [],
+        "excluded": [],
+        "undo": null
+      },
+      "replacement": null,
+      "factRemovalUndo": null
+    },
+    "proposal": {
+      "summary": "Ты смотришь один и хочешь короткий законченный детективный сериал с сериями до 45 минут, без натуралистичной жестокости. Несколько сезонов сейчас не хочешь.",
+      "facts": [
+        {
+          "key": "detective",
+          "text": "Хочешь детективный сериал.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "Хочу детективный сериал",
+          "feature": "story.mystery",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "violence_exclusion",
+          "text": "Без натуралистичной жестокости.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "без натуралистичной жестокости",
+          "feature": "content.violence",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "short_story",
+          "text": "Готов на короткую историю.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "Готов на короткую законченную историю",
+          "feature": "length.short",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "completed_story",
+          "text": "Нужна законченная история.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "Готов на короткую законченную историю",
+          "feature": "completeness.ended",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "no_multiple_seasons",
+          "text": "Сейчас не хочешь историю на несколько сезонов.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "несколько сезонов сейчас не хочу",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        }
+      ],
+      "uncertainties": [],
+      "action": "review",
+      "question": null,
+      "context": {
+        "company": {
+          "value": "solo",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "Сегодня смотрю один"
+        },
+        "childAge": null,
+        "timeMode": {
+          "value": "episode",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "серии до 45 минут"
+        },
+        "commitment": {
+          "value": "short",
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "Готов на короткую законченную историю"
+        },
+        "onlyEnded": {
+          "value": true,
+          "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+          "quote": "Готов на короткую законченную историю, несколько сезонов сейчас не хочу."
+        },
+        "format": null
+      },
+      "sessionTime": {
+        "minutes": 45,
+        "sourceId": "394d1440-7db7-44b2-afca-5e4187336225:2",
+        "quote": "серии до 45 минут"
+      }
+    }
+  },
+  "cartoon": {
+    "receiptId": "resp_09d7535b2763b685016ae7de401cec87d2a5b67ca333f084af",
+    "sourceSha256": "49bb575334ef21b34bd2c4d0391a953d517a76314d291b6f94928924240f76b6",
+    "state": {
+      "version": 1,
+      "domain": "cartoon",
+      "id": "318a1292-6559-48ef-bba7-b01f10a1a603",
+      "revision": 2,
+      "mode": "guided",
+      "phase": "talk",
+      "context": {
+        "company": null,
+        "childAge": null,
+        "minutes": null,
+        "timeMode": null,
+        "commitment": null,
+        "onlyEnded": null,
+        "format": null
+      },
+      "contextEvidence": {
+        "company": null,
+        "childAge": null,
+        "timeMode": null,
+        "commitment": null,
+        "onlyEnded": null,
+        "format": null
+      },
+      "turns": [
+        {
+          "id": "318a1292-6559-48ef-bba7-b01f10a1a603:1",
+          "question": {
+            "id": "direction",
+            "title": "Какую анимацию хочется сегодня?",
+            "why": "Выбери направления или опиши своими словами. Можно пока не знать.",
+            "options": [
+              {
+                "id": "comedy",
+                "label": "Комедия"
+              },
+              {
+                "id": "drama",
+                "label": "Драма"
+              },
+              {
+                "id": "thriller",
+                "label": "Триллер"
+              },
+              {
+                "id": "adventure",
+                "label": "Приключения"
+              },
+              {
+                "id": "fantasy",
+                "label": "Фантастика"
+              },
+              {
+                "id": "detective",
+                "label": "Детектив"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Пока не могу решить, чего именно хочется посмотреть.",
+          "kind": "answer",
+          "answer": "Пока не могу решить, чего именно хочется посмотреть.",
+          "acceptedContext": {
+            "company": null,
+            "childAge": null,
+            "timeMode": null,
+            "commitment": null,
+            "onlyEnded": null,
+            "format": null
+          },
+          "acceptedTime": null
+        },
+        {
+          "id": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "question": {
+            "id": "desired_experience",
+            "title": "Какого ощущения тебе сейчас больше хочется от просмотра?",
+            "why": "Можно начать с настроения, не выбирая жанр.",
+            "options": [
+              {
+                "id": "relax",
+                "label": "Расслабиться и посмеяться"
+              },
+              {
+                "id": "warmth",
+                "label": "Почувствовать тепло и уют"
+              },
+              {
+                "id": "suspense",
+                "label": "Увлечься и понервничать"
+              },
+              {
+                "id": "emotion",
+                "label": "Растрогаться"
+              },
+              {
+                "id": "wonder",
+                "label": "Удивиться необычному миру"
+              },
+              {
+                "id": "reflect",
+                "label": "Получить пищу для размышлений"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Будем смотреть с ребёнком 7 лет. Нужен один полнометражный мультфильм, добрый и смешной. Сегодня есть 100 минут. Не сериал и без страшных сцен.",
+          "kind": "answer",
+          "answer": "Будем смотреть с ребёнком 7 лет. Нужен один полнометражный мультфильм, добрый и смешной. Сегодня есть 100 минут. Не сериал и без страшных сцен."
+        }
+      ],
+      "facts": [],
+      "question": {
+        "id": "experience",
+        "title": "Какое впечатление хочется получить?",
+        "options": [
+          {
+            "id": "warm",
+            "label": "Тёплая история"
+          },
+          {
+            "id": "intrigue",
+            "label": "Интрига"
+          },
+          {
+            "id": "laugh",
+            "label": "Посмеяться"
+          },
+          {
+            "id": "adventure",
+            "label": "Приключение"
+          }
+        ],
+        "why": "Направление можно уточнить своими словами.",
+        "multiple": true,
+        "controls": [
+          "unknown",
+          "indifferent",
+          "none"
+        ]
+      },
+      "summary": "",
+      "uncertainties": [
+        "Желаемое настроение и впечатление от просмотра пока неизвестны."
+      ],
+      "retractions": [],
+      "sessionTime": null,
+      "result": null,
+      "provisional": true,
+      "needsPlan": true,
+      "failedAction": "plan",
+      "familiar": {
+        "marked": [],
+        "keep": [],
+        "hidden": [],
+        "excluded": [],
+        "undo": null
+      },
+      "replacement": null,
+      "factRemovalUndo": null
+    },
+    "proposal": {
+      "summary": "Хочешь один добрый и смешной полнометражный мультфильм для совместного просмотра с ребёнком 7 лет, без страшных сцен и не сериал. Сегодня у тебя есть 100 минут. Возрастную пригодность, длительность и отсутствие пугающих сцен нужно проверить при подборе.",
+      "facts": [
+        {
+          "key": "format_movie",
+          "text": "Нужен один полнометражный мультфильм.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "Нужен один полнометражный мультфильм",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "exclude_series",
+          "text": "Сериалы исключены.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "Не сериал",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "kind_tone",
+          "text": "Хочется добрый мультфильм.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "добрый и смешной",
+          "feature": "tone.feelgood",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "funny",
+          "text": "Хочется смешной мультфильм.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "добрый и смешной",
+          "feature": "humor.funny",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "no_scary_scenes",
+          "text": "Без страшных сцен.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "без страшных сцен",
+          "feature": "tone.creepy",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        }
+      ],
+      "uncertainties": [],
+      "action": "review",
+      "question": null,
+      "context": {
+        "company": {
+          "value": "children",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "Будем смотреть с ребёнком 7 лет."
+        },
+        "childAge": {
+          "value": 7,
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "с ребёнком 7 лет"
+        },
+        "timeMode": {
+          "value": "session",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "Сегодня есть 100 минут."
+        },
+        "commitment": {
+          "value": "single",
+          "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+          "quote": "Нужен один полнометражный мультфильм"
+        },
+        "onlyEnded": null,
+        "format": null
+      },
+      "sessionTime": {
+        "minutes": 100,
+        "sourceId": "318a1292-6559-48ef-bba7-b01f10a1a603:2",
+        "quote": "Сегодня есть 100 минут."
+      }
+    }
+  }
+}

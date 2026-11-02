@@ -1,0 +1,11 @@
+{"appid": 1623940, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "an adventure game based on Scandinavian folklore"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p1", "q": "has elements of horror games"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "sacrifice her baby in a Satanic ritual"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "must traverse locales common to fairy tales"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "the player must occasionally solve puzzles or jump across platforms"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p1", "q": "the player must occasionally solve puzzles or jump across platforms"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p6", "q": "enough jump scares and gore to satisfy horror fans"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "as gorgeous as it is horrifying"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p1", "q": "Travel is generally linear"}]}
+]}

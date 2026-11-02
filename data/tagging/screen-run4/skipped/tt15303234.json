@@ -1,0 +1,31 @@
+{
+  "id": "tt15303234",
+  "name": "Full Circle",
+  "kind": "series",
+  "domain": "series",
+  "year": 2023,
+  "genres": [
+    "Crime",
+    "Drama",
+    "Mystery"
+  ],
+  "s": "An investigation into a botched kidnapping uncovers long-held secrets connecting multiple characters and cultures in present day New York City.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Full Circle is an American mystery drama miniseries created and written by Ed Solomon and directed by Steven Soderbergh for the Max streaming television service. It premiered July 13, 2023."
+    },
+    {
+      "id": "p1",
+      "section": "Premise",
+      "text": "An investigation into a botched kidnapping uncovers long-held secrets connecting multiple characters and cultures in present-day New York City."
+    },
+    {
+      "id": "p2",
+      "section": "Reception",
+      "text": "The review aggregator website Rotten Tomatoes reported a 78% approval rating with an average rating of 7.5/10, based on 45 critic reviews. The website's critics consensus reads, \"Full Circles windy plotting may prove too labyrinthine for casual enjoyment, but Steven Soderbergh's assured direction and a stacked cast give this simmering noir plenty of intrigue.\" Metacritic, which uses a weighted average, assigned a score of 70 out of 100 based on 23 critics, indicating \"generally favourable reviews\"."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Full_Circle_(miniseries)"
+}

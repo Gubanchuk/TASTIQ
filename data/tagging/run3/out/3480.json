@@ -1,0 +1,7 @@
+{"appid": 3480, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Peggle is a casual puzzle video game"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p6", "q": "simple enough for anybody to pick up and instantly start having fun"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p1", "q": "a diverse cast of cartoon"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p5", "q": "allows the player to compete against another person or a computer AI"}]},
+{"f": "session.short", "r": 1, "ev": [{"id": "p2", "q": "Peggle is divided into fifty-five levels."}]}
+]}

@@ -1,0 +1,10 @@
+{"id": "tt9362930", "features": [
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is a 2023 American superhero film"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p0", "q": "an ancient alien relic known as the Scarab"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p3", "q": "Led by Xolo Maridueña's magnetic performance in the title role"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p3", "q": "a refreshingly family-focused superhero movie"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p3", "q": "with plenty of humor and heart"}]},
+{"f": "tone.feelgood", "r": 2, "ev": [{"id": "p3", "q": "with plenty of humor and heart"}]},
+{"f": "aesthetic.effects", "r": 2, "ev": [{"id": "p4", "q": "may be frontloaded with visual fireworks"}]},
+{"f": "story.predictable", "r": 2, "ev": [{"id": "p5", "q": "it's as tediously familiar as rail strikes and rainy Augusts"}, {"id": "p5", "q": "this basically routine production"}]}
+]}

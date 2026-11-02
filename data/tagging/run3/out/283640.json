@@ -1,0 +1,12 @@
+{"appid": 283640, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "Players can wield two handed weapons for additional power, and shields to defend and parry"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "continues exploring the island, gathering salt in order to gain power"}]},
+{"f": "difficulty.hard", "r": 3, "ev": [{"id": "p12", "q": "with the games high difficulty being a highlight"}]},
+{"f": "progression.builds", "r": 3, "ev": [{"id": "p2", "q": "an extensive skill tree providing hundreds of combinations"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p2", "q": "There are 600 items players may use"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p2", "q": "The game also provides a local multiplayer option for co-operative and versus play"}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p2", "q": "The game also provides a local multiplayer option for co-operative and versus play"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p6", "q": "agreed to be the servant of the Nameless God in exchange for power"}]},
+{"f": "story.minimal", "r": 1, "ev": [{"id": "p9", "q": "expressing dismay at the minimalist storyline"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p8", "q": "the graphic style that evokes horror through the style of comic strips"}, {"id": "p2", "q": "The game features 2D hand drawn visuals"}]}
+]}

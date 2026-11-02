@@ -1,0 +1,7 @@
+{"id": "tt0402711", "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p0", "q": "is an American legal comedy drama television series"}, {"id": "s", "q": "Fast-paced and wildly comedic"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "s", "q": "Fast-paced and wildly comedic"}]},
+{"f": "tone.melancholic", "r": 1, "ev": [{"id": "s", "q": "sometimes intense and moving"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "s", "q": "issue-oriented television, often addressing issues that are underreported by the media"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "The series aired from October 3, 2004, to December 8, 2008"}]}
+]}

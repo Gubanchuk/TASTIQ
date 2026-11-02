@@ -1,0 +1,7 @@
+{"appid": 4700, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p1", "q": "Gameplay is divided between a turn-based strategic campaign and real-time tactical battles"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p1", "q": "control its government, economy, military, diplomacy, and religion"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p1", "q": "The campaign is set between the years 1080 and 1530"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "controlling the faction's military, economic, and social systems in large campaign maps"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p10", "q": "epic, engrossing gameplay"}]}
+]}

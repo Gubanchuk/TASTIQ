@@ -1,0 +1,19 @@
+{"appid": 1371980, "features": [
+{"f": "tone.dark", "r": 3, "ev": [{"id": "r236557917", "q": "a dark grimey fantasy world with enemies to match"}, {"id": "r237866051", "q": "the dark atmosphere, the music, and the precise combat system"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "r236557917", "q": "a dark grimey fantasy world"}]},
+{"f": "loop.melee", "r": 3, "ev": [{"id": "a", "q": "featuring Souls-like combat, where every strike matters"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "a", "q": "Precision, weighty combat where every fight matters"}, {"id": "r236557917", "q": "Combat feels responsive yet weighty"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "r237866051", "q": "the precise combat system"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r236557917", "q": "the enemies can be very punishing"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "a", "q": "Play solo or with up to 4 players in seamless online co-op"}]},
+{"f": "social.solo", "r": 2, "ev": [{"id": "a", "q": "Play solo or with up to 4 players in seamless online co-op"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "r236557917", "q": "seemingly lots of ways to play"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "a", "q": "Homebuilding and crafting systems that tie directly into gameplay"}]},
+{"f": "loop.looting", "r": 3, "ev": [{"id": "a", "q": "A vast pool of loot to discover"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "a", "q": "A living island that evolves over time"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "r237001914", "q": "meticulously exploring every corner"}]},
+{"f": "loop.platforming", "r": 1, "ev": [{"id": "r237001914", "q": "a great mix of metroidvania, platforming, RPG and hack&slash"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "r237844216", "q": "I treat it like any other early access game"}, {"id": "r236589950", "q": "the people making these decisions knew the game wasn't ready"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "r237912690", "q": "the visuals are just stunning"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "r236108403", "q": "Very good and pronounced artstyle"}]}
+]}

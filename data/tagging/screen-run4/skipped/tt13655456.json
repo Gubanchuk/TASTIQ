@@ -1,0 +1,31 @@
+{
+  "id": "tt13655456",
+  "name": "True Story",
+  "kind": "series",
+  "domain": "series",
+  "year": 2021,
+  "genres": [
+    "Crime",
+    "Drama",
+    "Thriller"
+  ],
+  "s": "True Story follows a world famous comedian grappling the consequences of a lost evening with his wayward older brother that threatens to destroy everything he's built.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "True Story is an American drama television limited series created by Eric Newman for Netflix. The series premiered on November 24, 2021, and consists of seven episodes."
+    },
+    {
+      "id": "p1",
+      "section": "Premise",
+      "text": "A tour stop in Philadelphia becomes a matter of life and death for famous comedians."
+    },
+    {
+      "id": "p2",
+      "section": "Reception",
+      "text": "The review aggregator website Rotten Tomatoes reported a 57% approval rating with an average rating of 5.9/10, based on 20 critic reviews. The website's critics consensus reads, \"Kevin Hart and Wesley Snipes make for a compelling duo, but True Story muffles their chemistry with a dawdling, unmemorable plot.\" Metacritic gave the series a weighted average score of 54 out of 100 based on 11 critics, indicating \"mixed or average reviews\"."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/True_Story_(miniseries)"
+}

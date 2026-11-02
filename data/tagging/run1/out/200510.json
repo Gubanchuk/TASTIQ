@@ -1,0 +1,115 @@
+{
+ "appid": 200510,
+ "features": [
+  {
+   "f": "loop.tactics",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "couples tactical turn-based gameplay with incredible action sequences"
+    }
+   ]
+  },
+  {
+   "f": "loop.management",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "managing resources, advancing technologies, and overseeing combat strategies"
+    }
+   ]
+  },
+  {
+   "f": "loop.building",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "creating and managing a fully operational base"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r235971761",
+     "q": "XCOM is easily one of the hardest single player games I've ever played"
+    }
+   ]
+  },
+  {
+   "f": "tension.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237823434",
+     "q": "this game stresses me out"
+    }
+   ]
+  },
+  {
+   "f": "cognitive.high",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "planning combat missions and controlling soldier movement in battle"
+    }
+   ]
+  },
+  {
+   "f": "progression.power",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237850170",
+     "q": "decent squad level ups"
+    }
+   ]
+  },
+  {
+   "f": "progression.builds",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237849513",
+     "q": "individual unit progression"
+    }
+   ]
+  },
+  {
+   "f": "pace.draggy",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236307637",
+     "q": "Every turn takes far too long to resolve"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r238009967",
+     "q": "репетативность, затянутость, чудовищно медленные анимации"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235998989",
+     "q": "Do not play with mouse and keyboard, terrible without a controller"
+    }
+   ]
+  }
+ ]
+}

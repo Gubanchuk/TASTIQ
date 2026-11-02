@@ -1,0 +1,73 @@
+{
+ "appid": 203140,
+ "features": [
+  {
+   "f": "loop.stealth",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Disguises: As Agent 47, the identity of almost anyone you meet is yours for the taking"
+    },
+    {
+     "id": "a",
+     "q": "Stalk your prey, fight them head on or adapt as you go along"
+    }
+   ]
+  },
+  {
+   "f": "characters.lone_hero",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Agent 47 finds himself pursuing redemption in a corrupt and twisted world"
+    }
+   ]
+  },
+  {
+   "f": "world.living",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Experience a Living, Breathing World"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236689679",
+     "q": "the story is also very well written"
+    }
+   ]
+  },
+  {
+   "f": "freedom.linear",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236864562",
+     "q": "Свободы действий нет от слова совсем"
+    },
+    {
+     "id": "r237085217",
+     "q": "a linear hitman"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237524547",
+     "q": "if you make one mistake, the entire map is gunning you down"
+    }
+   ]
+  }
+ ]
+}

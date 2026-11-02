@@ -1,0 +1,8 @@
+{"id": "tt0247729", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p6", "q": "Jones commended Virgil's portrayal as an everyman teenager"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p8", "q": "formulaic but appealing"}]},
+{"f": "characters.unlikeable", "r": 1, "ev": [{"id": "p8", "q": "the annoying sister"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p8", "q": "the show's pacing lags"}]}
+]}

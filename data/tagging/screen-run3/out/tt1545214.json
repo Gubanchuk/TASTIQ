@@ -1,0 +1,8 @@
+{"id": "tt1545214", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated comedy television series"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American animated comedy television series"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p6", "q": "derivative, cliché-laden children's show"}]},
+{"f": "content.family", "r": 2, "ev": [{"id": "p6", "q": "This isn't going to harm any kids"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p6", "q": "derivative, cliché-laden children's show that recycles moral platitudes"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The final episode aired on June 29, 2016"}]}
+]}

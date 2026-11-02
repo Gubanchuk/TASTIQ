@@ -1,0 +1,12 @@
+{"id": "tt8962124", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "an American romantic comedy drama television series"}]},
+{"f": "characters.romance", "r": 3, "ev": [{"id": "s", "q": "while juggling work, friends and romance"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p9", "q": "an inherently winsome performer who has never been quite as well used"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "spectacularly dressed and filled with charming performances"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p4", "q": "spectacularly dressed and filled with charming performances"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p5", "q": "anything more profound than a frivolous romp"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p9", "q": "If you need a five-hour brain vacation"}]},
+{"f": "characters.unlikeable", "r": 2, "ev": [{"id": "p11", "q": "Emma Gray from HuffPost called Emily a bland character"}, {"id": "p12", "q": "who shows zero personal growth over a ten-episode arc"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p13", "q": "Cliché-ridden and completely outdated"}]},
+{"f": "completeness.running", "r": 2, "ev": [{"id": "p2", "q": "In January 2026, the series was renewed for a sixth and final season"}]}
+]}

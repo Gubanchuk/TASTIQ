@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-01T13:17:07.409Z",
+  "landingUnchanged": true,
+  "landing": {
+    "src/server/public/index.html": "02bf5a02c9954a7229b3861e5dc46f955b9a394300396ec3c0811eeccc4ec634",
+    "src/server/public/style.css": "9d3622e01b91ed6bbd59c9970f4b2d229a3d96a0fb2993d3bb91ad07965ede81",
+    "src/server/public/app.js": "128bbfa90f4905b09d3318634ccb3b512a76be163a397df619ba25d721f150fb"
+  },
+  "sources": {
+    "src/server/public/pick/game/index.html": "10aed7e741667856fa5c3f46211e303a0f654dc20a3357861456bf74a82839d3",
+    "src/server/public/pick/game/app.js": "09e9a857ef956e3abaf2c7cde7dcdf59c8ae7c280196437785fe4f9d23237d1f",
+    "src/server/public/pick/game/workspace.css": "82232786598aedf517841a5a4792166a6a011f0c606d3cffcfc8f12f6f909a13",
+    "src/server/public/pick/game/pending-view.js": "1c2c5d881745862b463e25a4a4280c00eb0f845ebceddee807ac8a6d351d2f5f",
+    "src/server/public/pick/index.html": "c2dcdf720aba6cb267d8238ad2619583c9ad8a3091ade7a12bbe27ce6624db6a",
+    "src/server/public/pick/app.js": "f680ce2a67e2ef2362900ad7d4fcea610f6273d9cb43523525a6b5debb75c2a6",
+    "src/server/public/pick/workspace-legacy.css": "764f5ee98867ecc87e66a034baf5b5e44859fb99f925af11a93764fe9cbab162"
+  },
+  "browser": {
+    "plans": 2,
+    "picks": 8,
+    "paidCalls": 0,
+    "failNext": false,
+    "dropNext": false,
+    "failPlanNext": null,
+    "stopped": true
+  },
+  "apiCallsByThisUiWork": 0,
+  "apiCostUsdByThisUiWork": 0,
+  "budget": {
+    "cumulativeUpper": 1.9853488,
+    "successfulCalls": 177,
+    "uncertainReserve": 0,
+    "remainingLower": 3.0146512,
+    "grantBaselineUpper": 1.5782519,
+    "grantRemainingLower": 9.5929031
+  },
+  "detector": {
+    "runs": 1,
+    "count": 12,
+    "byRule": {
+      "design-system-color": 2,
+      "design-system-radius": 6,
+      "marquee": 2,
+      "design-system-font-size": 1,
+      "cramped-padding": 1
+    }
+  }
+}

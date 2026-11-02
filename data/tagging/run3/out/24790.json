@@ -1,0 +1,8 @@
+{"appid": 24790, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is a 2007 science fiction real-time strategy video game"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p4", "q": "careful management of production, training units and funds are key to strategy"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p3", "q": "the central platform from which the player constructs other structures"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p6", "q": "Unit effectiveness against opponents follows the rock-paper-scissors principle"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "Other modes include a skirmish battle mode and multiplayer games"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p6", "q": "Virtually every type of structure in the game acts as a tech tree"}]}
+]}

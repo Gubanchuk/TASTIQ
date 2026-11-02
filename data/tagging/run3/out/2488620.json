@@ -1,0 +1,5 @@
+{"appid": 2488620, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p0", "q": "is a racing video game developed by Codemasters"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p2", "q": "A session mimics a real race weekend, starting on free practice and ending on the Grand Prix"}]},
+{"f": "progression.power", "r": 1, "ev": [{"id": "p3", "q": "players play as real drivers and gain reputation throughout the season"}]}
+]}

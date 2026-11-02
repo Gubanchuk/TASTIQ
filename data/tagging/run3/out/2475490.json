@@ -1,0 +1,15 @@
+{"appid": 2475490, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "Mouthwashing is a 2024 horror adventure game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "severely mutilated by the crash"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "Gameplay primarily involves exploring the Tulpar"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p1", "q": "engaging in dialogue with the crew, and solving puzzles using various items"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "engaging in dialogue with the crew, and solving puzzles using various items"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p7", "q": "created an air of mystery and kept the player uncertain about the true nature of events"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p0", "q": "The game received acclaim for its narrative and visual style"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p8", "q": "The graphics and visual style were also received well"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p9", "q": "likened the graphics to fifth generation video game consoles, arguing that they complement the Tulpars retro style"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p11", "q": "Critics enjoyed the cast of characters"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p11", "q": "identified satire and black comedy in the game's treatment of corporate greed"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "It follows the crew of the cargo spaceship Tulpar after a mysterious crash"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p12", "q": "called the combat and stealth sections"}]}
+]}

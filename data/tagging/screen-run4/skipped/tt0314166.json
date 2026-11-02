@@ -1,0 +1,31 @@
+{
+  "id": "tt0314166",
+  "name": "Hey Arnold! The Movie",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2002,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Hey Arnold!: The Movie is a 2002 American animated adventure comedy film based on the television series created by Craig Bartlett. It was directed by Tuck Tucker and written by Bartlett and Steve Viksten, with music by series composer Jim Lang. The film stars Spencer Klein, Francesca Smith, Jamil Walker Smith, Dan Castellaneta, Tress MacNeille, Paul Sorvino, and Jennifer Jason Leigh. The film follows Arnold, Gerald, and Helga on a quest to save their neighborhood from a greedy developer who plans on converting it into a huge shopping mall. The events of the film take place during the series' fifth and final season."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The project was originally developed as a television film titled Arnold Saves the Neighborhood, but following successful test screenings, Paramount Pictures decided to give the film a theatrical release. Hey Arnold!: The Movie was released in theaters on June 28, 2002, and received unfavorable reviews from critics. The film grossed $15 million against a production budget of $3–$4 million. A made for television sequel, Hey Arnold!: The Jungle Movie, aired in 2017."
+    },
+    {
+      "id": "p2",
+      "section": "Reception",
+      "text": "Metacritic, which uses a weighted average, assigned the a score of 47 out of 100, based on 23 critics, indicating \"mixed or average\" reviews. Audiences polled by CinemaScore gave the film an average grade of \"B+\" on an A+ to F scale."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Hey_Arnold!%3A_The_Movie"
+}

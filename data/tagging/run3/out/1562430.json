@@ -1,0 +1,20 @@
+{
+  "appid": 1562430,
+  "features": [
+    {"f": "progression.power", "r": 2, "ev": [{"id": "p0", "q": "the player can upgrade the character's fishing equipment and abilities"}]},
+    {"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "combines genres of fishing, survival, and horror"}]},
+    {"f": "tone.serene", "r": 2, "ev": [{"id": "p4", "q": "During the day, the ambience is relatively peaceful"}]},
+    {"f": "tone.cozy", "r": 1, "ev": [{"id": "p10", "q": "the game's balance of cozy and horror elements"}]},
+    {"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "faces Lovecraftian creatures as he fishes"}]},
+    {"f": "freedom.open_world", "r": 2, "ev": [{"id": "p0", "q": "explores an open world consisting of five archipelagos"}]},
+    {"f": "story.mystery", "r": 2, "ev": [{"id": "p12", "q": "praise directed towards its mysteriousness and open-endedness"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p12", "q": "The game's story and dialogue have been commended by critics"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p11", "q": "The game's exploration aspect was praised"}]},
+    {"f": "pace.repetitive", "r": 1, "ev": [{"id": "p2", "q": "some complained that the fishing portions are repetitive"}]},
+    {"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p13", "q": "there was a lack of content in the DLC"}]},
+    {"f": "cognitive.low", "r": 1, "ev": [{"id": "p11", "q": "found it easy-to-understand, simple, snappy, and engaging"}]},
+    {"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p8", "q": "a stylized, cartoon-like world with minimal gradients"}]},
+    {"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "horrific moments make it strangely even more gorgeous to look at"}]},
+    {"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "keeps things eerie throughout"}]}
+  ]
+}

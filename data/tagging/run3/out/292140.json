@@ -1,0 +1,8 @@
+{"appid": 292140, "features": [
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p0", "q": "including fast-paced combat and a customizable"}, {"id": "p8", "q": "The amount of damage performed by an attack is multiplied by the chain percentage"}]},
+{"f": "loop.tactics", "r": 1, "ev": [{"id": "p6", "q": "queues them up in the ATB bar"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p7", "q": "the two main characters and a monster"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p7", "q": "there are around 150 different monster types available to be collected"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p0", "q": "a customizable \"Paradigm\" system to control which abilities are used by the characters"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "Reviewers generally praised the graphics"}]}
+]}

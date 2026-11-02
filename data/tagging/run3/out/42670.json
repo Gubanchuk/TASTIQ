@@ -1,0 +1,8 @@
+{"appid": 42670, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 first-person shooter video game"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p1", "q": "first-person shooter with horror elements"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p1", "q": "It is used often to solve puzzles such as aging and de-aging boxes to open gates"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "The TMD is powered by an E-99 core, and can manipulate time"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p2", "q": "the story is mostly linear without any choices that affect the narrative"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p4", "q": "Renko begins to phase between the present and 1955"}]}
+]}

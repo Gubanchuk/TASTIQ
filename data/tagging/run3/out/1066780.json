@@ -1,0 +1,7 @@
+{"appid": 1066780, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "Transport Fever 2 is a business simulation game"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "The game consists of nearly 200 vehicles that are modelled from real life examples"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p1", "q": "transport evolution of the past seventeen decades, from 1850 to date"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "modelled from real life examples or historically accurate depictions"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "The game also features a sandbox mode, a map editor and mod tools"}]}
+]}

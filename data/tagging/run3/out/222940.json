@@ -1,0 +1,10 @@
+{"appid": 222940, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "is a 2010 fighting game developed and published by SNK Playmore for arcades"}]},
+{"f": "combat.precise", "r": 1, "ev": [{"id": "p11", "q": "praising its large amount of characters and responsive controls"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p9", "q": "despite possible difficulties to newcomers to the franchise"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p13", "q": "thanks to a highly competitive tournament"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "notable visual improvements making the characters"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p10", "q": "Eurogamer still praised SNK's desire to tell a story arc more than previous installments"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "a story mode that is influenced by the player's actions"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "re-grouping the playable characters into three-member teams"}]}
+]}

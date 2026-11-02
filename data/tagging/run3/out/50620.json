@@ -1,0 +1,9 @@
+{"appid": 50620, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p0", "q": "Darksiders is a hack and slash action-adventure video game"}]},
+{"f": "loop.puzzles", "r": 1, "ev": [{"id": "p5", "q": "are themselves puzzle-based battles"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "Chaos Form, which transforms him into a large, fiery and extremely resistant entity"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "Weapons have different combinations of attack that can be obtained throughout the game"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p6", "q": "souls can be obtained in chests found throughout the world"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p0", "q": "The game's inspiration is from the Four Horsemen of the Apocalypse"}]},
+{"f": "combat.precise", "r": 2, "ev": [{"id": "p8", "q": "the combat is exquisite"}]}
+]}

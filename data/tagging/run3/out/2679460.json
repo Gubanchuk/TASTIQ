@@ -1,0 +1,13 @@
+{
+  "appid": 2679460,
+  "features": [
+    {"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "a medieval fantasy realm mirroring the contemporary real world"}]},
+    {"f": "progression.builds", "r": 3, "ev": [{"id": "p7", "q": "Acting as the game's job system, each archetype has their own unique skills"}]},
+    {"f": "loop.life_sim", "r": 3, "ev": [{"id": "p3", "q": "including dungeon crawling and social simulation"}]},
+    {"f": "characters.companions", "r": 2, "ev": [{"id": "p5", "q": "the player forges bonds with the locals of Euchronia's regions"}]},
+    {"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "praise being directed towards its narrative, worldbuilding, visuals, gameplay, and themes"}]},
+    {"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "praise being directed towards its narrative, worldbuilding, visuals, gameplay, and themes"}]},
+    {"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "The game features time-sensitive activities structured after a day-to-day calendar"}]},
+    {"f": "pace.repetitive", "r": 1, "ev": [{"id": "p10", "q": "issues with Persona elements and dungeon repetition"}]}
+  ]
+}

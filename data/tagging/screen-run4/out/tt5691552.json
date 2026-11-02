@@ -1,0 +1,15 @@
+{"id": "tt5691552", "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "is an American science fiction comedy drama television series"}]},
+{"f": "world.space", "r": 2, "ev": [{"id": "s", "q": "The Orville is a live-action, one-hour space adventure series"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "s", "q": "often humorous problems of everyday life"}]},
+{"f": "humor.satire", "r": 2, "ev": [{"id": "p3", "q": "An odd jumble of campiness and sincerity, homage, and satire"}]},
+{"f": "tone.cheesy", "r": 2, "ev": [{"id": "p3", "q": "An odd jumble of campiness and sincerity"}, {"id": "p4", "q": "calling it a rip-off"}]},
+{"f": "story.weak", "r": 2, "ev": [{"id": "p4", "q": "She criticized the lack of creativity, the blatant imitation"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p0", "q": "it follows the crew of the starship USS Orville"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p8", "q": "the crew of the Orville into a group of people that the audience cared about"}]},
+{"f": "characters.unlikeable", "r": 1, "ev": [{"id": "p5", "q": "The show might have stood a better chance with a different actor in the captain's chair"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p12", "q": "bigger, bolder, and a whole lot darker"}]},
+{"f": "content.disturbing", "r": 1, "ev": [{"id": "p12", "q": "explored themes such as trauma, suicide, and grief"}]},
+{"f": "tone.creepy", "r": 1, "ev": [{"id": "p13", "q": "Alien-esque horror story that thrills both psychologically and physically"}]},
+{"f": "aesthetic.effects", "r": 1, "ev": [{"id": "p13", "q": "allowing more investment in both the practical and special effects"}]}
+]}

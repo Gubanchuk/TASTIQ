@@ -1,0 +1,10 @@
+{"appid": 2291850, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p5", "q": "revolve around solving point and click puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "navigating different 2D environments"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p3", "q": "examines the mysteries of Rusty Lake"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p7", "q": "to better understand the larger storyline of the Rusty Lake universe"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p7", "q": "unparalleled as far as surreal horror goes"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p0", "q": "a series of surrealistic escape room"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p7", "q": "centres upon its artwork and atmosphere"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p4", "q": "Most games of the series involve supernatural events such as reincarnation"}]}
+]}

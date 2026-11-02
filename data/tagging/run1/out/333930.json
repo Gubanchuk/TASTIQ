@@ -1,0 +1,93 @@
+{
+ "appid": 333930,
+ "features": [
+  {
+   "f": "social.pvp",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "Fast-paced, highly competitive teamplay"
+    },
+    {
+     "id": "d",
+     "q": "the most challenging team based shooter around"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236231566",
+     "q": "The gunplay is smooth and fluid"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Work together or die alone"
+    }
+   ]
+  },
+  {
+   "f": "pace.fast",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "a fast-paced team game that will challenge even the most competent players"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "all that lies between you and certain death is player skill and reaction"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236231566",
+     "q": "the characters have great variety in both playstyles and designs"
+    }
+   ]
+  },
+  {
+   "f": "world.modern",
+   "r": 2,
+   "ev": [
+    {
+     "id": "d",
+     "q": "Fight to restore peace to London or tear it down for profit"
+    }
+   ]
+  },
+  {
+   "f": "completeness.unfinished",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236231566",
+     "q": "it's essentially dead"
+    },
+    {
+     "id": "r236207329",
+     "q": "its a shame that the developers quit on the project"
+    }
+   ]
+  }
+ ]
+}

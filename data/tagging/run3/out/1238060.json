@@ -1,0 +1,13 @@
+{"appid": 1238060, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "survival horror action video game"}, {"id": "p2", "q": "The game received praise for its atmosphere and gameplay"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p3", "q": "a science-fiction-themed survival horror action video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p5", "q": "Isaac can use two weapons to combat the Necromorphs"}]},
+{"f": "loop.melee", "r": 1, "ev": [{"id": "p4", "q": "break crates using his melee attack"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p3", "q": "through a level-based narrative campaign"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "online cooperative multiplayer sessions"}, {"id": "p9", "q": "praising the co-op mode"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "solving physics-based puzzles in the environment"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p0", "q": "Players control Isaac and explore the environment"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p5", "q": "additional items and customized weapons are created using crafting benches"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p9", "q": "noted pacing issues due to its size"}, {"id": "p10", "q": "the campaign is too long"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "repetitive gameplay elements"}]}
+]}

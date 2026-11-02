@@ -1,0 +1,105 @@
+{
+ "appid": 221040,
+ "features": [
+  {
+   "f": "social.coop",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236957678",
+     "q": "So fun in co-op if you have a friend/friends"
+    },
+    {
+     "id": "r237116741",
+     "q": "absolute banger of a multiplayer co op"
+    },
+    {
+     "id": "r237530804",
+     "q": "I had a decent time playing co-op with a friend"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236365767",
+     "q": "If you like a good shooter with timing / skill based mechanics"
+    },
+    {
+     "id": "r237116741",
+     "q": "the most action focused game in the series"
+    }
+   ]
+  },
+  {
+   "f": "world.modern",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "North America, the war-torn Eastern European state of Edonia and the Chinese city of Lanshiang"
+    }
+   ]
+  },
+  {
+   "f": "characters.companions",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237072999",
+     "q": "all the heros joins together in this action packed game"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237163520",
+     "q": "оч колоритные персонажи"
+    }
+   ]
+  },
+  {
+   "f": "tone.epic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237589238",
+     "q": "В этой игре столько экшена и эпика"
+    }
+   ]
+  },
+  {
+   "f": "combat.clunky",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237635424",
+     "q": "Clunky controls, awful qte and endless scripted nonsense"
+    },
+    {
+     "id": "r238045006",
+     "q": "controls just straight up didn't work for me no matter what I did"
+    },
+    {
+     "id": "r235654015",
+     "q": "the awful camera and terrible controls"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.hard",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237530804",
+     "q": "insta-death segments are annoying"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{"appid": 39120, "features": [
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "a fantasy free-to-play massively multiplayer online role-playing game"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p8", "q": "Entering the area around a rift triggers a prompt for the player to join a public group"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p0", "q": "Two competing factions, composed of a selection of races and classes, battle each other"}]},
+{"f": "world.living", "r": 2, "ev": [{"id": "p10", "q": "praised the dynamic world offered from rift events"}]},
+{"f": "tone.epic", "r": 1, "ev": [{"id": "p5", "q": "Players take on the role of the Ascended, resurrected superhuman warriors"}]}
+]}

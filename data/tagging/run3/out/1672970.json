@@ -1,0 +1,11 @@
+{"appid": 1672970, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p2", "q": "it is a hack and slash-styled dungeon crawler"}]},
+{"f": "loop.looting", "r": 1, "ev": [{"id": "p7", "q": "the procedural generation system used to generate loot and dungeon layouts"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p7", "q": "Critics generally found the game fun and charming"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "as having excellent visuals and music"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p7", "q": "complimenting its visuals and music"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p4", "q": "It consists of rough 3D objects"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "The game includes four-player local and online multiplayer"}]},
+{"f": "freedom.linear", "r": 2, "ev": [{"id": "p4", "q": "the game features a linear, story-driven campaign and cutscenes"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p5", "q": "granted him magic powers but also corrupted him"}]}
+]}

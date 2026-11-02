@@ -1,0 +1,413 @@
+{
+  "frozenAt": "2026-10-31T18:39:34.991Z",
+  "cases": [
+    {
+      "id": "story",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "state": {
+        "step": "ask",
+        "domain": "game",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "solo",
+          "childAge": null,
+          "partySize": null,
+          "note": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [],
+          "intent": {
+            "version": 1,
+            "sourceText": "Хочу погрузиться в историю и загадку, привязаться к героям. Грустная или тревожная атмосфера подходит. Сегодня час-полтора, могу продолжить завтра. Не хочу сложных боёв и проверки реакции.",
+            "wants": [
+              {
+                "f": "story.central",
+                "evidence": "Хочу погрузиться в историю"
+              },
+              {
+                "f": "story.mystery",
+                "evidence": "и загадку"
+              },
+              {
+                "f": "characters.memorable",
+                "evidence": "привязаться к героям"
+              }
+            ],
+            "avoids": [],
+            "time": {
+              "minutes": 90,
+              "evidence": "Сегодня час-полтора"
+            },
+            "source": "confirmed"
+          }
+        },
+        "stops": [],
+        "asked": [],
+        "shown": [
+          "steam:271590",
+          "steam:359550",
+          "steam:105600",
+          "steam:4000",
+          "steam:2358720",
+          "steam:1245620",
+          "steam:550",
+          "steam:413150"
+        ],
+        "liked": [
+          "steam:1222140",
+          "steam:319630"
+        ],
+        "disliked": [
+          "steam:1245620"
+        ],
+        "whyIndex": 0,
+        "answers": {
+          "steam:1222140": {
+            "reaction": "love",
+            "reasons": [
+              "story.choices",
+              "story.central",
+              "characters.memorable"
+            ],
+            "issues": []
+          },
+          "steam:319630": {
+            "reaction": "love",
+            "reasons": [
+              "story.central",
+              "story.choices",
+              "characters.memorable"
+            ],
+            "issues": []
+          },
+          "steam:1245620": {
+            "reaction": "dislike",
+            "issues": [
+              {
+                "f": "difficulty.hard",
+                "hard": false
+              }
+            ],
+            "badQuality": false
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 281673
+      }
+    },
+    {
+      "id": "coop",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "state": {
+        "step": "ask",
+        "domain": "game",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "friend",
+          "childAge": null,
+          "partySize": null,
+          "note": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [],
+          "intent": {
+            "version": 1,
+            "sourceText": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи, можно посмеяться. Против других игроков не хотим. Нужна именно совместная игра, а не по очереди проходить одиночную.",
+            "wants": [
+              {
+                "f": "social.coop",
+                "evidence": "С другом вдвоём хотим совместное приключение: помогать друг другу, вместе решать задачи"
+              },
+              {
+                "f": "humor.funny",
+                "evidence": "можно посмеяться"
+              }
+            ],
+            "avoids": [
+              {
+                "f": "social.pvp",
+                "evidence": "Против других игроков не хотим."
+              }
+            ],
+            "time": null,
+            "source": "confirmed"
+          }
+        },
+        "stops": [
+          "social.pvp"
+        ],
+        "asked": [],
+        "shown": [
+          "steam:730",
+          "steam:271590",
+          "steam:105600",
+          "steam:359550",
+          "steam:252490",
+          "steam:4000",
+          "steam:553850",
+          "steam:1245620"
+        ],
+        "liked": [
+          "steam:728880",
+          "steam:1225570"
+        ],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {
+          "steam:728880": {
+            "reaction": "love",
+            "reasons": [
+              "social.coop"
+            ],
+            "issues": []
+          },
+          "steam:1225570": {
+            "reaction": "love",
+            "reasons": [
+              "social.coop",
+              "loop.puzzles"
+            ],
+            "issues": []
+          },
+          "steam:548430": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 445586
+      }
+    },
+    {
+      "id": "runs",
+      "source": "actual browser state before its first adaptive question, journey-v1",
+      "state": {
+        "step": "ask",
+        "domain": "game",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "solo",
+          "childAge": null,
+          "partySize": null,
+          "note": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [],
+          "intent": {
+            "version": 1,
+            "sourceText": "Хочу динамичные забеги, чтобы решали мои действия и реакция. Готов проигрывать и пробовать снова, осваивать разные сборки. На сегодня около часа, продолжу в другой день. Сейчас не хочется долгих разговоров и медленного начала.",
+            "wants": [
+              {
+                "f": "pace.fast",
+                "evidence": "Хочу динамичные забеги"
+              },
+              {
+                "f": "progression.builds",
+                "evidence": "осваивать разные сборки"
+              }
+            ],
+            "avoids": [
+              {
+                "f": "loop.dialogue",
+                "evidence": "Сейчас не хочется долгих разговоров"
+              },
+              {
+                "f": "stability.slow_start",
+                "evidence": "Сейчас не хочется долгих разговоров и медленного начала"
+              }
+            ],
+            "time": {
+              "minutes": 60,
+              "evidence": "На сегодня около часа"
+            },
+            "source": "confirmed"
+          }
+        },
+        "stops": [],
+        "asked": [],
+        "shown": [
+          "steam:271590",
+          "steam:359550",
+          "steam:105600",
+          "steam:4000",
+          "steam:2358720",
+          "steam:1245620",
+          "steam:550",
+          "steam:413150"
+        ],
+        "liked": [
+          "steam:367520",
+          "steam:782330"
+        ],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {
+          "steam:367520": {
+            "reaction": "love",
+            "reasons": [
+              "difficulty.hard",
+              "loop.platforming"
+            ],
+            "issues": []
+          },
+          "steam:782330": {
+            "reaction": "love",
+            "reasons": [
+              "pace.fast",
+              "combat.fast",
+              "loop.shooting"
+            ],
+            "issues": []
+          },
+          "steam:1794680": {
+            "reaction": "like",
+            "reasons": [],
+            "issues": []
+          }
+        },
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 559435
+      }
+    },
+    {
+      "id": "no-taste",
+      "source": "authored offline context, frozen before implementation",
+      "state": {
+        "step": "ask",
+        "domain": "game",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "solo",
+          "childAge": null,
+          "partySize": null,
+          "note": "",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": []
+        },
+        "stops": [],
+        "asked": [],
+        "shown": [],
+        "liked": [],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {},
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "calm-film",
+      "source": "authored offline context, frozen before implementation",
+      "state": {
+        "step": "ask",
+        "domain": "film",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "pair",
+          "childAge": null,
+          "partySize": null,
+          "note": "Хочу спокойный фильм. Сегодня есть 100 минут",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": null,
+          "leans": [],
+          "intent": {
+            "version": 1,
+            "source": "confirmed",
+            "sourceText": "Хочу спокойный фильм. Сегодня есть 100 минут",
+            "wants": [
+              {
+                "f": "tension.low",
+                "evidence": "спокойный фильм"
+              }
+            ],
+            "avoids": [],
+            "time": {
+              "minutes": 100,
+              "evidence": "100 минут"
+            }
+          }
+        },
+        "stops": [],
+        "asked": [],
+        "shown": [],
+        "liked": [],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {},
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "short-series",
+      "source": "authored offline context, frozen before implementation",
+      "state": {
+        "step": "ask",
+        "domain": "series",
+        "platform": "windows",
+        "situation": {
+          "time": null,
+          "company": "solo",
+          "childAge": null,
+          "partySize": null,
+          "note": "",
+          "popularity": null,
+          "era": null,
+          "onlyEnded": false,
+          "episodeLength": "short",
+          "leans": []
+        },
+        "stops": [],
+        "asked": [],
+        "shown": [],
+        "liked": [],
+        "disliked": [],
+        "whyIndex": 0,
+        "answers": {},
+        "corrections": [],
+        "preferences": [],
+        "session": {
+          "notNow": []
+        },
+        "seed": 42
+      }
+    }
+  ]
+}

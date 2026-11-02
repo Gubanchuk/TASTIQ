@@ -1,0 +1,10 @@
+{"id": "tt3597790", "features": [
+{"f": "humor.satire", "r": 3, "ev": [{"id": "p0", "q": "A parody of the police procedural genre"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p0", "q": "A parody of the police procedural genre"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p2", "q": "Angie Tribeca's unique blend of sharp wit and broad humor"}]},
+{"f": "humor.silly", "r": 2, "ev": [{"id": "p2", "q": "charmingly absurd spoof of police procedurals"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p2", "q": "the obvious fun being had by a talented cast"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "the obvious fun being had by a talented cast"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "s", "q": "investigate the most serious cases, from the murder of a ventriloquist"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The fourth and final season"}]}
+]}

@@ -1,0 +1,11 @@
+{"appid": 241540, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "the game challenges players to survive by exploring, scavenging, and fighting the undead"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p4", "q": "The player can choose from several locations to build a base"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p4", "q": "Part of the game is balancing the use of resources"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p3", "q": "State of Decay contains elements of third-person shooter, combat and simulation"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p7", "q": "use stealth to sneak past them"}]},
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p3", "q": "The player is in charge of a small group of survivors"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p7", "q": "Zombies are the main threat in State of Decay"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p9", "q": "one of the most cohesive, terrifying and engaging open-world games"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p3", "q": "The game world is 16 square kilometers, 8 square kilometers of which is playable"}]}
+]}

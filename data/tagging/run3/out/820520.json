@@ -1,0 +1,6 @@
+{"appid": 820520, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "is a first-person shooter video game"}]},
+{"f": "loop.stealth", "r": 3, "ev": [{"id": "p2", "q": "creative blend of sneaking and shooting"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "competing against other teams of spies"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "just as long as you have friends at the ready"}]}
+]}

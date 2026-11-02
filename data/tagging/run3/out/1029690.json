@@ -1,0 +1,8 @@
+{"appid": 1029690, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p1", "q": "Similar to its predecessors, Sniper Elite 5 is a third-person shooter."}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "It takes place in France during World War II."}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p0", "q": "third-person tactical shooter stealth video game"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p7", "q": "deep weapon customisation system"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p1", "q": "shows body parts, bones or internal body organs being broken or ruptured by the bullet"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p1", "q": "The single-player campaign can be played cooperatively with another player."}]}
+]}

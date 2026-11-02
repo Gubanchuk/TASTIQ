@@ -1,0 +1,13 @@
+{"appid": 1262350, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "Signalis is a 2022 survival horror video game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p4", "q": "Signalis is set in a retrofuturist world"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "top-down shooter elements from a top-down 2.5D perspective"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p2", "q": "with occasional puzzle elements"}, {"id": "p2", "q": "Puzzles vary from manipulating switches and dials"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p3", "q": "Difficulty and thematic elements are enhanced through the use of resource management"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p6", "q": "praised the atmosphere and environmental storytelling of the game"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p5", "q": "The game features multiple endings depending on the choices of the player"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "p5", "q": "it is slowly revealed that Elster is in search of her female Gestalt lover"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "a dark love story caught up in a retrofuture survival horror masterwork"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p1", "q": "designed to replicate the graphics and gameplay of fifth generation video games"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p6", "q": "the limited inventory and combat received criticism"}]}
+]}

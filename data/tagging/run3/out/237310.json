@@ -1,0 +1,8 @@
+{"appid": 237310, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "to provide a side-scrolling beat 'em up fighter"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p1", "q": "require the player to properly execute combos within the specific range of their character"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p0", "q": "includes both player vs. environment and player vs. player modes"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "free-to-play, 2.5D action MMORPG"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p2", "q": "Each character is able to choose from four job paths"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p4", "q": "they can advance to 3rd job, by either purchasing an item from the mall"}]}
+]}

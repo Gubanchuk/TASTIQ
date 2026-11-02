@@ -1,0 +1,11 @@
+{"appid": 207610, "features": [
+{"f": "story.central", "r": 3, "ev": [{"id": "r237208866", "q": "The story centers on the deeply emotional bond between Lee and Clementine"}]},
+{"f": "story.choices", "r": 3, "ev": [{"id": "a", "q": "Your actions and choices will affect how your story plays out across the entire series"}]},
+{"f": "tone.melancholic", "r": 3, "ev": [{"id": "r237850349", "q": "There is not a single other game that has made me as emotional as this one did"}, {"id": "r236961382", "q": "the ending was really heartbreaking"}]},
+{"f": "ending.bittersweet", "r": 2, "ev": [{"id": "r236961382", "q": "the ending was really heartbreaking"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "r237017879", "q": "slowly makes you care about the characters"}, {"id": "r236626196", "q": "Every character feels so realistic"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "a", "q": "protecting an orphaned girl named Clementine"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "r237850349", "q": "Hands down the best interactive-movie game ever made"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "r237208866", "q": "a distinctive comic-book art style"}]},
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "a", "q": "a world devastated by the undead"}]}
+]}

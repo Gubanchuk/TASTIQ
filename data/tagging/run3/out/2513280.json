@@ -1,0 +1,7 @@
+{"appid": 2513280, "features": [
+{"f": "loop.platforming", "r": 3, "ev": [{"id": "p2", "q": "is a platform game that shifts between side-scrolling and 3D gameplay"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p3", "q": "Shadow can boost for extra speed"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "As the player progresses, they unlock transformations enabling new methods of attack and traversal"}]},
+{"f": "freedom.open_world", "r": 1, "ev": [{"id": "p4", "q": "features open-world gameplay similar to that of Sonic Frontiers"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p5", "q": "Each act and challenge stage contains three hidden tokens"}]}
+]}

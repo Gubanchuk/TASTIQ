@@ -1,0 +1,5 @@
+{"appid": 700600, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "the player is tasked to construct a criminal lair on an abandoned island"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p1", "q": "operating a casino as a cover operation"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p2", "q": "send their minions to the world to complete missions and commit crimes"}]}
+]}

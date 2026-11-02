@@ -1,0 +1,26 @@
+{
+  "id": "tt0063951",
+  "name": "Sesame Street",
+  "kind": "series",
+  "domain": "cartoon",
+  "year": 1969,
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Drama"
+  ],
+  "s": "Sunny days are here! This freshly reimagined \" Sesame Street \" series features characters you love, fan-favorite segments — and new ways to play.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "1, rue Sésame (translates to: 1 Sesame Street) is a French children's television series based on the popular American children's program Sesame Street. The show first aired on 4 January 1978, at 6:00 a.m. on TF1. Its musical director was Roger Elcourt, composer Jean Morlier."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The series was executive produced by Michel Berthier from TF1 and Lutrelle Horne from CTW. The show ran for a total of 82 episodes and ceased production in June 1982."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/1%2C_rue_S%C3%A9same"
+}

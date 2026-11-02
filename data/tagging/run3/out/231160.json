@@ -1,0 +1,9 @@
+{"appid": 231160, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "The Swapper is a 2013 puzzle-platform game"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "A science fiction-themed title"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p2", "q": "is a side-scrolling puzzle-platformer in a science fiction setting"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p0", "q": "learn about the fate of the station's researchers"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "in which the player may have to backtrack through the facility"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p0", "q": "The player uses this ability to solve various puzzles"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p1", "q": "reviewers praising the game's visual style and atmosphere"}]}
+]}

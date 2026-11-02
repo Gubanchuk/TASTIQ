@@ -1,0 +1,10 @@
+{"appid": 356040, "features": [
+{"f": "world.postapoc", "r": 3, "ev": [{"id": "p0", "q": "Sheltered is a post-apocalyptic survival game"}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "to survive various threats, such as starvation, radiation poisoning, and dehydration"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p2", "q": "Players will need to extend the shelter, build toilets and showers for hygiene"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p0", "q": "Players control a family that survives a nuclear war"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p3", "q": "choosing a positive one when creating the characters"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "the family will need to go on expeditions, the map is randomly generated"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p5", "q": "different locations contain different loot unique to them"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p1", "q": "A family survives a nuclear war by taking refuge in an underground shelter"}]}
+]}

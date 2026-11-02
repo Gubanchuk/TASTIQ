@@ -1,0 +1,12 @@
+{"appid": 1732190, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "survival horror video game"}, {"id": "p9", "q": "praised the atmosphere and the disturbing nature of the backstory"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p2", "q": "its use of the GamePad and dark atmosphere"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p3", "q": "the characters are confronted by hostile ghosts that attack and damage them through touch"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p3", "q": "Characters navigate environments using an interactive map"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "supernatural events revolving the area"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p10", "q": "praised the graphics and lighting effects"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p11", "q": "despite some control issues"}, {"id": "p13", "q": "found issues with its controls"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p11", "q": "found later sections tedious due to repetitive battles"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "p9", "q": "the drawn-out structure of the game harmed the initial premise"}]},
+{"f": "story.lore", "r": 1, "ev": [{"id": "p9", "q": "relying too heavily on written documents in the environment for storytelling"}]}
+]}

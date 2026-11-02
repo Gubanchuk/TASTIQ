@@ -1,0 +1,12 @@
+{"appid": 394230, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "free-to-play first-person shooter video game"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p1", "q": "participated in either single player matches or competitive matches with other players"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p8", "q": "enables five players to cooperate to complete various missions"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "allows the player to create a custom loadout for that character"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p1", "q": "players gained experience to advance their character along the Helix Tree"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p6", "q": "New gear is earned as loot drops from the completion of a match"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "reviewers citing on the difficulties of learning the complex gameplay systems"}]},
+{"f": "length.long", "r": 1, "ev": [{"id": "p11", "q": "work through tens to hundreds of hours of gameplay"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p10", "q": "despite a lack of content"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p7", "q": "The game features 25 playable characters upon release"}]}
+]}

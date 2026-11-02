@@ -1,0 +1,7 @@
+{"appid": 666140, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p2", "q": "The goal of the game is to expand the city of Portia"}]},
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "p0", "q": "is a 2019 farm life sim role-playing video game"}]},
+{"f": "world.postapoc", "r": 2, "ev": [{"id": "p1", "q": "The game takes place long after civilization has been destroyed"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p6", "q": "waiting around for things to happen can get old pretty fast"}, {"id": "p6", "q": "it was too long"}]},
+{"f": "tone.cozy", "r": 2, "ev": [{"id": "p6", "q": "a lovely place to spend time in"}]}
+]}

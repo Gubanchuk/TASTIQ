@@ -1,0 +1,9 @@
+{"appid": 421120, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "puzzle point-and-click adventure game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "He explores the environment, solves puzzles and collects items"}]},
+{"f": "tone.whimsical", "r": 3, "ev": [{"id": "p7", "q": "praised its surrealness"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p7", "q": "praised the animation and surrealistic visuals"}, {"id": "p8", "q": "praised the design of the game world and its visuals"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p9", "q": "the best video game music of 2016"}]},
+{"f": "cognitive.low", "r": 1, "ev": [{"id": "p7", "q": "a hint system that can spare players of frustration"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "journey through space full of planets"}]}
+]}

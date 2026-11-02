@@ -1,0 +1,179 @@
+{
+  "createdAt": "2026-10-31T16:53:48.125Z",
+  "method": "Read-only exact normalized names across the six saved source/catalog files; Overwatch prefix also checked. Absence is limited to these lists, not an external service claim.",
+  "sources": [
+    {
+      "path": "data/raw/games-raw.json",
+      "sha256": "8e64edc2def087222fdd4f0c99cdd082d51c257f6ddba6e3ecd6102f0005edfe",
+      "count": 500
+    },
+    {
+      "path": "data/raw/games-tail.json",
+      "sha256": "fda8782f35a08ae087dd25e1644053617d53c18d939d7b81079067a51ff29ad0",
+      "count": 4500
+    },
+    {
+      "path": "data/raw/head-candidates.json",
+      "sha256": "8e86f537a2fdeb82653b507b60f47a698af6116f099df01924b3c95a86113bab",
+      "count": 700
+    },
+    {
+      "path": "data/catalog.json",
+      "sha256": "f2805c2776bc2a3327a67a875cd569cb6b8eea5b767e9aac570fcf1064ad45c1",
+      "count": 4952
+    },
+    {
+      "path": "data/raw/screen-base.json",
+      "sha256": "a2de93eba0a36bcfef1c9d85dca46e0ec801cde8c932dc2e543069036522ca6e",
+      "count": 45398
+    },
+    {
+      "path": "data/catalog-screen.json",
+      "sha256": "2124d8f15efc077ee1eba2e38f751b78a17dcc6875748f73f81e23be0d0435c2",
+      "count": 45397
+    }
+  ],
+  "results": [
+    {
+      "title": "Tavern Talk",
+      "matches": []
+    },
+    {
+      "title": "THE FINALS",
+      "matches": []
+    },
+    {
+      "title": "VALORANT",
+      "matches": []
+    },
+    {
+      "title": "Overwatch",
+      "matches": []
+    },
+    {
+      "title": "Presto",
+      "matches": []
+    },
+    {
+      "title": "For the Birds",
+      "matches": []
+    },
+    {
+      "title": "The Snowman",
+      "matches": [
+        {
+          "source": "data/raw/screen-base.json",
+          "id": "tt1758810",
+          "name": "The Snowman",
+          "original": null,
+          "year": 2017,
+          "domain": null,
+          "type": "movie",
+          "family": null
+        },
+        {
+          "source": "data/catalog-screen.json",
+          "id": "tt1758810",
+          "name": "The Snowman",
+          "original": null,
+          "year": 2017,
+          "domain": "film",
+          "type": null,
+          "family": null
+        }
+      ]
+    },
+    {
+      "title": "Crac",
+      "matches": []
+    },
+    {
+      "title": "Whisper of the Heart",
+      "matches": [
+        {
+          "source": "data/raw/screen-base.json",
+          "id": "tt0113824",
+          "name": "Whisper of the Heart",
+          "original": "Mimi o sumaseba",
+          "year": 1995,
+          "domain": null,
+          "type": "movie",
+          "family": null
+        },
+        {
+          "source": "data/catalog-screen.json",
+          "id": "tt0113824",
+          "name": "Whisper of the Heart",
+          "original": "Mimi o sumaseba",
+          "year": 1995,
+          "domain": "anime",
+          "type": null,
+          "family": {
+            "r": 0.8,
+            "c": 0.6,
+            "src": [
+              "genre"
+            ],
+            "ev": [
+              {
+                "id": "genre:Family",
+                "kind": "genre",
+                "q": "Family"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Only Yesterday",
+      "matches": [
+        {
+          "source": "data/raw/screen-base.json",
+          "id": "tt0102587",
+          "name": "Only Yesterday",
+          "original": "Omohide poro poro",
+          "year": 1991,
+          "domain": null,
+          "type": "movie",
+          "family": null
+        },
+        {
+          "source": "data/catalog-screen.json",
+          "id": "tt0102587",
+          "name": "Only Yesterday",
+          "original": "Omohide poro poro",
+          "year": 1991,
+          "domain": "anime",
+          "type": null,
+          "family": null
+        }
+      ]
+    },
+    {
+      "title": "Robot Dreams",
+      "matches": [
+        {
+          "source": "data/raw/screen-base.json",
+          "id": "tt13429870",
+          "name": "Robot Dreams",
+          "original": null,
+          "year": 2023,
+          "domain": null,
+          "type": "movie",
+          "family": null
+        },
+        {
+          "source": "data/catalog-screen.json",
+          "id": "tt13429870",
+          "name": "Robot Dreams",
+          "original": null,
+          "year": 2023,
+          "domain": "cartoon",
+          "type": null,
+          "family": null
+        }
+      ]
+    }
+  ]
+}

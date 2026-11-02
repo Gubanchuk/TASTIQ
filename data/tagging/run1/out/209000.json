@@ -1,0 +1,103 @@
+{
+ "appid": 209000,
+ "features": [
+  {
+   "f": "loop.melee",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236835313",
+     "q": "the combat is still great and the pacing feels pretty solid"
+    }
+   ]
+  },
+  {
+   "f": "combat.weighty",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238081100",
+     "q": "Batman's punches have nice weight in them"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237189518",
+     "q": "storywise one of the best titles in the series"
+    },
+    {
+     "id": "r237163050",
+     "q": "the story is great"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237189518",
+     "q": "It's nice to see a younger and angrier version of Bruce"
+    },
+    {
+     "id": "r236337515",
+     "q": "отличная химия героев и лучший молодой Бэтмен"
+    }
+   ]
+  },
+  {
+   "f": "loop.stealth",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236008069",
+     "q": "most stealth segments have almost all enemies exclusively armed with guns"
+    }
+   ]
+  },
+  {
+   "f": "difficulty.forgiving",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236008069",
+     "q": "I didn't feel like I had to punch enemies 30 times like in Asylum or City"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236337515",
+     "q": "Заснеженный рождественский Готэм и потрясающая работа со светом"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r237299384",
+     "q": "game is short unrewarding"
+    }
+   ]
+  },
+  {
+   "f": "progression.collection",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r235857890",
+     "q": "the amount of collectables is a joke"
+    }
+   ]
+  }
+ ]
+}

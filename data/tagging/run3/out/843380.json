@@ -1,0 +1,11 @@
+{"appid": 843380, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "Up to 64 players compete to be the last person standing"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p1", "q": "2D, top-down, third-person battle royale shooter"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "Species and subspecies are unlocked by collecting animal DNA"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p2", "q": "allows them to level up"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p0", "q": "starring anthropomorphic animals who use a variety of weapons"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "containing weapons, protective armor, and Health Juice"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p2", "q": "Players create a character from one of several \"Super Animals\""}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "p4", "q": "The current season is Season 13"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "p1", "q": "The Bwoking Dead"}]}
+]}

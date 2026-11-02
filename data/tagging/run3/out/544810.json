@@ -1,0 +1,9 @@
+{"appid": 544810, "features": [
+{"f": "loop.cards", "r": 3, "ev": [{"id": "p1", "q": "Kards is a turn-based collectible card game"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "World War II themed online digital collectible card game"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p2", "q": "is divided into three fronts, the player's support line"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "Players can choose to build a deck using one of the five major powers"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p3", "q": "compete against a computer AI or human opponents online"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p1", "q": "Each nation has its own unique strategy and playstyle"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p4", "q": "reward players with a card pack"}]}
+]}

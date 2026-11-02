@@ -1,0 +1,7 @@
+{"appid": 1971650, "features": [
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p1", "q": "via a turn-based battle system"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "these points can be reduced by finding and attacking their weakness"}]},
+{"f": "loop.dialogue", "r": 1, "ev": [{"id": "p4", "q": "find various NPCs to converse with"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "have up to four of these characters being useable for interacting with the game world"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "The game features around twelve jobs"}]}
+]}

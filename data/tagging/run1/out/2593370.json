@@ -1,0 +1,133 @@
+{
+ "appid": 2593370,
+ "features": [
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "A dark visual novel about an unlikely bond"
+    },
+    {
+     "id": "r235776054",
+     "q": "Шикарная история"
+    }
+   ]
+  },
+  {
+   "f": "tone.dark",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "A Dark Tale of Redemption"
+    }
+   ]
+  },
+  {
+   "f": "tone.gritty",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "famine, trafficking, revenge, and cannibalism in a brutal world"
+    }
+   ]
+  },
+  {
+   "f": "tone.melancholic",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235776054",
+     "q": "это печальная истинная концовка"
+    }
+   ]
+  },
+  {
+   "f": "ending.bittersweet",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235776054",
+     "q": "это печальная истинная концовка"
+    }
+   ]
+  },
+  {
+   "f": "story.choices",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "160,000 words across 9 different endings where every choice matters"
+    }
+   ]
+  },
+  {
+   "f": "world.historical",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "The year is 1632. The Ming Dynasty"
+    }
+   ]
+  },
+  {
+   "f": "loop.dialogue",
+   "r": 3,
+   "ev": [
+    {
+     "id": "d",
+     "q": "A dark visual novel about an unlikely bond"
+    }
+   ]
+  },
+  {
+   "f": "content.gore",
+   "r": 2,
+   "ev": [
+    {
+     "id": "a",
+     "q": "famine, trafficking, revenge, and cannibalism in a brutal world"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236782228",
+     "q": "рисовка довольно симпатичная"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.soundtrack",
+   "r": 1,
+   "ev": [
+    {
+     "id": "a",
+     "q": "plus original music for movie-like experience"
+    }
+   ]
+  },
+  {
+   "f": "length.short",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236212550",
+     "q": "длительность игры в целом часов 10"
+    },
+    {
+     "id": "r236258993",
+     "q": "good short story"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{"appid": 1274570, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "d", "q": "DEVOUR is a co-op horror survival game for 1-4 players"}, {"id": "r236373310", "q": "I love games that encourage teamwork"}]},
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "r238032107", "q": "its REALLY scary"}, {"id": "r237522275", "q": "nightmares for a week"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "d", "q": "co-op horror survival game for 1-4 players"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "d", "q": "Run. Scream. Hide. Just don't get caught."}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "a", "q": "completely new environments to explore, items to collect"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "a", "q": "Single player mode"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r236918305", "q": "its pretty challenging even with a full squad on"}]},
+{"f": "session.short", "r": 1, "ev": [{"id": "a", "q": "a single session lasting up to an hour"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "r236311604", "q": "и страх и постоянное сердцебиение"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "r237274752", "q": "Game mode monotonous and boring"}, {"id": "r236332292", "q": "заставляют заниматься заготовленной рутиной"}]},
+{"f": "world.empty", "r": 1, "ev": [{"id": "r237744881", "q": "walked around an empty house and never saw a single spooky thing"}]}
+]}

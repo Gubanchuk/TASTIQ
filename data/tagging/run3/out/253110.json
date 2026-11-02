@@ -1,0 +1,12 @@
+{"appid": 253110, "features": [
+{"f": "tone.melancholic", "r": 3, "ev": [{"id": "p1", "q": "a depressed woman who commits suicide"}, {"id": "p5", "q": "is a chronically depressed 40-year-old woman"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "is a 2012 horror graphic adventure game"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "The game deals with mature themes such as depression, suicide, murder and cancer"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p4", "q": "but also provides moments of humor"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p3", "q": "The player can occasionally make dialogue decisions that alter the story slightly"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p4", "q": "The ending changes slightly depending on the player's dialogue choices"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p7", "q": "a touching character portrait"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p5", "q": "lives alone in a dilapidated council flat in England"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "The game is presented as a side-scroller with simple controls"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p6", "q": "awakening in a strange afterlife"}]}
+]}

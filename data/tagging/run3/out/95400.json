@@ -1,0 +1,6 @@
+{"appid": 95400, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "is a puzzle-platform video game"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p0", "q": "is a puzzle-platform video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p2", "q": "The game is focused on cooperative play"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "the two characters must work closely together to progress through the game"}]}
+]}

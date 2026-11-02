@@ -1,0 +1,36 @@
+{
+  "id": "tt15000314",
+  "name": "Green Snake",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2021,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Green Snake, known in China as White Snake 2: The Tribulation of the Green Snake (), is a 2021 Chinese adult animated fantasy film directed by Amp Wong, with animation production by Light Chaser Animation, Alibaba Pictures, Tianjin Maoyan Weiying Culture Media and Bilibili. It is the sequel to 2019's White Snake. The film was inspired by the Chinese folktale Legend of the White Snake and was released in China on 23 July 2021."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The third film, White Snake: Afloat, which is a sequel of the first film and a prequel to this film, was released in 2024."
+    },
+    {
+      "id": "p2",
+      "section": "Synopsis",
+      "text": "Verta the green snake-demon must find a way to escape from the modern Shura City of mortals, in order to rescue her elder sister Blanca the white snake from the demon-slaying monk Fahai without her demonic abilities."
+    },
+    {
+      "id": "p3",
+      "section": "Reception",
+      "text": "Green Snake earned a total of 200 million yuan ($30.86 million) in its first three days of release."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Green_Snake_(2021_film)"
+}

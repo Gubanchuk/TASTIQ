@@ -1,0 +1,7 @@
+{"id": "tt0118266", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series based on the DC Comics superhero Batman"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p0", "q": "is an American animated superhero television series based on the DC Comics superhero Batman"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "p2", "q": "episodes focusing less on Batman and more on the many characters that inhabited Gotham City"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "serving as the series' third and final season"}]},
+{"f": "world.supernatural", "r": 1, "ev": [{"id": "p1", "q": "guest characters such as Supergirl, Etrigan the Demon and The Creeper"}]}
+]}

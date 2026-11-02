@@ -1,0 +1,10 @@
+{"appid": 236090, "features": [
+{"f": "loop.melee", "r": 3, "ev": [{"id": "p1", "q": "Combat is based on brawler-like mechanics, where Dust can use a combination of swordplay and magic"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "Dust takes place in the fictional world of Falana, inhabited by anthropomorphic animals"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "with Metroidvania-style exploration, requiring the player to gain power-ups"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p2", "q": "praising the game particularly for its art style"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p9", "q": "praising the detailed environments and animations"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "As the player travels the world, they can acquire power-ups that alter gameplay"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "acts as a companion for Dust and can use magical attacks"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p5", "q": "creatures who are victims of a genocide perpetrated by General Gaius"}]}
+]}

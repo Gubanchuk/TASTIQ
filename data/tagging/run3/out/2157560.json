@@ -1,0 +1,6 @@
+{"appid": 2157560, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p0", "q": "is a 2.5D fighting game developed by Arc System Works"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p1", "q": "new Dash Attacks and an updated Auto Combo"}]},
+{"f": "world.fantasy", "r": 1, "ev": [{"id": "p2", "q": "based on Granblue Fantasys ongoing webcomic series"}]},
+{"f": "progression.collection", "r": 1, "ev": [{"id": "p3", "q": "All twenty five characters from the first game return"}]}
+]}

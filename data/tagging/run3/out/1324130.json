@@ -1,0 +1,8 @@
+{"appid": 1324130, "features": [
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p0", "q": "is a survival simulation video game"}]},
+{"f": "loop.management", "r": 3, "ev": [{"id": "p2", "q": "Players need to manage the crew and assign tasks"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "build a self-sustaining community"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p2", "q": "Each survivor also has their own strengths and weaknesses and distinct personality"}]},
+{"f": "world.scifi", "r": 2, "ev": [{"id": "p1", "q": "marooned on a deadly alien planet"}]},
+{"f": "tension.high", "r": 1, "ev": [{"id": "p4", "q": "generates stories of triumph, disaster, and white-knuckle rescues"}]}
+]}

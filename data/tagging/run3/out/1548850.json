@@ -1,0 +1,10 @@
+{"appid": 1548850, "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "Set in the Second Battle of Fallujah of the Iraq War"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p0", "q": "an upcoming tactical first-person shooter video game"}]},
+{"f": "world.realistic", "r": 3, "ev": [{"id": "p4", "q": "A hallmark of the game is its emphasis on authentic squad tactics"}]},
+{"f": "tension.high", "r": 3, "ev": [{"id": "p2", "q": "the primary focus is on tension, surprise, and the unpredictability of urban combat"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p4", "q": "The player can issue commands to team members"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "Gameplay demands slow, deliberate movement, room-clearing tactics, team coordination, and awareness of enemy concealment"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p3", "q": "players can play solo (accompanied by AI teammates)"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p5", "q": "ray-traced lighting via RTX Global Illumination"}]}
+]}

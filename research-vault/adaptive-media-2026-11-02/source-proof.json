@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-02T01:28:40.010Z",
+  "frozen": {
+    "firstUnchanged": true,
+    "rootStyleUnchanged": true
+  },
+  "spend": {
+    "taskCalls": 12,
+    "taskUsd": 0.1772022,
+    "taskUnsettled": 0,
+    "upper": 2.2256646,
+    "calls": 193,
+    "uncertainReserve": 0,
+    "technicalRemaining": 2.7743354,
+    "grantRemainingLower": 9.3525873
+  }
+}

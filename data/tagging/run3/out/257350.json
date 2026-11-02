@@ -1,0 +1,10 @@
+{"appid": 257350, "features": [
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p5", "q": "who are once again recruitable"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p4", "q": "Set in the Forgotten Realms continent of Faerûn"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "up to thirty new locations can be accessed"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p7", "q": "with its epic story, memorable characters, hundreds of hours of dungeon crawling"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p7", "q": "with its epic story, memorable characters, hundreds of hours of dungeon crawling"}]},
+{"f": "length.long", "r": 2, "ev": [{"id": "p7", "q": "hundreds of hours of dungeon crawling, questing and adventuring"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p2", "q": "which allows players from different platforms to play with each other"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p7", "q": "due to its improved visuals"}]}
+]}

@@ -1,0 +1,9 @@
+{"id": "tt2006848", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American comedy drama television series"}]},
+{"f": "tone.melancholic", "r": 1, "ev": [{"id": "p3", "q": "slightly melancholic characters"}]},
+{"f": "characters.female_lead", "r": 3, "ev": [{"id": "s", "q": "A former ballerina turned Vegas showgirl decides to take a gamble"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p1", "q": "teaching alongside her mother-in-law, Fanny Flowers"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p3", "q": "the performances of leading ladies Sutton Foster and Kelly Bishop"}]},
+{"f": "tone.feelgood", "r": 2, "ev": [{"id": "p3", "q": "a cute summer treat"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "ABC Family canceled the series after one season"}]}
+]}

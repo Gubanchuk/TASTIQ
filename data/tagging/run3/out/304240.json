@@ -1,0 +1,13 @@
+{"appid": 304240, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p2", "q": "It is often described as one of the best, scariest, and most visually impressive entries"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "Items in the inventory can be used, examined, and combined to solve puzzles"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "the player must explore a mansion and its surrounding areas"}]},
+{"f": "loop.shooting", "r": 1, "ev": [{"id": "p4", "q": "Although the player can use firearms to kill monsters"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p4", "q": "The player has a limited amount of health, which decreases when attacked by monsters"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p10", "q": "The game's suspenseful and cinematic atmosphere received praise"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p9", "q": "The game was widely praised for its graphics"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p10", "q": "Resident Evil was also praised for its realistic sound"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p6", "q": "certain choices the player makes in the game can impact the direction of the game and its ending"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p9", "q": "GameSpot credited the attention to detail, realistic gore"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p11", "q": "the controls were criticized for their lack of analog precision"}]}
+]}

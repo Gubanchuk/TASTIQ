@@ -1,0 +1,11 @@
+{"id": "tt9561862", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an adult animated anthology web series"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "is an adult animated anthology web series"}]},
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "The animations span the genres of comedy, horror, science fiction, and fantasy"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "The animations span the genres of comedy, horror, science fiction, and fantasy"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p0", "q": "The animations span the genres of comedy, horror, science fiction, and fantasy"}]},
+{"f": "aesthetic.stylized", "r": 3, "ev": [{"id": "p2", "q": "unique approach of using a variety of animation styles and genres"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p2", "q": "praise its voice acting, sound design"}]},
+{"f": "structure.procedural", "r": 2, "ev": [{"id": "p3", "q": "The animated series consists of a collection of short films"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "s", "q": "sentient dairy products, werewolf soldiers and robots gone wild"}]}
+]}

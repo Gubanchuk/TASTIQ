@@ -1,0 +1,1334 @@
+[
+  {
+    "persona": "andrey",
+    "mode": "careful",
+    "state": {
+      "step": "result",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "length.short",
+            "against": "length.long",
+            "label": "за пару вечеров"
+          },
+          {
+            "f": "humor.funny",
+            "against": "tone.dark",
+            "label": "посмеяться"
+          }
+        ]
+      },
+      "stops": [
+        "progression.grind"
+      ],
+      "asked": [
+        "lean:length.short|length.long",
+        "lean:humor.funny|tone.dark"
+      ],
+      "shown": [
+        "steam:271590",
+        "steam:359550",
+        "steam:105600",
+        "steam:4000",
+        "steam:2358720",
+        "steam:1245620",
+        "steam:550",
+        "steam:413150"
+      ],
+      "liked": [
+        "steam:632470",
+        "steam:292030"
+      ],
+      "disliked": [
+        "steam:1245620"
+      ],
+      "whyIndex": 0,
+      "answers": {
+        "steam:1245620": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "difficulty.hard",
+              "hard": true
+            }
+          ],
+          "badQuality": false,
+          "text": "умирал сорок раз на первом боссе, это не отдых после работы, никогда больше"
+        },
+        "steam:632470": {
+          "reaction": "love",
+          "reasons": [
+            "characters.memorable",
+            "story.central",
+            "loop.dialogue",
+            "story.choices",
+            "humor.funny"
+          ],
+          "issues": [],
+          "text": "за текст и персонажей, голоса в голове как отдельные герои, и что выборы что-то меняют"
+        },
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central",
+            "characters.memorable",
+            "story.choices",
+            "world.living"
+          ],
+          "issues": [],
+          "text": "за Геральта и побочные квесты, каждый как отдельная драма, живой мир"
+        },
+        "steam:1328670": {
+          "reaction": "love",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:383870": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:501300": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "love",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:620": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:1222140": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:319630": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:2344520": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "steam:374320": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "steam:1085660": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "steam:812140": {
+          "reaction": "dislike",
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 162474
+    }
+  },
+  {
+    "persona": "andrey",
+    "mode": "lazy",
+    "state": {
+      "step": "result",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "length.short",
+            "against": "length.long",
+            "label": "за пару вечеров"
+          },
+          {
+            "f": "humor.funny",
+            "against": "tone.dark",
+            "label": "посмеяться"
+          }
+        ]
+      },
+      "stops": [],
+      "asked": [
+        "lean:length.short|length.long",
+        "lean:humor.funny|tone.dark",
+        "lean:freedom.open_world|freedom.linear"
+      ],
+      "shown": [
+        "steam:271590",
+        "steam:359550",
+        "steam:105600",
+        "steam:4000",
+        "steam:2358720",
+        "steam:1245620",
+        "steam:550",
+        "steam:413150",
+        "steam:477160",
+        "steam:814380",
+        "steam:292030",
+        "steam:1091500",
+        "steam:250900",
+        "steam:374320",
+        "steam:1086940",
+        "steam:291550"
+      ],
+      "liked": [
+        "steam:292030",
+        "steam:1086940"
+      ],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:292030": {
+          "reaction": "love",
+          "reasons": [
+            "story.central"
+          ],
+          "issues": []
+        },
+        "steam:1086940": {
+          "reaction": "love",
+          "reasons": [
+            "story.choices"
+          ],
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 58099
+    }
+  },
+  {
+    "persona": "cinephile",
+    "mode": "careful",
+    "state": {
+      "step": "result",
+      "domain": "film",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "solo",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "tone.dark",
+            "against": "tone.feelgood",
+            "label": "мрачное"
+          },
+          {
+            "f": "pace.slow",
+            "against": "pace.fast",
+            "label": "неторопливое"
+          }
+        ]
+      },
+      "stops": [],
+      "asked": [
+        "lean:tone.feelgood|tone.dark",
+        "lean:pace.fast|pace.slow"
+      ],
+      "shown": [
+        "tt0111161",
+        "tt0468569",
+        "tt1375666",
+        "tt0137523",
+        "tt0816692",
+        "tt0109830",
+        "tt0110912",
+        "tt0133093",
+        "tt0325980",
+        "tt0169547",
+        "tt0088763",
+        "tt0114369",
+        "tt1853728",
+        "tt0167261",
+        "tt0266697",
+        "tt2582802",
+        "tt0208092",
+        "tt1119646",
+        "tt0120737",
+        "tt0167260",
+        "tt0172495",
+        "tt0993846",
+        "tt1345836",
+        "tt0361748"
+      ],
+      "liked": [
+        "tt0166924",
+        "tt0079944"
+      ],
+      "disliked": [
+        "tt4154796"
+      ],
+      "whyIndex": 0,
+      "answers": {
+        "tt0137523": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0166924": {
+          "reaction": "love",
+          "reasons": [
+            "story.nonlinear",
+            "tone.atmospheric",
+            "tone.whimsical",
+            "story.complex",
+            "aesthetic.stylized"
+          ],
+          "issues": [],
+          "text": "за авторский почерк, сновидческое, ничего не объясняет и не надо"
+        },
+        "tt0079944": {
+          "reaction": "love",
+          "reasons": [
+            "pace.slow",
+            "cognitive.high",
+            "aesthetic.beautiful",
+            "story.dialogue"
+          ],
+          "issues": [],
+          "text": "медленно, созерцательно, каждый кадр как картина, философия"
+        },
+        "tt0118694": {
+          "reaction": "love",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0090756": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt4154796": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "story.predictable",
+              "hard": false
+            },
+            {
+              "f": "length.long",
+              "hard": false
+            },
+            {
+              "f": "aesthetic.effects",
+              "hard": true
+            },
+            {
+              "f": "world.superhero",
+              "hard": true
+            }
+          ],
+          "badQuality": false
+        },
+        "tt2109248": {
+          "reaction": "dislike",
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 4242
+    }
+  },
+  {
+    "persona": "cinephile",
+    "mode": "lazy",
+    "state": {
+      "step": "result",
+      "domain": "film",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "solo",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "tone.dark",
+            "against": "tone.feelgood",
+            "label": "мрачное"
+          },
+          {
+            "f": "tone.melancholic",
+            "against": "humor.funny",
+            "label": "чтобы пробрало"
+          }
+        ]
+      },
+      "stops": [],
+      "asked": [
+        "lean:tone.feelgood|tone.dark",
+        "lean:humor.funny|tone.melancholic",
+        "fact:era"
+      ],
+      "shown": [
+        "tt0111161",
+        "tt0468569",
+        "tt1375666",
+        "tt0137523",
+        "tt0816692",
+        "tt0109830",
+        "tt0110912",
+        "tt0133093",
+        "tt0325980",
+        "tt0169547",
+        "tt0088763",
+        "tt0114369",
+        "tt1853728",
+        "tt0167261",
+        "tt0266697",
+        "tt2582802",
+        "tt0208092",
+        "tt1119646",
+        "tt0120737",
+        "tt0167260",
+        "tt0172495",
+        "tt0993846",
+        "tt1345836",
+        "tt0361748",
+        "tt0068646",
+        "tt0102926",
+        "tt0372784",
+        "tt7286456",
+        "tt0482571",
+        "tt1130884",
+        "tt0120815",
+        "tt0108052"
+      ],
+      "liked": [
+        "tt0166924"
+      ],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0166924": {
+          "reaction": "love",
+          "reasons": [
+            "story.nonlinear",
+            "tone.atmospheric"
+          ],
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 4242,
+      "firstPage": {
+        "marks": [
+          {
+            "id": "tt0166924",
+            "reaction": "love"
+          }
+        ],
+        "known": {}
+      }
+    }
+  },
+  {
+    "persona": "couple",
+    "mode": "careful",
+    "state": {
+      "step": "result",
+      "domain": "film",
+      "platform": "windows",
+      "situation": {
+        "time": "two",
+        "company": "pair",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": []
+      },
+      "stops": [
+        "tone.creepy"
+      ],
+      "asked": [
+        "lean:pace.fast|pace.slow"
+      ],
+      "shown": [
+        "tt0111161",
+        "tt0468569",
+        "tt1375666",
+        "tt0137523",
+        "tt0816692",
+        "tt0109830",
+        "tt0110912",
+        "tt0133093",
+        "tt0325980",
+        "tt0169547",
+        "tt0088763",
+        "tt0114369",
+        "tt1853728",
+        "tt0167261",
+        "tt0266697",
+        "tt2582802",
+        "tt0208092",
+        "tt1119646",
+        "tt0120737",
+        "tt0167260",
+        "tt0172495",
+        "tt0993846",
+        "tt1345836",
+        "tt0361748"
+      ],
+      "liked": [
+        "tt0816692",
+        "tt0338013"
+      ],
+      "disliked": [
+        "tt0418279"
+      ],
+      "whyIndex": 0,
+      "answers": {
+        "tt0468569": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt1375666": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0137523": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0816692": {
+          "reaction": "love",
+          "reasons": [
+            "tone.epic",
+            "world.space",
+            "cognitive.high",
+            "aesthetic.beautiful",
+            "ending.strong",
+            "aesthetic.soundtrack"
+          ],
+          "issues": [],
+          "text": "про космос и про отца с дочкой, музыка и финал до мурашек"
+        },
+        "tt0133093": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0169547": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0338013": {
+          "reaction": "love",
+          "reasons": [
+            "story.nonlinear",
+            "characters.romance",
+            "tone.melancholic",
+            "tone.whimsical"
+          ],
+          "issues": [],
+          "text": "про любовь, но по-умному и без соплей, грустно и странно"
+        },
+        "tt1798709": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0112471": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt1856101": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0418279": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "story.weak",
+              "hard": false
+            },
+            {
+              "f": "humor.silly",
+              "hard": false
+            },
+            {
+              "f": "aesthetic.effects",
+              "hard": false
+            },
+            {
+              "f": "story.predictable",
+              "hard": false
+            }
+          ],
+          "badQuality": false
+        },
+        "tt1099212": {
+          "reaction": "dislike",
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 4242
+    }
+  },
+  {
+    "persona": "couple",
+    "mode": "lazy",
+    "state": {
+      "step": "result",
+      "domain": "film",
+      "platform": "windows",
+      "situation": {
+        "time": "two",
+        "company": "pair",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "tension.low",
+            "against": "tension.high",
+            "label": "спокойное"
+          }
+        ]
+      },
+      "stops": [],
+      "asked": [
+        "lean:pace.fast|pace.slow",
+        "lean:tone.feelgood|tone.dark",
+        "lean:tension.high|tension.low"
+      ],
+      "shown": [
+        "tt0111161",
+        "tt0468569",
+        "tt1375666",
+        "tt0137523",
+        "tt0816692",
+        "tt0109830",
+        "tt0110912",
+        "tt0133093",
+        "tt0325980",
+        "tt0169547",
+        "tt0088763",
+        "tt0114369",
+        "tt1853728",
+        "tt0167261",
+        "tt0266697",
+        "tt2582802"
+      ],
+      "liked": [
+        "tt0816692",
+        "tt1375666"
+      ],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt1375666": {
+          "reaction": "like",
+          "reasons": [
+            "aesthetic.effects"
+          ],
+          "issues": []
+        },
+        "tt0816692": {
+          "reaction": "love",
+          "reasons": [
+            "tone.epic"
+          ],
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 4242
+    }
+  },
+  {
+    "persona": "danya",
+    "mode": "careful",
+    "state": {
+      "step": "result",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "tension.high",
+            "against": "tension.low",
+            "label": "адреналин"
+          },
+          {
+            "f": "humor.funny",
+            "against": "tone.dark",
+            "label": "посмеяться"
+          }
+        ]
+      },
+      "stops": [],
+      "asked": [
+        "lean:tension.high|tension.low",
+        "lean:humor.funny|tone.dark"
+      ],
+      "shown": [
+        "steam:730",
+        "steam:271590",
+        "steam:105600",
+        "steam:359550",
+        "steam:252490",
+        "steam:4000",
+        "steam:440",
+        "steam:553850"
+      ],
+      "liked": [
+        "steam:730",
+        "steam:1966720"
+      ],
+      "disliked": [
+        "steam:632470"
+      ],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [
+            "social.pvp",
+            "loop.shooting",
+            "tension.high",
+            "session.short",
+            "pace.fast"
+          ],
+          "issues": [],
+          "text": "катки с пацанами, клатчи, адреналин, быстрые раунды"
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:1966720": {
+          "reaction": "love",
+          "reasons": [
+            "tone.creepy",
+            "humor.funny",
+            "social.coop",
+            "tension.high"
+          ],
+          "issues": [],
+          "text": "ржали до слёз, страшно и смешно, с друзьями"
+        },
+        "steam:548430": {
+          "reaction": "love",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:252950": {
+          "reaction": "love",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:739630": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:550": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:945360": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:1172470": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:632470": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "loop.dialogue",
+              "hard": true
+            },
+            {
+              "f": "pace.slow",
+              "hard": false
+            }
+          ],
+          "badQuality": false,
+          "text": "стена текста, одни диалоги, медленно, уснул через двадцать минут, терпеть не могу такое"
+        },
+        "steam:289070": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "steam:1158310": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "steam:413150": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "steam:1174180": {
+          "reaction": "dislike",
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 355804
+    }
+  },
+  {
+    "persona": "danya",
+    "mode": "lazy",
+    "state": {
+      "step": "result",
+      "domain": "game",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "group",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "cognitive.low",
+            "against": "cognitive.high",
+            "label": "отключить голову"
+          },
+          {
+            "f": "session.short",
+            "against": "session.long",
+            "label": "короткие заходы"
+          }
+        ]
+      },
+      "stops": [],
+      "asked": [
+        "lean:cognitive.high|cognitive.low",
+        "lean:session.short|session.long",
+        "lean:difficulty.hard|difficulty.forgiving"
+      ],
+      "shown": [
+        "steam:730",
+        "steam:271590",
+        "steam:105600",
+        "steam:359550",
+        "steam:252490",
+        "steam:4000",
+        "steam:440",
+        "steam:553850"
+      ],
+      "liked": [
+        "steam:730",
+        "steam:359550"
+      ],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "steam:730": {
+          "reaction": "love",
+          "reasons": [],
+          "issues": []
+        },
+        "steam:359550": {
+          "reaction": "like",
+          "reasons": [
+            "cognitive.high"
+          ],
+          "issues": []
+        },
+        "steam:553850": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 667173
+    }
+  },
+  {
+    "persona": "dima",
+    "mode": "careful",
+    "state": {
+      "step": "result",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "humor.funny",
+            "against": "tone.melancholic",
+            "label": "поржать"
+          }
+        ]
+      },
+      "stops": [
+        "tone.creepy",
+        "content.disturbing"
+      ],
+      "asked": [
+        "lean:humor.funny|tone.melancholic",
+        "pair:characters.coming_of_age|world.superhero",
+        "pair:world.fantasy|pace.fast"
+      ],
+      "shown": [
+        "tt0910970",
+        "tt0110357",
+        "tt1049413",
+        "tt0266543",
+        "tt0114709",
+        "tt0198781",
+        "tt0435761",
+        "tt2096673"
+      ],
+      "liked": [
+        "tt2948356",
+        "tt3521164"
+      ],
+      "disliked": [
+        "tt0327597"
+      ],
+      "whyIndex": 0,
+      "answers": {
+        "tt2948356": {
+          "reaction": "love",
+          "reasons": [
+            "characters.friendship",
+            "humor.funny",
+            "content.family",
+            "cognitive.high",
+            "aesthetic.beautiful",
+            "story.mystery"
+          ],
+          "issues": [],
+          "text": "и ребёнку смешно, и мне интересно, детектив"
+        },
+        "tt3521164": {
+          "reaction": "love",
+          "reasons": [
+            "characters.female_lead",
+            "world.music",
+            "aesthetic.beautiful",
+            "content.family",
+            "tone.feelgood"
+          ],
+          "issues": [],
+          "text": "дочка подпевает песням"
+        },
+        "tt0441773": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0327597": {
+          "reaction": "dislike",
+          "issues": [
+            {
+              "f": "tone.dark",
+              "hard": false
+            },
+            {
+              "f": "tone.creepy",
+              "hard": true
+            }
+          ],
+          "badQuality": false,
+          "text": "ребёнок испугался, выключили на 20 минуте"
+        },
+        "tt3121722": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "tt2293640": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0114709": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0198781": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0435761": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [
+        {
+          "f": "pace.fast",
+          "qid": "pair:world.fantasy|pace.fast"
+        }
+      ],
+      "session": {
+        "notNow": []
+      },
+      "seed": 20261021
+    }
+  },
+  {
+    "persona": "dima",
+    "mode": "lazy",
+    "state": {
+      "step": "result",
+      "domain": "cartoon",
+      "platform": "windows",
+      "situation": {
+        "time": "any",
+        "company": "kids",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": null,
+        "leans": [
+          {
+            "f": "tone.feelgood",
+            "against": "tone.dark",
+            "label": "тёплое"
+          },
+          {
+            "f": "humor.funny",
+            "against": "tone.melancholic",
+            "label": "поржать"
+          },
+          {
+            "f": "pace.fast",
+            "against": "pace.slow",
+            "label": "динамичное"
+          }
+        ]
+      },
+      "stops": [],
+      "asked": [
+        "lean:tone.feelgood|tone.dark",
+        "lean:humor.funny|tone.melancholic",
+        "lean:pace.fast|pace.slow"
+      ],
+      "shown": [
+        "tt0910970",
+        "tt0110357",
+        "tt1049413",
+        "tt0266543",
+        "tt0114709",
+        "tt0198781",
+        "tt0435761",
+        "tt2096673"
+      ],
+      "liked": [
+        "tt1049413",
+        "tt0266543"
+      ],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt1049413": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt0266543": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 20261021
+    }
+  },
+  {
+    "persona": "lena",
+    "mode": "careful",
+    "state": {
+      "step": "result",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": "short",
+        "leans": []
+      },
+      "stops": [
+        "content.violence",
+        "content.disturbing",
+        "tone.creepy"
+      ],
+      "asked": [
+        "fact:episode",
+        "fact:ended",
+        "fact:era"
+      ],
+      "shown": [
+        "tt0903747",
+        "tt0944947",
+        "tt4574334",
+        "tt1520211",
+        "tt0108778",
+        "tt1475582",
+        "tt7366338",
+        "tt1190634"
+      ],
+      "liked": [
+        "tt2467372",
+        "tt0108778"
+      ],
+      "disliked": [
+        "tt5834204"
+      ],
+      "whyIndex": 0,
+      "answers": {
+        "tt2467372": {
+          "reaction": "love",
+          "reasons": [
+            "humor.funny",
+            "tone.lighthearted",
+            "tone.feelgood",
+            "structure.procedural"
+          ],
+          "issues": [],
+          "text": "добрые герои, короткие серии по 20 минут"
+        },
+        "tt0386676": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt1266020": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        },
+        "tt5834204": {
+          "reaction": "dislike",
+          "issues": [],
+          "badQuality": false
+        },
+        "tt0903747": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "tt0944947": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "tt1520211": {
+          "reaction": "dislike",
+          "issues": []
+        },
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "characters.ensemble",
+            "humor.funny",
+            "tone.feelgood",
+            "characters.friendship",
+            "cognitive.low"
+          ],
+          "issues": [],
+          "text": "можно включить любую серию фоном и отдыхать"
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 20261021
+    }
+  },
+  {
+    "persona": "lena",
+    "mode": "lazy",
+    "state": {
+      "step": "result",
+      "domain": "series",
+      "platform": "windows",
+      "situation": {
+        "time": null,
+        "company": "solo",
+        "popularity": null,
+        "era": null,
+        "onlyEnded": false,
+        "episodeLength": "short",
+        "leans": []
+      },
+      "stops": [],
+      "asked": [
+        "fact:popularity",
+        "fact:episode",
+        "fact:era"
+      ],
+      "shown": [
+        "tt0903747",
+        "tt0944947",
+        "tt4574334",
+        "tt1520211",
+        "tt0108778",
+        "tt1475582",
+        "tt7366338",
+        "tt1190634",
+        "tt5180504",
+        "tt0185906",
+        "tt0475784",
+        "tt2085059",
+        "tt8772296",
+        "tt8111088",
+        "tt0285403",
+        "tt11198330"
+      ],
+      "liked": [
+        "tt0108778",
+        "tt0285403"
+      ],
+      "disliked": [],
+      "whyIndex": 0,
+      "answers": {
+        "tt0108778": {
+          "reaction": "love",
+          "reasons": [
+            "characters.ensemble",
+            "humor.funny"
+          ],
+          "issues": []
+        },
+        "tt0285403": {
+          "reaction": "like",
+          "reasons": [],
+          "issues": []
+        }
+      },
+      "corrections": [],
+      "preferences": [],
+      "session": {
+        "notNow": []
+      },
+      "seed": 20261021,
+      "firstPage": {
+        "marks": [
+          {
+            "id": "tt0108778",
+            "reaction": "love"
+          }
+        ],
+        "known": {}
+      }
+    }
+  }
+]

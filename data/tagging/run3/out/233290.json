@@ -1,0 +1,14 @@
+{"appid": 233290, "features": [
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "p0", "q": "action-adventure stealth video game"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p0", "q": "he must solve the Bell Killer mystery so he can rejoin her"}]},
+{"f": "story.central", "r": 1, "ev": [{"id": "p1", "q": "receive praise for some aspects of its story and its original concept"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p3", "q": "a serial killer known as the Bell Killer begins murdering seemingly unconnected victims"}]},
+{"f": "tone.dark", "r": 1, "ev": [{"id": "p3", "q": "Detective Ronan O'Connor, who has a dark past"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "There are multiple areas in Salem to explore"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p2", "q": "There are numerous collectibles in the game"}]},
+{"f": "world.modern", "r": 3, "ev": [{"id": "p3", "q": "In present day Salem, Massachusetts, a serial killer known as the Bell Killer"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p2", "q": "Since Ronan is a ghost, he has a number of ghostly abilities such as teleportation and possession"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p1", "q": "most of the criticism centered around the poor combat, short length, lack of replay value, and lack of difficulty"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p8", "q": "criticizing it as leaving concepts unfinished"}]},
+{"f": "freedom.linear", "r": 1, "ev": [{"id": "p8", "q": "like a pick-a-path game where there's only one path"}]}
+]}

@@ -1,0 +1,9 @@
+{"appid": 539470, "features": [
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "Police Stories is a top-down shooter action game with tactical shooter elements"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "the tactical and strategic elements of Door Kickers and SWAT"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "while in co-op both are controlled by players"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p5", "q": "This adds to tension in gameplay and forces the player to act fast"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p2", "q": "who are assigned to deal with resisting criminals"}]},
+{"f": "story.mystery", "r": 1, "ev": [{"id": "p0", "q": "come upon a major conspiracy"}]},
+{"f": "pace.fast", "r": 2, "ev": [{"id": "p6", "q": "tense and fast, almost to a Hotline Miami degree"}]}
+]}

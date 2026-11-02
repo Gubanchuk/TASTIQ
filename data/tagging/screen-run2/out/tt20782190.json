@@ -1,0 +1,8 @@
+{"id": "tt20782190", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American sitcom television series"}]},
+{"f": "world.school", "r": 3, "ev": [{"id": "s", "q": "a high school teacher in Austin, Texas"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "p2", "q": "never feeling like homework"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "the series was canceled after two seasons"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "s", "q": "Evan wants to be a principled person but often runs into trouble because of it"}]},
+{"f": "humor.satire", "r": 1, "ev": [{"id": "p2", "q": "making for a biting and buoyant schoolhouse sitcom"}]}
+]}

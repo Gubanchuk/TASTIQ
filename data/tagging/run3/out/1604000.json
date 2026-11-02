@@ -1,0 +1,9 @@
+{"appid": 1604000, "features": [
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p3", "q": "centered around dialogue choices and a brief point-and-click segment"}]},
+{"f": "length.short", "r": 3, "ev": [{"id": "p4", "q": "short and visually striking adventure"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p0", "q": "examining themes of isolation, trauma, and depression"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "is a 2021 psychological horror visual novel"}]},
+{"f": "ending.strong", "r": 2, "ev": [{"id": "p4", "q": "giving special praise for avoiding a happy ending that would have otherwise undermined its story"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p3", "q": "The game offers five possible endings, each presented as dream sequences"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p4", "q": "short and visually striking adventure"}]}
+]}

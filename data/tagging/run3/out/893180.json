@@ -1,0 +1,12 @@
+{"appid": 893180, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Catherine is a puzzle video game developed by Atlus"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p1", "q": "navigate three-dimensional towers through combined platforming and puzzle-solving"}]},
+{"f": "loop.dialogue", "r": 2, "ev": [{"id": "p5", "q": "During dialogue and text segments, Vincent can choose several options to respond"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "The game's ending is affected by choices made by Vincent over the course of the story"}]},
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p1", "q": "torn between his feelings for his longtime girlfriend Katherine and the similarly named beauty Catherine"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p4", "q": "tormented by deadly nightmares after becoming involved with multiple women"}]},
+{"f": "content.sexual", "r": 2, "ev": [{"id": "p10", "q": "its treatment of relationships and sex"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p3", "q": "some criticism was directed towards its difficulty"}, {"id": "p9", "q": "criticized the game's difficulty due to random enemy AI"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p7", "q": "Colosseum features two players simultaneously playing a stage in order to reach the top first"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p7", "q": "Babel Mode features four large stages playable with up to two players"}]}
+]}

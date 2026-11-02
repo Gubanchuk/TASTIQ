@@ -1,0 +1,12 @@
+{"appid": 368230, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "strategy and resource management game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p1", "q": "building defenses against creatures that can attack"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "p1", "q": "pixel art-based two-dimensional landscape"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p2", "q": "appreciating the game's art and music"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p2", "q": "appreciating the game's art and music"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p5", "q": "While exploration of the kingdom can lead to finding more coins"}]},
+{"f": "loop.survival", "r": 2, "ev": [{"id": "p3", "q": "while surviving various foes that will attempt to capture the player-character's crown"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p6", "q": "the tension of the various random attacks created a great experience"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "p2", "q": "the tedious nature of some tasks in the game affected its end-game and replayability"}]},
+{"f": "pace.repetitive", "r": 1, "ev": [{"id": "p7", "q": "the early game of setting up the initial kingdom can become monotonous"}]}
+]}

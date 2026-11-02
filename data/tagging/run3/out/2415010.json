@@ -1,0 +1,9 @@
+{"appid": 2415010, "features": [
+{"f": "characters.romance", "r": 3, "ev": [{"id": "p1", "q": "featuring elements of romance and supernatural themes"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p3", "q": "The player can customize the main character's name, appearance, and gender"}]},
+{"f": "loop.dialogue", "r": 3, "ev": [{"id": "p3", "q": "Most of the game is centered around selecting options for the protagonist's interactions"}]},
+{"f": "story.choices", "r": 2, "ev": [{"id": "p8", "q": "These might not all help shape the ending"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p1", "q": "praising its writing, characterization, and the depth of its narrative"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "praising its writing, characterization, artwork, and soundtrack"}]},
+{"f": "humor.funny", "r": 1, "ev": [{"id": "p8", "q": "Jenni Lada of Siliconera wrote positively of its humor and replayability"}]}
+]}

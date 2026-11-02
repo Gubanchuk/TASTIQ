@@ -1,0 +1,14 @@
+{"appid": 2651280, "features": [
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p5", "q": "both Spider-Men are able to parry physical attacks"}]},
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p4", "q": "traverse an open world New York City and fight enemies"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "collectibles dispersed throughout the game's open world"}]},
+{"f": "loop.platforming", "r": 2, "ev": [{"id": "p5", "q": "allow them to glide across the city"}]},
+{"f": "characters.memorable", "r": 3, "ev": [{"id": "p10", "q": "Significant praise was directed towards the narrative and characterization of the primary cast"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p3", "q": "praise directed towards its narrative, characterization, and gameplay"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "transforms New York City into a hunting ground for super-powered individuals"}]},
+{"f": "world.scifi", "r": 1, "ev": [{"id": "p8", "q": "an extraterrestrial symbiote capable of bonding to human bodies"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "p8", "q": "seeks to perform a demonic ritual to bring about an eschatological event"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p4", "q": "Players can acquire new abilities and collect various Spider-Man suits"}]},
+{"f": "progression.collection", "r": 2, "ev": [{"id": "p4", "q": "collect various Spider-Man suits"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p5", "q": "for additional footing during stealth sequences suspended above enemies"}]}
+]}

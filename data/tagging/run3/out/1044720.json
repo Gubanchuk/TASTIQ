@@ -1,0 +1,8 @@
+{"appid": 1044720, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "Farthest Frontier is a city-building and survival management simulator."}]},
+{"f": "loop.survival", "r": 3, "ev": [{"id": "p1", "q": "establish stable food sources to survive environmental conditions"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p3", "q": "Players manage villager logistics by assigning professions"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p3", "q": "The simulation includes historical disease mechanics"}]},
+{"f": "stability.slow_start", "r": 1, "ev": [{"id": "p5", "q": "despite a sluggish early game pace while waiting for town expansions"}]},
+{"f": "stability.falls_off", "r": 1, "ev": [{"id": "p5", "q": "the late-game town management lacked the immediate appeal of the early survival stages"}]}
+]}

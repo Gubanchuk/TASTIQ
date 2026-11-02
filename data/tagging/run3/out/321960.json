@@ -1,0 +1,8 @@
+{"appid": 321960, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a 2015 turn-based strategy game"}, {"id": "p4", "q": "battles are structured on a chess-like board"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p4", "q": "building or upgrading the main castle allows for better expansion on the map"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p4", "q": "Players move their \"Heroes\" about the map"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p0", "q": "players control leaders with magical abilities termed as \"heroes\""}]},
+{"f": "social.pvp", "r": 1, "ev": [{"id": "p0", "q": "standalone and multiplayer scenarios"}]},
+{"f": "completeness.unfinished", "r": 2, "ev": [{"id": "p2", "q": "Ubisoft announced that further game development was halted"}]}
+]}

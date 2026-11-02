@@ -1,0 +1,6 @@
+{"appid": 2700, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "places players in charge of managing amusement parks"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p3", "q": "building or removing the rides, scenery and amenities"}]},
+{"f": "freedom.sandbox", "r": 2, "ev": [{"id": "p1", "q": "players have unlimited time and money to create their own custom parks"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p0", "q": "balance visitor engagement and profitability"}]}
+]}

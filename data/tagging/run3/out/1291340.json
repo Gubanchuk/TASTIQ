@@ -1,0 +1,12 @@
+{"appid": 1291340, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "Townscaper is a city builder game"}, {"id": "p2", "q": "Users construct an island town by placing and removing coloured blocks"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p0", "q": "a simple, minimalist user interface"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p6", "q": "serene sound design"}, {"id": "p2", "q": "calm body of endless water"}]},
+{"f": "tone.cozy", "r": 3, "ev": [{"id": "p4", "q": "quaint towns littered with cobbled streets and old churches"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p0", "q": "It features low poly graphics"}]},
+{"f": "aesthetic.beautiful", "r": 2, "ev": [{"id": "p6", "q": "serves up a gorgeous, illustrative art style"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p2", "q": "has no inherent objective or story"}]},
+{"f": "story.minimal", "r": 3, "ev": [{"id": "p2", "q": "has no inherent objective or story"}, {"id": "p2", "q": "more of a toy"}]},
+{"f": "tone.lighthearted", "r": 1, "ev": [{"id": "p5", "q": "an absolutely joyous little time waster"}]},
+{"f": "length.endless", "r": 1, "ev": [{"id": "p5", "q": "it'll keep popping back in for a quick vacation for many months to come"}]}
+]}

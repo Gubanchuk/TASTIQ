@@ -1,0 +1,31 @@
+{
+  "id": "tt0081938",
+  "name": "Spider-Man",
+  "kind": "series",
+  "domain": "cartoon",
+  "year": 1981,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "s": "The web slinging superhero battles crime in New York City.",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Spider-Man is a 1981–82 American animated TV series based on the Marvel Comics character of the same name. It is the second Spider-Man cartoon, following the 1967 series."
+    },
+    {
+      "id": "p1",
+      "section": "Synopsis",
+      "text": "The series featured Peter Parker having to balance his alter ego crimefighting with his responsibilities as a university student, a part-time photographer for the Daily Bugle and caring for his elderly Aunt May Parker."
+    },
+    {
+      "id": "p2",
+      "section": "Synopsis",
+      "text": "While Spider-Man fights his usual enemies, six episodes have him contending with Doctor Doom."
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Spider-Man_(1981_TV_series)"
+}

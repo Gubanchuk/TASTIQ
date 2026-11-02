@@ -1,0 +1,13 @@
+{"appid": 913740, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "in order to halt a looming apocalypse"}, {"id": "p5", "q": "an unsettling feeling of being lost or hunted"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p8", "q": "enhancing the game's bleak tone"}]},
+{"f": "loop.tactics", "r": 2, "ev": [{"id": "p3", "q": "The game features turn-based combat where the player queues up actions and attacks"}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "p3", "q": "through its exploration and puzzle-solving mechanics"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p3", "q": "through its exploration and puzzle-solving mechanics"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "p7", "q": "despite its short playthroughs"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p8", "q": "highlighting its emulation of Ito's style"}]},
+{"f": "aesthetic.pixel", "r": 3, "ev": [{"id": "p1", "q": "The game's art design has a 1-bit pixel art"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "p8", "q": "Destructoids Handley both praised the music"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p6", "q": "their predictable behavior led to repetitive tactics"}, {"id": "p6", "q": "Bell describing it as repetitive"}]},
+{"f": "combat.clunky", "r": 1, "ev": [{"id": "p6", "q": "Bell of RPS and Oscar Taylor-Kent of Play criticized the combat"}]}
+]}

@@ -1,0 +1,5 @@
+{"appid": 225840, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p0", "q": "Sven Co-op is a co-op variation of the 1998 first-person shooter Half-Life"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p2", "q": "Sven Co-op is a first-person shooter based on Half-Life"}]},
+{"f": "social.solo", "r": 1, "ev": [{"id": "p2", "q": "The game can also be played in single-player mode"}]}
+]}

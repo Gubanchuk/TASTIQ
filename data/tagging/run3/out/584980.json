@@ -1,0 +1,6 @@
+{"appid": 584980, "features": [
+{"f": "story.choices", "r": 3, "ev": [{"id": "p1", "q": "the user interaction influences characters and the events of the game"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p1", "q": "so viewers must react in real-time"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p2", "q": "an armed robbery crew steals a BMW i8 from the garage"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p3", "q": "Depending on the player's choices, it can be revealed that Parr previously paid May-Ling"}]}
+]}

@@ -1,0 +1,10 @@
+{"id": "tt2077823", "features": [
+{"f": "world.historical", "r": 3, "ev": [{"id": "p0", "q": "is an American historical drama television series"}]},
+{"f": "story.mystery", "r": 3, "ev": [{"id": "p3", "q": "compelling mystery more than makes up for its somewhat messy story"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p1", "q": "praise going towards the cinematography, production design, and performances of its cast"}]},
+{"f": "aesthetic.beautiful", "r": 3, "ev": [{"id": "p4", "q": "Perry Mason stands as an astounding visual feat"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p3", "q": "dripping in style"}]},
+{"f": "world.crime", "r": 2, "ev": [{"id": "s", "q": "most legendary criminal defense lawyer"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "the series was canceled after two seasons"}]},
+{"f": "story.weak", "r": 1, "ev": [{"id": "p3", "q": "its somewhat messy story"}]}
+]}

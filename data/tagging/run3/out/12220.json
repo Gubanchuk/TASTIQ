@@ -1,0 +1,8 @@
+{"appid": 12220, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "Gameplay focuses on an open world"}]},
+{"f": "loop.driving", "r": 2, "ev": [{"id": "p1", "q": "Most of the gameplay revolves around driving and shooting"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p1", "q": "Most of the gameplay revolves around driving and shooting"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p1", "q": "occasional role-playing and stealth elements"}]},
+{"f": "world.realistic", "r": 2, "ev": [{"id": "p1", "q": "fictional locales modelled after real-life cities"}]},
+{"f": "content.gore", "r": 1, "ev": [{"id": "p3", "q": "its adult nature, violent themes and cut content"}]}
+]}

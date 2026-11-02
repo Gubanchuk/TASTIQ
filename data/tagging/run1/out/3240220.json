@@ -1,0 +1,161 @@
+{
+ "appid": 3240220,
+ "features": [
+  {
+   "f": "world.modern",
+   "r": 3,
+   "ev": [
+    {
+     "id": "a",
+     "q": "they must pull off a series of dangerous heists to survive in a ruthless city"
+    }
+   ]
+  },
+  {
+   "f": "world.living",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236197242",
+     "q": "tons of stories crated by gameplay itself"
+    }
+   ]
+  },
+  {
+   "f": "freedom.open_world",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r236229621",
+     "q": "Увлекательная игра с огромным открытым миром"
+    },
+    {
+     "id": "r236197242",
+     "q": "Big world, little details"
+    }
+   ]
+  },
+  {
+   "f": "freedom.sandbox",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237172368",
+     "q": "sheer freedom like this one does"
+    }
+   ]
+  },
+  {
+   "f": "story.central",
+   "r": 3,
+   "ev": [
+    {
+     "id": "r238163100",
+     "q": "The story is another big reason why I love GTA V"
+    },
+    {
+     "id": "r237172368",
+     "q": "a brilliant three-protagonist story plus GTA Online"
+    }
+   ]
+  },
+  {
+   "f": "characters.memorable",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r238163100",
+     "q": "The characters are brilliant"
+    }
+   ]
+  },
+  {
+   "f": "loop.driving",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237172368",
+     "q": "cruising the city at sunset with the radio on"
+    }
+   ]
+  },
+  {
+   "f": "loop.shooting",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r236229621",
+     "q": "перестрелки, гонки и побочные задания"
+    }
+   ]
+  },
+  {
+   "f": "social.coop",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237172368",
+     "q": "which with friends is endlessly fun"
+    }
+   ]
+  },
+  {
+   "f": "length.endless",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237172368",
+     "q": "550+ hours and Los Santos still hasn't gotten old"
+    }
+   ]
+  },
+  {
+   "f": "aesthetic.beautiful",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237172368",
+     "q": "The Enhanced version looks and runs beautifully"
+    },
+    {
+     "id": "r237571885",
+     "q": "Attention to detail is just insane"
+    }
+   ]
+  },
+  {
+   "f": "humor.funny",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r235686224",
+     "q": "funny game, really love it when I play the story mode and freemode"
+    }
+   ]
+  },
+  {
+   "f": "progression.grind",
+   "r": 2,
+   "ev": [
+    {
+     "id": "r237843752",
+     "q": "Зашел в игру - фарм"
+    },
+    {
+     "id": "r237843752",
+     "q": "Играешь в сюжетку - фарм"
+    }
+   ]
+  },
+  {
+   "f": "pace.repetitive",
+   "r": 1,
+   "ev": [
+    {
+     "id": "r236229621",
+     "q": "а задания могут повторяться"
+    }
+   ]
+  }
+ ]
+}

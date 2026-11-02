@@ -1,0 +1,13 @@
+{"appid": 582010, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "a", "q": "Hunt alone or in co-op with up to three other players"}]},
+{"f": "world.living", "r": 3, "ev": [{"id": "a", "q": "a living, breathing ecosystem"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "a", "q": "Battle gigantic monsters in epic locales"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "a", "q": "elder dragons trek across the sea to travel to the land known as the New World"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "a", "q": "use materials collected from fallen foes to craft new gear"}]},
+{"f": "combat.weighty", "r": 2, "ev": [{"id": "r237621198", "q": "The combat is satisfying"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "r237621198", "q": "every hard-earned victory feels incredible"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "r237621198", "q": "suggesting armour builds"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "r236297654", "q": "the controls are awful, and so is the clunky and confusing UI"}, {"id": "r236810477", "q": "over actually being responsive and fun to control"}]},
+{"f": "pace.draggy", "r": 1, "ev": [{"id": "r237501604", "q": "This game is a chore to play a lot of the time"}]},
+{"f": "aesthetic.soundtrack", "r": 1, "ev": [{"id": "r236952571", "q": "his amazing music"}]}
+]}

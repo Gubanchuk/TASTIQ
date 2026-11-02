@@ -1,0 +1,7 @@
+{"appid": 246900, "features": [
+{"f": "world.scifi", "r": 3, "ev": [{"id": "p0", "q": "a 2015 science fiction simulation video game"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p4", "q": "some care and planning are necessary to avoid re-cleaning the same area multiple times"}]},
+{"f": "humor.dark", "r": 2, "ev": [{"id": "p5", "q": "employees consuming viscera, tripping over buckets, choking on discarded bullet shells"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "clean up the bloody aftermath of a successfully repelled alien invasion"}]},
+{"f": "content.gore", "r": 2, "ev": [{"id": "p1", "q": "dismembered bodies of aliens and humans"}]}
+]}

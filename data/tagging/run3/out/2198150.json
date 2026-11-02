@@ -1,0 +1,11 @@
+{"appid": 2198150, "features": [
+{"f": "loop.building", "r": 3, "ev": [{"id": "p0", "q": "Players can construct houses, castles, and other buildings from the medieval era"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p1", "q": "Tiny Glade is a building simulator and sandbox"}]},
+{"f": "story.minimal", "r": 3, "ev": [{"id": "p1", "q": "It does not include any tasks or story line that the player can follow and complete"}]},
+{"f": "tone.cozy", "r": 3, "ev": [{"id": "p0", "q": "Various critics have considered it a relaxing and cosy game"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p4", "q": "a small slice of flow state to pamper your brain"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p4", "q": "everything is awash in a pleasantly low-detail pastel goodness"}]},
+{"f": "aesthetic.beautiful", "r": 1, "ev": [{"id": "p3", "q": "with pleasant and charming aesthetic and big area for creativity"}]},
+{"f": "world.historical", "r": 2, "ev": [{"id": "p2", "q": "All objects in the game are medieval-styled"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p0", "q": "but noted the limited amount of content"}]}
+]}

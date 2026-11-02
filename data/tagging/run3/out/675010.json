@@ -1,0 +1,6 @@
+{"appid": 675010, "features": [
+{"f": "loop.driving", "r": 3, "ev": [{"id": "p1", "q": "driving through muddy unpaved roads in aging Soviet vehicles"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "There is both a single-player and multiplayer co-op mode"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p2", "q": "various real life aspects of off-roading simulation"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p2", "q": "increased fuel consumption for hardcore compared to casual"}]}
+]}

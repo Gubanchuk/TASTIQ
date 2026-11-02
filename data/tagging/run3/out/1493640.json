@@ -1,0 +1,7 @@
+{"appid": 1493640, "features": [
+{"f": "story.choices", "r": 2, "ev": [{"id": "p1", "q": "players will have to make numerous choices, influencing the game's story"}]},
+{"f": "world.historical", "r": 3, "ev": [{"id": "p2", "q": "The story is set in 1695"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p3", "q": "The creature is revealed to be an extremely powerful ghost"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p1", "q": "a pair of ghost hunters named Antea Duarte and Red mac Raith"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "p0", "q": "investigate a small but haunted community named New Eden"}]}
+]}

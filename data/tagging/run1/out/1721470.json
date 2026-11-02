@@ -1,0 +1,11 @@
+{"appid": 1721470, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "r236418044", "q": "The atmosphere is nicely creepy"}, {"id": "d", "q": "You must stay alive in this horror/puzzle adventure."}]},
+{"f": "loop.puzzles", "r": 2, "ev": [{"id": "d", "q": "Use your GrabPack to hack electrical circuits or nab anything from afar"}]},
+{"f": "loop.stealth", "r": 2, "ev": [{"id": "d", "q": "don't get caught"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "d", "q": "Explore the mysterious facility"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "a", "q": "you must explore the abandoned factory and uncover the truth"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "r237353378", "q": "It is a mascot horror game with horrorfing lore"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "r237353378", "q": "has many interesting characters sparing no details"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "r236882028", "q": "Музыка + вайб для ушей"}]},
+{"f": "length.short", "r": 2, "ev": [{"id": "r238112326", "q": "For the first game of the series and a short one."}]}
+]}

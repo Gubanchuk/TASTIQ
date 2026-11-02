@@ -1,0 +1,7 @@
+{"appid": 1605220, "features": [
+{"f": "loop.management", "r": 2, "ev": [{"id": "p2", "q": "The player can upgrade their main base and the towns they control with different buildings"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p2", "q": "The player can upgrade their main base and the towns they control with different buildings"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p1", "q": "The player can research different technologies in the skill tree, ranging from military to economic"}]},
+{"f": "loop.exploration", "r": 1, "ev": [{"id": "p2", "q": "The player uses ornithopters in order to scout out the desert and the sites within it"}]},
+{"f": "cognitive.high", "r": 1, "ev": [{"id": "p2", "q": "The player can only expand and survive if they have enough solari, military power, water and authority"}]}
+]}

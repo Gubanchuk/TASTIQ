@@ -1,0 +1,12 @@
+{"id": "tt3428912", "features": [
+{"f": "world.crime", "r": 3, "ev": [{"id": "p0", "q": "a British crime drama television series"}]},
+{"f": "content.violence", "r": 2, "ev": [{"id": "p4", "q": "criticised the show for its graphic content"}, {"id": "p5", "q": "the level of violence had been carefully considered"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p7", "q": "Happy Valley sounds so bleak on paper"}]},
+{"f": "characters.acting", "r": 3, "ev": [{"id": "p6", "q": "draws an astonishing performance from Sarah Lancashire"}]},
+{"f": "characters.family", "r": 2, "ev": [{"id": "p7", "q": "the love that Cawood has for her family"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p6", "q": "complex, thrilling and brilliantly written and acted"}]},
+{"f": "ending.happy", "r": 2, "ev": [{"id": "p7", "q": "a happy ending for a character who truly deserves it"}]},
+{"f": "ending.strong", "r": 2, "ev": [{"id": "p7", "q": "garnered much praise from critics"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "the third and final series on 1 January 2023"}]},
+{"f": "content.disturbing", "r": 1, "ev": [{"id": "p7", "q": "storylines about drugs, rape and murder"}]}
+]}

@@ -1,0 +1,6 @@
+{"appid": 961200, "features": [
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p1", "q": "is a multiplayer online battle arena (MOBA) video game in a third-person perspective"}, {"id": "p2", "q": "ten participants are divided into two opposing teams, each comprising five players"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "fostering a collaborative effort toward constructing a balanced team composition"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p3", "q": "These items can modify character abilities in various ways"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "experience is received to increase a character's attributes, such as strength, attack speed, and health"}]}
+]}

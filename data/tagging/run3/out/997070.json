@@ -1,0 +1,12 @@
+{"appid": 997070, "features": [
+{"f": "characters.companions", "r": 3, "ev": [{"id": "p1", "q": "allowing players to assemble a team of heroes of their own"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p1", "q": "it features an online co-op mode"}]},
+{"f": "combat.fast", "r": 2, "ev": [{"id": "p3", "q": "The game features a combat system chaining attacks, dodges, abilities, skills and elements"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p1", "q": "Each hero possesses a variety of costume customization features"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p1", "q": "as well as the capacity to upgrade their powers and abilities using a skill tree"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p2", "q": "critics praising its story and combat"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "p9", "q": "the charming and endearing Ms. Marvel"}]},
+{"f": "pace.repetitive", "r": 2, "ev": [{"id": "p2", "q": "criticizing its repetition"}, {"id": "p10", "q": "grafting on an annoying, overly repetitive games-as-a-service component"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p2", "q": "lack of substantial content"}]},
+{"f": "progression.grind", "r": 1, "ev": [{"id": "p10", "q": "you'll get bored long before you grind your way to the top"}]}
+]}

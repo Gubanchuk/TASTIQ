@@ -1,0 +1,10 @@
+{"appid": 1127500, "features": [
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Mini Motorways is a puzzle strategy game"}]},
+{"f": "loop.building", "r": 2, "ev": [{"id": "p0", "q": "creating a network of roads to connect coloured houses to buildings"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p0", "q": "allowing cars to reach their destination before the timer runs out"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p8", "q": "it is fiendishly difficult and filled with tactical nuance"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p8", "q": "it is also joyously mellow"}]},
+{"f": "aesthetic.soundtrack", "r": 2, "ev": [{"id": "p8", "q": "praised the game's soundtrack and minimalistic art style"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p8", "q": "praised the game's soundtrack and minimalistic art style"}]},
+{"f": "pace.fast", "r": 1, "ev": [{"id": "p8", "q": "criticising the frantic pace of gameplay"}]}
+]}

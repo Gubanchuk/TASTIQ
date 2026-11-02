@@ -1,0 +1,14 @@
+{"appid": 413150, "features": [
+{"f": "loop.life_sim", "r": 3, "ev": [{"id": "a", "q": "Raise animals, grow crops, start an orchard"}]},
+{"f": "tone.cozy", "r": 3, "ev": [{"id": "r237279765", "q": "A cozy and enjoyable experience"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "r237279765", "q": "do everything for the maximum possible profit"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "r236353356", "q": "great for relaxation, chilling"}]},
+{"f": "characters.memorable", "r": 2, "ev": [{"id": "r237854372", "q": "The villagers have more emotional baggage than a Dostoevsky protagonist"}]},
+{"f": "characters.romance", "r": 2, "ev": [{"id": "r237854372", "q": "maybe fall in love"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "a", "q": "Invite 1-7 players to join you in the valley online"}]},
+{"f": "pace.draggy", "r": 2, "ev": [{"id": "r235750385", "q": "the game is so insanely slow"}, {"id": "r236939850", "q": "It's just menial time wasting and arbitrary progression"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r237854372", "q": "hoarding rocks like a Victorian chimney sweep"}]},
+{"f": "aesthetic.pixel", "r": 2, "ev": [{"id": "r237178207", "q": "пиксельная игра, где надо поливать огород"}]},
+{"f": "length.endless", "r": 2, "ev": [{"id": "r236413585", "q": "Отыграла в стардью семь игровых лет"}]},
+{"f": "tone.melancholic", "r": 1, "ev": [{"id": "r237208756", "q": "Any time I fell back into depression I play this game"}]}
+]}

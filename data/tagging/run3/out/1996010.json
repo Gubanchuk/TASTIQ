@@ -1,0 +1,14 @@
+{"appid": 1996010, "features": [
+{"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "is a 2024 survival horror video game"}, {"id": "p9", "q": "effective jump scares"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "uncovers the dark secrets the park hides"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p4", "q": "Combat requires players to aim and shoot at monsters"}]},
+{"f": "loop.survival", "r": 1, "ev": [{"id": "p4", "q": "Players have limited health, which is depleted by hits from enemies"}]},
+{"f": "loop.puzzles", "r": 3, "ev": [{"id": "p0", "q": "Gameplay focuses on exploring the park, solving puzzles, and defeating enemies"}]},
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p0", "q": "Gameplay focuses on exploring the park, solving puzzles, and defeating enemies"}, {"id": "p5", "q": "Players gain access to new areas through exploration"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p5", "q": "collect notes and diary entries scattered throughout the park"}, {"id": "p10", "q": "effective use of environmental storytelling to reveal lore"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p7", "q": "Its founder, Edward Crow, mysteriously disappeared"}]},
+{"f": "story.central", "r": 2, "ev": [{"id": "p10", "q": "The narrative and writing were well-received"}]},
+{"f": "characters.memorable", "r": 1, "ev": [{"id": "p11", "q": "well-written characters and plotting"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "p9", "q": "wonderful retro graphical style"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p6", "q": "Enemies deal more damage, supplies are rarer"}]}
+]}

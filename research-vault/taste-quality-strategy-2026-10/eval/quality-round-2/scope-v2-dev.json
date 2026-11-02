@@ -1,0 +1,185 @@
+[
+  {
+    "id": "s01",
+    "split": "dev",
+    "domain": "game",
+    "text": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+    "wants": [
+      [
+        "cognitive.high"
+      ]
+    ],
+    "noAvoids": [
+      "cognitive.high",
+      "difficulty.hard"
+    ],
+    "noWants": [
+      "cognitive.low"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3030,
+        "input_tokens_details": {
+          "cache_write_tokens": 3027,
+          "cached_tokens": 0
+        },
+        "output_tokens": 85,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 3115
+      },
+      "ms": 3809,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не хочу сложных боёв, зато хочу сложные головоломки.",
+        "wants": [
+          {
+            "f": "loop.puzzles",
+            "evidence": "хочу сложные головоломки"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": false,
+      "failures": [
+        "missing wants: cognitive.high"
+      ]
+    }
+  },
+  {
+    "id": "s02",
+    "split": "dev",
+    "domain": "film",
+    "text": "Не хочу жестокости по отношению к животным. Экшен с драками между людьми нормально.",
+    "noAvoids": [
+      "content.violence"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2742,
+        "input_tokens_details": {
+          "cache_write_tokens": 2739,
+          "cached_tokens": 0
+        },
+        "output_tokens": 53,
+        "output_tokens_details": {
+          "reasoning_tokens": 22
+        },
+        "total_tokens": 2795
+      },
+      "ms": 1814,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не хочу жестокости по отношению к животным. Экшен с драками между людьми нормально.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s03",
+    "split": "dev",
+    "domain": "film",
+    "text": "Не люблю пошлые шутки, но сегодня хочу остроумную комедию.",
+    "noAvoids": [
+      "humor.funny"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 2741,
+        "input_tokens_details": {
+          "cache_write_tokens": 32,
+          "cached_tokens": 2706
+        },
+        "output_tokens": 85,
+        "output_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "total_tokens": 2826
+      },
+      "ms": 2583,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Не люблю пошлые шутки, но сегодня хочу остроумную комедию.",
+        "wants": [
+          {
+            "f": "humor.funny",
+            "evidence": "сегодня хочу остроумную комедию"
+          }
+        ],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": null
+    },
+    "assessment": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  {
+    "id": "s04",
+    "split": "dev",
+    "domain": "game",
+    "text": "Хочу поспокойнее бои, но напряжённый сюжет.",
+    "wants": [
+      [
+        "tension.high"
+      ]
+    ],
+    "noWants": [
+      "tension.low"
+    ],
+    "noAvoids": [
+      "tension.high"
+    ],
+    "minutes": null,
+    "result": {
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 3028,
+        "input_tokens_details": {
+          "cache_write_tokens": 26,
+          "cached_tokens": 2999
+        },
+        "output_tokens": 137,
+        "output_tokens_details": {
+          "reasoning_tokens": 77
+        },
+        "total_tokens": 3165
+      },
+      "ms": 3896,
+      "proposal": {
+        "version": 1,
+        "sourceText": "Хочу поспокойнее бои, но напряжённый сюжет.",
+        "wants": [],
+        "avoids": [],
+        "time": null
+      },
+      "clarification": "Что ты имеешь в виду под «поспокойнее бои»: более медленный темп, меньшую сложность или что-то другое?"
+    },
+    "assessment": {
+      "pass": false,
+      "failures": [
+        "missing wants: tension.high"
+      ]
+    }
+  }
+]

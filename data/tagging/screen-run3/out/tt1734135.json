@@ -1,0 +1,12 @@
+{"id": "tt1734135", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American animated fantasy television series created by Guillermo del Toro"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p0", "q": "stumbles across a secret realm inhabited by trolls and other magical creatures"}]},
+{"f": "world.supernatural", "r": 2, "ev": [{"id": "p0", "q": "protecting the world from the dangerous monsters that lurk in the shadows"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "p0", "q": "shadows of their small suburban town"}]},
+{"f": "characters.coming_of_age", "r": 2, "ev": [{"id": "s", "q": "an average teen assumes an unlikely destiny"}]},
+{"f": "characters.friendship", "r": 1, "ev": [{"id": "p0", "q": "he and his friends are charged with protecting the world"}]},
+{"f": "tone.epic", "r": 2, "ev": [{"id": "s", "q": "sets out to save two worlds"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "The third and final season premiered on May 25, 2018"}]},
+{"f": "structure.serialized", "r": 2, "ev": [{"id": "p4", "q": "The story was continued in a science fiction inspired follow-up series"}]},
+{"f": "audience.kids", "r": 2, "ev": [{"id": "p9", "q": "is targeted at a younger audience"}]}
+]}

@@ -1,0 +1,5771 @@
+{
+  "at": "2026-10-31T18:49:04.959Z",
+  "source": "actual UI clicks, AI_ACCESS=off, isolated localhost5178 journal",
+  "desktop": [
+    {
+      "text": "посмеяться",
+      "x": 297,
+      "y": 209.875,
+      "w": 746,
+      "h": 58,
+      "visible": true,
+      "hit": true
+    },
+    {
+      "text": "мрачное",
+      "x": 297,
+      "y": 267.875,
+      "w": 746,
+      "h": 58,
+      "visible": true,
+      "hit": true
+    },
+    {
+      "text": "Всё равно",
+      "x": 296,
+      "y": 852,
+      "w": 91.21875,
+      "h": 36,
+      "visible": true,
+      "hit": true
+    }
+  ],
+  "mobile": [
+    {
+      "text": "посмеяться",
+      "x": 17,
+      "y": 208.09375,
+      "w": 356,
+      "h": 58,
+      "visible": true,
+      "hit": true
+    },
+    {
+      "text": "мрачное",
+      "x": 17,
+      "y": 266.09375,
+      "w": 356,
+      "h": 58,
+      "visible": true,
+      "hit": true
+    },
+    {
+      "text": "Всё равно",
+      "x": 16,
+      "y": 659,
+      "w": 91.21875,
+      "h": 36,
+      "visible": true,
+      "hit": true
+    }
+  ],
+  "firstState": {
+    "step": "ask",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "friend",
+      "childAge": null,
+      "partySize": null,
+      "note": "",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [],
+      "intent": null
+    },
+    "stops": [
+      "social.pvp"
+    ],
+    "asked": [],
+    "shown": [
+      "steam:730",
+      "steam:271590",
+      "steam:105600",
+      "steam:359550",
+      "steam:252490",
+      "steam:4000",
+      "steam:553850",
+      "steam:1245620"
+    ],
+    "liked": [
+      "steam:728880",
+      "steam:1225570"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:728880": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop"
+        ],
+        "issues": []
+      },
+      "steam:1225570": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop",
+          "loop.puzzles"
+        ],
+        "issues": []
+      },
+      "steam:548430": {
+        "reaction": "like",
+        "reasons": [],
+        "issues": []
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 841004
+  },
+  "positiveState": {
+    "step": "ask",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "friend",
+      "childAge": null,
+      "partySize": null,
+      "note": "",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [
+        {
+          "f": "humor.funny",
+          "against": "tone.dark",
+          "label": "посмеяться"
+        }
+      ],
+      "intent": null
+    },
+    "stops": [
+      "social.pvp"
+    ],
+    "asked": [
+      "lean:humor.funny|tone.dark"
+    ],
+    "shown": [
+      "steam:730",
+      "steam:271590",
+      "steam:105600",
+      "steam:359550",
+      "steam:252490",
+      "steam:4000",
+      "steam:553850",
+      "steam:1245620"
+    ],
+    "liked": [
+      "steam:728880",
+      "steam:1225570"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:728880": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop"
+        ],
+        "issues": []
+      },
+      "steam:1225570": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop",
+          "loop.puzzles"
+        ],
+        "issues": []
+      },
+      "steam:548430": {
+        "reaction": "like",
+        "reasons": [],
+        "issues": []
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 841004
+  },
+  "backState": {
+    "step": "ask",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "friend",
+      "childAge": null,
+      "partySize": null,
+      "note": "",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [],
+      "intent": null
+    },
+    "stops": [
+      "social.pvp"
+    ],
+    "asked": [],
+    "shown": [
+      "steam:730",
+      "steam:271590",
+      "steam:105600",
+      "steam:359550",
+      "steam:252490",
+      "steam:4000",
+      "steam:553850",
+      "steam:1245620"
+    ],
+    "liked": [
+      "steam:728880",
+      "steam:1225570"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:728880": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop"
+        ],
+        "issues": []
+      },
+      "steam:1225570": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop",
+          "loop.puzzles"
+        ],
+        "issues": []
+      },
+      "steam:548430": {
+        "reaction": "like",
+        "reasons": [],
+        "issues": []
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 841004
+  },
+  "skipState": {
+    "step": "ask",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "friend",
+      "childAge": null,
+      "partySize": null,
+      "note": "",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [],
+      "intent": null
+    },
+    "stops": [
+      "social.pvp"
+    ],
+    "asked": [
+      "lean:humor.funny|tone.dark"
+    ],
+    "shown": [
+      "steam:730",
+      "steam:271590",
+      "steam:105600",
+      "steam:359550",
+      "steam:252490",
+      "steam:4000",
+      "steam:553850",
+      "steam:1245620"
+    ],
+    "liked": [
+      "steam:728880",
+      "steam:1225570"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:728880": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop"
+        ],
+        "issues": []
+      },
+      "steam:1225570": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop",
+          "loop.puzzles"
+        ],
+        "issues": []
+      },
+      "steam:548430": {
+        "reaction": "like",
+        "reasons": [],
+        "issues": []
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 841004
+  },
+  "finalState": {
+    "step": "result",
+    "domain": "game",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "friend",
+      "childAge": null,
+      "partySize": null,
+      "note": "",
+      "popularity": null,
+      "era": "any",
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": [
+        {
+          "f": "difficulty.forgiving",
+          "against": "difficulty.hard",
+          "label": "щадяще"
+        }
+      ],
+      "intent": null
+    },
+    "stops": [
+      "social.pvp"
+    ],
+    "asked": [
+      "lean:humor.funny|tone.dark",
+      "fact:era",
+      "lean:difficulty.hard|difficulty.forgiving"
+    ],
+    "shown": [
+      "steam:730",
+      "steam:271590",
+      "steam:105600",
+      "steam:359550",
+      "steam:252490",
+      "steam:4000",
+      "steam:553850",
+      "steam:1245620"
+    ],
+    "liked": [
+      "steam:728880",
+      "steam:1225570"
+    ],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {
+      "steam:728880": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop"
+        ],
+        "issues": []
+      },
+      "steam:1225570": {
+        "reaction": "love",
+        "reasons": [
+          "social.coop",
+          "loop.puzzles"
+        ],
+        "issues": []
+      },
+      "steam:548430": {
+        "reaction": "like",
+        "reasons": [],
+        "issues": []
+      }
+    },
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": []
+    },
+    "seed": 841004
+  },
+  "text": "Назад\nПодбор\nВот что я подобрал\n\nСравнил 952 игры после отсева.\n\nTrine\n2009\nВероятно подойдёт\nTrine\n2009\nЕщё 2 причины в подробностях\nНе проверено, можно ли играть всей компанией (2).\nЕщё 3 варианта ↓\nВ «Моё»\nУже играл\nНе сейчас\nОткрыть в Steam\nВыбираю на сегодня\nПодходит на сегодня?\nПодходит ли сегодня\nНе проверено, можно ли играть всей компанией (2).\nПочему\n\n«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть\n\nСтатья в Википедии: «Также есть функция кооперативной игры, при которой несколько игроков могут присоединиться в любой момент» источникоригинал\nЕщё 1 подтверждение\n\n«Unravel Two»: ты отметил «головоломки», здесь это тоже есть\n\nСтатья в Википедии: «которые могут сражаться с врагами и решать экологические головоломки» источникоригинал\nЕщё 1 подтверждение\n\n«Unravel Two»: ещё «платформинг» и «команда и спутники». Это ты не отмечал, вес слабый\n\nСтатья в Википедии: «Trine — платформер-головоломка» источникоригинал\nЕщё 2 подтверждения\n\nПод настроение «щадяще»: «щадящая сложность»\n\nСтатья в Википедии: «При пересечении контрольной точки все погибшие персонажи воскрешаются» источникоригинал\nУчти\n\nНет данных: длина\n\nФакты\nэкшен, приключения, казуальная\nЕщё варианты\nOperation Tango\n2021\nНе проверено, можно ли играть всей компанией (2).\nВероятно подойдёт\nУже играл\nPortal 2\n2011\nНе проверено, можно ли играть всей компанией (2).\nВероятно подойдёт\nУже играл\nP\nPikuniku\n2019\nНе проверено, можно ли играть всей компанией (2).\nВероятно подойдёт\nУже играл\nПоправить, что я понял о тебе\nПочему не показал…",
+  "errors": [],
+  "events": [
+    {
+      "path": "/api/meta",
+      "input": null,
+      "status": 200,
+      "output": {
+        "domains": {
+          "game": {
+            "items": 4952,
+            "dictionary": "games-2026-10-20.2",
+            "label": "Поиграть",
+            "labels": {
+              "tone.cozy": "уютная атмосфера",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грусть и меланхолия",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое весёлое настроение",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное и причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.serene": "спокойствие и медитативность",
+              "tension.high": "держит в напряжении",
+              "tension.low": "без стресса",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливый темп",
+              "pace.repetitive": "однообразно",
+              "pace.draggy": "затянуто, провисает",
+              "story.central": "сильный сюжет",
+              "story.choices": "выборы влияют на историю",
+              "story.mystery": "загадка и расследование",
+              "story.lore": "история через мир и лор",
+              "story.minimal": "сюжета почти нет",
+              "ending.strong": "сильный финал",
+              "ending.bittersweet": "горький финал",
+              "ending.weak": "слабый финал",
+              "characters.memorable": "живые персонажи",
+              "characters.companions": "команда и спутники",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.custom_hero": "свой герой",
+              "characters.romance": "романтические линии",
+              "world.living": "живой мир",
+              "world.realistic": "реалистичный мир",
+              "world.fantasy": "фэнтези",
+              "world.scifi": "фантастика и космос",
+              "world.historical": "историческая эпоха",
+              "world.postapoc": "постапокалипсис",
+              "world.empty": "пустой мир",
+              "world.modern": "современный мир",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стилизованный визуал",
+              "aesthetic.pixel": "пиксель-арт",
+              "aesthetic.soundtrack": "сильная музыка",
+              "content.gore": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.family": "без жести, подходит всем",
+              "humor.funny": "много юмора",
+              "humor.dark": "чёрный юмор",
+              "cognitive.low": "можно не напрягать голову",
+              "cognitive.high": "надо думать и планировать",
+              "length.short": "короткая, на пару вечеров",
+              "length.long": "большая, на десятки часов",
+              "length.endless": "можно играть годами",
+              "completeness.unfinished": "недоделана",
+              "stability.falls_off": "проседает к концу",
+              "stability.slow_start": "цепляет не сразу",
+              "loop.shooting": "стрельба",
+              "loop.melee": "ближний бой",
+              "loop.exploration": "исследование мира",
+              "loop.building": "строительство и крафт",
+              "loop.management": "управление и экономика",
+              "loop.tactics": "тактические бои",
+              "loop.stealth": "стелс",
+              "loop.driving": "езда и гонки",
+              "loop.platforming": "платформинг",
+              "loop.dialogue": "разговоры и решения",
+              "loop.looting": "лут и снаряжение",
+              "loop.survival": "выживание",
+              "loop.life_sim": "быт и ферма",
+              "loop.cards": "карты и колоды",
+              "loop.puzzles": "головоломки",
+              "combat.weighty": "весомый бой",
+              "combat.fast": "быстрый зрелищный бой",
+              "combat.precise": "отзывчивое управление",
+              "combat.clunky": "деревянное управление",
+              "progression.power": "растёшь в силе",
+              "progression.builds": "разные билды",
+              "progression.collection": "собирать и коллекционировать",
+              "progression.grind": "гринд",
+              "difficulty.hard": "сложно, наказывает за ошибки",
+              "difficulty.forgiving": "щадящая сложность",
+              "social.solo": "одиночная игра",
+              "social.coop": "кооператив",
+              "social.pvp": "соревнование с людьми",
+              "freedom.open_world": "открытый мир",
+              "freedom.sandbox": "песочница: цели ставишь сам",
+              "freedom.linear": "линейная, ведут по истории",
+              "session.short": "короткие заходы",
+              "session.long": "садиться надолго",
+              "company:solo": "один",
+              "company:friend": "с другом",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          },
+          "film": {
+            "items": 32172,
+            "dictionary": "screen-2026-10-20.1",
+            "label": "Посмотреть фильм",
+            "labels": {
+              "tone.feelgood": "тёплое, доброе",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грустное, пробирает",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое, весёлое",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное, причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.inspiring": "вдохновляет",
+              "tone.atmospheric": "атмосферное",
+              "tone.cheesy": "наивно, слащаво",
+              "tension.high": "держит в напряжении",
+              "tension.low": "спокойное, без нервов",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливое",
+              "pace.draggy": "затянуто, скучно",
+              "story.twist": "неожиданные повороты",
+              "story.nonlinear": "нелинейный сюжет",
+              "story.complex": "сложный, надо вникать",
+              "story.mystery": "загадка и расследование",
+              "story.true": "по реальным событиям",
+              "story.dialogue": "держится на диалогах",
+              "story.revenge": "месть",
+              "story.weak": "слабый сюжет, дыры",
+              "story.predictable": "предсказуемо",
+              "ending.happy": "счастливый финал",
+              "ending.sad": "горький финал",
+              "ending.strong": "сильный финал",
+              "ending.weak": "слабый финал",
+              "characters.acting": "сильная актёрская игра",
+              "characters.memorable": "живые, сложные персонажи",
+              "characters.ensemble": "много героев, ансамбль",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.antihero": "антигерой",
+              "characters.female_lead": "сильная героиня",
+              "characters.romance": "любовная линия",
+              "characters.friendship": "дружба",
+              "characters.family": "семья и отношения",
+              "characters.coming_of_age": "взросление",
+              "characters.unlikeable": "раздражающие персонажи",
+              "world.scifi": "фантастика",
+              "world.space": "космос",
+              "world.fantasy": "фэнтези и магия",
+              "world.supernatural": "мистика",
+              "world.dystopia": "антиутопия",
+              "world.postapoc": "постапокалипсис",
+              "world.historical": "историческая эпоха",
+              "world.war": "война",
+              "world.crime": "криминал",
+              "world.school": "школа и подростки",
+              "world.smalltown": "маленький город",
+              "world.timetravel": "путешествия во времени",
+              "world.superhero": "супергерои",
+              "world.western": "вестерн",
+              "world.sports": "спорт",
+              "world.music": "музыка и мюзикл",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стильно и необычно снято",
+              "aesthetic.soundtrack": "сильная музыка",
+              "aesthetic.effects": "зрелищные спецэффекты",
+              "content.violence": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.profanity": "много мата",
+              "content.family": "для всей семьи",
+              "content.disturbing": "тяжёлые темы",
+              "humor.funny": "смешно",
+              "humor.dark": "чёрный юмор",
+              "humor.satire": "сатира и ирония",
+              "humor.silly": "дурашливый юмор",
+              "humor.deadpan": "сухой, британский юмор",
+              "cognitive.low": "можно смотреть не напрягаясь",
+              "cognitive.high": "заставляет думать",
+              "length.short": "короткий",
+              "length.long": "длинный",
+              "completeness.running": "ещё выходит",
+              "completeness.ended": "закончен",
+              "completeness.unfinished": "оборван, не закончен",
+              "stability.falls_off": "портится к концу",
+              "structure.procedural": "каждая серия — отдельная история",
+              "structure.serialized": "одна большая история",
+              "structure.slow_start": "раскачивается несколько серий",
+              "audience.kids": "детское",
+              "audience.adult": "для взрослых",
+              "format.documentary": "документальное",
+              "format.animation": "анимация",
+              "time:short": "до полутора часов",
+              "time:two": "часа два",
+              "time:any": "сколько угодно",
+              "company:solo": "один",
+              "company:pair": "вдвоём",
+              "company:kids": "с детьми",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          },
+          "series": {
+            "items": 9773,
+            "dictionary": "screen-2026-10-20.1",
+            "label": "Посмотреть сериал",
+            "labels": {
+              "tone.feelgood": "тёплое, доброе",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грустное, пробирает",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое, весёлое",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное, причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.inspiring": "вдохновляет",
+              "tone.atmospheric": "атмосферное",
+              "tone.cheesy": "наивно, слащаво",
+              "tension.high": "держит в напряжении",
+              "tension.low": "спокойное, без нервов",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливое",
+              "pace.draggy": "затянуто, скучно",
+              "story.twist": "неожиданные повороты",
+              "story.nonlinear": "нелинейный сюжет",
+              "story.complex": "сложный, надо вникать",
+              "story.mystery": "загадка и расследование",
+              "story.true": "по реальным событиям",
+              "story.dialogue": "держится на диалогах",
+              "story.revenge": "месть",
+              "story.weak": "слабый сюжет, дыры",
+              "story.predictable": "предсказуемо",
+              "ending.happy": "счастливый финал",
+              "ending.sad": "горький финал",
+              "ending.strong": "сильный финал",
+              "ending.weak": "слабый финал",
+              "characters.acting": "сильная актёрская игра",
+              "characters.memorable": "живые, сложные персонажи",
+              "characters.ensemble": "много героев, ансамбль",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.antihero": "антигерой",
+              "characters.female_lead": "сильная героиня",
+              "characters.romance": "любовная линия",
+              "characters.friendship": "дружба",
+              "characters.family": "семья и отношения",
+              "characters.coming_of_age": "взросление",
+              "characters.unlikeable": "раздражающие персонажи",
+              "world.scifi": "фантастика",
+              "world.space": "космос",
+              "world.fantasy": "фэнтези и магия",
+              "world.supernatural": "мистика",
+              "world.dystopia": "антиутопия",
+              "world.postapoc": "постапокалипсис",
+              "world.historical": "историческая эпоха",
+              "world.war": "война",
+              "world.crime": "криминал",
+              "world.school": "школа и подростки",
+              "world.smalltown": "маленький город",
+              "world.timetravel": "путешествия во времени",
+              "world.superhero": "супергерои",
+              "world.western": "вестерн",
+              "world.sports": "спорт",
+              "world.music": "музыка и мюзикл",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стильно и необычно снято",
+              "aesthetic.soundtrack": "сильная музыка",
+              "aesthetic.effects": "зрелищные спецэффекты",
+              "content.violence": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.profanity": "много мата",
+              "content.family": "для всей семьи",
+              "content.disturbing": "тяжёлые темы",
+              "humor.funny": "смешно",
+              "humor.dark": "чёрный юмор",
+              "humor.satire": "сатира и ирония",
+              "humor.silly": "дурашливый юмор",
+              "humor.deadpan": "сухой, британский юмор",
+              "cognitive.low": "можно смотреть не напрягаясь",
+              "cognitive.high": "заставляет думать",
+              "length.short": "короткий",
+              "length.long": "длинный",
+              "completeness.running": "ещё выходит",
+              "completeness.ended": "закончен",
+              "completeness.unfinished": "оборван, не закончен",
+              "stability.falls_off": "портится к концу",
+              "structure.procedural": "каждая серия — отдельная история",
+              "structure.serialized": "одна большая история",
+              "structure.slow_start": "раскачивается несколько серий",
+              "audience.kids": "детское",
+              "audience.adult": "для взрослых",
+              "format.documentary": "документальное",
+              "format.animation": "анимация",
+              "time:mini": "мини-сериал, до 10 серий",
+              "time:season": "сезон-другой",
+              "time:long": "надолго",
+              "company:solo": "один",
+              "company:pair": "вдвоём",
+              "company:kids": "с детьми",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          },
+          "cartoon": {
+            "items": 1867,
+            "dictionary": "screen-2026-10-20.1",
+            "label": "Посмотреть мультфильм",
+            "labels": {
+              "tone.feelgood": "тёплое, доброе",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грустное, пробирает",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое, весёлое",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное, причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.inspiring": "вдохновляет",
+              "tone.atmospheric": "атмосферное",
+              "tone.cheesy": "наивно, слащаво",
+              "tension.high": "держит в напряжении",
+              "tension.low": "спокойное, без нервов",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливое",
+              "pace.draggy": "затянуто, скучно",
+              "story.twist": "неожиданные повороты",
+              "story.nonlinear": "нелинейный сюжет",
+              "story.complex": "сложный, надо вникать",
+              "story.mystery": "загадка и расследование",
+              "story.true": "по реальным событиям",
+              "story.dialogue": "держится на диалогах",
+              "story.revenge": "месть",
+              "story.weak": "слабый сюжет, дыры",
+              "story.predictable": "предсказуемо",
+              "ending.happy": "счастливый финал",
+              "ending.sad": "горький финал",
+              "ending.strong": "сильный финал",
+              "ending.weak": "слабый финал",
+              "characters.acting": "сильная актёрская игра",
+              "characters.memorable": "живые, сложные персонажи",
+              "characters.ensemble": "много героев, ансамбль",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.antihero": "антигерой",
+              "characters.female_lead": "сильная героиня",
+              "characters.romance": "любовная линия",
+              "characters.friendship": "дружба",
+              "characters.family": "семья и отношения",
+              "characters.coming_of_age": "взросление",
+              "characters.unlikeable": "раздражающие персонажи",
+              "world.scifi": "фантастика",
+              "world.space": "космос",
+              "world.fantasy": "фэнтези и магия",
+              "world.supernatural": "мистика",
+              "world.dystopia": "антиутопия",
+              "world.postapoc": "постапокалипсис",
+              "world.historical": "историческая эпоха",
+              "world.war": "война",
+              "world.crime": "криминал",
+              "world.school": "школа и подростки",
+              "world.smalltown": "маленький город",
+              "world.timetravel": "путешествия во времени",
+              "world.superhero": "супергерои",
+              "world.western": "вестерн",
+              "world.sports": "спорт",
+              "world.music": "музыка и мюзикл",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стильно и необычно снято",
+              "aesthetic.soundtrack": "сильная музыка",
+              "aesthetic.effects": "зрелищные спецэффекты",
+              "content.violence": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.profanity": "много мата",
+              "content.family": "для всей семьи",
+              "content.disturbing": "тяжёлые темы",
+              "humor.funny": "смешно",
+              "humor.dark": "чёрный юмор",
+              "humor.satire": "сатира и ирония",
+              "humor.silly": "дурашливый юмор",
+              "humor.deadpan": "сухой, британский юмор",
+              "cognitive.low": "можно смотреть не напрягаясь",
+              "cognitive.high": "заставляет думать",
+              "length.short": "короткий",
+              "length.long": "длинный",
+              "completeness.running": "ещё выходит",
+              "completeness.ended": "закончен",
+              "completeness.unfinished": "оборван, не закончен",
+              "stability.falls_off": "портится к концу",
+              "structure.procedural": "каждая серия — отдельная история",
+              "structure.serialized": "одна большая история",
+              "structure.slow_start": "раскачивается несколько серий",
+              "audience.kids": "детское",
+              "audience.adult": "для взрослых",
+              "format.documentary": "документальное",
+              "format.animation": "анимация",
+              "time:short": "до полутора часов",
+              "time:two": "часа два",
+              "time:any": "сколько угодно",
+              "company:solo": "один",
+              "company:pair": "вдвоём",
+              "company:kids": "с детьми",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/ai/status",
+      "input": null,
+      "status": 200,
+      "output": {
+        "enabled": false,
+        "reason": "нейросеть выключена",
+        "locked": false,
+        "model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:271590": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 78585,
+          "firstPage": {
+            "marks": [
+              {
+                "id": "steam:271590",
+                "reaction": "love"
+              }
+            ],
+            "known": {}
+          }
+        },
+        "action": null
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:271590": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 78585,
+          "firstPage": {
+            "marks": [
+              {
+                "id": "steam:271590",
+                "reaction": "love"
+              }
+            ],
+            "known": {}
+          }
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Может, что-то из этого знаешь?",
+          "hint": "Пока отмечено мало, и подбор выйдет наугад. Отметь, что знаешь. Если ничего, жми «Дальше».",
+          "extra": true,
+          "items": [
+            {
+              "id": "steam:1091500",
+              "name": "Cyberpunk 2077",
+              "ru": null,
+              "original": null,
+              "year": 2020,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "RPG"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:477160",
+              "name": "Human Fall Flat",
+              "ru": null,
+              "original": null,
+              "year": 2016,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477160/9258286b309480a3ce438c07cb51fadf3ea2f1d1/header_alt_assets_27.jpg?t=1792416519",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/477160/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Adventure",
+                "Casual",
+                "Indie"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:239140",
+              "name": "Dying Light",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239140/9d1b810b85ae46a0acbdfddf583ccbb81271183e/header.jpg?t=1782913513",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/239140/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "RPG"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:1238810",
+              "name": "Battlefield™ V",
+              "ru": "Battlefield V",
+              "original": null,
+              "year": 2020,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238810/header.jpg?t=1772707365",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1238810/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action"
+              ],
+              "rating": "Mostly Positive"
+            },
+            {
+              "id": "steam:227300",
+              "name": "Euro Truck Simulator 2",
+              "ru": null,
+              "original": null,
+              "year": 2012,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/d3c44cfff95e8223687121b05c80e594d35c4c53/header_alt_assets_9.jpg?t=1792055307",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/227300/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Indie",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:250900",
+              "name": "The Binding of Isaac: Rebirth",
+              "ru": null,
+              "original": null,
+              "year": 2014,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/header.jpg?t=1731977365",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/250900/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:1086940",
+              "name": "Baldur's Gate 3",
+              "ru": "Baldur’s Gate III",
+              "original": null,
+              "year": 2023,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Adventure",
+                "RPG",
+                "Strategy"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:72850",
+              "name": "The Elder Scrolls V: Skyrim",
+              "ru": null,
+              "original": null,
+              "year": 2011,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/72850/header.jpg?t=1788199504",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/72850/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "RPG"
+              ],
+              "rating": "Very Positive"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не играл"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:271590",
+            "steam:359550",
+            "steam:105600",
+            "steam:4000",
+            "steam:2358720",
+            "steam:1245620",
+            "steam:550",
+            "steam:413150"
+          ],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:271590": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 78585,
+          "firstPage": {
+            "marks": [
+              {
+                "id": "steam:271590",
+                "reaction": "love"
+              }
+            ],
+            "known": {}
+          }
+        },
+        "action": {
+          "type": "restart"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "domain",
+          "domain": null,
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "domain",
+          "title": "Что хочешь?",
+          "options": [
+            {
+              "value": "game",
+              "label": "Поиграть"
+            },
+            {
+              "value": "film",
+              "label": "Посмотреть фильм"
+            },
+            {
+              "value": "series",
+              "label": "Посмотреть сериал"
+            },
+            {
+              "value": "cartoon",
+              "label": "Посмотреть мультфильм"
+            }
+          ],
+          "later": [
+            "Почитать",
+            "Аниме"
+          ]
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "restart",
+        "data": {
+          "from": "anchors",
+          "step": "domain",
+          "domain": null,
+          "asked": 0,
+          "action": {
+            "type": "restart"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "domain",
+          "domain": null,
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "choose",
+          "value": "game"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "platform",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "platform",
+          "title": "Где играешь?",
+          "options": [
+            {
+              "value": "windows",
+              "label": "ПК (Windows)"
+            },
+            {
+              "value": "mac",
+              "label": "Mac"
+            },
+            {
+              "value": "linux",
+              "label": "Linux"
+            },
+            {
+              "value": "deck",
+              "label": "Steam Deck"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "choose",
+        "data": {
+          "from": "domain",
+          "step": "platform",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "choose",
+            "value": "game"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "platform",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "choose",
+          "value": "windows"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "company",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "company",
+          "title": "Один или с друзьями?",
+          "options": [
+            {
+              "value": "solo",
+              "label": "один"
+            },
+            {
+              "value": "friend",
+              "label": "с другом"
+            },
+            {
+              "value": "group",
+              "label": "компанией"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "choose",
+        "data": {
+          "from": "platform",
+          "step": "company",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "choose",
+            "value": "windows"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "company",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "choose",
+          "value": "solo"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "solo",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Во что играл, и как?",
+          "hint": "Отметь, как тебе знакомые названия, затем нажми «Дальше». Все карточки заполнять не нужно.",
+          "extra": false,
+          "items": [
+            {
+              "id": "steam:271590",
+              "name": "Grand Theft Auto V Legacy",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:359550",
+              "name": "Tom Clancy's Rainbow Six Siege",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/359550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Free To Play"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:105600",
+              "name": "Terraria",
+              "ru": null,
+              "original": null,
+              "year": 2011,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:4000",
+              "name": "Garry's Mod",
+              "ru": null,
+              "original": null,
+              "year": 2006,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Casual",
+                "Indie",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:2358720",
+              "name": "Black Myth: Wukong",
+              "ru": null,
+              "original": null,
+              "year": 2024,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "RPG"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:1245620",
+              "name": "ELDEN RING",
+              "ru": null,
+              "original": null,
+              "year": 2022,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "RPG"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:550",
+              "name": "Left 4 Dead 2",
+              "ru": null,
+              "original": null,
+              "year": 2009,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:413150",
+              "name": "Stardew Valley",
+              "ru": null,
+              "original": null,
+              "year": 2016,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1786554168",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Indie",
+                "RPG",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не играл"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "choose",
+        "data": {
+          "from": "company",
+          "step": "anchors",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "choose",
+            "value": "solo"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "company",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": null
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "company",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "company",
+          "title": "Один или с друзьями?",
+          "options": [
+            {
+              "value": "solo",
+              "label": "один"
+            },
+            {
+              "value": "friend",
+              "label": "с другом"
+            },
+            {
+              "value": "group",
+              "label": "компанией"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "company",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": null,
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "choose",
+          "value": "friend"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "anchors",
+          "title": "Во что играл, и как?",
+          "hint": "Отметь, как тебе знакомые названия, затем нажми «Дальше». Все карточки заполнять не нужно.",
+          "extra": false,
+          "items": [
+            {
+              "id": "steam:730",
+              "name": "Counter-Strike 2",
+              "ru": null,
+              "original": null,
+              "year": 2012,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1791824795",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Free To Play"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:271590",
+              "name": "Grand Theft Auto V Legacy",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:105600",
+              "name": "Terraria",
+              "ru": null,
+              "original": null,
+              "year": 2011,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/105600/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:359550",
+              "name": "Tom Clancy's Rainbow Six Siege",
+              "ru": null,
+              "original": null,
+              "year": 2015,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/359550/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Free To Play"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:252490",
+              "name": "Rust",
+              "ru": null,
+              "original": null,
+              "year": 2018,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1781536981",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/252490/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "Adventure",
+                "Indie"
+              ],
+              "rating": "Very Positive"
+            },
+            {
+              "id": "steam:4000",
+              "name": "Garry's Mod",
+              "ru": null,
+              "original": null,
+              "year": 2006,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Casual",
+                "Indie",
+                "Simulation"
+              ],
+              "rating": "Overwhelmingly Positive"
+            },
+            {
+              "id": "steam:553850",
+              "name": "HELLDIVERS™ 2",
+              "ru": null,
+              "original": null,
+              "year": 2024,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg?t=1792487611",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/553850/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action"
+              ],
+              "rating": "Mostly Positive"
+            },
+            {
+              "id": "steam:1245620",
+              "name": "ELDEN RING",
+              "ru": null,
+              "original": null,
+              "year": 2022,
+              "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+              "kind": "game",
+              "genres": [
+                "Action",
+                "RPG"
+              ],
+              "rating": "Very Positive"
+            }
+          ],
+          "reactions": [
+            {
+              "value": "love",
+              "label": "обожаю"
+            },
+            {
+              "value": "like",
+              "label": "нормально"
+            },
+            {
+              "value": "dislike",
+              "label": "не моё"
+            },
+            {
+              "value": "unknown",
+              "label": "не играл"
+            }
+          ],
+          "search": true,
+          "more": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "choose",
+        "data": {
+          "from": "company",
+          "step": "anchors",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "choose",
+            "value": "friend"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/search",
+      "input": null,
+      "status": 200,
+      "output": [
+        {
+          "id": "steam:728880",
+          "name": "Overcooked! 2",
+          "ru": null,
+          "original": null,
+          "year": 2018,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/9305414f49b2f7aee7f7198dc507d6b66383fdd6/header.jpg?t=1789548883",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/728880/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Casual",
+            "Indie"
+          ],
+          "rating": "Very Positive"
+        },
+        {
+          "id": "steam:730",
+          "name": "Counter-Strike 2",
+          "ru": null,
+          "original": null,
+          "year": 2012,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1791824795",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Free To Play"
+          ],
+          "rating": "Very Positive"
+        },
+        {
+          "id": "steam:440",
+          "name": "Team Fortress 2",
+          "ru": null,
+          "original": null,
+          "year": 2007,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1757348372",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/440/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Free To Play"
+          ],
+          "rating": "Very Positive"
+        },
+        {
+          "id": "steam:553850",
+          "name": "HELLDIVERS™ 2",
+          "ru": null,
+          "original": null,
+          "year": 2024,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg?t=1792487611",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/553850/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action"
+          ],
+          "rating": "Mostly Positive"
+        },
+        {
+          "id": "steam:550",
+          "name": "Left 4 Dead 2",
+          "ru": null,
+          "original": null,
+          "year": 2009,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/550/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action"
+          ],
+          "rating": "Overwhelmingly Positive"
+        },
+        {
+          "id": "steam:1091500",
+          "name": "Cyberpunk 2077",
+          "ru": null,
+          "original": null,
+          "year": 2020,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "RPG"
+          ],
+          "rating": "Very Positive"
+        },
+        {
+          "id": "steam:227300",
+          "name": "Euro Truck Simulator 2",
+          "ru": null,
+          "original": null,
+          "year": 2012,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/d3c44cfff95e8223687121b05c80e594d35c4c53/header_alt_assets_9.jpg?t=1792055307",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/227300/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Indie",
+            "Simulation"
+          ],
+          "rating": "Overwhelmingly Positive"
+        },
+        {
+          "id": "steam:1174180",
+          "name": "Red Dead Redemption 2",
+          "ru": null,
+          "original": null,
+          "year": 2019,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1759502961",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "rating": "Very Positive"
+        }
+      ]
+    },
+    {
+      "path": "/api/search",
+      "input": null,
+      "status": 200,
+      "output": [
+        {
+          "id": "steam:1225570",
+          "name": "Unravel Two",
+          "ru": null,
+          "original": null,
+          "year": 2020,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1225570/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1225570/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "rating": null
+        },
+        {
+          "id": "steam:1426210",
+          "name": "It Takes Two",
+          "ru": null,
+          "original": null,
+          "year": 2021,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header.jpg?t=1777395376",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "rating": "Overwhelmingly Positive"
+        },
+        {
+          "id": "steam:646910",
+          "name": "The Crew™ 2",
+          "ru": "The Crew 2",
+          "original": null,
+          "year": 2018,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646910/header.jpg?t=1787130932",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/646910/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Massively Multiplayer",
+            "Racing"
+          ],
+          "rating": "Mostly Positive"
+        },
+        {
+          "id": "steam:420",
+          "name": "Half-Life 2: Episode Two",
+          "ru": null,
+          "original": null,
+          "year": 2007,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/420/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/420/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action"
+          ],
+          "rating": null
+        },
+        {
+          "id": "steam:225080",
+          "name": "Brothers - A Tale of Two Sons",
+          "ru": "Brothers: A Tale of Two Sons",
+          "original": null,
+          "year": 2013,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/225080/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/225080/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Indie"
+          ],
+          "rating": null
+        },
+        {
+          "id": "steam:535930",
+          "name": "Two Point Hospital",
+          "ru": null,
+          "original": null,
+          "year": 2018,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/535930/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/535930/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Indie",
+            "Simulation"
+          ],
+          "rating": null
+        },
+        {
+          "id": "steam:261030",
+          "name": "The Walking Dead: Season Two",
+          "ru": "The Walking Dead Season Two",
+          "original": null,
+          "year": 2013,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/261030/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/261030/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Adventure"
+          ],
+          "rating": null
+        },
+        {
+          "id": "steam:960990",
+          "name": "Beyond: Two Souls",
+          "ru": null,
+          "original": null,
+          "year": 2020,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/960990/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/960990/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "rating": null
+        }
+      ]
+    },
+    {
+      "path": "/api/search",
+      "input": null,
+      "status": 200,
+      "output": [
+        {
+          "id": "steam:548430",
+          "name": "Deep Rock Galactic",
+          "ru": null,
+          "original": null,
+          "year": 2020,
+          "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548430/37b58a6c4816ee60b0ca97cb6724d6e904c58c41/header.jpg?t=1792497307",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/548430/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action"
+          ],
+          "rating": "Overwhelmingly Positive"
+        },
+        {
+          "id": "steam:2321470",
+          "name": "Deep Rock Galactic: Survivor",
+          "ru": null,
+          "original": null,
+          "year": 2025,
+          "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2321470/header.jpg",
+          "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/2321470/library_600x900.jpg",
+          "kind": "game",
+          "genres": [
+            "Action"
+          ],
+          "rating": null
+        }
+      ]
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "anchors",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": []
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [],
+          "liked": [],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {},
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "react",
+          "marksMode": "snapshot",
+          "marks": [
+            {
+              "id": "steam:728880",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:1225570",
+              "reaction": "love"
+            },
+            {
+              "id": "steam:548430",
+              "reaction": "like"
+            }
+          ],
+          "known": {},
+          "shownIds": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "note": ""
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «Overcooked! 2»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:728880",
+            "name": "Overcooked! 2",
+            "ru": null,
+            "original": null,
+            "year": 2018,
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/9305414f49b2f7aee7f7198dc507d6b66383fdd6/header.jpg?t=1789548883",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/728880/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "Casual",
+              "Indie"
+            ],
+            "rating": "Very Positive"
+          },
+          "pair": [
+            {
+              "value": "humor.funny",
+              "label": "много юмора"
+            },
+            {
+              "value": "length.short",
+              "label": "короткая, на пару вечеров"
+            }
+          ],
+          "options": [
+            {
+              "value": "social.coop",
+              "label": "кооператив"
+            },
+            {
+              "value": "humor.funny",
+              "label": "много юмора"
+            },
+            {
+              "value": "length.short",
+              "label": "короткая, на пару вечеров"
+            },
+            {
+              "value": "tone.lighthearted",
+              "label": "лёгкое весёлое настроение"
+            },
+            {
+              "value": "cognitive.low",
+              "label": "можно не напрягать голову"
+            },
+            {
+              "value": "content.family",
+              "label": "без жести, подходит всем"
+            },
+            {
+              "value": "social.pvp",
+              "label": "соревнование с людьми"
+            },
+            {
+              "value": "freedom.linear",
+              "label": "линейная, ведут по истории"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "label": "щадящая сложность"
+            },
+            {
+              "value": "tension.high",
+              "label": "держит в напряжении"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "1 из 2"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "react",
+        "data": {
+          "from": "anchors",
+          "step": "why",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "react",
+            "marksMode": "snapshot",
+            "marks": [
+              {
+                "id": "steam:728880",
+                "reaction": "love"
+              },
+              {
+                "id": "steam:1225570",
+                "reaction": "love"
+              },
+              {
+                "id": "steam:548430",
+                "reaction": "like"
+              }
+            ],
+            "known": {},
+            "shownIds": [
+              "steam:730",
+              "steam:271590",
+              "steam:105600",
+              "steam:359550",
+              "steam:252490",
+              "steam:4000",
+              "steam:553850",
+              "steam:1245620"
+            ],
+            "note": ""
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "social.coop"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 1,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "why",
+          "title": "За что тебе так нравится «Unravel Two»?",
+          "hint": "Что главное? Можно выбрать несколько, остальные причины ниже.",
+          "item": {
+            "id": "steam:1225570",
+            "name": "Unravel Two",
+            "ru": null,
+            "original": null,
+            "year": 2020,
+            "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1225570/header.jpg",
+            "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1225570/library_600x900.jpg",
+            "kind": "game",
+            "genres": [
+              "Action",
+              "Adventure"
+            ],
+            "rating": null
+          },
+          "pair": [
+            {
+              "value": "tone.whimsical",
+              "label": "странное и причудливое"
+            },
+            {
+              "value": "characters.companions",
+              "label": "команда и спутники"
+            }
+          ],
+          "options": [
+            {
+              "value": "loop.puzzles",
+              "label": "головоломки"
+            },
+            {
+              "value": "social.coop",
+              "label": "кооператив"
+            },
+            {
+              "value": "loop.platforming",
+              "label": "платформинг"
+            },
+            {
+              "value": "tone.whimsical",
+              "label": "странное и причудливое"
+            },
+            {
+              "value": "characters.companions",
+              "label": "команда и спутники"
+            },
+            {
+              "value": "content.family",
+              "label": "без жести, подходит всем"
+            }
+          ],
+          "freeText": true,
+          "canSkip": true,
+          "progress": "2 из 2"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "reasons",
+        "data": {
+          "from": "why",
+          "step": "why",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "reasons",
+            "values": [
+              "social.coop"
+            ],
+            "issues": [],
+            "text": ""
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "why",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 1,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "reasons",
+          "values": [
+            "social.coop",
+            "loop.puzzles"
+          ],
+          "issues": [],
+          "text": ""
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "stops",
+          "title": "Что точно не надо?",
+          "hint": "Такое не предложу совсем. Если всё можно, просто дальше.",
+          "options": [
+            {
+              "value": "content.gore",
+              "label": "кровь и жестокость"
+            },
+            {
+              "value": "tone.creepy",
+              "label": "страшное"
+            },
+            {
+              "value": "content.sexual",
+              "label": "откровенное"
+            },
+            {
+              "value": "social.pvp",
+              "label": "против других людей"
+            },
+            {
+              "value": "progression.grind",
+              "label": "гринд"
+            }
+          ],
+          "canSkip": true
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "reasons",
+        "data": {
+          "from": "why",
+          "step": "stops",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "reasons",
+            "values": [
+              "social.coop",
+              "loop.puzzles"
+            ],
+            "issues": [],
+            "text": ""
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "stops",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "stops",
+          "values": [
+            "social.pvp"
+          ]
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "lean",
+          "qid": "lean:humor.funny|tone.dark",
+          "title": "Посмеяться или что-то мрачное?",
+          "hint": "Выбери, чего хочется сегодня. Если оба варианта подходят — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "посмеяться"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное"
+            }
+          ],
+          "canSkip": true,
+          "progress": "1"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "stops",
+        "data": {
+          "from": "stops",
+          "step": "ask",
+          "domain": "game",
+          "asked": 0,
+          "action": {
+            "type": "stops",
+            "values": [
+              "social.pvp"
+            ]
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "answer",
+          "qid": "lean:humor.funny|tone.dark",
+          "value": "humor.funny"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [
+              {
+                "f": "humor.funny",
+                "against": "tone.dark",
+                "label": "посмеяться"
+              }
+            ],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "fact",
+          "qid": "fact:popularity",
+          "title": "Известная игра или что-то менее известное?",
+          "hint": "Уточним, что тебе подходит сегодня. Если не важно — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "mainstream",
+              "label": "более известное"
+            },
+            {
+              "value": "niche",
+              "label": "менее известное"
+            }
+          ],
+          "canSkip": true,
+          "progress": "2"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "answer",
+        "data": {
+          "from": "ask",
+          "qid": "lean:humor.funny|tone.dark",
+          "step": "ask",
+          "domain": "game",
+          "asked": 1,
+          "action": {
+            "type": "answer",
+            "qid": "lean:humor.funny|tone.dark",
+            "value": "humor.funny"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": null
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "lean",
+          "qid": "lean:humor.funny|tone.dark",
+          "title": "Посмеяться или что-то мрачное?",
+          "hint": "Выбери, чего хочется сегодня. Если оба варианта подходят — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "humor.funny",
+              "label": "посмеяться"
+            },
+            {
+              "value": "tone.dark",
+              "label": "мрачное"
+            }
+          ],
+          "canSkip": true,
+          "progress": "1"
+        }
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "skip"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "fact",
+          "qid": "fact:era",
+          "title": "Свежее или можно и старое?",
+          "hint": "Уточним, что тебе подходит сегодня. Если не важно — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015"
+            },
+            {
+              "value": "any",
+              "label": "можно и старое"
+            }
+          ],
+          "canSkip": true,
+          "progress": "2"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "skip",
+        "data": {
+          "from": "ask",
+          "qid": "lean:humor.funny|tone.dark",
+          "step": "ask",
+          "domain": "game",
+          "asked": 1,
+          "action": {
+            "type": "skip"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/meta",
+      "input": null,
+      "status": 200,
+      "output": {
+        "domains": {
+          "game": {
+            "items": 4952,
+            "dictionary": "games-2026-10-20.2",
+            "label": "Поиграть",
+            "labels": {
+              "tone.cozy": "уютная атмосфера",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грусть и меланхолия",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое весёлое настроение",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное и причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.serene": "спокойствие и медитативность",
+              "tension.high": "держит в напряжении",
+              "tension.low": "без стресса",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливый темп",
+              "pace.repetitive": "однообразно",
+              "pace.draggy": "затянуто, провисает",
+              "story.central": "сильный сюжет",
+              "story.choices": "выборы влияют на историю",
+              "story.mystery": "загадка и расследование",
+              "story.lore": "история через мир и лор",
+              "story.minimal": "сюжета почти нет",
+              "ending.strong": "сильный финал",
+              "ending.bittersweet": "горький финал",
+              "ending.weak": "слабый финал",
+              "characters.memorable": "живые персонажи",
+              "characters.companions": "команда и спутники",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.custom_hero": "свой герой",
+              "characters.romance": "романтические линии",
+              "world.living": "живой мир",
+              "world.realistic": "реалистичный мир",
+              "world.fantasy": "фэнтези",
+              "world.scifi": "фантастика и космос",
+              "world.historical": "историческая эпоха",
+              "world.postapoc": "постапокалипсис",
+              "world.empty": "пустой мир",
+              "world.modern": "современный мир",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стилизованный визуал",
+              "aesthetic.pixel": "пиксель-арт",
+              "aesthetic.soundtrack": "сильная музыка",
+              "content.gore": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.family": "без жести, подходит всем",
+              "humor.funny": "много юмора",
+              "humor.dark": "чёрный юмор",
+              "cognitive.low": "можно не напрягать голову",
+              "cognitive.high": "надо думать и планировать",
+              "length.short": "короткая, на пару вечеров",
+              "length.long": "большая, на десятки часов",
+              "length.endless": "можно играть годами",
+              "completeness.unfinished": "недоделана",
+              "stability.falls_off": "проседает к концу",
+              "stability.slow_start": "цепляет не сразу",
+              "loop.shooting": "стрельба",
+              "loop.melee": "ближний бой",
+              "loop.exploration": "исследование мира",
+              "loop.building": "строительство и крафт",
+              "loop.management": "управление и экономика",
+              "loop.tactics": "тактические бои",
+              "loop.stealth": "стелс",
+              "loop.driving": "езда и гонки",
+              "loop.platforming": "платформинг",
+              "loop.dialogue": "разговоры и решения",
+              "loop.looting": "лут и снаряжение",
+              "loop.survival": "выживание",
+              "loop.life_sim": "быт и ферма",
+              "loop.cards": "карты и колоды",
+              "loop.puzzles": "головоломки",
+              "combat.weighty": "весомый бой",
+              "combat.fast": "быстрый зрелищный бой",
+              "combat.precise": "отзывчивое управление",
+              "combat.clunky": "деревянное управление",
+              "progression.power": "растёшь в силе",
+              "progression.builds": "разные билды",
+              "progression.collection": "собирать и коллекционировать",
+              "progression.grind": "гринд",
+              "difficulty.hard": "сложно, наказывает за ошибки",
+              "difficulty.forgiving": "щадящая сложность",
+              "social.solo": "одиночная игра",
+              "social.coop": "кооператив",
+              "social.pvp": "соревнование с людьми",
+              "freedom.open_world": "открытый мир",
+              "freedom.sandbox": "песочница: цели ставишь сам",
+              "freedom.linear": "линейная, ведут по истории",
+              "session.short": "короткие заходы",
+              "session.long": "садиться надолго",
+              "company:solo": "один",
+              "company:friend": "с другом",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          },
+          "film": {
+            "items": 32172,
+            "dictionary": "screen-2026-10-20.1",
+            "label": "Посмотреть фильм",
+            "labels": {
+              "tone.feelgood": "тёплое, доброе",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грустное, пробирает",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое, весёлое",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное, причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.inspiring": "вдохновляет",
+              "tone.atmospheric": "атмосферное",
+              "tone.cheesy": "наивно, слащаво",
+              "tension.high": "держит в напряжении",
+              "tension.low": "спокойное, без нервов",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливое",
+              "pace.draggy": "затянуто, скучно",
+              "story.twist": "неожиданные повороты",
+              "story.nonlinear": "нелинейный сюжет",
+              "story.complex": "сложный, надо вникать",
+              "story.mystery": "загадка и расследование",
+              "story.true": "по реальным событиям",
+              "story.dialogue": "держится на диалогах",
+              "story.revenge": "месть",
+              "story.weak": "слабый сюжет, дыры",
+              "story.predictable": "предсказуемо",
+              "ending.happy": "счастливый финал",
+              "ending.sad": "горький финал",
+              "ending.strong": "сильный финал",
+              "ending.weak": "слабый финал",
+              "characters.acting": "сильная актёрская игра",
+              "characters.memorable": "живые, сложные персонажи",
+              "characters.ensemble": "много героев, ансамбль",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.antihero": "антигерой",
+              "characters.female_lead": "сильная героиня",
+              "characters.romance": "любовная линия",
+              "characters.friendship": "дружба",
+              "characters.family": "семья и отношения",
+              "characters.coming_of_age": "взросление",
+              "characters.unlikeable": "раздражающие персонажи",
+              "world.scifi": "фантастика",
+              "world.space": "космос",
+              "world.fantasy": "фэнтези и магия",
+              "world.supernatural": "мистика",
+              "world.dystopia": "антиутопия",
+              "world.postapoc": "постапокалипсис",
+              "world.historical": "историческая эпоха",
+              "world.war": "война",
+              "world.crime": "криминал",
+              "world.school": "школа и подростки",
+              "world.smalltown": "маленький город",
+              "world.timetravel": "путешествия во времени",
+              "world.superhero": "супергерои",
+              "world.western": "вестерн",
+              "world.sports": "спорт",
+              "world.music": "музыка и мюзикл",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стильно и необычно снято",
+              "aesthetic.soundtrack": "сильная музыка",
+              "aesthetic.effects": "зрелищные спецэффекты",
+              "content.violence": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.profanity": "много мата",
+              "content.family": "для всей семьи",
+              "content.disturbing": "тяжёлые темы",
+              "humor.funny": "смешно",
+              "humor.dark": "чёрный юмор",
+              "humor.satire": "сатира и ирония",
+              "humor.silly": "дурашливый юмор",
+              "humor.deadpan": "сухой, британский юмор",
+              "cognitive.low": "можно смотреть не напрягаясь",
+              "cognitive.high": "заставляет думать",
+              "length.short": "короткий",
+              "length.long": "длинный",
+              "completeness.running": "ещё выходит",
+              "completeness.ended": "закончен",
+              "completeness.unfinished": "оборван, не закончен",
+              "stability.falls_off": "портится к концу",
+              "structure.procedural": "каждая серия — отдельная история",
+              "structure.serialized": "одна большая история",
+              "structure.slow_start": "раскачивается несколько серий",
+              "audience.kids": "детское",
+              "audience.adult": "для взрослых",
+              "format.documentary": "документальное",
+              "format.animation": "анимация",
+              "time:short": "до полутора часов",
+              "time:two": "часа два",
+              "time:any": "сколько угодно",
+              "company:solo": "один",
+              "company:pair": "вдвоём",
+              "company:kids": "с детьми",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          },
+          "series": {
+            "items": 9773,
+            "dictionary": "screen-2026-10-20.1",
+            "label": "Посмотреть сериал",
+            "labels": {
+              "tone.feelgood": "тёплое, доброе",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грустное, пробирает",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое, весёлое",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное, причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.inspiring": "вдохновляет",
+              "tone.atmospheric": "атмосферное",
+              "tone.cheesy": "наивно, слащаво",
+              "tension.high": "держит в напряжении",
+              "tension.low": "спокойное, без нервов",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливое",
+              "pace.draggy": "затянуто, скучно",
+              "story.twist": "неожиданные повороты",
+              "story.nonlinear": "нелинейный сюжет",
+              "story.complex": "сложный, надо вникать",
+              "story.mystery": "загадка и расследование",
+              "story.true": "по реальным событиям",
+              "story.dialogue": "держится на диалогах",
+              "story.revenge": "месть",
+              "story.weak": "слабый сюжет, дыры",
+              "story.predictable": "предсказуемо",
+              "ending.happy": "счастливый финал",
+              "ending.sad": "горький финал",
+              "ending.strong": "сильный финал",
+              "ending.weak": "слабый финал",
+              "characters.acting": "сильная актёрская игра",
+              "characters.memorable": "живые, сложные персонажи",
+              "characters.ensemble": "много героев, ансамбль",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.antihero": "антигерой",
+              "characters.female_lead": "сильная героиня",
+              "characters.romance": "любовная линия",
+              "characters.friendship": "дружба",
+              "characters.family": "семья и отношения",
+              "characters.coming_of_age": "взросление",
+              "characters.unlikeable": "раздражающие персонажи",
+              "world.scifi": "фантастика",
+              "world.space": "космос",
+              "world.fantasy": "фэнтези и магия",
+              "world.supernatural": "мистика",
+              "world.dystopia": "антиутопия",
+              "world.postapoc": "постапокалипсис",
+              "world.historical": "историческая эпоха",
+              "world.war": "война",
+              "world.crime": "криминал",
+              "world.school": "школа и подростки",
+              "world.smalltown": "маленький город",
+              "world.timetravel": "путешествия во времени",
+              "world.superhero": "супергерои",
+              "world.western": "вестерн",
+              "world.sports": "спорт",
+              "world.music": "музыка и мюзикл",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стильно и необычно снято",
+              "aesthetic.soundtrack": "сильная музыка",
+              "aesthetic.effects": "зрелищные спецэффекты",
+              "content.violence": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.profanity": "много мата",
+              "content.family": "для всей семьи",
+              "content.disturbing": "тяжёлые темы",
+              "humor.funny": "смешно",
+              "humor.dark": "чёрный юмор",
+              "humor.satire": "сатира и ирония",
+              "humor.silly": "дурашливый юмор",
+              "humor.deadpan": "сухой, британский юмор",
+              "cognitive.low": "можно смотреть не напрягаясь",
+              "cognitive.high": "заставляет думать",
+              "length.short": "короткий",
+              "length.long": "длинный",
+              "completeness.running": "ещё выходит",
+              "completeness.ended": "закончен",
+              "completeness.unfinished": "оборван, не закончен",
+              "stability.falls_off": "портится к концу",
+              "structure.procedural": "каждая серия — отдельная история",
+              "structure.serialized": "одна большая история",
+              "structure.slow_start": "раскачивается несколько серий",
+              "audience.kids": "детское",
+              "audience.adult": "для взрослых",
+              "format.documentary": "документальное",
+              "format.animation": "анимация",
+              "time:mini": "мини-сериал, до 10 серий",
+              "time:season": "сезон-другой",
+              "time:long": "надолго",
+              "company:solo": "один",
+              "company:pair": "вдвоём",
+              "company:kids": "с детьми",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          },
+          "cartoon": {
+            "items": 1867,
+            "dictionary": "screen-2026-10-20.1",
+            "label": "Посмотреть мультфильм",
+            "labels": {
+              "tone.feelgood": "тёплое, доброе",
+              "tone.dark": "мрачная атмосфера",
+              "tone.melancholic": "грустное, пробирает",
+              "tone.creepy": "жуть и страх",
+              "tone.lighthearted": "лёгкое, весёлое",
+              "tone.epic": "эпичность и размах",
+              "tone.whimsical": "странное, причудливое",
+              "tone.gritty": "суровый реализм",
+              "tone.inspiring": "вдохновляет",
+              "tone.atmospheric": "атмосферное",
+              "tone.cheesy": "наивно, слащаво",
+              "tension.high": "держит в напряжении",
+              "tension.low": "спокойное, без нервов",
+              "pace.fast": "быстрый темп",
+              "pace.slow": "неторопливое",
+              "pace.draggy": "затянуто, скучно",
+              "story.twist": "неожиданные повороты",
+              "story.nonlinear": "нелинейный сюжет",
+              "story.complex": "сложный, надо вникать",
+              "story.mystery": "загадка и расследование",
+              "story.true": "по реальным событиям",
+              "story.dialogue": "держится на диалогах",
+              "story.revenge": "месть",
+              "story.weak": "слабый сюжет, дыры",
+              "story.predictable": "предсказуемо",
+              "ending.happy": "счастливый финал",
+              "ending.sad": "горький финал",
+              "ending.strong": "сильный финал",
+              "ending.weak": "слабый финал",
+              "characters.acting": "сильная актёрская игра",
+              "characters.memorable": "живые, сложные персонажи",
+              "characters.ensemble": "много героев, ансамбль",
+              "characters.lone_hero": "герой-одиночка",
+              "characters.antihero": "антигерой",
+              "characters.female_lead": "сильная героиня",
+              "characters.romance": "любовная линия",
+              "characters.friendship": "дружба",
+              "characters.family": "семья и отношения",
+              "characters.coming_of_age": "взросление",
+              "characters.unlikeable": "раздражающие персонажи",
+              "world.scifi": "фантастика",
+              "world.space": "космос",
+              "world.fantasy": "фэнтези и магия",
+              "world.supernatural": "мистика",
+              "world.dystopia": "антиутопия",
+              "world.postapoc": "постапокалипсис",
+              "world.historical": "историческая эпоха",
+              "world.war": "война",
+              "world.crime": "криминал",
+              "world.school": "школа и подростки",
+              "world.smalltown": "маленький город",
+              "world.timetravel": "путешествия во времени",
+              "world.superhero": "супергерои",
+              "world.western": "вестерн",
+              "world.sports": "спорт",
+              "world.music": "музыка и мюзикл",
+              "aesthetic.beautiful": "красивая картинка",
+              "aesthetic.stylized": "стильно и необычно снято",
+              "aesthetic.soundtrack": "сильная музыка",
+              "aesthetic.effects": "зрелищные спецэффекты",
+              "content.violence": "жестокость и кровь",
+              "content.sexual": "откровенные сцены",
+              "content.profanity": "много мата",
+              "content.family": "для всей семьи",
+              "content.disturbing": "тяжёлые темы",
+              "humor.funny": "смешно",
+              "humor.dark": "чёрный юмор",
+              "humor.satire": "сатира и ирония",
+              "humor.silly": "дурашливый юмор",
+              "humor.deadpan": "сухой, британский юмор",
+              "cognitive.low": "можно смотреть не напрягаясь",
+              "cognitive.high": "заставляет думать",
+              "length.short": "короткий",
+              "length.long": "длинный",
+              "completeness.running": "ещё выходит",
+              "completeness.ended": "закончен",
+              "completeness.unfinished": "оборван, не закончен",
+              "stability.falls_off": "портится к концу",
+              "structure.procedural": "каждая серия — отдельная история",
+              "structure.serialized": "одна большая история",
+              "structure.slow_start": "раскачивается несколько серий",
+              "audience.kids": "детское",
+              "audience.adult": "для взрослых",
+              "format.documentary": "документальное",
+              "format.animation": "анимация",
+              "time:short": "до полутора часов",
+              "time:two": "часа два",
+              "time:any": "сколько угодно",
+              "company:solo": "один",
+              "company:pair": "вдвоём",
+              "company:kids": "с детьми",
+              "company:group": "компанией",
+              "childAge:preschool": "до 7 лет",
+              "childAge:school": "7–11 лет",
+              "childAge:teen": "12 лет и старше",
+              "childAge:mixed": "разного возраста",
+              "partySize:2": "двое",
+              "partySize:3": "трое",
+              "partySize:4": "четверо",
+              "partySize:5+": "пятеро или больше"
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/ai/status",
+      "input": null,
+      "status": 200,
+      "output": {
+        "enabled": false,
+        "reason": "нейросеть выключена",
+        "locked": false,
+        "model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": null
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "fact",
+          "qid": "fact:era",
+          "title": "Свежее или можно и старое?",
+          "hint": "Уточним, что тебе подходит сегодня. Если не важно — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "new",
+              "label": "свежее, с 2015"
+            },
+            {
+              "value": "any",
+              "label": "можно и старое"
+            }
+          ],
+          "canSkip": true,
+          "progress": "2"
+        }
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": null,
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "answer",
+          "qid": "fact:era",
+          "value": "any"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": "any",
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark",
+            "fact:era"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "ask",
+          "kind": "lean",
+          "qid": "lean:difficulty.hard|difficulty.forgiving",
+          "title": "Чтобы было сложно или щадяще?",
+          "hint": "Выбери, чего хочется сегодня. Если оба варианта подходят — нажми «Всё равно».",
+          "options": [
+            {
+              "value": "difficulty.hard",
+              "label": "сложно, с вызовом"
+            },
+            {
+              "value": "difficulty.forgiving",
+              "label": "щадяще"
+            }
+          ],
+          "canSkip": true,
+          "progress": "3"
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "answer",
+        "data": {
+          "from": "ask",
+          "qid": "fact:era",
+          "step": "ask",
+          "domain": "game",
+          "asked": 2,
+          "action": {
+            "type": "answer",
+            "qid": "fact:era",
+            "value": "any"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/dialogue",
+      "input": {
+        "state": {
+          "step": "ask",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": "any",
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark",
+            "fact:era"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "action": {
+          "type": "answer",
+          "qid": "lean:difficulty.hard|difficulty.forgiving",
+          "value": "difficulty.forgiving"
+        }
+      },
+      "status": 200,
+      "output": {
+        "state": {
+          "step": "result",
+          "domain": "game",
+          "platform": "windows",
+          "situation": {
+            "time": null,
+            "company": "friend",
+            "childAge": null,
+            "partySize": null,
+            "note": "",
+            "popularity": null,
+            "era": "any",
+            "onlyEnded": false,
+            "episodeLength": null,
+            "leans": [
+              {
+                "f": "difficulty.forgiving",
+                "against": "difficulty.hard",
+                "label": "щадяще"
+              }
+            ],
+            "intent": null
+          },
+          "stops": [
+            "social.pvp"
+          ],
+          "asked": [
+            "lean:humor.funny|tone.dark",
+            "fact:era",
+            "lean:difficulty.hard|difficulty.forgiving"
+          ],
+          "shown": [
+            "steam:730",
+            "steam:271590",
+            "steam:105600",
+            "steam:359550",
+            "steam:252490",
+            "steam:4000",
+            "steam:553850",
+            "steam:1245620"
+          ],
+          "liked": [
+            "steam:728880",
+            "steam:1225570"
+          ],
+          "disliked": [],
+          "whyIndex": 0,
+          "answers": {
+            "steam:728880": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop"
+              ],
+              "issues": []
+            },
+            "steam:1225570": {
+              "reaction": "love",
+              "reasons": [
+                "social.coop",
+                "loop.puzzles"
+              ],
+              "issues": []
+            },
+            "steam:548430": {
+              "reaction": "like",
+              "reasons": [],
+              "issues": []
+            }
+          },
+          "corrections": [],
+          "preferences": [],
+          "session": {
+            "notNow": []
+          },
+          "seed": 841004
+        },
+        "screen": {
+          "step": "result",
+          "title": "Вот что я подобрал",
+          "result": {
+            "top": {
+              "id": "steam:35700",
+              "domain": "game",
+              "name": "Trine Enchanted Edition",
+              "ru": "Trine",
+              "year": 2009,
+              "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/35700/header.jpg",
+              "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/35700/library_600x900.jpg",
+              "kind": "game",
+              "series": [
+                "Trine"
+              ],
+              "genres": [
+                "Action",
+                "Adventure",
+                "Casual"
+              ],
+              "runtime": null,
+              "seasons": null,
+              "episodes": null,
+              "status": null,
+              "rating": null,
+              "link": "https://store.steampowered.com/app/35700/",
+              "price": null,
+              "label": "likely",
+              "labelText": "Вероятно подойдёт",
+              "score": 2.882,
+              "parts": {
+                "fit": 1.414,
+                "penalty": 0,
+                "mood": 1.107,
+                "prior": 0.36
+              },
+              "mainAspect": "social",
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                    "factIds": [
+                      "match:social.coop"
+                    ]
+                  },
+                  {
+                    "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                    "factIds": [
+                      "match:loop.puzzles"
+                    ]
+                  },
+                  {
+                    "text": "«Unravel Two»: ещё «платформинг» и «команда и спутники». Это ты не отмечал, вес слабый",
+                    "factIds": [
+                      "match:loop.platforming",
+                      "match:characters.companions"
+                    ],
+                    "weak": true
+                  },
+                  {
+                    "text": "Под настроение «щадяще»: «щадящая сложность»",
+                    "factIds": [
+                      "mood:difficulty.forgiving"
+                    ]
+                  }
+                ],
+                "risks": [
+                  {
+                    "text": "Нет данных: длина",
+                    "factIds": [
+                      "gap:length"
+                    ]
+                  }
+                ],
+                "info": [
+                  {
+                    "text": "96% положительных из 15 345 отзывов Steam",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "match:social.coop",
+                  "type": "match",
+                  "f": "social.coop",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Overcooked! 2",
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "There is also a cooperative play feature, whereby multiple players can join in at any time",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                      "ru": "Также есть функция кооперативной игры, при которой несколько игроков могут присоединиться в любой момент"
+                    },
+                    {
+                      "id": "p8",
+                      "q": "the multiplayer mode adds extra life to the game",
+                      "kind": "wiki",
+                      "section": "Reception and legacy",
+                      "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                      "ru": "мультиплеер добавляет игре новую жизнь"
+                    }
+                  ],
+                  "contribution": 0.7580757748376681
+                },
+                {
+                  "id": "match:loop.puzzles",
+                  "type": "match",
+                  "f": "loop.puzzles",
+                  "basis": "confirmed",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "who can battle enemies and solve environmental puzzles",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                      "ru": "которые могут сражаться с врагами и решать экологические головоломки"
+                    },
+                    {
+                      "id": "tag:Puzzle",
+                      "kind": "tag",
+                      "q": "Puzzle",
+                      "votes": 431
+                    }
+                  ],
+                  "contribution": 0.4906354768889559
+                },
+                {
+                  "id": "match:loop.platforming",
+                  "type": "match",
+                  "f": "loop.platforming",
+                  "basis": "inferred",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p0",
+                      "q": "Trine is a puzzle-platform video game",
+                      "kind": "wiki",
+                      "section": "lead",
+                      "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                      "ru": "Trine — платформер-головоломка"
+                    },
+                    {
+                      "id": "tag:Platformer",
+                      "kind": "tag",
+                      "q": "Platformer",
+                      "votes": 635
+                    }
+                  ],
+                  "contribution": 0.08374185000000002
+                },
+                {
+                  "id": "match:characters.companions",
+                  "type": "match",
+                  "f": "characters.companions",
+                  "basis": "inferred",
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p2",
+                      "q": "The player controls and switches between three different characters",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                      "ru": "Игрок управляет тремя разными персонажами и переключается между ними"
+                    }
+                  ],
+                  "contribution": 0.034432504315000015
+                },
+                {
+                  "id": "mood:difficulty.forgiving",
+                  "type": "mood",
+                  "f": "difficulty.forgiving",
+                  "why": [
+                    "щадяще"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "p4",
+                      "q": "Upon crossing a checkpoint, any deceased characters are brought back to life",
+                      "kind": "wiki",
+                      "section": "Gameplay",
+                      "url": "https://en.wikipedia.org/wiki/Trine_(video_game)",
+                      "ru": "При пересечении контрольной точки все погибшие персонажи воскрешаются"
+                    }
+                  ]
+                },
+                {
+                  "id": "gap:length",
+                  "type": "gap",
+                  "what": "длина"
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.958,
+                  "total": 15345,
+                  "desc": null
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "players",
+                  "status": "unknown",
+                  "text": "Не проверено, можно ли играть всей компанией (2)."
+                }
+              ]
+            },
+            "alternatives": [
+              {
+                "id": "steam:1335790",
+                "domain": "game",
+                "name": "Operation: Tango",
+                "ru": "Operation Tango",
+                "year": 2021,
+                "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1335790/header.jpg",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1335790/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Adventure",
+                  "Casual"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": null,
+                "link": "https://store.steampowered.com/app/1335790/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 2.638,
+                "parts": {
+                  "fit": 1.324,
+                  "penalty": 0,
+                  "mood": 1.053,
+                  "prior": 0.262
+                },
+                "mainAspect": "social",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                      "factIds": [
+                        "match:social.coop"
+                      ]
+                    },
+                    {
+                      "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.puzzles"
+                      ]
+                    },
+                    {
+                      "text": "«Overcooked! 2»: ещё «можно не напрягать голову» и «щадящая сложность». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:cognitive.low",
+                        "match:difficulty.forgiving"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [
+                    {
+                      "text": "Нет данных: длина",
+                      "factIds": [
+                        "gap:length"
+                      ]
+                    }
+                  ],
+                  "info": [
+                    {
+                      "text": "87% положительных из 7 997 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:social.coop",
+                    "type": "match",
+                    "f": "social.coop",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Overcooked! 2",
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p0",
+                        "q": "Operation: Tango is a cooperative first-person video game",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Operation%3A_Tango",
+                        "ru": "Operation: Tango — кооперативный шутер от первого лица"
+                      },
+                      {
+                        "id": "p1",
+                        "q": "is an asymmetrical co-operative game",
+                        "kind": "wiki",
+                        "section": "Premise and gameplay",
+                        "url": "https://en.wikipedia.org/wiki/Operation%3A_Tango",
+                        "ru": "— асимметричная кооперативная игра"
+                      }
+                    ],
+                    "contribution": 0.7580757748376681
+                  },
+                  {
+                    "id": "match:loop.puzzles",
+                    "type": "match",
+                    "f": "loop.puzzles",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p0",
+                        "q": "must work together to solve puzzles to bring down a hi-tech global menace",
+                        "kind": "wiki",
+                        "section": "lead",
+                        "url": "https://en.wikipedia.org/wiki/Operation%3A_Tango",
+                        "ru": "должны вместе решать головоломки, чтобы победить высокотехнологичную глобальную угрозу"
+                      },
+                      {
+                        "id": "tag:Puzzle",
+                        "kind": "tag",
+                        "q": "Puzzle",
+                        "votes": 148
+                      }
+                    ],
+                    "contribution": 0.4906354768889559
+                  },
+                  {
+                    "id": "match:cognitive.low",
+                    "type": "match",
+                    "f": "cognitive.low",
+                    "basis": "inferred",
+                    "sources": [
+                      "Overcooked! 2"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Casual",
+                        "kind": "tag",
+                        "q": "Casual",
+                        "votes": 102
+                      }
+                    ],
+                    "contribution": 0.0306343296
+                  },
+                  {
+                    "id": "match:difficulty.forgiving",
+                    "type": "match",
+                    "f": "difficulty.forgiving",
+                    "basis": "inferred",
+                    "sources": [
+                      "Overcooked! 2"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Casual",
+                        "kind": "tag",
+                        "q": "Casual",
+                        "votes": 102
+                      }
+                    ],
+                    "contribution": 0.017573759999999997
+                  },
+                  {
+                    "id": "gap:length",
+                    "type": "gap",
+                    "what": "длина"
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.874,
+                    "total": 7997,
+                    "desc": null
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "players",
+                    "status": "unknown",
+                    "text": "Не проверено, можно ли играть всей компанией (2)."
+                  }
+                ]
+              },
+              {
+                "id": "steam:620",
+                "domain": "game",
+                "name": "Portal 2",
+                "ru": null,
+                "year": 2011,
+                "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/faffc0f560786e2f05104a8d2fac837c6969bf13/header.jpg?t=1790187113",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/620/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Action",
+                  "Adventure"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": "Overwhelmingly Positive",
+                "link": "https://store.steampowered.com/app/620/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 2.686,
+                "parts": {
+                  "fit": 1.466,
+                  "penalty": 0,
+                  "mood": 0.8,
+                  "prior": 0.42
+                },
+                "mainAspect": "social",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                      "factIds": [
+                        "match:social.coop"
+                      ]
+                    },
+                    {
+                      "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.puzzles"
+                      ]
+                    },
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ещё «много юмора» и «платформинг». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:humor.funny",
+                        "match:loop.platforming"
+                      ],
+                      "weak": true
+                    }
+                  ],
+                  "risks": [],
+                  "info": [
+                    {
+                      "text": "99% положительных из 468 742 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    },
+                    {
+                      "text": "Авторы отзывов к моменту отзыва наиграли в среднем (медиана) 11 ч",
+                      "factIds": [
+                        "fact:hours"
+                      ]
+                    },
+                    {
+                      "text": "проверена для Steam Deck",
+                      "factIds": [
+                        "fact:deck"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:social.coop",
+                    "type": "match",
+                    "f": "social.coop",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Overcooked! 2",
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "a",
+                        "q": "Complete two-person co-op: Multiplayer game featuring its own dedicated story",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "Кооператив на двоих: многопользовательская игра с собственной сюжетной линией"
+                      },
+                      {
+                        "id": "tag:Co-op",
+                        "kind": "tag",
+                        "q": "Co-op",
+                        "votes": 6260
+                      }
+                    ],
+                    "contribution": 0.7929662916712009
+                  },
+                  {
+                    "id": "match:loop.puzzles",
+                    "type": "match",
+                    "f": "loop.puzzles",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "d",
+                        "q": "design co-op puzzles for you and your friends",
+                        "kind": "description",
+                        "thumb": null,
+                        "hours": null,
+                        "lang": null,
+                        "ru": "создавай кооперативные головоломки для тебя и твоих друзей"
+                      },
+                      {
+                        "id": "tag:Puzzle",
+                        "kind": "tag",
+                        "q": "Puzzle",
+                        "votes": 7394
+                      }
+                    ],
+                    "contribution": 0.4906354768889559
+                  },
+                  {
+                    "id": "match:humor.funny",
+                    "type": "match",
+                    "f": "humor.funny",
+                    "basis": "inferred",
+                    "sources": [
+                      "Overcooked! 2"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "r236440527",
+                        "q": "a sprawling comedic masterpiece of puzzle design",
+                        "kind": "review",
+                        "thumb": "up",
+                        "hours": 98,
+                        "lang": "english",
+                        "ru": "грандиозный комедийный шедевр дизайна головоломок"
+                      },
+                      {
+                        "id": "tag:Funny",
+                        "kind": "tag",
+                        "q": "Funny",
+                        "votes": 6885
+                      }
+                    ],
+                    "contribution": 0.09831179680000002
+                  },
+                  {
+                    "id": "match:loop.platforming",
+                    "type": "match",
+                    "f": "loop.platforming",
+                    "basis": "inferred",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Platformer",
+                        "kind": "tag",
+                        "q": "Platformer",
+                        "votes": 7477
+                      }
+                    ],
+                    "contribution": 0.05582790000000001
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.987,
+                    "total": 468742,
+                    "desc": "Overwhelmingly Positive"
+                  },
+                  {
+                    "id": "fact:hours",
+                    "type": "fact",
+                    "hours": 11
+                  },
+                  {
+                    "id": "fact:deck",
+                    "type": "fact",
+                    "deck": "verified"
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "players",
+                    "status": "unknown",
+                    "text": "Не проверено, можно ли играть всей компанией (2)."
+                  }
+                ]
+              },
+              {
+                "id": "steam:572890",
+                "domain": "game",
+                "name": "Pikuniku",
+                "ru": null,
+                "year": 2019,
+                "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/572890/header.jpg",
+                "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/572890/library_600x900.jpg",
+                "kind": "game",
+                "series": [],
+                "genres": [
+                  "Action",
+                  "Adventure",
+                  "Casual"
+                ],
+                "runtime": null,
+                "seasons": null,
+                "episodes": null,
+                "status": null,
+                "rating": null,
+                "link": "https://store.steampowered.com/app/572890/",
+                "price": null,
+                "label": "likely",
+                "labelText": "Вероятно подойдёт",
+                "score": 2.851,
+                "parts": {
+                  "fit": 1.514,
+                  "penalty": 0,
+                  "mood": 0.982,
+                  "prior": 0.355
+                },
+                "mainAspect": "social",
+                "explanation": {
+                  "reasons": [
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ты отметил «кооператив», здесь это тоже есть",
+                      "factIds": [
+                        "match:social.coop"
+                      ]
+                    },
+                    {
+                      "text": "«Unravel Two»: ты отметил «головоломки», здесь это тоже есть",
+                      "factIds": [
+                        "match:loop.puzzles"
+                      ]
+                    },
+                    {
+                      "text": "«Overcooked! 2» и «Unravel Two»: ещё «много юмора» и «платформинг». Это ты не отмечал, вес слабый",
+                      "factIds": [
+                        "match:humor.funny",
+                        "match:loop.platforming"
+                      ],
+                      "weak": true
+                    },
+                    {
+                      "text": "Под настроение «щадяще»: «щадящая сложность»",
+                      "factIds": [
+                        "mood:difficulty.forgiving"
+                      ]
+                    }
+                  ],
+                  "risks": [],
+                  "info": [
+                    {
+                      "text": "96% положительных из 10 001 отзывов Steam",
+                      "factIds": [
+                        "fact:reviews"
+                      ]
+                    }
+                  ]
+                },
+                "facts": [
+                  {
+                    "id": "match:social.coop",
+                    "type": "match",
+                    "f": "social.coop",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Overcooked! 2",
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p3",
+                        "q": "features a local co-op mode with 9 levels",
+                        "kind": "wiki",
+                        "section": "Co-op",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "включает локальный кооперативный режим на 9 уровней"
+                      },
+                      {
+                        "id": "tag:Co-op",
+                        "kind": "tag",
+                        "q": "Co-op",
+                        "votes": 105
+                      }
+                    ],
+                    "contribution": 0.6875017748789312
+                  },
+                  {
+                    "id": "match:loop.puzzles",
+                    "type": "match",
+                    "f": "loop.puzzles",
+                    "basis": "confirmed",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p2",
+                        "q": "is a puzzle and adventure game",
+                        "kind": "wiki",
+                        "section": "Single-player",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "это головоломка и приключение"
+                      },
+                      {
+                        "id": "tag:Puzzle",
+                        "kind": "tag",
+                        "q": "Puzzle",
+                        "votes": 121
+                      }
+                    ],
+                    "contribution": 0.4906354768889559
+                  },
+                  {
+                    "id": "match:humor.funny",
+                    "type": "match",
+                    "f": "humor.funny",
+                    "basis": "inferred",
+                    "sources": [
+                      "Overcooked! 2"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p12",
+                        "q": "extremely charming and funny throughout",
+                        "kind": "wiki",
+                        "section": "Reception",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "невероятно очаровательная и смешная на протяжении всей игры"
+                      },
+                      {
+                        "id": "tag:Funny",
+                        "kind": "tag",
+                        "q": "Funny",
+                        "votes": 94
+                      }
+                    ],
+                    "contribution": 0.09831179680000002
+                  },
+                  {
+                    "id": "match:loop.platforming",
+                    "type": "match",
+                    "f": "loop.platforming",
+                    "basis": "inferred",
+                    "sources": [
+                      "Unravel Two"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "p8",
+                        "q": "a pretty good mix of platforming and puzzle",
+                        "kind": "wiki",
+                        "section": "Reception",
+                        "url": "https://en.wikipedia.org/wiki/Pikuniku",
+                        "ru": "неплохое сочетание платформинга и головоломок"
+                      },
+                      {
+                        "id": "tag:Platformer",
+                        "kind": "tag",
+                        "q": "Platformer",
+                        "votes": 71
+                      }
+                    ],
+                    "contribution": 0.08374185000000002
+                  },
+                  {
+                    "id": "mood:difficulty.forgiving",
+                    "type": "mood",
+                    "f": "difficulty.forgiving",
+                    "why": [
+                      "щадяще"
+                    ],
+                    "evidence": [
+                      {
+                        "id": "tag:Casual",
+                        "kind": "tag",
+                        "q": "Casual",
+                        "votes": 129
+                      }
+                    ]
+                  },
+                  {
+                    "id": "fact:reviews",
+                    "type": "fact",
+                    "ratio": 0.958,
+                    "total": 10001,
+                    "desc": null
+                  }
+                ],
+                "feasibility": [
+                  {
+                    "key": "players",
+                    "status": "unknown",
+                    "text": "Не проверено, можно ли играть всей компанией (2)."
+                  }
+                ]
+              }
+            ],
+            "belief": 0.122,
+            "sieves": [
+              {
+                "id": 1,
+                "name": "Можно ли",
+                "removed": 0
+              },
+              {
+                "id": 2,
+                "name": "Было ли",
+                "removed": 5
+              },
+              {
+                "id": 3,
+                "name": "Сделано ли нормально",
+                "removed": 571
+              },
+              {
+                "id": 4,
+                "name": "Моё ли (жёсткие стопы)",
+                "removed": 285
+              },
+              {
+                "id": 5,
+                "name": "Подходит ли сегодня (обязательное)",
+                "removed": 3139
+              }
+            ],
+            "considered": 952,
+            "taste": {
+              "confirmed": [
+                {
+                  "f": "social.coop",
+                  "label": "кооператив",
+                  "w": 1.38,
+                  "sources": [
+                    "Overcooked! 2",
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:728880",
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.puzzles",
+                  "label": "головоломки",
+                  "w": 0.82,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                }
+              ],
+              "inferred": [
+                {
+                  "f": "humor.funny",
+                  "label": "много юмора",
+                  "w": 0.17,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "loop.platforming",
+                  "label": "платформинг",
+                  "w": 0.12,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "cognitive.low",
+                  "label": "можно не напрягать голову",
+                  "w": 0.11,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "tone.lighthearted",
+                  "label": "лёгкое весёлое настроение",
+                  "w": 0.11,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "tone.whimsical",
+                  "label": "странное и причудливое",
+                  "w": 0.07,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "characters.companions",
+                  "label": "команда и спутники",
+                  "w": 0.07,
+                  "sources": [
+                    "Unravel Two"
+                  ],
+                  "ids": [
+                    "steam:1225570"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "difficulty.forgiving",
+                  "label": "щадящая сложность",
+                  "w": 0.07,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                },
+                {
+                  "f": "freedom.linear",
+                  "label": "линейная, ведут по истории",
+                  "w": 0.07,
+                  "sources": [
+                    "Overcooked! 2"
+                  ],
+                  "ids": [
+                    "steam:728880"
+                  ],
+                  "preference": false
+                }
+              ],
+              "dislikes": [],
+              "hardNo": [
+                {
+                  "f": "social.pvp",
+                  "label": "надо играть против людей",
+                  "w": 0,
+                  "sources": [],
+                  "ids": [],
+                  "preference": false
+                }
+              ],
+              "consumed": 3
+            },
+            "today": null,
+            "uncheckedContext": []
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/log",
+      "input": {
+        "event": "answer",
+        "data": {
+          "from": "ask",
+          "qid": "lean:difficulty.hard|difficulty.forgiving",
+          "step": "result",
+          "domain": "game",
+          "asked": 3,
+          "action": {
+            "type": "answer",
+            "qid": "lean:difficulty.hard|difficulty.forgiving",
+            "value": "difficulty.forgiving"
+          }
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/feedback",
+      "input": {
+        "run": {
+          "version": 1,
+          "id": "3f6ac596-7ce3-4d5b-b75f-8c39b4d3dbf0",
+          "dialogueId": "b8c3f92c-22c6-4174-9483-b99ee58341b6",
+          "domain": "game",
+          "revision": 0,
+          "at": "2026-10-31T18:49:04.884Z",
+          "updatedAt": "2026-10-31T18:49:04.884Z",
+          "context": {
+            "platform": "windows",
+            "time": null,
+            "company": "friend",
+            "partySize": "2",
+            "childAge": null,
+            "wants": [],
+            "avoids": [],
+            "stops": [
+              "social.pvp"
+            ],
+            "minutes": null
+          },
+          "cards": [
+            {
+              "id": "steam:35700",
+              "title": "Trine",
+              "origin": "engine"
+            },
+            {
+              "id": "steam:1335790",
+              "title": "Operation Tango",
+              "origin": "engine"
+            },
+            {
+              "id": "steam:620",
+              "title": "Portal 2",
+              "origin": "engine"
+            },
+            {
+              "id": "steam:572890",
+              "title": "Pikuniku",
+              "origin": "engine"
+            }
+          ],
+          "responses": []
+        }
+      },
+      "status": 200,
+      "output": {
+        "ok": true,
+        "id": "3f6ac596-7ce3-4d5b-b75f-8c39b4d3dbf0",
+        "revision": 0
+      }
+    }
+  ]
+}

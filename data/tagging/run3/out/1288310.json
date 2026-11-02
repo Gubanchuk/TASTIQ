@@ -1,0 +1,14 @@
+{
+  "appid": 1288310,
+  "features": [
+    {"f": "tone.creepy", "r": 3, "ev": [{"id": "p0", "q": "a horror puzzle game"}]},
+    {"f": "story.mystery", "r": 3, "ev": [{"id": "p1", "q": "uncover the truth behind the tragedy and the inner stories of each character"}]},
+    {"f": "loop.puzzles", "r": 3, "ev": [{"id": "p1", "q": "players will encounter a variety of puzzles"}]},
+    {"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "through exploration in different scenes"}]},
+    {"f": "cognitive.low", "r": 2, "ev": [{"id": "p2", "q": "features simple controls centered around 2D side-scrolling exploration"}]},
+    {"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p2", "q": "relying on highlighted prompts and auto-saves to lower barriers"}]},
+    {"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "criminal policeman Lin Lixun, investigating a funeral arson case in a mountain town"}]},
+    {"f": "tone.dark", "r": 2, "ev": [{"id": "p0", "q": "another family massacre involved in it"}]},
+    {"f": "freedom.linear", "r": 2, "ev": [{"id": "p2", "q": "The pacing follows Linear narrative with chapter-based progression"}]}
+  ]
+}

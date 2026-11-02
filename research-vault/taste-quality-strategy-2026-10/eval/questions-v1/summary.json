@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-31T18:59:20.756Z",
+  "cases": [
+    {
+      "id": "story",
+      "before": 3,
+      "after": 1,
+      "allQuestionsChangeLeader": true
+    },
+    {
+      "id": "coop",
+      "before": 3,
+      "after": 3,
+      "allQuestionsChangeLeader": true
+    },
+    {
+      "id": "runs",
+      "before": 3,
+      "after": 0,
+      "allQuestionsChangeLeader": true
+    },
+    {
+      "id": "no-taste",
+      "before": 3,
+      "after": 3,
+      "allQuestionsChangeLeader": true
+    },
+    {
+      "id": "calm-film",
+      "before": 3,
+      "after": 3,
+      "allQuestionsChangeLeader": true
+    },
+    {
+      "id": "short-series",
+      "before": 3,
+      "after": 3,
+      "allQuestionsChangeLeader": true
+    }
+  ],
+  "counts": {
+    "before": 18,
+    "after": 13,
+    "arbitraryBefore": 7,
+    "arbitraryAfter": 0,
+    "questionStates": 47,
+    "completePaths": 103
+  },
+  "tests": {
+    "pass": 208,
+    "fail": 0,
+    "http": "pass"
+  },
+  "review": "one fresh GPT-6 Astra, Pass, no material findings",
+  "paidCalls": 0,
+  "budget": {
+    "totalUpper": 1.1916883,
+    "remainingLower": 3.8083117,
+    "successfulCalls": 135,
+    "uncertainReserve": 0
+  },
+  "sourceSha256": {
+    "src/core/ask.js": "b7b33f0a195375e0964fd067651914e843819d9d605859825fafc589769c5271",
+    "src/aspects/games.js": "520dfb0ba001c065a605a9f7afdd08c2475162584392acda27bf53e0841b953d",
+    "src/core/dialogue.js": "9853658101b050afc22ae26530fe5343000ba7b0d529938c505a9a54ae6ab967",
+    "test/question-quality.test.js": "07936eee0c806ccc118d57fd24d66eddeea950e29e9e0c92c26e376baa9c0185",
+    "test/ask.test.js": "def2b1f82ea8c4361eaf58b58159283c0edc339f90219d9481ae42978d9e513a",
+    "src/stand/question-audit.js": "5121ad4801cb302ed18b318b270793aeb9df130e3738467ccc017325d510b2b2",
+    "src/stand/question-branches.js": "6ee8f6cf3ff095cc5c863cf28d06f5705a9b159d8345c0edce2cb06030122fd0"
+  },
+  "evidenceSha256": {
+    "cases.frozen.json": "4096347ca055a8fba862a44ba3c10494b7b49b21b065a2581d779ba7742b3cea",
+    "before.json": "7a165baab8d93918f385b6afe0e957c6fee837f317ce5c45389214d7793415ac",
+    "after-final.json": "b83c33ee13f8e6a8136beaa5ba6b5cd761cd89e01b9e8cdb0d3670bcd693141c",
+    "branches.json": "f567dad3691f3af2b5508827a6931ff7cbd1417bf134c484dc8331d889c79382",
+    "browser-coop.json": "17a5a9dcbf007998d741be48672ed28af1c8b9d18b1d4398eda065d0e7041854",
+    "browser-film.json": "6b9e810b08ab269c59da99b84644a1bcdb6e32f993dd2a7fd53d90ad22856349",
+    "runtime-ready.json": "5cd44f3fcba42b006cd80e09524a649aaad81b9043a87e2d41b4bc5b660a8a66",
+    "review.md": "dc665ee2bab56a78b3aae9f51a35fdf6e947a37b6d9757c24351f69b7e3070b3",
+    "tests-final.log": "ed64fc7186200b5dbcbc09335e8e23c3706b5888659273456a0f1534ac87b523",
+    "http.log": "e2052f38dc46051f3e5a13aa6c648501886c590d415890fda8c9be4479c2950e"
+  },
+  "limits": [
+    "Authored diagnostic cases, not human fit",
+    "Question utility within top60",
+    "Sparse tags can suppress useful questions",
+    "AI ranking unchanged; no new paid recommendation comparison"
+  ]
+}

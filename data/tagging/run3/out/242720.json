@@ -1,0 +1,9 @@
+{"appid": 242720, "features": [
+{"f": "pace.fast", "r": 3, "ev": [{"id": "p3", "q": "The game emphasizes fast-paced gameplay"}]},
+{"f": "loop.shooting", "r": 3, "ev": [{"id": "p3", "q": "is a multiplayer third-person shooter mixed with swordplay"}]},
+{"f": "loop.melee", "r": 2, "ev": [{"id": "p4", "q": "create deadly combat techniques using rhythmic keystrokes"}]},
+{"f": "social.pvp", "r": 3, "ev": [{"id": "p6", "q": "The team that successfully kills everyone in the other team will win the round"}]},
+{"f": "social.coop", "r": 1, "ev": [{"id": "p7", "q": "where you can play together in co-op mode to defeat NPCs enemies and complete missions"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "p1", "q": "This sparked anger among the game's fanbase due to the lack of communication"}]},
+{"f": "progression.builds", "r": 1, "ev": [{"id": "p3", "q": "There are six different classes to choose from"}]}
+]}

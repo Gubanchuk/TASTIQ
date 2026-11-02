@@ -1,0 +1,7 @@
+{"appid": 2132850, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "p1", "q": "a smaller-scale four-player coop experience"}]},
+{"f": "loop.looting", "r": 2, "ev": [{"id": "p3", "q": "players receive loot drops that allow them to upgrade their abilities"}]},
+{"f": "progression.power", "r": 2, "ev": [{"id": "p3", "q": "players receive loot drops that allow them to upgrade their abilities"}]},
+{"f": "cognitive.high", "r": 2, "ev": [{"id": "p3", "q": "Using abilities in the correct order is an important part of gameplay"}]},
+{"f": "difficulty.forgiving", "r": 2, "ev": [{"id": "p4", "q": "commented on the game's accessibility to solo players"}]}
+]}

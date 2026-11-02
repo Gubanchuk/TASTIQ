@@ -1,0 +1,9 @@
+{"id": "tt2058303", "features": [
+{"f": "humor.funny", "r": 3, "ev": [{"id": "p6", "q": "almost an hour of laugh-out-loud comic astuteness"}]},
+{"f": "characters.coming_of_age", "r": 3, "ev": [{"id": "s", "q": "a group of six students about to embark on the most exciting period of their lives"}]},
+{"f": "world.school", "r": 3, "ev": [{"id": "s", "q": "a group of six students about to embark on the most exciting period of their lives"}]},
+{"f": "characters.ensemble", "r": 2, "ev": [{"id": "s", "q": "a group of six students about to embark on the most exciting period of their lives"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p5", "q": "stirring pathos into the flow of gags"}]},
+{"f": "characters.acting", "r": 2, "ev": [{"id": "p5", "q": "complimenting the scripts and performances"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p1", "q": "as a conclusion to the series"}]}
+]}

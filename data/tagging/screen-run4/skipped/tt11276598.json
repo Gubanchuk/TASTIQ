@@ -1,0 +1,31 @@
+{
+  "id": "tt11276598",
+  "name": "Pets United",
+  "kind": "film",
+  "domain": "cartoon",
+  "year": 2019,
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "s": "",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "section": "lead",
+      "text": "Pets United is a 2019 animated comedy film directed and written by Reinhard Klooss and starring Natalie Dormer, Eddie Marsan, and Jeff Burrell. It serves as a standalone sequel to the 2010 film Animals United."
+    },
+    {
+      "id": "p1",
+      "section": "lead",
+      "text": "The film premiered in China on 8 November 2019. In the United States, Netflix added the film to its streaming service on 11 September 2020, and was panned by critics."
+    },
+    {
+      "id": "p2",
+      "section": "Reception",
+      "text": "Roger Moore of Movie Nation gave the film 1.5 out of 4 stars, writing: \"'Pets United' could struggle a bit even to keep a toddler distracted for 92 minutes.\""
+    }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Pets_United"
+}

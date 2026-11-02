@@ -1,0 +1,9 @@
+{"appid": 1599600, "features": [
+{"f": "loop.management", "r": 3, "ev": [{"id": "p0", "q": "PlateUp! is a 2022 restaurant management simulation video game"}]},
+{"f": "social.coop", "r": 3, "ev": [{"id": "p2", "q": "a co-op restaurant management simulation video game for one to four players"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p0", "q": "Over each run lasting 15 in-game days, players choose randomly generated upgrades and difficulty modifiers for their restaurant"}]},
+{"f": "difficulty.hard", "r": 2, "ev": [{"id": "p5", "q": "due to its difficulty curve, especially among games of its type"}]},
+{"f": "tension.high", "r": 2, "ev": [{"id": "p2", "q": "Taking too long for these tasks causes customers to become disgruntled"}]},
+{"f": "tone.serene", "r": 2, "ev": [{"id": "p5", "q": "making the game calming"}]},
+{"f": "combat.clunky", "r": 2, "ev": [{"id": "p6", "q": "Multiple reviewers criticized the controls"}]}
+]}

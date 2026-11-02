@@ -1,0 +1,7 @@
+{"appid": 244930, "features": [
+{"f": "freedom.open_world", "r": 3, "ev": [{"id": "p1", "q": "an open world skiing and snowboarding game"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p1", "q": "to explore mountainous environments consisting of a range of different routes"}]},
+{"f": "freedom.sandbox", "r": 1, "ev": [{"id": "p1", "q": "This environment could be edited by players"}]},
+{"f": "social.pvp", "r": 2, "ev": [{"id": "p2", "q": "Players could compete individually or against their friends in various sporting events"}]},
+{"f": "characters.custom_hero", "r": 2, "ev": [{"id": "p2", "q": "Characters could be customized by means of catalogues of popular winter sports clothing brands"}]}
+]}

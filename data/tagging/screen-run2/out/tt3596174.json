@@ -1,0 +1,10 @@
+{"id": "tt3596174", "features": [
+{"f": "humor.funny", "r": 2, "ev": [{"id": "p0", "q": "is an American comedy television series created by Dan Schneider and Dana Olsen"}]},
+{"f": "world.superhero", "r": 3, "ev": [{"id": "p1", "q": "Swellview's well-known superhero Captain Man"}]},
+{"f": "world.smalltown", "r": 2, "ev": [{"id": "p1", "q": "lives in the town of Swellview"}]},
+{"f": "audience.kids", "r": 1, "ev": [{"id": "p1", "q": "Henry Hart is a 13-year-old boy who lives in the town of Swellview"}]},
+{"f": "completeness.ended", "r": 2, "ev": [{"id": "p0", "q": "aired on Nickelodeon from July 26, 2014, to March 21, 2020"}]},
+{"f": "tone.cheesy", "r": 1, "ev": [{"id": "p2", "q": "cheesy, formulaic superhero comedy offers little substance"}]},
+{"f": "story.predictable", "r": 1, "ev": [{"id": "p2", "q": "cheesy, formulaic superhero comedy offers little substance"}]},
+{"f": "characters.friendship", "r": 1, "ev": [{"id": "p1", "q": "his best friends, Charlotte and Jasper"}]}
+]}

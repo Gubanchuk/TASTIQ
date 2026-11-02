@@ -1,0 +1,8 @@
+{"appid": 1995520, "features": [
+{"f": "length.endless", "r": 2, "ev": [{"id": "p0", "q": "is a massively multiplayer online sandbox game"}]},
+{"f": "freedom.sandbox", "r": 3, "ev": [{"id": "p0", "q": "is a massively multiplayer online sandbox game"}]},
+{"f": "social.coop", "r": 2, "ev": [{"id": "p2", "q": "work alone or with other players to complete common goals"}]},
+{"f": "loop.building", "r": 3, "ev": [{"id": "p1", "q": "will be able to craft weapons, armors and build their own homes"}, {"id": "p3", "q": "Players are allowed to build overground on certain areas of the map"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p2", "q": "the environment will contain lore and mysteries that players can solve"}]},
+{"f": "world.fantasy", "r": 2, "ev": [{"id": "p1", "q": "set in a fantasy medieval era"}]}
+]}

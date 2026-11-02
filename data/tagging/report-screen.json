@@ -1,0 +1,560 @@
+{
+  "runs": [
+    {
+      "run": "screen-run1",
+      "games": 903,
+      "features": 7124,
+      "kept": 7121,
+      "unknownFeature": 2,
+      "badRelevance": 0,
+      "noValidEvidence": 0,
+      "evidence": 7549,
+      "badEvidenceId": 0,
+      "notVerbatim": 1,
+      "tooLong": 0,
+      "riskCapped": 238,
+      "appidMismatch": 0,
+      "unreadable": 0
+    },
+    {
+      "run": "screen-run2",
+      "games": 2421,
+      "features": 12906,
+      "kept": 12865,
+      "unknownFeature": 0,
+      "badRelevance": 0,
+      "noValidEvidence": 41,
+      "evidence": 13124,
+      "badEvidenceId": 0,
+      "notVerbatim": 43,
+      "tooLong": 0,
+      "riskCapped": 230,
+      "appidMismatch": 0,
+      "unreadable": 0
+    },
+    {
+      "run": "screen-run3",
+      "games": 1546,
+      "features": 8772,
+      "kept": 8749,
+      "unknownFeature": 0,
+      "badRelevance": 0,
+      "noValidEvidence": 23,
+      "evidence": 8924,
+      "badEvidenceId": 0,
+      "notVerbatim": 24,
+      "tooLong": 0,
+      "riskCapped": 118,
+      "appidMismatch": 0,
+      "unreadable": 0
+    },
+    {
+      "run": "screen-run4",
+      "games": 217,
+      "features": 1785,
+      "kept": 1779,
+      "unknownFeature": 0,
+      "badRelevance": 0,
+      "noValidEvidence": 5,
+      "evidence": 1896,
+      "badEvidenceId": 0,
+      "notVerbatim": 5,
+      "tooLong": 0,
+      "riskCapped": 44,
+      "appidMismatch": 0,
+      "unreadable": 0
+    }
+  ],
+  "agreement": {
+    "sharedGames": 217,
+    "perFeature": {
+      "format.animation": {
+        "both": 55,
+        "oneOnly": 0,
+        "closeWhenBoth": 55,
+        "presenceAgreement": 1
+      },
+      "humor.funny": {
+        "both": 70,
+        "oneOnly": 23,
+        "closeWhenBoth": 69,
+        "presenceAgreement": 0.7526881720430108
+      },
+      "humor.satire": {
+        "both": 9,
+        "oneOnly": 10,
+        "closeWhenBoth": 9,
+        "presenceAgreement": 0.47368421052631576
+      },
+      "characters.family": {
+        "both": 36,
+        "oneOnly": 23,
+        "closeWhenBoth": 36,
+        "presenceAgreement": 0.6101694915254238
+      },
+      "world.smalltown": {
+        "both": 8,
+        "oneOnly": 9,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.47058823529411764
+      },
+      "stability.falls_off": {
+        "both": 8,
+        "oneOnly": 22,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.26666666666666666
+      },
+      "length.long": {
+        "both": 15,
+        "oneOnly": 3,
+        "closeWhenBoth": 15,
+        "presenceAgreement": 0.8333333333333334
+      },
+      "story.dialogue": {
+        "both": 1,
+        "oneOnly": 12,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.07692307692307693
+      },
+      "characters.ensemble": {
+        "both": 33,
+        "oneOnly": 53,
+        "closeWhenBoth": 33,
+        "presenceAgreement": 0.38372093023255816
+      },
+      "world.supernatural": {
+        "both": 18,
+        "oneOnly": 5,
+        "closeWhenBoth": 18,
+        "presenceAgreement": 0.782608695652174
+      },
+      "tone.creepy": {
+        "both": 19,
+        "oneOnly": 8,
+        "closeWhenBoth": 19,
+        "presenceAgreement": 0.7037037037037037
+      },
+      "world.school": {
+        "both": 15,
+        "oneOnly": 3,
+        "closeWhenBoth": 15,
+        "presenceAgreement": 0.8333333333333334
+      },
+      "structure.serialized": {
+        "both": 2,
+        "oneOnly": 10,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.16666666666666666
+      },
+      "structure.procedural": {
+        "both": 6,
+        "oneOnly": 10,
+        "closeWhenBoth": 6,
+        "presenceAgreement": 0.375
+      },
+      "characters.female_lead": {
+        "both": 20,
+        "oneOnly": 19,
+        "closeWhenBoth": 20,
+        "presenceAgreement": 0.5128205128205128
+      },
+      "characters.acting": {
+        "both": 68,
+        "oneOnly": 50,
+        "closeWhenBoth": 68,
+        "presenceAgreement": 0.576271186440678
+      },
+      "completeness.ended": {
+        "both": 87,
+        "oneOnly": 20,
+        "closeWhenBoth": 86,
+        "presenceAgreement": 0.8130841121495327
+      },
+      "characters.friendship": {
+        "both": 18,
+        "oneOnly": 19,
+        "closeWhenBoth": 18,
+        "presenceAgreement": 0.4864864864864865
+      },
+      "characters.coming_of_age": {
+        "both": 8,
+        "oneOnly": 6,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.5714285714285714
+      },
+      "world.music": {
+        "both": 12,
+        "oneOnly": 1,
+        "closeWhenBoth": 12,
+        "presenceAgreement": 0.9230769230769231
+      },
+      "aesthetic.soundtrack": {
+        "both": 10,
+        "oneOnly": 9,
+        "closeWhenBoth": 9,
+        "presenceAgreement": 0.5263157894736842
+      },
+      "story.predictable": {
+        "both": 3,
+        "oneOnly": 29,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.09375
+      },
+      "pace.draggy": {
+        "both": 2,
+        "oneOnly": 22,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.08333333333333333
+      },
+      "aesthetic.beautiful": {
+        "both": 18,
+        "oneOnly": 28,
+        "closeWhenBoth": 18,
+        "presenceAgreement": 0.391304347826087
+      },
+      "world.scifi": {
+        "both": 22,
+        "oneOnly": 5,
+        "closeWhenBoth": 22,
+        "presenceAgreement": 0.8148148148148148
+      },
+      "world.dystopia": {
+        "both": 5,
+        "oneOnly": 4,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.5555555555555556
+      },
+      "world.western": {
+        "both": 3,
+        "oneOnly": 0,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 1
+      },
+      "tone.dark": {
+        "both": 19,
+        "oneOnly": 25,
+        "closeWhenBoth": 19,
+        "presenceAgreement": 0.4318181818181818
+      },
+      "story.complex": {
+        "both": 3,
+        "oneOnly": 12,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.2
+      },
+      "cognitive.high": {
+        "both": 9,
+        "oneOnly": 20,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.3103448275862069
+      },
+      "story.weak": {
+        "both": 13,
+        "oneOnly": 50,
+        "closeWhenBoth": 13,
+        "presenceAgreement": 0.20634920634920634
+      },
+      "completeness.unfinished": {
+        "both": 4,
+        "oneOnly": 5,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.4444444444444444
+      },
+      "content.violence": {
+        "both": 9,
+        "oneOnly": 26,
+        "closeWhenBoth": 9,
+        "presenceAgreement": 0.2571428571428571
+      },
+      "world.timetravel": {
+        "both": 3,
+        "oneOnly": 1,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.75
+      },
+      "world.historical": {
+        "both": 25,
+        "oneOnly": 6,
+        "closeWhenBoth": 25,
+        "presenceAgreement": 0.8064516129032258
+      },
+      "content.sexual": {
+        "both": 4,
+        "oneOnly": 15,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.21052631578947367
+      },
+      "tension.high": {
+        "both": 33,
+        "oneOnly": 30,
+        "closeWhenBoth": 33,
+        "presenceAgreement": 0.5238095238095238
+      },
+      "characters.romance": {
+        "both": 25,
+        "oneOnly": 22,
+        "closeWhenBoth": 25,
+        "presenceAgreement": 0.5319148936170213
+      },
+      "characters.memorable": {
+        "both": 10,
+        "oneOnly": 29,
+        "closeWhenBoth": 10,
+        "presenceAgreement": 0.2564102564102564
+      },
+      "world.space": {
+        "both": 7,
+        "oneOnly": 3,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.7
+      },
+      "tone.epic": {
+        "both": 5,
+        "oneOnly": 12,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.29411764705882354
+      },
+      "completeness.running": {
+        "both": 20,
+        "oneOnly": 7,
+        "closeWhenBoth": 20,
+        "presenceAgreement": 0.7407407407407407
+      },
+      "tone.gritty": {
+        "both": 9,
+        "oneOnly": 12,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.42857142857142855
+      },
+      "tone.feelgood": {
+        "both": 8,
+        "oneOnly": 21,
+        "closeWhenBoth": 8,
+        "presenceAgreement": 0.27586206896551724
+      },
+      "tone.inspiring": {
+        "both": 3,
+        "oneOnly": 9,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.25
+      },
+      "world.sports": {
+        "both": 3,
+        "oneOnly": 0,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 1
+      },
+      "tone.lighthearted": {
+        "both": 2,
+        "oneOnly": 17,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.10526315789473684
+      },
+      "story.mystery": {
+        "both": 25,
+        "oneOnly": 15,
+        "closeWhenBoth": 25,
+        "presenceAgreement": 0.625
+      },
+      "story.nonlinear": {
+        "both": 2,
+        "oneOnly": 7,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.2222222222222222
+      },
+      "content.disturbing": {
+        "both": 7,
+        "oneOnly": 15,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.3181818181818182
+      },
+      "world.fantasy": {
+        "both": 16,
+        "oneOnly": 7,
+        "closeWhenBoth": 16,
+        "presenceAgreement": 0.6956521739130435
+      },
+      "humor.dark": {
+        "both": 15,
+        "oneOnly": 8,
+        "closeWhenBoth": 15,
+        "presenceAgreement": 0.6521739130434783
+      },
+      "ending.strong": {
+        "both": 0,
+        "oneOnly": 10,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "format.documentary": {
+        "both": 5,
+        "oneOnly": 1,
+        "closeWhenBoth": 5,
+        "presenceAgreement": 0.8333333333333334
+      },
+      "story.true": {
+        "both": 16,
+        "oneOnly": 3,
+        "closeWhenBoth": 16,
+        "presenceAgreement": 0.8421052631578947
+      },
+      "world.crime": {
+        "both": 28,
+        "oneOnly": 16,
+        "closeWhenBoth": 28,
+        "presenceAgreement": 0.6363636363636364
+      },
+      "story.twist": {
+        "both": 1,
+        "oneOnly": 9,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.1
+      },
+      "tone.atmospheric": {
+        "both": 0,
+        "oneOnly": 10,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "characters.antihero": {
+        "both": 1,
+        "oneOnly": 8,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.1111111111111111
+      },
+      "humor.silly": {
+        "both": 7,
+        "oneOnly": 10,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.4117647058823529
+      },
+      "content.family": {
+        "both": 2,
+        "oneOnly": 8,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.2
+      },
+      "pace.fast": {
+        "both": 4,
+        "oneOnly": 15,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.21052631578947367
+      },
+      "world.superhero": {
+        "both": 9,
+        "oneOnly": 2,
+        "closeWhenBoth": 9,
+        "presenceAgreement": 0.8181818181818182
+      },
+      "world.war": {
+        "both": 12,
+        "oneOnly": 4,
+        "closeWhenBoth": 12,
+        "presenceAgreement": 0.75
+      },
+      "humor.deadpan": {
+        "both": 2,
+        "oneOnly": 3,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.4
+      },
+      "tone.melancholic": {
+        "both": 7,
+        "oneOnly": 13,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.35
+      },
+      "characters.unlikeable": {
+        "both": 3,
+        "oneOnly": 11,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.21428571428571427
+      },
+      "tone.whimsical": {
+        "both": 6,
+        "oneOnly": 17,
+        "closeWhenBoth": 6,
+        "presenceAgreement": 0.2608695652173913
+      },
+      "aesthetic.effects": {
+        "both": 2,
+        "oneOnly": 10,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.16666666666666666
+      },
+      "audience.kids": {
+        "both": 6,
+        "oneOnly": 11,
+        "closeWhenBoth": 6,
+        "presenceAgreement": 0.35294117647058826
+      },
+      "aesthetic.stylized": {
+        "both": 7,
+        "oneOnly": 12,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.3684210526315789
+      },
+      "story.revenge": {
+        "both": 3,
+        "oneOnly": 3,
+        "closeWhenBoth": 3,
+        "presenceAgreement": 0.5
+      },
+      "world.postapoc": {
+        "both": 7,
+        "oneOnly": 2,
+        "closeWhenBoth": 7,
+        "presenceAgreement": 0.7777777777777778
+      },
+      "pace.slow": {
+        "both": 0,
+        "oneOnly": 2,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "audience.adult": {
+        "both": 6,
+        "oneOnly": 6,
+        "closeWhenBoth": 6,
+        "presenceAgreement": 0.5
+      },
+      "characters.lone_hero": {
+        "both": 0,
+        "oneOnly": 3,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "tone.cheesy": {
+        "both": 3,
+        "oneOnly": 7,
+        "closeWhenBoth": 2,
+        "presenceAgreement": 0.3
+      },
+      "cognitive.low": {
+        "both": 0,
+        "oneOnly": 2,
+        "closeWhenBoth": 0,
+        "presenceAgreement": 0
+      },
+      "content.profanity": {
+        "both": 1,
+        "oneOnly": 5,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.16666666666666666
+      },
+      "ending.weak": {
+        "both": 1,
+        "oneOnly": 2,
+        "closeWhenBoth": 1,
+        "presenceAgreement": 0.3333333333333333
+      },
+      "length.short": {
+        "both": 4,
+        "oneOnly": 2,
+        "closeWhenBoth": 4,
+        "presenceAgreement": 0.6666666666666666
+      }
+    },
+    "overallPresenceAgreement": 0.5022761760242792
+  }
+}

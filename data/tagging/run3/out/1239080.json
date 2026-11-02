@@ -1,0 +1,9 @@
+{"appid": 1239080, "features": [
+{"f": "loop.tactics", "r": 3, "ev": [{"id": "p0", "q": "is a real-time tactics video game"}]},
+{"f": "loop.shooting", "r": 2, "ev": [{"id": "p2", "q": "combines elements of strategy games and tactical shooters"}]},
+{"f": "loop.stealth", "r": 1, "ev": [{"id": "p4", "q": "a revamped stealth system"}]},
+{"f": "cognitive.high", "r": 3, "ev": [{"id": "p3", "q": "plan each trooper's movement pathing and actions"}]},
+{"f": "world.modern", "r": 2, "ev": [{"id": "p0", "q": "counterinsurgency operations against an insurgency threatening the region's stability"}]},
+{"f": "progression.builds", "r": 2, "ev": [{"id": "p5", "q": "Each unit features different classes and unique weapons, equipment, and doctrine trees"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "p8", "q": "the trial and error nature of gameplay"}]}
+]}

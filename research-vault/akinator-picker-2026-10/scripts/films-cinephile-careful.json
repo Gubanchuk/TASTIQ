@@ -1,0 +1,1297 @@
+{
+ "persona": "cinephile",
+ "mode": "careful",
+ "screens": [
+  {
+   "n": 1,
+   "step": "domain",
+   "title": "Что хочешь?",
+   "options": [
+    "Поиграть",
+    "Посмотреть фильм",
+    "Посмотреть сериал",
+    "Посмотреть мультфильм"
+   ]
+  },
+  {
+   "n": 2,
+   "action": {
+    "type": "choose",
+    "value": "film"
+   },
+   "step": "genres",
+   "title": "Что обычно смотришь?",
+   "options": [
+    "драмы",
+    "комедии",
+    "боевики",
+    "криминал",
+    "мелодрамы",
+    "триллеры",
+    "ужасы",
+    "приключения",
+    "детективы",
+    "биографии",
+    "фэнтези",
+    "фантастика",
+    "документальное",
+    "историческое"
+   ]
+  },
+  {
+   "n": 3,
+   "action": {
+    "type": "genres",
+    "values": [
+     "genre:Drama",
+     "genre:Mystery"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Властелин колец: Братство кольца (2001)",
+    "Джанго освобождённый (2012)",
+    "Красота по-американски (1999)",
+    "Логан (2017)",
+    "Донни Дарко (2001)",
+    "Марсианин (2015)",
+    "Пианист (2002)",
+    "Властелин колец: Две крепости (2002)"
+   ]
+  },
+  {
+   "n": 4,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt0120737",
+     "tt1853728",
+     "tt0169547",
+     "tt3315342",
+     "tt0246578",
+     "tt3659388",
+     "tt0253474",
+     "tt0167261"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Отель «Гранд Будапешт» (2014)",
+    "Крёстный отец (1972)",
+    "Прибытие (2016)",
+    "Шестое чувство (1999)",
+    "Бойцовский клуб (1999)",
+    "Криминальное чтиво (1994)",
+    "Форрест Гамп (1994)",
+    "Властелин колец: Возвращение короля (2003)"
+   ]
+  },
+  {
+   "n": 5,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt2278388",
+     "tt0068646",
+     "tt2543164",
+     "tt0167404",
+     "tt0137523",
+     "tt0110912",
+     "tt0109830",
+     "tt0167260"
+    ]
+   },
+   "step": "liked",
+   "title": "Что из этого смотрел, и зашло?",
+   "items": [
+    "Побег из Шоушенка (1994)",
+    "Рокки (1976)",
+    "Семь (1995)",
+    "Гладиатор (2000)",
+    "Молчание ягнят (1991)",
+    "Джокер (2019)",
+    "Бесславные ублюдки (2009)",
+    "Остров проклятых (2010)"
+   ]
+  },
+  {
+   "n": 6,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt0166924",
+     "tt0079944",
+     "tt0118694",
+     "tt0090756"
+    ],
+    "shownIds": [
+     "tt0120737",
+     "tt1853728",
+     "tt0169547",
+     "tt3315342",
+     "tt0246578",
+     "tt3659388",
+     "tt0253474",
+     "tt0167261",
+     "tt2278388",
+     "tt0068646",
+     "tt2543164",
+     "tt0167404",
+     "tt0137523",
+     "tt0110912",
+     "tt0109830",
+     "tt0167260",
+     "tt0111161",
+     "tt0075148",
+     "tt0114369",
+     "tt0172495",
+     "tt0102926",
+     "tt7286456",
+     "tt0361748",
+     "tt1130884"
+    ]
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Малхолланд Драйв»?",
+   "options": [
+    "нелинейный сюжет",
+    "атмосферное",
+    "неожиданные повороты",
+    "сложный, надо вникать",
+    "стильно и необычно снято",
+    "загадка и расследование",
+    "мрачная атмосфера",
+    "странное, причудливое",
+    "красивая картинка",
+    "жуть и страх"
+   ]
+  },
+  {
+   "n": 7,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "tone.whimsical",
+     "story.complex",
+     "tone.atmospheric",
+     "aesthetic.stylized"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Сталкер»?",
+   "options": [
+    "антиутопия",
+    "неторопливое",
+    "фантастика",
+    "мрачная атмосфера",
+    "заставляет думать",
+    "странное, причудливое",
+    "красивая картинка",
+    "держится на диалогах",
+    "постапокалипсис",
+    "атмосферное"
+   ]
+  },
+  {
+   "n": 8,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "pace.slow",
+     "cognitive.high",
+     "aesthetic.beautiful",
+     "tone.atmospheric"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "step": "why",
+   "title": "За что тебе зашло «Любовное настроение»?",
+   "options": [
+    "атмосферное",
+    "стильно и необычно снято",
+    "любовная линия",
+    "грустное, пробирает",
+    "красивая картинка",
+    "спокойное, без нервов",
+    "неторопливое",
+    "горький финал",
+    "заставляет думать",
+    "странное, причудливое"
+   ]
+  },
+  {
+   "n": 9,
+   "action": {
+    "type": "reasons",
+    "values": [
+     "aesthetic.stylized",
+     "tone.melancholic",
+     "aesthetic.beautiful",
+     "pace.slow",
+     "aesthetic.soundtrack"
+    ],
+    "love": true,
+    "issues": []
+   },
+   "step": "disliked",
+   "title": "А что не зашло, хотя многие хвалят?",
+   "items": [
+    "День сурка (1993)",
+    "Спасти рядового Райана (1998)",
+    "Престиж (2006)",
+    "Список Шиндлера (1993)",
+    "Крёстный отец 2 (1974)",
+    "Зелёная миля (1999)",
+    "Отступники (2006)",
+    "Гравитация (2013)"
+   ]
+  },
+  {
+   "n": 10,
+   "action": {
+    "type": "more",
+    "ids": [
+     "tt0107048",
+     "tt0120815",
+     "tt0482571",
+     "tt0108052",
+     "tt0071562",
+     "tt0120689",
+     "tt0407887",
+     "tt1454468"
+    ]
+   },
+   "step": "disliked",
+   "title": "А что не зашло, хотя многие хвалят?",
+   "items": [
+    "Помни (2000)",
+    "Славные парни (1990)",
+    "Леон (1994)",
+    "Шоу Трумана (1998)",
+    "Американская история Икс (1998)",
+    "Титаник (1997)",
+    "«V» значит Вендетта (2005)",
+    "Поймай меня, если сможешь (2002)"
+   ]
+  },
+  {
+   "n": 11,
+   "action": {
+    "type": "pick",
+    "ids": [
+     "tt4154796",
+     "tt2109248"
+    ],
+    "shownIds": [
+     "tt0107048",
+     "tt0120815",
+     "tt0482571",
+     "tt0108052",
+     "tt0071562",
+     "tt0120689",
+     "tt0407887",
+     "tt1454468",
+     "tt0209144",
+     "tt0099685",
+     "tt0110413",
+     "tt0120382",
+     "tt0120586",
+     "tt0120338",
+     "tt0434409",
+     "tt0264464"
+    ]
+   },
+   "step": "why_not",
+   "title": "Что не понравилось в «Мстители: Финал»?",
+   "options": [
+    "длинно, устал смотреть",
+    "много крови и жестокости",
+    "всё время на нервах",
+    "неприятно смотреть",
+    "одни спецэффекты, а смотреть нечего",
+    "запутался, не понял, что происходит",
+    "затянуто, скучал",
+    "всё понятно заранее"
+   ]
+  },
+  {
+   "n": 12,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "story.predictable",
+      "hard": false
+     },
+     {
+      "f": "length.long",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": true
+     },
+     {
+      "f": "world.superhero",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   },
+   "step": "why_not",
+   "title": "Что не понравилось в «Трансформеры: Эпоха истребления»?",
+   "options": [
+    "длинно, устал смотреть",
+    "сюжет с дырами",
+    "одни спецэффекты, а смотреть нечего",
+    "всё понятно заранее",
+    "затянуто, скучал",
+    "герои бесили",
+    "слили концовку"
+   ]
+  },
+  {
+   "n": 13,
+   "action": {
+    "type": "issues",
+    "issues": [
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "pace.draggy",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": true
+     },
+     {
+      "f": "world.superhero",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   },
+   "step": "today",
+   "title": "Что сегодня?",
+   "options": [
+    "Хочу расслабиться",
+    "Хочу посмеяться",
+    "Хочу пощекотать нервы",
+    "Хочу, чтобы пробрало",
+    "Хочу подумать",
+    "Фоном, не вникая",
+    "Смотрю с детьми",
+    "Коротко, на один вечер",
+    "Хочу засесть надолго"
+   ]
+  },
+  {
+   "n": 14,
+   "action": {
+    "type": "today",
+    "values": [
+     "think"
+    ],
+    "avoid": []
+   },
+   "step": "playback",
+   "title": "Вот как я тебя вижу",
+   "options": [
+    "Да, подбирай",
+    "Добавлю ещё, что зашло"
+   ]
+  },
+  {
+   "n": 15,
+   "action": {
+    "type": "choose",
+    "value": "confirm"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  },
+  {
+   "n": 16,
+   "action": {
+    "type": "fork",
+    "f": "story.nonlinear"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  },
+  {
+   "n": 17,
+   "action": {
+    "type": "fork",
+    "f": "world.space"
+   },
+   "step": "result",
+   "title": "Вот что я подобрал"
+  }
+ ],
+ "result": {
+  "tag": "после развилки 2",
+  "top": {
+   "id": "tt0414993",
+   "name": "Фонтан",
+   "label": "likely",
+   "score": 10.433
+  },
+  "alternatives": [
+   {
+    "id": "tt0137523",
+    "name": "Бойцовский клуб",
+    "label": "likely",
+    "score": 9.595
+   },
+   {
+    "id": "tt0112817",
+    "name": "Мертвец",
+    "label": "likely",
+    "score": 9.06
+   },
+   {
+    "id": "tt0069762",
+    "name": "Пустоши",
+    "label": "likely",
+    "score": 9.458
+   }
+  ],
+  "fork": null,
+  "taste": {
+   "confirmed": [
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "w": 1.72,
+     "sources": [
+      "Малхолланд Драйв",
+      "Сталкер"
+     ],
+     "ids": [
+      "tt0166924",
+      "tt0079944"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "w": 1.66,
+     "sources": [
+      "Малхолланд Драйв",
+      "Любовное настроение"
+     ],
+     "ids": [
+      "tt0166924",
+      "tt0118694"
+     ],
+     "preference": false
+    },
+    {
+     "f": "pace.slow",
+     "label": "неторопливое",
+     "w": 1.48,
+     "sources": [
+      "Сталкер",
+      "Любовное настроение"
+     ],
+     "ids": [
+      "tt0079944",
+      "tt0118694"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "w": 1.38,
+     "sources": [
+      "Сталкер",
+      "Любовное настроение"
+     ],
+     "ids": [
+      "tt0079944",
+      "tt0118694"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "w": 1.21,
+     "sources": [
+      "Любовное настроение"
+     ],
+     "ids": [
+      "tt0118694"
+     ],
+     "preference": false
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "w": 1.18,
+     "sources": [
+      "Сталкер"
+     ],
+     "ids": [
+      "tt0079944"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "w": 0.9,
+     "sources": [],
+     "ids": [],
+     "preference": true
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "w": 0.82,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "w": 0.82,
+     "sources": [
+      "Малхолланд Драйв"
+     ],
+     "ids": [
+      "tt0166924"
+     ],
+     "preference": false
+    },
+    {
+     "f": "aesthetic.soundtrack",
+     "label": "сильная музыка",
+     "w": 0.82,
+     "sources": [
+      "Любовное настроение"
+     ],
+     "ids": [
+      "tt0118694"
+     ],
+     "preference": false
+    },
+    {
+     "f": "world.space",
+     "label": "космос",
+     "w": 0.61,
+     "sources": [],
+     "ids": [],
+     "preference": true
+    }
+   ],
+   "inferred": [
+    {
+     "f": "tone.dark",
+     "label": "мрачная атмосфера",
+     "w": 0.5,
+     "sources": [
+      "Малхолланд Драйв",
+      "Сталкер",
+      "Любовное настроение",
+      "Синий бархат"
+     ],
+     "ids": [
+      "tt0166924",
+      "tt0079944",
+      "tt0118694",
+      "tt0090756"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tone.creepy",
+     "label": "жуть и страх",
+     "w": 0.46,
+     "sources": [
+      "Малхолланд Драйв",
+      "Сталкер",
+      "Синий бархат"
+     ],
+     "ids": [
+      "tt0166924",
+      "tt0079944",
+      "tt0090756"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.mystery",
+     "label": "загадка и расследование",
+     "w": 0.37,
+     "sources": [
+      "Малхолланд Драйв",
+      "Синий бархат"
+     ],
+     "ids": [
+      "tt0166924",
+      "tt0090756"
+     ],
+     "preference": false
+    },
+    {
+     "f": "tension.low",
+     "label": "спокойное, без нервов",
+     "w": 0.32,
+     "sources": [
+      "Сталкер",
+      "Любовное настроение",
+      "Синий бархат"
+     ],
+     "ids": [
+      "tt0079944",
+      "tt0118694",
+      "tt0090756"
+     ],
+     "preference": false
+    },
+    {
+     "f": "humor.dark",
+     "label": "чёрный юмор",
+     "w": 0.24,
+     "sources": [
+      "Малхолланд Драйв",
+      "Синий бархат"
+     ],
+     "ids": [
+      "tt0166924",
+      "tt0090756"
+     ],
+     "preference": false
+    },
+    {
+     "f": "characters.romance",
+     "label": "любовная линия",
+     "w": 0.19,
+     "sources": [
+      "Любовное настроение"
+     ],
+     "ids": [
+      "tt0118694"
+     ],
+     "preference": false
+    },
+    {
+     "f": "world.smalltown",
+     "label": "маленький город",
+     "w": 0.17,
+     "sources": [
+      "Синий бархат"
+     ],
+     "ids": [
+      "tt0090756"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.dialogue",
+     "label": "держится на диалогах",
+     "w": 0.15,
+     "sources": [
+      "Сталкер"
+     ],
+     "ids": [
+      "tt0079944"
+     ],
+     "preference": false
+    }
+   ],
+   "dislikes": [
+    {
+     "f": "story.predictable",
+     "label": "всё понятно заранее",
+     "w": 2,
+     "sources": [
+      "Мстители: Финал",
+      "Трансформеры: Эпоха истребления"
+     ],
+     "ids": [
+      "tt4154796",
+      "tt2109248"
+     ],
+     "preference": false
+    },
+    {
+     "f": "length.long",
+     "label": "длинно, устал смотреть",
+     "w": 1,
+     "sources": [
+      "Мстители: Финал"
+     ],
+     "ids": [
+      "tt4154796"
+     ],
+     "preference": false
+    },
+    {
+     "f": "story.weak",
+     "label": "сюжет с дырами",
+     "w": 1,
+     "sources": [
+      "Трансформеры: Эпоха истребления"
+     ],
+     "ids": [
+      "tt2109248"
+     ],
+     "preference": false
+    },
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучал",
+     "w": 1,
+     "sources": [
+      "Трансформеры: Эпоха истребления"
+     ],
+     "ids": [
+      "tt2109248"
+     ],
+     "preference": false
+    }
+   ],
+   "hardNo": [
+    {
+     "f": "aesthetic.effects",
+     "label": "одни спецэффекты, а смотреть нечего",
+     "w": 0,
+     "sources": [
+      "Мстители: Финал",
+      "Трансформеры: Эпоха истребления"
+     ],
+     "ids": [
+      "tt4154796",
+      "tt2109248"
+     ],
+     "preference": false
+    },
+    {
+     "f": "world.superhero",
+     "label": "супергерои",
+     "w": 0,
+     "sources": [
+      "Мстители: Финал",
+      "Трансформеры: Эпоха истребления"
+     ],
+     "ids": [
+      "tt4154796",
+      "tt2109248"
+     ],
+     "preference": false
+    }
+   ],
+   "consumed": 6
+  },
+  "considered": 21296,
+  "sieves": [
+   {
+    "id": 1,
+    "name": "Можно ли",
+    "removed": 0
+   },
+   {
+    "id": 2,
+    "name": "Было ли",
+    "removed": 6
+   },
+   {
+    "id": 3,
+    "name": "Сделано ли нормально",
+    "removed": 10287
+   },
+   {
+    "id": 4,
+    "name": "Моё ли (жёсткие стопы)",
+    "removed": 537
+   },
+   {
+    "id": 5,
+    "name": "Подходит ли сегодня (обязательное)",
+    "removed": 0
+   }
+  ]
+ },
+ "why": {
+  "tt1441395": {
+   "id": "tt1441395",
+   "name": "Under the Skin",
+   "rank": 22,
+   "of": 21296,
+   "score": 8.889,
+   "parts": {
+    "fit": 8.598990277450422,
+    "penalty": 0.763755,
+    "mood": 0.9806865600000001,
+    "prior": 0.07355000983155272
+   },
+   "leaderScore": 10.433,
+   "matches": [
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "contribution": 1.473,
+     "confirmed": true
+    },
+    {
+     "f": "pace.slow",
+     "label": "неторопливое",
+     "contribution": 1.37,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 1.162,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.845,
+     "confirmed": true
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.72,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.571,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.764
+    }
+   ]
+  },
+  "tt2076220": {
+   "id": "tt2076220",
+   "name": "Holy Motors",
+   "rank": 349,
+   "of": 21296,
+   "score": 6.349,
+   "parts": {
+    "fit": 5.324838887156968,
+    "penalty": 0.138,
+    "mood": 1.0445752,
+    "prior": 0.11803295208756633
+   },
+   "leaderScore": 10.433,
+   "matches": [
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 0.863,
+     "confirmed": true
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.828,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.76,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.682,
+     "confirmed": true
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.539,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.532,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.138
+    }
+   ]
+  },
+  "tt7984734": {
+   "id": "tt7984734",
+   "name": "The Lighthouse",
+   "rank": 84,
+   "of": 21296,
+   "score": 7.826,
+   "parts": {
+    "fit": 7.068219061538681,
+    "penalty": 0.23399999999999999,
+    "mood": 0.82005712,
+    "prior": 0.17208371567149502
+   },
+   "leaderScore": 10.433,
+   "matches": [
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "contribution": 1.473,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 1.056,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.77,
+     "confirmed": true
+    },
+    {
+     "f": "story.complex",
+     "label": "сложный, надо вникать",
+     "contribution": 0.577,
+     "confirmed": true
+    },
+    {
+     "f": "tone.whimsical",
+     "label": "странное, причудливое",
+     "contribution": 0.524,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.523,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.134
+    },
+    {
+     "f": "length.long",
+     "label": "длинный",
+     "contribution": 0.1
+    }
+   ]
+  },
+  "tt0054632": {
+   "id": "tt0054632",
+   "name": "Last Year at Marienbad",
+   "rank": 27,
+   "of": 21296,
+   "score": 8.77,
+   "parts": {
+    "fit": 7.629215424517401,
+    "penalty": 0,
+    "mood": 0.98420752,
+    "prior": 0.15690527298944745
+   },
+   "leaderScore": 10.433,
+   "matches": [
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 1.242,
+     "confirmed": true
+    },
+    {
+     "f": "pace.slow",
+     "label": "неторопливое",
+     "contribution": 0.953,
+     "confirmed": true
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.828,
+     "confirmed": true
+    },
+    {
+     "f": "story.nonlinear",
+     "label": "нелинейный сюжет",
+     "contribution": 0.769,
+     "confirmed": true
+    },
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "contribution": 0.75,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.649,
+     "confirmed": true
+    }
+   ],
+   "penalties": []
+  },
+  "tt0060176": {
+   "id": "tt0060176",
+   "name": "Blow-Up",
+   "rank": 33,
+   "of": 21296,
+   "score": 8.596,
+   "parts": {
+    "fit": 7.5724465256973215,
+    "penalty": 0.07050000000000001,
+    "mood": 0.934624,
+    "prior": 0.15895556138166086
+   },
+   "leaderScore": 10.433,
+   "matches": [
+    {
+     "f": "tone.atmospheric",
+     "label": "атмосферное",
+     "contribution": 1.473,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.stylized",
+     "label": "стильно и необычно снято",
+     "contribution": 1.242,
+     "confirmed": true
+    },
+    {
+     "f": "pace.slow",
+     "label": "неторопливое",
+     "contribution": 1.096,
+     "confirmed": true
+    },
+    {
+     "f": "cognitive.high",
+     "label": "заставляет думать",
+     "contribution": 0.828,
+     "confirmed": true
+    },
+    {
+     "f": "tone.melancholic",
+     "label": "грустное, пробирает",
+     "contribution": 0.586,
+     "confirmed": true
+    },
+    {
+     "f": "aesthetic.beautiful",
+     "label": "красивая картинка",
+     "contribution": 0.573,
+     "confirmed": true
+    }
+   ],
+   "penalties": [
+    {
+     "f": "pace.draggy",
+     "label": "затянуто, скучно",
+     "contribution": 0.071
+    }
+   ]
+  }
+ },
+ "finalState": {
+  "step": "result",
+  "domain": "film",
+  "platform": "windows",
+  "genres": [
+   "genre:Drama",
+   "genre:Mystery"
+  ],
+  "shown": [
+   "tt0120737",
+   "tt1853728",
+   "tt0169547",
+   "tt3315342",
+   "tt0246578",
+   "tt3659388",
+   "tt0253474",
+   "tt0167261",
+   "tt2278388",
+   "tt0068646",
+   "tt2543164",
+   "tt0167404",
+   "tt0137523",
+   "tt0110912",
+   "tt0109830",
+   "tt0167260",
+   "tt0111161",
+   "tt0075148",
+   "tt0114369",
+   "tt0172495",
+   "tt0102926",
+   "tt7286456",
+   "tt0361748",
+   "tt1130884",
+   "tt0107048",
+   "tt0120815",
+   "tt0482571",
+   "tt0108052",
+   "tt0071562",
+   "tt0120689",
+   "tt0407887",
+   "tt1454468",
+   "tt0209144",
+   "tt0099685",
+   "tt0110413",
+   "tt0120382",
+   "tt0120586",
+   "tt0120338",
+   "tt0434409",
+   "tt0264464"
+  ],
+  "liked": [
+   "tt0166924",
+   "tt0079944",
+   "tt0118694"
+  ],
+  "disliked": [
+   "tt4154796",
+   "tt2109248"
+  ],
+  "whyIndex": 0,
+  "answers": {
+   "tt0166924": {
+    "reaction": "love",
+    "reasons": [
+     "tone.whimsical",
+     "story.complex",
+     "tone.atmospheric",
+     "aesthetic.stylized"
+    ],
+    "issues": []
+   },
+   "tt0079944": {
+    "reaction": "love",
+    "reasons": [
+     "pace.slow",
+     "cognitive.high",
+     "aesthetic.beautiful",
+     "tone.atmospheric"
+    ],
+    "issues": []
+   },
+   "tt0118694": {
+    "reaction": "love",
+    "reasons": [
+     "aesthetic.stylized",
+     "tone.melancholic",
+     "aesthetic.beautiful",
+     "pace.slow",
+     "aesthetic.soundtrack"
+    ],
+    "issues": []
+   },
+   "tt0090756": {
+    "reaction": "like",
+    "reasons": []
+   },
+   "tt4154796": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "story.predictable",
+      "hard": false
+     },
+     {
+      "f": "length.long",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": true
+     },
+     {
+      "f": "world.superhero",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   },
+   "tt2109248": {
+    "reaction": "dislike",
+    "issues": [
+     {
+      "f": "story.weak",
+      "hard": false
+     },
+     {
+      "f": "pace.draggy",
+      "hard": false
+     },
+     {
+      "f": "story.predictable",
+      "hard": false
+     },
+     {
+      "f": "aesthetic.effects",
+      "hard": true
+     },
+     {
+      "f": "world.superhero",
+      "hard": true
+     }
+    ],
+    "badQuality": false
+   }
+  },
+  "corrections": [],
+  "preferences": [
+   {
+    "f": "story.nonlinear"
+   },
+   {
+    "f": "world.space"
+   }
+  ],
+  "session": {
+   "moods": [
+    "think"
+   ],
+   "avoid": [],
+   "notNow": [],
+   "asked": 2
+  },
+  "seed": 4242
+ }
+}

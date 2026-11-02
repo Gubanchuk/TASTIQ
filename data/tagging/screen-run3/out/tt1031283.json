@@ -1,0 +1,9 @@
+{"id": "tt1031283", "features": [
+{"f": "format.animation", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated television series created by Christy Karacas"}]},
+{"f": "audience.adult", "r": 3, "ev": [{"id": "p0", "q": "is an American adult animated television series created by Christy Karacas"}]},
+{"f": "content.violence", "r": 3, "ev": [{"id": "p1", "q": "psychedelic shifts in setting and plot and extreme graphic violence"}]},
+{"f": "content.disturbing", "r": 2, "ev": [{"id": "p1", "q": "including scenes of bloodshed, dismemberment, torture, and cruelty"}]},
+{"f": "tone.dark", "r": 2, "ev": [{"id": "p3", "q": "numerous inmates are brutally and gruesomely murdered"}]},
+{"f": "tone.whimsical", "r": 2, "ev": [{"id": "p3", "q": "builds in both violence and surrealism into a climactic psychedelic bloodbath"}]},
+{"f": "aesthetic.stylized", "r": 2, "ev": [{"id": "s", "q": "psychedelic animation that will melt your face off"}]}
+]}

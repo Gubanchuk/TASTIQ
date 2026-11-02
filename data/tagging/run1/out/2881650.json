@@ -1,0 +1,8 @@
+{"appid": 2881650, "features": [
+{"f": "social.coop", "r": 3, "ev": [{"id": "a", "q": "co-op horror game where you film spooky stuff with your friends"}, {"id": "r235812938", "q": "раскрывается только при игре в кооперативе с друзьями"}]},
+{"f": "tone.creepy", "r": 2, "ev": [{"id": "d", "q": "Film your friends doing scary things"}, {"id": "r237174857", "q": "Its scary and quite fun"}]},
+{"f": "tone.lighthearted", "r": 2, "ev": [{"id": "r237217682", "q": "I've had good laughs with my friends"}]},
+{"f": "humor.funny", "r": 2, "ev": [{"id": "r238001192", "q": "Hilarious and silly, especially if you have a crew of weirdos"}]},
+{"f": "completeness.unfinished", "r": 1, "ev": [{"id": "r235696958", "q": "сейчас просто стухла без обновлений"}]},
+{"f": "difficulty.hard", "r": 1, "ev": [{"id": "r238042085", "q": "its too hard to keep up with the minimum numbers of view"}]}
+]}

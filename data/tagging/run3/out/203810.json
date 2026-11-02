@@ -1,0 +1,9 @@
+{"appid": 203810, "features": [
+{"f": "loop.exploration", "r": 3, "ev": [{"id": "p3", "q": "the only task being to explore an uninhabited Hebridean island"}]},
+{"f": "story.central", "r": 3, "ev": [{"id": "p1", "q": "Dear Esther is a narrative-focused game"}]},
+{"f": "cognitive.low", "r": 2, "ev": [{"id": "p3", "q": "The gameplay in Dear Esther is minimal"}]},
+{"f": "tone.melancholic", "r": 2, "ev": [{"id": "p1", "q": "listening to a troubled man read a series of letters to his deceased wife"}]},
+{"f": "story.mystery", "r": 2, "ev": [{"id": "p1", "q": "Details of her mysterious death are revealed as the player moves throughout the island"}]},
+{"f": "story.lore", "r": 2, "ev": [{"id": "p3", "q": "the game plays a new letter fragment relating to that area"}]},
+{"f": "world.realistic", "r": 1, "ev": [{"id": "p1", "q": "an unnamed island in the Hebrides, Scotland"}]}
+]}

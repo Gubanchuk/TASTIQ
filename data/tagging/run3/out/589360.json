@@ -1,0 +1,9 @@
+{"appid": 589360, "features": [
+{"f": "loop.building", "r": 2, "ev": [{"id": "p4", "q": "players have the ability to build and manage Evan's kingdom"}]},
+{"f": "loop.management", "r": 2, "ev": [{"id": "p4", "q": "focusing on the arrangement of work-forces within the town to provide materials"}]},
+{"f": "freedom.open_world", "r": 2, "ev": [{"id": "p2", "q": "players can freely roam the open world"}]},
+{"f": "world.fantasy", "r": 3, "ev": [{"id": "p1", "q": "players use magical abilities and are assisted by elemental creatures"}]},
+{"f": "characters.companions", "r": 2, "ev": [{"id": "p3", "q": "a party consists of three chosen characters"}]},
+{"f": "loop.exploration", "r": 2, "ev": [{"id": "p2", "q": "they explore towns, villages, dungeons, and other dangerous places"}]},
+{"f": "aesthetic.stylized", "r": 1, "ev": [{"id": "p2", "q": "the characters are portrayed with a chibi-like design"}]}
+]}
