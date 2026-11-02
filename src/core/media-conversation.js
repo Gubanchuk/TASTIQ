@@ -171,7 +171,7 @@ function checkedTime(s,value,ctx) {
   const checked=validateSessionTime({...value,quote:watchTime(value.quote)},mapped);
   if(!checked.error)return {...value};
   // Explicit runtime caps are different from a whole-series duration or its commitment.
-  const t=folded(value.quote),match=t.match(/^(?:(?:хочу|нужен|нужны)\s+)?(фильм|полнометражный фильм|эпизод(?:ы)?|сери[яиюй])\s+(?:по\s+)?(?:не больше|до|максимум)\s+(.+)$/u);
+  const t=folded(value.quote),match=t.match(/^(?:(?:хочу|нужен|нужны)\s+)?(?:на\s+)?(фильм|полнометражный фильм|эпизод(?:ы)?|сери[яиюй])\s+(?:по\s+)?(?:не больше|до|максимум)\s+(.+)$/u);
   if(!match||conditional(t)||isSessionTimeSourceRetracted(value.sourceId,s))throw fail(checked.error);
   const expectedMode=/фильм/u.test(match[1])?'runtime':'episode';
   if(ctx.timeMode!==expectedMode||s.domain==='film'&&expectedMode!=='runtime')throw fail('Длина фильма и эпизода должны быть указаны отдельно.');

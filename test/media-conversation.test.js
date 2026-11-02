@@ -110,6 +110,25 @@ test('runtime, episode and commitment are separate supported facts and missing s
   let film=said('Фильм не больше 100 минут');film=accepted(film,{context:{...context(),timeMode:ev(film,'runtime')},sessionTime:{minutes:100,sourceId:film.turns[0].id,quote:film.turns[0].answer}});assert.equal(sessionOf(project(film,dict)).maxRuntime,100);
 });
 
+test('explicit caps phrased as na film or na episode retain the exact evidence and runtime meaning',()=>{
+  for(const [domain,quote,minutes,mode]of [['film','На фильм не больше 110 минут.',110,'runtime'],['cartoon','На фильм до 100 минут',100,'runtime'],['series','На эпизод максимум 45 минут',45,'episode'],['series','На серию не больше 30 минут',30,'episode']]){
+    const s=said(`Хочу лёгкую историю. ${quote} Без тяжёлой драмы.`,domain);
+    const next=accepted(s,{context:{...context(),timeMode:ev(s,mode,quote)},sessionTime:{minutes,sourceId:s.turns[0].id,quote}});
+    assert.deepEqual(next.sessionTime,{minutes,sourceId:s.turns[0].id,quote});
+    assert.equal(sessionOf(project(normalize(next,domain),dict)).maxRuntime,minutes);
+  }
+});
+
+test('na-film wording cannot bypass uncertain, ranged, wrong-value or retracted cap evidence',()=>{
+  const quote='На фильм не больше 110 минут';
+  for(const [text,minutes]of [[`Если будет время, ${quote}`,110],[`${quote} или 130 минут`,110],[quote,100],[`${quote}, но теперь времени нет`,110]]){
+    const s=said(text);assert.ok(apply(s,proposal({context:{...context(),timeMode:ev(s,'runtime',quote)},sessionTime:{minutes,sourceId:s.turns[0].id,quote}}),dict).error,text);
+  }
+  let s=said(quote);s=accepted(s,{context:{...context(),timeMode:ev(s,'runtime')},sessionTime:{minutes:110,sourceId:s.turns[0].id,quote}});
+  s=reduce(s,{type:'remove_fact',key:'session_time'});
+  assert.ok(apply(s,proposal({context:{...context(),timeMode:ev(s,'runtime',quote)},sessionTime:{minutes:110,sourceId:s.turns[0].id,quote}}),dict).error);
+});
+
 test('ambiguous, historical, conditional, negated and lower-bound time cannot become a hard cap',()=>{
   for(const text of ['Раньше смотрел по 30 минут','На весь сериал 30 часов','Если успею, сегодня есть 30 минут','Сегодня есть 30–60 минут','Сегодня есть не меньше 30 минут','Сегодня есть 30 минут, но теперь времени нет']) {
     const s=said(text,'series');const quote=text.includes('сегодня есть')?'сегодня есть 30 минут':text.startsWith('Сегодня есть 30 минут,')?'Сегодня есть 30 минут':text;

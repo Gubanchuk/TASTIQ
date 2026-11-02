@@ -27,3 +27,11 @@
 ## Вердикт
 
 **Pass в проверенном source scope.** Существенных регрессий не найдено; обычный доступ, инициализация окружения, отсутствие application deadline и single-request transport соответствуют поручению. Это не verdict о фактическом cloud-прогоне или качестве рекомендаций для человека.
+
+## Адресный follow-up: «На фильм не больше 110 минут»
+
+Проверен только unstaged delta относительно `7a8a54cf370f9c537043895aec644e2cd6d68533`: `media-conversation.js:174` и две новые проверки в `media-conversation.test.js`. Добавлен лишь необязательный предлог `на` перед уже известными существительными в anchored runtime/episode cap grammar; исходные capture groups и их использование не меняются.
+
+Точная цитата действующего source, retraction guard, проверка timeMode/domain, равенство распознанных минут и проверки условий вокруг цитаты остаются на месте. Положительные film/cartoon/episode/series варианты сохраняют точное evidence после normalize и projection; conditional/range/wrong-minute/retracted варианты отвергаются.
+
+Самостоятельно выполнен `node --test test/media-conversation.test.js`: **48/48 Pass**, внешняя сеть/платный API **0**. Source/index/branch не менялись. **Вердикт: Pass в этом узком scope**, material-находок нет. Full suite/build/HTTP smoke и реальное продолжение browser остаются проверкой root; качество live-ответа и денежная история этим review не переоцениваются.
