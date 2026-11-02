@@ -142,6 +142,26 @@ test('short descriptive grammar does not turn a short fragment or a negated wish
   }
 });
 
+test('one descriptive full-length cartoon keeps single commitment and derives a missing movie format',()=>{
+  const source='Хочу один добрый полнометражный мультфильм для просмотра с ребёнком 7 лет.';
+  for(const quote of [source,'один добрый полнометражный мультфильм']){
+    const s=said(source,'cartoon');
+    const next=accepted(s,{context:{...context(),format:ev(s,'movie',quote),commitment:ev(s,'single',quote)}});
+    assert.equal(normalize(next,'cartoon').context.commitment,'single');
+  }
+  const s=said(source,'cartoon'),f=fact(s,{feature:null,stance:'require',quote:source,text:'Нужен один полнометражный мультфильм'});
+  const next=accepted(s,{facts:[f]});assert.equal(next.context.format,'movie');assert.equal(project(next,dict).conversation.context.format,'movie');
+});
+
+test('descriptive full-length movie grammar preserves negative, conditional, synopsis, alternative and removed evidence',()=>{
+  for(const source of ['Не хочу один добрый полнометражный мультфильм','Если успею, хочу один добрый полнометражный мультфильм','Хочу один добрый обзор полнометражного мультфильма','Хочу одно доброе описание полнометражного мультфильма','Хочу один добрый мультфильм или сериал']){
+    const s=said(source,'cartoon');assert.ok(apply(s,proposal({context:{...context(),format:ev(s,'movie',source),commitment:ev(s,'single',source)}}),dict).error,source);
+  }
+  let s=said('Хочу один добрый полнометражный мультфильм','cartoon');const f=fact(s,{feature:null,stance:'require',text:'Нужен фильм'});
+  s=accepted(s,{facts:[f]});s=reduce(s,{type:'remove_fact',key:'context:format'});
+  assert.ok(apply(s,proposal({facts:[f]}),dict).error);
+});
+
 test('ambiguous, historical, conditional, negated and lower-bound time cannot become a hard cap',()=>{
   for(const text of ['Раньше смотрел по 30 минут','На весь сериал 30 часов','Если успею, сегодня есть 30 минут','Сегодня есть 30–60 минут','Сегодня есть не меньше 30 минут','Сегодня есть 30 минут, но теперь времени нет']) {
     const s=said(text,'series');const quote=text.includes('сегодня есть')?'сегодня есть 30 минут':text.startsWith('Сегодня есть 30 минут,')?'Сегодня есть 30 минут':text;

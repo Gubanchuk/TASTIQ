@@ -53,3 +53,38 @@
 Повторная независимая проверка: **50/50 target tests Pass**; четыре названия пересказа теперь отвергаются. Ещё семь offline positive cases — описательный детектив, короткая законченная/завершённая история, мини-сериал, короткие сериалы, ненадолго, несколько описательных слов — принимаются и сохраняют short после normalize. Новых material-регрессий в этом delta не найдено; сеть/платный API **0**.
 
 **Текущий verdict этого follow-up: Pass в проверенном scope.** Единственная material-находка закрыта; source/index/branch reviewer не менял. Точный scalar из последнего live-предложения не утверждается причиной: предложение не сохранено, а finding отдельно подтверждён offline. Full502/build/HTTP и дальнейший live остаются у root.
+
+## Preflight мультфильма: «один добрый полнометражный мультфильм»
+
+Read-only fixture-проверка текущего `ce7d240cc0dd5aa0160592e7ace3f680408234ac` перед следующим платным действием. Это отдельная проверка естественной формулировки, а не утверждение о содержимом ещё не полученного модельного предложения.
+
+Точный agent-owned source: `Хочу один добрый полнометражный мультфильм для просмотра с ребёнком 7 лет. На фильм не больше 100 минут. Без страшных сцен, жестокости и тяжёлого финала. Хочется смешное приключение.`
+
+Независимые scalar-проверки через настоящий `applyMediaConversationProposal`:
+
+| Проверка | Результат |
+| --- | --- |
+| children по первому предложению | Pass |
+| children + childAge7 по тому же источнику | Pass |
+| explicit format movie по первому предложению | Pass |
+| runtime100 с точной цитатой `На фильм не больше 100 минут.` | Pass |
+| commitment single по всему первому предложению | **Fail: generic context scalar validation** |
+| commitment single по `один добрый полнометражный мультфильм` | **Тот же Fail** |
+
+**Important, уверенность100/100:** `src/core/media-conversation.js:135`–`:136` требует adjacent `один → [полнометражный] → мультфильм`, поэтому нормальное определение «добрый» отвергает single при обеих точных допустимых цитатах. Если модель заполняет этот scalar, всё предложение отклоняется атомарно, несмотря на остальные допустимые поля.
+
+Связанный подтверждённый пробел: `movieRequest` в `media-conversation.js:105` имеет ту же adjacency-границу. При hard explicit movie fact (`scope:today`, `stance:require`, `feature/titleId:null`) с полным первым предложением и пропущенным scalar format результат успешен, но `context.format` остаётся null. Контроль с удалённым только словом «добрый» выводит `format:movie`. При bare noun quote формат тоже не выводится; отсутствие request verb — уже существующая граница этой функции, её не следует расширять автоматически.
+
+Узкое исправление: общая bounded movie-phrase grammar с конечными допустимыми media descriptor stems, включая «добрый», между `один`, optional `полнометражный` и точным noun `фильм/мультфильм`; использовать одинаковую структуру для single и verb-qualified movieRequest. Сохранить источник, exact evidence, negation/conditional/retraction и различение альтернатив. Не заменять descriptor span произвольным набором слов.
+
+Необходимые negative fixtures для правки: `Не хочу один добрый полнометражный мультфильм`; условный запрос `Если будет время, хочу…`; `Хочу один добрый обзор полнометражного мультфильма`; `Хочу одно доброе описание полнометражного мультфильма`; `Хочу один добрый полнометражный мультфильм или сериал`; повтор старого hard format evidence после его снятия. Пересказ/обзор не должен становиться single movie request, альтернативы — обязательным movie format.
+
+**Первоначальный preflight verdict: With fixes.** Найдены конкретные отказы до следующего платного клика. Сеть/платный API **0**, исходники и receipts не менялись. Допустимость ещё не полученного actual model proposal и человеческая пригодность выдачи не оценивались.
+
+### Закрытие мультфильм-preflight после общей movie grammar
+
+Root заменил adjacency-проверки общими `mediaDescriptor` / `mediaModifiers` / `moviePhrase`, сохранил explicit request verb для hard fact derivation и exact movie noun forms. Single и request-derived movie используют одинаковую bounded phrase structure; short-story helper продолжает использовать finite descriptors. Source, negation/conditional и retraction guards не изменены.
+
+Повторная независимая проверка: **52/52 media tests Pass**. Дополнительно настоящий полный исходный cartoon draft с children/age7/runtime100/format movie/single проходит для обеих обсуждавшихся цитат single и сохраняет поля после normalize. Hard fact с полным первым предложением выводит пропущенный `format:movie`; отдельные hard facts с отрицанием, условием и альтернативой «или сериал» отвергаются и без explicit format scalar. Отрицательные synopsis/retracted fixtures проходят в target suite.
+
+**Текущий финальный verdict этого review: Pass в проверенном source/preflight scope.** Обе связанные adjacency-находки закрыты; новых material-регрессий не найдено. Reviewer не менял исходники/receipts, сеть и платный API **0**. Actual cartoon model proposal, deployment/live/browser и human fit остаются отдельной проверкой root.
