@@ -107,6 +107,14 @@ function movieEvidence(quote,source) {
   return contextEvidenceAllowed(quote,source)&&/(?:мульт)?фильм|полнометраж/u.test(folded(quote))
     &&!/(?:не\s+(?:нуж(?:ен|на|но)|хочу|буду)|без|вместо)\s+.*(?:фильм|полнометраж)|не\s+(?:фильм|мультфильм|полнометраж)|(?:или|либо)\s+(?:сериал|эпизод)/u.test(folded(quote));
 }
+// Bound the intervening words to media descriptors: adjective endings alone
+// also match nouns like "description", which may refer to a long series.
+const shortStoryPattern=new RegExp(String.raw`(?<!\p{L})(?:коротк\p{L}*\s*,?\s+(?:(?:и\s+)?(?:легк|детективн|комедийн|приключенческ|фантастическ|историческ|романтическ|драматическ|криминальн|полицейск|шпионск|смешн|весел|мрачн|законченн|завершенн)\p{L}*\s*,?\s+){0,4}(?:истори(?:я|ю|и|ей|й|ями|ях)|(?:мини[- ]?)?сериал(?:а|у|ом|е|ы|ов|ам|ами|ах)?)|мини[- ]?сериал(?:а|у|ом|е|ы|ов|ам|ами|ах)?|ненадолго)(?!\p{L})`,'u');
+function shortStoryEvidence(quote) {
+  const t=folded(quote),match=t.match(shortStoryPattern);if(!match)return false;
+  const before=t.slice(0,match.index).split(/[.!?;,]/u).at(-1)??'';
+  return !/(?:^|\s)(?:не(?:\s+(?:хочу|нужен|нужна|нужны|буду|смотреть|только|очень|слишком)){0,3}|без)\s*$/u.test(before);
+}
 function contextMeaning(key,value,quote,source) {
   if(source.question.id==='context'&&Object.hasOwn(source.context??{},key))return source.context[key]===value&&quote===contextQuote(key,value)
     &&source.contextQuotes?.[key]===quote;
@@ -125,7 +133,7 @@ function contextMeaning(key,value,quote,source) {
   }
   if(key==='timeMode')return value==='episode'?/эпизод|сери[яиюй]/u.test(t):value==='runtime'?/фильм|полнометраж|хронометраж/u.test(t):/сегодня|сейчас|вечер|есть.*(?:минут|час)|могу\s+(?:по)?смотр/u.test(t)||/сегодня.*врем|врем.*сегодня/u.test(folded(source.question.title));
   if(key==='commitment')return value==='single'?/од(?:ин|ну)\s+(?:эпизод|серию)|на один вечер|одним (?:фильмом|вечером)/u.test(t)
-    ||/од(?:ин|ну)\s+(?:полнометражн\p{L}*\s+)?(?:мульт)?фильм/u.test(t)&&movieEvidence(quote,source):value==='short'?/коротк\p{L}*\s+(?:(?:закончен|завершен)\p{L}*\s+)?(?:истори|сериал)|мини[- ]?сериал|ненадолго/u.test(t):value==='long'?/(?:готов|хочу|можно|не против).*(?:длинн\p{L}*\s+(?:истори|сериал)|много\s+сезон)|надолго/u.test(t):/любая (?:длина|длительность)|длина не важна|длительность не важна|неважно.*(?:сезон|длин)/u.test(t);
+    ||/од(?:ин|ну)\s+(?:полнометражн\p{L}*\s+)?(?:мульт)?фильм/u.test(t)&&movieEvidence(quote,source):value==='short'?shortStoryEvidence(quote):value==='long'?/(?:готов|хочу|можно|не против).*(?:длинн\p{L}*\s+(?:истори|сериал)|много\s+сезон)|надолго/u.test(t):/любая (?:длина|длительность)|длина не важна|длительность не важна|неважно.*(?:сезон|длин)/u.test(t);
   if(key==='onlyEnded') {
     if(isEndedQuestion(source.question))return endedOptions.some(([id,label])=>source.selected?.some(o=>o.id===id&&o.label===label)&&quote===label&&value===(id==='yes'));
     return value?explicitEndedSeries(quote,source)

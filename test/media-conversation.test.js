@@ -129,6 +129,19 @@ test('na-film wording cannot bypass uncertain, ranged, wrong-value or retracted 
   assert.ok(apply(s,proposal({context:{...context(),timeMode:ev(s,'runtime',quote)},sessionTime:{minutes:110,sourceId:s.turns[0].id,quote}}),dict).error);
 });
 
+test('short-series commitment survives descriptive adjectives in the exact user quote',()=>{
+  for(const quote of ['Хочу короткий лёгкий детективный сериал для одного взрослого.','Хочу короткую лёгкую законченную историю','Хочу короткий и лёгкий сериал','Хочу короткий, лёгкий, детективный сериал']){
+    const s=said(quote,'series');const next=accepted(s,{context:{...context(),commitment:ev(s,'short',quote)}});
+    assert.equal(next.context.commitment,'short');assert.equal(normalize(next,'series').contextEvidence.commitment.quote,quote);
+  }
+});
+
+test('short descriptive grammar does not turn a short fragment or a negated wish into short-series commitment',()=>{
+  for(const quote of ['Хочу короткий эпизод длинного сериала','Хочу короткий обзор лёгкого сериала','Хочу короткое описание длинного сериала','Хочу короткое содержание длинного сериала','Хочу короткое изложение длинной истории','Хочу короткое содержимое длинного сериала','Хочу короткий исторический фильм','Не хочу короткий лёгкий сериал','Хочу не короткий лёгкий сериал','Хочу некороткий лёгкий сериал','Если успею, хочу короткий лёгкий сериал']){
+    const s=said(quote,'series');assert.ok(apply(s,proposal({context:{...context(),commitment:ev(s,'short',quote)}}),dict).error,quote);
+  }
+});
+
 test('ambiguous, historical, conditional, negated and lower-bound time cannot become a hard cap',()=>{
   for(const text of ['Раньше смотрел по 30 минут','На весь сериал 30 часов','Если успею, сегодня есть 30 минут','Сегодня есть 30–60 минут','Сегодня есть не меньше 30 минут','Сегодня есть 30 минут, но теперь времени нет']) {
     const s=said(text,'series');const quote=text.includes('сегодня есть')?'сегодня есть 30 минут':text.startsWith('Сегодня есть 30 минут,')?'Сегодня есть 30 минут':text;
