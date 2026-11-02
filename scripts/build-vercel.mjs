@@ -22,5 +22,9 @@ export function buildVercel({root=resolve(dirname(fileURLToPath(import.meta.url)
  return output;
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ if(process.env.TASTIQ_CHECK_OPENAI==='1'){
+  const {checkOpenAIConnection}=await import('./check-openai-connection.mjs');
+  console.log('OpenAI connection check:',JSON.stringify(await checkOpenAIConnection()));
+ }
  const output=buildVercel();console.log(`Vercel output ready: ${output}`);
 }

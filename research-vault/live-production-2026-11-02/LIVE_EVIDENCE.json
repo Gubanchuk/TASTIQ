@@ -1,0 +1,145 @@
+{
+  "site": "https://tastiq-drab.vercel.app/",
+  "run": "prod-live-20261102-01",
+  "meters": [
+    {
+      "at": "2026-11-02T15:03:48.816Z",
+      "path": "/api/media-conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:04:55.936Z",
+      "path": "/api/media-conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:08:12.777Z",
+      "path": "/api/media-conversation",
+      "action": "answer",
+      "status": 200,
+      "modelCalls": 1
+    },
+    {
+      "at": "2026-11-02T15:10:15.759Z",
+      "path": "/api/media-conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:11:21.643Z",
+      "path": "/api/media-conversation",
+      "action": "review",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:12:49.682Z",
+      "path": "/api/media-conversation",
+      "action": "set_context",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:13:17.386Z",
+      "path": "/api/media-conversation",
+      "action": "remove_time",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:13:44.987Z",
+      "path": "/api/media-conversation",
+      "action": "undo_fact_removal",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:14:16.208Z",
+      "path": "/api/media-conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:14:32.933Z",
+      "path": "/api/media-conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:14:52.981Z",
+      "path": "/api/media-conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:15:02.083Z",
+      "path": "/api/media-conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:15:34.521Z",
+      "path": "/api/conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:15:51.144Z",
+      "path": "/api/conversation",
+      "action": "answer",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:16:15.582Z",
+      "path": "/api/conversation",
+      "action": "answer",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:16:19.334Z",
+      "path": "/api/conversation",
+      "action": "back",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:16:23.341Z",
+      "path": "/api/conversation",
+      "action": "back",
+      "status": 200,
+      "modelCalls": 0
+    },
+    {
+      "at": "2026-11-02T15:16:24.387Z",
+      "path": "/api/conversation",
+      "action": "resume",
+      "status": 200,
+      "modelCalls": 0
+    }
+  ],
+  "modelAttempts": [
+    {
+      "at": "2026-11-02T15:08:12.777Z",
+      "path": "/api/media-conversation",
+      "action": "answer",
+      "model": "gpt-6.1-sol",
+      "status": "uncertain",
+      "code": "transport_unknown"
+    }
+  ],
+  "consoleErrors": [],
+  "knownStageCostUsd": null,
+  "heldReserveUsd": 0.25
+}
