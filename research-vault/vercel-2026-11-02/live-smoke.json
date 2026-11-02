@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-02T14:08:42.791Z",
+  "base": "https://tastiq-drab.vercel.app",
+  "passed": true,
+  "pages": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/pick/game/",
+      "status": 200
+    },
+    {
+      "path": "/pick/watch/?domain=film",
+      "status": 200
+    },
+    {
+      "path": "/pick/watch/?domain=series",
+      "status": 200
+    },
+    {
+      "path": "/pick/watch/?domain=cartoon",
+      "status": 200
+    },
+    {
+      "path": "/library/",
+      "status": 200
+    }
+  ],
+  "restarts": [
+    {
+      "domain": "game",
+      "type": "question"
+    },
+    {
+      "domain": "film",
+      "type": "question"
+    },
+    {
+      "domain": "series",
+      "type": "question"
+    },
+    {
+      "domain": "cartoon",
+      "type": "question"
+    }
+  ],
+  "domains": {
+    "game": 4952,
+    "film": 32172,
+    "series": 9773,
+    "cartoon": 1867
+  },
+  "aiEnabled": false,
+  "aiReason": "нейросеть не подключена",
+  "model": "gpt-6.1-sol",
+  "paidCalls": 0
+}

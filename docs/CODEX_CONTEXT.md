@@ -1,4 +1,12 @@
-# GitHub — 02.11.2026
+# Vercel восстановлен — 02.11.2026
+
+Владелец сообщил, что tastiq-drab.vercel.app показывает исходник `Happy developing`. Причина подтверждена HTTP200/application-javascript и CLI: Framework Other без build/output публиковал корневой шаблонный index.js. Исправлено через официальный Build Output API: npm run build → public static + Node24 function; общий handler в src/server/app.js, локальный listener остаётся server.js. В artifact только src и6runtime JSON по явному списку, без ключей/ledger/journals/research; .vercel исключён из Git. На Vercel journal временный в OS temp, не durable analytics. UI/core/catalog/ranking не менялись.
+
+Production **https://tastiq-drab.vercel.app/**, первый исправленный deployment **dpl_m4DeyMTq7fbqFv7gv6dttoAC5W8s**, READY. Проверка489/489+HTTPstub; собранный handler проверен локально на настоящих каталогах, затем реальное облако:6HTML200,4POST restart→question,meta/CSS/JS/font,404для.env/data/src. Browser главная→film→вопрос и native captures; evidence research-vault/vercel-2026-11-02/. Платных запросов0; production GETAIstatus false/no key, env ls Production пусто. Владелец добавляет OPENAI_API_KEY и Redeploy; OPENAI_MODEL=gpt-6.1-sol/AI_EFFORT=low/AI_ACCESS=all — текущие defaults. Локальный .env/ключ не переносились. Подробнее [VERCEL_2026-11-02.md](VERCEL_2026-11-02.md).
+
+CLI53 vercel build на Windows дал spawn cmd.exe ENOENT в2попытках; прямой npm run build зелёный, его output принят официальным vercel deploy --prebuilt --prod. Не называть Windows wrapper успешным build. MCP team-команды403, доступ через существующий CLI, права подключения не расширялись. In-memory limits не постоянный глобальный бюджет serverless. Локальный5177 не слушал, ledgerlock не трогали. Следующее — ключ в Vercel/перезапуск и отдельный человеческий проход; прежние12платных медиа-проверок не повторять.
+
+## GitHub — 02.11.2026
 
 Владелец прямо поручил коммит и push, затем прислал https://github.com/Gubanchuk/TASTIQ.git. Настроен origin этого публичного репозитория, текущая ветка main; до этого коммитов не было. Первый snapshot сохраняет исходные staged файлы владельца. .gitignore исключает ключи/локальные NDJSON и логи, runtime, billing ledgers, private review keys, временные снимки браузера и IDE-настройки. Каталоги включены для запуска после клонирования. Три неизменённых синтетических state/proposal вынесены в test/fixtures, тесты больше не читают локальный budget.json; оригинальные receipts не переписывались.
 

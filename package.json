@@ -8,6 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
+    "build": "node scripts/build-vercel.mjs",
     "data:head": "node src/pipeline/01-head.js",
     "data:details": "node src/pipeline/02-details.js",
     "data:wikidata": "node src/pipeline/03-wikidata.js",
