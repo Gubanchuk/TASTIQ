@@ -1,0 +1,231 @@
+{
+  "site": "https://tastiq-drab.vercel.app/",
+  "run": "prod-recovery-20261102-01",
+  "finalSourceCommit": "ef45e3d8c56f40ccb9727e860eabe5815e043582",
+  "deployment": "dpl_GW8rCowZRaVCmfHDmUwpqyh7NWEP",
+  "checks": {
+    "unitTests": 504,
+    "httpStub": "Pass",
+    "build": "Pass",
+    "sourceReview": "Pass"
+  },
+  "stageCostUsd": 0.1833516,
+  "stageModelCalls": 10,
+  "historicalUncertainReserveUsd": 0.25,
+  "pending": null,
+  "calls": [
+    {
+      "domain": "film",
+      "label": "film-answer",
+      "action": "answer",
+      "status": "completed",
+      "costUsd": 0.02003,
+      "usage": {
+        "input": 5010,
+        "output": 1001,
+        "cached": 0
+      }
+    },
+    {
+      "domain": "film",
+      "label": "film-retry",
+      "action": "retry",
+      "status": "completed",
+      "costUsd": 0.0133534,
+      "usage": {
+        "input": 5096,
+        "output": 790,
+        "cached": 2494
+      }
+    },
+    {
+      "domain": "film",
+      "label": "film-pick",
+      "action": "confirm",
+      "status": "completed",
+      "costUsd": 0.015592,
+      "usage": {
+        "input": 5126,
+        "output": 534,
+        "cached": 0
+      }
+    },
+    {
+      "domain": "game",
+      "label": "game-plan",
+      "action": "answer",
+      "status": "completed",
+      "costUsd": 0.0259,
+      "usage": {
+        "input": 5805,
+        "output": 1429,
+        "cached": 0
+      }
+    },
+    {
+      "domain": "game",
+      "label": "game-pick",
+      "action": "confirm",
+      "status": "completed",
+      "costUsd": 0.01853,
+      "usage": {
+        "input": 6430,
+        "output": 567,
+        "cached": 0
+      }
+    },
+    {
+      "domain": "series",
+      "label": "series-plan",
+      "action": "answer",
+      "status": "completed",
+      "costUsd": 0.0168154,
+      "usage": {
+        "input": 5022,
+        "output": 1151,
+        "cached": 2494
+      }
+    },
+    {
+      "domain": "series",
+      "label": "series-retry",
+      "action": "retry",
+      "status": "completed",
+      "costUsd": 0.0141674,
+      "usage": {
+        "input": 5108,
+        "output": 869,
+        "cached": 2494
+      }
+    },
+    {
+      "domain": "series",
+      "label": "series-pick",
+      "action": "confirm",
+      "status": "completed",
+      "costUsd": 0.023986,
+      "usage": {
+        "input": 8748,
+        "output": 649,
+        "cached": 0
+      }
+    },
+    {
+      "domain": "cartoon",
+      "label": "cartoon-plan",
+      "action": "answer",
+      "status": "completed",
+      "costUsd": 0.015629399999999998,
+      "usage": {
+        "input": 5039,
+        "output": 1029,
+        "cached": 2494
+      }
+    },
+    {
+      "domain": "cartoon",
+      "label": "cartoon-pick",
+      "action": "confirm",
+      "status": "completed",
+      "costUsd": 0.019348,
+      "usage": {
+        "input": 5514,
+        "output": 832,
+        "cached": 0
+      }
+    }
+  ],
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "ui": {
+    "film": {
+      "status": "Pass",
+      "cards": 4,
+      "firstTitle": "Без единой улики",
+      "saved": true,
+      "chosenTonight": true,
+      "firstPlanValidationErrorFixed": true
+    },
+    "game": {
+      "status": "Pass",
+      "cards": 4,
+      "firstTitle": "Sable",
+      "saved": true,
+      "reloadRestored": true
+    },
+    "series": {
+      "status": "Pass",
+      "cards": 4,
+      "firstTitle": "Свен Гьерсон Агаты Кристи",
+      "saved": true,
+      "shortEndedEpisode45Preserved": true,
+      "firstPlanValidationErrorFixed": true
+    },
+    "cartoon": {
+      "status": "Pass",
+      "cards": 2,
+      "firstTitle": "Любопытный Джордж",
+      "saved": true,
+      "children7MovieRuntime100Preserved": true
+    },
+    "library": {
+      "savedDomains": 4,
+      "searchAndSeriesFilter": "1 of 4",
+      "mobileCartoonFilter": "1 of 4",
+      "removeUndo": "Pass",
+      "moveAndReload": "Pass",
+      "eveningChoiceStartOutcomeAndDelivery": "Pass",
+      "syntheticOutcome": "mixed",
+      "humanLabels": false
+    },
+    "finalSourceRestoreAllFour": true,
+    "mobileViewport": {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false
+    },
+    "qaTabClosed": true,
+    "qaModeCleared": true,
+    "viewportReset": true,
+    "normalLibraryUntouchedAndEmpty": true,
+    "limits": {
+      "paidFreshReplacement": "not tested in this recovery",
+      "physicalTouch": "not tested",
+      "screenReader": "not tested",
+      "humanFit": "not measured",
+      "missingPosterPlaceholders": "observed"
+    }
+  },
+  "sourceStages": [
+    {
+      "commit": "7a8a54c",
+      "labels": [
+        "film-answer"
+      ]
+    },
+    {
+      "commit": "0f22ea6",
+      "labels": [
+        "film-retry",
+        "film-pick",
+        "game-plan",
+        "game-pick",
+        "series-plan"
+      ]
+    },
+    {
+      "commit": "ce7d240",
+      "labels": [
+        "series-retry",
+        "series-pick"
+      ]
+    },
+    {
+      "commit": "ef45e3d",
+      "labels": [
+        "cartoon-plan",
+        "cartoon-pick"
+      ]
+    }
+  ]
+}
