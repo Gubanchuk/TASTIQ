@@ -3,31 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#282a2c">
+  <meta name="theme-color" content="#15213D">
   <title>Что посмотреть сегодня — TASTIQ</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
   <link rel="stylesheet" href="/pick/style.css">
   <link rel="stylesheet" href="/pick/game/style.css">
   <link rel="stylesheet" href="/pick/game/workspace.css">
   <link rel="stylesheet" href="/shared/conversation.css">
   <link rel="stylesheet" href="/pick/game/conversation.css">
+  <link rel="stylesheet" href="/shared/brand.css">
+  <link rel="stylesheet" href="/shared/selection.css">
+  <link rel="stylesheet" href="/shared/product.css?v=1">
 </head>
-<body class="conversation-page game-dialogue workspace-v2 media-dialogue">
+<body class="product-page conversation-page game-dialogue workspace-v2 media-dialogue">
   <div class="conversation-app">
-  <aside class="conversation-rail" aria-label="Навигация TASTIQ">
-    <a class="conversation-brand" href="/" aria-label="TASTIQ — главная">tastiq<span aria-hidden="true"></span></a>
-    <nav class="conversation-links" aria-label="Основное">
-      <a href="/pick/game/" aria-current="page"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l-3 3V11.5A7.5 7.5 0 0 1 9.5 4h3a7.5 7.5 0 0 1 7.5 7.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Подобрать</a>
-      <a href="/library/"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.7"/></svg>Библиотека</a>
-    </nav>
-    <nav class="conversation-domains" aria-label="Что подобрать"><a href="/pick/game/">Игры</a><a href="/pick/watch/?domain=film">Фильмы</a><a href="/pick/watch/?domain=series">Сериалы</a><a href="/pick/watch/?domain=cartoon">Мультфильмы</a></nav>
-    <p class="conversation-rail-note">Освободи вечер<br>для самого вечера.</p>
-  </aside>
-  <div class="conversation-body game-workspace">
-    <aside class="game-context-panel" aria-label="Понимание запроса">
-      <section id="request-panel"><div class="game-context-heading"><h2 tabindex="-1">Твой запрос</h2><button type="button" class="btn btn-secondary" data-act="focus-correction" data-focus="context-edit">Поправить</button></div><div id="understanding" class="game-understanding"></div></section>
+  <header class="conversation-rail" aria-label="Навигация TASTIQ"><a class="conversation-brand" href="/" aria-label="TASTIQ — главная"><img class="site-logo" src="/assets/brand/tastiq-logo-cobalt.svg" alt="TASTIQ" width="148" height="36"></a><div class="selection-header"><strong data-selection-domain>Подбираем фильм</strong><a href="/#doors">Сменить раздел</a></div><nav class="conversation-links" aria-label="Основное"><a href="/library/"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="3" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="3" y="14" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="14" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.7"/></svg>Библиотека</a></nav></header>
+  <div class="conversation-body game-workspace" id="picker-workspace">
+
+    <aside class="game-context-panel" data-context-open="false" aria-label="Понимание запроса">
+      <section id="request-panel"><div class="game-context-heading"><h2 tabindex="-1">Твой запрос</h2><button type="button" class="btn btn-plain game-context-toggle" data-act="toggle-context" aria-controls="understanding" aria-expanded="false">Показать</button><button type="button" class="btn btn-secondary" data-act="focus-correction" data-focus="context-edit">Поправить</button></div><div id="request-preview" class="game-context-preview"></div><div id="understanding" class="game-understanding"></div></section>
     </aside>
     <section class="game-stage" id="stage" aria-label="Текущий шаг подбора">
+
       <nav class="game-navigation" aria-label="Навигация подбора">
         <button type="button" class="btn btn-plain game-back" data-act="back" id="back"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m11.5 5-5 5 5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Назад</button>
         <ol class="game-journey" aria-label="Этапы подбора"><li data-journey-stage="0"><span aria-hidden="true">1</span><b>Желание</b></li><li data-journey-stage="1"><span aria-hidden="true">2</span><b>Условия</b></li><li data-journey-stage="2"><span aria-hidden="true">3</span><b>Уточнения</b></li><li data-journey-stage="3"><span aria-hidden="true">4</span><b>Варианты</b></li></ol>

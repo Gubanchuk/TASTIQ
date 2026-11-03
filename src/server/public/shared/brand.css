@@ -1,0 +1,21 @@
+@font-face{font-family:Golos;src:url('/assets/fonts/GolosText-Variable.ttf') format('truetype');font-weight:400 900;font-display:swap}
+@font-face{font-family:Unbounded;src:url('/assets/fonts/Unbounded-Variable.ttf') format('truetype');font-weight:200 900;font-display:swap}
+:root{
+ --brand-primary:#3154d6;--brand-ink:#1c2945;--brand-paper:#f1f4fc;
+ --brand-dark:#15213d;--brand-inverse:#dfe8ff;--brand-accent:#abc9ed;
+ --brand-surface:#fff;--brand-context:#e7ecf8;--brand-fill:#e3e9f7;
+ --brand-hover:#2544b8;--brand-press:#1e3898;--brand-muted:#52617d;
+ --brand-line:#c9d3e9;--brand-strong-line:#9aaaca;--brand-selected:#dce5ff;
+ --brand-error:#8c3042;--brand-error-bg:#fff0f2;--brand-error-line:#d4a0aa;
+ color-scheme:light;font-family:Golos,Arial,sans-serif;accent-color:var(--brand-primary);
+ scrollbar-color:var(--brand-strong-line) var(--brand-paper);
+}
+::selection{background:var(--brand-selected);color:var(--brand-ink)}
+:is(input,textarea){caret-color:var(--brand-primary)}
+:is(a,button,input,textarea,select,summary):focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}
+a{text-underline-offset:4px}
+.site-logo{display:block;width:148px;height:auto;max-width:100%}
+.conversation-brand .site-logo{width:128px}
+.conversation-brand::after{display:none}
+@media(max-width:760px){.conversation-brand .site-logo{width:123px}}
+@media(max-width:360px){.conversation-brand .site-logo{width:108px}}

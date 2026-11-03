@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASTIQ — знак 5B и написание</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f1f1ef; color: #191919; font: 16px/1.5 system-ui, sans-serif; }
+    main { max-width: 1160px; margin: auto; padding: 28px 24px 40px; }
+    h1 { font-size: 25px; letter-spacing: -.6px; font-weight: 600; margin: 0 0 8px; }
+    .intro { margin: 0 0 20px; color: #5b5b5b; }
+    .sheet { display: block; width: 100%; height: auto; border: 1px solid #dededa; background: white; }
+    .legend { display: flex; gap: 20px; flex-wrap: wrap; margin: 14px 0 24px; color: #525252; font-size: 14px; }
+    .legend strong { color: #191919; }
+    details { border-top: 1px solid #d5d5d0; padding-top: 14px; }
+    summary { cursor: pointer; min-height: 44px; padding: 8px 0; }
+    .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 10px 0; }
+    .sample { background: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; min-height: 320px; padding: 24px; }
+    .sample.dark { background: #000; color: white; }
+    .bear { display: block; width: 248px; height: 248px; max-width: 100%; object-fit: contain; }
+    .dark .bear, .dark .mini { filter: invert(1); }
+    .sizes { display: flex; align-items: flex-end; justify-content: center; gap: 24px; }
+    .size { display: flex; align-items: center; gap: 8px; flex-direction: column; font-size: 12px; }
+    .mini { display: block; }
+    .note { color: #686868; font-size: 13px; margin: 16px 0; }
+    a { color: inherit; text-underline-offset: 3px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid #777; outline-offset: 4px; }
+    @media (max-width: 600px) {
+      main { padding: 22px 12px; }
+      h1 { font-size: 22px; }
+      .checks { gap: 8px; }
+      .sample { min-height: 240px; padding: 12px 6px; gap: 16px; }
+      .bear { width: 160px; height: 160px; }
+      .sizes { gap: 12px; flex-wrap: wrap; }
+      .size { min-width: 34px; }
+      .legend { gap: 8px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Знак 5B и написание TASTIQ</h1>
+    <p class="intro">Выбрано написание 02. <a href="/selected/">Открыть собранный логотип</a>.</p>
+    <a href="/lettering.png" aria-label="Открыть три написания в полном размере"><img class="sheet" src="/lettering.png" alt="Три сочетания медведя 5B с названием: 01 — мягкое строчное tastiq, 02 — плотное прописное TASTIQ, 03 — Tastiq с засечками."></a>
+    <div class="legend"><span><strong>01</strong> — мягкое строчное</span><span><strong>02</strong> — плотное прописное</span><span><strong>03</strong> — с засечками</span></div>
+    <details>
+      <summary>Знак после доводки: фон и маленький размер</summary>
+      <div class="checks">
+        <div class="sample"><img class="bear" src="/bear-5b-refined-v1.png" alt="Медведь 5B после доводки на белом фоне"><div class="sizes"></div></div>
+        <div class="sample dark"><img class="bear" src="/bear-5b-refined-v1.png" alt="Медведь 5B после доводки на чёрном фоне"><div class="sizes"></div></div>
+      </div>
+    </details>
+    <p class="note">Это эскизы написания. После выбора доведём буквы, интервалы и окончательные контуры.</p>
+    <a href="/">Вернуться к выбранному исходнику 5B</a>
+  </main>
+  <script>
+    document.querySelectorAll('.sizes').forEach(container => {
+      container.innerHTML = [16,24,32,48].map(size => `<div class="size"><img class="mini" src="/bear-5b-refined-v1.png" alt="Знак ${size} пикселей" width="${size}" height="${size}"><span>${size} px</span></div>`).join('');
+    });
+  </script>
+</body>
+</html>

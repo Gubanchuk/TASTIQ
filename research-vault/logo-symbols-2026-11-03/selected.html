@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASTIQ — выбранный логотип</title>
+  <link rel="icon" type="image/svg+xml" href="/exports/tastiq-symbol.svg">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #191919; background: #f1f1ef; font: 16px/1.5 system-ui,sans-serif; }
+    main { max-width: 1100px; margin: auto; padding: 28px 24px 48px; }
+    h1 { margin: 0 0 8px; font-size: 25px; font-weight: 600; letter-spacing: -.5px; }
+    .intro { color: #5b5b5b; margin: 0 0 22px; }
+    .hero { display: grid; place-items: center; padding: 46px 30px; min-height: 255px; background: #fff; border: 1px solid #dededa; }
+    .hero img { display: block; width: 100%; max-width: 850px; height: auto; }
+    .hero.dark { background: #000; border-color: #000; margin-top: 14px; }
+    .downloads { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 30px; }
+    .downloads a, .downloads button { display: inline-flex; align-items: center; min-height: 44px; padding: 9px 14px; border: 1px solid #bdbdb8; border-radius: 5px; text-decoration: none; font: inherit; background: transparent; color: inherit; cursor: pointer; }
+    h2 { font-size: 17px; font-weight: 600; margin: 28px 0 14px; }
+    .header-example { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; background: white; border: 1px solid #dededa; padding: 22px 24px; }
+    .header-example img { display: block; height: 32px; width: auto; }
+    .header-example span { color: #777; font-size: 13px; }
+    .icon-examples { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 30px; padding: 25px; background: white; border: 1px solid #dededa; }
+    .icon-example { display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 12px; color: #666; }
+    .icon-example img { display: block; }
+    details { margin-top: 28px; border-top: 1px solid #d5d5d0; padding-top: 10px; }
+    summary { cursor: pointer; min-height: 44px; padding: 10px 0; }
+    .source { display: block; width: 100%; height: auto; background: white; }
+    .note { color: #686868; font-size: 13px; }
+    a { color: inherit; text-underline-offset: 3px; }
+    a:focus-visible,summary:focus-visible,button:focus-visible { outline: 3px solid #777; outline-offset: 4px; }
+    @media (max-width: 600px) {
+      main { padding: 22px 12px 32px; }
+      h1 { font-size: 22px; }
+      .hero { padding: 30px 15px; min-height: 145px; }
+      .downloads { gap: 8px; }
+      .downloads a, .downloads button { font-size: 14px; padding: 9px 11px; }
+      .header-example { padding: 18px 16px; gap: 12px; }
+      .icon-examples { justify-content: space-around; gap: 20px; padding: 20px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>TASTIQ: знак 5B и написание 02</h1>
+    <p class="intro">Выбранная связка в векторе. Чёрный и белый варианты.</p>
+    <p><a href="/palettes-v2/">Следующий этап: кобальт и новые палитры</a></p>
+    <div class="hero"><img src="/exports/tastiq-logo.svg" alt="Логотип TASTIQ: медведь 5B слева, плотные прописные буквы справа"></div>
+    <div class="hero dark"><img src="/exports/tastiq-logo-white.svg" alt="Белый логотип TASTIQ на чёрном фоне"></div>
+    <div class="downloads">
+      <a href="/exports/tastiq-logo.svg" download="tastiq-logo.svg">Логотип SVG</a>
+      <a href="/exports/tastiq-symbol.svg" download="tastiq-symbol.svg">Знак SVG</a>
+      <a href="/exports/tastiq-wordmark.svg" download="tastiq-wordmark.svg">Надпись SVG</a>
+      <button type="button" data-png="transparent">PNG прозрачный</button>
+      <button type="button" data-png="preview">Превью PNG</button>
+    </div>
+    <h2>Размер в шапке сайта</h2>
+    <div class="header-example"><img src="/exports/tastiq-logo.svg" alt="Логотип высотой 32 пикселя"><span>32 px по высоте</span></div>
+    <h2>Отдельный знак</h2>
+    <div class="icon-examples"></div>
+    <details>
+      <summary>Исходный выбранный эскиз</summary>
+      <svg class="source" viewBox="240 378 1160 295" role="img" aria-label="Вариант 02 до сборки в векторе"><defs><clipPath id="source-crop"><rect x="240" y="378" width="1160" height="295"/></clipPath></defs><image href="/lettering.png" width="1536" height="1024" clip-path="url(#source-crop)"/></svg>
+      <p class="note">Пропорции знака и интервалы подровнены при сборке. Чёрно-белая версия сохраняет выбранные формы; палитра ещё не выбрана.</p>
+    </details>
+    <p class="note">SVG содержит контуры знака и букв. Устанавливать шрифт для его использования не нужно.</p>
+    <a href="/lettering/">Предыдущие варианты написания</a>
+  </main>
+  <script>
+    document.querySelector('.icon-examples').innerHTML = [16,24,32,48,96].map(size => `<div class="icon-example"><img src="/exports/tastiq-symbol.svg" alt="Знак ${size} пикселей" width="${size}" height="${size}"><span>${size} px</span></div>`).join('');
+    document.querySelectorAll('[data-png]').forEach(button => button.addEventListener('click', async () => {
+      button.disabled = true;
+      try {
+        const preview = button.dataset.png === 'preview';
+        const scale = preview ? 2 : 4, padding = preview ? 80 : 0;
+        const image = new Image();
+        image.src = '/exports/tastiq-logo.svg';
+        await image.decode();
+        const canvas = document.createElement('canvas');
+        canvas.width = (1140 + padding * 2) * scale;
+        canvas.height = (277 + padding * 2) * scale;
+        const context = canvas.getContext('2d');
+        if (preview) { context.fillStyle = '#fff'; context.fillRect(0,0,canvas.width,canvas.height); }
+        context.drawImage(image,padding*scale,padding*scale,1140*scale,277*scale);
+        const blob = await new Promise(resolve => canvas.toBlob(resolve,'image/png'));
+        if (!blob) throw new Error('PNG export unavailable');
+        const url = URL.createObjectURL(blob), link = document.createElement('a');
+        link.href = url;
+        link.download = preview ? 'tastiq-preview.png' : 'tastiq-logo.png';
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url),10000);
+      } finally { button.disabled = false; }
+    }));
+  </script>
+</body>
+</html>

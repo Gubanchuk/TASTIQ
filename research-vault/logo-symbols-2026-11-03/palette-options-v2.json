@@ -1,0 +1,53 @@
+[
+  {
+    "id": "02",
+    "name": "Кобальт",
+    "primary": "#3154D6",
+    "ink": "#1C2945",
+    "paper": "#F1F4FC",
+    "dark": "#15213D",
+    "inverse": "#DFE8FF",
+    "accent": "#ABC9ED",
+    "reference": true
+  },
+  {
+    "id": "05",
+    "name": "Ультрафиолет",
+    "primary": "#6429DE",
+    "ink": "#25183C",
+    "paper": "#F5F1FF",
+    "dark": "#21133E",
+    "inverse": "#EDE2FF",
+    "accent": "#C6EF6D"
+  },
+  {
+    "id": "06",
+    "name": "Лазурь",
+    "primary": "#007EA7",
+    "ink": "#102F3E",
+    "paper": "#EFFAFF",
+    "dark": "#102D3A",
+    "inverse": "#CBF0FF",
+    "accent": "#8EDDE8"
+  },
+  {
+    "id": "07",
+    "name": "Мандарин",
+    "primary": "#EA6500",
+    "ink": "#302117",
+    "paper": "#FFF9F2",
+    "dark": "#2D1E14",
+    "inverse": "#FFE6CB",
+    "accent": "#FFC66B"
+  },
+  {
+    "id": "08",
+    "name": "Лайм и графит",
+    "primary": "#252C13",
+    "ink": "#1B2210",
+    "paper": "#DBFA68",
+    "dark": "#18200F",
+    "inverse": "#D9FC5A",
+    "accent": "#A4C925"
+  }
+]

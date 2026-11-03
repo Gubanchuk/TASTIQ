@@ -2,36 +2,37 @@
 version: 1
 slug: "src-server-public-pick-index-html"
 primary_target: "src/server/public/pick/index.html"
-related_targets: ["src/server/public/pick/app.js", "src/server/public/shared/conversation.css", "src/server/public/pick/conversation.css", "src/server/public/pick/style.css", "src/server/public/pick/workspace-legacy.css", "src/server/public/shared/result-view-state.js"]
+related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/conversation.css","src/server/public/pick/conversation.css","src/server/public/pick/style.css","src/server/public/pick/workspace-legacy.css","src/server/public/pick/app.js","src/server/public/shared/result-view-state.js"]
 ---
 
-Mode: Operate. /pick/ сохраняет прежний маршрут и его данные. После адаптивного media-этапа02.11 новые start=film|series|cartoon ведут в /pick/watch/; legacy=1 явно оставляет прежний путь. Ниже документируется legacy-оформление выбранного Conversation, новый media brief — src-server-public-pick-watch-index-html.md.
+Mode: Operate. /pick/ сохраняет legacy-маршрут и его данные. Новые start=film|series|cartoon ведут в /pick/watch/; legacy=1 явно оставляет прежний путь.03.11.2026 здесь перенесены утверждённые SVG и цветовые роли.
 
 ## Direction contract and provenance
 
-THESIS: контекст помогает принять решение, библиотека возвращает к планам.
-OWN-WORLD: графитовая навигация, тёплое поле, медные действия, Unbounded/Golos, реальные обложки.
-STORY: действующие вопросы/подтверждённые причины → четыре последовательных предложения → save/choose/familiarity/facts/внешняя ссылка.
-FIRST VIEWPORT: rail/context/work; phone — видимая сводка и явные «Подробнее / Свернуть» с chevron. Прогресс некликабельный, Next рядом с ответом.
-FORM: code-led выбранный /design-v2/?concept=conversation; seed 537787fa, deal 6/4/5, 6 leads; receipt research-vault/site-design-reset-2026-11-02/structure-seed.txt. Raster comp не создавался; QUALITY BAR board/hero локально нет, внешний ceiling не проверен. Новый roll/traveltheme не требуется.
-FINISH: production FINISH_REVIEW.md и scoped re-review дали ship covers scored fixes; CODE_REVIEW.md — 3/3 resolved.
+THESIS: сегодняшний запрос превращается в понятный выбор с причиной и оговорками.
+OWN-WORLD: выбранные знак 5B, прописное 02 и палитра 02 «Кобальт»; прохладная бумага, тёмный синий rail, белые поверхности, кобальтовые действия, Unbounded/Golos и настоящие обложки.
+FORM: прямой перенос утверждённой идентичности в существующий Conversation, без нового workshop или raster comp. Контуры production SVG сохранены; исходный kit — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/.
+История: code-led Conversation выбран 02.11.2026, seed 537787fa/deal 6/4/5, receipt research-vault/site-design-reset-2026-11-02/structure-seed.txt. Прежняя тёплая система и frozen-граница верхней главной описывали тот этап; новый запрос 03.11 разрешил общую замену. Исторические receipts остаются на месте и не служат текущим визуальным образцом.
 
-## Shipped composition
+STORY: прежние вопросы/подтверждённые причины → последовательные предложения → явные save/choose/familiarity/facts/external link.
+FIRST VIEWPORT: rail/context/work; phone — сводка и явные «Подробнее / Свернуть». Новый correction/featured layout относится к adaptive game/watch и не приписывается legacy.
 
-- Desktop grid 164px rail+270px context+work max960px, padding 27px clamp(24px,3vw,52px) 64px. Rail/context sticky; context со своим viewport overflow. 761–1150px:148/220px, поля работы 25px.
-- ≤760px всё в потоке: nav, context summary, toolbar/progress, work. Disclosure имеет текст действия/chevron. Поля работы 24px 20px 45px; ≤360px по 16px.
-- Unbounded headline clamp(27px,2.6vw,35px)/1.28, 500; phone 28px/1.3, ≤360px25px. Golos body 14px/1.8. Светлые answer rows min 62px/radius5px; inline actionbar/primary≥140px.
-- Четыре предложения последовательно. Cover 91px desktop/70px tablet/64px phone/53px≤360; title 24/21px. Reasons/caveats видны, facts раскрываются локально. «Не сейчас» и безопасная настоящая внешняя ссылка сохранены отдельно от остальных controls.
-- /pick/#my перенаправляет в /library/ до bootstrap. Старые status/answer/history не меняют смысл: lane — отдельный план.
+## Preserved composition
+
+- Desktop 164px rail+270px context+работа до 960px, padding27px clamp(24px,3vw,52px) 64px. Rail/context sticky; context имеет viewport overflow. Tablet761–1150px148/220px и поля 25px.
+- Phone≤760px nav/context/toolbar/progress/work идут в потоке. Поля 24px 20px 45px,≤360px16px. Disclosure имеет текст и chevron.
+- Unbounded headline clamp(27px,2.6vw,35px)/1.28/500, phone28px/1.3,≤360px25px. Golos body14px/1.8, answer min 62px/radius5px; действия остаются рядом с ответом.
+- Результаты последовательны, poster91px desktop/70tablet/64phone/53≤360, title 24/21px. Причины и оговорки видны, facts раскрываются. «Не сейчас» и настоящая внешняя ссылка сохранены.
+- Cobalt/inverse SVG и shared brand roles связывают этот путь с остальным сайтом. /pick/#my по-прежнему перенаправляет в /library/ до bootstrap.
 
 ## Input, processing and recovery
 
-Кино сохраняет центральный разбор пожелания, live status вне busy content, прежний DOM/scroll/focus после завершения/ошибки. Scoped layer min 410px desktop/400px phone; spinner.7s linear, reduced-motion stop. Обычный transport feedback вторичен. Общий focus 3px / offset 4px; старое более специфичное input правило может давать inset ring.
-
-Search «Почему не показал…» имеет padding-left36px после лупы — восстановлено после material finding; общий shorthand не должен перекрывать его. Unsent result-wish, caret/disclosures сохраняются при redraw; отправленная ai.wish отдельна.
+Существующий central status вне busy content сохраняет ответ, DOM/scroll/focus и исходную операцию Retry; min 410px desktop/400px phone, spinner.7s и reduced-motion stop. Search «Почему не показал…» сохраняет padding-left36px после лупы. Unsent result wish и отправленная ai.wish отдельны. Lane остаётся отдельным планом, не изменением вкуса.
 
 ## Evidence boundary
 
-Лично открыты актуальные final-reviewfix-film-result-{desktop,mobile}.png и final-reviewfix-film-context-open-mobile.png. Они заменяют pre-fix final-film-result как финальное evidence: mobile disclosure явно, placeholder начинается правее лупы. JPEG bytes под .png — camera encoding без правки растра; реальные размеры/encoding/SHA256 в CAPTURE_MANIFEST.json.
+Текущий этап: docs/BRAND_UI_2026-11-03.md, направление research-vault/brand-ui-2026-11-03/DIRECTION.md. Родитель выполнил 509/509 unit, HTTP stub и production build; native IAB — desktop 1280, mobile 390/320. Канонические viewport captures находятся в .impeccable/review/brand-ui-2026-11-03/. Этот документ проверен по исходному коду; документер не запускал браузер, сервер, API или тесты и не присваивает собственный finish verdict. Итог material re-review фиксируется отдельно.
 
-Родитель: 390/390 tests, HTTP stub Pass, paid 0, реальный film AI-off journey/save/choose/library. Для series/cartoon новых отдельных полных браузерных journeys нет; общие renderer/actions проверены offline. Humanfit/новая платная генерация/физический touch / screen-reader не измерены. Документация browser/server/API/detector не запускала. Existing image chain и fallback, локальные Golos/Unbounded+OFL сохранены.
+Платных API-вызовов 0 / $0, генераций изображений 0. Human fit, новая работа реальной модели с человеком, физический touch и screen reader не измерены. Публикации нет; пользовательские состояния и оплаченные журналы не использованы. Старые evidence и бюджеты не перезаписаны.
+
+Текущий native IAB не является новым полным legacy journey; прежние material кино-fixes и соответствующие captures остаются в research-vault/site-design-reset-2026-11-02/. Предел утверждения нынешнего этапа — актуальные assets, палитра, общие offline/build checks и сохранённый source contract.

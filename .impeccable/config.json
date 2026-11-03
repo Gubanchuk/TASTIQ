@@ -22,5 +22,6 @@
         "reason": "Claude: the child flush with the replay bar's bottom border is the 2px progress line drawn on that edge, not text"
       }
     ]
-  }
+  },
+  "buildPath": "code"
 }

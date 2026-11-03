@@ -1,404 +1,264 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T23:38:57.530Z",
-  "title": "Design System: TASTIQ — Разговор",
+  "generatedAt": "2026-11-02T23:59:31Z",
+  "title": "Design System: TASTIQ — Кобальтовый разговор",
   "extensions": {
     "colorMeta": {
-      "accent": {
+      "primary": {
         "role": "primary",
-        "displayName": "accent",
+        "displayName": "Кобальт",
         "tonalRamp": [
-          "oklch(15% 0.16042 34.12)",
-          "oklch(27% 0.16042 34.12)",
-          "oklch(39% 0.16042 34.12)",
-          "oklch(51% 0.16042 34.12)",
-          "oklch(63% 0.16042 34.12)",
-          "oklch(75% 0.16042 34.12)",
-          "oklch(87% 0.16042 34.12)",
-          "oklch(95% 0.16042 34.12)"
-        ]
-      },
-      "accent-hover": {
-        "role": "primary",
-        "displayName": "accent-hover",
-        "tonalRamp": [
-          "oklch(15% 0.14927 33.21)",
-          "oklch(27% 0.14927 33.21)",
-          "oklch(39% 0.14927 33.21)",
-          "oklch(51% 0.14927 33.21)",
-          "oklch(63% 0.14927 33.21)",
-          "oklch(75% 0.14927 33.21)",
-          "oklch(87% 0.14927 33.21)",
-          "oklch(95% 0.14927 33.21)"
-        ]
-      },
-      "game-accent-hover": {
-        "role": "primary",
-        "displayName": "game-accent-hover",
-        "tonalRamp": [
-          "oklch(15% 0.14281 33.63)",
-          "oklch(27% 0.14281 33.63)",
-          "oklch(39% 0.14281 33.63)",
-          "oklch(51% 0.14281 33.63)",
-          "oklch(63% 0.14281 33.63)",
-          "oklch(75% 0.14281 33.63)",
-          "oklch(87% 0.14281 33.63)",
-          "oklch(95% 0.14281 33.63)"
-        ]
-      },
-      "game-accent-press": {
-        "role": "primary",
-        "displayName": "game-accent-press",
-        "tonalRamp": [
-          "oklch(15% 0.12811 33.13)",
-          "oklch(27% 0.12811 33.13)",
-          "oklch(39% 0.12811 33.13)",
-          "oklch(51% 0.12811 33.13)",
-          "oklch(63% 0.12811 33.13)",
-          "oklch(75% 0.12811 33.13)",
-          "oklch(87% 0.12811 33.13)",
-          "oklch(95% 0.12811 33.13)"
-        ]
-      },
-      "accent-text": {
-        "role": "primary",
-        "displayName": "accent-text",
-        "tonalRamp": [
-          "oklch(15% 0.15059 33.45)",
-          "oklch(27% 0.15059 33.45)",
-          "oklch(39% 0.15059 33.45)",
-          "oklch(51% 0.15059 33.45)",
-          "oklch(63% 0.15059 33.45)",
-          "oklch(75% 0.15059 33.45)",
-          "oklch(87% 0.15059 33.45)",
-          "oklch(95% 0.15059 33.45)"
-        ]
-      },
-      "game-accent-text": {
-        "role": "primary",
-        "displayName": "game-accent-text",
-        "tonalRamp": [
-          "oklch(15% 0.13312 35.20)",
-          "oklch(27% 0.13312 35.20)",
-          "oklch(39% 0.13312 35.20)",
-          "oklch(51% 0.13312 35.20)",
-          "oklch(63% 0.13312 35.20)",
-          "oklch(75% 0.13312 35.20)",
-          "oklch(87% 0.13312 35.20)",
-          "oklch(95% 0.13312 35.20)"
-        ]
-      },
-      "on-accent": {
-        "role": "primary",
-        "displayName": "on-accent",
-        "tonalRamp": [
-          "oklch(15% 0.01023 67.71)",
-          "oklch(27% 0.01023 67.71)",
-          "oklch(39% 0.01023 67.71)",
-          "oklch(51% 0.01023 67.71)",
-          "oklch(63% 0.01023 67.71)",
-          "oklch(75% 0.01023 67.71)",
-          "oklch(87% 0.01023 67.71)",
-          "oklch(95% 0.01023 67.71)"
-        ]
-      },
-      "paper": {
-        "role": "neutral",
-        "displayName": "paper",
-        "tonalRamp": [
-          "oklch(15% 0.01653 70.53)",
-          "oklch(27% 0.01653 70.53)",
-          "oklch(39% 0.01653 70.53)",
-          "oklch(51% 0.01653 70.53)",
-          "oklch(63% 0.01653 70.53)",
-          "oklch(75% 0.01653 70.53)",
-          "oklch(87% 0.01653 70.53)",
-          "oklch(95% 0.01653 70.53)"
-        ]
-      },
-      "surface": {
-        "role": "neutral",
-        "displayName": "surface",
-        "tonalRamp": [
-          "oklch(15% 0.01302 71.33)",
-          "oklch(27% 0.01302 71.33)",
-          "oklch(39% 0.01302 71.33)",
-          "oklch(51% 0.01302 71.33)",
-          "oklch(63% 0.01302 71.33)",
-          "oklch(75% 0.01302 71.33)",
-          "oklch(87% 0.01302 71.33)",
-          "oklch(95% 0.01302 71.33)"
-        ]
-      },
-      "context": {
-        "role": "neutral",
-        "displayName": "context",
-        "tonalRamp": [
-          "oklch(15% 0.01917 67.58)",
-          "oklch(27% 0.01917 67.58)",
-          "oklch(39% 0.01917 67.58)",
-          "oklch(51% 0.01917 67.58)",
-          "oklch(63% 0.01917 67.58)",
-          "oklch(75% 0.01917 67.58)",
-          "oklch(87% 0.01917 67.58)",
-          "oklch(95% 0.01917 67.58)"
-        ]
-      },
-      "card": {
-        "role": "neutral",
-        "displayName": "card",
-        "tonalRamp": [
-          "oklch(15% 0.00854 84.57)",
-          "oklch(27% 0.00854 84.57)",
-          "oklch(39% 0.00854 84.57)",
-          "oklch(51% 0.00854 84.57)",
-          "oklch(63% 0.00854 84.57)",
-          "oklch(75% 0.00854 84.57)",
-          "oklch(87% 0.00854 84.57)",
-          "oklch(95% 0.00854 84.57)"
-        ]
-      },
-      "field": {
-        "role": "neutral",
-        "displayName": "field",
-        "tonalRamp": [
-          "oklch(15% 0.00693 88.64)",
-          "oklch(27% 0.00693 88.64)",
-          "oklch(39% 0.00693 88.64)",
-          "oklch(51% 0.00693 88.64)",
-          "oklch(63% 0.00693 88.64)",
-          "oklch(75% 0.00693 88.64)",
-          "oklch(87% 0.00693 88.64)",
-          "oklch(95% 0.00693 88.64)"
-        ]
-      },
-      "game-field": {
-        "role": "neutral",
-        "displayName": "game-field",
-        "tonalRamp": [
-          "oklch(15% 0.00958 72.66)",
-          "oklch(27% 0.00958 72.66)",
-          "oklch(39% 0.00958 72.66)",
-          "oklch(51% 0.00958 72.66)",
-          "oklch(63% 0.00958 72.66)",
-          "oklch(75% 0.00958 72.66)",
-          "oklch(87% 0.00958 72.66)",
-          "oklch(95% 0.00958 72.66)"
+          "oklch(15% 0.20321 266.98)",
+          "oklch(27% 0.20321 266.98)",
+          "oklch(39% 0.20321 266.98)",
+          "oklch(51% 0.20321 266.98)",
+          "oklch(63% 0.20321 266.98)",
+          "oklch(75% 0.20321 266.98)",
+          "oklch(87% 0.20321 266.98)",
+          "oklch(95% 0.20321 266.98)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "ink",
+        "displayName": "Чернила",
         "tonalRamp": [
-          "oklch(15% 0.00179 106.51)",
-          "oklch(27% 0.00179 106.51)",
-          "oklch(39% 0.00179 106.51)",
-          "oklch(51% 0.00179 106.51)",
-          "oklch(63% 0.00179 106.51)",
-          "oklch(75% 0.00179 106.51)",
-          "oklch(87% 0.00179 106.51)",
-          "oklch(95% 0.00179 106.51)"
+          "oklch(15% 0.05478 264.32)",
+          "oklch(27% 0.05478 264.32)",
+          "oklch(39% 0.05478 264.32)",
+          "oklch(51% 0.05478 264.32)",
+          "oklch(63% 0.05478 264.32)",
+          "oklch(75% 0.05478 264.32)",
+          "oklch(87% 0.05478 264.32)",
+          "oklch(95% 0.05478 264.32)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Прохладная бумага",
+        "tonalRamp": [
+          "oklch(15% 0.01116 269.55)",
+          "oklch(27% 0.01116 269.55)",
+          "oklch(39% 0.01116 269.55)",
+          "oklch(51% 0.01116 269.55)",
+          "oklch(63% 0.01116 269.55)",
+          "oklch(75% 0.01116 269.55)",
+          "oklch(87% 0.01116 269.55)",
+          "oklch(95% 0.01116 269.55)"
+        ]
+      },
+      "dark": {
+        "role": "neutral",
+        "displayName": "Тёмный синий",
+        "tonalRamp": [
+          "oklch(15% 0.05578 265.15)",
+          "oklch(27% 0.05578 265.15)",
+          "oklch(39% 0.05578 265.15)",
+          "oklch(51% 0.05578 265.15)",
+          "oklch(63% 0.05578 265.15)",
+          "oklch(75% 0.05578 265.15)",
+          "oklch(87% 0.05578 265.15)",
+          "oklch(95% 0.05578 265.15)"
+        ]
+      },
+      "inverse": {
+        "role": "neutral",
+        "displayName": "Обратный свет",
+        "tonalRamp": [
+          "oklch(15% 0.03270 268.67)",
+          "oklch(27% 0.03270 268.67)",
+          "oklch(39% 0.03270 268.67)",
+          "oklch(51% 0.03270 268.67)",
+          "oklch(63% 0.03270 268.67)",
+          "oklch(75% 0.03270 268.67)",
+          "oklch(87% 0.03270 268.67)",
+          "oklch(95% 0.03270 268.67)"
+        ]
+      },
+      "accent": {
+        "role": "neutral",
+        "displayName": "Светлый синий",
+        "tonalRamp": [
+          "oklch(15% 0.06031 253.17)",
+          "oklch(27% 0.06031 253.17)",
+          "oklch(39% 0.06031 253.17)",
+          "oklch(51% 0.06031 253.17)",
+          "oklch(63% 0.06031 253.17)",
+          "oklch(75% 0.06031 253.17)",
+          "oklch(87% 0.06031 253.17)",
+          "oklch(95% 0.06031 253.17)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Белая поверхность",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(27% 0.00000 89.88)",
+          "oklch(39% 0.00000 89.88)",
+          "oklch(51% 0.00000 89.88)",
+          "oklch(63% 0.00000 89.88)",
+          "oklch(75% 0.00000 89.88)",
+          "oklch(87% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "context": {
+        "role": "neutral",
+        "displayName": "Контекст",
+        "tonalRamp": [
+          "oklch(15% 0.01704 267.79)",
+          "oklch(27% 0.01704 267.79)",
+          "oklch(39% 0.01704 267.79)",
+          "oklch(51% 0.01704 267.79)",
+          "oklch(63% 0.01704 267.79)",
+          "oklch(75% 0.01704 267.79)",
+          "oklch(87% 0.01704 267.79)",
+          "oklch(95% 0.01704 267.79)"
+        ]
+      },
+      "fill": {
+        "role": "neutral",
+        "displayName": "Функциональная заливка",
+        "tonalRamp": [
+          "oklch(15% 0.02001 267.28)",
+          "oklch(27% 0.02001 267.28)",
+          "oklch(39% 0.02001 267.28)",
+          "oklch(51% 0.02001 267.28)",
+          "oklch(63% 0.02001 267.28)",
+          "oklch(75% 0.02001 267.28)",
+          "oklch(87% 0.02001 267.28)",
+          "oklch(95% 0.02001 267.28)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Кобальт при наведении",
+        "tonalRamp": [
+          "oklch(15% 0.18619 266.69)",
+          "oklch(27% 0.18619 266.69)",
+          "oklch(39% 0.18619 266.69)",
+          "oklch(51% 0.18619 266.69)",
+          "oklch(63% 0.18619 266.69)",
+          "oklch(75% 0.18619 266.69)",
+          "oklch(87% 0.18619 266.69)",
+          "oklch(95% 0.18619 266.69)"
+        ]
+      },
+      "primary-press": {
+        "role": "primary",
+        "displayName": "Нажатый кобальт",
+        "tonalRamp": [
+          "oklch(15% 0.15983 266.76)",
+          "oklch(27% 0.15983 266.76)",
+          "oklch(39% 0.15983 266.76)",
+          "oklch(51% 0.15983 266.76)",
+          "oklch(63% 0.15983 266.76)",
+          "oklch(75% 0.15983 266.76)",
+          "oklch(87% 0.15983 266.76)",
+          "oklch(95% 0.15983 266.76)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "muted",
+        "displayName": "Вторичный текст",
         "tonalRamp": [
-          "oklch(15% 0.01204 67.55)",
-          "oklch(27% 0.01204 67.55)",
-          "oklch(39% 0.01204 67.55)",
-          "oklch(51% 0.01204 67.55)",
-          "oklch(63% 0.01204 67.55)",
-          "oklch(75% 0.01204 67.55)",
-          "oklch(87% 0.01204 67.55)",
-          "oklch(95% 0.01204 67.55)"
+          "oklch(15% 0.04881 262.71)",
+          "oklch(27% 0.04881 262.71)",
+          "oklch(39% 0.04881 262.71)",
+          "oklch(51% 0.04881 262.71)",
+          "oklch(63% 0.04881 262.71)",
+          "oklch(75% 0.04881 262.71)",
+          "oklch(87% 0.04881 262.71)",
+          "oklch(95% 0.04881 262.71)"
         ]
       },
       "line": {
         "role": "neutral",
-        "displayName": "line",
+        "displayName": "Линия",
         "tonalRamp": [
-          "oklch(15% 0.01838 64.90)",
-          "oklch(27% 0.01838 64.90)",
-          "oklch(39% 0.01838 64.90)",
-          "oklch(51% 0.01838 64.90)",
-          "oklch(63% 0.01838 64.90)",
-          "oklch(75% 0.01838 64.90)",
-          "oklch(87% 0.01838 64.90)",
-          "oklch(95% 0.01838 64.90)"
+          "oklch(15% 0.03236 266.14)",
+          "oklch(27% 0.03236 266.14)",
+          "oklch(39% 0.03236 266.14)",
+          "oklch(51% 0.03236 266.14)",
+          "oklch(63% 0.03236 266.14)",
+          "oklch(75% 0.03236 266.14)",
+          "oklch(87% 0.03236 266.14)",
+          "oklch(95% 0.03236 266.14)"
         ]
       },
-      "context-line": {
+      "strong-line": {
         "role": "neutral",
-        "displayName": "context-line",
+        "displayName": "Сильная линия",
         "tonalRamp": [
-          "oklch(15% 0.02406 65.38)",
-          "oklch(27% 0.02406 65.38)",
-          "oklch(39% 0.02406 65.38)",
-          "oklch(51% 0.02406 65.38)",
-          "oklch(63% 0.02406 65.38)",
-          "oklch(75% 0.02406 65.38)",
-          "oklch(87% 0.02406 65.38)",
-          "oklch(95% 0.02406 65.38)"
+          "oklch(15% 0.04983 264.20)",
+          "oklch(27% 0.04983 264.20)",
+          "oklch(39% 0.04983 264.20)",
+          "oklch(51% 0.04983 264.20)",
+          "oklch(63% 0.04983 264.20)",
+          "oklch(75% 0.04983 264.20)",
+          "oklch(87% 0.04983 264.20)",
+          "oklch(95% 0.04983 264.20)"
         ]
       },
-      "game-separator": {
+      "selected": {
         "role": "neutral",
-        "displayName": "game-separator",
+        "displayName": "Выбор",
         "tonalRamp": [
-          "oklch(15% 0.02870 60.24)",
-          "oklch(27% 0.02870 60.24)",
-          "oklch(39% 0.02870 60.24)",
-          "oklch(51% 0.02870 60.24)",
-          "oklch(63% 0.02870 60.24)",
-          "oklch(75% 0.02870 60.24)",
-          "oklch(87% 0.02870 60.24)",
-          "oklch(95% 0.02870 60.24)"
+          "oklch(15% 0.03671 270.47)",
+          "oklch(27% 0.03671 270.47)",
+          "oklch(39% 0.03671 270.47)",
+          "oklch(51% 0.03671 270.47)",
+          "oklch(63% 0.03671 270.47)",
+          "oklch(75% 0.03671 270.47)",
+          "oklch(87% 0.03671 270.47)",
+          "oklch(95% 0.03671 270.47)"
         ]
       },
-      "game-fill": {
+      "error": {
         "role": "neutral",
-        "displayName": "game-fill",
+        "displayName": "Ошибка",
         "tonalRamp": [
-          "oklch(15% 0.02078 67.57)",
-          "oklch(27% 0.02078 67.57)",
-          "oklch(39% 0.02078 67.57)",
-          "oklch(51% 0.02078 67.57)",
-          "oklch(63% 0.02078 67.57)",
-          "oklch(75% 0.02078 67.57)",
-          "oklch(87% 0.02078 67.57)",
-          "oklch(95% 0.02078 67.57)"
+          "oklch(15% 0.12513 11.98)",
+          "oklch(27% 0.12513 11.98)",
+          "oklch(39% 0.12513 11.98)",
+          "oklch(51% 0.12513 11.98)",
+          "oklch(63% 0.12513 11.98)",
+          "oklch(75% 0.12513 11.98)",
+          "oklch(87% 0.12513 11.98)",
+          "oklch(95% 0.12513 11.98)"
         ]
       },
-      "game-fill-hover": {
+      "error-bg": {
         "role": "neutral",
-        "displayName": "game-fill-hover",
+        "displayName": "Поверхность ошибки",
         "tonalRamp": [
-          "oklch(15% 0.02340 65.44)",
-          "oklch(27% 0.02340 65.44)",
-          "oklch(39% 0.02340 65.44)",
-          "oklch(51% 0.02340 65.44)",
-          "oklch(63% 0.02340 65.44)",
-          "oklch(75% 0.02340 65.44)",
-          "oklch(87% 0.02340 65.44)",
-          "oklch(95% 0.02340 65.44)"
+          "oklch(15% 0.01640 8.16)",
+          "oklch(27% 0.01640 8.16)",
+          "oklch(39% 0.01640 8.16)",
+          "oklch(51% 0.01640 8.16)",
+          "oklch(63% 0.01640 8.16)",
+          "oklch(75% 0.01640 8.16)",
+          "oklch(87% 0.01640 8.16)",
+          "oklch(95% 0.01640 8.16)"
         ]
       },
-      "game-fill-press": {
+      "error-line": {
         "role": "neutral",
-        "displayName": "game-fill-press",
+        "displayName": "Граница ошибки",
         "tonalRamp": [
-          "oklch(15% 0.03070 65.79)",
-          "oklch(27% 0.03070 65.79)",
-          "oklch(39% 0.03070 65.79)",
-          "oklch(51% 0.03070 65.79)",
-          "oklch(63% 0.03070 65.79)",
-          "oklch(75% 0.03070 65.79)",
-          "oklch(87% 0.03070 65.79)",
-          "oklch(95% 0.03070 65.79)"
-        ]
-      },
-      "game-choice-selected": {
-        "role": "neutral",
-        "displayName": "game-choice-selected",
-        "tonalRamp": [
-          "oklch(15% 0.03078 54.69)",
-          "oklch(27% 0.03078 54.69)",
-          "oklch(39% 0.03078 54.69)",
-          "oklch(51% 0.03078 54.69)",
-          "oklch(63% 0.03078 54.69)",
-          "oklch(75% 0.03078 54.69)",
-          "oklch(87% 0.03078 54.69)",
-          "oklch(95% 0.03078 54.69)"
-        ]
-      },
-      "game-chip": {
-        "role": "neutral",
-        "displayName": "game-chip",
-        "tonalRamp": [
-          "oklch(15% 0.01238 75.37)",
-          "oklch(27% 0.01238 75.37)",
-          "oklch(39% 0.01238 75.37)",
-          "oklch(51% 0.01238 75.37)",
-          "oklch(63% 0.01238 75.37)",
-          "oklch(75% 0.01238 75.37)",
-          "oklch(87% 0.01238 75.37)",
-          "oklch(95% 0.01238 75.37)"
-        ]
-      },
-      "rail": {
-        "role": "neutral",
-        "displayName": "rail",
-        "tonalRamp": [
-          "oklch(15% 0.00466 247.99)",
-          "oklch(27% 0.00466 247.99)",
-          "oklch(39% 0.00466 247.99)",
-          "oklch(51% 0.00466 247.99)",
-          "oklch(63% 0.00466 247.99)",
-          "oklch(75% 0.00466 247.99)",
-          "oklch(87% 0.00466 247.99)",
-          "oklch(95% 0.00466 247.99)"
-        ]
-      },
-      "rail-text": {
-        "role": "neutral",
-        "displayName": "rail-text",
-        "tonalRamp": [
-          "oklch(15% 0.01452 74.41)",
-          "oklch(27% 0.01452 74.41)",
-          "oklch(39% 0.01452 74.41)",
-          "oklch(51% 0.01452 74.41)",
-          "oklch(63% 0.01452 74.41)",
-          "oklch(75% 0.01452 74.41)",
-          "oklch(87% 0.01452 74.41)",
-          "oklch(95% 0.01452 74.41)"
-        ]
-      },
-      "rail-hover": {
-        "role": "neutral",
-        "displayName": "rail-hover",
-        "tonalRamp": [
-          "oklch(15% 0.00220 247.89)",
-          "oklch(27% 0.00220 247.89)",
-          "oklch(39% 0.00220 247.89)",
-          "oklch(51% 0.00220 247.89)",
-          "oklch(63% 0.00220 247.89)",
-          "oklch(75% 0.00220 247.89)",
-          "oklch(87% 0.00220 247.89)",
-          "oklch(95% 0.00220 247.89)"
-        ]
-      },
-      "focus": {
-        "role": "primary",
-        "displayName": "focus",
-        "tonalRamp": [
-          "oklch(15% 0.10557 235.19)",
-          "oklch(27% 0.10557 235.19)",
-          "oklch(39% 0.10557 235.19)",
-          "oklch(51% 0.10557 235.19)",
-          "oklch(63% 0.10557 235.19)",
-          "oklch(75% 0.10557 235.19)",
-          "oklch(87% 0.10557 235.19)",
-          "oklch(95% 0.10557 235.19)"
-        ]
-      },
-      "game-focus": {
-        "role": "primary",
-        "displayName": "game-focus",
-        "tonalRamp": [
-          "oklch(15% 0.14391 34.29)",
-          "oklch(27% 0.14391 34.29)",
-          "oklch(39% 0.14391 34.29)",
-          "oklch(51% 0.14391 34.29)",
-          "oklch(63% 0.14391 34.29)",
-          "oklch(75% 0.14391 34.29)",
-          "oklch(87% 0.14391 34.29)",
-          "oklch(95% 0.14391 34.29)"
+          "oklch(15% 0.06299 5.88)",
+          "oklch(27% 0.06299 5.88)",
+          "oklch(39% 0.06299 5.88)",
+          "oklch(51% 0.06299 5.88)",
+          "oklch(63% 0.06299 5.88)",
+          "oklch(75% 0.06299 5.88)",
+          "oklch(87% 0.06299 5.88)",
+          "oklch(95% 0.06299 5.88)"
         ]
       },
       "known-line": {
         "role": "neutral",
-        "displayName": "known-line",
+        "displayName": "Знакомое: линия",
         "tonalRamp": [
           "oklch(15% 0.03366 151.10)",
           "oklch(27% 0.03366 151.10)",
@@ -412,7 +272,7 @@
       },
       "liked-text": {
         "role": "neutral",
-        "displayName": "liked-text",
+        "displayName": "Положительная оценка",
         "tonalRamp": [
           "oklch(15% 0.06157 150.43)",
           "oklch(27% 0.06157 150.43)",
@@ -423,136 +283,69 @@
           "oklch(87% 0.06157 150.43)",
           "oklch(95% 0.06157 150.43)"
         ]
-      },
-      "disliked-text": {
-        "role": "neutral",
-        "displayName": "disliked-text",
-        "tonalRamp": [
-          "oklch(15% 0.14752 32.24)",
-          "oklch(27% 0.14752 32.24)",
-          "oklch(39% 0.14752 32.24)",
-          "oklch(51% 0.14752 32.24)",
-          "oklch(63% 0.14752 32.24)",
-          "oklch(75% 0.14752 32.24)",
-          "oklch(87% 0.14752 32.24)",
-          "oklch(95% 0.14752 32.24)"
-        ]
-      },
-      "frozen-bg": {
-        "role": "neutral",
-        "displayName": "frozen-bg",
-        "tonalRamp": [
-          "oklch(15% 0.00397 286.03)",
-          "oklch(27% 0.00397 286.03)",
-          "oklch(39% 0.00397 286.03)",
-          "oklch(51% 0.00397 286.03)",
-          "oklch(63% 0.00397 286.03)",
-          "oklch(75% 0.00397 286.03)",
-          "oklch(87% 0.00397 286.03)",
-          "oklch(95% 0.00397 286.03)"
-        ]
-      },
-      "frozen-ink": {
-        "role": "neutral",
-        "displayName": "frozen-ink",
-        "tonalRamp": [
-          "oklch(15% 0.00266 286.35)",
-          "oklch(27% 0.00266 286.35)",
-          "oklch(39% 0.00266 286.35)",
-          "oklch(51% 0.00266 286.35)",
-          "oklch(63% 0.00266 286.35)",
-          "oklch(75% 0.00266 286.35)",
-          "oklch(87% 0.00266 286.35)",
-          "oklch(95% 0.00266 286.35)"
-        ]
-      },
-      "frozen-action": {
-        "role": "neutral",
-        "displayName": "frozen-action",
-        "tonalRamp": [
-          "oklch(15% 0.19333 256.16)",
-          "oklch(27% 0.19333 256.16)",
-          "oklch(39% 0.19333 256.16)",
-          "oklch(51% 0.19333 256.16)",
-          "oklch(63% 0.19333 256.16)",
-          "oklch(75% 0.19333 256.16)",
-          "oklch(87% 0.19333 256.16)",
-          "oklch(95% 0.19333 256.16)"
-        ]
-      },
-      "frozen-light-bg": {
-        "role": "neutral",
-        "displayName": "frozen-light-bg",
-        "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(27% 0.00000 89.88)",
-          "oklch(39% 0.00000 89.88)",
-          "oklch(51% 0.00000 89.88)",
-          "oklch(63% 0.00000 89.88)",
-          "oklch(75% 0.00000 89.88)",
-          "oklch(87% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
-        ]
-      },
-      "frozen-light-ink": {
-        "role": "neutral",
-        "displayName": "frozen-light-ink",
-        "tonalRamp": [
-          "oklch(15% 0.00381 286.10)",
-          "oklch(27% 0.00381 286.10)",
-          "oklch(39% 0.00381 286.10)",
-          "oklch(51% 0.00381 286.10)",
-          "oklch(63% 0.00381 286.10)",
-          "oklch(75% 0.00381 286.10)",
-          "oklch(87% 0.00381 286.10)",
-          "oklch(95% 0.00381 286.10)"
-        ]
       }
     },
     "typographyMeta": {
+      "hero": {
+        "displayName": "Первый экран",
+        "purpose": "Заголовок главной."
+      },
       "display": {
         "displayName": "Библиотека",
-        "purpose": "Основной заголовок; responsive размеры в DESIGN."
+        "purpose": "Основной заголовок библиотеки."
       },
       "headline": {
-        "displayName": "Игровой вопрос",
-        "purpose": "Вопрос, понимание и результат."
-      },
-      "media-headline": {
-        "displayName": "Legacy-кино",
-        "purpose": "Оформление прежнего маршрута /pick/."
+        "displayName": "Вопрос и результат",
+        "purpose": "Текущая задача адаптивного разговора."
       },
       "landing-headline": {
-        "displayName": "Низ главной",
-        "purpose": "Только новые нижние секции."
+        "displayName": "Механизм главной",
+        "purpose": "Заголовок последовательности подбора."
+      },
+      "featured-title": {
+        "displayName": "Первое предложение",
+        "purpose": "Иерархия адаптивной выдачи."
       },
       "title": {
-        "displayName": "Предложение",
-        "purpose": "Название игры; кино24px, phone21px."
+        "displayName": "Название",
+        "purpose": "Обычные предложения."
       },
       "body": {
-        "displayName": "Текст",
-        "purpose": "Body14px; локальные line-height описаны в DESIGN."
+        "displayName": "Содержание",
+        "purpose": "Запрос, причины, пояснения."
       },
       "label": {
-        "displayName": "Controls",
-        "purpose": "Подписи действий."
+        "displayName": "Действие",
+        "purpose": "Подписи controls."
       },
       "meta": {
         "displayName": "Метаданные",
-        "purpose": "Годы, counts, пояснения."
+        "purpose": "Годы, статусы и counts."
+      },
+      "landing-finale": {
+        "displayName": "Финал главной",
+        "purpose": "Приглашение выбрать один из четырёх разделов."
+      },
+      "label-primary": {
+        "displayName": "Основное действие",
+        "purpose": "Кобальтовые кнопки современной рабочей поверхности."
       }
     },
     "shadows": [
       {
+        "name": "featured-result",
+        "value": "0 10px 30px #15213d06",
+        "purpose": "Первое современное адаптивное предложение."
+      },
+      {
         "name": "shared-pop",
         "value": "0 8px 24px #22222220",
-        "purpose": "Общие всплывающие элементы."
+        "purpose": "Всплывающие элементы."
       },
       {
         "name": "game-pop",
         "value": "0 12px 28px #40302424",
-        "purpose": "Игровое session menu."
+        "purpose": "Прежняя тень нижнего слоя CSS; современное session menu перекрывает product-menu."
       },
       {
         "name": "library-notice",
@@ -562,152 +355,250 @@
       {
         "name": "progress-line-mask",
         "value": "0 0 0 5px var(--paper)",
-        "purpose": "Маска соединителя, не elevation."
+        "purpose": "Сохранённая маска нижнего CSS-слоя; современный текстовый progress не использует соединитель."
+      },
+      {
+        "name": "landing-cover",
+        "value": "0 12px 24px #15213d24",
+        "purpose": "Разделение перекрывающихся обложек главной."
+      },
+      {
+        "name": "landing-cover-open",
+        "value": "0 18px 30px #15213d30",
+        "purpose": "Центральная обложка при раскрытии веера."
+      },
+      {
+        "name": "landing-arrow",
+        "value": "0 5px 14px #15213d12",
+        "purpose": "Круглая стрелка поверх веера."
+      },
+      {
+        "name": "question-board",
+        "value": "0 10px 32px #15213d05",
+        "purpose": "Современная рабочая поверхность вопроса; на выдаче снимается."
+      },
+      {
+        "name": "product-menu",
+        "value": "0 12px 30px #15213d16",
+        "purpose": "Современное session menu."
       }
     ],
     "motion": [
       {
         "name": "library-state",
         "value": "background .18s cubic-bezier(.16,1,.3,1), border-color .18s cubic-bezier(.16,1,.3,1)",
-        "purpose": "Library button hover."
+        "purpose": "Фон и граница библиотечной кнопки."
       },
       {
         "name": "game-choice",
         "value": "background-color .16s ease-out, border-color .16s ease-out",
-        "purpose": "Game choice state."
+        "purpose": "Состояние ответа."
       },
       {
         "name": "game-processing",
         "value": "1.25s ease-in-out infinite; delays .15s/.3s",
-        "purpose": "Три bars7×28px, scaleY/opacity.45→1, без процента/ETA."
+        "purpose": "Три bars 7×28px; scale/opacity без процента и ETA."
+      },
+      {
+        "name": "landing-door",
+        "value": "transform .48s cubic-bezier(.16,1,.3,1), box-shadow .48s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Веер: углы -16/-3/15deg раскрываются до -22/0/21deg, середина translateY(-12px); reduced-motion сохраняет исходные углы."
       },
       {
         "name": "legacy-spinner",
         "value": ".7s linear infinite",
-        "purpose": "Существующий spinner."
+        "purpose": "Существующий legacy status."
       },
       {
         "name": "reduced-motion",
         "value": "animation:none!important; transition:none!important; scroll-behavior:auto!important",
-        "purpose": "Scoped app override; lower landing отключает transition/smooth scroll."
+        "purpose": "App override; главная отключает transitions/smooth scroll и оставляет веер статичным на hover/focus."
+      },
+      {
+        "name": "product-button-state",
+        "value": "background .18s ease, border-color .18s ease",
+        "purpose": "Современные stage buttons; reduced-motion отключает переходы."
       }
     ],
     "breakpoints": [
       {
-        "name": "library-narrow",
+        "name": "width-350",
         "value": "350px"
       },
       {
-        "name": "navigation-narrow",
+        "name": "width-360",
         "value": "360px"
       },
       {
-        "name": "landing-phone",
-        "value": "640px"
+        "name": "width-380",
+        "value": "380px"
       },
       {
-        "name": "app-phone",
+        "name": "width-760",
         "value": "760px"
       },
       {
-        "name": "landing-stack",
-        "value": "1000px"
+        "name": "width-1050",
+        "value": "1050px"
       },
       {
-        "name": "library-compact",
+        "name": "width-1100",
         "value": "1100px"
       },
       {
-        "name": "picker-compact",
+        "name": "width-1150",
         "value": "1150px"
       },
       {
-        "name": "library-wide",
+        "name": "width-1500",
         "value": "1500px"
       },
       {
-        "name": "game-wide",
+        "name": "width-1600",
         "value": "1600px"
       }
     ]
   },
   "components": [
     {
-      "name": "Основное действие игры",
+      "name": "Продолжение",
       "kind": "button",
       "refersTo": "button-game-next",
-      "description": "Продолжение после ответа; min48px.",
+      "description": "Основное действие после ответа; минимум 48px.",
       "html": "<button class=\"ds-next\">Дальше <svg width=\"18\" height=\"18\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m8 5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
-      "css": ".ds-next{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;display:inline-flex;align-items:center;justify-content:space-between;gap:25px;min-width:150px;min-height:48px;padding:12px 17px;border:1px solid #b84025;border-radius:6px;background:#b84025;color:#fff9f3;cursor:pointer}.ds-next:hover:not(:disabled){background:#9d351f;border-color:#9d351f}.ds-next:focus-visible{outline:3px solid #a43b23;outline-offset:4px}.ds-next:disabled{opacity:.48;cursor:default}"
+      "css": ".ds-next{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;font-weight:550;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;min-width:150px;min-height:48px;padding:12px 21px;border:1px solid var(--brand-primary);border-radius:999px;background:var(--brand-primary);color:var(--brand-surface);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-next:hover:not(:disabled){background:var(--brand-hover);border-color:var(--brand-hover)}.ds-next:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-next:disabled{opacity:.48;cursor:default}@media(max-width:760px){.ds-next{min-width:125px}}@media(prefers-reduced-motion:reduce){.ds-next{transition:none}}"
     },
     {
       "name": "Вторичное действие",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Game secondary: прозрачный фон, медный focus.",
+      "description": "Вторичное pill-действие современной рабочей поверхности.",
       "html": "<button class=\"ds-secondary\">Повторить</button>",
-      "css": ".ds-secondary{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;min-height:44px;padding:10px 14px;border:1px solid #beac9e;border-radius:6px;background:transparent;color:#2b2b2a;cursor:pointer}.ds-secondary:hover:not(:disabled){background:#eadbce;border-color:#8c7868}.ds-secondary:focus-visible{outline:3px solid #a43b23;outline-offset:4px}.ds-secondary:disabled{opacity:.48;cursor:default}"
-    },
-    {
-      "name": "Подтверждённое желание",
-      "kind": "chip",
-      "refersTo": "context-chip",
-      "description": "Статичная часть сводки, не кнопка.",
-      "html": "<span class=\"ds-chip\">Спокойно проводить время</span>",
-      "css": ".ds-chip{display:inline-block;padding:5px 9px;border-radius:4px;background:#fff9f1;color:#493c32;font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.6;max-width:100%}"
-    },
-    {
-      "name": "Своими словами",
-      "kind": "input",
-      "refersTo": "field-game",
-      "description": "Многострочный ввод адаптивного разговора для игр и просмотра.",
-      "html": "<label class=\"ds-field\">Что хочется сегодня?<textarea class=\"ds-input\" placeholder=\"Расскажи своими словами\"></textarea></label>",
-      "css": ".ds-field{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;display:grid;gap:10px;color:#2b2b2a}.ds-input{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.75;width:100%;min-height:108px;padding:15px;border:1px solid #b9a797;border-radius:6px;background:#fffaf4;color:#2b2b2a;resize:vertical;caret-color:#b84025}.ds-input::placeholder{color:#74675c;opacity:1}.ds-input:focus-visible{outline:3px solid #a43b23;outline-offset:4px}"
-    },
-    {
-      "name": "Навигация",
-      "kind": "nav",
-      "refersTo": "rail-item-current",
-      "description": "Графитовый rail с активным разделом.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Основное\"><a href=\"#pick\" aria-current=\"page\">Подобрать</a><a href=\"#library\">Библиотека</a></nav>",
-      "css": ".ds-nav{display:grid;gap:8px;background:#282a2c;padding:17px;width:164px;font-family:Golos,Arial,sans-serif}.ds-nav a{display:flex;align-items:center;min-height:44px;padding:10px 9px;border-radius:4px;font-size:12px;line-height:1.5;font-weight:500;color:#d8d1c8;text-decoration:none}.ds-nav a[aria-current=page]{background:#b84025;color:#fff}.ds-nav a:hover{background:#3c3d3e;color:#fff}.ds-nav a:focus-visible{outline:3px solid #257eaa;outline-offset:4px}"
-    },
-    {
-      "name": "Карточка библиотеки без обложки",
-      "kind": "card",
-      "refersTo": "library-card",
-      "description": "Текстовый fallback и перенос плана через native select.",
-      "html": "<article class=\"ds-card\"><div class=\"ds-cover\" aria-hidden=\"true\">Без обложки</div><div><p class=\"ds-meta\">2023 · Игра</p><h3>Сохранённая игра</h3><select aria-label=\"План\" class=\"ds-plan\"><option>На потом</option><option>На этот вечер</option><option>Уже знакомо</option></select></div></article>",
-      "css": ".ds-card{display:grid;grid-template-columns:68px minmax(0,1fr);gap:14px;padding:13px;background:#fffcf6;border-radius:4px;color:#2b2b2a;font-family:Golos,Arial,sans-serif}.ds-cover{aspect-ratio:2/3;background:#e4d7c8;border-radius:3px;display:grid;place-items:center;padding:8px;color:#665546;text-align:center;font-size:12px;line-height:1.4;overflow-wrap:anywhere}.ds-meta{font-size:12px;line-height:1.6;color:#6b655f;margin:0}.ds-card h3{font-size:14px;line-height:1.45;letter-spacing:-.015em;font-weight:650;margin:6px 0 11px;overflow-wrap:anywhere}.ds-plan{font:inherit;font-size:12px;width:100%;min-height:44px;padding:8px 20px 8px 7px;border:0;border-radius:5px;background:#eee5da;color:#2b2b2a}.ds-plan:focus-visible{outline:2px solid #b84025;outline-offset:4px}"
+      "css": ".ds-secondary{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;font-weight:500;min-height:46px;padding:10px 17px;border:1px solid var(--brand-strong-line);border-radius:999px;background:transparent;color:var(--brand-ink);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-secondary:hover:not(:disabled){background:var(--brand-fill);border-color:var(--brand-muted)}.ds-secondary:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-secondary:disabled{opacity:.48;cursor:default}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
     },
     {
       "name": "Ответ",
       "kind": "button",
       "refersTo": "choice-game",
-      "description": "Состояние выбранного ответа с нарисованным check.",
+      "description": "Выбранный ответ отмечен заливкой, границей и SVG check.",
       "html": "<button class=\"ds-choice\" aria-pressed=\"true\">Один <svg width=\"18\" height=\"18\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m5 10 3 3 7-7\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
-      "css": ".ds-choice{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.6;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;width:100%;text-align:left;padding:16px;border:1px solid #c9b9ab;border-radius:6px;background:#fffaf4;color:#2b2b2a;cursor:pointer;transition:background-color .16s ease-out,border-color .16s ease-out}.ds-choice[aria-pressed=true]{background:#f5dfd1;border-color:#b84025;color:#81341f}.ds-choice:hover:not(:disabled){background:#efe0d3;border-color:#9e8571}.ds-choice:focus-visible{outline:3px solid #a43b23;outline-offset:4px}.ds-choice:disabled{opacity:.48}@media(prefers-reduced-motion:reduce){.ds-choice{transition:none}}"
+      "css": ".ds-choice{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.6;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;width:100%;text-align:left;padding:16px 18px;border:1px solid var(--brand-line);border-radius:18px;background:var(--brand-paper);color:var(--brand-ink);cursor:pointer;transition:background-color .16s ease-out,border-color .16s ease-out}.ds-choice[aria-pressed=true]{background:var(--brand-selected);border-color:var(--brand-primary);color:var(--brand-ink)}.ds-choice:hover:not(:disabled){background:var(--brand-context);border-color:var(--brand-strong-line)}.ds-choice:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-choice:disabled{opacity:.48}@media(max-width:760px){.ds-choice{min-height:58px;padding:14px 16px;border-radius:16px}}@media(prefers-reduced-motion:reduce){.ds-choice{transition:none}}"
+    },
+    {
+      "name": "Подтверждённое желание",
+      "kind": "chip",
+      "refersTo": "context-chip",
+      "description": "Статичная часть контекста, не кнопка.",
+      "html": "<span class=\"ds-chip\">Спокойно проводить время</span>",
+      "css": ".ds-chip{font-family:Golos,Arial,sans-serif;display:inline-block;padding:5px 9px;border-radius:10px;background:var(--brand-context);color:var(--brand-ink);font-size:13px;line-height:1.6;max-width:100%}@media(max-width:760px){.ds-chip{padding:3px 7px}}"
+    },
+    {
+      "name": "Своими словами",
+      "kind": "input",
+      "refersTo": "field-game",
+      "description": "Многострочный ответ адаптивного разговора.",
+      "html": "<label class=\"ds-field\">Что хочется сегодня?<textarea class=\"ds-input\" placeholder=\"Расскажи своими словами\"></textarea></label>",
+      "css": ".ds-field{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.5;display:grid;gap:10px;color:var(--brand-ink)}.ds-input{font-family:Golos,Arial,sans-serif;font-size:15px;line-height:1.75;width:100%;min-height:116px;padding:16px 18px;border:1px solid var(--brand-strong-line);border-radius:20px;background:var(--brand-paper);color:var(--brand-ink);resize:vertical;caret-color:var(--brand-primary)}.ds-input::placeholder{color:var(--brand-muted);opacity:1}.ds-input:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-field{font-size:13px}.ds-input{font-size:14px;padding:14px 16px;border-radius:18px}}"
+    },
+    {
+      "name": "Навигация legacy",
+      "kind": "nav",
+      "refersTo": "rail-item-current",
+      "description": "Только сохранённый legacy /pick/: тёмный rail, выбранный пункт и aria-current=page. Современные game/watch/library используют отдельный светлый header ниже.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основное\"><a href=\"#pick\" aria-current=\"page\">Подобрать</a><a href=\"#library\">Библиотека</a></nav>",
+      "css": ".ds-nav{font-family:Golos,Arial,sans-serif;display:grid;gap:8px;background:var(--brand-dark);padding:17px;width:164px}.ds-nav a{display:flex;align-items:center;min-height:44px;padding:10px 9px;border-radius:4px;font-size:12px;line-height:1.5;font-weight:500;color:var(--brand-inverse);text-decoration:none}.ds-nav a[aria-current=page]{background:var(--brand-primary);color:var(--brand-surface)}.ds-nav a:hover{background:var(--brand-ink);color:var(--brand-surface)}.ds-nav a:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}"
+    },
+    {
+      "name": "Первое предложение",
+      "kind": "card",
+      "refersTo": "result-featured",
+      "description": "Первая карточка занимает всю ширину сетки; крупная белая поверхность с асимметричным верхним правым углом. Пример с текстовым fallback.",
+      "html": "<article class=\"ds-result\"><div class=\"ds-poster\" aria-hidden=\"true\">Без обложки</div><div><h2>Название игры</h2><p class=\"ds-model\">Мнение модели</p><p class=\"ds-reason\">Причина под сегодняшнее желание.</p><p class=\"ds-caveat\">Оговорка остаётся рядом с причиной.</p><button class=\"ds-save\">Сохранить</button></div></article>",
+      "css": ".ds-result{font-family:Golos,Arial,sans-serif;display:grid;grid-template-columns:190px minmax(0,1fr);gap:30px;padding:30px;border:1px solid var(--brand-line);border-radius:32px 56px 32px 32px;background:var(--brand-surface);color:var(--brand-ink);box-shadow:0 10px 30px #15213d06}.ds-poster{width:190px;aspect-ratio:16/9;border-radius:18px;background:var(--brand-line);display:grid;place-items:center;font-size:14px;line-height:1.5}.ds-result h2{font-size:30px;line-height:1.25;font-weight:600;letter-spacing:-.025em;margin:0 0 10px}.ds-model{font-size:12px;line-height:1.6;color:var(--brand-muted);margin:0 0 6px}.ds-reason{font-size:16px;line-height:1.8;max-width:62ch;margin:0 0 14px}.ds-caveat{font-size:13px;line-height:1.75;color:var(--brand-muted);border-top:1px solid var(--brand-line);padding-top:13px;margin-top:15px}.ds-save{font-family:Golos,Arial,sans-serif;font-size:12px;line-height:1.5;min-height:44px;padding:9px 13px;border:1px solid var(--brand-strong-line);border-radius:999px;background:transparent;color:var(--brand-ink);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-save:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-save:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:1150px) and (min-width:761px){.ds-result{grid-template-columns:130px minmax(0,1fr);gap:22px;padding:24px;border-radius:28px}.ds-poster{width:130px}.ds-result h2{font-size:26px}}@media(max-width:760px){.ds-result{grid-template-columns:80px minmax(0,1fr);gap:0 17px;padding:22px 18px;border-radius:26px 42px 26px 26px}.ds-result>div:last-child{display:contents}.ds-poster{width:80px;border-radius:14px}.ds-result h2{font-size:23px}.ds-model,.ds-reason,.ds-caveat,.ds-save{grid-column:1/-1}.ds-model{margin-top:18px}.ds-reason{font-size:15px}.ds-save{justify-self:start}}@media(max-width:360px){.ds-result{padding:20px 16px}.ds-result h2{font-size:22px}}@media(prefers-reduced-motion:reduce){.ds-save{transition:none}}"
+    },
+    {
+      "name": "Карточка библиотеки",
+      "kind": "card",
+      "refersTo": "library-card",
+      "description": "План переносится отдельным native select; изображение может отсутствовать.",
+      "html": "<article class=\"ds-library\"><div class=\"ds-cover\" aria-hidden=\"true\">Без обложки</div><div><p class=\"ds-meta\">2023 · Игра</p><h3>Сохранённая игра</h3><select class=\"ds-plan\" aria-label=\"План\"><option>На потом</option><option>На этот вечер</option><option>Уже знакомо</option></select></div></article>",
+      "css": ".ds-library{font-family:Golos,Arial,sans-serif;display:grid;grid-template-columns:68px minmax(0,1fr);gap:16px;padding:18px;border:1px solid var(--brand-line);border-radius:22px;background:var(--brand-surface);color:var(--brand-ink)}.ds-cover{aspect-ratio:2/3;border-radius:12px;background:var(--brand-fill);display:grid;place-items:center;padding:8px;color:var(--brand-muted);text-align:center;font-size:12px;line-height:1.4;overflow-wrap:anywhere}.ds-meta{font-size:12px;line-height:1.6;color:var(--brand-muted);margin:0}.ds-library h3{font-size:14px;line-height:1.45;font-weight:650;letter-spacing:-.015em;margin:6px 0 11px}.ds-plan{font-family:Golos,Arial,sans-serif;font-size:12px;width:100%;min-height:44px;padding:8px 20px 8px 7px;border:0;border-radius:14px;background:var(--brand-context);color:var(--brand-ink)}.ds-plan:focus-visible{outline:2px solid var(--brand-primary);outline-offset:4px}@media(min-width:1500px){.ds-library{grid-template-columns:76px minmax(0,1fr)}.ds-library h3{font-size:15px}}@media(max-width:1100px) and (min-width:761px){.ds-library{grid-template-columns:48px minmax(0,1fr)}.ds-library h3{font-size:13px}}@media(max-width:760px){.ds-library{grid-template-columns:72px minmax(0,1fr);padding:16px}}@media(max-width:350px){.ds-library{grid-template-columns:60px minmax(0,1fr)}}"
+    },
+    {
+      "name": "Краткий запрос на телефоне",
+      "kind": "custom",
+      "description": "Исходная неясность видна целиком, рядом явное уточнение и раскрытие контекста.",
+      "html": "<section class=\"ds-context\"><div class=\"ds-context-head\"><h2>Твой запрос</h2><button class=\"ds-toggle\" aria-expanded=\"false\">Показать</button></div><p>Нужно уточнить, что ты имеешь в виду под короткой историей.</p><button class=\"ds-clarify\">Уточнить</button></section>",
+      "css": ".ds-context{font-family:Golos,Arial,sans-serif;padding:0 4px;background:transparent;color:var(--brand-ink)}.ds-context-head{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px}.ds-context h2{font-size:13px;font-weight:650;line-height:1.4;margin:0}.ds-context p{font-size:13px;line-height:1.7;margin:5px 0 10px}.ds-toggle,.ds-clarify{font-family:Golos,Arial,sans-serif;font-size:12px;line-height:1.45;min-height:44px;padding:9px 14px;border-radius:999px;cursor:pointer}.ds-toggle{background:none;border:0;color:var(--brand-muted)}.ds-clarify{background:var(--brand-surface);border:1px solid var(--brand-strong-line);color:var(--brand-primary);margin-bottom:8px}.ds-toggle:hover,.ds-clarify:hover{background:var(--brand-fill)}.ds-toggle:focus-visible,.ds-clarify:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}"
+    },
+    {
+      "name": "Действие главной",
+      "kind": "button",
+      "refersTo": "landing-action",
+      "description": "Кобальтовая pill-ссылка к выбору раздела; локальная форма главной.",
+      "html": "<a class=\"ds-landing-action\" href=\"#doors\">Найти своё <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-landing-action{font-family:Golos,Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:48px;border:0;border-radius:999px;padding:12px 22px;font-size:14px;line-height:1.5;font-weight:550;text-decoration:none;background:var(--brand-primary);color:var(--brand-surface)}.ds-landing-action:hover{background:var(--brand-hover)}.ds-landing-action:focus-visible{outline:3px solid var(--brand-primary);outline-offset:7px}"
+    },
+    {
+      "name": "Веер раздела",
+      "kind": "custom",
+      "description": "Одна ссылка, три обложки и подпись на бумаге. Здесь показан настоящий текстовый fallback без внешних изображений.",
+      "html": "<a class=\"ds-door\" href=\"/pick/game/\"><span class=\"ds-door-art\"><span class=\"ds-door-cover\"><span>Dark Souls III</span><small>2016</small></span><span class=\"ds-door-cover\"><span>Stardew Valley</span><small>2016</small></span><span class=\"ds-door-cover\"><span>Cyberpunk 2077</span><small>2020</small></span><span class=\"ds-door-go\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"ds-door-label\">Игра</span></a>",
+      "css": ".ds-door{font-family:Golos,Arial,sans-serif;display:block;width:280px;max-width:100%;text-decoration:none;color:var(--brand-ink);border-radius:32px;background:var(--brand-paper)}.ds-door-art{position:relative;display:block;height:306px;isolation:isolate}.ds-door-art::before{content:\"\";position:absolute;inset:24px 0 0;z-index:-1;border-radius:160px 160px 38px 38px;background:var(--brand-dark)}.ds-door-cover{position:absolute;display:flex;flex-direction:column;justify-content:space-between;padding:12px;overflow:hidden;width:46%;aspect-ratio:2/3;border-radius:12px;box-shadow:0 12px 24px #15213d24;background:#273b65;color:var(--brand-inverse);font-size:14px;line-height:1.35;font-weight:600;transition:transform .48s cubic-bezier(.16,1,.3,1),box-shadow .48s cubic-bezier(.16,1,.3,1)}.ds-door-cover small{font-size:12px;color:var(--brand-accent)}.ds-door-cover:nth-child(1){left:5%;top:52px;transform:rotate(-16deg)}.ds-door-cover:nth-child(2){z-index:2;left:25%;top:20px;width:52%;transform:rotate(-3deg);background:#30486d}.ds-door-cover:nth-child(3){left:49%;top:56px;transform:rotate(15deg);background:#243b52}.ds-door-go{display:grid;place-items:center;position:absolute;z-index:3;top:18px;right:10px;width:44px;height:44px;border-radius:50%;background:var(--brand-surface);color:var(--brand-primary);box-shadow:0 5px 14px #15213d12}.ds-door-label{display:block;padding:20px 5px 0;font-size:24px;font-weight:600;line-height:1.35;letter-spacing:-.02em}.ds-door:is(:hover,:focus-visible) .ds-door-cover:nth-child(1){transform:translate(-4px,-3px) rotate(-22deg)}.ds-door:is(:hover,:focus-visible) .ds-door-cover:nth-child(2){transform:translateY(-12px) rotate(0);box-shadow:0 18px 30px #15213d30}.ds-door:is(:hover,:focus-visible) .ds-door-cover:nth-child(3){transform:translate(5px,-2px) rotate(21deg)}.ds-door:is(:hover,:focus-visible) .ds-door-go{background:var(--brand-primary);color:var(--brand-surface)}.ds-door:focus-visible{outline:3px solid var(--brand-primary);outline-offset:7px}@media(prefers-reduced-motion:reduce){.ds-door-cover{transition:none}.ds-door:is(:hover,:focus-visible) .ds-door-cover:nth-child(1){transform:rotate(-16deg)}.ds-door:is(:hover,:focus-visible) .ds-door-cover:nth-child(2){transform:rotate(-3deg)}.ds-door:is(:hover,:focus-visible) .ds-door-cover:nth-child(3){transform:rotate(15deg)}}"
+    },
+    {
+      "name": "Прямой вход финала",
+      "kind": "nav",
+      "refersTo": "landing-final-choice",
+      "description": "Ссылка на раздел внутри тёмного финала; четыре таких действия стоят одной колонкой.",
+      "html": "<nav class=\"ds-finale-sample\" aria-label=\"Начать подбор\"><a class=\"ds-final-choice\" href=\"/pick/watch/?domain=film\"><span>Фильм</span><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></nav>",
+      "css": ".ds-finale-sample{padding:24px;background:var(--brand-dark)}.ds-final-choice{font-family:Golos,Arial,sans-serif;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;padding:16px 22px;border:1px solid #abc9ed55;border-radius:24px;color:var(--brand-inverse);text-decoration:none;font-size:23px;line-height:1.4;font-weight:500;letter-spacing:-.02em}.ds-final-choice:hover{background:var(--brand-primary);border-color:var(--brand-primary);color:var(--brand-surface)}.ds-final-choice:focus-visible{outline:3px solid var(--brand-accent);outline-offset:7px}@media(max-width:760px){.ds-final-choice{min-height:62px;padding:14px 18px;font-size:21px;border-radius:20px}}"
+    },
+    {
+      "name": "Светлая шапка продукта",
+      "kind": "nav",
+      "refersTo": "product-nav-link",
+      "description": "Современные game/watch: точный cobalt SVG, постоянно видимый раздел, смена раздела и библиотека. У библиотеки вместо раздела остаётся свободное место, справа Новый подбор.",
+      "html": "<header class=\"ds-product-header\"><a class=\"ds-brand\" href=\"/\" aria-label=\"TASTIQ — главная\"><svg class=\"ds-site-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1140 277\" role=\"img\" aria-labelledby=\"ds-product-logo-title\"><title id=\"ds-product-logo-title\">TASTIQ</title><g fill=\"#3154D6\" fill-rule=\"evenodd\"><path transform=\"translate(-16.873 -3.436) scale(0.896)\" d=\"M200.386 15.386 C207.14 14.548 214.088 15.54 220.614 17.386 C227.743 20.117 234.871 22.848 242 25.579 C254.363 24.082 266.725 22.585 279.088 21.088 C304.133 18.798 308.084 38.368 300 58 C288.795 85.212 253.058 96.687 257.018 129.982 C259.706 152.59 280.481 173.913 291.614 190.386 C300.231 203.135 306.813 217.479 310.614 232.386 C313.525 243.804 317.641 263.425 306.982 271.982 C305.016 273.561 302.419 273.992 300 274 C263.006 273.994 226.012 273.988 189.018 273.982 C184.457 273.928 178.738 271.402 175.263 268.737 C161.226 257.972 164.445 239.052 175.263 227.263 C177.93 224.93 180.596 222.596 183.263 220.263 C196.032 211.324 263.743 179.289 225.614 154.386 C222.947 153.053 220.281 151.719 217.614 150.386 C211.339 148.661 205.064 146.936 198.789 145.211 C189.86 144.474 180.93 143.737 172 143 C168.438 142.87 160.086 144.842 168.368 147.632 C173.943 149.509 211.96 154.879 201.982 171.982 C194.809 184.281 151.047 194.381 146.123 196.123 C124.161 203.894 101.507 213.829 86.263 232.263 C79.299 240.685 74.237 251.132 73.088 262.088 C72.916 263.722 74.336 271.028 71.158 273.158 C70.099 273.433 69.041 273.708 67.982 273.982 C59.994 273.982 52.006 273.982 44.018 273.982 C41.807 273.193 39.596 272.404 37.386 271.614 C27.565 266.14 30.004 242.879 31.088 235.088 C35.418 203.956 47.491 172.938 62.316 145.316 C70.227 130.575 81.718 110.193 92.386 95.386 C97.404 88.795 102.421 82.205 107.439 75.614 C108.738 73.623 100.689 62.284 100.018 55.982 C98.628 42.949 102.917 31.427 113.386 23.386 C123.698 15.465 139.657 14.896 150.982 21.018 C154.723 23.04 157.907 29.253 161.86 27.684 C177.781 21.366 182.569 17.596 200.386 15.386 Z\"/><path transform=\"translate(-39.502 -26)\" d=\"M356.386 102.386 C396.585 102.263 436.784 102.14 476.982 102.018 C495.526 102.253 492.56 122.656 489.632 134.632 C489.056 136.985 487.822 140.152 485.737 141.737 C475.283 149.683 454.446 145.599 445.018 146.018 C444.117 146.45 443.216 146.883 442.316 147.316 C442.181 178.848 442.047 210.38 441.912 241.912 C441.793 249.175 439.84 257.064 432.982 260.982 C426.514 264.679 406.952 262.965 404.211 262.789 C398.617 262.431 393.284 259.026 391.316 253.684 C390.55 250.45 389.784 247.216 389.018 243.982 C388.936 211.731 388.854 179.48 388.772 147.228 C388.75 145.769 387.004 145.113 385.912 145.088 C373.626 144.803 361.016 148.257 350.018 141.982 C338.459 135.388 339.853 102.934 356.386 102.386 Z\"/><path transform=\"translate(-41.502 -26)\" d=\"M553.386 101.386 C568.081 99.79 585.588 104.306 591.684 119.316 C607.988 161.345 624.292 203.374 640.596 245.404 C643.067 251.884 642.26 261.6 634.982 264.982 C623.068 270.52 598.612 271.622 592.14 256.86 C589.52 249.146 586.901 241.433 584.281 233.719 C583.982 233.351 583.684 232.982 583.386 232.614 C582.585 232.415 581.784 232.216 580.982 232.018 C563.427 232.117 545.871 232.216 528.316 232.316 C527.842 232.842 527.368 233.368 526.895 233.895 C523.801 242.468 520.708 251.041 517.614 259.614 C512.371 271.348 483.313 269.436 474.386 263.614 C466.659 258.575 470.727 246.29 473.123 240.123 C489.088 199.754 505.053 159.386 521.018 119.018 C526.613 105.52 540.581 102.777 553.386 101.386 Z M556 147.632 C555.456 148.544 554.912 149.456 554.368 150.368 C549.713 164.836 545.058 179.304 540.404 193.772 C541.275 194.175 542.146 194.579 543.018 194.982 C552.24 194.883 561.462 194.784 570.684 194.684 C572.211 194.62 571.463 191.939 571.368 191.632 C571.301 191.411 560.04 153.955 556 147.632 Z\"/><path transform=\"translate(-40.502 -26)\" d=\"M700.386 98.386 C718.768 96.362 770.199 99.443 764.789 128.789 C759.883 155.408 743.384 144.964 723.789 141.211 C719.471 140.383 693.753 136.645 695.105 148.93 C695.736 154.657 702.869 156.448 707.386 157.614 C721.087 161.151 735.795 162.762 748.544 169.456 C776.42 184.093 782.404 220.629 763.614 245.614 C753.969 258.44 738.152 263.727 722.912 265.912 C718.942 266.275 714.971 266.637 711 267 C690.587 267 642.232 260.59 647.211 230.211 C647.989 225.461 650.275 220.173 653.754 216.754 C663.669 207.012 677.901 217.605 687.386 220.614 C692.596 221.737 697.807 222.86 703.018 223.982 C710.698 225.015 721.187 223.874 724.596 215.596 C727.64 208.207 718.088 202.963 712.596 201.404 C692.204 195.613 661.014 192.858 650.386 170.614 C631.557 131.205 663.028 102.499 700.386 98.386 Z\"/><path transform=\"translate(-38.502 -26)\" d=\"M787.386 102.386 C826.918 102.263 866.45 102.14 905.982 102.018 C925.013 102.265 923.796 131.878 913.737 141.737 C906.847 148.49 877.273 144.923 875.018 145.018 C874.117 145.45 873.216 145.883 872.316 146.316 C872.181 180.181 872.047 214.047 871.912 247.912 C871.794 252.712 868.54 259.723 863.544 261.544 C848.482 267.032 821.528 267.607 821.018 245.982 C820.977 213.023 820.936 180.064 820.895 147.105 C820.883 145.454 819.361 145.065 817.982 145.018 C813.936 144.88 791.04 148.011 781.842 142.158 C770.522 134.954 771.513 102.69 787.386 102.386 Z\"/><path transform=\"translate(-37.502 -26)\" d=\"M945.386 102.386 C955.258 101.427 979.644 99.243 979.912 116.088 C979.912 162.029 979.912 207.971 979.912 253.912 C979.803 262.073 971.202 267.486 963.912 267.912 C954.103 268.486 931.349 270.213 931.088 253.912 C931.088 208.304 931.088 162.696 931.088 117.088 C931.159 109.349 937.907 103.112 945.386 102.386 Z\"/><path transform=\"translate(-34.502 -26)\" d=\"M1068.386 99.386 C1115.246 95.505 1153.513 120.158 1162.789 167.211 C1163.491 170.769 1164.409 179.383 1163.912 183.912 C1162.493 196.854 1160.392 209.423 1153.982 220.982 C1150.86 225.526 1147.737 230.07 1144.614 234.614 C1142.643 236.825 1140.673 239.035 1138.702 241.246 C1139.31 242.322 1139.918 243.398 1140.526 244.474 C1145.222 249.111 1149.918 253.749 1154.614 258.386 C1165.411 270.825 1145.332 286.513 1135.877 290.877 C1131.183 293.044 1121.802 294.784 1117.386 290.614 C1108.766 281.567 1100.146 272.52 1091.526 263.474 C1083.023 263.643 1074.52 263.813 1066.018 263.982 C1046.731 263.156 1024.806 253.651 1012.263 238.737 C967.899 185.985 998.511 105.173 1068.386 99.386 Z M1069.211 142.211 C1023.929 153.486 1034.937 228.237 1081.789 221.789 C1123.913 215.993 1126.969 154.658 1086.789 142.211 C1081.013 140.421 1074.987 140.772 1069.211 142.211 Z\"/></g></svg></a><div class=\"ds-domain\"><strong>Подбираем игру</strong><a href=\"/#doors\">Сменить раздел</a></div><nav class=\"ds-product-links\" aria-label=\"Основное\"><a href=\"/library/\">Библиотека</a></nav></header>",
+      "css": ".ds-product-header{font-family:Golos,Arial,sans-serif;position:sticky;top:0;z-index:50;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:30px;max-width:1440px;min-height:88px;margin-inline:auto;padding:16px clamp(20px,4vw,64px);background:var(--brand-paper);color:var(--brand-ink);border-bottom:1px solid var(--brand-line)}.ds-brand{display:flex;align-items:center;min-height:44px}.ds-site-logo{display:block;width:148px;height:auto;max-width:100%}.ds-domain{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 20px}.ds-domain strong{font-size:18px;font-weight:650;line-height:1.4;letter-spacing:-.025em}.ds-domain a{display:inline-flex;align-items:center;min-height:44px;font-size:12px;color:var(--brand-muted)}.ds-product-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid var(--brand-line);border-radius:999px;background:var(--brand-surface);color:var(--brand-ink);font-size:13px;font-weight:550;text-decoration:none}.ds-product-links a:hover{background:var(--brand-selected)}.ds-product-header a:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-product-header{grid-template-columns:1fr auto;gap:4px 16px;padding:10px 20px 8px;min-height:0}.ds-site-logo{width:122px}.ds-domain{grid-column:1/-1;grid-row:2;justify-content:space-between;gap:0 12px;min-height:44px}.ds-domain strong{font-size:17px}.ds-product-links{grid-column:2;grid-row:1}.ds-product-links a{padding:9px 13px;font-size:12px}}@media(max-width:360px){.ds-product-header{padding-inline:16px;column-gap:10px}.ds-site-logo{width:108px}.ds-domain strong{font-size:16px}}"
+    },
+    {
+      "name": "Рабочая поверхность вопроса",
+      "kind": "custom",
+      "refersTo": "question-board",
+      "description": "Одна поверхность для вопроса, ответа и продолжения. Четыре текстовых этапа сохраняют aria-current=step; при ≤360px стоят сеткой 2×2.",
+      "html": "<section class=\"ds-question\"><ol class=\"ds-journey\" aria-label=\"Этапы подбора\"><li aria-current=\"step\"><b>Желание</b></li><li><b>Условия</b></li><li><b>Уточнения</b></li><li><b>Варианты</b></li></ol><h1>Чего хочется сегодня?</h1><p>Опиши желание своими словами.</p></section>",
+      "css": ".ds-question{font-family:Golos,Arial,sans-serif;padding:28px 32px 34px;border:1px solid var(--brand-line);border-radius:32px;background:var(--brand-surface);color:var(--brand-ink);box-shadow:0 10px 32px #15213d05}.ds-journey{display:flex;gap:0;margin:0 0 30px;padding:0 0 18px;list-style:none;border-bottom:1px solid var(--brand-line)}.ds-journey li{flex:1;display:flex;justify-content:center;font-size:12px;line-height:1.5;text-align:center}.ds-journey b{padding:6px 4px;font-weight:400;white-space:nowrap}.ds-journey [aria-current=step] b{font-weight:650;color:var(--brand-primary)}.ds-question h1{font-family:Unbounded,Golos,sans-serif;font-size:30px;line-height:1.35;font-weight:500;letter-spacing:-.035em;max-width:26ch;margin:0 0 18px;text-wrap:balance}.ds-question p{font-size:14px;line-height:1.8;max-width:65ch}@media(max-width:1150px) and (min-width:761px){.ds-question{padding:25px;border-radius:28px}}@media(max-width:760px){.ds-question{padding:20px;border-radius:26px}.ds-question h1{font-size:25px;margin-bottom:16px}.ds-journey{margin-bottom:24px;padding-bottom:14px}.ds-journey li{line-height:1.6}}@media(max-width:360px){.ds-question{padding:18px 16px;border-radius:24px}.ds-question h1{font-size:23px}.ds-journey{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px}.ds-journey li{justify-content:flex-start;min-width:0}.ds-journey b{padding-inline:0}}"
+    },
+    {
+      "name": "Альтернатива",
+      "kind": "card",
+      "refersTo": "result-alternative",
+      "description": "Одна из альтернатив под отдельным заголовком; сетка 3/2/1 задаётся внешним контейнером, число предложений не дополняется искусственно.",
+      "html": "<article class=\"ds-alternative\"><div class=\"ds-alt-cover\" aria-hidden=\"true\">Без обложки</div><h2>Название игры</h2><p class=\"ds-alt-model\">Мнение модели</p><p class=\"ds-alt-reason\">Причина под сегодняшний запрос.</p><p class=\"ds-alt-caveat\">Оговорка остаётся рядом.</p><button class=\"ds-alt-save\">Сохранить</button></article>",
+      "css": ".ds-alternative{font-family:Golos,Arial,sans-serif;display:flex;flex-direction:column;min-width:0;padding:22px;border:1px solid var(--brand-line);border-radius:24px;background:var(--brand-surface);color:var(--brand-ink)}.ds-alt-cover{display:grid;place-items:center;width:100%;aspect-ratio:16/9;border-radius:16px;margin-bottom:18px;background:var(--brand-line);font-size:14px;line-height:1.5}.ds-alternative h2{font-size:21px;line-height:1.35;letter-spacing:-.02em;font-weight:600;margin:0 0 9px}.ds-alt-model{font-size:12px;line-height:1.6;color:var(--brand-muted)}.ds-alt-reason{font-size:14px;line-height:1.8}.ds-alt-caveat{font-size:13px;line-height:1.75;color:var(--brand-muted);padding-top:13px;border-top:1px solid var(--brand-line);margin-top:15px}.ds-alt-save{align-self:start;font-family:Golos,Arial,sans-serif;font-size:12px;line-height:1.5;min-height:44px;padding:9px 13px;border:1px solid var(--brand-strong-line);border-radius:999px;background:transparent;color:var(--brand-ink);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-alt-save:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-alt-save:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-alternative{display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 16px;padding:20px 18px;margin-bottom:16px}.ds-alt-cover{width:72px;aspect-ratio:2/3;border-radius:12px;margin:0 0 16px}.ds-alt-model,.ds-alt-reason,.ds-alt-caveat,.ds-alt-save{grid-column:1/-1}.ds-alt-save{justify-self:start}}@media(prefers-reduced-motion:reduce){.ds-alt-save{transition:none}}"
     }
   ],
   "narrative": {
     "northStar": "Разговор",
-    "overview": "Владелец выбрал работающий Conversation 02.11.2026: «Разговор давай этот сделаем». Выпущенный мир — графитовая навигация, тёплое светлое поле, широкие геометрические заголовки и медные действия. Понимание запроса доступно рядом с работой; реальные обложки помогают различать предложения. «Бумага» означает цвет плоской поверхности, а не нарисованную фактуру.\n\nЭта система действует на /pick/game/, /pick/, /library/ и двух новых нижних секциях главной. Источник — shared/conversation.css, pick/game/conversation.css, pick/conversation.css, library/style.css и landing-bottom.css относительно src/server/public/. Прежние правила нейтрального приложения заменены только в этой области. section.first, корневой style.css, исходные двери и footer сохраняют свой мир. В header разрешены «Библиотека»/новый href и компактное оформление этой ссылки при ≤360px; весь header не является byte-identical.",
+    "overview": "Владелец выбрал Conversation 02.11.2026 и 03.11.2026 утвердил его бренд: знак 5B, прописное написание 02 и палитру 02 «Кобальт». Современные подбор и библиотека соединяют прохладное светлое поле, горизонтальную светлую sticky-шапку, кобальтовые действия, округлые рабочие поверхности и геометрические заголовки. Содержание остаётся главным: запрос, один вопрос, проверяемое понимание, предложение с причиной и оговорками.\n\nСистема действует на всей главной, /pick/game/, /pick/watch/, /library/ и сохранённом legacy /pick/. Верх главной, двери и footer входят в текущий бренд; одобренная главная не менялась при продолжении оформления продукта. Утверждённые SVG из src/server/public/assets/brand/ сохраняют контуры и пропорции; исходный комплект — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Цвета и шрифты задаёт shared/brand.css, современную рабочую форму — последний слой shared/product.css под body.product-page. Тёмный rail и прежние компактные прямоугольники относятся к legacy; они не задают форму новых экранов.\n\nИстория решений: тёплая бумага, медь и отдельный исходный верх описывали Conversation 02.11.2026. Сообщение о временной палитре и отсутствии выбранного логотипа относилось к поиску до выбора 03.11.2026. Нынешнее прямое поручение заменить оформление всей страницы отменило прежнюю границу frozen hero. Старые receipts в research-vault/site-design-reset-2026-11-02/ и research-vault/logo-2026-11-02/ сохраняют историю, но не задают текущую норму.",
     "keyCharacteristics": [
-      "Фиксированная светлая рабочая тема с тёмной навигацией; она не переключается вместе с prefers-color-scheme исходной главной.",
-      "Unbounded задаёт голос заголовков, Golos — интерфейс и содержание.",
-      "Небольшие скругления, тональные области и тонкие линии; предложения читаются последовательными строками.",
-      "Состояния названы словами: выбранное, сохранённое, знакомое, ожидание и ошибка различимы без одного лишь цвета."
+      "Одна светлая кобальтовая система на главной, в подборе и библиотеке; тёмные области используют тот же бренд.",
+      "Утверждённый контурный логотип; Unbounded задаёт голос заголовков, Golos — содержание и действия.",
+      "Смысл состояния выражен словами и формой вместе с цветом.",
+      "Первое предложение имеет собственную белую поверхность; альтернативы читаются ниже отдельного заголовка.",
+      "Светлая шапка удерживает текущий раздел; округлая рабочая поверхность сменяется отдельными карточками выдачи."
     ],
     "rules": [
-      {
-        "name": "The Scoped World Rule",
-        "body": "Новые правила применяются только в своей области; сохранённый верх главной не наследует Conversation.",
-        "section": "overview"
-      },
       {
         "name": "The State Has Words Rule",
         "body": "Цвет поддерживает подпись, check, underline, границу или текущий шаг; он не заменяет смысл состояния.",
         "section": "colors"
+      },
+      {
+        "name": "The Logo Is an Asset Rule",
+        "body": "Использовать утверждённый SVG целиком и масштабировать пропорционально; не заменять знак и надпись наборным текстом или новым рисунком.",
+        "section": "typography"
       },
       {
         "name": "The Answer and Action Rule",
@@ -716,20 +607,20 @@
       }
     ],
     "dos": [
-      "**Do** сохранять границу Conversation и исходного верха главной.",
-      "**Do** показывать состояние подписью и формой вместе с цветом.",
+      "**Do** использовать утверждённые cobalt/inverse SVG и общие роли кобальтового бренда на всех production-поверхностях.",
+      "**Do** показывать состояние словами и формой вместе с цветом.",
       "**Do** оставлять вопрос, ответы и продолжение в одной рабочей колонке.",
-      "**Do** сохранять сводку запроса видимой на телефоне и обозначать раскрытие подробностей.",
-      "**Do** давать отсутствующей или сломанной обложке текстовый fallback; сохранять реальный источник изображения.",
-      "**Do** сохранять черновики, выделение, раскрытия и выбранные ответы при обновлениях и повторе."
+      "**Do** показывать краткий запрос на телефоне, исходную неясность целиком и явное раскрытие полного контекста.",
+      "**Do** сохранять причину, оговорку, действия и текстовый fallback при любом состоянии обложки.",
+      "**Do** сохранять независимые черновики и возможность вернуться к предыдущему запросу и вариантам без модели."
     ],
     "donts": [
-      "**Don't** распространять новый фон, шрифт или display voice на frozen hero/header.",
-      "**Don't** возвращать выдаче прежнюю композицию «hero плюс сетка трёх альтернатив».",
-      "**Don't** смешивать планы библиотеки, вкусовую оценку и знакомство одним цветным статусом.",
-      "**Don't** подменять нарисованные иконки Unicode-глифами или добавлять декоративные надписи над заголовками.",
+      "**Don't** возвращать прежнюю медную палитру или frozen-границу главной как действующие ограничения.",
+      "**Don't** перерисовывать утверждённый знак, растягивать логотип или заменять его наборной надписью.",
+      "**Don't** смешивать план, вкусовую оценку и знакомство одним цветным статусом.",
+      "**Don't** подменять SVG-иконки Unicode-глифами или добавлять декоративные надписи над заголовками.",
       "**Don't** превращать временное ожидание в заявленный процент, ETA или доказательство качества рекомендаций.",
-      "**Don't** считать неизвестные возраст/время/свойства проверенными или тестовые локальные записи человеческими оценками."
+      "**Don't** считать неизвестное проверенным или тестовые локальные записи человеческими оценками."
     ]
   }
 }

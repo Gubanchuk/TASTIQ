@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-03",
+  "tests": {
+    "passed": 509,
+    "total": 509,
+    "log": "research-vault/product-style-2026-11-03/tests.log"
+  },
+  "build": {
+    "pass": true,
+    "log": "research-vault/product-style-2026-11-03/build-final.log"
+  },
+  "landingUnchanged": 4,
+  "paidModelCalls": 0,
+  "paidModelCostUSD": 0,
+  "imageGenerationCalls": 0,
+  "viewportOverflow": false,
+  "captures": [
+    {
+      "name": "question-desktop-final",
+      "headerBottom": 88,
+      "heading": "Какой фильм хочется сегодня?",
+      "height": 1000,
+      "scrollWidth": 1440,
+      "width": 1440,
+      "y": 0
+    },
+    {
+      "name": "question-tiny-final",
+      "headerBottom": 111,
+      "heading": "Какой фильм хочется сегодня?",
+      "height": 740,
+      "scrollWidth": 310,
+      "width": 320,
+      "y": 0
+    },
+    {
+      "name": "cartoon-tablet-final",
+      "headerBottom": 88,
+      "heading": "Твои варианты на этот вечер",
+      "height": 900,
+      "scrollWidth": 1014,
+      "width": 1024,
+      "y": 0
+    },
+    {
+      "name": "result-desktop-final",
+      "headerBottom": 88,
+      "heading": "Твои варианты на этот вечер",
+      "height": 1000,
+      "scrollWidth": 1430,
+      "width": 1440,
+      "y": 0
+    },
+    {
+      "name": "alternatives-desktop-final",
+      "headerBottom": 88,
+      "heading": "Твои варианты на этот вечер",
+      "height": 1000,
+      "scrollWidth": 1430,
+      "width": 1440,
+      "y": 681
+    },
+    {
+      "name": "series-mobile-final",
+      "headerBottom": 111,
+      "heading": "Твои варианты на этот вечер",
+      "height": 844,
+      "scrollWidth": 380,
+      "width": 390,
+      "y": 0
+    },
+    {
+      "name": "clarify-mobile-final",
+      "headerBottom": 111,
+      "heading": "Твои варианты на этот вечер",
+      "height": 844,
+      "scrollWidth": 380,
+      "width": 390,
+      "y": 52
+    },
+    {
+      "name": "library-mobile-final",
+      "headerBottom": 67,
+      "heading": "Библиотека",
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390,
+      "y": 0
+    },
+    {
+      "name": "library-desktop-final",
+      "headerBottom": 88,
+      "heading": "Библиотека",
+      "height": 1000,
+      "scrollWidth": 1440,
+      "width": 1440,
+      "y": 0
+    },
+    {
+      "name": "film-user-1280-final",
+      "headerBottom": 88,
+      "heading": "Твои варианты на этот вечер",
+      "height": 720,
+      "scrollWidth": 1270,
+      "width": 1280,
+      "y": 0
+    },
+    {
+      "name": "question-mobile-final",
+      "headerBottom": 111,
+      "heading": "Какой фильм хочется сегодня?",
+      "height": 844,
+      "scrollWidth": 380,
+      "width": 390,
+      "y": 0
+    }
+  ],
+  "limits": [
+    "Isolated actual controller/catalog with offline plan/pick stub; real model quality not measured.",
+    "Native raster dimensions differ from CSS viewport; exact capture mechanism unknown.",
+    "Human fit, physical touch and screen reader not measured."
+  ],
+  "review": {
+    "initial": "fix",
+    "materialFindings": 2,
+    "resolved": 2,
+    "remaining": "clear",
+    "disposition": "ship",
+    "scope": "Scored fixes; not a claim of whole-site readiness or human fit.",
+    "report": "research-vault/product-style-2026-11-03/FINISH_VERDICT.md"
+  },
+  "documentation": "research-vault/product-style-2026-11-03/DOCUMENTATION.md",
+  "qaFinal": {
+    "run": "productstyle20261103",
+    "paidCalls": 0,
+    "externalRequests": 0,
+    "plans": 5,
+    "picks": 3
+  },
+  "cleanup": {
+    "qaServerStopped": true,
+    "mainPort": 5177,
+    "mainPid": 57888,
+    "viewportReset": true,
+    "qaTabsClosed": [
+      "10",
+      "12"
+    ],
+    "failedTab9": "Temporary, unmarked; automatic turn cleanup. Tool URL policy prevented obtaining its handle for explicit close.",
+    "deliverables": [
+      "6",
+      "11"
+    ]
+  }
+}

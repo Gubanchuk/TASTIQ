@@ -3,94 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#151517" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#F1F4FC">
   <title>TASTIQ — что поиграть или посмотреть сегодня</title>
-  <meta name="description" content="Спрошу, что тебе зашло и за что, и подберу один вариант и три запасных — с причинами, рисками и фактами, которые можно проверить.">
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/landing-bottom.css?v=conversation-production-4">
-  <script type="module" src="/app.js?v=conversation-production-3"></script>
+  <meta name="description" content="Выбери, чего хочется сегодня. TASTIQ уточнит важное и предложит игры, фильмы, сериалы или мультфильмы с причинами и оговорками.">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+  <link rel="stylesheet" href="/shared/brand.css">
+  <link rel="stylesheet" href="/style.css?v=unfold-1">
+  <link rel="stylesheet" href="/landing-bottom.css?v=unfold-1">
+  <script type="module" src="/app.js?v=unfold-1"></script>
 </head>
 <body>
   <a class="skip" href="#doors">К выбору</a>
-
-  <header class="top">
-    <div class="top-in">
-      <a class="brand" href="/" aria-label="TASTIQ, на главную">TASTIQ</a>
-      <nav class="top-nav" aria-label="Основное">
-        <a class="btn btn-plain" id="my-link" href="/library/">Библиотека<span class="count num" id="my-count" hidden></span></a>
-        <a class="btn btn-primary" id="pick-btn" href="/pick/">Подобрать</a>
-      </nav>
-    </div>
-  </header>
-
+  <header class="top"><div class="top-in">
+    <a class="brand" href="#doors" aria-label="TASTIQ — выбрать раздел"><img class="site-logo" src="/assets/brand/tastiq-logo-cobalt.svg" alt="TASTIQ" width="164" height="40"></a>
+    <a class="btn btn-primary" href="#doors">Начать подбор <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+  </div></header>
   <main>
     <section class="first" aria-labelledby="hero-title">
       <div class="intro">
-        <h1 id="hero-title">Подберу игру или кино на&nbsp;вечер&nbsp;— по тому, за что тебе нравится</h1>
-        <p class="sub">Спрошу, что тебе зашло и за что. Дам один вариант и три запасных&nbsp;— с&nbsp;причинами, рисками и фактами, которые можно проверить.</p>
+        <h1 id="hero-title">Твой вечер.<br><span>Твой следующий выбор.</span></h1>
+        <p class="sub">Для большого приключения или пары серий перед сном. Выбери, чего хочется сегодня, — дальше подбор поможет сузить круг.</p>
       </div>
-
       <nav class="doors" id="doors" aria-label="Что подобрать" tabindex="-1">
-        <a class="door" data-domain="game" href="/pick/?start=game">
-          <span class="wall" aria-hidden="true"></span>
-          <span class="door-label">
-            <span class="door-text"><span class="door-title">Поиграть</span><span class="door-count num"></span></span>
-            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
+        <a class="door" data-domain="game" href="/pick/game/">
+          <span class="door-art"><span class="wall" aria-hidden="true"></span><span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
+          <span class="door-label"><span class="door-title">Игра</span><span class="door-count num"></span></span>
         </a>
-        <a class="door" data-domain="film" href="/pick/?start=film">
-          <span class="wall" aria-hidden="true"></span>
-          <span class="door-label">
-            <span class="door-text"><span class="door-title">Посмотреть фильм</span><span class="door-count num"></span></span>
-            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
+        <a class="door" data-domain="film" href="/pick/watch/?domain=film">
+          <span class="door-art"><span class="wall" aria-hidden="true"></span><span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
+          <span class="door-label"><span class="door-title">Фильм</span><span class="door-count num"></span></span>
         </a>
-        <a class="door" data-domain="series" href="/pick/?start=series">
-          <span class="wall" aria-hidden="true"></span>
-          <span class="door-label">
-            <span class="door-text"><span class="door-title">Сериал</span><span class="door-count num"></span></span>
-            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
+        <a class="door" data-domain="series" href="/pick/watch/?domain=series">
+          <span class="door-art"><span class="wall" aria-hidden="true"></span><span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
+          <span class="door-label"><span class="door-title">Сериал</span><span class="door-count num"></span></span>
         </a>
-        <a class="door" data-domain="cartoon" href="/pick/?start=cartoon">
-          <span class="wall" aria-hidden="true"></span>
-          <span class="door-label">
-            <span class="door-text"><span class="door-title">Мультфильм</span><span class="door-count num"></span></span>
-            <span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
+        <a class="door" data-domain="cartoon" href="/pick/watch/?domain=cartoon">
+          <span class="door-art"><span class="wall" aria-hidden="true"></span><span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
+          <span class="door-label"><span class="door-title">Мультфильм</span><span class="door-count num"></span></span>
         </a>
       </nav>
-
-      <ul class="later" aria-label="Скоро">
-        <li class="slot" aria-disabled="true">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-          <span>Почитать</span><span class="pill">скоро</span>
-        </li>
-        <li class="slot" aria-disabled="true">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.5 2 5.4 5.6.4-4.3 3.7 1.4 5.6L12 15.5l-4.7 3.1 1.4-5.6-4.3-3.7 5.6-.4Z"/></svg>
-          <span>Аниме</span><span class="pill">скоро</span>
-        </li>
-      </ul>
+      <p class="choice-note">Начни с желания. Название знать не обязательно.</p>
     </section>
-
-    <section class="landing-conversation" aria-labelledby="conversation-title">
-      <div class="landing-conversation-intro"><h2 id="conversation-title">Давай начнём<br>с твоего вечера.</h2><p>Не нужно заранее знать название. Расскажи, какого опыта хочется сегодня, и уточни то, что для тебя важно.</p><a class="landing-action" href="/pick/game/">Подобрать игру <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a><p class="landing-media-note">Фильм, сериал или мультфильм тоже можно выбрать в разговоре: расскажи о сегодняшнем желании, а знакомые истории добавь по желанию.</p></div>
-      <div class="landing-conversation-example" aria-label="Пример игрового разговора"><div class="landing-turn landing-turn-yours"><span>Ты</span><p>Сегодня хочется исследовать большой мир и никуда не спешить.</p></div><div class="landing-turn"><span>TASTIQ</span><p>История должна вести тебя дальше или хочется самому выбирать маршрут?</p></div><p class="landing-example-note">Пример игрового разговора. Сначала проверишь понимание, потом увидишь варианты с причинами и оговорками.</p></div>
-    </section>
-    <section class="landing-conversation-library" aria-labelledby="library-title">
-      <div class="landing-library-intro"><h2 id="library-title">У хороших планов<br>есть своё место.</h2><p>Сохрани на потом, выбери на этот вечер или отметь знакомое. Игры, фильмы и сериалы — в одной библиотеке с поиском и фильтрами.</p><a class="landing-action landing-action-light" href="/library/">Открыть библиотеку <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
-      <div><div class="landing-library-board" id="landing-library-board"></div><p class="landing-library-note" id="landing-library-note">Пример устройства библиотеки. Здесь появятся твои сохранённые планы.</p></div>
+    <section class="landing-method" aria-labelledby="method-title">
+      <div class="method-intro">
+        <h2 id="method-title">От желания<br>к выбору.</h2>
+        <p>Отметь, чего хочется, или опиши своими словами. TASTIQ уточнит важное и предложит до четырёх вариантов — с причинами и оговорками.</p>
+        <a class="landing-action" href="#doors">Найти своё <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <ol class="method-steps" aria-label="Как устроен подбор">
+        <li><div><h3>Твоё желание</h3><p class="method-example">Например: исследовать большой мир и никуда не спешить.</p></div></li>
+        <li><div><h3>Важные детали</h3><p>Вопросы подстраиваются под ответ: настроение, время, компания и то, что тебе уже нравится.</p></div></li>
+        <li><div><h3>Проверка понимания</h3><p>Посмотри, как понят твой запрос. Дополнить или исправить его можно до выбора вариантов.</p></div></li>
+        <li><div><h3>Несколько вариантов</h3><p>Почему предложено, что стоит учесть и что выбрать на сегодня. Знакомое можно заменить.</p></div></li>
+      </ol>
     </section>
   </main>
-
-  <footer class="foot">
-    <div class="foot-in">
-      <span class="brand brand-s">TASTIQ</span>
-      <p>Откуда факты: отзывы и теги игроков Steam, теги зрителей MovieLens, Википедия, оценки IMDb. Картинки: Steam, TVmaze, Википедия.</p>
+  <section class="landing-finale" aria-labelledby="finale-title">
+    <div class="finale-inner">
+      <div class="finale-intro"><h2 id="finale-title">Что выберем<br>на этот вечер?</h2><p>Выбери раздел — и начнём с того, чего хочется именно тебе.</p></div>
+      <nav class="final-choices" aria-label="Начать подбор">
+        <a class="final-choice" href="/pick/game/"><span>Игру</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="final-choice" href="/pick/watch/?domain=film"><span>Фильм</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="final-choice" href="/pick/watch/?domain=series"><span>Сериал</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="final-choice" href="/pick/watch/?domain=cartoon"><span>Мультфильм</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </nav>
     </div>
-  </footer>
+  </section>
+  <footer class="foot"><div class="foot-in">
+    <a class="brand" href="#doors" aria-label="TASTIQ — выбрать раздел"><img class="site-logo" src="/assets/brand/tastiq-logo-inverse.svg" alt="TASTIQ" width="140" height="34"></a>
+    <p>Факты: отзывы и теги Steam, теги MovieLens, Википедия, оценки IMDb. Изображения: Steam, TVmaze, Википедия.</p>
+  </div></footer>
 </body>
 </html>

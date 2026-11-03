@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TASTIQ — выбранный кобальтовый логотип</title>
+  <link rel="icon" href="/brand/svg/favicon.svg" type="image/svg+xml">
+  <style>
+    *{box-sizing:border-box}body{margin:0;color:#1C2945;background:#F1F4FC;font:16px/1.5 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:28px 24px 44px}h1{font-size:25px;font-weight:600;letter-spacing:-.5px;margin:0 0 8px}.intro{margin:0 0 22px;color:#53607A}.hero{display:grid;place-items:center;min-height:250px;padding:45px 30px;background:#fff;border:1px solid #d4dced}.hero img{display:block;width:100%;max-width:850px;height:auto}.hero.dark{background:#15213D;border-color:#15213D;margin-top:14px}.downloads{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.downloads a,.downloads button{display:inline-flex;align-items:center;min-height:44px;padding:9px 14px;border:1px solid #b8c4df;border-radius:5px;font:inherit;font-size:14px;text-decoration:none;background:transparent;color:inherit;cursor:pointer}.downloads .primary{background:#3154D6;color:#fff;border-color:#3154D6}.status{font-size:13px;color:#53607A;min-height:20px}button:disabled{opacity:.6;cursor:wait}a{color:inherit;text-underline-offset:3px}a:focus-visible,button:focus-visible{outline:3px solid #3154D6;outline-offset:4px}h2{font-size:17px;margin:28px 0 14px}.colors{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.color{font-size:11px;line-height:1.6}.swatch{height:48px;border-radius:4px;box-shadow:inset 0 0 0 1px #0001;margin-bottom:6px}.icons{display:flex;align-items:flex-end;flex-wrap:wrap;gap:30px;padding:24px;background:#fff;border:1px solid #d4dced}.icon{display:flex;align-items:center;flex-direction:column;gap:12px;font-size:12px;color:#53607A}.icon img{display:block}.note{font-size:13px;color:#53607A;margin-top:24px}@media(max-width:650px){main{padding:22px 12px 32px}h1{font-size:22px}.hero{padding:28px 16px;min-height:145px}.colors{grid-template-columns:repeat(3,minmax(0,1fr))}.icons{gap:22px;justify-content:space-around;padding:20px 12px}}
+  </style>
+</head>
+<body><main>
+  <h1>TASTIQ · Кобальт</h1><p class="intro">Выбранный медведь 5B, прописное TASTIQ и палитра 02.</p>
+  <div class="hero"><img src="/brand/svg/tastiq-logo-cobalt.svg" alt="Кобальтовый логотип TASTIQ"></div>
+  <div class="hero dark"><img src="/brand/svg/tastiq-logo-inverse.svg" alt="Светлый логотип TASTIQ на тёмно-синем фоне"></div>
+  <div class="downloads">
+    <a class="primary" href="/brand-kit.zip" download="TASTIQ-brand-cobalt-v1.zip">Скачать весь комплект</a>
+    <a href="/brand/svg/tastiq-logo-cobalt.svg" download="tastiq-logo-cobalt.svg">Логотип SVG</a>
+    <a href="/brand/svg/tastiq-symbol-cobalt.svg" download="tastiq-symbol-cobalt.svg">Знак SVG</a>
+    <button id="png-kit" type="button">Сохранить PNG-набор</button>
+  </div><p class="status" role="status"></p>
+  <h2>Палитра</h2><div class="colors"></div>
+  <h2>Отдельный знак</h2><div class="icons"></div>
+  <p class="note">SVG масштабируется без потери качества. Логотип и надпись сохранены в контурах и не требуют установленного шрифта.</p>
+  <a href="/palettes-v2/">История выбора цвета</a>
+</main>
+<script type="module">
+  const colors=[['Основной','#3154D6'],['Текст','#1C2945'],['Светлый фон','#F1F4FC'],['Тёмный фон','#15213D'],['На тёмном','#DFE8FF'],['Дополнительный','#ABC9ED']];
+  document.querySelector('.colors').innerHTML=colors.map(([name,color])=>`<div class="color"><div class="swatch" style="background:${color}"></div>${name}<br>${color}</div>`).join('');
+  document.querySelector('.icons').innerHTML=[16,24,32,48,96].map(size=>`<div class="icon"><img src="/brand/svg/tastiq-symbol-cobalt.svg" width="${size}" height="${size}" alt="Знак TASTIQ ${size} пикселей"><span>${size} px</span></div>`).join('');
+  const encoder=new TextEncoder();
+  const crcTable=Uint32Array.from({length:256},(_,index)=>{let value=index;for(let bit=0;bit<8;bit++)value=(value&1)?0xEDB88320^(value>>>1):value>>>1;return value>>>0;});
+  function crc32(data){let crc=0xFFFFFFFF;for(const value of data)crc=crcTable[(crc^value)&255]^(crc>>>8);return(crc^0xFFFFFFFF)>>>0;}
+  function makeZip(files){
+    const parts=[],central=[];let offset=0;
+    for(const file of files){
+      const name=encoder.encode(file.name),data=file.data,crc=crc32(data);
+      const header=new Uint8Array(30+name.length),local=new DataView(header.buffer);
+      local.setUint32(0,0x04034B50,true);local.setUint16(4,20,true);local.setUint16(6,0x0800,true);local.setUint16(12,33,true);local.setUint32(14,crc,true);local.setUint32(18,data.length,true);local.setUint32(22,data.length,true);local.setUint16(26,name.length,true);header.set(name,30);
+      const entry=new Uint8Array(46+name.length),directory=new DataView(entry.buffer);
+      directory.setUint32(0,0x02014B50,true);directory.setUint16(4,20,true);directory.setUint16(6,20,true);directory.setUint16(8,0x0800,true);directory.setUint16(14,33,true);directory.setUint32(16,crc,true);directory.setUint32(20,data.length,true);directory.setUint32(24,data.length,true);directory.setUint16(28,name.length,true);directory.setUint32(42,offset,true);entry.set(name,46);
+      parts.push(header,data);central.push(entry);offset+=header.length+data.length;
+    }
+    const centralSize=central.reduce((sum,entry)=>sum+entry.length,0),end=new Uint8Array(22),footer=new DataView(end.buffer);
+    footer.setUint32(0,0x06054B50,true);footer.setUint16(8,files.length,true);footer.setUint16(10,files.length,true);footer.setUint32(12,centralSize,true);footer.setUint32(16,offset,true);
+    return new Blob([...parts,...central,end],{type:'application/zip'});
+  }
+  const renders=[
+    {name:'tastiq-logo-cobalt.png',source:'tastiq-logo-cobalt.svg',width:4560,height:1108},
+    {name:'tastiq-logo-inverse.png',source:'tastiq-logo-inverse.svg',width:4560,height:1108},
+    {name:'tastiq-logo-white.png',source:'tastiq-logo-white.svg',width:4560,height:1108},
+    {name:'tastiq-logo-accent.png',source:'tastiq-logo-accent.svg',width:4560,height:1108},
+    {name:'tastiq-symbol-cobalt.png',source:'tastiq-symbol-cobalt.svg',width:1024,height:1024},
+    {name:'tastiq-symbol-white.png',source:'tastiq-symbol-white.svg',width:1024,height:1024},
+    {name:'favicon-16.png',source:'tastiq-symbol-cobalt.svg',width:16,height:16},
+    {name:'favicon-32.png',source:'tastiq-symbol-cobalt.svg',width:32,height:32},
+    {name:'apple-touch-icon.png',source:'tastiq-symbol-cobalt.svg',width:180,height:180,background:'#F1F4FC'},
+    {name:'preview-light.png',source:'tastiq-logo-cobalt.svg',width:2600,height:874,background:'#F1F4FC',padding:160},
+    {name:'preview-dark.png',source:'tastiq-logo-inverse.svg',width:2600,height:874,background:'#15213D',padding:160}
+  ];
+  document.querySelector('#png-kit').addEventListener('click',async event=>{
+    const button=event.currentTarget,status=document.querySelector('.status');button.disabled=true;
+    try{
+      const files=[];
+      for(let index=0;index<renders.length;index++){
+        const item=renders[index];status.textContent=`Сохраняю PNG: ${index+1} из ${renders.length}…`;
+        const image=new Image();image.src='/brand/svg/'+item.source;await image.decode();
+        const canvas=document.createElement('canvas');canvas.width=item.width;canvas.height=item.height;
+        const context=canvas.getContext('2d');if(item.background){context.fillStyle=item.background;context.fillRect(0,0,item.width,item.height);}
+        const padding=item.padding||0;context.drawImage(image,padding,padding,item.width-padding*2,item.height-padding*2);
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw new Error('PNG render failed');
+        files.push({name:item.name,data:new Uint8Array(await blob.arrayBuffer())});
+      }
+      const url=URL.createObjectURL(makeZip(files)),link=document.createElement('a');link.href=url;link.download='TASTIQ-cobalt-png-v1.zip';link.click();setTimeout(()=>URL.revokeObjectURL(url),10000);status.textContent='PNG-набор сохранён.';
+    }catch(error){status.textContent='Не удалось сохранить PNG-набор. SVG остаются доступны.';console.error(error);}
+    finally{button.disabled=false;}
+  });
+</script></body></html>

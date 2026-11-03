@@ -1,0 +1,120 @@
+{
+  "source": "lettering-study-v1.png",
+  "sourceRegion": [
+    220,
+    370,
+    1200,
+    320
+  ],
+  "threshold": 128,
+  "components": [
+    {
+      "name": "bear",
+      "area": 47259,
+      "bounds": {
+        "x": 30,
+        "y": 15,
+        "right": 313,
+        "bottom": 274
+      },
+      "contours": 1,
+      "curves": 35
+    },
+    {
+      "name": "T",
+      "area": 12318,
+      "bounds": {
+        "x": 343,
+        "y": 102,
+        "right": 492,
+        "bottom": 263
+      },
+      "contours": 1,
+      "curves": 14
+    },
+    {
+      "name": "A",
+      "area": 16567,
+      "bounds": {
+        "x": 470,
+        "y": 101,
+        "right": 642,
+        "bottom": 268
+      },
+      "contours": 2,
+      "curves": 20
+    },
+    {
+      "name": "S",
+      "area": 15096,
+      "bounds": {
+        "x": 645,
+        "y": 98,
+        "right": 774,
+        "bottom": 267
+      },
+      "contours": 1,
+      "curves": 16
+    },
+    {
+      "name": "T",
+      "area": 11967,
+      "bounds": {
+        "x": 774,
+        "y": 102,
+        "right": 920,
+        "bottom": 264
+      },
+      "contours": 1,
+      "curves": 11
+    },
+    {
+      "name": "I",
+      "area": 7907,
+      "bounds": {
+        "x": 931,
+        "y": 102,
+        "right": 980,
+        "bottom": 268
+      },
+      "contours": 1,
+      "curves": 6
+    },
+    {
+      "name": "Q",
+      "area": 19811,
+      "bounds": {
+        "x": 992,
+        "y": 99,
+        "right": 1164,
+        "bottom": 293
+      },
+      "contours": 2,
+      "curves": 16
+    }
+  ],
+  "fit": {
+    "boundarySmoothingRadius": 4,
+    "polygonTolerance": 0.55,
+    "curveTolerance": 1
+  },
+  "layout": {
+    "symbolHeight": 232,
+    "gap": 40,
+    "letterOffsets": [
+      0,
+      -2,
+      -1,
+      1,
+      2,
+      5
+    ],
+    "logoViewBox": [
+      0,
+      0,
+      1140,
+      277
+    ]
+  },
+  "status": "Owner selected symbol5B and uppercase02; final vector composition requires visual review."
+}

@@ -7,7 +7,7 @@ const button=(label,act,id,focus=act)=>`<button type="button" class="btn btn-sec
 
 function poster(card,{eager=false}={}) {
  const image=safeUrl(card.poster)||safeUrl(card.image);
- return `<div class="game-poster${image?'':' game-poster-fallback'}" data-title="${esc(nameOf(card))}" aria-hidden="true">${image?`<picture><img src="${esc(image)}" alt="" loading="${eager?'eager':'lazy'}" referrerpolicy="no-referrer"></picture>`:`<span>${esc(nameOf(card))}</span>`}</div>`;
+ return `<div class="game-poster${image?'':' game-poster-fallback'}" data-title="${esc(nameOf(card))}" aria-hidden="true">${image?`<span>${esc(nameOf(card))}</span><picture><img src="${esc(image)}" alt="" loading="${eager?'eager':'lazy'}" referrerpolicy="no-referrer"></picture>`:`<span>${esc(nameOf(card))}</span>`}</div>`;
 }
 
 // A plan is separate from taste, familiarity and evening feedback.
@@ -29,7 +29,7 @@ export function mediaCardHtml(card,{domain='film',index=0,marked=false,kept=fals
   +`<div class="game-pending-controls"><div class="game-card-actions">${button('Отменить','familiar-unmark',card.id,'familiar')}${button('Оставить — хочу пересмотреть','familiar-keep',card.id,'keep')}</div>`
   +`<label class="game-check"><input type="checkbox" data-history-block="${id}" data-focus="block:${id}"${blocked?' checked':''}> Не предлагать в следующих подборах</label></div></article>`;
  const url=safeUrl(card.link),reason=card.ai?.reason||card.reason||'',caveat=card.ai?.caveat||card.caveat||'';
- return `<article class="game-card game-proposal" data-card-id="${id}" aria-label="${esc(title)}"><div class="game-card-layout">${poster(card,{eager:index===0})}<div class="game-card-copy">`
+ return `${index===1?'<h2 class="game-alternatives-heading">Ещё варианты на этот вечер</h2>':''}<article class="game-card game-proposal${index===0?' game-proposal-featured':''}" data-card-id="${id}" aria-label="${esc(title)}"><div class="game-card-layout">${poster(card,{eager:index===0})}<div class="game-card-copy">`
   +`<div class="game-card-heading"><${heading}>${esc(title)}</${heading}><p class="game-meta">${esc([card.year,card.runtime?`${card.runtime} мин${card.kind==='series'?' · эпизод':''}`:null,...(card.kind==='series'?[card.seasons?`${card.seasons} сез.`:null,card.episodes?`${card.episodes} эп.`:null]:[]),...(card.genres??[]).slice(0,2)].filter(Boolean).join(' · '))}</p>`
   +(kept?'<p class="game-kept">Знакомое название — оставлено на сегодня.</p>':known?'<p class="game-kept">Уже знакомо · отметка в этом браузере</p>':'')
   +'</div>'

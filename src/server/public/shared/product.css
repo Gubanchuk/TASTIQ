@@ -1,0 +1,177 @@
+/* The approved brand adapted to a working picker, not a marketing poster. */
+html:has(body.product-page){scroll-padding-top:112px}
+body.product-page .conversation-app{display:block;min-height:100svh}
+body.product-page .conversation-rail{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:30px;width:100%;max-width:1440px;min-height:88px;height:auto;margin-inline:auto;padding:16px clamp(20px,4vw,64px);overflow:visible;background:var(--brand-paper);color:var(--brand-ink);border-bottom:1px solid var(--brand-line)}
+body.product-page .conversation-brand{min-height:44px;gap:0}
+body.product-page .conversation-brand .site-logo{width:148px}
+body.product-page .conversation-rail .selection-header{position:static;display:flex;align-self:center;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 20px;width:auto;margin:0;padding:0;border:0;background:none;grid-column:auto;z-index:auto}
+body.product-page .selection-header strong{font-size:18px;font-weight:650;line-height:1.4;letter-spacing:-.025em}
+body.product-page .selection-header a{min-height:44px;font-size:12px;color:var(--brand-muted)}
+body.product-page .conversation-links{display:flex;flex-direction:row;gap:8px}
+body.product-page .conversation-links a{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:10px 16px;border:1px solid var(--brand-line);border-radius:999px;background:var(--brand-surface);color:var(--brand-ink);font-size:13px;font-weight:550;text-decoration:none}
+body.product-page .conversation-links a:hover{background:var(--brand-selected);color:var(--brand-ink)}
+body.product-page .conversation-links a.product-new-pick{background:var(--brand-primary);border-color:var(--brand-primary);color:white}
+body.product-page .conversation-links a.product-new-pick:hover{background:var(--brand-hover)}
+body.product-page #picker-workspace{display:grid;grid-template-columns:252px minmax(0,1fr);grid-template-rows:auto;align-items:start;gap:32px;max-width:1440px;min-height:0;margin:28px auto 70px;padding:0 clamp(20px,4vw,64px)}
+body.product-page #picker-workspace>.game-context-panel{position:static;min-width:0;padding:14px 0;border:0;border-radius:0;background:transparent}
+body.product-page #request-panel .game-context-heading{margin-bottom:18px;gap:10px}
+body.product-page #request-panel .game-context-heading h2{font-size:16px;font-weight:650}
+body.product-page #request-panel .game-summary-copy>p{font-size:14px;line-height:1.8}
+body.product-page #request-panel .btn{min-height:44px;padding:9px 14px;border-radius:999px;font-size:12px}
+body.product-page #request-panel .game-field{font-size:13px}
+body.product-page #request-panel :is(input,select,textarea){max-width:100%;border-radius:14px}
+body.product-page #request-panel textarea.input{border-radius:16px;font-size:14px}
+body.product-page #request-panel .clarification-list{border-color:var(--brand-line)}
+body.product-page #request-panel .clarification-restore p{font-size:13px;line-height:1.7;margin-bottom:10px}
+body.product-page #request-panel .game-summary-chips>span{border-radius:10px;background:var(--brand-context)}
+body.product-page #stage{min-width:0;padding:28px 32px 34px;border:1px solid var(--brand-line);border-radius:32px;background:var(--brand-surface);box-shadow:0 10px 32px #15213d05;scroll-margin-top:112px}
+body.product-page #stage .game-navigation{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;max-width:none;margin:0 0 30px;padding:0 0 18px;border-bottom:1px solid var(--brand-line)}
+body.product-page #stage .game-back{grid-column:1;grid-row:1;min-height:44px;padding:8px 4px;font-size:12px}
+body.product-page #stage .game-journey{display:flex;grid-column:2;grid-row:1;width:100%;max-width:none;gap:0;padding:0;border:0}
+body.product-page #stage .game-journey li{flex:1;display:flex;align-items:center;justify-content:center;gap:0;font-size:12px;line-height:1.5;padding:0;text-align:center}
+body.product-page #stage .game-journey li>span,body.product-page #stage .game-journey li::after{display:none}
+body.product-page #stage .game-journey li>b{padding:6px 4px;font-weight:400;white-space:nowrap}
+body.product-page #stage .game-journey li[data-status=current]>b{font-weight:650;color:var(--brand-primary)}
+body.product-page #stage .game-navigation-tools{grid-column:3;grid-row:1;gap:0}
+body.product-page #stage .game-navigation-tools>#request-link{display:none}
+body.product-page #stage .game-session-menu>summary{min-height:44px;padding:8px 0;font-size:12px}
+body.product-page #stage .game-session-options{border-radius:18px;padding:8px;box-shadow:0 12px 30px #15213d16}
+body.product-page #main{max-width:none;scroll-margin-top:120px}
+body.product-page #main h1{font-family:Unbounded,Golos,sans-serif;font-size:30px;font-weight:500;line-height:1.35;letter-spacing:-.035em;max-width:26ch;margin:0 0 18px;text-wrap:balance}
+body.product-page #main .game-help{font-size:14px;line-height:1.8;max-width:65ch}
+body.product-page #stage .btn{min-height:46px;padding:10px 17px;border-radius:999px;font-size:13px;line-height:1.5;font-weight:500;transition:background .18s ease,border-color .18s ease}
+body.product-page #stage .btn-primary{background:var(--brand-primary);color:white;border-color:var(--brand-primary);font-weight:550}
+body.product-page #stage .btn-primary:hover:not(:disabled){background:var(--brand-hover);border-color:var(--brand-hover)}
+body.product-page #stage .input{border-radius:16px;border-color:var(--brand-strong-line);background:var(--brand-paper)}
+body.product-page #stage textarea.input{min-height:116px;border-radius:20px;padding:16px 18px;font-size:15px;line-height:1.75}
+body.product-page #stage .game-field{font-size:14px;gap:10px;margin-top:25px}
+body.product-page #stage .game-question-options{gap:12px;margin-top:24px}
+body.product-page #stage .game-option{min-height:64px;padding:16px 18px;border:1px solid var(--brand-line);border-radius:18px;background:var(--brand-paper);font-size:14px;line-height:1.6}
+body.product-page #stage .game-option:hover:not(:disabled){background:var(--brand-context);border-color:var(--brand-strong-line)}
+body.product-page #stage .game-option[aria-pressed=true]{background:var(--brand-selected);border-color:var(--brand-primary);color:var(--brand-ink)}
+body.product-page #stage .game-direction-options{gap:9px;margin-top:12px}
+body.product-page #stage .game-direction-options .game-option{min-height:44px;padding:10px 16px;border-radius:999px;font-size:13px}
+body.product-page #stage .game-neutral-options .btn{background:transparent;font-size:12px;padding:9px 13px}
+body.product-page #stage .game-actions{max-width:none;margin:25px 0 0;padding:22px 0 0;border-top:1px solid var(--brand-line);background:transparent}
+body.product-page #stage .game-action-controls>.btn-primary{min-height:48px;min-width:150px;padding:12px 21px}
+body.product-page #stage .game-processing{max-width:none;min-height:360px}
+body.product-page #stage :is(.game-error,.game-notice){border-radius:18px}
+body.product-page[data-view=result] #stage:not(.is-processing){padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+body.product-page[data-view=result] #stage .game-navigation{padding-bottom:18px}
+body.product-page #stage .game-result-heading{margin:0 0 26px}
+body.product-page #stage .game-result-heading h1{max-width:26ch;font-size:30px;margin-bottom:12px}
+body.product-page #stage .game-proposals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:20px;max-width:none}
+body.product-page #stage .game-alternatives-heading{grid-column:1/-1;max-width:none;font:600 21px/1.4 Golos,Arial,sans-serif;margin:12px 0 0}
+body.product-page #stage .game-proposal{min-width:0;border:1px solid var(--brand-line);border-radius:24px;background:var(--brand-surface);padding:22px;margin:0;overflow:visible}
+body.product-page #stage .game-proposal-featured{grid-column:1/-1;display:grid;grid-template-columns:190px minmax(0,1fr);gap:0 30px;padding:30px;border-radius:32px 56px 32px 32px;box-shadow:0 10px 30px #15213d06}
+body.product-page #stage .game-proposal-featured .game-card-layout{display:contents}
+body.product-page #stage .game-proposal-featured .game-poster{grid-column:1;grid-row:1/4;width:190px;border-radius:18px}
+body.product-page #stage .game-proposal-featured .game-card-copy{display:block;grid-column:2}
+body.product-page #stage .game-proposal-featured h2{font-size:30px;line-height:1.25;margin-bottom:10px}
+body.product-page #stage .game-proposal-featured .game-card-reason{font-size:16px;line-height:1.8}
+body.product-page #stage .game-proposal-featured .game-card-footer,body.product-page #stage .game-proposal-featured>.game-store-link{grid-column:2}
+body.product-page #stage .game-proposal:not(.game-proposal-featured){display:flex;flex-direction:column;align-self:stretch;gap:0}
+body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-layout{display:block}
+body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-poster{width:100%;aspect-ratio:16/9;border-radius:16px;margin-bottom:18px}
+body.product-page.media-dialogue #stage .game-proposal:not(.game-proposal-featured) .game-poster{aspect-ratio:4/3}
+body.product-page #stage .game-proposal:not(.game-proposal-featured) h2{font-size:21px;line-height:1.35;margin-bottom:9px;letter-spacing:-.02em}
+body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-reason{font-size:14px;line-height:1.8}
+body.product-page #stage .game-proposal .game-meta{font-size:12px;line-height:1.7}
+body.product-page #stage .game-proposal .game-model-label{font-size:12px;line-height:1.6}
+body.product-page #stage .game-proposal .game-caveat{font-size:13px;line-height:1.75;padding-top:13px;border-top:1px solid var(--brand-line);margin-top:15px}
+body.product-page #stage .game-proposal .game-card-footer{margin-top:20px;gap:8px}
+body.product-page #stage .game-proposal .game-card-footer .btn{font-size:12px;min-height:44px;padding:9px 13px}
+body.product-page #stage .game-proposal .game-plan-actions{gap:7px}
+body.product-page #stage .game-proposal .game-store-link{font-size:12px;min-height:44px;margin-top:8px}
+body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-footer{margin-top:auto;padding-top:20px}
+body.product-page #stage .game-card-pending{padding:22px;border:1px solid var(--brand-line);border-radius:24px;background:var(--brand-context);min-width:0}
+body.product-page #stage .game-card-pending .game-pending-controls{margin:16px 0 0}
+body.product-page #stage .game-card-pending .game-pending-identity{align-items:flex-start}
+body.product-page.library-page .board-library{max-width:1440px;padding:38px clamp(20px,4vw,64px) 70px}
+body.product-page.library-page .board-heading h1{font-size:32px;line-height:1.3}
+body.product-page.library-page .library-button{border-radius:999px;min-height:46px;padding:10px 17px}
+body.product-page.library-page :is(.library-search,.library-filter select,.move-control select){border-radius:14px}
+body.product-page.library-page .board-card{border:1px solid var(--brand-line);border-radius:22px;padding:18px;gap:16px;background:var(--brand-surface)}
+body.product-page.library-page .library-cover{border-radius:12px}
+body.product-page.library-page .library-undo{border-radius:16px}
+body.product-page.library-page .library-filter-panel>summary{border-radius:14px}
+@media(max-width:1150px) and (min-width:761px){
+ body.product-page #picker-workspace{grid-template-columns:218px minmax(0,1fr);gap:24px}
+ body.product-page #stage{padding:25px;border-radius:28px}
+ body.product-page #stage .game-navigation{grid-template-columns:auto 1fr;gap:8px 14px;margin-bottom:26px}
+ body.product-page #stage .game-navigation-tools{grid-column:2;grid-row:1}
+ body.product-page #stage .game-journey{grid-column:1/-1;grid-row:2}
+ body.product-page #stage .game-proposals{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ body.product-page #stage .game-proposal-featured{grid-template-columns:130px minmax(0,1fr);gap:0 22px;padding:24px;border-radius:28px}
+ body.product-page #stage .game-proposal-featured .game-poster{width:130px}
+ body.product-page #stage .game-proposal-featured h2{font-size:26px}
+}
+@media(max-width:760px){
+ html:has(body.product-page){scroll-padding-top:140px}
+ body.product-page .conversation-rail{grid-template-columns:1fr auto;gap:4px 16px;padding:10px 20px 8px;min-height:0}
+ body.product-page .conversation-brand .site-logo{width:122px}
+ body.product-page .conversation-rail .selection-header{grid-column:1/-1;grid-row:2;justify-content:space-between;gap:0 12px;min-height:44px}
+ body.product-page .selection-header strong{font-size:17px}
+ body.product-page .selection-header a{font-size:12px}
+ body.product-page .conversation-links{grid-column:2;grid-row:1}
+ body.product-page .conversation-links a{min-height:44px;padding:9px 13px;font-size:12px}
+ body.product-page .conversation-links .conversation-icon{width:16px;height:16px}
+ body.product-page #picker-workspace{display:flex;flex-direction:column;gap:16px;margin:14px auto 44px;padding:0 16px}
+ body.product-page #picker-workspace>.game-context-panel{width:100%;padding:0 4px}
+ body.product-page #request-panel .game-context-heading{margin:0;min-height:44px}
+ body.product-page #request-panel .game-context-heading h2{font-size:13px}
+ body.product-page #request-panel .game-context-preview p{font-size:13px;line-height:1.7;margin:5px 0 10px}
+ body.product-page #request-panel .game-summary-copy>p{font-size:13px}
+ body.product-page #stage{width:100%;padding:20px;border-radius:26px;scroll-margin-top:140px}
+ body.product-page #stage .game-navigation{grid-template-columns:auto 1fr;gap:6px;margin-bottom:24px;padding-bottom:14px}
+ body.product-page #stage .game-navigation-tools{grid-column:2;grid-row:1}
+ body.product-page #stage .game-journey{grid-column:1/-1;grid-row:2}
+ body.product-page #stage .game-journey li{font-size:12px;line-height:1.6}
+ body.product-page #main h1{font-size:25px;line-height:1.35;margin-bottom:16px}
+ body.product-page #main .game-help{font-size:14px}
+ body.product-page #stage .game-field{font-size:13px;margin-top:24px}
+ body.product-page #stage textarea.input{font-size:14px;padding:14px 16px;min-height:116px;border-radius:18px}
+ body.product-page #stage .game-option{min-height:58px;padding:14px 16px;border-radius:16px}
+ body.product-page #stage .game-neutral-options{gap:7px}
+ body.product-page #stage .game-neutral-options .btn{padding:9px 11px}
+ body.product-page #stage .game-direction-options .game-option{font-size:12px;padding:9px 14px}
+ body.product-page #stage .game-actions{margin-top:22px;padding-top:18px}
+ body.product-page #stage .game-action-controls>.btn-primary{min-width:125px;min-height:48px}
+ body.product-page #stage .game-processing{min-height:300px}
+ body.product-page #stage .game-result-heading h1{font-size:25px}
+ body.product-page #stage .game-proposals{display:block}
+ body.product-page #stage .game-alternatives-heading{font-size:20px;margin:28px 0 18px}
+ body.product-page #stage .game-proposal-featured{display:grid;grid-template-columns:80px minmax(0,1fr);gap:0 17px;padding:22px 18px;border-radius:26px 42px 26px 26px;margin-bottom:0}
+ body.product-page #stage .game-proposal-featured .game-card-copy{display:contents}
+ body.product-page #stage .game-proposal-featured .game-poster{width:80px;grid-row:1;grid-column:1;border-radius:14px}
+ body.product-page #stage .game-proposal-featured .game-card-heading{grid-column:2}
+ body.product-page #stage .game-proposal-featured h2{font-size:23px}
+ body.product-page #stage .game-proposal-featured .game-card-reason{font-size:15px}
+ body.product-page #stage .game-proposal-featured :is(.game-model-label,.game-card-reason,.game-caveat,.game-feasibility,.game-card-footer,.game-store-link){grid-column:1/-1}
+ body.product-page #stage .game-proposal-featured .game-model-label{margin-top:18px!important}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured){display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 16px;padding:20px 18px;border-radius:24px;margin-bottom:16px}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-layout{display:contents}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-poster{grid-column:1;grid-row:1;width:72px;aspect-ratio:2/3;margin:0 0 16px;border-radius:12px}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-copy{display:contents}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-heading{grid-column:2}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured) h2{font-size:21px}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured) :is(.game-model-label,.game-card-reason,.game-caveat,.game-feasibility,.game-card-footer,.game-store-link){grid-column:1/-1}
+ body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-footer{margin-top:0;padding-top:18px}
+ body.product-page #stage .game-card-pending{margin-bottom:16px;border-radius:24px}
+ body.product-page.library-page .board-library{padding:28px 20px 50px}
+ body.product-page.library-page .board-heading h1{font-size:28px}
+ body.product-page.library-page .board-card{border-radius:22px;padding:16px}
+}
+@media(max-width:360px){
+ body.product-page .conversation-rail{padding-inline:16px;column-gap:10px}
+ body.product-page .conversation-brand .site-logo{width:108px}
+ body.product-page .selection-header strong{font-size:16px}
+ body.product-page #stage{padding:18px 16px;border-radius:24px}
+ body.product-page #main h1{font-size:23px}
+ body.product-page #stage .game-journey{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px}
+ body.product-page #stage .game-journey li{justify-content:flex-start;min-width:0}
+ body.product-page #stage .game-journey li>b{padding-inline:0}
+ body.product-page #stage .game-proposal-featured{padding:20px 16px}
+ body.product-page #stage .game-proposal-featured h2{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){body.product-page *{transition:none!important;animation:none!important}}

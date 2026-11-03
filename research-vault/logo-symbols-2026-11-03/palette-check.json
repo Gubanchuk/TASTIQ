@@ -1,0 +1,35 @@
+{
+  "status": "Palette preview syntax and color data checked; browser review recorded separately.",
+  "sourceGeometryFNV32": "ed7c420c",
+  "method": "sRGB relative luminance; (lighter + 0.05) / (darker + 0.05). Ratios do not establish approval of a palette.",
+  "results": [
+    {
+      "id": "01",
+      "name": "Киноварь",
+      "primaryOnPaper": 4.74,
+      "inkOnPaper": 14.45,
+      "inverseOnDark": 14.05
+    },
+    {
+      "id": "02",
+      "name": "Кобальт",
+      "primaryOnPaper": 5.66,
+      "inkOnPaper": 13.14,
+      "inverseOnDark": 13
+    },
+    {
+      "id": "03",
+      "name": "Хвоя",
+      "primaryOnPaper": 6.14,
+      "inkOnPaper": 11.77,
+      "inverseOnDark": 11.45
+    },
+    {
+      "id": "04",
+      "name": "Слива",
+      "primaryOnPaper": 7.17,
+      "inkOnPaper": 12.57,
+      "inverseOnDark": 12.84
+    }
+  ]
+}

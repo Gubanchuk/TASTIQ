@@ -1,0 +1,42 @@
+[
+  {
+    "id": "01",
+    "name": "Киноварь",
+    "primary": "#C1422B",
+    "ink": "#2D2020",
+    "paper": "#FFF4E7",
+    "dark": "#2A1C1A",
+    "inverse": "#FFEAD4",
+    "accent": "#E8BD77"
+  },
+  {
+    "id": "02",
+    "name": "Кобальт",
+    "primary": "#3154D6",
+    "ink": "#1C2945",
+    "paper": "#F1F4FC",
+    "dark": "#15213D",
+    "inverse": "#DFE8FF",
+    "accent": "#ABC9ED"
+  },
+  {
+    "id": "03",
+    "name": "Хвоя",
+    "primary": "#086752",
+    "ink": "#17362D",
+    "paper": "#F1F4E9",
+    "dark": "#132E26",
+    "inverse": "#D8E9D7",
+    "accent": "#D7DA8B"
+  },
+  {
+    "id": "04",
+    "name": "Слива",
+    "primary": "#743E69",
+    "ink": "#392635",
+    "paper": "#FBF0F5",
+    "dark": "#2D1C29",
+    "inverse": "#F6E0EE",
+    "accent": "#E8C85A"
+  }
+]

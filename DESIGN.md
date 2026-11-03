@@ -1,74 +1,70 @@
 ---
-name: TASTIQ — Разговор
-description: Выпущенная система подбора и библиотеки; исходный верх главной сохраняет отдельный нейтральный стиль.
+name: TASTIQ — Кобальтовый разговор
+description: Выбранный кобальтовый бренд на единой главной, адаптивном подборе и библиотеке.
 colors:
-  accent: "#b84025"
-  accent-hover: "#a43620"
-  game-accent-hover: "#9d351f"
-  game-accent-press: "#872c1a"
-  accent-text: "#a4351e"
-  game-accent-text: "#96371f"
-  on-accent: "#fff9f3"
-  paper: "#f5ece2"
-  surface: "#fbf4ec"
-  context: "#e7dcd1"
-  card: "#fffcf6"
-  field: "#fffdf8"
-  game-field: "#fffaf4"
-  ink: "#2b2b2a"
-  muted: "#6b655f"
-  line: "#d9cec4"
-  context-line: "#c9bbae"
-  game-separator: "#beac9e"
-  game-fill: "#efe3d7"
-  game-fill-hover: "#e8dacd"
-  game-fill-press: "#deccbb"
-  game-choice-selected: "#f5dfd1"
-  game-chip: "#fff9f1"
-  rail: "#282a2c"
-  rail-text: "#d8d1c8"
-  rail-hover: "#3c3d3e"
-  focus: "#257eaa"
-  game-focus: "#a43b23"
+  primary: "#3154d6"
+  ink: "#1c2945"
+  paper: "#f1f4fc"
+  dark: "#15213d"
+  inverse: "#dfe8ff"
+  accent: "#abc9ed"
+  surface: "#fff"
+  context: "#e7ecf8"
+  fill: "#e3e9f7"
+  primary-hover: "#2544b8"
+  primary-press: "#1e3898"
+  muted: "#52617d"
+  line: "#c9d3e9"
+  strong-line: "#9aaaca"
+  selected: "#dce5ff"
+  error: "#8c3042"
+  error-bg: "#fff0f2"
+  error-line: "#d4a0aa"
   known-line: "#6c8070"
   liked-text: "#3e6246"
-  disliked-text: "#a43724"
-  frozen-bg: "#151517"
-  frozen-ink: "#f2f2f4"
-  frozen-action: "#0071e3"
-  frozen-light-bg: "#ffffff"
-  frozen-light-ink: "#1d1d1f"
 typography:
+  hero:
+    fontFamily: "Unbounded, Golos, sans-serif"
+    fontSize: "clamp(34px, 3.6vw, 52px)"
+    fontWeight: 500
+    lineHeight: 1.27
+    letterSpacing: "-0.035em"
   display:
     fontFamily: "Unbounded, Golos, sans-serif"
-    fontSize: "40px"
+    fontSize: "32px"
     fontWeight: 500
-    lineHeight: 1.23
+    lineHeight: 1.3
     letterSpacing: "-0.035em"
   headline:
     fontFamily: "Unbounded, Golos, sans-serif"
-    fontSize: "31px"
+    fontSize: "30px"
     fontWeight: 500
-    lineHeight: 1.3
-    letterSpacing: "-0.035em"
-  media-headline:
-    fontFamily: "Unbounded, Golos, sans-serif"
-    fontSize: "clamp(27px, 2.6vw, 35px)"
-    fontWeight: 500
-    lineHeight: 1.28
+    lineHeight: 1.35
     letterSpacing: "-0.035em"
   landing-headline:
     fontFamily: "Unbounded, Golos, sans-serif"
-    fontSize: "clamp(29px, 3vw, 41px)"
+    fontSize: "clamp(34px, 3.5vw, 50px)"
     fontWeight: 500
     lineHeight: 1.3
     letterSpacing: "-0.035em"
+  landing-finale:
+    fontFamily: "Unbounded, Golos, sans-serif"
+    fontSize: "clamp(34px, 3.7vw, 54px)"
+    fontWeight: 500
+    lineHeight: 1.28
+    letterSpacing: "-0.035em"
+  featured-title:
+    fontFamily: "Golos, Arial, sans-serif"
+    fontSize: "30px"
+    fontWeight: 600
+    lineHeight: 1.25
+    letterSpacing: "-0.025em"
   title:
     fontFamily: "Golos, Arial, sans-serif"
-    fontSize: "23px"
+    fontSize: "21px"
     fontWeight: 600
-    lineHeight: 1.2
-    letterSpacing: "-0.025em"
+    lineHeight: 1.35
+    letterSpacing: "-0.02em"
   body:
     fontFamily: "Golos, Arial, sans-serif"
     fontSize: "14px"
@@ -79,6 +75,11 @@ typography:
     fontSize: "13px"
     fontWeight: 500
     lineHeight: 1.5
+  label-primary:
+    fontFamily: "Golos, Arial, sans-serif"
+    fontSize: "13px"
+    fontWeight: 550
+    lineHeight: 1.5
   meta:
     fontFamily: "Golos, Arial, sans-serif"
     fontSize: "12px"
@@ -88,218 +89,280 @@ rounded:
   card: "4px"
   control: "5px"
   game-control: "6px"
-  reply: "8px 8px 0 8px"
+  product-pill: "999px"
+  product-chip: "10px"
+  product-field: "20px"
+  product-field-phone: "18px"
+  product-choice: "18px"
+  product-choice-phone: "16px"
+  product-question: "32px"
+  product-question-tablet: "28px"
+  product-question-phone: "26px"
+  product-question-tiny: "24px"
+  product-featured: "32px 56px 32px 32px"
+  product-featured-tablet: "28px"
+  product-featured-phone: "26px 42px 26px 26px"
+  product-alternative: "24px"
+  product-featured-poster: "18px"
+  product-alternative-poster: "16px"
+  product-library-card: "22px"
+  product-library-field: "14px"
+  product-library-cover: "12px"
+  landing-door: "32px"
+  landing-cover: "12px"
+  landing-cover-phone: "9px"
+  landing-arch: "160px 160px 38px 38px"
+  landing-arch-phone: "120px 120px 28px 28px"
+  landing-finale: "76px 76px 0 0"
+  landing-finale-phone: "42px 42px 0 0"
+  landing-pill: "999px"
+  landing-final-choice: "24px"
+  landing-final-choice-phone: "20px"
 spacing:
-  "7": "7px"
-  "8": "8px"
-  "10": "10px"
-  "12": "12px"
-  "13": "13px"
-  "14": "14px"
-  "15": "15px"
-  "16": "16px"
-  "17": "17px"
-  "18": "18px"
-  "20": "20px"
-  "22": "22px"
-  "23": "23px"
-  "24": "24px"
-  "25": "25px"
-  "27": "27px"
-  "30": "30px"
-  "40": "40px"
-  "44": "44px"
+  sm: "8px"
+  control: "12px"
+  md: "16px"
+  group: "20px"
+  lg: "24px"
+  card: "28px"
+  product-card: "30px"
+  product-work: "32px"
+  section: "40px"
 components:
   button-primary:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.on-accent}"
-    rounded: "{rounded.control}"
-    typography: "{typography.label}"
-    padding: "10px 15px"
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.surface}"
+    rounded: "{rounded.product-pill}"
+    typography: "{typography.label-primary}"
+    padding: "10px 17px"
+    height: "46px"
   button-primary-hover:
-    backgroundColor: "{colors.accent-hover}"
+    backgroundColor: "{colors.primary-hover}"
   button-game-next:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.on-accent}"
-    rounded: "{rounded.game-control}"
-    padding: "12px 17px"
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.surface}"
+    rounded: "{rounded.product-pill}"
+    padding: "12px 21px"
+    height: "48px"
   button-secondary:
     textColor: "{colors.ink}"
-    rounded: "{rounded.control}"
-    padding: "10px 15px"
+    rounded: "{rounded.product-pill}"
+    padding: "10px 17px"
+    height: "46px"
   choice-game:
-    backgroundColor: "{colors.game-field}"
+    backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.game-control}"
-    padding: "16px"
+    rounded: "{rounded.product-choice}"
+    padding: "16px 18px"
+    height: "64px"
   choice-game-selected:
-    backgroundColor: "{colors.game-choice-selected}"
+    backgroundColor: "{colors.selected}"
+    textColor: "{colors.ink}"
   context-chip:
-    backgroundColor: "{colors.game-chip}"
-    rounded: "{rounded.card}"
+    backgroundColor: "{colors.context}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.product-chip}"
     padding: "5px 9px"
   field-game:
-    backgroundColor: "{colors.game-field}"
+    backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.game-control}"
-    padding: "15px"
+    rounded: "{rounded.product-field}"
+    padding: "16px 18px"
+    height: "116px"
+  question-board:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.product-question}"
+    padding: "28px 32px 34px"
+  result-featured:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.product-featured}"
+    padding: "30px"
+  result-alternative:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.product-alternative}"
+    padding: "22px"
   library-card:
-    backgroundColor: "{colors.card}"
+    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.card}"
-    padding: "13px"
+    rounded: "{rounded.product-library-card}"
+    padding: "18px"
+  product-nav-link:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.product-pill}"
+    padding: "10px 16px"
+    height: "44px"
   rail-item-current:
-    backgroundColor: "{colors.accent}"
-    textColor: "#fff"
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.surface}"
     rounded: "{rounded.card}"
     padding: "10px 9px"
+  landing-action:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.surface}"
+    rounded: "{rounded.landing-pill}"
+    padding: "12px 22px"
+    height: "48px"
+  landing-final-choice:
+    textColor: "{colors.inverse}"
+    rounded: "{rounded.landing-final-choice}"
+    padding: "16px 22px"
+    height: "68px"
 ---
 
-# Design System: TASTIQ — Разговор
+# Design System: TASTIQ — Кобальтовый разговор
 
 ## Overview
 
 **Creative North Star: "Разговор"**
 
-Владелец выбрал работающий Conversation 02.11.2026: «Разговор давай этот сделаем». Выпущенный мир — графитовая навигация, тёплое светлое поле, широкие геометрические заголовки и медные действия. Понимание запроса доступно рядом с работой; реальные обложки помогают различать предложения. «Бумага» означает цвет плоской поверхности, а не нарисованную фактуру.
+Владелец выбрал Conversation 02.11.2026 и 03.11.2026 утвердил его бренд: знак 5B, прописное написание 02 и палитру 02 «Кобальт». Современные подбор и библиотека соединяют прохладное светлое поле, горизонтальную светлую sticky-шапку, кобальтовые действия, округлые рабочие поверхности и геометрические заголовки. Содержание остаётся главным: запрос, один вопрос, проверяемое понимание, предложение с причиной и оговорками.
 
-Эта система действует на /pick/game/, /pick/, /library/ и двух новых нижних секциях главной. Источник — shared/conversation.css, pick/game/conversation.css, pick/conversation.css, library/style.css и landing-bottom.css относительно src/server/public/. Прежние правила нейтрального приложения заменены только в этой области. section.first, корневой style.css, исходные двери и footer сохраняют свой мир. В header разрешены «Библиотека»/новый href и компактное оформление этой ссылки при ≤360px; весь header не является byte-identical.
+Система действует на всей главной, /pick/game/, /pick/watch/, /library/ и сохранённом legacy /pick/. Верх главной, двери и footer входят в текущий бренд; одобренная главная не менялась при продолжении оформления продукта. Утверждённые SVG из src/server/public/assets/brand/ сохраняют контуры и пропорции; исходный комплект — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Цвета и шрифты задаёт shared/brand.css, современную рабочую форму — последний слой shared/product.css под body.product-page. Тёмный rail и прежние компактные прямоугольники относятся к legacy; они не задают форму новых экранов.
+
+История решений: тёплая бумага, медь и отдельный исходный верх описывали Conversation 02.11.2026. Сообщение о временной палитре и отсутствии выбранного логотипа относилось к поиску до выбора 03.11.2026. Нынешнее прямое поручение заменить оформление всей страницы отменило прежнюю границу frozen hero. Старые receipts в research-vault/site-design-reset-2026-11-02/ и research-vault/logo-2026-11-02/ сохраняют историю, но не задают текущую норму.
 
 **Key Characteristics:**
 
-- Фиксированная светлая рабочая тема с тёмной навигацией; она не переключается вместе с prefers-color-scheme исходной главной.
-- Unbounded задаёт голос заголовков, Golos — интерфейс и содержание.
-- Небольшие скругления, тональные области и тонкие линии; предложения читаются последовательными строками.
-- Состояния названы словами: выбранное, сохранённое, знакомое, ожидание и ошибка различимы без одного лишь цвета.
-
-**The Scoped World Rule.** Новые правила применяются только в своей области; сохранённый верх главной не наследует Conversation.
+- Одна светлая кобальтовая система на главной, в подборе и библиотеке; тёмные области используют тот же бренд.
+- Утверждённый контурный логотип; Unbounded задаёт голос заголовков, Golos — содержание и действия.
+- Смысл состояния выражен словами и формой вместе с цветом.
+- Первое предложение имеет собственную белую поверхность; альтернативы читаются ниже отдельного заголовка.
+- Светлая шапка удерживает текущий раздел; округлая рабочая поверхность сменяется отдельными карточками выдачи.
 
 ## Colors
 
-Тёплая светлая основа, графит и медь; точные значения в frontmatter нормативны. Имена описывают употребление в коде, а не обещают единую новую CSS-переменную для каждого literal.
+Шесть утверждённых цветов бренда образуют основу; прохладные поверхности и функциональные состояния извлечены из shared/brand.css. Точные значения frontmatter нормативны, имена совпадают с ролями в построенном интерфейсе.
 
 ### Primary
 
-- **Медь** (accent) — продолжение, выбор на вечер, активная основная навигация и текущий шаг. Общий hover и игровой hover различаются; игровой press сохраняет существующий alias, а не вводит обязательный новый эффект.
-- **Медный текст** (accent-text, game-accent-text) — ссылки и действия на светлом поле. Светлые надписи (on-accent) используются на заполненной меди.
-
-### Secondary
-
-- **Синий фокус** (focus) — общий outline, также у ссылок нижнего лендинга. Game и library имеют собственный медный focus. Второй hue здесь функционален.
-- **Спокойный зелёный** (known-line, liked-text) — линия списка знакомого и явная положительная оценка в библиотеке; отрицательная оценка имеет свой disliked-text. Планы и оценки подписаны отдельно.
+- **Кобальт** (primary) — логотип на светлом фоне, продолжение, выбранный ответ, выбор на вечер, активная навигация, ссылки, caret и focus. primary-hover и primary-press — существующие состояния controls.
+- **Светлый синий** (accent) — поддерживающий текст и focus на тёмном финале главной; не самостоятельный второй primary.
 
 ### Neutral
 
-- **Тёплая бумага** (paper) — рабочий фон; **поверхность** (surface) остаётся общим panel alias. **Контекст** (context) чуть темнее рабочей области и отделён тонкой линией.
-- **Светлая карточка** (card) — библиотека; **поля** (field, game-field) — ввод и ответы. Игровые fills и выбранный ответ отражают реальные локальные overrides.
-- **Чернила / вторичный текст** (ink, muted) — содержание и пояснения; **линии** (line, context-line, game-separator) — разделение областей и controls.
-- **Графит / текст rail** (rail, rail-text) — постоянная навигация; hover меняет тон на rail-hover.
-- frozen-* — только оставшийся исходный верх и footer: тёмная основа и её светлый media-query вариант, системный синий CTA. Эти примитивы не распространяют старую тему на приложение; полный frozen набор остаётся в корневом style.css.
+- **Чернила** (ink) — основное содержание; **вторичный текст** (muted) — пояснения и метаданные.
+- **Прохладная бумага** (paper) — основное поле; **белая поверхность** (surface) — ответы, поля, первое предложение и библиотечные карточки. **Контекст** (context) отделяет запрос; fill — небольшие функциональные заливки.
+- **Тёмный синий** (dark) — legacy rail, одна из арочных подложек, финал главной и footer; **обратный свет** (inverse) — логотип и основное содержание на тёмном фоне. Современная рабочая шапка использует paper и cobalt SVG. Остальные подложки дверей используют accent, primary и inverse.
+- **Линия / сильная линия** (line, strong-line) — разделители, рамки, поля и прогресс; selected поддерживает выбранный ответ и выделение текста.
+- **Ошибка** (error, error-bg, error-line) — сообщение с явным действием восстановления. Сохранённые known-line и liked-text служат подписанным статусам библиотеки, а не новым акцентам бренда.
 
 **The State Has Words Rule.** Цвет поддерживает подпись, check, underline, границу или текущий шаг; он не заменяет смысл состояния.
 
 ## Typography
 
-**Display Font:** Unbounded с Golos/sans-serif fallback. **Body Font:** Golos с Arial/sans-serif fallback. Оба variable TTF размещены локально, font-display:swap; рядом лежат SIL OFL. Onest объявлен в shared CSS, но не используется этими production-поверхностями и не входит в шкалу.
+**Display Font:** Unbounded с Golos/sans-serif fallback. **Body Font:** Golos с Arial/sans-serif fallback. Локальные variable TTF используют font-display:swap; лицензии SIL OFL лежат рядом. Логотип состоит из утверждённых SVG-контуров и не набирается одним из этих шрифтов. Onest объявлен в унаследованном shared CSS, но не используется как голос production-поверхностей.
 
 ### Hierarchy
 
-- **Display:** заголовок библиотеки из frontmatter; на ≤760px становится 31px/1.3, на ≤350px — 28px. Нижний лендинг использует отдельный clamp из frontmatter.
-- **Headline:** адаптивный вопрос/результат игр и просмотра; 28px на 761–1150px и 27px/1.3 на телефоне. Legacy-кино имеет собственный fluid headline, 28px/1.3 на ≤760px и 25px на ≤360px.
-- **Title:** предложение адаптивного разговора; legacy-кино — 24px с теми же весом, line-height и tracking. На телефоне оба — 21px/1.25. Библиотечные карточки плотнее: 14px/1.45, вес 650.
-- **Body:** основной игровой текст из frontmatter; причины 14px/1.75–1.8 и до 65ch, на телефоне 13px/1.8. Нижний лендинг использует 14–15px/1.85–1.9.
-- **Label / meta:** controls обычно 12–13px; подписи, годы и counts — 12px. Служебная метка мнения модели в game — 11px; это локальная подпись, не общий размер body.
+- **Hero:** заголовок главной из frontmatter; при ≤1050px — 35px, на телефоне fluid 29–40px, при ≤360px — 28px.
+- **Display:** библиотека; на телефоне — 28px. Ширина планшета не меняет текущие 32px.
+- **Headline:** адаптивный вопрос и результат; 30px/1.35, на телефоне 25px, при ≤360px вопрос 23px, заголовок результата остаётся 25px. Максимум 26ch. Главная использует отдельные landing-headline для механизма и landing-finale для приглашения: на телефоне — 34px и fluid 29–40px соответственно, при ≤360px — 30px и 28px.
+- **Featured title:** первое предложение; при 761–1150px — 26px, при ≤760px — 23px, при ≤360px — 22px. Это голос названия, а не второй display-шрифт.
+- **Title:** альтернативы; заголовок их группы — Golos 600, 21px/1.4 и 20px на телефоне. Библиотечные названия плотнее: 14px/1.45, вес 650; при 761–1100px — 13px, от 1500px — 15px.
+- **Body:** рабочий текст; пояснения и причины 14px/1.8, у первого предложения 16px/1.8 и 15px на телефоне. Текст причины ограничен 62ch, помощь — 65ch. Главная использует 15–17px/1.8–1.85 в пояснениях и 14px/1.8 в шагах механизма.
+- **Label / meta:** controls обычно 12–13px, вторичные подписи и этапы 12px. Текущий раздел — Golos 650, 18px/1.4, на телефоне 17px, при ≤360px 16px. Счётчики используют tabular-nums. Локальные размеры миниатюр не образуют шкалу основного текста.
 
-Числа счётчиков и шагов используют tabular-nums. Заголовки не предваряются декоративными надписями; названия собеседников в примере разговора обозначают роль реплики. Исходный hero сохраняет системный sans и собственный clamp: он не задаёт display voice новым поверхностям.
+**The Logo Is an Asset Rule.** Использовать утверждённый SVG целиком и масштабировать пропорционально; не заменять знак и надпись наборным текстом или новым рисунком.
 
 ## Layout
 
-Композиция зависит от поверхности; точные схемы записаны в surface briefs.
+Точная композиция зависит от поверхности и записана в .impeccable/surfaces/. Главная имеет max-width 1440px и общий gutter clamp(20px,5vw,80px); четыре веера обложек стоят в ряд, при ≤760px — две колонки. Подписи разделов остаются на бумаге под изображениями. Светлые header, первый экран и последовательность шагов продолжают друг друга; тёмный финал с округлым верхом продолжается в footer. Механизм и финал используют две колонки, при ≤760px — одну; gaps дополнительно сужаются при ≤1050px. Четыре конечных действия всегда стоят одной колонкой. Все переходы главной ведут к выбору раздела или напрямую в соответствующий адаптивный подбор; библиотека доступна внутри приложения.
 
-| Область | Desktop | Телефон ≤760px |
-| --- | --- | --- |
-| Общая навигация | Rail 164px, sticky, высота viewport, собственный overflow | Верхняя навигация в потоке, две строки; домены видны |
-| Игра | Контекст 300px + работа; рабочая область до 950px, padding 30px 40px 64px | Краткая сводка с «Поправить» до вопроса; подробности отдельно; padding работы 20px 20px 40px |
-| Адаптивный просмотр | Тот же layout, что у игр | Та же краткая сводка, один вопрос, «Подробнее о запросе» |
-| Legacy-кино | 164px rail + 270px контекст + работа до 960px | Сводка перед работой; «Подробнее / Свернуть» и chevron; padding работы 24px 20px 45px |
-| Библиотека | Три списка, gap 23px, контент до 1600px | Один выбранный список, переключатели и counts; поиск всегда виден, фильтры раскрываются |
+Современный app shell имеет горизонтальную sticky-шапку (top 0, z-index 50), max-width 1440px, минимум 88px, padding 16px clamp(20px,4vw,64px). Слева cobalt SVG шириной 148px, в центре текущий раздел и «Сменить раздел», справа библиотека; её собственная шапка ведёт в «Новый подбор». На телефоне logo 122px и действие стоят первой строкой, раздел второй; у библиотеки строки раздела нет. При ≤360px logo 108px. Scroll-padding-top — 112px, на телефоне 140px. Текущий раздел сохраняется на вопросе, review, ожидании, ошибке и результате.
 
-На 761–1150px adaptive context — 245px, legacy-кино rail/context — 148/220px; внутренние поля сужаются. От 1600px adaptive context — 320px. Library имеет плотный режим 761–1100px и расширенный от 1500px. Нижний лендинг меняет две колонки при 1000px и складывает содержимое при 640px; это отдельные breakpoints, не общий app shell.
+Адаптивный запрос и работа стоят рядом в контейнере до 1440px: context 252px, gap 32px, поля clamp(20px,4vw,64px), margin 28px auto 70px. При 761–1150px context 218px и gap 24px. Рабочая поверхность вопроса имеет padding 28px 32px 34px; планшет 25px, телефон 20px, при ≤360px 18px 16px. На телефоне контекст и работа идут одной колонкой с gap 16px и внешними полями 16px. Контекст начинается с краткого preview: обычная сводка ограничена двумя строками, исходная неясность показана целиком рядом с «Уточнить». «Показать / Свернуть» раскрывает полный запрос; длинные условия и история не занимают весь первый экран по умолчанию. Четыре текстовых этапа показываются без цифровых кружков и соединителей на всех ширинах. На планшете и телефоне они занимают отдельную строку; при ≤360px — сетку 2×2 с gap 4px 12px и текстом 12px. Текущий этап выделен весом 650 и aria-current=step; это не кликабельные tabs и не обязательное число вопросов.
 
-Основной ритм — небольшие gaps внутри control-групп и 20–30px между смысловыми группами. Продолжение идёт после ответов в рабочей колонке; игровой Next имеет минимум 48px и ширину от 150px (125px mobile), обычные controls — минимум 44px. Высоты — минимумы, текст может увеличить элемент. Новые вопросы и результаты не обрамляются прежними большими округлыми панелями.
+Выдача снимает внешнюю рамку рабочей поверхности: первое предложение занимает всю ширину сетки, ниже общий заголовок и отдельные альтернативы в трёх колонках. При 761–1150px — две колонки, на телефоне — одна. Широкая сетка имеет gap 20px, планшет 16px. Библиотека использует контейнер до 1440px и padding 38px clamp(20px,4vw,64px) 70px, на телефоне 28px 20px 50px. Три равных списка имеют gap 23px (при 761–1100px 14px); при ≤760px виден один выбранный список, поиск остаётся на месте, фильтры раскрываются. Только legacy /pick/ сохраняет тёмный rail 164px, прежнюю композицию с контекстом и последовательными строками результатов.
+
+Ритм задают небольшие gaps внутри controls и 20–32px между смысловыми группами. Действия современной рабочей поверхности и основные library buttons имеют min-height 46px, действия карточек и шапки — 44px; продолжение вопроса — 48px и ширину от 150px, на телефоне от 125px. Высоты component-токенов означают наблюдаемый минимум, русский текст может увеличить элемент.
 
 **The Answer and Action Rule.** Продолжение остаётся в потоке сразу после ответов; оно не отделяется в footer окна.
 
 ## Elevation & Depth
 
-Основа плоская: фон, контекст и карточки различаются тоном, границами и положением. Последовательные предложения разделены hairline, без поднятого hero-card. Тени сохраняют конкретное назначение: session menu / suggestions / уведомления. Маска линии за кругом прогресса (0 0 0 5px фоном бумаги) — геометрия соединителя, не декоративное свечение.
+Основа плоская: глубину дают разные поверхности, положение, масштаб названий и тонкие границы. Рабочая поверхность вопроса и первое предложение имеют слабые мягкие тени. Альтернативы и библиотечные карточки имеют собственные светлые поверхности с границей, без resting shadow. На главной мягкие тени разделяют три перекрывающиеся обложки и круглое действие; центральная обложка усиливает тень при раскрытии веера. Мягкие тени также обозначают меню, всплывающие подсказки и временное уведомление. Сохранённая legacy-маска линии desktop-прогресса не используется современными текстовыми этапами.
 
 ### Shadow Vocabulary
 
-- **Shared pop:** 0 8px 24px #22222220 — унаследованные всплывающие элементы общего Conversation.
-- **Game pop:** 0 12px 28px #40302424 — игровое session menu.
+- **Question board:** 0 10px 32px #15213d05 — рабочая поверхность вопроса; внешняя поверхность снимается на выдаче.
+- **Featured result:** 0 10px 30px #15213d06 — белое первое предложение.
+- **Shared pop:** 0 8px 24px #22222220 — существующие всплывающие элементы.
+- **Product menu:** 0 12px 30px #15213d16 — современное session menu. Прежняя Game pop (0 12px 28px #40302424) остаётся в нижнем слое CSS, но перекрыта product.css.
 - **Library notice:** 0 12px 30px #30251a2c — временное фиксированное сообщение.
+- **Landing cover:** 0 12px 24px #15213d24 — разделение перекрывающихся обложек.
+- **Landing cover open:** 0 18px 30px #15213d30 — центральная обложка при hover/focus.
+- **Landing arrow:** 0 5px 14px #15213d12 — круглое действие поверх веера.
 
-У старых компонентов legacy могут сохраняться собственные hover/всплывающие тени; они не задают новую норму библиотечных карточек. Тени и motion живут в sidecar, не в token frontmatter.
+Тени и motion живут в sidecar. Не переносить тень featured result на все карточки автоматически.
 
 ## Shapes
 
-Небольшие мягкие прямоугольники: карточки и summary chips, controls, игровые controls и постеры используют свои примитивы frontmatter. Main/context имеют прямой край и разделитель. Круг означает номер/состояние шага; он не является формой каждой кнопки. Реплика человека в нижнем лендинге имеет один прямой нижний угол. Иконки — authored inline SVG, обычно 18px со stroke 1.5–1.7; короткий CSS-chevron служит disclosure кино-контекста.
+Современные действия — pills (product-pill); поля и карточки имеют собственные роли product-*. Вопрос использует product-question, на планшете/телефоне/узком телефоне его соответствующие варианты. Первое предложение выделено асимметричным верхним правым углом (product-featured), альтернативы — product-alternative, карточки библиотеки — product-library-card. Контекст лежит прямо на бумаге. Компактные poster/card/control/game-control относятся к унаследованным мелким элементам и legacy, а не к форме новых рабочих экранов. Прежние featured-радиусы 7/9/12px больше не задают актуальные токены. Главная имеет собственную форму: арочные подложки, скруглённые обложки, pill-действия, крупное скругление верхнего края финала и мягкие прямоугольные ссылки в нём. Все rounded.landing-* локальны для главной; её арки и веера не переносятся в рабочую форму подбора. Иконки — authored inline SVG, обычно 18–22px, stroke 1.5–1.7; служебный chevron обозначает раскрытие.
 
 ## Components
 
 ### Buttons
 
-Медный primary с тонкой границей, прозрачный secondary, тихий plain. Game использует локальные radius/padding/hover из frontmatter; library primary — 10px 14px и hover #9d331e. Disabled снижает opacity (shared .48, library .55); библиотечное ожидание меняет cursor. Итоговые действия могут повторяться у каждого предложения — правило «один медный элемент на весь экран» здесь неверно.
+Кобальтовый primary, прозрачный secondary и тихий plain. Современные stage и library buttons используют pills и padding 10px 17px; продолжение — 12px 21px. Context actions плотнее: 9px 14px, минимум 44px. Hover меняет фон, focus сохраняет видимый outline. Disabled снижает opacity: shared .48, library .55. Несколько карточек могут иметь собственные основные действия — количество primary определяется действием человека, а не квотой акцента. Компактные прямоугольные controls прежних библиотечных «Вечеров» и legacy сохраняются локально.
+
+На главной primary-действия используют landing-pill и min-height 48px; header при ≤760px снижает минимум до 44px. Прямые ссылки тёмного финала используют landing-final-choice, границу accent с прозрачностью и кобальтовую заливку на hover; минимум 68px desktop и 62px phone. Высота в component-токене обозначает наблюдаемый минимум, а не ограничение текста.
 
 ### Chips
 
-Небольшие прямоугольные summary chips показывают подтверждённое желание и условия. Game: padding из frontmatter; mobile — 3px 7px. Legacy сохраняет существующие интерактивные reason/complaint chips, окрашенные scoped palette; они не заменяют живой текст объяснения.
+Небольшие summary chips с заливкой context и radius product-chip показывают подтверждённое желание и условия; padding 5px 9px, на телефоне 3px 7px. Legacy сохраняет интерактивные reason/complaint chips. Цвет и форма дополняют буквальную формулировку, не заменяют её.
 
 ### Cards / Containers
 
-Выдача — последовательность до четырёх допустимых предложений: обложка, title/meta, причина/оговорки, явные действия и внешняя ссылка. Adaptive desktop cover 90px, phone65px; legacy-кино91/64px. Меньшее число подходящих предложений не дополняется неподходящими. На телефоне actions переносятся внутри текстовой колонки. Библиотечная карточка — светлая компактная плитка с обложкой, переносом между списками, удалением и отдельным раскрытием отношения.
+Адаптивная выдача содержит до четырёх допустимых предложений. Первое выделено белой поверхностью, размером названия, постером и отступами; ниже стоит отдельный заголовок «Другие варианты». Desktop featured использует колонки 190px + текст, padding 30px и gap 30px. При 761–1150px постер 130px, padding 24px и gap 22px; на телефоне 80px рядом с названием, padding 22px 18px и gap 17px, а причина, оговорки и действия занимают всю ширину. Альтернативы — отдельные карточки padding 22px с обложкой во всю ширину; на телефоне обложка 72px рядом с названием, padding 20px 18px, ниже текст и действия на всю ширину. Меньшее число подходящих предложений не дополняется ради сетки.
+
+В адаптивной выдаче для игр обложка сохраняет 16:9 на широком экране, у телефонной альтернативы контейнер 2:3. Для просмотра featured остаётся 2:3, альтернативы имеют контейнер 4:3 на всех ширинах; сами изображения используют object-fit:contain. Пока изображение не загрузилось, виден текстовый fallback. Picture становится непрозрачным только после успешного load; его непрозрачный фон защищает от просвечивания fallback через прозрачные части изображения. Ошибка загрузки возвращает текст. Библиотечная карточка — белая плитка с границей, padding 18px (телефон 16px), gap 16px, cover radius product-library-cover; перенос между планами и раскрытие отношения независимы.
+
+### Входы главной
+
+Каждый раздел — одна целая ссылка с веером из трёх настоящих обложек (2:3, object-fit:cover), арочной подложкой, круглой SVG-стрелкой и отдельной подписью на бумаге. При hover и focus раскрываются только обложки; подпись не смещается. Все 12 изображений загружаются eager. Название и год остаются текстовым fallback до принятого портретного изображения; после load текст скрывается, ошибочный или горизонтальный источник заменяется следующим. При недоступных данных сами четыре ссылки остаются в HTML и работают.
 
 ### Inputs / Fields
 
-Тёплое светлое поле, тонкая граница и outline. Game textarea — минимум 108px, line-height 1.75. Кино search сохраняет отдельный левый inset 36px после иконки; общий padding не должен его перекрывать. В library поиск обёрнут отдельным полем с focus-within; фильтры используют native select. Не ограничивать многострочный русский текст фиксированной высотой.
+Поле основного ответа лежит на прохладной бумаге, имеет тонкую сильную границу, кобальтовый caret и outline. Textarea — минимум 116px, padding 16px 18px, на телефоне 14px 16px. Поля контекста остаются белыми, textarea радиусом 16px; неясный пункт имеет соседнюю кнопку «Уточнить», собственный textarea минимум 115px и независимый draft. «Дополнить запрос» — отдельное действие. После принятой поправки предыдущий запрос и варианты можно восстановить без модели. Текст и результат сохраняются при отмене, ошибке и reload.
+
+В legacy search «Почему не показал…» сохраняет padding-left 36px после иконки. В библиотеке поиск обёрнут полем с focus-within; фильтры используют native select. Многострочный текст не ограничен фиксированной высотой.
 
 ### Navigation
 
-Rail соединяет «Подобрать», «Библиотека» и четыре domain links. Активный раздел — медное заполнение, домен — вес/светлый текст. На ≤360px общие nav-иконки скрываются для сохранения полных названий. Прогресс — некликабельная последовательность четырёх реальных этапов, без обещания точного числа вопросов. Назад и меню подбора остаются отдельными controls.
+Светлая горизонтальная шапка использует утверждённый cobalt SVG. Раздел обозначен словами, соседняя ссылка ведёт к четырём входам главной; справа доступна «Библиотека». В библиотеке справа кобальтовое pill-действие «Новый подбор». На телефоне строка раздела идёт после logo и действия. Только legacy сохраняет тёмный rail, inverse SVG, «Подобрать / Библиотека» и список доменов; его навигационный snippet в sidecar явно помечен legacy. Некликабельный прогресс обозначает четыре этапа, не количество обязательных вопросов; aria-current=step остаётся и в сетке 2×2.
 
 ### Named processing / recovery
 
-Game status занимает текущую работу, минимум 430px desktop и 330px mobile. Три bars 7×28px используют 1.25s scale/opacity с задержками .15/.3s. Заголовок называет планирование, подбор или замену; подпись сообщает, что ответ сохранён. Live status находится вне busy editable main и получает фокус; main/actions скрываются, контекстные controls блокируются на время работы. Ошибка возвращает выбранный ответ и явный Retry, который повторяет исходную операцию.
-
-Фильмы, сериалы и мультфильмы в `/pick/watch/` используют тот же адаптивный Conversation layout и именованные состояния обработки. Сериальный статус может уточняться локально без модели: это сохранение изменения, без model spinner. Прежний `/pick/` сохраняет отдельное центральное состояние и scoped слой 410px desktop /400px mobile только для legacy; spinner там .7s linear.
+Адаптивный status занимает текущую работу: минимум 360px desktop и 300px mobile. Три кобальтовых bars 7×28px используют scale/opacity (1.25s ease-in-out, delays .15/.3s); заголовок называет планирование, подбор или замену. Live status вне busy editable main получает фокус; ответ сохранён, контекстные действия временно блокируются. Ошибка показывает явный Retry. Локальное сохранение условия не имитирует ожидание модели. Legacy сохраняет собственный central status и spinner.
 
 ### Library board
 
-Списки «На потом / На этот вечер / Уже знакомо» — планы. Отношение, знакомство каждого domain и вечера сохраняют независимые значения. Архив содержит прежние подборы; новые выборы и отзывы всех4 разделов находятся во «Вечерах», с явным переходом из архива. Mobile показывает одну lane без внутренней прокрутки всей доски; поиск остаётся видимым, «Фильтры и порядок» имеет подпись/chevron/count. Перенос через select, удаление с undo, поиск, сортировка и пустые состояния используют настоящие browser-local данные.
+«На потом / На этот вечер / Уже знакомо» — планы; вкус, знакомство и отзывы о вечере независимы. Поиск всегда виден; phone «Фильтры и порядок» имеет подпись, chevron и count. Перенос через select, удаление с undo, архив, вечера и пустые состояния работают с настоящими browser-local записями. Главная не читает личные планы и не показывает библиотечное промо; никаких вымышленных отзывов или статистики продукта.
 
 ### Browser surfaces, focus and motion
 
-Golos/Unbounded загружаются локально; caret и native accent медные. Общий focus — 3px с offset 4px; game переопределяет цвет на game-focus, library — 2px accent с offset 4px, поиск — 2px с offset 3px, нижний landing — общий синий с offset 5px. Outline поля может дополнительно наследовать более специфичное правило старого input; не заявлять один точный ring для всех controls.
-
-Library hover — .18s cubic-bezier(.16,1,.3,1) для фона/границы; game choices — .16s ease-out, legacy controls — существующие короткие transitions. Появления секций не анимированы. prefers-reduced-motion отключает animation/transition и smooth scroll в scoped app, нижний лендинг отключает transition/smooth scroll. Процент и ETA ожидания не выдумываются.
+Общий и адаптивный focus — 3px primary с offset 4px; библиотека — 2px с offset 4px, поиск — 2px с offset 3px, главная — 3px с offset 7px. Более специфичные унаследованные input rules могут дополнять ring. В тёмном финале и footer главной outline использует accent. Library hover — .18s cubic-bezier(.16,1,.3,1), stage buttons — .18s ease; game choice сохраняет .16s ease-out. Обложки главной раскрываются на hover/focus за .48s cubic-bezier(.16,1,.3,1); секции не имеют entrance animation. prefers-reduced-motion отключает переходы, анимацию и smooth scroll в приложении; на главной отключает переходы и smooth scroll, а веер сохраняет исходные углы даже при hover/focus. Процент и ETA ожидания не выдумываются.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** сохранять границу Conversation и исходного верха главной.
-- **Do** показывать состояние подписью и формой вместе с цветом.
+- **Do** использовать утверждённые cobalt/inverse SVG и общие роли кобальтового бренда на всех production-поверхностях.
+- **Do** показывать состояние словами и формой вместе с цветом.
 - **Do** оставлять вопрос, ответы и продолжение в одной рабочей колонке.
-- **Do** сохранять сводку запроса видимой на телефоне и обозначать раскрытие подробностей.
-- **Do** давать отсутствующей или сломанной обложке текстовый fallback; сохранять реальный источник изображения.
-- **Do** сохранять черновики, выделение, раскрытия и выбранные ответы при обновлениях и повторе.
+- **Do** показывать краткий запрос на телефоне, исходную неясность целиком и явное раскрытие полного контекста.
+- **Do** сохранять причину, оговорку, действия и текстовый fallback при любом состоянии обложки.
+- **Do** сохранять независимые черновики и возможность вернуться к предыдущему запросу и вариантам без модели.
 
 ### Don't:
 
-- **Don't** распространять новый фон, шрифт или display voice на frozen hero/header.
-- **Don't** возвращать выдаче прежнюю композицию «hero плюс сетка трёх альтернатив».
-- **Don't** смешивать планы библиотеки, вкусовую оценку и знакомство одним цветным статусом.
-- **Don't** подменять нарисованные иконки Unicode-глифами или добавлять декоративные надписи над заголовками.
+- **Don't** возвращать прежнюю медную палитру или frozen-границу главной как действующие ограничения.
+- **Don't** перерисовывать утверждённый знак, растягивать логотип или заменять его наборной надписью.
+- **Don't** смешивать план, вкусовую оценку и знакомство одним цветным статусом.
+- **Don't** подменять SVG-иконки Unicode-глифами или добавлять декоративные надписи над заголовками.
 - **Don't** превращать временное ожидание в заявленный процент, ETA или доказательство качества рекомендаций.
-- **Don't** считать неизвестные возраст/время/свойства проверенными или тестовые локальные записи человеческими оценками.
+- **Don't** считать неизвестное проверенным или тестовые локальные записи человеческими оценками.

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>TASTIQ — выбираем характер логотипа</title>
+<link rel="icon" href="data:,">
+<style>
+@font-face{font-family:Golos;src:url(assets/GolosText-Variable.ttf) format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:Unbounded;src:url(assets/Unbounded-Variable.ttf) format('truetype');font-weight:200 900;font-display:swap}
+:root{--paper:#f5ece2;--surface:#fffcf6;--ink:#282a2c;--muted:#665f59;--accent:#b84025;--line:#d9cec4;color:var(--ink);background:var(--paper);font:16px/1.55 Golos,sans-serif;scroll-behavior:smooth;accent-color:var(--accent)}
+*{box-sizing:border-box}body{margin:0}::selection{background:#b84025;color:#fff8ee}a{color:inherit;text-underline-offset:4px}button{font:inherit;cursor:pointer;min-height:44px}button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button:hover{border-color:var(--accent)}.skip{position:absolute;left:16px;top:-90px;background:var(--surface);padding:12px}.skip:focus{top:12px;z-index:9}.wrap{width:min(1424px,100% - 64px);margin:auto}.masthead{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}.project{font:600 18px Unbounded,sans-serif;letter-spacing:-.03em}.status{color:var(--muted);font-size:14px}.intro{padding:60px 0 42px;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end}h1{font:500 clamp(30px,3.5vw,52px)/1.17 Unbounded,sans-serif;letter-spacing:-.035em;max-width:20ch;margin:0}p{margin:0}.intro p{max-width:49ch;color:var(--muted)}.concepts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}.concept{min-width:0}.concept img{width:100%;height:auto;display:block;aspect-ratio:1.5;background:var(--surface);border:1px solid var(--line)}.concept h2{font-size:22px;line-height:1.25;margin:20px 0 10px;letter-spacing:-.02em}.concept p{color:var(--muted);font-size:15px;max-width:44ch}.concept .tradeoff{font-size:14px;margin-top:12px}.concept a{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:var(--accent);font-weight:600}.recommendation{display:grid;grid-template-columns:1fr 2fr;gap:40px;border-block:1px solid var(--line);margin:45px 0 56px;padding:25px 0}.recommendation strong{font-size:21px;font-weight:600;line-height:1.4}.recommendation p{max-width:73ch;color:var(--muted)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:25px}.section-head h2{font:500 clamp(24px,2.3vw,34px)/1.25 Unbounded,sans-serif;letter-spacing:-.03em;margin:0}.section-head p{max-width:43ch;color:var(--muted);font-size:15px}.choices{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.choices button{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:10px 18px}.choices button[aria-pressed=true]{background:var(--ink);color:#fff8ee;border-color:var(--ink)}.preview{background:var(--surface);border:1px solid var(--line);border-radius:5px;overflow:hidden}.browser-bar{display:flex;align-items:center;gap:10px;padding:9px 18px;background:#e7dcd1;border-bottom:1px solid var(--line);font-size:12px;line-height:1.3;color:#514c47;min-height:34px}.favicon{width:16px;height:16px;display:block;flex:none}.crop{display:block;overflow:hidden}.crop image{pointer-events:none}.sample-header{display:flex;align-items:center;justify-content:space-between;padding:20px 30px;background:#282a2c;color:#fff8ee;gap:24px;min-height:85px}.sample-header .crop{width:132px;height:41px}.sample-header span{font-size:14px}.workspace{display:grid;grid-template-columns:164px 1fr;min-height:350px}.sample-rail{background:#282a2c;color:#d8d1c8;padding:26px 20px;display:flex;flex-direction:column;align-items:start;gap:10px}.sample-rail>.crop{width:124px;height:40px;margin-bottom:23px}.rail-item{font-size:14px;padding:6px 0}.rail-item.active{color:#fff8ee;text-decoration:underline;text-decoration-color:#d5a17b;text-underline-offset:8px}.sample-work{padding:36px clamp(22px,4vw,64px);max-width:850px;width:100%}.sample-work h3{font:500 clamp(23px,2.6vw,31px)/1.3 Unbounded,sans-serif;letter-spacing:-.03em;margin:0 0 16px}.sample-work p{color:var(--muted);max-width:49ch}.domain-choices{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}.domain-choices span{font-size:14px;border:1px solid var(--line);padding:8px 13px;border-radius:4px}.domain-choices span:first-child{background:#f2d9cc;border-color:#be735c;color:#7d2e1b}.fake-input{padding:16px 18px;border:1px solid var(--line);border-radius:4px;min-height:68px;color:var(--muted);max-width:620px;font-size:15px}.preview-foot{padding:14px 22px;background:#eee4d9;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.scale-row{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:30px 0 45px}.scale-test{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.scale-label{font-size:14px;color:var(--muted);width:110px}.scale-test .crop{flex:none}.light-logo{padding:12px 0}.small-note{font-size:13px;color:var(--muted);max-width:60ch}.ending{padding:25px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;max-width:85ch}.muted{color:var(--muted)}
+@media(max-width:900px){.wrap{width:calc(100% - 40px)}.intro{grid-template-columns:1fr;gap:23px;padding-top:40px}.concepts{gap:18px}.concept h2{font-size:19px}.recommendation{grid-template-columns:1fr;gap:12px}.section-head{align-items:start;flex-direction:column;gap:12px}.scale-row{gap:22px}.scale-test{gap:15px}.scale-label{width:100%}}
+@media(max-width:620px){.wrap{width:calc(100% - 32px)}.masthead{padding:18px 0;align-items:start}.status{font-size:12px;max-width:16ch;text-align:right}.intro{padding:34px 0 30px}h1{font-size:29px}.concepts{grid-template-columns:1fr;gap:35px}.concept h2{margin-top:14px}.concept p{max-width:100%}.concept a{margin-top:5px}.recommendation{margin:32px 0 38px;padding:22px 0}.choices{display:grid;grid-template-columns:1fr}.choices button{text-align:left}.sample-header{padding:16px 20px;min-height:73px}.sample-header .crop{width:120px;height:36px}.sample-header span{font-size:12px}.workspace{grid-template-columns:1fr}.sample-rail{flex-direction:row;align-items:center;gap:16px;padding:14px 20px;flex-wrap:wrap}.sample-rail>.crop{width:100px;height:30px;margin:0 auto 0 0}.rail-item{font-size:12px}.sample-work{padding:28px 20px}.sample-work h3{font-size:23px}.scale-row{grid-template-columns:1fr;gap:24px}.scale-label{width:100px}.preview-foot{padding:13px 18px}.browser-bar{padding-inline:16px}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
+</style>
+<a class="skip" href="#comparison">К сравнению</a>
+<div class="wrap">
+  <header class="masthead"><span class="project">TASTIQ</span><span class="status">Эскизы логотипа · 2 ноября</span></header>
+  <main id="comparison">
+    <div class="intro"><h1>Найти свой вариант.<br>Узнать свой знак.</h1><p>Три характера для одного сервиса: он понимает, чего тебе хочется сегодня, и помогает выбрать игру, фильм, сериал или мультфильм.</p></div>
+    <div class="concepts">
+      <article class="concept"><img src="assets/lettering.png" width="1536" height="1024" alt="Авторское округлое написание tastiq с диагональным медным хвостом Q; ниже отдельная Q и светлый логотип на тёмном фоне"><h2>Имя с характером</h2><p>Крупное, дружелюбное написание. Буква Q становится отдельным знаком для вкладки и приложения.</p><p class="tradeoff">Сильнее всего запоминается само имя. Хвост Q ещё стоит довести, чтобы он увереннее читался как часть буквы.</p><a href="#in-context" data-select="lettering">Посмотреть на сайте →</a></article>
+      <article class="concept"><img src="assets/match.png" width="1536" height="1024" alt="Две соединяющиеся скобообразные формы рядом с узким заглавным написанием TASTIQ; ниже уменьшенные версии"><h2>Совпало</h2><p>Две формы складываются в одно целое: твоё желание и подходящий вариант. Самостоятельный плотный знак.</p><p class="tradeoff">Символ хорошо держит маленький размер. По характеру ближе к технологичному сервису; меньше личного тепла.</p><a href="#in-context" data-select="match">Посмотреть на сайте →</a></article>
+      <article class="concept"><img src="assets/conversation.png" width="1536" height="1024" alt="Две крупные встречные кавычки и выразительное написание tastiq с засечками; ниже уменьшенные версии"><h2>Хороший собеседник</h2><p>Кавычки и выразительный шрифт с засечками. Ощущение человека с хорошим вкусом, к которому пришли за советом.</p><p class="tradeoff">Самый редакционный и тёплый вариант. Кавычки пока могут восприниматься как «69»; знак требует доработки.</p><a href="#in-context" data-select="conversation">Посмотреть на сайте →</a></article>
+    </div>
+    <aside class="recommendation"><strong>Я бы развивал<br>«Имя с характером».</strong><p>Здесь бренд сразу строится вокруг TASTIQ, а Q даёт ему собственную иконку. Написание подходит и играм, и кино, а мягкая форма поддерживает тёплый интерфейс. Следующий шаг — точно нарисовать буквы и хвост Q в векторе, затем проверить одноцветную версию.</p></aside>
+    <section id="in-context" aria-labelledby="context-title">
+      <div class="section-head"><h2 id="context-title">Теперь — в масштабе сайта</h2><p>Переключай концепции. Меняется только логотип: окружение одинаковое, чтобы сравнение было честным.</p></div>
+      <div class="choices" role="group" aria-label="Концепция логотипа"><button type="button" data-select="lettering" aria-pressed="true">Имя с характером</button><button type="button" data-select="match" aria-pressed="false">Совпало</button><button type="button" data-select="conversation" aria-pressed="false">Хороший собеседник</button></div>
+      <p id="selection-status" class="small-note" role="status" aria-live="polite" style="margin-bottom:14px">Показана концепция «Имя с характером».</p>
+      <div class="preview" aria-label="Пример размещения логотипа в интерфейсе">
+        <div class="browser-bar"><span id="tab-icon"></span><span>TASTIQ — что выбрать на сегодня</span></div>
+        <div class="sample-header"><div id="header-logo"></div><span>Найдём, что тебе по вкусу</span></div>
+        <div class="workspace"><div class="sample-rail"><div id="rail-logo"></div><span class="rail-item active">Подобрать</span><span class="rail-item">Библиотека</span></div><div class="sample-work"><h3>Чего хочется сегодня?</h3><p>Начнём с направления. Дальше можно рассказать своими словами.</p><div class="domain-choices" aria-label="Пример направлений"><span>Игры</span><span>Фильмы</span><span>Сериалы</span><span>Мультфильмы</span></div><div class="fake-input">Хочется погрузиться в другой мир и никуда не торопиться…</div></div></div>
+        <div class="preview-foot">Пример размещения. Подбор здесь не запускается; основной сайт не изменён.</div>
+      </div>
+      <div class="scale-row"><div><div class="scale-test"><span class="scale-label">Иконка<br>16 / 32 / 48 px</span><div id="icon-16"></div><div id="icon-32"></div><div id="icon-48"></div></div></div><div class="scale-test light-logo"><span class="scale-label">На светлом<br>фоне · 132 px</span><div id="light-logo"></div></div></div>
+    </section>
+    <p class="ending">Это растровые эскизы, созданные встроенным генератором изображений, а не финальные файлы логотипа. Маленькие версии показывают читаемость идеи. Перед внедрением нужны чистый SVG, оптическая доводка и настоящая одноцветная версия.</p>
+  </main>
+</div>
+<script>
+'use strict';
+const concepts={
+ lettering:{name:'Имя с характером',light:[91,109,1357,458],dark:[706,742,548,180],icon:[229,689,284,284]},
+ match:{name:'Совпало',light:[130,195,1280,382],dark:[701,798,590,174],icon:[80,760,256,256]},
+ conversation:{name:'Хороший собеседник',light:[87,195,1360,375],dark:[740,800,550,165],icon:[98,760,256,256]}
+};
+function renderCrop(key,rect,width,height,label){
+ const ns='http://www.w3.org/2000/svg';
+ const svg=document.createElementNS(ns,'svg');svg.setAttribute('class','crop');svg.setAttribute('width',width);svg.setAttribute('height',height);svg.setAttribute('viewBox',rect.join(' '));svg.setAttribute('role','img');svg.setAttribute('aria-label',label);
+ const img=document.createElementNS(ns,'image');img.setAttribute('href','assets/'+key+'.png');img.setAttribute('width','1536');img.setAttribute('height','1024');svg.append(img);return svg;
+}
+function select(key){
+ const c=concepts[key];if(!c)return;
+ document.querySelectorAll('button[data-select]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.select===key)));
+ const placements=[['header-logo',c.dark,132,41],['rail-logo',c.dark,124,40],['tab-icon',c.icon,16,16],['icon-16',c.icon,16,16],['icon-32',c.icon,32,32],['icon-48',c.icon,48,48],['light-logo',c.light,132,44]];
+ placements.forEach(([id,rect,w,h])=>document.getElementById(id).replaceChildren(renderCrop(key,rect,w,h,'Логотип: '+c.name)));
+ document.getElementById('selection-status').textContent='Показана концепция «'+c.name+'».';
+ document.body.dataset.concept=key;
+}
+document.querySelectorAll('[data-select]').forEach(el=>el.addEventListener('click',()=>select(el.dataset.select)));
+select('lettering');
+</script>
+</html>

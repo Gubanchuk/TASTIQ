@@ -1,23 +1,23 @@
 /* The production conversation: real request at left, one decision at right. */
 body.conversation-page.game-dialogue.workspace-v2 {
  --font:Golos,Arial,sans-serif;
- --bg:var(--paper);--panel:var(--surface);--group:#fffcf6;--popover:#fffcf6;
- --fill:#efe3d7;--fill-2:#e8dacd;--fill-3:#deccbb;--field:#fffaf4;
- --sep:var(--line);--sep-strong:#beac9e;
- --text:var(--ink);--text-2:var(--muted);--text-3:#74675c;
- --accent-fill:var(--accent);--accent-fill-hover:#9d351f;--accent-fill-press:#872c1a;
- --accent-text:#96371f;--accent-tint:#f3ddd0;--on-accent:#fff9f3;
- --typo-1:#d9cab9;--typo-ink:#493f36;--shadow-pop:0 12px 28px #40302424;
+ --bg:var(--paper);--panel:var(--surface);--group:var(--brand-surface);--popover:var(--brand-surface);
+ --fill:var(--brand-fill);--fill-2:var(--brand-fill);--fill-3:var(--brand-line);--field:var(--brand-surface);
+ --sep:var(--line);--sep-strong:var(--brand-strong-line);
+ --text:var(--ink);--text-2:var(--muted);--text-3:var(--brand-muted);
+ --accent-fill:var(--accent);--accent-fill-hover:var(--brand-hover);--accent-fill-press:var(--brand-press);
+ --accent-text:var(--brand-primary);--accent-tint:var(--brand-selected);--on-accent:var(--brand-surface);
+ --typo-1:var(--brand-line);--typo-ink:var(--brand-ink);--shadow-pop:0 12px 28px #40302424;
  color-scheme:light;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:14px;line-height:1.7;
 }
-.conversation-page.game-dialogue ::selection { background:#edc6b1;color:var(--ink); }
+.conversation-page.game-dialogue ::selection { background:var(--brand-selected);color:var(--ink); }
 .conversation-page.game-dialogue .btn { font-family:inherit;font-size:13px;line-height:1.45;border-radius:6px;min-height:44px;padding:10px 14px; }
 .conversation-page.game-dialogue .btn-secondary { color:var(--ink);background:transparent;border:1px solid var(--sep-strong); }
-.conversation-page.game-dialogue .btn-secondary:hover:not(:disabled) { background:#eadbce;border-color:#8c7868; }
-.conversation-page.game-dialogue .btn-primary { background:var(--accent);color:#fff9f3;border:1px solid var(--accent); }
-.conversation-page.game-dialogue .btn-primary:hover:not(:disabled) { background:#9d351f;border-color:#9d351f; }
+.conversation-page.game-dialogue .btn-secondary:hover:not(:disabled) { background:var(--brand-fill);border-color:var(--brand-muted); }
+.conversation-page.game-dialogue .btn-primary { background:var(--accent);color:var(--brand-surface);border:1px solid var(--accent); }
+.conversation-page.game-dialogue .btn-primary:hover:not(:disabled) { background:var(--brand-hover);border-color:var(--brand-hover); }
 .conversation-page.game-dialogue .btn-plain { color:var(--muted);background:none;border:0; }
-.conversation-page.game-dialogue :is(button,a,textarea,input,select,summary):focus-visible { outline:3px solid #a43b23;outline-offset:4px; }
+.conversation-page.game-dialogue :is(button,a,textarea,input,select,summary):focus-visible { outline:3px solid var(--brand-primary);outline-offset:4px; }
 .conversation-page.game-dialogue h1,.conversation-page.game-dialogue h2,.conversation-page.game-dialogue h3 { color:var(--ink); }
 .conversation-page.game-dialogue p { line-height:1.75; }
 .conversation-page.game-dialogue a { text-underline-offset:4px; }
@@ -25,25 +25,25 @@ body.conversation-page.game-dialogue.workspace-v2 .game-workspace {
  display:grid;grid-template-columns:300px minmax(0,1fr);align-items:stretch;gap:0;max-width:none;min-height:100dvh;margin:0;padding:0;
 }
 body.conversation-page.game-dialogue.workspace-v2 .game-context-panel {
- position:static;top:auto;margin:0;padding:30px 25px;background:#e7dcd1;border:0;border-right:1px solid #c9bbae;border-radius:0;min-width:0;
+ position:static;top:auto;margin:0;padding:30px 25px;background:var(--brand-context);border:0;border-right:1px solid var(--brand-line);border-radius:0;min-width:0;
 }
 .conversation-page.game-dialogue .game-context-heading { display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px; }
 .conversation-page.game-dialogue .game-context-heading h2 { font-size:16px;font-weight:600;line-height:1.4;margin:0;outline-offset:5px; }
 .conversation-page.game-dialogue .game-context-heading .btn { padding:8px 10px;font-size:12px;min-height:44px; }
 body.conversation-page.game-dialogue.workspace-v2 .game-understanding { position:static;display:block;margin:0;padding:0;border:0; }
 body.conversation-page.game-dialogue.workspace-v2 .game-summary-copy { display:block; }
-.conversation-page.game-dialogue .game-summary-copy>p { font-size:14px;line-height:1.85;margin:0 0 18px;color:#443b34;overflow-wrap:anywhere; }
+.conversation-page.game-dialogue .game-summary-copy>p { font-size:14px;line-height:1.85;margin:0 0 18px;color:var(--brand-ink);overflow-wrap:anywhere; }
 .conversation-page.game-dialogue .game-summary-copy>.game-context-empty { color:var(--muted); }
 .conversation-page.game-dialogue .game-summary-chips { display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px; }
-.conversation-page.game-dialogue .game-summary-chips>span { padding:5px 9px;border-radius:4px;background:#fff9f1;color:#493c32;font-size:13px;line-height:1.6; }
+.conversation-page.game-dialogue .game-summary-chips>span { padding:5px 9px;border-radius:4px;background:var(--brand-surface);color:var(--brand-ink);font-size:13px;line-height:1.6; }
 .conversation-page.game-dialogue .game-context { margin-bottom:15px;gap:6px; }
-.conversation-page.game-dialogue .game-context span,.conversation-page.game-dialogue .game-time-budget>span { background:#dacbbc;color:#493f36;border-radius:4px;font-size:12px; }
-body.conversation-page.game-dialogue.workspace-v2 .game-request-tools { display:block;margin:18px 0 0;padding:14px 0 0;border-top:1px solid #c1b0a0; }
+.conversation-page.game-dialogue .game-context span,.conversation-page.game-dialogue .game-time-budget>span { background:var(--brand-line);color:var(--brand-ink);border-radius:4px;font-size:12px; }
+body.conversation-page.game-dialogue.workspace-v2 .game-request-tools { display:block;margin:18px 0 0;padding:14px 0 0;border-top:1px solid var(--brand-strong-line); }
 .conversation-page.game-dialogue .game-request-tools>details { margin:0;padding:0;border:0; }
-.conversation-page.game-dialogue .game-understanding summary { font-size:12px;line-height:1.6;color:#51483f; }
+.conversation-page.game-dialogue .game-understanding summary { font-size:12px;line-height:1.6;color:var(--brand-ink); }
 .conversation-page.game-dialogue .game-request-details { margin:0;padding:0;border:0; }
 .conversation-page.game-dialogue .game-request-details>summary { display:none; }
-.conversation-page.game-dialogue .game-request-detail-content>p { font-size:12px;margin:12px 0 5px;color:#51483f; }
+.conversation-page.game-dialogue .game-request-detail-content>p { font-size:12px;margin:12px 0 5px;color:var(--brand-ink); }
 .conversation-page.game-dialogue .game-understanding .game-help,.conversation-page.game-dialogue .game-understanding li { font-size:12px;line-height:1.8; }
 .conversation-page.game-dialogue .game-understanding .game-facts { margin:0 0 14px; }
 .conversation-page.game-dialogue .game-understanding .game-uncertainties { margin:8px 0 14px;padding-left:18px; }
@@ -51,7 +51,7 @@ body.conversation-page.game-dialogue.workspace-v2 .game-request-tools { display:
 .conversation-page.game-dialogue .game-understanding .game-history-list strong { font-size:13px; }
 .conversation-page.game-dialogue .game-understanding .game-field { font-size:12px;gap:7px; }
 .conversation-page.game-dialogue .game-understanding .btn { font-size:12px; }
-.conversation-page.game-dialogue .game-understanding input,.conversation-page.game-dialogue .game-understanding select { background:#fffaf4; }
+.conversation-page.game-dialogue .game-understanding input,.conversation-page.game-dialogue .game-understanding select { background:var(--brand-surface); }
 body.conversation-page.game-dialogue.workspace-v2 .game-stage,
 body.conversation-page.game-dialogue.workspace-v2[data-view="result"] .game-stage:not(.is-processing) {
  min-width:0;padding:30px 40px 64px;border:0;border-radius:0;background:var(--paper);scroll-margin-top:18px;
@@ -61,37 +61,37 @@ body.conversation-page.game-dialogue.workspace-v2 .game-navigation { display:gri
 .conversation-page.game-dialogue .game-navigation-tools { grid-column:2;grid-row:1;gap:4px; }
 .conversation-page.game-dialogue .game-navigation-tools>.btn { font-size:12px; }
 .conversation-page.game-dialogue .game-session-menu>summary { font-size:12px;padding-right:0; }
-.conversation-page.game-dialogue .game-session-options { top:48px;background:#fffaf4;border-color:var(--line);border-radius:6px; }
+.conversation-page.game-dialogue .game-session-options { top:48px;background:var(--brand-surface);border-color:var(--line);border-radius:6px; }
 .conversation-page.game-dialogue .game-session-options>.btn,.conversation-page.game-dialogue .game-session-options>a { font-size:13px; }
 body.conversation-page.game-dialogue.workspace-v2 .game-journey { grid-column:1/-1;grid-row:2;display:flex;gap:0;width:100%;max-width:950px;padding:0 0 26px;border-bottom:1px solid var(--line); }
 .conversation-page.game-dialogue .game-journey li { flex:1;min-width:0;display:flex;align-items:center;gap:8px;padding:0;font-size:12px;color:var(--muted); }
-.conversation-page.game-dialogue .game-journey li>span { display:grid;place-items:center;flex:none;width:24px;height:24px;border:1px solid #a99a8d;border-radius:50%;font-size:12px;line-height:1; }
+.conversation-page.game-dialogue .game-journey li>span { display:grid;place-items:center;flex:none;width:24px;height:24px;border:1px solid var(--brand-strong-line);border-radius:50%;font-size:12px;line-height:1; }
 .conversation-page.game-dialogue .game-journey li>b { font-weight:400; }
 .conversation-page.game-dialogue .game-journey li::after,
-.conversation-page.game-dialogue .game-journey li[data-status="current"]::after { position:static;content:'';flex:1;height:1px;background:#c3b4a7;margin:0 12px 0 4px;border-radius:0; }
+.conversation-page.game-dialogue .game-journey li[data-status="current"]::after { position:static;content:'';flex:1;height:1px;background:var(--brand-strong-line);margin:0 12px 0 4px;border-radius:0; }
 .conversation-page.game-dialogue .game-journey li:last-child { flex:0 0 auto; }
 .conversation-page.game-dialogue .game-journey li:last-child::after { display:none; }
 .conversation-page.game-dialogue .game-journey li[data-status="current"] { color:var(--ink); }
 .conversation-page.game-dialogue .game-journey li[data-status="current"]>b { font-weight:650; }
-.conversation-page.game-dialogue .game-journey li[data-status="current"]>span { background:var(--accent);border-color:var(--accent);color:#fff9f3; }
-.conversation-page.game-dialogue .game-journey li[data-status="done"]>span { background:#e1d2c3;border-color:#a99a8d;color:#514537; }
+.conversation-page.game-dialogue .game-journey li[data-status="current"]>span { background:var(--accent);border-color:var(--accent);color:var(--brand-surface); }
+.conversation-page.game-dialogue .game-journey li[data-status="done"]>span { background:var(--brand-fill);border-color:var(--brand-strong-line);color:var(--brand-ink); }
 body.conversation-page.game-dialogue.workspace-v2 main { max-width:950px;scroll-margin-top:25px; }
 body.conversation-page.game-dialogue.workspace-v2 main h1 { font-family:Unbounded,Golos,sans-serif;font-size:31px;font-weight:500;line-height:1.3;letter-spacing:-.035em;max-width:24ch;margin:0 0 18px; }
 .conversation-page.game-dialogue main>p { max-width:65ch; }
 .conversation-page.game-dialogue .game-help { font-size:14px;color:var(--muted); }
 body.conversation-page.game-dialogue.workspace-v2 .game-field { margin:25px 0 12px;font-size:13px;gap:10px; }
-.conversation-page.game-dialogue .input { color:var(--ink);background:#fffaf4;border:1px solid #b9a797;border-radius:6px; }
-body.conversation-page.game-dialogue.workspace-v2 textarea.input { font-size:14px;line-height:1.75;padding:15px;min-height:108px;border-radius:6px;background:#fffaf4; }
-.conversation-page.game-dialogue textarea::placeholder,.conversation-page.game-dialogue input::placeholder { color:#74675c;opacity:1; }
+.conversation-page.game-dialogue .input { color:var(--ink);background:var(--brand-surface);border:1px solid var(--brand-strong-line);border-radius:6px; }
+body.conversation-page.game-dialogue.workspace-v2 textarea.input { font-size:14px;line-height:1.75;padding:15px;min-height:108px;border-radius:6px;background:var(--brand-surface); }
+.conversation-page.game-dialogue textarea::placeholder,.conversation-page.game-dialogue input::placeholder { color:var(--brand-muted);opacity:1; }
 body.conversation-page.game-dialogue.workspace-v2 .game-question-options { gap:10px;margin-top:24px; }
-body.conversation-page.game-dialogue.workspace-v2 .game-option { background:#fffaf4;border:1px solid #c9b9ab;border-radius:6px;min-height:64px;padding:16px;font-size:14px;line-height:1.6;box-shadow:none; }
-.conversation-page.game-dialogue .game-option:hover:not(:disabled) { background:#efe0d3;border-color:#9e8571; }
-body.conversation-page.game-dialogue.workspace-v2 .game-option[aria-pressed="true"] { background:#f5dfd1;border-color:var(--accent);color:#81341f; }
+body.conversation-page.game-dialogue.workspace-v2 .game-option { background:var(--brand-surface);border:1px solid var(--brand-strong-line);border-radius:6px;min-height:64px;padding:16px;font-size:14px;line-height:1.6;box-shadow:none; }
+.conversation-page.game-dialogue .game-option:hover:not(:disabled) { background:var(--brand-fill);border-color:var(--brand-muted); }
+body.conversation-page.game-dialogue.workspace-v2 .game-option[aria-pressed="true"] { background:var(--brand-selected);border-color:var(--accent);color:var(--brand-press); }
 body.conversation-page.game-dialogue.workspace-v2 .game-direction-options { margin-top:12px;gap:8px; }
 body.conversation-page.game-dialogue.workspace-v2 .game-direction-options .game-option { min-height:44px;padding:10px 13px;font-size:13px; }
 body.conversation-page.game-dialogue.workspace-v2 .game-neutral-options { gap:8px;margin:12px 0 20px; }
 .conversation-page.game-dialogue .game-neutral-options .btn { font-size:12px; }
-.conversation-page.game-dialogue .game-neutral-options button[aria-pressed="true"] { background:#f3dacc;color:#81341f;border-color:var(--accent); }
+.conversation-page.game-dialogue .game-neutral-options button[aria-pressed="true"] { background:var(--brand-selected);color:var(--brand-press);border-color:var(--accent); }
 .conversation-page.game-dialogue .game-neutral-status .game-help { font-size:12px; }
 body.conversation-page.game-dialogue.workspace-v2 .game-actions,
 body.conversation-page.game-dialogue.workspace-v2[data-view="result"] .game-actions {
@@ -103,8 +103,8 @@ body.conversation-page.game-dialogue.workspace-v2 .game-action-controls>.btn-sec
 .conversation-page.game-dialogue .game-draft-hint { font-size:12px;text-align:right; }
 .conversation-page.game-dialogue .game-example { max-width:950px; }
 .conversation-page.game-dialogue .game-example>summary { font-size:12px; }
-body.conversation-page.game-dialogue.workspace-v2 .game-notice:not(:empty) { max-width:950px;margin-bottom:22px;padding:12px 15px;background:#efdfd1;border:1px solid #ccb6a4;border-radius:4px;font-size:13px;color:#59473a; }
-body.conversation-page.game-dialogue.workspace-v2 .game-error { max-width:950px;background:#f5dfd1;border:1px solid #b9775d;border-radius:6px;color:#6e2c1c; }
+body.conversation-page.game-dialogue.workspace-v2 .game-notice:not(:empty) { max-width:950px;margin-bottom:22px;padding:12px 15px;background:var(--brand-fill);border:1px solid var(--brand-strong-line);border-radius:4px;font-size:13px;color:var(--brand-ink); }
+body.conversation-page.game-dialogue.workspace-v2 .game-error { max-width:950px;background:var(--brand-selected);border:1px solid var(--brand-error-line);border-radius:6px;color:var(--brand-error); }
 body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:430px;max-width:950px; }
 .conversation-page.game-dialogue .game-processing h2 { font-family:Unbounded,Golos,sans-serif;font-size:24px;font-weight:500;line-height:1.4;letter-spacing:-.03em; }
 .conversation-page.game-dialogue .game-processing>p { font-size:14px; }
@@ -122,7 +122,7 @@ body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:
 .conversation-page.game-dialogue .game-proposal h2 { font-family:Golos,Arial,sans-serif;font-size:23px;font-weight:600;line-height:1.2;letter-spacing:-.025em;margin:0 0 9px;overflow-wrap:anywhere; }
 .conversation-page.game-dialogue .game-proposal .game-meta { font-size:12px;line-height:1.6;margin:0 0 14px!important; }
 .conversation-page.game-dialogue .game-proposal .game-card-reason { font-size:14px;line-height:1.75;max-width:65ch;margin-bottom:14px!important; }
-.conversation-page.game-dialogue .game-proposal .game-model-label { font-size:11px;color:var(--muted);margin:0 0 6px!important; }
+.conversation-page.game-dialogue .game-proposal .game-model-label { font-size:12px;color:var(--muted);margin:0 0 6px!important; }
 .conversation-page.game-dialogue .game-proposal .game-caveat { font-size:12px;line-height:1.75;margin-bottom:12px!important; }
 .conversation-page.game-dialogue .game-proposal .game-kept { font-size:12px;line-height:1.6;margin-bottom:14px; }
 .conversation-page.game-dialogue .game-proposal .game-feasibility { font-size:12px;line-height:1.75;margin:15px 0 0;padding-top:12px; }
@@ -134,10 +134,10 @@ body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:
 .conversation-page.game-dialogue .game-proposal .evening-controls>.btn { order:0;font-size:12px;min-height:44px;padding:10px 12px; }
 .conversation-page.game-dialogue .game-plan-actions { order:1;display:flex;flex-wrap:wrap;gap:8px;margin:0; }
 .conversation-page.game-dialogue .game-plan-actions .btn { min-height:44px;padding:10px 12px;font-size:12px; }
-.conversation-page.game-dialogue .game-library-save[aria-pressed="true"] { color:#5f4e40;background:#e8dacb;border-color:#b8a28e; }
+.conversation-page.game-dialogue .game-library-save[aria-pressed="true"] { color:var(--brand-ink);background:var(--brand-fill);border-color:var(--brand-strong-line); }
 .conversation-page.game-dialogue .game-proposal .evening-fit { order:3;flex:1 0 100%;margin:0; }
 .conversation-page.game-dialogue .game-proposal .evening-fit>summary { font-size:12px;min-height:44px; }
-.conversation-page.game-dialogue .game-proposal .evening-chosen { order:0;display:flex;align-items:center;gap:8px;margin:0;color:#70412c;font-size:12px; }
+.conversation-page.game-dialogue .game-proposal .evening-chosen { order:0;display:flex;align-items:center;gap:8px;margin:0;color:var(--brand-primary);font-size:12px; }
 .conversation-page.game-dialogue .game-proposal .evening-progress { order:2;flex:1 0 100%;display:flex;align-items:start;flex-wrap:wrap;gap:8px; }
 .conversation-page.game-dialogue .game-proposal .evening-progress .btn,.conversation-page.game-dialogue .game-proposal .evening-buttons .btn { min-height:44px;font-size:12px; }
 .conversation-page.game-dialogue .game-proposal .evening-reason { margin:14px 0; }
@@ -145,7 +145,7 @@ body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:
 .conversation-page.game-dialogue .game-proposal .evening-reason :is(select,textarea) { width:100%;margin:6px 0 12px; }
 .conversation-page.game-dialogue .game-proposal .evening-help,.conversation-page.game-dialogue .game-proposal .evening-status { font-size:12px;line-height:1.75; }
 .conversation-page.game-dialogue .game-proposal .evening-status { order:5;flex:1 0 100%;margin:0; }
-.conversation-page.game-dialogue .game-library-state { order:4;flex:1 0 100%;font-size:12px;line-height:1.6;margin:0;color:#655345; }
+.conversation-page.game-dialogue .game-library-state { order:4;flex:1 0 100%;font-size:12px;line-height:1.6;margin:0;color:var(--brand-ink); }
 .conversation-page.game-dialogue .game-proposal>.game-store-link { grid-column:2;margin:5px 0 0;min-height:44px;font-size:12px;justify-self:start; }
 .conversation-page.game-dialogue .game-card-pending { display:block;padding:25px 0;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0; }
 .conversation-page.game-dialogue .game-card-pending .game-poster { width:70px;flex-basis:70px;aspect-ratio:2/3;border-radius:4px; }
@@ -173,7 +173,7 @@ body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:
 }
 @media(max-width:760px) {
  body.conversation-page.game-dialogue.workspace-v2 .game-workspace { display:flex;flex-direction:column;min-height:0; }
- body.conversation-page.game-dialogue.workspace-v2 .game-context-panel { padding:20px 20px 13px;border:0;border-bottom:1px solid #c9bbae; }
+ body.conversation-page.game-dialogue.workspace-v2 .game-context-panel { padding:20px 20px 13px;border:0;border-bottom:1px solid var(--brand-line); }
  .conversation-page.game-dialogue .game-context-heading { margin-bottom:8px; }
  .conversation-page.game-dialogue .game-context-heading h2 { font-size:13px; }
  .conversation-page.game-dialogue .game-context-heading .btn { font-size:12px;padding:8px 10px; }
@@ -183,10 +183,10 @@ body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:
  .conversation-page.game-dialogue .game-summary-chips { gap:5px;margin-bottom:8px; }
  .conversation-page.game-dialogue .game-summary-chips>span { font-size:12px;padding:3px 7px; }
  .conversation-page.game-dialogue .game-time-budget { margin-bottom:6px; }
- .conversation-page.game-dialogue .game-request-details { margin-top:7px;padding-top:3px;border-top:1px solid #ccbaaa; }
+ .conversation-page.game-dialogue .game-request-details { margin-top:7px;padding-top:3px;border-top:1px solid var(--brand-line); }
  .conversation-page.game-dialogue .game-request-details>summary { display:flex;min-height:44px;font-size:12px; }
  .conversation-page.game-dialogue .game-request-detail-content { padding-top:6px; }
- body.conversation-page.game-dialogue.workspace-v2 .game-request-tools { display:block;margin-top:14px;padding-top:8px;border-top:1px solid #ccbaaa; }
+ body.conversation-page.game-dialogue.workspace-v2 .game-request-tools { display:block;margin-top:14px;padding-top:8px;border-top:1px solid var(--brand-line); }
  .conversation-page.game-dialogue .game-request-tools>details[open] { flex:1 0 100%; }
  .conversation-page.game-dialogue .game-request-tools>details>summary { min-height:44px;font-size:12px; }
  body.conversation-page.game-dialogue.workspace-v2 .game-stage,
@@ -196,7 +196,7 @@ body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:
  .conversation-page.game-dialogue .game-navigation-tools>.btn { display:none; }
  .conversation-page.game-dialogue .game-session-menu>summary { font-size:12px; }
  body.conversation-page.game-dialogue.workspace-v2 .game-journey { padding-bottom:23px; }
- .conversation-page.game-dialogue .game-journey li { position:relative;isolation:isolate;flex:1;flex-direction:column;gap:8px;font-size:11px;text-align:center; }
+ .conversation-page.game-dialogue .game-journey li { position:relative;isolation:isolate;flex:1;flex-direction:column;gap:8px;font-size:12px;text-align:center; }
  .conversation-page.game-dialogue .game-journey li>span { position:relative;z-index:1;background:var(--paper);box-shadow:0 0 0 5px var(--paper); }
  .conversation-page.game-dialogue .game-journey li::after,
  .conversation-page.game-dialogue .game-journey li[data-status="current"]::after { position:absolute;top:12px;left:50%;width:100%;margin:0;z-index:0; }
@@ -220,7 +220,7 @@ body.conversation-page.game-dialogue.workspace-v2 .game-processing { min-height:
  .conversation-page.game-dialogue .game-proposal .game-card-reason { font-size:13px;line-height:1.8; }
  .conversation-page.game-dialogue .game-proposal .game-card-footer { gap:7px;margin-top:13px; }
  .conversation-page.game-dialogue .game-plan-actions { gap:7px; }
- .conversation-page.game-dialogue .game-proposal .game-model-label { font-size:11px;line-height:1.6; }
- .conversation-page.game-dialogue .game-proposal .game-poster-fallback { font-size:11px;padding:6px; }
+ .conversation-page.game-dialogue .game-proposal .game-model-label { font-size:12px;line-height:1.6; }
+ .conversation-page.game-dialogue .game-proposal .game-poster-fallback { font-size:12px;padding:6px; }
  .conversation-page.game-dialogue .game-pending-controls { margin-left:0; }
 }

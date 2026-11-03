@@ -1,3 +1,4 @@
+import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createConversationClient,CONVERSATION_KEY} from '/shared/conversation-client.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
@@ -69,9 +70,9 @@ function historyHtml() {
   +(!history.persistent?'<p class="game-help">Отметки сохранятся только до закрытия окна.</p>':'')+'</details>';
 }
 
-function correctionForm({open=false,id='correction-form'}={}) {
+function correctionForm({id='correction-form'}={}) {
  const draft=client.draft('__correction');
- return `<details class="game-correction" data-disclosure="correction"${open?' open':''}><summary>Исправить запрос</summary><form id="${id}" data-form="correction"><label class="game-field">Что нужно изменить?<textarea id="correction-text" class="input" name="correction" maxlength="1600" rows="3" placeholder="Например: сегодня хочу гонки, а не сюжетную RPG" required>${esc(draft.text)}</textarea></label><button class="btn btn-secondary" type="submit"${client.busy?' disabled':''}>Применить поправку</button></form></details>`;
+ return `<div class="clarification-tools"><button type="button" class="btn btn-secondary" data-act="focus-correction">Дополнить запрос</button><form id="${id}" class="clarification-form" data-form="correction"${draft.kind==='none'?'':' hidden'}><label class="game-field">Что добавить или изменить?<textarea id="correction-text" class="input" name="correction" maxlength="1600" rows="3" required>${esc(draft.text)}</textarea></label><div class="clarification-actions"><button class="btn btn-secondary" type="submit"${client.busy?' disabled':''}>Применить поправку</button><button type="button" class="btn btn-plain" data-act="cancel-correction">Отмена</button></div></form></div>`;
 }
 function contextForm(context) {
  context=contextEditorValues(context,client.draft('__context').text,client.state.id);
@@ -82,19 +83,31 @@ function contextForm(context) {
   +`<label class="game-field" data-group-field${context.company==='group'?'':' hidden'}>Количество игроков<select id="context-party" class="input" name="partySize"${context.company==='group'?' required':''}>${options({'2':'2 игрока','3':'3 игрока','4':'4 игрока','5+':'5 и больше'},context.partySize??'2')}</select></label>`
   +'<button type="submit" class="btn btn-secondary">Сохранить условия</button></form></details>';
 }
+function setContextOpen(open) {
+ const panel=$('.game-context-panel'),toggle=$('[data-act="toggle-context"]');
+ panel.dataset.contextOpen=String(open);toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Свернуть':'Показать';
+}
+function renderRequestPreview(screen) {
+ const first=screen.uncertainties?.[0],raw=client.state?.turns?.findLast(t=>!t.superseded&&t.kind==='answer'&&t.text?.trim())?.text;
+ const preview=$('#request-preview');preview.dataset.hasUncertainty=String(Boolean(first));
+ preview.innerHTML=first?`<p>${esc(first)}</p><button type="button" class="btn btn-secondary btn-s" data-act="preview-clarify"${client.busy?' disabled':''}>Уточнить</button>`:screen.summary||raw?`<p>${esc(screen.summary||raw)}</p>`:'';
+ preview.hidden=!preview.innerHTML;
+}
 function understanding(screen) {
+ renderRequestPreview(screen);
  const facts=screen.facts??[],context=screen.context??{};
+ const raw=client.state?.turns?.findLast(t=>!t.superseded&&t.kind==='answer'&&typeof t.text==='string'&&t.text.trim())?.text;
  const time=hasSessionTime(screen.sessionTime)?screen.sessionTime:null,detailsCount=facts.length+(time?1:0);
  const labels={windows:'Windows',mac:'macOS',linux:'Linux',deck:'Steam Deck',pc:'ПК',ps:'PlayStation',xbox:'Xbox',switch:'Nintendo Switch',any:'Любая платформа',solo:'Один',friend:'Вдвоём',group:'Компания',kids:'С детьми'};
  $('#understanding').innerHTML='<div class="game-summary-copy">'
-  +(!screen.summary&&!facts.length?'<p class="game-context-empty">Расскажи, какого вечера хочется. Здесь соберём то, что важно для выбора.</p>':'')
+  +(!screen.summary?raw?`<p class="game-context-empty"><strong>Твои слова:</strong> ${esc(raw)}</p>`:'<p class="game-context-empty">Расскажи, какого вечера хочется. Здесь соберём то, что важно для выбора.</p>':'')
   +(screen.type==='review'||!screen.summary?'':/^(Хочется|Меньше|Обязательно|Исключить):/.test(screen.summary)?`<div class="game-summary-chips">${facts.filter(f=>f.stance==='want'&&f.scope==='today').map(f=>`<span>${esc(f.text)}</span>`).join('')}</div>`:`<p>${esc(screen.summary)}</p>`)
   +`<div class="game-context">${Object.entries(context).filter(([,v])=>v).map(([key,v])=>`<span>${esc(key==='partySize'?`${v} игроков`:labels[v]??v)}</span>`).join('')}</div>`
   +timeBudgetHtml(time)
   +`</div><details class="game-request-details" data-disclosure="request-details"${compactRequest.matches?'':' open'}><summary>Подробнее о запросе</summary><div class="game-request-detail-content">`
   +(detailsCount?`<details class="game-fact-details" data-disclosure="facts"><summary data-focus="fact-details">Подробности запроса (${detailsCount})</summary><ul class="game-facts">${facts.map(f=>`<li><span><b class="game-fact-label">${stanceLabel(f)}</b> ${esc(f.text)}</span><button type="button" data-act="remove-fact" data-key="${esc(f.key)}" data-focus="remove-fact:${esc(f.key)}" aria-label="Убрать: ${esc(f.text)}"${client.busy?' disabled':''}>Убрать</button></li>`).join('')+timeEvidenceHtml(time)}</ul></details>`:'')
-  +((screen.uncertainties??[]).length?`<p>Пока неясно:</p><ul class="game-uncertainties">${screen.uncertainties.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'')
-  +'<div class="game-request-tools">'+(contextReady(screen)?contextForm(context):'')+correctionForm()+historyHtml()+'</div></div></details>';
+
+  +'<div class="game-request-tools">'+(contextReady(screen)?contextForm(context):'')+historyHtml()+'</div></div></details>'+clarificationHtml({state:client.state,uncertainties:screen.uncertainties,draft:key=>client.draft(key),busy:client.busy})+correctionForm()+(client.canRestoreCorrection?'<div class="clarification-restore"><p>Запрос изменён. Предыдущие варианты сохранены отдельно.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуться к предыдущему запросу и вариантам</button></div>':'');
 }
 function questionHtml(question) {
  const draft=currentDraft(question),allowText=question.allowText!==false;
@@ -133,7 +146,7 @@ function resultHtml(screen) {
  const result=screen.result??client.state?.result;
  const replacement=client.state.replacement,notice=replacement?.notice||(client.state.familiar?.marked?.length?'':'Отмеченные игры заменены. Остальные варианты сохранены.');
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Исправить запрос','focus-correction');
- return '<div class="game-result-heading"><h1>Есть из чего выбрать.</h1><p class="game-help">Сохрани на потом, выбери на вечер или замени знакомую игру.</p></div>'
+ return '<div class="game-result-heading"><h1>Твои варианты на этот вечер</h1><p class="game-help">Сохрани на потом, выбери на вечер или замени знакомую игру.</p></div>'
   +(screen.provisional||result.ai?.error?'<p class="game-help">Предварительный подбор по каталогу. Уточнение моделью сейчас недоступно.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
@@ -236,7 +249,7 @@ function persistAnswer() {
  const draft=currentDraft(question),input=$('#answer-text');if(input)draft.text=input.value;
  saveCurrentDraft(question,draft);return draft;
 }
-async function navigate(action) {
+async function navigate(action,{origin=null}={}) {
  if(client.busy)return null;
  if(action.type==='review'&&client.screen?.type==='question'&&hasPendingAnswer(currentDraft(client.screen.question)))return null;
  currentRequest=action.type;
@@ -251,7 +264,7 @@ async function navigate(action) {
  const result=await client.send(action);
  rememberAcceptedFamiliar(result);
  completeBackDraft(result);
- if(action.type==='correct'&&result&&!client.error){client.saveDraft('__correction',{text:''});const input=$('#correction-text');if(input)input.value='';}
+ if(result&&!client.error&&shouldClearCorrection(action,origin,client.draft('__correction').text)){client.saveDraft('__correction',{text:''});const input=$('#correction-text');if(input)input.value='';}
  if(action.type==='context'&&result&&!client.error){
   client.saveDraft('__context',{text:''});
   if(client.screen?.type==='question'){localNotice='Условия изменены. Проверь ответ на этот вопрос перед отправкой.';render();}
@@ -328,7 +341,13 @@ document.addEventListener('click',event=>{
   const addition=`${draft.text.trim()?'\n':''}Пример: «${el.dataset.title}». `;draft.text=(draft.text+addition).slice(0,1600);draft.kind='answer';
   saveCurrentDraft(question,draft);$('#answer-text').value=draft.text;$('#answer-text').focus();paintSelections(draft);return;
  }
- if(act==='focus-correction'){expandRequestDetails();$('#correction-form')?.closest('details').setAttribute('open','');disclosures.set('correction',true);$('#correction-text')?.focus();return;}
+ if(act==='toggle-context'){setContextOpen($('.game-context-panel').dataset.contextOpen!=='true');return;}
+ if(act==='preview-clarify'){setContextOpen(true);$('#understanding [data-act="clarify"]')?.click();return;}
+ if(act==='focus-correction'){setContextOpen(true);const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'none'});$('#correction-form').hidden=false;$('#correction-text')?.focus();return;}
+ if(act==='cancel-correction'){const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'answer'});$('#correction-form').hidden=true;return;}
+ if(act==='clarify'){setContextOpen(true);const form=document.getElementById(el.getAttribute('aria-controls')),draft=client.draft(el.dataset.key);client.saveDraft(el.dataset.key,{...draft,kind:'none'});form.hidden=false;el.setAttribute('aria-expanded','true');form.elements.clarification.focus();return;}
+ if(act==='cancel-clarification'){const form=el.closest('form'),draft=client.draft(form.dataset.key);client.saveDraft(form.dataset.key,{...draft,kind:'answer'});form.hidden=true;form.parentElement.querySelector('[data-act="clarify"]').setAttribute('aria-expanded','false');return;}
+ if(act==='restore-correction'){persistAnswer();if(client.restoreCorrection()){observedKey=null;activeEvening=null;activeEveningDialogue=null;renderedKey=null;render();}return;}
  if(['familiar-mark','familiar-unmark','familiar-keep'].includes(act)){
   const id=el.dataset.id,card=[client.state?.result?.top,...(client.state?.result?.alternatives??[])].find(card=>card?.id===id);
   const type={'familiar-mark':'familiar_mark','familiar-unmark':'familiar_unmark','familiar-keep':'familiar_keep'}[act];
@@ -358,8 +377,12 @@ document.addEventListener('submit',event=>{
   const question=client.screen?.question,draft=persistAnswer();if(!question||!draft)return;
   const action=answerAction(question,draft);if(action)return void navigate(action);return;
  }
+ if(form.dataset.form==='clarification'){
+  const action=clarificationAction(form.dataset,client.state,form.elements.clarification.value);
+  if(action)void navigate(action);else {localNotice='Запрос уже изменился. Проверь уточнение в текущей сводке.';render();}return;
+ }
  if(form.dataset.form==='correction'){
-  const text=form.elements.correction.value.trim();if(text)void navigate({type:'correct',text});
+  const text=form.elements.correction.value.trim();if(text)void navigate({type:'correct',text},{origin:'correction'});
  }
 });
 document.addEventListener('keydown',event=>{
@@ -384,7 +407,8 @@ document.addEventListener('change',event=>{
 document.addEventListener('input',event=>{
  const el=event.target;
  if(el.id==='answer-text'){const draft=persistAnswer();if(draft?.text.trim()&&draft.kind!=='answer'){draft.kind='answer';saveCurrentDraft(client.screen.question,draft);}if(draft)paintSelections(draft);return;}
- if(el.name==='correction'){client.saveDraft('__correction',{text:el.value});document.querySelectorAll('textarea[name="correction"]').forEach(other=>{if(other!==el)other.value=el.value;});return;}
+ if(el.name==='clarification'){const form=el.closest('form');client.saveDraft(form.dataset.key,{text:el.value,kind:'none'});return;}
+ if(el.name==='correction'){client.saveDraft('__correction',{text:el.value,kind:'none'});document.querySelectorAll('textarea[name="correction"]').forEach(other=>{if(other!==el)other.value=el.value;});return;}
  const form=el.closest('[data-form="evening-reason"]');if(form)feedbackDrafts.set(`${form.dataset.run}:${form.dataset.id}`,{reason:form.elements.reason.value,note:form.elements.note.value});
  if(el.id==='game-search'){
   clearTimeout(searchTimer);const ticket=++searchGeneration,query=el.value.trim(),question=client.screen?.question?.id;
@@ -400,6 +424,7 @@ document.addEventListener('input',event=>{
  }
 });
 document.addEventListener('toggle',event=>{const el=event.target;if(el.matches('[data-feedback-details]'))feedbackOpen.set(`${el.dataset.run}:${el.dataset.id}`,el.open);},true);
+document.addEventListener('load',event=>{const img=event.target;if(img.matches?.('.game-poster img'))img.closest('.game-poster').classList.add('is-loaded');},true);
 document.addEventListener('error',event=>{const img=event.target;if(img.matches?.('.game-poster img')){const poster=img.closest('.game-poster'),tile=document.createElement('span');tile.textContent=poster.dataset.title||'Игра';poster.classList.add('game-poster-fallback');poster.replaceChildren(tile);}},true);
 window.addEventListener('online',()=>void feedback.flush());
 window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(refreshFeedback);else if(event.key===null||event.key==='tastiq.site.library'||event.key.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});

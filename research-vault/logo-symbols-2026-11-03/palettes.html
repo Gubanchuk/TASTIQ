@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASTIQ — четыре палитры</title>
+  <link rel="icon" href="/exports/tastiq-symbol.svg" type="image/svg+xml">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #252525; background: #f1f1ef; font: 16px/1.5 system-ui,sans-serif; }
+    main { max-width: 1200px; padding: 28px 24px 40px; margin: auto; }
+    h1 { font-size: 25px; font-weight: 600; letter-spacing: -.5px; margin: 0 0 8px; }
+    .intro { margin: 0 0 20px; color: #60605c; }
+    .tools { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; margin-bottom: 22px; }
+    .group { display: flex; flex-wrap: wrap; gap: 5px; }
+    button { min-height: 44px; padding: 9px 13px; border: 1px solid #c8c8c0; border-radius: 5px; font: inherit; font-size: 14px; color: #333; background: transparent; cursor: pointer; }
+    button[aria-pressed="true"] { color: #fff; background: #242424; border-color: #242424; }
+    button:focus-visible,a:focus-visible { outline: 3px solid #777; outline-offset: 4px; }
+    button:disabled { cursor: wait; opacity: .6; }
+    .cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
+    .cards.single { grid-template-columns: minmax(0,760px); justify-content: center; }
+    .card { min-width: 0; color: var(--ink); background: var(--paper); border: 1px solid #d9d9d2; }
+    .card[hidden] { display: none; }
+    .card-title { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 22px 8px; }
+    h2 { font-size: 17px; font-weight: 600; margin: 0; }
+    .swatches { display: flex; gap: 5px; }
+    .swatch { width: 17px; height: 17px; border-radius: 50%; box-shadow: inset 0 0 0 1px #0001; }
+    .light { display: grid; place-items: center; min-height: 168px; padding: 25px 28px; }
+    svg.lockup { display: block; width: 100%; height: auto; max-width: 470px; }
+    .inverted { display: grid; place-items: center; background: var(--dark); min-height: 105px; padding: 24px 28px; }
+    .inverted svg.lockup { max-width: 280px; }
+    .header-label { padding: 14px 22px 0; margin: 0; font-size: 11px; opacity: .7; }
+    .sample-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 80px; padding: 15px 22px; }
+    .sample-header svg.lockup { width: auto; height: 26px; max-width: 65%; }
+    .sample-header span { font-size: 12px; padding: 7px 10px; border: 1px solid currentColor; border-radius: 5px; }
+    .codes { padding: 0 22px 18px; margin: 0; font-size: 11px; font-variant-numeric: tabular-nums; opacity: .7; }
+    .note { color: #686868; font-size: 13px; margin-top: 22px; }
+    a { color: inherit; text-underline-offset: 3px; }
+    .export-status { font-size: 13px; color: #555; }
+    @media(max-width:700px) {
+      main { padding: 22px 12px 32px; }
+      h1 { font-size: 22px; }
+      .cards { grid-template-columns: minmax(0,1fr); gap: 18px; }
+      .card-title { padding: 16px 18px 5px; }
+      .light { min-height: 142px; padding: 25px 20px; }
+      .inverted { min-height: 95px; padding: 24px 20px; }
+      .sample-header { padding: 14px 18px; }
+      .sample-header svg.lockup { height: 24px; }
+      .header-label { padding-left: 18px; }
+      .codes { padding-left: 18px; }
+      .tools { gap: 10px; }
+      button { padding: 9px 11px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Четыре палитры TASTIQ</h1>
+    <p class="intro">Тот же медведь 5B и написание 02. Меняется только цвет.</p>
+    <div class="tools">
+      <div class="group" aria-label="Показать палитры">
+        <button data-filter="all" aria-pressed="true">Все</button>
+        <button data-filter="01" aria-pressed="false">01</button>
+        <button data-filter="02" aria-pressed="false">02</button>
+        <button data-filter="03" aria-pressed="false">03</button>
+        <button data-filter="04" aria-pressed="false">04</button>
+      </div>
+      <div class="group" aria-label="Окраска логотипа">
+        <button data-mode="mono" aria-pressed="true">Весь логотип</button>
+        <button data-mode="accent" aria-pressed="false">Только знак</button>
+      </div>
+      <button id="export" type="button" disabled>Сохранить сравнение PNG</button>
+    </div>
+    <p id="loading" role="status">Загружаю выбранный вектор…</p>
+    <div class="cards" aria-label="Сравнение четырёх палитр"></div>
+    <p class="export-status" role="status"></p>
+    <p class="note">Палитра пока не выбрана. Варианты ниже относятся к бренду; это не изменение цветов основного сайта.</p>
+    <a href="/selected/">Чёрно-белая основа</a>
+  </main>
+  <script type="module">
+    const [palettes, original] = await Promise.all([
+      fetch('/palette-options.json').then(response => { if(!response.ok)throw new Error('Palette loading failed'); return response.json(); }),
+      fetch('/exports/tastiq-logo.svg').then(response => { if(!response.ok)throw new Error('SVG loading failed'); return response.text(); })
+    ]);
+    const board = document.querySelector('.cards');
+    const status = document.querySelector('.export-status');
+    let filter = 'all', mode = 'mono', serial = 0;
+    function coloredSvg(palette,inverted=false) {
+      const svg = new DOMParser().parseFromString(original,'image/svg+xml').documentElement;
+      const id = `palette-logo-${++serial}`;
+      svg.setAttribute('class','lockup');
+      svg.setAttribute('aria-labelledby',id);
+      svg.querySelector('title').setAttribute('id',id);
+      svg.querySelector('title').textContent = `TASTIQ — ${palette.name}${inverted ? ', тёмный фон' : ''}`;
+      svg.querySelectorAll('path').forEach((path,index) => {
+        path.setAttribute('fill',inverted ? palette.inverse : (mode==='accent'&&index>0 ? palette.ink : palette.primary));
+      });
+      return new XMLSerializer().serializeToString(svg);
+    }
+    function applyFilter() {
+      board.classList.toggle('single',filter!=='all');
+      document.querySelectorAll('.card').forEach(card => { card.hidden=filter!=='all'&&card.dataset.palette!==filter; });
+    }
+    function render() {
+      board.innerHTML = palettes.map(palette => `<article class="card" data-palette="${palette.id}" style="--ink:${palette.ink};--paper:${palette.paper};--dark:${palette.dark}"><div class="card-title"><h2>${palette.id} · ${palette.name}</h2><div class="swatches" aria-label="Цвета палитры">${[palette.primary,palette.ink,palette.paper,palette.accent].map(color=>`<span class="swatch" style="background:${color}" title="${color}"></span>`).join('')}</div></div><div class="light">${coloredSvg(palette)}</div><div class="inverted">${coloredSvg(palette,true)}</div><p class="header-label">Пример шапки</p><div class="sample-header">${coloredSvg(palette)}<span>Библиотека</span></div><p class="codes">${palette.primary} · ${palette.ink} · ${palette.paper}</p></article>`).join('');
+      applyFilter();
+    }
+    document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click',()=>{
+      filter=button.dataset.filter;
+      document.querySelectorAll('[data-filter]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+      applyFilter();
+    }));
+    document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click',()=>{
+      mode=button.dataset.mode;
+      document.querySelectorAll('[data-mode]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+      render();
+    }));
+    async function drawSvg(context,svg,x,y,width) {
+      const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));
+      try { const image=new Image(); image.src=url; await image.decode(); context.drawImage(image,x,y,width,width*277/1140); }
+      finally { URL.revokeObjectURL(url); }
+    }
+    document.querySelector('#export').addEventListener('click',async event=>{
+      const button=event.currentTarget;
+      button.disabled=true; status.textContent='Сохраняю сравнение…';
+      try {
+        const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1280;
+        const context=canvas.getContext('2d');context.fillStyle='#EAEAE5';context.fillRect(0,0,2048,1280);
+        for(let index=0;index<palettes.length;index++) {
+          const palette=palettes[index],x=48+(index%2)*996,y=48+Math.floor(index/2)*612,w=956,h=572;
+          context.fillStyle=palette.paper;context.fillRect(x,y,w,h);
+          context.fillStyle=palette.ink;context.font='600 30px system-ui,sans-serif';context.fillText(`${palette.id} · ${palette.name}`,x+38,y+58);
+          for(const [colorIndex,color] of [palette.primary,palette.ink,palette.paper,palette.accent].entries()) {
+            context.beginPath();context.arc(x+w-150+colorIndex*30,y+48,10,0,Math.PI*2);context.fillStyle=color;context.fill();
+          }
+          await drawSvg(context,coloredSvg(palette),x+68,y+130,820);
+          context.fillStyle=palette.ink;context.font='18px system-ui,sans-serif';context.fillText(`${palette.primary}  ·  ${palette.ink}  ·  ${palette.paper}`,x+38,y+408);
+          context.fillStyle=palette.dark;context.fillRect(x,y+h-112,w,112);
+          await drawSvg(context,coloredSvg(palette,true),x+(w-340)/2,y+h-96,340);
+        }
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+        if(!blob)throw new Error('PNG export failed');
+        const url=URL.createObjectURL(blob),link=document.createElement('a');
+        link.href=url;link.download=`TASTIQ-palettes-${mode}.png`;link.click();
+        setTimeout(()=>URL.revokeObjectURL(url),10000);status.textContent='Сравнение сохранено.';
+      } catch(error) { status.textContent='Не удалось сохранить PNG. Варианты остаются доступны на странице.'; console.error(error); }
+      finally { button.disabled=false; }
+    });
+    render();document.querySelector('#loading').remove();document.querySelector('#export').disabled=false;
+  </script>
+</body>
+</html>

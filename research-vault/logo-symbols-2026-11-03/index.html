@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASTIQ — выбранный знак 5B</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f1f1ef; color: #191919; font: 16px/1.5 system-ui, sans-serif; }
+    main { max-width: 1060px; margin: auto; padding: 36px 24px; }
+    h1 { margin: 0; font-size: 26px; letter-spacing: -.6px; font-weight: 600; }
+    .intro { margin: 8px 0 24px; color: #585858; }
+    .tools { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+    .group { display: flex; gap: 5px; }
+    button { cursor: pointer; border: 1px solid #cececa; border-radius: 5px; padding: 9px 13px; min-height: 44px; background: transparent; color: #333; font: inherit; font-size: 14px; }
+    button[aria-pressed="true"] { background: #202020; color: white; border-color: #202020; }
+    button:focus-visible { outline: 3px solid #777; outline-offset: 3px; }
+    .board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: #fff; color: #191919; border: 1px solid #dededa; }
+    .candidate { min-width: 0; padding: 24px; }
+    .candidate + .candidate { border-left: 1px solid #e8e8e8; }
+    h2 { margin: 0; font-size: 16px; font-weight: 600; }
+    .large { height: 310px; display: grid; place-items: center; }
+    .mark { display: block; flex-shrink: 0; overflow: hidden; }
+    .large .mark { width: 248px; height: 248px; max-width: 100%; }
+    .sizes { display: flex; align-items: flex-end; justify-content: center; gap: 29px; padding: 18px 0 12px; border-top: 1px solid #e8e8e8; }
+    .sample { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 12px; }
+    .sample span { font-size: 12px; color: #666; }
+    .board.dark { background: #000; color: #f5f5f5; border-color: #000; }
+    .dark .candidate + .candidate, .dark .sizes { border-color: #303030; }
+    .dark .mark { filter: invert(1); }
+    .dark .sample span { color: #aaa; }
+    .board.single { grid-template-columns: 1fr; }
+    .board.single .candidate { border-left: 0; }
+    .candidate[hidden] { display: none; }
+    .note { color: #686868; font-size: 13px; margin-top: 18px; }
+    @media (max-width: 600px) {
+      main { padding: 24px 14px; }
+      h1 { font-size: 23px; }
+      .candidate { padding: 16px 10px; }
+      .large { height: 230px; }
+      .large .mark { width: 190px; height: 190px; }
+      .sizes { gap: 13px; flex-wrap: wrap; justify-content: space-evenly; }
+      .sample { min-width: 48px; }
+      button { padding: 9px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Выбранный знак — 5B</h1>
+    <p class="intro">Медведь с белым изгибом внутри. Крупно и в размере иконки.</p>
+    <p><a href="/lettering/" style="color:inherit;text-underline-offset:3px">Следующий этап: три написания TASTIQ</a></p>
+    <div class="tools">
+      <div class="group" aria-label="Показать знаки">
+        <button type="button" data-show="both" aria-pressed="false">Оба</button>
+        <button type="button" data-show="5B" aria-pressed="true">Только 5B</button>
+        <button type="button" data-show="6A" aria-pressed="false">Только 6A</button>
+      </div>
+      <div class="group" aria-label="Фон">
+        <button type="button" data-theme="light" aria-pressed="true">Белый</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Чёрный</button>
+      </div>
+    </div>
+    <section class="board single" aria-label="Просмотр выбранного знака"></section>
+    <p class="note">Использованы выбранные растровые эскизы. При окончательной отрисовке проверим контуры и детали отдельно.</p>
+  </main>
+  <script>
+    const candidates = [
+      { name: '5B', viewBox: '1040 565 430 380', description: 'Медведь с белым изгибом внутри' },
+      { name: '6A', viewBox: '540 25 455 440', description: 'Динамичный силуэт с двумя каплями' }
+    ];
+    const board = document.querySelector('.board');
+    function mark(candidate, size) {
+      const [x, y, width, height] = candidate.viewBox.split(' ');
+      const clip = `crop-${candidate.name}-${size}`;
+      return `<svg class="mark" width="${size}" height="${size}" viewBox="${candidate.viewBox}" role="img" aria-label="${candidate.description}"><defs><clipPath id="${clip}"><rect x="${x}" y="${y}" width="${width}" height="${height}" /></clipPath></defs><image href="./refinements.png" width="1536" height="1024" clip-path="url(#${clip})" /></svg>`;
+    }
+    board.innerHTML = candidates.map(candidate => `<article class="candidate" data-candidate="${candidate.name}"><h2>${candidate.name}</h2><div class="large">${mark(candidate, 248)}</div><div class="sizes">${[16,24,32,48].map(size => `<div class="sample">${mark(candidate, size)}<span>${size} px</span></div>`).join('')}</div></article>`).join('');
+    document.querySelector('[data-candidate="6A"]').hidden = true;
+    document.querySelectorAll('[data-show]').forEach(button => button.addEventListener('click', () => {
+      const selected = button.dataset.show;
+      document.querySelectorAll('[data-show]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+      document.querySelectorAll('.candidate').forEach(candidate => { candidate.hidden = selected !== 'both' && candidate.dataset.candidate !== selected; });
+      board.classList.toggle('single', selected !== 'both');
+    }));
+    document.querySelectorAll('[data-theme]').forEach(button => button.addEventListener('click', () => {
+      document.querySelectorAll('[data-theme]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+      board.classList.toggle('dark', button.dataset.theme === 'dark');
+    }));
+  </script>
+</body>
+</html>

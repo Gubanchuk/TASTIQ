@@ -1,0 +1,42 @@
+{
+  "status": "Palette preview syntax and color data checked; browser review recorded separately.",
+  "sourceGeometryFNV32": "ed7c420c",
+  "method": "sRGB relative luminance; (lighter + 0.05) / (darker + 0.05). Ratios do not establish approval of a palette.",
+  "results": [
+    {
+      "id": "02",
+      "name": "Кобальт",
+      "primaryOnPaper": 5.66,
+      "inkOnPaper": 13.14,
+      "inverseOnDark": 13
+    },
+    {
+      "id": "05",
+      "name": "Ультрафиолет",
+      "primaryOnPaper": 6.49,
+      "inkOnPaper": 14.84,
+      "inverseOnDark": 13.79
+    },
+    {
+      "id": "06",
+      "name": "Лазурь",
+      "primaryOnPaper": 4.36,
+      "inkOnPaper": 13.21,
+      "inverseOnDark": 11.96
+    },
+    {
+      "id": "07",
+      "name": "Мандарин",
+      "primaryOnPaper": 3.16,
+      "inkOnPaper": 14.82,
+      "inverseOnDark": 13.33
+    },
+    {
+      "id": "08",
+      "name": "Лайм и графит",
+      "primaryOnPaper": 12.35,
+      "inkOnPaper": 13.94,
+      "inverseOnDark": 14.39
+    }
+  ]
+}

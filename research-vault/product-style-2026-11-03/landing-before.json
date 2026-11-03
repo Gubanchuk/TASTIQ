@@ -1,0 +1,18 @@
+[
+  {
+    "path": "src/server/public/index.html",
+    "sha256": "60F6B1A06FAE9508FBE1B0D7C57EE399D944C4F18F4091348A1BAE4ABAAEC8B9"
+  },
+  {
+    "path": "src/server/public/style.css",
+    "sha256": "C51C0C0E674E1583D06943550FFC0D441D0A6F544D7D552D290C5E08E7677D86"
+  },
+  {
+    "path": "src/server/public/landing-bottom.css",
+    "sha256": "96BC64EA26404C36C8B31F634984331074464FEC80426041C202B38C86C81318"
+  },
+  {
+    "path": "src/server/public/app.js",
+    "sha256": "57B91DBACDE585FD4A2A8E88CFB42B67F10F28F2F6D1076DCE9C753AFD90779F"
+  }
+]
