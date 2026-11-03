@@ -101,15 +101,37 @@ function completedStory(quote,source) {
     &&(/(?<!\p{L})(?:закончен|завершен)\p{L}*\s+(?:сюжетн\p{L}*\s+)?(?:истори|сюжет|арк)\p{L}*/u.test(t)
       ||/(?<!\p{L})(?:истори|сюжет|арк)\p{L}*\s+(?:(?:уже|полностью)\s+)*(?:закончен|завершен)\p{L}*/u.test(t));
 }
-const mediaDescriptor=String.raw`(?:добр|легк|детективн|комедийн|приключенческ|фантастическ|историческ|романтическ|драматическ|криминальн|полицейск|шпионск|смешн|весел|мрачн|законченн|завершенн)`;
+const mediaDescriptor=String.raw`(?:добр|легк|детективн|комедийн|приключенческ|фантастическ|историческ|романтическ|драматическ|криминальн|полицейск|шпионск|анимационн|мультипликационн|смешн|весел|мрачн|законченн|завершенн)`;
 const mediaModifiers=String.raw`(?:(?:и\s+)?${mediaDescriptor}\p{L}*\s*,?\s+){0,4}`;
 const moviePhrase=String.raw`${mediaModifiers}(?:полнометражн\p{L}*\s+)?${mediaModifiers}(?:мульт)?фильм(?:а|у|ом|е|ы|ов|ам|ами|ах)?(?!\p{L})`;
 const movieRequestPattern=new RegExp(String.raw`(?<!\p{L})(?:нуж(?:ен|на|но)|хочу|только)\s+(?:од(?:ин|ну)\s+)?${moviePhrase}`,'u');
 const singleMoviePattern=new RegExp(String.raw`(?<!\p{L})од(?:ин|ну)\s+${moviePhrase}`,'u');
 const movieRequest=quote=>movieRequestPattern.test(folded(quote));
+const seriesRequestPattern=new RegExp(String.raw`(?<!\p{L})(?:нуж(?:ен|на|но)|хочу|только)\s+(?:од(?:ин|ну)\s+)?${mediaModifiers}(?:мини[- ]?)?сериал(?:а|у|ом|е|ы|ов|ам|ами|ах)?(?!\p{L})`,'u');
+function formatAlternatives(quote,source) {
+  const start=source.answer.indexOf(quote),before=source.answer.slice(0,start).split(/[.!?;]/u).at(-1)??'',after=source.answer.slice(start+quote.length).split(/[.!?;]/u)[0];
+  const clause=folded(before+quote+after);
+  return /(?:или|либо)/u.test(clause)&&/(?:мульт)?фильм/u.test(clause)&&/сериал|эпизод/u.test(clause)
+    ||/(?:но|а)\s+(?:фильм|сериал).*(?:тоже|также|подойдет|можно)/u.test(clause);
+}
 function movieEvidence(quote,source) {
   return contextEvidenceAllowed(quote,source)&&/(?:мульт)?фильм|полнометраж/u.test(folded(quote))
+    &&!formatAlternatives(quote,source)
     &&!/(?:не\s+(?:нуж(?:ен|на|но)|хочу|буду)|без|вместо)\s+.*(?:фильм|полнометраж)|не\s+(?:фильм|мультфильм|полнометраж)|(?:или|либо)\s+(?:сериал|эпизод)/u.test(folded(quote));
+}
+function seriesEvidence(quote,source) {
+  return contextEvidenceAllowed(quote,source)&&/сериал|эпизод|серии|серию/u.test(folded(quote))&&!formatAlternatives(quote,source)
+    &&!/(?:не\s+(?:нуж(?:ен|на|но)|хочу|буду)|без|вместо)\s+.*(?:сериал|эпизод)|не\s+(?:сериал|эпизод)/u.test(folded(quote));
+}
+function requestedFormatFact(f) {
+  if(f.scope!=='today'||!['want','require'].includes(f.stance)||f.titleId!==null||![null,'format.animation'].includes(f.feature))return null;
+  return movieRequest(f.quote)?'movie':seriesRequestPattern.test(folded(f.quote))?'episodic':null;
+}
+function directFormatSource(format,quote,source) {
+  const match=(format==='movie'?movieRequestPattern:seriesRequestPattern).exec(folded(quote));if(!match)return false;
+  const before=source.answer.slice(0,source.answer.indexOf(quote)+match.index).split(/[.!?;]/u).at(-1)??'';
+  // This omission fallback does not assign the speaker of a quoted/history sentence.
+  return !/[«“„"]\s*$/u.test(before)&&!/синопсис|описани|персонаж|герой|раньше|тогда|в детстве/iu.test(before);
 }
 // Bound the intervening words to media descriptors: adjective endings alone
 // also match nouns like "description", which may refer to a long series.
@@ -143,7 +165,7 @@ function contextMeaning(key,value,quote,source) {
     return value?explicitEndedSeries(quote,source)
       :/можно.*(?:выходит|незакончен|продолжа)|необязательно.*закончен|статус не важен/u.test(t);
   }
-  if(key==='format')return value==='episodic'?/сериал|эпизод|серии|серию/u.test(t):movieEvidence(quote,source);
+  if(key==='format')return value==='episodic'?seriesEvidence(quote,source):movieEvidence(quote,source);
   return false;
 }
 function checkedContext(s,value,{clarify=false}={}) {
@@ -338,12 +360,12 @@ export function answerMediaConversation(input,action={}) {
   if(action.type==='remove_fact'||action.type==='remove_time') {
     const key=action.type==='remove_time'?'session_time':action.key,f=s.facts.find(f=>f.key===key),contextKey=key?.startsWith('context:')?key.slice(8):null;
     if(!f&&key!=='session_time'&&!fields.includes(contextKey)||key==='session_time'&&!s.sessionTime||contextKey&&!s.contextEvidence[contextKey])return s;
-    const derivedFormat=f?.feature===null&&f?.titleId===null&&s.contextEvidence.format?.sourceId===f.sourceId&&s.contextEvidence.format?.quote===f.quote;
+    const derivedFormat=f?.titleId===null&&s.contextEvidence.format?.sourceId===f.sourceId&&s.contextEvidence.format?.quote===f.quote&&(f.feature===null||requestedFormatFact(f)===s.context.format);
     if(s.retractions.length+(derivedFormat?2:1)>64)throw fail('Слишком много исправлений. Начни новый подбор.');
     const undo=Object.fromEntries(Object.entries(structuredClone(s)).filter(([k])=>k!=='factRemovalUndo'));
     if(key==='session_time') {s.retractions.push({kind:'session_time',sourceId:s.sessionTime.sourceId,quote:s.sessionTime.quote,at:s.turns.at(-1)?.id});s.sessionTime=null;s.context.minutes=null;s.context.timeMode=null;s.contextEvidence.timeMode=null;}
     else if(contextKey) {const e=s.contextEvidence[contextKey];s.retractions.push({kind:'context',key:contextKey,sourceId:e.sourceId,quote:e.quote,at:s.turns.at(-1)?.id});s.context[contextKey]=null;s.contextEvidence[contextKey]=null;
-      if(contextKey==='format')s.facts=s.facts.filter(f=>!(f.feature===null&&f.titleId===null&&f.stance==='require'&&f.sourceId===e.sourceId&&f.quote===e.quote));
+      if(contextKey==='format')s.facts=s.facts.filter(f=>!(f.titleId===null&&f.sourceId===e.sourceId&&f.quote===e.quote&&(f.feature===null&&f.stance==='require'||requestedFormatFact(f)===e.value)));
       if(contextKey==='company'){s.context.childAge=null;s.contextEvidence.childAge=null;}}
     else {
       s.facts=s.facts.filter(x=>x.key!==f.key&&!(f.feature&&x.feature===f.feature&&x.sourceId===f.sourceId));
@@ -411,6 +433,15 @@ export function applyMediaConversationProposal(state,proposal,dict,expectedRevis
     if(requiredMovies.length&&checked.context.format!=='movie') {
       if(checked.context.format!==null)throw fail('В условиях одновременно указаны фильм и сериал. Уточни нужный формат.');
       const f=requiredMovies[0];checked.context.format='movie';checked.evidence.format={value:'movie',sourceId:f.sourceId,quote:f.quote};
+    }
+    // A directly requested format is independent of animation/genre and the time cap.
+    // Recover an omitted slot only from the accepted fact's active exact request clause.
+    for(const f of facts) {
+      const format=requestedFormatFact(f);if(!format)continue;const source=sourceFor(state,f);
+      if(!directFormatSource(format,f.quote,source)||!contextMeaning('format',format,f.quote,source))continue;
+      if(retractedContext(state,'format',f.sourceId))throw fail('Этот формат уже снят. Уточни его новым ответом.');
+      if(checked.context.format!==null&&checked.context.format!==format)throw fail('В условиях одновременно указаны фильм и сериал. Уточни нужный формат.');
+      if(checked.context.format===null){checked.context.format=format;checked.evidence.format={value:format,sourceId:f.sourceId,quote:f.quote};}
     }
     // A finished story/arc does not prove that production of its whole series ended.
     // Keep supported goal facts and ask this one scalar question locally. An invalid

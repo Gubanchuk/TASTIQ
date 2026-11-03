@@ -1,0 +1,14 @@
+{
+  "nativeDesktopEvidence": [
+    "live-round-2/adult-scifi-result.jpg",
+    "live-round-3/family-result.jpg",
+    "live-round-5/family-no-fit-explained.jpg"
+  ],
+  "excludedFromVisualProof": [
+    {
+      "file": "live-round-3/family-result-390.jpg",
+      "reason": "Native capture is a scaled wide surface with the narrow layout in its left edge; it is not a complete phone frame. Preserved without raster editing."
+    }
+  ],
+  "narrowViewportCheck": "At CSS width390 the live DOM reported scrollWidth<=innerWidth. This supports no horizontal overflow, not full mobile visual quality or physical touch."
+}

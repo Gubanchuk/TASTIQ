@@ -1,0 +1,422 @@
+{
+  "verifiedAt": "2026-11-03T16:51:43.953Z",
+  "initialFailuresPreserved": [
+    "reference omitted format",
+    "family viewing-time rejection",
+    "family more knowingly violated no scary scenes",
+    "unverified new title displayed as technical id error"
+  ],
+  "structuralResults": [
+    {
+      "id": "reference",
+      "file": "live-round-2/02-reference-response.json",
+      "context": {
+        "company": "solo",
+        "childAge": null,
+        "minutes": 30,
+        "timeMode": "episode",
+        "commitment": null,
+        "onlyEnded": null,
+        "format": "episodic"
+      },
+      "cards": [
+        {
+          "id": "tt0278866",
+          "title": "Ким Пять-с-плюсом",
+          "year": 2002,
+          "kind": "series",
+          "runtime": 22,
+          "own": false,
+          "reason": "Ким совмещает школу со спасением мира: как у Человека-паука, обычная жизнь мешается с подвигами, погонями и шутками.",
+          "caveat": "Школьные заботы занимают заметное место; юмор порой совсем детский.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 22 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        },
+        {
+          "id": "tt1877889",
+          "title": "Черепашки-Ниндзя",
+          "year": 2012,
+          "kind": "series",
+          "runtime": 24,
+          "own": false,
+          "reason": "Четыре разных характера, городские злодеи и шутки между схватками дают близкий к Человеку-пауку приключенческий ритм.",
+          "caveat": "Есть жутковатые мутанты и мрачные сюжетные арки, хотя бои без натурализма.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 24 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        },
+        {
+          "id": "tt9248538",
+          "title": "Космобой",
+          "year": 2021,
+          "kind": "series",
+          "runtime": 25,
+          "own": false,
+          "reason": "Упрямый мальчишка учится быть супергероем: твой запрос на характер, динамику и лёгкий юмор здесь важнее одних суперсил.",
+          "caveat": "Рисовка нарочито простая; за комедией постепенно проступает драма.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 25 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        },
+        {
+          "id": "tt0112196",
+          "title": "Тик-герой",
+          "year": 1994,
+          "kind": "series",
+          "runtime": 30,
+          "own": false,
+          "reason": "Тик превращает знакомую по Бэтмену борьбу с нелепыми злодеями в абсурдную комедию, сохраняя погони и геройский напор.",
+          "caveat": "Рисовка из 90-х; это скорее пародия на супергероев, чем серьёзная история.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 30 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-scifi",
+      "file": "live-round-2/04-adult-scifi-response.json",
+      "context": {
+        "company": "solo",
+        "childAge": null,
+        "minutes": 120,
+        "timeMode": "session",
+        "commitment": "single",
+        "onlyEnded": null,
+        "format": "movie"
+      },
+      "cards": [
+        {
+          "id": "tt26915336",
+          "title": "Марс Экспресс",
+          "year": 2023,
+          "kind": "film",
+          "runtime": 88,
+          "own": false,
+          "reason": "«Марс Экспресс» сочетает напряжённое расследование, продуманный мир людей и роботов и взрослую историю — прямо под твой запрос.",
+          "caveat": "Есть жестокие сцены; детектив здесь важнее космических путешествий.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 88 мин; сегодня есть 120 мин."
+            }
+          ]
+        },
+        {
+          "id": "tt0472033",
+          "title": "Девять",
+          "year": 2009,
+          "kind": "film",
+          "runtime": 79,
+          "own": false,
+          "reason": "«Девять» — тревожное приключение в мире погибшей цивилизации, где маленькие герои сталкиваются с совсем не детской угрозой.",
+          "caveat": "Научная фантастика смешана с мистикой; устройство мира объясняют не полностью.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 79 мин; сегодня есть 120 мин."
+            }
+          ]
+        },
+        {
+          "id": "tt0095525",
+          "title": "Гандахар. Световые годы",
+          "year": 1987,
+          "kind": "film",
+          "runtime": 78,
+          "own": false,
+          "reason": "«Гандахар» предлагает необычную биосферу, опасное вторжение и временной парадокс — для твоего интереса к миру и серьёзной фантастике.",
+          "caveat": "Рисовка и темп старой французской анимации; есть обнажённые тела.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 78 мин; сегодня есть 120 мин."
+            }
+          ]
+        },
+        {
+          "id": "tt0070544",
+          "title": "Дикая планета",
+          "year": 1973,
+          "kind": "film",
+          "runtime": 72,
+          "own": false,
+          "reason": "«Дикая планета» берёт странной инопланетной экологией и серьёзной историей выживания людей — без детской комедии.",
+          "caveat": "Сюрреалистическая рисованная фантастика 1970-х; созерцания больше, чем экшена.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 72 мин; сегодня есть 120 мин."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "file": "live-round-3/02-family-response.json",
+      "context": {
+        "company": "children",
+        "childAge": 7,
+        "minutes": 90,
+        "timeMode": "session",
+        "commitment": "single",
+        "onlyEnded": null,
+        "format": "movie"
+      },
+      "cards": [
+        {
+          "id": "tt0381971",
+          "title": "Любопытный Джордж",
+          "year": 2006,
+          "kind": "film",
+          "runtime": 87,
+          "own": false,
+          "reason": "«Любопытный Джордж» — добрые и смешные проделки обезьянки без зловещих злодеев; для вашего совместного вечера на 87 минут.",
+          "caveat": "Есть разлука с другом и короткие моменты огорчения.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 87 мин; сегодня есть 90 мин."
+            },
+            {
+              "key": "age",
+              "status": "unknown",
+              "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        },
+        {
+          "id": "tt2452042",
+          "title": "Снупи и мелочь пузатая в кино",
+          "year": 2015,
+          "kind": "film",
+          "runtime": 88,
+          "own": false,
+          "reason": "«Снупи и мелочь пузатая в кино» сочетает смешные фантазии пса и добрую историю о застенчивости — для просмотра вместе.",
+          "caveat": "Есть условные воздушные бои в фантазиях Снупи и переживания из-за школьных неудач.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 88 мин; сегодня есть 90 мин."
+            },
+            {
+              "key": "age",
+              "status": "unknown",
+              "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        },
+        {
+          "id": "tt0069289",
+          "title": "Снупи, вернись домой",
+          "year": 1972,
+          "kind": "film",
+          "runtime": 80,
+          "own": false,
+          "reason": "«Снупи, вернись домой» — полнометражная история с забавными проделками пса и птицы, где главное — дружба и привязанность.",
+          "caveat": "Грустнее остальных: есть больная девочка в больнице и долгое прощание с друзьями.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 80 мин; сегодня есть 90 мин."
+            },
+            {
+              "key": "age",
+              "status": "unknown",
+              "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "file": "live-round-3/03-family-response.json",
+      "context": {
+        "company": "children",
+        "childAge": 7,
+        "minutes": 90,
+        "timeMode": "session",
+        "commitment": "single",
+        "onlyEnded": null,
+        "format": "movie"
+      },
+      "cards": [
+        {
+          "id": "tt2709692",
+          "title": "Гринч",
+          "year": 2018,
+          "kind": "film",
+          "runtime": 86,
+          "own": false,
+          "reason": "Смешные приготовления Гринча к Рождеству и история о доброте подходят для вашего семейного вечера; фильм длится 86 минут.",
+          "caveat": "Есть грустные воспоминания об одиночестве и рискованные трюки с санями.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 86 мин; сегодня есть 90 мин."
+            },
+            {
+              "key": "age",
+              "status": "unknown",
+              "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        },
+        {
+          "id": "tt0065421",
+          "title": "Коты-аристократы",
+          "year": 1970,
+          "kind": "film",
+          "runtime": 78,
+          "own": false,
+          "reason": "Музыкальные номера и комичные кошачьи характеры отвечают пожеланию доброго и смешного мультфильма; длительность — 78 минут.",
+          "caveat": "Есть похищение котят, погони и драка: строгому условию «без страшных сцен» не отвечает.",
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 78 мин; сегодня есть 90 мин."
+            },
+            {
+              "key": "age",
+              "status": "unknown",
+              "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "moreAfterPromptRepair": {
+    "file": "live-round-5/family-no-fit-replayed-response.json",
+    "context": {
+      "company": "children",
+      "childAge": 7,
+      "minutes": 90,
+      "timeMode": "session",
+      "commitment": "single",
+      "onlyEnded": null,
+      "format": "movie"
+    },
+    "error": "Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.",
+    "retryable": false,
+    "priorCardsPreserved": true,
+    "successfulNewReplacement": false
+  },
+  "budget": {
+    "run": "cartoon-journeys-20261103",
+    "round": "live-round-5",
+    "cap": 0.5,
+    "maxCalls": 10,
+    "spent": 0.157469,
+    "modelCalls": 8,
+    "uncertain": [],
+    "before": {
+      "upper": 2.4253462,
+      "calls": 204,
+      "hold": 0.25
+    },
+    "roundBefore": {
+      "upper": 2.5828152,
+      "calls": 212,
+      "hold": 0.25
+    },
+    "after": {
+      "upper": 2.5828152,
+      "calls": 212,
+      "hold": 0.25
+    },
+    "closed": true
+  },
+  "miffyCatalogMatches": [],
+  "offlineCatalog": {
+    "cartoons": 1867,
+    "kinds": {
+      "film": 762,
+      "series": 1105
+    },
+    "filmUnder30": [],
+    "unknownFilmRuntime": 0
+  },
+  "limits": [
+    "Synthetic requests; no human fit labels",
+    "Original tester request lost; original failure cause unknown",
+    "One initial plan per case; fixes replay the same paid response for free",
+    "Round3 more has valid structural metadata but failed semantic exclusion criterion",
+    "Improved more named one unverified title: no successful new replacement",
+    "One improved sample is not a guarantee of semantic safety",
+    "No anime/short/import/ranking policy changes"
+  ]
+}

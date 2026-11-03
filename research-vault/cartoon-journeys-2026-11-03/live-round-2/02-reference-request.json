@@ -1,0 +1,260 @@
+{
+  "state": {
+    "version": 1,
+    "domain": "cartoon",
+    "id": "5f728b66-6544-4b15-91b9-79fd23a1d9d9",
+    "revision": 1,
+    "mode": "guided",
+    "phase": "review",
+    "context": {
+      "company": "solo",
+      "childAge": null,
+      "minutes": 30,
+      "timeMode": "episode",
+      "commitment": null,
+      "onlyEnded": null,
+      "format": "episodic"
+    },
+    "contextEvidence": {
+      "company": {
+        "value": "solo",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "для одного взрослого"
+      },
+      "childAge": null,
+      "timeMode": {
+        "value": "episode",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Эпизоды не больше 30 минут."
+      },
+      "commitment": null,
+      "onlyEnded": null,
+      "format": {
+        "value": "episodic",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Хочу анимационный сериал"
+      }
+    },
+    "turns": [
+      {
+        "id": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "question": {
+          "id": "direction",
+          "title": "Какую анимацию хочется сегодня?",
+          "why": "Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.",
+          "options": [
+            {
+              "id": "mood_action",
+              "label": "Хочется движухи"
+            },
+            {
+              "id": "mood_relax",
+              "label": "Расслабиться и отвлечься"
+            },
+            {
+              "id": "mood_story",
+              "label": "Погрузиться в историю"
+            },
+            {
+              "id": "mood_explore",
+              "label": "Перенестись в другой мир"
+            },
+            {
+              "id": "mood_thought",
+              "label": "Подумать о сложном"
+            },
+            {
+              "id": "comedy",
+              "label": "Комедия"
+            },
+            {
+              "id": "drama",
+              "label": "Драма"
+            },
+            {
+              "id": "thriller",
+              "label": "Триллер"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "fantasy",
+              "label": "Фантастика"
+            },
+            {
+              "id": "detective",
+              "label": "Детектив"
+            },
+            {
+              "id": "avoid_stress",
+              "label": "Не хочу напрягаться"
+            },
+            {
+              "id": "avoid_dark",
+              "label": "Без тяжёлых тем"
+            },
+            {
+              "id": "avoid_slow",
+              "label": "Без медленного начала"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [],
+        "text": "Хочу анимационный сериал для одного взрослого. Человек-паук и Бэтмен — примеры того, чего хочется: герой с характером, динамичные приключения и лёгкий юмор, без натуралистичной жестокости. Точные версии не помню, они не важны. Нужен похожий опыт, а не пересмотр. Эпизоды не больше 30 минут. Не аниме.",
+        "kind": "answer",
+        "answer": "Хочу анимационный сериал для одного взрослого. Человек-паук и Бэтмен — примеры того, чего хочется: герой с характером, динамичные приключения и лёгкий юмор, без натуралистичной жестокости. Точные версии не помню, они не важны. Нужен похожий опыт, а не пересмотр. Эпизоды не больше 30 минут. Не аниме.",
+        "acceptedContext": {
+          "company": {
+            "value": "solo",
+            "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+            "quote": "для одного взрослого"
+          },
+          "childAge": null,
+          "timeMode": {
+            "value": "episode",
+            "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+            "quote": "Эпизоды не больше 30 минут."
+          },
+          "commitment": null,
+          "onlyEnded": null,
+          "format": {
+            "value": "episodic",
+            "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+            "quote": "Хочу анимационный сериал"
+          }
+        },
+        "acceptedTime": {
+          "minutes": 30,
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "Эпизоды не больше 30 минут."
+        }
+      }
+    ],
+    "facts": [
+      {
+        "key": "format.episodic",
+        "text": "Хочется анимационный сериал.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Хочу анимационный сериал",
+        "feature": "format.animation",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "characters.memorable",
+        "text": "Хочется героя с характером.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "герой с характером",
+        "feature": "characters.memorable",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "pace.fast",
+        "text": "Хочется динамичных приключений.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "динамичные приключения",
+        "feature": "pace.fast",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "humor.light",
+        "text": "Хочется лёгкого юмора.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "лёгкий юмор",
+        "feature": "humor.funny",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "content.violence",
+        "text": "Без натуралистичной жестокости.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "без натуралистичной жестокости",
+        "feature": "content.violence",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "format.anime",
+        "text": "Аниме исключено.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Не аниме.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "viewing.new_experience",
+        "text": "Нужен похожий опыт, а не пересмотр.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Нужен похожий опыт, а не пересмотр.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+    "uncertainties": [
+      "Точная версия «Человек-паук» не определена: в этом разделе есть несколько разных произведений.",
+      "Длительность относится к эпизоду. Неизвестный хронометраж требует проверки."
+    ],
+    "retractions": [],
+    "sessionTime": {
+      "minutes": 30,
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "Эпизоды не больше 30 минут."
+    },
+    "factRemovalUndo": null,
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "failedAction": null,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "browseSeen": []
+  },
+  "action": {
+    "type": "confirm"
+  },
+  "uid": "23da5c75-cab0-4e4e-8d05-59c0820835b7",
+  "domain": "cartoon",
+  "rememberedExclusions": []
+}

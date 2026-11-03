@@ -1,0 +1,673 @@
+{
+  "context": {
+    "company": "solo",
+    "childAge": null,
+    "minutes": 30,
+    "timeMode": "episode",
+    "commitment": null,
+    "onlyEnded": null,
+    "format": null
+  },
+  "sessionTime": {
+    "minutes": 30,
+    "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+    "quote": "Эпизоды не больше 30 минут."
+  },
+  "facts": [
+    {
+      "key": "format.episodic",
+      "text": "Хочется анимационный сериал.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "Хочу анимационный сериал",
+      "feature": "format.animation",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "characters.memorable",
+      "text": "Хочется героя с характером.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "герой с характером",
+      "feature": "characters.memorable",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "pace.fast",
+      "text": "Хочется динамичных приключений.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "динамичные приключения",
+      "feature": "pace.fast",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "humor.light",
+      "text": "Хочется лёгкого юмора.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "лёгкий юмор",
+      "feature": "humor.funny",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "content.violence",
+      "text": "Без натуралистичной жестокости.",
+      "stance": "exclude",
+      "scope": "today",
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "без натуралистичной жестокости",
+      "feature": "content.violence",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "format.anime",
+      "text": "Аниме исключено.",
+      "stance": "exclude",
+      "scope": "today",
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "Не аниме.",
+      "feature": null,
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "viewing.new_experience",
+      "text": "Нужен похожий опыт, а не пересмотр.",
+      "stance": "require",
+      "scope": "today",
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "Нужен похожий опыт, а не пересмотр.",
+      "feature": null,
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    }
+  ],
+  "summary": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+  "rankedCount": 875,
+  "droppedCount": null,
+  "shortlist": [
+    {
+      "id": "tt1486217",
+      "name": "Арчер",
+      "rank": 1,
+      "score": 4.240192872341929,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt0417373",
+      "name": "Братья Bентура",
+      "rank": 2,
+      "score": 3.879105941928647,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt2861424",
+      "name": "Рик и Морти",
+      "rank": 3,
+      "score": 3.7616126533380436,
+      "kind": "series",
+      "runtime": 23
+    },
+    {
+      "id": "tt8050740",
+      "name": "Амфибия",
+      "rank": 5,
+      "score": 3.384910654044507,
+      "kind": "series",
+      "runtime": 23
+    },
+    {
+      "id": "tt0131664",
+      "name": "Крутые бобры",
+      "rank": 4,
+      "score": 3.5267574784881672,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt1877889",
+      "name": "Черепашки-Ниндзя",
+      "rank": 6,
+      "score": 3.375754791946309,
+      "kind": "series",
+      "runtime": 24
+    },
+    {
+      "id": "tt1710308",
+      "name": "Обычное шоу",
+      "rank": 7,
+      "score": 3.3019609678558814,
+      "kind": "series",
+      "runtime": 23
+    },
+    {
+      "id": "tt2758770",
+      "name": "Звёздная принцесса и силы зла",
+      "rank": 8,
+      "score": 3.2689787283645355,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt0892700",
+      "name": "Пингвины из Мадагаскара",
+      "rank": 9,
+      "score": 3.2396428046626635,
+      "kind": "series",
+      "runtime": 11
+    },
+    {
+      "id": "tt0118298",
+      "name": "Дарья",
+      "rank": 10,
+      "score": 3.2386341222182975,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt5804986",
+      "name": "Шоу Большого Леза",
+      "rank": 11,
+      "score": 3.211445249028612,
+      "kind": "series",
+      "runtime": 7
+    },
+    {
+      "id": "tt9184820",
+      "name": "Звёздный путь: Нижние палубы",
+      "rank": 12,
+      "score": 3.2113375132462028,
+      "kind": "series",
+      "runtime": 25
+    },
+    {
+      "id": "tt1600757",
+      "name": "Сорвиголова Кик Бутовски",
+      "rank": 13,
+      "score": 3.186194163193218,
+      "kind": "series",
+      "runtime": 23
+    },
+    {
+      "id": "tt13623148",
+      "name": "Я есть Грут",
+      "rank": 14,
+      "score": 3.1825552031084423,
+      "kind": "series",
+      "runtime": 4
+    },
+    {
+      "id": "tt0111970",
+      "name": "Фриказоид!",
+      "rank": 15,
+      "score": 3.1558897915930766,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0222518",
+      "name": "Соник Супер-ежик",
+      "rank": 16,
+      "score": 3.1438521511833275,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt27368999",
+      "name": "Джентри Чау против демонов",
+      "rank": 17,
+      "score": 3.1363488584952317,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt6524350",
+      "name": "Большой рот",
+      "rank": 18,
+      "score": 3.1250489571176265,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0364774",
+      "name": "Лило и Стич",
+      "rank": 19,
+      "score": 3.1134984104556693,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt0112123",
+      "name": "Пинки и Брейн",
+      "rank": 20,
+      "score": 3.1044555272341934,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0149460",
+      "name": "Футурама",
+      "rank": 21,
+      "score": 3.1001812080536917,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt0305011",
+      "name": "Школа клонов",
+      "rank": 22,
+      "score": 3.0892806773578245,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0103359",
+      "name": "Бэтмен",
+      "rank": 23,
+      "score": 3.0837700105969623,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt0419326",
+      "name": "Дом друзей Фостера",
+      "rank": 24,
+      "score": 3.0729984449311196,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0118360",
+      "name": "Джонни Браво",
+      "rank": 25,
+      "score": 3.0565157533027203,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt1561755",
+      "name": "Закусочная Боба",
+      "rank": 26,
+      "score": 3.056244436594843,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt1213218",
+      "name": "Бэтмен: Отважный и смелый",
+      "rank": 27,
+      "score": 3.0448573287177676,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0278866",
+      "name": "Ким Пять-с-плюсом",
+      "rank": 28,
+      "score": 3.0377904189332394,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt7165904",
+      "name": "Семейка Грин в городе",
+      "rank": 29,
+      "score": 3.0303977737901806,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt2252938",
+      "name": "С приветом по планетам",
+      "rank": 30,
+      "score": 3.023133556199223,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt9248538",
+      "name": "Космобой",
+      "rank": 31,
+      "score": 3.0067692840692337,
+      "kind": "series",
+      "runtime": 25
+    },
+    {
+      "id": "tt0437745",
+      "name": "Робоцып",
+      "rank": 32,
+      "score": 2.9974436594842815,
+      "kind": "series",
+      "runtime": 11
+    },
+    {
+      "id": "tt8041658",
+      "name": "Лунная девочка и ДиноДьявол",
+      "rank": 33,
+      "score": 2.994656869516072,
+      "kind": "series",
+      "runtime": 23
+    },
+    {
+      "id": "tt0105941",
+      "name": "Озорные анимашки",
+      "rank": 34,
+      "score": 2.99290639350053,
+      "kind": "series",
+      "runtime": 21
+    },
+    {
+      "id": "tt2058221",
+      "name": "Китай, Иллинойс",
+      "rank": 35,
+      "score": 2.987142740233133,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt7945066",
+      "name": "Генлок",
+      "rank": 36,
+      "score": 2.9768998931826216,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt8101850",
+      "name": "Отмена",
+      "rank": 37,
+      "score": 2.9564616036736138,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0373732",
+      "name": "Гетто",
+      "rank": 38,
+      "score": 2.952251916637231,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt12642764",
+      "name": "Тупик: Парк паранормальных явлений",
+      "rank": 39,
+      "score": 2.9388444357470864,
+      "kind": "series",
+      "runtime": 27
+    },
+    {
+      "id": "tt0401747",
+      "name": "Красные против Синих",
+      "rank": 40,
+      "score": 2.936566139173437,
+      "kind": "series",
+      "runtime": 6
+    },
+    {
+      "id": "tt0289036",
+      "name": "Что с Энди?",
+      "rank": 41,
+      "score": 2.920392264217591,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0439341",
+      "name": "Шестнадцатилетние",
+      "rank": 42,
+      "score": 2.9196981631932184,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt8543208",
+      "name": "Веселые мелодии: Мультфильмы",
+      "rank": 43,
+      "score": 2.9184353585305547,
+      "kind": "series",
+      "runtime": 12
+    },
+    {
+      "id": "tt0361201",
+      "name": "Мегас Экс-Эл-Ар",
+      "rank": 44,
+      "score": 2.9161357824090426,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt2818496",
+      "name": "Крутые",
+      "rank": 45,
+      "score": 2.915556967855882,
+      "kind": "series",
+      "runtime": 23
+    },
+    {
+      "id": "tt0891396",
+      "name": "Букашки",
+      "rank": 46,
+      "score": 2.9123465206640766,
+      "kind": "series",
+      "runtime": 5
+    },
+    {
+      "id": "tt0096697",
+      "name": "Симпсоны",
+      "rank": 47,
+      "score": 2.909418236665489,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt0386993",
+      "name": "Шаолиньские разборки",
+      "rank": 48,
+      "score": 2.898832264217591,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt1833403",
+      "name": "Джейк и пираты Нетландии",
+      "rank": 49,
+      "score": 2.8971423248322146,
+      "kind": "series",
+      "runtime": 15
+    },
+    {
+      "id": "tt0112196",
+      "name": "Тик-герой",
+      "rank": 50,
+      "score": 2.89622615330272,
+      "kind": "series",
+      "runtime": 30
+    },
+    {
+      "id": "tt0491560",
+      "name": "Люси - дочь дьявола",
+      "rank": 51,
+      "score": 2.890461144471918,
+      "kind": "series",
+      "runtime": 15
+    },
+    {
+      "id": "tt1608383",
+      "name": "Чёрный динамит",
+      "rank": 52,
+      "score": 2.887900473330978,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt8688814",
+      "name": "Принц-дракон",
+      "rank": 53,
+      "score": 2.879919816319322,
+      "kind": "series",
+      "runtime": 26
+    },
+    {
+      "id": "tt4306696",
+      "name": "Шоу Цианид и Счастье",
+      "rank": 54,
+      "score": 2.8754902861179796,
+      "kind": "series",
+      "runtime": 11
+    },
+    {
+      "id": "tt2474952",
+      "name": "Храбрейшие воины",
+      "rank": 55,
+      "score": 2.867578149063935,
+      "kind": "series",
+      "runtime": 5
+    },
+    {
+      "id": "tt15475608",
+      "name": "Олаф представляет",
+      "rank": 56,
+      "score": 2.8558468738961498,
+      "kind": "series",
+      "runtime": 4
+    },
+    {
+      "id": "tt13622958",
+      "name": "Бэймакс!",
+      "rank": 57,
+      "score": 2.8504384457788765,
+      "kind": "series",
+      "runtime": 12
+    },
+    {
+      "id": "tt2244077",
+      "name": "Маленький зоомагазин",
+      "rank": 58,
+      "score": 2.847875917202402,
+      "kind": "series",
+      "runtime": 22
+    },
+    {
+      "id": "tt5439480",
+      "name": "Закон Мёрфи",
+      "rank": 59,
+      "score": 2.8464310279053335,
+      "kind": "series",
+      "runtime": 12
+    },
+    {
+      "id": "tt21107718",
+      "name": "Чудаки",
+      "rank": 60,
+      "score": 2.842898445778877,
+      "kind": "series",
+      "runtime": 20
+    }
+  ],
+  "rawTop": [
+    {
+      "id": "tt1486217",
+      "name": "Арчер",
+      "kind": "series",
+      "runtime": 22,
+      "score": 4.240192872341929
+    },
+    {
+      "id": "tt0417373",
+      "name": "Братья Bентура",
+      "kind": "series",
+      "runtime": 22,
+      "score": 3.879105941928647
+    },
+    {
+      "id": "tt2861424",
+      "name": "Рик и Морти",
+      "kind": "series",
+      "runtime": 23,
+      "score": 3.7616126533380436
+    },
+    {
+      "id": "tt0131664",
+      "name": "Крутые бобры",
+      "kind": "series",
+      "runtime": 30,
+      "score": 3.5267574784881672
+    },
+    {
+      "id": "tt8050740",
+      "name": "Амфибия",
+      "kind": "series",
+      "runtime": 23,
+      "score": 3.384910654044507
+    },
+    {
+      "id": "tt1877889",
+      "name": "Черепашки-Ниндзя",
+      "kind": "series",
+      "runtime": 24,
+      "score": 3.375754791946309
+    },
+    {
+      "id": "tt1710308",
+      "name": "Обычное шоу",
+      "kind": "series",
+      "runtime": 23,
+      "score": 3.3019609678558814
+    },
+    {
+      "id": "tt2758770",
+      "name": "Звёздная принцесса и силы зла",
+      "kind": "series",
+      "runtime": 22,
+      "score": 3.2689787283645355
+    },
+    {
+      "id": "tt0892700",
+      "name": "Пингвины из Мадагаскара",
+      "kind": "series",
+      "runtime": 11,
+      "score": 3.2396428046626635
+    },
+    {
+      "id": "tt0118298",
+      "name": "Дарья",
+      "kind": "series",
+      "runtime": 30,
+      "score": 3.2386341222182975
+    },
+    {
+      "id": "tt5804986",
+      "name": "Шоу Большого Леза",
+      "kind": "series",
+      "runtime": 7,
+      "score": 3.211445249028612
+    },
+    {
+      "id": "tt9184820",
+      "name": "Звёздный путь: Нижние палубы",
+      "kind": "series",
+      "runtime": 25,
+      "score": 3.2113375132462028
+    }
+  ]
+}

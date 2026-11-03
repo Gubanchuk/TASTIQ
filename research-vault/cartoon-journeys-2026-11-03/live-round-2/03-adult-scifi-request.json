@@ -1,0 +1,125 @@
+{
+  "state": {
+    "version": 1,
+    "domain": "cartoon",
+    "id": "baf19449-88a8-4a28-b708-85363a07f8d0",
+    "revision": 0,
+    "mode": "guided",
+    "phase": "direction",
+    "context": {
+      "company": null,
+      "childAge": null,
+      "minutes": null,
+      "timeMode": null,
+      "commitment": null,
+      "onlyEnded": null,
+      "format": null
+    },
+    "contextEvidence": {
+      "company": null,
+      "childAge": null,
+      "timeMode": null,
+      "commitment": null,
+      "onlyEnded": null,
+      "format": null
+    },
+    "turns": [],
+    "facts": [],
+    "question": {
+      "id": "direction",
+      "title": "Какую анимацию хочется сегодня?",
+      "why": "Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.",
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ],
+      "options": [
+        {
+          "id": "mood_action",
+          "label": "Хочется движухи"
+        },
+        {
+          "id": "mood_relax",
+          "label": "Расслабиться и отвлечься"
+        },
+        {
+          "id": "mood_story",
+          "label": "Погрузиться в историю"
+        },
+        {
+          "id": "mood_explore",
+          "label": "Перенестись в другой мир"
+        },
+        {
+          "id": "mood_thought",
+          "label": "Подумать о сложном"
+        },
+        {
+          "id": "comedy",
+          "label": "Комедия"
+        },
+        {
+          "id": "drama",
+          "label": "Драма"
+        },
+        {
+          "id": "thriller",
+          "label": "Триллер"
+        },
+        {
+          "id": "adventure",
+          "label": "Приключения"
+        },
+        {
+          "id": "fantasy",
+          "label": "Фантастика"
+        },
+        {
+          "id": "detective",
+          "label": "Детектив"
+        },
+        {
+          "id": "avoid_stress",
+          "label": "Не хочу напрягаться"
+        },
+        {
+          "id": "avoid_dark",
+          "label": "Без тяжёлых тем"
+        },
+        {
+          "id": "avoid_slow",
+          "label": "Без медленного начала"
+        }
+      ]
+    },
+    "summary": "",
+    "uncertainties": [],
+    "retractions": [],
+    "sessionTime": null,
+    "factRemovalUndo": null,
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "failedAction": null,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null
+  },
+  "action": {
+    "type": "answer",
+    "questionId": "direction",
+    "selected": [],
+    "text": "Сегодня смотрю один, взрослый. Хочу один полнометражный мультфильм: напряжённое научно-фантастическое приключение, интересный мир и серьёзная история. Без детских шуток и музыкальных номеров. Не сериал и не аниме. Сегодня есть 120 минут.",
+    "kind": "answer"
+  },
+  "uid": "03aef372-ce69-4ea2-936a-fcde66a31121",
+  "domain": "cartoon",
+  "rememberedExclusions": []
+}

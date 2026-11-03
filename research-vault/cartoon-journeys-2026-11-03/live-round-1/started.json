@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-03T16:26:34.119Z",
+  "model": "gpt-6.1-sol",
+  "sourceCommit": "e28e6313d478b93790ca63fe6470e0ba8b51ea77",
+  "cap": 0.5,
+  "maxCalls": 10,
+  "heldHistorical": [
+    {
+      "id": "prod-live-20261102-01:1",
+      "reserveUsd": 0.25
+    }
+  ],
+  "freeModelGet": 200
+}

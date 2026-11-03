@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-03T16:37:20.452Z",
+  "model": "gpt-6.1-sol",
+  "sourceCommitBefore": "e28e6313d478b93790ca63fe6470e0ba8b51ea77",
+  "sourceHashes": {
+    "src/core/media-conversation.js": "fe70fcc997bf9cb3d3685dcbbd8ebaa4d8465fe373e6624befa6e6279182d5a6",
+    "src/ai/media-conversation.js": "3e343fdd6f7e038899f04e52ab7a63b3231601b537104d4f1c0ed216429a1189"
+  },
+  "cap": 0.5,
+  "maxCalls": 10,
+  "heldHistorical": [
+    {
+      "id": "prod-live-20261102-01:1",
+      "reserveUsd": 0.25
+    }
+  ],
+  "freeModelGet": 200
+}

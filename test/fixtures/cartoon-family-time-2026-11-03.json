@@ -1,0 +1,212 @@
+{
+  "note": "Synthetic persona, real provider proposal. No billing journal dependency or credentials.",
+  "state": {
+    "version": 1,
+    "domain": "cartoon",
+    "id": "5efa44c0-d90e-4b06-9728-fbd694d065e6",
+    "revision": 0,
+    "mode": "guided",
+    "phase": "direction",
+    "context": {
+      "company": null,
+      "childAge": null,
+      "minutes": null,
+      "timeMode": null,
+      "commitment": null,
+      "onlyEnded": null,
+      "format": null
+    },
+    "contextEvidence": {
+      "company": null,
+      "childAge": null,
+      "timeMode": null,
+      "commitment": null,
+      "onlyEnded": null,
+      "format": null
+    },
+    "turns": [],
+    "facts": [],
+    "question": {
+      "id": "direction",
+      "title": "Какую анимацию хочется сегодня?",
+      "why": "Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.",
+      "multiple": true,
+      "controls": [
+        "unknown",
+        "indifferent",
+        "none"
+      ],
+      "options": [
+        {
+          "id": "mood_action",
+          "label": "Хочется движухи"
+        },
+        {
+          "id": "mood_relax",
+          "label": "Расслабиться и отвлечься"
+        },
+        {
+          "id": "mood_story",
+          "label": "Погрузиться в историю"
+        },
+        {
+          "id": "mood_explore",
+          "label": "Перенестись в другой мир"
+        },
+        {
+          "id": "mood_thought",
+          "label": "Подумать о сложном"
+        },
+        {
+          "id": "comedy",
+          "label": "Комедия"
+        },
+        {
+          "id": "drama",
+          "label": "Драма"
+        },
+        {
+          "id": "thriller",
+          "label": "Триллер"
+        },
+        {
+          "id": "adventure",
+          "label": "Приключения"
+        },
+        {
+          "id": "fantasy",
+          "label": "Фантастика"
+        },
+        {
+          "id": "detective",
+          "label": "Детектив"
+        },
+        {
+          "id": "avoid_stress",
+          "label": "Не хочу напрягаться"
+        },
+        {
+          "id": "avoid_dark",
+          "label": "Без тяжёлых тем"
+        },
+        {
+          "id": "avoid_slow",
+          "label": "Без медленного начала"
+        }
+      ]
+    },
+    "summary": "",
+    "uncertainties": [],
+    "retractions": [],
+    "sessionTime": null,
+    "factRemovalUndo": null,
+    "result": null,
+    "provisional": false,
+    "needsPlan": false,
+    "failedAction": null,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null
+  },
+  "action": {
+    "type": "answer",
+    "questionId": "direction",
+    "selected": [],
+    "text": "Будем смотреть вместе с ребёнком 7 лет. Нужен один полнометражный мультфильм: добрый, смешной, без страшных сцен. Не сериал. Сегодня на просмотр есть 90 минут.",
+    "kind": "answer"
+  },
+  "proposal": {
+    "summary": "Ты хочешь один добрый и смешной полнометражный мультфильм для совместного просмотра с ребёнком 7 лет, строго без страшных сцен и не сериал. Сегодня есть 90 минут.",
+    "facts": [
+      {
+        "key": "format.movie",
+        "text": "Нужен один полнометражный мультфильм, не сериал.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "Нужен один полнометражный мультфильм",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "tone.feelgood",
+        "text": "Хочется добрый мультфильм.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "добрый",
+        "feature": "tone.feelgood",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "humor.funny",
+        "text": "Хочется смешной мультфильм.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "смешной",
+        "feature": "humor.funny",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "tone.creepy",
+        "text": "Страшные сцены исключены.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "без страшных сцен",
+        "feature": "tone.creepy",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      }
+    ],
+    "uncertainties": [],
+    "action": "review",
+    "question": null,
+    "context": {
+      "company": {
+        "value": "children",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "Будем смотреть вместе с ребёнком 7 лет."
+      },
+      "childAge": {
+        "value": 7,
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "с ребёнком 7 лет"
+      },
+      "timeMode": {
+        "value": "session",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "Сегодня на просмотр есть 90 минут."
+      },
+      "commitment": {
+        "value": "single",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "Нужен один полнометражный мультфильм"
+      },
+      "onlyEnded": null,
+      "format": {
+        "value": "movie",
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "Нужен один полнометражный мультфильм"
+      }
+    },
+    "sessionTime": {
+      "minutes": 90,
+      "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+      "quote": "Сегодня на просмотр есть 90 минут."
+    }
+  }
+}

@@ -93,7 +93,10 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   const liked = Object.entries(state.answers ?? {}).filter(([, a]) => a?.reaction === 'love' || a?.reaction === 'like').map(([id]) => catalog.byId.get(id)).filter(Boolean);
 
   const total = AI.picks + AI.spares;
-  const howMany = AI.spares
+  const adaptiveMedia=state.domain!=='game'&&Boolean(state.conversation);
+  const howMany = adaptiveMedia
+    ? `Выбери до ${total} разных тайтлов по порядку, первый — лучший. Не дополняй число заведомо неподходящими: при конфликте с обязательным условием исключи тайтл, даже с оговоркой. Можно вернуть меньше вариантов или пустой список.`
+    : AI.spares
     ? `Выбери ровно ${total} разных тайтлов по порядку. Первые ${AI.picks} покажу сразу, первый — лучший; остальные ${AI.spares} — запасные, по очереди встанут на место того, что человек уже видел.`
     : `Выбери ровно ${AI.picks} разных тайтла, первый — лучший.`;
   const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} Бери из списка (id копируй из строки кандидата) или не больше ${AI.ownPicks} своих (id пустой, название и год).`;
@@ -133,10 +136,12 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
     return { ...meta, error: 'нейросеть ответила не по форме' };
   }
   const checked = checkPicks(parsed, rows, total, ranked);
-  if (!checked.picks.length) return { ...meta, error: 'нейросеть выбрала не из списка' };
-  // Fewer than four (seen at effort low: two picks, one with an id outside the list): the engine's next best titles
-  // fill the rest, without a model sentence.
+  if (!checked.picks.length) return adaptiveMedia
+    ? { ...meta, error: parsed?.picks?.length?'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.':'Подходящих вариантов по этому запросу пока не нашлось. Попробуй уточнить запрос.', retryable:false }
+    : { ...meta, error: 'нейросеть выбрала не из списка' };
+  // Legacy paths fill a short answer in engine order. Adaptive media keeps a short
+  // answer: filling it could undo the model's decision to omit a semantic conflict.
   const chosen = new Set(checked.picks.map((p) => p.id));
-  const filled = rows.map((r) => r.game.id).filter((id) => !chosen.has(id)).slice(0, Math.max(0, AI.picks - checked.picks.length));
+  const filled = adaptiveMedia?[]:rows.map((r) => r.game.id).filter((id) => !chosen.has(id)).slice(0, Math.max(0, AI.picks - checked.picks.length));
   return { ...checked, filled, ...meta };
 }

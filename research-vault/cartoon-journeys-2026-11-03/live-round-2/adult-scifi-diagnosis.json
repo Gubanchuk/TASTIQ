@@ -1,0 +1,685 @@
+{
+  "context": {
+    "company": "solo",
+    "childAge": null,
+    "minutes": 120,
+    "timeMode": "session",
+    "commitment": "single",
+    "onlyEnded": null,
+    "format": "movie"
+  },
+  "sessionTime": {
+    "minutes": 120,
+    "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+    "quote": "Сегодня есть 120 минут."
+  },
+  "facts": [
+    {
+      "key": "format.movie",
+      "text": "Один полнометражный мультфильм, не сериал.",
+      "stance": "require",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "Хочу один полнометражный мультфильм",
+      "feature": "format.animation",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "tension",
+      "text": "Хочется напряжённого приключения.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "напряжённое научно-фантастическое приключение",
+      "feature": "tension.high",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "science_fiction",
+      "text": "Хочется научной фантастики.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "научно-фантастическое приключение",
+      "feature": "world.scifi",
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "adventure",
+      "text": "Хочется приключения.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "научно-фантастическое приключение",
+      "feature": null,
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "world_and_story",
+      "text": "Важны интересный мир и серьёзная история.",
+      "stance": "want",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "интересный мир и серьёзная история",
+      "feature": null,
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "exclude_childish_jokes",
+      "text": "Без детских шуток.",
+      "stance": "exclude",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "Без детских шуток",
+      "feature": null,
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "exclude_musical_numbers",
+      "text": "Без музыкальных номеров.",
+      "stance": "exclude",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "Без детских шуток и музыкальных номеров",
+      "feature": null,
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    },
+    {
+      "key": "exclude_series_anime",
+      "text": "Сериалы и аниме исключены.",
+      "stance": "exclude",
+      "scope": "today",
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "Не сериал и не аниме.",
+      "feature": null,
+      "titleId": null,
+      "exposure": null,
+      "titleIntent": null
+    }
+  ],
+  "summary": "Сегодня ты смотришь один и хочешь один полнометражный мультфильм: напряжённое научно-фантастическое приключение с интересным миром и серьёзной историей. Без детских шуток, музыкальных номеров и аниме; не сериал. На просмотр есть 120 минут.",
+  "rankedCount": 547,
+  "droppedCount": null,
+  "shortlist": [
+    {
+      "id": "tt7979580",
+      "name": "Митчеллы против машин",
+      "rank": 1,
+      "score": 3.650600838379134,
+      "kind": "film",
+      "runtime": 114
+    },
+    {
+      "id": "tt14145426",
+      "name": "Бивис и Батт-Хед уделывают Вселенную",
+      "rank": 3,
+      "score": 3.57012746157429,
+      "kind": "film",
+      "runtime": 87
+    },
+    {
+      "id": "tt0129167",
+      "name": "Стальной гигант",
+      "rank": 2,
+      "score": 3.6032286911970193,
+      "kind": "film",
+      "runtime": 86
+    },
+    {
+      "id": "tt0910970",
+      "name": "ВАЛЛ·И",
+      "rank": 4,
+      "score": 3.459631578947368,
+      "kind": "film",
+      "runtime": 98
+    },
+    {
+      "id": "tt0472033",
+      "name": "Девять",
+      "rank": 5,
+      "score": 3.3412234906380993,
+      "kind": "film",
+      "runtime": 79
+    },
+    {
+      "id": "tt2245084",
+      "name": "Город героев",
+      "rank": 6,
+      "score": 3.3085978108989296,
+      "kind": "film",
+      "runtime": 102
+    },
+    {
+      "id": "tt0070544",
+      "name": "Дикая планета",
+      "rank": 7,
+      "score": 3.287077689799721,
+      "kind": "film",
+      "runtime": 72
+    },
+    {
+      "id": "tt0405296",
+      "name": "Помутнение",
+      "rank": 8,
+      "score": 3.2497642906380997,
+      "kind": "film",
+      "runtime": 100
+    },
+    {
+      "id": "tt0084315",
+      "name": "Властелины времени",
+      "rank": 9,
+      "score": 3.2288706567303214,
+      "kind": "film",
+      "runtime": 79
+    },
+    {
+      "id": "tt0133240",
+      "name": "Планета сокровищ",
+      "rank": 10,
+      "score": 3.226511644154634,
+      "kind": "film",
+      "runtime": 95
+    },
+    {
+      "id": "tt7504818",
+      "name": "Неисправимый Рон",
+      "rank": 11,
+      "score": 3.1645032603632974,
+      "kind": "film",
+      "runtime": 107
+    },
+    {
+      "id": "tt2224026",
+      "name": "Дом",
+      "rank": 12,
+      "score": 3.159651047973917,
+      "kind": "film",
+      "runtime": 94
+    },
+    {
+      "id": "tt0892782",
+      "name": "Монстры против пришельцев",
+      "rank": 13,
+      "score": 3.157613972985561,
+      "kind": "film",
+      "runtime": 94
+    },
+    {
+      "id": "tt0358082",
+      "name": "Роботы",
+      "rank": 14,
+      "score": 3.156350256171402,
+      "kind": "film",
+      "runtime": 91
+    },
+    {
+      "id": "tt0095525",
+      "name": "Гандахар. Световые годы",
+      "rank": 15,
+      "score": 3.1090373078714486,
+      "kind": "film",
+      "runtime": 78
+    },
+    {
+      "id": "tt0275847",
+      "name": "Лило и Стич",
+      "rank": 16,
+      "score": 3.102486679087099,
+      "kind": "film",
+      "runtime": 85
+    },
+    {
+      "id": "tt0858486",
+      "name": "Битва за планету Терра 3D",
+      "rank": 17,
+      "score": 3.0926966930600837,
+      "kind": "film",
+      "runtime": 85
+    },
+    {
+      "id": "tt0985058",
+      "name": "Метропия",
+      "rank": 18,
+      "score": 3.0443758267349796,
+      "kind": "film",
+      "runtime": 86
+    },
+    {
+      "id": "tt12885852",
+      "name": "Бэтмен: Душа дракона",
+      "rank": 19,
+      "score": 3.0264959012575687,
+      "kind": "film",
+      "runtime": 83
+    },
+    {
+      "id": "tt2262345",
+      "name": "Далеко на Север",
+      "rank": 20,
+      "score": 2.997911504424779,
+      "kind": "film",
+      "runtime": 81
+    },
+    {
+      "id": "tt5104604",
+      "name": "Остров собак",
+      "rank": 21,
+      "score": 2.9825452750815096,
+      "kind": "film",
+      "runtime": 101
+    },
+    {
+      "id": "tt26915336",
+      "name": "Марс Экспресс",
+      "rank": 22,
+      "score": 2.9617783601304146,
+      "kind": "film",
+      "runtime": 88
+    },
+    {
+      "id": "tt8752474",
+      "name": "Лига справедливости против Смертоносной пятерки",
+      "rank": 23,
+      "score": 2.9147816488122964,
+      "kind": "film",
+      "runtime": 77
+    },
+    {
+      "id": "tt7978758",
+      "name": "Аполлон-10½: Приключение космического века",
+      "rank": 24,
+      "score": 2.9125719142990216,
+      "kind": "film",
+      "runtime": 97
+    },
+    {
+      "id": "tt0117705",
+      "name": "Космический джем",
+      "rank": 25,
+      "score": 2.9086294550535636,
+      "kind": "film",
+      "runtime": 88
+    },
+    {
+      "id": "tt4633694",
+      "name": "Человек-паук: Через Вселенные",
+      "rank": 26,
+      "score": 2.846590144014905,
+      "kind": "film",
+      "runtime": 117
+    },
+    {
+      "id": "tt7133686",
+      "name": "Друзья нового поколения",
+      "rank": 27,
+      "score": 2.819013786679087,
+      "kind": "film",
+      "runtime": 106
+    },
+    {
+      "id": "tt1655413",
+      "name": "Магазинчик самоубийств",
+      "rank": 28,
+      "score": 2.789930908616675,
+      "kind": "film",
+      "runtime": 79
+    },
+    {
+      "id": "tt0297753",
+      "name": "Каена: Пророчество",
+      "rank": 29,
+      "score": 2.7458098742431303,
+      "kind": "film",
+      "runtime": 92
+    },
+    {
+      "id": "tt1372301",
+      "name": "Эдит и я",
+      "rank": 30,
+      "score": 2.7030428132277597,
+      "kind": "film",
+      "runtime": 100
+    },
+    {
+      "id": "tt1001526",
+      "name": "Мегамозг",
+      "rank": 31,
+      "score": 2.70097410675361,
+      "kind": "film",
+      "runtime": 95
+    },
+    {
+      "id": "tt0983193",
+      "name": "Приключения Тинтина: Тайна Единорога",
+      "rank": 32,
+      "score": 2.6912203793199816,
+      "kind": "film",
+      "runtime": 107
+    },
+    {
+      "id": "tt0396555",
+      "name": "В гости к Робинсонам",
+      "rank": 33,
+      "score": 2.658243605030275,
+      "kind": "film",
+      "runtime": 95
+    },
+    {
+      "id": "tt6718170",
+      "name": "Братья Супер Марио в кино",
+      "rank": 34,
+      "score": 2.6486364229156965,
+      "kind": "film",
+      "runtime": 92
+    },
+    {
+      "id": "tt0230011",
+      "name": "Атлантида: Затерянный мир",
+      "rank": 35,
+      "score": 2.6457180970656733,
+      "kind": "film",
+      "runtime": 95
+    },
+    {
+      "id": "tt0211653",
+      "name": "Тайна третьей планеты",
+      "rank": 36,
+      "score": 2.636055239869586,
+      "kind": "film",
+      "runtime": 48
+    },
+    {
+      "id": "tt5116410",
+      "name": "Башня",
+      "rank": 37,
+      "score": 2.6009488122962274,
+      "kind": "film",
+      "runtime": 82
+    },
+    {
+      "id": "tt0317705",
+      "name": "Суперсемейка",
+      "rank": 38,
+      "score": 2.555456730321379,
+      "kind": "film",
+      "runtime": 115
+    },
+    {
+      "id": "tt15090124",
+      "name": "Безумный бог",
+      "rank": 39,
+      "score": 2.5532670703306937,
+      "kind": "film",
+      "runtime": 83
+    },
+    {
+      "id": "tt3915174",
+      "name": "Кот в сапогах 2: Последнее желание",
+      "rank": 40,
+      "score": 2.533451886353051,
+      "kind": "film",
+      "runtime": 102
+    },
+    {
+      "id": "tt1355638",
+      "name": "Кот раввина",
+      "rank": 41,
+      "score": 2.5295402421984163,
+      "kind": "film",
+      "runtime": 100
+    },
+    {
+      "id": "tt6193408",
+      "name": "Барашек Шон: Фермагеддон",
+      "rank": 42,
+      "score": 2.5180610619469026,
+      "kind": "film",
+      "runtime": 87
+    },
+    {
+      "id": "tt1013607",
+      "name": "Идиоты & ангелы",
+      "rank": 43,
+      "score": 2.469671634839311,
+      "kind": "film",
+      "runtime": 78
+    },
+    {
+      "id": "tt0198781",
+      "name": "Корпорация монстров",
+      "rank": 44,
+      "score": 2.4334920353982303,
+      "kind": "film",
+      "runtime": 92
+    },
+    {
+      "id": "tt8864596",
+      "name": "Трансформеры: Начало",
+      "rank": 45,
+      "score": 2.40337643223102,
+      "kind": "film",
+      "runtime": 104
+    },
+    {
+      "id": "tt8001346",
+      "name": "Астерикс и тайное зелье",
+      "rank": 46,
+      "score": 2.3972653935724266,
+      "kind": "film",
+      "runtime": 87
+    },
+    {
+      "id": "tt1490017",
+      "name": "ЛЕГО Фильм",
+      "rank": 47,
+      "score": 2.3635172668840245,
+      "kind": "film",
+      "runtime": 100
+    },
+    {
+      "id": "tt3040964",
+      "name": "Книга джунглей",
+      "rank": 48,
+      "score": 2.3624071262226365,
+      "kind": "film",
+      "runtime": 106
+    },
+    {
+      "id": "tt0120855",
+      "name": "Тарзан",
+      "rank": 49,
+      "score": 2.342070814718211,
+      "kind": "film",
+      "runtime": 88
+    },
+    {
+      "id": "tt0053285",
+      "name": "Спящая красавица",
+      "rank": 50,
+      "score": 2.3255381645086164,
+      "kind": "film",
+      "runtime": 75
+    },
+    {
+      "id": "tt0078480",
+      "name": "Опаснейшее путешествие",
+      "rank": 51,
+      "score": 2.32437866790871,
+      "kind": "film",
+      "runtime": 92
+    },
+    {
+      "id": "tt0120630",
+      "name": "Побег из курятника",
+      "rank": 52,
+      "score": 2.320713478900792,
+      "kind": "film",
+      "runtime": 84
+    },
+    {
+      "id": "tt1488589",
+      "name": "Пиноккио Гильермо дель Торо",
+      "rank": 53,
+      "score": 2.315668095016302,
+      "kind": "film",
+      "runtime": 117
+    },
+    {
+      "id": "tt0844471",
+      "name": "Облачно, возможны осадки в виде фрикаделек",
+      "rank": 54,
+      "score": 2.3071904700512342,
+      "kind": "film",
+      "runtime": 90
+    },
+    {
+      "id": "tt28664733",
+      "name": "Затерявшись в звёздах",
+      "rank": 55,
+      "score": 2.3014291103865863,
+      "kind": "film",
+      "runtime": 96
+    },
+    {
+      "id": "tt1142977",
+      "name": "Франкенвини",
+      "rank": 56,
+      "score": 2.2930375590125758,
+      "kind": "film",
+      "runtime": 87
+    },
+    {
+      "id": "tt5181830",
+      "name": "Уэнделл и Уайлд",
+      "rank": 57,
+      "score": 2.292329343269679,
+      "kind": "film",
+      "runtime": 105
+    },
+    {
+      "id": "tt0792986",
+      "name": "Страх[и] темноты",
+      "rank": 58,
+      "score": 2.2831362645551936,
+      "kind": "film",
+      "runtime": 83
+    },
+    {
+      "id": "tt1911658",
+      "name": "Пингвины Мадагаскара: Фильм",
+      "rank": 59,
+      "score": 2.2743110103400093,
+      "kind": "film",
+      "runtime": 92
+    },
+    {
+      "id": "tt0120363",
+      "name": "История игрушек 2",
+      "rank": 60,
+      "score": 2.266204797391709,
+      "kind": "film",
+      "runtime": 92
+    }
+  ],
+  "rawTop": [
+    {
+      "id": "tt7979580",
+      "name": "Митчеллы против машин",
+      "kind": "film",
+      "runtime": 114,
+      "score": 3.650600838379134
+    },
+    {
+      "id": "tt0129167",
+      "name": "Стальной гигант",
+      "kind": "film",
+      "runtime": 86,
+      "score": 3.6032286911970193
+    },
+    {
+      "id": "tt14145426",
+      "name": "Бивис и Батт-Хед уделывают Вселенную",
+      "kind": "film",
+      "runtime": 87,
+      "score": 3.57012746157429
+    },
+    {
+      "id": "tt0910970",
+      "name": "ВАЛЛ·И",
+      "kind": "film",
+      "runtime": 98,
+      "score": 3.459631578947368
+    },
+    {
+      "id": "tt0472033",
+      "name": "Девять",
+      "kind": "film",
+      "runtime": 79,
+      "score": 3.3412234906380993
+    },
+    {
+      "id": "tt2245084",
+      "name": "Город героев",
+      "kind": "film",
+      "runtime": 102,
+      "score": 3.3085978108989296
+    },
+    {
+      "id": "tt0070544",
+      "name": "Дикая планета",
+      "kind": "film",
+      "runtime": 72,
+      "score": 3.287077689799721
+    },
+    {
+      "id": "tt0405296",
+      "name": "Помутнение",
+      "kind": "film",
+      "runtime": 100,
+      "score": 3.2497642906380997
+    },
+    {
+      "id": "tt0084315",
+      "name": "Властелины времени",
+      "kind": "film",
+      "runtime": 79,
+      "score": 3.2288706567303214
+    },
+    {
+      "id": "tt0133240",
+      "name": "Планета сокровищ",
+      "kind": "film",
+      "runtime": 95,
+      "score": 3.226511644154634
+    },
+    {
+      "id": "tt7504818",
+      "name": "Неисправимый Рон",
+      "kind": "film",
+      "runtime": 107,
+      "score": 3.1645032603632974
+    },
+    {
+      "id": "tt2224026",
+      "name": "Дом",
+      "kind": "film",
+      "runtime": 94,
+      "score": 3.159651047973917
+    }
+  ]
+}

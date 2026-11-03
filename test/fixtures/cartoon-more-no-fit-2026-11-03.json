@@ -1,0 +1,748 @@
+{
+  "note": "Synthetic persona and provider output only; no usage/billing journal dependency.",
+  "request": {
+    "state": {
+      "version": 1,
+      "domain": "cartoon",
+      "id": "5efa44c0-d90e-4b06-9728-fbd694d065e6",
+      "revision": 2,
+      "mode": "guided",
+      "phase": "result",
+      "context": {
+        "company": "children",
+        "childAge": 7,
+        "minutes": 90,
+        "timeMode": "session",
+        "commitment": "single",
+        "onlyEnded": null,
+        "format": "movie"
+      },
+      "contextEvidence": {
+        "company": {
+          "value": "children",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "Будем смотреть вместе с ребёнком 7 лет."
+        },
+        "childAge": {
+          "value": 7,
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "с ребёнком 7 лет"
+        },
+        "timeMode": {
+          "value": "session",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "Сегодня на просмотр есть 90 минут."
+        },
+        "commitment": {
+          "value": "single",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "Нужен один полнометражный мультфильм"
+        },
+        "onlyEnded": null,
+        "format": {
+          "value": "movie",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "Нужен один полнометражный мультфильм"
+        }
+      },
+      "turns": [
+        {
+          "id": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "question": {
+            "id": "direction",
+            "title": "Какую анимацию хочется сегодня?",
+            "why": "Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.",
+            "options": [
+              {
+                "id": "mood_action",
+                "label": "Хочется движухи"
+              },
+              {
+                "id": "mood_relax",
+                "label": "Расслабиться и отвлечься"
+              },
+              {
+                "id": "mood_story",
+                "label": "Погрузиться в историю"
+              },
+              {
+                "id": "mood_explore",
+                "label": "Перенестись в другой мир"
+              },
+              {
+                "id": "mood_thought",
+                "label": "Подумать о сложном"
+              },
+              {
+                "id": "comedy",
+                "label": "Комедия"
+              },
+              {
+                "id": "drama",
+                "label": "Драма"
+              },
+              {
+                "id": "thriller",
+                "label": "Триллер"
+              },
+              {
+                "id": "adventure",
+                "label": "Приключения"
+              },
+              {
+                "id": "fantasy",
+                "label": "Фантастика"
+              },
+              {
+                "id": "detective",
+                "label": "Детектив"
+              },
+              {
+                "id": "avoid_stress",
+                "label": "Не хочу напрягаться"
+              },
+              {
+                "id": "avoid_dark",
+                "label": "Без тяжёлых тем"
+              },
+              {
+                "id": "avoid_slow",
+                "label": "Без медленного начала"
+              }
+            ],
+            "multiple": true,
+            "controls": [
+              "unknown",
+              "indifferent",
+              "none"
+            ]
+          },
+          "selected": [],
+          "text": "Будем смотреть вместе с ребёнком 7 лет. Нужен один полнометражный мультфильм: добрый, смешной, без страшных сцен. Не сериал. Сегодня на просмотр есть 90 минут.",
+          "kind": "answer",
+          "answer": "Будем смотреть вместе с ребёнком 7 лет. Нужен один полнометражный мультфильм: добрый, смешной, без страшных сцен. Не сериал. Сегодня на просмотр есть 90 минут.",
+          "acceptedContext": {
+            "company": {
+              "value": "children",
+              "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+              "quote": "Будем смотреть вместе с ребёнком 7 лет."
+            },
+            "childAge": {
+              "value": 7,
+              "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+              "quote": "с ребёнком 7 лет"
+            },
+            "timeMode": {
+              "value": "session",
+              "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+              "quote": "Сегодня на просмотр есть 90 минут."
+            },
+            "commitment": {
+              "value": "single",
+              "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+              "quote": "Нужен один полнометражный мультфильм"
+            },
+            "onlyEnded": null,
+            "format": {
+              "value": "movie",
+              "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+              "quote": "Нужен один полнометражный мультфильм"
+            }
+          },
+          "acceptedTime": {
+            "minutes": 90,
+            "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+            "quote": "Сегодня на просмотр есть 90 минут."
+          }
+        }
+      ],
+      "facts": [
+        {
+          "key": "format.movie",
+          "text": "Нужен один полнометражный мультфильм, не сериал.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "Нужен один полнометражный мультфильм",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "tone.feelgood",
+          "text": "Хочется добрый мультфильм.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "добрый",
+          "feature": "tone.feelgood",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "humor.funny",
+          "text": "Хочется смешной мультфильм.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "смешной",
+          "feature": "humor.funny",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "tone.creepy",
+          "text": "Страшные сцены исключены.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+          "quote": "без страшных сцен",
+          "feature": "tone.creepy",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        }
+      ],
+      "question": null,
+      "summary": "Ты хочешь один добрый и смешной полнометражный мультфильм для совместного просмотра с ребёнком 7 лет, строго без страшных сцен и не сериал. Сегодня есть 90 минут.",
+      "uncertainties": [
+        "Возрастная пригодность проверяется по доступной разметке; если данных нет, она остаётся неизвестной.",
+        "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+      ],
+      "retractions": [],
+      "sessionTime": {
+        "minutes": 90,
+        "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+        "quote": "Сегодня на просмотр есть 90 минут."
+      },
+      "factRemovalUndo": null,
+      "result": {
+        "top": {
+          "id": "tt0381971",
+          "domain": "cartoon",
+          "name": "Curious George",
+          "ru": "Любопытный Джордж",
+          "year": 2006,
+          "image": null,
+          "poster": "https://upload.wikimedia.org/wikipedia/en/6/6b/3rd_Curious_George_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+          "kind": "film",
+          "series": [],
+          "genres": [
+            "Adventure",
+            "Animation",
+            "Comedy"
+          ],
+          "runtime": 87,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "IMDb 6.5",
+          "link": "https://www.imdb.com/title/tt0381971/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.516,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.45,
+            "prior": 0.065
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «добрый»»: «тёплое, доброе»",
+                "factIds": [
+                  "mood:tone.feelgood"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «смешной»»: «смешно»",
+                "factIds": [
+                  "mood:humor.funny"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Зрители жалуются: слабый сюжет, дыры",
+                "factIds": [
+                  "risk:flaw:story.weak"
+                ]
+              },
+              {
+                "text": "Оценка IMDb 6.5: ниже, чем у большинства в каталоге",
+                "factIds": [
+                  "risk:quality"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "IMDb 6.5 из 10, 19 856 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "87 мин",
+                "factIds": [
+                  "fact:runtime"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:tone.feelgood",
+              "type": "mood",
+              "f": "tone.feelgood",
+              "why": [
+                "сегодня хочется: «добрый»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:cute",
+                  "kind": "genome",
+                  "q": "cute",
+                  "rel": 0.929
+                }
+              ]
+            },
+            {
+              "id": "mood:humor.funny",
+              "type": "mood",
+              "f": "humor.funny",
+              "why": [
+                "сегодня хочется: «смешной»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:humor",
+                  "kind": "genome",
+                  "q": "humor",
+                  "rel": 0.35
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:story.weak",
+              "type": "risk_flaw",
+              "f": "story.weak",
+              "evidence": [
+                {
+                  "id": "wiki:p3",
+                  "kind": "wiki",
+                  "q": "some criticized the plot and modern references",
+                  "section": null,
+                  "url": null,
+                  "ru": "некоторых критиков раздражали сюжет и современные отсылки"
+                }
+              ]
+            },
+            {
+              "id": "risk:quality",
+              "type": "risk_quality",
+              "ratio": 0.65,
+              "desc": "IMDb 6.5"
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.65,
+              "total": 19856,
+              "desc": "IMDb 6.5"
+            },
+            {
+              "id": "fact:runtime",
+              "type": "fact",
+              "runtime": 87
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 87 мин; сегодня есть 90 мин."
+            },
+            {
+              "key": "age",
+              "status": "unknown",
+              "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+            }
+          ],
+          "ai": {
+            "reason": "«Любопытный Джордж» — добрые и смешные проделки обезьянки без зловещих злодеев; для вашего совместного вечера на 87 минут.",
+            "caveat": "Есть разлука с другом и короткие моменты огорчения.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        "alternatives": [
+          {
+            "id": "tt2452042",
+            "domain": "cartoon",
+            "name": "The Peanuts Movie",
+            "ru": "Снупи и мелочь пузатая в кино",
+            "year": 2015,
+            "image": null,
+            "poster": "https://upload.wikimedia.org/wikipedia/en/7/77/Peanuts_2015.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "kind": "film",
+            "series": [],
+            "genres": [
+              "Adventure",
+              "Animation",
+              "Comedy"
+            ],
+            "runtime": 88,
+            "seasons": null,
+            "episodes": null,
+            "status": null,
+            "rating": "IMDb 7",
+            "link": "https://www.imdb.com/title/tt2452042/",
+            "price": null,
+            "label": "try",
+            "labelText": "Вариант по твоему запросу",
+            "score": 2.192,
+            "parts": {
+              "fit": 0,
+              "penalty": 0,
+              "mood": 2.067,
+              "prior": 0.125
+            },
+            "mainAspect": null,
+            "explanation": {
+              "reasons": [
+                {
+                  "text": "Под настроение «сегодня хочется: «добрый»»: «тёплое, доброе»",
+                  "factIds": [
+                    "mood:tone.feelgood"
+                  ]
+                },
+                {
+                  "text": "Под настроение «сегодня хочется: «смешной»»: «смешно»",
+                  "factIds": [
+                    "mood:humor.funny"
+                  ]
+                }
+              ],
+              "risks": [],
+              "info": [
+                {
+                  "text": "IMDb 7 из 10, 54 239 оценок",
+                  "factIds": [
+                    "fact:reviews"
+                  ]
+                },
+                {
+                  "text": "88 мин",
+                  "factIds": [
+                    "fact:runtime"
+                  ]
+                }
+              ]
+            },
+            "facts": [
+              {
+                "id": "mood:tone.feelgood",
+                "type": "mood",
+                "f": "tone.feelgood",
+                "why": [
+                  "сегодня хочется: «добрый»"
+                ],
+                "evidence": [
+                  {
+                    "id": "genome:cute",
+                    "kind": "genome",
+                    "q": "cute",
+                    "rel": 0.803
+                  }
+                ]
+              },
+              {
+                "id": "mood:humor.funny",
+                "type": "mood",
+                "f": "humor.funny",
+                "why": [
+                  "сегодня хочется: «смешной»"
+                ],
+                "evidence": [
+                  {
+                    "id": "genre:Comedy",
+                    "kind": "genre",
+                    "q": "Comedy"
+                  }
+                ]
+              },
+              {
+                "id": "fact:reviews",
+                "type": "fact",
+                "ratio": 0.7,
+                "total": 54239,
+                "desc": "IMDb 7"
+              },
+              {
+                "id": "fact:runtime",
+                "type": "fact",
+                "runtime": 88
+              }
+            ],
+            "feasibility": [
+              {
+                "key": "minutes",
+                "status": "yes",
+                "text": "Фильм идёт 88 мин; сегодня есть 90 мин."
+              },
+              {
+                "key": "age",
+                "status": "unknown",
+                "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+              },
+              {
+                "key": "excluded-features",
+                "status": "unknown",
+                "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+              }
+            ],
+            "ai": {
+              "reason": "«Снупи и мелочь пузатая в кино» сочетает смешные фантазии пса и добрую историю о застенчивости — для просмотра вместе.",
+              "caveat": "Есть условные воздушные бои в фантазиях Снупи и переживания из-за школьных неудач.",
+              "likelySeen": false,
+              "own": false
+            }
+          },
+          {
+            "id": "tt0069289",
+            "domain": "cartoon",
+            "name": "Snoopy Come Home",
+            "ru": "Снупи, вернись домой",
+            "year": 1972,
+            "image": null,
+            "poster": null,
+            "kind": "film",
+            "series": [],
+            "genres": [
+              "Adventure",
+              "Animation",
+              "Comedy"
+            ],
+            "runtime": 80,
+            "seasons": null,
+            "episodes": null,
+            "status": null,
+            "rating": "IMDb 7.3",
+            "link": "https://www.imdb.com/title/tt0069289/",
+            "price": null,
+            "label": "try",
+            "labelText": "Вариант по твоему запросу",
+            "score": 2.237,
+            "parts": {
+              "fit": 0,
+              "penalty": 0,
+              "mood": 2.14,
+              "prior": 0.096
+            },
+            "mainAspect": null,
+            "explanation": {
+              "reasons": [
+                {
+                  "text": "Под настроение «сегодня хочется: «смешной»»: «смешно»",
+                  "factIds": [
+                    "mood:humor.funny"
+                  ]
+                },
+                {
+                  "text": "Под настроение «Смотрю с детьми»: «для всей семьи»",
+                  "factIds": [
+                    "mood:content.family"
+                  ]
+                }
+              ],
+              "risks": [],
+              "info": [
+                {
+                  "text": "IMDb 7.3 из 10, 5 722 оценок",
+                  "factIds": [
+                    "fact:reviews"
+                  ]
+                },
+                {
+                  "text": "80 мин",
+                  "factIds": [
+                    "fact:runtime"
+                  ]
+                }
+              ]
+            },
+            "facts": [
+              {
+                "id": "mood:humor.funny",
+                "type": "mood",
+                "f": "humor.funny",
+                "why": [
+                  "сегодня хочется: «смешной»"
+                ],
+                "evidence": [
+                  {
+                    "id": "genome:funny",
+                    "kind": "genome",
+                    "q": "funny",
+                    "rel": 0.375
+                  }
+                ]
+              },
+              {
+                "id": "mood:content.family",
+                "type": "mood",
+                "f": "content.family",
+                "why": [
+                  "Смотрю с детьми"
+                ],
+                "evidence": [
+                  {
+                    "id": "genome:disney",
+                    "kind": "genome",
+                    "q": "disney",
+                    "rel": 0.489
+                  }
+                ]
+              },
+              {
+                "id": "fact:reviews",
+                "type": "fact",
+                "ratio": 0.73,
+                "total": 5722,
+                "desc": "IMDb 7.3"
+              },
+              {
+                "id": "fact:runtime",
+                "type": "fact",
+                "runtime": 80
+              }
+            ],
+            "feasibility": [
+              {
+                "key": "minutes",
+                "status": "yes",
+                "text": "Фильм идёт 80 мин; сегодня есть 90 мин."
+              },
+              {
+                "key": "age",
+                "status": "unknown",
+                "text": "Возрастная пригодность по проверенному источнику пока не подтверждена."
+              },
+              {
+                "key": "excluded-features",
+                "status": "unknown",
+                "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+              }
+            ],
+            "ai": {
+              "reason": "«Снупи, вернись домой» — полнометражная история с забавными проделками пса и птицы, где главное — дружба и привязанность.",
+              "caveat": "Грустнее остальных: есть больная девочка в больнице и долгое прощание с друзьями.",
+              "likelySeen": false,
+              "own": false
+            }
+          }
+        ],
+        "belief": 0.139,
+        "sieves": [
+          {
+            "id": 1,
+            "name": "Можно ли",
+            "removed": 0
+          },
+          {
+            "id": 2,
+            "name": "Было ли",
+            "removed": 0
+          },
+          {
+            "id": 3,
+            "name": "Сделано ли нормально",
+            "removed": 204
+          },
+          {
+            "id": 4,
+            "name": "Моё ли (жёсткие стопы)",
+            "removed": 0
+          },
+          {
+            "id": 5,
+            "name": "Подходит ли сегодня (обязательное)",
+            "removed": 414
+          }
+        ],
+        "considered": 144,
+        "taste": {
+          "confirmed": [],
+          "inferred": [],
+          "dislikes": [],
+          "hardNo": [],
+          "consumed": 0
+        },
+        "today": null,
+        "ai": {
+          "understood": "Ты хочешь один добрый и смешной полнометражный мультфильм для совместного просмотра с ребёнком 7 лет, строго без страшных сцен и не сериал. Сегодня есть 90 минут.",
+          "model": "gpt-6.1-sol",
+          "shortlist": 60
+        }
+      },
+      "provisional": false,
+      "needsPlan": false,
+      "failedAction": null,
+      "familiar": {
+        "marked": [],
+        "keep": [],
+        "hidden": [],
+        "excluded": [],
+        "undo": null
+      },
+      "replacement": null,
+      "browseSeen": []
+    },
+    "action": {
+      "type": "more"
+    },
+    "uid": "11dc888e-b4f9-43bc-a32a-273fceac28a7",
+    "domain": "cartoon",
+    "rememberedExclusions": []
+  },
+  "response": {
+    "status": "completed",
+    "model": "gpt-6.1-sol",
+    "output": [
+      {
+        "id": "rs_07f26fc8eb784f58016aea1049ef7c87d2950b18bb0d04758d",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq6hBWJ_J-OtLNhhPArsvMeaOaJFe02PEzhjnN8YZXHcE0ZKqf6iHdMba48gId3cYtS-7PEuWbpSMeTsWq_40kzS7FPg749P6uCsVanyNPfnrAAAMZKuQ9ift-RtX68Q-izCB5ka19zR-4quQa-YZ7UBnerbSlpz_gZs90UbRE5qVQHmbecLAHhnKnMuNIMZSXkA8Zw7sZ42xpcPtM1J3gApNMVffJj7F7Zj3REVaX_T8N992De0mFSlBRJ5W8y1AModg8o5nGhE_f5RrDQ2X36KwXqiN7pRctB3cYv1zNmk0b5wtVlgXaooQ1SLBJqpW_lC7xzFpK5naei1jdasXIqe8x4tGMZGt-L4H3WQ4qjthZL9GQ910kgnIHlzI42XYmjsdjIfey9NoBU3DlS5Y2fW4MuFKKgzk1-miHBBoj__lwvckiBsEtK4oxWhbNtrumSlMbu370Sdo0UCJZ3tKRkbbVRN545pGBkLD-G099M-yeGPiIWKJB1fXykDzYlqQfPBCcoYVdBp_Aj3_v21rkzyC4c-r2qCY9w7EaXFBfebyvTtuCEM7Ck8J45YAeEKtAUERAtBwKF1ULBpvHtCeTDN1BnEzLjc7fBk9HGpAIsMuJqdUCx8jktyRsqOMB5S7vn76A61EmuQOAyK95UjeJ0GwwK05Ttq81iG8nNANqrGyY8l6nTOUI7_4GjbS_WpUbovV99yoU0KVdxOwi0agbrXxM4Ls3NqeL3tQ-YGywVWYRgl4LNcTWrbyn1jeSvBDHQOTTlX64dMBYKIwm-g5UGK3U4Avs6__KQunsUEQR9igShFxO7R6pUnC-xuxPIXTth8SDMPctISWOtIFnXghuP8_wWyiK0HIIRzwQ09W5fvNrchCYcJV0ZgWAy6-1R-gw2HjgKvhRP87Paw_BtG_uPbomp04NZVINEv9yNM3066U_SKM66pZK2Mc7V7Nvbw19zqWgbFdg1kTCVv09fMHls4CDpjNjxMQmH30m3ffkCidUvFRr9Kr5q3SVKYLspkxr0T-AvSI6y6bdAf6B-HHvhmAH2LQvqxqixzKTYvUWSOdesduQlYw_90QJbz67np8IKehcN80pCqOWDio1tEEHb-YG47fdxLYKfyVuEdpHkgZENJPn95CT6B5LH1AC_5d0lby9amyjk9J8VIfAXnyVxy8XdQxxOVGf2Mrsx-U96cBTwLV9AzIz65ie24GrL5bRUbN1aJdX8HDhjTEWyfv9PErFCeJHW0xldqLhSwHzoM6GzOpQDhBPpT8vvaFsKdG7moufEEG9IiipdrAQIW-3Ho7ZpC3ZMMF0aJOCP9aRJVyHbC4wvk61CnP2y_pqR3YVI8KD89U77RhHz6KNdkVtsd73vMehCQlRQoYIuDdLzb8ok3s8hcaUazGkcgjbSyoDhs2q8ju2dPG9mh49-ROhLg2FFpT_oJ8deLTgCCZ7voQZ0rURUgyryVyv_56OPYmlTXQAb2GEAnuERRVoa4nJiV7RToMGwLY2B6IJG36ANwjhEciVX6GDeUg7P_I87gd7vlERRPJGBCLN5TE9QXdsxESGpRdE9bsi8dxOIZ7WcEpLR0ZF3hSlot5C6wMVeKvJKRW2x4SPx4hHfD2G1k_nDio9KgopcpoQFMMn6YQtRmgJDs7kCVrUYld9Q3UuldL0OYQq6ekneZa-1qpt66-2hhvGXR-jZ7J45ewUcoqJifgeKxaNKoMHpyugHEHFgJuxSbKB6r3Vvu98lyezUOIEYAFG6UfTQ6vz4RI4qBODG456EnbJ-4lgeTsNbdVUHh45vm4EfbSO9XMvLtfhlRXWFKw4ocC61QYiPYNPT5UG9AmtIRsIW16rKRFkUcrFWwOTa0J-izGown9x9VMlPOj8r83LBHplepekCDFRT83rvngtsk_CJOdAyq83hU5D1Mm8z6C9-Ef4lBgYF4nFzLzKFgaoYy01Th223xWa8aME_nD04pqQtonaqugAe255_QIQpI3gsLCymdpvjMH2bkwsbXlGSmIsb6Zx93p1Dyn_DVkv4RFd06xh_lWWIG40pqbEst2gp9xrLZxz9ZqgY9G1F5PD1rIEHYRArXiOmmmJXMdg5hgw3vhDvErVUYpQ-NSDE9XhkUabLSlMop7o_-w0nSUZ3OLJj-pbn8yfCbcPRQOgOkqenCFWHnEYwsCmL2dTlH28rkwj2el2VKlUuu9skXfD1eZv5-5DnFT2wTOW-_H7YwzQW77mLMauypQbFWjzQ5LH5ihZudA0uOzm_d-RBJYcHDU3goThn_LwfJLVKjvErmB4u35ocRK51CdikqtdPx5BR-yvi09mrI5dd8Jj8wZRWAMkrss4T9-lz09dNPTb3zMnTU3177u-PwR1wF2DsRJ_qUid_ByQ2_OchUYRrlvIVLRgbK-XxYzk5heUaHZJdN_RblCjSKa-x-IzvoC_EuE8Srb6ZfEjdxjJ6fQW-zrC9ZoHbjF1I4jzv_VvNGIX-17rEVPcVBlOiOPqInqhW03FDLaBaS7gkq4sG7FNDpDXFcgpyt5t9fTtK6sIgGAtQDZhxy0jDK5doI9WcGe8fIDzyhpZ-7_1AEDqoB-Z3gmWhK-ILKA750CjneYMTl0mz1-duhHPlsN8X48-YgjUtkchqG7DQLg7DMcq3gMQGMyA6U4oRpzLsx6r7ysKFnNzX2-E50Q2xpO3zQ62Gx8PdYJR6Nr2marvC2o1F0a8_7HgaMsJgFln4uRc4RTtlYsWeFDO1zSheKaOXjnROg9o9KyO_0TLWqsUjX6jhZAmXRlRzqXElV5kaGvPShsUyXHPFMuqQQJzY8wtPsxMPYj5G6TrPfJ3IXP3fz-1IW3L_doUciYFgvKyLrlmlbz8AgDna5il6pqxich-JgZ6imdM_kFrqF5giCwfrR_z6qdIfvWoNHYGlLICs7wzxwNahgvfsMcgNjx9eV1VoUaJQTGQ_7yHfyGulLjzlWGrqpUTORHXoTmy4Y9EDHA1YD_9XvtqchI8I2c1jCraNlWIAGBNlF6_pnBZo69EpnCRX_J29uKdEsHYfxNGVOWj_t0anetNXkGOiYCv8jZ7Mt9GaizGE_W-kfJDGL7_Udgz47ZT7U88gKSI_4z5wuaWbjLsJxpaKQVfVHjSeAPfA2XT49RtD2ACxl6cvI6k4xhB7wj3tauq1ArzneVFp7smiAzJMEF_bk-ZXx0kHx6ShiHNla7JkNS-2aHLXSgXJKO18YAFI1nRMjE7UYk75ZJ62qYqWcmq6SSr68UXFCy63E2LHAweSkJPnXFhQEd1BIj371_Ng_Z0g9KIFKQHu07Zob-lqHZLtDnq57to4e7fhNuc_UXTYRCHPPgXBGcDeA9GTuhk9ms_KtJeTsBN1ToA-NPTVv6pmXBCok-HkNMugtMf3GKUF74n6_KJDiTI3Cks6HpUJSKhAe1qp3n_6ZA9FR0tq63avIe96c4VRkFpLquvwvAIL4KAK-3Pv1z_r1cPwkeaVof1cUczxzh1j253h-8-nZnLxmYUW05MuilGaxJZdtcdGApuSMXrlqM2eJ60WOiU985YxzOk-W4KV8ZqkGIvK1EMNthcWJn6AIm4BYdref2t0p1Dr5kDTvFYRcyBnlgN-ZiyUvRc_HTP5yNfAOrtEEiki1N13LnyrmD4rpTDhNwt6OLIe-QXRna701vDVBEk71eq3qzojqji6kZQM2t4O_-ezyO3FyMlcZYNsqBKs91glp6IZGYxzEiet-Ktuu2yTe0aPfEKw4tvVb3FUiJS8kZyNAnz1bmlRM3mcRiMZ8rFknDdqyS3UXQve_RpWP1uCx6ELInR8VsHo0cpA94012E-Z2DKiRwhO7vDuyaV5G08TfVSySv3aZ1yml46ofKoESqhiyNucu23tkziZiADAvbwaQPRmEi6CL0ypt9JbONI7TmEqI8PN4DpbYPxQXR2QCaCTtdaM8QkSnklSDQClYfOjxNDYnXsZI0OkywYxr08nwC_vXp-1G1QMvvyV-zNrCs9zrlizfYXsq7Mqn3Au6gZcjOihc-pjoFPXgq8-3drq8aLXYQE7ujwqsw0JslrY1Rv4tIObVV3MQANM20s_4tSWhTFcmi9M-3Swymue4Y6uTQEl5pJnDmYBXAN67Rb4OYjNnmWLl82BPAWYihzlPZkeCOFakwKfGRlVi1nGAH-sYfgDbHJWDdvnbu1qJj-jd1cKXtyZi9tU9gVygY204ELof3kyCb_c1DXCtEQS1HbmmFeNm02ydVO0i4gfv8RLWdA3VlJge8XwF_AAEZD0Xz2gL4C_Tg5a3iiDiXf4zgdDKico1CKssT3HaoxPBLY2vYh263a9fjUtc1zDAjFhHtCmRN2yeD2jtTa6qzZ5SiK8E2S0dkktC7kQMnfjMx-WwmJQjTO19qiAkw2uXrRLgvmh6o=",
+        "summary": []
+      },
+      {
+        "id": "msg_07f26fc8eb784f58016aea1054193887d288a0d9441f15ab5f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"understood\":\"Тебе нужен добрый и смешной полнометражный мультфильм до 90 минут для просмотра с ребёнком 7 лет, строго без страшных сцен.\",\"picks\":[{\"id\":\"\",\"title\":\"Winnie the Pooh: Springtime with Roo\",\"year\":2004,\"reason\":\"Добрые пасхальные хлопоты Винни и Ру с песнями и мягким юмором подойдут для вашего совместного просмотра; идут 65 минут.\",\"caveat\":\"Спокойный темп; Кролик сердится на друзей, но история не про опасные приключения.\",\"likelySeen\":false}]}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ]
+  }
+}

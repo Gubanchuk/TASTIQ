@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-03T16:47:56.347Z",
+  "model": "gpt-6.1-sol",
+  "sourceCommitBefore": "e28e6313d478b93790ca63fe6470e0ba8b51ea77",
+  "sourceHashes": {
+    "src/core/media-conversation.js": "fe70fcc997bf9cb3d3685dcbbd8ebaa4d8465fe373e6624befa6e6279182d5a6",
+    "src/ai/media-conversation.js": "3e343fdd6f7e038899f04e52ab7a63b3231601b537104d4f1c0ed216429a1189",
+    "src/core/session-time.js": "fdc40f87fead31dd3ee45040e331b681fab1de37ff4790153c57996f9d28f99b",
+    "src/ai/prompt.js": "70b513210a74d50efa26b85306214a4806b7da2f0ea7f68038676735a4b75f69",
+    "src/ai/pick.js": "81d6797a7810e818302ed881cda18d1bb9568031a27b83ba0e7888f5796c0ea0"
+  },
+  "cap": 0.5,
+  "maxCalls": 10,
+  "heldHistorical": [
+    {
+      "id": "prod-live-20261102-01:1",
+      "reserveUsd": 0.25
+    }
+  ],
+  "freeModelGet": 200
+}

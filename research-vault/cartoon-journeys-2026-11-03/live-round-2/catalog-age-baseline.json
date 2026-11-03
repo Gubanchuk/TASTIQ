@@ -1,0 +1,59 @@
+{
+  "films": 762,
+  "from2019": 247,
+  "unknownYear": 0,
+  "targets": [
+    {
+      "query": "Mars Express",
+      "matches": [
+        {
+          "id": "tt26915336",
+          "name": "Mars Express",
+          "ru": "Марс Экспресс",
+          "year": 2023,
+          "runtime": 88
+        }
+      ]
+    },
+    {
+      "query": "Fantastic Planet",
+      "matches": [
+        {
+          "id": "tt0070544",
+          "name": "Fantastic Planet",
+          "ru": "Дикая планета",
+          "year": 1973,
+          "runtime": 72
+        }
+      ]
+    },
+    {
+      "query": "Gandahar",
+      "matches": [
+        {
+          "id": "tt0095525",
+          "name": "Gandahar",
+          "ru": "Гандахар. Световые годы",
+          "year": 1987,
+          "runtime": 78
+        }
+      ]
+    },
+    {
+      "query": "The Iron Giant",
+      "matches": [
+        {
+          "id": "tt0129167",
+          "name": "The Iron Giant",
+          "ru": "Стальной гигант",
+          "year": 1999,
+          "runtime": 86
+        }
+      ]
+    },
+    {
+      "query": "Titan A.E.",
+      "matches": []
+    }
+  ]
+}

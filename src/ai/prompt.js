@@ -38,7 +38,18 @@ const ADAPTIVE_GAME_SYSTEM=GAME_SYSTEM.split('\n').map(line=>line.startsWith('- 
   : line.startsWith('- Distinguish the person')
   ? '- Use only supported active preferences. Corrections and retractions supersede earlier interpretations. Indifference is not dislike; an unknown reason is not permission to invent one. A conditional tolerance stays conditional. Explicit exclusions win; never recommend a known violation with a caveat.'
   : line).join('\n')+'\nIn this adaptive game dialogue only explicitly completed or excluded titles have been removed. A game merely started or dropped may be offered to continue if the current request allows it. Respect the full evidence-backed conversation; factual unknowns must be stated, not guessed.';
-export const systemFor=(state)=>state.domain==='game'?(state.conversation?ADAPTIVE_GAME_SYSTEM:GAME_SYSTEM):state.domain==='cartoon'||state.situation?.company==='kids'?CONTEXTUAL_SYSTEM:SYSTEM;
+const adaptiveMediaSystem=base=>base.split('\n').map(line=>line.startsWith("You get the person's answers")
+  ? "You get the person's active answers and an engine shortlist. The engine enforces supported catalog constraints, but not every semantic exclusion is covered by its tags. You must check the full current request yourself; being shortlisted does not mean every condition is satisfied."
+  : line.startsWith('- Start from the titles the person loves')
+  ? '- Start from today’s explicit goal and conditions; reference titles and past likes are secondary evidence, never a substitute for the current request.'
+  : line.startsWith('- Prefer one clear best match')
+  ? '- Prefer one clear best match first, then different alternatives only while they respect the request. Return fewer picks, or an empty list, if there are not enough suitable candidates.'
+  : line).join('\n')+'\nOmit any candidate you know violates an explicit exclusion or requirement. A caveat cannot waive it, including during more/replacement. Do not claim absence of frightening scenes or age suitability without evidence; unknowns stay unknown. Soft preferences may have caveats, but never knowingly fill the count with a hard conflict. Corrections and retractions supersede earlier interpretations.';
+export const systemFor=state=>{
+ if(state.domain==='game')return state.conversation?ADAPTIVE_GAME_SYSTEM:GAME_SYSTEM;
+ const base=state.domain==='cartoon'||state.situation?.company==='kids'?CONTEXTUAL_SYSTEM:SYSTEM;
+ return state.conversation?adaptiveMediaSystem(base):base;
+};
 
 // Structured output: four picks in order, each with a reason, a caveat and a guess whether the person has seen it;
 // a pick outside the shortlist comes as title and year instead of an id.

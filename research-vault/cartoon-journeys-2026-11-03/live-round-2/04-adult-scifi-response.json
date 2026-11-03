@@ -1,0 +1,1827 @@
+{
+  "state": {
+    "version": 1,
+    "domain": "cartoon",
+    "id": "baf19449-88a8-4a28-b708-85363a07f8d0",
+    "revision": 2,
+    "mode": "guided",
+    "phase": "result",
+    "context": {
+      "company": "solo",
+      "childAge": null,
+      "minutes": 120,
+      "timeMode": "session",
+      "commitment": "single",
+      "onlyEnded": null,
+      "format": "movie"
+    },
+    "contextEvidence": {
+      "company": {
+        "value": "solo",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Сегодня смотрю один"
+      },
+      "childAge": null,
+      "timeMode": {
+        "value": "session",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Сегодня есть 120 минут."
+      },
+      "commitment": {
+        "value": "single",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Хочу один полнометражный мультфильм"
+      },
+      "onlyEnded": null,
+      "format": {
+        "value": "movie",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Хочу один полнометражный мультфильм"
+      }
+    },
+    "turns": [
+      {
+        "id": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "question": {
+          "id": "direction",
+          "title": "Какую анимацию хочется сегодня?",
+          "why": "Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.",
+          "options": [
+            {
+              "id": "mood_action",
+              "label": "Хочется движухи"
+            },
+            {
+              "id": "mood_relax",
+              "label": "Расслабиться и отвлечься"
+            },
+            {
+              "id": "mood_story",
+              "label": "Погрузиться в историю"
+            },
+            {
+              "id": "mood_explore",
+              "label": "Перенестись в другой мир"
+            },
+            {
+              "id": "mood_thought",
+              "label": "Подумать о сложном"
+            },
+            {
+              "id": "comedy",
+              "label": "Комедия"
+            },
+            {
+              "id": "drama",
+              "label": "Драма"
+            },
+            {
+              "id": "thriller",
+              "label": "Триллер"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "fantasy",
+              "label": "Фантастика"
+            },
+            {
+              "id": "detective",
+              "label": "Детектив"
+            },
+            {
+              "id": "avoid_stress",
+              "label": "Не хочу напрягаться"
+            },
+            {
+              "id": "avoid_dark",
+              "label": "Без тяжёлых тем"
+            },
+            {
+              "id": "avoid_slow",
+              "label": "Без медленного начала"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [],
+        "text": "Сегодня смотрю один, взрослый. Хочу один полнометражный мультфильм: напряжённое научно-фантастическое приключение, интересный мир и серьёзная история. Без детских шуток и музыкальных номеров. Не сериал и не аниме. Сегодня есть 120 минут.",
+        "kind": "answer",
+        "answer": "Сегодня смотрю один, взрослый. Хочу один полнометражный мультфильм: напряжённое научно-фантастическое приключение, интересный мир и серьёзная история. Без детских шуток и музыкальных номеров. Не сериал и не аниме. Сегодня есть 120 минут.",
+        "acceptedContext": {
+          "company": {
+            "value": "solo",
+            "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+            "quote": "Сегодня смотрю один"
+          },
+          "childAge": null,
+          "timeMode": {
+            "value": "session",
+            "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+            "quote": "Сегодня есть 120 минут."
+          },
+          "commitment": {
+            "value": "single",
+            "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+            "quote": "Хочу один полнометражный мультфильм"
+          },
+          "onlyEnded": null,
+          "format": {
+            "value": "movie",
+            "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+            "quote": "Хочу один полнометражный мультфильм"
+          }
+        },
+        "acceptedTime": {
+          "minutes": 120,
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Сегодня есть 120 минут."
+        }
+      }
+    ],
+    "facts": [
+      {
+        "key": "format.movie",
+        "text": "Один полнометражный мультфильм, не сериал.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Хочу один полнометражный мультфильм",
+        "feature": "format.animation",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "tension",
+        "text": "Хочется напряжённого приключения.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "напряжённое научно-фантастическое приключение",
+        "feature": "tension.high",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "science_fiction",
+        "text": "Хочется научной фантастики.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "научно-фантастическое приключение",
+        "feature": "world.scifi",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "adventure",
+        "text": "Хочется приключения.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "научно-фантастическое приключение",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "world_and_story",
+        "text": "Важны интересный мир и серьёзная история.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "интересный мир и серьёзная история",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "exclude_childish_jokes",
+        "text": "Без детских шуток.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Без детских шуток",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "exclude_musical_numbers",
+        "text": "Без музыкальных номеров.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Без детских шуток и музыкальных номеров",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "exclude_series_anime",
+        "text": "Сериалы и аниме исключены.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Не сериал и не аниме.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "Сегодня ты смотришь один и хочешь один полнометражный мультфильм: напряжённое научно-фантастическое приключение с интересным миром и серьёзной историей. Без детских шуток, музыкальных номеров и аниме; не сериал. На просмотр есть 120 минут.",
+    "uncertainties": [
+      "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+    ],
+    "retractions": [],
+    "sessionTime": {
+      "minutes": 120,
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "Сегодня есть 120 минут."
+    },
+    "factRemovalUndo": null,
+    "result": {
+      "top": {
+        "id": "tt26915336",
+        "domain": "cartoon",
+        "name": "Mars Express",
+        "ru": "Марс Экспресс",
+        "year": 2023,
+        "image": null,
+        "poster": "https://upload.wikimedia.org/wikipedia/en/b/b1/Mars_Express_film_poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "kind": "film",
+        "series": [],
+        "genres": [
+          "Action",
+          "Animation",
+          "Mystery"
+        ],
+        "runtime": 88,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "IMDb 7.5",
+        "link": "https://www.imdb.com/title/tt26915336/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 2.962,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 2.822,
+          "prior": 0.14
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+              "factIds": [
+                "mood:format.animation"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+              "factIds": [
+                "mood:world.scifi"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "IMDb 7.5 из 10, 15 841 оценок",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "88 мин",
+              "factIds": [
+                "fact:runtime"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:format.animation",
+            "type": "mood",
+            "f": "format.animation",
+            "why": [
+              "сегодня хочется: «Хочу один полнометражный мультфильм»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p0",
+                "kind": "wiki",
+                "q": "French animated science fiction thriller film",
+                "section": null,
+                "url": null,
+                "ru": "французский анимационный научно-фантастический триллер"
+              }
+            ]
+          },
+          {
+            "id": "mood:world.scifi",
+            "type": "mood",
+            "f": "world.scifi",
+            "why": [
+              "сегодня хочется: «научно-фантастическое приключение»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p7",
+                "kind": "wiki",
+                "q": "a futuristic society where humans and robots live side by side",
+                "section": null,
+                "url": null,
+                "ru": "футуристическое общество, где люди и роботы живут бок о бок"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.75,
+            "total": 15841,
+            "desc": "IMDb 7.5"
+          },
+          {
+            "id": "fact:runtime",
+            "type": "fact",
+            "runtime": 88
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "yes",
+            "text": "Фильм идёт 88 мин; сегодня есть 120 мин."
+          }
+        ],
+        "ai": {
+          "reason": "«Марс Экспресс» сочетает напряжённое расследование, продуманный мир людей и роботов и взрослую историю — прямо под твой запрос.",
+          "caveat": "Есть жестокие сцены; детектив здесь важнее космических путешествий.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "tt0472033",
+          "domain": "cartoon",
+          "name": "9",
+          "ru": "Девять",
+          "year": 2009,
+          "image": null,
+          "poster": "https://upload.wikimedia.org/wikipedia/en/c/c9/9posterfinal.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+          "kind": "film",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Animation"
+          ],
+          "runtime": 79,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "IMDb 7",
+          "link": "https://www.imdb.com/title/tt0472033/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.341,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.198,
+            "prior": 0.143
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+                "factIds": [
+                  "mood:world.scifi"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Зрители жалуются: слабый сюжет, дыры",
+                "factIds": [
+                  "risk:flaw:story.weak"
+                ]
+              },
+              {
+                "text": "Зрители жалуются: предсказуемо",
+                "factIds": [
+                  "risk:flaw:story.predictable"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "IMDb 7 из 10, 159 125 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "79 мин",
+                "factIds": [
+                  "fact:runtime"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу один полнометражный мультфильм»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:animation",
+                  "kind": "genome",
+                  "q": "animation",
+                  "rel": 0.782
+                }
+              ]
+            },
+            {
+              "id": "mood:world.scifi",
+              "type": "mood",
+              "f": "world.scifi",
+              "why": [
+                "сегодня хочется: «научно-фантастическое приключение»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:artificial intelligence",
+                  "kind": "genome",
+                  "q": "artificial intelligence",
+                  "rel": 0.554
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:story.weak",
+              "type": "risk_flaw",
+              "f": "story.weak",
+              "evidence": [
+                {
+                  "id": "genome:bad plot",
+                  "kind": "genome",
+                  "q": "bad plot",
+                  "rel": 0.481
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:story.predictable",
+              "type": "risk_flaw",
+              "f": "story.predictable",
+              "evidence": [
+                {
+                  "id": "genome:predictable",
+                  "kind": "genome",
+                  "q": "predictable",
+                  "rel": 0.389
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.7,
+              "total": 159125,
+              "desc": "IMDb 7"
+            },
+            {
+              "id": "fact:runtime",
+              "type": "fact",
+              "runtime": 79
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 79 мин; сегодня есть 120 мин."
+            }
+          ],
+          "ai": {
+            "reason": "«Девять» — тревожное приключение в мире погибшей цивилизации, где маленькие герои сталкиваются с совсем не детской угрозой.",
+            "caveat": "Научная фантастика смешана с мистикой; устройство мира объясняют не полностью.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "tt0095525",
+          "domain": "cartoon",
+          "name": "Gandahar",
+          "ru": "Гандахар. Световые годы",
+          "year": 1987,
+          "image": null,
+          "poster": null,
+          "kind": "film",
+          "series": [],
+          "genres": [
+            "Adventure",
+            "Animation",
+            "Fantasy"
+          ],
+          "runtime": 78,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "IMDb 6.9",
+          "link": "https://www.imdb.com/title/tt0095525/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.109,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.034,
+            "prior": 0.075
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+                "factIds": [
+                  "mood:world.scifi"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 6.9 из 10, 6 641 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "78 мин",
+                "factIds": [
+                  "fact:runtime"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу один полнометражный мультфильм»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:animated",
+                  "kind": "genome",
+                  "q": "animated",
+                  "rel": 0.683
+                }
+              ]
+            },
+            {
+              "id": "mood:world.scifi",
+              "type": "mood",
+              "f": "world.scifi",
+              "why": [
+                "сегодня хочется: «научно-фантастическое приключение»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:future",
+                  "kind": "genome",
+                  "q": "future",
+                  "rel": 0.702
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.69,
+              "total": 6641,
+              "desc": "IMDb 6.9"
+            },
+            {
+              "id": "fact:runtime",
+              "type": "fact",
+              "runtime": 78
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 78 мин; сегодня есть 120 мин."
+            }
+          ],
+          "ai": {
+            "reason": "«Гандахар» предлагает необычную биосферу, опасное вторжение и временной парадокс — для твоего интереса к миру и серьёзной фантастике.",
+            "caveat": "Рисовка и темп старой французской анимации; есть обнажённые тела.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "tt0070544",
+          "domain": "cartoon",
+          "name": "Fantastic Planet",
+          "ru": "Дикая планета",
+          "year": 1973,
+          "image": null,
+          "poster": "https://upload.wikimedia.org/wikipedia/en/1/12/Fantastic_Planet_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+          "kind": "film",
+          "series": [],
+          "genres": [
+            "Animation",
+            "Sci-Fi"
+          ],
+          "runtime": 72,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "IMDb 7.6",
+          "link": "https://www.imdb.com/title/tt0070544/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.287,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.114,
+            "prior": 0.173
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+                "factIds": [
+                  "mood:world.scifi"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 7.6 из 10, 43 653 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "72 мин",
+                "factIds": [
+                  "fact:runtime"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:world.scifi",
+              "type": "mood",
+              "f": "world.scifi",
+              "why": [
+                "сегодня хочется: «научно-фантастическое приключение»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:alien",
+                  "kind": "genome",
+                  "q": "alien",
+                  "rel": 0.76
+                }
+              ]
+            },
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу один полнометражный мультфильм»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:animated",
+                  "kind": "genome",
+                  "q": "animated",
+                  "rel": 0.783
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.76,
+              "total": 43653,
+              "desc": "IMDb 7.6"
+            },
+            {
+              "id": "fact:runtime",
+              "type": "fact",
+              "runtime": 72
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 72 мин; сегодня есть 120 мин."
+            }
+          ],
+          "ai": {
+            "reason": "«Дикая планета» берёт странной инопланетной экологией и серьёзной историей выживания людей — без детской комедии.",
+            "caveat": "Сюрреалистическая рисованная фантастика 1970-х; созерцания больше, чем экшена.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.1,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 204
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 11
+        }
+      ],
+      "considered": 547,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты смотришь один и хочешь один полнометражный мультфильм: напряжённое научно-фантастическое приключение с интересным миром и серьёзной историей. Без детских шуток, музыкальных номеров и аниме; не сериал. На просмотр есть 120 минут.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    },
+    "provisional": false,
+    "needsPlan": false,
+    "failedAction": null,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": null
+    },
+    "replacement": null,
+    "browseSeen": []
+  },
+  "screen": {
+    "domain": "cartoon",
+    "summary": "Сегодня ты смотришь один и хочешь один полнометражный мультфильм: напряжённое научно-фантастическое приключение с интересным миром и серьёзной историей. Без детских шуток, музыкальных номеров и аниме; не сериал. На просмотр есть 120 минут.",
+    "facts": [
+      {
+        "key": "format.movie",
+        "text": "Один полнометражный мультфильм, не сериал.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Хочу один полнометражный мультфильм",
+        "feature": "format.animation",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "tension",
+        "text": "Хочется напряжённого приключения.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "напряжённое научно-фантастическое приключение",
+        "feature": "tension.high",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "science_fiction",
+        "text": "Хочется научной фантастики.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "научно-фантастическое приключение",
+        "feature": "world.scifi",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "adventure",
+        "text": "Хочется приключения.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "научно-фантастическое приключение",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "world_and_story",
+        "text": "Важны интересный мир и серьёзная история.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "интересный мир и серьёзная история",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "exclude_childish_jokes",
+        "text": "Без детских шуток.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Без детских шуток",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "exclude_musical_numbers",
+        "text": "Без музыкальных номеров.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Без детских шуток и музыкальных номеров",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "exclude_series_anime",
+        "text": "Сериалы и аниме исключены.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Не сериал и не аниме.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "context:company",
+        "text": "Сегодня смотрю один",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Сегодня смотрю один",
+        "stance": "require",
+        "scope": "today",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "context:timeMode",
+        "text": "Сегодня есть 120 минут.",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Сегодня есть 120 минут.",
+        "stance": "require",
+        "scope": "today",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "context:commitment",
+        "text": "Хочу один полнометражный мультфильм",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Хочу один полнометражный мультфильм",
+        "stance": "require",
+        "scope": "today",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "context:format",
+        "text": "Хочу один полнометражный мультфильм",
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Хочу один полнометражный мультфильм",
+        "stance": "require",
+        "scope": "today",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      }
+    ],
+    "uncertainties": [
+      "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+    ],
+    "context": {
+      "company": "solo",
+      "childAge": null,
+      "minutes": 120,
+      "timeMode": "session",
+      "commitment": "single",
+      "onlyEnded": null,
+      "format": "movie"
+    },
+    "sessionTime": {
+      "minutes": 120,
+      "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+      "quote": "Сегодня есть 120 минут."
+    },
+    "canBack": true,
+    "canUndoFactRemoval": false,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "question": "Какую анимацию хочется сегодня?",
+        "answer": "Сегодня смотрю один, взрослый. Хочу один полнометражный мультфильм: напряжённое научно-фантастическое приключение, интересный мир и серьёзная история. Без детских шуток и музыкальных номеров. Не сериал и не аниме. Сегодня есть 120 минут.",
+        "superseded": false
+      }
+    ],
+    "type": "result",
+    "result": {
+      "top": {
+        "id": "tt26915336",
+        "domain": "cartoon",
+        "name": "Mars Express",
+        "ru": "Марс Экспресс",
+        "year": 2023,
+        "image": null,
+        "poster": "https://upload.wikimedia.org/wikipedia/en/b/b1/Mars_Express_film_poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "kind": "film",
+        "series": [],
+        "genres": [
+          "Action",
+          "Animation",
+          "Mystery"
+        ],
+        "runtime": 88,
+        "seasons": null,
+        "episodes": null,
+        "status": null,
+        "rating": "IMDb 7.5",
+        "link": "https://www.imdb.com/title/tt26915336/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 2.962,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 2.822,
+          "prior": 0.14
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+              "factIds": [
+                "mood:format.animation"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+              "factIds": [
+                "mood:world.scifi"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "IMDb 7.5 из 10, 15 841 оценок",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "88 мин",
+              "factIds": [
+                "fact:runtime"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:format.animation",
+            "type": "mood",
+            "f": "format.animation",
+            "why": [
+              "сегодня хочется: «Хочу один полнометражный мультфильм»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p0",
+                "kind": "wiki",
+                "q": "French animated science fiction thriller film",
+                "section": null,
+                "url": null,
+                "ru": "французский анимационный научно-фантастический триллер"
+              }
+            ]
+          },
+          {
+            "id": "mood:world.scifi",
+            "type": "mood",
+            "f": "world.scifi",
+            "why": [
+              "сегодня хочется: «научно-фантастическое приключение»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p7",
+                "kind": "wiki",
+                "q": "a futuristic society where humans and robots live side by side",
+                "section": null,
+                "url": null,
+                "ru": "футуристическое общество, где люди и роботы живут бок о бок"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.75,
+            "total": 15841,
+            "desc": "IMDb 7.5"
+          },
+          {
+            "id": "fact:runtime",
+            "type": "fact",
+            "runtime": 88
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "yes",
+            "text": "Фильм идёт 88 мин; сегодня есть 120 мин."
+          }
+        ],
+        "ai": {
+          "reason": "«Марс Экспресс» сочетает напряжённое расследование, продуманный мир людей и роботов и взрослую историю — прямо под твой запрос.",
+          "caveat": "Есть жестокие сцены; детектив здесь важнее космических путешествий.",
+          "likelySeen": false,
+          "own": false
+        }
+      },
+      "alternatives": [
+        {
+          "id": "tt0472033",
+          "domain": "cartoon",
+          "name": "9",
+          "ru": "Девять",
+          "year": 2009,
+          "image": null,
+          "poster": "https://upload.wikimedia.org/wikipedia/en/c/c9/9posterfinal.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+          "kind": "film",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Animation"
+          ],
+          "runtime": 79,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "IMDb 7",
+          "link": "https://www.imdb.com/title/tt0472033/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.341,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.198,
+            "prior": 0.143
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+                "factIds": [
+                  "mood:world.scifi"
+                ]
+              }
+            ],
+            "risks": [
+              {
+                "text": "Зрители жалуются: слабый сюжет, дыры",
+                "factIds": [
+                  "risk:flaw:story.weak"
+                ]
+              },
+              {
+                "text": "Зрители жалуются: предсказуемо",
+                "factIds": [
+                  "risk:flaw:story.predictable"
+                ]
+              }
+            ],
+            "info": [
+              {
+                "text": "IMDb 7 из 10, 159 125 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "79 мин",
+                "factIds": [
+                  "fact:runtime"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу один полнометражный мультфильм»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:animation",
+                  "kind": "genome",
+                  "q": "animation",
+                  "rel": 0.782
+                }
+              ]
+            },
+            {
+              "id": "mood:world.scifi",
+              "type": "mood",
+              "f": "world.scifi",
+              "why": [
+                "сегодня хочется: «научно-фантастическое приключение»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:artificial intelligence",
+                  "kind": "genome",
+                  "q": "artificial intelligence",
+                  "rel": 0.554
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:story.weak",
+              "type": "risk_flaw",
+              "f": "story.weak",
+              "evidence": [
+                {
+                  "id": "genome:bad plot",
+                  "kind": "genome",
+                  "q": "bad plot",
+                  "rel": 0.481
+                }
+              ]
+            },
+            {
+              "id": "risk:flaw:story.predictable",
+              "type": "risk_flaw",
+              "f": "story.predictable",
+              "evidence": [
+                {
+                  "id": "genome:predictable",
+                  "kind": "genome",
+                  "q": "predictable",
+                  "rel": 0.389
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.7,
+              "total": 159125,
+              "desc": "IMDb 7"
+            },
+            {
+              "id": "fact:runtime",
+              "type": "fact",
+              "runtime": 79
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 79 мин; сегодня есть 120 мин."
+            }
+          ],
+          "ai": {
+            "reason": "«Девять» — тревожное приключение в мире погибшей цивилизации, где маленькие герои сталкиваются с совсем не детской угрозой.",
+            "caveat": "Научная фантастика смешана с мистикой; устройство мира объясняют не полностью.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "tt0095525",
+          "domain": "cartoon",
+          "name": "Gandahar",
+          "ru": "Гандахар. Световые годы",
+          "year": 1987,
+          "image": null,
+          "poster": null,
+          "kind": "film",
+          "series": [],
+          "genres": [
+            "Adventure",
+            "Animation",
+            "Fantasy"
+          ],
+          "runtime": 78,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "IMDb 6.9",
+          "link": "https://www.imdb.com/title/tt0095525/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.109,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.034,
+            "prior": 0.075
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+                "factIds": [
+                  "mood:world.scifi"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 6.9 из 10, 6 641 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "78 мин",
+                "factIds": [
+                  "fact:runtime"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу один полнометражный мультфильм»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:animated",
+                  "kind": "genome",
+                  "q": "animated",
+                  "rel": 0.683
+                }
+              ]
+            },
+            {
+              "id": "mood:world.scifi",
+              "type": "mood",
+              "f": "world.scifi",
+              "why": [
+                "сегодня хочется: «научно-фантастическое приключение»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:future",
+                  "kind": "genome",
+                  "q": "future",
+                  "rel": 0.702
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.69,
+              "total": 6641,
+              "desc": "IMDb 6.9"
+            },
+            {
+              "id": "fact:runtime",
+              "type": "fact",
+              "runtime": 78
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 78 мин; сегодня есть 120 мин."
+            }
+          ],
+          "ai": {
+            "reason": "«Гандахар» предлагает необычную биосферу, опасное вторжение и временной парадокс — для твоего интереса к миру и серьёзной фантастике.",
+            "caveat": "Рисовка и темп старой французской анимации; есть обнажённые тела.",
+            "likelySeen": false,
+            "own": false
+          }
+        },
+        {
+          "id": "tt0070544",
+          "domain": "cartoon",
+          "name": "Fantastic Planet",
+          "ru": "Дикая планета",
+          "year": 1973,
+          "image": null,
+          "poster": "https://upload.wikimedia.org/wikipedia/en/1/12/Fantastic_Planet_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+          "kind": "film",
+          "series": [],
+          "genres": [
+            "Animation",
+            "Sci-Fi"
+          ],
+          "runtime": 72,
+          "seasons": null,
+          "episodes": null,
+          "status": null,
+          "rating": "IMDb 7.6",
+          "link": "https://www.imdb.com/title/tt0070544/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.287,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.114,
+            "prior": 0.173
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «научно-фантастическое приключение»»: «фантастика»",
+                "factIds": [
+                  "mood:world.scifi"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу один полнометражный мультфильм»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 7.6 из 10, 43 653 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "72 мин",
+                "factIds": [
+                  "fact:runtime"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:world.scifi",
+              "type": "mood",
+              "f": "world.scifi",
+              "why": [
+                "сегодня хочется: «научно-фантастическое приключение»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:alien",
+                  "kind": "genome",
+                  "q": "alien",
+                  "rel": 0.76
+                }
+              ]
+            },
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу один полнометражный мультфильм»"
+              ],
+              "evidence": [
+                {
+                  "id": "genome:animated",
+                  "kind": "genome",
+                  "q": "animated",
+                  "rel": 0.783
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.76,
+              "total": 43653,
+              "desc": "IMDb 7.6"
+            },
+            {
+              "id": "fact:runtime",
+              "type": "fact",
+              "runtime": 72
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Фильм идёт 72 мин; сегодня есть 120 мин."
+            }
+          ],
+          "ai": {
+            "reason": "«Дикая планета» берёт странной инопланетной экологией и серьёзной историей выживания людей — без детской комедии.",
+            "caveat": "Сюрреалистическая рисованная фантастика 1970-х; созерцания больше, чем экшена.",
+            "likelySeen": false,
+            "own": false
+          }
+        }
+      ],
+      "belief": 0.1,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 204
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 11
+        }
+      ],
+      "considered": 547,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Сегодня ты смотришь один и хочешь один полнометражный мультфильм: напряжённое научно-фантастическое приключение с интересным миром и серьёзной историей. Без детских шуток, музыкальных номеров и аниме; не сериал. На просмотр есть 120 минут.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60
+      }
+    }
+  },
+  "feedbackState": {
+    "step": "result",
+    "domain": "cartoon",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "Сегодня ты смотришь один и хочешь один полнометражный мультфильм: напряжённое научно-фантастическое приключение с интересным миром и серьёзной историей. Без детских шуток, музыкальных номеров и аниме; не сериал. На просмотр есть 120 минут.",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": []
+    },
+    "stops": [],
+    "asked": [],
+    "shown": [],
+    "liked": [],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {},
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": [],
+      "goalDriven": true,
+      "excludeSeries": false,
+      "goalWants": [
+        {
+          "f": "format.animation",
+          "evidence": "Хочу один полнометражный мультфильм"
+        },
+        {
+          "f": "tension.high",
+          "evidence": "напряжённое научно-фантастическое приключение"
+        },
+        {
+          "f": "world.scifi",
+          "evidence": "научно-фантастическое приключение"
+        }
+      ],
+      "goalAvoids": [],
+      "goalRequires": [
+        {
+          "f": "format.animation",
+          "evidence": "Хочу один полнометражный мультфильм"
+        }
+      ],
+      "goalExcludes": [],
+      "genreWants": [],
+      "minutes": 120,
+      "maxRuntime": 120
+    },
+    "seed": 550793,
+    "conversation": {
+      "domain": "cartoon",
+      "revision": 2,
+      "summary": "Сегодня ты смотришь один и хочешь один полнометражный мультфильм: напряжённое научно-фантастическое приключение с интересным миром и серьёзной историей. Без детских шуток, музыкальных номеров и аниме; не сериал. На просмотр есть 120 минут.",
+      "facts": [
+        {
+          "key": "format.movie",
+          "text": "Один полнометражный мультфильм, не сериал.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Хочу один полнометражный мультфильм",
+          "feature": "format.animation",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "tension",
+          "text": "Хочется напряжённого приключения.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "напряжённое научно-фантастическое приключение",
+          "feature": "tension.high",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "science_fiction",
+          "text": "Хочется научной фантастики.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "научно-фантастическое приключение",
+          "feature": "world.scifi",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "adventure",
+          "text": "Хочется приключения.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "научно-фантастическое приключение",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "world_and_story",
+          "text": "Важны интересный мир и серьёзная история.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "интересный мир и серьёзная история",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "exclude_childish_jokes",
+          "text": "Без детских шуток.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Без детских шуток",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "exclude_musical_numbers",
+          "text": "Без музыкальных номеров.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Без детских шуток и музыкальных номеров",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "exclude_series_anime",
+          "text": "Сериалы и аниме исключены.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Не сериал и не аниме.",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        }
+      ],
+      "context": {
+        "company": "solo",
+        "childAge": null,
+        "minutes": 120,
+        "timeMode": "session",
+        "commitment": "single",
+        "onlyEnded": null,
+        "format": "movie"
+      },
+      "contextEvidence": {
+        "company": {
+          "value": "solo",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Сегодня смотрю один"
+        },
+        "childAge": null,
+        "timeMode": {
+          "value": "session",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Сегодня есть 120 минут."
+        },
+        "commitment": {
+          "value": "single",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Хочу один полнометражный мультфильм"
+        },
+        "onlyEnded": null,
+        "format": {
+          "value": "movie",
+          "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "quote": "Хочу один полнометражный мультфильм"
+        }
+      },
+      "sessionTime": {
+        "minutes": 120,
+        "sourceId": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+        "quote": "Сегодня есть 120 минут."
+      },
+      "uncertainties": [
+        "Если длительность произведения неизвестна, попадание в лимит времени не подтверждено."
+      ],
+      "retractions": [],
+      "familiarity": {
+        "returnToIds": [],
+        "hiddenIds": [],
+        "excludedIds": []
+      },
+      "turns": [
+        {
+          "id": "baf19449-88a8-4a28-b708-85363a07f8d0:1",
+          "question": "Какую анимацию хочется сегодня?",
+          "answer": "Сегодня смотрю один, взрослый. Хочу один полнометражный мультфильм: напряжённое научно-фантастическое приключение, интересный мир и серьёзная история. Без детских шуток и музыкальных номеров. Не сериал и не аниме. Сегодня есть 120 минут.",
+          "kind": "answer",
+          "superseded": false
+        }
+      ]
+    }
+  }
+}
