@@ -1,0 +1,11 @@
+# Копия текущего подбора —03.11.2026
+
+По «ок погнали» реализована первая предложенная задача: «Скопировать подбор» в result header game/film/series/cartoon. Plain text: отправленный диалог, текущее понимание/условия/неясности и4видимые карточки в порядке с metadata/reason/caveat/feasibility/link. Без uid/диалоговыхID/библиотеки/глобального знакомства/оценок/черновиков/undo-карточек. Superseded/retracted source answers скрываются, context/time anchor учитывается; актуальная сводка отдельно. Вывод о предварительности остаётся явным.
+
+Чистый formatter shared/selection-copy.js вызывается в момент клика с текущими state/screen. Общий copyText в title-copy.js сохраняет прежний title+year. Inline «Подбор скопирован», при отказе/отсутствии API readonly textarea+focus/full selection/scrollTop/Left0. Нет новой AI операции, отправки сообщения или публичной ссылки.
+
+570/570(5новых), HTTPstub/buildPass,81static source-match/5syntax. Основные3контракта+metadata RED→GREEN; anchor/нулевое значение guard отдельно. Native desktopfilm/game+series390/cartoon320: точный аргумент настоящего writeText совпал с текущим server snapshot; APIresolved/status. Game more изменяет копию, undo восстанавливает прежнюю; title regressionPass. Fallback1490/1490выделены, readonly/focus, scrollTop0/overflow0, consoleerrors0. Systemclipboardreadback не подтверждён: readText не завершался и при видимом браузере. QA-only wrapper наблюдал аргумент, затем вызывал оригинальный writeText; в production source/build его нет. Physicaltouch/screenreader/humanfit не измерены.
+
+Responses0/$0. Основной5177/PID42356 сохранён, server/core/catalog не менялись. QA namespace selectioncopy20261103, пользовательские states/journals нетронуты. Последние cleanup/delivery сведения — verification.json и docs/SELECTION_COPY_2026-11-03.md. Production до публикации этого этапа ebfa399/dpl_9FMfLmxoKthP9jLbJVyrV4ZeZGPA. После проверки продолжить обычную разрешённую доставку и зафиксировать реальный deployment отдельно.
+
+Следующее по обсуждённому порядку: сохраняемые мультфильмные проходы (понимание/каталог/порядок), затем ясность приоритета первого варианта/«4за раз». Они ещё не выполнены, платных проверок автоматически не начинать. При фактическом paid опыте сначала определить объём/cap и сверить свежий ledger. Оригинальный мультфильмный запрос прежнего тестировщика потерян.

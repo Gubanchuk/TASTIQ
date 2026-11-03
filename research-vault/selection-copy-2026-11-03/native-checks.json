@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "domain": "film",
+      "proof": "Переданный текст совпал с текущим подбором",
+      "characters": 1383
+    },
+    {
+      "domain": "game",
+      "initialCharacters": 1326,
+      "moreChanged": true,
+      "undoRestored": true,
+      "status": "Подбор скопирован",
+      "metrics": {
+        "overflow": false,
+        "width": 390
+      }
+    },
+    {
+      "domain": "series",
+      "proof": "Переданный текст совпал с текущим подбором",
+      "metrics": {
+        "overflow": false,
+        "width": 390
+      }
+    },
+    {
+      "domain": "cartoon",
+      "characters": 1490,
+      "proof": "Переданный текст совпал с текущим подбором",
+      "denied": {
+        "focused": true,
+        "length": 1490,
+        "overflow": false,
+        "readOnly": true,
+        "selected": 1490
+      },
+      "width": 320
+    }
+  ],
+  "titleRegression": true,
+  "clipboardReadBack": "Unavailable: browser readText promise did not settle; captured exact input to real writeText instead",
+  "consoleErrors": []
+}

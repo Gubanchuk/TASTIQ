@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-03",
+  "unit": {
+    "pass": 570,
+    "fail": 0,
+    "new": 5
+  },
+  "httpStub": "Pass",
+  "build": "Pass",
+  "staticFiles": 81,
+  "mismatches": [],
+  "syntaxFiles": 5,
+  "native": {
+    "checks": [
+      {
+        "domain": "film",
+        "proof": "Переданный текст совпал с текущим подбором",
+        "characters": 1383
+      },
+      {
+        "domain": "game",
+        "initialCharacters": 1326,
+        "moreChanged": true,
+        "undoRestored": true,
+        "status": "Подбор скопирован",
+        "metrics": {
+          "overflow": false,
+          "width": 390
+        }
+      },
+      {
+        "domain": "series",
+        "proof": "Переданный текст совпал с текущим подбором",
+        "metrics": {
+          "overflow": false,
+          "width": 390
+        }
+      },
+      {
+        "domain": "cartoon",
+        "characters": 1490,
+        "proof": "Переданный текст совпал с текущим подбором",
+        "denied": {
+          "focused": true,
+          "length": 1490,
+          "overflow": false,
+          "readOnly": true,
+          "selected": 1490
+        },
+        "width": 320
+      }
+    ],
+    "titleRegression": true,
+    "clipboardReadBack": "Unavailable: browser readText promise did not settle; captured exact input to real writeText instead",
+    "consoleErrors": []
+  },
+  "manualFinal": {
+    "length": 1490,
+    "overflow": false,
+    "scrollLeft": 0,
+    "scrollTop": 0,
+    "selected": 1490
+  },
+  "paidCalls": 0,
+  "estimatedUsd": 0,
+  "main": {
+    "port": 5177,
+    "pid": 42356,
+    "unchanged": true,
+    "reason": "Static client files only"
+  },
+  "qaCleanup": {
+    "server5180Stopped": true,
+    "tabs23and24and25Closed": true,
+    "viewportReset": true,
+    "visibilityRestored": "hidden"
+  },
+  "delivery": "pending",
+  "limitations": [
+    "No OS clipboard read-back: browser readText promise did not settle; exact input to actual writeText was observed instead",
+    "No physical touch or screen reader test",
+    "No model or human-fit test"
+  ]
+}

@@ -48,3 +48,6 @@ Detector один раз: exit0/58findings=52advisories+6inherited warnings; п�
 
 
 Локальная итерация второго отзыва03.11: заголовок карточки копирует название+год (shared/title-copy.js), inline статус и доступный ручной fallback. Верхнее more у result-heading повторяет нижнее, без новой анкеты и нового вкусового сигнала. Проверки и границы: docs/TESTER_FEEDBACK_ROUND2_2026-11-03.md; production пока532299e.
+
+
+03.11: «Скопировать подбор» рядом с верхним more, общий inline status и multiline manual fallback. shared/selection-copy.js экспортирует явные поля текущего запроса/выдачи, без uid/библиотеки/оценок/черновиков. Проверки/ограничение OS clipboard readback: docs/SELECTION_COPY_2026-11-03.md.

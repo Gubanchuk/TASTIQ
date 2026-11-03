@@ -415,6 +415,10 @@ Stage/shared focus3px/4px, library2px/4px, search/select2px/3px; главная3
 - **Don't** подменять SVG-иконки Unicode-глифами или добавлять декоративные надписи над заголовками.
 - **Don't** выдавать synthetic QA за human fit, ожидание за процент/ETA или новый UI за одобренный.
 
+## Копирование подбора —03.11.2026
+
+В result-heading рядом с верхним more добавлена прежняя secondary button «Скопировать подбор»,44px+, обычный flex-wrap на узком телефоне. Общий inline status под toolbar,13px/1.6; при отказе readonly textarea в том же месте, min180px/max360px/resizevertical, полное выделение и scrollTop/Left0. Это перенос текущего подбора обычным текстом; публичная ссылка не создаётся. Мир, карточки и feedback прежние. Проверки/границы: docs/SELECTION_COPY_2026-11-03.md.
+
 ## Второй отзыв — локальная доработка03.11.2026
 
 В modern result название внутри h2 — кнопка копирования с прежними шрифтом/цветом и иконкой20px; доступное имя h2 сохраняет само название, кнопка называет действие. Min-height44px, keyboard focus outline2px, overflow-wrap:anywhere. Статус13px/1.6 появляется рядом с заголовком; отказ Clipboard API даёт readonly-поле с выделением названия+года. Верхнее продолжение у заголовка выдачи повторяет прежнее more: flex/wrap/gap10px16px/margin18px и пояснение13px/1.6, нижнее действие сохранено. Геометрия карточек, бренд, human feedback и каталог прежние. Эта итерация ещё локальная; docs/TESTER_FEEDBACK_ROUND2_2026-11-03.md.
