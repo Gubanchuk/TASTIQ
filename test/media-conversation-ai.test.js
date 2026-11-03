@@ -9,6 +9,15 @@ const proposal=()=>({summary:'Хочется тёплой истории',facts:
 const response=(out=proposal(),patch={})=>({status:'completed',model:'stub-model',usage:{input_tokens:100,output_tokens:20},output:[{type:'message',content:[{type:'output_text',text:JSON.stringify(out)}]}],...patch});
 const state=(domain='film')=>{const s=fresh({domain,id:'ai-test'});return reduce(s,{type:'answer',questionId:s.question.id,text:'Хочу тёплую историю с юмором',selected:[]});};
 
+test('media planning distinguishes a mood reference from identity-dependent replay without inventing title properties',async()=>{
+ let request;
+ await run(screenFixture('cartoon'),state('cartoon'),{api:async body=>{request=body;return response();}});
+ assert.doesNotMatch(request.instructions,/Use null when ambiguous and ask for the exact work\./);
+ assert.match(request.instructions,/Ask for the exact work only when its identity materially changes/);
+ assert.match(request.instructions,/use only properties explicitly described by the person/);
+ assert.match(request.instructions,/Never guess a version or import its properties/);
+});
+
 test('media planner is a separate injectable adapter with a private bounded domain-specific request',async()=>{
   assert.equal(typeof run,'function','media planner is missing');
   for(const domain of ['film','series','cartoon']) {

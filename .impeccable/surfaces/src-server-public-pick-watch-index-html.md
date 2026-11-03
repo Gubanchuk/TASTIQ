@@ -45,3 +45,6 @@ Detector один раз: exit0/58findings=52advisories+6inherited warnings; п�
 Общие входы теперь /pick/start/; внешний мир и бренд прежние. Первый вопрос shared/conversation-entry.js создаётся без API. В shared/question-form.js желания выше раскрываемых жанров/ограничений/своих слов, нейтральные ответы ниже. В выдаче доступны more/уточнение/undo без перезапуска анкеты. Текущий проверенный scope и ограничения: docs/PICKER_FEEDBACK_2026-11-03.md; прежнее landing byte-identical относится к предыдущей переработке.
 
 Полный проход передmain: collapsed extra disclosures3встроку, open fullwidth, phone1колонка. Нейтральные controls ниже вариантов, Next рядом/вdesktopviewport. Own-answer resume/example раскрывает поле и фокусирует его; oldv3drafts мигрируют. Свежий scope: research-vault/picker-feedback-2026-11-03/FULL_CHECK.md,563/563+HTTPstub+build/sourcePass/paid0.
+
+
+Локальная итерация второго отзыва03.11: заголовок карточки копирует название+год (shared/title-copy.js), inline статус и доступный ручной fallback. Верхнее more у result-heading повторяет нижнее, без новой анкеты и нового вкусового сигнала. Проверки и границы: docs/TESTER_FEEDBACK_ROUND2_2026-11-03.md; production пока532299e.

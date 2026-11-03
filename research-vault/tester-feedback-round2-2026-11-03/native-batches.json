@@ -1,0 +1,87 @@
+[
+  {
+    "domain": "game",
+    "before": [
+      "steam:413150",
+      "steam:620",
+      "steam:105600",
+      "steam:400"
+    ],
+    "after": [
+      "steam:1794680",
+      "steam:550",
+      "steam:227300",
+      "steam:1145360"
+    ],
+    "noRepeats": true,
+    "metrics": {
+      "height": 844,
+      "overflow": false,
+      "topMoreBottom": 561.28125,
+      "width": 390
+    }
+  },
+  {
+    "domain": "series",
+    "before": [
+      "tt0903747",
+      "tt0944947",
+      "tt0185906",
+      "tt7366338"
+    ],
+    "after": [
+      "tt0795176",
+      "tt0306414",
+      "tt0141842",
+      "tt5491994"
+    ],
+    "noRepeats": true,
+    "metrics": {
+      "overflow": false,
+      "topMoreBottom": 561.28125,
+      "width": 390
+    }
+  },
+  {
+    "domain": "cartoon",
+    "before": [
+      "tt0417299",
+      "tt2861424",
+      "tt11126994",
+      "tt0103359"
+    ],
+    "after": [
+      "tt1865718",
+      "tt7678620",
+      "tt0121955",
+      "tt3398228"
+    ],
+    "noRepeats": true,
+    "metrics": {
+      "overflow": false,
+      "topMoreBottom": 561.375,
+      "width": 320
+    }
+  },
+  {
+    "domain": "film",
+    "before": [
+      "tt0111161",
+      "tt0068646",
+      "tt0468569",
+      "tt0167260"
+    ],
+    "after": [
+      "tt0108052",
+      "tt0071562",
+      "tt0120737",
+      "tt0050083"
+    ],
+    "noRepeats": true,
+    "metrics": {
+      "overflow": false,
+      "topMoreBottom": 354.296875,
+      "width": 1280
+    }
+  }
+]

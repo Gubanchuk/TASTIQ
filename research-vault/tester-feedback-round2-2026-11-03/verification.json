@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-03",
+  "scope": "Local changes approved after second tester discussion",
+  "unit": {
+    "passed": 565,
+    "failed": 0
+  },
+  "redGreen": 2,
+  "httpStub": "Pass",
+  "build": "Pass",
+  "staticFiles": 80,
+  "staticMismatches": [],
+  "syntaxFiles": 9,
+  "native": {
+    "domains": [
+      "game",
+      "series",
+      "cartoon",
+      "film"
+    ],
+    "widths": [
+      1280,
+      1024,
+      390,
+      320
+    ],
+    "noRepeats": true,
+    "overflow": false,
+    "consoleErrors": 0,
+    "clipboardRoundtrip": "Pass: actual page API compared title+year including ampersand/quotes",
+    "clipboardDenied": "Pass: readonly value, focus and full selection",
+    "keyboardCopy": "Pass"
+  },
+  "paidCalls": 0,
+  "estimatedUsd": 0,
+  "main": {
+    "port": 5177,
+    "pid": 42356,
+    "metaStatus": 200,
+    "aiStatus": 200,
+    "enabled": true
+  },
+  "sourceReview": "Local self-review; no new agent review",
+  "viewportReset": true,
+  "qaCleanup": {
+    "server5180Stopped": true,
+    "qaTab19Closed": true,
+    "viewportReset": true,
+    "localPreviewTab20": "deliverable",
+    "priorUserTabs": "untouched"
+  },
+  "production": {
+    "unchanged": true,
+    "commit": "532299e0b0824e62fe195897bbf99ed7fa88f148"
+  },
+  "notMeasured": [
+    "new real model chain",
+    "original cartoon mismatch: request lost",
+    "human fit",
+    "physical touch",
+    "screen reader"
+  ]
+}

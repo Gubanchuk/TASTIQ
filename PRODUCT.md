@@ -32,6 +32,8 @@ The landing introduces the four adaptive pickers and explains the sequence from 
 
 ## Capabilities and Constraints
 
+- Modern result titles copy the displayed name and year with an inline confirmation and manual fallback. The same-request continuation is available above and below the cards. An ambiguous mood reference may remain unbound when its desired properties are explicit; exact identity is required only for decisions that depend on it. This local03.11 iteration has not yet been published; see docs/TESTER_FEEDBACK_ROUND2_2026-11-03.md.
+
 - Catalogs: 4 952 Steam games, 32 126 films, 9 771 series, 1 916 cartoons; Russian names for most titles.
 - Images: Steam header images for games, TVmaze images for some series; Wikipedia poster thumbnails for the ~6 100 most popular films, series and cartoons (prototype only; a public launch needs a source licensed for display). Designs must work well without images.
 - Evidence types shown to people: review quote with thumbs and hours played, Steam player tag with vote count, MovieLens viewer tag with relevance %, Wikipedia quote, catalog fact (runtime, seasons, status).

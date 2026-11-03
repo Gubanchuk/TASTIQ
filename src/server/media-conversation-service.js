@@ -150,7 +150,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
         const bound=identities.bindFacts(s,out.proposal?.facts,resolved);
         if(bound.error)checked={error:bound.error};
         else {
-          const uncertainties=[...new Set([...(out.proposal?.uncertainties??[]),...resolved.ambiguous.map(m=>`Уточни название «${m.quote}»: в этом разделе есть несколько разных произведений.`)])];
+          const uncertainties=[...new Set([...(out.proposal?.uncertainties??[]),...resolved.ambiguous.map(m=>`Точная версия «${m.quote}» не определена: в этом разделе есть несколько разных произведений.`)])];
           checked=applyMediaConversationProposal(s,{...out.proposal,facts:bound.facts,uncertainties},catalog.dict,s.revision);
         }
       }

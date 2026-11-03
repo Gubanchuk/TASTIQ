@@ -23,6 +23,27 @@ const resultState=async service=>{
   return {...state,phase:'result',needsPlan:false,summary:'Сегодня нужна история',result:{top:{id:'t1',domain:'film',name:'Old',ai:{reason:'Старое объяснение'}},alternatives:[{id:'t2',domain:'film',name:'Keep',ai:{reason:'Оставить'}}],ai:{model:'old'}}};
 };
 
+test('an ambiguous mood reference remains unresolved without demanding an exact version or blocking review',async()=>{
+  const domain='cartoon',base=screenFixture(domain);
+  const items=base.items.map((item,index)=>index<2?{...item,name:'Shared Hero',ru:null,aliases:[],work:`hero-${index}`} : item);
+  const local=makeCatalog({...base,items,...computeIdf(items)},domain);
+  let known;
+  const service=create(domain,{catalogs:{...catalogs,[domain]:local},plan:async(_,s,options)=>{
+    known=options.knownTitles;
+    const source=s.turns.at(-1);
+    return {proposal:{...proposal,action:'review',question:null,summary:'Динамичное приключение с юмором',facts:[{key:'wish',text:'Динамичное приключение с юмором',stance:'want',scope:'today',sourceId:source.id,quote:'динамичное приключение с юмором',feature:null,titleId:null,exposure:null,titleIntent:null}]}};
+  }});
+  const body=answerBody(await service({domain}));
+  body.action.text='Хочу динамичное приключение с юмором, как Shared Hero. Версию не помню, она не важна.';
+  const out=await service(body);
+  assert.equal(out.error,undefined);
+  assert.deepEqual(known,[],'an ambiguous example never acquires a guessed catalog identity');
+  assert.equal(out.screen.type,'review');
+  assert.equal(out.state.facts[0].titleId,null);
+  assert.match(out.state.uncertainties.join(' '),/Shared Hero/);
+  assert.doesNotMatch(out.state.uncertainties.join(' '),/Уточни название/);
+});
+
 test('media services require an explicit supported matching domain before planning or spending',async()=>{
   let spends=0,calls=0;const service=create('film',{spend:()=>spends++,plan:async()=>{calls++;return goodPlan();}});
   for(const body of [{},{domain:'game'},{domain:'series'},{domain:'film',state:{domain:'series'}},{domain:'film',state:{domain:'game'}}])await assert.rejects(()=>service(body),e=>e.status===400);
