@@ -51,7 +51,7 @@ Interfaces: form updates drafts, explicit review submit queues payload/current s
 
 - [x] Full unit/HTTPstub/build; one fresh independent final review, material fixes RED→GREEN.
 - [x] Owner analysis queries/summary; PRODUCT/context/memory; retire rejected tester-invitation proposal.
-- [ ] Main push/manual deploy; production synthetic isolated durable ACK/readback/zero AI; cleanup.
+- [x] Main push/manual deploy; production synthetic isolated durable ACK/readback/zero AI; cleanup.
 
 ## Execution ledger
 
@@ -67,3 +67,5 @@ Interfaces: form updates drafts, explicit review submit queues payload/current s
 - User selected a separate TASTIQ in Primary. get_cost returned0/month; create_project failed because the administrator reached the2activefreeproject limit. No project/schema/environment mutation succeeded. Waiting for the user's new choice (existing Guban with private TASTIQ tables / paid separate project / user frees a slot). No authorization to pause/delete another project or upgrade billing is inferred.
 
 - 04.11 target supersedes Primary: explicit Family authorization, only tastiq_ additive objects and dedicated Edge. Ruling: scoped append-only ingestion token instead of broad shared Family key — bounds TASTIQ credential to feedback; cost: Edge hop and paired token/digest rotation. Real hosted+localHTTP QA ACK/readback verified, productionrows0; no paid resources/model calls. Additional trust-boundary review:1GPT6Astra,11tests,material0. Own HTTP503/409 mapping fix actual-handler RED→GREEN; stub realDB isolation fixed; full624/624+HTTPstub+build. Main62976/env configured; delivery pending.
+
+- 04.11 delivery complete: main11d6466 pushed/remoteMatch→READY dpl_8Mm4Y3EdxMejhhP2Bwcvp8NEbjx6;cloudQA ACK/readback1row/repeat/no ordinaryQA contamination;14static+11runtimecommitMatch/6JSON;nativefirstscreen/earlyerrors0/paidAI0. See delivery report.

@@ -8,7 +8,7 @@
 
 # TASTIQ: прототип подбора игр, фильмов, сериалов и мультфильмов
 
-Общая оценка после каждой выдачи, очередь и ограниченный учёт собственных отзывов реализованы.624tests+HTTPstub+SQL проходят; настоящая запись в Family подтверждена. Таблицы tastiq_feedback_events/tastiq_feedback_latest отделены именами и правами от Family. [Реализация и доставка](docs/DURABLE_FEEDBACK_2026-11-03.md), [закрытые запросы анализа](docs/FEEDBACK_ANALYSIS_QUERIES.sql). FEEDBACK_DATABASE_URL/FEEDBACK_DATABASE_SECRET — только серверные параметры; отдельный token TASTIQ не даёт общего доступа к Family. Публикация обновления в работе.
+Общая оценка после каждой выдачи, очередь и ограниченный учёт собственных отзывов реализованы.624tests+HTTPstub+SQL проходят; настоящая запись в Family подтверждена. Таблицы tastiq_feedback_events/tastiq_feedback_latest отделены именами и правами от Family. [Реализация и доставка](docs/DURABLE_FEEDBACK_2026-11-03.md), [закрытые запросы анализа](docs/FEEDBACK_ANALYSIS_QUERIES.sql). FEEDBACK_DATABASE_URL/FEEDBACK_DATABASE_SECRET — только серверные параметры; отдельный token TASTIQ не даёт общего доступа к Family. [Обновление опубликовано и cloud ACK/readback проверен](docs/DURABLE_FEEDBACK_DEPLOY_2026-11-04.md).
 
 Репозиторий: [Gubanchuk/TASTIQ](https://github.com/Gubanchuk/TASTIQ). Исходники, каталоги и автономные тестовые фикстуры включены; ключи, локальные журналы, расходы API и приватные ключи оценки остаются вне Git. Для офлайн-тестов не нужен локальный ledger: три точных синтетических ответа сохранены в `test/fixtures/media-live-proposals.json`.
 

@@ -69,12 +69,18 @@
   "paidModelCalls": 0,
   "apiUsd": 0,
   "remoteDatabase": "Family tastiq_ objects; real QA write/readback PASS, see hosted artifacts",
-  "production": "delivery in progress",
+  "production": {
+    "commit": "11d6466c4a3340965b4265f5f3abcb1d95d50987",
+    "id": "dpl_8Mm4Y3EdxMejhhP2Bwcvp8NEbjx6",
+    "readyMoscow": "2026-11-04 00:42:21",
+    "authenticatedQaReadback": true
+  },
   "newBoundaryReview": {
     "model": "gpt-6-astra",
     "targetedTests": 11,
     "materialFindings": 0
   },
   "finalHttpFix": "feedback503/409 preserved RED→GREEN; HTTPstub excludes configured owner DB",
-  "finalAt": "2026-11-03T21:38:33.790Z"
+  "finalAt": "2026-11-03T21:38:33.790Z",
+  "deliveryEvidence": "delivery-verification.json"
 }

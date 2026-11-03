@@ -1,0 +1,138 @@
+{
+  "at": "2026-11-03T21:42:59.282Z",
+  "commit": "11d6466c4a3340965b4265f5f3abcb1d95d50987",
+  "base": "https://tastiq-drab.vercel.app",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "pick/start/index.html",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "pick/game/index.html",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "pick/watch/index.html",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "pick/game/app.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "pick/watch/app.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/selection-review.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/selection-review-controller.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/evening-feedback.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/evening-storage.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/conversation-client.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/results.css",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/selection-copy.js",
+      "status": 200,
+      "commitMatch": true
+    },
+    {
+      "path": "shared/qa-session.js",
+      "status": 200,
+      "commitMatch": true
+    }
+  ],
+  "bundledRuntime": [
+    {
+      "path": "src/server/app.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/feedback-service.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/feedback-repository.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/feedback-edge-handler.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/ai/feedback-context.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/ai/pick.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/conversation-service.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/media-conversation-service.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/public/shared/evening-feedback.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/public/shared/selection-review.js",
+      "commitMatch": true
+    },
+    {
+      "path": "src/server/public/shared/selection-review-controller.js",
+      "commitMatch": true
+    }
+  ],
+  "runtimeJson": 6,
+  "noEnvOrDevDependencies": true,
+  "api": [
+    {
+      "path": "/api/meta",
+      "status": 200
+    },
+    {
+      "path": "/api/ai/status",
+      "status": 200,
+      "enabled": true,
+      "model": "gpt-6.1-sol"
+    }
+  ],
+  "paidModelCalls": 0
+}

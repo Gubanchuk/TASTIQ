@@ -1,0 +1,17 @@
+{
+  "id": "dpl_8Mm4Y3EdxMejhhP2Bwcvp8NEbjx6",
+  "url": "tastiq-8uuqs7c5w-gubanchuks-projects.vercel.app",
+  "state": "READY",
+  "target": "production",
+  "alias": [
+    "tastiq-drab.vercel.app",
+    "tastiq-gubanchuks-projects.vercel.app"
+  ],
+  "createdAt": 1793742132901,
+  "ready": 1793742141725,
+  "sha": "11d6466c4a3340965b4265f5f3abcb1d95d50987",
+  "ref": "main",
+  "projectSettingsNode": "26.x",
+  "prebuiltFunctionRuntime": "nodejs24.x",
+  "readyMoscow": "2026-11-04 00:42:21"
+}

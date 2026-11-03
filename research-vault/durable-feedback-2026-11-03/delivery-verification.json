@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-03T21:48:25.878Z",
+  "deploymentId": "dpl_8Mm4Y3EdxMejhhP2Bwcvp8NEbjx6",
+  "commit": "11d6466c4a3340965b4265f5f3abcb1d95d50987",
+  "readyMoscow": "2026-11-04 00:42:21",
+  "cloudAck": true,
+  "readback": {
+    "namespace": "qa:tastiqfamilyprod20261104_01",
+    "id": "tastiqfamilyprod20261104_01",
+    "rows": 1,
+    "latestRevision": 0,
+    "ordinaryQaExcludedRows": 0,
+    "totalSyntheticQaRows": 4,
+    "productionFeedbackRows": 0
+  },
+  "native": {
+    "firstScreen": "cartoon",
+    "tab": 40,
+    "closed": true,
+    "consoleWarningsAndErrors": 0,
+    "userStatesUntouched": true,
+    "paidActions": 0,
+    "screenshot": "production-first-screen.jpg",
+    "ordinaryLandingTab": 37,
+    "landingTabUnchanged": true,
+    "deliverableMarkRenewal": "backend browser.user unavailable; existing tab left open"
+  },
+  "runtimeErrors": {
+    "count": 0,
+    "checkedAt": "2026-11-03T21:44:23.079Z",
+    "secondsAfterReady": 121
+  },
+  "paidModelCalls": 0,
+  "apiUsd": 0
+}

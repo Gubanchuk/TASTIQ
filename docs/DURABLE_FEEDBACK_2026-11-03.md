@@ -43,4 +43,4 @@ Hosted service→Edge→RPC→Postgres проверил новую/повтор�
 
 ## Доставка
 
-Server-only production env настроен, main5177/PID62976 перезапущен. Mainremote/production покаffa1817; далее разрешённые push/manualdeploy и cloud authenticatedQA ACK/readback с0AI. Финальные реквизиты — в DURABLE_FEEDBACK_DEPLOY_2026-11-04.md после проверки. Реальный эффект на humanfit не измерен.
+Опубликовано main11d6466→READY dpl_8Mm4Y3EdxMejhhP2Bwcvp8NEbjx6,04.11.2026 00:42:21МСК. Cloud authenticatedQA ACK/readback подтверждён;1QArow/repeatбез дубля/productionrows0/0AI. Main5177/PID62976 обновлён. [Реквизиты и границы](DURABLE_FEEDBACK_DEPLOY_2026-11-04.md). Реальный эффект на humanfit не измерен.

@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-03T21:42:51.659Z",
+  "base": "https://tastiq-drab.vercel.app",
+  "qaRun": "tastiqfamilyprod20261104_01",
+  "namespace": "qa:tastiqfamilyprod20261104_01",
+  "id": "tastiqfamilyprod20261104_01",
+  "ack": {
+    "ok": true,
+    "id": "tastiqfamilyprod20261104_01",
+    "revision": 0
+  },
+  "repeatAcknowledged": true,
+  "ordinaryQaSkipped": true,
+  "excludedId": "tastiqfamilyprod20261104_01-excluded",
+  "qaBilling": {
+    "run": "tastiqfamilyprod20261104_01",
+    "maxReserveUsd": 0,
+    "calls": []
+  },
+  "checks": [
+    {
+      "path": "/api/meta",
+      "status": 200
+    },
+    {
+      "path": "/api/ai/status",
+      "status": 200
+    },
+    {
+      "path": "/shared/selection-review.js",
+      "status": 200
+    },
+    {
+      "path": "/shared/selection-review-controller.js",
+      "status": 200
+    }
+  ],
+  "paidModelCalls": 0,
+  "apiUsd": 0,
+  "productionFeedbackWrites": 0
+}

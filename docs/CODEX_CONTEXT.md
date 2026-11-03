@@ -1,3 +1,13 @@
+# Feedback опубликован —04.11.2026
+
+Разрешённые main commit/push11d6466c4a3340965b4265f5f3abcb1d95d50987, remoteMatch0/0. Production READY dpl_8Mm4Y3EdxMejhhP2Bwcvp8NEbjx6, 2026-11-04 00:42:21МСК; https://tastiq-drab.vercel.app/. Vercel API SHA/refmain/alias совпадают; prebuilt function nodejs24.x, projectSettings node26.x — разные поля, runtime заявлен именно артефактом. Первая попытка ECONNRESET не создала deployment (проверен список), повтор завершён успешно.
+
+Cloud API→tastiq-feedback→RPC→Family: ACK/repeat без дубля; SQLreadback1row/latest0 в qa:tastiqfamilyprod20261104_01. Обычный QAexcluded0; всего4syntheticQArows, productionrows0 при проверке.14static+11bundledruntime commitMatch/6runtimeJSON/no.env/devdeps/2GET200. Nativecartoonfirstscreen/console0, screenshot сохранён,40closed;37ordinarylanding не менялся (повторный deliverable mark недоступен в backend). Earlyerrorlogs0 через121sec. ПлатныхAI0/$0 на весь этап. Main5177PID62976/QA5180stopped/viewport ранееreset/userstates untouched.
+
+624/624+HTTPstub+build; frontendfeedback4domains/native и reviews описаны в docs/DURABLE_FEEDBACK_2026-11-03.md. Разрешённый Family проект pbipnjlsxkbhdyfebdeo, только tastiq_ objects/scopedEdge. ШирокийFamilykey в TASTIQ не переносился. Отзывы используются как6ownbrowser историческихконтекстов в прежнемpick, не обучениевесов/глобальныеправила; humanfitнеизмерен. Следующее: накопить реальные отзывы и анализировать latest revisions через docs/FEEDBACK_ANALYSIS_QUERIES.sql. Источники проверки research-vault/durable-feedback-2026-11-03/{deployment,production-hosted-verification,production-source-verification,delivery-verification}.json.
+
+Ниже локальные pending/Primaryquota — история. Итоговые post-delivery evidence/docs включены в отдельный документационный коммит; production использует код11d6466, повторный deploy только из-за заметок не нужен. Посторонние старые untracked файлы сохранены.
+
 # Feedback в Family — 04.11.2026, БД подключена; доставка в работе
 
 Владелец явно выбрал существующий Family и бренд в названиях. Прежнее ожидание отдельного Primary больше не действует. В разрешённом проекте pbipnjlsxkbhdyfebdeo созданы только tastiq_feedback_events, tastiq_feedback_latest, tastiq_record_feedback и Edge tastiq-feedback. Существующие Family таблицы/функции не менялись. RLS/закрытые anon/authenticated права, invoker RPC, append-only revisions. Vercel получает отдельный scoped ingestion token; широкого ключа Family в TASTIQ нет. Реальная новая/повторная/старая запись,409/401/405; SQL2QArows/latest1. Local HTTP→БД1QArow, повтор без дубля, обычный QAexcluded0; productionrows0. Evidence hosted-family-verification/local-hosted-verification/hosted-security-verification в research-vault/durable-feedback-2026-11-03/.
