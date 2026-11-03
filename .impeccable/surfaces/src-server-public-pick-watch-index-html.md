@@ -2,7 +2,7 @@
 version: 1
 slug: "src-server-public-pick-watch-index-html"
 primary_target: "src/server/public/pick/watch/index.html"
-related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/product.css","src/server/public/shared/workspace.css","src/server/public/shared/custom-select.css","src/server/public/shared/custom-select.js","src/server/public/shared/results.css","src/server/public/shared/workspace-ui.js","src/server/public/shared/request-overview.js","src/server/public/shared/clarification-view.js","src/server/public/shared/feedback-drafts.js","src/server/public/shared/evening-view.js","src/server/public/pick/watch/app.js","src/server/public/pick/watch/card-view.js"]
+related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/product.css","src/server/public/shared/workspace.css","src/server/public/shared/custom-select.css","src/server/public/shared/custom-select.js","src/server/public/shared/results.css","src/server/public/shared/workspace-ui.js","src/server/public/shared/request-overview.js","src/server/public/shared/request-conditions.js","src/server/public/shared/result-clarity.js","src/server/public/shared/clarification-view.js","src/server/public/shared/feedback-drafts.js","src/server/public/shared/evening-view.js","src/server/public/pick/watch/app.js","src/server/public/pick/watch/card-view.js"]
 ---
 
 Mode: Operate. Построенный адаптивный film/series/cartoon Conversation после U01–U15,03.11.2026.
@@ -51,3 +51,8 @@ Detector один раз: exit0/58findings=52advisories+6inherited warnings; п�
 
 
 03.11: «Скопировать подбор» рядом с верхним more, общий inline status и multiline manual fallback. shared/selection-copy.js экспортирует явные поля текущего запроса/выдачи, без uid/библиотеки/оценок/черновиков. Проверки/ограничение OS clipboard readback: docs/SELECTION_COPY_2026-11-03.md.
+
+
+## Условия и порядок рекомендаций — 2026-11-03
+
+Сводка показывает единственные канонические условия; общий исходник цитаты сам по себе не скрывает независимые пожелания. Точная привязка формата объединяет его видимую строку и прежний remove/undo; state.facts остаются полными. Первый/остальные блоки и more подписаны единообразно с game. Проверка удаления компании/времени/формата, undo/reload, desktop390/320 и границы: docs/REQUEST_CLARITY_2026-11-03.md.

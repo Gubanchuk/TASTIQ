@@ -1,6 +1,7 @@
 import {questionFormHtml,neutralAnswerLabels,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
 import {copySelection} from '/shared/selection-copy.js';
+import {resultBatchHelp} from '/shared/result-clarity.js';
 import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor} from '/shared/workspace-ui.js';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
@@ -141,8 +142,8 @@ function resultHtml(screen) {
  const result=screen.result??client.state?.result;
  const replacement=client.state.replacement,notice=replacement?.notice||(client.state.familiar?.marked?.length?'':'Отмеченные игры заменены. Остальные варианты сохранены.');
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
- return '<div class="game-result-heading"><h1>Твои варианты на этот вечер</h1><p class="game-help">Сохрани на потом, выбери на вечер или замени знакомую игру.</p>'
-  +`<div class="game-result-browse">${button('Показать ещё','more',client.busy?'disabled':'')}${button('Скопировать подбор','copy-selection',client.busy?'disabled':'')}<span>Ещё варианты с тем же запросом</span></div><div class="game-copy-status game-selection-copy-status" data-selection-copy-status role="status" aria-live="polite"></div></div>`
+ return '<div class="game-result-heading"><h1>Твои варианты на этот вечер</h1>'
+  +`<div class="game-result-browse">${button('Показать ещё','more',`aria-describedby="result-batch-help" ${client.busy?'disabled':''}`)}${button('Скопировать подбор','copy-selection',client.busy?'disabled':'')}<span id="result-batch-help">${resultBatchHelp}</span></div><div class="game-copy-status game-selection-copy-status" data-selection-copy-status role="status" aria-live="polite"></div></div>`
   +(screen.provisional||result.ai?.error?'<p class="game-help">Предварительный подбор по каталогу. Уточнение моделью сейчас недоступно.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
@@ -198,7 +199,7 @@ function render() {
   ?`${contextReady(screen)?button('Проверить запрос','review',client.busy||reviewBlocked?' disabled':''):''}<button type="submit" form="answer-form" class="btn btn-primary"${client.busy||needsChoice?' disabled':''}>${client.busy?'Продолжаю…':'Дальше'}<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>${contextReady(screen)?`<p class="game-draft-hint" id="review-draft-hint"${reviewBlocked?'':' hidden'}>Чтобы учесть этот ответ, нажми «Дальше».</p>`:''}`
   :screen.type==='review'?button('Изменить пожелание','focus-correction',disabled)+button('Подобрать игры','confirm',disabled,true)
   :(marked.length?button(`Заменить отмеченные (${marked.length})`,'replace-familiar',disabled,true):'')
-   +button('Показать ещё','more',disabled,!marked.length)+button('Уточнить запрос','focus-correction',disabled)
+   +button('Показать ещё','more',`aria-describedby="result-batch-help" ${disabled}`,!marked.length)+button('Уточнить запрос','focus-correction',disabled)
    +(client.state.familiar?.undo?button('Вернуть предыдущие варианты','undo-replacement',disabled):'');
  if(screen.canUndoFactRemoval)$('#action-controls').insertAdjacentHTML('beforeend',button('Отменить удаление','undo-fact-removal',disabled));
  $('#actions').hidden=prominent;

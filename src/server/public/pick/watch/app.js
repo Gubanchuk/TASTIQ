@@ -1,6 +1,7 @@
 import {questionFormHtml,neutralAnswerLabels,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
 import {copySelection} from '/shared/selection-copy.js';
+import {resultBatchHelp} from '/shared/result-clarity.js';
 import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor} from '/shared/workspace-ui.js';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
@@ -118,9 +119,7 @@ function renderRequestPreview(screen) {
 function understanding(screen) {
  renderRequestPreview(screen);
  const context=screen.context??{},time=hasSessionTime(screen.sessionTime)?screen.sessionTime:null;
- const labels={adults:'Со взрослыми',children:'С детьми',runtime:'Весь фильм',episode:'Эпизод',session:'Просмотр сегодня',single:'Один просмотр',short:'Короткая история',long:'Можно надолго',open:'Длина не важна',movie:'Одна история',episodic:'Эпизоды',windows:'Windows',mac:'macOS',linux:'Linux',deck:'Steam Deck',pc:'ПК',ps:'PlayStation',xbox:'Xbox',switch:'Nintendo Switch',any:'Любая платформа',solo:'Один',friend:'Вдвоём',group:'Компания',kids:'С детьми'};
- const contextHtml=`<div class="game-context">${Object.entries(context).filter(([key,v])=>v!=null&&!['minutes','timeMode'].includes(key)).map(([key,v])=>`<span>${esc(key==='childAge'?`Возраст: ${v}`:key==='onlyEnded'?(v?'Завершённые':'Можно продолжающиеся'):labels[v]??v)}</span>`).join('')}</div>`;
- $('#understanding').innerHTML=requestOverviewHtml({screen,state:client.state,contextHtml,timeHtml:timeBudgetHtml(time,{timeMode:context.timeMode}),busy:client.busy,
+ $('#understanding').innerHTML=requestOverviewHtml({screen,state:client.state,timeHtml:timeBudgetHtml(time,{timeMode:context.timeMode}),busy:client.busy,
   toolsHtml:(contextReady(screen)?contextForm(context):'')+historyHtml()+(time?'<details class="request-time-details"><summary>Откуда ограничение времени</summary><ul>'+timeEvidenceHtml(time)+'</ul></details>':''),
   clarification:clarificationHtml({state:client.state,uncertainties:screen.uncertainties,draft:key=>client.draft(key),busy:client.busy}),correction:correctionForm(),
   restore:client.canRestoreCorrection?'<div class="clarification-restore"><p>Предыдущий запрос и варианты можно вернуть.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуть предыдущие варианты</button></div>':''});
@@ -156,8 +155,8 @@ function resultHtml(screen) {
  const result=screen.result??client.state?.result;
  const replacement=client.state.replacement,notice=replacement?.notice||(client.state.familiar?.marked?.length?'':'Отмеченные варианты заменены. Остальные варианты сохранены.');
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
- return '<div class="game-result-heading"><h1>Твои варианты на этот вечер</h1><p class="game-help">Сохрани на потом, выбери на вечер или замени знакомое название.</p>'
-  +`<div class="game-result-browse">${button('Показать ещё','more',client.busy?'disabled':'')}${button('Скопировать подбор','copy-selection',client.busy?'disabled':'')}<span>Ещё варианты с тем же запросом</span></div><div class="game-copy-status game-selection-copy-status" data-selection-copy-status role="status" aria-live="polite"></div></div>`
+ return '<div class="game-result-heading"><h1>Твои варианты на этот вечер</h1>'
+  +`<div class="game-result-browse">${button('Показать ещё','more',`aria-describedby="result-batch-help" ${client.busy?'disabled':''}`)}${button('Скопировать подбор','copy-selection',client.busy?'disabled':'')}<span id="result-batch-help">${resultBatchHelp}</span></div><div class="game-copy-status game-selection-copy-status" data-selection-copy-status role="status" aria-live="polite"></div></div>`
   +(screen.provisional||result.ai?.error?'<p class="game-help">Предварительный подбор по каталогу. Уточнение моделью сейчас недоступно.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
@@ -214,7 +213,7 @@ function render() {
   ?`${contextReady(screen)?button('Проверить запрос','review',client.busy||reviewBlocked?' disabled':''):''}<button type="submit" form="answer-form" class="btn btn-primary"${client.busy||needsChoice?' disabled':''}>${client.busy?'Продолжаю…':'Дальше'}<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>${contextReady(screen)?`<p class="game-draft-hint" id="review-draft-hint"${reviewBlocked?'':' hidden'}>Чтобы учесть этот ответ, нажми «Дальше».</p>`:''}`
   :screen.type==='review'?button('Изменить пожелание','focus-correction',disabled)+button('Подобрать варианты','confirm',disabled,true)
   :(marked.length?button(`Заменить отмеченные (${marked.length})`,'replace-familiar',disabled,true):'')
-   +button('Показать ещё','more',disabled,!marked.length)+button('Уточнить запрос','focus-correction',disabled)
+   +button('Показать ещё','more',`aria-describedby="result-batch-help" ${disabled}`,!marked.length)+button('Уточнить запрос','focus-correction',disabled)
    +(client.state.familiar?.undo?button('Вернуть предыдущие варианты','undo-replacement',disabled):'');
  if(screen.canUndoFactRemoval)$('#action-controls').insertAdjacentHTML('beforeend',button('Отменить удаление','undo-fact-removal',disabled));
  $('#actions').hidden=prominent;

@@ -1,3 +1,15 @@
+# Условия и порядок рекомендаций —03.11.2026, локально проверено
+
+По одобренному объяснению убраны дубли media-условий: канонические формат/компания+возраст, без повторов single/movie и цитаты времени. Точный format/source/quote binding добавляет только screen.facts.conditionKey; state.facts/источники/подбор прежние. Во всех4modern domains: «Главный вариант под твой запрос», «Другие варианты», пояснение до4за раз/тот же подбор с aria-describedby обеих more. [Отчёт](REQUEST_CLARITY_2026-11-03.md).
+
+587/587+HTTPstub/paid0+build83static/5runtime match/6JSON/node24/300s. Native реальный записанный family: removeformat/company/time→undo/focus/reload, more→возврат3, labels4домена, console0; desktop390/320overflow0,44×44, полноценные native mobile JPEG. Два visual passes: убрана лишняя инструкция, финальный mobile показывает первую карточку. Detector1раз/25inheritedadvisories/no newblockers; без стороннего drift repair. Core screen metadata требует restart: main5177/PID64644, бесплатный restore HTTP200/maxReserve0/calls[]/statefacts unchanged. QA31closed/5180stopped/reset/hidden, userstates untouched.
+
+API этого этапа0/$0; QA14HTTP/0stubplan/1stubpick, настоящийhumanfit/paidreplacement не измерялись. Ranking/catalog/prompts/guards прежние. Разрешённыеcommit/push/deploy вработе, productionпока28acea7ниже. Следующее после публикации — оценка владельцем читаемости сводки и сравнения карточек; прежняя semantic-more граница не закрыта этими UI-подписями.
+
+# Мультфильмные исправления опубликованы —03.11.2026
+
+Main28acea7896f024804582b5e0b6cbdd0106afe6bc pushed/remoteSHAmatch→production READY dpl_7T66ucVSMMbC26KTtYJNMCcUevFK,03.11.2026 19:54:01МСК, https://tastiq-drab.vercel.app/. [Доставка](CARTOON_JOURNEYS_DEPLOY_2026-11-03.md):VercelAPImetaSHA/refmain/alias/functionnode24;581/581+HTTPstub+build81static/5runtime/6JSON;11productionstatic+5bundledruntime commitMatch/2GET200/nativecartoonfirstscreen/console0/ранниеerrors0через63sec. DeployResponses0/$0; полныйэтап8calls/$0.157469,hold0.25сохранён. QA28/29closed/productionentry30deliverable/reset/hidden,local5177PID49644/5180stopped/lockabsent. Userstates untouched. CSS390проверенDOMoverflow, rasterисключёнизвизуальногодоказательства;полныйmobilevisualнеподтверждён. Humanfit/новаяуспешнаязаменанеподтверждены. Следующее: дубликатыусловий/ясностьпорядка/до4зараз. Ниже «локально»/ожиданияпубликации — история.
+
 # Мультфильмные сценарии —03.11.2026, проверено локально
 
 По одобренному продолжению пройдены3новых synthetic запроса+реальное семейное more; [отчёт](CARTOON_JOURNEYS_2026-11-03.md), evidence research-vault/cartoon-journeys-2026-11-03/. Исправлены потеря episodic из format.animation, отказ фразы «Сегодня на просмотр есть90мин», давление ровно4при смысловом запрете и техническое сообщение о неподтверждённом title. Фиксы проверены теми же записанными ответами бесплатно; history/negation/alternatives/retractions guards сохранены.581/581+HTTPstub+build81static/5runtime sourceMatch/6runtimeJSON/node24/300s. Native3review/results/copy/more/390overflow0/console0; QA28closed/5180stopped/lockabsent/viewportreset. Main5177перезапущен PID49644/2GET200/AIenabled:true.
@@ -454,7 +466,7 @@ TASTIQ — русскоязычный подборщик игры, фильма,
 | Персоны | `npm run personas -- --tag codex-continuity`: 3 цели из 36, все три в первой четвёрке; медиана лучшего ранга 7.5 |
 | Воспроизведение | Все 12 строк итоговой таблицы полностью совпали с `eval/2026-10-29-arch-final4.md` |
 | Игры | 4 952 записи в `data/catalog.json` |
-| Экранные каталоги | `data/catalog-screen.json`: фильмы 32 172, сериалы 9 773, мультфильмы 1 867, скрытое аниме 1 585 |
+| Экранные каталоги | `data/catalog-screen.json`: фильмы 32 172, сериалы 9 773, мультфильмы 1 867, скрытое аниме 1 587 |
 | Переводы | 43 061 ключ в `data/quotes-ru.json`; это размер словаря, не проверка качества перевода |
 | Git | `main` без единого коммита; существовали staged `.idea/.gitignore`, `index.js`, `package.json`, последняя также изменена вне индекса; основная масса проекта untracked |
 | API-расход этой сессии | $0: платные сценарии и переводчик не запускались |

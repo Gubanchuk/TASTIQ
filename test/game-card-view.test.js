@@ -19,6 +19,9 @@ test('game and media cards distinguish catalogue reasons and the plan action fro
   assert.match(html,/<picture><img[^>]+loading="eager"/);
   assert.doesNotMatch(html,/<img[^>]+(?:width|height)="/);
   assert.match(html,/game-proposal-featured/);
+  assert.match(html,/<h2[^>]*>Главный вариант под твой запрос<\/h2>/);
+  assert.match(render(card,{index:1}),/<h2[^>]*>Другие варианты<\/h2>/);
+  assert.doesNotMatch(render(card,{index:2}),/Главный вариант под твой запрос|Другие варианты/);
   assert.doesNotMatch(render(card,{index:1}),/game-proposal-featured/);
   assert.doesNotMatch(render(card,{index:2}),/game-proposal-featured/);
  }

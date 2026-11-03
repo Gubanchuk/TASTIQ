@@ -35,7 +35,7 @@ body.product-page #request-panel .request-conditions{padding:0;margin:0 0 24px}
 body.product-page #request-panel .game-context{display:flex;flex-wrap:wrap;gap:7px;margin:0}
 body.product-page #request-panel .game-context>span{border:0;border-radius:9px;background:var(--workspace-soft);padding:6px 9px;font-size:12px;color:var(--brand-ink)}
 body.product-page #request-panel .request-fact-group{margin:22px 0}
-body.product-page #request-panel .request-fact-group h3{font:600 12px/1.5 Golos,Arial,sans-serif;color:var(--brand-muted);margin:0 0 8px}
+body.product-page #request-panel :is(.request-fact-group,.request-conditions) h3{font:600 12px/1.5 Golos,Arial,sans-serif;color:var(--brand-muted);margin:0 0 8px}
 body.product-page #request-panel .request-facts{list-style:none;padding:0;margin:0;display:grid;gap:7px}
 body.product-page #request-panel .request-facts li{display:flex;align-items:flex-start;gap:8px;padding:10px 10px 10px 12px;background:var(--brand-paper);border:0;border-radius:12px;font-size:13px;line-height:1.65}
 body.product-page #request-panel .request-facts li>span{flex:1;min-width:0}

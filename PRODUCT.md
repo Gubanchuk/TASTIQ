@@ -32,6 +32,8 @@ The landing introduces the four adaptive pickers and explains the sequence from 
 
 ## Capabilities and Constraints
 
+- Modern recommendation roles are explicit: the first card is the main suggestion and the rest are alternatives. The same-request continuation explains that up to four suggestions are shown per batch. Media conditions use one canonical visible row per supported condition; duplicate format facts share the existing removal/undo control. Independent goals and source facts remain intact. See docs/REQUEST_CLARITY_2026-11-03.md.
+
 - Modern results can copy the sent dialogue, current understanding/conditions and exactly the visible suggestions as plain text. This uses no model request or public share URL. Library plans, rating notes and unsent drafts are omitted; removed sources stay removed. See docs/SELECTION_COPY_2026-11-03.md.
 
 - Modern result titles copy the displayed name and year with an inline confirmation and manual fallback. The same-request continuation is available above and below the cards. An ambiguous mood reference may remain unbound when its desired properties are explicit; exact identity is required only for decisions that depend on it. This local03.11 iteration has not yet been published; see docs/TESTER_FEEDBACK_ROUND2_2026-11-03.md.

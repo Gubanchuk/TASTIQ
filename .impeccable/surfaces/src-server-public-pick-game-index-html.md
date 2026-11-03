@@ -2,7 +2,7 @@
 version: 1
 slug: "src-server-public-pick-game-index-html"
 primary_target: "src/server/public/pick/game/index.html"
-related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/product.css","src/server/public/shared/workspace.css","src/server/public/shared/custom-select.css","src/server/public/shared/custom-select.js","src/server/public/shared/results.css","src/server/public/shared/workspace-ui.js","src/server/public/shared/request-overview.js","src/server/public/shared/clarification-view.js","src/server/public/shared/feedback-drafts.js","src/server/public/shared/evening-view.js","src/server/public/pick/game/app.js","src/server/public/pick/game/card-view.js"]
+related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/product.css","src/server/public/shared/workspace.css","src/server/public/shared/custom-select.css","src/server/public/shared/custom-select.js","src/server/public/shared/results.css","src/server/public/shared/workspace-ui.js","src/server/public/shared/request-overview.js","src/server/public/shared/request-conditions.js","src/server/public/shared/result-clarity.js","src/server/public/shared/clarification-view.js","src/server/public/shared/feedback-drafts.js","src/server/public/shared/evening-view.js","src/server/public/pick/game/app.js","src/server/public/pick/game/card-view.js"]
 ---
 
 Mode: Operate. Построенный адаптивный игровой Conversation после U01–U15,03.11.2026.
@@ -51,3 +51,8 @@ Detector один раз: exit0/58findings=52advisories+6inherited warnings; п�
 
 
 03.11: «Скопировать подбор» рядом с верхним more, общий inline status и multiline manual fallback. shared/selection-copy.js экспортирует явные поля текущего запроса/выдачи, без uid/библиотеки/оценок/черновиков. Проверки/ограничение OS clipboard readback: docs/SELECTION_COPY_2026-11-03.md.
+
+
+## Условия и порядок рекомендаций — 2026-11-03
+
+Первый блок выдачи имеет явный заголовок «Главный вариант под твой запрос», альтернативы — «Другие варианты». Обе кнопки more связаны с пояснением до четырёх за раз и того же запроса. Бренд, карточки, ранжирование и feedback прежние; docs/REQUEST_CLARITY_2026-11-03.md.

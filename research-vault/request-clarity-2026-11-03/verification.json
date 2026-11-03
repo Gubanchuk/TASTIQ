@@ -1,0 +1,135 @@
+{
+  "at": "2026-11-03T17:29:44.238Z",
+  "tests": {
+    "count": 587,
+    "failed": 0,
+    "command": "npm test",
+    "httpStub": "Pass; paid0",
+    "build": {
+      "staticSourceMatches": 83,
+      "runtimeSourceMatches": 5,
+      "data": [
+        "catalog-screen.json",
+        "catalog.json",
+        "posters.json",
+        "quotes-ru.json",
+        "verified-game-context.json",
+        "verified-game-releases.json"
+      ],
+      "config": {
+        "runtime": "nodejs24.x",
+        "handler": "handler.mjs",
+        "launcherType": "Nodejs",
+        "shouldAddHelpers": false,
+        "maxDuration": 300
+      },
+      "paidCalls": 0
+    }
+  },
+  "native": {
+    "evidence": "Observed in native IAB, not a paid human-fit evaluation",
+    "domains": [
+      {
+        "domain": "game",
+        "alternativesLabel": "Другие варианты",
+        "help": "До четырёх вариантов за раз. «Показать ещё» продолжает этот же подбор.",
+        "mainLabel": "Главный вариант под твой запрос",
+        "moreDescriptions": [
+          "result-batch-help",
+          "result-batch-help"
+        ],
+        "overflow": false
+      },
+      {
+        "domain": "film",
+        "alternativesLabel": "Другие варианты",
+        "help": "До четырёх вариантов за раз. «Показать ещё» продолжает этот же подбор.",
+        "mainLabel": "Главный вариант под твой запрос",
+        "moreDescriptions": [
+          "result-batch-help",
+          "result-batch-help"
+        ],
+        "overflow": false
+      },
+      {
+        "domain": "series",
+        "alternativesLabel": "Другие варианты",
+        "help": "До четырёх вариантов за раз. «Показать ещё» продолжает этот же подбор.",
+        "mainLabel": "Главный вариант под твой запрос",
+        "moreDescriptions": [
+          "result-batch-help",
+          "result-batch-help"
+        ],
+        "overflow": false
+      }
+    ],
+    "family": {
+      "formatRemovalUndo": true,
+      "companyRemovalUndo": true,
+      "timeRemovalUndo": true,
+      "reload": true,
+      "focusRestoredToFormatControl": true,
+      "moreChangedCards": true,
+      "undoRestoredOriginalThree": true
+    },
+    "phone": {
+      "widths": [
+        390,
+        320
+      ],
+      "horizontalOverflow": false,
+      "removeTargetAt320": [
+        44,
+        44
+      ],
+      "fullNativeFrames": true
+    },
+    "consoleErrors": 0
+  },
+  "localRuntime": {
+    "base": "http://127.0.0.1:5177",
+    "status": 200,
+    "formatDisplayBinding": "format",
+    "acceptedFactsUnchanged": true,
+    "company": "children",
+    "childAge": 7,
+    "minutes": 90,
+    "qaBilling": {
+      "run": "requestclaritydeploy20261103",
+      "maxReserveUsd": 0,
+      "calls": []
+    }
+  },
+  "detector": {
+    "runs": 1,
+    "advisories": 25,
+    "blockingFindings": 0,
+    "scope": "Existing font/radius values retained; no unrelated drift repair"
+  },
+  "primaryCaptures": [
+    "cartoon-desktop-final.jpg",
+    "cartoon-390-final.jpg",
+    "conditions-320.jpg"
+  ],
+  "nonFinalCaptures": [
+    "cartoon-desktop.jpg"
+  ],
+  "sourceHashes": {
+    "src/core/media-conversation.js": "9c302fb80f7ee80122819765778f89bdc1aab09b1c55dba4aeab38510ada2873",
+    "src/server/public/shared/request-overview.js": "396799a02126eba01e7062a91a07a077af57d15c5aee3138966cc7916dde7501",
+    "src/server/public/shared/request-conditions.js": "7d3a983a97862903a86425aba18e84f306e5dfbe14a00b538e6482ba81e6cdc3",
+    "src/server/public/shared/result-clarity.js": "bed89a4c9f3ad4b3001c342f545f1a675f78e5c342016394f177bb4a567e98c3",
+    "src/server/public/shared/results.css": "e5f97cdc4e87c5d37985a3a58b8e624e4f39444c08b6be733ef63703a2e96ba7",
+    "src/server/public/shared/workspace.css": "0a0fb992127c3a9b1b0df10ebdef8e750a22140fd572551cf7100fbc5751088a",
+    "src/server/public/pick/game/app.js": "8230c76a761f00b032628c04c1570b36350080c394d89026b2e10acf04388429",
+    "src/server/public/pick/watch/app.js": "b23c73d39a18f5c5be1a9089a61b6f3f244aef8f01e2659bca7d23a19bd95ad7",
+    "src/server/public/pick/game/card-view.js": "28b9bd94560d4445592f7748e622508af926f6a7e30da788cd632712d31b5e38",
+    "src/server/public/pick/watch/card-view.js": "ce5a023962fd7922c7e95c9db8bd093079c278b1611deb0c6ce0251ef621dad8"
+  },
+  "paidCalls": 0,
+  "costUsd": 0,
+  "limits": [
+    "Stub more verifies UI and state, not semantic matching",
+    "No new human fit, real paid replacement, physical touch or screen-reader measurement"
+  ]
+}

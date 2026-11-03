@@ -478,7 +478,10 @@ export function applyMediaConversationProposal(state,proposal,dict,expectedRevis
 }
 export function mediaConversationScreen(s) {
   const contextFacts=fields.filter(k=>s.contextEvidence?.[k]).map(k=>({key:`context:${k}`,text:s.contextEvidence[k].quote,sourceId:s.contextEvidence[k].sourceId,quote:s.contextEvidence[k].quote,stance:'require',scope:'today',feature:null,titleId:null,exposure:null,titleIntent:null}));
-  const common={domain:s.domain,summary:s.summary||s.facts.filter(f=>f.scope==='today').map(f=>f.text).join('; '),facts:[...s.facts,...contextFacts],uncertainties:s.uncertainties,context:s.context,
+  // Display metadata only: an exact format binding can share one visible control.
+  const format=s.contextEvidence?.format;
+  const facts=s.facts.map(f=>format&&requestedFormatFact(f)===format.value&&f.sourceId===format.sourceId&&f.quote===format.quote?{...f,conditionKey:'format'}:f);
+  const common={domain:s.domain,summary:s.summary||s.facts.filter(f=>f.scope==='today').map(f=>f.text).join('; '),facts:[...facts,...contextFacts],uncertainties:s.uncertainties,context:s.context,
     sessionTime:s.sessionTime??null,canBack:s.turns.length>0,canUndoFactRemoval:Boolean(s.factRemovalUndo),provisional:Boolean(s.provisional),turns:s.turns.map(t=>({id:t.id,question:t.question.title,answer:t.answer,superseded:Boolean(t.superseded)}))};
   if(s.phase==='result')return {...common,type:'result',result:s.result};if(s.phase==='review')return {...common,type:'review'};
   return {...common,type:'question',question:s.question??mediaFallbackQuestion(s)??q('extra','Что ещё важно учесть?',[],'Можно перейти к пониманию и посмотреть варианты.')};

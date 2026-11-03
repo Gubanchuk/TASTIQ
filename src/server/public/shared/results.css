@@ -8,7 +8,7 @@
 .game-copy-status:not(:empty){margin:0 0 10px}
 .game-copy-fallback{display:block;width:100%;margin-top:8px;font-size:14px}
 .game-result-browse{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin-top:18px}
-.game-result-browse>span{color:var(--brand-muted);font-size:13px;line-height:1.6}
+.game-result-browse>span{flex-basis:100%;color:var(--brand-muted);font-size:13px;line-height:1.6}
 .game-selection-copy-status:not(:empty){margin-top:12px}
 .game-selection-copy-status textarea.game-copy-fallback{width:100%;min-height:180px;max-height:360px;resize:vertical;font-size:13px}
 body.product-page #stage .game-proposals{align-items:start;gap:20px}
@@ -59,7 +59,7 @@ body.product-page #stage .game-proposal .game-plan-actions{order:initial;display
 body.product-page #stage .game-proposal .game-plan-actions .btn{min-height:44px;padding:10px 13px;font-size:12px;white-space:normal;text-align:center}
 body.product-page #stage .game-proposal .game-library-state{order:initial;margin:0;color:var(--brand-muted);font-size:12px;line-height:1.6}
 body.product-page #stage .game-proposal>.game-store-link{align-self:start;justify-self:start;margin:12px 0 0;padding:0;font-size:13px;min-height:44px}
-body.product-page #stage .game-alternatives-heading{margin:14px 0 0;font-size:22px;line-height:1.4}
+body.product-page #stage :is(.game-choice-heading,.game-alternatives-heading){grid-column:1/-1;max-width:none;margin:14px 0 0;font:600 22px/1.4 Golos,Arial,sans-serif}
 body.product-page #stage .game-card-pending{align-self:start;height:auto;min-height:0;padding:22px;border:0;background:var(--brand-context)}
 body.product-page #stage .game-card-pending .game-poster{flex:0 0 76px;width:76px;max-width:76px;min-height:88px;margin:0;border-radius:10px;opacity:1}
 body.product-page #stage .game-card-pending .game-poster img{max-height:110px}
@@ -131,7 +131,7 @@ body.product-page #stage .game-proposal .evening-controls-modern .evening-status
  body.product-page #stage .game-proposal-featured .game-card-reason{font-size:15px}
  body.product-page #stage .game-proposal .game-card-footer,
  body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-footer{margin:20px 0 0;padding:0}
- body.product-page #stage .game-alternatives-heading{margin:12px 0 0;font-size:21px}
+ body.product-page #stage :is(.game-choice-heading,.game-alternatives-heading){margin:12px 0 0;font-size:21px}
  body.product-page #stage .game-card-pending{margin:0}
 }
 @media(max-width:360px){

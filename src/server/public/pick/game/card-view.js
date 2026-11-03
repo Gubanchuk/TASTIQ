@@ -1,5 +1,6 @@
 import {feasibilityHtml} from './feasibility.js';
 import {titleCopyHtml} from '../../shared/title-copy.js';
+import {resultSectionHeading} from '../../shared/result-clarity.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const nameOf=card=>card.ru||card.name||card.title||'Игра';
@@ -25,12 +26,12 @@ export function gameLibraryState(card,items=[]) {
 
 export function gameCardHtml(card,{index=0,marked=false,kept=false,known=false,blocked=false,saved=false,libraryLane='want'}={}) {
  const title=nameOf(card),heading='h2',id=esc(card.id);
- if(marked)return `<article class="game-card game-card-pending" data-card-id="${id}" aria-label="${esc(title)}">`
+ if(marked)return resultSectionHeading(index)+`<article class="game-card game-card-pending" data-card-id="${id}" aria-label="${esc(title)}">`
   +`<div class="game-pending-identity">${poster(card)}<div><${heading}>${esc(title)}</${heading}><p class="game-pending-label">Отмечена для замены</p><p class="game-help">Остальные варианты сохранятся.</p></div></div>`
   +`<div class="game-pending-controls"><div class="game-card-actions">${button('Отменить','familiar-unmark',card.id,'familiar')}${button('Оставить — хочу вернуться','familiar-keep',card.id,'keep')}</div>`
   +`<label class="game-check"><input type="checkbox" data-history-block="${id}" data-focus="block:${id}"${blocked?' checked':''}> Не предлагать в следующих подборах</label></div></article>`;
  const url=safeUrl(card.link),reason=card.ai?.reason||card.reason||'',caveat=card.ai?.caveat||card.caveat||'';
- return `${index===1?'<h2 class="game-alternatives-heading">Ещё варианты на этот вечер</h2>':''}<article class="game-card game-proposal${index===0?' game-proposal-featured':''}" data-card-id="${id}" aria-label="${esc(title)}"><div class="game-card-layout">${poster(card,{eager:index===0})}<div class="game-card-copy">`
+ return resultSectionHeading(index)+`<article class="game-card game-proposal${index===0?' game-proposal-featured':''}" data-card-id="${id}" aria-label="${esc(title)}"><div class="game-card-layout">${poster(card,{eager:index===0})}<div class="game-card-copy">`
   +`<div class="game-card-heading"><${heading} aria-label="${esc(title)}">${titleCopyHtml(title,card.year)}</${heading}><div class="game-copy-status" data-copy-status role="status" aria-live="polite"></div><p class="game-meta">${esc([card.year,...(card.genres??[]).slice(0,2)].filter(Boolean).join(' · '))}</p>`
   +(kept?'<p class="game-kept">Знакомая игра — оставлена на сегодня.</p>':known?'<p class="game-kept">Уже знакома · отметка в этом браузере</p>':'')
   +'</div>'

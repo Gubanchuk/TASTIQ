@@ -1,0 +1,35 @@
+[
+  {
+    "domain": "game",
+    "alternativesLabel": "Другие варианты",
+    "help": "До четырёх вариантов за раз. «Показать ещё» продолжает этот же подбор.",
+    "mainLabel": "Главный вариант под твой запрос",
+    "moreDescriptions": [
+      "result-batch-help",
+      "result-batch-help"
+    ],
+    "overflow": false
+  },
+  {
+    "domain": "film",
+    "alternativesLabel": "Другие варианты",
+    "help": "До четырёх вариантов за раз. «Показать ещё» продолжает этот же подбор.",
+    "mainLabel": "Главный вариант под твой запрос",
+    "moreDescriptions": [
+      "result-batch-help",
+      "result-batch-help"
+    ],
+    "overflow": false
+  },
+  {
+    "domain": "series",
+    "alternativesLabel": "Другие варианты",
+    "help": "До четырёх вариантов за раз. «Показать ещё» продолжает этот же подбор.",
+    "mainLabel": "Главный вариант под твой запрос",
+    "moreDescriptions": [
+      "result-batch-help",
+      "result-batch-help"
+    ],
+    "overflow": false
+  }
+]
