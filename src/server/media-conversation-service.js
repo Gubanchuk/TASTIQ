@@ -6,6 +6,7 @@ import {editionsOf,makeCatalog} from '../core/catalog.js';
 import {aiMediaConversation} from '../ai/media-conversation.js';
 import {aiPick} from '../ai/pick.js';
 import {criteriaOf} from '../ai/pick-constraints.js';
+import {feedbackContextOf} from '../ai/feedback-context.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationMediaIdentity} from './conversation-media-identity.js';
@@ -104,7 +105,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     else {
       const permission=access(who);if(!permission.allowed)return failed(`${permission.reason??'Помощник недоступен'}. Варианты и отметки сохранены.`,false);
       spend(who);
-      try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),wish:s.summary,...(more?{alreadyShown:neutralShown}:{previous:before.map(card=>card.id)})});}
+      try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,...(more?{alreadyShown:neutralShown}:{previous:before.map(card=>card.id)})});}
       catch {out={error:'Не удалось заменить варианты. Варианты и отметки сохранены.'};}
       log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
     }
@@ -132,6 +133,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     return response(s,{feedbackCarry:{retainedIds}});
   }
   async function handle(body,who) {
+    const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,domain);if(feedbackContext.length)who={...who,feedbackContext};
     let s=validateSnapshot(body.state?normalizeMediaConversation(body.state,domain):newMediaConversation({domain,mode:body.mode}));
     s=remembered(body,s);
     if(!body.action) {
@@ -178,7 +180,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       s.uncertainties=[...new Set([...s.uncertainties,'Это предварительный подбор по доступным признакам: помощник сейчас недоступен, свободный ответ мог быть учтён не полностью.'])];return response(s);
     }
     spend(who);let out;
-    try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),wish:s.summary,previous:[]});}
+    try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,previous:[]});}
     catch {out={error:'Не удалось получить рекомендации. Запрос сохранён.'};}
     log('pick',s,out);
     if(out.error)return response({...s,phase:'review',failedAction:'pick'},{error:out.error,retryable:out.retryable!==false});

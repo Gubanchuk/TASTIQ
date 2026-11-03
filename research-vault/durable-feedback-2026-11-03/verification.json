@@ -1,0 +1,80 @@
+{
+  "at": "2026-11-03T19:48:02.563Z",
+  "sourceHashes": {
+    "src/server/app.js": "15615636207338aec11d6f5b99165148597497ea7c6d5ed2f1c103d61d9c7202",
+    "src/server/feedback-service.js": "0bc492964d4dc9fff4449ccf6133d22bdaac1c55dc4c35c547a6308ed9434e79",
+    "src/server/feedback-repository.js": "a6a099f8a318feaacebf1ed0255159b12e0fc07d9ba511016004aeea6389c882",
+    "src/server/feedback-edge-handler.js": "69568e5cd3731f4b1238fe42d23b5cee18e22c3cb5ed36b5cffa7d9f611e1612",
+    "src/ai/feedback-context.js": "6a4059d10e554c26fdcdacdae4fd6afe4402fa73b8225978974f8a3c8eac99c1",
+    "src/ai/pick.js": "1a28dc3492babe4ad1eb91e537c0e8b571ec52d754b27f5c28008d5ec4020acf",
+    "src/server/conversation-service.js": "9794c6149a9c65f0147f2f8ae8944302553012cdfaed5ce5caeb0d5b5c834d49",
+    "src/server/media-conversation-service.js": "b903de34900f40dfcc7a07eca4be66916f0bf4dfa38aed150903d1103ac08355",
+    "src/server/public/shared/evening-feedback.js": "74275bcfb098f07c6355d2abb4d7ba7665c798f2ec507cd9daeea8c120542001",
+    "src/server/public/shared/selection-review.js": "50e25e0c8cf647d94b1ab0f3fba7829c09c30f940fac790ca780adbc7bfbd34a",
+    "src/server/public/shared/selection-review-controller.js": "c476b05bd0270bc45d2a8a8689814b0a14195f496cb8120c7e224612b3e4113d"
+  },
+  "native": {
+    "domains": [
+      "game",
+      "film",
+      "series",
+      "cartoon"
+    ],
+    "mockDatabaseRows": 10,
+    "feedbackRequests": 13,
+    "conflicts": 0,
+    "allReviewsSynthetic": true,
+    "realDatabaseWrites": 0,
+    "draftSurvivesReload": true,
+    "draftNotSentBeforeSubmit": true,
+    "offlineQueueReloadRetry": true,
+    "moreNewFormUndoRestoresReview": true,
+    "learningOptOut": true,
+    "widths": [
+      390,
+      320
+    ],
+    "overflow": false,
+    "minVerdictButtonHeight": 44,
+    "unexpectedConsoleErrors": 0,
+    "successfulAckHidesRetry": true,
+    "tab": 38,
+    "closed": true
+  },
+  "unitTests": 624,
+  "httpStub": "Pass, paid0",
+  "localSql": {
+    "engine": "PGlite PostgreSQL",
+    "tests": 3,
+    "idempotence": true,
+    "outOfOrderRevisions": true,
+    "anonymousAndAuthenticatedDenied": true,
+    "serverInvokerAllowed": true,
+    "qaNamespaceSeparate": true
+  },
+  "review": {
+    "reviewers": 1,
+    "model": "gpt-6-astra",
+    "materialFindings": 1,
+    "fixed": "newer draft survives delayed local submit RED→GREEN",
+    "additionalOwnFix": "storage-disabled draft fallback RED→GREEN",
+    "deferredMinors": []
+  },
+  "build": {
+    "staticSourceMatches": 85,
+    "runtimeSourceMatches": 11,
+    "runtimeJson": 6,
+    "testDependencyBundled": false
+  },
+  "paidModelCalls": 0,
+  "apiUsd": 0,
+  "remoteDatabase": "Family tastiq_ objects; real QA write/readback PASS, see hosted artifacts",
+  "production": "delivery in progress",
+  "newBoundaryReview": {
+    "model": "gpt-6-astra",
+    "targetedTests": 11,
+    "materialFindings": 0
+  },
+  "finalHttpFix": "feedback503/409 preserved RED→GREEN; HTTPstub excludes configured owner DB",
+  "finalAt": "2026-11-03T21:38:33.790Z"
+}

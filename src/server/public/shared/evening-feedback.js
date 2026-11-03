@@ -1,5 +1,6 @@
 // Shared browser/server contract. Feedback describes one evening, never a persistent taste update.
 import { feedbackTransactions } from './evening-storage.js';
+import {normalizeSelectionReview,historicalFeedback} from './selection-review.js';
 export const FEEDBACK_KEY = 'tastiq.site.evenings';
 export const FIT = {accept:'Подходит',conditional:'С оговоркой',reject:'Не подходит',unknown:'Пока не знаю'};
 export const REASONS = {mood:'Не то настроение',taste:'Не мой вкус',time:'Не укладывается по времени',company:'Не для моей компании',availability:'Не могу запустить или посмотреть',seen:'Уже знакомо',other:'Другая причина'};
@@ -67,7 +68,9 @@ export function normalizeFeedback(x) {
     }
     if(Object.hasOwn(c,'onlyEnded')){if(c.onlyEnded!=null&&typeof c.onlyEnded!=='boolean')return null;context.onlyEnded=c.onlyEnded??null;}
   }
-  return {version:1,id:x.id,dialogueId:x.dialogueId,domain:x.domain,revision:x.revision,at:x.at,updatedAt:x.updatedAt,context,cards,responses};
+  const selectionReview=Object.hasOwn(x,'selectionReview')?normalizeSelectionReview(x.selectionReview):undefined;
+  if(selectionReview===null)return null;
+  return {version:1,id:x.id,dialogueId:x.dialogueId,domain:x.domain,revision:x.revision,at:x.at,updatedAt:x.updatedAt,context,cards,responses,...(selectionReview?{selectionReview}:{})};
 }
 
 // Private source words and displayed AI sentences can contain those words. Never send either automatically.
@@ -131,6 +134,12 @@ export function createFeedbackStore({storage,send,id=()=>crypto.randomUUID(),now
     async refresh() {await exclusive(()=>refresh());onChange();},
     all: () => entries.map(e=>structuredClone(e.run)),
     get: (rid) => { const e=getEntry(rid); return e ? structuredClone(e.run) : null; },
+    learning: domain => historicalFeedback(entries.map(e=>e.run),domain),
+    review(rid,value) { return exclusive(()=>{
+      refresh();const e=getEntry(rid),checked=normalizeSelectionReview(value);if(!e||!checked)return false;
+      if(JSON.stringify(e.run.selectionReview)===JSON.stringify(checked))return true;
+      e.run.selectionReview=checked;e.run.revision++;e.run.updatedAt=now();save();return true;
+    }); },
     status: (rid) => { const e=getEntry(rid); return !e ? 'missing' : e.ack===e.run.revision && e.ackPayload===payload(e.run) ? 'sent' : 'pending'; },
     observe(dialogueId,state,result,{inheritFrom,carryIntoExisting=false,retainedIds}={}) { return exclusive(()=>{
       if (!token(dialogueId) || !DOMAINS.includes(state?.domain) || !result?.top) return null;

@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-03T21:03:34.346Z",
+  "targetProject": "pbipnjlsxkbhdyfebdeo",
+  "namespace": "qa:tastiqfamily20261104_01",
+  "first": {
+    "ok": true,
+    "id": "tastiq-family-connection-test",
+    "revision": 1
+  },
+  "repeated": {
+    "ok": true,
+    "id": "tastiq-family-connection-test",
+    "revision": 1
+  },
+  "older": {
+    "ok": true,
+    "id": "tastiq-family-connection-test",
+    "revision": 0
+  },
+  "conflictStatus": 409,
+  "unauthorizedStatus": 401,
+  "readStatus": 405,
+  "scopedIngestionToken": true,
+  "familyServiceRoleKeyInTastiq": false,
+  "synthetic": true,
+  "productionFeedbackWrites": 0,
+  "paidModelCalls": 0
+}

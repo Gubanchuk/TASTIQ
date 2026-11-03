@@ -12,6 +12,7 @@ import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
 import { verifiedOriginalYear } from '../core/title-identity.js';
 import {criteriaOf,constraintSchema,constraintInstructions,validateConstraintChecks} from './pick-constraints.js';
+import {feedbackContextPrompt,feedbackContextRule} from './feedback-context.js';
 
 export { AI };
 
@@ -88,7 +89,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = []) 
  * Asks the model for four picks. Returns { picks: [{ id, reason, caveat, likelySeen, own }], understood, ms, usage } or
  * { error } when the engine's picks should stay.
  */
-export async function aiPick(catalogs, state, { wish = '', previous = [], alreadyShown = [], api = requestResponse, maxCostUsd = Infinity } = {}) {
+export async function aiPick(catalogs, state, { wish = '', previous = [], alreadyShown = [], feedbackContext=[], api = requestResponse, maxCostUsd = Infinity } = {}) {
   const catalog = catalogs[state?.domain];
   if (!catalog) return { error: 'нет домена' };
   const adaptiveMedia=state.domain!=='game'&&Boolean(state.conversation),criteria=criteriaOf(state);
@@ -110,14 +111,14 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
     : AI.spares
     ? `Выбери ровно ${total} разных тайтлов по порядку. Первые ${AI.picks} покажу сразу, первый — лучший; остальные ${AI.spares} — запасные, по очереди встанут на место того, что человек уже видел.`
     : `Выбери ровно ${AI.picks} разных тайтла, первый — лучший.`;
-  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} Бери из списка (id копируй из строки кандидата) или не больше ${AI.ownPicks} своих (id пустой, название и год).`;
+  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} Бери из списка (id копируй из строки кандидата) или не больше ${AI.ownPicks} своих (id пустой, название и год).`;
   const started = Date.now();
   const request = {
       model: AI.model,
       max_output_tokens: AI.maxOutputTokens,
       reasoning: { effort: AI.effort },
       text: { format: { type: 'json_schema', name: 'tastiq_picks', strict: true, schema: constraintSchema(SCHEMA,criteria) } },
-      instructions: systemFor(state)+constraintInstructions(criteria),
+      instructions: systemFor(state)+constraintInstructions(criteria)+(feedbackContext.length?'\n'+feedbackContextRule:''),
       input: content,
       store: false,
       service_tier: 'default',

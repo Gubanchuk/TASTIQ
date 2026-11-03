@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-03T21:36:40.048Z",
+  "project": "pbipnjlsxkbhdyfebdeo",
+  "table": "public.tastiq_feedback_events",
+  "view": "public.tastiq_feedback_latest",
+  "rpc": "public.tastiq_record_feedback",
+  "edgeFunction": "tastiq-feedback",
+  "readback": {
+    "directProbeRows": 2,
+    "localHttpProbeRows": 1,
+    "ordinaryQaRows": 0,
+    "productionRows": 0,
+    "latestDirectRevision": 1,
+    "rls": true,
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "anonExecute": false,
+    "authenticatedExecute": false,
+    "securityDefiner": false
+  },
+  "advisors": {
+    "security": [
+      {
+        "name": "rls_enabled_no_policy",
+        "title": "RLS Enabled No Policy",
+        "level": "INFO",
+        "facing": "EXTERNAL",
+        "categories": [
+          "SECURITY"
+        ],
+        "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+        "count": 3,
+        "findings": [
+          {
+            "detail": "Table \\`public.tastiq_feedback_events\\` has RLS enabled, but no policies exist",
+            "metadata": {
+              "name": "tastiq_feedback_events",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-11-03T21:04:02.276Z"
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "name": "unused_index",
+        "title": "Unused Index",
+        "level": "INFO",
+        "facing": "EXTERNAL",
+        "categories": [
+          "PERFORMANCE"
+        ],
+        "description": "Detects if an index has never been used and may be a candidate for removal.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+        "count": 2,
+        "findings": [
+          {
+            "detail": "Index \\`tastiq_feedback_received\\` on table \\`public.tastiq_feedback_events\\` has not been used",
+            "metadata": {
+              "name": "tastiq_feedback_events",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-11-03T21:04:02.099Z"
+          }
+        ]
+      }
+    ]
+  },
+  "assessment": "INFO no-policy is intentional closed server-only storage: anonymous/authenticated receive no grants or policies. Fresh received-at index has no observed use yet; retained for bounded owner analysis. No existing Family object changed.",
+  "paidModelCalls": 0
+}

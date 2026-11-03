@@ -54,7 +54,7 @@
 - [x] Full unit, HTTP stub and production build; native replay of blocked/unknown/successful partial/undo/reload states.
 - [x] Decide and announce a justified bounded live check only after offline gates and fresh ledger accounting.
 - [x] One fresh whole-change review at the end; fix material findings and rerun appropriate gates.
-- [ ] Update docs/memory; use existing main push/deploy authorization; verify production runtime without new paid calls.
+- [x] Update docs/memory; use existing main push/deploy authorization; verify production runtime without new paid calls.
 
 ## Rulings / execution ledger
 
@@ -68,3 +68,4 @@
 - Task2 complete: constrained sole/partial/unknown/initial/familiar/AI-off regressions GREEN; native partial/sole/undo/reload/failed familiarity preserved.
 - Final review: one fresh reviewer,54/54 targeted tests, no material findings and no deferred minor findings. Server-only neutral-kind plus nonempty text was assessed: current UI sends empty neutral text and switches typing back to answer; no ordinary UI reproduction. Product normalization remains the input boundary; a future alternate client must preserve that contract.
 - Task3 verification:600/600, HTTPstub paid0, build83static/7runtime source matches/6JSON/Node24/300s. Native desktop/390 no overflow or console errors. Live exactly2 calls/$0.050074, no new uncertainty: family title rejected by catalog, episodic3 new cards23–30min, undo/reload restored4. Production delivery remains the final checkbox above until separately verified.
+- Task3 delivery complete: mainffa1817 remoteMatch→READY dpl_4TEuGSxS9BVCGbSr3YL6F2pZvwf2/21:53:31МСК.18productionstatic+7bundledruntime commitMatch; free cloudrestore calls[]/more not_requested0/resultpreserved; nativefirstscreen console0; earlyerrorrecords0 after first minute. No paid delivery calls. Context/memory/delivery report updated locally after publication, prior pre-push report included in the shipped commit.

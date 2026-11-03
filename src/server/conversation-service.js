@@ -8,6 +8,7 @@ import {aiPick} from '../ai/pick.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationGameIdentity} from './conversation-game-identity.js';
+import {feedbackContextOf} from '../ai/feedback-context.js';
 
 const contextual = s => ({...s,question:s.question??fallbackQuestion(s),phase:'talk',provisional:true});
 
@@ -46,7 +47,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     else {
       const permission=access(who);if(!permission.allowed)return failed(`${permission.reason??'Помощник недоступен'}. Варианты и отметки сохранены.`,false);
       spend(who);
-      try {out=await pick(catalogs,legacy,{...(api?{api}:{}),wish:s.summary,...(more?{alreadyShown:neutralShown}:{previous:before.map(c=>c.id)})});}
+      try {out=await pick(catalogs,legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,...(more?{alreadyShown:neutralShown}:{previous:before.map(c=>c.id)})});}
       catch {out={error:'Не удалось заменить игры. Варианты и отметки сохранены.'};}
       log(more?'more':'replace',s,out);if(out.error)return failed(out.error,out.retryable!==false);
     }
@@ -78,6 +79,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     return response(s,{feedbackCarry:{retainedIds}});
   }
   async function handle(body,who) {
+    const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,'game');if(feedbackContext.length)who={...who,feedbackContext};
     let s=body.state?normalizeConversation(body.state):newConversation({mode:body.mode});
     if(s.facts.some(f=>f?.gameId==null)) {
       const resolved=identities.resolve(s);
@@ -140,7 +142,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     }
     spend(who);
     let out;
-    try {out=await pick(catalogs,legacy,{...(api?{api}:{}),wish:s.summary,previous:[]});}
+    try {out=await pick(catalogs,legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,previous:[]});}
     catch {out={error:'Не удалось получить рекомендации. Запрос сохранён.'};}
     log('pick',s,out);
     if(out.error)return response({...s,phase:'review',failedAction:'pick'},{error:out.error,retryable:out.retryable!==false});

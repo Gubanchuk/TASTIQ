@@ -9,7 +9,7 @@ const recoveryOf=value=>typeof value?.error==='string'&&value.error?{error:value
  id:value.state?.id,revision:value.state?.revision,failedAction:value.state?.failedAction??null}:null;
 
 // Transport, snapshots and drafts are independent of DOM. Reload is always a free resume.
-export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false}={}) {
+export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false}={}) {
  if(!['game','film','series','cartoon'].includes(domain)||typeof storageKey!=='string'||!storageKey||domain!=='game'&&storageKey===CONVERSATION_KEY)throw TypeError('Некорректный раздел подбора');
  const scoped=state=>state&&(domain==='game'?state.domain==null||state.domain==='game':state.domain===domain);
  let snapshot=null,drafts={},previous=null,correctionCheckpoint=null,persistent=Boolean(storage),generation=0,busy=false,error=null,retryBody=null,retryOptions={};
@@ -35,6 +35,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  async function execute(body,{reset=false,restoredDrafts=null,clearPrevious=false,resumeFailure=null}={}) {
   if(domain!=='game')body={...body,domain};
   if(typeof rememberedExclusions==='function'&&!Object.hasOwn(body,'rememberedExclusions'))body={...body,rememberedExclusions:clone(rememberedExclusions())};
+  if(typeof qualityFeedback==='function'&&!Object.hasOwn(body,'qualityFeedback')){const rows=qualityFeedback();if(rows?.length)body={...body,qualityFeedback:clone(rows)};}
   const ticket=++generation,base=clone(body.state);busy=true;error=null;retryBody=clone(body);retryOptions={reset,restoredDrafts:clone(restoredDrafts),clearPrevious,resumeFailure:clone(resumeFailure)};notify();
   try {
    const response=await request(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});

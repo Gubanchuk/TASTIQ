@@ -26,6 +26,8 @@ Object.assign(process.env, {
   AI_ACCESS: 'all', AI_SPARES: '0', AI_EFFORT: 'low',
   CATALOG_PATH: join(scratch, 'catalog.json'), SCREEN_CATALOG_PATH: join(scratch, 'screen.json'),
   JOURNAL_PATH: join(scratch, 'journal.ndjson'),
+  // Keep this offline fixture independent of an owner's configured hosted feedback database.
+  FEEDBACK_DATABASE_URL: '', FEEDBACK_DATABASE_SECRET: '',
   AI_EVAL_BUDGET_DIR: ledgerDir, AI_EVAL_BATCH_ID: 'http-smoke', AI_EVAL_BATCH_CAP: '0.75',
 });
 

@@ -11,7 +11,8 @@ import { aiAccess, aiSpend } from '../ai/access.js';
 import { AI, aiPick } from '../ai/pick.js';
 import { estimateCost } from '../ai/usage.js';
 import { aiIntent, INTENT_VERSION } from '../ai/intent.js';
-import { normalizeFeedback, publicFeedback } from './public/shared/evening-feedback.js';
+import {createFeedbackRepository,feedbackVerificationNamespace} from './feedback-repository.js';
+import {createFeedbackService} from './feedback-service.js';
 import { normalizeNote } from '../core/session-intent.js';
 import { PaidBudget } from '../stand/paid-budget.js';
 import { budgetTransport } from '../ai/budget-transport.js';
@@ -24,6 +25,7 @@ const PUBLIC = resolve(ROOT, 'src', 'server', 'public');
 const JOURNAL = journalPath();
 const appendJournal=(content,encoding='utf8')=>{if(!isQaRequest())appendFileSync(JOURNAL,content,encoding);};
 export const catalogs = loadCatalogs({ gamesPath: process.env.CATALOG_PATH, screenPath: process.env.SCREEN_CATALOG_PATH });
+const feedbackService=createFeedbackService({catalogs,repository:createFeedbackRepository(),journal:row=>appendJournal(JSON.stringify(row)+'\n')});
 const paidLedger = process.env.AI_EVAL_BUDGET_DIR ? new PaidBudget(resolve(process.env.AI_EVAL_BUDGET_DIR)) : null;
 let aiOptions = {};
 try {
@@ -163,17 +165,7 @@ const routes = {
   },
   'POST /api/ai/pick': (_, body, req) => aiRoute(req, body),
   'POST /api/ai/intent': (_, body, req) => intentRoute(req, body),
-  'POST /api/feedback': (_, body) => {
-    const run = normalizeFeedback(body?.run), catalog = run && catalogs[run.domain];
-    if (!run || !catalog || run.cards.some(c=>!catalog.byId.has(c.id))
-      || [...run.context.wants,...run.context.avoids,...run.context.stops].some(f=>!catalog.dict.featureById.has(f))) {
-      throw Object.assign(new Error('Некорректный отзыв о подборе'), { status: 400 });
-    }
-    const data = publicFeedback(run);
-    data.cards = data.cards.map(c=>({...c,title:String(catalog.byId.get(c.id).ru??catalog.byId.get(c.id).name).slice(0,200)}));
-    appendJournal( JSON.stringify({ at: new Date().toISOString(), event: 'quality-feedback', data }) + '\n', 'utf8');
-    return { ok: true, id: run.id, revision: run.revision };
-  },
+  'POST /api/feedback': (_, body,req) => feedbackService(body,{qa:isQaRequest(),namespace:feedbackVerificationNamespace({run:qaReceipt()?.run,signature:req.headers['x-tastiq-feedback-probe']})}),
   'POST /api/log': (_, body) => {
     appendJournal( JSON.stringify({ at: new Date().toISOString(), ...body }) + '\n', 'utf8');
     return { ok: true };
@@ -197,6 +189,7 @@ async function handleRequest(req, res) {
     res.end(readFileSync(path));
   } catch (err) {
     if (err.status !== 400) console.error(err);
-    send(res, err.status === 400 ? 400 : 500, { error: err.message });
+    const feedbackStatus=url.pathname==='/api/feedback'&&[409,503].includes(err.status)?err.status:null;
+    send(res, feedbackStatus??(err.status === 400 ? 400 : 500), { error: err.message });
   }
 }

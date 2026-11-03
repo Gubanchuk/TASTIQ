@@ -29,5 +29,8 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.135.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.15"
   }
 }

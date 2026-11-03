@@ -1,6 +1,7 @@
 import {questionFormHtml,neutralAnswerLabels,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
 import {copySelection} from '/shared/selection-copy.js';
+import {createSelectionReviewController} from '/shared/selection-review-controller.js';
 import {resultBatchHelp} from '/shared/result-clarity.js';
 import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor} from '/shared/workspace-ui.js';
@@ -44,11 +45,13 @@ const disclosures=new Map();
 const compactRequest=matchMedia('(max-width:760px)');
 const history=createMediaHistory(domain,{storage});
 const library=createLibraryStore({storage});
+let selectionReviews;
 const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
  return response.ok?response.json():null;
-},onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});}});
-const client=createConversationClient({localStart:true,fetch,domain,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),onChange:render});
+},onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();}});
+const client=createConversationClient({localStart:true,fetch,domain,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>feedback.learning(domain),onChange:render});
+selectionReviews=createSelectionReviewController({storage,feedback,getSnapshot:()=>client.snapshot,getRunId:()=>activeEvening,isBusy:()=>client.busy,onChange:refreshFeedback});
 const knownQuestionDrafts=new Set();
 try {const saved=JSON.parse(storage?.getItem(CONVERSATION_KEY)??'null');for(const drafts of [saved?.drafts,saved?.previous?.drafts])for(const key of Object.keys(drafts??{}))knownQuestionDrafts.add(key);}catch { /* no saved keys in a memory-only visit */ }
 const currentDraft=question=>client.draft(questionDraftKey(client.state,question));
@@ -160,7 +163,7 @@ function resultHtml(screen) {
   +(screen.provisional||result.ai?.error?'<p class="game-help">Предварительный подбор по каталогу. Уточнение моделью сейчас недоступно.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
-  +'<section class="game-proposals" aria-label="Предложенные варианты">'+[result.top,...(result.alternatives??[]).slice(0,3)].map(cardHtml).join('')+'</section>';
+  +'<section class="game-proposals" aria-label="Предложенные варианты">'+[result.top,...(result.alternatives??[]).slice(0,3)].map(cardHtml).join('')+'</section><div data-selection-review></div>';
 }
 function render() {
  ensureQuestionDraftMigration();
@@ -241,7 +244,7 @@ function refreshFeedback() {
   const outcome=el.querySelector('.evening-outcome');if(outcome){const disclosure=`outcome:${activeEvening}:${id}`;outcome.dataset.disclosure=disclosure;if(disclosures.has(disclosure))outcome.open=disclosures.get(disclosure);else if(outcomes.get(id))outcome.open=true;}
   el.querySelectorAll('button,input,textarea,select').forEach(control=>control.disabled=client.busy);
  });
- initCustomSelects(document);
+ selectionReviews?.render();initCustomSelects(document);
  restoreView(focus);
 }
 function observeResult() {
