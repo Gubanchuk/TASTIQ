@@ -4,6 +4,8 @@ import {createGameHistory,GAME_HISTORY_PREFIX} from '/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '/shared/media-history.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
+import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
+import {createFeedbackDrafts,FEEDBACK_DRAFTS_KEY} from '/shared/feedback-drafts.js';
 
 const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -25,13 +27,12 @@ const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:a
 },onChange:()=>{
  document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});
 }});
-const state={view:'board',query:'',domain:'all',reaction:'all',sort:'added',lane:'want',filtersOpen:false,undo:null};
-const mobileLayout=globalThis.matchMedia?.('(max-width:760px)');
-const metadata=new Map(),requested=new Set(),failedImages=new Set(),openDetails=new Set(),feedbackDrafts=new Map();
+const state={view:'board',query:'',domain:'all',reaction:'all',sort:'added',lane:'want',limit:24,filtersOpen:false,undo:null};
+const metadata=new Map(),requested=new Set(),failedImages=new Set(),openDetails=new Set(),feedbackDrafts=createFeedbackDrafts({storage});
 let noticeTimer,feedbackQueue=Promise.resolve(),feedbackQueued=0,feedbackDirty=false;
 const date=value=>{const at=new Date(value);return Number.isFinite(at.valueOf())?at.toLocaleDateString('ru',{day:'numeric',month:'short',year:'numeric'}):'Дата не сохранена';};
 const button=(label,act,attrs='',primary=false)=>`<button type="button" class="library-button${primary?' primary':''}" data-act="${act}" ${attrs}>${label}</button>`;
-const pickLink=(label='Подобрать')=>`<a class="library-button primary" href="/#doors">${label} ${icon('arrow')}</a>`;
+const pickLink=(label='Подобрать')=>`<a class="library-button" href="/#doors">${label} ${icon('arrow')}</a>`;
 function notice(text){$('#library-notice').textContent=text;$('#library-notice').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>{$('#library-notice').hidden=true;},5000);}
 
 function records() {
@@ -77,11 +78,12 @@ function card(row) {
   +(url?`<a class="library-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${row.domain==='game'?'Открыть игру':'Открыть страницу'} ${icon('arrow')}</a>`:'')+'</div></details></article>';
 }
 function filters() {
- const activeCount=Number(state.domain!=='all')+Number(state.reaction!=='all'),mobile=Boolean(mobileLayout?.matches);
+ const activeCount=Number(state.domain!=='all')+Number(state.reaction!=='all')+Number(state.sort!=='added');
  return `<div class="library-filters"><label class="library-search">${icon('search')}<span class="library-sr-only">Найти название</span><input id="find-title" type="search" placeholder="Найти название" autocomplete="off" value="${esc(state.query)}"></label>`
- +`<details class="library-filter-panel" id="library-filter-panel" data-filter-panel="true" data-layout="${mobile?'mobile':'desktop'}"${!mobile||state.filtersOpen?' open':''}><summary data-focus="filter-panel" aria-label="Фильтры и порядок. Активных фильтров: ${activeCount}"><span>Фильтры и порядок</span><span class="filter-active-count" data-active-count="${activeCount}">${activeCount}</span><svg class="filter-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="library-filter-options" data-filter-options>`
+ +`<div class="library-filter-actions">${button(`Фильтры и порядок${activeCount?`<span class="filter-active-count">${activeCount}</span>`:''}<svg class="filter-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,'filters',`data-focus="filters-toggle" aria-expanded="${state.filtersOpen}" aria-controls="library-filter-options"`)}${button('Сбросить','clear',`data-focus="filters-reset"${state.query||activeCount?'':' disabled'}`)}</div>`
+ +`<div class="library-filter-panel" id="library-filter-panel" data-active-count="${activeCount}" data-filter-open="${state.filtersOpen}"><div class="library-filter-options" id="library-filter-options" data-filter-options>`
  +`<label class="library-filter"><span>Раздел</span><select id="domain-filter"><option value="all">Всё</option>${Object.entries(DOMAINS).map(([id,label])=>`<option value="${id}"${state.domain===id?' selected':''}>${label}</option>`).join('')}</select></label>`
- +`<label class="library-filter"><span>Отношение</span><select id="reaction-filter">${Object.entries({all:'Любое',liked:'Зашло',disliked:'Не зашло',unrated:'Без оценки'}).map(([id,label])=>`<option value="${id}"${state.reaction===id?' selected':''}>${label}</option>`).join('')}</select></label><label class="library-filter"><span>Порядок</span><select id="sort">${Object.entries({added:'Сначала новые',oldest:'Сначала давние',title:'По названию'}).map(([id,label])=>`<option value="${id}"${state.sort===id?' selected':''}>${label}</option>`).join('')}</select></label></div></details></div>`;
+ +`<label class="library-filter"><span>Отношение</span><select id="reaction-filter">${Object.entries({all:'Любое',liked:'Зашло',disliked:'Не зашло',unrated:'Без оценки'}).map(([id,label])=>`<option value="${id}"${state.reaction===id?' selected':''}>${label}</option>`).join('')}</select></label><label class="library-filter"><span>Порядок</span><select id="sort">${Object.entries({added:'Сначала новые',oldest:'Сначала давние',title:'По названию'}).map(([id,label])=>`<option value="${id}"${state.sort===id?' selected':''}>${label}</option>`).join('')}</select></label></div></div></div>`;
 }
 function empty(lane,hasFilters) {
  return `<div class="library-empty"><h3>${hasFilters?'Нет совпадений':lane==='tonight'?'Вечер ещё свободен':lane==='known'?'Здесь будет знакомое':'Здесь будут твои планы'}</h3><p>${hasFilters?'Попробуй другое название или сбрось фильтры.':lane==='tonight'?'Перенеси сюда сохранённое, к которому хочешь вернуться сегодня.':lane==='known'?'Знакомые названия и явные оценки будут видны здесь. Знакомство и вкус хранятся отдельно.':'Сохрани вариант из подбора — он появится здесь.'}</p>${hasFilters?button('Сбросить фильтры','clear'):lane==='want'?pickLink('Найти вариант'):''}</div>`;
@@ -89,9 +91,10 @@ function empty(lane,hasFilters) {
 function undoLine(){return state.undo?`<div class="library-undo" role="status"><span>${esc(state.undo.message)}</span>${button('Вернуть','undo','data-focus="undo"')}</div>`:'';}
 function board() {
  const all=records(),rows=filtered(all),hasFilters=Boolean(state.query.trim()||state.domain!=='all'||state.reaction!=='all');
- return filters()+undoLine()+`<p class="library-count" role="status">${hasFilters?`Найдено ${rows.length} из ${all.length}`:`Сохранено на этом устройстве: ${all.length}`}</p>`
+ const items=rows.filter(row=>row.lane===state.lane),shown=items.slice(0,state.limit);
+ return filters()+undoLine()+`<p class="library-count" role="status">${hasFilters?`Найдено ${rows.length} из ${all.length}`:`В списках и отметках знакомства: ${all.length}`}</p>`
   +`<nav class="board-switch" aria-label="Списки библиотеки">${Object.entries(LANES).map(([id,label])=>`<button type="button" data-act="lane" data-lane="${id}" data-focus="lane:${id}" aria-pressed="${state.lane===id}" aria-controls="lane-${id}">${label}<span>${rows.filter(row=>row.lane===id).length}</span></button>`).join('')}</nav><div class="library-board">`
-  +Object.entries(LANES).map(([id,label])=>{const items=rows.filter(row=>row.lane===id);return `<section class="library-lane lane-${id}" id="lane-${id}" data-active="${state.lane===id}" aria-label="${label}"><header><h2>${label}</h2><span>${items.length}</span></header>${items.map(card).join('')||empty(id,hasFilters)}</section>`;}).join('')+'</div>'
+  +`<section class="library-lane lane-${state.lane}" id="lane-${state.lane}" data-active="true" aria-label="${LANES[state.lane]}"><header><div><h2>${LANES[state.lane]}</h2><p>${state.lane==='want'?'Варианты, к которым хочешь вернуться.':state.lane==='tonight'?'То, что выбрал на ближайший вечер.':'Знакомство не означает ни оценку, ни запрет в подборе.'}</p></div><span>${items.length}</span></header><div class="library-card-list">${shown.map(card).join('')||empty(state.lane,hasFilters)}</div>${items.length>shown.length?`<div class="library-more"><p>Показано ${shown.length} из ${items.length}</p>${button(`Показать ещё ${Math.min(24,items.length-shown.length)}`,'more','data-focus="library-more"')}</div>`:''}</section></div>`
   +'<p class="library-footnote">Списки, оценки и отметки о знакомых названиях сохранены в этом браузере. Перенос между списками не меняет твой вкус.</p>';
 }
 function historyView() {
@@ -100,25 +103,26 @@ function historyView() {
  if(!rows.length)return '<div class="library-empty wide-empty"><h2>Прежних подборов нет</h2><p>Здесь хранятся прежние предложения. Новые выборы на вечер и отзывы об играх, фильмах, сериалах и мультфильмах — во «Вечерах».</p>'+eveningsLink+'</div>';
  return '<p class="view-description">Архив прежних предложений — в том виде, в котором они сохранились. Новые выборы и отзывы всех разделов — во «Вечерах». Открытие архива не начинает новый подбор.</p>'+eveningsLink+'<div class="library-history">'+rows.map((row,index)=>`<article class="history-row">${media({...row,id:row.topId})}<div><p class="library-meta">${esc([date(row.at),NOUNS[row.domain]].filter(Boolean).join(' · '))}</p><h2>${esc(title(row))}</h2>${Array.isArray(row.alternatives)&&row.alternatives.length?`<p>Ещё варианты: ${esc(row.alternatives.map(x=>x?.title).filter(Boolean).join(', '))}</p>`:''}</div>${saved.some(item=>item.domain===row.domain&&item.id===row.topId)?'<span class="history-saved">В библиотеке</span>':button('На потом','save-history',`data-index="${index}" data-focus="history:${index}"`)}</article>`).join('')+'</div>';
 }
+function eveningRows(){
+ const drafts=new Set(feedbackDrafts.keys());return feedback.all().filter(run=>run.responses.length||run.cards.some(card=>drafts.has(`${run.id}:${card.id}`)));
+}
 function eveningsView() {
- const rows=feedback.all().filter(row=>row.responses.length).reverse();
+ const rows=eveningRows().reverse(),drafts=new Map(feedbackDrafts);
  if(!rows.length)return '<div class="library-empty wide-empty"><h2>Как прошёл твой вечер?</h2><p>Выбери вариант на сегодня или оставь отзыв в подборе. Здесь сможешь вернуться и рассказать, что получилось.</p>'+pickLink('Подобрать на вечер')+'</div>';
  return '<p class="view-description">Твой выбор, начало и впечатление хранятся отдельно от вкуса. Просмотр не меняет и не отправляет отзывы.</p><div class="library-evenings">'+rows.map((run,index)=>{
-  const chosen=run.cards.filter(card=>run.responses.some(r=>r.cardId===card.id&&r.chosen)),rated=run.cards.filter(card=>run.responses.some(r=>r.cardId===card.id));
-  return `<details class="library-evening" data-detail="evening:${esc(run.id)}"${openDetails.has(`evening:${run.id}`)||index===0&&!openDetails.has(`closed:${run.id}`)?' open':''}><summary data-focus="evening:${esc(run.id)}"><svg class="evening-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${esc(date(run.at))}</span><strong>${esc((chosen.length?chosen:rated).map(title).join(', '))}</strong></summary><div class="evening-content">${run.context.note?`<p class="evening-context">На этот вечер: ${esc(run.context.note)}</p>`:''}${rated.map(card=>`<article class="evening-card"><h2>${esc(card.title)}</h2>${eveningControls(run,card.id,{history:true,open:openDetails.has(`feedback:${run.id}:${card.id}`),status:feedback.status(run.id),persistent:feedback.persistent,draft:feedbackDrafts.get(`${run.id}:${card.id}`)})}</article>`).join('')}</div></details>`;
+  const chosen=run.cards.filter(card=>run.responses.some(r=>r.cardId===card.id&&r.chosen)),rated=run.cards.filter(card=>run.responses.some(r=>r.cardId===card.id)||drafts.has(`${run.id}:${card.id}`));
+  return `<details class="library-evening" data-detail="evening:${esc(run.id)}"${openDetails.has(`evening:${run.id}`)||index===0&&!openDetails.has(`closed:${run.id}`)?' open':''}><summary data-focus="evening:${esc(run.id)}"><svg class="evening-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${esc(date(run.at))}</span><strong>${esc((chosen.length?chosen:rated).map(title).join(', '))}</strong></summary><div class="evening-content">${run.context.note?`<p class="evening-context">На этот вечер: ${esc(run.context.note)}</p>`:''}${rated.map(card=>`<article class="evening-card"><h2>${esc(card.title)}</h2>${eveningControls(run,card.id,{modern:true,history:true,open:openDetails.has(`feedback:${run.id}:${card.id}`),status:feedback.status(run.id),persistent:feedback.persistent,draft:feedbackDrafts.get(`${run.id}:${card.id}`)})}</article>`).join('')}</div></details>`;
  }).join('')+'</div>';
 }
 function render({feedbackFocus}={}) {
  const active=document.activeElement,focus=active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active instanceof HTMLInputElement?[active.selectionStart,active.selectionEnd]:null;
- const filterPanel=$('#library-filter-panel');
- if(mobileLayout?.matches&&filterPanel?.dataset.layout==='mobile')state.filtersOpen=filterPanel.open;
- const counts={board:records().length,history:library.history().length,evenings:feedback.all().filter(row=>row.responses.length).length};
+ const counts={board:records().length,history:library.history().length,evenings:eveningRows().length};
  $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${Object.entries({board:'Списки',history:'Архив',evenings:'Вечера'}).map(([view,label])=>`<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}">${label}<span>${counts[view]}</span></button>`).join('')}</nav>`
-  +(!library.persistent||!familiar.persistent||Object.values(mediaHistories).some(h=>!h.persistent)||state.view==='evenings'&&!feedback.persistent?'<p class="library-storage-note" role="status">Браузер не разрешил сохранить часть изменений. Они останутся в этом окне до его закрытия.</p>':'')
+  +(!library.persistent||!familiar.persistent||Object.values(mediaHistories).some(h=>!h.persistent)||state.view==='evenings'&&(!feedback.persistent||!feedbackDrafts.persistent)?'<p class="library-storage-note" role="status">Браузер не разрешил сохранить часть изменений. Они останутся в этом окне до его закрытия.</p>':'')
   +(state.view==='board'?board():undoLine()+(state.view==='history'?historyView():eveningsView()));
  $('#library-app').setAttribute('aria-busy','false');
  const target=focus?document.querySelector(`[data-focus="${CSS.escape(focus)}"]`):feedbackKey?document.querySelector(`[data-fk="${CSS.escape(feedbackKey)}"]`):id?document.getElementById(id):null;
- target?.focus({preventScroll:true});if(target instanceof HTMLInputElement&&selection&&target.type==='search')target.setSelectionRange(...selection);
+ initCustomSelects(document);focusCustomSelect(target,{preventScroll:true});if(target instanceof HTMLInputElement&&selection&&target.type==='search')target.setSelectionRange(...selection);
 }
 function rowFor(el){return records().find(row=>row.domain===el.dataset.domain&&row.id===el.dataset.id);}
 function saveRow(row,lane){return library.save(row,{domain:row.domain,lane});}
@@ -165,8 +169,10 @@ document.addEventListener('click',event=>{
  const el=event.target instanceof Element?event.target.closest('button[data-act]'):null;if(!el)return;
  const act=el.dataset.act,row=rowFor(el);
  if(act==='view'){state.view=el.dataset.view;render();return;}
- if(act==='lane'){state.lane=el.dataset.lane;render();return;}
- if(act==='clear'){state.query='';state.domain='all';state.reaction='all';render();$('#find-title')?.focus();return;}
+ if(act==='filters'){state.filtersOpen=!state.filtersOpen;render();return;}
+ if(act==='lane'){state.lane=el.dataset.lane;state.limit=24;render();return;}
+ if(act==='more'){state.limit+=24;render();return;}
+ if(act==='clear'){state.query='';state.domain='all';state.reaction='all';state.sort='added';state.limit=24;render();$('#find-title')?.focus();return;}
  if(act==='undo'){undo();return;}
  if(act==='remove'&&row){removeRow(row);return;}
  if(act==='forget'&&row){forgetRow(row);return;}
@@ -183,11 +189,11 @@ document.addEventListener('change',event=>{
  else if(el.dataset.act==='move'){const row=rowFor(el);if(row){row.saved?library.move(row.domain,row.id,el.value):saveRow(row,el.value);state.lane=el.value;notice(`Перенесено в «${LANES[el.value]}».`);}}
  else if(el.dataset.act==='blocked'){historyFor(el.dataset.domain)?.setBlocked(el.dataset.id,el.checked);notice(el.checked?'Не будем предлагать это название в следующих подборах.':'Это название снова можно предлагать.');}
  else return;
- render();
+ state.limit=24;render();
 });
 document.addEventListener('input',event=>{
  const el=event.target;
- if(el.id==='find-title'){state.query=el.value;render();}
+ if(el.id==='find-title'){state.query=el.value;state.limit=24;render();}
  const form=el.closest?.('[data-form="evening-reason"]');if(form)feedbackDrafts.set(`${form.dataset.run}:${form.dataset.id}`,{reason:form.elements.reason.value,note:form.elements.note.value});
 });
 document.addEventListener('submit',event=>{
@@ -197,7 +203,6 @@ document.addEventListener('submit',event=>{
 });
 document.addEventListener('toggle',event=>{
  const el=event.target;
- if(el.dataset.filterPanel==='true'&&mobileLayout?.matches)state.filtersOpen=el.open;
  if(el.dataset.detail){el.open?openDetails.add(el.dataset.detail):openDetails.delete(el.dataset.detail);if(el.dataset.detail.startsWith('evening:')){const closed=`closed:${el.dataset.detail.slice(8)}`;el.open?openDetails.delete(closed):openDetails.add(closed);}}
  if(el.matches('[data-feedback-details]')){const k=`feedback:${el.dataset.run}:${el.dataset.id}`;el.open?openDetails.add(k):openDetails.delete(k);}
 },true);
@@ -205,6 +210,7 @@ document.addEventListener('error',event=>{const image=event.target;if(image inst
 addEventListener('storage',event=>{
  if(event.key===LIBRARY_KEY||event.key?.startsWith(GAME_HISTORY_PREFIX)||event.key?.startsWith(MEDIA_HISTORY_PREFIX)||event.key===null){render();void enrichFamiliar();}
  if(event.key===FEEDBACK_KEY||event.key===null)void feedback.refresh().then(()=>{render();});
+ if(event.key===FEEDBACK_DRAFTS_KEY)render();
 });
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){render();void feedback.refresh().then(()=>{render();});void enrichFamiliar();}});
 
@@ -222,7 +228,6 @@ async function enrichFamiliar() {
 }
 const firstRows=records();
 state.lane=Object.keys(LANES).find(lane=>firstRows.some(row=>row.lane===lane))??'want';
-mobileLayout?.addEventListener('change',()=>{render();});
 render();
 // Refresh opens the authoritative IndexedDB snapshot. Viewing never observes, updates or flushes a run.
 void feedback.refresh().then(()=>{render();});

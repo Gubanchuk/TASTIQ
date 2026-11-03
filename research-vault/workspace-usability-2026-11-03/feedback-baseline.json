@@ -1,0 +1,46 @@
+{
+  "before": [
+    {
+      "height": 471.375,
+      "open": false,
+      "title": "Stardew Valley"
+    },
+    {
+      "height": 680.28125,
+      "open": false,
+      "title": "Portal 2"
+    },
+    {
+      "height": 680.28125,
+      "open": false,
+      "title": "Terraria"
+    },
+    {
+      "height": 680.28125,
+      "open": false,
+      "title": "Portal"
+    }
+  ],
+  "after": [
+    {
+      "height": 471.375,
+      "open": false,
+      "title": "Stardew Valley"
+    },
+    {
+      "height": 1211.0625,
+      "open": true,
+      "title": "Portal 2"
+    },
+    {
+      "height": 1211.0625,
+      "open": false,
+      "title": "Terraria"
+    },
+    {
+      "height": 1211.0625,
+      "open": false,
+      "title": "Portal"
+    }
+  ]
+}

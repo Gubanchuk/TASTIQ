@@ -5,7 +5,7 @@ import {mediaConfig,mediaJourneyStage,mediaLoadingPresentation,mediaContextDraft
 
 test('media cards retain honest reasons, unknowns and viewed replacement without game terminology or unsafe links',()=>{
  const html=mediaCardHtml({id:'tt1',ru:'<script>x</script>',runtime:42,kind:'series',ai:{reason:'Причина',caveat:'Не проверено'},link:'javascript:bad()'},{domain:'series'});
- for(const value of ['Причина','Не проверено','Уже смотрел','42 мин'])assert.ok(html.includes(value),value);
+ for(const value of ['Причина','Не проверено','Знакомо — заменить','42 мин'])assert.ok(html.includes(value),value);
  for(const value of ['<script>','javascript:','Уже играл','Открыть игру'])assert.ok(!html.includes(value),value);
  const marked=mediaCardHtml({id:'tt1',name:'Сериал'},{domain:'series',marked:true});
  for(const action of ['familiar-unmark','familiar-keep','data-history-block'])assert.ok(marked.includes(action));

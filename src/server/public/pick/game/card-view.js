@@ -33,10 +33,10 @@ export function gameCardHtml(card,{index=0,marked=false,kept=false,known=false,b
   +`<div class="game-card-heading"><${heading}>${esc(title)}</${heading}><p class="game-meta">${esc([card.year,...(card.genres??[]).slice(0,2)].filter(Boolean).join(' · '))}</p>`
   +(kept?'<p class="game-kept">Знакомая игра — оставлена на сегодня.</p>':known?'<p class="game-kept">Уже знакома · отметка в этом браузере</p>':'')
   +'</div>'
-  +(reason?`${card.ai?.reason?'<p class="game-model-label">Почему предложено · мнение модели</p>':''}<p class="game-card-reason">${esc(reason)}</p>`:'<p class="game-help">Вариант по каталогу. Личное совпадение ещё предстоит проверить.</p>')
+  +(reason?`<p class="game-model-label">Почему предложено · ${card.ai?.reason?'мнение модели':'данные каталога'}</p><p class="game-card-reason">${esc(reason)}</p>`:'<p class="game-help">Вариант по каталогу. Личное совпадение ещё предстоит проверить.</p>')
   +(caveat?`<p class="game-caveat"><span>Учти</span>${esc(caveat)}</p>`:'')
   +feasibilityHtml(card.feasibility)
-  +`</div></div><div class="game-card-footer"><div data-card-feedback="${id}"></div><div class="game-card-actions game-plan-actions"><button type="button" class="btn btn-secondary game-library-save" data-act="library-save" data-id="${id}" data-focus="library-save:${id}" aria-pressed="${Boolean(saved)}">${saved?'Сохранено':'Сохранить'}</button>${button('Уже играл','familiar-mark',card.id,'familiar')}</div>`
+  +`</div></div><div class="game-card-footer"><div data-card-feedback="${id}"></div><div class="game-card-actions game-plan-actions"><button type="button" class="btn btn-secondary game-library-save" data-act="library-save" data-id="${id}" data-focus="library-save:${id}" aria-pressed="${Boolean(saved)}">${saved?'Сохранено':'Сохранить'}</button>${button('Знакомо — заменить','familiar-mark',card.id,'familiar')}</div>`
   +(saved?`<p class="game-library-state">В библиотеке · ${esc({want:'На потом',tonight:'На этот вечер',known:'Уже знакомо'}[libraryLane]??'На потом')}</p>`:'')+'</div>'
   +(url?`<a class="game-store-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="Открыть игру ${esc(title)}">Открыть игру<span aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M6 5h9v9M15 5 5 15" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>`:'')+'</article>';
 }

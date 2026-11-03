@@ -1,8 +1,12 @@
+import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
+import {openRequestEditor,closeRequestEditor,syncRequestEditor} from '/shared/workspace-ui.js';
+import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createConversationClient,CONVERSATION_KEY} from '/shared/conversation-client.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
+import {createFeedbackDrafts} from '/shared/feedback-drafts.js';
 import {gameCardHtml,journeyStage,saveGameToLibrary,gameLibraryState} from '/pick/game/card-view.js';
 import {loadingPresentation} from '/pick/game/pending-view.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '/shared/game-history.js';
@@ -25,7 +29,7 @@ try{storage=qaStorage(localStorage);uid=storage.getItem('tastiq.uid');if(!uid){u
 const mode=new URLSearchParams(location.search).get('mode')==='free'?'free':'guided';
 let renderedKey=null,screenKey=null,navigationFocus=null,lastRemovedFactFocus=null,pendingFamiliar=null,pendingBack=null,localNotice='',currentRequest='resume',searchTimer=null,searchGeneration=0,activeEvening=null,activeEveningDialogue=null,observedKey=null,observingKey=null;
 let pendingAction={type:'resume'},pendingOrigin=null,processingShown=false,lastVisibleError=null;
-const feedbackOpen=new Map(),feedbackDrafts=new Map();
+const feedbackOpen=new Map(),feedbackDrafts=createFeedbackDrafts({storage});
 const disclosures=new Map();
 const compactRequest=matchMedia('(max-width:760px)');
 const history=createGameHistory({storage});
@@ -61,7 +65,7 @@ function restoreView(focus) {
  if(!focus)return false;
  let el=focus.focus?document.querySelector(`[data-focus="${CSS.escape(focus.focus)}"]`):focus.fk?document.querySelector(`[data-fk="${CSS.escape(focus.fk)}"]`):document.getElementById(focus.id);
  if(!el&&focus.toggle)el=document.querySelector(`[data-act="${CSS.escape(focus.toggle.act)}"][data-id="${CSS.escape(focus.toggle.id)}"]`);
- el?.focus({preventScroll:true});if(el)restoreTextSelection(el,focus.selection);return Boolean(el);
+ if(el)focusCustomSelect(el,{preventScroll:true});if(el)restoreTextSelection(el,focus.selection);return Boolean(el);
 }
 function historyHtml() {
  const records=history.all();
@@ -72,7 +76,7 @@ function historyHtml() {
 
 function correctionForm({id='correction-form'}={}) {
  const draft=client.draft('__correction');
- return `<div class="clarification-tools"><button type="button" class="btn btn-secondary" data-act="focus-correction">Дополнить запрос</button><form id="${id}" class="clarification-form" data-form="correction"${draft.kind==='none'?'':' hidden'}><label class="game-field">Что добавить или изменить?<textarea id="correction-text" class="input" name="correction" maxlength="1600" rows="3" required>${esc(draft.text)}</textarea></label><div class="clarification-actions"><button class="btn btn-secondary" type="submit"${client.busy?' disabled':''}>Применить поправку</button><button type="button" class="btn btn-plain" data-act="cancel-correction">Отмена</button></div></form></div>`;
+ return `<div class="clarification-tools"><form id="${id}" class="clarification-form" data-form="correction"${draft.kind==='none'?'':' hidden'}><label class="game-field">Что добавить или изменить?<textarea id="correction-text" class="input" name="correction" maxlength="1600" rows="3" required>${esc(draft.text)}</textarea></label><div class="clarification-actions"><button class="btn btn-secondary" type="submit"${client.busy?' disabled':''}>Применить поправку</button><button type="button" class="btn btn-plain" data-act="cancel-correction">Отмена</button></div></form></div>`;
 }
 function contextForm(context) {
  context=contextEditorValues(context,client.draft('__context').text,client.state.id);
@@ -88,26 +92,22 @@ function setContextOpen(open) {
  panel.dataset.contextOpen=String(open);toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Свернуть':'Показать';
 }
 function renderRequestPreview(screen) {
- const first=screen.uncertainties?.[0],raw=client.state?.turns?.findLast(t=>!t.superseded&&t.kind==='answer'&&t.text?.trim())?.text;
+ const first=screen.uncertainties?.[0];
  const preview=$('#request-preview');preview.dataset.hasUncertainty=String(Boolean(first));
- preview.innerHTML=first?`<p>${esc(first)}</p><button type="button" class="btn btn-secondary btn-s" data-act="preview-clarify"${client.busy?' disabled':''}>Уточнить</button>`:screen.summary||raw?`<p>${esc(screen.summary||raw)}</p>`:'';
+ preview.innerHTML=requestPreviewHtml({screen,state:client.state,busy:client.busy});
  preview.hidden=!preview.innerHTML;
 }
 function understanding(screen) {
  renderRequestPreview(screen);
- const facts=screen.facts??[],context=screen.context??{};
- const raw=client.state?.turns?.findLast(t=>!t.superseded&&t.kind==='answer'&&typeof t.text==='string'&&t.text.trim())?.text;
- const time=hasSessionTime(screen.sessionTime)?screen.sessionTime:null,detailsCount=facts.length+(time?1:0);
+ const context=screen.context??{},time=hasSessionTime(screen.sessionTime)?screen.sessionTime:null;
  const labels={windows:'Windows',mac:'macOS',linux:'Linux',deck:'Steam Deck',pc:'ПК',ps:'PlayStation',xbox:'Xbox',switch:'Nintendo Switch',any:'Любая платформа',solo:'Один',friend:'Вдвоём',group:'Компания',kids:'С детьми'};
- $('#understanding').innerHTML='<div class="game-summary-copy">'
-  +(!screen.summary?raw?`<p class="game-context-empty"><strong>Твои слова:</strong> ${esc(raw)}</p>`:'<p class="game-context-empty">Расскажи, какого вечера хочется. Здесь соберём то, что важно для выбора.</p>':'')
-  +(screen.type==='review'||!screen.summary?'':/^(Хочется|Меньше|Обязательно|Исключить):/.test(screen.summary)?`<div class="game-summary-chips">${facts.filter(f=>f.stance==='want'&&f.scope==='today').map(f=>`<span>${esc(f.text)}</span>`).join('')}</div>`:`<p>${esc(screen.summary)}</p>`)
-  +`<div class="game-context">${Object.entries(context).filter(([,v])=>v).map(([key,v])=>`<span>${esc(key==='partySize'?`${v} игроков`:labels[v]??v)}</span>`).join('')}</div>`
-  +timeBudgetHtml(time)
-  +`</div><details class="game-request-details" data-disclosure="request-details"${compactRequest.matches?'':' open'}><summary>Подробнее о запросе</summary><div class="game-request-detail-content">`
-  +(detailsCount?`<details class="game-fact-details" data-disclosure="facts"><summary data-focus="fact-details">Подробности запроса (${detailsCount})</summary><ul class="game-facts">${facts.map(f=>`<li><span><b class="game-fact-label">${stanceLabel(f)}</b> ${esc(f.text)}</span><button type="button" data-act="remove-fact" data-key="${esc(f.key)}" data-focus="remove-fact:${esc(f.key)}" aria-label="Убрать: ${esc(f.text)}"${client.busy?' disabled':''}>Убрать</button></li>`).join('')+timeEvidenceHtml(time)}</ul></details>`:'')
-
-  +'<div class="game-request-tools">'+(contextReady(screen)?contextForm(context):'')+historyHtml()+'</div></div></details>'+clarificationHtml({state:client.state,uncertainties:screen.uncertainties,draft:key=>client.draft(key),busy:client.busy})+correctionForm()+(client.canRestoreCorrection?'<div class="clarification-restore"><p>Запрос изменён. Предыдущие варианты сохранены отдельно.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуться к предыдущему запросу и вариантам</button></div>':'');
+ const contextHtml=`<div class="game-context">${Object.entries(context).filter(([,v])=>v).map(([key,v])=>`<span>${esc(key==='partySize'?`${v} игроков`:labels[v]??v)}</span>`).join('')}</div>`;
+ $('#understanding').innerHTML=requestOverviewHtml({screen,state:client.state,contextHtml,timeHtml:timeBudgetHtml(time),busy:client.busy,
+  toolsHtml:(contextReady(screen)?contextForm(context):'')+historyHtml()+(time?'<details class="request-time-details"><summary>Откуда ограничение времени</summary><ul>'+timeEvidenceHtml(time)+'</ul></details>':''),
+  clarification:clarificationHtml({state:client.state,uncertainties:screen.uncertainties,draft:key=>client.draft(key),busy:client.busy}),correction:correctionForm(),
+  restore:client.canRestoreCorrection?'<div class="clarification-restore"><p>Предыдущий запрос и варианты можно вернуть.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуть предыдущие варианты</button></div>':''});
+ syncRequestEditor(client.draft('__activeRequestEditor').text);
+ initCustomSelects(document);
 }
 function questionHtml(question) {
  const draft=currentDraft(question),allowText=question.allowText!==false;
@@ -145,7 +145,7 @@ function cardHtml(card,index) {
 function resultHtml(screen) {
  const result=screen.result??client.state?.result;
  const replacement=client.state.replacement,notice=replacement?.notice||(client.state.familiar?.marked?.length?'':'Отмеченные игры заменены. Остальные варианты сохранены.');
- if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Исправить запрос','focus-correction');
+ if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
  return '<div class="game-result-heading"><h1>Твои варианты на этот вечер</h1><p class="game-help">Сохрани на потом, выбери на вечер или замени знакомую игру.</p></div>'
   +(screen.provisional||result.ai?.error?'<p class="game-help">Предварительный подбор по каталогу. Уточнение моделью сейчас недоступно.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
@@ -193,14 +193,14 @@ function render() {
    else (matchMedia('(max-width:760px)').matches?$('#request-panel'):$('#stage')).scrollIntoView({block:'start',behavior:'auto'});
   }
  }
- document.querySelectorAll('#main button,#main input,#main textarea,#request-panel button,#request-panel input,#request-panel textarea,#request-panel select').forEach(el=>el.disabled=client.busy);
+ document.querySelectorAll('#main button,#main input,#main textarea,#request-editor button,#request-editor input,#request-editor textarea,#request-editor select,#request-panel button,#request-panel input,#request-panel textarea,#request-panel select').forEach(el=>el.disabled=client.busy);
  const disabled=client.busy?' disabled':'';
  const needsChoice=screen.type==='question'&&screen.question.allowText===false&&!currentDraft(screen.question).selected.length;
  const reviewBlocked=screen.type==='question'&&hasPendingAnswer(currentDraft(screen.question));
  const marked=client.state.familiar?.marked??[];
  $('#action-controls').innerHTML=screen.type==='question'
-  ?`${contextReady(screen)?button('Посмотреть понимание','review',client.busy||reviewBlocked?' disabled':''):''}<button type="submit" form="answer-form" class="btn btn-primary"${client.busy||needsChoice?' disabled':''}>${client.busy?'Продолжаю…':'Дальше'}<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>${contextReady(screen)?`<p class="game-draft-hint" id="review-draft-hint"${reviewBlocked?'':' hidden'}>Чтобы учесть этот ответ, нажми «Дальше».</p>`:''}`
-  :screen.type==='review'?button('Исправить запрос','focus-correction',disabled)+button('Подобрать игры','confirm',disabled,true)
+  ?`${contextReady(screen)?button('Проверить запрос','review',client.busy||reviewBlocked?' disabled':''):''}<button type="submit" form="answer-form" class="btn btn-primary"${client.busy||needsChoice?' disabled':''}>${client.busy?'Продолжаю…':'Дальше'}<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>${contextReady(screen)?`<p class="game-draft-hint" id="review-draft-hint"${reviewBlocked?'':' hidden'}>Чтобы учесть этот ответ, нажми «Дальше».</p>`:''}`
+  :screen.type==='review'?button('Изменить пожелание','focus-correction',disabled)+button('Подобрать игры','confirm',disabled,true)
   :(marked.length?button(`Заменить отмеченные (${marked.length})`,'replace-familiar',disabled,true):'')
    +(client.state.familiar?.undo?button('Вернуть предыдущие варианты','undo-replacement',disabled):'');
  if(screen.canUndoFactRemoval)$('#action-controls').insertAdjacentHTML('beforeend',button('Отменить удаление','undo-fact-removal',disabled));
@@ -223,12 +223,13 @@ function refreshFeedback() {
  const run=activeEvening?feedback.get(activeEvening):null;
  document.querySelectorAll('[data-card-feedback]').forEach(el=>{
   const id=el.dataset.cardFeedback,key=`${activeEvening}:${id}`;
-  el.innerHTML=eveningControls(run,id,{open:feedbackOpen.get(key)??false,status:feedback.status(activeEvening),persistent:feedback.persistent,draft:feedbackDrafts.get(key)});
+  el.innerHTML=eveningControls(run,id,{open:feedbackOpen.get(key)??false,status:feedback.status(activeEvening),persistent:feedback.persistent,draft:feedbackDrafts.get(key),modern:true});
   el.querySelectorAll('[data-form="evening-reason"] [name]').forEach(field=>field.dataset.focus=`feedback-field:${id}:${field.name}`);
   if(el.closest('.game-card-alternative'))el.querySelectorAll('.btn-primary').forEach(button=>{button.classList.remove('btn-primary');button.classList.add('btn-secondary');});
   const outcome=el.querySelector('.evening-outcome');if(outcome){const disclosure=`outcome:${activeEvening}:${id}`;outcome.dataset.disclosure=disclosure;if(disclosures.has(disclosure))outcome.open=disclosures.get(disclosure);else if(outcomes.get(id))outcome.open=true;}
   el.querySelectorAll('button,input,textarea,select').forEach(control=>control.disabled=client.busy);
  });
+ initCustomSelects(document);
  restoreView(focus);
 }
 function observeResult() {
@@ -264,7 +265,7 @@ async function navigate(action,{origin=null}={}) {
  const result=await client.send(action);
  rememberAcceptedFamiliar(result);
  completeBackDraft(result);
- if(result&&!client.error&&shouldClearCorrection(action,origin,client.draft('__correction').text)){client.saveDraft('__correction',{text:''});const input=$('#correction-text');if(input)input.value='';}
+ if(result&&!client.error&&shouldClearCorrection(action,origin,client.draft('__correction').text)){client.saveDraft('__correction',{text:''});client.saveDraft('__activeRequestEditor',{text:''});const input=$('#correction-text');if(input)input.value='';closeRequestEditor($('#correction-form'),{focus:false});}
  if(action.type==='context'&&result&&!client.error){
   client.saveDraft('__context',{text:''});
   if(client.screen?.type==='question'){localNotice='Условия изменены. Проверь ответ на этот вопрос перед отправкой.';render();}
@@ -343,11 +344,11 @@ document.addEventListener('click',event=>{
  }
  if(act==='toggle-context'){setContextOpen($('.game-context-panel').dataset.contextOpen!=='true');return;}
  if(act==='preview-clarify'){setContextOpen(true);$('#understanding [data-act="clarify"]')?.click();return;}
- if(act==='focus-correction'){setContextOpen(true);const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'none'});$('#correction-form').hidden=false;$('#correction-text')?.focus();return;}
- if(act==='cancel-correction'){const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'answer'});$('#correction-form').hidden=true;return;}
- if(act==='clarify'){setContextOpen(true);const form=document.getElementById(el.getAttribute('aria-controls')),draft=client.draft(el.dataset.key);client.saveDraft(el.dataset.key,{...draft,kind:'none'});form.hidden=false;el.setAttribute('aria-expanded','true');form.elements.clarification.focus();return;}
- if(act==='cancel-clarification'){const form=el.closest('form'),draft=client.draft(form.dataset.key);client.saveDraft(form.dataset.key,{...draft,kind:'answer'});form.hidden=true;form.parentElement.querySelector('[data-act="clarify"]').setAttribute('aria-expanded','false');return;}
- if(act==='restore-correction'){persistAnswer();if(client.restoreCorrection()){observedKey=null;activeEvening=null;activeEveningDialogue=null;renderedKey=null;render();}return;}
+ if(act==='focus-correction'){const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'none'});client.saveDraft('__activeRequestEditor',{text:'correction'});openRequestEditor($('#correction-form'));return;}
+ if(act==='cancel-correction'){const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'answer'});client.saveDraft('__activeRequestEditor',{text:''});closeRequestEditor($('#correction-form'));return;}
+ if(act==='clarify'){const form=document.getElementById(el.getAttribute('aria-controls'));if(!form)return;const draft=client.draft(form.dataset.key);client.saveDraft(form.dataset.key,{...draft,kind:'none'});client.saveDraft('__activeRequestEditor',{text:form.dataset.key});el.setAttribute('aria-expanded','true');openRequestEditor(form);return;}
+ if(act==='cancel-clarification'){const form=el.closest('form'),draft=client.draft(form.dataset.key);client.saveDraft(form.dataset.key,{...draft,kind:'answer'});client.saveDraft('__activeRequestEditor',{text:''});closeRequestEditor(form);return;}
+ if(act==='restore-correction'){persistAnswer();if(client.restoreCorrection()){const general=client.draft('__correction');client.saveDraft('__correction',{...general,kind:'answer'});client.saveDraft('__activeRequestEditor',{text:''});for(const text of client.screen.uncertainties??[]){const key=`__clarification:${client.state.id}:${encodeURIComponent(text)}`;client.saveDraft(key,{...client.draft(key),kind:'answer'});}observedKey=null;activeEvening=null;activeEveningDialogue=null;renderedKey=null;render();}return;}
  if(['familiar-mark','familiar-unmark','familiar-keep'].includes(act)){
   const id=el.dataset.id,card=[client.state?.result?.top,...(client.state?.result?.alternatives??[])].find(card=>card?.id===id);
   const type={'familiar-mark':'familiar_mark','familiar-unmark':'familiar_unmark','familiar-keep':'familiar_keep'}[act];

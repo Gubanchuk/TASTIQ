@@ -1,0 +1,183 @@
+/* Working surfaces: explicit navigation, grouped intent and focused actions. */
+body.product-page{--workspace-soft:#e9eefb;--workspace-line:#d8e0f0}
+body.product-page [hidden]{display:none!important}
+body.product-page .app-shell{position:sticky;top:12px;z-index:60;display:flex;align-items:center;gap:24px;max-width:1380px;min-height:76px;margin:16px auto 28px;padding:14px 24px;border-radius:20px;background:var(--brand-surface);box-shadow:0 4px 24px #15213d08;border:0}
+body.product-page .app-brand{display:inline-flex;align-items:center;min-height:44px;flex:none}
+body.product-page .app-brand img{display:block;width:140px;height:auto}
+body.product-page .app-shell-nav{display:flex;align-items:center;gap:5px;margin-left:16px}
+body.product-page .app-shell-nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:500;text-decoration:none;color:var(--brand-muted)}
+body.product-page .app-shell-nav a[aria-current=page]{color:var(--brand-primary);background:var(--workspace-soft)}
+body.product-page .app-shell-nav a:hover{color:var(--brand-primary);background:var(--brand-paper)}
+body.product-page .app-domain-control{position:relative;margin-left:auto}
+body.product-page .app-domain-button{display:flex;align-items:center;gap:12px;min-height:46px;padding:10px 15px;background:var(--brand-paper);border:0;border-radius:13px;color:var(--brand-ink);cursor:pointer}
+body.product-page .app-domain-button strong{font:550 14px/1.5 Golos,Arial,sans-serif;letter-spacing:0}
+body.product-page .app-domain-button svg{width:18px;height:18px;color:var(--brand-primary)}
+body.product-page .app-domain-button[aria-expanded=true]{background:var(--brand-selected)}
+body.product-page .app-domain-menu{position:absolute;top:calc(100% + 12px);right:0;width:290px;padding:9px;border-radius:20px;background:white;box-shadow:0 16px 48px #15213d20;z-index:80}
+body.product-page .app-domain-menu a{display:flex;flex-direction:column;gap:3px;padding:13px 15px;border-radius:13px;text-decoration:none;color:var(--brand-ink)}
+body.product-page .app-domain-menu a:hover,body.product-page .app-domain-menu a:focus-visible{background:var(--brand-paper)}
+body.product-page .app-domain-menu a span{font-weight:600;font-size:15px}
+body.product-page .app-domain-menu small{font-size:12px;color:var(--brand-muted)}
+body.product-page .app-shell-actions{display:flex;align-items:center;gap:8px}
+body.product-page .app-shell-actions :is(button,a){display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:13px;font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer;text-decoration:none}
+body.product-page .app-shell-restart,body.product-page .app-shell-restore{background:transparent;border:1px solid var(--workspace-line);color:var(--brand-ink)}
+body.product-page .app-shell-restart:hover{background:var(--brand-paper)}
+body.product-page .app-shell-primary{background:var(--brand-primary);color:white;border:0}
+body.product-page.library-page .app-shell-actions{margin-left:auto}
+body.product-page #picker-workspace{max-width:1380px;grid-template-columns:280px minmax(0,1fr);gap:28px;margin:0 auto 64px;padding:0 4px}
+body.product-page #picker-workspace>.game-context-panel{background:var(--brand-surface);padding:24px 22px;border-radius:24px;border:0;min-height:0}
+body.product-page #request-panel .game-context-heading{gap:10px;margin-bottom:18px;align-items:center}
+body.product-page #request-panel .game-context-heading h2{font-size:17px;font-weight:650}
+body.product-page #request-panel .game-context-heading>.btn{background:var(--brand-paper);border:0;border-radius:10px;padding:8px 11px;font-size:12px;min-height:40px;color:var(--brand-primary)}
+body.product-page #request-panel .request-summary{font-size:14px;line-height:1.75;margin:0 0 20px;color:var(--brand-ink)}
+body.product-page #request-panel .request-summary.is-empty{color:var(--brand-muted)}
+body.product-page #request-panel .request-conditions{padding:0;margin:0 0 24px}
+body.product-page #request-panel .game-context{display:flex;flex-wrap:wrap;gap:7px;margin:0}
+body.product-page #request-panel .game-context>span{border:0;border-radius:9px;background:var(--workspace-soft);padding:6px 9px;font-size:12px;color:var(--brand-ink)}
+body.product-page #request-panel .request-fact-group{margin:22px 0}
+body.product-page #request-panel .request-fact-group h3{font:600 12px/1.5 Golos,Arial,sans-serif;color:var(--brand-muted);margin:0 0 8px}
+body.product-page #request-panel .request-facts{list-style:none;padding:0;margin:0;display:grid;gap:7px}
+body.product-page #request-panel .request-facts li{display:flex;align-items:flex-start;gap:8px;padding:10px 10px 10px 12px;background:var(--brand-paper);border:0;border-radius:12px;font-size:13px;line-height:1.65}
+body.product-page #request-panel .request-facts li>span{flex:1;min-width:0}
+body.product-page #request-panel .request-facts button{display:grid;place-items:center;min-width:28px;width:28px;min-height:28px;padding:4px;background:transparent;border:0;border-radius:8px;color:var(--brand-muted);cursor:pointer;flex:none}
+body.product-page #request-panel .request-facts button:hover{background:var(--brand-selected);color:var(--brand-primary)}
+body.product-page #request-panel .request-facts svg{width:18px;height:18px}
+body.product-page #request-panel .request-tools{display:grid;gap:8px;margin:20px 0}
+body.product-page #request-panel :is(.game-context-editor,.game-history,.request-time-details){border:0;margin:0;padding:0}
+body.product-page #request-panel :is(.game-context-editor,.game-history,.request-time-details)>summary{min-height:44px;padding:12px 10px;background:var(--brand-paper);border-radius:11px;font-size:13px}
+body.product-page #request-panel .game-history .game-help{font-size:12px}
+body.product-page #request-panel .clarification-list{margin:22px 0 16px;padding:16px;border:0;border-radius:15px;background:var(--workspace-soft)}
+body.product-page #request-panel .clarification-list>p{font-size:12px;font-weight:650;margin:0 0 7px;color:var(--brand-primary)}
+body.product-page #request-panel .clarification-question{font-size:13px;line-height:1.7;margin:0 0 12px;color:var(--brand-ink)}
+body.product-page #request-panel .clarification-item{border:0;padding:0;margin:0 0 16px}
+body.product-page #request-panel .clarification-item:last-child{margin-bottom:0}
+body.product-page #request-panel .clarification-item>.btn{border:0;border-radius:10px;background:white;color:var(--brand-primary);font-weight:550;min-height:40px}
+body.product-page #understanding form.clarification-form{display:none!important}
+body.product-page #request-panel .clarification-tools{border:0;margin:0;padding:0}
+body.product-page #request-panel .clarification-tools>button{background:var(--brand-paper);border:0;border-radius:11px;width:100%;justify-content:flex-start;color:var(--brand-primary)}
+body.product-page #stage{padding:26px 32px 30px;border:0;border-radius:26px;box-shadow:none;background:var(--brand-surface)}
+body.product-page #stage .game-navigation{display:flex;align-items:center;gap:22px;padding:0;margin:0 0 32px;border:0}
+body.product-page #stage .game-navigation-tools{display:none}
+body.product-page #stage .game-back{min-height:44px;font-size:13px;padding:8px 4px;flex:none}
+body.product-page #stage .game-journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex:1;padding:0;margin:0;border:0}
+body.product-page #stage .game-journey li{display:flex;align-items:center;justify-content:flex-start;gap:8px;min-width:0;padding:0;color:var(--brand-muted);font-size:12px}
+body.product-page #stage .game-journey li>span{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:var(--brand-paper);color:var(--brand-muted);flex:none;font-size:12px}
+body.product-page #stage .game-journey li>span i{font-style:normal}
+body.product-page #stage .game-journey li>span svg{display:none;width:18px;height:18px}
+body.product-page #stage .game-journey li>b{padding:0;white-space:normal;font-size:12px;font-weight:450;line-height:1.5}
+body.product-page #stage .game-journey li[data-status=current]>span{background:var(--brand-primary);color:white}
+body.product-page #stage .game-journey li[data-status=current]>b{font-weight:650;color:var(--brand-primary)}
+body.product-page #stage .game-journey li[data-status=done]>span{background:var(--brand-selected);color:var(--brand-primary)}
+body.product-page #stage .game-journey li[data-status=done]>span i{display:none}
+body.product-page #stage .game-journey li[data-status=done]>span svg{display:block}
+body.product-page #main{max-width:none}
+body.product-page #main h1{font-size:28px;line-height:1.35;letter-spacing:-.035em;max-width:28ch;margin-bottom:14px}
+body.product-page #main .game-help{line-height:1.7;font-size:14px;margin-bottom:20px;max-width:65ch}
+body.product-page #stage .game-question-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}
+body.product-page #stage .game-option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;padding:14px 17px;border:1px solid transparent;border-radius:14px;background:var(--brand-paper);font-size:14px;font-weight:450;text-align:left;box-shadow:none}
+body.product-page #stage .game-option:hover{background:var(--workspace-soft);border-color:var(--brand-line)}
+body.product-page #stage .game-option[aria-pressed=true]{background:var(--brand-selected);color:var(--brand-primary);border-color:var(--brand-primary);font-weight:550}
+body.product-page #stage .game-direction-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:12px}
+body.product-page #stage .game-direction-options .game-option{min-height:47px;border-radius:12px;padding:10px 13px;font-size:13px}
+body.product-page #stage .game-field{margin-top:24px;font-size:14px;gap:9px}
+body.product-page #stage textarea.input{min-height:122px;border-radius:16px;background:var(--brand-paper);padding:16px 18px;line-height:1.7}
+body.product-page #stage .game-neutral-options{gap:4px;margin-top:8px}
+body.product-page #stage .game-neutral-options .btn{min-height:40px;padding:8px 11px;border:0;border-radius:10px;background:transparent;color:var(--brand-muted);font-size:12px}
+body.product-page #stage .game-neutral-options .btn:hover{background:var(--brand-paper);color:var(--brand-ink)}
+body.product-page #stage .game-neutral-options .btn[aria-pressed=true]{background:var(--brand-selected);color:var(--brand-primary)}
+body.product-page #stage .btn{border-radius:12px;min-height:44px;font-size:13px}
+body.product-page #stage .game-actions{margin-top:24px;padding:12px 0 0;border:0}
+body.product-page #stage .game-action-controls{gap:12px;align-items:center}
+body.product-page #stage .game-action-controls>.btn-primary{border-radius:13px;min-height:48px;min-width:145px}
+body.product-page #stage .game-action-controls>.btn-secondary{background:var(--brand-paper);border:0;color:var(--brand-primary)}
+body.product-page #stage .game-auxiliary{margin-top:22px;border:0;padding:0}
+body.product-page #stage .game-example{margin:0;border:0;padding:0}
+body.product-page #stage .game-example>summary{padding:12px 0;color:var(--brand-muted);font-size:12px;min-height:44px}
+body.product-page .request-editor{padding:24px;margin:0 0 28px;border:0;border-radius:20px;background:var(--workspace-soft);scroll-margin-top:120px}
+body.product-page .request-editor h2{font:600 20px/1.4 Golos,Arial,sans-serif;margin:0 0 9px;color:var(--brand-ink)}
+body.product-page .request-editor .request-editor-context{font-size:14px;line-height:1.7;color:var(--brand-muted);margin-bottom:18px;max-width:65ch}
+body.product-page .request-editor .clarification-form{display:block;margin:0;padding:0;background:transparent;border:0}
+body.product-page .request-editor textarea.input{background:white;min-height:136px}
+body.product-page .request-editor .clarification-actions{display:flex;gap:10px;margin-top:16px}
+body.product-page .request-editor .clarification-actions>button[type=submit]{background:var(--brand-primary);color:white;border:0;border-radius:12px}
+body.product-page .request-editor .game-help{font-size:12px;margin:9px 0 0}
+@media(min-width:1500px){body.product-page .app-shell{max-width:1440px}body.product-page #picker-workspace{max-width:1440px}}
+@media(max-width:1450px){body.product-page .app-shell{margin-inline:24px}body.product-page #picker-workspace{padding-inline:24px}}
+@media(max-width:1100px){
+ body.product-page .app-shell{gap:14px;padding:12px 18px}
+ body.product-page .app-shell-nav{margin-left:0}
+ body.product-page .app-shell-nav a{padding-inline:11px}
+ body.product-page #picker-workspace{grid-template-columns:250px minmax(0,1fr);gap:22px}
+ body.product-page #stage{padding:24px}
+ body.product-page #stage .game-navigation{gap:16px;flex-wrap:wrap;margin-bottom:26px}
+ body.product-page #stage .game-journey{min-width:100%;order:2}
+ body.product-page #stage .game-direction-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ html:has(body.product-page){scroll-padding-top:146px}
+ body.product-page .app-shell{top:0;margin:0 0 16px;padding:10px 16px;border-radius:0;display:grid;grid-template-columns:1fr auto;gap:8px 12px;box-shadow:none}
+ body.product-page .app-brand img{width:120px}
+ body.product-page .app-shell-nav{grid-column:2;grid-row:1;gap:2px}
+ body.product-page .app-shell-nav a{font-size:12px;padding:8px 10px;min-height:40px;border-radius:10px}
+ body.product-page .app-domain-control{grid-column:1;grid-row:2;margin:0;position:static}
+ body.product-page .app-domain-button{min-height:42px;padding:8px 10px;gap:6px}
+ body.product-page .app-domain-button strong{font-size:13px}
+ body.product-page .app-domain-menu{left:16px;right:16px;top:calc(100% - 2px);width:auto}
+ body.product-page .app-shell-actions{grid-column:2;grid-row:2;justify-content:flex-end;gap:5px}
+ body.product-page .app-shell-actions :is(button,a){font-size:12px;padding:8px 10px;min-height:42px;border-radius:10px}
+ body.product-page .app-shell-restore{position:static;font-size:11px!important}
+ body.product-page.library-page .app-shell-actions{grid-column:1/-1;justify-content:flex-start;margin:0}
+ body.product-page #picker-workspace{display:flex;gap:16px;margin:0 auto 40px;padding-inline:14px}
+ body.product-page #picker-workspace>.game-context-panel{padding:16px 18px;border-radius:18px}
+ body.product-page #request-panel .game-context-heading{margin:0}
+ body.product-page #request-panel .game-context-heading h2{font-size:14px}
+ body.product-page #request-panel .game-context-preview p{font-size:13px;line-height:1.7;margin:10px 0 8px}
+ body.product-page #request-panel .game-context-toggle{min-height:36px;padding:7px 10px;background:transparent;font-size:12px}
+ body.product-page #stage{border-radius:22px;padding:20px 18px}
+ body.product-page #stage .game-navigation{gap:12px;margin-bottom:26px;padding:0}
+ body.product-page #stage .game-journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;min-width:100%;order:2}
+ body.product-page #stage .game-journey li{flex-direction:column;justify-content:flex-start;gap:5px;text-align:center;font-size:12px}
+ body.product-page #stage .game-journey li>b{font-size:11px;line-height:1.5}
+ body.product-page #stage .game-journey li>span{width:25px;height:25px}
+ body.product-page #main h1{font-size:24px;line-height:1.4;margin-bottom:14px}
+ body.product-page #main .game-help{font-size:14px;margin-bottom:18px}
+ body.product-page #stage .game-question-options{grid-template-columns:1fr;gap:9px;margin-top:20px}
+ body.product-page #stage .game-direction-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ body.product-page #stage .game-direction-options .game-option{padding:10px 11px;min-height:47px;font-size:12px}
+ body.product-page #stage .game-option{font-size:14px;padding:14px 15px}
+ body.product-page #stage .game-field{font-size:13px;margin-top:20px}
+ body.product-page #stage textarea.input{font-size:14px;min-height:125px;padding:14px}
+ body.product-page #stage .game-neutral-options .btn{font-size:12px;padding-inline:9px}
+ body.product-page #stage .game-actions{margin-top:20px;padding-top:8px}
+ body.product-page #stage .game-action-controls{gap:10px}
+ body.product-page .request-editor{padding:18px 16px;border-radius:16px;margin-bottom:22px;scroll-margin-top:135px}
+ body.product-page .request-editor h2{font-size:19px}
+ body.product-page .request-editor .clarification-actions{flex-wrap:wrap}
+ body.product-page #request-panel .request-fact-group{margin:20px 0}
+}
+@media(max-width:360px){
+ body.product-page .app-brand img{width:105px}
+ body.product-page .app-shell-nav a{padding-inline:8px;font-size:11px}
+ body.product-page #picker-workspace{padding-inline:10px}
+ body.product-page #stage{padding:18px 14px}
+ body.product-page #stage .game-journey{grid-template-columns:repeat(4,minmax(0,1fr));gap:3px}
+ body.product-page #main h1{font-size:22px}
+ body.product-page .app-shell-actions :is(button,a){font-size:11px;padding-inline:9px}
+}
+
+body.product-page #request-panel .game-context-heading>[data-act="focus-correction"]{display:inline-flex}
+body.product-page .app-domain-menu a[aria-current=page]{background:var(--brand-selected);color:var(--brand-primary)}
+body.product-page #request-panel .game-context-heading h2{flex:1}
+
+@media(max-width:760px){
+ body.product-page .app-shell-nav a,body.product-page .app-domain-button,body.product-page .app-shell-actions :is(button,a){min-height:44px}
+ body.product-page #request-panel .game-context-heading>.btn,body.product-page #request-panel .game-context-toggle,body.product-page #request-panel .clarification-item>.btn,body.product-page #stage .game-neutral-options .btn{min-height:44px}
+ body.product-page #request-panel .request-facts button{width:44px;min-width:44px;min-height:44px}
+}
+
+body.product-page .app-domain-short{display:none}
+@media(max-width:760px){
+ body.product-page .app-domain-short{display:inline;font-size:14px;font-weight:550}
+ body.product-page .app-domain-button strong{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ body.product-page .app-shell-actions:has(#restore:not([hidden])){grid-row:3;grid-column:1/-1;justify-content:space-between}
+}

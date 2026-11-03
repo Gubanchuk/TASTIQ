@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-02T23:59:31Z",
+  "generatedAt": "2026-11-03T01:18:16.574Z",
   "title": "Design System: TASTIQ — Кобальтовый разговор",
   "extensions": {
     "colorMeta": {
@@ -283,6 +283,34 @@
           "oklch(87% 0.06157 150.43)",
           "oklch(95% 0.06157 150.43)"
         ]
+      },
+      "workspace-soft": {
+        "role": "neutral",
+        "displayName": "Мягкая рабочая заливка",
+        "tonalRamp": [
+          "oklch(15% 0.01830 269.09)",
+          "oklch(27% 0.01830 269.09)",
+          "oklch(39% 0.01830 269.09)",
+          "oklch(51% 0.01830 269.09)",
+          "oklch(63% 0.01830 269.09)",
+          "oklch(75% 0.01830 269.09)",
+          "oklch(87% 0.01830 269.09)",
+          "oklch(95% 0.01830 269.09)"
+        ]
+      },
+      "workspace-line": {
+        "role": "neutral",
+        "displayName": "Рабочая граница",
+        "tonalRamp": [
+          "oklch(15% 0.02351 264.45)",
+          "oklch(27% 0.02351 264.45)",
+          "oklch(39% 0.02351 264.45)",
+          "oklch(51% 0.02351 264.45)",
+          "oklch(63% 0.02351 264.45)",
+          "oklch(75% 0.02351 264.45)",
+          "oklch(87% 0.02351 264.45)",
+          "oklch(95% 0.02351 264.45)"
+        ]
       }
     },
     "typographyMeta": {
@@ -296,7 +324,7 @@
       },
       "headline": {
         "displayName": "Вопрос и результат",
-        "purpose": "Текущая задача адаптивного разговора."
+        "purpose": "Вопрос28px, phone24px/tiny22px; результат отдельно."
       },
       "landing-headline": {
         "displayName": "Механизм главной",
@@ -329,14 +357,29 @@
       "label-primary": {
         "displayName": "Основное действие",
         "purpose": "Кобальтовые кнопки современной рабочей поверхности."
+      },
+      "result-headline": {
+        "displayName": "Заголовок результата",
+        "purpose": "Отдельные30px/phone25px."
+      },
+      "request-fact": {
+        "displayName": "Факт запроса",
+        "purpose": "Локальные13px/1.65."
+      },
+      "result-meta": {
+        "displayName": "Метаданные предложения",
+        "purpose": "Локальные13px/1.65."
+      },
+      "result-caveat": {
+        "displayName": "Оговорка",
+        "purpose": "Локальные13px/1.7."
+      },
+      "select-value": {
+        "displayName": "Значение select",
+        "purpose": "Локальные50013px/1.5."
       }
     },
     "shadows": [
-      {
-        "name": "featured-result",
-        "value": "0 10px 30px #15213d06",
-        "purpose": "Первое современное адаптивное предложение."
-      },
       {
         "name": "shared-pop",
         "value": "0 8px 24px #22222220",
@@ -345,17 +388,12 @@
       {
         "name": "game-pop",
         "value": "0 12px 28px #40302424",
-        "purpose": "Прежняя тень нижнего слоя CSS; современное session menu перекрывает product-menu."
-      },
-      {
-        "name": "library-notice",
-        "value": "0 12px 30px #30251a2c",
-        "purpose": "Временное фиксированное сообщение."
+        "purpose": "Только сохранённый нижний CSS; не современный popover."
       },
       {
         "name": "progress-line-mask",
         "value": "0 0 0 5px var(--paper)",
-        "purpose": "Сохранённая маска нижнего CSS-слоя; современный текстовый progress не использует соединитель."
+        "purpose": "Только унаследованная маска; modern numbered/check stepper без соединителя."
       },
       {
         "name": "landing-cover",
@@ -373,14 +411,29 @@
         "purpose": "Круглая стрелка поверх веера."
       },
       {
-        "name": "question-board",
-        "value": "0 10px 32px #15213d05",
-        "purpose": "Современная рабочая поверхность вопроса; на выдаче снимается."
+        "name": "app-shell",
+        "value": "0 4px 24px #15213d08",
+        "purpose": "Desktop shell, phone без тени."
       },
       {
-        "name": "product-menu",
-        "value": "0 12px 30px #15213d16",
-        "purpose": "Современное session menu."
+        "name": "domain-menu",
+        "value": "0 16px 48px #15213d20",
+        "purpose": "Четыре прямых входа."
+      },
+      {
+        "name": "custom-select",
+        "value": "0 14px 40px #15213d24",
+        "purpose": "Fixed listbox."
+      },
+      {
+        "name": "library-active-view",
+        "value": "0 2px 6px #15213d08",
+        "purpose": "Активный view."
+      },
+      {
+        "name": "library-notice",
+        "value": "0 10px 30px #15213d25",
+        "purpose": "Ink/white notice."
       }
     ],
     "motion": [
@@ -434,8 +487,16 @@
         "value": "380px"
       },
       {
+        "name": "width-600",
+        "value": "600px"
+      },
+      {
         "name": "width-760",
         "value": "760px"
+      },
+      {
+        "name": "width-900",
+        "value": "900px"
       },
       {
         "name": "width-1050",
@@ -448,6 +509,10 @@
       {
         "name": "width-1150",
         "value": "1150px"
+      },
+      {
+        "name": "width-1450",
+        "value": "1450px"
       },
       {
         "name": "width-1500",
@@ -464,41 +529,41 @@
       "name": "Продолжение",
       "kind": "button",
       "refersTo": "button-game-next",
-      "description": "Основное действие после ответа; минимум 48px.",
-      "html": "<button class=\"ds-next\">Дальше <svg width=\"18\" height=\"18\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m8 5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
-      "css": ".ds-next{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;font-weight:550;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;min-width:150px;min-height:48px;padding:12px 21px;border:1px solid var(--brand-primary);border-radius:999px;background:var(--brand-primary);color:var(--brand-surface);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-next:hover:not(:disabled){background:var(--brand-hover);border-color:var(--brand-hover)}.ds-next:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-next:disabled{opacity:.48;cursor:default}@media(max-width:760px){.ds-next{min-width:125px}}@media(prefers-reduced-motion:reduce){.ds-next{transition:none}}"
+      "description": "Прямоугольное next рядом с ответом, min48px/min-width145px.",
+      "html": "<button class=\"ds-button ds-next\">Дальше</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid var(--brand-strong-line);border-radius:12px;background:transparent;color:var(--brand-ink);font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-button:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-button:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-button:disabled{opacity:.48}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-next{min-height:48px;min-width:145px;padding:12px 21px;border-radius:13px;background:var(--brand-primary);border-color:var(--brand-primary);color:white;font-weight:550}.ds-next:hover{background:var(--brand-hover);border-color:var(--brand-hover)}"
     },
     {
       "name": "Вторичное действие",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Вторичное pill-действие современной рабочей поверхности.",
-      "html": "<button class=\"ds-secondary\">Повторить</button>",
-      "css": ".ds-secondary{font-family:Golos,Arial,sans-serif;font-size:13px;line-height:1.5;font-weight:500;min-height:46px;padding:10px 17px;border:1px solid var(--brand-strong-line);border-radius:999px;background:transparent;color:var(--brand-ink);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-secondary:hover:not(:disabled){background:var(--brand-fill);border-color:var(--brand-muted)}.ds-secondary:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-secondary:disabled{opacity:.48;cursor:default}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+      "description": "Прямоугольное secondary stage-действие; library pill локален.",
+      "html": "<button class=\"ds-button\">Сохранить</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid var(--brand-strong-line);border-radius:12px;background:transparent;color:var(--brand-ink);font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-button:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-button:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-button:disabled{opacity:.48}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
     },
     {
       "name": "Ответ",
       "kind": "button",
       "refersTo": "choice-game",
-      "description": "Выбранный ответ отмечен заливкой, границей и SVG check.",
-      "html": "<button class=\"ds-choice\" aria-pressed=\"true\">Один <svg width=\"18\" height=\"18\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m5 10 3 3 7-7\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
-      "css": ".ds-choice{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.6;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;width:100%;text-align:left;padding:16px 18px;border:1px solid var(--brand-line);border-radius:18px;background:var(--brand-paper);color:var(--brand-ink);cursor:pointer;transition:background-color .16s ease-out,border-color .16s ease-out}.ds-choice[aria-pressed=true]{background:var(--brand-selected);border-color:var(--brand-primary);color:var(--brand-ink)}.ds-choice:hover:not(:disabled){background:var(--brand-context);border-color:var(--brand-strong-line)}.ds-choice:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-choice:disabled{opacity:.48}@media(max-width:760px){.ds-choice{min-height:58px;padding:14px 16px;border-radius:16px}}@media(prefers-reduced-motion:reduce){.ds-choice{transition:none}}"
+      "description": "Paper-ответ, выбранный state: border/fill/подпись и SVG check.",
+      "html": "<button class=\"ds-choice\" aria-pressed=\"true\">Развивать державу<svg viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m5 10 3 3 7-7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-choice{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;width:100%;padding:14px 17px;border:1px solid transparent;border-radius:14px;background:var(--brand-paper);color:var(--brand-ink);font:450 14px/1.6 Golos,Arial,sans-serif;text-align:left;cursor:pointer;transition:background-color .16s ease-out,border-color .16s ease-out}.ds-choice:hover{background:var(--workspace-soft,#e9eefb);border-color:var(--brand-line)}.ds-choice[aria-pressed=true]{background:var(--brand-selected);color:var(--brand-primary);border-color:var(--brand-primary);font-weight:550}.ds-choice svg{width:20px;height:20px;flex:none}.ds-choice:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-choice{padding:14px 15px}}@media(prefers-reduced-motion:reduce){.ds-choice{transition:none}}"
     },
     {
       "name": "Подтверждённое желание",
       "kind": "chip",
       "refersTo": "context-chip",
-      "description": "Статичная часть контекста, не кнопка.",
-      "html": "<span class=\"ds-chip\">Спокойно проводить время</span>",
-      "css": ".ds-chip{font-family:Golos,Arial,sans-serif;display:inline-block;padding:5px 9px;border-radius:10px;background:var(--brand-context);color:var(--brand-ink);font-size:13px;line-height:1.6;max-width:100%}@media(max-width:760px){.ds-chip{padding:3px 7px}}"
+      "description": "Статичное условие сгруппированного запроса, не кнопка.",
+      "html": "<span class=\"ds-chip\">Windows · один</span>",
+      "css": ".ds-chip{display:inline-block;padding:6px 9px;border:0;border-radius:9px;background:var(--workspace-soft,#e9eefb);color:var(--brand-ink);font:400 12px/1.5 Golos,Arial,sans-serif}"
     },
     {
       "name": "Своими словами",
       "kind": "input",
       "refersTo": "field-game",
-      "description": "Многострочный ответ адаптивного разговора.",
-      "html": "<label class=\"ds-field\">Что хочется сегодня?<textarea class=\"ds-input\" placeholder=\"Расскажи своими словами\"></textarea></label>",
-      "css": ".ds-field{font-family:Golos,Arial,sans-serif;font-size:14px;line-height:1.5;display:grid;gap:10px;color:var(--brand-ink)}.ds-input{font-family:Golos,Arial,sans-serif;font-size:15px;line-height:1.75;width:100%;min-height:116px;padding:16px 18px;border:1px solid var(--brand-strong-line);border-radius:20px;background:var(--brand-paper);color:var(--brand-ink);resize:vertical;caret-color:var(--brand-primary)}.ds-input::placeholder{color:var(--brand-muted);opacity:1}.ds-input:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-field{font-size:13px}.ds-input{font-size:14px;padding:14px 16px;border-radius:18px}}"
+      "description": "Реальные stage textarea122px/phone125px.",
+      "html": "<label class=\"ds-field\">Своими словами<textarea placeholder=\"Чего хочется сегодня?\"></textarea></label>",
+      "css": ".ds-field{display:grid;gap:9px;color:var(--brand-ink);font:400 14px/1.5 Golos,Arial,sans-serif}.ds-field textarea{width:100%;min-height:122px;padding:16px 18px;border:1px solid var(--brand-strong-line);border-radius:16px;background:var(--brand-paper);color:var(--brand-ink);font:400 15px/1.7 Golos,Arial,sans-serif;caret-color:var(--brand-primary);resize:vertical}.ds-field textarea:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-field textarea{min-height:125px;padding:14px;font-size:14px}}"
     },
     {
       "name": "Навигация legacy",
@@ -512,24 +577,24 @@
       "name": "Первое предложение",
       "kind": "card",
       "refersTo": "result-featured",
-      "description": "Первая карточка занимает всю ширину сетки; крупная белая поверхность с асимметричным верхним правым углом. Пример с текстовым fallback.",
-      "html": "<article class=\"ds-result\"><div class=\"ds-poster\" aria-hidden=\"true\">Без обложки</div><div><h2>Название игры</h2><p class=\"ds-model\">Мнение модели</p><p class=\"ds-reason\">Причина под сегодняшнее желание.</p><p class=\"ds-caveat\">Оговорка остаётся рядом с причиной.</p><button class=\"ds-save\">Сохранить</button></div></article>",
-      "css": ".ds-result{font-family:Golos,Arial,sans-serif;display:grid;grid-template-columns:190px minmax(0,1fr);gap:30px;padding:30px;border:1px solid var(--brand-line);border-radius:32px 56px 32px 32px;background:var(--brand-surface);color:var(--brand-ink);box-shadow:0 10px 30px #15213d06}.ds-poster{width:190px;aspect-ratio:16/9;border-radius:18px;background:var(--brand-line);display:grid;place-items:center;font-size:14px;line-height:1.5}.ds-result h2{font-size:30px;line-height:1.25;font-weight:600;letter-spacing:-.025em;margin:0 0 10px}.ds-model{font-size:12px;line-height:1.6;color:var(--brand-muted);margin:0 0 6px}.ds-reason{font-size:16px;line-height:1.8;max-width:62ch;margin:0 0 14px}.ds-caveat{font-size:13px;line-height:1.75;color:var(--brand-muted);border-top:1px solid var(--brand-line);padding-top:13px;margin-top:15px}.ds-save{font-family:Golos,Arial,sans-serif;font-size:12px;line-height:1.5;min-height:44px;padding:9px 13px;border:1px solid var(--brand-strong-line);border-radius:999px;background:transparent;color:var(--brand-ink);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-save:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-save:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:1150px) and (min-width:761px){.ds-result{grid-template-columns:130px minmax(0,1fr);gap:22px;padding:24px;border-radius:28px}.ds-poster{width:130px}.ds-result h2{font-size:26px}}@media(max-width:760px){.ds-result{grid-template-columns:80px minmax(0,1fr);gap:0 17px;padding:22px 18px;border-radius:26px 42px 26px 26px}.ds-result>div:last-child{display:contents}.ds-poster{width:80px;border-radius:14px}.ds-result h2{font-size:23px}.ds-model,.ds-reason,.ds-caveat,.ds-save{grid-column:1/-1}.ds-model{margin-top:18px}.ds-reason{font-size:15px}.ds-save{justify-self:start}}@media(max-width:360px){.ds-result{padding:20px 16px}.ds-result h2{font-size:22px}}@media(prefers-reduced-motion:reduce){.ds-save{transition:none}}"
+      "description": "Natural proportions/contain и честный fallback, title-before-art phone, independent optional feedback.",
+      "html": "<article class=\"ds-result\"><div class=\"ds-result-art\" aria-hidden=\"true\">Название игры — без обложки</div><div class=\"ds-result-heading\"><h2>Название игры</h2><p class=\"ds-result-meta\">2022 · Strategy</p></div><div class=\"ds-result-copy\"><p class=\"ds-result-model\">Почему предложено · мнение модели</p><p class=\"ds-result-reason\">Причина под сегодняшний запрос.</p><p class=\"ds-result-caveat\">Учти: оговорка остаётся рядом.</p><button class=\"ds-button\">Выбираю на сегодня</button></div><div class=\"ds-feedback\"><p>Как тебе вариант на сегодня?</p><div class=\"ds-fit\"><button class=\"ds-button\">Подходит</button><button class=\"ds-button\">С оговоркой</button><button class=\"ds-button\">Не подходит</button><button class=\"ds-button\">Пока не знаю</button></div><details><summary>Добавить уточнение <span>Необязательно</span></summary><label>Своими словами<textarea placeholder=\"Что добавить к своей оценке?\"></textarea></label></details></div></article>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid var(--brand-strong-line);border-radius:12px;background:transparent;color:var(--brand-ink);font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-button:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-button:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-button:disabled{opacity:.48}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-result{font-family:Golos,Arial,sans-serif;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.5fr);align-items:start;gap:0 30px;padding:30px;border:0;border-radius:28px;background:var(--brand-surface);color:var(--brand-ink)}.ds-result-art{grid-column:1;grid-row:1/4;display:grid;place-items:center;min-height:132px;padding:18px;border-radius:14px;background:var(--brand-paper);font-size:15px;line-height:1.5;text-align:center}.ds-result-art img{display:block;width:auto;height:auto;max-width:100%;max-height:420px;margin-inline:auto;object-fit:contain}.ds-result-heading,.ds-result-copy,.ds-feedback{grid-column:2;min-width:0}.ds-result h2{font:600 30px/1.25 Golos,Arial,sans-serif;letter-spacing:-.025em;margin:0 0 10px}.ds-result-meta{font-size:13px;line-height:1.65;color:var(--brand-muted);margin:0 0 18px}.ds-result-model{font-size:12px;line-height:1.6;color:var(--brand-muted);margin:0 0 7px}.ds-result-reason{font-size:16px;line-height:1.75;max-width:65ch;margin:0 0 16px}.ds-result-caveat{font-size:13px;line-height:1.7;color:var(--brand-muted);margin:0 0 16px}.ds-feedback{display:grid;gap:16px;margin-top:22px;font-size:13px;line-height:1.6}.ds-feedback>p{margin:0 0 -8px;font-weight:550}.ds-fit{display:flex;flex-wrap:wrap;gap:7px}.ds-fit .ds-button{font-size:12px;padding:9px 12px}.ds-feedback summary{min-height:44px;padding:8px 0;color:var(--brand-primary);cursor:pointer}.ds-feedback summary span{color:var(--brand-muted);font-size:12px;font-weight:400}.ds-feedback summary:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-feedback label{display:grid;gap:6px;font-size:13px}.ds-feedback textarea{width:100%;min-height:80px;padding:11px 12px;border:1px solid var(--brand-strong-line);border-radius:12px;background:var(--brand-paper);color:var(--brand-ink);font:400 14px/1.6 Golos,Arial,sans-serif;resize:vertical}.ds-feedback textarea:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:1150px) and (min-width:761px){.ds-result{grid-template-columns:minmax(180px,.85fr) minmax(0,1.35fr);gap:0 24px;padding:24px}.ds-result h2{font-size:27px}}@media(max-width:760px){.ds-result{display:flex;flex-direction:column;gap:0;padding:22px 20px;border-radius:24px}.ds-result-heading{order:0}.ds-result-art{order:1;width:100%;margin-bottom:22px;border-radius:12px}.ds-result-art img{max-height:320px}.ds-result-copy{order:2}.ds-feedback{order:3}.ds-result h2{font-size:26px}.ds-result-reason{font-size:15px}}@media(max-width:360px){.ds-result{padding:20px 16px}.ds-result h2{font-size:24px}}"
     },
     {
       "name": "Карточка библиотеки",
       "kind": "card",
       "refersTo": "library-card",
-      "description": "План переносится отдельным native select; изображение может отсутствовать.",
-      "html": "<article class=\"ds-library\"><div class=\"ds-cover\" aria-hidden=\"true\">Без обложки</div><div><p class=\"ds-meta\">2023 · Игра</p><h3>Сохранённая игра</h3><select class=\"ds-plan\" aria-label=\"План\"><option>На потом</option><option>На этот вечер</option><option>Уже знакомо</option></select></div></article>",
-      "css": ".ds-library{font-family:Golos,Arial,sans-serif;display:grid;grid-template-columns:68px minmax(0,1fr);gap:16px;padding:18px;border:1px solid var(--brand-line);border-radius:22px;background:var(--brand-surface);color:var(--brand-ink)}.ds-cover{aspect-ratio:2/3;border-radius:12px;background:var(--brand-fill);display:grid;place-items:center;padding:8px;color:var(--brand-muted);text-align:center;font-size:12px;line-height:1.4;overflow-wrap:anywhere}.ds-meta{font-size:12px;line-height:1.6;color:var(--brand-muted);margin:0}.ds-library h3{font-size:14px;line-height:1.45;font-weight:650;letter-spacing:-.015em;margin:6px 0 11px}.ds-plan{font-family:Golos,Arial,sans-serif;font-size:12px;width:100%;min-height:44px;padding:8px 20px 8px 7px;border:0;border-radius:14px;background:var(--brand-context);color:var(--brand-ink)}.ds-plan:focus-visible{outline:2px solid var(--brand-primary);outline-offset:4px}@media(min-width:1500px){.ds-library{grid-template-columns:76px minmax(0,1fr)}.ds-library h3{font-size:15px}}@media(max-width:1100px) and (min-width:761px){.ds-library{grid-template-columns:48px minmax(0,1fr)}.ds-library h3{font-size:13px}}@media(max-width:760px){.ds-library{grid-template-columns:72px minmax(0,1fr);padding:16px}}@media(max-width:350px){.ds-library{grid-template-columns:60px minmax(0,1fr)}}"
+      "description": "Выбранный list grid2/1 снаружи, natural cover и отдельное изменение плана.",
+      "html": "<article class=\"ds-library-card\"><div class=\"ds-library-cover\" aria-hidden=\"true\">Без обложки</div><div><p>2024 · игра</p><h3>Название игры</h3><button class=\"ds-move\">На потом <svg viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m6 8 4 4 4-4\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></div></article>",
+      "css": ".ds-library-card{display:grid;grid-template-columns:76px minmax(0,1fr);align-self:start;gap:16px;padding:18px;border:1px solid var(--brand-line);border-radius:22px;background:var(--brand-surface);color:var(--brand-ink);font-family:Golos,Arial,sans-serif}.ds-library-cover{display:flex;align-items:center;justify-content:center;min-height:106px;padding:8px;border-radius:12px;background:var(--brand-fill);color:var(--brand-muted);font-size:12px;line-height:1.5;text-align:center;overflow-wrap:anywhere}.ds-library-cover img{display:block;width:100%;height:auto;object-fit:contain}.ds-library-card p{font-size:12px;line-height:1.6;color:var(--brand-muted);margin:0}.ds-library-card h3{font:600 17px/1.45 Golos,Arial,sans-serif;letter-spacing:-.015em;margin:5px 0 13px;overflow-wrap:anywhere}.ds-move{display:flex;align-items:center;justify-content:space-between;gap:6px;min-height:46px;width:100%;padding:11px;border:1px solid var(--brand-strong-line);border-radius:12px;background:var(--brand-paper);color:var(--brand-ink);font:500 12px/1.5 Golos,Arial,sans-serif;cursor:pointer}.ds-move svg{width:18px;height:18px;flex:none}.ds-move:hover{background:var(--brand-context);border-color:var(--brand-muted)}.ds-move:focus-visible{outline:2px solid var(--brand-primary);outline-offset:3px}@media(max-width:900px){.ds-library-card{grid-template-columns:80px minmax(0,1fr)}}@media(max-width:760px){.ds-library-card{padding:16px}}@media(max-width:600px){.ds-library-card{grid-template-columns:62px minmax(0,1fr)}.ds-library-card h3{font-size:16px}.ds-move{padding-inline:9px}}@media(max-width:350px){.ds-library-card{grid-template-columns:46px minmax(0,1fr)}.ds-library-card h3{font-size:15px}}"
     },
     {
       "name": "Краткий запрос на телефоне",
       "kind": "custom",
-      "description": "Исходная неясность видна целиком, рядом явное уточнение и раскрытие контекста.",
-      "html": "<section class=\"ds-context\"><div class=\"ds-context-head\"><h2>Твой запрос</h2><button class=\"ds-toggle\" aria-expanded=\"false\">Показать</button></div><p>Нужно уточнить, что ты имеешь в виду под короткой историей.</p><button class=\"ds-clarify\">Уточнить</button></section>",
-      "css": ".ds-context{font-family:Golos,Arial,sans-serif;padding:0 4px;background:transparent;color:var(--brand-ink)}.ds-context-head{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px}.ds-context h2{font-size:13px;font-weight:650;line-height:1.4;margin:0}.ds-context p{font-size:13px;line-height:1.7;margin:5px 0 10px}.ds-toggle,.ds-clarify{font-family:Golos,Arial,sans-serif;font-size:12px;line-height:1.45;min-height:44px;padding:9px 14px;border-radius:999px;cursor:pointer}.ds-toggle{background:none;border:0;color:var(--brand-muted)}.ds-clarify{background:var(--brand-surface);border:1px solid var(--brand-strong-line);color:var(--brand-primary);margin-bottom:8px}.ds-toggle:hover,.ds-clarify:hover{background:var(--brand-fill)}.ds-toggle:focus-visible,.ds-clarify:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}"
+      "description": "Свои слова, явное уточнение и раскрытие полной сводки.",
+      "html": "<section class=\"ds-request\"><div><h2>Твой запрос</h2><button class=\"ds-button\">Показать</button><button class=\"ds-button\">Изменить</button></div><p>Хочу развивать державу, управлять экономикой и договариваться с соседями.</p><button class=\"ds-button\">Уточнить один момент</button></section>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid var(--brand-strong-line);border-radius:12px;background:transparent;color:var(--brand-ink);font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-button:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-button:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-button:disabled{opacity:.48}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-request{padding:16px 18px;border-radius:18px;background:var(--brand-surface);color:var(--brand-ink);font-family:Golos,Arial,sans-serif}.ds-request>div{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.ds-request h2{flex:1;font-size:14px;font-weight:650;margin:0}.ds-request p{font-size:13px;line-height:1.7;margin:10px 0 8px}.ds-request .ds-button{font-size:12px;padding:8px 11px;background:var(--brand-paper);border:0;border-radius:10px;color:var(--brand-primary)}"
     },
     {
       "name": "Действие главной",
@@ -558,36 +623,44 @@
       "name": "Светлая шапка продукта",
       "kind": "nav",
       "refersTo": "product-nav-link",
-      "description": "Современные game/watch: точный cobalt SVG, постоянно видимый раздел, смена раздела и библиотека. У библиотеки вместо раздела остаётся свободное место, справа Новый подбор.",
-      "html": "<header class=\"ds-product-header\"><a class=\"ds-brand\" href=\"/\" aria-label=\"TASTIQ — главная\"><svg class=\"ds-site-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1140 277\" role=\"img\" aria-labelledby=\"ds-product-logo-title\"><title id=\"ds-product-logo-title\">TASTIQ</title><g fill=\"#3154D6\" fill-rule=\"evenodd\"><path transform=\"translate(-16.873 -3.436) scale(0.896)\" d=\"M200.386 15.386 C207.14 14.548 214.088 15.54 220.614 17.386 C227.743 20.117 234.871 22.848 242 25.579 C254.363 24.082 266.725 22.585 279.088 21.088 C304.133 18.798 308.084 38.368 300 58 C288.795 85.212 253.058 96.687 257.018 129.982 C259.706 152.59 280.481 173.913 291.614 190.386 C300.231 203.135 306.813 217.479 310.614 232.386 C313.525 243.804 317.641 263.425 306.982 271.982 C305.016 273.561 302.419 273.992 300 274 C263.006 273.994 226.012 273.988 189.018 273.982 C184.457 273.928 178.738 271.402 175.263 268.737 C161.226 257.972 164.445 239.052 175.263 227.263 C177.93 224.93 180.596 222.596 183.263 220.263 C196.032 211.324 263.743 179.289 225.614 154.386 C222.947 153.053 220.281 151.719 217.614 150.386 C211.339 148.661 205.064 146.936 198.789 145.211 C189.86 144.474 180.93 143.737 172 143 C168.438 142.87 160.086 144.842 168.368 147.632 C173.943 149.509 211.96 154.879 201.982 171.982 C194.809 184.281 151.047 194.381 146.123 196.123 C124.161 203.894 101.507 213.829 86.263 232.263 C79.299 240.685 74.237 251.132 73.088 262.088 C72.916 263.722 74.336 271.028 71.158 273.158 C70.099 273.433 69.041 273.708 67.982 273.982 C59.994 273.982 52.006 273.982 44.018 273.982 C41.807 273.193 39.596 272.404 37.386 271.614 C27.565 266.14 30.004 242.879 31.088 235.088 C35.418 203.956 47.491 172.938 62.316 145.316 C70.227 130.575 81.718 110.193 92.386 95.386 C97.404 88.795 102.421 82.205 107.439 75.614 C108.738 73.623 100.689 62.284 100.018 55.982 C98.628 42.949 102.917 31.427 113.386 23.386 C123.698 15.465 139.657 14.896 150.982 21.018 C154.723 23.04 157.907 29.253 161.86 27.684 C177.781 21.366 182.569 17.596 200.386 15.386 Z\"/><path transform=\"translate(-39.502 -26)\" d=\"M356.386 102.386 C396.585 102.263 436.784 102.14 476.982 102.018 C495.526 102.253 492.56 122.656 489.632 134.632 C489.056 136.985 487.822 140.152 485.737 141.737 C475.283 149.683 454.446 145.599 445.018 146.018 C444.117 146.45 443.216 146.883 442.316 147.316 C442.181 178.848 442.047 210.38 441.912 241.912 C441.793 249.175 439.84 257.064 432.982 260.982 C426.514 264.679 406.952 262.965 404.211 262.789 C398.617 262.431 393.284 259.026 391.316 253.684 C390.55 250.45 389.784 247.216 389.018 243.982 C388.936 211.731 388.854 179.48 388.772 147.228 C388.75 145.769 387.004 145.113 385.912 145.088 C373.626 144.803 361.016 148.257 350.018 141.982 C338.459 135.388 339.853 102.934 356.386 102.386 Z\"/><path transform=\"translate(-41.502 -26)\" d=\"M553.386 101.386 C568.081 99.79 585.588 104.306 591.684 119.316 C607.988 161.345 624.292 203.374 640.596 245.404 C643.067 251.884 642.26 261.6 634.982 264.982 C623.068 270.52 598.612 271.622 592.14 256.86 C589.52 249.146 586.901 241.433 584.281 233.719 C583.982 233.351 583.684 232.982 583.386 232.614 C582.585 232.415 581.784 232.216 580.982 232.018 C563.427 232.117 545.871 232.216 528.316 232.316 C527.842 232.842 527.368 233.368 526.895 233.895 C523.801 242.468 520.708 251.041 517.614 259.614 C512.371 271.348 483.313 269.436 474.386 263.614 C466.659 258.575 470.727 246.29 473.123 240.123 C489.088 199.754 505.053 159.386 521.018 119.018 C526.613 105.52 540.581 102.777 553.386 101.386 Z M556 147.632 C555.456 148.544 554.912 149.456 554.368 150.368 C549.713 164.836 545.058 179.304 540.404 193.772 C541.275 194.175 542.146 194.579 543.018 194.982 C552.24 194.883 561.462 194.784 570.684 194.684 C572.211 194.62 571.463 191.939 571.368 191.632 C571.301 191.411 560.04 153.955 556 147.632 Z\"/><path transform=\"translate(-40.502 -26)\" d=\"M700.386 98.386 C718.768 96.362 770.199 99.443 764.789 128.789 C759.883 155.408 743.384 144.964 723.789 141.211 C719.471 140.383 693.753 136.645 695.105 148.93 C695.736 154.657 702.869 156.448 707.386 157.614 C721.087 161.151 735.795 162.762 748.544 169.456 C776.42 184.093 782.404 220.629 763.614 245.614 C753.969 258.44 738.152 263.727 722.912 265.912 C718.942 266.275 714.971 266.637 711 267 C690.587 267 642.232 260.59 647.211 230.211 C647.989 225.461 650.275 220.173 653.754 216.754 C663.669 207.012 677.901 217.605 687.386 220.614 C692.596 221.737 697.807 222.86 703.018 223.982 C710.698 225.015 721.187 223.874 724.596 215.596 C727.64 208.207 718.088 202.963 712.596 201.404 C692.204 195.613 661.014 192.858 650.386 170.614 C631.557 131.205 663.028 102.499 700.386 98.386 Z\"/><path transform=\"translate(-38.502 -26)\" d=\"M787.386 102.386 C826.918 102.263 866.45 102.14 905.982 102.018 C925.013 102.265 923.796 131.878 913.737 141.737 C906.847 148.49 877.273 144.923 875.018 145.018 C874.117 145.45 873.216 145.883 872.316 146.316 C872.181 180.181 872.047 214.047 871.912 247.912 C871.794 252.712 868.54 259.723 863.544 261.544 C848.482 267.032 821.528 267.607 821.018 245.982 C820.977 213.023 820.936 180.064 820.895 147.105 C820.883 145.454 819.361 145.065 817.982 145.018 C813.936 144.88 791.04 148.011 781.842 142.158 C770.522 134.954 771.513 102.69 787.386 102.386 Z\"/><path transform=\"translate(-37.502 -26)\" d=\"M945.386 102.386 C955.258 101.427 979.644 99.243 979.912 116.088 C979.912 162.029 979.912 207.971 979.912 253.912 C979.803 262.073 971.202 267.486 963.912 267.912 C954.103 268.486 931.349 270.213 931.088 253.912 C931.088 208.304 931.088 162.696 931.088 117.088 C931.159 109.349 937.907 103.112 945.386 102.386 Z\"/><path transform=\"translate(-34.502 -26)\" d=\"M1068.386 99.386 C1115.246 95.505 1153.513 120.158 1162.789 167.211 C1163.491 170.769 1164.409 179.383 1163.912 183.912 C1162.493 196.854 1160.392 209.423 1153.982 220.982 C1150.86 225.526 1147.737 230.07 1144.614 234.614 C1142.643 236.825 1140.673 239.035 1138.702 241.246 C1139.31 242.322 1139.918 243.398 1140.526 244.474 C1145.222 249.111 1149.918 253.749 1154.614 258.386 C1165.411 270.825 1145.332 286.513 1135.877 290.877 C1131.183 293.044 1121.802 294.784 1117.386 290.614 C1108.766 281.567 1100.146 272.52 1091.526 263.474 C1083.023 263.643 1074.52 263.813 1066.018 263.982 C1046.731 263.156 1024.806 253.651 1012.263 238.737 C967.899 185.985 998.511 105.173 1068.386 99.386 Z M1069.211 142.211 C1023.929 153.486 1034.937 228.237 1081.789 221.789 C1123.913 215.993 1126.969 154.658 1086.789 142.211 C1081.013 140.421 1074.987 140.772 1069.211 142.211 Z\"/></g></svg></a><div class=\"ds-domain\"><strong>Подбираем игру</strong><a href=\"/#doors\">Сменить раздел</a></div><nav class=\"ds-product-links\" aria-label=\"Основное\"><a href=\"/library/\">Библиотека</a></nav></header>",
-      "css": ".ds-product-header{font-family:Golos,Arial,sans-serif;position:sticky;top:0;z-index:50;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:30px;max-width:1440px;min-height:88px;margin-inline:auto;padding:16px clamp(20px,4vw,64px);background:var(--brand-paper);color:var(--brand-ink);border-bottom:1px solid var(--brand-line)}.ds-brand{display:flex;align-items:center;min-height:44px}.ds-site-logo{display:block;width:148px;height:auto;max-width:100%}.ds-domain{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 20px}.ds-domain strong{font-size:18px;font-weight:650;line-height:1.4;letter-spacing:-.025em}.ds-domain a{display:inline-flex;align-items:center;min-height:44px;font-size:12px;color:var(--brand-muted)}.ds-product-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid var(--brand-line);border-radius:999px;background:var(--brand-surface);color:var(--brand-ink);font-size:13px;font-weight:550;text-decoration:none}.ds-product-links a:hover{background:var(--brand-selected)}.ds-product-header a:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-product-header{grid-template-columns:1fr auto;gap:4px 16px;padding:10px 20px 8px;min-height:0}.ds-site-logo{width:122px}.ds-domain{grid-column:1/-1;grid-row:2;justify-content:space-between;gap:0 12px;min-height:44px}.ds-domain strong{font-size:17px}.ds-product-links{grid-column:2;grid-row:1}.ds-product-links a{padding:9px 13px;font-size:12px}}@media(max-width:360px){.ds-product-header{padding-inline:16px;column-gap:10px}.ds-site-logo{width:108px}.ds-domain strong{font-size:16px}}"
+      "description": "Плавающая desktop shell76px, visible nav/domain/restart; phone две строки.",
+      "html": "<header class=\"ds-shell\"><a href=\"/\" class=\"ds-brand\" aria-label=\"TASTIQ — главная\"><svg class=\"ds-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1140 277\" role=\"img\" aria-labelledby=\"title\"><title id=\"title\">TASTIQ</title><g fill=\"#3154D6\" fill-rule=\"evenodd\"><path transform=\"translate(-16.873 -3.436) scale(0.896)\" d=\"M200.386 15.386 C207.14 14.548 214.088 15.54 220.614 17.386 C227.743 20.117 234.871 22.848 242 25.579 C254.363 24.082 266.725 22.585 279.088 21.088 C304.133 18.798 308.084 38.368 300 58 C288.795 85.212 253.058 96.687 257.018 129.982 C259.706 152.59 280.481 173.913 291.614 190.386 C300.231 203.135 306.813 217.479 310.614 232.386 C313.525 243.804 317.641 263.425 306.982 271.982 C305.016 273.561 302.419 273.992 300 274 C263.006 273.994 226.012 273.988 189.018 273.982 C184.457 273.928 178.738 271.402 175.263 268.737 C161.226 257.972 164.445 239.052 175.263 227.263 C177.93 224.93 180.596 222.596 183.263 220.263 C196.032 211.324 263.743 179.289 225.614 154.386 C222.947 153.053 220.281 151.719 217.614 150.386 C211.339 148.661 205.064 146.936 198.789 145.211 C189.86 144.474 180.93 143.737 172 143 C168.438 142.87 160.086 144.842 168.368 147.632 C173.943 149.509 211.96 154.879 201.982 171.982 C194.809 184.281 151.047 194.381 146.123 196.123 C124.161 203.894 101.507 213.829 86.263 232.263 C79.299 240.685 74.237 251.132 73.088 262.088 C72.916 263.722 74.336 271.028 71.158 273.158 C70.099 273.433 69.041 273.708 67.982 273.982 C59.994 273.982 52.006 273.982 44.018 273.982 C41.807 273.193 39.596 272.404 37.386 271.614 C27.565 266.14 30.004 242.879 31.088 235.088 C35.418 203.956 47.491 172.938 62.316 145.316 C70.227 130.575 81.718 110.193 92.386 95.386 C97.404 88.795 102.421 82.205 107.439 75.614 C108.738 73.623 100.689 62.284 100.018 55.982 C98.628 42.949 102.917 31.427 113.386 23.386 C123.698 15.465 139.657 14.896 150.982 21.018 C154.723 23.04 157.907 29.253 161.86 27.684 C177.781 21.366 182.569 17.596 200.386 15.386 Z\"/><path transform=\"translate(-39.502 -26)\" d=\"M356.386 102.386 C396.585 102.263 436.784 102.14 476.982 102.018 C495.526 102.253 492.56 122.656 489.632 134.632 C489.056 136.985 487.822 140.152 485.737 141.737 C475.283 149.683 454.446 145.599 445.018 146.018 C444.117 146.45 443.216 146.883 442.316 147.316 C442.181 178.848 442.047 210.38 441.912 241.912 C441.793 249.175 439.84 257.064 432.982 260.982 C426.514 264.679 406.952 262.965 404.211 262.789 C398.617 262.431 393.284 259.026 391.316 253.684 C390.55 250.45 389.784 247.216 389.018 243.982 C388.936 211.731 388.854 179.48 388.772 147.228 C388.75 145.769 387.004 145.113 385.912 145.088 C373.626 144.803 361.016 148.257 350.018 141.982 C338.459 135.388 339.853 102.934 356.386 102.386 Z\"/><path transform=\"translate(-41.502 -26)\" d=\"M553.386 101.386 C568.081 99.79 585.588 104.306 591.684 119.316 C607.988 161.345 624.292 203.374 640.596 245.404 C643.067 251.884 642.26 261.6 634.982 264.982 C623.068 270.52 598.612 271.622 592.14 256.86 C589.52 249.146 586.901 241.433 584.281 233.719 C583.982 233.351 583.684 232.982 583.386 232.614 C582.585 232.415 581.784 232.216 580.982 232.018 C563.427 232.117 545.871 232.216 528.316 232.316 C527.842 232.842 527.368 233.368 526.895 233.895 C523.801 242.468 520.708 251.041 517.614 259.614 C512.371 271.348 483.313 269.436 474.386 263.614 C466.659 258.575 470.727 246.29 473.123 240.123 C489.088 199.754 505.053 159.386 521.018 119.018 C526.613 105.52 540.581 102.777 553.386 101.386 Z M556 147.632 C555.456 148.544 554.912 149.456 554.368 150.368 C549.713 164.836 545.058 179.304 540.404 193.772 C541.275 194.175 542.146 194.579 543.018 194.982 C552.24 194.883 561.462 194.784 570.684 194.684 C572.211 194.62 571.463 191.939 571.368 191.632 C571.301 191.411 560.04 153.955 556 147.632 Z\"/><path transform=\"translate(-40.502 -26)\" d=\"M700.386 98.386 C718.768 96.362 770.199 99.443 764.789 128.789 C759.883 155.408 743.384 144.964 723.789 141.211 C719.471 140.383 693.753 136.645 695.105 148.93 C695.736 154.657 702.869 156.448 707.386 157.614 C721.087 161.151 735.795 162.762 748.544 169.456 C776.42 184.093 782.404 220.629 763.614 245.614 C753.969 258.44 738.152 263.727 722.912 265.912 C718.942 266.275 714.971 266.637 711 267 C690.587 267 642.232 260.59 647.211 230.211 C647.989 225.461 650.275 220.173 653.754 216.754 C663.669 207.012 677.901 217.605 687.386 220.614 C692.596 221.737 697.807 222.86 703.018 223.982 C710.698 225.015 721.187 223.874 724.596 215.596 C727.64 208.207 718.088 202.963 712.596 201.404 C692.204 195.613 661.014 192.858 650.386 170.614 C631.557 131.205 663.028 102.499 700.386 98.386 Z\"/><path transform=\"translate(-38.502 -26)\" d=\"M787.386 102.386 C826.918 102.263 866.45 102.14 905.982 102.018 C925.013 102.265 923.796 131.878 913.737 141.737 C906.847 148.49 877.273 144.923 875.018 145.018 C874.117 145.45 873.216 145.883 872.316 146.316 C872.181 180.181 872.047 214.047 871.912 247.912 C871.794 252.712 868.54 259.723 863.544 261.544 C848.482 267.032 821.528 267.607 821.018 245.982 C820.977 213.023 820.936 180.064 820.895 147.105 C820.883 145.454 819.361 145.065 817.982 145.018 C813.936 144.88 791.04 148.011 781.842 142.158 C770.522 134.954 771.513 102.69 787.386 102.386 Z\"/><path transform=\"translate(-37.502 -26)\" d=\"M945.386 102.386 C955.258 101.427 979.644 99.243 979.912 116.088 C979.912 162.029 979.912 207.971 979.912 253.912 C979.803 262.073 971.202 267.486 963.912 267.912 C954.103 268.486 931.349 270.213 931.088 253.912 C931.088 208.304 931.088 162.696 931.088 117.088 C931.159 109.349 937.907 103.112 945.386 102.386 Z\"/><path transform=\"translate(-34.502 -26)\" d=\"M1068.386 99.386 C1115.246 95.505 1153.513 120.158 1162.789 167.211 C1163.491 170.769 1164.409 179.383 1163.912 183.912 C1162.493 196.854 1160.392 209.423 1153.982 220.982 C1150.86 225.526 1147.737 230.07 1144.614 234.614 C1142.643 236.825 1140.673 239.035 1138.702 241.246 C1139.31 242.322 1139.918 243.398 1140.526 244.474 C1145.222 249.111 1149.918 253.749 1154.614 258.386 C1165.411 270.825 1145.332 286.513 1135.877 290.877 C1131.183 293.044 1121.802 294.784 1117.386 290.614 C1108.766 281.567 1100.146 272.52 1091.526 263.474 C1083.023 263.643 1074.52 263.813 1066.018 263.982 C1046.731 263.156 1024.806 253.651 1012.263 238.737 C967.899 185.985 998.511 105.173 1068.386 99.386 Z M1069.211 142.211 C1023.929 153.486 1034.937 228.237 1081.789 221.789 C1123.913 215.993 1126.969 154.658 1086.789 142.211 C1081.013 140.421 1074.987 140.772 1069.211 142.211 Z\"/></g></svg>\n</a><nav class=\"ds-nav\" aria-label=\"Основное\"><a href=\"/#doors\" aria-current=\"page\">Подбор</a><a href=\"/library/\">Библиотека</a></nav><button class=\"ds-domain\">Подбираем игру<svg viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m6 8 4 4 4-4\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><button class=\"ds-restart\">Начать заново</button></header>",
+      "css": ".ds-shell{display:flex;align-items:center;gap:24px;position:sticky;top:12px;z-index:60;max-width:1380px;min-height:76px;margin:16px auto 28px;padding:14px 24px;border:0;border-radius:20px;background:var(--brand-surface);color:var(--brand-ink);box-shadow:0 4px 24px #15213d08;font-family:Golos,Arial,sans-serif}.ds-brand{display:inline-flex;align-items:center;min-height:44px;flex:none}.ds-logo{display:block;width:140px;height:auto}.ds-nav{display:flex;gap:5px;margin-left:16px}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:500;text-decoration:none;color:var(--brand-muted)}.ds-nav a[aria-current=page]{color:var(--brand-primary);background:var(--workspace-soft,#e9eefb)}.ds-nav a:hover{background:var(--brand-paper);color:var(--brand-primary)}.ds-domain{display:flex;align-items:center;gap:12px;min-height:46px;margin-left:auto;padding:10px 15px;border:0;border-radius:13px;background:var(--brand-paper);color:var(--brand-ink);font:550 14px/1.5 Golos,Arial,sans-serif;cursor:pointer}.ds-domain svg{width:18px;height:18px}.ds-domain:hover{background:var(--brand-selected)}.ds-restart{min-height:44px;padding:10px 16px;border:1px solid var(--workspace-line,#d8e0f0);border-radius:13px;background:transparent;color:var(--brand-ink);font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer}.ds-restart:hover{background:var(--brand-paper)}.ds-shell :is(a,button):focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:1100px){.ds-shell{padding:12px 18px;gap:14px}.ds-nav{margin-left:0}.ds-nav a{padding-inline:11px}}@media(max-width:760px){.ds-shell{display:grid;grid-template-columns:1fr auto;top:0;margin:0 0 16px;padding:10px 16px;gap:8px 12px;border-radius:0;box-shadow:none}.ds-logo{width:120px}.ds-nav{grid-column:2;grid-row:1;gap:2px;margin:0}.ds-nav a{padding:8px 10px;font-size:12px;border-radius:10px}.ds-domain{grid-row:2;grid-column:1;min-height:44px;margin:0;padding:8px 10px;font-size:13px}.ds-restart{grid-row:2;grid-column:2;padding:8px 10px;font-size:12px}}@media(max-width:360px){.ds-logo{width:105px}.ds-nav a{padding-inline:8px;font-size:11px}.ds-restart{font-size:11px;padding-inline:9px}}"
     },
     {
       "name": "Рабочая поверхность вопроса",
       "kind": "custom",
       "refersTo": "question-board",
-      "description": "Одна поверхность для вопроса, ответа и продолжения. Четыре текстовых этапа сохраняют aria-current=step; при ≤360px стоят сеткой 2×2.",
-      "html": "<section class=\"ds-question\"><ol class=\"ds-journey\" aria-label=\"Этапы подбора\"><li aria-current=\"step\"><b>Желание</b></li><li><b>Условия</b></li><li><b>Уточнения</b></li><li><b>Варианты</b></li></ol><h1>Чего хочется сегодня?</h1><p>Опиши желание своими словами.</p></section>",
-      "css": ".ds-question{font-family:Golos,Arial,sans-serif;padding:28px 32px 34px;border:1px solid var(--brand-line);border-radius:32px;background:var(--brand-surface);color:var(--brand-ink);box-shadow:0 10px 32px #15213d05}.ds-journey{display:flex;gap:0;margin:0 0 30px;padding:0 0 18px;list-style:none;border-bottom:1px solid var(--brand-line)}.ds-journey li{flex:1;display:flex;justify-content:center;font-size:12px;line-height:1.5;text-align:center}.ds-journey b{padding:6px 4px;font-weight:400;white-space:nowrap}.ds-journey [aria-current=step] b{font-weight:650;color:var(--brand-primary)}.ds-question h1{font-family:Unbounded,Golos,sans-serif;font-size:30px;line-height:1.35;font-weight:500;letter-spacing:-.035em;max-width:26ch;margin:0 0 18px;text-wrap:balance}.ds-question p{font-size:14px;line-height:1.8;max-width:65ch}@media(max-width:1150px) and (min-width:761px){.ds-question{padding:25px;border-radius:28px}}@media(max-width:760px){.ds-question{padding:20px;border-radius:26px}.ds-question h1{font-size:25px;margin-bottom:16px}.ds-journey{margin-bottom:24px;padding-bottom:14px}.ds-journey li{line-height:1.6}}@media(max-width:360px){.ds-question{padding:18px 16px;border-radius:24px}.ds-question h1{font-size:23px}.ds-journey{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px}.ds-journey li{justify-content:flex-start;min-width:0}.ds-journey b{padding-inline:0}}"
+      "description": "Плоская работа,4 numbered/check этапа; phone сохраняет4колонки.",
+      "html": "<section class=\"ds-question\"><ol class=\"ds-journey\" aria-label=\"Этапы подбора\"><li class=\"ds-done\"><span><svg viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m5 10 3 3 7-7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><b>Желание</b></li><li aria-current=\"step\"><span>2</span><b>Условия</b></li><li><span>3</span><b>Уточнения</b></li><li><span>4</span><b>Варианты</b></li></ol><h1>Чего хочется сегодня?</h1><p>Опиши желание своими словами.</p></section>",
+      "css": ".ds-question{padding:26px 32px 30px;border:0;border-radius:26px;background:var(--brand-surface);color:var(--brand-ink);font-family:Golos,Arial,sans-serif}.ds-journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:0;margin:0 0 32px;list-style:none}.ds-journey li{display:flex;align-items:center;gap:8px;min-width:0;color:var(--brand-muted)}.ds-journey span{display:grid;place-items:center;width:27px;height:27px;flex:none;border-radius:50%;background:var(--brand-paper);font-size:12px}.ds-journey svg{width:18px;height:18px}.ds-journey b{font-size:12px;font-weight:450;line-height:1.5}.ds-journey [aria-current=step]{color:var(--brand-primary)}.ds-journey [aria-current=step] span{background:var(--brand-primary);color:white}.ds-journey [aria-current=step] b{font-weight:650}.ds-journey .ds-done span{background:var(--brand-selected);color:var(--brand-primary)}.ds-question h1{font:500 28px/1.35 Unbounded,Golos,sans-serif;letter-spacing:-.035em;max-width:28ch;margin:0 0 14px}.ds-question p{font-size:14px;line-height:1.7;max-width:65ch}@media(max-width:1100px){.ds-question{padding:24px}}@media(max-width:760px){.ds-question{padding:20px 18px;border-radius:22px}.ds-journey{gap:5px;margin-bottom:26px}.ds-journey li{flex-direction:column;gap:5px;text-align:center}.ds-journey span{width:25px;height:25px}.ds-journey b{font-size:11px}.ds-question h1{font-size:24px;line-height:1.4}}@media(max-width:360px){.ds-question{padding:18px 14px}.ds-question h1{font-size:22px}.ds-journey{gap:3px}}"
     },
     {
       "name": "Альтернатива",
       "kind": "card",
       "refersTo": "result-alternative",
-      "description": "Одна из альтернатив под отдельным заголовком; сетка 3/2/1 задаётся внешним контейнером, число предложений не дополняется искусственно.",
-      "html": "<article class=\"ds-alternative\"><div class=\"ds-alt-cover\" aria-hidden=\"true\">Без обложки</div><h2>Название игры</h2><p class=\"ds-alt-model\">Мнение модели</p><p class=\"ds-alt-reason\">Причина под сегодняшний запрос.</p><p class=\"ds-alt-caveat\">Оговорка остаётся рядом.</p><button class=\"ds-alt-save\">Сохранить</button></article>",
-      "css": ".ds-alternative{font-family:Golos,Arial,sans-serif;display:flex;flex-direction:column;min-width:0;padding:22px;border:1px solid var(--brand-line);border-radius:24px;background:var(--brand-surface);color:var(--brand-ink)}.ds-alt-cover{display:grid;place-items:center;width:100%;aspect-ratio:16/9;border-radius:16px;margin-bottom:18px;background:var(--brand-line);font-size:14px;line-height:1.5}.ds-alternative h2{font-size:21px;line-height:1.35;letter-spacing:-.02em;font-weight:600;margin:0 0 9px}.ds-alt-model{font-size:12px;line-height:1.6;color:var(--brand-muted)}.ds-alt-reason{font-size:14px;line-height:1.8}.ds-alt-caveat{font-size:13px;line-height:1.75;color:var(--brand-muted);padding-top:13px;border-top:1px solid var(--brand-line);margin-top:15px}.ds-alt-save{align-self:start;font-family:Golos,Arial,sans-serif;font-size:12px;line-height:1.5;min-height:44px;padding:9px 13px;border:1px solid var(--brand-strong-line);border-radius:999px;background:transparent;color:var(--brand-ink);cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-alt-save:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-alt-save:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:760px){.ds-alternative{display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 16px;padding:20px 18px;margin-bottom:16px}.ds-alt-cover{width:72px;aspect-ratio:2/3;border-radius:12px;margin:0 0 16px}.ds-alt-model,.ds-alt-reason,.ds-alt-caveat,.ds-alt-save{grid-column:1/-1}.ds-alt-save{justify-self:start}}@media(prefers-reduced-motion:reduce){.ds-alt-save{transition:none}}"
+      "description": "Собственная естественная высота; natural art max220px/phone280px, title перед art phone.",
+      "html": "<article class=\"ds-result ds-alternative\"><div class=\"ds-result-art\" aria-hidden=\"true\">Название игры — без обложки</div><div class=\"ds-result-heading\"><h2>Название игры</h2><p class=\"ds-result-meta\">2022 · Strategy</p></div><div class=\"ds-result-copy\"><p class=\"ds-result-model\">Почему предложено · мнение модели</p><p class=\"ds-result-reason\">Причина под сегодняшний запрос.</p><p class=\"ds-result-caveat\">Учти: оговорка остаётся рядом.</p><button class=\"ds-button\">Выбираю на сегодня</button></div><div class=\"ds-feedback\"><p>Как тебе вариант на сегодня?</p><div class=\"ds-fit\"><button class=\"ds-button\">Подходит</button><button class=\"ds-button\">С оговоркой</button><button class=\"ds-button\">Не подходит</button><button class=\"ds-button\">Пока не знаю</button></div><details><summary>Добавить уточнение <span>Необязательно</span></summary><label>Своими словами<textarea placeholder=\"Что добавить к своей оценке?\"></textarea></label></details></div></article>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid var(--brand-strong-line);border-radius:12px;background:transparent;color:var(--brand-ink);font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer;transition:background .18s ease,border-color .18s ease}.ds-button:hover{background:var(--brand-fill);border-color:var(--brand-muted)}.ds-button:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-button:disabled{opacity:.48}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-result{font-family:Golos,Arial,sans-serif;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.5fr);align-items:start;gap:0 30px;padding:30px;border:0;border-radius:28px;background:var(--brand-surface);color:var(--brand-ink)}.ds-result-art{grid-column:1;grid-row:1/4;display:grid;place-items:center;min-height:132px;padding:18px;border-radius:14px;background:var(--brand-paper);font-size:15px;line-height:1.5;text-align:center}.ds-result-art img{display:block;width:auto;height:auto;max-width:100%;max-height:420px;margin-inline:auto;object-fit:contain}.ds-result-heading,.ds-result-copy,.ds-feedback{grid-column:2;min-width:0}.ds-result h2{font:600 30px/1.25 Golos,Arial,sans-serif;letter-spacing:-.025em;margin:0 0 10px}.ds-result-meta{font-size:13px;line-height:1.65;color:var(--brand-muted);margin:0 0 18px}.ds-result-model{font-size:12px;line-height:1.6;color:var(--brand-muted);margin:0 0 7px}.ds-result-reason{font-size:16px;line-height:1.75;max-width:65ch;margin:0 0 16px}.ds-result-caveat{font-size:13px;line-height:1.7;color:var(--brand-muted);margin:0 0 16px}.ds-feedback{display:grid;gap:16px;margin-top:22px;font-size:13px;line-height:1.6}.ds-feedback>p{margin:0 0 -8px;font-weight:550}.ds-fit{display:flex;flex-wrap:wrap;gap:7px}.ds-fit .ds-button{font-size:12px;padding:9px 12px}.ds-feedback summary{min-height:44px;padding:8px 0;color:var(--brand-primary);cursor:pointer}.ds-feedback summary span{color:var(--brand-muted);font-size:12px;font-weight:400}.ds-feedback summary:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}.ds-feedback label{display:grid;gap:6px;font-size:13px}.ds-feedback textarea{width:100%;min-height:80px;padding:11px 12px;border:1px solid var(--brand-strong-line);border-radius:12px;background:var(--brand-paper);color:var(--brand-ink);font:400 14px/1.6 Golos,Arial,sans-serif;resize:vertical}.ds-feedback textarea:focus-visible{outline:3px solid var(--brand-primary);outline-offset:4px}@media(max-width:1150px) and (min-width:761px){.ds-result{grid-template-columns:minmax(180px,.85fr) minmax(0,1.35fr);gap:0 24px;padding:24px}.ds-result h2{font-size:27px}}@media(max-width:760px){.ds-result{display:flex;flex-direction:column;gap:0;padding:22px 20px;border-radius:24px}.ds-result-heading{order:0}.ds-result-art{order:1;width:100%;margin-bottom:22px;border-radius:12px}.ds-result-art img{max-height:320px}.ds-result-copy{order:2}.ds-feedback{order:3}.ds-result h2{font-size:26px}.ds-result-reason{font-size:15px}}@media(max-width:360px){.ds-result{padding:20px 16px}.ds-result h2{font-size:24px}}.ds-alternative{display:flex;flex-direction:column;padding:24px;border-radius:24px;align-self:start;height:auto}.ds-alternative .ds-result-art{order:0;width:100%;margin-bottom:22px}.ds-alternative .ds-result-art img{max-height:220px}.ds-alternative .ds-result-heading{order:1}.ds-alternative .ds-result-copy{order:2}.ds-alternative .ds-feedback{order:3}.ds-alternative h2{font-size:22px;line-height:1.3}.ds-alternative .ds-result-reason{font-size:14px}@media(max-width:760px){.ds-alternative{padding:22px 20px}.ds-alternative .ds-result-heading{order:0}.ds-alternative .ds-result-art{order:1}.ds-alternative .ds-result-art img{max-height:280px}.ds-alternative h2{font-size:22px}}@media(max-width:360px){.ds-alternative{padding:20px 16px}.ds-alternative h2{font-size:22px}}"
+    },
+    {
+      "name": "Общий select",
+      "kind": "input",
+      "refersTo": "custom-select",
+      "description": "Native select хранит value; snippet открытого enhanced listbox. Production popover fixed/z2000.",
+      "html": "<div class=\"ds-select\"><button class=\"ds-select-trigger\" aria-haspopup=\"listbox\" aria-expanded=\"true\">Любое<svg viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"m6 8 4 4 4-4\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><div class=\"ds-select-menu\" role=\"listbox\" aria-label=\"Отношение\"><div class=\"ds-option\" role=\"option\" aria-selected=\"true\">Любое</div><div class=\"ds-option\" role=\"option\" aria-selected=\"false\">Нравится</div></div></div>",
+      "css": ".ds-select{display:inline-flex;flex-direction:column;min-width:190px;max-width:100%;font-family:Golos,Arial,sans-serif}.ds-select-trigger{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;width:100%;padding:11px 13px;border:1px solid var(--brand-primary);border-radius:12px;background:var(--brand-selected);color:var(--brand-ink);font:500 13px/1.5 Golos,Arial,sans-serif;cursor:pointer}.ds-select-trigger svg{width:18px;height:18px;transform:rotate(180deg)}.ds-select-trigger:hover{background:var(--brand-context);border-color:var(--brand-muted)}.ds-select-trigger:focus-visible{outline:2px solid var(--brand-primary);outline-offset:3px}.ds-select-trigger:disabled{opacity:.55}.ds-select-menu{margin-top:8px;padding:6px;border:1px solid var(--brand-strong-line);border-radius:14px;background:var(--brand-surface);color:var(--brand-ink);box-shadow:0 14px 40px #15213d24;font:400 14px/1.5 Golos,Arial,sans-serif}.ds-option{position:relative;display:flex;align-items:center;min-height:44px;padding:10px 32px 10px 12px;border-radius:9px;cursor:pointer}.ds-option:hover{background:var(--brand-context)}.ds-option[aria-selected=true]{background:var(--brand-selected);color:var(--brand-primary);font-weight:600}.ds-option[aria-selected=true]:after{content:\"\";position:absolute;right:14px;top:17px;width:5px;height:9px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg)}"
     }
   ],
   "narrative": {
     "northStar": "Разговор",
-    "overview": "Владелец выбрал Conversation 02.11.2026 и 03.11.2026 утвердил его бренд: знак 5B, прописное написание 02 и палитру 02 «Кобальт». Современные подбор и библиотека соединяют прохладное светлое поле, горизонтальную светлую sticky-шапку, кобальтовые действия, округлые рабочие поверхности и геометрические заголовки. Содержание остаётся главным: запрос, один вопрос, проверяемое понимание, предложение с причиной и оговорками.\n\nСистема действует на всей главной, /pick/game/, /pick/watch/, /library/ и сохранённом legacy /pick/. Верх главной, двери и footer входят в текущий бренд; одобренная главная не менялась при продолжении оформления продукта. Утверждённые SVG из src/server/public/assets/brand/ сохраняют контуры и пропорции; исходный комплект — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Цвета и шрифты задаёт shared/brand.css, современную рабочую форму — последний слой shared/product.css под body.product-page. Тёмный rail и прежние компактные прямоугольники относятся к legacy; они не задают форму новых экранов.\n\nИстория решений: тёплая бумага, медь и отдельный исходный верх описывали Conversation 02.11.2026. Сообщение о временной палитре и отсутствии выбранного логотипа относилось к поиску до выбора 03.11.2026. Нынешнее прямое поручение заменить оформление всей страницы отменило прежнюю границу frozen hero. Старые receipts в research-vault/site-design-reset-2026-11-02/ и research-vault/logo-2026-11-02/ сохраняют историю, но не задают текущую норму.",
+    "overview": "Владелец выбрал Conversation 02.11.2026 и 03.11.2026 утвердил знак 5B, прописное написание 02 и палитру 02 «Кобальт». Прохладное светлое поле, точный SVG, белые рабочие поверхности, кобальтовые действия и Unbounded/Golos сохранены. Иерархию задают запрос, один вопрос, исправление понимания и предложение с причиной и оговорками.\n\nПосле отклонения предыдущего product UI владелец поручил существенную автономную переработку. Эта запись описывает её построенный код и свежие captures после F1/F2; новое оформление ещё не одобрено владельцем. Четыре файла одобренной главной в этом этапе byte-identical. Старые тёплая палитра, seed 537787fa и receipts — история.\n\nСистема действует на главной, /pick/game/, /pick/watch/, /library/ и legacy /pick/. Утверждённые SVG из src/server/public/assets/brand/ сохраняют контуры и пропорции; kit — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Бренд задаёт brand.css, современную форму — product.css, затем workspace.css/custom-select.css/results.css. Порядок подключения существенен; legacy сохраняет собственную композицию.",
     "keyCharacteristics": [
-      "Одна светлая кобальтовая система на главной, в подборе и библиотеке; тёмные области используют тот же бренд.",
-      "Утверждённый контурный логотип; Unbounded задаёт голос заголовков, Golos — содержание и действия.",
-      "Смысл состояния выражен словами и формой вместе с цветом.",
-      "Первое предложение имеет собственную белую поверхность; альтернативы читаются ниже отдельного заголовка.",
-      "Светлая шапка удерживает текущий раздел; округлая рабочая поверхность сменяется отдельными карточками выдачи."
+      "Один выбранный кобальтовый бренд; рабочая композиция не копирует веера главной.",
+      "Точный SVG; Unbounded для заголовков, Golos для содержания.",
+      "Состояние выражено словами и формой вместе с цветом.",
+      "Плавающая desktop-шапка, сгруппированный запрос и центральный редактор.",
+      "Полная обложка, собственная высота карточки и один выбранный список библиотеки."
     ],
     "rules": [
       {
@@ -604,23 +677,28 @@
         "name": "The Answer and Action Rule",
         "body": "Продолжение остаётся в потоке сразу после ответов; оно не отделяется в footer окна.",
         "section": "layout"
+      },
+      {
+        "name": "The Card Owns Its Feedback Rule",
+        "body": "Карточка владеет высотой своего отзыва; открытие формы не выравнивает соседей по её высоте.",
+        "section": "components"
       }
     ],
     "dos": [
-      "**Do** использовать утверждённые cobalt/inverse SVG и общие роли кобальтового бренда на всех production-поверхностях.",
+      "**Do** использовать утверждённые cobalt/inverse SVG и общие роли бренда.",
       "**Do** показывать состояние словами и формой вместе с цветом.",
       "**Do** оставлять вопрос, ответы и продолжение в одной рабочей колонке.",
-      "**Do** показывать краткий запрос на телефоне, исходную неясность целиком и явное раскрытие полного контекста.",
-      "**Do** сохранять причину, оговорку, действия и текстовый fallback при любом состоянии обложки.",
-      "**Do** сохранять независимые черновики и возможность вернуться к предыдущему запросу и вариантам без модели."
+      "**Do** сохранять слова человека, явное уточнение и раскрытие полного запроса на телефоне.",
+      "**Do** показывать title перед полной обложкой на телефоне, сохранять причину, caveat и fallback.",
+      "**Do** сохранять независимые высоту карточки и черновик отзыва."
     ],
     "donts": [
-      "**Don't** возвращать прежнюю медную палитру или frozen-границу главной как действующие ограничения.",
-      "**Don't** перерисовывать утверждённый знак, растягивать логотип или заменять его наборной надписью.",
-      "**Don't** смешивать план, вкусовую оценку и знакомство одним цветным статусом.",
+      "**Don't** возвращать старую медную палитру или считать старый seed основанием новой формы.",
+      "**Don't** перерисовывать утверждённый знак, растягивать логотип или заменять его текстом.",
+      "**Don't** смешивать план, вкус и знакомство одним статусом.",
+      "**Don't** обрезать modern result art или растягивать соседей ради открытого feedback.",
       "**Don't** подменять SVG-иконки Unicode-глифами или добавлять декоративные надписи над заголовками.",
-      "**Don't** превращать временное ожидание в заявленный процент, ETA или доказательство качества рекомендаций.",
-      "**Don't** считать неизвестное проверенным или тестовые локальные записи человеческими оценками."
+      "**Don't** выдавать synthetic QA за human fit, ожидание за процент/ETA или новый UI за одобренный."
     ]
   }
 }

@@ -9,6 +9,8 @@ import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '../src/server/public/shar
 import {createFeedbackStore,FEEDBACK_KEY} from '../src/server/public/shared/evening-feedback.js';
 import {eveningControls,feedbackStatus} from '../src/server/public/shared/evening-view.js';
 import {qaStorage,qaFeedbackOptions} from '../src/server/public/shared/qa-session.js';
+import {initCustomSelects,focusCustomSelect} from '../src/server/public/shared/custom-select.js';
+import {createFeedbackDrafts,FEEDBACK_DRAFTS_KEY} from '../src/server/public/shared/feedback-drafts.js';
 
 function memory(initial) {
  const map=new Map(initial?[[LIBRARY_KEY,JSON.stringify(initial)]]:[]);
@@ -106,7 +108,7 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
  const document={activeElement:null,hidden:false,querySelector:selector=>selector==='#library-app'?app:selector==='#library-notice'?notice:null,querySelectorAll:()=>[],getElementById:()=>null,
   addEventListener:(type,handler)=>handlers.set(type,handler)};
  const context=vm.createContext({document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:value=>value},structuredClone,matchMedia:()=>({matches:mobile,addEventListener(){}}),
-  createLibraryStore,LIBRARY_KEY,safeLibraryUrl:library.safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,
+  createLibraryStore,LIBRARY_KEY,safeLibraryUrl:library.safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,initCustomSelects,focusCustomSelect,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,
   createFeedbackStore:options=>createFeedbackStore({...options,locks:{request:async(_,fn)=>fn()},...(localTransaction?{transaction:localTransaction}:{})}),
   fetch:async(url,options)=>{requests.push({url,options});return transport?transport(url,options):{ok:true,json:async()=>catalog};},
   setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
@@ -140,10 +142,10 @@ test('library filters render real matching records and moving familiarity keeps 
  const store=createLibraryStore({storage});store.save({id:'film-one',title:'A film'},{domain:'film'});
  const page=await controller(storage);
  const ids=()=>[...page.app.innerHTML.matchAll(/data-card="([^"]+)"/g)].map(match=>match[1]);
- assert.deepEqual(ids().sort(),['film:film-one','game:steam:10','game:steam:30']);
- page.change('reaction-filter','liked');assert.deepEqual(ids(),['game:steam:10']);
- page.change('reaction-filter','unrated');assert.deepEqual(ids().sort(),['film:film-one','game:steam:30']);
- page.change('domain-filter','film');assert.deepEqual(ids(),['film:film-one']);
+ assert.deepEqual(ids(),['film:film-one']);
+ page.click({act:'lane',lane:'known'});page.change('reaction-filter','liked');assert.deepEqual(ids(),['game:steam:10']);
+ page.change('reaction-filter','unrated');assert.deepEqual(ids(),['game:steam:30']);
+ page.change('domain-filter','film');assert.deepEqual(ids(),[]);page.click({act:'lane',lane:'want'});assert.deepEqual(ids(),['film:film-one']);
  page.click({act:'clear'});page.change('', 'tonight',{act:'move',domain:'game',id:'steam:30'});
  assert.equal(store.all().find(row=>row.id==='steam:30').lane,'tonight');assert.equal(store.all().find(row=>row.id==='steam:30').status,'want');
  assert.deepEqual(history.blockedIds(),['steam:30']);assert.equal(store.all().find(row=>row.id===game.id).status,'liked');
@@ -209,16 +211,22 @@ test('a delayed submitted explanation preserves a newer unsent note draft',async
  assert.ok(!page.requests.some(request=>request.options?.body?.includes('New unsent words')));
 });
 
-test('mobile filter disclosure keeps its open state and selections while search rerenders',async()=>{
+test('a restored draft-only evening is visible in the library before any rating was submitted',async()=>{
+ const storage=memory(legacy),draftOnly={...evening,revision:0,responses:[]};storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'draft-only',run:draftOnly,ack:-1}]}));
+ createFeedbackDrafts({storage}).set(`${evening.id}:${game.id}`,{reason:'mood',note:'Черновик после перезагрузки'});
+ const page=await controller(storage);page.click({act:'view',view:'evenings'});
+ assert.ok(page.app.innerHTML.includes('Черновик после перезагрузки</textarea>'));assert.ok(page.app.innerHTML.includes('Продолжить отзыв'));assert.ok(page.app.innerHTML.includes('data-view="evenings" data-focus="view:evenings" aria-pressed="true">Вечера<span>1</span>'));
+ assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
+});
+
+test('mobile filter controls preserve selections while search rerenders and views change',async()=>{
  const page=await controller(memory(legacy),{mobile:true});
- const panel=()=>page.app.innerHTML.match(/<details\b[^>]*data-filter-panel="true"[^>]*>/)?.[0]??'';
- assert.ok(panel(),'The filter disclosure is rendered');assert.ok(!/\sopen(?:\s|>)/.test(panel()));
- page.toggleFilters(true);page.change('domain-filter','game');page.change('reaction-filter','liked');
- page.input('Real');assert.ok(/\sopen(?:\s|>)/.test(panel()));
+ const panel=()=>page.app.innerHTML.match(/<div\b[^>]*id="library-filter-panel"[^>]*>/)?.[0]??'';
+ assert.ok(panel(),'The secondary filter region remains available');
+ page.change('domain-filter','game');page.change('reaction-filter','liked');page.input('Real');assert.ok(panel());
  assert.ok(page.app.innerHTML.includes('data-active-count="2"'));assert.ok(page.app.innerHTML.includes('<option value="game" selected>'));
- page.toggleFilters(false);page.input('Real game');assert.ok(!/\sopen(?:\s|>)/.test(panel()));
- page.click({act:'view',view:'history'});page.click({act:'view',view:'board'});assert.ok(!/\sopen(?:\s|>)/.test(panel()));
- const desktop=await controller(memory(legacy));assert.match(desktop.app.innerHTML,/<details\b[^>]*data-filter-panel="true"[^>]*\sopen(?:\s|>)/);
+ page.input('Real game');page.click({act:'view',view:'history'});page.click({act:'view',view:'board'});assert.ok(panel());
+ const desktop=await controller(memory(legacy));assert.match(desktop.app.innerHTML,/<div\b[^>]*id="library-filter-panel"/);
 });
 
 

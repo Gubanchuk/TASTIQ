@@ -12,14 +12,17 @@
   <script type="module" src="/library/app.js?v=conversation-production-3"></script>
   <link rel="stylesheet" href="/shared/brand.css">
   <link rel="stylesheet" href="/shared/product.css?v=1">
+  <link rel="stylesheet" href="/shared/workspace.css?v=2">
+  <link rel="stylesheet" href="/shared/custom-select.css?v=2">
+  <link rel="stylesheet" href="/shared/results.css?v=2">
 </head>
 <body class="product-page conversation-page library-page">
   <a class="library-skip" href="#library-content">К библиотеке</a>
   <div class="conversation-app">
-    <header class="conversation-rail" aria-label="Навигация TASTIQ"><a class="conversation-brand" href="/" aria-label="TASTIQ — главная"><img class="site-logo" src="/assets/brand/tastiq-logo-cobalt.svg" alt="TASTIQ" width="148" height="36"></a><div class="product-header-space"></div><nav class="conversation-links" aria-label="Основное"><a href="/#doors" class="product-new-pick"><svg class="conversation-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 17h16M9 4v6m6 4v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Новый подбор</a></nav></header>
+    <header class="app-shell" aria-label="Навигация TASTIQ"><a class="app-brand" href="/" aria-label="TASTIQ — главная"><img src="/assets/brand/tastiq-logo-cobalt.svg" alt="TASTIQ" width="148" height="36"></a><nav class="app-shell-nav" aria-label="Основное"><a href="/#doors">Подбор</a><a href="/library/" aria-current="page">Библиотека</a></nav><div class="app-shell-actions"><a class="app-shell-primary" href="/#doors">Подобрать новое</a></div></header>
     <div class="conversation-body">
       <main class="board-library" id="library-content" tabindex="-1">
-        <header class="board-heading"><div><h1>Библиотека</h1><p>Хорошие планы на твой вечер.</p></div><a class="library-button primary" href="/#doors">Подобрать ещё <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></header>
+        <header class="board-heading"><div><h1>Библиотека</h1><p>Планы, знакомые названия и твои впечатления.</p></div></header>
         <div id="library-app" aria-busy="true"><p class="library-loading" role="status">Открываем сохранённое на этом устройстве…</p></div>
         <noscript><p class="library-empty">Включи JavaScript, чтобы увидеть сохранённые названия в этом браузере.</p></noscript>
       </main>

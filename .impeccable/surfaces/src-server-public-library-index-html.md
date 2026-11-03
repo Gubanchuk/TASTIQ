@@ -2,39 +2,39 @@
 version: 1
 slug: "src-server-public-library-index-html"
 primary_target: "src/server/public/library/index.html"
-related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/product.css","src/server/public/shared/conversation.css","src/server/public/library/style.css","src/server/public/library/app.js","src/server/public/shared/library-store.js","src/server/public/pick/game/familiarity-store.js"]
+related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/product.css","src/server/public/shared/workspace.css","src/server/public/shared/custom-select.css","src/server/public/shared/custom-select.js","src/server/public/shared/results.css","src/server/public/shared/workspace-ui.js","src/server/public/shared/request-overview.js","src/server/public/shared/clarification-view.js","src/server/public/shared/feedback-drafts.js","src/server/public/shared/evening-view.js","src/server/public/library/style.css","src/server/public/library/app.js","src/server/public/shared/library-store.js","src/server/public/pick/game/familiarity-store.js"]
 ---
 
-Mode: Operate. /library/ — настоящее место планов, истории и вечеров для всех четырёх разделов. Перенос выбранного кобальтового бренда 03.11.2026 сохраняет смысл данных.
+Mode: Operate. Настоящая библиотека четырёх разделов после U01/U02/U07/U13/U15,03.11.2026.
 
 ## Direction contract and provenance
 
 THESIS: сегодняшний запрос превращается в понятный выбор с причиной и оговорками.
-OWN-WORLD: выбранные знак 5B, прописное 02 и палитра 02 «Кобальт»; прохладная бумага, светлая горизонтальная шапка с точным cobalt SVG, белые округлые поверхности, кобальтовые действия, Unbounded/Golos и настоящие обложки.
-FORM: code-led продолжение одобренного бренда в рабочем Conversation. Источники текущего направления — research-vault/product-style-2026-11-03/DIRECTION.md и shared/product.css; утверждённая главная служит identity reference, её веера и маркетинговая композиция не копируются в формы. Контуры production SVG сохранены; исходный kit — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Новая айдентика, workshop и raster comp не требовались.
-История: Conversation выбран 02.11.2026; seed 537787fa относится к прежнему site-design-reset и не обосновывает нынешнюю форму. Прежние тёплая система и frozen-граница описывали тот этап. Одобренные четыре файла главной не менялись в текущем продолжении продукта; исторические receipts сохранены.
-
-STORY: сохранить/выбрать → найти → перенести/удалить+undo → отдельно оценить или открыть вечер.
-FIRST VIEWPORT: heading/CTA, «Списки / Архив / Вечера», постоянный поиск и desktop-три списка. Phone сохраняет поиск, раскрывает фильтры, показывает один выбранный список.
+OWN-WORLD: approved5B/uppercase02/Кобальт02, Golos/Unbounded, прохладная бумага, точный SVG, белые поверхности и реальные обложки.
+FORM: Operate существующего выбранного мира; существенная code-led переработка по docs/superpowers/specs/2026-11-03-workspace-usability-design.md/U01–U15. Новые identity/comp/workshop не требовались. Старый seed537787fa не доказывает эту форму. Четыре файла одобренного landing byte-identical; его арки/веера не копируются в рабочую форму. Предыдущий product UI отклонён; эта новая версия ещё не одобрена владельцем.
+STORY: желание → уточнение → проверка/исправление понимания → предложение/альтернативы → сохранение/вечер/знакомство.
+FIRST VIEWPORT: явный раздел/действия, свои слова в request и текущая работа. Mobile result показывает title до art; Library показывает выбранный список и начало содержимого в0/1/130.
 
 ## Shipped composition
 
-- Светлая горизонтальная sticky-шапка top0/z50/max1440px/min88px с точным cobalt SVG148px слева и кобальтовым pill «Новый подбор» справа; на телефоне logo122px, ≤360px108px. Строки домена у библиотеки нет. Прежний rail164px/inverse logo остаётся только в legacy.
-- Content max1440px, padding38px clamp(20px,4vw,64px)70px; phone28px20px50px. Heading Unbounded32px/1.3/500/-.035em, phone28px. Три lane/gap23px, tablet761–1100px gap14px; header17px/tablet15px, counts12px. На телефоне виден один выбранный список. План на вечер поддержан кобальтовой линией, знакомое — сохранённой зелёной; названия объясняют смысл.
-- Белая card с line border/radius22px/padding18px/gap16px, phone padding16px, без resting shadow. Cover68px/2:3/radius12px; title Golos14px/1.45/650, meta12px. Tablet761–1100px cover48px/title13px; от1500px cover76px/title15px. Phone cover72px, ≤350px60px. Поля/поиск/перенос плана radius14px, library buttons pill999px/min46px/padding10px17px; compact native move select min44px. Старые компактные controls во «Вечерах» сохраняются локально и не задают общий product pill.
-- Phone «Фильтры и порядок» имеет chevron/count; поиск всегда видим. «Архив» хранит прежние предложения и ведёт к новым выборам/отзывам во «Вечерах», без молчаливой миграции. Remove hitarea44px; отношение и знакомство раскрываются отдельно.
-- Focus2px primary/offset4px, search focus-within2px/offset3px; button transition.18s cubic-bezier(.16,1,.3,1), reduced-motion отключает переходы. Уведомление имеет сохранённую локальную мягкую тень; доска остаётся плоской. Это унаследованное локальное отличие, не новая тень бренда.
+- Общий app-shell desktop top12/z60/min76px/max1380px(от1500px1440px)/margin16px auto28px/padding14px24px/radius20px/white/soft-shadow. Logo140px, видимые «Подбор»/«Библиотека»/«Подобрать новое»; domain/restart нет. Phone top0/radius0/no-shadow/logo120px/tiny105px, nav первая строка/CTA вторая. Legacy rail не менялся.
+- Board max1440px/padding24px clamp(20px,4vw,64px)70px; phone18px20px50px. H1 Unbounded32px/1.3/500/-.035em/phone28px. Одна краткая вводная. «Списки / Архив / Вечера» с counts на context/radius16px, active white tab/radius12px/shadow0 2px6px #15213d08/min44px.
+- Поиск всегда виден/min46px; desktop search+domain/reaction/order+reset, ≤1050px fields во втором ряду. Phone явная «Фильтры и порядок»/active count/aria-expanded плюс отдельный reset. Panel data-filter-open=false скрыт только phone, desktop options видны. Custom select46px/13px/radius12px/listbox fixed z2000/radius14px/options44px/check; keyboard/Escape/outside/focus/native fallback.
+- Один выбранный list при любой ширине. Три list controls рядом; phone grid3/min44px с count/переносом label. Selected primary-border/selected-fill. Card-grid2/gap16px, ≤900px1. Вывод24, more добавляет24/«Показано N из M». Search/domain/reaction/order/lane/reset не переписывают записи, reset возвращает limit24.
+- Итоговая card white/line-border/radius22px/padding18px(phone16px)/gap16px: поздний product.css перекрывает одноимённые18px/cover8px из library/style.css. Natural cover/contain/radius12px/width76px; ≤900px80px, ≤600px62px, ≤350px46px. Title Golos60017px/1.45, ≤600px16px, ≤350px15px; meta12px/1.6, description13px/1.75. Remove44px и move custom-select независимы; card align-self:start.
+- Tabs/list/select/shell controls прямоугольные. Library-button сохраняет локальный pill999px/min46px/padding10px17px для filter/reset/empty CTA; не общая форма picker. Notice ink/white/z2100/radius14px/shadow0 10px30px #15213d25.
+- Empty и no-results различны; empty context/radius18px/padding36px20px, phone24px16px. На1280×720 и320×740 виден содержательный empty-heading/первая запись, проверены0/1/130. Повторной длинной вводной и трёх пустых desktop-колонок нет.
+- Вечера используют4видимые fit-оценки/optional reason-note. Shared draft tastiq.feedback-drafts.v1/runId:cardId доступен также в draft-only runs, не является доставленным отзывом. Choice/start/outcome отдельно; reload/resume без model call. Draft store читает свежий envelope перед записью и сохраняет чужие drafts, storage failure сообщается.
+- Focus2px/offset4px; search/select2px/3px. Library buttons.18s cubic-bezier(.16,1,.3,1), reduced-motion отключает transitions.
 
 ## Data and interaction boundaries
 
-Lane означает план и независима от вкуса, истории и familiarity. Знакомство не является запретом, прохождением или dislike. Поиск, фильтры и sort не переписывают записи; undo не затирает повторное сохранение. Отзывы идут отдельной очередью, чтение вечеров не отправляет observe/flush. Прототипные demo records не импортируются.
+Plan/taste/familiarity независимы; знакомство не запрет/прохождение/dislike. Undo не затирает повторное сохранение. Чтение вечеров не создаёт observe/flush. User journals/paid receipts не используются QA; каталоги/ranking/policy/квоты и legacy прежние.
 
 ## Evidence boundary
 
-Текущий этап — docs/PRODUCT_STYLE_2026-11-03.md; пакет — research-vault/product-style-2026-11-03/REVIEW_PACKET.md, review и замечания — FINISH_REVIEW.md рядом. Проверка родителя: 509/509 unit, HTTP stub и production build; native IAB на изолированном 5180 с настоящими контроллерами/каталогом и stub plan/pick. CSS viewport: 1440×1000, 1280×720, 1024×900, 390×844 и 320×740. Канонические captures и DOM-замеры — .impeccable/review/product-style-2026-11-03/. Исправление progress при ≤360px записано по последнему исходнику; родитель сообщил о пересъёмке и визуальной проверке tiny/mobile/desktop по тем же canonical paths. Итоговый re-review фиксируется отдельно.
+Пакет: research-vault/workspace-usability-2026-11-03/CAPTURE_MANIFEST.md, ACTION_MATRIX.md, SOURCE_REVIEW.md, FINISH_REVIEW.md.21PNG в .impeccable/review/workspace-usability-2026-11-03/; родитель переснял/открыл все после F1/F2. Documenter открыл4: game-tiny320, game-feedback1440, library-tiny320, library-empty1280; остальные сверены по code/manifest. Native390×844→380×822 и320×740→310×717, JPEG→PNG без crop/resize; CSS и raster размеры различаются явно.
 
-Размер native PNG местами меньше CSS viewport: в первом review отмечены 380×822 при CSS 390×844 и 310×717 при CSS 320×740. JPEG→PNG сохранён без resize/crop; документер не устанавливал причину различия. Размеры растров не выдаются за размеры CSS. Этот проход сверяет код и документы; браузер, сервер, API и тесты документер не запускал, finish verdict не присваивал.
+Родительский свежий пакет:540/540 tests, build exit0, offline HTTP stub, source delta Pass46/46. Реальные controllers/stores/catalogs, AI_ACCESS=off/injected plan/pick; synthetic reasons не human fit. F1 first content: single1280 title y598–623; tiny320 title y695–717, empty heading y678–738. F2 Victoria3 title y641–671 при320×740 и621–654 при390×844. Tested widths без overflow. Documenter не запускал tests/server/browser и не присваивает finish verdict.
 
-Платных API-вызовов 0 / $0, генераций изображений 0 в текущем этапе по отчёту родителя; этот проход тоже не выполнял вызовов. Stub не доказывает качество реальной модели или human fit. Физический touch и screen reader не проверялись. Публикации нет; пользовательские состояния и оплаченные журналы не использованы. Старые evidence и бюджеты не перезаписаны.
-
-Текущие captures: library-mobile-final.png и library-desktop-final.png. Отдельный QA profile не доказывает состояние библиотеки владельца.
+Detector один раз: exit0/58findings=52advisories+6inherited warnings; повторно не запускался. F3 синхронизация не отменяет paper drift/чужие records. Новых paid calls0/$0, imagegen0, commit/push/deploy0. Human fit/physical touch/реальный screen reader неизвестны; новый UI ещё не одобрен. Старые receipts/budgets/user states не переписаны.
