@@ -1,0 +1,11 @@
+{
+  "date":"2026-11-03",
+  "sourceCommit":"14d3df2cefe1b4aa193df69983ad973a254f0696",
+  "run":"media-more-constraints-20261103",
+  "budget":{"capUsd":0.30,"maxModelCalls":2,"perCallReserveCeilingUsd":0.25,"historicalHoldId":"prod-live-20261102-01:1","historicalHoldUsd":0.25,"baselineSettledUsd":2.5828152,"baselineSuccessfulCalls":212,"noAutomaticPaidRetries":true},
+  "cases":[
+    {"id":"family","source":"test/fixtures/cartoon-more-no-fit-2026-11-03.json","sourceField":"request","checks":["one film, runtime<=90 or explicit unknown","age7 and no-scary checks present; unknown visible","no repeated or unverified identities","known admission cannot pass","old result retained on empty/conflict; undo on success"]},
+    {"id":"episodic","source":"research-vault/cartoon-journeys-2026-11-03/live-round-2/02-reference-response.json","checks":["cartoon domain remains cartoon; episodic format","runtime<=30 or explicit unknown","no naturalistic gore/no-anime criteria remain active","no repeated identities","unknowns visible; undo on success"]}
+  ],
+  "interpretation":"Two distinct synthetic saved journeys, one more call each. No retries for a lucky result. Model checks are not independent content verification or human-fit labels. Existing unresolved historic hold remains counted against every cap."
+}

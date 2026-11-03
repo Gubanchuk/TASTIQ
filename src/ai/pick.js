@@ -11,6 +11,7 @@ import { AI } from './config.js';
 import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
 import { verifiedOriginalYear } from '../core/title-identity.js';
+import {criteriaOf,constraintSchema,constraintInstructions,validateConstraintChecks} from './pick-constraints.js';
 
 export { AI };
 
@@ -51,12 +52,19 @@ const sentence = (x, max) => { const t = String(x ?? '').trim().slice(0, max); r
  * Model output checked against the shortlist: known ids, no repeats, cut to size; reasons trimmed. A pick without
  * an id is looked up by title and year among the titles that passed the sieves (`ranked`), at most AI.ownPicks.
  */
-export function checkPicks(out, rows, n = AI.picks, ranked = []) {
+export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = []) {
   const allowed = new Set(rows.map((r) => r.game.id));
   const seen = new Set();
   const picks = [];
   let own = 0;
   const proposed = Array.isArray(out?.picks) ? out.picks : [];
+  const resolve=p=>{const id=typeof p?.id==='string'?p.id.trim():'';return allowed.has(id)?id:lookUp(ranked,p?.title,Number(p?.year)||0);};
+  const assessments=new Map(proposed.map(p=>[p,validateConstraintChecks(p,criteria)]));
+  // Any contradictory duplicate taints that identity, including a title/year alias.
+  const conflicts=new Set(proposed.filter(p=>assessments.get(p).reason==='conflict').map(resolve).filter(Boolean));
+  const signatures=new Map(),inconsistent=new Set();
+  if(criteria.length)for(const p of proposed){const id=resolve(p);if(!id)continue;const a=assessments.get(p),signature=a.ok?JSON.stringify(criteria.map(c=>a.checks.find(row=>row.key===c.key).status)):a.reason;if(signatures.has(id)&&signatures.get(id)!==signature)inconsistent.add(id);else signatures.set(id,signature);}
+  let conflictDrops=0,unconfirmedDrops=0;
   for (const p of proposed) {
     if (picks.length >= n) break;
     const given = typeof p?.id === 'string' ? p.id.trim() : '';
@@ -67,11 +75,13 @@ export function checkPicks(out, rows, n = AI.picks, ranked = []) {
       outside = Boolean(id) && !allowed.has(id);
     }
     if (!id || seen.has(id)) continue;
+    const assessment=assessments.get(p);
+    if(conflicts.has(id)||inconsistent.has(id)||!assessment.ok){if(conflicts.has(id))conflictDrops++;else unconfirmedDrops++;continue;}
     seen.add(id);
     if (outside) own++;
-    picks.push({ id, reason: sentence(p.reason, 220), caveat: sentence(p.caveat, 140), likelySeen: Boolean(p.likelySeen), own: outside });
+    picks.push({ id, reason: sentence(p.reason, 220), caveat: sentence(p.caveat, 140), likelySeen: Boolean(p.likelySeen), own: outside,...(criteria.length?{constraintChecks:assessment.checks,unknownCriteria:assessment.unknowns}:{}) });
   }
-  return { picks, understood: String(out?.understood ?? '').trim().slice(0, 220), dropped: proposed.length - picks.length };
+  return { picks, understood: String(out?.understood ?? '').trim().slice(0, 220), dropped: proposed.length - picks.length,...(criteria.length?{constraintDrops:{conflict:conflictDrops,unconfirmed:unconfirmedDrops}}:{}) };
 }
 
 /**
@@ -81,6 +91,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = []) {
 export async function aiPick(catalogs, state, { wish = '', previous = [], alreadyShown = [], api = requestResponse, maxCostUsd = Infinity } = {}) {
   const catalog = catalogs[state?.domain];
   if (!catalog) return { error: 'нет домена' };
+  const adaptiveMedia=state.domain!=='game'&&Boolean(state.conversation),criteria=criteriaOf(state);
   const cleanWish = String(wish ?? '').replace(/\s+/g, ' ').trim().slice(0, 300);
   // What was shown and did not suit («Не то? Скажи словами») cannot come back, from the list or as the model's own.
   const shown = new Set([...previous,...alreadyShown]);
@@ -89,11 +100,11 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   const all = candidatesOf(catalog, state, limit + shown.size);
   const rows = all.rows.filter((r) => !shown.has(r.game.id)).slice(0, limit);
   const ranked = all.ranked.filter((r) => !shown.has(r.game.id));
-  if (rows.length < 2) return { error: 'выбирать не из чего' };
+  if(!adaptiveMedia&&rows.length<2)return {error:'выбирать не из чего'};
+  if(!rows.length)return {error:'По этим условиям нет доступных вариантов каталога.',retryable:false};
   const liked = Object.entries(state.answers ?? {}).filter(([, a]) => a?.reaction === 'love' || a?.reaction === 'like').map(([id]) => catalog.byId.get(id)).filter(Boolean);
 
   const total = AI.picks + AI.spares;
-  const adaptiveMedia=state.domain!=='game'&&Boolean(state.conversation);
   const howMany = adaptiveMedia
     ? `Выбери до ${total} разных тайтлов по порядку, первый — лучший. Не дополняй число заведомо неподходящими: при конфликте с обязательным условием исключи тайтл, даже с оговоркой. Можно вернуть меньше вариантов или пустой список.`
     : AI.spares
@@ -105,8 +116,8 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
       model: AI.model,
       max_output_tokens: AI.maxOutputTokens,
       reasoning: { effort: AI.effort },
-      text: { format: { type: 'json_schema', name: 'tastiq_picks', strict: true, schema: SCHEMA } },
-      instructions: systemFor(state),
+      text: { format: { type: 'json_schema', name: 'tastiq_picks', strict: true, schema: constraintSchema(SCHEMA,criteria) } },
+      instructions: systemFor(state)+constraintInstructions(criteria),
       input: content,
       store: false,
       service_tier: 'default',
@@ -135,9 +146,10 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   } catch {
     return { ...meta, error: 'нейросеть ответила не по форме' };
   }
-  const checked = checkPicks(parsed, rows, total, ranked);
+  const checked = checkPicks(parsed, rows, total, ranked, criteria);
+  if(!checked.picks.length&&checked.constraintDrops&&(checked.constraintDrops.conflict||checked.constraintDrops.unconfirmed))return {...meta,...checked,error:'Предложения в этом ответе не прошли проверку обязательных условий. Можно уточнить запрос.',retryable:false};
   if (!checked.picks.length) return adaptiveMedia
-    ? { ...meta, error: parsed?.picks?.length?'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.':'Подходящих вариантов по этому запросу пока не нашлось. Попробуй уточнить запрос.', retryable:false }
+    ? { ...meta, error: parsed?.picks?.length?'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.':'В этом ответе не нашлось подходящих вариантов. Можно уточнить запрос.', retryable:false }
     : { ...meta, error: 'нейросеть выбрала не из списка' };
   // Legacy paths fill a short answer in engine order. Adaptive media keeps a short
   // answer: filling it could undo the model's decision to omit a semantic conflict.

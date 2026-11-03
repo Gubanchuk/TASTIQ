@@ -1,0 +1,2257 @@
+{
+  "state": {
+    "version": 1,
+    "domain": "cartoon",
+    "id": "5f728b66-6544-4b15-91b9-79fd23a1d9d9",
+    "revision": 3,
+    "mode": "guided",
+    "phase": "result",
+    "context": {
+      "company": "solo",
+      "childAge": null,
+      "minutes": 30,
+      "timeMode": "episode",
+      "commitment": null,
+      "onlyEnded": null,
+      "format": "episodic"
+    },
+    "contextEvidence": {
+      "company": {
+        "value": "solo",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "для одного взрослого"
+      },
+      "childAge": null,
+      "timeMode": {
+        "value": "episode",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Эпизоды не больше 30 минут."
+      },
+      "commitment": null,
+      "onlyEnded": null,
+      "format": {
+        "value": "episodic",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Хочу анимационный сериал"
+      }
+    },
+    "turns": [
+      {
+        "id": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "question": {
+          "id": "direction",
+          "title": "Какую анимацию хочется сегодня?",
+          "why": "Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.",
+          "options": [
+            {
+              "id": "mood_action",
+              "label": "Хочется движухи"
+            },
+            {
+              "id": "mood_relax",
+              "label": "Расслабиться и отвлечься"
+            },
+            {
+              "id": "mood_story",
+              "label": "Погрузиться в историю"
+            },
+            {
+              "id": "mood_explore",
+              "label": "Перенестись в другой мир"
+            },
+            {
+              "id": "mood_thought",
+              "label": "Подумать о сложном"
+            },
+            {
+              "id": "comedy",
+              "label": "Комедия"
+            },
+            {
+              "id": "drama",
+              "label": "Драма"
+            },
+            {
+              "id": "thriller",
+              "label": "Триллер"
+            },
+            {
+              "id": "adventure",
+              "label": "Приключения"
+            },
+            {
+              "id": "fantasy",
+              "label": "Фантастика"
+            },
+            {
+              "id": "detective",
+              "label": "Детектив"
+            },
+            {
+              "id": "avoid_stress",
+              "label": "Не хочу напрягаться"
+            },
+            {
+              "id": "avoid_dark",
+              "label": "Без тяжёлых тем"
+            },
+            {
+              "id": "avoid_slow",
+              "label": "Без медленного начала"
+            }
+          ],
+          "multiple": true,
+          "controls": [
+            "unknown",
+            "indifferent",
+            "none"
+          ]
+        },
+        "selected": [],
+        "text": "Хочу анимационный сериал для одного взрослого. Человек-паук и Бэтмен — примеры того, чего хочется: герой с характером, динамичные приключения и лёгкий юмор, без натуралистичной жестокости. Точные версии не помню, они не важны. Нужен похожий опыт, а не пересмотр. Эпизоды не больше 30 минут. Не аниме.",
+        "kind": "answer",
+        "answer": "Хочу анимационный сериал для одного взрослого. Человек-паук и Бэтмен — примеры того, чего хочется: герой с характером, динамичные приключения и лёгкий юмор, без натуралистичной жестокости. Точные версии не помню, они не важны. Нужен похожий опыт, а не пересмотр. Эпизоды не больше 30 минут. Не аниме.",
+        "acceptedContext": {
+          "company": {
+            "value": "solo",
+            "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+            "quote": "для одного взрослого"
+          },
+          "childAge": null,
+          "timeMode": {
+            "value": "episode",
+            "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+            "quote": "Эпизоды не больше 30 минут."
+          },
+          "commitment": null,
+          "onlyEnded": null,
+          "format": {
+            "value": "episodic",
+            "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+            "quote": "Хочу анимационный сериал"
+          }
+        },
+        "acceptedTime": {
+          "minutes": 30,
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "Эпизоды не больше 30 минут."
+        }
+      }
+    ],
+    "facts": [
+      {
+        "key": "format.episodic",
+        "text": "Хочется анимационный сериал.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Хочу анимационный сериал",
+        "feature": "format.animation",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "characters.memorable",
+        "text": "Хочется героя с характером.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "герой с характером",
+        "feature": "characters.memorable",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "pace.fast",
+        "text": "Хочется динамичных приключений.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "динамичные приключения",
+        "feature": "pace.fast",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "humor.light",
+        "text": "Хочется лёгкого юмора.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "лёгкий юмор",
+        "feature": "humor.funny",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "content.violence",
+        "text": "Без натуралистичной жестокости.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "без натуралистичной жестокости",
+        "feature": "content.violence",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "format.anime",
+        "text": "Аниме исключено.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Не аниме.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "viewing.new_experience",
+        "text": "Нужен похожий опыт, а не пересмотр.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Нужен похожий опыт, а не пересмотр.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      }
+    ],
+    "question": null,
+    "summary": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+    "uncertainties": [
+      "Точная версия «Человек-паук» не определена: в этом разделе есть несколько разных произведений.",
+      "Длительность относится к эпизоду. Неизвестный хронометраж требует проверки."
+    ],
+    "retractions": [],
+    "sessionTime": {
+      "minutes": 30,
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "Эпизоды не больше 30 минут."
+    },
+    "factRemovalUndo": null,
+    "result": {
+      "top": {
+        "id": "tt0318233",
+        "domain": "cartoon",
+        "name": "My Life as a Teenage Robot",
+        "ru": "Жизнь и приключения робота-подростка",
+        "year": 2002,
+        "image": "https://static.tvmaze.com/uploads/images/medium_portrait/42/106384.jpg",
+        "poster": null,
+        "kind": "series",
+        "series": [],
+        "genres": [
+          "Action",
+          "Adventure",
+          "Animation"
+        ],
+        "runtime": 23,
+        "seasons": 3,
+        "episodes": 40,
+        "status": "Ended",
+        "rating": "IMDb 6.9",
+        "link": "https://www.imdb.com/title/tt0318233/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 2.836,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 2.738,
+          "prior": 0.098
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+              "factIds": [
+                "mood:format.animation"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+              "factIds": [
+                "mood:humor.funny"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "IMDb 6.9 из 10, 11 757 оценок",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "3 сез., 40 серий, закончен",
+              "factIds": [
+                "fact:seasons"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:format.animation",
+            "type": "mood",
+            "f": "format.animation",
+            "why": [
+              "сегодня хочется: «Хочу анимационный сериал»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p0",
+                "kind": "wiki",
+                "q": "is an American animated science fiction superhero comedy television series",
+                "section": null,
+                "url": null,
+                "ru": "американский анимационный научно-фантастический супергеройский комедийный телесериал"
+              }
+            ]
+          },
+          {
+            "id": "mood:humor.funny",
+            "type": "mood",
+            "f": "humor.funny",
+            "why": [
+              "сегодня хочется: «лёгкий юмор»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p2",
+                "kind": "wiki",
+                "q": "making lighthearted fun of typical teenage issues",
+                "section": null,
+                "url": null,
+                "ru": "беззаботно высмеивая типичные подростковые проблемы"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.69,
+            "total": 11757,
+            "desc": "IMDb 6.9"
+          },
+          {
+            "id": "fact:seasons",
+            "type": "fact",
+            "seasons": 3,
+            "episodes": 40,
+            "status": "Ended"
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "yes",
+            "text": "Серия идёт 23 мин; сегодня есть 30 мин."
+          },
+          {
+            "key": "excluded-features",
+            "status": "unknown",
+            "text": "Условия требуют проверки: «Нужен похожий опыт, а не пересмотр»; «Без натуралистичной жестокости»; «Аниме исключено»."
+          }
+        ],
+        "ai": {
+          "reason": "Дженни совмещает спасение мира с подростковой жизнью — близко к Человеку-пауку по характеру, приключениям и юмору.",
+          "caveat": "Школьные заботы занимают заметную часть историй.",
+          "likelySeen": false,
+          "own": false,
+          "constraintChecks": [
+            {
+              "key": "fact:content.violence:5c4100ab0c874ef0",
+              "status": "compatible",
+              "reason": "Стилизованные бои с роботами и чудовищами, без натуралистичной жестокости."
+            },
+            {
+              "key": "fact:format.anime:2c50c8998ed898d3",
+              "status": "compatible",
+              "reason": "Американский анимационный сериал, не аниме."
+            },
+            {
+              "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+              "status": "unknown",
+              "reason": "Не пересказ приключений Бэтмена или Человека-паука; смотрел ли ты этот сериал, неизвестно."
+            },
+            {
+              "key": "session:minutes:34040f1fb29a7069",
+              "status": "compatible",
+              "reason": "Эпизоды около 23 минут."
+            }
+          ]
+        }
+      },
+      "alternatives": [
+        {
+          "id": "tt0361201",
+          "domain": "cartoon",
+          "name": "Megas XLR",
+          "ru": "Мегас Экс-Эл-Ар",
+          "year": 2004,
+          "image": "https://static.tvmaze.com/uploads/images/medium_portrait/27/67755.jpg",
+          "poster": null,
+          "kind": "series",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Animation"
+          ],
+          "runtime": 30,
+          "seasons": 2,
+          "episodes": 26,
+          "status": "Ended",
+          "rating": "IMDb 8.1",
+          "link": "https://www.imdb.com/title/tt0361201/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.919,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.758,
+            "prior": 0.16
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+                "factIds": [
+                  "mood:humor.funny"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 8.1 из 10, 6 351 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "2 сез., 26 серий, закончен",
+                "factIds": [
+                  "fact:seasons"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу анимационный сериал»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p0",
+                  "kind": "wiki",
+                  "q": "is an American animated television series created by Jody Schaeffer",
+                  "section": null,
+                  "url": null,
+                  "ru": "американский анимационный телесериал, созданный Джоди Шеффер"
+                }
+              ]
+            },
+            {
+              "id": "mood:humor.funny",
+              "type": "mood",
+              "f": "humor.funny",
+              "why": [
+                "сегодня хочется: «лёгкий юмор»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p8",
+                  "kind": "wiki",
+                  "q": "While it's still hilarious and fun to watch",
+                  "section": null,
+                  "url": null,
+                  "ru": "Хотя это по-прежнему смешно и весело смотреть"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.81,
+              "total": 6351,
+              "desc": "IMDb 8.1"
+            },
+            {
+              "id": "fact:seasons",
+              "type": "fact",
+              "seasons": 2,
+              "episodes": 26,
+              "status": "Ended"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 30 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Условия требуют проверки: «Нужен похожий опыт, а не пересмотр»; «Без натуралистичной жестокости»; «Аниме исключено»."
+            }
+          ],
+          "ai": {
+            "reason": "Самоуверенный Куп спасает Землю на переделанном роботе: герой с характером, стремительные драки и лёгкий юмор.",
+            "caveat": "Много пародий на игры и фильмы; герой скорее разгильдяй, чем образец ответственности.",
+            "likelySeen": false,
+            "own": false,
+            "constraintChecks": [
+              {
+                "key": "fact:content.violence:5c4100ab0c874ef0",
+                "status": "compatible",
+                "reason": "Масштабные, но условные роботизированные битвы без натуралистичной жестокости."
+              },
+              {
+                "key": "fact:format.anime:2c50c8998ed898d3",
+                "status": "compatible",
+                "reason": "Американская анимация, пародирующая в том числе меха-аниме, но сама не аниме."
+              },
+              {
+                "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+                "status": "unknown",
+                "reason": "Самостоятельная история с другими героями; сведений о твоём знакомстве с ней нет."
+              },
+              {
+                "key": "session:minutes:34040f1fb29a7069",
+                "status": "compatible",
+                "reason": "Обычный эпизод длится около 22 минут, укладываясь в предел 30 минут."
+              }
+            ]
+          }
+        },
+        {
+          "id": "tt0111970",
+          "domain": "cartoon",
+          "name": "Freakazoid!",
+          "ru": "Фриказоид!",
+          "year": 1995,
+          "image": "https://static.tvmaze.com/uploads/images/medium_portrait/25/64591.jpg",
+          "poster": null,
+          "kind": "series",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Animation"
+          ],
+          "runtime": 30,
+          "seasons": 2,
+          "episodes": 24,
+          "status": "Ended",
+          "rating": "IMDb 7.5",
+          "link": "https://www.imdb.com/title/tt0111970/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.159,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.024,
+            "prior": 0.135
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+                "factIds": [
+                  "mood:humor.funny"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 7.5 из 10, 9 249 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "2 сез., 24 серии, закончен",
+                "factIds": [
+                  "fact:seasons"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу анимационный сериал»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p0",
+                  "kind": "wiki",
+                  "q": "is an American superhero comedy animated television series",
+                  "section": null,
+                  "url": null,
+                  "ru": "— американский анимационный сериал о супергероях в жанре комедии"
+                }
+              ]
+            },
+            {
+              "id": "mood:humor.funny",
+              "type": "mood",
+              "f": "humor.funny",
+              "why": [
+                "сегодня хочется: «лёгкий юмор»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p1",
+                  "kind": "wiki",
+                  "q": "requested it to be a flat-out comedy",
+                  "section": null,
+                  "url": null,
+                  "ru": "попросил сделать его откровенной комедией"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.75,
+              "total": 9249,
+              "desc": "IMDb 7.5"
+            },
+            {
+              "id": "fact:seasons",
+              "type": "fact",
+              "seasons": 2,
+              "episodes": 24,
+              "status": "Ended"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 30 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Условия требуют проверки: «Нужен похожий опыт, а не пересмотр»; «Без натуралистичной жестокости»; «Аниме исключено»."
+            }
+          ],
+          "ai": {
+            "reason": "Фриказоид — супергерой с буйным характером: погони и злодеи сохраняют нужный экшен, а юмор превращает его в пародию.",
+            "caveat": "Абсурд и разговоры со зрителем часто важнее связного приключения.",
+            "likelySeen": false,
+            "own": false,
+            "constraintChecks": [
+              {
+                "key": "fact:content.violence:5c4100ab0c874ef0",
+                "status": "compatible",
+                "reason": "Комические потасовки и мультяшные удары без натуралистичной жестокости."
+              },
+              {
+                "key": "fact:format.anime:2c50c8998ed898d3",
+                "status": "compatible",
+                "reason": "Американский рисованный сериал, не аниме."
+              },
+              {
+                "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+                "status": "unknown",
+                "reason": "Другой супергерой и самостоятельный сериал; смотрел ли ты его раньше, неизвестно."
+              },
+              {
+                "key": "session:minutes:34040f1fb29a7069",
+                "status": "compatible",
+                "reason": "Эпизоды около 22 минут без рекламного блока, не больше 30 минут."
+              }
+            ]
+          }
+        }
+      ],
+      "belief": 0.188,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 109
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 121
+        }
+      ],
+      "considered": 875,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60,
+        "mixed": false
+      }
+    },
+    "provisional": false,
+    "needsPlan": false,
+    "failedAction": null,
+    "familiar": {
+      "marked": [],
+      "keep": [],
+      "hidden": [],
+      "excluded": [],
+      "undo": {
+        "result": {
+          "top": {
+            "id": "tt0278866",
+            "domain": "cartoon",
+            "name": "Kim Possible",
+            "ru": "Ким Пять-с-плюсом",
+            "year": 2002,
+            "image": "https://static.tvmaze.com/uploads/images/medium_portrait/158/396340.jpg",
+            "poster": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Kim_Possible_%28Disney_television_logo%29.svg/500px-Kim_Possible_%28Disney_television_logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "kind": "series",
+            "series": [],
+            "genres": [
+              "Action",
+              "Adventure",
+              "Animation"
+            ],
+            "runtime": 22,
+            "seasons": 4,
+            "episodes": 86,
+            "status": "Ended",
+            "rating": "IMDb 7.3",
+            "link": "https://www.imdb.com/title/tt0278866/",
+            "price": null,
+            "label": "try",
+            "labelText": "Вариант по твоему запросу",
+            "score": 3.043,
+            "parts": {
+              "fit": 0,
+              "penalty": 0,
+              "mood": 2.888,
+              "prior": 0.154
+            },
+            "mainAspect": null,
+            "explanation": {
+              "reasons": [
+                {
+                  "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                  "factIds": [
+                    "mood:format.animation"
+                  ]
+                },
+                {
+                  "text": "Под настроение «сегодня хочется: «динамичные приключения»»: «быстрый темп»",
+                  "factIds": [
+                    "mood:pace.fast"
+                  ]
+                }
+              ],
+              "risks": [],
+              "info": [
+                {
+                  "text": "IMDb 7.3 из 10, 36 881 оценок",
+                  "factIds": [
+                    "fact:reviews"
+                  ]
+                },
+                {
+                  "text": "4 сез., 86 серий, закончен",
+                  "factIds": [
+                    "fact:seasons"
+                  ]
+                }
+              ]
+            },
+            "facts": [
+              {
+                "id": "mood:format.animation",
+                "type": "mood",
+                "f": "format.animation",
+                "why": [
+                  "сегодня хочется: «Хочу анимационный сериал»"
+                ],
+                "evidence": [
+                  {
+                    "id": "wiki:p0",
+                    "kind": "wiki",
+                    "q": "is an American animated action comedy television series",
+                    "section": null,
+                    "url": null,
+                    "ru": "американский анимационный экшен-комедийный телесериал"
+                  }
+                ]
+              },
+              {
+                "id": "mood:pace.fast",
+                "type": "mood",
+                "f": "pace.fast",
+                "why": [
+                  "сегодня хочется: «динамичные приключения»"
+                ],
+                "evidence": [
+                  {
+                    "id": "wiki:p10",
+                    "kind": "wiki",
+                    "q": "speed with which stories unfold and especially the dialogue",
+                    "section": null,
+                    "url": null,
+                    "ru": "темп развития историй и особенно диалогов"
+                  }
+                ]
+              },
+              {
+                "id": "fact:reviews",
+                "type": "fact",
+                "ratio": 0.73,
+                "total": 36881,
+                "desc": "IMDb 7.3"
+              },
+              {
+                "id": "fact:seasons",
+                "type": "fact",
+                "seasons": 4,
+                "episodes": 86,
+                "status": "Ended"
+              }
+            ],
+            "feasibility": [
+              {
+                "key": "minutes",
+                "status": "yes",
+                "text": "Серия идёт 22 мин; сегодня есть 30 мин."
+              },
+              {
+                "key": "excluded-features",
+                "status": "unknown",
+                "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+              }
+            ],
+            "ai": {
+              "reason": "Ким совмещает школу со спасением мира: как у Человека-паука, обычная жизнь мешается с подвигами, погонями и шутками.",
+              "caveat": "Школьные заботы занимают заметное место; юмор порой совсем детский.",
+              "likelySeen": false,
+              "own": false
+            }
+          },
+          "alternatives": [
+            {
+              "id": "tt1877889",
+              "domain": "cartoon",
+              "name": "Teenage Mutant Ninja Turtles",
+              "ru": "Черепашки-Ниндзя",
+              "year": 2012,
+              "image": "https://static.tvmaze.com/uploads/images/medium_portrait/5/14755.jpg",
+              "poster": null,
+              "kind": "series",
+              "series": [],
+              "genres": [
+                "Action",
+                "Adventure",
+                "Animation"
+              ],
+              "runtime": 24,
+              "seasons": 5,
+              "episodes": 124,
+              "status": "Ended",
+              "rating": "IMDb 7.9",
+              "link": "https://www.imdb.com/title/tt1877889/",
+              "price": null,
+              "label": "try",
+              "labelText": "Вариант по твоему запросу",
+              "score": 3.38,
+              "parts": {
+                "fit": 0,
+                "penalty": 0,
+                "mood": 3.193,
+                "prior": 0.187
+              },
+              "mainAspect": null,
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                    "factIds": [
+                      "mood:format.animation"
+                    ]
+                  },
+                  {
+                    "text": "Под настроение «сегодня хочется: «динамичные приключения»»: «быстрый темп»",
+                    "factIds": [
+                      "mood:pace.fast"
+                    ]
+                  }
+                ],
+                "risks": [],
+                "info": [
+                  {
+                    "text": "IMDb 7.9 из 10, 18 881 оценок",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "5 сез., 124 серии, закончен",
+                    "factIds": [
+                      "fact:seasons"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "mood:format.animation",
+                  "type": "mood",
+                  "f": "format.animation",
+                  "why": [
+                    "сегодня хочется: «Хочу анимационный сериал»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "wiki:p0",
+                      "kind": "wiki",
+                      "q": "is an American action animated television series",
+                      "section": null,
+                      "url": null,
+                      "ru": "американский анимационный приключенческий телесериал"
+                    }
+                  ]
+                },
+                {
+                  "id": "mood:pace.fast",
+                  "type": "mood",
+                  "f": "pace.fast",
+                  "why": [
+                    "сегодня хочется: «динамичные приключения»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "wiki:p0",
+                      "kind": "wiki",
+                      "q": "is an American action animated television series",
+                      "section": null,
+                      "url": null,
+                      "ru": "американский анимационный приключенческий телесериал"
+                    }
+                  ]
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.79,
+                  "total": 18881,
+                  "desc": "IMDb 7.9"
+                },
+                {
+                  "id": "fact:seasons",
+                  "type": "fact",
+                  "seasons": 5,
+                  "episodes": 124,
+                  "status": "Ended"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "yes",
+                  "text": "Серия идёт 24 мин; сегодня есть 30 мин."
+                },
+                {
+                  "key": "excluded-features",
+                  "status": "unknown",
+                  "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                }
+              ],
+              "ai": {
+                "reason": "Четыре разных характера, городские злодеи и шутки между схватками дают близкий к Человеку-пауку приключенческий ритм.",
+                "caveat": "Есть жутковатые мутанты и мрачные сюжетные арки, хотя бои без натурализма.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "tt9248538",
+              "domain": "cartoon",
+              "name": "Kid Cosmic",
+              "ru": "Космобой",
+              "year": 2021,
+              "image": "https://static.tvmaze.com/uploads/images/medium_portrait/292/730994.jpg",
+              "poster": null,
+              "kind": "series",
+              "series": [],
+              "genres": [
+                "Action",
+                "Adventure",
+                "Animation"
+              ],
+              "runtime": 25,
+              "seasons": 3,
+              "episodes": 24,
+              "status": "Ended",
+              "rating": "IMDb 8",
+              "link": "https://www.imdb.com/title/tt9248538/",
+              "price": null,
+              "label": "try",
+              "labelText": "Вариант по твоему запросу",
+              "score": 3.008,
+              "parts": {
+                "fit": 0,
+                "penalty": 0,
+                "mood": 2.906,
+                "prior": 0.102
+              },
+              "mainAspect": null,
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                    "factIds": [
+                      "mood:format.animation"
+                    ]
+                  },
+                  {
+                    "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+                    "factIds": [
+                      "mood:humor.funny"
+                    ]
+                  }
+                ],
+                "risks": [],
+                "info": [
+                  {
+                    "text": "IMDb 8 из 10, 2 102 оценок",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "3 сез., 24 серии, закончен",
+                    "factIds": [
+                      "fact:seasons"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "mood:format.animation",
+                  "type": "mood",
+                  "f": "format.animation",
+                  "why": [
+                    "сегодня хочется: «Хочу анимационный сериал»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "wiki:p0",
+                      "kind": "wiki",
+                      "q": "Kid Cosmic is an American animated superhero comedy-drama television series",
+                      "section": null,
+                      "url": null,
+                      "ru": "«Кид Космик» — американский анимационный супергеройский комедийно-драматический телесериал"
+                    }
+                  ]
+                },
+                {
+                  "id": "mood:humor.funny",
+                  "type": "mood",
+                  "f": "humor.funny",
+                  "why": [
+                    "сегодня хочется: «лёгкий юмор»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "wiki:s",
+                      "kind": "summary",
+                      "q": "The Kid may be the good guy, but he's really bad at it",
+                      "section": null,
+                      "url": null,
+                      "ru": "Малыш может быть хорошим парнем, но он очень плохо справляется"
+                    }
+                  ]
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.8,
+                  "total": 2102,
+                  "desc": "IMDb 8"
+                },
+                {
+                  "id": "fact:seasons",
+                  "type": "fact",
+                  "seasons": 3,
+                  "episodes": 24,
+                  "status": "Ended"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "yes",
+                  "text": "Серия идёт 25 мин; сегодня есть 30 мин."
+                },
+                {
+                  "key": "excluded-features",
+                  "status": "unknown",
+                  "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                }
+              ],
+              "ai": {
+                "reason": "Упрямый мальчишка учится быть супергероем: твой запрос на характер, динамику и лёгкий юмор здесь важнее одних суперсил.",
+                "caveat": "Рисовка нарочито простая; за комедией постепенно проступает драма.",
+                "likelySeen": false,
+                "own": false
+              }
+            },
+            {
+              "id": "tt0112196",
+              "domain": "cartoon",
+              "name": "The Tick",
+              "ru": "Тик-герой",
+              "year": 1994,
+              "image": "https://static.tvmaze.com/uploads/images/medium_portrait/402/1006151.jpg",
+              "poster": null,
+              "kind": "series",
+              "series": [],
+              "genres": [
+                "Action",
+                "Adventure",
+                "Animation"
+              ],
+              "runtime": 30,
+              "seasons": 3,
+              "episodes": 36,
+              "status": "Ended",
+              "rating": "IMDb 7.8",
+              "link": "https://www.imdb.com/title/tt0112196/",
+              "price": null,
+              "label": "try",
+              "labelText": "Вариант по твоему запросу",
+              "score": 2.9,
+              "parts": {
+                "fit": 0,
+                "penalty": 0,
+                "mood": 2.738,
+                "prior": 0.162
+              },
+              "mainAspect": null,
+              "explanation": {
+                "reasons": [
+                  {
+                    "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                    "factIds": [
+                      "mood:format.animation"
+                    ]
+                  },
+                  {
+                    "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+                    "factIds": [
+                      "mood:humor.funny"
+                    ]
+                  }
+                ],
+                "risks": [],
+                "info": [
+                  {
+                    "text": "IMDb 7.8 из 10, 10 862 оценок",
+                    "factIds": [
+                      "fact:reviews"
+                    ]
+                  },
+                  {
+                    "text": "3 сез., 36 серий, закончен",
+                    "factIds": [
+                      "fact:seasons"
+                    ]
+                  }
+                ]
+              },
+              "facts": [
+                {
+                  "id": "mood:format.animation",
+                  "type": "mood",
+                  "f": "format.animation",
+                  "why": [
+                    "сегодня хочется: «Хочу анимационный сериал»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "wiki:p0",
+                      "kind": "wiki",
+                      "q": "The Tick is an American animated television series adaptation",
+                      "section": null,
+                      "url": null,
+                      "ru": "«Тик» — американская анимационная адаптация телесериала"
+                    }
+                  ]
+                },
+                {
+                  "id": "mood:humor.funny",
+                  "type": "mood",
+                  "f": "humor.funny",
+                  "why": [
+                    "сегодня хочется: «лёгкий юмор»"
+                  ],
+                  "evidence": [
+                    {
+                      "id": "wiki:s",
+                      "kind": "summary",
+                      "q": "get ready to laugh and cheer",
+                      "section": null,
+                      "url": null,
+                      "ru": "готовьтесь смеяться и ликовать"
+                    }
+                  ]
+                },
+                {
+                  "id": "fact:reviews",
+                  "type": "fact",
+                  "ratio": 0.78,
+                  "total": 10862,
+                  "desc": "IMDb 7.8"
+                },
+                {
+                  "id": "fact:seasons",
+                  "type": "fact",
+                  "seasons": 3,
+                  "episodes": 36,
+                  "status": "Ended"
+                }
+              ],
+              "feasibility": [
+                {
+                  "key": "minutes",
+                  "status": "yes",
+                  "text": "Серия идёт 30 мин; сегодня есть 30 мин."
+                },
+                {
+                  "key": "excluded-features",
+                  "status": "unknown",
+                  "text": "Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором."
+                }
+              ],
+              "ai": {
+                "reason": "Тик превращает знакомую по Бэтмену борьбу с нелепыми злодеями в абсурдную комедию, сохраняя погони и геройский напор.",
+                "caveat": "Рисовка из 90-х; это скорее пародия на супергероев, чем серьёзная история.",
+                "likelySeen": false,
+                "own": false
+              }
+            }
+          ],
+          "belief": 0.188,
+          "sieves": [
+            {
+              "id": 1,
+              "name": "Можно ли",
+              "removed": 0
+            },
+            {
+              "id": 2,
+              "name": "Было ли",
+              "removed": 0
+            },
+            {
+              "id": 3,
+              "name": "Сделано ли нормально",
+              "removed": 109
+            },
+            {
+              "id": 4,
+              "name": "Моё ли (жёсткие стопы)",
+              "removed": 0
+            },
+            {
+              "id": 5,
+              "name": "Подходит ли сегодня (обязательное)",
+              "removed": 121
+            }
+          ],
+          "considered": 875,
+          "taste": {
+            "confirmed": [],
+            "inferred": [],
+            "dislikes": [],
+            "hardNo": [],
+            "consumed": 0
+          },
+          "today": null,
+          "ai": {
+            "understood": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+            "model": "gpt-6.1-sol",
+            "shortlist": 60
+          }
+        },
+        "marked": [],
+        "keep": [],
+        "hidden": [],
+        "replacement": null
+      }
+    },
+    "replacement": {
+      "changedIds": [
+        "tt0278866",
+        "tt1877889",
+        "tt9248538",
+        "tt0112196"
+      ],
+      "unresolvedIds": [],
+      "notice": "Нашлось меньше четырёх новых вариантов по этому запросу."
+    },
+    "browseSeen": [
+      "tt0278866",
+      "tt1877889",
+      "tt9248538",
+      "tt0112196",
+      "tt0318233",
+      "tt0361201",
+      "tt0111970"
+    ]
+  },
+  "screen": {
+    "domain": "cartoon",
+    "summary": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+    "facts": [
+      {
+        "key": "format.episodic",
+        "text": "Хочется анимационный сериал.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Хочу анимационный сериал",
+        "feature": "format.animation",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null,
+        "conditionKey": "format"
+      },
+      {
+        "key": "characters.memorable",
+        "text": "Хочется героя с характером.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "герой с характером",
+        "feature": "characters.memorable",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "pace.fast",
+        "text": "Хочется динамичных приключений.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "динамичные приключения",
+        "feature": "pace.fast",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "humor.light",
+        "text": "Хочется лёгкого юмора.",
+        "stance": "want",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "лёгкий юмор",
+        "feature": "humor.funny",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "content.violence",
+        "text": "Без натуралистичной жестокости.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "без натуралистичной жестокости",
+        "feature": "content.violence",
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "format.anime",
+        "text": "Аниме исключено.",
+        "stance": "exclude",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Не аниме.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "viewing.new_experience",
+        "text": "Нужен похожий опыт, а не пересмотр.",
+        "stance": "require",
+        "scope": "today",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Нужен похожий опыт, а не пересмотр.",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "context:company",
+        "text": "для одного взрослого",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "для одного взрослого",
+        "stance": "require",
+        "scope": "today",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "context:timeMode",
+        "text": "Эпизоды не больше 30 минут.",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Эпизоды не больше 30 минут.",
+        "stance": "require",
+        "scope": "today",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      },
+      {
+        "key": "context:format",
+        "text": "Хочу анимационный сериал",
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Хочу анимационный сериал",
+        "stance": "require",
+        "scope": "today",
+        "feature": null,
+        "titleId": null,
+        "exposure": null,
+        "titleIntent": null
+      }
+    ],
+    "uncertainties": [
+      "Точная версия «Человек-паук» не определена: в этом разделе есть несколько разных произведений.",
+      "Длительность относится к эпизоду. Неизвестный хронометраж требует проверки."
+    ],
+    "context": {
+      "company": "solo",
+      "childAge": null,
+      "minutes": 30,
+      "timeMode": "episode",
+      "commitment": null,
+      "onlyEnded": null,
+      "format": "episodic"
+    },
+    "sessionTime": {
+      "minutes": 30,
+      "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+      "quote": "Эпизоды не больше 30 минут."
+    },
+    "canBack": true,
+    "canUndoFactRemoval": false,
+    "provisional": false,
+    "turns": [
+      {
+        "id": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "question": "Какую анимацию хочется сегодня?",
+        "answer": "Хочу анимационный сериал для одного взрослого. Человек-паук и Бэтмен — примеры того, чего хочется: герой с характером, динамичные приключения и лёгкий юмор, без натуралистичной жестокости. Точные версии не помню, они не важны. Нужен похожий опыт, а не пересмотр. Эпизоды не больше 30 минут. Не аниме.",
+        "superseded": false
+      }
+    ],
+    "type": "result",
+    "result": {
+      "top": {
+        "id": "tt0318233",
+        "domain": "cartoon",
+        "name": "My Life as a Teenage Robot",
+        "ru": "Жизнь и приключения робота-подростка",
+        "year": 2002,
+        "image": "https://static.tvmaze.com/uploads/images/medium_portrait/42/106384.jpg",
+        "poster": null,
+        "kind": "series",
+        "series": [],
+        "genres": [
+          "Action",
+          "Adventure",
+          "Animation"
+        ],
+        "runtime": 23,
+        "seasons": 3,
+        "episodes": 40,
+        "status": "Ended",
+        "rating": "IMDb 6.9",
+        "link": "https://www.imdb.com/title/tt0318233/",
+        "price": null,
+        "label": "try",
+        "labelText": "Вариант по твоему запросу",
+        "score": 2.836,
+        "parts": {
+          "fit": 0,
+          "penalty": 0,
+          "mood": 2.738,
+          "prior": 0.098
+        },
+        "mainAspect": null,
+        "explanation": {
+          "reasons": [
+            {
+              "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+              "factIds": [
+                "mood:format.animation"
+              ]
+            },
+            {
+              "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+              "factIds": [
+                "mood:humor.funny"
+              ]
+            }
+          ],
+          "risks": [],
+          "info": [
+            {
+              "text": "IMDb 6.9 из 10, 11 757 оценок",
+              "factIds": [
+                "fact:reviews"
+              ]
+            },
+            {
+              "text": "3 сез., 40 серий, закончен",
+              "factIds": [
+                "fact:seasons"
+              ]
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "mood:format.animation",
+            "type": "mood",
+            "f": "format.animation",
+            "why": [
+              "сегодня хочется: «Хочу анимационный сериал»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p0",
+                "kind": "wiki",
+                "q": "is an American animated science fiction superhero comedy television series",
+                "section": null,
+                "url": null,
+                "ru": "американский анимационный научно-фантастический супергеройский комедийный телесериал"
+              }
+            ]
+          },
+          {
+            "id": "mood:humor.funny",
+            "type": "mood",
+            "f": "humor.funny",
+            "why": [
+              "сегодня хочется: «лёгкий юмор»"
+            ],
+            "evidence": [
+              {
+                "id": "wiki:p2",
+                "kind": "wiki",
+                "q": "making lighthearted fun of typical teenage issues",
+                "section": null,
+                "url": null,
+                "ru": "беззаботно высмеивая типичные подростковые проблемы"
+              }
+            ]
+          },
+          {
+            "id": "fact:reviews",
+            "type": "fact",
+            "ratio": 0.69,
+            "total": 11757,
+            "desc": "IMDb 6.9"
+          },
+          {
+            "id": "fact:seasons",
+            "type": "fact",
+            "seasons": 3,
+            "episodes": 40,
+            "status": "Ended"
+          }
+        ],
+        "feasibility": [
+          {
+            "key": "minutes",
+            "status": "yes",
+            "text": "Серия идёт 23 мин; сегодня есть 30 мин."
+          },
+          {
+            "key": "excluded-features",
+            "status": "unknown",
+            "text": "Условия требуют проверки: «Нужен похожий опыт, а не пересмотр»; «Без натуралистичной жестокости»; «Аниме исключено»."
+          }
+        ],
+        "ai": {
+          "reason": "Дженни совмещает спасение мира с подростковой жизнью — близко к Человеку-пауку по характеру, приключениям и юмору.",
+          "caveat": "Школьные заботы занимают заметную часть историй.",
+          "likelySeen": false,
+          "own": false,
+          "constraintChecks": [
+            {
+              "key": "fact:content.violence:5c4100ab0c874ef0",
+              "status": "compatible",
+              "reason": "Стилизованные бои с роботами и чудовищами, без натуралистичной жестокости."
+            },
+            {
+              "key": "fact:format.anime:2c50c8998ed898d3",
+              "status": "compatible",
+              "reason": "Американский анимационный сериал, не аниме."
+            },
+            {
+              "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+              "status": "unknown",
+              "reason": "Не пересказ приключений Бэтмена или Человека-паука; смотрел ли ты этот сериал, неизвестно."
+            },
+            {
+              "key": "session:minutes:34040f1fb29a7069",
+              "status": "compatible",
+              "reason": "Эпизоды около 23 минут."
+            }
+          ]
+        }
+      },
+      "alternatives": [
+        {
+          "id": "tt0361201",
+          "domain": "cartoon",
+          "name": "Megas XLR",
+          "ru": "Мегас Экс-Эл-Ар",
+          "year": 2004,
+          "image": "https://static.tvmaze.com/uploads/images/medium_portrait/27/67755.jpg",
+          "poster": null,
+          "kind": "series",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Animation"
+          ],
+          "runtime": 30,
+          "seasons": 2,
+          "episodes": 26,
+          "status": "Ended",
+          "rating": "IMDb 8.1",
+          "link": "https://www.imdb.com/title/tt0361201/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 2.919,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 2.758,
+            "prior": 0.16
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+                "factIds": [
+                  "mood:humor.funny"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 8.1 из 10, 6 351 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "2 сез., 26 серий, закончен",
+                "factIds": [
+                  "fact:seasons"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу анимационный сериал»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p0",
+                  "kind": "wiki",
+                  "q": "is an American animated television series created by Jody Schaeffer",
+                  "section": null,
+                  "url": null,
+                  "ru": "американский анимационный телесериал, созданный Джоди Шеффер"
+                }
+              ]
+            },
+            {
+              "id": "mood:humor.funny",
+              "type": "mood",
+              "f": "humor.funny",
+              "why": [
+                "сегодня хочется: «лёгкий юмор»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p8",
+                  "kind": "wiki",
+                  "q": "While it's still hilarious and fun to watch",
+                  "section": null,
+                  "url": null,
+                  "ru": "Хотя это по-прежнему смешно и весело смотреть"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.81,
+              "total": 6351,
+              "desc": "IMDb 8.1"
+            },
+            {
+              "id": "fact:seasons",
+              "type": "fact",
+              "seasons": 2,
+              "episodes": 26,
+              "status": "Ended"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 30 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Условия требуют проверки: «Нужен похожий опыт, а не пересмотр»; «Без натуралистичной жестокости»; «Аниме исключено»."
+            }
+          ],
+          "ai": {
+            "reason": "Самоуверенный Куп спасает Землю на переделанном роботе: герой с характером, стремительные драки и лёгкий юмор.",
+            "caveat": "Много пародий на игры и фильмы; герой скорее разгильдяй, чем образец ответственности.",
+            "likelySeen": false,
+            "own": false,
+            "constraintChecks": [
+              {
+                "key": "fact:content.violence:5c4100ab0c874ef0",
+                "status": "compatible",
+                "reason": "Масштабные, но условные роботизированные битвы без натуралистичной жестокости."
+              },
+              {
+                "key": "fact:format.anime:2c50c8998ed898d3",
+                "status": "compatible",
+                "reason": "Американская анимация, пародирующая в том числе меха-аниме, но сама не аниме."
+              },
+              {
+                "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+                "status": "unknown",
+                "reason": "Самостоятельная история с другими героями; сведений о твоём знакомстве с ней нет."
+              },
+              {
+                "key": "session:minutes:34040f1fb29a7069",
+                "status": "compatible",
+                "reason": "Обычный эпизод длится около 22 минут, укладываясь в предел 30 минут."
+              }
+            ]
+          }
+        },
+        {
+          "id": "tt0111970",
+          "domain": "cartoon",
+          "name": "Freakazoid!",
+          "ru": "Фриказоид!",
+          "year": 1995,
+          "image": "https://static.tvmaze.com/uploads/images/medium_portrait/25/64591.jpg",
+          "poster": null,
+          "kind": "series",
+          "series": [],
+          "genres": [
+            "Action",
+            "Adventure",
+            "Animation"
+          ],
+          "runtime": 30,
+          "seasons": 2,
+          "episodes": 24,
+          "status": "Ended",
+          "rating": "IMDb 7.5",
+          "link": "https://www.imdb.com/title/tt0111970/",
+          "price": null,
+          "label": "try",
+          "labelText": "Вариант по твоему запросу",
+          "score": 3.159,
+          "parts": {
+            "fit": 0,
+            "penalty": 0,
+            "mood": 3.024,
+            "prior": 0.135
+          },
+          "mainAspect": null,
+          "explanation": {
+            "reasons": [
+              {
+                "text": "Под настроение «сегодня хочется: «Хочу анимационный сериал»»: «анимация»",
+                "factIds": [
+                  "mood:format.animation"
+                ]
+              },
+              {
+                "text": "Под настроение «сегодня хочется: «лёгкий юмор»»: «смешно»",
+                "factIds": [
+                  "mood:humor.funny"
+                ]
+              }
+            ],
+            "risks": [],
+            "info": [
+              {
+                "text": "IMDb 7.5 из 10, 9 249 оценок",
+                "factIds": [
+                  "fact:reviews"
+                ]
+              },
+              {
+                "text": "2 сез., 24 серии, закончен",
+                "factIds": [
+                  "fact:seasons"
+                ]
+              }
+            ]
+          },
+          "facts": [
+            {
+              "id": "mood:format.animation",
+              "type": "mood",
+              "f": "format.animation",
+              "why": [
+                "сегодня хочется: «Хочу анимационный сериал»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p0",
+                  "kind": "wiki",
+                  "q": "is an American superhero comedy animated television series",
+                  "section": null,
+                  "url": null,
+                  "ru": "— американский анимационный сериал о супергероях в жанре комедии"
+                }
+              ]
+            },
+            {
+              "id": "mood:humor.funny",
+              "type": "mood",
+              "f": "humor.funny",
+              "why": [
+                "сегодня хочется: «лёгкий юмор»"
+              ],
+              "evidence": [
+                {
+                  "id": "wiki:p1",
+                  "kind": "wiki",
+                  "q": "requested it to be a flat-out comedy",
+                  "section": null,
+                  "url": null,
+                  "ru": "попросил сделать его откровенной комедией"
+                }
+              ]
+            },
+            {
+              "id": "fact:reviews",
+              "type": "fact",
+              "ratio": 0.75,
+              "total": 9249,
+              "desc": "IMDb 7.5"
+            },
+            {
+              "id": "fact:seasons",
+              "type": "fact",
+              "seasons": 2,
+              "episodes": 24,
+              "status": "Ended"
+            }
+          ],
+          "feasibility": [
+            {
+              "key": "minutes",
+              "status": "yes",
+              "text": "Серия идёт 30 мин; сегодня есть 30 мин."
+            },
+            {
+              "key": "excluded-features",
+              "status": "unknown",
+              "text": "Условия требуют проверки: «Нужен похожий опыт, а не пересмотр»; «Без натуралистичной жестокости»; «Аниме исключено»."
+            }
+          ],
+          "ai": {
+            "reason": "Фриказоид — супергерой с буйным характером: погони и злодеи сохраняют нужный экшен, а юмор превращает его в пародию.",
+            "caveat": "Абсурд и разговоры со зрителем часто важнее связного приключения.",
+            "likelySeen": false,
+            "own": false,
+            "constraintChecks": [
+              {
+                "key": "fact:content.violence:5c4100ab0c874ef0",
+                "status": "compatible",
+                "reason": "Комические потасовки и мультяшные удары без натуралистичной жестокости."
+              },
+              {
+                "key": "fact:format.anime:2c50c8998ed898d3",
+                "status": "compatible",
+                "reason": "Американский рисованный сериал, не аниме."
+              },
+              {
+                "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+                "status": "unknown",
+                "reason": "Другой супергерой и самостоятельный сериал; смотрел ли ты его раньше, неизвестно."
+              },
+              {
+                "key": "session:minutes:34040f1fb29a7069",
+                "status": "compatible",
+                "reason": "Эпизоды около 22 минут без рекламного блока, не больше 30 минут."
+              }
+            ]
+          }
+        }
+      ],
+      "belief": 0.188,
+      "sieves": [
+        {
+          "id": 1,
+          "name": "Можно ли",
+          "removed": 0
+        },
+        {
+          "id": 2,
+          "name": "Было ли",
+          "removed": 0
+        },
+        {
+          "id": 3,
+          "name": "Сделано ли нормально",
+          "removed": 109
+        },
+        {
+          "id": 4,
+          "name": "Моё ли (жёсткие стопы)",
+          "removed": 0
+        },
+        {
+          "id": 5,
+          "name": "Подходит ли сегодня (обязательное)",
+          "removed": 121
+        }
+      ],
+      "considered": 875,
+      "taste": {
+        "confirmed": [],
+        "inferred": [],
+        "dislikes": [],
+        "hardNo": [],
+        "consumed": 0
+      },
+      "today": null,
+      "ai": {
+        "understood": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+        "model": "gpt-6.1-sol",
+        "shortlist": 60,
+        "mixed": false
+      }
+    }
+  },
+  "feedbackState": {
+    "step": "result",
+    "domain": "cartoon",
+    "platform": "windows",
+    "situation": {
+      "time": null,
+      "company": "solo",
+      "childAge": null,
+      "partySize": null,
+      "note": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+      "popularity": null,
+      "era": null,
+      "onlyEnded": false,
+      "episodeLength": null,
+      "leans": []
+    },
+    "stops": [],
+    "asked": [],
+    "shown": [],
+    "liked": [],
+    "disliked": [],
+    "whyIndex": 0,
+    "answers": {},
+    "corrections": [],
+    "preferences": [],
+    "session": {
+      "notNow": [],
+      "goalDriven": true,
+      "excludeSeries": false,
+      "goalWants": [
+        {
+          "f": "format.animation",
+          "evidence": "Хочу анимационный сериал"
+        },
+        {
+          "f": "characters.memorable",
+          "evidence": "герой с характером"
+        },
+        {
+          "f": "pace.fast",
+          "evidence": "динамичные приключения"
+        },
+        {
+          "f": "humor.funny",
+          "evidence": "лёгкий юмор"
+        }
+      ],
+      "goalAvoids": [
+        {
+          "f": "content.violence",
+          "evidence": "без натуралистичной жестокости"
+        }
+      ],
+      "goalRequires": [],
+      "goalExcludes": [
+        {
+          "f": "content.violence",
+          "evidence": "без натуралистичной жестокости"
+        }
+      ],
+      "genreWants": [],
+      "minutes": 30,
+      "maxRuntime": 30
+    },
+    "seed": 501209,
+    "conversation": {
+      "domain": "cartoon",
+      "revision": 3,
+      "summary": "Ты ищешь анимационный сериал для просмотра в одиночку: герой с характером, динамичные приключения и лёгкий юмор. Без натуралистичной жестокости и не аниме, эпизоды — не больше 30 минут. Человек-паук и Бэтмен — ориентиры по описанному опыту; точные версии не важны, пересмотр не нужен.",
+      "facts": [
+        {
+          "key": "format.episodic",
+          "text": "Хочется анимационный сериал.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "Хочу анимационный сериал",
+          "feature": "format.animation",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "characters.memorable",
+          "text": "Хочется героя с характером.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "герой с характером",
+          "feature": "characters.memorable",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "pace.fast",
+          "text": "Хочется динамичных приключений.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "динамичные приключения",
+          "feature": "pace.fast",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "humor.light",
+          "text": "Хочется лёгкого юмора.",
+          "stance": "want",
+          "scope": "today",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "лёгкий юмор",
+          "feature": "humor.funny",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "content.violence",
+          "text": "Без натуралистичной жестокости.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "без натуралистичной жестокости",
+          "feature": "content.violence",
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "format.anime",
+          "text": "Аниме исключено.",
+          "stance": "exclude",
+          "scope": "today",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "Не аниме.",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        },
+        {
+          "key": "viewing.new_experience",
+          "text": "Нужен похожий опыт, а не пересмотр.",
+          "stance": "require",
+          "scope": "today",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "Нужен похожий опыт, а не пересмотр.",
+          "feature": null,
+          "titleId": null,
+          "exposure": null,
+          "titleIntent": null
+        }
+      ],
+      "context": {
+        "company": "solo",
+        "childAge": null,
+        "minutes": 30,
+        "timeMode": "episode",
+        "commitment": null,
+        "onlyEnded": null,
+        "format": "episodic"
+      },
+      "contextEvidence": {
+        "company": {
+          "value": "solo",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "для одного взрослого"
+        },
+        "childAge": null,
+        "timeMode": {
+          "value": "episode",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "Эпизоды не больше 30 минут."
+        },
+        "commitment": null,
+        "onlyEnded": null,
+        "format": {
+          "value": "episodic",
+          "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "quote": "Хочу анимационный сериал"
+        }
+      },
+      "sessionTime": {
+        "minutes": 30,
+        "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+        "quote": "Эпизоды не больше 30 минут."
+      },
+      "uncertainties": [
+        "Точная версия «Человек-паук» не определена: в этом разделе есть несколько разных произведений.",
+        "Длительность относится к эпизоду. Неизвестный хронометраж требует проверки."
+      ],
+      "retractions": [],
+      "familiarity": {
+        "returnToIds": [],
+        "hiddenIds": [],
+        "excludedIds": []
+      },
+      "turns": [
+        {
+          "id": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+          "question": "Какую анимацию хочется сегодня?",
+          "answer": "Хочу анимационный сериал для одного взрослого. Человек-паук и Бэтмен — примеры того, чего хочется: герой с характером, динамичные приключения и лёгкий юмор, без натуралистичной жестокости. Точные версии не помню, они не важны. Нужен похожий опыт, а не пересмотр. Эпизоды не больше 30 минут. Не аниме.",
+          "kind": "answer",
+          "superseded": false
+        }
+      ]
+    }
+  },
+  "feedbackCarry": {
+    "retainedIds": []
+  }
+}

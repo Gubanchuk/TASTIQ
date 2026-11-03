@@ -1,0 +1,178 @@
+{
+  "at": "2026-11-03T18:50:34.455Z",
+  "cases": [
+    {
+      "id": "family",
+      "proposed": [
+        {
+          "id": "",
+          "title": "Miffy the Movie",
+          "year": 2013,
+          "checks": [
+            {
+              "key": "fact:format.movie:c8528c123744cd24",
+              "status": "compatible"
+            },
+            {
+              "key": "fact:tone.creepy:ee4eff922075b56d",
+              "status": "compatible"
+            },
+            {
+              "key": "context:childAge:eb103f6ea7fd3405",
+              "status": "unknown"
+            },
+            {
+              "key": "session:minutes:e47367d2d81296cb",
+              "status": "compatible"
+            }
+          ]
+        }
+      ],
+      "shownNew": [],
+      "error": "Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.",
+      "priorResultPreserved": true,
+      "undoReloadVerified": false,
+      "humanFit": "not measured"
+    },
+    {
+      "id": "episodic",
+      "proposed": [
+        {
+          "id": "tt0318233",
+          "title": "",
+          "year": 0,
+          "checks": [
+            {
+              "key": "fact:content.violence:5c4100ab0c874ef0",
+              "status": "compatible"
+            },
+            {
+              "key": "fact:format.anime:2c50c8998ed898d3",
+              "status": "compatible"
+            },
+            {
+              "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+              "status": "unknown"
+            },
+            {
+              "key": "session:minutes:34040f1fb29a7069",
+              "status": "compatible"
+            }
+          ]
+        },
+        {
+          "id": "tt0361201",
+          "title": "",
+          "year": 0,
+          "checks": [
+            {
+              "key": "fact:content.violence:5c4100ab0c874ef0",
+              "status": "compatible"
+            },
+            {
+              "key": "fact:format.anime:2c50c8998ed898d3",
+              "status": "compatible"
+            },
+            {
+              "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+              "status": "unknown"
+            },
+            {
+              "key": "session:minutes:34040f1fb29a7069",
+              "status": "compatible"
+            }
+          ]
+        },
+        {
+          "id": "tt0111970",
+          "title": "",
+          "year": 0,
+          "checks": [
+            {
+              "key": "fact:content.violence:5c4100ab0c874ef0",
+              "status": "compatible"
+            },
+            {
+              "key": "fact:format.anime:2c50c8998ed898d3",
+              "status": "compatible"
+            },
+            {
+              "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+              "status": "unknown"
+            },
+            {
+              "key": "session:minutes:34040f1fb29a7069",
+              "status": "compatible"
+            }
+          ]
+        }
+      ],
+      "shownNew": [
+        {
+          "id": "tt0318233",
+          "name": "Жизнь и приключения робота-подростка",
+          "kind": "series",
+          "runtime": 23
+        },
+        {
+          "id": "tt0361201",
+          "name": "Мегас Экс-Эл-Ар",
+          "kind": "series",
+          "runtime": 30
+        },
+        {
+          "id": "tt0111970",
+          "name": "Фриказоид!",
+          "kind": "series",
+          "runtime": 30
+        }
+      ],
+      "error": null,
+      "priorResultPreserved": false,
+      "undoReloadVerified": true,
+      "humanFit": "not measured"
+    }
+  ],
+  "budget": {
+    "run": "media-more-constraints-20261103",
+    "cap": 0.3,
+    "maxCalls": 2,
+    "spent": 0.050074,
+    "modelCalls": 2,
+    "newUncertain": 0,
+    "before": {
+      "upper": 2.5828152,
+      "calls": 212,
+      "hold": 0.25
+    },
+    "after": {
+      "upper": 2.6328892,
+      "calls": 214,
+      "hold": 0.25,
+      "technicalRemaining": 2.1171108,
+      "grantRemaining": 8.6953627
+    },
+    "closed": true
+  },
+  "freeNative": {
+    "offlineRequestCountAfterRestart": 10,
+    "offlineStubPicks": 4,
+    "paid": 0,
+    "partialOneCard": true,
+    "explicitAgeAndNoScaryUnknown": true,
+    "undoReload": true,
+    "constrainedSole": true,
+    "familiarFailedMarksPreserved": true,
+    "emptyPreserves3": true,
+    "consoleErrors": 0,
+    "mobileWidth": 390,
+    "horizontalOverflow": false
+  },
+  "review": {
+    "reviewerCount": 1,
+    "findings": 0,
+    "targetedTests": 54,
+    "paid": 0
+  },
+  "limits": "Model judgements are not independent age/content certificates; unknowns remain visible. Narrow admission matcher is not a universal semantic classifier."
+}

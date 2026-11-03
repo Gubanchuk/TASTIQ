@@ -1,0 +1,25 @@
+{
+  "note": "Reconstructed provider shape from the delivered synthetic cards; exact reason/caveat preserved. Request is the existing autonomous cartoon-more-no-fit fixture. No billing receipt dependency.",
+  "requestFixture": "cartoon-more-no-fit-2026-11-03.json",
+  "output": {
+    "understood": "Ты хочешь один добрый и смешной полнометражный мультфильм для совместного просмотра с ребёнком 7 лет, строго без страшных сцен и не сериал. Сегодня есть 90 минут.",
+    "picks": [
+      {
+        "id": "tt2709692",
+        "title": "",
+        "year": 0,
+        "reason": "Смешные приготовления Гринча к Рождеству и история о доброте подходят для вашего семейного вечера; фильм длится 86 минут.",
+        "caveat": "Есть грустные воспоминания об одиночестве и рискованные трюки с санями.",
+        "likelySeen": false
+      },
+      {
+        "id": "tt0065421",
+        "title": "",
+        "year": 0,
+        "reason": "Музыкальные номера и комичные кошачьи характеры отвечают пожеланию доброго и смешного мультфильма; длительность — 78 минут.",
+        "caveat": "Есть похищение котят, погони и драка: строгому условию «без страшных сцен» не отвечает.",
+        "likelySeen": false
+      }
+    ]
+  }
+}

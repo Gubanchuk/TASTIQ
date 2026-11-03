@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-03T18:47:47.779Z",
+  "model": "gpt-6.1-sol",
+  "sourceCommitBefore": "14d3df2cefe1b4aa193df69983ad973a254f0696",
+  "sourceHashes": {
+    "src/ai/pick-constraints.js": "018560bbce54efb2f325e6ea5d382d5f44664d823cb50d5efaf17ca66ebb2c85",
+    "src/ai/pick.js": "2660da42e2e2f6902e92eb45389e29b14aa12eea45d6c36a790f20a6e9708b78",
+    "src/server/media-conversation-service.js": "1f8f956579d8c2763bb9425044e2c9fcb2bd046144262948d0500678df0826b2",
+    "src/core/media-conversation.js": "9c302fb80f7ee80122819765778f89bdc1aab09b1c55dba4aeab38510ada2873",
+    "src/core/session-time.js": "fdc40f87fead31dd3ee45040e331b681fab1de37ff4790153c57996f9d28f99b",
+    "test/fixtures/cartoon-more-no-fit-2026-11-03.json": "4124ae54652048162f5cb9b071feab6904cd7b87c9db053c79bf3bf3e6e2e11f",
+    "research-vault/cartoon-journeys-2026-11-03/live-round-2/02-reference-response.json": "debba2f9181d5e9fc3c1eeba5169d62fa9a0b6966bad499a9ca458a00d1bec8f",
+    "research-vault/media-more-constraints-2026-11-03/plan.json": "2139989b5b9a6a718fdb11608e4714e8bda9c46b2c9e4491fb31dc729a99fec1"
+  },
+  "cap": 0.3,
+  "maxCalls": 2,
+  "historicHold": 0.25,
+  "freeModelGet": 200
+}

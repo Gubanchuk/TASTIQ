@@ -5,6 +5,7 @@ import {recommend,recommendIds,rankAll} from '../core/recommend.js';
 import {editionsOf,makeCatalog} from '../core/catalog.js';
 import {aiMediaConversation} from '../ai/media-conversation.js';
 import {aiPick} from '../ai/pick.js';
+import {criteriaOf} from '../ai/pick-constraints.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationMediaIdentity} from './conversation-media-identity.js';
@@ -74,8 +75,18 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     return card;
   }
   function attach(card,p,s,legacy) {
-    card.ai={reason:p?.reason,caveat:p?.caveat,likelySeen:p?.likelySeen,own:p?.own};
-    card.labelText='Вариант по твоему запросу';return caveats(card,s,legacy);
+    card.ai={reason:p?.reason,caveat:p?.caveat,likelySeen:p?.likelySeen,own:p?.own,...(p?.constraintChecks?{constraintChecks:p.constraintChecks}:{})};
+    card.labelText='Вариант по твоему запросу';caveats(card,s,legacy);return constraintWarnings(card,p?.unknownCriteria,criteriaOf(legacy));
+  }
+  function constraintWarnings(card,unknowns=[],allCriteria=[]) {
+    const items=[...unknowns,...allCriteria.filter(c=>c.stance==='exclude')];
+    const texts=[...new Set(items.filter(c=>!c.key?.startsWith('context:childAge:')&&!(c.key?.startsWith('session:minutes:')&&card.feasibility.some(f=>f.key==='minutes'))&&!(c.key?.startsWith('context:onlyEnded:')&&(card.status==='Ended'||card.feasibility.some(f=>f.key==='ended')))&&typeof c.text==='string').map(c=>c.text.trim().replace(/[.!?;:]+$/u,'')))];
+    if(!texts.length)return card;
+    const detail=`${texts.length===1?'Условие требует':'Условия требуют'} проверки: ${texts.map(text=>`«${text}»`).join('; ')}.`;
+    const existing=card.feasibility.find(c=>c.key==='excluded-features');
+    if(existing)existing.text=detail;
+    else card.feasibility.push({key:'request-conditions',status:'unknown',text:detail});
+    return card;
   }
   async function replace(s,who,more=false) {
     const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):s.familiar.marked).filter(id=>before.some(card=>card.id===id)));
@@ -87,7 +98,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     if(new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)]).size>496)return failed('В этом подборе уже слишком много отметок. Начни новый подбор: явные сохранённые исключения останутся.',false);
     const eligibleCatalog=catalogFor(s),eligible=rankAll(eligibleCatalog,profileOf(legacy),sessionOf(legacy)).ranked;
     if(!eligible.length)return failed(more?'Других подходящих вариантов по этому запросу пока нет. Прежние варианты сохранены — можно уточнить запрос.':'Других подходящих вариантов пока нет. Оставь знакомое для возвращения или уточни запрос.',false);
-    const sole=eligible.length===1;
+    const sole=eligible.length===1&&criteriaOf(legacy,eligible[0].game).length===0;
     let out;
     if(sole)out={picks:[{id:eligible[0].game.id}]};
     else {
@@ -95,7 +106,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       spend(who);
       try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),wish:s.summary,...(more?{alreadyShown:neutralShown}:{previous:before.map(card=>card.id)})});}
       catch {out={error:'Не удалось заменить варианты. Варианты и отметки сохранены.'};}
-      log(more?'more':'replace',s,out);if(out.error)return failed(out.error,out.retryable!==false);
+      log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
     }
     const ids=[...new Set((out.picks??[]).map(p=>p.id))];
     const selected=recommendIds(eligibleCatalog,profileOf(legacy),sessionOf(legacy),ids),picks=new Map((out.picks??[]).map(p=>[p.id,p]));
@@ -162,7 +173,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     if(!permission.allowed) {
       const result=recommend(catalogFor(s),profileOf(legacy),sessionOf(legacy));
       if(!result.top)return response({...s,phase:'review',failedAction:'pick'},{error:'По этим условиям пока не нашлось доступных вариантов. Уточни условия или разреши вернуться к знакомому.',retryable:false});
-      for(const card of cardsOf(result))caveats(card,s,legacy);
+      const hardCriteria=criteriaOf(legacy);for(const card of cardsOf(result)){caveats(card,s,legacy);constraintWarnings(card,hardCriteria,hardCriteria);}
       s={...s,phase:'result',result,provisional:true,failedAction:null};
       s.uncertainties=[...new Set([...s.uncertainties,'Это предварительный подбор по доступным признакам: помощник сейчас недоступен, свободный ответ мог быть учтён не полностью.'])];return response(s);
     }

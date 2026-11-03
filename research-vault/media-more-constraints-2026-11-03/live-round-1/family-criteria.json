@@ -1,0 +1,30 @@
+[
+  {
+    "key": "fact:format.movie:c8528c123744cd24",
+    "stance": "require",
+    "text": "Нужен один полнометражный мультфильм, не сериал.",
+    "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+    "quote": "Нужен один полнометражный мультфильм"
+  },
+  {
+    "key": "fact:tone.creepy:ee4eff922075b56d",
+    "stance": "exclude",
+    "text": "Страшные сцены исключены.",
+    "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+    "quote": "без страшных сцен"
+  },
+  {
+    "key": "context:childAge:eb103f6ea7fd3405",
+    "stance": "require",
+    "text": "Возраст младшего зрителя: 7",
+    "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+    "quote": "с ребёнком 7 лет"
+  },
+  {
+    "key": "session:minutes:e47367d2d81296cb",
+    "stance": "require",
+    "text": "Один фильм или эпизод — не больше 90 мин",
+    "sourceId": "5efa44c0-d90e-4b06-9728-fbd694d065e6:1",
+    "quote": "Сегодня на просмотр есть 90 минут."
+  }
+]

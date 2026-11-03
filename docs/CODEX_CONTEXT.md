@@ -1,3 +1,13 @@
+# Надёжность обязательных условий —03.11.2026, локально проверено
+
+Одобренное продолжение «Показать ещё»: исправлены сохранённый self-admitted conflict и sole-candidate bypass. Source-backed versioned hard criteria/полная matrix compatible-conflict-unknown в прежнем одном pick call, duplicate/alias/stale-source guards, явные unknown, partial/failed preserve/undo. Scope adaptive film/series/cartoon; game/legacy/catalog/ranking/финансовые guards прежние. [Отчёт](MEDIA_MORE_CONSTRAINTS_2026-11-03.md).
+
+600/600+HTTPstub paid0+build83static/7runtime match/6JSON/Node24/300s; native blocked/partial/sole/empty/familiar-failure/undo/reload desktop390 overflow0/console0. Freshreview1/54tests/Pass. Live2calls/$0.050074 из cap2/$0.30: family title не подтвердился, старые3 сохранены; episodic3 новых23–30мин, undo/reload→старые4. Humanfit/успешная семейная новая рекомендация не подтверждены; checks — мнение модели. Общий settled upper2.6328892/214+historic hold0.25, technicalremaining2.1171108/grantremaining8.6953627, newuncertain0/lockclosed. Main5177PID65588/restoremax0calls[]/moremax0not_requested0,QA5180stopped/35–36closed/reset/hidden/userstates untouched. Разрешённая публикация в работе; production пока14d3df2 ниже. Следующее после доставки — реальные воспроизводимые отзывы через copyподбора.
+
+# Условия и порядок рекомендаций опубликованы —03.11.2026
+
+Main14d3df2cefe1b4aa193df69983ad973a254f0696 pushed/remoteMatch→READY dpl_9PS45YcTkKmginvpKBUYUhZEFk5G,03.11.2026 20:31:37МСК, https://tastiq-drab.vercel.app/. [Доставка](REQUEST_CLARITY_DEPLOY_2026-11-03.md). VercelAPImetaSHA/refmain/alias/node24;587/587+HTTPstub+build83static/5runtime/6JSON.18productionstatic+5bundledruntime commitMatch/2GET200. Cloud restore maxReserve0/calls[] подтвердил conditionKey=format и прежниеstatefacts. Nativecartoonfirstscreen/console0/earlyerrors0через104sec;Responses0/$0. QA31/32closed/обычныйentry33deliverable,main5177PID64644/5180stopped/reset/hidden,userstates untouched. Смешанные format-факты и animation за пределамиcartoon сохраняют полный смысл/корректное удаление. Следующее — свободная оценка читаемости и сравнения; прежнийsemantic-more/humanfit не доказаны UI-подписями. Ниже «локально» и ожидание публикации — история.
+
 # Условия и порядок рекомендаций —03.11.2026, локально проверено
 
 По одобренному объяснению убраны дубли media-условий: канонические формат/компания+возраст, без повторов single/movie и цитаты времени. Точный format/source/quote binding добавляет только screen.facts.conditionKey; state.facts/источники/подбор прежние. Во всех4modern domains: «Главный вариант под твой запрос», «Другие варианты», пояснение до4за раз/тот же подбор с aria-describedby обеих more. [Отчёт](REQUEST_CLARITY_2026-11-03.md).

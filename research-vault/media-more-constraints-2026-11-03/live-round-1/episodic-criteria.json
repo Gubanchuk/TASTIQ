@@ -1,0 +1,30 @@
+[
+  {
+    "key": "fact:content.violence:5c4100ab0c874ef0",
+    "stance": "exclude",
+    "text": "Без натуралистичной жестокости.",
+    "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+    "quote": "без натуралистичной жестокости"
+  },
+  {
+    "key": "fact:format.anime:2c50c8998ed898d3",
+    "stance": "exclude",
+    "text": "Аниме исключено.",
+    "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+    "quote": "Не аниме."
+  },
+  {
+    "key": "fact:viewing.new_experience:69b0b0a685bfff27",
+    "stance": "require",
+    "text": "Нужен похожий опыт, а не пересмотр.",
+    "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+    "quote": "Нужен похожий опыт, а не пересмотр."
+  },
+  {
+    "key": "session:minutes:34040f1fb29a7069",
+    "stance": "require",
+    "text": "Один фильм или эпизод — не больше 30 мин",
+    "sourceId": "5f728b66-6544-4b15-91b9-79fd23a1d9d9:1",
+    "quote": "Эпизоды не больше 30 минут."
+  }
+]
