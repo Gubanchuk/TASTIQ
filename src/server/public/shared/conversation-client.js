@@ -1,3 +1,5 @@
+import {initialConversationSnapshot} from './conversation-entry.js';
+import {questionDraftKey} from '../pick/game/question-drafts.js';
 export const CONVERSATION_KEY='tastiq.conversation.game.v1';
 export const conversationStorageKey=domain=>`tastiq.conversation.${domain}.v1`;
 const clone=value=>value==null?value:structuredClone(value);
@@ -7,12 +9,25 @@ const recoveryOf=value=>typeof value?.error==='string'&&value.error?{error:value
  id:value.state?.id,revision:value.state?.revision,failedAction:value.state?.failedAction??null}:null;
 
 // Transport, snapshots and drafts are independent of DOM. Reload is always a free resume.
-export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation'}={}) {
+export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false}={}) {
  if(!['game','film','series','cartoon'].includes(domain)||typeof storageKey!=='string'||!storageKey||domain!=='game'&&storageKey===CONVERSATION_KEY)throw TypeError('Некорректный раздел подбора');
  const scoped=state=>state&&(domain==='game'?state.domain==null||state.domain==='game':state.domain===domain);
  let snapshot=null,drafts={},previous=null,correctionCheckpoint=null,persistent=Boolean(storage),generation=0,busy=false,error=null,retryBody=null,retryOptions={};
  try {const saved=JSON.parse(storage?.getItem(storageKey)??'null');if(saved?.version===1){if(saved.snapshot?.state?.version===1&&saved.snapshot?.screen&&scoped(saved.snapshot.state)){snapshot=saved.snapshot;if(saved.drafts&&typeof saved.drafts==='object')drafts=saved.drafts;}if(saved.previous?.snapshot?.state?.version===1&&saved.previous.snapshot.screen&&scoped(saved.previous.snapshot.state))previous=saved.previous;}}catch { /* invalid storage is not trusted */ }
  try {const saved=JSON.parse(storage?.getItem(storageKey)??'null');if(saved?.version===1&&saved.correctionCheckpoint?.snapshot?.state?.version===1&&saved.correctionCheckpoint.snapshot.screen?.type==='result'&&saved.correctionCheckpoint.snapshot.state.result&&scoped(saved.correctionCheckpoint.snapshot.state)&&saved.correctionCheckpoint.drafts&&typeof saved.correctionCheckpoint.drafts==='object')correctionCheckpoint=saved.correctionCheckpoint;}catch {}
+ if(localStart&&(!snapshot||snapshot.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.state.turns.length&&!snapshot.error)){
+  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,...(snapshot?{id:snapshot.state.id}:{})});
+  // v3 draft keys include question wording and options. Upgrade a pristine entry
+  // without hiding words or genre choices written before quick wishes existed.
+  if(snapshot?.screen?.question){
+   const from=questionDraftKey(snapshot.state,snapshot.screen.question),to=questionDraftKey(initial.state,initial.screen.question);
+   if(from!==to&&Object.hasOwn(drafts,from)&&!Object.hasOwn(drafts,to)){
+    const options=new Set(initial.screen.question.options.map(option=>option.id));
+    const draft=cleanDraft(drafts[from]);drafts[to]={...draft,selected:draft.selected.filter(id=>options.has(id))};
+   }
+  }
+  snapshot=initial;
+ }
  error=recoveryOf(snapshot)?.error??null;
  if(error&&snapshot.retryable!==false)retryBody={state:clone(snapshot.state),action:{type:'retry'},...(uid?{uid}:{})};
  const save=()=>{try{if(!storage)throw Error();storage.setItem(storageKey,JSON.stringify({version:1,snapshot,drafts,previous,correctionCheckpoint}));}catch{persistent=false;}};
@@ -49,7 +64,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
   get canRestorePrevious(){return Boolean(previous&&previous.snapshot.state.id!==snapshot?.state?.id);},
   draft(key){return cleanDraft(drafts[key]);},
   saveDraft(key,value){drafts[key]=cleanDraft(value);save();},
-  start(){return execute({...(snapshot?{state:clone(snapshot.state)}:{mode:mode==='free'?'free':'guided'}),...(uid?{uid}:{})},{resumeFailure:recoveryOf(snapshot)});},
+  start(){if(localStart&&snapshot?.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.error){save();notify();return Promise.resolve(clone(snapshot));}return execute({...(snapshot?{state:clone(snapshot.state)}:{mode:mode==='free'?'free':'guided'}),...(uid?{uid}:{})},{resumeFailure:recoveryOf(snapshot)});},
   send(action){if(action.type==='correct'&&snapshot?.state?.result){correctionCheckpoint={snapshot:clone(snapshot),drafts:clone(drafts)};delete correctionCheckpoint.snapshot.error;delete correctionCheckpoint.snapshot.retryable;correctionCheckpoint.snapshot.state.failedAction=null;save();}if(action.type==='restart'&&snapshot){previous={snapshot:clone(snapshot),drafts:clone(drafts)};save();}return execute({...(snapshot?{state:clone(snapshot.state)}:{}),action:clone(action),...(uid?{uid}:{})},{reset:action.type==='restart'});},
   retry(){if(error&&snapshot?.retryable===false&&snapshot.error===error)return Promise.resolve(null);return retryBody?execute(clone(retryBody),retryOptions):api.send({type:'retry'});},
   restorePrevious(){return previous?execute({state:clone(previous.snapshot.state),...(uid?{uid}:{})},{reset:true,restoredDrafts:clone(previous.drafts??{}),clearPrevious:true,resumeFailure:recoveryOf(previous.snapshot)}):Promise.resolve(null);},

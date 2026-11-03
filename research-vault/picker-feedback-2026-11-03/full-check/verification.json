@@ -1,0 +1,33 @@
+{
+  "tests": {
+    "passed": 563,
+    "failed": 0
+  },
+  "syntaxFiles": 16,
+  "build": "Pass",
+  "httpStub": "Pass",
+  "staticFiles": 79,
+  "staticMismatches": [],
+  "paidCalls": 0,
+  "estimatedUsd": 0,
+  "sourceReview": "Pass after fixes",
+  "nativeConsoleErrors": 0,
+  "main": {
+    "port": 5177,
+    "pid": 67920
+  },
+  "qaStopped": 70824,
+  "viewportReset": true,
+  "corrections": [
+    "old v3 entry drafts",
+    "neutral more prompt",
+    "desktop Next visibility",
+    "own-answer reveal/focus"
+  ],
+  "targetBranch": "main",
+  "autoDeploy": {
+    "main": false,
+    "codex/workspace-usability-20261103": false
+  },
+  "newLiveModelQuality": "not measured"
+}

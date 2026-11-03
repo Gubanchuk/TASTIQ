@@ -38,3 +38,7 @@ Plan/taste/familiarity независимы; знакомство не запр�
 Родительский свежий пакет:540/540 tests, build exit0, offline HTTP stub, source delta Pass46/46. Реальные controllers/stores/catalogs, AI_ACCESS=off/injected plan/pick; synthetic reasons не human fit. F1 first content: single1280 title y598–623; tiny320 title y695–717, empty heading y678–738. F2 Victoria3 title y641–671 при320×740 и621–654 при390×844. Tested widths без overflow. Documenter не запускал tests/server/browser и не присваивает finish verdict.
 
 Detector один раз: exit0/58findings=52advisories+6inherited warnings; повторно не запускался. F3 синхронизация не отменяет paper drift/чужие records. Новых paid calls0/$0, imagegen0, commit/push/deploy0. Human fit/physical touch/реальный screen reader неизвестны; новый UI ещё не одобрен. Старые receipts/budgets/user states не переписаны.
+
+## Коррекция по обратной связи 03.11.2026
+
+Общие входы теперь /pick/start/; внешний мир и бренд прежние. Первый вопрос shared/conversation-entry.js создаётся без API. В shared/question-form.js желания выше раскрываемых жанров/ограничений/своих слов, нейтральные ответы ниже. В выдаче доступны more/уточнение/undo без перезапуска анкеты. Текущий проверенный scope и ограничения: docs/PICKER_FEEDBACK_2026-11-03.md; прежнее landing byte-identical относится к предыдущей переработке.

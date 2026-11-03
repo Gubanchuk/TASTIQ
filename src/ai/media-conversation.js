@@ -66,7 +66,7 @@ export async function aiMediaConversation(catalog,state,{api=requestResponse,kno
   const input=inputFor(catalog,state,knownTitles);
   if(input===null)return {error:'Запрос не отправлен: раздел или контекст разговора некорректен либо превышает допустимый размер.',notRequested:true,retryable:false};
   const schema=schemaFor(catalog.dict.features),request={model:AI.model,max_output_tokens:6500,reasoning:{effort:AI.effort},text:{format:{type:'json_schema',name:'tastiq_media_conversation',strict:true,schema}},
-    instructions:`${INSTRUCTIONS}\nMode ${state.mode}: ${state.mode==='free'?'the model controls conversation sequencing within the same evidence contract.':'guided invariants require one useful clarification after a broad direction unless the own answer is already specific.'}`,
+    instructions:`${INSTRUCTIONS}\nMode ${state.mode}: ${state.mode==='free'?'the model controls conversation sequencing within the same evidence contract.':'guided invariants require one useful clarification after a broad genre unless the answer is already specific. Explicitly selected wishes and avoidances carry the same meaning as typed words; do not repeat a resolved question merely because the user selected buttons.'}`,
     input,store:false,service_tier:'default'};
   if(maxCostUsd!==Infinity) {
     const reserve=reserveCost(request);if(!Number.isFinite(maxCostUsd)||maxCostUsd<0||reserve==null||reserve>maxCostUsd)return {error:'Запрос не отправлен: оставшийся бюджет недостаточен или цена модели неизвестна.',notRequested:true,retryable:false};

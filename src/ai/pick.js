@@ -78,12 +78,12 @@ export function checkPicks(out, rows, n = AI.picks, ranked = []) {
  * Asks the model for four picks. Returns { picks: [{ id, reason, caveat, likelySeen, own }], understood, ms, usage } or
  * { error } when the engine's picks should stay.
  */
-export async function aiPick(catalogs, state, { wish = '', previous = [], api = requestResponse, maxCostUsd = Infinity } = {}) {
+export async function aiPick(catalogs, state, { wish = '', previous = [], alreadyShown = [], api = requestResponse, maxCostUsd = Infinity } = {}) {
   const catalog = catalogs[state?.domain];
   if (!catalog) return { error: 'нет домена' };
   const cleanWish = String(wish ?? '').replace(/\s+/g, ' ').trim().slice(0, 300);
   // What was shown and did not suit («Не то? Скажи словами») cannot come back, from the list or as the model's own.
-  const shown = new Set(previous);
+  const shown = new Set([...previous,...alreadyShown]);
   const limit = candidateLimit(state.domain, Boolean(cleanWish));
   const detailed = cleanWish ? AI.shortlistWithWish : AI.shortlist;
   const all = candidatesOf(catalog, state, limit + shown.size);
@@ -96,7 +96,7 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], api = 
   const howMany = AI.spares
     ? `Выбери ровно ${total} разных тайтлов по порядку. Первые ${AI.picks} покажу сразу, первый — лучший; остальные ${AI.spares} — запасные, по очереди встанут на место того, что человек уже видел.`
     : `Выбери ровно ${AI.picks} разных тайтла, первый — лучший.`;
-  const content = `${describePerson(state, catalog, { wish: cleanWish, previous })}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} Бери из списка (id копируй из строки кандидата) или не больше ${AI.ownPicks} своих (id пустой, название и год).`;
+  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} Бери из списка (id копируй из строки кандидата) или не больше ${AI.ownPicks} своих (id пустой, название и год).`;
   const started = Date.now();
   const request = {
       model: AI.model,

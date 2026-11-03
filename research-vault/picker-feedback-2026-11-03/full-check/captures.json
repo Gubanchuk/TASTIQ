@@ -1,0 +1,41 @@
+{
+  "rawNativeRasters": {
+    "game-entry-desktop.jpg": [
+      1270,
+      714
+    ],
+    "game-entry-final.jpg": [
+      1270,
+      714
+    ],
+    "game-example-390.jpg": [
+      380,
+      822
+    ],
+    "game-plan-pending.jpg": [
+      1270,
+      714
+    ],
+    "library-evening-draft.jpg": [
+      1265,
+      712
+    ],
+    "library-filter-390.jpg": [
+      375,
+      812
+    ],
+    "series-first-320-confirmed.jpg": [
+      310,
+      736
+    ],
+    "series-first-320.jpg": [
+      380,
+      822
+    ]
+  },
+  "excludedAs320Evidence": [
+    "series-first-320.jpg"
+  ],
+  "canonicalDesktop": "game-entry-final.jpg",
+  "canonical320": "series-first-320-confirmed.jpg"
+}

@@ -1,0 +1,31 @@
+{
+  "staticFiles": 79,
+  "mismatches": [],
+  "paidCalls": 0,
+  "tests": {
+    "passed": 555,
+    "failed": 0
+  },
+  "httpStub": "Pass",
+  "build": "Pass",
+  "main": {
+    "port": 5177,
+    "pid": 47808
+  },
+  "native": {
+    "entryDesktop": true,
+    "entry390": true,
+    "seriesFirst390": true,
+    "seriesMore390": true,
+    "cartoonFirst320": true,
+    "moreRetryFocus": "РўРІРѕРё РІР°СЂРёР°РЅС‚С‹ РЅР° СЌС‚РѕС‚ РІРµС‡РµСЂ",
+    "gameConsoleErrors": 0
+  },
+  "limitations": [
+    "Real model response quality not evaluated",
+    "Cold first submitted request still depends on network/server startup",
+    "Camera/clip screenshots excluded"
+  ],
+  "qaStopped": true,
+  "viewportReset": true
+}

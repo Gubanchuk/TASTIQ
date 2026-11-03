@@ -32,7 +32,7 @@ const metadata=new Map(),requested=new Set(),failedImages=new Set(),openDetails=
 let noticeTimer,feedbackQueue=Promise.resolve(),feedbackQueued=0,feedbackDirty=false;
 const date=value=>{const at=new Date(value);return Number.isFinite(at.valueOf())?at.toLocaleDateString('ru',{day:'numeric',month:'short',year:'numeric'}):'Дата не сохранена';};
 const button=(label,act,attrs='',primary=false)=>`<button type="button" class="library-button${primary?' primary':''}" data-act="${act}" ${attrs}>${label}</button>`;
-const pickLink=(label='Подобрать')=>`<a class="library-button" href="/#doors">${label} ${icon('arrow')}</a>`;
+const pickLink=(label='Подобрать')=>`<a class="library-button" href="/pick/start/">${label} ${icon('arrow')}</a>`;
 function notice(text){$('#library-notice').textContent=text;$('#library-notice').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>{$('#library-notice').hidden=true;},5000);}
 
 function records() {

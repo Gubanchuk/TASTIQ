@@ -4,6 +4,7 @@
   "buildCommand": "npm run build",
   "git": {
     "deploymentEnabled": {
+      "main": false,
       "codex/workspace-usability-20261103": false
     }
   }

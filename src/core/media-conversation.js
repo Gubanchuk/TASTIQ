@@ -1,3 +1,4 @@
+import {initialConversation,initialDirectionQuestion} from '../server/public/shared/conversation-entry.js';
 // Separate media adapter: today's evidence never silently becomes permanent taste.
 import { initialState } from './dialogue.js';
 import { validateSessionTime, currentSessionMinutes, isSessionTimeSourceRetracted } from './session-time.js';
@@ -24,9 +25,7 @@ const seriesContext=s=>s.context?.format!=='movie'&&(s.domain==='series'||s.cont
 const scopedUncertainties=(s,list)=>seriesContext(s)?list:list.filter(text=>text!==seriesUncertainty);
 const endedQuestion=()=>({...q('only_ended','Сериал должен быть полностью закончен?',endedOptions,'Законченная история может быть и в ещё выходящем сериале. Уточню, какой статус тебе подходит.'),multiple:false});
 const isEndedQuestion=value=>value?.id==='only_ended'&&value.options?.length===2&&endedOptions.every(([id,label])=>value.options.some(o=>o.id===id&&o.label===label));
-const direction = domain => q('direction',domain==='series'?'Какой сериал хочется сегодня?':domain==='cartoon'?'Какую анимацию хочется сегодня?':'Какой фильм хочется сегодня?',[
-  ['comedy','Комедия'],['drama','Драма'],['thriller','Триллер'],['adventure','Приключения'],['fantasy','Фантастика'],['detective','Детектив'],
-],'Выбери направления или опиши своими словами. Можно пока не знать.');
+const direction = initialDirectionQuestion;
 const cards = result => [result?.top,...(result?.alternatives??[])].filter(Boolean);
 function ids(value,max=500) {
   if(value==null)return [];
@@ -62,7 +61,7 @@ function validateContext(value) {
 }
 function checkedQuestion(value,{planner=false}={}) {
   if(!object(value)||!text(value.id,100)||!text(value.title,220)||typeof value.why!=='string'||value.why.length>220
-    ||typeof value.multiple!=='boolean'||!Array.isArray(value.options)||value.options.length>6
+    ||typeof value.multiple!=='boolean'||!Array.isArray(value.options)||value.options.length>(!planner&&value.id==='direction'?20:6)
     ||value.options.some(o=>!object(o)||!text(o.id,100)||!text(o.label,100))
     ||new Set(value.options.map(o=>o.id)).size!==value.options.length||!Array.isArray(value.controls)||value.controls.some(v=>!controls.includes(v)))throw fail('Не удалось подготовить вопрос.');
   if(planner&&(!exactKeys(value,['id','title','why','options','multiple','controls'])||value.controls.length!==3||new Set(value.controls).size!==3
@@ -229,9 +228,7 @@ function checkedFacts(s,list,dict) {
 
 export function newMediaConversation({id,domain='film',mode}={}) {
   if(!domains.includes(domain))throw fail('Неизвестный раздел просмотра.');
-  return {version:1,domain,id:clean(id,100)||crypto.randomUUID(),revision:0,mode:mode==='free'?'free':'guided',phase:'direction',context:blankContext(),contextEvidence:blankEvidence(),
-    turns:[],facts:[],question:direction(domain),summary:'',uncertainties:[],retractions:[],sessionTime:null,result:null,provisional:false,needsPlan:false,failedAction:null,
-    familiar:emptyFamiliar(),replacement:null,factRemovalUndo:null};
+  return initialConversation({domain,id:clean(id,100)||undefined,mode});
 }
 export function normalizeMediaConversation(input,expectedDomain) {
   if(input==null)return newMediaConversation({domain:expectedDomain??'film'});
@@ -240,10 +237,10 @@ export function normalizeMediaConversation(input,expectedDomain) {
     ||!Array.isArray(input.facts)||input.facts.length>16||!Array.isArray(input.retractions)||input.retractions.length>64||!Array.isArray(input.uncertainties)||input.uncertainties.length>8
     ||input.uncertainties.some(v=>typeof v!=='string'||v.length>240)||typeof input.summary!=='string'||input.summary.length>1000)throw fail('Сохранённый разговор не удалось прочитать. Начни новый подбор.');
   const s=structuredClone(input),seen=new Set();
-  s.context=validateContext(s.context);s.contextEvidence=s.contextEvidence??blankEvidence();
+  s.browseSeen=ids(s.browseSeen);s.context=validateContext(s.context);s.contextEvidence=s.contextEvidence??blankEvidence();
   for(const t of s.turns) {
     if(!object(t)||!text(t.id,100)||seen.has(t.id)||typeof t.answer!=='string'||t.answer.length>2400||typeof t.text!=='string'||t.text.length>1600
-      ||!['answer',...controls].includes(t.kind)||!Array.isArray(t.selected)||t.selected.length>6||t.selected.some(o=>!text(o?.id,100)||!text(o?.label,100))
+      ||!['answer',...controls].includes(t.kind)||!Array.isArray(t.selected)||t.selected.length>(t.question?.id==='direction'?20:6)||t.selected.some(o=>!text(o?.id,100)||!text(o?.label,100))
       ||t.supersedes!=null&&(!Array.isArray(t.supersedes)||t.supersedes.length>24||t.supersedes.some(id=>typeof id!=='string'))
       ||t.superseded!=null&&typeof t.superseded!=='boolean')throw fail('Некорректный ответ в истории разговора.');
     seen.add(t.id);t.question=checkedQuestion(t.question);if(t.context)t.context=validateContext(t.context);
@@ -280,7 +277,7 @@ export function normalizeMediaConversation(input,expectedDomain) {
     if(!object(s.factRemovalUndo)||Object.hasOwn(s.factRemovalUndo,'factRemovalUndo'))throw fail('Некорректная отмена снятого вывода.');
     const undo=normalizeMediaConversation({...s.factRemovalUndo,factRemovalUndo:null},s.domain);s.factRemovalUndo=Object.fromEntries(Object.entries(undo).filter(([k])=>k!=='factRemovalUndo'));
   }
-  if(![null,undefined,'plan','pick','replace'].includes(s.failedAction))throw fail('Некорректное действие восстановления.');
+  if(![null,undefined,'plan','pick','replace','more'].includes(s.failedAction))throw fail('Некорректное действие восстановления.');
   s.failedAction=s.failedAction??null;s.uncertainties=scopedUncertainties(s,s.uncertainties);return s;
 }
 export function mediaFallbackQuestion(s) {
@@ -318,10 +315,10 @@ export function answerMediaConversation(input,action={}) {
   if(action.type==='restart')return newMediaConversation({domain:s.domain,mode:s.mode});
   if(!action.type)return s;
   if(action.type==='undo_fact_removal')return s.factRemovalUndo?{...structuredClone(s.factRemovalUndo),revision:s.revision+1,factRemovalUndo:null,failedAction:null}:s;
-  if(['familiar_mark','familiar_unmark','familiar_keep','replace_familiar','undo_replacement'].includes(action.type)) {
+  if(['familiar_mark','familiar_unmark','familiar_keep','replace_familiar','more','undo_replacement'].includes(action.type)) {
     if(s.phase!=='result'||!s.result?.top)throw fail('Это действие доступно на вариантах результата.');
     if(action.type==='undo_replacement') {const undo=s.familiar.undo;if(!undo)return s;s.result=undo.result;s.familiar={...s.familiar,marked:undo.marked,keep:undo.keep,hidden:undo.hidden,undo:null};s.replacement=undo.replacement;}
-    else if(action.type!=='replace_familiar') {
+    else if(!['replace_familiar','more'].includes(action.type)) {
       if(!cards(s.result).some(c=>c.id===action.id))throw fail('Этого произведения нет среди текущих вариантов.');
       if(action.type==='familiar_mark'){s.familiar.marked=ids([...s.familiar.marked,action.id],4);s.familiar.keep=s.familiar.keep.filter(id=>id!==action.id);}
       else {s.familiar.marked=s.familiar.marked.filter(id=>id!==action.id);if(action.type==='familiar_keep')s.familiar.keep=ids([...s.familiar.keep,action.id]);}
@@ -375,8 +372,9 @@ export function answerMediaConversation(input,action={}) {
   const correcting=action.type==='correct';if(!correcting&&action.type!=='answer')throw fail('Неизвестное действие.');
   const question=correcting?q(`correction:${s.revision+1}`,'Что нужно изменить?'):s.question;
   if(!question||!correcting&&action.questionId!==question.id)throw fail('Вопрос уже изменился. Ответь на текущий.');
-  if(action.text!=null&&(typeof action.text!=='string'||action.text.length>1600)||action.selected!=null&&(!Array.isArray(action.selected)||action.selected.length>6||action.selected.some(id=>typeof id!=='string')))throw fail('Ответ слишком длинный или имеет неверную форму.');
-  const kind=correcting?'answer':controls.includes(action.kind)?action.kind:'answer',chosen=ids(action.selected??[],6),selected=kind==='answer'?question.options.filter(o=>chosen.includes(o.id)):[];
+  const selectionLimit=question.id==='direction'?20:6;
+  if(action.text!=null&&(typeof action.text!=='string'||action.text.length>1600)||action.selected!=null&&(!Array.isArray(action.selected)||action.selected.length>selectionLimit||action.selected.some(id=>typeof id!=='string')))throw fail('Ответ слишком длинный или имеет неверную форму.');
+  const kind=correcting?'answer':controls.includes(action.kind)?action.kind:'answer',chosen=ids(action.selected??[],selectionLimit),selected=kind==='answer'?question.options.filter(o=>chosen.includes(o.id)):[];
   if(kind==='answer'&&(selected.length!==chosen.length||!question.multiple&&selected.length>1))throw fail('Проверь выбранные ответы.');
   const own=clean(action.text);if(kind==='answer'&&!selected.length&&!own)throw fail('Напиши ответ, выбери вариант или пропусти вопрос.');
   const turn={id:`${s.id}:${s.revision+1}`,question,selected:selected.map(({id,label})=>({id,label})),text:own,kind,answer:[...(kind==='answer'?selected.map(o=>o.label):[neutral[kind]]),own].filter(Boolean).join('; ')};
@@ -433,7 +431,8 @@ export function applyMediaConversationProposal(state,proposal,dict,expectedRevis
     } else {
       if(proposal.question!==null)throw fail('В проверке понимания вопрос должен отсутствовать.');
       const meaningful=state.turns.filter(t=>!t.superseded&&t.question.id!=='context');
-      if(state.mode==='guided'&&meaningful.length===1&&meaningful[0].question.id==='direction'&&meaningful[0].text.length<60)throw fail('Одного направления мало: уточним желаемое впечатление.');
+      const explicitWish=meaningful[0]?.selected?.some(option=>option.id.startsWith('mood_')||option.id.startsWith('avoid_'));
+      if(state.mode==='guided'&&meaningful.length===1&&meaningful[0].question.id==='direction'&&meaningful[0].text.length<60&&!explicitWish)throw fail('Одного направления мало: уточним желаемое впечатление.');
     }
     if(clarifyEnded)question=endedQuestion();
     const uncertainties=[...(clarifyEnded?[endedUncertainty]:[]),...proposal.uncertainties];

@@ -1,3 +1,4 @@
+import {questionFormHtml,neutralAnswerLabels,focusOwnAnswer} from '/shared/question-form.js';
 import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor} from '/shared/workspace-ui.js';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
@@ -21,7 +22,7 @@ const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const nameOf=card=>card.ru||card.name||card.title||'Игра';
 const stanceLabel=fact=>fact.scope==='history'?'Прошлый опыт':({want:'Хочется',avoid:'Меньше',require:'Обязательно',exclude:'Исключить',indifferent:'Неважно',unknown:'Неясно',conditional:'При условии',history:'Прошлый опыт'}[fact.stance]??'Неясно');
-const neutralLabels={unknown:'Пока не знаю',indifferent:'Неважно',none:'Ничего из этого'};
+const neutralLabels=neutralAnswerLabels;
 const contextReady=screen=>Boolean(screen?.context?.platform&&screen.context.company&&(screen.context.company!=='group'||screen.context.partySize));
 const button=(label,act,extra='',primary=false)=>`<button type="button" class="btn ${primary?'btn-primary':'btn-secondary'}" data-act="${act}"${extra.includes('data-focus=')?'':` data-focus="${act}"`} ${extra}>${esc(label)}</button>`;
 let storage,uid=null;
@@ -38,7 +39,7 @@ const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:a
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
  return response.ok?response.json():null;
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});}});
-const client=createConversationClient({fetch,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),onChange:render});
+const client=createConversationClient({localStart:true,fetch,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),onChange:render});
 const knownQuestionDrafts=new Set();
 try {const saved=JSON.parse(storage?.getItem(CONVERSATION_KEY)??'null');for(const drafts of [saved?.drafts,saved?.previous?.drafts])for(const key of Object.keys(drafts??{}))knownQuestionDrafts.add(key);}catch { /* no saved keys in a memory-only visit */ }
 const currentDraft=question=>client.draft(questionDraftKey(client.state,question));
@@ -110,16 +111,8 @@ function understanding(screen) {
  initCustomSelects(document);
 }
 function questionHtml(question) {
- const draft=currentDraft(question),allowText=question.allowText!==false;
- const ownFirst=question.id==='direction'&&allowText;
- const options=(question.options??[]).length?`<div class="game-question-options${ownFirst?' game-direction-options':''}" role="group" aria-label="${question.multiple?'Можно выбрать несколько вариантов':'Варианты ответа'}">${question.options.map(o=>`<button type="button" class="game-option" data-act="option" data-id="${esc(o.id)}" aria-pressed="${draft.kind==='answer'&&draft.selected.includes(o.id)}"${client.busy?' disabled':''}><span>${esc(o.label)}</span><svg class="game-option-check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10 3.5 3.5 7.5-7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`).join('')}</div>`:'';
- const optionsHelp=question.multiple&&options&&!ownFirst?'<p class="game-help">Можно выбрать несколько вариантов и добавить свои слова.</p>':'';
- const own=allowText?`<label class="game-field" id="answer-field" for="answer-text"${draft.kind!=='answer'?' hidden':''}>Своими словами${!ownFirst&&question.options?.length?' — вместо вариантов или в дополнение':''}<textarea class="input" id="answer-text" name="answer" maxlength="1600" rows="3" placeholder="Что хочется сегодня? Что важно или точно не подходит?">${esc(draft.text)}</textarea></label>`:'';
- const neutral=`<div class="game-neutral-options" role="group" aria-label="Другой ответ">${(question.controls??[]).filter(x=>neutralLabels[x]).map(kind=>`<button type="button" class="btn btn-secondary btn-s" data-act="neutral" data-kind="${kind}" aria-pressed="${draft.kind===kind}"${client.busy?' disabled':''}>${neutralLabels[kind]}</button>`).join('')}</div><div id="neutral-status" class="game-neutral-status" role="status">${neutralStatusHtml(draft)}</div>`;
- return `<h1>${esc(question.title)}</h1>${question.why?`<p class="game-help">${esc(question.why)}</p>`:''}`
-  +'<form id="answer-form" data-form="answer">'
-  +(ownFirst?own+neutral+'<p class="game-choice-label">Или выбери направление</p>'+options+optionsHelp:options+optionsHelp+own+neutral)
-  +'</form>';
+ const draft=currentDraft(question);
+ return questionFormHtml(question,draft,{busy:client.busy,neutralStatus:neutralStatusHtml(draft)});
 }
 function auxiliaryHtml(screen) {
  if(screen.type!=='question'||screen.question.allowText===false)return '';
@@ -202,9 +195,10 @@ function render() {
   ?`${contextReady(screen)?button('Проверить запрос','review',client.busy||reviewBlocked?' disabled':''):''}<button type="submit" form="answer-form" class="btn btn-primary"${client.busy||needsChoice?' disabled':''}>${client.busy?'Продолжаю…':'Дальше'}<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>${contextReady(screen)?`<p class="game-draft-hint" id="review-draft-hint"${reviewBlocked?'':' hidden'}>Чтобы учесть этот ответ, нажми «Дальше».</p>`:''}`
   :screen.type==='review'?button('Изменить пожелание','focus-correction',disabled)+button('Подобрать игры','confirm',disabled,true)
   :(marked.length?button(`Заменить отмеченные (${marked.length})`,'replace-familiar',disabled,true):'')
+   +button('Показать ещё','more',disabled,!marked.length)+button('Уточнить запрос','focus-correction',disabled)
    +(client.state.familiar?.undo?button('Вернуть предыдущие варианты','undo-replacement',disabled):'');
  if(screen.canUndoFactRemoval)$('#action-controls').insertAdjacentHTML('beforeend',button('Отменить удаление','undo-fact-removal',disabled));
- $('#actions').hidden=prominent||screen.type==='result'&&!marked.length&&!client.state.familiar?.undo&&!screen.canUndoFactRemoval;
+ $('#actions').hidden=prominent;
  $('#main').setAttribute('aria-busy',String(client.busy));
  if(!client.busy&&navigationFocus?.focus?.startsWith('remove-fact:')&&screen.canUndoFactRemoval)$('#action-controls [data-act="undo-fact-removal"]')?.focus({preventScroll:true});
  else if(!newScreen&&!client.busy&&!restoreView(navigationFocus??focus)&&navigationFocus)$('#action-controls button')?.focus({preventScroll:true});
@@ -250,8 +244,10 @@ function persistAnswer() {
  const draft=currentDraft(question),input=$('#answer-text');if(input)draft.text=input.value;
  saveCurrentDraft(question,draft);return draft;
 }
+function focusResultStart(){const heading=$('#main h1');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}$('#stage').scrollIntoView({block:'start',behavior:'auto'});}
 async function navigate(action,{origin=null}={}) {
  if(client.busy)return null;
+ const browseNavigation=['more','undo_replacement'].includes(action.type)||action.type==='retry'&&client.state?.failedAction==='more';
  if(action.type==='review'&&client.screen?.type==='question'&&hasPendingAnswer(currentDraft(client.screen.question)))return null;
  currentRequest=action.type;
  pendingAction=action;pendingOrigin=client.state;
@@ -272,6 +268,7 @@ async function navigate(action,{origin=null}={}) {
  }
  if(action.type==='remove_fact'&&result&&!client.error){localNotice='Убрал из понимания запроса.';render();}
  if(action.type==='undo_fact_removal'&&result&&!client.error){localNotice='Удаление отменено.';render();}
+ if(result&&!client.error&&client.screen?.type==='result'&&browseNavigation)focusResultStart();
  navigationFocus=null;return result;
 }
 function completeBackDraft(result) {
@@ -333,14 +330,20 @@ document.addEventListener('click',event=>{
   const draft=act==='option'?chooseOption(current,el.dataset.id,question.multiple):chooseNeutral(current,el.dataset.kind);
   saveCurrentDraft(question,draft);paintSelections(draft);return;
  }
+ if(act==='own-answer'){
+  if(client.busy){event.preventDefault();return;}
+  const question=client.screen?.question;if(!question)return;
+  const draft=currentDraft(question);if(draft.kind==='answer')return;
+  event.preventDefault();saveCurrentDraft(question,{...draft,kind:'answer'});paintSelections({...draft,kind:'answer'});focusOwnAnswer($('#answer-text'));return;
+ }
  if(act==='resume-answer'){
   const question=client.screen?.question;if(!question)return;const draft={...currentDraft(question),kind:'answer'};
-  saveCurrentDraft(question,draft);paintSelections(draft);$('#answer-text')?.focus();return;
+  saveCurrentDraft(question,draft);paintSelections(draft);focusOwnAnswer($('#answer-text'));return;
  }
  if(act==='example'){
   const draft=persistAnswer(),question=client.screen?.question;if(!draft||!question)return;
   const addition=`${draft.text.trim()?'\n':''}Пример: «${el.dataset.title}». `;draft.text=(draft.text+addition).slice(0,1600);draft.kind='answer';
-  saveCurrentDraft(question,draft);$('#answer-text').value=draft.text;$('#answer-text').focus();paintSelections(draft);return;
+  saveCurrentDraft(question,draft);$('#answer-text').value=draft.text;paintSelections(draft);focusOwnAnswer($('#answer-text'));return;
  }
  if(act==='toggle-context'){setContextOpen($('.game-context-panel').dataset.contextOpen!=='true');return;}
  if(act==='preview-clarify'){setContextOpen(true);$('#understanding [data-act="clarify"]')?.click();return;}
@@ -357,6 +360,7 @@ document.addEventListener('click',event=>{
    if(act==='familiar-keep')document.querySelector(`[data-focus="familiar:${CSS.escape(id)}"]`)?.focus({preventScroll:true});
   });return;
  }
+ if(act==='more')return void navigate({type:'more'});
  if(act==='replace-familiar')return void navigate({type:'replace_familiar'});
  if(act==='undo-replacement')return void navigate({type:'undo_replacement'});
  if(act==='evening-fit')return void updateEvening(el,{type:'fit',value:el.dataset.v});
@@ -366,7 +370,7 @@ document.addEventListener('click',event=>{
  if(act==='remove-fact'){lastRemovedFactFocus=el.dataset.focus;return void navigate({type:'remove_fact',key:el.dataset.key});}
  if(act==='undo-fact-removal')return void navigate({type:'undo_fact_removal'});
  if(act==='remove-time')return void navigate({type:'remove_time'});
- if(act==='retry'){currentRequest='retry';if(client.state?.failedAction||pendingAction.type==='resume'){pendingAction={type:'retry'};pendingOrigin=client.state;}localNotice='';navigationFocus=preserveView();persistAnswer();void client.retry().then(result=>{rememberAcceptedFamiliar(result);completeBackDraft(result);}).finally(()=>{navigationFocus=null;});return;}
+ if(act==='retry'){const browseRetry=client.state?.failedAction==='more'||pendingAction.type==='more';currentRequest='retry';if(client.state?.failedAction||pendingAction.type==='resume'){pendingAction={type:'retry'};pendingOrigin=client.state;}localNotice='';navigationFocus=preserveView();persistAnswer();void client.retry().then(result=>{rememberAcceptedFamiliar(result);completeBackDraft(result);if(browseRetry&&result&&!client.error&&client.screen?.type==='result')focusResultStart();}).finally(()=>{navigationFocus=null;});return;}
  if(['back','restart','review','confirm','continue'].includes(act))void navigate({type:act});
 });
 document.addEventListener('submit',event=>{

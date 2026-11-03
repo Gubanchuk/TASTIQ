@@ -9,6 +9,9 @@
 
 ## Правила проекта
 
+- Первый адаптивный вопрос использует общую для браузера и сервера фабрику. При изменении его текста/вариантов сохранять старые v3-черновики: ключ включает вопрос и опции. Проверять старое pristine-сохранение и restart→restore→reload, а не только новые черновики.
+- «Показать ещё» — нейтральное продолжение. Показанные произведения исключаются ради отсутствия повторов через `alreadyShown`; не описывать показ как отказ, знакомство или отрицательный вкус. Явные исключения и старый `previous` для настоящего отказа остаются отдельными. Проверять итоговый AI prompt, а не только state или подменный picker.
+
 - Vercel: npm run build → официальный Build Output API, static из src/server/public + Node24 function. HTTP handler в src/server/app.js, локальный listener в server.js; оба пути используют одну логику. В function только явный список runtime JSON, без .env/ledger/user journals/research. На Vercel journal временный в OS temp; локальные AI_EVAL_* туда не переносить, in-memory limits не считать общим постоянным cap. Читать docs/VERCEL_2026-11-02.md перед изменениями деплоя.
 
 - GitHub: origin https://github.com/Gubanchuk/TASTIQ.git, ветка main. Локальные ключи, NDJSON/логи, runtime, billing ledger и *.private.json исключены через .gitignore; не добавлять их принудительно. Автономные regression fixtures находятся в test/fixtures, unit-тесты не должны зависеть от пользовательского или платёжного журнала. Git push не является разрешением на деплой.

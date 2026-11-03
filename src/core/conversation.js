@@ -1,3 +1,4 @@
+import {initialConversation,initialDirectionQuestion,gameGenreDirections as directions} from '../server/public/shared/conversation-entry.js';
 // A game conversation owns today's goal; evidence is never silently promoted to permanent taste.
 import { initialState } from './dialogue.js';
 import { PLATFORMS } from './sieves.js';
@@ -10,14 +11,8 @@ const clean = (x, n = 1600) => typeof x === 'string' ? x.replace(/\s+/g, ' ').tr
 const failure = (message) => Object.assign(new Error(message), {status:400});
 const controls = ['unknown','indifferent','none'];
 const neutral = {unknown:'Пока не знаю',indifferent:'Не принципиально',none:'Ни один вариант не подходит'};
-const directions = [
-  ['rpg','RPG',null,'RPG'], ['action','Экшен',null,'Action'], ['shooter','Шутер','loop.shooting'],
-  ['strategy','Стратегия',null,'Strategy'], ['simulation','Симулятор',null,'Simulation'], ['racing','Гонки','loop.driving'],
-  ['puzzle','Головоломки','loop.puzzles'], ['adventure','Приключения',null,'Adventure'], ['survival','Выживание','loop.survival'],
-  ['horror','Хоррор','tone.creepy'], ['open_world','Открытый мир','freedom.open_world'], ['sandbox','Песочница','freedom.sandbox'],
-];
 const question = (id,title,options,why='',multiple=true) => ({id,title,why,options:options.map(o=>Array.isArray(o)?{id:o[0],label:o[1],...(o[2]?{feature:o[2]}:{})}:o),multiple,controls});
-export const directionQuestion = () => question('direction','Во что тянет сегодня?',directions,'Можно выбрать несколько направлений, описать своё или пока не знать.');
+export const directionQuestion = () => initialDirectionQuestion('game');
 const requiredQuestion = (...args) => ({...question(...args),allowText:false,controls:[]});
 const platformQuestion = () => requiredQuestion('platform','Где будешь играть?',Object.entries(PLATFORMS).map(([id,p])=>[id,p.label]),'Сейчас в каталоге игры для компьютера и Steam Deck.',false);
 const companyQuestion = () => requiredQuestion('company','Будешь играть один или вместе с кем-то?',[['solo','Один'],['friend','Вдвоём, в кооперативе'],['group','Компанией']], 'Это поможет проверить доступные режимы.',false);
@@ -72,8 +67,7 @@ const captureFactRemovalUndo=s=>normalizeFactRemovalUndo({facts:s.facts,retracti
   phase:s.phase,question:s.question,provisional:s.provisional,needsPlan:s.needsPlan,marked:s.familiar.marked,familiarUndo:s.familiar.undo,replacement:s.replacement});
 
 export function newConversation({id,mode}={}) {
-  return {version:1,id:clean(id,100)||crypto.randomUUID(),revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
-    context:{platform:null,company:null,partySize:null},turns:[],facts:[],question:directionQuestion(),summary:'',uncertainties:[],retractions:[],sessionTime:null,factRemovalUndo:null,result:null,provisional:false,needsPlan:false,familiar:emptyFamiliar(),replacement:null};
+  return initialConversation({id:clean(id,100)||undefined,mode});
 }
 
 export function normalizeConversation(input) {
@@ -83,7 +77,7 @@ export function normalizeConversation(input) {
     || !Array.isArray(input.retractions) || input.retractions.length>64) throw failure('Сохранённый разговор не удалось прочитать. Начни новый подбор.');
   if(input.turns.some(t=>!t?.id || typeof t.answer!=='string' || t.answer.length>2400 || !t.question?.id)) throw failure('Некорректный ответ в истории разговора');
   const s=structuredClone(input);
-  s.familiar=normalizeFamiliar(s.familiar);s.replacement=normalizeReplacement(s.replacement);
+  s.browseSeen=familiarIds(s.browseSeen);s.familiar=normalizeFamiliar(s.familiar);s.replacement=normalizeReplacement(s.replacement);
   s.factRemovalUndo=normalizeFactRemovalUndo(s.factRemovalUndo);
   s.mode=s.mode==='free'?'free':'guided';
   s.summary=clean(s.summary,1000); s.uncertainties=(s.uncertainties??[]).map(x=>clean(x,240)).slice(0,8);
@@ -110,7 +104,7 @@ function localFacts(s, turn) {
   for(const o of turn.selected) {
     const source=turn.question.options.find(x=>x.id===o.id);
     if(turn.question.id!=='direction' && !source?.feature)continue;
-    s.facts.push({key:`${turn.question.id}:${o.id}`,text:o.label,stance:turn.question.id==='avoidance'?'avoid':'want',scope:'today',
+    s.facts.push({key:`${turn.question.id}:${o.id}`,text:o.label,stance:turn.question.id==='avoidance'||o.id.startsWith('avoid_')?'avoid':'want',scope:'today',
       sourceId:turn.id,quote:o.label,feature:source?.feature??null,gameId:null,exposure:null});
   }
   s.facts=s.facts.slice(-16);
@@ -144,12 +138,12 @@ export function answerConversation(input, action={}) {
       familiar:{...s.familiar,marked:undo.marked,undo:undo.familiarUndo},failedAction:null,revision:s.revision+1};
     return s;
   }
-  if(['familiar_mark','familiar_unmark','familiar_keep','replace_familiar','undo_replacement'].includes(action.type)) {
+  if(['familiar_mark','familiar_unmark','familiar_keep','replace_familiar','more','undo_replacement'].includes(action.type)) {
     if(s.phase!=='result'||!s.result?.top)throw failure('Эти действия доступны на карточках результата.');
     if(action.type==='undo_replacement') {
       const undo=s.familiar.undo;if(!undo)return s;
       s.result=undo.result;s.familiar={...s.familiar,marked:undo.marked,keep:undo.keep,hidden:undo.hidden,undo:null};s.replacement=undo.replacement;
-    } else if(action.type!=='replace_familiar') {
+    } else if(!['replace_familiar','more'].includes(action.type)) {
       if(!resultCards(s.result).some(c=>c.id===action.id))throw failure('Этой карточки уже нет среди текущих вариантов.');
       const f=s.familiar;
       if(action.type==='familiar_mark') {f.marked=[...new Set([...f.marked,action.id])];f.keep=f.keep.filter(id=>id!==action.id);}

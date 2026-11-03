@@ -20,6 +20,12 @@ const reply = (s,text,patch={}) => reduce(s,{type:'answer',questionId:s.question
 const said = (text,domain='film') => reply(fresh({id:`test-${domain}`,domain}),text);
 const fact = (s,patch={}) => ({key:'goal',text:'Тёплая история',stance:'want',scope:'today',sourceId:s.turns.at(-1).id,quote:s.turns.at(-1).answer,feature:'tone.feelgood',titleId:null,exposure:null,titleIntent:null,...patch});
 const ev = (s,value,quote=s.turns.at(-1).answer) => ({value,sourceId:s.turns.at(-1).id,quote});
+
+test('quick wishes count as explicit desired experience when the planner can already summarize',()=>{
+ const state=reply(fresh({id:'quick-mood',domain:'film'}),'',{selected:['mood_relax','avoid_stress']});
+ const out=apply(state,proposal({action:'review',question:null}),dict);
+ assert.equal(out.error,undefined);assert.equal(out.state.phase,'review');
+});
 const accepted = (s,patch={}) => {const out=apply(s,proposal(patch),dict);assert.equal(out.error,undefined);return out.state;};
 
 test('three media entries expose a free-text first question without importing game or child context',()=>{

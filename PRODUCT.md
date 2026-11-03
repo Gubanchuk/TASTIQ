@@ -55,3 +55,7 @@ Real catalog data and real quotes in `data/catalog.json` and `data/catalog-scree
 3. Every claim in a pick points to a fact the person can check; the AI sentence is labelled as the model's opinion, not a fact.
 4. Show risks, not only reasons; never fake confidence.
 5. Corrections are instant and visible: the person can always see and edit what the system believes about them.
+
+## Picker feedback correction — 2026-11-03
+
+General entry actions now open /pick/start/ to choose the domain. The first question is shared with the server and rendered locally without an API request. Explicit wish buttons precede optional genre, avoidance and own-word details. Neutral controls follow the choices; the none control is absent from text-only questions. More continues the same request with unseen works, retains reasons/caveats and supports recovery/undo. Shown works are separate from familiarity and taste. The catalog is finite; fewer new cards and exhaustion are stated honestly. The landing's visual world remains approved; only general navigation targets changed in this correction. No new human-fit claim or paid model validation.

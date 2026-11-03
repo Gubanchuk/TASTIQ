@@ -175,3 +175,15 @@ body.product-page.library-page .library-filter-panel>summary{border-radius:14px}
  body.product-page #stage .game-proposal-featured h2{font-size:22px}
 }
 @media(prefers-reduced-motion:reduce){body.product-page *{transition:none!important;animation:none!important}}
+
+/* Optional answer details stay adjacent to their question. */
+.conversation-page .game-answer-extra{margin:14px 0 0;border:0;padding:0}
+.conversation-page .game-answer-extra>summary{cursor:pointer;font-size:14px;font-weight:500;line-height:1.6;color:var(--brand-primary);padding:10px 0;min-height:44px;text-underline-offset:4px}
+.conversation-page .game-answer-extra[open]>summary{margin-bottom:8px}
+.conversation-page .game-answer-extra .game-field{margin-top:0}
+.conversation-page .game-answer-extras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:16px;margin-top:8px}
+.conversation-page .game-answer-extras .game-answer-extra{min-width:0;margin-top:0}
+.conversation-page .game-answer-extras .game-answer-extra[open]{grid-column:1/-1}
+@media(max-width:760px){.conversation-page .game-answer-extras{grid-template-columns:1fr;row-gap:8px}}
+.conversation-page .game-neutral-options{border-top:1px solid var(--brand-line);padding-top:16px;margin-top:16px;gap:8px}
+.conversation-page .game-neutral-options .btn{white-space:normal;text-align:left;line-height:1.5}

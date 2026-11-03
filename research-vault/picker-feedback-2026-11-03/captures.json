@@ -1,0 +1,50 @@
+{
+  "policy": "Native bytes preserved. Raster size can differ proportionally from the CSS viewport; no resizing or image editing.",
+  "valid": [
+    "start-desktop-native.jpg",
+    "start-390-native.jpg",
+    "series-first-390-native.jpg",
+    "series-more-390-native.jpg",
+    "cartoon-first-320-native.jpg"
+  ],
+  "excluded": [
+    {
+      "file": "game-more-desktop.png",
+      "reason": "Camera capture; JPEG bytes despite png extension. Not part of final visual evidence."
+    },
+    {
+      "file": "start-390.png",
+      "reason": "Camera produced a 101x219 raster; insufficient mobile evidence."
+    },
+    {
+      "file": "start-390-clip.jpg",
+      "reason": "Clip capture distorted layout compared with native screenshot."
+    },
+    {
+      "file": "film-first-390.jpg",
+      "reason": "Clip capture distorted layout compared with native screenshot."
+    }
+  ],
+  "nativeRasterSizes": {
+    "start-desktop-native.jpg": [
+      1265,
+      712
+    ],
+    "start-390-native.jpg": [
+      390,
+      844
+    ],
+    "series-first-390-native.jpg": [
+      380,
+      822
+    ],
+    "series-more-390-native.jpg": [
+      380,
+      822
+    ],
+    "cartoon-first-320-native.jpg": [
+      310,
+      736
+    ]
+  }
+}

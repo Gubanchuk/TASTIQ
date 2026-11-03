@@ -85,7 +85,7 @@ function lengthOf(g) {
 }
 
 /** The person: domain, tonight, marked titles with reasons and complaints, preferences, wish. */
-export function describePerson(state, catalog, { wish = '', previous = [] } = {}) {
+export function describePerson(state, catalog, { wish = '', previous = [], alreadyShown = [] } = {}) {
   const { featureById, complaintByFeature, stops, company } = catalog.dict;
   const label = (f) => featureById.get(f)?.label ?? complaintByFeature.get(f)?.label ?? f;
   const domain = DOMAINS[state.domain];
@@ -144,9 +144,11 @@ export function describePerson(state, catalog, { wish = '', previous = [] } = {}
   // «Уже смотрел» on a result card: seen, so not to be picked again; a rating, when given, says how it went.
   const seen = (state.corrections ?? []).filter((c) => c.kind === 'played').map((c) => ({ g: catalog.byId.get(c.id), c })).filter((x) => x.g);
   if (seen.length) lines.push(`${state.domain === 'game' ? 'Уже играл' : 'Уже смотрел'} (сказал на подборе): ${seen.map(({ g, c }) => `${nameOf(g)}${c.reaction === 'like' ? ' — понравилось' : c.reaction === 'dislike' ? ' — не зашло' : ''}`).join(', ')}.`);
-  const notNow = state.session?.notNow ?? [];
+  const neutralShown = new Set(alreadyShown);
+  const notNow = (state.session?.notNow ?? []).filter(id=>!neutralShown.has(id));
   if (notNow.length) lines.push(`Отказался сейчас («не сейчас»): ${notNow.map((id) => catalog.byId.get(id)).filter(Boolean).map(nameOf).join(', ')}.`);
   if (previous.length) lines.push(`Уже показано и не устроило: ${previous.map((id) => catalog.byId.get(id)).filter(Boolean).map(nameOf).join(', ')}.`);
+  if (alreadyShown.length) lines.push(`Уже показано для выбора: ${alreadyShown.map(id=>catalog.byId.get(id)).filter(Boolean).map(nameOf).join(', ')}. Исключено только ради новых вариантов; это не означает отказ, неприязнь или знакомство. Продолжай тот же запрос без выводов о вкусе по факту показа.`);
   if (wish) lines.push('', `Пожелание своими словами: «${wish}»`);
   return lines.join('\n');
 }
