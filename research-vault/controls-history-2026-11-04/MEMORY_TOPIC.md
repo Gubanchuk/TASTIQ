@@ -8,4 +8,6 @@ Modern localStorage archive tastiq.selections.v1:30batches/1.5M characters, ре
 
 633tests+HTTPstub+build. Native4полныхпути×390/1440;16resultcards320,446/820/1024extra; all initial options/6long dynamic/neutral/drafts/context/back, replacements/more/undo, Libraryfilters/move/taste/forget, quality verdict/draft/reload/submit, keyboard/copy/search. SyntheticQA isolated, Responses0/$0. Impeccable + UX-review + UI/UX Pro Max + web-quality-audit + review-task; in-thread review, не независимый. Source/budget/brand/catalog/Family unchanged. Humanfit/physical touch/real screenreader/CWV неизвестны.
 
-Доставка разрешена в этом чате; финальные SHA/READY — deployment.json в том же evidence folder. Новые цвета/состояния/поведение зафиксированы PRODUCT/DESIGN/3briefs, design.json UTF-8 обновлён по факту. Исторические результаты не переписывать.
+Код `76db0f2` отправлен в `main`, Vercel production READY `dpl_9uuCTHFcPJfd53sCSBNPHpjJ24jD` с 05:24:55 МСК на `https://tastiq-drab.vercel.app/`. 16 публичных файлов совпали со сборкой, `/api/meta` 200, действие resume восстановило по четыре карточки во всех четырёх разделах при лимите $0, вызовы Responses отсутствовали. Native smoke 390×705, раскрытие и шапка исправны, горизонтального overflow нет, browser/early Vercel errors 0. QA 5180 остановлен, viewport сброшен. Источники `deployment.json`, `production-verification.json`, `production-mobile.png`.
+
+Новые цвета и состояния зафиксированы в PRODUCT, DESIGN и трёх описаниях поверхностей. Sidecar `design.json` обновлён в UTF-8. Исторические результаты не переписывать.

@@ -51,4 +51,8 @@ Impeccable bolder/polish/craft-floor, UI/UX Pro Max (локальная база
 
 ## Доставка
 
-Commit/push main и ручной prebuilt production разрешены владельцем. Точные SHA/deployment/HTTP/source checks после публикации — `research-vault/controls-history-2026-11-04/deployment.json` и `production-verification.json`. Коннектор Vercel вернул403 выбранной команды; используется ранее настроенный CLI, права/тарифы не расширяются.
+Коммит `76db0f2` отправлен в `main` и опубликован на [основном сайте](https://tastiq-drab.vercel.app/) в 05:24:55 МСК. Деплой `dpl_9uuCTHFcPJfd53sCSBNPHpjJ24jD` получил статус READY. Коннектор Vercel вернул 403, публикация прошла через ранее настроенный CLI.
+
+На основном адресе 16 файлов совпали со сборкой побайтно, `/api/meta` вернул 200. Два обработчика восстановили синтетические подборы во всех четырёх разделах с теми же 16 карточками и пустой квитанцией вызовов Responses при лимите $0. В браузере на 390×705 проверены раскрытие условий мультфильма, одна стрелка, шапка у верхнего края и отсутствие горизонтальной прокрутки. При проверке в консоли браузера и раннем журнале Vercel было 0 ошибок. QA-сервер 5180 остановлен, размер браузера сброшен.
+
+Доказательства публикации и проверки — [метаданные деплоя](../research-vault/controls-history-2026-11-04/deployment.json), [HTTP и браузер](../research-vault/controls-history-2026-11-04/production-verification.json), [мобильный скриншот](../research-vault/controls-history-2026-11-04/production-mobile.png).

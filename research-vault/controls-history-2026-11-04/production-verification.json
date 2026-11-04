@@ -1,0 +1,124 @@
+{
+  "host": "https://tastiq-drab.vercel.app",
+  "checkedAt": "2026-11-04T09:29:20.873Z",
+  "staticFiles": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "0be92bc90d848797dc0ba47d2b3ae1d69ca75aa7260c58afcd59747858cd4565"
+    },
+    {
+      "path": "/pick/game/",
+      "status": 200,
+      "sha256": "0afcfbe4f7c2f8edda2e695ff97364bfb0c0249660cb3948b56476ff94f4f257"
+    },
+    {
+      "path": "/pick/watch/",
+      "status": 200,
+      "sha256": "3357434979407db069fc5ddc6055fa623752da1f6b19be5c53fbd2fde61faa2b"
+    },
+    {
+      "path": "/library/",
+      "status": 200,
+      "sha256": "5f31d3a6a787d14a3d43dad37a2a83a90ada24a95fc78913cef83d9afa92a1e4"
+    },
+    {
+      "path": "/library/style.css",
+      "status": 200,
+      "sha256": "025175f7bc685c9e79380ebd5a91e65ee02306e59b26176865f377ec76149cbc"
+    },
+    {
+      "path": "/library/app.js",
+      "status": 200,
+      "sha256": "41b18967d791bc82b134d7f017576a92d173fe7797f1480c92e4b873e466b26c"
+    },
+    {
+      "path": "/pick/game/app.js",
+      "status": 200,
+      "sha256": "2115442e8615f435cc872a7a5ce6c5617bfbe37238b2db43bcae0d73a80f6cdc"
+    },
+    {
+      "path": "/pick/game/card-view.js",
+      "status": 200,
+      "sha256": "bc83f46daf8a07c419e9fe45913b89df1d812c02fef57f9a837e24bb4ec977a2"
+    },
+    {
+      "path": "/pick/watch/app.js",
+      "status": 200,
+      "sha256": "9f6e50a46054a69ef5b70d0b309269713fce2a14c422ee5e9d4b056de6413931"
+    },
+    {
+      "path": "/pick/watch/card-view.js",
+      "status": 200,
+      "sha256": "21bbf5d664b5794fec1cb271ba3c5224a51852a556acbce9d37399d476bdaea3"
+    },
+    {
+      "path": "/shared/card-metadata.js",
+      "status": 200,
+      "sha256": "9ce371570af212e03fc6d8efc6b576c733cfedffde343bb7c31d37a9da054bc1"
+    },
+    {
+      "path": "/shared/controls.css",
+      "status": 200,
+      "sha256": "6225eba087a2330caf672c39178cc900bfb711af5e70fd7c031e894418f4df4a"
+    },
+    {
+      "path": "/shared/conversation-client.js",
+      "status": 200,
+      "sha256": "4b3cf3dec9aedd991e4715f16233a491de13c61ddf84e11d820192c237662d94"
+    },
+    {
+      "path": "/shared/results.css",
+      "status": 200,
+      "sha256": "16090730dc2895d339a4f32a7b6d8ab848255b82bfd0f96838799f7ad74f1686"
+    },
+    {
+      "path": "/shared/selection-archive.js",
+      "status": 200,
+      "sha256": "f8b1fd6de26cf07d3438e878bf3c8f136e1949af9b29a4aeb353ea862cfcd369"
+    },
+    {
+      "path": "/shared/workspace.css",
+      "status": 200,
+      "sha256": "30788601f284f61acb9a4b76c5b82c3b4537c5f5894a76006cbd873eb80d649f"
+    }
+  ],
+  "metaStatus": 200,
+  "restored": [
+    {
+      "domain": "game",
+      "cards": 4,
+      "paidCalls": 0
+    },
+    {
+      "domain": "film",
+      "cards": 4,
+      "paidCalls": 0
+    },
+    {
+      "domain": "series",
+      "cards": 4,
+      "paidCalls": 0
+    },
+    {
+      "domain": "cartoon",
+      "cards": 4,
+      "paidCalls": 0
+    }
+  ],
+  "qaCapUsd": 0,
+  "paidCalls": 0,
+  "paidCostUsd": 0,
+  "browser": {
+    "chevron": true,
+    "clientWidth": 380,
+    "expanded": true,
+    "headerTop": 0,
+    "height": 705,
+    "leftMarker": "none",
+    "overflow": 0,
+    "width": 390,
+    "consoleErrors": 0
+  },
+  "earlyVercelErrorRows": 0
+}

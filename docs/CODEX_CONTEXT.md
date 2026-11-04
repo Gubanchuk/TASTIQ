@@ -1,10 +1,10 @@
-# Кнопки / сохранение / мобильный финал —04.11.2026, проверено локально
+# Кнопки, сохранение и мобильный финал — опубликовано 04.11.2026
 
 Владелец прислал7скриншотов и расширил задачу до ручного прохождения ПК/телефона, явно разрешил самостоятельные push/deploy. Реализовано: controls.css/одна стрелка/sticky top0/restore-wrap; localStorage-архив modern результатов с бесплатным reopen; адресная замена/pending target retry/retained marks/undo. Найден и исправлен critical inherited grid-column2: mobile alt reason0/78.56→312px при390; все16cards320→258px. Mobile fit/outcome2×2, groupedmetadata/RU genres, Libraryfullrow move/remove, filters≤420single, evenings overflow21→0.
 
 633/633 + HTTPstubpaid0 + build; native4полныхпути×390/1440, все16карточек320, extras446/820/1024; всевидыдействий и длинныевопросы/черновики/поправки/ошибка/retry/undo/feedback. APIResponses0/$0. Impeccable/UXreview/UIUXProMax/web-quality-audit/review-task; in-thread, без независимого reviewer. Отчёт docs/CONTROLS_HISTORY_MOBILE_2026-11-04.md; evidence research-vault/controls-history-2026-11-04/. PRODUCT/DESIGN/3briefs/UTF8sidecar обновлены. Бренд/главная/catalog/ranking/guards/Family не менялись. Humanfit/physicaltouch/realSR/CWV не измерены.
 
-Разрешённые mainpush/manualprebuiltprod в работе; VercelMCP403→существующийCLI без новых прав. Новые чужие untracked сохранены. Ниже — предшествующие этапы, не текущая точка.
+Код `76db0f2` отправлен в `main` и опубликован на [основном сайте](https://tastiq-drab.vercel.app/) в 05:24:55 МСК. Vercel `dpl_9uuCTHFcPJfd53sCSBNPHpjJ24jD`, READY. На основном адресе 16 файлов совпали со сборкой побайтно, `/api/meta` вернул 200. API восстановил по четыре прежние карточки во всех четырёх разделах, 0 вызовов Responses. На 390×705 проверено раскрытие условий мультфильма, шапка у верхнего края и отсутствие горизонтальной прокрутки. QA-сервер 5180 остановлен, размер браузера сброшен. Источники в `research-vault/controls-history-2026-11-04/`. Ниже — предшествующие этапы.
 
 # Feedback опубликован —04.11.2026
 
