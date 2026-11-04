@@ -25,7 +25,7 @@ const familiarIds = (value,max=500) => {
 };
 const emptyFamiliar = () => ({marked:[],keep:[],hidden:[],excluded:[],undo:null});
 const resultCards = result => [result?.top,...(result?.alternatives??[])].filter(Boolean);
-const normalizeReplacement = value => value==null?null:{changedIds:familiarIds(value.changedIds,4),unresolvedIds:familiarIds(value.unresolvedIds,4),notice:clean(value.notice,240)};
+const normalizeReplacement = value => value==null?null:{changedIds:familiarIds(value.changedIds,4),unresolvedIds:familiarIds(value.unresolvedIds,4),notice:clean(value.notice,240),...(value.pendingIds?{pendingIds:familiarIds(value.pendingIds,4)}:{})};
 function normalizeFamiliar(value) {
   const f=value??emptyFamiliar();
   const out={marked:familiarIds(f.marked,4),keep:familiarIds(f.keep),hidden:familiarIds(f.hidden),excluded:familiarIds(f.excluded),undo:null};

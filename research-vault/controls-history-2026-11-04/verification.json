@@ -1,0 +1,66 @@
+{
+  "tests": {
+    "command": "npm test",
+    "passed": 633,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "http": {
+    "command": "npm run test:server",
+    "passed": true,
+    "paidRequests": 0,
+    "exitCode": 0
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "runtime": "nodejs24.x",
+    "staticFiles": 88,
+    "sourceFiles": 194,
+    "runtimeJSON": 6
+  },
+  "manual": {
+    "browser": "native IAB via cua_repl",
+    "fullPaths": 8,
+    "domains": [
+      "game",
+      "film",
+      "series",
+      "cartoon"
+    ],
+    "fullPathWidths": [
+      390,
+      1440
+    ],
+    "additionalWidths": [
+      320,
+      446,
+      820,
+      1024
+    ],
+    "actionRecords": 45,
+    "layoutRecords": 21,
+    "notes": "Synthetic isolated qa_run; model transport stubbed; not human taste labels"
+  },
+  "responsesAPI": {
+    "realCalls": 0,
+    "usd": 0
+  },
+  "review": {
+    "skills": [
+      "impeccable",
+      "ui-ux-pro-max",
+      "ux-review",
+      "web-quality-audit",
+      "review-task"
+    ],
+    "independentReviewer": false,
+    "verdict": "Pass in described UI/functional scope"
+  },
+  "limitations": [
+    "No human fit measurement",
+    "No physical touch / real screen reader",
+    "No field CWV or Lighthouse score"
+  ],
+  "rawLogs": "Local ignored *.log files; not force-added"
+}

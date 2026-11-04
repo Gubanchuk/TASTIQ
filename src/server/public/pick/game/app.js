@@ -44,7 +44,8 @@ const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:a
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
  return response.ok?response.json():null;
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();}});
-const client=createConversationClient({localStart:true,fetch,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>feedback.learning('game'),onChange:render});
+const client=createConversationClient({localStart:true,selectionId:new URLSearchParams(location.search).get('selection'),fetch,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>feedback.learning('game'),onChange:render});
+if(new URLSearchParams(location.search).has('selection')){const url=new URL(location.href);url.searchParams.delete('selection');window.history.replaceState(null,'',url);}
 selectionReviews=createSelectionReviewController({storage,feedback,getSnapshot:()=>client.snapshot,getRunId:()=>activeEvening,isBusy:()=>client.busy,onChange:refreshFeedback});
 const knownQuestionDrafts=new Set();
 try {const saved=JSON.parse(storage?.getItem(CONVERSATION_KEY)??'null');for(const drafts of [saved?.drafts,saved?.previous?.drafts])for(const key of Object.keys(drafts??{}))knownQuestionDrafts.add(key);}catch { /* no saved keys in a memory-only visit */ }
@@ -150,6 +151,7 @@ function resultHtml(screen) {
   +(screen.provisional||result.ai?.error?'<p class="game-help">Предварительный подбор по каталогу. Уточнение моделью сейчас недоступно.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
+  +`<p class="game-archive-status">${client.archivePersistent?'Подбор сохранён в этом браузере':'Браузер не разрешил сохранить подбор. Он доступен до закрытия окна.'} · <a href="/library/?view=history">Все подборы</a></p>`
   +'<section class="game-proposals" aria-label="Предложенные игры">'+[result.top,...(result.alternatives??[]).slice(0,3)].map(cardHtml).join('')+'</section><div data-selection-review></div>';
 }
 function render() {
@@ -160,7 +162,7 @@ function render() {
  $('#restart').disabled=client.busy;
  $('#restore').hidden=!client.canRestorePrevious;
  $('#restore').disabled=client.busy;
- const pending=loadingPresentation(pendingAction,pendingOrigin??client.state),prominent=client.busy&&pending.prominent;
+ const pending=loadingPresentation(pendingAction,pendingOrigin??client.state),prominent=client.busy&&pending.prominent&&!pendingAction.targetId;
  $('#notice').textContent=client.busy?(prominent?'':pending.title):localNotice||(!client.persistent?'Этот подбор сохранится только до закрытия окна.':'');
  $('#processing-title').textContent=pending.title;
  $('#processing-description').textContent=pending.description;
@@ -194,6 +196,8 @@ function render() {
   }
  }
  document.querySelectorAll('#main button,#main input,#main textarea,#request-editor button,#request-editor input,#request-editor textarea,#request-editor select,#request-panel button,#request-panel input,#request-panel textarea,#request-panel select').forEach(el=>el.disabled=client.busy);
+ const targetButton=pendingAction.targetId?document.querySelector(`[data-act="replace-one"][data-id="${CSS.escape(pendingAction.targetId)}"]`):null;
+ if(targetButton){targetButton.textContent=client.busy?'Ищу замену…':'Заменить только этот вариант';targetButton.setAttribute('aria-busy',String(client.busy));}
  const disabled=client.busy?' disabled':'';
  const needsChoice=screen.type==='question'&&screen.question.allowText===false&&!currentDraft(screen.question).selected.length;
  const reviewBlocked=screen.type==='question'&&hasPendingAnswer(currentDraft(screen.question));
@@ -254,10 +258,12 @@ function persistAnswer() {
 function focusResultStart(){const heading=$('#main h1');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}$('#stage').scrollIntoView({block:'start',behavior:'auto'});}
 async function navigate(action,{origin=null}={}) {
  if(client.busy)return null;
+ const singleTarget=action.type==='replace_familiar'?action.id:action.type==='retry'&&client.state?.failedAction==='replace'&&client.state.replacement?.pendingIds?.length===1?client.state.replacement.pendingIds[0]:null;
+ const singleSlot=singleTarget?Array.from(document.querySelectorAll('[data-card-id]')).findIndex(card=>card.dataset.cardId===singleTarget):-1;
  const browseNavigation=['more','undo_replacement'].includes(action.type)||action.type==='retry'&&client.state?.failedAction==='more';
  if(action.type==='review'&&client.screen?.type==='question'&&hasPendingAnswer(currentDraft(client.screen.question)))return null;
  currentRequest=action.type;
- pendingAction=action;pendingOrigin=client.state;
+ pendingAction=singleTarget?{...action,targetId:singleTarget}:action;pendingOrigin=client.state;
  localNotice='';
  navigationFocus=action.type==='undo_fact_removal'?{focus:lastRemovedFactFocus??'fact-details'}:preserveView();
  pendingBack=action.type==='back'?prepareBackDraft(client.state):null;
@@ -276,6 +282,7 @@ async function navigate(action,{origin=null}={}) {
  if(action.type==='remove_fact'&&result&&!client.error){localNotice='Убрал из понимания запроса.';render();}
  if(action.type==='undo_fact_removal'&&result&&!client.error){localNotice='Удаление отменено.';render();}
  if(result&&!client.error&&client.screen?.type==='result'&&browseNavigation)focusResultStart();
+ if(singleSlot>=0&&result&&!client.error&&client.screen?.type==='result'){const heading=document.querySelectorAll('[data-card-id]')[singleSlot]?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
  navigationFocus=null;return result;
 }
 function completeBackDraft(result) {
@@ -370,6 +377,7 @@ document.addEventListener('click',event=>{
   });return;
  }
  if(act==='more')return void navigate({type:'more'});
+ if(act==='replace-one')return void navigate({type:'replace_familiar',id:el.dataset.id});
  if(act==='replace-familiar')return void navigate({type:'replace_familiar'});
  if(act==='undo-replacement')return void navigate({type:'undo_replacement'});
  if(act==='evening-fit')return void updateEvening(el,{type:'fit',value:el.dataset.v});

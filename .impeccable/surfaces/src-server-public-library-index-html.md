@@ -17,7 +17,7 @@ FIRST VIEWPORT: явный раздел/действия, свои слова в
 
 ## Shipped composition
 
-- Общий app-shell desktop top12/z60/min76px/max1380px(от1500px1440px)/margin16px auto28px/padding14px24px/radius20px/white/soft-shadow. Logo140px, видимые «Подбор»/«Библиотека»/«Подобрать новое»; domain/restart нет. Phone top0/radius0/no-shadow/logo120px/tiny105px, nav первая строка/CTA вторая. Legacy rail не менялся.
+- Общий app-shell desktop top12/z60/min76px/max1380px(от1500px1440px)/margin0 auto28px/padding14px24px/radius20px/white/soft-shadow. Logo140px, видимые «Подбор»/«Библиотека»/«Подобрать новое»; domain/restart нет. Phone top0/radius0/no-shadow/logo120px/tiny105px, nav первая строка/CTA вторая. Legacy rail не менялся.
 - Board max1440px/padding24px clamp(20px,4vw,64px)70px; phone18px20px50px. H1 Unbounded32px/1.3/500/-.035em/phone28px. Одна краткая вводная. «Списки / Архив / Вечера» с counts на context/radius16px, active white tab/radius12px/shadow0 2px6px #15213d08/min44px.
 - Поиск всегда виден/min46px; desktop search+domain/reaction/order+reset, ≤1050px fields во втором ряду. Phone явная «Фильтры и порядок»/active count/aria-expanded плюс отдельный reset. Panel data-filter-open=false скрыт только phone, desktop options видны. Custom select46px/13px/radius12px/listbox fixed z2000/radius14px/options44px/check; keyboard/Escape/outside/focus/native fallback.
 - Один выбранный list при любой ширине. Три list controls рядом; phone grid3/min44px с count/переносом label. Selected primary-border/selected-fill. Card-grid2/gap16px, ≤900px1. Вывод24, more добавляет24/«Показано N из M». Search/domain/reaction/order/lane/reset не переписывают записи, reset возвращает limit24.
@@ -42,3 +42,7 @@ Detector один раз: exit0/58findings=52advisories+6inherited warnings; п�
 ## Коррекция по обратной связи 03.11.2026
 
 Общие входы теперь /pick/start/; внешний мир и бренд прежние. Первый вопрос shared/conversation-entry.js создаётся без API. В shared/question-form.js желания выше раскрываемых жанров/ограничений/своих слов, нейтральные ответы ниже. В выдаче доступны more/уточнение/undo без перезапуска анкеты. Текущий проверенный scope и ограничения: docs/PICKER_FEEDBACK_2026-11-03.md; прежнее landing byte-identical относится к предыдущей переработке.
+
+## Подтверждённое уточнение04.11.2026
+
+Текущее описание controls/history/mobile находится в DESIGN.md, разделе «Кнопки, мобильная сетка и архив». controls.css подключён последним. Header top0 без верхнего отступа;761–1000px restore/actions отдельным рядом. Summary — одна стрелка; первый вопрос сохраняет ширину при раскрытии. Mobile alternatives имеют явную колонку1 и полную ширину причины. Fit/outcome2×2; metadata единицами/жанры по-русски. Библиотечный select/remove отдельным полным рядом, фильтры≤420px одной колонкой. Подборы автоматически архивируются локально и открываются без генерации; адресная замена не меняет остальные слоты и отметки. Evidence: research-vault/controls-history-2026-11-04/. Старые top12/серые neutral/неявная колонка2 — история. Новое оформление не считать одобренным владельцем по тестам.

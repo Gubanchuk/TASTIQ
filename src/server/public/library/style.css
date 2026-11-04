@@ -139,6 +139,7 @@ body.product-page.library-page .library-cover img{display:block;position:static;
 body.product-page.library-page .library-cover.no-cover{min-height:106px;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
 body.product-page.library-page .board-card h3{font-size:17px;line-height:1.45;margin:5px 0 13px;font-weight:600}
 body.product-page.library-page .board-card-actions{grid-template-columns:minmax(0,1fr) 44px;gap:6px}
+body.product-page.library-page .board-card-actions{grid-column:1/-1}
 body.product-page.library-page .move-control .custom-select-trigger{font-size:12px;background:var(--brand-paper);padding-inline:11px;gap:6px}
 body.product-page.library-page .library-remove{margin:0;border-radius:12px}
 body.product-page.library-page .card-details{border:0;margin:0;padding:0}
@@ -234,3 +235,4 @@ body.product-page.library-page .library-lane>header h2{margin-bottom:4px}
  body.product-page.library-page .library-lane>header{margin-bottom:12px}
  body.product-page.library-page .library-empty{padding:24px 16px}
 }
+@media(max-width:420px){body.product-page.library-page .library-filter-options{grid-template-columns:minmax(0,1fr)}}

@@ -1,0 +1,39 @@
+{
+  "staticFiles": 88,
+  "bundledSourceFiles": 194,
+  "mismatches": [],
+  "privateLeaks": [],
+  "runtime": "nodejs24.x",
+  "maxDuration": 300,
+  "runtimeJSON": [
+    "catalog-screen.json",
+    "catalog.json",
+    "posters.json",
+    "quotes-ru.json",
+    "verified-game-context.json",
+    "verified-game-releases.json"
+  ],
+  "frozenLandingRoot": [
+    {
+      "path": "src/server/public/app.js",
+      "unchanged": true,
+      "comparison": "Git canonical text (checkout CRLF normalized)"
+    },
+    {
+      "path": "src/server/public/index.html",
+      "unchanged": true,
+      "comparison": "Git canonical text (checkout CRLF normalized)"
+    },
+    {
+      "path": "src/server/public/landing-bottom.css",
+      "unchanged": true,
+      "comparison": "Git canonical text (checkout CRLF normalized)"
+    },
+    {
+      "path": "src/server/public/style.css",
+      "unchanged": true,
+      "comparison": "Git canonical text (checkout CRLF normalized)"
+    }
+  ],
+  "passed": true
+}

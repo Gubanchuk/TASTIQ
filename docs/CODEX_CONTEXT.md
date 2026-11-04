@@ -1,3 +1,11 @@
+# Кнопки / сохранение / мобильный финал —04.11.2026, проверено локально
+
+Владелец прислал7скриншотов и расширил задачу до ручного прохождения ПК/телефона, явно разрешил самостоятельные push/deploy. Реализовано: controls.css/одна стрелка/sticky top0/restore-wrap; localStorage-архив modern результатов с бесплатным reopen; адресная замена/pending target retry/retained marks/undo. Найден и исправлен critical inherited grid-column2: mobile alt reason0/78.56→312px при390; все16cards320→258px. Mobile fit/outcome2×2, groupedmetadata/RU genres, Libraryfullrow move/remove, filters≤420single, evenings overflow21→0.
+
+633/633 + HTTPstubpaid0 + build; native4полныхпути×390/1440, все16карточек320, extras446/820/1024; всевидыдействий и длинныевопросы/черновики/поправки/ошибка/retry/undo/feedback. APIResponses0/$0. Impeccable/UXreview/UIUXProMax/web-quality-audit/review-task; in-thread, без независимого reviewer. Отчёт docs/CONTROLS_HISTORY_MOBILE_2026-11-04.md; evidence research-vault/controls-history-2026-11-04/. PRODUCT/DESIGN/3briefs/UTF8sidecar обновлены. Бренд/главная/catalog/ranking/guards/Family не менялись. Humanfit/physicaltouch/realSR/CWV не измерены.
+
+Разрешённые mainpush/manualprebuiltprod в работе; VercelMCP403→существующийCLI без новых прав. Новые чужие untracked сохранены. Ниже — предшествующие этапы, не текущая точка.
+
 # Feedback опубликован —04.11.2026
 
 Разрешённые main commit/push11d6466c4a3340965b4265f5f3abcb1d95d50987, remoteMatch0/0. Production READY dpl_8Mm4Y3EdxMejhhP2Bwcvp8NEbjx6, 2026-11-04 00:42:21МСК; https://tastiq-drab.vercel.app/. Vercel API SHA/refmain/alias совпадают; prebuilt function nodejs24.x, projectSettings node26.x — разные поля, runtime заявлен именно артефактом. Первая попытка ECONNRESET не создала deployment (проверен список), повтор завершён успешно.

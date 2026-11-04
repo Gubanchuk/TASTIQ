@@ -1,0 +1,1189 @@
+[
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "copy each of four card titles",
+    "result": ""
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "fit Подходит",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "fit С оговоркой",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "fit Не подходит",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "fit Пока не знаю",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "outcome Понравилось",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "outcome Нормально",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "outcome Не зашло",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "outcome Не начал",
+    "pressed": "true"
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "action": "reason + note / choose / start / outcomes",
+    "result": "controls visible, no horizontal overflow",
+    "overflow": 0
+  },
+  {
+    "domain": "cartoon",
+    "width": 320,
+    "actions": [
+      "all 4 fit buttons",
+      "save each of 4 cards",
+      "mark / cancel mark",
+      "mark / keep",
+      "copy long alternative title"
+    ],
+    "pending": {
+      "overflow": 0,
+      "text": "Аркейн",
+      "width": 176
+    }
+  },
+  {
+    "domain": "game",
+    "width": 320,
+    "actions": [
+      "all 4 fit buttons",
+      "save each of 4 cards",
+      "mark / cancel mark",
+      "mark / keep",
+      "copy long alternative title"
+    ],
+    "pending": {
+      "overflow": 0,
+      "text": "Slay the Spire",
+      "width": 176
+    }
+  },
+  {
+    "domain": "film",
+    "width": 320,
+    "actions": [
+      "all 4 fit buttons",
+      "save each of 4 cards",
+      "mark / cancel mark",
+      "mark / keep",
+      "copy long alternative title"
+    ],
+    "pending": {
+      "overflow": 0,
+      "text": "Властелин колец: Возвращение короля",
+      "width": 176
+    }
+  },
+  {
+    "domain": "series",
+    "width": 320,
+    "actions": [
+      "all 4 fit buttons",
+      "save each of 4 cards",
+      "mark / cancel mark",
+      "mark / keep",
+      "copy long alternative title"
+    ],
+    "pending": {
+      "overflow": 0,
+      "text": "Игра престолов",
+      "width": 176
+    }
+  },
+  {
+    "domain": "game",
+    "width": 320,
+    "actions": [
+      "two marks / replace only first / retain second mark",
+      "batch replace remaining / undo",
+      "more without repeats / undo"
+    ],
+    "initial": [
+      "steam:413150",
+      "steam:620",
+      "steam:646570",
+      "steam:550"
+    ],
+    "single": [
+      "steam:413150",
+      "steam:105600",
+      "steam:646570",
+      "steam:550"
+    ],
+    "batch": [
+      "steam:413150",
+      "steam:105600",
+      "steam:400",
+      "steam:550"
+    ],
+    "more": [
+      "steam:1794680",
+      "steam:227300",
+      "steam:1089980",
+      "steam:220"
+    ],
+    "undo": [
+      "steam:413150",
+      "steam:105600",
+      "steam:646570",
+      "steam:550"
+    ],
+    "back": [
+      "steam:413150",
+      "steam:105600",
+      "steam:646570",
+      "steam:550"
+    ]
+  },
+  {
+    "domain": "cartoon",
+    "width": 320,
+    "actions": [
+      "two marks / replace only first / retain second mark",
+      "batch replace remaining / undo",
+      "more without repeats / undo"
+    ],
+    "initial": [
+      "tt0417299",
+      "tt2861424",
+      "tt11126994",
+      "tt0110357"
+    ],
+    "single": [
+      "tt0417299",
+      "tt0103359",
+      "tt11126994",
+      "tt0110357"
+    ],
+    "batch": [
+      "tt0417299",
+      "tt0103359",
+      "tt1865718",
+      "tt0110357"
+    ],
+    "more": [
+      "tt7678620",
+      "tt9362722",
+      "tt3398228",
+      "tt6741278"
+    ],
+    "undo": [
+      "tt0417299",
+      "tt0103359",
+      "tt11126994",
+      "tt0110357"
+    ],
+    "back": [
+      "tt0417299",
+      "tt0103359",
+      "tt11126994",
+      "tt0110357"
+    ]
+  },
+  {
+    "domain": "film",
+    "width": 320,
+    "actions": [
+      "two marks / replace only first / retain second mark",
+      "batch replace remaining / undo",
+      "more without repeats / undo"
+    ],
+    "initial": [
+      "tt0111161",
+      "tt0071562",
+      "tt0167260",
+      "tt0468569"
+    ],
+    "single": [
+      "tt0111161",
+      "tt0120737",
+      "tt0167260",
+      "tt0468569"
+    ],
+    "batch": [
+      "tt0111161",
+      "tt0120737",
+      "tt0050083",
+      "tt0468569"
+    ],
+    "more": [
+      "tt1375666",
+      "tt0109830",
+      "tt0060196",
+      "tt0167261"
+    ],
+    "undo": [
+      "tt0111161",
+      "tt0120737",
+      "tt0167260",
+      "tt0468569"
+    ],
+    "back": [
+      "tt0111161",
+      "tt0120737",
+      "tt0167260",
+      "tt0468569"
+    ]
+  },
+  {
+    "domain": "series",
+    "width": 320,
+    "actions": [
+      "two marks / replace only first / retain second mark",
+      "batch replace remaining / undo",
+      "more without repeats / undo"
+    ],
+    "initial": [
+      "tt0903747",
+      "tt7366338",
+      "tt0944947",
+      "tt0185906"
+    ],
+    "single": [
+      "tt0903747",
+      "tt0306414",
+      "tt0944947",
+      "tt0185906"
+    ],
+    "batch": [
+      "tt0903747",
+      "tt0306414",
+      "tt0141842",
+      "tt0185906"
+    ],
+    "more": [
+      "tt5491994",
+      "tt14392248",
+      "tt0386676",
+      "tt1475582"
+    ],
+    "undo": [
+      "tt0903747",
+      "tt0306414",
+      "tt0944947",
+      "tt0185906"
+    ],
+    "back": [
+      "tt0903747",
+      "tt0306414",
+      "tt0944947",
+      "tt0185906"
+    ]
+  },
+  {
+    "surface": "library",
+    "width": 320,
+    "actions": [
+      "open filters",
+      "domain film",
+      "reaction unrated",
+      "sort by title",
+      "search long title",
+      "collapse / reset"
+    ],
+    "result": "one matching title, full sort label, overflow 0"
+  },
+  {
+    "surface": "library",
+    "width": 320,
+    "actions": [
+      "move to tonight",
+      "expand taste",
+      "liked / disliked / clear rating",
+      "remove / undo"
+    ],
+    "result": "record restored, separate lane and rating controls"
+  },
+  {
+    "surface": "library",
+    "width": 320,
+    "actions": [
+      "known lane",
+      "expand familiarity",
+      "toggle exclusion",
+      "forget / undo"
+    ],
+    "result": "known record restored"
+  },
+  {
+    "surface": "library evenings",
+    "width": 320,
+    "actions": [
+      "expand evening",
+      "expand explanation",
+      "write note draft / reload / reopen"
+    ],
+    "draft": "300",
+    "overflow": 0
+  },
+  {
+    "surface": "library evenings",
+    "width": 320,
+    "action": "verify restored draft value",
+    "result": "Черновик отзыва из библиотеки: проверяю переносы и восстановление."
+  },
+  {
+    "domain": "game",
+    "width": 1440,
+    "actions": [
+      "inspect all cards",
+      "copy third title",
+      "expand third explanation"
+    ],
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Stardew Valley",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Terraria",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Slay the Spire",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Left 4 Dead 2",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "film",
+    "width": 1440,
+    "actions": [
+      "inspect all cards",
+      "copy third title",
+      "expand third explanation"
+    ],
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Побег из Шоушенка",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Властелин колец: Братство кольца",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Тёмный рыцарь",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "series",
+    "width": 1440,
+    "actions": [
+      "inspect all cards",
+      "copy third title",
+      "expand third explanation"
+    ],
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Во все тяжкие",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Прослушка",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Игра престолов",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Братья по оружию",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "cartoon",
+    "width": 1440,
+    "actions": [
+      "inspect all cards",
+      "copy third title",
+      "expand third explanation"
+    ],
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Аватар: Легенда об Аанге",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Бэтмен",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Аркейн",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Король лев",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "game",
+    "width": 390,
+    "actions": [
+      "open genres / avoids / own words",
+      "toggle every initial option on and off",
+      "all 3 neutral answers / resume own",
+      "reload draft"
+    ],
+    "options": 20,
+    "wish": "Хочется приключения с интересной историей, без спешки и тяжёлых тем."
+  },
+  {
+    "domain": "game",
+    "width": 390,
+    "actions": [
+      "all 4 platforms",
+      "all 3 company choices",
+      "all 4 party sizes",
+      "back from party / solo"
+    ],
+    "result": "long dynamic question shown"
+  },
+  {
+    "domain": "game",
+    "width": 390,
+    "actions": [
+      "every long dynamic option",
+      "own text",
+      "pending-answer review disabled",
+      "submit to review"
+    ],
+    "heading": "Что поможет тебе втянуться и провести этот вечер с удовольствием?",
+    "options": [
+      {
+        "height": 97.171875,
+        "text": "Неспешное погружение в живой мир и внимательное исследование деталей",
+        "width": 316
+      },
+      {
+        "height": 74.78125,
+        "text": "Напряжённые события с понятными целями и короткими передышками",
+        "width": 316
+      },
+      {
+        "height": 74.78125,
+        "text": "История о людях и отношениях, которая держит без тяжёлых тем",
+        "width": 316
+      },
+      {
+        "height": 74.78125,
+        "text": "Свобода пробовать разные способы и находить собственный подход",
+        "width": 316
+      },
+      {
+        "height": 74.78125,
+        "text": "Спокойный ритм и возможность остановиться в любой момент",
+        "width": 316
+      },
+      {
+        "height": 74.78125,
+        "text": "Необычная атмосфера и ощущение, что открываешь что-то новое",
+        "width": 316
+      }
+    ],
+    "overflow": 0,
+    "reviewDisabled": true
+  },
+  {
+    "domain": "game",
+    "width": 390,
+    "actions": [
+      "result",
+      "edit request / cancel / reopen draft",
+      "apply correction",
+      "show request / restore old result",
+      "restart / restore previous"
+    ],
+    "before": [
+      "steam:413150",
+      "steam:620",
+      "steam:646570",
+      "steam:550"
+    ],
+    "after": [
+      "steam:413150",
+      "steam:620",
+      "steam:646570",
+      "steam:550"
+    ],
+    "restartOverflow": 0
+  },
+  {
+    "domain": "film",
+    "width": 390,
+    "run": "controls-path-mobile",
+    "actions": [
+      "every initial option on/off",
+      "all disclosures",
+      "own answer",
+      "3 neutral answers / resume",
+      "draft reload",
+      "6 long question options",
+      "own long answer / pending-review guard",
+      "review / confirm / result / copy alternative"
+    ],
+    "initialOptions": 14,
+    "question": {
+      "options": [
+        {
+          "height": 97.171875,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        }
+      ],
+      "overflow": 0,
+      "reviewDisabled": true
+    },
+    "cards": [
+      {
+        "textWidth": 312,
+        "title": "Побег из Шоушенка",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Крёстный отец",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Тёмный рыцарь",
+        "width": 352
+      }
+    ]
+  },
+  {
+    "domain": "series",
+    "width": 390,
+    "run": "controls-path-mobile",
+    "actions": [
+      "every initial option on/off",
+      "all disclosures",
+      "own answer",
+      "3 neutral answers / resume",
+      "draft reload",
+      "6 long question options",
+      "own long answer / pending-review guard",
+      "review / confirm / result / copy alternative"
+    ],
+    "initialOptions": 14,
+    "question": {
+      "options": [
+        {
+          "height": 97.171875,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        }
+      ],
+      "overflow": 0,
+      "reviewDisabled": true
+    },
+    "cards": [
+      {
+        "textWidth": 312,
+        "title": "Во все тяжкие",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Чернобыль",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Игра престолов",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Братья по оружию",
+        "width": 352
+      }
+    ]
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "run": "controls-path-mobile",
+    "actions": [
+      "every initial option on/off",
+      "all disclosures",
+      "own answer",
+      "3 neutral answers / resume",
+      "draft reload",
+      "6 long question options",
+      "own long answer / pending-review guard",
+      "review / confirm / result / copy alternative"
+    ],
+    "initialOptions": 14,
+    "question": {
+      "options": [
+        {
+          "height": 97.171875,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        },
+        {
+          "height": 74.78125,
+          "width": 316
+        }
+      ],
+      "overflow": 0,
+      "reviewDisabled": true
+    },
+    "cards": [
+      {
+        "textWidth": 312,
+        "title": "Аватар: Легенда об Аанге",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Рик и Морти",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Аркейн",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Король лев",
+        "width": 352
+      }
+    ]
+  },
+  {
+    "domain": "game",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "actions": [
+      "every initial option on/off",
+      "all disclosures",
+      "own answer",
+      "3 neutral answers / resume",
+      "draft reload",
+      "4 platforms / 3 company / 4 party / back",
+      "6 long question options",
+      "own long answer / pending-review guard",
+      "review / confirm / result / copy alternative"
+    ],
+    "initialOptions": 20,
+    "question": {
+      "options": [
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        }
+      ],
+      "overflow": 0,
+      "reviewDisabled": true
+    },
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Stardew Valley",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Portal 2",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Slay the Spire",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Left 4 Dead 2",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "film",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "actions": [
+      "every initial option on/off",
+      "all disclosures",
+      "own answer",
+      "3 neutral answers / resume",
+      "draft reload",
+      "6 long question options",
+      "own long answer / pending-review guard",
+      "review / confirm / result / copy alternative"
+    ],
+    "initialOptions": 14,
+    "question": {
+      "options": [
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        }
+      ],
+      "overflow": 0,
+      "reviewDisabled": true
+    },
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Побег из Шоушенка",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Крёстный отец",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Тёмный рыцарь",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "series",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "actions": [
+      "every initial option on/off",
+      "all disclosures",
+      "own answer",
+      "3 neutral answers / resume",
+      "draft reload",
+      "6 long question options",
+      "own long answer / pending-review guard",
+      "review / confirm / result / copy alternative"
+    ],
+    "initialOptions": 14,
+    "question": {
+      "options": [
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        }
+      ],
+      "overflow": 0,
+      "reviewDisabled": true
+    },
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Во все тяжкие",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Чернобыль",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Игра престолов",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Братья по оружию",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "cartoon",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "actions": [
+      "every initial option on/off",
+      "all disclosures",
+      "own answer",
+      "3 neutral answers / resume",
+      "draft reload",
+      "6 long question options",
+      "own long answer / pending-review guard",
+      "review / confirm / result / copy alternative"
+    ],
+    "initialOptions": 14,
+    "question": {
+      "options": [
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        },
+        {
+          "height": 74.78125,
+          "width": 475
+        }
+      ],
+      "overflow": 0,
+      "reviewDisabled": true
+    },
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Аватар: Легенда об Аанге",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Рик и Морти",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Аркейн",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Король лев",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "surface": "header",
+    "width": 1024,
+    "actions": [
+      "keyboard menu open / Escape",
+      "restart / reload / keyboard restore"
+    ],
+    "keyboardMenu": {
+      "expanded": "false",
+      "focus": "domain-switch"
+    },
+    "restoreHeader": {
+      "buttons": [
+        {
+          "right": 624.90625,
+          "text": "Подбираем мультфильмМультфильм",
+          "width": 227
+        },
+        {
+          "right": 765.65625,
+          "text": "Начать заново",
+          "width": 126.75
+        },
+        {
+          "right": 972,
+          "text": "Вернуть прошлый подбор",
+          "width": 198.34375
+        }
+      ],
+      "overflow": 0,
+      "top": 0
+    }
+  },
+  {
+    "surface": "example search / keyboard",
+    "width": 320,
+    "search320": {
+      "buttons": [
+        {
+          "height": 44,
+          "text": "Черепашки-ниндзя2014",
+          "width": 262
+        },
+        {
+          "height": 61,
+          "text": "Черепашки-ниндзя: Погром мутантов2023",
+          "width": 262
+        },
+        {
+          "height": 44,
+          "text": "Черепашки мутанты ниндзя1987",
+          "width": 262
+        },
+        {
+          "height": 44,
+          "text": "Черепашки-Ниндзя2012",
+          "width": 262
+        },
+        {
+          "height": 61,
+          "text": "Черепашки-ниндзя: Истории2024",
+          "width": 262
+        },
+        {
+          "height": 44,
+          "text": "Мутанты черепашки ниндзя2003",
+          "width": 262
+        }
+      ],
+      "overflow": 0
+    },
+    "addedExample": "Пример: «Черепашки-ниндзя: Погром мутантов». ",
+    "keyboardNext": "Какое впечатление хочется получить?"
+  },
+  {
+    "surface": "media context",
+    "width": 320,
+    "actions": [
+      "company children / child age",
+      "minutes / session time",
+      "movie hides episode fields / episodic restores",
+      "commitment short / completed",
+      "save context"
+    ],
+    "result": {
+      "notice": "Условия изменены. Проверь ответ на этот вопрос перед отправкой.",
+      "overflow": 0,
+      "understanding": "Пример: «Черепашки-ниндзя: Погром мутантов».УсловияМультсериалС ребёнком 8 летКороткая историяТолько завершённый сериалНа сегодня: 60 минУбрать ограничение времениИзменить условияС кем смотришьНе уточнялиОдинСо взрослымиС детьмиС детьмиВозраст младшего зрителяЕсть минут на сегодняОграничение относится кНе уточнялиВсему фильмуОдному эпизодуПросмотру сегодняПросмотру сегодняФорматНе уточнялиОдин мультфильмЭпизодыЭпизодыГотовность к длинной историиНе уточнялиОдин просмотрКороткая историяМожно надолгоНе принципиальноКороткая историяЗавершённость сериалаНе уточнялиТолько завершённыеМожно продолжающиесяТолько завершённыеСохранить условияЗнакомые названияОтметки хранятся в этом браузере. Знакомое н"
+    }
+  },
+  {
+    "surface": "request conditions",
+    "width": 320,
+    "actions": [
+      "remove time / undo"
+    ],
+    "overflow": 0,
+    "timeRestored": true
+  },
+  {
+    "surface": "selection feedback",
+    "width": 320,
+    "actions": [
+      "all 3 verdicts",
+      "long reason menu",
+      "note / opt out",
+      "reload draft",
+      "explicit submit"
+    ],
+    "reviewDraft": {
+      "learning": false,
+      "note": "Проверочный отзыв: длинное пояснение должно нормально переноситься на узком экране. Все варианты и сегодняшний запрос сохраняются вместе с оценкой.",
+      "overflow": 0
+    },
+    "reviewSubmitted": {
+      "overflow": 0,
+      "text": "Отзыв отправлен. Спасибо!"
+    }
+  },
+  {
+    "surface": "copy selection",
+    "width": 320,
+    "result": true,
+    "length": 1690
+  },
+  {
+    "surface": "library",
+    "width": 1440,
+    "actions": [
+      "inspect lists",
+      "expand card detail"
+    ],
+    "columns": "646.906px 646.906px",
+    "headerTop": 0,
+    "moveWidth": 558.90625,
+    "overflow": 0
+  }
+]

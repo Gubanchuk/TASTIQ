@@ -89,13 +89,13 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     else card.feasibility.push({key:'request-conditions',status:'unknown',text:detail});
     return card;
   }
-  async function replace(s,who,more=false) {
-    const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):s.familiar.marked).filter(id=>before.some(card=>card.id===id)));
+  async function replace(s,who,more=false,targetIds=null) {
+    const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):targetIds??s.familiar.marked).filter(id=>before.some(card=>card.id===id)));
     if(!marked.size)return response(s);
     const legacy=projection(s);
     const neutralShown=[...new Set([...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(card=>editionsOf(catalog,card.id))])].filter(id=>!(legacy.session.notNow??[]).includes(id));
     legacy.session.notNow=[...new Set([...(legacy.session.notNow??[]),...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(card=>editionsOf(catalog,card.id))])];
-    const failed=(error,retryable=true)=>response({...s,failedAction:more?'more':'replace'},{error,retryable});
+    const failed=(error,retryable=true)=>response({...s,failedAction:more?'more':'replace',...(!more?{replacement:{...s.replacement,pendingIds:[...marked]}}:{})},{error,retryable});
     if(new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)]).size>496)return failed('В этом подборе уже слишком много отметок. Начни новый подбор: явные сохранённые исключения останутся.',false);
     const eligibleCatalog=catalogFor(s),eligible=rankAll(eligibleCatalog,profileOf(legacy),sessionOf(legacy)).ranked;
     if(!eligible.length)return failed(more?'Других подходящих вариантов по этому запросу пока нет. Прежние варианты сохранены — можно уточнить запрос.':'Других подходящих вариантов пока нет. Оставь знакомое для возвращения или уточни запрос.',false);
@@ -128,7 +128,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const undo={result:s.result,marked:s.familiar.marked,keep:s.familiar.keep,hidden:s.familiar.hidden,replacement:s.replacement};
     const retainedIds=after.filter(card=>before.some(old=>old.id===card.id)).map(card=>card.id);
     const result={...s.result,top:after[0],alternatives:after.slice(1),ai:sole?s.result.ai?{...s.result.ai,mixed:true}:undefined:{understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist,mixed:retainedIds.length>0}};
-    s={...s,result,browseSeen:[...new Set([...(s.browseSeen??[]),...before.map(card=>card.id),...after.map(card=>card.id)])],failedAction:null,familiar:{...s.familiar,marked:more?[]:unresolvedIds,hidden:more?s.familiar.hidden:[...new Set([...s.familiar.hidden,...changedIds])],undo},
+    s={...s,result,browseSeen:[...new Set([...(s.browseSeen??[]),...before.map(card=>card.id),...after.map(card=>card.id)])],failedAction:null,familiar:{...s.familiar,marked:more?[]:s.familiar.marked.filter(id=>!changedIds.includes(id)),hidden:more?s.familiar.hidden:[...new Set([...s.familiar.hidden,...changedIds])],undo},
       replacement:{changedIds,unresolvedIds,notice:[more?(after.length<4?'Нашлось меньше четырёх новых вариантов по этому запросу.':'Другие варианты по тому же запросу.'):'',sole?'Доступен только один другой вариант по условиям. Он подобран по каталогу без нового обращения к модели.':'',unresolvedIds.length?'Часть отмеченных вариантов осталась: подтверждённых замен пока недостаточно.':''].filter(Boolean).join(' ')}};
     return response(s,{feedbackCarry:{retainedIds}});
   }
@@ -147,7 +147,11 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const final=action.type==='confirm'||action.type==='retry'&&s.failedAction==='pick';
     s=answerMediaConversation(s,action);
     if(action.type==='restart'){s.familiar.excluded=priorExclusions;s=remembered(body,s);}
-    if(replacing)return replace(s,who,more);
+    if(replacing){
+      if(action.type==='replace_familiar'&&action.id!==undefined&&!s.familiar.marked.includes(action.id))throw bad('Сначала отметь этот вариант для замены.');
+      const targets=action.type==='replace_familiar'&&action.id!==undefined?[action.id]:action.type==='retry'?s.replacement?.pendingIds:null;
+      return replace(s,who,more,targets);
+    }
     if(action.type==='undo_replacement')return response(s,{feedbackCarry:{retainedIds:cardsOf(s.result).filter(card=>cardsOf(beforeResult).some(old=>old.id===card.id)).map(card=>card.id)}});
     const planning=!final&&s.needsPlan&&['answer','correct','retry'].includes(action.type);
     if(!final&&!planning)return response(s);

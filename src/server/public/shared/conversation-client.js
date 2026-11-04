@@ -1,5 +1,6 @@
 import {initialConversationSnapshot} from './conversation-entry.js';
 import {questionDraftKey} from '../pick/game/question-drafts.js';
+import {createSelectionArchive} from './selection-archive.js';
 export const CONVERSATION_KEY='tastiq.conversation.game.v1';
 export const conversationStorageKey=domain=>`tastiq.conversation.${domain}.v1`;
 const clone=value=>value==null?value:structuredClone(value);
@@ -9,12 +10,15 @@ const recoveryOf=value=>typeof value?.error==='string'&&value.error?{error:value
  id:value.state?.id,revision:value.state?.revision,failedAction:value.state?.failedAction??null}:null;
 
 // Transport, snapshots and drafts are independent of DOM. Reload is always a free resume.
-export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false}={}) {
+export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false,selectionId=null}={}) {
  if(!['game','film','series','cartoon'].includes(domain)||typeof storageKey!=='string'||!storageKey||domain!=='game'&&storageKey===CONVERSATION_KEY)throw TypeError('Некорректный раздел подбора');
  const scoped=state=>state&&(domain==='game'?state.domain==null||state.domain==='game':state.domain===domain);
  let snapshot=null,drafts={},previous=null,correctionCheckpoint=null,persistent=Boolean(storage),generation=0,busy=false,error=null,retryBody=null,retryOptions={};
  try {const saved=JSON.parse(storage?.getItem(storageKey)??'null');if(saved?.version===1){if(saved.snapshot?.state?.version===1&&saved.snapshot?.screen&&scoped(saved.snapshot.state)){snapshot=saved.snapshot;if(saved.drafts&&typeof saved.drafts==='object')drafts=saved.drafts;}if(saved.previous?.snapshot?.state?.version===1&&saved.previous.snapshot.screen&&scoped(saved.previous.snapshot.state))previous=saved.previous;}}catch { /* invalid storage is not trusted */ }
  try {const saved=JSON.parse(storage?.getItem(storageKey)??'null');if(saved?.version===1&&saved.correctionCheckpoint?.snapshot?.state?.version===1&&saved.correctionCheckpoint.snapshot.screen?.type==='result'&&saved.correctionCheckpoint.snapshot.state.result&&scoped(saved.correctionCheckpoint.snapshot.state)&&saved.correctionCheckpoint.drafts&&typeof saved.correctionCheckpoint.drafts==='object')correctionCheckpoint=saved.correctionCheckpoint;}catch {}
+ const archive=createSelectionArchive({storage});
+ const selected=selectionId?archive.get(selectionId,domain):null;
+ if(selected&&JSON.stringify(snapshot?.state)!==JSON.stringify(selected.state)){if(snapshot)previous={snapshot:clone(snapshot),drafts:clone(drafts),fromArchive:true};snapshot=selected;drafts={};correctionCheckpoint=null;}
  if(localStart&&(!snapshot||snapshot.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.state.turns.length&&!snapshot.error)){
   const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,...(snapshot?{id:snapshot.state.id}:{})});
   // v3 draft keys include question wording and options. Upgrade a pristine entry
@@ -30,7 +34,8 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  }
  error=recoveryOf(snapshot)?.error??null;
  if(error&&snapshot.retryable!==false)retryBody={state:clone(snapshot.state),action:{type:'retry'},...(uid?{uid}:{})};
- const save=()=>{try{if(!storage)throw Error();storage.setItem(storageKey,JSON.stringify({version:1,snapshot,drafts,previous,correctionCheckpoint}));}catch{persistent=false;}};
+ let lastArchived=null;
+ const save=()=>{if(snapshot!==lastArchived){archive.capture(snapshot);lastArchived=snapshot;}try{if(!storage)throw Error();storage.setItem(storageKey,JSON.stringify({version:1,snapshot,drafts,previous,correctionCheckpoint}));}catch{persistent=false;}};
  const notify=()=>onChange(api);
  async function execute(body,{reset=false,restoredDrafts=null,clearPrevious=false,resumeFailure=null}={}) {
   if(domain!=='game')body={...body,domain};
@@ -59,10 +64,10 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  }
  const api={
   get state(){return clone(snapshot?.state??null);},get screen(){return clone(snapshot?.screen??null);},
-  get snapshot(){return clone(snapshot);},get busy(){return busy;},get error(){return error;},get persistent(){return persistent;},
+  get snapshot(){return clone(snapshot);},get busy(){return busy;},get error(){return error;},get persistent(){return persistent;},get archivePersistent(){return archive.persistent;},
   get canRestoreCorrection(){return Boolean(correctionCheckpoint&&correctionCheckpoint.snapshot.state.id===snapshot?.state?.id&&correctionCheckpoint.snapshot.state.revision!==snapshot?.state?.revision);},
   restoreCorrection(){if(!api.canRestoreCorrection||busy)return false;generation++;snapshot=clone(correctionCheckpoint.snapshot);drafts={...clone(correctionCheckpoint.drafts),...drafts};correctionCheckpoint=null;error=snapshot.error??null;retryBody=null;save();notify();return true;},
-  get canRestorePrevious(){return Boolean(previous&&previous.snapshot.state.id!==snapshot?.state?.id);},
+  get canRestorePrevious(){return Boolean(previous&&(previous.fromArchive||previous.snapshot.state.id!==snapshot?.state?.id));},
   draft(key){return cleanDraft(drafts[key]);},
   saveDraft(key,value){drafts[key]=cleanDraft(value);save();},
   start(){if(localStart&&snapshot?.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.error){save();notify();return Promise.resolve(clone(snapshot));}return execute({...(snapshot?{state:clone(snapshot.state)}:{mode:mode==='free'?'free':'guided'}),...(uid?{uid}:{})},{resumeFailure:recoveryOf(snapshot)});},

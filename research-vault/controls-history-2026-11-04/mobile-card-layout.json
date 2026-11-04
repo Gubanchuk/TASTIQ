@@ -1,0 +1,576 @@
+[
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "cards": [
+      {
+        "cardWidth": 352,
+        "columns": "312px",
+        "textWidth": 312,
+        "title": "Аватар: Легенда об Аанге"
+      },
+      {
+        "cardWidth": 352,
+        "columns": "312px",
+        "textWidth": 312,
+        "title": "Рик и Морти"
+      },
+      {
+        "cardWidth": 352,
+        "columns": "312px",
+        "textWidth": 312,
+        "title": "Аркейн"
+      },
+      {
+        "cardWidth": 352,
+        "columns": "312px",
+        "textWidth": 312,
+        "title": "Король лев"
+      }
+    ]
+  },
+  {
+    "domain": "cartoon",
+    "width": 320,
+    "cards": [
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Аватар: Легенда об Аанге",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Рик и Морти",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Аркейн",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Король лев",
+        "width": 290
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "domain": "game",
+    "width": 320,
+    "cards": [
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Stardew Valley",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Portal 2",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Slay the Spire",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Left 4 Dead 2",
+        "width": 290
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "domain": "film",
+    "width": 320,
+    "cards": [
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Побег из Шоушенка",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Крёстный отец 2",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Тёмный рыцарь",
+        "width": 290
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "domain": "series",
+    "width": 320,
+    "cards": [
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Во все тяжкие",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Чернобыль",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Игра престолов",
+        "width": 290
+      },
+      {
+        "columns": "258px",
+        "textWidth": 258,
+        "title": "Братья по оружию",
+        "width": 290
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "domain": "game",
+    "width": 1440,
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Stardew Valley",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Terraria",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Slay the Spire",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Left 4 Dead 2",
+        "width": 328
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "domain": "film",
+    "width": 1440,
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Побег из Шоушенка",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Властелин колец: Братство кольца",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Тёмный рыцарь",
+        "width": 328
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "domain": "series",
+    "width": 1440,
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Во все тяжкие",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Прослушка",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Игра престолов",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Братья по оружию",
+        "width": 328
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "domain": "cartoon",
+    "width": 1440,
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Аватар: Легенда об Аанге",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Бэтмен",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Аркейн",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Король лев",
+        "width": 328
+      }
+    ],
+    "overflow": 0
+  },
+  {
+    "cards": [
+      {
+        "textWidth": 381.6875,
+        "title": "Побег из Шоушенка",
+        "width": 694
+      },
+      {
+        "textWidth": 289,
+        "title": "Властелин колец: Братство кольца",
+        "width": 337
+      },
+      {
+        "textWidth": 289,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 337
+      },
+      {
+        "textWidth": 289,
+        "title": "Тёмный рыцарь",
+        "width": 337
+      }
+    ],
+    "overflow": 0,
+    "width": 1024,
+    "domain": "film"
+  },
+  {
+    "domain": "film",
+    "width": 390,
+    "run": "controls-path-mobile",
+    "cards": [
+      {
+        "textWidth": 312,
+        "title": "Побег из Шоушенка",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Крёстный отец",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Тёмный рыцарь",
+        "width": 352
+      }
+    ]
+  },
+  {
+    "domain": "series",
+    "width": 390,
+    "run": "controls-path-mobile",
+    "cards": [
+      {
+        "textWidth": 312,
+        "title": "Во все тяжкие",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Чернобыль",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Игра престолов",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Братья по оружию",
+        "width": 352
+      }
+    ]
+  },
+  {
+    "domain": "cartoon",
+    "width": 390,
+    "run": "controls-path-mobile",
+    "cards": [
+      {
+        "textWidth": 312,
+        "title": "Аватар: Легенда об Аанге",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Рик и Морти",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Аркейн",
+        "width": 352
+      },
+      {
+        "textWidth": 312,
+        "title": "Король лев",
+        "width": 352
+      }
+    ]
+  },
+  {
+    "domain": "game",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Stardew Valley",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Portal 2",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Slay the Spire",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Left 4 Dead 2",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "film",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Побег из Шоушенка",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Крёстный отец",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Властелин колец: Возвращение короля",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Тёмный рыцарь",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "series",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Во все тяжкие",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Чернобыль",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Игра престолов",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Братья по оружию",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "cartoon",
+    "width": 1440,
+    "run": "controls-path-desktop",
+    "cards": [
+      {
+        "textWidth": 609.140625,
+        "title": "Аватар: Легенда об Аанге",
+        "width": 1024
+      },
+      {
+        "textWidth": 280,
+        "title": "Рик и Морти",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Аркейн",
+        "width": 328
+      },
+      {
+        "textWidth": 280,
+        "title": "Король лев",
+        "width": 328
+      }
+    ]
+  },
+  {
+    "domain": "game",
+    "cards": [
+      {
+        "textWidth": 368,
+        "title": "Stardew Valley"
+      },
+      {
+        "textWidth": 368,
+        "title": "Terraria"
+      },
+      {
+        "textWidth": 368,
+        "title": "Slay the Spire"
+      },
+      {
+        "textWidth": 368,
+        "title": "Left 4 Dead 2"
+      }
+    ],
+    "overflow": 0,
+    "smallVisibleControls": [],
+    "width": 446
+  },
+  {
+    "domain": "film",
+    "cards": [
+      {
+        "textWidth": 368,
+        "title": "Побег из Шоушенка"
+      },
+      {
+        "textWidth": 368,
+        "title": "Властелин колец: Братство кольца"
+      },
+      {
+        "textWidth": 368,
+        "title": "Властелин колец: Возвращение короля"
+      },
+      {
+        "textWidth": 368,
+        "title": "Тёмный рыцарь"
+      }
+    ],
+    "overflow": 0,
+    "smallVisibleControls": [],
+    "width": 446
+  },
+  {
+    "domain": "series",
+    "cards": [
+      {
+        "textWidth": 368,
+        "title": "Во все тяжкие"
+      },
+      {
+        "textWidth": 368,
+        "title": "Прослушка"
+      },
+      {
+        "textWidth": 368,
+        "title": "Игра престолов"
+      },
+      {
+        "textWidth": 368,
+        "title": "Братья по оружию"
+      }
+    ],
+    "overflow": 0,
+    "smallVisibleControls": [],
+    "width": 446
+  },
+  {
+    "domain": "cartoon",
+    "cards": [
+      {
+        "textWidth": 368,
+        "title": "Аватар: Легенда об Аанге"
+      },
+      {
+        "textWidth": 368,
+        "title": "Бэтмен"
+      },
+      {
+        "textWidth": 368,
+        "title": "Аркейн"
+      },
+      {
+        "textWidth": 368,
+        "title": "Король лев"
+      }
+    ],
+    "overflow": 0,
+    "smallVisibleControls": [],
+    "width": 446
+  }
+]

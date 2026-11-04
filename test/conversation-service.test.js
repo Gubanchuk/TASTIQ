@@ -57,6 +57,16 @@ test('disabled AI provides explicit local recovery and provisional engine result
 });
 
 const resultState=()=>({...pending(),phase:'result',needsPlan:false,summary:'Сегодня нужна история',result:{top:{id:'1',name:'Old',ai:{reason:'Старое объяснение'}},alternatives:[{id:'3',name:'Keep',ai:{reason:'Оставить'}}],ai:{model:'old'}}});
+test('one-card replacement preserves another marked card, targeted retry and undo',async()=>{
+ let calls=0;const service=createConversationService({catalogs,pick:async()=>++calls===1?{error:'offline',retryable:true}:{picks:[{id:'4',reason:'Fresh'}]}});
+ let out=await service({state:resultState(),action:{type:'familiar_mark',id:'1'}});
+ out=await service({state:out.state,action:{type:'familiar_mark',id:'3'}});const before=structuredClone(out.state);
+ out=await service({state:out.state,action:{type:'replace_familiar',id:'1'}});assert.equal(out.error,'offline');assert.deepEqual(out.state.replacement.pendingIds,['1']);
+ out=await service({state:out.state,action:{type:'retry'}});
+ assert.equal(out.state.result.top.id,'4');assert.deepEqual(out.state.result.alternatives,before.result.alternatives);assert.deepEqual(out.state.familiar.marked,['3']);assert.deepEqual(out.feedbackCarry.retainedIds,['3']);
+ const undo=await service({state:out.state,action:{type:'undo_replacement'}});assert.deepEqual(undo.state.result,before.result);assert.deepEqual(undo.state.familiar.marked,['1','3']);assert.equal(calls,2);
+ await assert.rejects(()=>service({state:before,action:{type:'replace_familiar',id:'missing'}}),e=>e.status===400);
+});
 test('batch replaces only marked slots once, preserves goal and untouched cards, excludes editions and restores for free',async()=>{
   let plans=0,picks=0,candidates;
   const service=createConversationService({catalogs,plan:async()=>{plans++;return goodPlan();},pick:async(_,s)=>{

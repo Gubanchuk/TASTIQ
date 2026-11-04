@@ -1,3 +1,4 @@
+import {createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl} from '../src/server/public/shared/selection-archive.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createLibraryStore,LIBRARY_KEY} from '../src/server/public/shared/library-store.js';
@@ -107,8 +108,8 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
  }
  const document={activeElement:null,hidden:false,querySelector:selector=>selector==='#library-app'?app:selector==='#library-notice'?notice:null,querySelectorAll:()=>[],getElementById:()=>null,
   addEventListener:(type,handler)=>handlers.set(type,handler)};
- const context=vm.createContext({document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:value=>value},structuredClone,matchMedia:()=>({matches:mobile,addEventListener(){}}),
-  createLibraryStore,LIBRARY_KEY,safeLibraryUrl:library.safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,initCustomSelects,focusCustomSelect,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,
+ const context=vm.createContext({URLSearchParams,document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:value=>value},structuredClone,matchMedia:()=>({matches:mobile,addEventListener(){}}),
+  createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl:library.safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,initCustomSelects,focusCustomSelect,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,
   createFeedbackStore:options=>createFeedbackStore({...options,locks:{request:async(_,fn)=>fn()},...(localTransaction?{transaction:localTransaction}:{})}),
   fetch:async(url,options)=>{requests.push({url,options});return transport?transport(url,options):{ok:true,json:async()=>catalog};},
   setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});

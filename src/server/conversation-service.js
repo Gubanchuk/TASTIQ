@@ -30,14 +30,14 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     if(!Array.isArray(list)||list.length>500||list.some(id=>typeof id!=='string'||!/^[a-zA-Z0-9:_-]{1,80}$/.test(id)))throw Object.assign(Error('Некорректный список знакомых игр.'),{status:400});
     s.familiar.excluded=[...new Set(list.filter(id=>catalog.byId.has(id)))];return s;
   }
-  async function replace(s,who,more=false) {
-    const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):s.familiar.marked).filter(id=>before.some(c=>c.id===id)));
+  async function replace(s,who,more=false,targetIds=null) {
+    const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):targetIds??s.familiar.marked).filter(id=>before.some(c=>c.id===id)));
     if(!marked.size)return response(s);
     const legacy=projection(s);
     const neutralShown=[...new Set([...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(card=>editionsOf(catalog,card.id))])].filter(id=>!(legacy.session.notNow??[]).includes(id));
     // Every displayed work is unavailable as a replacement, including editions of retained cards.
     legacy.session.notNow=[...new Set([...legacy.session.notNow,...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(c=>editionsOf(catalog,c.id))])];
-    const failed=(error,retryable=true)=>response({...s,failedAction:more?'more':'replace'},{error,retryable});
+    const failed=(error,retryable=true)=>response({...s,failedAction:more?'more':'replace',...(!more?{replacement:{...s.replacement,pendingIds:[...marked]}}:{})},{error,retryable});
     if(new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)]).size>496)return failed('В этом подборе уже слишком много отметок. Начни новый подбор: явные сохранённые исключения останутся.',false);
     const eligible=rankAll(catalog,profileOf(legacy),sessionOf(legacy)).ranked;
     if(!eligible.length)return failed(more?'Других подходящих игр по этому запросу пока нет. Прежние варианты сохранены — можно уточнить запрос.':'Других подходящих игр пока нет. Оставь знакомую для возвращения или уточни запрос.',false);
@@ -74,7 +74,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     const retainedIds=after.filter(c=>before.some(old=>old.id===c.id)).map(c=>c.id);
     const result={...s.result,top:after[0],alternatives:after.slice(1),
       ai:sole?s.result.ai?{...s.result.ai,mixed:true}:undefined:{understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist,mixed:retainedIds.length>0}};
-    s={...s,result,browseSeen:[...new Set([...(s.browseSeen??[]),...before.map(card=>card.id),...after.map(card=>card.id)])],failedAction:null,familiar:{...s.familiar,marked:more?[]:unresolvedIds,hidden:more?s.familiar.hidden:[...new Set([...s.familiar.hidden,...changedIds])],undo},
+    s={...s,result,browseSeen:[...new Set([...(s.browseSeen??[]),...before.map(card=>card.id),...after.map(card=>card.id)])],failedAction:null,familiar:{...s.familiar,marked:more?[]:s.familiar.marked.filter(id=>!changedIds.includes(id)),hidden:more?s.familiar.hidden:[...new Set([...s.familiar.hidden,...changedIds])],undo},
       replacement:{changedIds,unresolvedIds,notice:[more?(after.length<4?'Нашлось меньше четырёх новых вариантов по этому запросу.':'Другие варианты по тому же запросу.'):'',sole?'Доступен только один другой вариант по условиям. Он подобран по каталогу без нового обращения к модели.':'',unresolvedIds.length?'Часть отмеченных игр осталась: подтверждённых замен пока недостаточно.':''].filter(Boolean).join(' ')}};
     return response(s,{feedbackCarry:{retainedIds}});
   }
@@ -100,7 +100,11 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     const replacing=more||action.type==='replace_familiar'||action.type==='retry'&&s.failedAction==='replace';
     s=answerConversation(s,action);
     if(action.type==='restart') {s.familiar.excluded=priorExclusions;s=remembered(body,s);}
-    if(replacing)return replace(s,who,more);
+    if(replacing){
+      if(action.type==='replace_familiar'&&action.id!==undefined&&!s.familiar.marked.includes(action.id))throw Object.assign(Error('Сначала отметь этот вариант для замены.'),{status:400});
+      const targets=action.type==='replace_familiar'&&action.id!==undefined?[action.id]:action.type==='retry'?s.replacement?.pendingIds:null;
+      return replace(s,who,more,targets);
+    }
     if(action.type==='undo_replacement')return response(s,{feedbackCarry:{retainedIds:cardsOf(s.result).filter(c=>cardsOf(beforeResult).some(old=>old.id===c.id)).map(c=>c.id)}});
     const final=action.type==='confirm'||action.type==='retry'&&s.failedAction==='pick';
     const planning=!final&&s.needsPlan&&['answer','correct','retry'].includes(action.type);

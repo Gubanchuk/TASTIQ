@@ -24,6 +24,8 @@ colors:
   liked-text: "#3e6246"
   workspace-soft: "#e9eefb"
   workspace-line: "#d8e0f0"
+  control-border: "#7186bc"
+  control-hover: "#e8eeff"
 typography:
   hero:
     fontFamily: "Unbounded, Golos, sans-serif"
@@ -176,12 +178,13 @@ components:
     padding: "12px 21px"
     height: "48px"
   button-secondary:
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.primary}"
     rounded: "{rounded.product-control}"
     padding: "10px 17px"
     height: "44px"
   choice-game:
-    backgroundColor: "{colors.paper}"
+    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
     rounded: "{rounded.product-choice}"
     padding: "14px 17px"
@@ -221,7 +224,7 @@ components:
     rounded: "{rounded.product-library-card}"
     padding: "18px"
   product-nav-link:
-    textColor: "{colors.muted}"
+    textColor: "{colors.primary}"
     rounded: "{rounded.product-control}"
     padding: "10px 16px"
     height: "44px"
@@ -263,9 +266,9 @@ components:
 
 Владелец выбрал Conversation 02.11.2026 и 03.11.2026 утвердил знак 5B, прописное написание 02 и палитру 02 «Кобальт». Прохладное светлое поле, точный SVG, белые рабочие поверхности, кобальтовые действия и Unbounded/Golos сохранены. Иерархию задают запрос, один вопрос, исправление понимания и предложение с причиной и оговорками.
 
-После отклонения предыдущего product UI владелец поручил существенную автономную переработку. Эта запись описывает её построенный код и свежие captures после F1/F2; новое оформление ещё не одобрено владельцем. Четыре файла одобренной главной в этом этапе byte-identical. Старые тёплая палитра, seed 537787fa и receipts — история.
+После отклонения предыдущего product UI владелец поручил существенную автономную переработку. Эта запись описывает текущий код, включая ручную проверку04.11.2026; новое оформление ещё не одобрено владельцем. Четыре файла одобренной главной в этом этапе byte-identical. Старые тёплая палитра, seed 537787fa и receipts — история.
 
-Система действует на главной, /pick/game/, /pick/watch/, /library/ и legacy /pick/. Утверждённые SVG из src/server/public/assets/brand/ сохраняют контуры и пропорции; kit — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Бренд задаёт brand.css, современную форму — product.css, затем workspace.css/custom-select.css/results.css. Порядок подключения существенен; legacy сохраняет собственную композицию.
+Система действует на главной, /pick/game/, /pick/watch/, /library/ и legacy /pick/. Утверждённые SVG из src/server/public/assets/brand/ сохраняют контуры и пропорции; kit — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Бренд задаёт brand.css, современную форму — product.css, затем workspace.css/custom-select.css/results.css/controls.css. Порядок подключения существенен; legacy сохраняет собственную композицию.
 
 **Key Characteristics:**
 
@@ -302,7 +305,7 @@ components:
 
 - **Hero:** сохранённая главная; ≤1050px35px, phone fluid29–40px, tiny28px. Landing-headline/landing-finale сохраняют отдельные роли: phone34px и29–40px, tiny30px и28px.
 - **Display:** библиотека32px/1.3, phone28px. **Headline:** вопрос28px/1.35/max28ch, phone24px/1.4/tiny22px. **Result-headline:** отдельные30px/1.35, phone25px.
-- **Featured title:** Golos60030px/1.25, tablet27px, phone26px/tiny24px. **Title:** альтернатива22px/1.3; групповой заголовок22px/1.4, phone21px.
+- **Featured title:** Golos60030px/1.25, tablet27px, phone24px/tiny24px. **Title:** альтернатива22px/1.3; групповой заголовок22px/1.4, phone21px.
 - **Library title:** Golos60017px/1.45, ≤600px16px, ≤350px15px.
 - **Body:**14px/1.7; featured reason16px/1.75, phone15px; alternative14px/1.75. Reason/help до65ch. Главная сохраняет15–17px/1.8–1.85 и14px/1.8 в механизме.
 - **Local roles:** request-fact13px/1.65, result-meta13px/1.65, caveat13px/1.7, select-value50013px/1.5. Это фактические компонентные роли, не утверждение об общей кратной шкале. Controls12–14px; desktop domain55014px/1.5. Круг этапа12px, phone label11px/1.5; counts tabular-nums.
@@ -313,7 +316,7 @@ components:
 
 Главная сохраняет max1440px/gutter clamp(20px,5vw,80px); четыре веера в ряд, phone две колонки. Подписи на бумаге. Механизм/финал две колонки, phone одна, gaps сужаются при1050px. Четыре конечных входа одной колонкой. Главная не читает личные планы и не превращается в библиотечное промо.
 
-Desktop shell sticky top12px/z60/max1380px (от1500px1440px)/min76px/margin16px auto28px/padding14px24px. ≤1450px поля24px, ≤1100px padding12px18px/gap14px. SVG140px, видимые «Подбор»/«Библиотека», domain/restart/restore. Phone top0/radius0/no shadow/padding10px16px/logo120px (tiny105px): nav в первой строке, короткое имя раздела/restart во второй, restore при наличии в третьей. Library вместо домена имеет «Подобрать новое». Scroll-padding112px/phone146px.
+Desktop shell sticky top0/z60/max1380px (от1500px1440px)/min76px/margin0 auto28px/padding14px24px/radius0 0 20px 20px. При761–1000px видимые restart/restore переходят на отдельный ряд и сохраняют однострочные подписи. ≤1450px поля24px, ≤1100px padding12px18px/gap14px. SVG140px, видимые «Подбор»/«Библиотека», domain/restart/restore. Phone top0/radius0/no shadow/padding10px16px/logo120px (tiny105px): nav в первой строке, короткое имя раздела/restart во второй, restore при наличии в третьей. Library вместо домена имеет «Подобрать новое». Scroll-padding112px/phone146px.
 
 Workspace max1380/1440px: request280px + работа/gap28px/margin0 auto64px; ≤1100px request250px/gap22px. Phone одна колонка/gap16px/поля14px/tiny10px/низ40px. Request — белая самостоятельная поверхность с группами фактов и условий. Phone preview сохраняет свои слова и «Уточнить один момент», полный запрос раскрывается. Редактор желания/неясности находится в центре с контекстом, draft и apply/cancel.
 
@@ -367,7 +370,7 @@ Featured desktop grid minmax(220px,.8fr)+minmax(0,1.5fr)/gap30px/padding30px; ta
 
 Art natural width/height/max-width100%/object-fit:contain, max-height featured420px/alternative220px desktop,320/280px phone. Нет modern16:9/2:3/4:3-контейнера. До load/error виден title fallback/min132px; success скрывает fallback и снимает минимум. Причины/caveats/actions доступны без картинки.
 
-Library cover76px desktop, ≤900px80px, ≤600px62px, ≤350px46px; natural height/contain. Plan-select/remove/details независимы. Меньшее число предложений не дополняется ради сетки.
+Library cover76px desktop, ≤900px80px, ≤600px62px, ≤350px46px; natural height/contain. Plan-select/remove/details независимы. Select и удаление занимают отдельную полную строку карточки; при ≤420px вторичные фильтры идут одной колонкой без обрезки выбранного порядка. Меньшее число предложений не дополняется ради сетки.
 
 ### Inputs / Fields
 
@@ -433,3 +436,13 @@ Stage/shared focus3px/4px, library2px/4px, search/select2px/3px; главная3
 ## Условия и порядок рекомендаций — 2026-11-03
 
 В modern media сводке формат/компания/возраст представлены единственными строками с прежним удалением и undo. Достоверно связанные дубли форматного факта скрыты только в представлении. Первый блок выдачи подписан «Главный вариант под твой запрос», следующие — «Другие варианты»; используются существующие роли Golos22/21, без новых tokens. Пояснение до четырёх вариантов относится к обеим кнопкам more. Проверенные кадры и границы: docs/REQUEST_CLARITY_2026-11-03.md.
+
+## Кнопки, мобильная сетка и архив — 04.11.2026
+
+Управление современными четырьмя разделами и библиотекой уточнено после семи скриншотов владельца и дополнительного поручения вручную пройти ПК и телефон. controls.css подключён последним: белые secondary/нейтральные действия с control-border, кобальтовые подписи, hover, pressed и focus. Primary остаётся сплошным кобальтом. Summary имеет одну SVG-стрелку справа; optional-подпись располагается под названием, стрелка занимает отдельную колонку. Открытие первого вопроса сохраняет вертикальную последовательность и ширину строк.
+
+Mobile result: у featured и каждой альтернативы heading явно занимает колонку1, без неявной второй колонки. В наблюдённом случае390px это вернуло текст с0/78.56px до312px; на320px все16 проверенных карточек имели258px. Заголовок featured24px/1.3, альтернатив22px/1.3, причины15px/1.7, оговорки14px/1.65. Метаданные состоят из смысловых единиц, известные жанры отображаются по-русски; catalog/ranking не меняются. Четыре fit-оценки и четыре outcome — сетка2×2, выбор/сохранение/знакомство занимают полную ширину.
+
+Одна отмеченная карточка имеет собственное «Заменить только этот вариант». Её загрузка остаётся в карточках; по завершении фокус переходит на заголовок замены. Групповая замена отдельно. Финал автоматически сохраняется в localStorage: «Библиотека → Подборы» возвращает весь результат без новой генерации. Архив ограничен30 batches/1.5M символов своего envelope, не меняет планы/оценки и не отправляет данные сам. Ошибка записи явно сообщается.
+
+Проверено native IAB: четыре полных пути на390px и1440px, все16 финальных карточек320px, дополнительные820/1024/446px, формы/клавиатура/ошибка и restore. Evidence: research-vault/controls-history-2026-11-04/. Это проверка интерфейса и поведения, не одобрение владельцем и не замер human fit.

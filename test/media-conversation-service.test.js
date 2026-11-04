@@ -23,6 +23,18 @@ const resultState=async service=>{
   return {...state,phase:'result',needsPlan:false,summary:'Сегодня нужна история',result:{top:{id:'t1',domain:'film',name:'Old',ai:{reason:'Старое объяснение'}},alternatives:[{id:'t2',domain:'film',name:'Keep',ai:{reason:'Оставить'}}],ai:{model:'old'}}};
 };
 
+test('one-card media replacement keeps another mark through error, free restore, retry and undo in all domains',async()=>{
+ for(const domain of domains){
+  let calls=0;const service=create(domain,{pick:async()=>++calls===1?{error:'offline',retryable:true}:{picks:[{id:'t4',reason:'Fresh'}]}});
+  const initial=await service({domain});const state={...initial.state,phase:'result',needsPlan:false,summary:'Сегодня нужна история',result:{top:{id:'t1',domain,name:'Old'},alternatives:[{id:'t2',domain,name:'Keep'}]}};
+  let out=await service({domain,state,action:{type:'familiar_mark',id:'t1'}});out=await service({domain,state:out.state,action:{type:'familiar_mark',id:'t2'}});const before=structuredClone(out.state);
+  out=await service({domain,state:out.state,action:{type:'replace_familiar',id:'t1'}});assert.equal(out.error,'offline');assert.deepEqual(out.state.replacement.pendingIds,['t1']);
+  out=await service({domain,state:out.state});assert.equal(calls,1);
+  out=await service({domain,state:out.state,action:{type:'retry'}});assert.equal(out.state.result.top.id,'t4');assert.deepEqual(out.state.result.alternatives,before.result.alternatives);assert.deepEqual(out.state.familiar.marked,['t2']);
+  const undo=await service({domain,state:out.state,action:{type:'undo_replacement'}});assert.deepEqual(undo.state.result,before.result);assert.deepEqual(undo.state.familiar.marked,['t1','t2']);assert.equal(calls,2);
+  await assert.rejects(()=>service({domain,state:before,action:{type:'replace_familiar',id:'missing'}}),e=>e.status===400);
+ }
+});
 test('an ambiguous mood reference remains unresolved without demanding an exact version or blocking review',async()=>{
   const domain='cartoon',base=screenFixture(domain);
   const items=base.items.map((item,index)=>index<2?{...item,name:'Shared Hero',ru:null,aliases:[],work:`hero-${index}`} : item);

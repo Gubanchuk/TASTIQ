@@ -6,6 +6,7 @@ import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {createFeedbackDrafts,FEEDBACK_DRAFTS_KEY} from '/shared/feedback-drafts.js';
+import {createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl} from '/shared/selection-archive.js';
 
 const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -18,6 +19,7 @@ const title=row=>String(row.title||row.ru||row.name||'Без названия');
 const icon=name=>`<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">${({search:'<circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/>',close:'<path d="m5 5 10 10M15 5 5 15"/>',arrow:'<path d="M3 10h13m-5-5 5 5-5 5"/>',book:'<path d="M5 3h10v14l-5-3-5 3V3Z"/>'})[name]||''}</svg>`;
 let storage;try{storage=qaStorage(localStorage);}catch{/* keep this visit in memory */}
 const library=createLibraryStore({storage});
+const archive=createSelectionArchive({storage});
 const familiar=createGameHistory({storage});
 const mediaHistories=Object.fromEntries(['film','series','cartoon'].map(domain=>[domain,createMediaHistory(domain,{storage})]));
 const historyFor=domain=>domain==='game'?familiar:mediaHistories[domain];
@@ -28,6 +30,7 @@ const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:a
  document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});
 }});
 const state={view:'board',query:'',domain:'all',reaction:'all',sort:'added',lane:'want',limit:24,filtersOpen:false,undo:null};
+if(new URLSearchParams(globalThis.location?.search??'').get('view')==='history')state.view='history';
 const metadata=new Map(),requested=new Set(),failedImages=new Set(),openDetails=new Set(),feedbackDrafts=createFeedbackDrafts({storage});
 let noticeTimer,feedbackQueue=Promise.resolve(),feedbackQueued=0,feedbackDirty=false;
 const date=value=>{const at=new Date(value);return Number.isFinite(at.valueOf())?at.toLocaleDateString('ru',{day:'numeric',month:'short',year:'numeric'}):'Дата не сохранена';};
@@ -69,9 +72,9 @@ function card(row) {
  const ratingButton=(status,label)=>`<button type="button" class="library-button rating-button" data-act="rate" ${attrs} data-value="${status}" data-focus="${focusKey(`rate-${status}`,row)}" aria-pressed="${row.status===status}">${label}</button>`;
  return `<article class="board-card" data-card="${esc(k)}">${media(row)}<div class="board-card-copy"><p class="library-meta">${esc([row.year,NOUNS[row.domain]].filter(Boolean).join(' · '))}</p><h3>${esc(title(row))}</h3>`
   +(rating?`<p class="rating-label ${row.status}">${rating}</p>`:'')
-  +`<div class="board-card-actions"><label class="move-control"><span class="library-sr-only">Список для ${esc(title(row))}</span><select data-act="move" ${attrs} data-focus="${focusKey('move',row)}">${Object.entries(LANES).map(([id,label])=>`<option value="${id}"${row.lane===id?' selected':''}>${label}</option>`).join('')}</select></label>`
+  +`</div><div class="board-card-actions"><label class="move-control"><span class="library-sr-only">Список для ${esc(title(row))}</span><select data-act="move" ${attrs} data-focus="${focusKey('move',row)}">${Object.entries(LANES).map(([id,label])=>`<option value="${id}"${row.lane===id?' selected':''}>${label}</option>`).join('')}</select></label>`
   +`<button type="button" class="library-remove" data-act="${row.saved?'remove':'forget'}" ${attrs} data-focus="${focusKey('remove',row)}" aria-label="${row.saved?'Убрать из библиотеки':'Забыть знакомство'}: ${esc(title(row))}" title="${row.saved?'Убрать из библиотеки':'Забыть знакомство'}">${icon('close')}</button></div>`
-  +`</div><details class="card-details" data-detail="card:${esc(k)}"${openDetails.has(`card:${k}`)?' open':''}><summary data-focus="${focusKey('details',row)}">${exposure?'Отношение и знакомство':'Твоё отношение'}</summary><div class="card-details-content">`
+  +`<details class="card-details" data-detail="card:${esc(k)}"${openDetails.has(`card:${k}`)?' open':''}><summary data-focus="${focusKey('details',row)}">${exposure?'Отношение и знакомство':'Твоё отношение'}</summary><div class="card-details-content">`
   +`<p>Что думаешь об этом ${row.domain==='game'?'опыте':'названии'}? Оценка относится к вкусу, список — к планам.</p><div class="rating-actions">${ratingButton('liked','Зашло')}${ratingButton('disliked','Не зашло')}${rating?button('Убрать оценку','rate',`${attrs} data-value="none" data-focus="${focusKey('rate-none',row)}"`):''}</div>`
   +(row.answer?'<p class="library-meta">Твои прежние уточнения к оценке сохранены и учитываются в подборе.</p>':'')
   +(exposure?`<div class="familiarity-facts"><p>${esc(row.domain==='game'?(EXPOSURES[exposure.exposure]||'Уже знакомо'):({seen:'Уже смотрел',started:'Начал смотреть',finished:'Досмотрел',dropped:'Не досмотрел',paused:'Отложил'}[exposure.exposure]||'Уже знакомо'))} · ${esc(date(exposure.updatedAt))}</p><label class="library-check"><input type="checkbox" data-act="blocked" ${attrs} data-focus="${focusKey('blocked',row)}"${exposure.blocked?' checked':''}> Не предлагать в следующих подборах</label><p class="library-meta">Знакомство само по себе не означает положительную оценку.</p>${row.saved?button('Забыть знакомство','forget',`${attrs} data-focus="${focusKey('forget',row)}"`):'<p class="library-meta">Крестик убирает эту отметку знакомства. Перенос в другой список сохранит её отдельно.</p>'}</div>`:'')
@@ -99,9 +102,12 @@ function board() {
 }
 function historyView() {
  const rows=library.history().filter(row=>row&&typeof row==='object').reverse(),saved=library.all();
- const eveningsLink=button('Открыть вечера','view','data-view="evenings" data-focus="archive-evenings"');
- if(!rows.length)return '<div class="library-empty wide-empty"><h2>Прежних подборов нет</h2><p>Здесь хранятся прежние предложения. Новые выборы на вечер и отзывы об играх, фильмах, сериалах и мультфильмах — во «Вечерах».</p>'+eveningsLink+'</div>';
- return '<p class="view-description">Архив прежних предложений — в том виде, в котором они сохранились. Новые выборы и отзывы всех разделов — во «Вечерах». Открытие архива не начинает новый подбор.</p>'+eveningsLink+'<div class="library-history">'+rows.map((row,index)=>`<article class="history-row">${media({...row,id:row.topId})}<div><p class="library-meta">${esc([date(row.at),NOUNS[row.domain]].filter(Boolean).join(' · '))}</p><h2>${esc(title(row))}</h2>${Array.isArray(row.alternatives)&&row.alternatives.length?`<p>Ещё варианты: ${esc(row.alternatives.map(x=>x?.title).filter(Boolean).join(', '))}</p>`:''}</div>${saved.some(item=>item.domain===row.domain&&item.id===row.topId)?'<span class="history-saved">В библиотеке</span>':button('На потом','save-history',`data-index="${index}" data-focus="history:${index}"`)}</article>`).join('')+'</div>';
+ const selections=archive.all();
+ if(!rows.length&&!selections.length)return '<div class="library-empty wide-empty"><h2>Здесь будут твои подборы</h2><p>Результат сохраняется автоматически: запрос и все предложенные варианты. Можно вернуться к нему в этом браузере.</p>'+pickLink('Подобрать на вечер')+'</div>';
+ return '<p class="view-description">Подборы сохраняются автоматически в этом браузере. Открытие сохранённых вариантов не запускает новый подбор. Твои оценки и выбор на вечер — во «Вечерах».</p><div class="library-history">'+selections.map(row=>{
+  const snapshot=row.snapshot,cards=[snapshot.state.result.top,...(snapshot.state.result.alternatives??[])],top=cards[0];
+  return `<article class="history-row history-selection">${media({...top,title:top.ru||top.name||top.title})}<div><p class="library-meta">${esc(date(row.at))} · ${esc(DOMAINS[row.domain])}</p><h2>${esc(top.ru||top.name||top.title)}</h2><p>${esc(snapshot.screen.summary||snapshot.state.summary||'Варианты на твой вечер')}</p>${cards.length>1?`<p class="history-alternatives">Ещё: ${esc(cards.slice(1).map(c=>c.ru||c.name||c.title).join(', '))}</p>`:''}</div><a class="library-button primary" href="${selectionUrl(row)}">Открыть подбор ${icon('arrow')}</a></article>`;
+ }).join('')+rows.map((row,index)=>`<article class="history-row">${media({...row,id:row.topId})}<div><p class="library-meta">${esc([date(row.at),NOUNS[row.domain]].filter(Boolean).join(' · '))}</p><h2>${esc(title(row))}</h2>${Array.isArray(row.alternatives)&&row.alternatives.length?`<p>Ещё варианты: ${esc(row.alternatives.map(x=>x?.title).filter(Boolean).join(', '))}</p>`:''}</div>${saved.some(item=>item.domain===row.domain&&item.id===row.topId)?'<span class="history-saved">В библиотеке</span>':button('На потом','save-history',`data-index="${index}" data-focus="history:${index}"`)}</article>`).join('')+'</div>';
 }
 function eveningRows(){
  const drafts=new Set(feedbackDrafts.keys());return feedback.all().filter(run=>run.responses.length||run.cards.some(card=>drafts.has(`${run.id}:${card.id}`)));
@@ -116,9 +122,9 @@ function eveningsView() {
 }
 function render({feedbackFocus}={}) {
  const active=document.activeElement,focus=active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active instanceof HTMLInputElement?[active.selectionStart,active.selectionEnd]:null;
- const counts={board:records().length,history:library.history().length,evenings:eveningRows().length};
- $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${Object.entries({board:'Списки',history:'Архив',evenings:'Вечера'}).map(([view,label])=>`<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}">${label}<span>${counts[view]}</span></button>`).join('')}</nav>`
-  +(!library.persistent||!familiar.persistent||Object.values(mediaHistories).some(h=>!h.persistent)||state.view==='evenings'&&(!feedback.persistent||!feedbackDrafts.persistent)?'<p class="library-storage-note" role="status">Браузер не разрешил сохранить часть изменений. Они останутся в этом окне до его закрытия.</p>':'')
+ const counts={board:records().length,history:library.history().length+archive.all().length,evenings:eveningRows().length};
+ $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${Object.entries({board:'Списки',history:'Подборы',evenings:'Вечера'}).map(([view,label])=>`<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}">${label}<span>${counts[view]}</span></button>`).join('')}</nav>`
+  +(!library.persistent||state.view==='history'&&!archive.persistent||!familiar.persistent||Object.values(mediaHistories).some(h=>!h.persistent)||state.view==='evenings'&&(!feedback.persistent||!feedbackDrafts.persistent)?'<p class="library-storage-note" role="status">Браузер не разрешил сохранить часть изменений. Они останутся в этом окне до его закрытия.</p>':'')
   +(state.view==='board'?board():undoLine()+(state.view==='history'?historyView():eveningsView()));
  $('#library-app').setAttribute('aria-busy','false');
  const target=focus?document.querySelector(`[data-focus="${CSS.escape(focus)}"]`):feedbackKey?document.querySelector(`[data-fk="${CSS.escape(feedbackKey)}"]`):id?document.getElementById(id):null;
@@ -208,7 +214,7 @@ document.addEventListener('toggle',event=>{
 },true);
 document.addEventListener('error',event=>{const image=event.target;if(image instanceof HTMLImageElement&&image.closest('.library-cover')){failedImages.add(image.getAttribute('src'));image.closest('.library-cover').classList.add('no-cover');image.closest('.library-cover').innerHTML='<span>Обложка недоступна</span>'; }},true);
 addEventListener('storage',event=>{
- if(event.key===LIBRARY_KEY||event.key?.startsWith(GAME_HISTORY_PREFIX)||event.key?.startsWith(MEDIA_HISTORY_PREFIX)||event.key===null){render();void enrichFamiliar();}
+ if(event.key===LIBRARY_KEY||event.key===SELECTION_ARCHIVE_KEY||event.key?.startsWith(GAME_HISTORY_PREFIX)||event.key?.startsWith(MEDIA_HISTORY_PREFIX)||event.key===null){render();void enrichFamiliar();}
  if(event.key===FEEDBACK_KEY||event.key===null)void feedback.refresh().then(()=>{render();});
  if(event.key===FEEDBACK_DRAFTS_KEY)render();
 });

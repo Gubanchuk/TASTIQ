@@ -9,6 +9,7 @@ import {createFeedbackStore,FEEDBACK_KEY} from '../src/server/public/shared/even
 import {eveningControls,feedbackStatus} from '../src/server/public/shared/evening-view.js';
 import {qaStorage,qaFeedbackOptions} from '../src/server/public/shared/qa-session.js';
 import {createFeedbackDrafts,FEEDBACK_DRAFTS_KEY} from '../src/server/public/shared/feedback-drafts.js';
+import {createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl} from '../src/server/public/shared/selection-archive.js';
 
 function memory(){const map=new Map();return {get length(){return map.size;},key:i=>[...map.keys()][i]??null,getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};}
 async function page(storage){
@@ -16,12 +17,21 @@ async function page(storage){
  class Element{constructor(dataset={},value='',id=''){Object.assign(this,{dataset,value,id,checked:false});}closest(s){return s==='button[data-act]'?this:null;}matches(){return false;}focus(){document.activeElement=this;}}
  const findId=id=>app.innerHTML.includes(`id="${id}"`)?new Element({},'',id):null;
  const document={activeElement:null,querySelector:s=>s==='#library-app'?app:s==='#library-notice'?notice:s.startsWith('#')?findId(s.slice(1)):s.startsWith('[data-focus=')&&app.innerHTML.includes(s.slice(1,-1))?new Element({focus:s.match(/data-focus="([^"]+)"/)[1]}):null,querySelectorAll:()=>[],getElementById:findId,addEventListener:(t,h)=>handlers.set(t,h)};
- const context=vm.createContext({document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:v=>v},structuredClone,matchMedia:()=>({matches:false,addEventListener(){}}),createLibraryStore,LIBRARY_KEY,safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,createFeedbackStore:o=>createFeedbackStore({...o,locks:{request:async(_,fn)=>fn()}}),FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,initCustomSelects(){},focusCustomSelect(){},fetch:async()=>({ok:true,json:async()=>[]}),setTimeout:()=>1,clearTimeout(){},addEventListener(){}});
+ const context=vm.createContext({URLSearchParams,document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:v=>v},structuredClone,matchMedia:()=>({matches:false,addEventListener(){}}),createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,createFeedbackStore:o=>createFeedbackStore({...o,locks:{request:async(_,fn)=>fn()}}),FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,initCustomSelects(){},focusCustomSelect(){},fetch:async()=>({ok:true,json:async()=>[]}),setTimeout:()=>1,clearTimeout(){},addEventListener(){}});
  vm.runInContext((await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,''),context);
  await new Promise(r=>setImmediate(r));
  return {get html(){return app.innerHTML;},get focus(){return document.activeElement?.dataset.focus??document.activeElement?.id;},click:dataset=>{const target=new Element(dataset);target.focus();handlers.get('click')({target});},change:(id,value,dataset={})=>handlers.get('change')({target:new Element(dataset,value,id)}),input:value=>handlers.get('input')({target:new Element({},value,'find-title')})};
 }
 const ids=html=>[...html.matchAll(/data-card="([^"]+)"/g)].map(m=>m[1]);
+test('modern results appear in saved selections with all alternatives and a free reopen link, independently of plans',async()=>{
+ const storage=memory(),archive=createSelectionArchive({storage});
+ for(const domain of ['game','film','series','cartoon']){
+  const result={top:{id:'one',ru:'Первый <вариант>'},alternatives:[{id:'two',ru:'Второй'}]},state={version:1,id:`archive-${domain}`,domain,phase:'result',result};
+  archive.capture({state,screen:{type:'result',result,summary:'Хочу историю'}});
+ }
+ const p=await page(storage);p.click({act:'view',view:'history'});
+ assert.match(p.html,/Подборы<span>4/);assert.equal((p.html.match(/Открыть подбор/g)??[]).length,4);assert.match(p.html,/Первый &lt;вариант&gt;/);assert.match(p.html,/Второй/);assert.match(p.html,/\/pick\/game\/\?selection=/);assert.match(p.html,/domain=cartoon&selection=/);assert.equal(createLibraryStore({storage}).all().length,0);
+});
 function seed(count=126){const storage=memory(),store=createLibraryStore({storage});for(let i=0;i<count;i++)store.save({id:`item-${i}`,title:`Название ${String(i).padStart(3,'0')}`,year:2020+i%6},{domain:['game','film','series','cartoon'][i%4],lane:i<100?'want':i<114?'tonight':'known'});return {storage,store};}
 
 test('large library renders one active list in chunks and load more preserves all stored records',async()=>{

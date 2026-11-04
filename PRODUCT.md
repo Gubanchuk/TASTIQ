@@ -67,3 +67,7 @@ Real catalog data and real quotes in `data/catalog.json` and `data/catalog-scree
 ## Picker feedback correction — 2026-11-03
 
 General entry actions now open /pick/start/ to choose the domain. The first question is shared with the server and rendered locally without an API request. Explicit wish buttons precede optional genre, avoidance and own-word details. Neutral controls follow the choices; the none control is absent from text-only questions. More continues the same request with unseen works, retains reasons/caveats and supports recovery/undo. Shown works are separate from familiarity and taste. The catalog is finite; fewer new cards and exhaustion are stated honestly. The landing's visual world remains approved; only general navigation targets changed in this correction. No new human-fit claim or paid model validation.
+
+## Уточнение04.11.2026
+
+Современные подборы автоматически сохраняют запрос и все варианты в локальный архив «Библиотека → Подборы»; открытие не генерирует новый результат. Списки и оценки остаются отдельными. На отмеченной карточке доступна адресная замена с сохранением других слотов/отметок; групповая кнопка остаётся отдельной. Кнопки/summary получили явные состояния, header прикреплён к верху. Устранена неявная колонка мобильных альтернатив, сжимавшая текст; компактные метаданные/сетка оценок/библиотечные формы проверены на native IAB320/390/446/820/1024/1440. Проверка не измеряет human fit. Отчёт: docs/CONTROLS_HISTORY_MOBILE_2026-11-04.md.

@@ -36,7 +36,7 @@ const emptyFamiliar = () => ({marked:[],keep:[],hidden:[],excluded:[],undo:null}
 function replacement(value) {
   if(value==null)return null;
   if(!object(value))throw fail('Не удалось прочитать замену вариантов.');
-  return {changedIds:ids(value.changedIds,4),unresolvedIds:ids(value.unresolvedIds,4),notice:clean(value.notice,240)};
+  return {changedIds:ids(value.changedIds,4),unresolvedIds:ids(value.unresolvedIds,4),notice:clean(value.notice,240),...(value.pendingIds?{pendingIds:ids(value.pendingIds,4)}:{})};
 }
 function validResult(value) {
   if(value==null)return null;

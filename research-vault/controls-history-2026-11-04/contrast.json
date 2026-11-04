@@ -1,0 +1,32 @@
+[
+  {
+    "pair": "primary on white",
+    "foreground": "#3154d6",
+    "background": "#ffffff",
+    "ratio": 6.232
+  },
+  {
+    "pair": "ink on white",
+    "foreground": "#1c2945",
+    "background": "#ffffff",
+    "ratio": 14.458
+  },
+  {
+    "pair": "muted on paper",
+    "foreground": "#52617d",
+    "background": "#f1f4fc",
+    "ratio": 5.672
+  },
+  {
+    "pair": "control border on white",
+    "foreground": "#7186bc",
+    "background": "#ffffff",
+    "ratio": 3.597
+  },
+  {
+    "pair": "primary on selected",
+    "foreground": "#3154d6",
+    "background": "#dce5ff",
+    "ratio": 4.954
+  }
+]

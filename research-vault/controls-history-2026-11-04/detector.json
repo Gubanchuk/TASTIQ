@@ -1,0 +1,122 @@
+[
+  {
+    "antipattern": "cramped-padding",
+    "name": "Cramped padding",
+    "description": "Text is too close to the edge of its container. Two shapes: (1) an element with its own text where the space between the rendered text and the border box is too small for the font size, and (2) a wrapper whose children's text lands flush against a visible boundary (border, outline, or non-transparent background) with nothing to inset it. Add at least 8px (ideally 12–16px) of space inside bordered, outlined, or colored containers.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": "<ol> \"game-journey\": children flush against border-bottom on bottom (no inset)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": "border-radius 10px on a \"Подбор\" is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "10px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": "border-top rgb(113, 134, 188) on button \"Подбираем игруИгра\" is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgb(113, 134, 188)"
+  },
+  {
+    "antipattern": "marquee",
+    "name": "Auto-scrolling marquee",
+    "description": "Continuously auto-scrolling content demands attention it has not earned and hides half its content at any moment. Reserve motion for content that changes; let readers move at their own pace.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": ".skel::after — infinite horizontal loop animation \"skel\""
+  },
+  {
+    "antipattern": "dark-glow",
+    "name": "Glowing shadow accents",
+    "description": "Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default \"cool\" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\game\\index.html",
+    "line": 0,
+    "snippet": "Colored box-shadow glow (#15213d) on dark page"
+  },
+  {
+    "antipattern": "cramped-padding",
+    "name": "Cramped padding",
+    "description": "Text is too close to the edge of its container. Two shapes: (1) an element with its own text where the space between the rendered text and the border box is too small for the font size, and (2) a wrapper whose children's text lands flush against a visible boundary (border, outline, or non-transparent background) with nothing to inset it. Add at least 8px (ideally 12–16px) of space inside bordered, outlined, or colored containers.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\watch\\index.html",
+    "line": 0,
+    "snippet": "<ol> \"game-journey\": children flush against border-bottom on bottom (no inset)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\watch\\index.html",
+    "line": 0,
+    "snippet": "border-radius 10px on a \"Подбор\" is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "10px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\watch\\index.html",
+    "line": 0,
+    "snippet": "border-top rgb(113, 134, 188) on button \"Подбираем игруИгра\" is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgb(113, 134, 188)"
+  },
+  {
+    "antipattern": "marquee",
+    "name": "Auto-scrolling marquee",
+    "description": "Continuously auto-scrolling content demands attention it has not earned and hides half its content at any moment. Reserve motion for content that changes; let readers move at their own pace.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\watch\\index.html",
+    "line": 0,
+    "snippet": ".skel::after — infinite horizontal loop animation \"skel\""
+  },
+  {
+    "antipattern": "dark-glow",
+    "name": "Glowing shadow accents",
+    "description": "Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default \"cool\" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\pick\\watch\\index.html",
+    "line": 0,
+    "snippet": "Colored box-shadow glow (#15213d) on dark page"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "E:\\project\\TASTIQ\\src\\server\\public\\library\\index.html",
+    "line": 0,
+    "snippet": "border-radius 10px on a \"Подбор\" is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "10px"
+  }
+]

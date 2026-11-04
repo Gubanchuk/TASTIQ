@@ -1,7 +1,7 @@
 /* Working surfaces: explicit navigation, grouped intent and focused actions. */
 body.product-page{--workspace-soft:#e9eefb;--workspace-line:#d8e0f0}
 body.product-page [hidden]{display:none!important}
-body.product-page .app-shell{position:sticky;top:12px;z-index:60;display:flex;align-items:center;gap:24px;max-width:1380px;min-height:76px;margin:16px auto 28px;padding:14px 24px;border-radius:20px;background:var(--brand-surface);box-shadow:0 4px 24px #15213d08;border:0}
+body.product-page .app-shell{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:24px;max-width:1380px;min-height:76px;margin:0 auto 28px;padding:14px 24px;border-radius:0 0 20px 20px;background:var(--brand-surface);box-shadow:0 4px 24px #15213d08;border:0;border-bottom:1px solid var(--workspace-line)}
 body.product-page .app-brand{display:inline-flex;align-items:center;min-height:44px;flex:none}
 body.product-page .app-brand img{display:block;width:140px;height:auto}
 body.product-page .app-shell-nav{display:flex;align-items:center;gap:5px;margin-left:16px}
@@ -176,6 +176,11 @@ body.product-page #request-panel .game-context-heading h2{flex:1}
 }
 
 body.product-page .app-domain-short{display:none}
+@media(min-width:761px) and (max-width:1000px){
+ body.product-page .app-shell:has(#restore:not([hidden])){flex-wrap:wrap;row-gap:10px}
+ body.product-page .app-shell-actions:has(#restore:not([hidden])){flex-basis:100%;justify-content:flex-end}
+ body.product-page .app-shell-actions:has(#restore:not([hidden])) :is(button,a){white-space:nowrap}
+}
 @media(max-width:760px){
  body.product-page .app-domain-short{display:inline;font-size:14px;font-weight:550}
  body.product-page .app-domain-button strong{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
