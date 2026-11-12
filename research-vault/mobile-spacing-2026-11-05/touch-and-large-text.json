@@ -1,0 +1,14 @@
+{
+  "engine": "Chrome mobile emulation, isMobile=true, hasTouch=true, deviceScaleFactor=2",
+  "textEnlargement": "Visible text font sizes multiplied by 1.3 in the DOM; this is a stress check, not a physical Android font-setting test",
+  "viewports": [
+    {"width":320,"height":740,"horizontalOverflow":0,"offscreenHeaderControls":[],"headerHeight":121.9375},
+    {"width":360,"height":740,"horizontalOverflow":0,"offscreenHeaderControls":[],"headerHeight":121.9375},
+    {"width":390,"height":740,"horizontalOverflow":0,"offscreenHeaderControls":[],"headerHeight":122.4375},
+    {"width":430,"height":740,"horizontalOverflow":0,"offscreenHeaderControls":[],"headerHeight":122.4375}
+  ],
+  "touchActions": ["Choose direction", "Next", "Choose Windows", "Next", "Open session menu", "Restart"],
+  "shortViewport": {"width":360,"height":430},
+  "physicalDeviceTested":false,
+  "paidCalls":0
+}

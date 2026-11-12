@@ -490,7 +490,7 @@
         "value": "760px"
       },
       {
-        "name": "restore-wrap",
+        "name": "request-disclosure",
         "value": "1000px"
       },
       {
@@ -576,6 +576,7 @@
     }
   ],
   "narrative": {
+    "mobileSpacing20261105": "Restore внутри правого меню не создаёт дополнительный ряд шапки; mobile actions идут одной колонкой полной ширины, gap10px/min48px, primary первым; desktop группа слева. Back padding8x12px. Library select/remove gap8px и одинаковая высота. Отчёт docs/MOBILE_SPACING_2026-11-05.md. Опубликовано в production dpl_GreEUNeRiRhwiJC2kFGBVF2BRi5a 05.11.2026.",
     "northStar": "Разговор",
     "overview": "**Creative North Star: \"Разговор\"**\n\nВладелец выбрал Conversation 02.11.2026 и 03.11.2026 утвердил знак 5B, прописное написание 02 и палитру 02 «Кобальт». Прохладное светлое поле, точный SVG, белые рабочие поверхности, кобальтовые действия и Unbounded/Golos сохранены. Иерархию задают запрос, один вопрос, исправление понимания и предложение с причиной и оговорками.\n\nПосле отклонения предыдущего product UI владелец поручил существенную автономную переработку. Эта запись описывает текущий код, включая ручную проверку04.11.2026; новое оформление ещё не одобрено владельцем. Четыре файла одобренной главной в этом этапе byte-identical. Старые тёплая палитра, seed 537787fa и receipts — история.\n\nСистема действует на главной, /pick/game/, /pick/watch/, /library/ и legacy /pick/. Утверждённые SVG из src/server/public/assets/brand/ сохраняют контуры и пропорции; kit — research-vault/logo-symbols-2026-11-03/brand-cobalt-v1/. Бренд задаёт brand.css, современную форму — product.css, затем workspace.css/custom-select.css/results.css/controls.css. Порядок подключения существенен; legacy сохраняет собственную композицию.",
     "keyCharacteristics": [

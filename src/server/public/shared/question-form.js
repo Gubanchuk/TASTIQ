@@ -1,18 +1,43 @@
+import {directionChoiceMessage,hasDirectionChoice} from './conversation-entry.js';
+
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
-export const neutralAnswerLabels={unknown:'Пока не знаю',indifferent:'Неважно',none:'Ни один вариант не подходит'};
-export function focusOwnAnswer(field){if(!field)return;const details=field.closest('details');if(details)details.open=true;field.focus();}
-export function questionFormHtml(question,draft,{busy=false,neutralStatus=''}={}){
- const first=question.id==='direction',allowText=question.allowText!==false,options=question.options??[];
- const selected=o=>draft.kind==='answer'&&draft.selected.includes(o.id);
- const group=(list,label)=>list.length?`<div class="game-question-options" role="group" aria-label="${esc(label)}">${list.map(o=>`<button type="button" class="game-option" data-act="option" data-id="${esc(o.id)}" aria-pressed="${selected(o)}"${busy?' disabled':''}><span>${esc(o.label)}</span><svg class="game-option-check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10 3.5 3.5 7.5-7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`).join('')}</div>`:'';
- const details=(title,body,open=false,key='')=>`<details class="game-answer-extra"${key?` data-disclosure="${key}"`:''}${open?' open':''}><summary${key==='answer-own'?' data-act="own-answer"':''}>${title}</summary>${body}</details>`;
- const moods=options.filter(o=>o.id.startsWith('mood_')),avoids=options.filter(o=>o.id.startsWith('avoid_')),genres=options.filter(o=>!o.id.startsWith('mood_')&&!o.id.startsWith('avoid_'));
- const choices=first&&moods.length?group(moods,'Чего хочется сегодня'):group(options,question.multiple?'Можно выбрать несколько вариантов':'Варианты ответа');
- const extraChoices=first&&moods.length?details('Выбрать жанр',group(genres,'Жанры'),genres.some(selected),'answer-genres')+details('Что сегодня не подойдёт?',group(avoids,'Чего сегодня не хочется'),avoids.some(selected),'answer-avoids'):'';
- const own=allowText?`<label class="game-field" id="answer-field" for="answer-text"${draft.kind!=='answer'?' hidden':''}>${first?'Свой ответ или дополнение':'Своими словами'+(options.length?' — вместо вариантов или в дополнение':'')}<textarea class="input" id="answer-text" name="answer" maxlength="1600" rows="3" placeholder="${first?'Например: хочется приключения без спешки':'Что важно для сегодняшнего выбора?'}">${esc(draft.text)}</textarea></label>`:'';
- const controls=(question.controls??[]).filter(kind=>neutralAnswerLabels[kind]&&(kind!=='none'||options.length));
- return `<h1>${esc(question.title)}</h1>${question.why?`<p class="game-help">${esc(question.why)}</p>`:''}<form id="answer-form" data-form="answer">`
-  +choices+(!first&&question.multiple&&options.length?'<p class="game-help">Можно выбрать несколько вариантов и добавить свои слова.</p>':'')
-  +(first?`<div class="game-answer-extras">${extraChoices}${details('Добавить своими словами',own,Boolean(draft.text),'answer-own')}</div>`:own)
-  +`<div class="game-neutral-options" role="group" aria-label="Пропустить или ответить иначе">${controls.map(kind=>`<button type="button" class="btn btn-secondary btn-s" data-act="neutral" data-kind="${kind}" aria-pressed="${draft.kind===kind}"${busy?' disabled':''}>${neutralAnswerLabels[kind]}</button>`).join('')}</div><div id="neutral-status" class="game-neutral-status" role="status">${neutralStatus}</div></form>`;
+const neutralLabels={unknown:'Пока не знаю',indifferent:'Неважно',none:'Ни один вариант не подходит'};
+const nextIcon='<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const checkIcon='<svg class="game-option-check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10 3.5 3.5 7.5-7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+export function focusOwnAnswer(field){
+ if(!field)return;
+ const details=field.closest('details');if(details)details.open=true;field.focus();
+}
+export function canSubmitQuestion(question,draft){
+ if(!question||draft.kind!=='answer')return false;
+ const selected=(question.options??[]).filter(option=>draft.selected.includes(option.id)).map(option=>option.id);
+ if(question.id==='direction')return hasDirectionChoice(selected);
+ return selected.length>0||question.allowText!==false&&Boolean(draft.text.trim());
+}
+export function questionFormHtml(question,draft,{busy=false,canReview=false,canChange=false,exampleHtml=''}={}){
+ const first=question.id==='direction',required=first||question.allowText===false,options=question.options??[];
+ const selected=option=>draft.kind==='answer'&&draft.selected.includes(option.id);
+ const group=(list,label)=>list.length?`<div class="game-question-options" role="group" aria-label="${esc(label)}" aria-describedby="answer-instruction">${list.map(option=>`<button type="button" class="game-option" data-act="option" data-id="${esc(option.id)}" aria-pressed="${selected(option)}"${busy?' disabled':''}><span>${esc(option.label)}</span>${checkIcon}</button>`).join('')}</div>`:'';
+ const details=(title,body,key,open=false)=>`<details class="game-answer-extra" data-disclosure="${key}"${open?' open':''}><summary>${title}</summary><div class="game-answer-extra-body">${body}</div></details>`;
+ const moods=options.filter(option=>option.id.startsWith('mood_'));
+ const avoids=options.filter(option=>option.id.startsWith('avoid_'));
+ const genres=options.filter(option=>!moods.includes(option)&&!avoids.includes(option));
+ const grouped=first&&moods.length>0;
+ const choices=group(grouped?moods:options,first?'Настроение':'Варианты ответа');
+ const genre=grouped&&genres.length?details('Выбрать жанр <small data-genre-count hidden></small>',group(genres,'Жанр'),'answer-genres',genres.some(selected)):'';
+ const own=question.allowText!==false?`<label class="game-field" id="answer-field" for="answer-text">Своими словами<textarea class="input" id="answer-text" name="answer" maxlength="1600" rows="3" placeholder="${first?'Например, хочется приключения без спешки':'Что важно для сегодняшнего выбора?'}">${esc(draft.text)}</textarea></label>`:'';
+ const avoid=grouped&&avoids.length?`<fieldset class="game-answer-avoid"><legend>Чего хочется избежать</legend>${group(avoids,'Исключения')}</fieldset>`:'';
+ const extra=own&&(first||options.length)?details(first?'Добавить детали <small>Необязательно</small>':'Ответить своими словами',own+avoid+exampleHtml,first?'answer-own':`answer-own:${esc(question.id)}`,Boolean(draft.text)||avoids.some(selected)):'';
+ const instruction=first?directionChoiceMessage:required?'Выбери один вариант, чтобы продолжить.':'Можешь ответить или пропустить этот вопрос.';
+ const hasDraft=Boolean(draft.text.trim()||draft.selected.length)&&draft.kind==='answer';
+ return `<h1>${esc(question.title)}</h1><p id="answer-instruction" class="game-help"><strong>${required?'Обязательно':'Необязательно'}</strong> ${instruction}</p>`
+  +(!first&&question.why?`<p class="game-help game-question-why">${esc(question.why)}</p>`:'')
+  +`<form id="answer-form" data-form="answer" data-multiple="${question.multiple===true}" aria-describedby="answer-instruction">${choices}`
+  +(genre||extra?`<div class="game-answer-extras">${genre}${extra}</div>`:own+exampleHtml)
+  +`<div id="neutral-status" class="game-neutral-status"${draft.kind==='answer'?' hidden':''}>Сохранён прежний ответ «${esc(neutralLabels[draft.kind])}». <button type="button" class="game-text-action" data-act="resume-answer">Изменить ответ</button></div>`
+  +'<div class="game-question-footer">'
+  +(canReview?`<p class="game-draft-hint" id="review-draft-hint"${hasDraft?'':' hidden'}>Нажми «Дальше», чтобы учесть ответ.</p>`:'')
+  +(canChange||canReview?`<div class="game-question-secondary">${canChange?`<button type="button" class="game-text-action" data-act="another-question"${busy?' disabled':''}>Другой вопрос</button>`:''}${canReview?`<button type="button" class="game-text-action" data-act="review"${busy||hasDraft?' disabled':''}>Пропустить уточнения</button>`:''}</div>`:'')
+  +`<button type="submit" class="btn btn-primary" data-answer-next${first?' data-first-next':''}${busy||!canSubmitQuestion(question,draft)?' disabled':''}>Дальше${nextIcon}</button></div></form>`;
 }

@@ -105,6 +105,7 @@
 .library-page .library-skip{position:fixed;top:8px;left:8px;z-index:20;transform:translateY(-160%);padding:13px 18px;background:var(--brand-surface);color:var(--ink);border:1px solid var(--accent);border-radius:4px}
 .library-page .library-skip:focus{transform:none}
 .library-page :is(button,a,input,select,textarea,summary):focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.library-page .library-search input:focus-visible{outline:none}
 .library-page button:disabled{cursor:wait;opacity:.55}
 .library-page ::selection{background:var(--brand-line);color:var(--brand-ink)}
 .library-page *{scrollbar-width:thin;scrollbar-color:var(--brand-strong-line) transparent}
@@ -138,10 +139,10 @@ body.product-page.library-page .library-cover{position:relative;display:flex;ali
 body.product-page.library-page .library-cover img{display:block;position:static;width:100%;height:auto;object-fit:contain}
 body.product-page.library-page .library-cover.no-cover{min-height:106px;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
 body.product-page.library-page .board-card h3{font-size:17px;line-height:1.45;margin:5px 0 13px;font-weight:600}
-body.product-page.library-page .board-card-actions{grid-template-columns:minmax(0,1fr) 44px;gap:6px}
+body.product-page.library-page .board-card-actions{grid-template-columns:minmax(0,1fr) 44px;gap:8px;align-items:stretch}
 body.product-page.library-page .board-card-actions{grid-column:1/-1}
 body.product-page.library-page .move-control .custom-select-trigger{font-size:12px;background:var(--brand-paper);padding-inline:11px;gap:6px}
-body.product-page.library-page .library-remove{margin:0;border-radius:12px}
+body.product-page.library-page .library-remove{margin:0;border-radius:12px;min-height:46px;height:100%}
 body.product-page.library-page .card-details{border:0;margin:0;padding:0}
 body.product-page.library-page .card-details>summary{min-height:44px;padding:12px 0 8px;font-size:13px;line-height:1.6}
 body.product-page.library-page .card-details-content{padding:12px 0 0}
@@ -173,7 +174,7 @@ body.product-page.library-page .library-button:disabled{cursor:default;opacity:.
  body.product-page.library-page .library-lane>header h2{font-size:19px}
  body.product-page.library-page .board-card{grid-template-columns:62px minmax(0,1fr);padding:16px;gap:12px;border-radius:18px}
  body.product-page.library-page .board-card h3{font-size:16px}
- body.product-page.library-page .board-card-actions{gap:0}
+ body.product-page.library-page .board-card-actions{gap:8px}
  body.product-page.library-page .move-control .custom-select-trigger{font-size:12px;padding-inline:9px}
  body.product-page.library-page .history-row{grid-template-columns:50px minmax(0,1fr);gap:13px;padding:16px}
  body.product-page.library-page .library-evening{padding:0 16px}
@@ -220,9 +221,9 @@ body.product-page.library-page .library-lane>header h2{margin-bottom:4px}
  body.product-page.library-page .library-views{margin-bottom:14px}
  body.product-page.library-page .library-filters{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-bottom:10px}
  body.product-page.library-page .library-filters>.library-search{grid-column:1;grid-row:1;margin:0}
- body.product-page.library-page .library-filter-actions{grid-column:1;grid-row:2;justify-content:space-between}
+ body.product-page.library-page .library-filter-actions{grid-column:1;grid-row:2;justify-content:flex-start;align-items:stretch;gap:8px}
  body.product-page.library-page .library-filter-actions>.library-button{min-height:44px;padding:10px 12px;font-size:13px}
- body.product-page.library-page .library-filter-actions>[data-act=filters]{display:inline-flex;gap:6px}
+ body.product-page.library-page .library-filter-actions>[data-act=filters]{display:inline-flex;flex:1;justify-content:space-between;gap:6px;text-align:left}
  body.product-page.library-page .library-filter-actions .filter-active-count{font-variant-numeric:tabular-nums;font-size:12px}
  body.product-page.library-page .library-filter-actions .filter-chevron{width:16px;height:16px;margin:0}
  body.product-page.library-page .library-filter-actions [aria-expanded=true] .filter-chevron{transform:rotate(180deg)}

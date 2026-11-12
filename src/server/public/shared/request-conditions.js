@@ -22,7 +22,12 @@ export function mediaRequestPresentation(screen={}) {
   const row=rows.find(r=>r.key==='context:format');if(row)row.key=null;
  }
  const represented=new Set(rows.filter(r=>r.key).map(r=>r.key.slice(8)));
+ const todayTime=facts.filter(f=>f.scope==='history'&&!f.titleId&&!f.feature
+  &&/^(?:сегодня|на сегодня)(?=\s|[.,!?]|$)/iu.test(f.text??'')
+  &&/(?:^|\s)(?:времени|минут|часа|часов)(?=\s|[.,!?]|$)/iu.test(f.text??''));
+ rows.push(...todayTime);
  return {conditions:rows,facts:facts.filter(f=>{
+  if(todayTime.includes(f))return false;
   if(f.key?.startsWith('context:')&&known.has(f.key.slice(8)))return false;
   return !(f.scope==='today'&&['want','require'].includes(f.stance)&&represented.has(f.conditionKey)&&formatOnly(f.text,context.format,screen.domain));
  })};

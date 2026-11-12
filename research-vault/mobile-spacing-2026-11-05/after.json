@@ -1,0 +1,343 @@
+{
+  "set": "after",
+  "widths": [
+    360
+  ],
+  "domains": [
+    "game"
+  ],
+  "results": [
+    {
+      "name": "360-game-question-actions-2",
+      "pass": true,
+      "detail": {
+        "#action-controls": {
+          "x": 24,
+          "y": 1330.875,
+          "width": 302,
+          "height": 137,
+          "top": 1330.875,
+          "right": 326,
+          "bottom": 1467.875,
+          "left": 24,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-primary": {
+          "x": 24,
+          "y": 1330.875,
+          "width": 302,
+          "height": 48,
+          "top": 1330.875,
+          "right": 326,
+          "bottom": 1378.875,
+          "left": 24,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 24,
+          "y": 1388.875,
+          "width": 302,
+          "height": 48,
+          "top": 1388.875,
+          "right": 326,
+          "bottom": 1436.875,
+          "left": 24,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        ".game-back": {
+          "x": 24,
+          "y": 280.09375,
+          "width": 89.65625,
+          "height": 44,
+          "top": 280.09375,
+          "right": 113.65625,
+          "bottom": 324.09375,
+          "left": 24,
+          "padding": "8px 12px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "360-game-review-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 24,
+          "y": 554.984375,
+          "width": 312,
+          "height": 48,
+          "top": 554.984375,
+          "right": 336,
+          "bottom": 602.984375,
+          "left": 24,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 24,
+          "y": 612.984375,
+          "width": 312,
+          "height": 48,
+          "top": 612.984375,
+          "right": 336,
+          "bottom": 660.984375,
+          "left": 24,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "360-game-result-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 10,
+          "y": 136.734375,
+          "width": 330,
+          "height": 48,
+          "top": 136.734375,
+          "right": 340,
+          "bottom": 184.734375,
+          "left": 10,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 10,
+          "y": 194.734375,
+          "width": 330,
+          "height": 48,
+          "top": 194.734375,
+          "right": 340,
+          "bottom": 242.734375,
+          "left": 10,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "360-game-restorable-menu",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 350,
+          "height": 117,
+          "top": 0,
+          "right": 350,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 162,
+          "height": 44,
+          "top": 62,
+          "right": 178,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 190,
+          "y": 62,
+          "width": 144,
+          "height": 44,
+          "top": 62,
+          "right": 334,
+          "bottom": 106,
+          "left": 190,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 94,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 334,
+          "bottom": 224,
+          "left": 94,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "360-game-two-header-rows",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 350,
+          "height": 117,
+          "top": 0,
+          "right": 350,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 162,
+          "height": 44,
+          "top": 62,
+          "right": 178,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 190,
+          "y": 62,
+          "width": 144,
+          "height": 44,
+          "top": 62,
+          "right": 334,
+          "bottom": 106,
+          "left": 190,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 94,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 334,
+          "bottom": 224,
+          "left": 94,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "360-game-escape",
+      "pass": true
+    },
+    {
+      "name": "360-game-restore",
+      "pass": true
+    },
+    {
+      "name": "360-game-domain-menu",
+      "pass": true,
+      "detail": {
+        "x": 16,
+        "y": 114,
+        "width": 318,
+        "height": 317.5625,
+        "top": 114,
+        "right": 334,
+        "bottom": 431.5625,
+        "left": 16,
+        "padding": "9px",
+        "marginLeft": "0px"
+      }
+    },
+    {
+      "name": "360-game-overflow",
+      "pass": true
+    },
+    {
+      "name": "360-library-control-gap",
+      "pass": true,
+      "detail": {
+        ".board-card-actions .custom-select-trigger": {
+          "x": 37,
+          "y": 645.59375,
+          "width": 219,
+          "height": 46,
+          "top": 645.59375,
+          "right": 256,
+          "bottom": 691.59375,
+          "left": 37,
+          "padding": "11px 9px",
+          "marginLeft": "0px"
+        },
+        ".board-card-actions .library-remove": {
+          "x": 264,
+          "y": 645.59375,
+          "width": 44,
+          "height": 46,
+          "top": 645.59375,
+          "right": 308,
+          "bottom": 691.59375,
+          "left": 264,
+          "padding": "10px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "360-library-control-height",
+      "pass": true,
+      "detail": {
+        ".board-card-actions .custom-select-trigger": {
+          "x": 37,
+          "y": 645.59375,
+          "width": 219,
+          "height": 46,
+          "top": 645.59375,
+          "right": 256,
+          "bottom": 691.59375,
+          "left": 37,
+          "padding": "11px 9px",
+          "marginLeft": "0px"
+        },
+        ".board-card-actions .library-remove": {
+          "x": 264,
+          "y": 645.59375,
+          "width": 44,
+          "height": 46,
+          "top": 645.59375,
+          "right": 308,
+          "bottom": 691.59375,
+          "left": 264,
+          "padding": "10px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "360-library-select-menu",
+      "pass": true,
+      "detail": {
+        "x": 37,
+        "y": 471.59375,
+        "width": 220,
+        "height": 146
+      }
+    },
+    {
+      "name": "360-library-move",
+      "pass": true
+    },
+    {
+      "name": "360-library-remove-undo",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "paidCalls": 0,
+  "checks": 14,
+  "failed": []
+}

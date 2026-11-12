@@ -1,0 +1,181 @@
+{
+  "alias": "https://tastiq-drab.vercel.app/",
+  "deployment": "dpl_HFEcoGSwwCYiXXesUsv6LJQ4RRGY",
+  "previousDeployment": "dpl_9uuCTHFcPJfd53sCSBNPHpjJ24jD",
+  "createdAt": "2026-11-05T03:51:42+03:00",
+  "url": "https://tastiq-bwyxdys94-gubanchuks-projects.vercel.app",
+  "state": "READY",
+  "target": "production",
+  "method": "npm run build and vercel deploy --prebuilt --prod from the local working tree",
+  "baseCommit": "e6fd09c",
+  "localTests": {
+    "passed": 634,
+    "failed": 0
+  },
+  "http": {
+    "checked": [
+      {
+        "url": "/library/app.js",
+        "status": 200,
+        "sha256": "4882b4077abf0f4e243b752a8376b6dba40409b4aa87c86d76224c2836aa9b32"
+      },
+      {
+        "url": "/library/",
+        "status": 200,
+        "sha256": "1ee64de97db082620cf99cb32a3dc16f31cfee8d576d9963a6941cd7d66764d6"
+      },
+      {
+        "url": "/library/style.css",
+        "status": 200,
+        "sha256": "0c1f051ca0bd205819cf60ac50ee989f5f9aea666ce052f026a5282a0bd0d5c4"
+      },
+      {
+        "url": "/pick/conversation.css",
+        "status": 200,
+        "sha256": "30f96e5b77e1ef45eb470456ffc634b8137327895e4966268118386ca0cfeb3a"
+      },
+      {
+        "url": "/pick/game/app.js",
+        "status": 200,
+        "sha256": "0e96f2d5ed8f3b7f26d2402b0de8ffe0242a90586c2e41eb9b18431270ccc953"
+      },
+      {
+        "url": "/pick/game/card-view.js",
+        "status": 200,
+        "sha256": "4f34d5dc1fb4f2ace05150ac6c91b7ae8fcd07923fdfcdf9db4a9ff3128676cb"
+      },
+      {
+        "url": "/pick/game/",
+        "status": 200,
+        "sha256": "4a8527dff3516c87556bf5900ab41b6ef6e107c5203d7d1189359ef3d185caa9"
+      },
+      {
+        "url": "/pick/",
+        "status": 200,
+        "sha256": "cc1be1de26b19c9815e7f28f29e46be28e05b41989206c4d5e53f61e4a2f4167"
+      },
+      {
+        "url": "/pick/start/style.css",
+        "status": 200,
+        "sha256": "fd9bd32c771a9f54f8b03d39476c73c71603c25b8b28739806bb2bbb83ede6f0"
+      },
+      {
+        "url": "/pick/watch/app.js",
+        "status": 200,
+        "sha256": "af82dcfe099fd5eae3c3189ea0780f4b93a61252bdcbfc3afc6b618526b3685a"
+      },
+      {
+        "url": "/pick/watch/card-view.js",
+        "status": 200,
+        "sha256": "861a7b230f820b616df6e984f66a8609477bf2db434591ca320ee78e811e4714"
+      },
+      {
+        "url": "/pick/watch/",
+        "status": 200,
+        "sha256": "75b10e458d4b6197e4d5a3bd2b4794ec4aa212e963fe47d19ae202d783c20329"
+      },
+      {
+        "url": "/shared/controls.css",
+        "status": 200,
+        "sha256": "76cc3bd7a92d6794d51f01610047c0ce5e945050db3f47a13ca75f1b9a994ed2"
+      },
+      {
+        "url": "/shared/evening-view.js",
+        "status": 200,
+        "sha256": "0a9bb2821b4ff94f8934473a97bbcc337e41225c176ff2b4992d4539ccf93c62"
+      },
+      {
+        "url": "/shared/question-form.js",
+        "status": 200,
+        "sha256": "fdcfbdd8a49d635fd365f38e23823c63d29c0f970482bd89e09dbad683292441"
+      },
+      {
+        "url": "/shared/result-clarity.js",
+        "status": 200,
+        "sha256": "5131255b3a610e70b23c5a00937d3f2c984288e6811f4861db44a4c54255dc89"
+      },
+      {
+        "url": "/shared/results.css",
+        "status": 200,
+        "sha256": "0702298b51a7798359e03dae8fae56996c351e272e8da9c070e24da69c6410c5"
+      }
+    ],
+    "landing": 200,
+    "meta": 200,
+    "domains": [
+      "game",
+      "film",
+      "series",
+      "cartoon"
+    ]
+  },
+  "chrome": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 705
+      },
+      "steps": [
+        {
+          "route": "/pick/game/",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        },
+        {
+          "route": "/pick/watch/?domain=film",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        },
+        {
+          "route": "/pick/watch/?domain=series",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        },
+        {
+          "route": "/pick/watch/?domain=cartoon",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        }
+      ],
+      "emptyLibrary": true,
+      "pageErrors": [],
+      "blocked": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "steps": [
+        {
+          "route": "/pick/game/",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        },
+        {
+          "route": "/pick/watch/?domain=film",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        },
+        {
+          "route": "/pick/watch/?domain=series",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        },
+        {
+          "route": "/pick/watch/?domain=cartoon",
+          "nextPosition": "closed/open/closed",
+          "overflow": 0
+        }
+      ],
+      "emptyLibrary": true,
+      "pageErrors": [],
+      "blocked": []
+    }
+  ],
+  "paidRequests": 0,
+  "runtimeErrorLog": {
+    "lookback": "5m",
+    "found": 0
+  }
+}

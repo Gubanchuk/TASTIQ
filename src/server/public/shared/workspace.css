@@ -58,7 +58,7 @@ body.product-page #request-panel .clarification-tools>button{background:var(--br
 body.product-page #stage{padding:26px 32px 30px;border:0;border-radius:26px;box-shadow:none;background:var(--brand-surface)}
 body.product-page #stage .game-navigation{display:flex;align-items:center;gap:22px;padding:0;margin:0 0 32px;border:0}
 body.product-page #stage .game-navigation-tools{display:none}
-body.product-page #stage .game-back{min-height:44px;font-size:13px;padding:8px 4px;flex:none}
+body.product-page #stage .game-back{min-height:44px;font-size:13px;padding:8px 12px;flex:none}
 body.product-page #stage .game-journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex:1;padding:0;margin:0;border:0}
 body.product-page #stage .game-journey li{display:flex;align-items:center;justify-content:flex-start;gap:8px;min-width:0;padding:0;color:var(--brand-muted);font-size:12px}
 body.product-page #stage .game-journey li>span{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:var(--brand-paper);color:var(--brand-muted);flex:none;font-size:12px}
@@ -176,13 +176,7 @@ body.product-page #request-panel .game-context-heading h2{flex:1}
 }
 
 body.product-page .app-domain-short{display:none}
-@media(min-width:761px) and (max-width:1000px){
- body.product-page .app-shell:has(#restore:not([hidden])){flex-wrap:wrap;row-gap:10px}
- body.product-page .app-shell-actions:has(#restore:not([hidden])){flex-basis:100%;justify-content:flex-end}
- body.product-page .app-shell-actions:has(#restore:not([hidden])) :is(button,a){white-space:nowrap}
-}
 @media(max-width:760px){
  body.product-page .app-domain-short{display:inline;font-size:14px;font-weight:550}
  body.product-page .app-domain-button strong{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
- body.product-page .app-shell-actions:has(#restore:not([hidden])){grid-row:3;grid-column:1/-1;justify-content:space-between}
 }

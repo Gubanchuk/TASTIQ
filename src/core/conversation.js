@@ -1,4 +1,4 @@
-import {initialConversation,initialDirectionQuestion,gameGenreDirections as directions} from '../server/public/shared/conversation-entry.js';
+import {initialConversation,initialDirectionQuestion,gameGenreDirections as directions,hasDirectionChoice,hasChosenDirection,directionChoiceMessage} from '../server/public/shared/conversation-entry.js';
 // A game conversation owns today's goal; evidence is never silently promoted to permanent taste.
 import { initialState } from './dialogue.js';
 import { PLATFORMS } from './sieves.js';
@@ -66,8 +66,8 @@ function normalizeFactRemovalUndo(value) {
 const captureFactRemovalUndo=s=>normalizeFactRemovalUndo({facts:s.facts,retractions:s.retractions,summary:s.summary,result:s.result,
   phase:s.phase,question:s.question,provisional:s.provisional,needsPlan:s.needsPlan,marked:s.familiar.marked,familiarUndo:s.familiar.undo,replacement:s.replacement});
 
-export function newConversation({id,mode}={}) {
-  return initialConversation({id:clean(id,100)||undefined,mode});
+export function newConversation({id,mode,requireDirection}={}) {
+  return initialConversation({id:clean(id,100)||undefined,mode,requireDirection});
 }
 
 export function normalizeConversation(input) {
@@ -77,6 +77,7 @@ export function normalizeConversation(input) {
     || !Array.isArray(input.retractions) || input.retractions.length>64) throw failure('Сохранённый разговор не удалось прочитать. Начни новый подбор.');
   if(input.turns.some(t=>!t?.id || typeof t.answer!=='string' || t.answer.length>2400 || !t.question?.id)) throw failure('Некорректный ответ в истории разговора');
   const s=structuredClone(input);
+  s.skippedQuestions=Array.isArray(s.skippedQuestions)?s.skippedQuestions.filter(id=>typeof id==='string'&&id.length<=100).slice(-12):[];
   s.browseSeen=familiarIds(s.browseSeen);s.familiar=normalizeFamiliar(s.familiar);s.replacement=normalizeReplacement(s.replacement);
   s.factRemovalUndo=normalizeFactRemovalUndo(s.factRemovalUndo);
   s.mode=s.mode==='free'?'free':'guided';
@@ -90,13 +91,18 @@ export function normalizeConversation(input) {
 }
 
 export function fallbackQuestion(s) {
-  const answered = new Set(s.turns.filter(t=>t.kind!=='none').map(t=>t.question.id));
+  const answered = new Set([...s.turns.filter(t=>t.kind!=='none').map(t=>t.question.id),...(s.skippedQuestions??[])]);
   const qs=[
     question('experience','Что хочется получать от игры?',[['story','Увлечься историей','story.central'],['explore','Находить интересное в мире','loop.exploration'],['builds','Развивать героя и пробовать билды','progression.builds'],['challenge','Преодолевать сложные испытания','difficulty.hard'],['relax','Спокойно проводить время','tension.low']], 'Жанр задаёт направление, а здесь — что важно именно сегодня.'),
     question('reference','Есть игра, из которой хочется что-то оставить?',[], 'Напиши название и что именно понравилось. Можно без примера.'),
     question('avoidance','Что может испортить тебе этот вечер?', [['grind','Однообразный фарм','progression.grind'],['stress','Постоянное напряжение','tension.high'],['slow','Медленное начало','pace.slow']], 'Можно написать свой ответ или отметить, что ограничений нет.'),
   ];
   return qs.find(q=>!answered.has(q.id))??null;
+}
+
+function replacementQuestion(s) {
+  return s.phase==='talk'&&s.question&&s.question.allowText!==false
+    ? fallbackQuestion({...s,skippedQuestions:[...(s.skippedQuestions??[]),s.question.id]}) : null;
 }
 
 function localFacts(s, turn) {
@@ -129,7 +135,7 @@ function activeContext(turns) {
 
 export function answerConversation(input, action={}) {
   let s=normalizeConversation(input);
-  if(action.type==='restart')return newConversation({mode:s.mode});
+  if(action.type==='restart')return newConversation({mode:s.mode,requireDirection:s.requireDirection===true||action.requireDirection===true});
   if(!action.type)return s;
   if(action.type==='undo_fact_removal') {
     const undo=s.factRemovalUndo;if(!undo)return s;
@@ -152,12 +158,19 @@ export function answerConversation(input, action={}) {
     s.revision++;s.needsPlan=false;s.failedAction=null;s.factRemovalUndo=null;return s;
   }
   if(action.type==='retry')return {...s,needsPlan:s.phase!=='review'&&s.phase!=='result'};
+  if(action.type==='another_question') {
+    const next=replacementQuestion(s);
+    if(!next||action.questionId!==s.question.id)throw failure('Этот вопрос уже изменился.');
+    return {...s,revision:s.revision+1,question:next,skippedQuestions:[...s.skippedQuestions,s.question.id].slice(-12),needsPlan:false,failedAction:null};
+  }
   if(action.type==='continue')return {...s,revision:s.revision+1,phase:'talk',question:question('extra','Что ещё важно для этого выбора?',[],'Добавь то, чего не хватает в моём понимании. Я учту это и уточню дальше, если нужно.'),needsPlan:false,result:null,familiar:{...s.familiar,marked:[],undo:null},replacement:null,factRemovalUndo:null};
   if(action.type==='review') {
+    if(s.requireDirection===true&&!hasChosenDirection(s))throw failure(directionChoiceMessage);
     if(!s.context.platform||!s.context.company||s.context.company==='group'&&!s.context.partySize)return s;
     return {...s,revision:s.revision+1,phase:'review',question:null,needsPlan:false,provisional:s.needsPlan||!s.summary};
   }
   if(action.type==='confirm') {
+    if(s.requireDirection===true&&s.phase!=='result'&&!hasChosenDirection(s))throw failure(directionChoiceMessage);
     if(s.phase!=='review' && s.phase!=='result')throw failure('Сначала проверь, как я понял твой запрос.');
     if(!s.context.platform||!s.context.company)throw failure('Сначала укажи платформу и компанию.');
     return {...s,revision:s.revision+1,needsPlan:false,factRemovalUndo:null};
@@ -218,6 +231,7 @@ export function answerConversation(input, action={}) {
   const selected=kind==='answer'?(q.options??[]).filter(o=>ids.includes(o.id)).map(({id,label})=>({id,label})):[];
   if(ids.length>selected.length && kind==='answer' || !q.multiple&&selected.length>1)throw failure('Проверь выбранные варианты ответа.');
   const text=clean(action.text);
+  if(s.requireDirection===true&&q.id==='direction'&&!hasDirectionChoice(selected.map(option=>option.id)))throw failure(directionChoiceMessage);
   if(kind==='answer'&&!text&&!selected.length)throw failure('Выбери вариант, напиши свой ответ или пропусти вопрос.');
   if(contextIds.has(q.id)&&!selected.length)throw failure('Для этого условия выбери один из доступных вариантов.');
   s.revision++;
@@ -266,9 +280,13 @@ export function applyConversationProposal(state, proposal, dict, expectedRevisio
       const q=proposal.question;
       if(!q || !clean(q.id,60)||!clean(q.title,220)||!Array.isArray(q.options)||q.options.length>6||typeof q.multiple!=='boolean'
         || q.options.some(o=>!clean(o?.id,60)||!clean(o?.label,100))||new Set(q.options.map(o=>o.id)).size!==q.options.length)throw failure('Не удалось подготовить следующий вопрос.');
-      const lastCorrection=state.turns.findLastIndex(t=>t.question.id.startsWith('correction:'));
-      if(state.mode==='guided'&&state.turns.slice(lastCorrection+1).some(t=>t.question.id===q.id&&t.kind!=='none'))throw failure('Этот вопрос уже был отвечен.');
-      next={id:clean(q.id,60),title:clean(q.title,220),why:clean(q.why,220),options:q.options.map(o=>({id:clean(o.id,60),label:clean(o.label,100)})),multiple:q.multiple,controls};
+      const id=clean(q.id,60);
+      // Keep the accepted answer and facts if the planner circles back to a dismissed topic.
+      if(!state.skippedQuestions?.includes(id)){
+        const lastCorrection=state.turns.findLastIndex(t=>t.question.id.startsWith('correction:'));
+        if(state.mode==='guided'&&state.turns.slice(lastCorrection+1).some(t=>t.question.id===id&&t.kind!=='none'))throw failure('Этот вопрос уже был отвечен.');
+        next={id,title:clean(q.title,220),why:clean(q.why,220),options:q.options.map(o=>({id:clean(o.id,60),label:clean(o.label,100)})),multiple:q.multiple,controls};
+      }
     } else if(state.mode==='guided'&&!state.turns.some(t=>!contextIds.has(t.question.id)&&t.question.id!=='direction')
       && (state.turns.find(t=>t.question.id==='direction')?.text.length??0)<80)throw failure('Одного направления пока недостаточно: уточним, что хочется от игры.');
     const effort=state.turns.filter(t=>!contextIds.has(t.question.id)).length;
@@ -284,7 +302,7 @@ export function conversationScreen(s) {
     context:s.context,sessionTime:s.sessionTime??null,canUndoFactRemoval:Boolean(s.factRemovalUndo),canBack:s.turns.length>0,provisional:Boolean(s.provisional),turns:s.turns.map(t=>({id:t.id,question:t.question.title,answer:t.answer}))};
   if(s.phase==='result')return {...common,type:'result',result:s.result};
   if(s.phase==='review')return {...common,type:'review'};
-  return {...common,type:'question',question:s.question??fallbackQuestion(s)??question('extra','Что ещё важно учесть?',[], 'Можно перейти к пониманию запроса и посмотреть варианты.')};
+  return {...common,type:'question',canChangeQuestion:Boolean(replacementQuestion(s)),question:s.question??fallbackQuestion(s)??question('extra','Что ещё важно учесть?',[], 'Можно перейти к пониманию запроса и посмотреть варианты.')};
 }
 
 export function conversationToLegacy(s, dict, catalog=null) {

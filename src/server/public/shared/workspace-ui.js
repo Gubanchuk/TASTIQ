@@ -24,6 +24,18 @@ export function syncRequestEditor(preferred=''){
  for(const form of forms)if(form!==chosen){form.hidden=true;const trigger=[...document.querySelectorAll('[data-act="clarify"]')].find(el=>el.dataset.key===form.dataset.key);trigger?.setAttribute('aria-expanded','false');}
  if(chosen)openRequestEditor(chosen,{focus:false});
 }
+
+export function syncSessionActions({busy,canRestore}){
+ const direct=document.getElementById('restart-direct'),restart=document.getElementById('restart');
+ const restore=document.getElementById('restore'),menu=restart?.closest('.game-session-menu');
+ if(!direct||!menu||!restore)return;
+ const active=document.activeElement;
+ direct.hidden=canRestore;menu.hidden=!canRestore;
+ restore.hidden=!canRestore;
+ for(const button of [direct,restart,restore])button.disabled=busy;
+ if(!canRestore){menu.open=false;if(menu.contains(active))direct.focus({preventScroll:true});}
+ else if(active===direct)menu.querySelector('summary')?.focus({preventScroll:true});
+}
 const switcher=document.getElementById('domain-switch'),menu=document.getElementById('domain-menu');
 if(switcher&&menu){
  const setOpen=open=>{menu.hidden=!open;switcher.setAttribute('aria-expanded',String(open));};

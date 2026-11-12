@@ -1,0 +1,1170 @@
+{
+  "set": "media",
+  "widths": [
+    390,
+    1440
+  ],
+  "domains": [
+    "film",
+    "series",
+    "cartoon"
+  ],
+  "results": [
+    {
+      "name": "390-film-question-actions-0",
+      "pass": true,
+      "detail": {
+        "#action-controls": {
+          "x": 32,
+          "y": 1321.6875,
+          "width": 316,
+          "height": 137,
+          "top": 1321.6875,
+          "right": 348,
+          "bottom": 1458.6875,
+          "left": 32,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-primary": {
+          "x": 32,
+          "y": 1321.6875,
+          "width": 316,
+          "height": 48,
+          "top": 1321.6875,
+          "right": 348,
+          "bottom": 1369.6875,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 32,
+          "y": 1379.6875,
+          "width": 316,
+          "height": 48,
+          "top": 1379.6875,
+          "right": 348,
+          "bottom": 1427.6875,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        ".game-back": {
+          "x": 32,
+          "y": 282.09375,
+          "width": 89.65625,
+          "height": 44,
+          "top": 282.09375,
+          "right": 121.65625,
+          "bottom": 326.09375,
+          "left": 32,
+          "padding": "8px 12px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-film-review-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 32,
+          "y": 538.78125,
+          "width": 326,
+          "height": 48,
+          "top": 538.78125,
+          "right": 358,
+          "bottom": 586.78125,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 32,
+          "y": 596.78125,
+          "width": 326,
+          "height": 48,
+          "top": 596.78125,
+          "right": 358,
+          "bottom": 644.78125,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-film-result-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 14,
+          "y": 137.484375,
+          "width": 352,
+          "height": 48,
+          "top": 137.484375,
+          "right": 366,
+          "bottom": 185.484375,
+          "left": 14,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 14,
+          "y": 195.484375,
+          "width": 352,
+          "height": 48,
+          "top": 195.484375,
+          "right": 366,
+          "bottom": 243.484375,
+          "left": 14,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-film-restorable-menu",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 380,
+          "height": 117,
+          "top": 0,
+          "right": 380,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 174.359375,
+          "height": 44,
+          "top": 62,
+          "right": 190.359375,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 202.359375,
+          "y": 62,
+          "width": 161.640625,
+          "height": 44,
+          "top": 62,
+          "right": 364,
+          "bottom": 106,
+          "left": 202.359375,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 124,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 364,
+          "bottom": 224,
+          "left": 124,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-film-two-header-rows",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 380,
+          "height": 117,
+          "top": 0,
+          "right": 380,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 174.359375,
+          "height": 44,
+          "top": 62,
+          "right": 190.359375,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 202.359375,
+          "y": 62,
+          "width": 161.640625,
+          "height": 44,
+          "top": 62,
+          "right": 364,
+          "bottom": 106,
+          "left": 202.359375,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 124,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 364,
+          "bottom": 224,
+          "left": 124,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-film-escape",
+      "pass": true
+    },
+    {
+      "name": "390-film-restore",
+      "pass": true
+    },
+    {
+      "name": "390-film-domain-menu",
+      "pass": true,
+      "detail": {
+        "x": 16,
+        "y": 114,
+        "width": 348,
+        "height": 317.5625,
+        "top": 114,
+        "right": 364,
+        "bottom": 431.5625,
+        "left": 16,
+        "padding": "9px",
+        "marginLeft": "0px"
+      }
+    },
+    {
+      "name": "390-film-overflow",
+      "pass": true
+    },
+    {
+      "name": "390-library-control-gap",
+      "pass": true,
+      "detail": {
+        ".board-card-actions .custom-select-trigger": {
+          "x": 37,
+          "y": 623.5,
+          "width": 249,
+          "height": 46,
+          "top": 623.5,
+          "right": 286,
+          "bottom": 669.5,
+          "left": 37,
+          "padding": "11px 9px",
+          "marginLeft": "0px"
+        },
+        ".board-card-actions .library-remove": {
+          "x": 294,
+          "y": 623.5,
+          "width": 44,
+          "height": 46,
+          "top": 623.5,
+          "right": 338,
+          "bottom": 669.5,
+          "left": 294,
+          "padding": "10px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-library-control-height",
+      "pass": true,
+      "detail": {
+        ".board-card-actions .custom-select-trigger": {
+          "x": 37,
+          "y": 623.5,
+          "width": 249,
+          "height": 46,
+          "top": 623.5,
+          "right": 286,
+          "bottom": 669.5,
+          "left": 37,
+          "padding": "11px 9px",
+          "marginLeft": "0px"
+        },
+        ".board-card-actions .library-remove": {
+          "x": 294,
+          "y": 623.5,
+          "width": 44,
+          "height": 46,
+          "top": 623.5,
+          "right": 338,
+          "bottom": 669.5,
+          "left": 294,
+          "padding": "10px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-library-select-menu",
+      "pass": true,
+      "detail": {
+        "x": 37,
+        "y": 471.5,
+        "width": 249,
+        "height": 146
+      }
+    },
+    {
+      "name": "390-library-move",
+      "pass": true
+    },
+    {
+      "name": "390-library-remove-undo",
+      "pass": true
+    },
+    {
+      "name": "390-series-question-actions-0",
+      "pass": true,
+      "detail": {
+        "#action-controls": {
+          "x": 32,
+          "y": 1321.6875,
+          "width": 316,
+          "height": 137,
+          "top": 1321.6875,
+          "right": 348,
+          "bottom": 1458.6875,
+          "left": 32,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-primary": {
+          "x": 32,
+          "y": 1321.6875,
+          "width": 316,
+          "height": 48,
+          "top": 1321.6875,
+          "right": 348,
+          "bottom": 1369.6875,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 32,
+          "y": 1379.6875,
+          "width": 316,
+          "height": 48,
+          "top": 1379.6875,
+          "right": 348,
+          "bottom": 1427.6875,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        ".game-back": {
+          "x": 32,
+          "y": 282.09375,
+          "width": 89.65625,
+          "height": 44,
+          "top": 282.09375,
+          "right": 121.65625,
+          "bottom": 326.09375,
+          "left": 32,
+          "padding": "8px 12px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-series-review-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 32,
+          "y": 538.78125,
+          "width": 326,
+          "height": 48,
+          "top": 538.78125,
+          "right": 358,
+          "bottom": 586.78125,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 32,
+          "y": 596.78125,
+          "width": 326,
+          "height": 48,
+          "top": 596.78125,
+          "right": 358,
+          "bottom": 644.78125,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-series-result-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 14,
+          "y": 136.765625,
+          "width": 352,
+          "height": 48,
+          "top": 136.765625,
+          "right": 366,
+          "bottom": 184.765625,
+          "left": 14,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 14,
+          "y": 194.765625,
+          "width": 352,
+          "height": 48,
+          "top": 194.765625,
+          "right": 366,
+          "bottom": 242.765625,
+          "left": 14,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-series-restorable-menu",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 380,
+          "height": 117,
+          "top": 0,
+          "right": 380,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 174.359375,
+          "height": 44,
+          "top": 62,
+          "right": 190.359375,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 202.359375,
+          "y": 62,
+          "width": 161.640625,
+          "height": 44,
+          "top": 62,
+          "right": 364,
+          "bottom": 106,
+          "left": 202.359375,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 124,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 364,
+          "bottom": 224,
+          "left": 124,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-series-two-header-rows",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 380,
+          "height": 117,
+          "top": 0,
+          "right": 380,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 174.359375,
+          "height": 44,
+          "top": 62,
+          "right": 190.359375,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 202.359375,
+          "y": 62,
+          "width": 161.640625,
+          "height": 44,
+          "top": 62,
+          "right": 364,
+          "bottom": 106,
+          "left": 202.359375,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 124,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 364,
+          "bottom": 224,
+          "left": 124,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-series-escape",
+      "pass": true
+    },
+    {
+      "name": "390-series-restore",
+      "pass": true
+    },
+    {
+      "name": "390-series-domain-menu",
+      "pass": true,
+      "detail": {
+        "x": 16,
+        "y": 114,
+        "width": 348,
+        "height": 317.5625,
+        "top": 114,
+        "right": 364,
+        "bottom": 431.5625,
+        "left": 16,
+        "padding": "9px",
+        "marginLeft": "0px"
+      }
+    },
+    {
+      "name": "390-series-overflow",
+      "pass": true
+    },
+    {
+      "name": "390-cartoon-question-actions-0",
+      "pass": true,
+      "detail": {
+        "#action-controls": {
+          "x": 32,
+          "y": 1321.6875,
+          "width": 316,
+          "height": 137,
+          "top": 1321.6875,
+          "right": 348,
+          "bottom": 1458.6875,
+          "left": 32,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-primary": {
+          "x": 32,
+          "y": 1321.6875,
+          "width": 316,
+          "height": 48,
+          "top": 1321.6875,
+          "right": 348,
+          "bottom": 1369.6875,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 32,
+          "y": 1379.6875,
+          "width": 316,
+          "height": 48,
+          "top": 1379.6875,
+          "right": 348,
+          "bottom": 1427.6875,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        ".game-back": {
+          "x": 32,
+          "y": 282.09375,
+          "width": 89.65625,
+          "height": 44,
+          "top": 282.09375,
+          "right": 121.65625,
+          "bottom": 326.09375,
+          "left": 32,
+          "padding": "8px 12px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-cartoon-review-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 32,
+          "y": 538.78125,
+          "width": 326,
+          "height": 48,
+          "top": 538.78125,
+          "right": 358,
+          "bottom": 586.78125,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 32,
+          "y": 596.78125,
+          "width": 326,
+          "height": 48,
+          "top": 596.78125,
+          "right": 358,
+          "bottom": 644.78125,
+          "left": 32,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-cartoon-result-actions",
+      "pass": true,
+      "detail": {
+        "#action-controls .btn-primary": {
+          "x": 14,
+          "y": 137.109375,
+          "width": 352,
+          "height": 48,
+          "top": 137.109375,
+          "right": 366,
+          "bottom": 185.109375,
+          "left": 14,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        },
+        "#action-controls .btn-secondary": {
+          "x": 14,
+          "y": 195.109375,
+          "width": 352,
+          "height": 48,
+          "top": 195.109375,
+          "right": 366,
+          "bottom": 243.109375,
+          "left": 14,
+          "padding": "12px 17px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-cartoon-restorable-menu",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 380,
+          "height": 117,
+          "top": 0,
+          "right": 380,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 174.359375,
+          "height": 44,
+          "top": 62,
+          "right": 190.359375,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 202.359375,
+          "y": 62,
+          "width": 161.640625,
+          "height": 44,
+          "top": 62,
+          "right": 364,
+          "bottom": 106,
+          "left": 202.359375,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 124,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 364,
+          "bottom": 224,
+          "left": 124,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-cartoon-two-header-rows",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 0,
+          "y": 0,
+          "width": 380,
+          "height": 117,
+          "top": 0,
+          "right": 380,
+          "bottom": 117,
+          "left": 0,
+          "padding": "10px 16px",
+          "marginLeft": "0px"
+        },
+        ".app-domain-control": {
+          "x": 16,
+          "y": 62,
+          "width": 174.359375,
+          "height": 44,
+          "top": 62,
+          "right": 190.359375,
+          "bottom": 106,
+          "left": 16,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-shell-actions": {
+          "x": 202.359375,
+          "y": 62,
+          "width": 161.640625,
+          "height": 44,
+          "top": 62,
+          "right": 364,
+          "bottom": 106,
+          "left": 202.359375,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 124,
+          "y": 112,
+          "width": 240,
+          "height": 112,
+          "top": 112,
+          "right": 364,
+          "bottom": 224,
+          "left": 124,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "390-cartoon-escape",
+      "pass": true
+    },
+    {
+      "name": "390-cartoon-restore",
+      "pass": true
+    },
+    {
+      "name": "390-cartoon-domain-menu",
+      "pass": true,
+      "detail": {
+        "x": 16,
+        "y": 114,
+        "width": 348,
+        "height": 317.5625,
+        "top": 114,
+        "right": 364,
+        "bottom": 431.5625,
+        "left": 16,
+        "padding": "9px",
+        "marginLeft": "0px"
+      }
+    },
+    {
+      "name": "390-cartoon-overflow",
+      "pass": true
+    },
+    {
+      "name": "1440-film-restorable-menu",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 24,
+          "y": 0,
+          "width": 1380,
+          "height": 76,
+          "top": 0,
+          "right": 1404,
+          "bottom": 76,
+          "left": 24,
+          "padding": "14px 24px",
+          "marginLeft": "24px"
+        },
+        ".app-domain-control": {
+          "x": 1061.515625,
+          "y": 14.5,
+          "width": 189.671875,
+          "height": 46,
+          "top": 14.5,
+          "right": 1251.1875,
+          "bottom": 60.5,
+          "left": 1061.515625,
+          "padding": "0px",
+          "marginLeft": "601.609px"
+        },
+        ".app-shell-actions": {
+          "x": 1275.1875,
+          "y": 15.5,
+          "width": 104.8125,
+          "height": 44,
+          "top": 15.5,
+          "right": 1380,
+          "bottom": 59.5,
+          "left": 1275.1875,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 1161.140625,
+          "y": 65.5,
+          "width": 218.859375,
+          "height": 112,
+          "top": 65.5,
+          "right": 1380,
+          "bottom": 177.5,
+          "left": 1161.140625,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "1440-film-escape",
+      "pass": true
+    },
+    {
+      "name": "1440-film-restore",
+      "pass": true
+    },
+    {
+      "name": "1440-film-domain-menu",
+      "pass": true,
+      "detail": {
+        "x": 961.1875,
+        "y": 72.5,
+        "width": 290,
+        "height": 317.5625,
+        "top": 72.5,
+        "right": 1251.1875,
+        "bottom": 390.0625,
+        "left": 961.1875,
+        "padding": "9px",
+        "marginLeft": "0px"
+      }
+    },
+    {
+      "name": "1440-film-overflow",
+      "pass": true
+    },
+    {
+      "name": "1440-library-control-gap",
+      "pass": true,
+      "detail": {
+        ".board-card-actions .custom-select-trigger": {
+          "x": 76.59375,
+          "y": 629.625,
+          "width": 556.90625,
+          "height": 46,
+          "top": 629.625,
+          "right": 633.5,
+          "bottom": 675.625,
+          "left": 76.59375,
+          "padding": "11px",
+          "marginLeft": "0px"
+        },
+        ".board-card-actions .library-remove": {
+          "x": 641.5,
+          "y": 629.625,
+          "width": 44,
+          "height": 46,
+          "top": 629.625,
+          "right": 685.5,
+          "bottom": 675.625,
+          "left": 641.5,
+          "padding": "10px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "1440-library-control-height",
+      "pass": true,
+      "detail": {
+        ".board-card-actions .custom-select-trigger": {
+          "x": 76.59375,
+          "y": 629.625,
+          "width": 556.90625,
+          "height": 46,
+          "top": 629.625,
+          "right": 633.5,
+          "bottom": 675.625,
+          "left": 76.59375,
+          "padding": "11px",
+          "marginLeft": "0px"
+        },
+        ".board-card-actions .library-remove": {
+          "x": 641.5,
+          "y": 629.625,
+          "width": 44,
+          "height": 46,
+          "top": 629.625,
+          "right": 685.5,
+          "bottom": 675.625,
+          "left": 641.5,
+          "padding": "10px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "1440-library-select-menu",
+      "pass": true,
+      "detail": {
+        "x": 76.59375,
+        "y": 414.625,
+        "width": 556.90625,
+        "height": 146
+      }
+    },
+    {
+      "name": "1440-library-move",
+      "pass": true
+    },
+    {
+      "name": "1440-library-remove-undo",
+      "pass": true
+    },
+    {
+      "name": "1440-series-restorable-menu",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 24,
+          "y": 0,
+          "width": 1380,
+          "height": 76,
+          "top": 0,
+          "right": 1404,
+          "bottom": 76,
+          "left": 24,
+          "padding": "14px 24px",
+          "marginLeft": "24px"
+        },
+        ".app-domain-control": {
+          "x": 1057.109375,
+          "y": 14.5,
+          "width": 194.078125,
+          "height": 46,
+          "top": 14.5,
+          "right": 1251.1875,
+          "bottom": 60.5,
+          "left": 1057.109375,
+          "padding": "0px",
+          "marginLeft": "597.203px"
+        },
+        ".app-shell-actions": {
+          "x": 1275.1875,
+          "y": 15.5,
+          "width": 104.8125,
+          "height": 44,
+          "top": 15.5,
+          "right": 1380,
+          "bottom": 59.5,
+          "left": 1275.1875,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 1161.140625,
+          "y": 65.5,
+          "width": 218.859375,
+          "height": 112,
+          "top": 65.5,
+          "right": 1380,
+          "bottom": 177.5,
+          "left": 1161.140625,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "1440-series-escape",
+      "pass": true
+    },
+    {
+      "name": "1440-series-restore",
+      "pass": true
+    },
+    {
+      "name": "1440-series-domain-menu",
+      "pass": true,
+      "detail": {
+        "x": 961.1875,
+        "y": 72.5,
+        "width": 290,
+        "height": 317.5625,
+        "top": 72.5,
+        "right": 1251.1875,
+        "bottom": 390.0625,
+        "left": 961.1875,
+        "padding": "9px",
+        "marginLeft": "0px"
+      }
+    },
+    {
+      "name": "1440-series-overflow",
+      "pass": true
+    },
+    {
+      "name": "1440-cartoon-restorable-menu",
+      "pass": true,
+      "detail": {
+        ".app-shell": {
+          "x": 24,
+          "y": 0,
+          "width": 1380,
+          "height": 76,
+          "top": 0,
+          "right": 1404,
+          "bottom": 76,
+          "left": 24,
+          "padding": "14px 24px",
+          "marginLeft": "24px"
+        },
+        ".app-domain-control": {
+          "x": 1021.5,
+          "y": 14.5,
+          "width": 229.6875,
+          "height": 46,
+          "top": 14.5,
+          "right": 1251.1875,
+          "bottom": 60.5,
+          "left": 1021.5,
+          "padding": "0px",
+          "marginLeft": "561.594px"
+        },
+        ".app-shell-actions": {
+          "x": 1275.1875,
+          "y": 15.5,
+          "width": 104.8125,
+          "height": 44,
+          "top": 15.5,
+          "right": 1380,
+          "bottom": 59.5,
+          "left": 1275.1875,
+          "padding": "0px",
+          "marginLeft": "0px"
+        },
+        ".app-session-actions": {
+          "x": 1161.140625,
+          "y": 65.5,
+          "width": 218.859375,
+          "height": 112,
+          "top": 65.5,
+          "right": 1380,
+          "bottom": 177.5,
+          "left": 1161.140625,
+          "padding": "8px",
+          "marginLeft": "0px"
+        }
+      }
+    },
+    {
+      "name": "1440-cartoon-escape",
+      "pass": true
+    },
+    {
+      "name": "1440-cartoon-restore",
+      "pass": true
+    },
+    {
+      "name": "1440-cartoon-domain-menu",
+      "pass": true,
+      "detail": {
+        "x": 961.1875,
+        "y": 72.5,
+        "width": 290,
+        "height": 317.5625,
+        "top": 72.5,
+        "right": 1251.1875,
+        "bottom": 390.0625,
+        "left": 961.1875,
+        "padding": "9px",
+        "marginLeft": "0px"
+      }
+    },
+    {
+      "name": "1440-cartoon-overflow",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "paidCalls": 0,
+  "checks": 52,
+  "failed": []
+}

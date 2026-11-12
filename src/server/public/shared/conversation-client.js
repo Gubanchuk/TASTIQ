@@ -20,7 +20,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  const selected=selectionId?archive.get(selectionId,domain):null;
  if(selected&&JSON.stringify(snapshot?.state)!==JSON.stringify(selected.state)){if(snapshot)previous={snapshot:clone(snapshot),drafts:clone(drafts),fromArchive:true};snapshot=selected;drafts={};correctionCheckpoint=null;}
  if(localStart&&(!snapshot||snapshot.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.state.turns.length&&!snapshot.error)){
-  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,...(snapshot?{id:snapshot.state.id}:{})});
+  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,requireDirection:true,...(snapshot?{id:snapshot.state.id}:{})});
   // v3 draft keys include question wording and options. Upgrade a pristine entry
   // without hiding words or genre choices written before quick wishes existed.
   if(snapshot?.screen?.question){
@@ -71,7 +71,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
   draft(key){return cleanDraft(drafts[key]);},
   saveDraft(key,value){drafts[key]=cleanDraft(value);save();},
   start(){if(localStart&&snapshot?.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.error){save();notify();return Promise.resolve(clone(snapshot));}return execute({...(snapshot?{state:clone(snapshot.state)}:{mode:mode==='free'?'free':'guided'}),...(uid?{uid}:{})},{resumeFailure:recoveryOf(snapshot)});},
-  send(action){if(action.type==='correct'&&snapshot?.state?.result){correctionCheckpoint={snapshot:clone(snapshot),drafts:clone(drafts)};delete correctionCheckpoint.snapshot.error;delete correctionCheckpoint.snapshot.retryable;correctionCheckpoint.snapshot.state.failedAction=null;save();}if(action.type==='restart'&&snapshot){previous={snapshot:clone(snapshot),drafts:clone(drafts)};save();}return execute({...(snapshot?{state:clone(snapshot.state)}:{}),action:clone(action),...(uid?{uid}:{})},{reset:action.type==='restart'});},
+  send(action){if(action.type==='correct'&&snapshot?.state?.result){correctionCheckpoint={snapshot:clone(snapshot),drafts:clone(drafts)};delete correctionCheckpoint.snapshot.error;delete correctionCheckpoint.snapshot.retryable;correctionCheckpoint.snapshot.state.failedAction=null;save();}if(action.type==='restart'&&localStart)action={...action,requireDirection:true};if(action.type==='restart'&&snapshot){previous={snapshot:clone(snapshot),drafts:clone(drafts)};save();}return execute({...(snapshot?{state:clone(snapshot.state)}:{}),action:clone(action),...(uid?{uid}:{})},{reset:action.type==='restart'});},
   retry(){if(error&&snapshot?.retryable===false&&snapshot.error===error)return Promise.resolve(null);return retryBody?execute(clone(retryBody),retryOptions):api.send({type:'retry'});},
   restorePrevious(){return previous?execute({state:clone(previous.snapshot.state),...(uid?{uid}:{})},{reset:true,restoredDrafts:clone(previous.drafts??{}),clearPrevious:true,resumeFailure:recoveryOf(previous.snapshot)}):Promise.resolve(null);},
   invalidate(){generation++;busy=false;error=null;notify();},

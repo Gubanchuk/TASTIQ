@@ -155,6 +155,34 @@ test('library filters render real matching records and moving familiarity keeps 
  assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
 });
 
+test('history and review tabs keep independent filters and split a saved choice by title',async()=>{
+ const second={id:'steam:22',title:'Second game',origin:'model'};
+ const run={...evening,cards:[...evening.cards,second],responses:[
+  ...evening.responses,{cardId:second.id,fit:null,reason:null,note:'',chosen:true,started:true,outcome:null},
+ ]};
+ const storage=memory({...legacy,history:[
+  {...legacy.history[0],alternatives:[{title:'Hidden adventure'}]},
+  {domain:'film',topId:'tt21',title:'Another film',at:'2026-11-01'},
+ ]});
+ storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'split',run,ack:run.revision}]}));
+ const page=await controller(storage);
+ const html=()=>page.app.innerHTML;
+ page.change('domain-filter','film');
+ page.click({act:'view',view:'history'});
+ assert.match(html(),/Earlier pick/);assert.match(html(),/Another film/);
+ page.input('Hidden adventure');assert.match(html(),/Earlier pick/);assert.doesNotMatch(html(),/Another film/);
+ page.click({act:'view',view:'evenings'});
+ assert.match(html(),/<strong>Real game<\/strong>/);assert.match(html(),/<strong>Second game<\/strong>/);
+ assert.equal((html().match(/class="library-evening"/g)??[]).length,2);
+ page.change('status-filter','started');
+ assert.doesNotMatch(html(),/<strong>Real game<\/strong>/);assert.match(html(),/<strong>Second game<\/strong>/);
+ page.click({act:'view',view:'history'});assert.match(html(),/value="Hidden adventure"/);
+ page.click({act:'view',view:'board'});assert.match(html(),/<option value="film" selected>/);
+ page.click({act:'view',view:'evenings'});assert.match(html(),/<option value="started" selected>/);
+ page.click({act:'clear'});assert.equal((html().match(/class="library-evening"/g)??[]).length,2);
+ assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
+});
+
 test('a slow explicit feedback send does not drop the next local evening edit',async()=>{
  const storage=memory(legacy);storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'old-key',run:evening,ack:-1}]}));
  let release,posts=0;
@@ -188,11 +216,12 @@ test('queued explicit evening edits survive a delayed local transaction before a
  page.click({act:'view',view:'evenings'});pause=true;
  page.click({act:'evening-start',run:evening.id,id:game.id,v:'on'});await waiting;
  page.click({act:'evening-fit',run:evening.id,id:game.id,v:'reject'});
- assert.equal(page.requests.length,0);
+ assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
  release();await page.tick();await page.tick();
  const after=JSON.parse(storage.getItem(FEEDBACK_KEY)).entries[0].run;
  assert.equal(after.responses[0].started,true);assert.equal(after.responses[0].fit,'reject');assert.equal(after.responses[0].note,'A review');assert.equal(after.revision,3);
- assert.equal(page.requests.length,1);const sent=JSON.parse(page.requests[0].options.body).run;
+ const submissions=page.requests.filter(request=>request.options?.method==='POST');
+ assert.equal(submissions.length,1);const sent=JSON.parse(submissions[0].options.body).run;
  assert.equal(sent.revision,3);assert.equal(sent.responses[0].fit,'reject');assert.equal(sent.responses[0].started,true);
  assert.deepEqual(JSON.parse(storage.getItem(LIBRARY_KEY)),legacy);
 });
@@ -216,7 +245,7 @@ test('a restored draft-only evening is visible in the library before any rating 
  const storage=memory(legacy),draftOnly={...evening,revision:0,responses:[]};storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'draft-only',run:draftOnly,ack:-1}]}));
  createFeedbackDrafts({storage}).set(`${evening.id}:${game.id}`,{reason:'mood',note:'Черновик после перезагрузки'});
  const page=await controller(storage);page.click({act:'view',view:'evenings'});
- assert.ok(page.app.innerHTML.includes('Черновик после перезагрузки</textarea>'));assert.ok(page.app.innerHTML.includes('Продолжить отзыв'));assert.ok(page.app.innerHTML.includes('data-view="evenings" data-focus="view:evenings" aria-pressed="true">Вечера<span>1</span>'));
+ assert.ok(page.app.innerHTML.includes('Черновик после перезагрузки</textarea>'));assert.ok(page.app.innerHTML.includes('Продолжить отзыв'));assert.ok(page.app.innerHTML.includes('data-view="evenings" data-focus="view:evenings" aria-pressed="true">Выбор и отзывы<span>1</span>'));
  assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
 });
 

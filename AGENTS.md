@@ -2,7 +2,7 @@
 
 ## Начало новой работы
 
-1. Прочитать `docs/CODEX_CONTEXT.md`: назначение, устройство, подтверждённая точка остановки, открытые решения и ограничения проверки.
+1. Прочитать `docs/CODEX_CONTEXT.md`: назначение, устройство, подтверждённая точка остановки, открытые решения и ограничения проверки. Для дальнейшего развития читать `ROADMAP.md`: актуальные этапы R0–R7, зависимости, критерии завершения и постановка следующей задачи; не подменять их историческими «следующими шагами» ниже.
 2. Прочитать `C:/Users/Dusik/.codex/claude-import/INDEX.md`, сопоставить каталог с `project-index.json`; память именно этого проекта: `C:/Users/Dusik/.codex/claude-import/projects/E--project-TASTIQ/memory/`.
 3. В памяти начать с `MEMORY.md`, `workspace-redesign-2026-11-01.md`, `interface-2026-11-01.md`, `overnight-quality-2026-11-01.md`, `familiar-games-2026-11-01.md`, `adaptive-game-dialogue-2026-10-31.md`, `dialogue-architecture-2026-10-31.md`, `owner-dialogue-feedback-2026-10-31.md` и `question-quality-2026-10-31.md`, затем `journey-quality-2026-10-31.md`, `live-feedback-2026-10-31.md`, `quality-round-2-2026-10-31.md`, `session-quality-2026-10-31.md`, `quality-strategy-2026-10-31.md` и более ранние темы; общие предпочтения — `C:/Users/Dusik/.codex/claude-import/user-guidance.md`.
 4. Проверить текущие файлы и Git. Снимок 31.10.2026 не заменяет свежую проверку. Историю исполнения смотреть в `research-vault/akinator-picker-2026-10/SUMMARY.md`, последние разделы идут в хронологическом порядке.

@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/pick/game/",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/pick/watch/",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/library/",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/shared/workspace.css",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/shared/results.css",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/shared/custom-select.css",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/shared/custom-select.js",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/shared/workspace-ui.js",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/shared/request-overview.js",
+    "status": 200,
+    "sourceByteMatch": true
+  },
+  {
+    "path": "/shared/feedback-drafts.js",
+    "status": 200,
+    "sourceByteMatch": true
+  }
+]

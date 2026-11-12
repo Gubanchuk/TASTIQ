@@ -25,11 +25,12 @@ test('a successful evening choice can use tonight without inventing taste or fam
 test('each available result exposes explicit save and persistent state without changing familiar controls',()=>{
  const card={id:'steam:12',title:'A game'};
  const fresh=gameCardHtml(card,{index:2,known:true});
- assert.match(fresh,/data-act="library-save"[^>]+aria-pressed="false"[^>]*>Сохранить/);
+ assert.match(fresh,/data-act="library-save"[^>]+aria-pressed="false"[^]*?<\/svg>На потом<\/button>/);
  assert.ok(fresh.includes('data-act="familiar-mark"'));
- const saved=gameCardHtml(card,{saved:true,libraryLane:'tonight'});
- assert.match(saved,/data-act="library-save"[^>]+aria-pressed="true"[^>]*>Сохранено/);
- assert.ok(saved.includes('На этот вечер'));
+ const tonight=gameCardHtml(card,{saved:true,libraryLane:'tonight'});
+ assert.match(tonight,/data-act="library-save"[^>]+aria-pressed="false"/);
+ const saved=gameCardHtml(card,{saved:true,libraryLane:'want'});
+ assert.match(saved,/data-act="library-save"[^>]+aria-pressed="true"/);
  const marked=gameCardHtml(card,{marked:true,saved:true});
  assert.ok(!marked.includes('data-act="library-save"'));
  assert.ok(marked.includes('data-act="familiar-unmark"'));

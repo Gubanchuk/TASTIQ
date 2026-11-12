@@ -12,10 +12,15 @@ export function initialDirectionQuestion(domain='game'){
   why:'Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.',multiple:true,controls:['unknown','indifferent','none'],
   options:[...moods,...genres[game?'game':'watch'],...avoids].map(([id,label,feature])=>({id,label,...(feature?{feature}:{})}))};
 }
-export function initialConversation({domain='game',id=crypto.randomUUID(),mode}={}){
+export const directionChoiceMessage='Выбери хотя бы одно настроение или жанр.';
+export const hasDirectionChoice=ids=>ids.some(id=>typeof id==='string'&&id&&!id.startsWith('avoid_'));
+export const hasChosenDirection=state=>state.turns.some(turn=>turn.question.id==='direction'&&turn.kind==='answer'&&!turn.superseded
+ &&Array.isArray(turn.selected)&&hasDirectionChoice(turn.selected.map(option=>option?.id)));
+
+export function initialConversation({domain='game',id=crypto.randomUUID(),mode,requireDirection=false}={}){
  if(!['game','film','series','cartoon'].includes(domain))throw TypeError('Неизвестный раздел подбора.');
  const media=domain!=='game';
- return {version:1,...(media?{domain}:{}),id,revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
+ return {version:1,...(media?{domain}:{}),...(requireDirection?{requireDirection:true}:{}),id,revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
   context:media?{company:null,childAge:null,minutes:null,timeMode:null,commitment:null,onlyEnded:null,format:null}:{platform:null,company:null,partySize:null},
   ...(media?{contextEvidence:{company:null,childAge:null,timeMode:null,commitment:null,onlyEnded:null,format:null}}:{}),
   turns:[],facts:[],question:initialDirectionQuestion(domain),summary:'',uncertainties:[],retractions:[],sessionTime:null,factRemovalUndo:null,result:null,provisional:false,needsPlan:false,
@@ -23,5 +28,5 @@ export function initialConversation({domain='game',id=crypto.randomUUID(),mode}=
 }
 export function initialConversationSnapshot(options={}){
  const state=initialConversation(options),media=options.domain&&options.domain!=='game';
- return {state,screen:{...(media?{domain:state.domain}:{}),summary:'',facts:[],uncertainties:[],context:state.context,sessionTime:null,canUndoFactRemoval:false,canBack:false,provisional:false,turns:[],type:'question',question:state.question}};
+ return {state,screen:{...(media?{domain:state.domain}:{}),summary:'',facts:[],uncertainties:[],context:state.context,sessionTime:null,canUndoFactRemoval:false,canBack:false,provisional:false,turns:[],type:'question',canChangeQuestion:false,question:state.question}};
 }

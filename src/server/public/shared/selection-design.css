@@ -1,0 +1,419 @@
+/* The current picker and library share the same type, action and surface roles. */
+body.selection-design {
+ --selection-navy:#18254a;
+ --selection-nav:#2b3c66;
+ --selection-canvas:#f2f4fa;
+ --selection-panel:#f6f8fd;
+ --selection-soft:#edf2ff;
+ --selection-active:#e1e9ff;
+ --selection-hover:#dce6ff;
+ --selection-accent:#284bc4;
+ --selection-ink:#192746;
+ --selection-muted:#4c5d7c;
+ --selection-note:#fbf3e6;
+ --selection-note-ink:#5e4422;
+ --selection-edge:#c5d1e9;
+ --selection-focus:#284bc4;
+ --selection-today:#086451;
+ --selection-today-hover:#064f40;
+ --selection-today-soft:#e5f5ee;
+ --selection-small:0.8125rem;
+ --selection-copy:1rem;
+ --selection-radius:16px;
+ --selection-surface:24px;
+ --brand-paper:var(--selection-canvas);
+ --brand-ink:var(--selection-ink);
+ --brand-muted:var(--selection-muted);
+ --brand-primary:var(--selection-accent);
+ --control-hover:var(--selection-hover);
+ background:var(--selection-canvas);
+}
+body.selection-design :is(.app-shell,.game-card,.library-evening,.library-views,.game-answer-extra,.game-question-footer) {
+ font-family:Golos,Arial,sans-serif;
+}
+body.selection-design.product-page.conversation-page :is(button,a,summary):focus-visible {
+ outline:2px solid var(--selection-focus);outline-offset:3px;
+}
+body.selection-design.product-page.conversation-page .app-shell,
+body.selection-start>header {
+ background:var(--selection-navy);color:white;border:0;
+ box-shadow:0 8px 22px #18254a16;
+}
+body.selection-design.product-page.conversation-page .app-shell {
+ margin-bottom:24px;border-radius:0 0 22px 22px;
+}
+body.selection-design.product-page.conversation-page .app-shell :is(.app-shell-nav a,.app-domain-button,#restart-direct,.game-session-menu>summary) {
+ border:1px solid transparent;border-radius:12px;background:transparent;color:#e4ebff;box-shadow:none;
+}
+body.selection-design.product-page.conversation-page .app-shell :is(.app-domain-button,#restart-direct,.game-session-menu>summary) {
+ background:var(--selection-nav);color:white;
+}
+body.selection-design.product-page.conversation-page .app-shell :is(.app-shell-nav a[aria-current],.app-shell-nav a:hover,.app-domain-button:hover,#restart-direct:hover,.game-session-menu>summary:hover,.game-session-menu[open]>summary) {
+ background:#374a79;color:white;
+}
+body.selection-design .app-shell .app-domain-button svg {color:#d9e5ff}
+body.selection-design.product-page.conversation-page .app-shell :is(a,button,summary):focus-visible {outline-color:#a9c2ff}
+body.selection-design.product-page.conversation-page .app-shell :is(.app-domain-menu,.app-session-actions) :is(a,button):focus-visible {outline-color:var(--selection-focus)}
+body.selection-design.product-page.conversation-page .app-shell :is(.app-session-actions,.app-domain-menu) {
+ border:0;border-radius:var(--selection-radius);box-shadow:0 12px 30px #18254a28;
+}
+body.selection-design.product-page.conversation-page .app-shell .app-shell-primary {background:#dbe6ff;color:var(--selection-navy);border:0}
+body.selection-design.product-page.conversation-page .app-shell .app-shell-primary:hover {background:white;color:var(--selection-navy)}
+
+body.selection-design.product-page.conversation-page #picker-workspace>.game-context-panel {
+ background:var(--selection-soft);border-radius:var(--selection-surface);
+}
+body.selection-design.product-page.conversation-page #main h1 {
+ color:var(--selection-navy);font:530 2rem/1.26 Unbounded,Golos,sans-serif;
+ letter-spacing:-.035em;margin:0 0 16px;max-width:29ch;text-wrap:balance;
+}
+body.selection-design.product-page.conversation-page #main .game-help {
+ color:var(--selection-muted);font-size:var(--selection-copy);line-height:1.55;max-width:62ch;
+}
+body.selection-design.product-page.conversation-page #stage .game-navigation {
+ gap:12px;margin-bottom:32px;
+}
+body.selection-design.product-page.conversation-page #stage .game-journey {
+ gap:6px;padding:6px;border-radius:var(--selection-radius);background:var(--selection-panel);
+}
+body.selection-design.product-page.conversation-page #stage .game-journey li {
+ min-height:40px;padding:4px 8px;border-radius:12px;
+}
+body.selection-design.product-page.conversation-page #stage .game-journey li[data-status=current] {background:var(--selection-active)}
+body.selection-design.product-page.conversation-page #stage .game-journey li>span {background:white}
+body.selection-design.product-page.conversation-page #stage .game-journey li[data-status=current]>span {background:var(--selection-accent)}
+body.selection-design.product-page.conversation-page #stage .game-journey li[data-status=done]>span {background:var(--selection-soft)}
+body.selection-design.product-page.conversation-page #stage :is(.game-back,.game-text-action) {
+ border:0;border-radius:12px;background:var(--selection-soft);box-shadow:none;color:var(--selection-accent);
+}
+body.selection-design.product-page.conversation-page #stage :is(.game-back,.game-text-action):hover:not(:disabled) {background:var(--selection-hover)}
+body.selection-design.product-page.conversation-page #stage #answer-instruction {display:flex;gap:6px 10px;align-items:center;margin:0 0 12px}
+body.selection-design.product-page.conversation-page #stage #answer-instruction strong {
+ font-size:var(--selection-small);line-height:1.3;border-radius:8px;padding:4px 8px;
+ background:var(--selection-soft);color:var(--selection-accent);
+}
+body.selection-design.product-page.conversation-page #stage #answer-instruction:has(+.game-question-why) {margin-bottom:6px}
+body.selection-design.product-page.conversation-page #stage .game-question-why {margin:0 0 16px}
+body.selection-design.product-page.conversation-page #stage #answer-form>.game-question-options {margin-top:20px;gap:10px}
+body.selection-design.product-page.conversation-page #stage #answer-form .game-option {
+ display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;
+ padding:12px 14px;border:1px solid var(--selection-edge);border-radius:14px;position:static;
+ background:var(--selection-panel);color:var(--selection-ink);
+ font:550 .9375rem/1.45 Golos,Arial,sans-serif;box-shadow:none;
+}
+body.selection-design.product-page.conversation-page #stage #answer-form .game-option:hover:not(:disabled) {
+ background:var(--selection-hover);border-color:var(--selection-accent);
+}
+body.selection-design.product-page.conversation-page #stage #answer-form .game-option[aria-pressed=true] {
+ background:var(--selection-active);border-color:var(--selection-accent);color:var(--selection-navy);box-shadow:none;
+}
+body.selection-design.product-page.conversation-page #stage #answer-form .game-option-check {
+ opacity:1;position:static;flex:0 0 18px;width:18px;height:18px;padding:1px;
+ color:transparent;background:white;border:1px solid var(--selection-edge);border-radius:5px;
+}
+body.selection-design.product-page.conversation-page #stage #answer-form[data-multiple=false] .game-option-check {border-radius:50%}
+body.selection-design.product-page.conversation-page #stage #answer-form .game-option[aria-pressed=true] .game-option-check {
+ color:white;background:var(--selection-accent);border-color:var(--selection-accent);
+}
+body.selection-design.product-page.conversation-page #stage .game-answer-extras {
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0 0;
+}
+body.selection-design.product-page.conversation-page #stage .game-answer-extras>details:only-child,
+body.selection-design.product-page.conversation-page #stage .game-answer-extras>details[open] {grid-column:1/-1}
+body.selection-design.product-page.conversation-page #stage details.game-answer-extra,
+body.selection-design.product-page.conversation-page #request-panel .request-tools>details {
+ border:0;background:var(--selection-soft);border-radius:var(--selection-radius);
+}
+body.selection-design.product-page.conversation-page #stage details.game-answer-extra>summary,
+body.selection-design.product-page.conversation-page #request-panel .request-tools>details>summary {
+ min-height:48px;gap:8px;padding:10px 14px;border:0;border-radius:var(--selection-radius);
+ background:transparent;color:var(--selection-navy);font-weight:650;
+}
+body.selection-design.product-page.conversation-page #stage details.game-answer-extra[open]>summary,
+body.selection-design.product-page.conversation-page #request-panel .request-tools>details[open]>summary {background:transparent}
+body.selection-design.product-page.conversation-page #stage details.game-answer-extra>summary:hover,
+body.selection-design.product-page.conversation-page #request-panel .request-tools>details>summary:hover {background:var(--selection-hover)}
+body.selection-design.product-page.conversation-page #stage details.game-answer-extra>summary::after,
+body.selection-design.product-page.conversation-page #request-panel .request-tools>details>summary::after {color:var(--selection-accent)}
+body.selection-design.product-page.conversation-page #stage .game-answer-extra-body {
+ background:transparent;border-radius:0;margin:0;padding:0 14px 16px;gap:16px;
+}
+body.selection-design.product-page.conversation-page #stage .game-answer-extra .game-option {background:white}
+body.selection-design.product-page.conversation-page #stage #answer-form :is(.game-field,.game-example,.game-answer-avoid legend) {font-size:.875rem;font-weight:580;color:var(--selection-ink)}
+body.selection-design.product-page.conversation-page #stage #answer-form :is(.game-field,.game-example) {margin:0}
+body.selection-design.product-page.conversation-page #stage #answer-form>.game-example {margin-top:14px}
+body.selection-design.product-page.conversation-page #stage #answer-form .input,
+body.selection-design.product-page.conversation-page #request-panel .game-context-editor form :is(.input,.custom-select-trigger),
+body.selection-design.product-page.conversation-page #library-app .evening-reason :is(.input,.custom-select-trigger) {
+ background:white;border:1px solid var(--selection-edge);border-radius:12px;font-size:1rem;
+}
+body.selection-design.product-page.conversation-page #stage #answer-form textarea {min-height:108px}
+body.selection-design.product-page.conversation-page #stage .game-question-footer,
+body.selection-design.product-page.conversation-page #stage .game-actions {
+ border:0;border-radius:var(--selection-radius);background:var(--selection-panel);
+ padding:10px;margin:24px 0 0;
+}
+body.selection-design.product-page.conversation-page #stage .game-question-footer {gap:8px 16px}
+body.selection-design.product-page.conversation-page #stage .game-question-secondary {gap:8px}
+body.selection-design.product-page.conversation-page #stage .game-text-action {font-size:var(--selection-small);padding:8px 12px}
+body.selection-design.product-page.conversation-page #stage .game-text-action[data-act=review] {background:white}
+body.selection-design.product-page.conversation-page #stage .game-text-action[data-act=review]:hover:not(:disabled) {background:var(--selection-hover)}
+body.selection-design.product-page.conversation-page #stage .game-question-footer .game-draft-hint {padding-inline:6px}
+body.selection-design.product-page.conversation-page #request-panel .request-tools {
+ border:0;gap:8px;margin:16px 0 0;
+}
+body.selection-design.product-page.conversation-page #request-panel .request-tools>details {background:white}
+body.selection-design.product-page.conversation-page #request-panel .request-tools>details[open] {padding-bottom:8px}
+body.selection-design.product-page.conversation-page #request-panel .request-tools>.game-history :is(p,ul),
+body.selection-design.product-page.conversation-page #request-panel .request-tools>.request-time-details ul {margin:0;padding:0 14px 8px}
+body.selection-design.product-page.conversation-page #request-panel .request-tools .game-context-editor form {
+ gap:12px;padding:12px;margin:0 8px;background:var(--selection-panel);border-radius:12px;
+}
+body.selection-design.product-page.conversation-page #stage .game-error {border:0;border-radius:14px;gap:12px}
+
+/* Recommendations: the reading column ends before the two plans. */
+body.selection-design.product-page.conversation-page #stage .game-result-heading {
+ display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px;
+}
+body.selection-design.product-page.conversation-page #stage .game-result-heading h1 {margin:0}
+body.selection-design.product-page.conversation-page #stage .game-result-browse {margin:0}
+body.selection-design.product-page.conversation-page #stage .game-proposals {gap:16px;align-items:start}
+body.selection-design.product-page.conversation-page #stage .game-proposal {
+ min-width:0;border:0;border-radius:var(--selection-surface);
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal:not(.game-proposal-featured) {
+ display:flex;flex-direction:column;align-self:start;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal-featured {
+ background:var(--selection-soft);padding:clamp(20px,3vw,32px);
+}
+body.selection-design.product-page.conversation-page #stage :is(.game-choice-heading,.game-alternatives-heading) {
+ font:650 1.3125rem/1.35 Golos,Arial,sans-serif;letter-spacing:-.02em;color:var(--selection-navy);margin:8px 0 0;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-layout {row-gap:10px;margin-bottom:16px}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-layout h2 {color:var(--selection-navy);font-weight:680;letter-spacing:-.025em}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-model-label {color:var(--selection-muted);margin:0}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-reason {font-size:1rem;line-height:1.55}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-caveat {
+ background:var(--selection-note);color:var(--selection-note-ink);padding:10px 12px;border:0;border-radius:12px;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-footer {
+ display:grid;gap:8px;padding:0;margin:0;border:0;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-plan-actions {
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:8px;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal-featured .game-plan-actions {max-width:480px}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions :is(.btn,.evening-decision) {min-width:0}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions .btn {font-size:.875rem;min-height:44px}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions :is(.game-library-save,[data-act=evening-choose]) {width:100%;justify-content:center}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions .game-library-save {
+ background:white;color:var(--selection-navy);border-color:var(--selection-edge);box-shadow:none;
+}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions .game-library-save[aria-pressed=true] {
+ background:var(--selection-active);color:var(--selection-accent);border-color:var(--selection-accent);
+}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions .game-library-save svg {width:16px;height:16px;flex:none}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions .game-library-save[aria-pressed=true] svg {fill:currentColor}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions [data-act=evening-choose] {
+ background:var(--selection-today);color:white;border-color:var(--selection-today);box-shadow:none;
+}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions [data-act=evening-choose]:hover:not(:disabled) {
+ background:var(--selection-today-hover);border-color:var(--selection-today-hover);color:white;
+}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions [data-act=evening-choose][aria-pressed=true] {
+ background:var(--selection-today-soft);color:var(--selection-today-hover);border-color:var(--selection-today);
+}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions [data-act=evening-choose][aria-pressed=true]:hover:not(:disabled) {
+ background:#d2eee2;color:var(--selection-today-hover);border-color:var(--selection-today-hover);
+}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions [data-act=evening-choose] svg {width:16px;height:16px;flex:none}
+body.selection-design.product-page.conversation-page #stage .game-plan-actions .game-library-save:hover:not(:disabled) {
+ background:var(--selection-hover);border-color:var(--selection-accent);
+}
+body.selection-design.product-page.conversation-page #stage .game-card-links {
+ display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal:not(.game-proposal-featured) .game-card-links {
+ display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:stretch;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal:not(.game-proposal-featured) .game-card-links:has(> :only-child) {
+ grid-template-columns:minmax(0,1fr);
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-links :is(button,a) {
+ display:inline-flex;align-items:center;border:1px solid var(--selection-edge);box-shadow:none;background:white;padding:7px 10px;
+ min-width:0;min-height:44px;margin:0;border-radius:10px;color:var(--selection-navy);font-size:var(--selection-small);
+ text-align:center;line-height:1.3;white-space:normal;justify-content:center;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal:not(.game-proposal-featured) .game-card-links a {
+ width:100%;gap:6px;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-links :is(button,a):hover {
+ background:var(--selection-soft);border-color:var(--selection-accent);text-decoration:none;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome) {
+ margin:0;background:var(--selection-panel);border-radius:12px;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome)>summary {
+ justify-content:space-between;padding:8px 12px;border:1px solid var(--selection-edge);
+ background:transparent;color:var(--selection-navy);
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome)>summary:hover {
+ border-color:var(--selection-accent);background:var(--selection-soft);
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome)[open] {
+ padding:0 10px 10px;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome)[open]>summary {
+ padding-inline:2px;border-color:transparent;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-result-start {
+ margin:4px 0 10px;
+}
+body.selection-design.product-page.conversation-page #stage .evening-controls-modern {gap:8px}
+body.selection-design.product-page.conversation-page #stage .selection-review {
+ border:0;background:white;border-radius:var(--selection-surface);padding:clamp(16px,3vw,28px);margin-top:18px;
+}
+
+/* The library tabs stay separate. An expanded record groups actions by purpose. */
+body.selection-design.product-page.conversation-page .board-heading h1 {
+ font:530 2.125rem/1.22 Unbounded,Golos,sans-serif;letter-spacing:-.035em;color:var(--selection-navy);
+}
+body.selection-design.product-page.conversation-page .board-heading p {font-size:1rem}
+body.selection-design.product-page.conversation-page :is(.library-views,.board-switch) {
+ background:transparent;border:0;box-shadow:none;padding:0;gap:10px;
+}
+body.selection-design.product-page.conversation-page :is(.library-views,.board-switch) button {
+ justify-content:center;min-height:46px;padding:8px 14px;gap:8px;border-radius:12px;
+ background:white;color:var(--selection-navy);border:1px solid var(--selection-edge);
+ box-shadow:none;font-weight:620;line-height:1.35;
+}
+body.selection-design.product-page.conversation-page :is(.library-views,.board-switch) button:hover {background:var(--selection-soft)}
+body.selection-design.product-page.conversation-page :is(.library-views,.board-switch) button[aria-pressed=true] {
+ background:var(--selection-accent);color:white;border-color:transparent;
+}
+body.selection-design.product-page.conversation-page :is(.library-views,.board-switch) button span {
+ font-variant-numeric:tabular-nums;background:var(--selection-soft);color:var(--selection-navy);
+}
+body.selection-design.product-page.conversation-page #library-app .library-evening {
+ border:1px solid var(--selection-edge);border-radius:var(--selection-surface);background:white;
+}
+body.selection-design.product-page.conversation-page #library-app details.library-evening>summary {
+ grid-template-columns:54px minmax(0,1fr) 18px;gap:14px;min-height:84px;padding:12px 18px;border:0;background:white;
+}
+body.selection-design.product-page.conversation-page #library-app details.library-evening>summary:hover,
+body.selection-design.product-page.conversation-page #library-app details.library-evening[open]>summary {background:var(--selection-soft)}
+body.selection-design.product-page.conversation-page #library-app .evening-summary-copy strong {
+ font-size:1.0625rem;line-height:1.35;font-weight:660;
+}
+body.selection-design.product-page.conversation-page #library-app .evening-state {
+ align-self:flex-start;padding:2px 8px;margin-top:2px;border-radius:7px;
+ color:var(--selection-muted);background:var(--selection-canvas);font-size:.75rem;
+}
+body.selection-design.product-page.conversation-page #library-app .evening-state[data-chosen=true] {
+ color:var(--selection-today-hover);background:var(--selection-today-soft);
+}
+body.selection-design.product-page.conversation-page #library-app [data-view-filters=evenings] {
+ max-width:920px;
+}
+body.selection-design.product-page.conversation-page #library-app .evening-content {border:0;padding:18px;display:grid;gap:14px}
+body.selection-design.product-page.conversation-page #library-app .evening-context {margin:0;line-height:1.55;font-size:.9375rem}
+body.selection-design.product-page.conversation-page #library-app .evening-card+.evening-card {border:0;padding:0;margin:14px 0 0}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern {gap:12px}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern :is(.evening-decision,.evening-review,.evening-outcome) {
+ border:0;border-radius:var(--selection-radius);margin:0;background:var(--selection-panel);padding:12px;
+}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern .evening-decision {gap:8px 12px}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern .evening-review {padding:14px 12px;display:grid;gap:8px}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern .evening-fit-label {font-weight:650;font-size:.9375rem}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern .evening-fit-prompt {margin:0}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern .evening-outcome {padding:4px 12px}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern .evening-outcome[open] {padding-bottom:12px;background:var(--selection-soft)}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern :is(.evening-outcome,.evening-feedback-note)[open]>summary {
+ background:transparent;border-color:transparent;color:var(--selection-navy);
+}
+body.selection-design.product-page.conversation-page #library-app .evening-outcome>.evening-buttons {margin:8px 0 0}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern .evening-buttons {gap:8px}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern :is(.evening-decision,.evening-buttons) .btn {
+ border:1px solid var(--selection-edge);border-radius:12px;background:white;color:var(--selection-navy);box-shadow:none;
+}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern :is(.evening-decision,.evening-buttons) .btn[aria-pressed=true] {
+ background:var(--selection-active);color:var(--selection-accent);border-color:var(--selection-accent);
+}
+body.selection-design.product-page.conversation-page #library-app .evening-controls-modern :is(.evening-decision,.evening-buttons) .btn:hover:not(:disabled) {background:var(--selection-hover)}
+body.selection-design.product-page.conversation-page #library-app .evening-feedback-note form {background:var(--selection-soft);margin:6px 0 0}
+body.selection-design.product-page.conversation-page #library-app :is(.history-row,.board-card,.library-empty) {border:0;border-radius:var(--selection-surface)}
+body.selection-design.product-page.conversation-page #library-app .board-card .card-details>summary {background:var(--selection-panel);border-color:transparent}
+
+/* The entry shares the same shell and uses a small palette of domain tiles. */
+body.selection-start>header {border-radius:var(--selection-surface)}
+body.selection-start>header>a:last-child {
+ padding:8px 14px;border-radius:12px;background:var(--selection-nav);color:white;text-decoration:none;
+}
+body.selection-start>main h1 {font-weight:530;line-height:1.24;text-wrap:balance}
+body.selection-start>main .back {
+ display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:12px;
+ background:white;color:var(--selection-accent);border:1px solid var(--selection-edge);
+ font-weight:620;text-decoration:none;
+}
+body.selection-start>main .back svg {width:18px;height:18px;flex:none}
+body.selection-start>main .back:is(:hover,:focus-visible) {
+ background:var(--selection-accent);border-color:var(--selection-accent);color:white;
+}
+body.selection-start>main nav a {
+ padding:20px 24px;background:var(--tile-background);border:1px solid var(--tile-border);border-radius:var(--selection-surface);
+ color:var(--selection-navy);font-weight:650;min-height:94px;
+}
+body.selection-start>main nav a:nth-child(1) {--tile-background:#dfe8ff;--tile-border:#b7cafa;--tile-active:#284bc4}
+body.selection-start>main nav a:nth-child(2) {--tile-background:#e5eaff;--tile-border:#c3cdf9;--tile-active:#4149aa}
+body.selection-start>main nav a:nth-child(3) {--tile-background:#eee8fa;--tile-border:#d9c7f1;--tile-active:#664099}
+body.selection-start>main nav a:nth-child(4) {--tile-background:#faeee1;--tile-border:#ebd2b6;--tile-active:#8a4b18}
+body.selection-start>main nav a:is(:hover,:focus-visible,:active) {
+ background:var(--tile-active);border-color:var(--tile-active);color:white;
+}
+body.selection-start>main nav a svg {
+ box-sizing:content-box;padding:8px;background:white;border-radius:12px;width:20px;height:20px;color:var(--selection-accent);
+}
+
+@media(min-width:761px) {
+ body.selection-design.product-page.conversation-page #stage .game-proposal-featured {
+  grid-template-columns:clamp(160px,22%,240px) minmax(0,1fr);column-gap:clamp(20px,3vw,36px);
+ }
+ body.selection-design.product-page.conversation-page #stage .game-proposal-featured .game-poster {
+  --result-art-height:clamp(210px,21vw,300px);margin:0;
+ }
+ body.selection-design.product-page.conversation-page #stage .game-proposal-featured .game-card-footer {margin-top:12px}
+}
+
+@media(min-width:421px) {
+ body.selection-design.library-page [data-view-filters=history] .library-filter-options {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+ }
+}
+
+@media(max-width:760px) {
+ body.selection-design.product-page.conversation-page .app-shell {border-radius:0;margin-bottom:16px;gap:6px 10px}
+ body.selection-design.product-page.conversation-page #stage .game-navigation {gap:8px;margin-bottom:22px}
+ body.selection-design.product-page.conversation-page #stage .game-journey {padding:4px;gap:4px}
+ body.selection-design.product-page.conversation-page #stage .game-journey li {padding:5px 2px;min-height:52px;gap:4px}
+ body.selection-design.product-page.conversation-page #main h1 {font-size:1.5rem;line-height:1.28;margin-bottom:12px}
+ body.selection-design.product-page.conversation-page #main .game-help {font-size:.9375rem}
+ body.selection-design.product-page.conversation-page #stage #answer-form .game-option {padding:10px;gap:8px}
+ body.selection-design.product-page.conversation-page #stage #answer-form:has([data-first-next])>.game-question-options .game-option {font-size:.875rem}
+ body.selection-design.product-page.conversation-page #stage #answer-form>.game-question-options {margin-top:14px;gap:8px}
+ body.selection-design.product-page.conversation-page #stage .game-answer-extras {grid-template-columns:minmax(0,1fr)}
+ body.selection-design.product-page.conversation-page #stage .game-question-footer {padding:8px;margin-top:18px;gap:6px}
+ body.selection-design.product-page.conversation-page #stage .game-question-secondary {gap:6px}
+ body.selection-design.product-page.conversation-page #stage .game-text-action {padding-inline:8px}
+ body.selection-design.product-page.conversation-page #stage .game-proposal-featured {padding:18px}
+ body.selection-design.product-page.conversation-page #stage .game-result-heading {gap:4px;margin-bottom:10px}
+ body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-layout {margin-bottom:12px}
+ body.selection-design.product-page.conversation-page .board-heading h1 {font-size:1.625rem}
+ body.selection-design.product-page.conversation-page .board-heading p {font-size:.9375rem}
+ body.selection-design.product-page.conversation-page .library-views {gap:6px}
+ body.selection-design.product-page.conversation-page .library-views button {padding-inline:6px;gap:4px}
+ body.selection-design.product-page.conversation-page #library-app .evening-content {padding:12px}
+ body.selection-design.product-page.conversation-page #library-app details.library-evening>summary {padding:12px;gap:10px}
+ body.selection-start>header {border-radius:16px}
+ body.selection-start>main nav a {min-height:66px;padding:12px 16px}
+}

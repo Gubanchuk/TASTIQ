@@ -1,0 +1,1868 @@
+{
+  "evidence": [
+    {
+      "label": "no page overflow 320×640",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 320×640",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 10,
+            "y": 468,
+            "w": 290,
+            "h": 1304,
+            "right": 300
+          },
+          "art": {
+            "x": 26,
+            "y": 488,
+            "w": 82,
+            "h": 98,
+            "right": 108
+          },
+          "head": {
+            "x": 122,
+            "y": 488,
+            "w": 162,
+            "h": 597,
+            "right": 284
+          },
+          "reason": {
+            "x": 26,
+            "y": 1120,
+            "w": 258,
+            "h": 281,
+            "right": 284
+          },
+          "caveat": {
+            "x": 26,
+            "y": 1414,
+            "w": 258,
+            "h": 96,
+            "right": 284
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 10,
+            "y": 1841,
+            "w": 290,
+            "h": 1111,
+            "right": 300
+          },
+          "art": {
+            "x": 26,
+            "y": 1861,
+            "w": 82,
+            "h": 98,
+            "right": 108
+          },
+          "head": {
+            "x": 122,
+            "y": 1861,
+            "w": 162,
+            "h": 433,
+            "right": 284
+          },
+          "reason": {
+            "x": 26,
+            "y": 2329,
+            "w": 258,
+            "h": 245,
+            "right": 284
+          },
+          "caveat": {
+            "x": 26,
+            "y": 2588,
+            "w": 258,
+            "h": 96,
+            "right": 284
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 10,
+            "y": 2968,
+            "w": 290,
+            "h": 943,
+            "right": 300
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 26,
+            "y": 2988,
+            "w": 258,
+            "h": 266,
+            "right": 284
+          },
+          "reason": {
+            "x": 26,
+            "y": 3288,
+            "w": 258,
+            "h": 245,
+            "right": 284
+          },
+          "caveat": {
+            "x": 26,
+            "y": 3547,
+            "w": 258,
+            "h": 96,
+            "right": 284
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 10,
+            "y": 3927,
+            "w": 290,
+            "h": 825,
+            "right": 300
+          },
+          "art": {
+            "x": 26,
+            "y": 3947,
+            "w": 82,
+            "h": 98,
+            "right": 108
+          },
+          "head": {
+            "x": 122,
+            "y": 3947,
+            "w": 162,
+            "h": 147,
+            "right": 284
+          },
+          "reason": {
+            "x": 26,
+            "y": 4129,
+            "w": 258,
+            "h": 245,
+            "right": 284
+          },
+          "caveat": {
+            "x": 26,
+            "y": 4388,
+            "w": 258,
+            "h": 96,
+            "right": 284
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 320×640",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 320×640",
+      "ok": true
+    },
+    {
+      "label": "mobile image and full-width text 320×640",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 390×705",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 390×705",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 14,
+            "y": 433,
+            "w": 352,
+            "h": 1086,
+            "right": 366
+          },
+          "art": {
+            "x": 34,
+            "y": 455,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 455,
+            "w": 216,
+            "h": 426,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 916,
+            "w": 312,
+            "h": 230,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 1160,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 14,
+            "y": 1588,
+            "w": 352,
+            "h": 1004,
+            "right": 366
+          },
+          "art": {
+            "x": 34,
+            "y": 1610,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 1610,
+            "w": 216,
+            "h": 347,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 1993,
+            "w": 312,
+            "h": 221,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 2227,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 14,
+            "y": 2609,
+            "w": 352,
+            "h": 894,
+            "right": 366
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 34,
+            "y": 2631,
+            "w": 312,
+            "h": 237,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 2903,
+            "w": 312,
+            "h": 221,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 3137,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 14,
+            "y": 3519,
+            "w": 352,
+            "h": 780,
+            "right": 366
+          },
+          "art": {
+            "x": 34,
+            "y": 3541,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 3541,
+            "w": 216,
+            "h": 123,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 3699,
+            "w": 312,
+            "h": 221,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 3933,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 390×705",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 390×705",
+      "ok": true
+    },
+    {
+      "label": "mobile image and full-width text 390×705",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 390×430",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 390×430",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 14,
+            "y": 146,
+            "w": 352,
+            "h": 1086,
+            "right": 366
+          },
+          "art": {
+            "x": 34,
+            "y": 168,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 168,
+            "w": 216,
+            "h": 426,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 629,
+            "w": 312,
+            "h": 230,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 873,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 14,
+            "y": 1301,
+            "w": 352,
+            "h": 1004,
+            "right": 366
+          },
+          "art": {
+            "x": 34,
+            "y": 1323,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 1323,
+            "w": 216,
+            "h": 347,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 1706,
+            "w": 312,
+            "h": 221,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 1940,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 14,
+            "y": 2322,
+            "w": 352,
+            "h": 894,
+            "right": 366
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 34,
+            "y": 2344,
+            "w": 312,
+            "h": 237,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 2616,
+            "w": 312,
+            "h": 221,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 2850,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 14,
+            "y": 3232,
+            "w": 352,
+            "h": 780,
+            "right": 366
+          },
+          "art": {
+            "x": 34,
+            "y": 3254,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 3254,
+            "w": 216,
+            "h": 123,
+            "right": 346
+          },
+          "reason": {
+            "x": 34,
+            "y": 3412,
+            "w": 312,
+            "h": 221,
+            "right": 346
+          },
+          "caveat": {
+            "x": 34,
+            "y": 3646,
+            "w": 312,
+            "h": 96,
+            "right": 346
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 390×430",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 390×430",
+      "ok": true
+    },
+    {
+      "label": "mobile image and full-width text 390×430",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 446×820",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 446×820",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 14,
+            "y": 146,
+            "w": 408,
+            "h": 937,
+            "right": 422
+          },
+          "art": {
+            "x": 34,
+            "y": 168,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 168,
+            "w": 272,
+            "h": 342,
+            "right": 402
+          },
+          "reason": {
+            "x": 34,
+            "y": 545,
+            "w": 368,
+            "h": 204,
+            "right": 402
+          },
+          "caveat": {
+            "x": 34,
+            "y": 763,
+            "w": 368,
+            "h": 73,
+            "right": 402
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 14,
+            "y": 1152,
+            "w": 408,
+            "h": 834,
+            "right": 422
+          },
+          "art": {
+            "x": 34,
+            "y": 1174,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 1174,
+            "w": 272,
+            "h": 266,
+            "right": 402
+          },
+          "reason": {
+            "x": 34,
+            "y": 1475,
+            "w": 368,
+            "h": 172,
+            "right": 402
+          },
+          "caveat": {
+            "x": 34,
+            "y": 1660,
+            "w": 368,
+            "h": 73,
+            "right": 402
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 14,
+            "y": 2002,
+            "w": 408,
+            "h": 752,
+            "right": 422
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 34,
+            "y": 2024,
+            "w": 368,
+            "h": 184,
+            "right": 402
+          },
+          "reason": {
+            "x": 34,
+            "y": 2243,
+            "w": 368,
+            "h": 172,
+            "right": 402
+          },
+          "caveat": {
+            "x": 34,
+            "y": 2428,
+            "w": 368,
+            "h": 73,
+            "right": 402
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 14,
+            "y": 2769,
+            "w": 408,
+            "h": 667,
+            "right": 422
+          },
+          "art": {
+            "x": 34,
+            "y": 2791,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 2791,
+            "w": 272,
+            "h": 99,
+            "right": 402
+          },
+          "reason": {
+            "x": 34,
+            "y": 2926,
+            "w": 368,
+            "h": 172,
+            "right": 402
+          },
+          "caveat": {
+            "x": 34,
+            "y": 3111,
+            "w": 368,
+            "h": 73,
+            "right": 402
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 446×820",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 446×820",
+      "ok": true
+    },
+    {
+      "label": "mobile image and full-width text 446×820",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 760×720",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 760×720",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 14,
+            "y": 146,
+            "w": 722,
+            "h": 676,
+            "right": 736
+          },
+          "art": {
+            "x": 34,
+            "y": 168,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 168,
+            "w": 586,
+            "h": 181,
+            "right": 716
+          },
+          "reason": {
+            "x": 34,
+            "y": 384,
+            "w": 605,
+            "h": 128,
+            "right": 639
+          },
+          "caveat": {
+            "x": 34,
+            "y": 526,
+            "w": 682,
+            "h": 50,
+            "right": 716
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 14,
+            "y": 891,
+            "w": 722,
+            "h": 623,
+            "right": 736
+          },
+          "art": {
+            "x": 34,
+            "y": 913,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 913,
+            "w": 586,
+            "h": 127,
+            "right": 716
+          },
+          "reason": {
+            "x": 34,
+            "y": 1075,
+            "w": 564,
+            "h": 123,
+            "right": 598
+          },
+          "caveat": {
+            "x": 34,
+            "y": 1212,
+            "w": 682,
+            "h": 50,
+            "right": 716
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 14,
+            "y": 1530,
+            "w": 722,
+            "h": 623,
+            "right": 736
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 34,
+            "y": 1552,
+            "w": 682,
+            "h": 127,
+            "right": 716
+          },
+          "reason": {
+            "x": 34,
+            "y": 1714,
+            "w": 564,
+            "h": 123,
+            "right": 598
+          },
+          "caveat": {
+            "x": 34,
+            "y": 1851,
+            "w": 682,
+            "h": 50,
+            "right": 716
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 14,
+            "y": 2169,
+            "w": 722,
+            "h": 594,
+            "right": 736
+          },
+          "art": {
+            "x": 34,
+            "y": 2191,
+            "w": 82,
+            "h": 98,
+            "right": 116
+          },
+          "head": {
+            "x": 130,
+            "y": 2203,
+            "w": 586,
+            "h": 74,
+            "right": 716
+          },
+          "reason": {
+            "x": 34,
+            "y": 2324,
+            "w": 564,
+            "h": 123,
+            "right": 598
+          },
+          "caveat": {
+            "x": 34,
+            "y": 2461,
+            "w": 682,
+            "h": 50,
+            "right": 716
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 760×720",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 760×720",
+      "ok": true
+    },
+    {
+      "label": "mobile image and full-width text 760×720",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 761×720",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 761×720",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 24,
+            "y": 240,
+            "w": 703,
+            "h": 916,
+            "right": 727
+          },
+          "art": {
+            "x": 48,
+            "y": 264,
+            "w": 244,
+            "h": 160,
+            "right": 292
+          },
+          "head": {
+            "x": 316,
+            "y": 264,
+            "w": 387,
+            "h": 278,
+            "right": 703
+          },
+          "reason": {
+            "x": 316,
+            "y": 580,
+            "w": 387,
+            "h": 224,
+            "right": 703
+          },
+          "caveat": {
+            "x": 316,
+            "y": 820,
+            "w": 387,
+            "h": 70,
+            "right": 703
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 24,
+            "y": 1227,
+            "w": 342,
+            "h": 1100,
+            "right": 366
+          },
+          "art": {
+            "x": 48,
+            "y": 1251,
+            "w": 294,
+            "h": 156,
+            "right": 342
+          },
+          "head": {
+            "x": 48,
+            "y": 1423,
+            "w": 294,
+            "h": 265,
+            "right": 342
+          },
+          "reason": {
+            "x": 48,
+            "y": 1726,
+            "w": 294,
+            "h": 221,
+            "right": 342
+          },
+          "caveat": {
+            "x": 48,
+            "y": 1963,
+            "w": 294,
+            "h": 92,
+            "right": 342
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 386,
+            "y": 1227,
+            "w": 342,
+            "h": 928,
+            "right": 727
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 410,
+            "y": 1251,
+            "w": 294,
+            "h": 265,
+            "right": 703
+          },
+          "reason": {
+            "x": 410,
+            "y": 1554,
+            "w": 294,
+            "h": 221,
+            "right": 703
+          },
+          "caveat": {
+            "x": 410,
+            "y": 1791,
+            "w": 294,
+            "h": 92,
+            "right": 703
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 24,
+            "y": 2343,
+            "w": 342,
+            "h": 934,
+            "right": 366
+          },
+          "art": {
+            "x": 48,
+            "y": 2367,
+            "w": 294,
+            "h": 156,
+            "right": 342
+          },
+          "head": {
+            "x": 48,
+            "y": 2539,
+            "w": 294,
+            "h": 99,
+            "right": 342
+          },
+          "reason": {
+            "x": 48,
+            "y": 2676,
+            "w": 294,
+            "h": 221,
+            "right": 342
+          },
+          "caveat": {
+            "x": 48,
+            "y": 2913,
+            "w": 294,
+            "h": 92,
+            "right": 342
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 761×720",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 761×720",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 820×768",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 820×768",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 24,
+            "y": 227,
+            "w": 762,
+            "h": 854,
+            "right": 786
+          },
+          "art": {
+            "x": 48,
+            "y": 251,
+            "w": 267,
+            "h": 164,
+            "right": 315
+          },
+          "head": {
+            "x": 339,
+            "y": 251,
+            "w": 423,
+            "h": 244,
+            "right": 762
+          },
+          "reason": {
+            "x": 339,
+            "y": 533,
+            "w": 423,
+            "h": 196,
+            "right": 762
+          },
+          "caveat": {
+            "x": 339,
+            "y": 745,
+            "w": 423,
+            "h": 70,
+            "right": 762
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 24,
+            "y": 1152,
+            "w": 371,
+            "h": 1025,
+            "right": 395
+          },
+          "art": {
+            "x": 48,
+            "y": 1176,
+            "w": 323,
+            "h": 156,
+            "right": 371
+          },
+          "head": {
+            "x": 48,
+            "y": 1348,
+            "w": 323,
+            "h": 236,
+            "right": 371
+          },
+          "reason": {
+            "x": 48,
+            "y": 1623,
+            "w": 323,
+            "h": 196,
+            "right": 371
+          },
+          "caveat": {
+            "x": 48,
+            "y": 1835,
+            "w": 323,
+            "h": 70,
+            "right": 371
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 415,
+            "y": 1152,
+            "w": 371,
+            "h": 853,
+            "right": 786
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 439,
+            "y": 1176,
+            "w": 323,
+            "h": 236,
+            "right": 762
+          },
+          "reason": {
+            "x": 439,
+            "y": 1451,
+            "w": 323,
+            "h": 196,
+            "right": 762
+          },
+          "caveat": {
+            "x": 439,
+            "y": 1663,
+            "w": 323,
+            "h": 70,
+            "right": 762
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 24,
+            "y": 2193,
+            "w": 371,
+            "h": 887,
+            "right": 395
+          },
+          "art": {
+            "x": 48,
+            "y": 2217,
+            "w": 323,
+            "h": 156,
+            "right": 371
+          },
+          "head": {
+            "x": 48,
+            "y": 2389,
+            "w": 323,
+            "h": 99,
+            "right": 371
+          },
+          "reason": {
+            "x": 48,
+            "y": 2526,
+            "w": 323,
+            "h": 196,
+            "right": 371
+          },
+          "caveat": {
+            "x": 48,
+            "y": 2738,
+            "w": 323,
+            "h": 70,
+            "right": 371
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 820×768",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 820×768",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 1024×768",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 1024×768",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 296,
+            "y": 113,
+            "w": 694,
+            "h": 950,
+            "right": 990
+          },
+          "art": {
+            "x": 320,
+            "y": 137,
+            "w": 240,
+            "h": 205,
+            "right": 560
+          },
+          "head": {
+            "x": 584,
+            "y": 137,
+            "w": 382,
+            "h": 311,
+            "right": 966
+          },
+          "reason": {
+            "x": 584,
+            "y": 487,
+            "w": 382,
+            "h": 224,
+            "right": 966
+          },
+          "caveat": {
+            "x": 584,
+            "y": 727,
+            "w": 382,
+            "h": 70,
+            "right": 966
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 296,
+            "y": 1134,
+            "w": 337,
+            "h": 1100,
+            "right": 633
+          },
+          "art": {
+            "x": 320,
+            "y": 1158,
+            "w": 289,
+            "h": 156,
+            "right": 609
+          },
+          "head": {
+            "x": 320,
+            "y": 1330,
+            "w": 289,
+            "h": 265,
+            "right": 609
+          },
+          "reason": {
+            "x": 320,
+            "y": 1633,
+            "w": 289,
+            "h": 221,
+            "right": 609
+          },
+          "caveat": {
+            "x": 320,
+            "y": 1870,
+            "w": 289,
+            "h": 92,
+            "right": 609
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 653,
+            "y": 1134,
+            "w": 337,
+            "h": 928,
+            "right": 990
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 677,
+            "y": 1158,
+            "w": 289,
+            "h": 265,
+            "right": 966
+          },
+          "reason": {
+            "x": 677,
+            "y": 1461,
+            "w": 289,
+            "h": 221,
+            "right": 966
+          },
+          "caveat": {
+            "x": 677,
+            "y": 1698,
+            "w": 289,
+            "h": 92,
+            "right": 966
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 296,
+            "y": 2250,
+            "w": 337,
+            "h": 934,
+            "right": 633
+          },
+          "art": {
+            "x": 320,
+            "y": 2274,
+            "w": 289,
+            "h": 156,
+            "right": 609
+          },
+          "head": {
+            "x": 320,
+            "y": 2446,
+            "w": 289,
+            "h": 99,
+            "right": 609
+          },
+          "reason": {
+            "x": 320,
+            "y": 2583,
+            "w": 289,
+            "h": 221,
+            "right": 609
+          },
+          "caveat": {
+            "x": 320,
+            "y": 2819,
+            "w": 289,
+            "h": 92,
+            "right": 609
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 1024×768",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 1024×768",
+      "ok": true
+    },
+    {
+      "label": "no page overflow 1440×900",
+      "ok": true,
+      "details": 0
+    },
+    {
+      "label": "all reasons and caveats fit 1440×900",
+      "ok": true,
+      "details": [
+        {
+          "id": "tt0903747",
+          "card": {
+            "x": 357,
+            "y": 44,
+            "w": 1024,
+            "h": 744,
+            "right": 1381
+          },
+          "art": {
+            "x": 387,
+            "y": 74,
+            "w": 325,
+            "h": 280,
+            "right": 712
+          },
+          "head": {
+            "x": 742,
+            "y": 74,
+            "w": 609,
+            "h": 200,
+            "right": 1351
+          },
+          "reason": {
+            "x": 742,
+            "y": 312,
+            "w": 609,
+            "h": 140,
+            "right": 1351
+          },
+          "caveat": {
+            "x": 742,
+            "y": 468,
+            "w": 609,
+            "h": 48,
+            "right": 1351
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            180,
+            360
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt7366338",
+          "card": {
+            "x": 357,
+            "y": 859,
+            "w": 328,
+            "h": 1125,
+            "right": 685
+          },
+          "art": {
+            "x": 381,
+            "y": 883,
+            "w": 280,
+            "h": 156,
+            "right": 661
+          },
+          "head": {
+            "x": 381,
+            "y": 1055,
+            "w": 280,
+            "h": 265,
+            "right": 661
+          },
+          "reason": {
+            "x": 381,
+            "y": 1359,
+            "w": 280,
+            "h": 245,
+            "right": 661
+          },
+          "caveat": {
+            "x": 381,
+            "y": 1620,
+            "w": 280,
+            "h": 92,
+            "right": 661
+          },
+          "fallback": false,
+          "artVisible": true,
+          "natural": [
+            680,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "id": "tt0944947",
+          "card": {
+            "x": 705,
+            "y": 859,
+            "w": 328,
+            "h": 953,
+            "right": 1033
+          },
+          "art": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "head": {
+            "x": 729,
+            "y": 883,
+            "w": 280,
+            "h": 265,
+            "right": 1009
+          },
+          "reason": {
+            "x": 729,
+            "y": 1187,
+            "w": 280,
+            "h": 245,
+            "right": 1009
+          },
+          "caveat": {
+            "x": 729,
+            "y": 1448,
+            "w": 280,
+            "h": 92,
+            "right": 1009
+          },
+          "fallback": true,
+          "artVisible": false,
+          "natural": null,
+          "fit": null
+        },
+        {
+          "id": "tt0185906",
+          "card": {
+            "x": 1053,
+            "y": 859,
+            "w": 328,
+            "h": 958,
+            "right": 1381
+          },
+          "art": {
+            "x": 1077,
+            "y": 883,
+            "w": 280,
+            "h": 156,
+            "right": 1357
+          },
+          "head": {
+            "x": 1077,
+            "y": 1055,
+            "w": 280,
+            "h": 99,
+            "right": 1357
+          },
+          "reason": {
+            "x": 1077,
+            "y": 1192,
+            "w": 280,
+            "h": 245,
+            "right": 1357
+          },
+          "caveat": {
+            "x": 1077,
+            "y": 1453,
+            "w": 280,
+            "h": 92,
+            "right": 1357
+          },
+          "fallback": true,
+          "artVisible": true,
+          "natural": null,
+          "fit": null
+        }
+      ]
+    },
+    {
+      "label": "whole portrait and landscape 1440×900",
+      "ok": true
+    },
+    {
+      "label": "no phantom space without URL, bounded 404 1440×900",
+      "ok": true
+    },
+    {
+      "label": "marked long title without a poster at 320",
+      "ok": true,
+      "details": {
+        "text": 246,
+        "row": 246,
+        "overflow": 0
+      }
+    },
+    {
+      "label": "marked long title without a poster at 390",
+      "ok": true,
+      "details": {
+        "text": 308,
+        "row": 308,
+        "overflow": 0
+      }
+    },
+    {
+      "label": "marked long title without a poster at 761",
+      "ok": true,
+      "details": {
+        "text": 298,
+        "row": 298,
+        "overflow": 0
+      }
+    },
+    {
+      "label": "marked long title without a poster at 1024",
+      "ok": true,
+      "details": {
+        "text": 293,
+        "row": 293,
+        "overflow": 0
+      }
+    },
+    {
+      "label": "marked long title without a poster at 1440",
+      "ok": true,
+      "details": {
+        "text": 284,
+        "row": 284,
+        "overflow": 0
+      }
+    },
+    {
+      "label": "loading identifies the current action",
+      "ok": true
+    },
+    {
+      "label": "network error preserves visible result",
+      "ok": true
+    },
+    {
+      "label": "more returns unseen results",
+      "ok": true
+    },
+    {
+      "label": "undo more restores original IDs",
+      "ok": true
+    },
+    {
+      "label": "one replacement changes only its slot",
+      "ok": true,
+      "details": {
+        "before": [
+          "tt0903747",
+          "tt7366338",
+          "tt0944947",
+          "tt0185906"
+        ],
+        "after": [
+          "tt0903747",
+          "tt0141842",
+          "tt0944947",
+          "tt0185906"
+        ]
+      }
+    },
+    {
+      "label": "undo single replacement restores all slots",
+      "ok": true
+    },
+    {
+      "label": "catalog picks executed through the local model substitute",
+      "ok": true,
+      "details": {
+        "stubbed": [
+          "tastiq_media_conversation",
+          "tastiq_picks",
+          "tastiq_picks",
+          "tastiq_picks"
+        ],
+        "paid": 0
+      }
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "transport": {
+    "stubbed": [
+      "tastiq_media_conversation",
+      "tastiq_picks",
+      "tastiq_picks",
+      "tastiq_picks"
+    ],
+    "paid": 0
+  }
+}

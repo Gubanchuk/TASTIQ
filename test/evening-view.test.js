@@ -12,11 +12,19 @@ test('a local draft survives rendering, stays escaped and never enters the saved
 
 const modernRun={id:'evening-one',cards:[{id:'first',title:'First'},{id:'second',title:'Second'}],responses:[]};
 
-test('modern feedback exposes every fit action before the optional explanation disclosure',()=>{
+test('modern picks group fit actions under a closed rating disclosure and evenings expose them directly',()=>{
   const html=eveningControls(modernRun,'first',{modern:true});
-  const visible=html.slice(0,html.indexOf('<details'));
+  const rating=html.indexOf('<details class="evening-rating"');
+  const explanation=html.indexOf('<details class="evening-fit evening-feedback-note"');
+  assert.ok(rating>0&&explanation>rating);
+  assert.doesNotMatch(html.slice(0,rating),/data-act="evening-fit"/);
+  assert.match(html,/<details class="evening-rating" data-disclosure="rating:evening-one:first"><summary[^>]*>Оценить вариант<\/summary>/);
+  const history=eveningControls(modernRun,'first',{modern:true,history:true});
+  assert.doesNotMatch(history,/class="evening-rating"/);
   for(const [value,label] of [['accept','Подходит'],['conditional','С оговоркой'],['reject','Не подходит'],['unknown','Пока не знаю']]){
-    assert.match(visible,new RegExp(`data-act="evening-fit" data-run="evening-one" data-id="first" data-v="${value}"[^>]*>${label}</button>`));
+    const action=new RegExp(`data-act="evening-fit" data-run="evening-one" data-id="first" data-v="${value}"[^>]*>${label}</button>`);
+    assert.match(html.slice(rating,explanation),action);
+    assert.match(history,action);
   }
   assert.match(html,/<details[^>]+data-feedback-details[^>]+data-run="evening-one" data-id="first">/);
   assert.match(html,/<summary[^>]*>Добавить уточнение/);
