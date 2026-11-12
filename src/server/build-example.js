@@ -1,6 +1,5 @@
-// Builds src/server/public/data/example-evenings.json for the landing: the game example walked through the real
-// dialogue (reduce/screen, the same code the server runs) on the real catalog. The door posters are kept from the
-// previous file. Run: node --max-old-space-size=8192 src/server/build-example.js
+// Rebuilds the example snapshot and refreshes the catalog counts in the static landing HTML.
+// Run: node --max-old-space-size=8192 src/server/build-example.js
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadCatalogs } from '../core/catalog.js';
@@ -8,6 +7,7 @@ import { initialState, reduce, screen } from '../core/dialogue.js';
 import { ROOT } from '../lib/fsx.js';
 
 const FILE = resolve(ROOT, 'src', 'server', 'public', 'data', 'example-evenings.json');
+const LANDING = resolve(ROOT, 'src', 'server', 'public', 'index.html');
 const previous = JSON.parse(readFileSync(FILE, 'utf8'));
 const catalogs = loadCatalogs();
 const game = catalogs.game;
@@ -57,5 +57,22 @@ const out = {
   catalog: { domains: Object.fromEntries(Object.entries(catalogs).map(([id, c]) => [id, { items: c.items.length, dictionary: c.dict.version, label: c.domain.label }])) },
   posters: previous.posters,
 };
+const number = new Intl.NumberFormat('ru-RU');
+const plural = new Intl.PluralRules('ru-RU');
+const forms = {
+  game: { one: 'игра', few: 'игры', many: 'игр' },
+  film: { one: 'фильм', few: 'фильма', many: 'фильмов' },
+  series: { one: 'сериал', few: 'сериала', many: 'сериалов' },
+  cartoon: { one: 'мультфильм', few: 'мультфильма', many: 'мультфильмов' },
+};
+const updatedDomains = new Set();
+const landing = readFileSync(LANDING, 'utf8').replace(/(data-catalog-count="(\w+)">)[^<]*(?=<\/span>)/g, (_, tag, domain) => {
+  if (!Object.hasOwn(forms, domain) || updatedDomains.has(domain)) throw new Error(`Unexpected landing count: ${domain}`);
+  const count = out.catalog.domains[domain].items;
+  updatedDomains.add(domain);
+  return `${tag}${number.format(count).replaceAll('\u00a0', '&nbsp;')} ${forms[domain][plural.select(count)]}`;
+});
+if (updatedDomains.size !== Object.keys(forms).length) throw new Error('Missing landing catalog counts');
 writeFileSync(FILE, JSON.stringify(out, null, 1) + '\n', 'utf8');
+writeFileSync(LANDING, landing, 'utf8');
 console.log(`example: ${steps.map((s) => s.step).join(' → ')} → ${out.game.result.top.ru ?? out.game.result.top.name}`);

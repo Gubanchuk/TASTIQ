@@ -53,6 +53,22 @@ test('drafts survive reload separately from submitted review and all user copy i
  assert.ok(html.includes('Отправить отзыв'));assert.ok(!html.includes('Отзыв сохранён в базе'));
 });
 
+test('a saved selection review shows thanks and offers editing while its delivery status stays accurate',()=>{
+ const run={id:'one',selectionReview:review};
+ for(const status of ['sent','pending']){
+  const html=selectionReviewHtml(run,{status});
+  assert.match(html,/Спасибо за отзыв!/);
+  assert.match(html,/tastiq-logo-cobalt\.svg/);
+  assert.match(html,/data-act="selection-edit"[^>]*>Изменить отзыв/);
+  assert.doesNotMatch(html,/data-form="selection-review"/);
+  assert.equal(html.includes('ожидает отправки'),status==='pending');
+ }
+ const editor=selectionReviewHtml(run,{status:'sent',draft:review});
+ assert.match(editor,/data-form="selection-review"/);
+ assert.ok(editor.includes(review.note));
+ assert.match(editor,/Обновить отзыв/);
+});
+
 test('submission is bound to the displayed domain, dialogue and ordered cards; draft spaces survive',()=>{
  const run={domain:'game',dialogueId:'d',cards:[{id:'1'},{id:'2'}]},snapshot={state:{domain:'game',id:'d',result},screen:{type:'result'}};
  assert.equal(canReviewSnapshot(run,snapshot),true);

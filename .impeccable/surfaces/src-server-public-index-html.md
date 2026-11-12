@@ -2,7 +2,7 @@
 version: 1
 slug: "src-server-public-index-html"
 primary_target: "src/server/public/index.html"
-related_targets: ["src/server/public/shared/brand.css","src/server/public/style.css","src/server/public/landing-bottom.css","src/server/public/app.js","src/server/public/assets/brand/"]
+related_targets: ["src/server/public/shared/brand.css","src/server/public/style.css","src/server/public/landing-bottom.css","src/server/public/assets/landing/","src/server/public/assets/brand/"]
 ---
 
 Mode: Persuade. Главная помогает начать подбор в одном из четырёх разделов. Владелец 03.11.2026 разрешил менять композицию, отверг квадратные входы и потребовал направить все действия к подбору. Отдельно отклонены текст «с разговора» и сцена реплик, создающие впечатление универсального чата. Это ограничение представления на главной; выбранный Conversation внутри приложения сохраняется.
@@ -18,6 +18,8 @@ FORM: «Раскрывающийся выбор», ограниченное ра
 Текущий direction: research-vault/landing-unfold-2026-11-03/DIRECTION.md. История: code-led Conversation выбран 02.11.2026, seed 537787fa/deal 6/4/5; полный бренд перенесён 03.11.2026. Прежняя frozen-граница, квадратные двери, сцена реплик и библиотечное промо описывали прошлые этапы. Исторические receipts не перезаписываются и не задают текущую композицию.
 
 ## Shipped composition
+
+**12.11.2026.** Первый экран задаёт вопрос «Что посмотреть или во что поиграть?» и обещает до четырёх вариантов с объяснениями. На телефоне подписи стоят перед веерами. Сокращённое описание процесса сопровождается примером подбора фильма. Четыре прямых входа в финале и общий вход «Начать подбор» в шапке. 12 локальных WebP и счётчики встроены в HTML. Текущая геометрия и проверка зафиксированы в `DESIGN.md` и `docs/CODEX_CONTEXT.md`. Ниже композиция первого выпуска от 03.11.2026.
 
 - Общая ширина 1440px и gutter clamp(20px,5vw,80px); header min-height 96px, logo 164px. Hero h1 clamp(34px,3.6vw,52px)/1.27/500, max-width 17ch; intro 1.15fr/1fr, gap 70px. Кобальтовые CTA имеют pill-radius 999px и min-height 48px.
 - Четыре двери стоят в ряд с gap 26px. Высота art clamp(230px,24vw,306px), при ≥1600px — 326px. Арочная подложка начинается на 24px ниже верхнего края; radius 160px 160px 38px 38px. Три portrait cover 2:3 имеют radius 12px и мягкую тень; исходные углы −16°/−3°/15°. Средняя обложка шире (52%). Подписи вынесены на бумагу: 24px/1.35/600 и counts 13px. Counts берутся из данных каталога, а не обозначают число рекомендаций.

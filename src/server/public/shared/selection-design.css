@@ -274,6 +274,17 @@ body.selection-design.product-page.conversation-page #stage .evening-controls-mo
 body.selection-design.product-page.conversation-page #stage .selection-review {
  border:0;background:white;border-radius:var(--selection-surface);padding:clamp(16px,3vw,28px);margin-top:18px;
 }
+.selection-review-logo {display:block;width:116px;height:auto;margin:0 0 18px}
+.selection-review-saved h2 {margin:0 0 6px}
+.selection-review-saved [data-selection-review-status] {margin:0 0 16px}
+.selection-review [data-selection-review-status]:empty {margin:0;min-height:0}
+.selection-review-actions {display:flex;gap:8px;flex-wrap:wrap}
+.selection-review-actions [hidden] {display:none}
+.evening-saved-label {display:grid;gap:2px;text-align:left}
+.evening-saved-label small {color:var(--selection-accent);font-size:.75rem}
+.evening-confirmation {display:flex;align-items:flex-start;gap:8px}
+.evening-confirmation img {flex:none}
+.evening-confirmation strong {display:block;color:var(--selection-navy);font-weight:650}
 
 /* The library tabs stay separate. An expanded record groups actions by purpose. */
 body.selection-design.product-page.conversation-page .board-heading h1 {
@@ -376,6 +387,14 @@ body.selection-start>main nav a svg {
 }
 
 @media(min-width:761px) {
+ body.selection-design.product-page.conversation-page #stage .game-card.game-alternative {align-self:stretch}
+ @supports(grid-template-rows:subgrid) {
+  /* Share the content and action rows so opening one editor leaves nearby buttons in place. */
+  body.selection-design.product-page.conversation-page #stage .game-card.game-alternative {
+   display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:subgrid;grid-row:span 2;row-gap:0;align-items:start;
+  }
+  body.selection-design.product-page.conversation-page #stage .game-alternative > * {grid-column:1}
+ }
  body.selection-design.product-page.conversation-page #stage .game-proposal-featured {
   grid-template-columns:clamp(160px,22%,240px) minmax(0,1fr);column-gap:clamp(20px,3vw,36px);
  }
@@ -396,6 +415,7 @@ body.selection-start>main nav a svg {
  body.selection-design.product-page.conversation-page #stage .game-navigation {gap:8px;margin-bottom:22px}
  body.selection-design.product-page.conversation-page #stage .game-journey {padding:4px;gap:4px}
  body.selection-design.product-page.conversation-page #stage .game-journey li {padding:5px 2px;min-height:52px;gap:4px}
+ body.selection-design.product-page.conversation-page #stage .game-journey li>b {max-width:100%;line-height:1.25;overflow-wrap:anywhere}
  body.selection-design.product-page.conversation-page #main h1 {font-size:1.5rem;line-height:1.28;margin-bottom:12px}
  body.selection-design.product-page.conversation-page #main .game-help {font-size:.9375rem}
  body.selection-design.product-page.conversation-page #stage #answer-form .game-option {padding:10px;gap:8px}

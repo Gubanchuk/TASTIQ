@@ -51,3 +51,16 @@ test('modern feedback keeps chosen/start/outcome actions and selected fit availa
   assert.match(legacy,/<summary>Подходит на сегодня\?/);
   assert.doesNotMatch(legacy,/evening-controls-modern/);
 });
+
+test('saved card feedback is acknowledged and both kinds of rating stay behind an explicit edit control',()=>{
+  const run={...modernRun,responses:[{cardId:'first',fit:'conditional',chosen:true,started:true,outcome:'liked',reason:null,note:''}]};
+  for(const history of [true,false]){
+    const html=eveningControls(run,'first',{modern:true,history,status:'sent'});
+    assert.match(html,/Спасибо за отзыв!/);
+    assert.match(html,/<details class="evening-rating"[^>]+><summary[^>]*>.*Изменить оценку/);
+    assert.match(html,/<details class="evening-outcome"[^>]+><summary[^>]*>.*Изменить отзыв/);
+    assert.doesNotMatch(html,/<details class="evening-(rating|outcome)"[^>]+ open/);
+    assert.match(html,/С оговоркой/);
+    assert.match(html,/Как прошло: Понравилось/);
+  }
+});

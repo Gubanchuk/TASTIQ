@@ -9,8 +9,6 @@
 .game-copy-fallback{display:block;width:100%;margin-top:8px;font-size:14px}
 .game-result-browse{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin-top:18px}
 .game-result-browse>span{flex-basis:100%;color:var(--brand-muted);font-size:13px;line-height:1.6}
-.game-selection-copy-status:not(:empty){margin-top:12px}
-.game-selection-copy-status textarea.game-copy-fallback{width:100%;min-height:180px;max-height:360px;resize:vertical;font-size:13px}
 body.product-page #stage .game-proposals{align-items:start;gap:20px}
 body.product-page #stage .game-proposal{align-self:start;height:auto;min-height:0;padding:24px;border:0;border-radius:24px;box-shadow:none}
 body.product-page #stage .game-proposal-featured{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.5fr);align-items:start;gap:0 30px;padding:30px;border-radius:28px;background:var(--brand-surface)}
@@ -110,13 +108,6 @@ body.product-page #stage .game-proposal .evening-controls-modern .evening-status
  body.product-page #stage .game-proposal-featured h2{font-size:27px}
 }
 @media(max-width:760px){
- /* Keep the actual choice in the first viewport. The complete art follows its
-    identity; the four labelled stages share a row with the back arrow. */
- body.product-page:has(#main .game-proposals) #stage .game-navigation{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center;gap:8px;margin-bottom:20px}
- body.product-page:has(#main .game-proposals) #stage .game-back{width:44px;height:44px;min-width:44px;padding:10px;font-size:0;overflow:hidden}
- body.product-page:has(#main .game-proposals) #stage .game-back svg{width:20px;height:20px;margin:0;flex:none}
- body.product-page:has(#main .game-proposals) #stage .game-journey{grid-column:2;grid-row:1;min-width:0;order:initial;gap:3px}
- body.product-page:has(#main .game-proposals) #stage .game-journey li{gap:4px}
  body.product-page #stage .game-proposals{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
  body.product-page #stage .game-proposal-featured,
  body.product-page #stage .game-proposal:not(.game-proposal-featured){display:block;margin:0;padding:22px 20px;border-radius:24px}

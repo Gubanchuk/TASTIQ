@@ -16,6 +16,8 @@ test('the shareable selection contains the sent request, current understanding, 
   for(const part of ['TASTIQ','Приключение; без жестокости','Пока не знаю','Хочется приключения с юмором, без жестокости','Без жестокости','45 мин','Не определена точная версия примера','Первый (2026)','Почему Первый','Оговорка Четвёртый'])assert.ok(text.includes(part),`${domain}: ${part}`);
   assert.ok(text.indexOf('Первый (2026)')<text.indexOf('Второй (2026)'));
   assert.doesNotMatch(text,/private-|PRIVATE_|UNSENT|Не показан/);
+  assert.match(text,/Почему может подойти: Почему Первый/);
+  assert.doesNotMatch(text,/мнение модели|уточнение моделью/i);
   if(domain==='game')assert.match(text,/Windows|Вдвоём/);
   if(domain==='series')assert.match(text,/Продолжающиеся сериалы допустимы/);
  }
@@ -37,6 +39,7 @@ test('a new batch exports only its visible result and provisional/unknown data s
  s.familiar.undo={result:old};s.provisional=true;
  const text=selectionCopyText({state:s});
  assert.match(text,/Новая карточка/);assert.match(text,/Предварительный подбор/);assert.doesNotMatch(text,/Первый|Четвёртый|javascript:|undefined|null/);
+ assert.doesNotMatch(text,/уточнение моделью/i);
  assert.equal(selectionCopyText({state:{...s,result:null}}),'');
 });
 

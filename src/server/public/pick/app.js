@@ -357,7 +357,7 @@ let ui = freshUi();
 const narrow = window.matchMedia('(max-width: 1100px)');
 
 // AI picker (src/ai/pick.js): the server says whether this browser may use it; each dialogue state and wish is
-// asked once. The engine's result stays at hand for «Показать без нейросети».
+// asked once. The engine's result stays available while the request runs.
 const ai = { status: null, runs: new Map(), wish: '', off: false, engine: null, key: null };
 const aiKeyOf = (st, wish) => JSON.stringify([st.domain, st.answers, st.situation, st.stops, st.preferences, st.corrections, st.session, st.platform, wish]);
 const aiOn = () => Boolean(ai.status?.enabled) && !ai.off;
@@ -561,7 +561,7 @@ async function startAi(key, previous = []) {
   const inContent = el.content.contains(document.activeElement) || document.activeElement === document.body;
   render(false);
   if (inContent) $('#q-title')?.focus({ preventScroll: true });
-  announce(run.result ? `Готово: первым «${nameOf(run.result.top)}».` : `Нейросеть не ответила: ${run.error}.`);
+  announce(run.result ? `Готово: первым «${nameOf(run.result.top)}».` : 'Не удалось уточнить подбор. Показываю варианты по твоим ответам.');
 }
 
 function syncFocus(r) {
@@ -1110,17 +1110,17 @@ function aiLoading(s, run) {
     + '<span class="legacy-thinking-signal" aria-hidden="true"><span class="spinner"></span></span>'
     + `<h1 class="q-title" id="q-title" tabindex="-1">Подбираю вариант на вечер</h1><p id="legacy-pick-wait-description">${esc(hint)}</p>`
     + '<p class="legacy-thinking-note">Ответы сохранены. Когда подбор закончится, варианты появятся здесь.</p>'
-    + '<button class="btn btn-secondary" type="button" data-act="ai-off" data-fk="ai-off">Показать без нейросети</button></section>';
+    + '<button class="btn btn-secondary" type="button" data-act="ai-off" data-fk="ai-off">Показать варианты по ответам</button></section>';
 }
 
 // Under the heading: what the model understood, or why its picks are missing, and the switch between both picks.
 function aiNote(r) {
   if (!ai.status?.enabled) return '';
-  if (ai.off) return `<p class="ai-note is-quiet">${icon('sparkle', 'i-s')}<span>Обычный подбор, без нейросети.</span><button class="link-btn" type="button" data-act="ai-on" data-fk="ai-on">Подобрать с нейросетью</button></p>`;
+  if (ai.off) return `<p class="ai-note is-quiet">${icon('sparkle', 'i-s')}<span>Варианты по твоим ответам и данным каталога.</span><button class="link-btn" type="button" data-act="ai-on" data-fk="ai-on">Уточнить подбор</button></p>`;
   const run = aiRun();
-  if (run?.error) return `<p class="ai-note is-quiet">${icon('alert', 'i-s')}<span>Нейросеть не ответила (${esc(run.error)}), это обычный подбор.</span><button class="link-btn" type="button" data-act="ai-retry" data-fk="ai-retry">Повторить</button></p>`;
+  if (run?.error) return `<p class="ai-note is-quiet">${icon('alert', 'i-s')}<span>Не удалось уточнить подбор. Ниже варианты по твоим ответам.</span><button class="link-btn" type="button" data-act="ai-retry" data-fk="ai-retry">Повторить</button></p>`;
   if (!r.ai) return '';
-  return `<div class="ai-note">${icon('sparkle', 'i-s')}<span><b>Понял так:</b> ${esc(r.ai.understood)} <button class="link-btn is-quiet" type="button" data-act="ai-off" data-fk="ai-off-top">Показать обычный подбор</button></span></div>`;
+  return `<div class="ai-note">${icon('sparkle', 'i-s')}<span><b>Твой запрос:</b> ${esc(r.ai.understood)} <button class="link-btn is-quiet" type="button" data-act="ai-off" data-fk="ai-off-top">Показать варианты по ответам</button></span></div>`;
 }
 
 function aiWishForm() {
@@ -1137,13 +1137,12 @@ function conversationProposal(p) {
   const reason=p.ai?.reason||(p.explanation?.reasons??[]).filter(x=>!x.weak).slice(0,2).map(x=>x.text).join(' ');
   const caveat=p.ai?.caveat||p.explanation?.risks?.[0]?.text||'';
   return `<article class="conversation-proposal" data-proposal-id="${esc(p.id)}">${poster(p,{lazy:false})}<div class="conversation-proposal-copy"><h2>${esc(nameOf(p))}</h2><p class="conversation-proposal-meta">${esc(pickMeta(p))}</p>`
-    +(p.ai?.reason?'<p class="conversation-proposal-meta">Причина — мнение модели</p>':'')
-    +(reason?`<p class="conversation-proposal-reason">${esc(reason)}</p>`:'<p class="conversation-proposal-reason">Вариант по каталогу. Совпадение с твоим желанием ещё предстоит проверить.</p>')
+    +(reason?`<p class="conversation-proposal-reason">${esc(reason)}</p>`:'<p class="conversation-proposal-reason">Вариант по каталогу. Пока мало данных, чтобы объяснить, чем он тебе подойдёт.</p>')
     +(caveat?`<p class="conversation-proposal-caveat"><strong>Учти</strong>${esc(caveat)}</p>`:'')
     +feasibilityHint(p)
     +`<div class="conversation-proposal-actions"><button class="btn btn-secondary" type="button" data-act="take" data-id="${esc(p.id)}" data-fk="take:${esc(p.id)}" aria-pressed="${Boolean(onLater)}">${icon(onLater?'check':'bookmark')}${onLater?'На потом':'Сохранить на потом'}</button>${seenButton(p)}<button class="btn btn-plain" type="button" data-act="not-now" data-id="${esc(p.id)}" data-fk="notnow:${esc(p.id)}">Не сейчас</button></div>`
     +eveningHtml(feedback.get(activeEveningId),p.id)
-    +`<details class="conversation-proposal-details" data-result-disclosure="${esc(p.id)}"><summary>Почему предложено и факты</summary>${detail(p,{inline:true,controls:false})}</details>`
+    +`<details class="conversation-proposal-details" data-result-disclosure="${esc(p.id)}"><summary>Подробнее о варианте</summary>${detail(p,{inline:true,controls:false})}</details>`
     +(resultLink(p)?`<a class="conversation-title-link" href="${esc(resultLink(p))}" target="_blank" rel="noopener noreferrer">${linkLabel(p)}${icon('external')}</a>`:'')+'</div></article>';
 }
 function resultBody(s) {
@@ -1153,7 +1152,7 @@ function resultBody(s) {
   if(!r.top){activeEveningId=null;eveningRequestKey=null;return head(s)+'<p class="empty">После всех фильтров ничего не осталось. Вернись назад и ослабь условия.</p>';}
   observeEvening(r);
   let html=aiNote(r);
-  if(!r.ai&&r.uncheckedContext?.length)html+=`<p class="q-hint" role="status">Обычный подбор пока не учитывает: ${esc(r.uncheckedContext.join(', '))}. Нейросеть сейчас недоступна или выключена.</p>`;
+  if(!r.ai&&r.uncheckedContext?.length)html+=`<p class="q-hint" role="status">В этих вариантах пока не учтено: ${esc(r.uncheckedContext.join(', '))}.</p>`;
   const cards=[r.top,...r.alternatives];
   html+=`<div class="conversation-proposals">${cards.map((p,i)=>seenNote(i)+conversationProposal(p)).join('')}${seenNote(cards.length,true)}</div>`;
   html+=aiWishForm()+`<section class="whynot"><h2 class="group-title">Почему не показал…</h2>${searchBox('why','Название','Почему не показал')}<div class="whynot-out" id="whynot-out" aria-live="polite">${whyOutHtml()}</div></section>`;
@@ -1254,11 +1253,10 @@ function reasonItem(x, evidence, kind) {
     + '</li>';
 }
 
-// The model's sentence, marked as its opinion: unlike the engine's reasons it has no quote behind it.
+// A personalized explanation is shown separately from catalog evidence.
 function aiReason(text, ic, kind = '') {
   if (!text) return '';
-  return `<li class="reason is-ai${kind ? ` is-${kind}` : ''}"><p class="reason-text">${icon(ic)}<span>${esc(text)}</span></p>`
-    + `<div class="ev">${icon('sparkle')}<div class="ev-body"><span class="ev-src">Мнение нейросети</span></div></div></li>`;
+  return `<li class="reason is-ai${kind ? ` is-${kind}` : ''}"><p class="reason-text">${icon(ic)}<span>${esc(text)}</span></p></li>`;
 }
 
 function linkLabel(p) {
@@ -1320,7 +1318,7 @@ function whyOutHtml() {
     `В обычном подборе по данным каталога: ${nf.format(w.rank)}-й из ${nf.format(w.of)}.`,
     matched.length ? `Совпадает с тем, что ты отметил: ${words(matched)}.` : '',
     w.penalties.length ? `Мешает: ${words(w.penalties.map((m) => m.label))}.` : '',
-    screen.result?.ai ? 'Нейросеть может выбрать другой порядок с учётом твоего пожелания.' : '',
+    screen.result?.ai ? 'Твоё пожелание может повлиять на порядок вариантов.' : '',
   ].filter(Boolean);
   return `<div class="whynot-card"><p><b>«${name}»</b>. ${parts.join(' ')}</p></div>`;
 }
@@ -1685,7 +1683,7 @@ function currentIntentDraft() {
 function intentControls() {
   const draft = currentIntentDraft();
   let html = `<button class="btn btn-secondary" type="button" data-act="parse-intent" data-fk="parse-intent"${!state?.situation?.note || ui.intentLoading ? ' disabled' : ''}>${ui.intentLoading ? 'Разбираю пожелание…' : 'Понять пожелание'}</button>`;
-  if (ui.intentError) html += `<p class="q-hint">${esc(ui.intentError)}. Твои слова сохранены, можно продолжить.</p>`;
+  if (ui.intentError) html += '<p class="q-hint">Не удалось уточнить пожелание. Твои слова сохранены, можно продолжить.</p>';
   if (ui.intentClarification) html += `<p class="q-hint">${esc(ui.intentClarification)} Допиши ответ в пожелание выше.</p>`;
   if (!draft) return html;
   const signals = [...draft.wants.map((x) => ({ ...x, kind: 'wants', title: `Хочется: ${labelOf(x.f)}` })), ...draft.avoids.map((x) => ({ ...x, kind: 'avoids', title: `Меньше: ${labelOf(x.f)}` }))];

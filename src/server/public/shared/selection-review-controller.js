@@ -11,7 +11,7 @@ export function createSelectionReviewController({storage,feedback,getSnapshot,ge
  const draft=run=>drafts.has(run.id)?drafts.get(run.id):undefined;
  const fields=form=>({issue:form.elements.issue.value||null,note:form.elements.note.value,learn:form.elements.learn.checked});
  const set=(run,value)=>drafts.set(run.id,{...(draft(run)??run.selectionReview??{}),...value});
- const notice=text=>{const element=root.querySelector('[data-selection-review-status]');if(element)element.textContent=text;};
+ const notice=text=>{const element=root.querySelector('[data-selection-review-status]');if(element&&element.textContent!==text)element.textContent=text;};
  const api={
   render(){const element=root.querySelector('[data-selection-review]');if(!element)return;const run=current();element.innerHTML=selectionReviewHtml(run,{draft:run?draft(run):undefined,status:feedback.status(run?.id),persistent:feedback.persistent});if(isBusy())element.querySelectorAll('button,input,textarea,select').forEach(el=>el.disabled=true);},
   refreshStatus(){const run=current();if(run){const status=feedback.status(run.id);notice(selectionReviewStatus(run,{draft:draft(run),status,persistent:feedback.persistent}));const retry=root.querySelector('[data-act="selection-retry"]');if(retry)retry.hidden=status==='sent'||Boolean(draft(run));}},
@@ -19,8 +19,15 @@ export function createSelectionReviewController({storage,feedback,getSnapshot,ge
  root.addEventListener('click',event=>{
   const button=event.target.closest('[data-act]');if(!button||button.disabled||isBusy())return;
   if(button.dataset.act==='selection-retry'){void feedback.flush();return;}
-  if(button.dataset.act!=='selection-verdict')return;
-  const run=current();if(!run||button.dataset.run!==run.id)return;set(run,{verdict:button.dataset.v});onChange();
+  const {act}=button.dataset;
+  if(!['selection-verdict','selection-edit','selection-cancel'].includes(act))return;
+  const run=current();if(!run||button.dataset.run!==run.id)return;
+  if(act==='selection-verdict'){set(run,{verdict:button.dataset.v});onChange();return;}
+  if(!run.selectionReview)return;
+  if(act==='selection-edit')drafts.set(run.id,run.selectionReview);
+  else drafts.delete(run.id);
+  onChange();
+  root.querySelector(act==='selection-edit'?'[data-form="selection-review"] [aria-pressed="true"]':'[data-act="selection-edit"]')?.focus({preventScroll:true});
  });
  for(const type of ['input','change'])root.addEventListener(type,event=>{
   const form=event.target.closest('[data-form="selection-review"]'),run=current();if(!form||!run||form.dataset.run!==run.id||isBusy())return;

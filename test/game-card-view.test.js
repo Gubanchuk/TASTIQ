@@ -10,11 +10,12 @@ test('the new card presentation escapes model/catalog text and rejects executabl
  assert.ok(html.includes('&lt;script&gt;'));assert.ok(html.includes('&lt;b&gt;warning&lt;/b&gt;'));
 });
 
-test('game and media cards distinguish catalogue reasons and the plan action from choosing for tonight',()=>{
+test('game and media cards explain the fit and distinguish the plan action from choosing for tonight',()=>{
  for(const render of [gameCardHtml,mediaCardHtml]){
   const card={id:'one',name:'One',reason:'A fact-based reason',poster:'https://example.com/landscape.jpg'};
   const html=render(card,{index:0});
-  assert.match(html,/Почему предложено · данные каталога/);
+  assert.match(html,/Почему может подойти/);
+  assert.match(html,/A fact-based reason/);
   assert.match(html,/data-act="library-save"[^>]*aria-pressed="false">[^]*?<\/svg>На потом<\/button>/);
   assert.match(render(card,{saved:true,libraryLane:'tonight'}),/data-act="library-save"[^>]*aria-pressed="false"/);
   assert.match(render(card,{saved:true,libraryLane:'want'}),/data-act="library-save"[^>]*aria-pressed="true"/);
@@ -42,9 +43,14 @@ test('complete art retains load/error hooks while familiarity remains an explici
 });
 
 test('an alternative retains visible reason and uncertain conditions; a marked card keeps undo/return/exclusion actions',()=>{
- const card={id:'steam:1',name:'Example',ai:{reason:'Причина',caveat:'Оговорка'},feasibility:[{status:'unknown',text:'Вместимость не проверена'}]};
+ const reason='Можно свернуть с тропы, исследовать руины и вернуться к заданию позже. Так ты сам задаёшь темп и выбираешь, куда идти.';
+ const card={id:'steam:1',name:'Example',ai:{reason,caveat:'Оговорка'},feasibility:[{status:'unknown',text:'Вместимость не проверена'}]};
+ for(const render of [gameCardHtml,mediaCardHtml]){
+  const html=render(card,{index:1});
+  assert.ok(html.includes(reason));assert.ok(!html.includes('<details'));
+  assert.doesNotMatch(html,/мнение модели|данные каталога/);
+ }
  const html=gameCardHtml(card,{index:1});
- assert.ok(html.includes('Причина'));assert.ok(!html.includes('<details'));
  assert.ok(html.includes('Вместимость не проверена'));assert.ok(html.includes('Оговорка'));
  const marked=gameCardHtml(card,{marked:true,blocked:true});
  for(const action of ['familiar-unmark','familiar-keep','data-history-block'])assert.ok(marked.includes(action));

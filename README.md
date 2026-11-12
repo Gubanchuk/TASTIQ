@@ -69,9 +69,9 @@ npm run personas:ai -- andrey --mode careful --paid --limit 1 --budget-usd 0.28 
                                                        # один ПЛАТНЫЙ запрос OpenAI; нужен OPENAI_API_KEY
 ```
 
-Сайт: http://localhost:5173 — дизайн «Нейтральный» (`src/server/public/index.html`, `style.css`, `app.js`), выбран 21.10.2026 из трёх кликабельных прототипов. Клиент диалога: `src/server/public/shared/dialogue-client.js`, контракт направления: `.impeccable/surfaces/src-server-public-index-html.md`, дизайн-система: `DESIGN.md`. Отклонённые варианты лежат локально в `archive/` (в git не попадают).
+Сайт доступен на http://localhost:5173. Главная собрана в `src/server/public/index.html`, `style.css` и `landing-bottom.css`. Клиент старого диалога: `src/server/public/shared/dialogue-client.js`, контракт главной: `.impeccable/surfaces/src-server-public-index-html.md`, дизайн-система: `DESIGN.md`. Отклонённые варианты лежат локально в `archive/`.
 
-Пример на лендинге (`src/server/public/data/example-evenings.json`) — настоящий проход диалога на каталоге: `node --max-old-space-size=8192 src/server/build-example.js`.
+Снимок примера (`src/server/public/data/example-evenings.json`) хранит реальный проход диалога на каталоге. Команда `node --max-old-space-size=8192 src/server/build-example.js` обновляет снимок и счётчики разделов в HTML главной. При открытии страницы снимок не загружается.
 
 Постеры фильмов, сериалов и мультфильмов: `node --max-old-space-size=8192 src/pipeline/screen/s06-posters.js` пишет в `data/posters.json` миниатюры статей английской Википедии для самых популярных 6 100 тайтлов. Скрипт продолжает с места остановки; сервер читает файл только при старте.
 

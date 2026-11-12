@@ -18,7 +18,7 @@ A picker that asks a few questions step by step and returns one choice plus a fe
 
 ## Positioning
 
-It picks by why a title worked for this person, not by genre. Taste is tied only to reasons the person confirmed ("за живой мир", "за неожиданные повороты"), dislikes are asked as complaints ("всё понятно заранее", "постоянно умирал"), and every stated reason in a pick is backed by a fact with a source: a quote from a review or article, a player or viewer tag, a catalog fact. The catalog and the hard limits belong to code; since 2026-10-28 an AI layer (OpenAI since 2026-10-31; historically Claude) chooses the final four from the shortlist the code leaves and adds one sentence per pick, marked on screen as the model's opinion. It never adds a title outside the catalog or past a sieve. Today it is open to everyone; later only to people who paid or were granted access by hand (`src/ai/access.js`).
+The current wish guides the selection. Past likes help when the person has confirmed what worked ("за живой мир", "за неожиданные повороты"). The catalog and its hard filters define the eligible titles. A generated recommendation explains how a concrete detail of the work matches today's request in one or two short sentences. The cards use «Почему может подойти» and show relevant caveats and unverified conditions.
 
 ## Operating Context
 
@@ -28,7 +28,7 @@ The Conversation interface retains the owner-approved 5B / uppercase 02 / Cobalt
 
 The first suggestion has its own surface; alternatives have independent heights and full natural-proportion images. Mobile shows title and metadata before art. Four fit ratings are visible; optional reason/text opens only on its card. Shared browser-local drafts survive reload and can be resumed in Library Evenings without becoming submitted feedback. The Library shows one selected list at every width, two card columns above 900px and one below, persistent search, domain/reaction/order, counts and batches of 24. Mobile secondary filters have an explicit disclosure with count and reset; the three plan lists share a compact row. Empty Library and no search results differ. Plan, taste, familiarity, choice and outcome are independent. Legacy keeps its old dark rail. The four approved landing files stayed byte-identical during this redesign; no new identity or catalog/ranking/policy change was introduced.
 
-The landing introduces the four adaptive pickers and explains the sequence from today's wish through useful details and checking the understanding to suggestions. Every landing link leads to choosing a domain or entering its picker. It presents the selection process without a chat scene, simulated messages or fake input fields. The Library remains part of the application; the landing does not read personal plans or promote a separate Library destination. This landing correction does not rename or replace the selected Conversation interface inside the product.
+The landing opens with «Что посмотреть или во что поиграть?» and offers up to four explained options for tonight. The four category entries lead directly to their pickers. The lower section explains the steps and shows an illustrative film suggestion with the wish that it fits. The landing uses static covers and links.
 
 ## Capabilities and Constraints
 
@@ -36,7 +36,7 @@ The landing introduces the four adaptive pickers and explains the sequence from 
 
 - Modern recommendation roles are explicit: the first card is the main suggestion and the rest are alternatives. The same-request continuation explains that up to four suggestions are shown per batch. Media conditions use one canonical visible row per supported condition; duplicate format facts share the existing removal/undo control. Independent goals and source facts remain intact. See docs/REQUEST_CLARITY_2026-11-03.md.
 
-- Modern results can copy the sent dialogue, current understanding/conditions and exactly the visible suggestions as plain text. This uses no model request or public share URL. Library plans, rating notes and unsent drafts are omitted; removed sources stay removed. See docs/SELECTION_COPY_2026-11-03.md.
+- A submitted selection review includes the sent dialogue, current request and visible suggestions. The transcript excludes library plans, rating notes, unsent drafts and removed sources. The result screen links to the saved selections in the Library.
 
 - Modern result titles copy the displayed name and year with an inline confirmation and manual fallback. The same-request continuation is available above and below the cards. An ambiguous mood reference may remain unbound when its desired properties are explicit; exact identity is required only for decisions that depend on it. This local03.11 iteration has not yet been published; see docs/TESTER_FEEDBACK_ROUND2_2026-11-03.md.
 
@@ -45,7 +45,7 @@ The landing introduces the four adaptive pickers and explains the sequence from 
 - Evidence types shown to people: review quote with thumbs and hours played, Steam player tag with vote count, MovieLens viewer tag with relevance %, Wikipedia quote, catalog fact (runtime, seasons, status).
 - Confidence labels set by code: "Сильное попадание", "Вероятно подойдёт", "Попробуй: мало данных о твоём вкусе".
 - Front end today: vanilla JS, no build step, `src/server/public` served by Node. Adaptive game state uses `/api/conversation`; domain-scoped film/series/cartoon state uses `/api/media-conversation`. Legacy `/api/dialogue` remains available. Resuming saved results does not call the model.
-- Adaptive free-text interpretation uses structured model proposals checked against exact active source quotes, explicit context and catalog identities. The person sees the understanding before picking. Unknown data stays unknown; reasons are labelled as the model's opinion. Legacy keyword parsing describes the previous path only.
+- Adaptive free-text interpretation uses structured model proposals checked against exact active source quotes, explicit context and catalog identities. The person sees the understanding before picking. Unverified conditions remain visible. Legacy keyword parsing describes the previous path only.
 - AI picker on the result screen: OpenAI Responses API since 2026-10-31, configurable model (default gpt-6.1-sol, low effort). Falls back to the engine's picks on failure; «Не то? Скажи словами» asks again with a wish. Cost is estimated from usage, with per-browser and daily request limits. First live persona comparison: 10/36 fixed targets versus the engine's 3/36, 12 successful requests at an estimated $0.1929, API time about 9 s. This is not real-user validation or a guaranteed per-request price.
 
 ## Brand Commitments
@@ -60,7 +60,7 @@ Real catalog data and real quotes in `data/catalog.json` and `data/catalog-scree
 
 1. One question at a time; never dump everything on one screen.
 2. Ask why, not which genre; genre only helps choose what to ask about.
-3. Every claim in a pick points to a fact the person can check; the AI sentence is labelled as the model's opinion, not a fact.
+3. Explain the fit through concrete details that matter to the current wish. Show uncertainty when it affects the choice.
 4. Show risks, not only reasons; never fake confidence.
 5. Corrections are instant and visible: the person can always see and edit what the system believes about them.
 

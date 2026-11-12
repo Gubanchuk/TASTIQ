@@ -14,7 +14,12 @@ export function historicalFeedback(runs,domain){
   .sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt))).slice(0,6).map(run=>({domain,verdict:run.selectionReview.verdict,issue:run.selectionReview.issue,note:clean(run.selectionReview.note,300),request:clean(run.selectionReview.requestSummary,500),cards:run.cards.slice(0,4).map(c=>({id:c.id,title:clean(c.title,200)}))}));
 }
 const draftOf=value=>({verdict:Object.hasOwn(REVIEW_VERDICTS,value?.verdict)?value.verdict:null,issue:Object.hasOwn(REVIEW_ISSUES,value?.issue)?value.issue:null,note:typeof value?.note==='string'?value.note.slice(0,600):'',learn:value?.learn!==false});
-export const selectionReviewStatus=(run,{draft,status='pending',persistent=true}={})=>draft?'Изменения ещё не отправлены.':!run?.selectionReview?'':status==='sent'?'Отзыв отправлен. Спасибо!':persistent?'Отзыв сохранён на устройстве и ожидает отправки.':'Отзыв пока сохранён в этом окне и ожидает отправки.';
+export function selectionReviewStatus(run,{draft,status='pending',persistent=true}={}){
+ if(draft)return JSON.stringify(draftOf(run?.selectionReview))===JSON.stringify(draftOf(draft))?'':'Изменения ещё не отправлены.';
+ if(!run?.selectionReview)return '';
+ if(status==='sent')return 'Твой отзыв помогает нам улучшать подбор.';
+ return persistent?'Отзыв сохранён на устройстве и ожидает отправки.':'Отзыв пока сохранён в этом окне и ожидает отправки.';
+}
 export function createSelectionReviewDrafts({storage}={}){
  let memory={},persistent=Boolean(storage);
  const read=()=>{if(!persistent)return structuredClone(memory);try{const data=JSON.parse(storage.getItem(KEY)??'{}');memory=data&&typeof data==='object'&&!Array.isArray(data)?data:{};return structuredClone(memory);}catch{persistent=false;return structuredClone(memory);}};
@@ -24,12 +29,18 @@ export function createSelectionReviewDrafts({storage}={}){
 export function selectionReviewHtml(run,{draft,status='pending',persistent=true}={}){
  if(!run)return '<p class="game-help">Подготавливаю форму отзыва…</p>';
  const value=draftOf(draft??run.selectionReview),rid=esc(run.id);
+ const message=`<p id="selection-review-status" data-selection-review-status role="status">${selectionReviewStatus(run,{draft,status,persistent})}</p>`;
+ if(run.selectionReview&&!draft)return `<section class="selection-review selection-review-saved" aria-labelledby="selection-review-title">`
+  +'<img class="selection-review-logo" src="/assets/brand/tastiq-logo-cobalt.svg" alt="TASTIQ" width="148" height="36">'
+  +'<h2 id="selection-review-title">Спасибо за отзыв!</h2>'+message
+  +`<div class="selection-review-actions"><button type="button" class="btn btn-secondary" data-act="selection-edit" data-run="${rid}" data-focus="selection-review:send" aria-describedby="selection-review-title selection-review-status">Изменить отзыв</button>`
+  +`<button type="button" class="btn btn-secondary" data-act="selection-retry"${status==='sent'?' hidden':''}>Повторить отправку</button></div></section>`;
  return `<section class="selection-review" aria-labelledby="selection-review-title"><h2 id="selection-review-title">Как тебе подбор?</h2><form data-form="selection-review" data-run="${rid}">`
   +`<div class="selection-review-verdicts" role="group" aria-label="Оценка подбора">${Object.entries(REVIEW_VERDICTS).map(([key,label])=>`<button type="button" class="btn btn-secondary" data-act="selection-verdict" data-run="${rid}" data-v="${key}" data-focus="selection-verdict:${key}" aria-pressed="${value.verdict===key}">${label}</button>`).join('')}</div>`
   +`<details data-disclosure="selection-review:${rid}"${value.issue||value.note?' open':''}><summary>Что понравилось или что не так? <span>Необязательно</span></summary><label>Причина<select class="input" name="issue" data-focus="selection-review:issue"><option value="">Не указывать</option>${Object.entries(REVIEW_ISSUES).map(([key,label])=>`<option value="${key}"${value.issue===key?' selected':''}>${label}</option>`).join('')}</select></label><label>Своими словами<textarea class="input" name="note" data-focus="selection-review:note" rows="3" maxlength="600" placeholder="Чего не хватило или какой вариант подошёл?">${esc(value.note)}</textarea></label></details>`
   +`<label class="selection-review-learning"><input type="checkbox" name="learn" data-focus="selection-review:learn"${value.learn?' checked':''}> Учитывать этот отзыв в моих следующих подборах</label>`
   +'<p class="game-help">С отзывом сохраним запрос и показанные варианты без имени — для анализа и улучшения подбора.</p>'
-  +`<button type="submit" class="btn btn-primary" data-focus="selection-review:send"${value.verdict?'':' disabled'}>${run.selectionReview?'Обновить отзыв':'Отправить отзыв'}</button>`
-  +`${run.selectionReview&&status!=='sent'&&!draft?'<button type="button" class="btn btn-secondary" data-act="selection-retry">Повторить отправку</button>':''}`
-  +`<p data-selection-review-status role="status" aria-live="polite">${selectionReviewStatus(run,{draft,status,persistent})}</p></form></section>`;
+  +`<div class="selection-review-actions"><button type="submit" class="btn btn-primary" data-focus="selection-review:send"${value.verdict?'':' disabled'}>${run.selectionReview?'Обновить отзыв':'Отправить отзыв'}</button>`
+  +(run.selectionReview?`<button type="button" class="btn btn-secondary" data-act="selection-cancel" data-run="${rid}">Отмена</button>`:'')
+  +'</div>'+message+'</form></section>';
 }

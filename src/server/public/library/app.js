@@ -86,7 +86,7 @@ function card(row) {
   +(rating?`<p class="rating-label ${row.status}">${rating}</p>`:'')
   +`</div><div class="board-card-actions"><label class="move-control"><span class="library-sr-only">Список для ${esc(title(row))}</span><select data-act="move" ${attrs} data-focus="${focusKey('move',row)}">${Object.entries(LANES).map(([id,label])=>`<option value="${id}"${row.lane===id?' selected':''}>${label}</option>`).join('')}</select></label>`
   +`<button type="button" class="library-remove" data-act="${row.saved?'remove':'forget'}" ${attrs} data-focus="${focusKey('remove',row)}" aria-label="${row.saved?'Убрать из библиотеки':'Забыть знакомство'}: ${esc(title(row))}" title="${row.saved?'Убрать из библиотеки':'Забыть знакомство'}">${icon('close')}</button></div>`
-  +`<details class="card-details" data-detail="card:${esc(k)}"${openDetails.has(`card:${k}`)?' open':''}><summary data-focus="${focusKey('details',row)}">${exposure?'Отношение и знакомство':'Твоё отношение'}</summary><div class="card-details-content">`
+  +`<details class="card-details" data-detail="card:${esc(k)}"${openDetails.has(`card:${k}`)?' open':''}><summary data-focus="${focusKey('details',row)}">${exposure?'Отношение и знакомство':rating?'Изменить оценку':'Твоё отношение'}</summary><div class="card-details-content">`
   +`<p>Что думаешь об этом ${row.domain==='game'?'опыте':'названии'}? Оценка относится к вкусу, список — к планам.</p><div class="rating-actions">${ratingButton('liked','Зашло')}${ratingButton('disliked','Не зашло')}${rating?button('Убрать оценку','rate',`${attrs} data-value="none" data-focus="${focusKey('rate-none',row)}"`):''}</div>`
   +(row.answer?'<p class="library-meta">Твои прежние уточнения к оценке сохранены и учитываются в подборе.</p>':'')
   +(exposure?`<div class="familiarity-facts"><p>${esc(row.domain==='game'?(EXPOSURES[exposure.exposure]||'Уже знакомо'):({seen:'Уже смотрел',started:'Начал смотреть',finished:'Досмотрел',dropped:'Не досмотрел',paused:'Отложил'}[exposure.exposure]||'Уже знакомо'))} · ${esc(date(exposure.updatedAt))}</p><label class="library-check"><input type="checkbox" data-act="blocked" ${attrs} data-focus="${focusKey('blocked',row)}"${exposure.blocked?' checked':''}> Не предлагать в следующих подборах</label><p class="library-meta">Знакомство само по себе не означает положительную оценку.</p>${row.saved?button('Забыть знакомство','forget',`${attrs} data-focus="${focusKey('forget',row)}"`):'<p class="library-meta">Крестик убирает эту отметку знакомства. Перенос в другой список сохранит её отдельно.</p>'}</div>`:'')
@@ -171,15 +171,15 @@ function eveningsView(all) {
   const label=response?.started?'Начато':response?.chosen?'Выбрано':reviewed(response)?'Есть отзыв':'Черновик';
   const controls=eveningControls(run,card.id,{
    modern:true,history:true,open:openDetails.has(`feedback:${pair}`),
-   outcomeOpen:openDetails.has(outcome)?true:openDetails.has(`closed:${outcome}`)?false:undefined,
+   ratingOpen:openDetails.has(`rating:${pair}`),outcomeOpen:openDetails.has(outcome),
    status:feedback.status(run.id),persistent:feedback.persistent,draft,
   });
   return `<details class="library-evening" data-detail="${esc(detail)}"${openDetails.has(detail)?' open':''}><summary data-focus="${esc(detail)}">${media(cover)}<div class="evening-summary-copy"><strong>${esc(title(card))}</strong><span>${esc(date(run.at))} · ${esc(DOMAINS[run.domain])}</span><small class="evening-state" data-chosen="${Boolean(response?.chosen)}">${label}</small></div></summary><div class="evening-content">${run.context.note?`<p class="evening-context">${esc(run.context.note)}</p>`:''}<article class="evening-card">${controls}</article></div></details>`;
  }).join('');
  return filters()+resultCount(rows.length,all.length)+(entries?`<div class="library-evenings">${entries}</div>`:noMatches());
 }
-function render({feedbackFocus}={}) {
- const active=document.activeElement,focus=active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active instanceof HTMLInputElement?[active.selectionStart,active.selectionEnd]:null;
+function render({feedbackFocus,focus:requestedFocus}={}) {
+ const active=document.activeElement,focus=requestedFocus??active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active instanceof HTMLInputElement?[active.selectionStart,active.selectionEnd]:null;
  const evenings=eveningRecords(),past=historyRecords();
  const counts={board:records().length,history:past.length,evenings:evenings.length};
  $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${Object.entries({board:'Списки',history:'Подборы',evenings:'Выбор и отзывы'}).map(([view,label])=>`<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}">${label}${counts[view]?`<span>${counts[view]}</span>`:''}</button>`).join('')}</nav>`
@@ -219,9 +219,16 @@ function editEvening(el,action) {
    if(queuedAction.type==='explain') {
     const draftKey=`${rid}:${cid}`,draft=feedbackDrafts.get(draftKey);
     if(draft?.note===queuedAction.note&&(draft.reason||null)===queuedAction.reason)feedbackDrafts.delete(draftKey);
+    openDetails.delete(`feedback:${draftKey}`);
    }
    if(queuedAction.type==='choose'&&queuedAction.value){const run=feedback.get(rid),card=run.cards.find(card=>card.id===cid),prior=library.all().find(row=>row.domain===run.domain&&row.id===cid);if(card&&prior?.lane!=='want')library.save(prior??card,{domain:run.domain,lane:'tonight'});}
-   const feedbackFocus=['choose','start'].includes(queuedAction.type)?`evening-${queuedAction.type}:${rid}:${cid}:${queuedAction.value?'off':'on'}`:focusKey;
+   let feedbackFocus=focusKey;
+   if(['choose','start'].includes(queuedAction.type))feedbackFocus=`evening-${queuedAction.type}:${rid}:${cid}:${queuedAction.value?'off':'on'}`;
+   if(['fit','explain','outcome'].includes(queuedAction.type)){
+    const panel=queuedAction.type==='outcome'?'outcome':'rating';
+    openDetails.delete(`${panel}:${rid}:${cid}`);
+    feedbackFocus=`evening-${panel}:${rid}:${cid}`;
+   }
    render({feedbackFocus});
   }catch{notice('Отзыв пока не сохранён. Повтори действие.');}
   finally {
@@ -243,7 +250,7 @@ document.addEventListener('click',event=>{
  if(act==='undo'){undo();return;}
  if(act==='remove'&&row){removeRow(row);return;}
  if(act==='forget'&&row){forgetRow(row);return;}
- if(act==='rate'&&row){if(!row.saved)saveRow(row,row.lane);library.rate(row.domain,row.id,el.dataset.value==='none'?null:el.dataset.value);render();notice('Оценка сохранена. Список не изменился.');return;}
+ if(act==='rate'&&row){if(!row.saved)saveRow(row,row.lane);library.rate(row.domain,row.id,el.dataset.value==='none'?null:el.dataset.value);openDetails.delete(`card:${key(row)}`);render({focus:`details:${key(row)}`});notice('Оценка сохранена.');return;}
  if(act==='save-history'){const h=legacyHistory()[Number(el.dataset.index)];if(h&&library.save({...h,id:h.topId},{domain:h.domain})){render();notice('Сохранено на потом.');}else notice('У этой старой записи не сохранился раздел или идентификатор. Её нельзя добавить в планы.');return;}
  const actions={'evening-fit':{type:'fit',value:el.dataset.v},'evening-choose':{type:'choose',value:el.dataset.v==='on'},'evening-start':{type:'start',value:el.dataset.v==='on'},'evening-outcome':{type:'outcome',value:el.dataset.v}};
  if(actions[act])void editEvening(el,actions[act]);
@@ -271,7 +278,7 @@ document.addEventListener('submit',event=>{
 });
 document.addEventListener('toggle',event=>{
  const el=event.target;
- if(el.dataset.detail){el.open?openDetails.add(el.dataset.detail):openDetails.delete(el.dataset.detail);if(el.dataset.detail.startsWith('outcome:')){const closed=`closed:${el.dataset.detail}`;el.open?openDetails.delete(closed):openDetails.add(closed);}}
+ if(el.dataset.detail){el.open?openDetails.add(el.dataset.detail):openDetails.delete(el.dataset.detail);}
  if(el.matches('[data-feedback-details]')){const k=`feedback:${el.dataset.run}:${el.dataset.id}`;el.open?openDetails.add(k):openDetails.delete(k);}
 },true);
 document.addEventListener('error',event=>{const image=event.target;if(image instanceof HTMLImageElement&&image.closest('.library-cover')){failedImages.add(image.getAttribute('src'));image.closest('.library-cover').classList.add('no-cover');image.closest('.library-cover').innerHTML='<small>Нет фото</small>'; }},true);

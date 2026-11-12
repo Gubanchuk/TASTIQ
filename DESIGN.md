@@ -53,15 +53,15 @@ typography:
     letterSpacing: "-0.035em"
   landing-headline:
     fontFamily: "Unbounded, Golos, sans-serif"
-    fontSize: "clamp(34px, 3.5vw, 50px)"
+    fontSize: "clamp(30px, 3.3vw, 48px)"
     fontWeight: 500
-    lineHeight: 1.3
+    lineHeight: 1.22
     letterSpacing: "-0.035em"
   landing-finale:
     fontFamily: "Unbounded, Golos, sans-serif"
-    fontSize: "clamp(34px, 3.7vw, 54px)"
+    fontSize: "clamp(30px, 3.3vw, 48px)"
     fontWeight: 500
-    lineHeight: 1.28
+    lineHeight: 1.22
     letterSpacing: "-0.035em"
   featured-title:
     fontFamily: "Golos, Arial, sans-serif"
@@ -150,7 +150,7 @@ rounded:
   landing-finale-phone: "42px 42px 0 0"
   landing-pill: "999px"
   landing-final-choice: "24px"
-  landing-final-choice-phone: "20px"
+  landing-final-choice-phone: "18px"
 spacing:
   sm: "8px"
   control: "12px"
@@ -303,18 +303,18 @@ components:
 
 ### Hierarchy
 
-- **Hero:** сохранённая главная; ≤1050px35px, phone fluid29–40px, tiny28px. Landing-headline/landing-finale сохраняют отдельные роли: phone34px и29–40px, tiny30px и28px.
+- **Hero:** Unbounded 500, `clamp(32px,3.35vw,49px)` с интерлиньяжем 1.18, на телефоне `clamp(24px,5.9vw,39px)`. Заголовки механизма и финала используют `clamp(30px,3.3vw,48px)` с интерлиньяжем 1.22.
 - **Display:** библиотека32px/1.3, phone28px. **Headline:** вопрос28px/1.35/max28ch, phone24px/1.4/tiny22px. **Result-headline:** отдельные30px/1.35, phone25px.
 - **Featured title:** Golos60030px/1.25, tablet27px, phone24px/tiny24px. **Title:** альтернатива22px/1.3; групповой заголовок22px/1.4, phone21px.
 - **Library title:** Golos60017px/1.45, ≤600px16px, ≤350px15px.
-- **Body:**14px/1.7; featured reason16px/1.75, phone15px; alternative14px/1.75. Reason/help до65ch. Главная сохраняет15–17px/1.8–1.85 и14px/1.8 в механизме.
+- **Body:**14px/1.7; featured reason16px/1.75, phone15px; alternative14px/1.75. Reason/help до65ch. Лид главной 15–17px/1.65 и 15px/1.55 на телефоне.
 - **Local roles:** request-fact13px/1.65, result-meta13px/1.65, caveat13px/1.7, select-value50013px/1.5. Это фактические компонентные роли, не утверждение об общей кратной шкале. Controls12–14px; desktop domain55014px/1.5. Круг этапа12px, phone label11px/1.5; counts tabular-nums.
 
 **The Logo Is an Asset Rule.** Использовать утверждённый SVG целиком и масштабировать пропорционально; не заменять знак и надпись наборным текстом или новым рисунком.
 
 ## Layout
 
-Главная сохраняет max1440px/gutter clamp(20px,5vw,80px); четыре веера в ряд, phone две колонки. Подписи на бумаге. Механизм/финал две колонки, phone одна, gaps сужаются при1050px. Четыре конечных входа одной колонкой. Главная не читает личные планы и не превращается в библиотечное промо.
+Главная сохраняет max1440px/gutter clamp(20px,5vw,80px); четыре веера в ряд, на телефоне две колонки с подписями над обложками. В механизме пояснение рядом с примером выдачи. Механизм и финал на телефоне складываются в одну колонку. Четыре конечных входа идут списком.
 
 Desktop shell sticky top0/z60/max1380px (от1500px1440px)/min76px/margin0 auto28px/padding14px24px/radius0 0 20px 20px. При761–1000px видимые restart/restore переходят на отдельный ряд и сохраняют однострочные подписи. ≤1450px поля24px, ≤1100px padding12px18px/gap14px. SVG140px, видимые «Подбор»/«Библиотека», domain/restart/restore. Phone top0/radius0/no shadow/padding10px16px/logo120px (tiny105px): nav в первой строке, короткое имя раздела/restart во второй, restore при наличии в третьей. Library вместо домена имеет «Подобрать новое». Scroll-padding112px/phone146px.
 
@@ -358,7 +358,7 @@ Library-button сохраняет локальный pill («Фильтры и �
 
 ### Buttons
 
-Primary cobalt/white, secondary с границей или paper, plain без рамки. Stage44px/padding10px17px; next48px/12px21px/radius13px; card actions44px/10px13px. Hover меняет фон/границу, focus видим, disabled снижает opacity. Library pill не становится общей формой. Главная сохраняет action48px (header phone44px) и final-choice68px/phone62px.
+Primary cobalt/white, secondary с границей или paper, plain без рамки. Stage44px/padding10px17px; next48px/12px21px/radius13px; card actions44px/10px13px. Hover меняет фон/границу, focus видим, disabled снижает opacity. Library pill не становится общей формой. Кнопка в шапке главной занимает минимум 48px, на телефоне 44px. Ссылки в финале занимают минимум 68px, на телефоне 58px.
 
 ### Chips
 
@@ -396,7 +396,7 @@ Stage/shared focus3px/4px, library2px/4px, search/select2px/3px; главная3
 
 ### Входы главной
 
-Одна ссылка, три настоящих обложки2:3/object-fit:cover, арка, круглая SVG-стрелка и подпись на бумаге. Hover/focus раскрывают только art. Все12 eager. Title/year fallback до принятого portrait; error/landscape source заменяется следующим. Четыре ссылки остаются в HTML при недоступных данных.
+Каждая ссылка содержит три локальные WebP-обложки 2:3 с `object-fit:cover`, арку, круглую SVG-стрелку и подпись на бумаге. Hover и focus раскрывают веер. Все 12 обложек и четыре ссылки доступны из HTML.
 
 ## Do's and Don'ts
 

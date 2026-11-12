@@ -1,5 +1,3 @@
-import {copyText} from './title-copy.js';
-
 const clean=value=>typeof value==='string'?value.trim():'';
 const labels={game:'игры',film:'фильма',series:'сериала',cartoon:'мультфильма'};
 const stances={want:'Хочется',avoid:'Не хочется',require:'Обязательно',exclude:'Исключено',indifferent:'Не принципиально',unknown:'Неясно',conditional:'При условии',history:'Прошлый опыт'};
@@ -47,7 +45,7 @@ export function selectionCopyText({state={},screen={}}={}) {
  if(facts.length)lines.push(facts.join('\n'));
  if(context.length)lines.push('\nУсловия:',context.join('\n'));
  if(uncertainties.length)lines.push('\nПока неясно:',uncertainties.map(text=>`- ${text}`).join('\n'));
- if(screen.provisional||state.provisional||result.ai?.error)lines.push('\nПредварительный подбор по каталогу: уточнение моделью недоступно.');
+ if(screen.provisional||state.provisional||result.ai?.error)lines.push('\nПредварительный подбор по каталогу.');
  lines.push('\nПредложенные варианты:');
  for(const [index,card] of [result.top,...(result.alternatives??[]).slice(0,3)].entries()){
   const title=clean(card.ru)||clean(card.name)||clean(card.title)||'Название не указано';
@@ -55,16 +53,11 @@ export function selectionCopyText({state={},screen={}}={}) {
   const meta=[...(domain!=='game'?[card.runtime?`${card.runtime} мин${card.kind==='series'?' · эпизод':''}`:'',...(card.kind==='series'?[card.seasons?`${card.seasons} сез.`:'',card.episodes?`${card.episodes} эп.`:'']:[])]:[]),...(card.genres??[]).slice(0,2)].filter(Boolean);
   if(meta.length)lines.push(meta.join(' · '));
   const reason=clean(card.ai?.reason)||clean(card.reason),caveat=clean(card.ai?.caveat)||clean(card.caveat),link=safeLink(card.link);
-  if(reason)lines.push(`Почему предложено (${card.ai?.reason?'мнение модели':'данные каталога'}): ${reason}`);
+  if(reason)lines.push(`Почему может подойти: ${reason}`);
   if(caveat)lines.push(`Учти: ${caveat}`);
   const checks={unknown:'Не подтверждено',conditional:'Есть условие',no:'Не подходит по условию'};
   for(const check of Array.isArray(card.feasibility)?card.feasibility:[])if(checks[check?.status]&&clean(check.text))lines.push(`${checks[check.status]}: ${clean(check.text)}`);
   if(link)lines.push(link);
  }
  return lines.join('\n');
-}
-
-export function copySelection(button,{state,screen,...options}={}) {
- const status=button.closest('.game-result-heading')?.querySelector('[data-selection-copy-status]');
- return copyText(selectionCopyText({state,screen}),status,{...options,multiline:true,success:'Подбор скопирован',fieldLabel:'Подбор для копирования'});
 }

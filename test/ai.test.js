@@ -39,6 +39,9 @@ test('OpenAI receives the schema, instructions and candidates without Anthropic 
   assert.equal(request.text.format.strict, true);
   assert.equal(request.text.format.schema.additionalProperties, false);
   assert.match(request.instructions, /You pick what a person/);
+  assert.match(request.instructions, /two short sentences, up to 220 characters/);
+  assert.match(request.instructions, /concrete detail/);
+  assert.match(request.instructions, /what the person wants today/);
   assert.match(request.input, /Кандидаты/);
   assert.equal(request.store, false);
   assert.equal(request.service_tier, 'default');

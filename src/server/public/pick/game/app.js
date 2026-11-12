@@ -1,6 +1,5 @@
 import {questionFormHtml,canSubmitQuestion,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
-import {copySelection} from '/shared/selection-copy.js';
 import {createSelectionReviewController} from '/shared/selection-review-controller.js';
 import {resultBatchHelp,singleReplacementIndex} from '/shared/result-clarity.js';
 import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
@@ -20,7 +19,7 @@ import {chooseOption,answerAction,hasPendingAnswer,keyboardSubmit,contextDraftTe
 import {timeBudgetHtml,timeEvidenceHtml,hasSessionTime} from '/pick/game/time-budget-view.js';
 import {questionDraftKey,questionScreenKey,planLegacyQuestionDraftMigration,prepareBackDraft,finishBackDraft} from '/pick/game/question-drafts.js';
 import {createLibraryStore} from '/shared/library-store.js';
-import {aiErrorMessage} from '/shared/ai-error-message.js';
+import {aiErrorMessage,replacementNotice} from '/shared/ai-error-message.js';
 
 const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -138,10 +137,10 @@ function cardHtml(card,index) {
 }
 function resultHtml(screen) {
  const result=screen.result??client.state?.result;
- const replacement=client.state.replacement,notice=replacement?.notice||(client.state.familiar?.marked?.length?'':'Отмеченные игры заменены. Остальные варианты сохранены.');
+ const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Отмеченные игры заменены. Остальные варианты сохранены.');
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
  return '<div class="game-result-heading"><h1>Варианты на вечер</h1>'
-  +`<div class="game-result-browse"><details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div><p id="result-batch-help">${resultBatchHelp}</p>${button('Скопировать подбор','copy-selection',client.busy?'disabled':'')}<a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div><div class="game-copy-status game-selection-copy-status" data-selection-copy-status role="status" aria-live="polite"></div></details></div></div>`
+  +`<div class="game-result-browse"><details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div><p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
@@ -223,7 +222,6 @@ function refreshFeedback(cardId) {
  document.querySelectorAll('[data-card-feedback]').forEach(el=>{
   const id=el.dataset.cardFeedback;
   if(typeof cardId==='string'&&id!==cardId)return;
-  const outcomeWasOpen=Boolean(el.querySelector('.evening-outcome')?.open);
   const key=`${activeEvening}:${id}`;
   el.innerHTML=eveningControls(run,id,{open:feedbackOpen.get(key)??false,status:feedback.status(activeEvening),persistent:feedback.persistent,draft:feedbackDrafts.get(key),modern:true});
   el.querySelectorAll('[data-form="evening-reason"] [name]').forEach(field=>field.dataset.focus=`feedback-field:${id}:${field.name}`);
@@ -231,7 +229,6 @@ function refreshFeedback(cardId) {
   const decision=el.querySelector('.evening-decision'),plan=card?.querySelector('[data-card-decision]');
   if(plan)plan.replaceChildren(...(decision?[decision]:[]));
   plan?.querySelectorAll('button').forEach(control=>control.disabled=client.busy);
-  const outcome=el.querySelector('.evening-outcome');if(outcome){const disclosure=`outcome:${activeEvening}:${id}`;outcome.dataset.disclosure=disclosure;if(disclosures.has(disclosure))outcome.open=disclosures.get(disclosure);else if(outcomeWasOpen)outcome.open=true;}
   el.querySelectorAll('button,input,textarea,select').forEach(control=>control.disabled=client.busy);
  });
  selectionReviews?.render();initCustomSelects(document);
@@ -331,15 +328,25 @@ async function updateEvening(element,action) {
   const savedForLater=library.all().some(item=>item.domain==='game'&&item.id===id&&item.lane==='want');
   if(!savedForLater)saveGameToLibrary(library,card,{lane:'tonight'});
  }
- if(action.type==='explain')feedbackDrafts.delete(`${run}:${id}`);
- refreshFeedback(id);void feedback.flush();
+ if(action.type==='explain'){
+  const key=`${run}:${id}`,draft=feedbackDrafts.get(key);
+  if(draft?.note===action.note&&(draft.reason||null)===action.reason)feedbackDrafts.delete(key);
+  feedbackOpen.set(key,false);
+ }
+ if(run===activeEvening){
+  const editor=['fit','explain','outcome'].includes(action.type)?element.closest('.evening-rating,.evening-outcome'):null;
+  const focusKey=editor&&element.contains(document.activeElement)?editor.querySelector('summary').dataset.fk:null;
+  if(editor)editor.open=false;
+  refreshFeedback(id);
+  if(focusKey)document.querySelector(`[data-fk="${CSS.escape(focusKey)}"]`)?.focus({preventScroll:true});
+ }
+ void feedback.flush();
 }
 document.addEventListener('click',event=>{
  const menu=$('.game-session-menu');if(menu?.open&&!menu.contains(event.target)){menu.open=false;disclosures.set('session',false);}
  const el=event.target.closest('[data-act]');if(!el||el.disabled)return;
  const act=el.dataset.act;
  if(act==='copy-title')return void copyCardTitle(el);
- if(act==='copy-selection'){if(!client.busy)void copySelection(el,{state:client.state,screen:client.screen});return;}
  if(el.closest('.game-session-menu'))el.closest('.game-session-menu').open=false;
  if(act==='focus-request'){$('#request-panel').scrollIntoView({block:'start',behavior:'auto'});$('#request-panel h2').focus({preventScroll:true});return;}
  if(act==='focus-history'){

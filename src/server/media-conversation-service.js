@@ -129,7 +129,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const retainedIds=after.filter(card=>before.some(old=>old.id===card.id)).map(card=>card.id);
     const result={...s.result,top:after[0],alternatives:after.slice(1),ai:sole?s.result.ai?{...s.result.ai,mixed:true}:undefined:{understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist,mixed:retainedIds.length>0}};
     s={...s,result,browseSeen:[...new Set([...(s.browseSeen??[]),...before.map(card=>card.id),...after.map(card=>card.id)])],failedAction:null,familiar:{...s.familiar,marked:more?[]:s.familiar.marked.filter(id=>!changedIds.includes(id)),hidden:more?s.familiar.hidden:[...new Set([...s.familiar.hidden,...changedIds])],undo},
-      replacement:{changedIds,unresolvedIds,notice:[more?(after.length<4?'Нашлось меньше четырёх новых вариантов по этому запросу.':'Другие варианты по тому же запросу.'):'',sole?'Доступен только один другой вариант по условиям. Он подобран по каталогу без нового обращения к модели.':'',unresolvedIds.length?'Часть отмеченных вариантов осталась: подтверждённых замен пока недостаточно.':''].filter(Boolean).join(' ')}};
+      replacement:{changedIds,unresolvedIds,notice:[more?(after.length<4?'Нашлось меньше четырёх новых вариантов по этому запросу.':'Другие варианты по тому же запросу.'):'',sole?'Доступен только один другой вариант по условиям. Он подобран по каталогу.':'',unresolvedIds.length?'Часть отмеченных вариантов осталась: подтверждённых замен пока недостаточно.':''].filter(Boolean).join(' ')}};
     return response(s,{feedbackCarry:{retainedIds}});
   }
   async function handle(body,who) {
