@@ -482,7 +482,7 @@ document.addEventListener('input',event=>{
 });
 document.addEventListener('toggle',event=>{const el=event.target;if(el.matches('[data-feedback-details]'))feedbackOpen.set(`${el.dataset.run}:${el.dataset.id}`,el.open);},true);
 document.addEventListener('load',event=>{const img=event.target;if(img.matches?.('.game-poster img'))img.closest('.game-poster').classList.add('is-loaded');},true);
-document.addEventListener('error',event=>{const img=event.target;if(img.matches?.('.game-poster img')){const poster=img.closest('.game-poster'),tile=document.createElement('span');tile.textContent='Обложка недоступна';poster.classList.add('game-poster-fallback');poster.replaceChildren(tile);}},true);
+document.addEventListener('error',event=>{const img=event.target;if(img.matches?.('.game-poster img')){const poster=img.closest('.game-poster'),tile=document.createElement('span');tile.textContent='Нет обложки';poster.classList.add('game-poster-fallback');poster.replaceChildren(tile);}},true);
 window.addEventListener('online',()=>void feedback.flush());
 window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());else if(event.key===null||event.key==='tastiq.site.library'||event.key?.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
 compactRequest.addEventListener('change',event=>{const details=$('.game-request-details');if(details){details.open=!event.matches;disclosures.set('request-details',details.open);}});

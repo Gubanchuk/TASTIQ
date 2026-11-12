@@ -411,17 +411,28 @@ body.selection-start>main nav a svg {
 }
 
 @media(max-width:760px) {
- body.selection-design.product-page.conversation-page .app-shell {border-radius:0;margin-bottom:16px;gap:6px 10px}
+ body.selection-design.product-page.conversation-page .app-shell {
+  grid-template-columns:minmax(0,1fr) auto;border-radius:0;margin-bottom:16px;gap:6px 10px;
+ }
+ body.selection-design.product-page.conversation-page .app-brand {min-width:0;max-width:100%}
+ body.selection-design.product-page.conversation-page .app-brand img {max-width:100%}
+ body.selection-design.product-page.conversation-page .app-domain-control {grid-column:1/-1;justify-self:start}
  body.selection-design.product-page.conversation-page #stage .game-navigation {gap:8px;margin-bottom:22px}
  body.selection-design.product-page.conversation-page #stage .game-journey {padding:4px;gap:4px}
  body.selection-design.product-page.conversation-page #stage .game-journey li {padding:5px 2px;min-height:52px;gap:4px}
- body.selection-design.product-page.conversation-page #stage .game-journey li>b {max-width:100%;line-height:1.25;overflow-wrap:anywhere}
+ body.selection-design.product-page.conversation-page #stage .game-journey li>b {max-width:100%;line-height:1.25;white-space:nowrap}
  body.selection-design.product-page.conversation-page #main h1 {font-size:1.5rem;line-height:1.28;margin-bottom:12px}
  body.selection-design.product-page.conversation-page #main .game-help {font-size:.9375rem}
  body.selection-design.product-page.conversation-page #stage #answer-form .game-option {padding:10px;gap:8px}
  body.selection-design.product-page.conversation-page #stage #answer-form:has([data-first-next])>.game-question-options .game-option {font-size:.875rem}
  body.selection-design.product-page.conversation-page #stage #answer-form>.game-question-options {margin-top:14px;gap:8px}
  body.selection-design.product-page.conversation-page #stage .game-answer-extras {grid-template-columns:minmax(0,1fr)}
+ body.selection-design.product-page.conversation-page #stage #answer-form [data-disclosure=answer-genres] .game-question-options {
+  display:flex;flex-wrap:wrap;
+ }
+ body.selection-design.product-page.conversation-page #stage #answer-form [data-disclosure=answer-genres] .game-option {
+  flex:1 1 auto;min-width:min-content;max-width:100%;overflow-wrap:normal;
+ }
  body.selection-design.product-page.conversation-page #stage .game-question-footer {padding:8px;margin-top:18px;gap:6px}
  body.selection-design.product-page.conversation-page #stage .game-question-secondary {gap:6px}
  body.selection-design.product-page.conversation-page #stage .game-text-action {padding-inline:8px}
@@ -430,10 +441,23 @@ body.selection-start>main nav a svg {
  body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-layout {margin-bottom:12px}
  body.selection-design.product-page.conversation-page .board-heading h1 {font-size:1.625rem}
  body.selection-design.product-page.conversation-page .board-heading p {font-size:.9375rem}
- body.selection-design.product-page.conversation-page .library-views {gap:6px}
- body.selection-design.product-page.conversation-page .library-views button {padding-inline:6px;gap:4px}
+ body.selection-design.product-page.conversation-page .library-views {grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ body.selection-design.product-page.conversation-page .library-views button {
+  flex-direction:column;min-width:0;min-height:52px;padding:7px 4px;gap:3px;
+  white-space:normal;overflow-wrap:break-word;text-align:center;
+ }
  body.selection-design.product-page.conversation-page #library-app .evening-content {padding:12px}
  body.selection-design.product-page.conversation-page #library-app details.library-evening>summary {padding:12px;gap:10px}
  body.selection-start>header {border-radius:16px}
  body.selection-start>main nav a {min-height:66px;padding:12px 16px}
+}
+
+@media(max-width:420px) {
+ body.selection-design.product-page.conversation-page #stage .game-journey {grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.selection-design.product-page.conversation-page #stage .game-journey li {
+  flex-direction:row;flex-wrap:wrap;justify-content:flex-start;min-height:36px;padding:5px 8px;gap:7px;
+ }
+ body.selection-design.product-page.conversation-page #stage #answer-form:has([data-first-next]) .game-question-options {
+  grid-template-columns:minmax(0,1fr);
+ }
 }

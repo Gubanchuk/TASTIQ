@@ -64,6 +64,8 @@ body.product-page #stage .game-card-pending{align-self:start;height:auto;min-hei
 body.product-page #stage .game-card-pending .game-poster{flex:0 0 76px;width:76px;max-width:76px;min-height:88px;margin:0;border-radius:10px;opacity:1}
 body.product-page #stage .game-card-pending .game-poster img{max-height:110px}
 body.product-page #stage .game-card-pending .game-poster>span{padding:8px;font-size:12px}
+body.product-page #stage .game-card-pending .game-poster-fallback{place-items:center;padding:3px}
+body.product-page #stage .game-card-pending .game-poster-fallback>span{padding:0;text-align:center;overflow-wrap:normal}
 body.product-page #stage .game-pending-identity>div:not(.game-poster){min-width:0;overflow-wrap:anywhere}
 body.product-page #stage .game-card-pending .game-pending-controls{margin:18px 0 0}
 

@@ -65,14 +65,14 @@ body.product-page:has([data-first-next])[data-has-summary=false] #picker-workspa
 body.product-page:has([data-first-next]) #stage .game-back:disabled{display:none}
 body.product-page:has([data-first-next]) #stage .game-navigation{margin-bottom:18px}
 body.product-page #stage #answer-form:has([data-first-next])>.game-question-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 0}
-body.product-page #stage #answer-form:has([data-first-next])>.game-question-options .game-option{position:relative;min-width:0;min-height:48px;padding:10px 24px 10px 12px;overflow-wrap:anywhere}
+body.product-page #stage #answer-form:has([data-first-next])>.game-question-options .game-option{position:relative;min-width:0;min-height:48px;padding:10px 24px 10px 12px;overflow-wrap:break-word}
 body.product-page #stage #answer-form:has([data-first-next])>.game-question-options .game-option-check{position:absolute;right:6px;top:6px;width:14px;height:14px}
 body.product-page #stage #answer-form:has(.game-answer-extra[open])>.game-answer-extras{margin-top:14px}
 body.product-page #stage #answer-form:has([data-first-next]) .game-answer-extra .game-question-options{
  grid-template-columns:repeat(auto-fit,minmax(min(128px,100%),1fr))
 }
 body.product-page #stage #answer-form:has([data-first-next]) .game-answer-extra .game-option{
- min-width:0;min-height:44px;padding:9px 10px;font-size:13px;overflow-wrap:anywhere
+ min-width:0;min-height:44px;padding:9px 10px;font-size:13px;overflow-wrap:break-word
 }
 body.product-page #stage #answer-form:has([data-first-next]) .game-answer-extra .game-option-check{flex-shrink:0}
 body.product-page:is([data-view=question],[data-view=review]) #stage .game-action-controls{justify-content:flex-start}
