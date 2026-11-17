@@ -211,16 +211,22 @@ body.selection-design.product-page.conversation-page #stage .game-proposal :is(.
 }
 body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-links:has(> :only-child) {grid-template-columns:minmax(0,1fr)}
 body.selection-design.product-page.conversation-page #stage .game-plan-actions :is([data-card-decision],.evening-decision) {min-width:0;height:100%}
-body.selection-design.product-page.conversation-page #stage .game-proposal :is(.game-plan-actions .btn,.game-card-links>button,.game-card-links>a,details:is(.evening-rating,.evening-outcome)>summary) {
+body.selection-design.product-page.conversation-page #stage .game-proposal :is(.game-plan-actions .btn,.game-card-links>button,.game-card-links>a) {
  display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-width:0;min-height:44px;
  margin:0;padding:8px 10px;border:1px solid var(--selection-edge);border-radius:10px;box-shadow:none;
  background:white;color:var(--selection-navy);font-size:.875rem;font-weight:550;
  line-height:1.35;text-align:center;white-space:normal;word-break:normal;overflow-wrap:normal;text-decoration:none;
 }
-body.selection-design.product-page.conversation-page #stage .game-proposal :is(.game-plan-actions .btn,.game-card-links>button,.game-card-links>a,details:is(.evening-rating,.evening-outcome)>summary):hover:not(:disabled) {
+body.selection-design.product-page.conversation-page #stage .game-proposal :is(.game-plan-actions .btn,.game-card-links>button,.game-card-links>a):hover:not(:disabled) {
  background:var(--selection-soft);border-color:var(--selection-accent);text-decoration:none;
 }
 body.selection-design.product-page.conversation-page #stage .game-plan-actions .btn {height:100%}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-plan-actions [data-act=evening-choose][aria-pressed=false] {
+ background:var(--selection-accent);color:white;border-color:transparent;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-plan-actions [data-act=evening-choose][aria-pressed=false]:hover:not(:disabled) {
+ background:var(--selection-navy);
+}
 body.selection-design.product-page.conversation-page #stage .game-plan-actions .btn[aria-pressed=true] {
  background:var(--selection-active);color:var(--selection-accent);border-color:var(--selection-accent);
 }
@@ -229,18 +235,28 @@ body.selection-design.product-page.conversation-page #stage .game-plan-actions [
 }
 body.selection-design.product-page.conversation-page #stage .game-proposal :is(.game-plan-actions .btn,.game-card-links>a) svg {width:16px;height:16px;flex:none}
 body.selection-design.product-page.conversation-page #stage .game-plan-actions .game-library-save[aria-pressed=true] svg {fill:currentColor}
-body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome) {margin:0;border-radius:10px}
-body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome)>summary {
- justify-content:space-between;text-align:left;
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-rating {
+ margin:0;min-width:0;border-radius:10px;
 }
-body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome)[open] {
- padding:0 10px 10px;background:var(--selection-panel);
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-rating>summary {
+ display:flex;justify-content:center;align-items:center;gap:6px;min-height:44px;padding:8px 10px;
+ border:0;border-radius:10px;background:transparent;color:var(--selection-accent);
+ font-size:.875rem;line-height:1.4;text-align:center;
 }
-body.selection-design.product-page.conversation-page #stage .game-proposal details:is(.evening-rating,.evening-outcome)[open]>summary {
- padding-inline:2px;background:transparent;border-color:transparent;
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-rating>summary:hover,
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-rating[open] {
+ background:var(--selection-panel);
 }
-body.selection-design.product-page.conversation-page #stage .game-proposal .evening-result-start {
- margin:4px 0 10px;
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-rating>summary:focus-visible {
+ outline:2px solid var(--selection-focus);outline-offset:-2px;
+}
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-rating[open] {padding:0 10px 10px}
+body.selection-design.product-page.conversation-page #stage .game-proposal .evening-rating .evening-buttons {
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;
+}
+.game-proposal .evening-rating .evening-saved-label {
+ display:flex;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:2px 10px;
+ text-align:center;color:var(--selection-navy);
 }
 body.selection-design.product-page.conversation-page #stage .evening-controls-modern {gap:8px}
 body.selection-design.product-page.conversation-page #stage .selection-review {
@@ -254,9 +270,9 @@ body.selection-design.product-page.conversation-page #stage .selection-review {
 .selection-review-actions [hidden] {display:none}
 .evening-saved-label {display:grid;gap:2px;text-align:left}
 .evening-saved-label small {color:var(--selection-accent);font-size:.75rem}
-.evening-confirmation {display:flex;align-items:flex-start;gap:8px}
+.evening-confirmation {display:grid;justify-items:center;gap:2px;text-align:center}
 .evening-confirmation img {flex:none}
-.evening-confirmation strong {display:block;color:var(--selection-navy);font-weight:650}
+.evening-confirmation strong {display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--selection-navy);font-weight:650}
 
 /* The library tabs stay separate. An expanded record groups actions by purpose. */
 body.selection-design.product-page.conversation-page .board-heading h1 {

@@ -40,27 +40,38 @@ test('modern explanation and its escaped unsent draft stay scoped to the request
   assert.doesNotMatch(first,/<script>/);assert.deepEqual(modernRun.responses,[]);
 });
 
-test('modern feedback keeps chosen/start/outcome actions and selected fit available without changing legacy defaults',()=>{
+test('current and legacy results show choice and fit while experience is editable only in library history',()=>{
   const run={...modernRun,responses:[{cardId:'first',fit:'conditional',chosen:true,started:true,outcome:'liked',reason:'time',note:'Short evening'}]};
-  const html=eveningControls(run,'first',{modern:true});
-  for(const token of ['data-act="evening-choose"','data-v="off"','data-act="evening-start"','data-act="evening-outcome"','data-fk="evening-reason:evening-one:first"'])assert.ok(html.includes(token),token);
-  assert.match(html,/data-v="conditional"[^>]+aria-pressed="true"/);
-  assert.match(html,/<summary[^>]*>Изменить уточнение/);
-  const legacy=eveningControls(run,'first');
-  assert.equal(legacy,eveningControls(run,'first',{modern:false}));
-  assert.match(legacy,/<summary>Подходит запросу\?/);
-  assert.doesNotMatch(legacy,/evening-controls-modern/);
+  for(const modern of [true,false]){
+    const result=eveningControls(run,'first',{modern});
+    assert.match(result,/data-act="evening-choose"[^>]+data-v="off"/);
+    assert.match(result,/data-v="conditional"[^>]+aria-pressed="true"/);
+    assert.doesNotMatch(result,/evening-start|evening-outcome|Понравилось/);
+    const history=eveningControls(run,'first',{modern,history:true});
+    assert.match(history,/data-act="evening-start"[^>]+aria-pressed="true"/);
+    assert.match(history,/data-act="evening-outcome"[^>]+data-v="liked"[^>]+aria-pressed="true"/);
+  }
 });
 
-test('saved card feedback is acknowledged and both kinds of rating stay behind an explicit edit control',()=>{
+test('saved fit is acknowledged on results and remains editable in both views',()=>{
   const run={...modernRun,responses:[{cardId:'first',fit:'conditional',chosen:true,started:true,outcome:'liked',reason:null,note:''}]};
   for(const history of [true,false]){
     const html=eveningControls(run,'first',{modern:true,history,status:'sent'});
     assert.match(html,/Спасибо за отзыв!/);
     assert.match(html,/<details class="evening-rating"[^>]+><summary[^>]*>.*Изменить оценку/);
-    assert.match(html,/<details class="evening-outcome"[^>]+><summary[^>]*>.*Изменить отзыв/);
     assert.doesNotMatch(html,/<details class="evening-(rating|outcome)"[^>]+ open/);
     assert.match(html,/С оговоркой/);
-    assert.match(html,/Как прошло: Понравилось/);
+    if(history)assert.match(html,/<details class="evening-outcome"[^>]+><summary[^>]*>.*Как прошло: Понравилось.*Изменить отзыв/);
+  }
+});
+
+test('choosing or recording an experience alone never acknowledges a recommendation rating on results',()=>{
+  for(const outcome of [null,'liked']){
+    const run={...modernRun,responses:[{cardId:'first',chosen:true,started:Boolean(outcome),outcome}]};
+    for(const modern of [true,false]){
+      const result=eveningControls(run,'first',{modern,status:'sent'});
+      assert.doesNotMatch(result,/evening-start|evening-outcome|Спасибо за отзыв|data-feedback-status/);
+    }
+    if(outcome)assert.match(eveningControls(run,'first',{modern:true,history:true}),/Спасибо за отзыв/);
   }
 });

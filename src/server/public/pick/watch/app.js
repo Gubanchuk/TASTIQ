@@ -352,7 +352,7 @@ async function updateEvening(element,action) {
   feedbackOpen.set(key,false);
  }
  if(run===activeEvening){
-  const editor=['fit','explain','outcome'].includes(action.type)?element.closest('.evening-rating,.evening-outcome'):null;
+  const editor=['fit','explain'].includes(action.type)?element.closest('.evening-rating'):null;
   const focusKey=editor&&element.contains(document.activeElement)?editor.querySelector('summary').dataset.fk:null;
   if(editor)editor.open=false;
   refreshFeedback(id);
@@ -420,8 +420,6 @@ document.addEventListener('click',event=>{
  if(act==='undo-replacement')return void navigate({type:'undo_replacement'},{origin:el.hasAttribute('data-inline-undo')?'card-undo':null});
  if(act==='evening-fit')return void updateEvening(el,{type:'fit',value:el.dataset.v});
  if(act==='evening-choose')return void updateEvening(el,{type:'choose',value:el.dataset.v==='on'});
- if(act==='evening-start')return void updateEvening(el,{type:'start',value:el.dataset.v==='on'});
- if(act==='evening-outcome')return void updateEvening(el,{type:'outcome',value:el.dataset.v});
  if(act==='remove-fact'){lastRemovedFactFocus=el.dataset.focus;return void navigate({type:'remove_fact',key:el.dataset.key});}
  if(act==='undo-fact-removal')return void navigate({type:'undo_fact_removal'});
  if(act==='remove-time')return void navigate({type:'remove_time'});

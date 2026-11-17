@@ -9,13 +9,13 @@ export function carryFeedbackView({drafts,open,disclosures},from,to,retainedIds=
   if(typeof id!=='string')continue;
   const source=`${from}:${id}`,target=`${to}:${id}`;
   transfer(drafts,source,target);transfer(open,source,target);
-  transfer(disclosures,`outcome:${source}`,`outcome:${target}`);
+  transfer(disclosures,`rating:${source}`,`rating:${target}`);
  }
 }
 
-// These controls change their value after a click, while their action and game remain the same.
+// Choosing toggles the value while the action and card stay the same.
 export function feedbackToggleFocus(dataset={}) {
- return ['evening-choose','evening-start'].includes(dataset.act)&&dataset.id?{act:dataset.act,id:dataset.id}:null;
+ return dataset.act==='evening-choose'&&dataset.id?{act:dataset.act,id:dataset.id}:null;
 }
 
 export function acceptedFamiliarCard(state,pending) {
