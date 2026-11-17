@@ -49,7 +49,9 @@
 - [x] npm test; npm run test:server; npm run build.
 - [x] Одна объединённая browser-проверка desktop/mobile/узкий экран и крупный текст; исправления одним пакетом, подтверждающий проход.
 - [x] Impeccable detect один раз по изменённым web-файлам, независимый finish review; документация фактического результата.
-- [ ] CODEX_CONTEXT и память, проверить сохранённый design двух режимов; sync-before-push; свежий Git diff/remote; commit и push разрешённого scope. Позднее владелец также разрешил deployment; проверить опубликованный снимок и публичные страницы.
+- [x] CODEX_CONTEXT и память, проверить сохранённый design двух режимов; sync-before-push; свежий Git diff/remote; commit и push разрешённого scope. Позднее владелец также разрешил deployment; проверить опубликованный снимок и публичные страницы.
 
 
 Проверки реализации завершены в изолированном снимке:660/660, HTTP/build PASS. Отправка/deployment выполняются после этой записи; фактический итог в памяти проекта. Визуальный FORM finding закрыт verdict pass; scope и ограничения см. FINISH_REVIEW.
+
+Итог: объединённый код `627ec1f` опубликован, 696/696 и HTTP/build PASS. Vercel-зеркало проверено в браузере; транспорт основного домена требует адресного исправления в Timeweb Cloud, см. `docs/PRODUCTION_TRANSPORT_2026-11-17.md`.
