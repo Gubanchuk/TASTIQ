@@ -23,10 +23,11 @@ import {createLibraryStore} from '/shared/library-store.js';
 import {aiErrorMessage,replacementNotice} from '/shared/ai-error-message.js';
 
 const requestedDomain=new URLSearchParams(location.search).get('domain');
-const domain=['film','series','cartoon'].includes(requestedDomain)?requestedDomain:'film';
+const domain=['film','series','cartoon','anime'].includes(requestedDomain)?requestedDomain:'film';
+const animation=domain==='cartoon'||domain==='anime';
 const config=mediaConfig(domain),CONVERSATION_KEY=conversationStorageKey(domain),GAME_HISTORY_PREFIX=mediaHistoryPrefix(domain);
 document.title=`${config.title} — TASTIQ`;
-document.querySelector('[data-selection-domain]').textContent=({film:'Подбираем фильм',series:'Подбираем сериал',cartoon:'Подбираем мультфильм'})[domain];
+document.querySelector('[data-selection-domain]').textContent=({film:'Подбираем фильм',series:'Подбираем сериал',cartoon:'Подбираем мультфильм',anime:'Подбираем аниме'})[domain];
 document.querySelectorAll('.conversation-domains a').forEach(a=>{const selected=new URL(a.href).searchParams.get('domain')===domain;a.toggleAttribute('aria-current',selected);if(selected)a.setAttribute('aria-current','page');});
 const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -96,20 +97,20 @@ function correctionForm({id='correction-form'}={}) {
 }
 function contextForm(context) {
  context=contextEditorValues(context,client.draft('__context').text,client.state.id);
- const select=(name,label,values)=>`<label class="game-field"${['commitment','onlyEnded'].includes(name)?' data-episodic-field'+(domain==='cartoon'&&context.format==='movie'?' hidden':''):''}>${label}<select class="input" name="${name}"><option value="">Не уточняли</option>${Object.entries(values).map(([value,label])=>`<option value="${value}"${String(context[name])===value?' selected':''}>${label}</option>`).join('')}</select></label>`;
+ const select=(name,label,values)=>`<label class="game-field"${['commitment','onlyEnded'].includes(name)?' data-episodic-field'+(animation&&context.format==='movie'?' hidden':''):''}>${label}<select class="input" name="${name}"><option value="">Не уточняли</option>${Object.entries(values).map(([value,label])=>`<option value="${value}"${String(context[name])===value?' selected':''}>${label}</option>`).join('')}</select></label>`;
  return '<details class="game-context-editor" data-disclosure="context"><summary>Изменить условия</summary><form data-form="context" id="context-form"><p class="request-field-note">Все поля необязательны.</p>'
   +select('company','С кем смотришь',{solo:'Один',adults:'Со взрослыми',children:'С детьми'})
   +`<label class="game-field" data-child-field${context.company==='children'?'':' hidden'}>Возраст младшего зрителя<input class="input" name="childAge" type="number" min="0" max="17" value="${context.childAge??''}"></label>`
   +`<label class="game-field">Есть минут на сегодня<input class="input" name="minutes" type="number" min="5" max="1440" value="${context.minutes??''}" placeholder="Без указанного ограничения"></label>`
   +(domain==='film'?'<input type="hidden" name="timeMode" value="runtime">':select('timeMode','Ограничение относится к',domain==='series'?{episode:'Одному эпизоду',session:'Просмотру сегодня'}:{runtime:'Всему фильму',episode:'Одному эпизоду',session:'Просмотру сегодня'}))
-  +(domain==='cartoon'?select('format','Формат',{movie:'Один мультфильм',episodic:'Эпизоды'}):'')
+  +(animation?select('format','Формат',{movie:domain==='anime'?'Полнометражное аниме':'Один мультфильм',episodic:'Эпизоды'}):'')
   +(domain!=='film'?select('commitment','Готовность к длинной истории',{single:'Один просмотр',short:'Короткая история',long:'Можно надолго',open:'Не принципиально'}):'')
   +(domain!=='film'?select('onlyEnded','Завершённость сериала',{'true':'Только завершённые','false':'Можно продолжающиеся'}):'')
   +'<button type="submit" class="btn btn-secondary">Сохранить условия</button></form></details>';
 }
 function readContextForm(form) {
  const value=name=>form.elements[name]?.value||null;
- return {company:value('company'),childAge:value('company')==='children'&&value('childAge')!==null?Number(value('childAge')):null,minutes:value('minutes')!==null?Number(value('minutes')):null,timeMode:value('minutes')!==null?value('timeMode'):null,format:domain==='film'?'movie':domain==='series'?'episodic':value('format'),commitment:domain==='film'||domain==='cartoon'&&value('format')==='movie'?null:value('commitment'),onlyEnded:domain==='film'||domain==='cartoon'&&value('format')==='movie'||value('onlyEnded')===null?null:value('onlyEnded')==='true'};
+ return {company:value('company'),childAge:value('company')==='children'&&value('childAge')!==null?Number(value('childAge')):null,minutes:value('minutes')!==null?Number(value('minutes')):null,timeMode:value('minutes')!==null?value('timeMode'):null,format:domain==='film'?'movie':domain==='series'?'episodic':value('format'),commitment:domain==='film'||animation&&value('format')==='movie'?null:value('commitment'),onlyEnded:domain==='film'||animation&&value('format')==='movie'||value('onlyEnded')===null?null:value('onlyEnded')==='true'};
 }
 
 function setContextOpen(open) {
@@ -487,7 +488,11 @@ document.addEventListener('toggle',event=>{const el=event.target;if(el.matches('
 document.addEventListener('load',event=>{const img=event.target;if(img.matches?.('.game-poster img'))img.closest('.game-poster').classList.add('is-loaded');},true);
 document.addEventListener('error',event=>{const img=event.target;if(img.matches?.('.game-poster img')){const poster=img.closest('.game-poster'),tile=document.createElement('span');tile.textContent='Нет обложки';poster.classList.add('game-poster-fallback');poster.replaceChildren(tile);}},true);
 window.addEventListener('online',()=>void feedback.flush());
-window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());else if(event.key===null||event.key==='tastiq.site.library'||event.key?.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
+window.addEventListener('storage',event=>{
+ if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());
+ else if(event.key===null||event.key==='tastiq.site.library'||event.key?.startsWith(GAME_HISTORY_PREFIX)
+   ||domain==='anime'&&event.key?.startsWith(mediaHistoryPrefix('cartoon'))){history.refresh();render();}
+});
 compactRequest.addEventListener('change',event=>{const details=$('.game-request-details');if(details){details.open=!event.matches;disclosures.set('request-details',details.open);}});
 render();
 if(!selectionMode.choosing)await client.start();

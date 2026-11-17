@@ -45,3 +45,7 @@
 @media(max-width:360px){.brand .site-logo{width:110px}.btn{padding-inline:13px;font-size:12px;gap:8px}.door-title{font-size:18px}.door-go{width:32px;height:32px;right:0}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.door:is(:hover,:focus-visible) .door-cover:nth-child(1){transform:rotate(-16deg)}.door:is(:hover,:focus-visible) .door-cover:nth-child(2){transform:rotate(-3deg)}.door:is(:hover,:focus-visible) .door-cover:nth-child(3){transform:rotate(15deg)}}
 .doors:focus-visible{outline:none}
+.door[data-domain=anime]{--door-ground:var(--brand-primary)}
+.anime-door-art{position:absolute;inset:16% 12% 18%;border-radius:50% 50% 32% 32%;background:radial-gradient(circle at 56% 37%,var(--brand-inverse) 0 16%,transparent 16.5%),linear-gradient(153deg,transparent 56%,var(--brand-dark) 56.5% 72%,var(--brand-accent) 72.5%);border-bottom:1px solid var(--brand-inverse)}
+@media(min-width:1051px){.doors.with-anime{grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,1.7vw,26px)}}
+@media(min-width:761px) and (max-width:1050px){.doors.with-anime{grid-template-columns:repeat(3,minmax(0,1fr))}}

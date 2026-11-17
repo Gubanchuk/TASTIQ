@@ -1,3 +1,4 @@
+import {animeStyleLabel,inLibraryDomain,mediaLibraryDomain} from '/shared/anime-pilot.js';
 import {selectionModeTitle} from '/shared/selection-mode.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '/shared/library-store.js';
@@ -12,19 +13,19 @@ import {createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl} from '/shared
 
 const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
-const DOMAINS={game:'Игры',film:'Фильмы',series:'Сериалы',cartoon:'Мультфильмы'};
-const NOUNS={game:'игра',film:'фильм',series:'сериал',cartoon:'мультфильм'};
+const DOMAINS={game:'Игры',film:'Фильмы',series:'Сериалы',cartoon:'Мультфильмы',anime:'Аниме'};
+const NOUNS={game:'игра',film:'фильм',series:'сериал',cartoon:'мультфильм',anime:'аниме'};
 const VIEWS={saved:'Сохранённое',liked:'Понравилось',history:'Подборы',all:'Все отметки',evenings:'Отзывы о рекомендациях'};
 const isCollection=()=>['saved','liked','all'].includes(state.view);
 const EXPOSURES={played:'Уже играл',started:'Начал',finished:'Прошёл',paused:'Отложил'};
-const key=row=>`${row.domain}:${row.id}`;
+const key=row=>`${mediaLibraryDomain(row.domain,row.id)}:${row.id}`;
 const title=row=>String(row.title||row.ru||row.name||'Без названия');
 const icon=name=>`<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">${({search:'<circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/>',close:'<path d="m5 5 10 10M15 5 5 15"/>',arrow:'<path d="M3 10h13m-5-5 5 5-5 5"/>',book:'<path d="M5 3h10v14l-5-3-5 3V3Z"/>'})[name]||''}</svg>`;
 let storage;try{storage=qaStorage(localStorage);}catch{/* keep this visit in memory */}
 const library=createLibraryStore({storage});
 const archive=createSelectionArchive({storage});
 const familiar=createGameHistory({storage});
-const mediaHistories=Object.fromEntries(['film','series','cartoon'].map(domain=>[domain,createMediaHistory(domain,{storage})]));
+const mediaHistories=Object.fromEntries(['film','series','cartoon','anime'].map(domain=>[domain,createMediaHistory(domain,{storage})]));
 const historyFor=domain=>domain==='game'?familiar:mediaHistories[domain];
 const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
@@ -85,7 +86,7 @@ function records() {
 function filtered(rows,matches=()=>true) {
  const {query,domain,sort}=activeFilters(),needle=query.trim().toLocaleLowerCase('ru');
  const at=row=>new Date(row.at??row.addedAt??0).valueOf()||0;
- return rows.filter(row=>(domain==='all'||row.domain===domain)&&matches(row)
+ return rows.filter(row=>(domain==='all'||inLibraryDomain(row,domain))&&matches(row)
   &&(!needle||`${title(row)} ${row.original??''} ${row.searchText??''}`.toLocaleLowerCase('ru').includes(needle)))
  .sort(sort==='title'?(a,b)=>title(a).localeCompare(title(b),'ru'):sort==='oldest'?(a,b)=>at(a)-at(b):(a,b)=>at(b)-at(a));
 }
@@ -107,7 +108,7 @@ function card(row) {
  const attrs=dataFor(row),k=key(row),url=safeLibraryUrl(row.link),exposure=row.familiarity;
  const rating=row.ratingConflict?'Разные впечатления':({liked:'Нравится',disliked:'Не нравится',mixed:'Смешанные впечатления'}[row.rating]??'');
  const ratingButton=(status,label)=>`<button type="button" class="library-button rating-button" data-act="rate" ${attrs} data-value="${status}" data-focus="${focusKey(`rate-${status}`,row)}" aria-pressed="${row.rating===status}">${label}</button>`;
- return `<article class="board-card" data-card="${esc(k)}">${media(row)}<div class="board-card-copy"><p class="library-meta">${esc([row.year,NOUNS[row.domain]].filter(Boolean).join(' · '))}</p><h3>${esc(title(row))}</h3>`
+ return `<article class="board-card" data-card="${esc(k)}">${media(row)}<div class="board-card-copy"><p class="library-meta">${esc([row.year,NOUNS[row.domain],animeStyleLabel(row.id)].filter(Boolean).join(' · '))}</p><h3>${esc(title(row))}</h3>`
   +(rating?`<p class="rating-label ${esc(row.rating??'mixed')}">${rating}</p>`:'')
   +(!exposure&&(row.status==='known'||row.lane==='known')?'<p class="library-meta">Уже знакомо</p>':'')
   +`</div><div class="board-card-actions">${button(`${icon('book')}${row.saved?'Сохранено':'Сохранить'}`,'saved',`${attrs} data-focus="${focusKey('saved',row)}" aria-pressed="${row.saved}" title="${row.saved?'Убрать из сохранённого':'Сохранить на будущее'}"`)}</div>`

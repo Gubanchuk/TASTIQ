@@ -3,6 +3,7 @@ import {feasibilityHtml} from '../game/feasibility.js';
 import {titleCopyHtml} from '../../shared/title-copy.js';
 import {resultSectionHeading} from '../../shared/result-clarity.js';
 import {isLibrarySaved} from '../../shared/library-store.js';
+import {animeStyleLabel,mediaLibraryDomain} from '../../shared/anime-pilot.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const nameOf=card=>card.ru||card.name||card.title||'Название';
@@ -22,25 +23,26 @@ export function saveMediaToLibrary(library,card,{lane='want',domain='film'}={}) 
 
 export function toggleMediaLibrarySave(library,card,{domain='film'}={}) {
  if(!card?.id)return null;
- const prior=library.all().find(row=>row.domain===domain&&row.id===card.id);
+ const prior=library.all().find(row=>row.domain===mediaLibraryDomain(domain,card.id)&&row.id===card.id);
  return library.setSaved({...card,title:nameOf(card)},!isLibrarySaved(prior),{domain});
 }
 
 // Familiarity can be displayed from a library plan/rating without creating an exclusion.
 export function mediaLibraryState(card,items=[],domain='film') {
- const item=items.find(row=>row.domain===domain&&row.id===card?.id);
+ const item=items.find(row=>row.domain===mediaLibraryDomain(domain,card?.id)&&row.id===card?.id);
  return {saved:isLibrarySaved(item),libraryLane:item?.lane??'want',known:Boolean(item&&(item.lane==='known'||['liked','disliked','known'].includes(item.status)))};
 }
 
 export function mediaCardHtml(card,{domain='film',index=0,marked=false,kept=false,inlineUndo=false,known=false,blocked=false,saved=false,libraryLane='want'}={}) {
  const title=nameOf(card),heading='h2',id=esc(card.id),later=saved;
+ const style=domain==='anime'&&animeStyleLabel(card.id)?'<p class="game-kept">В аниме-стиле</p>':'';
  if(marked)return resultSectionHeading(index)+`<article class="game-card game-card-pending${index===0?'':' game-alternative'}" data-card-id="${id}" aria-label="${esc(title)}">`
-  +`<div class="game-pending-identity">${poster(card)}<div><${heading}>${esc(title)}</${heading}><p class="game-pending-label">Отмечено для замены</p><p class="game-help">Остальные варианты сохранятся.</p></div></div>`
+  +`<div class="game-pending-identity">${poster(card)}<div><${heading}>${esc(title)}</${heading}>${style}<p class="game-pending-label">Отмечено для замены</p><p class="game-help">Остальные варианты сохранятся.</p></div></div>`
   +`<div class="game-pending-controls"><div class="game-card-actions">${button('Заменить только этот вариант','replace-one',card.id)}${button('Отменить','familiar-unmark',card.id,'familiar')}${button('Оставить — хочу пересмотреть','familiar-keep',card.id,'keep')}</div>`
   +`<label class="game-check"><input type="checkbox" data-history-block="${id}" data-focus="block:${id}"${blocked?' checked':''}> Не предлагать в следующих подборах</label></div></article>`;
  const url=safeUrl(card.link),reason=card.ai?.reason||card.reason||'',caveat=card.ai?.caveat||card.caveat||'';
  return resultSectionHeading(index)+`<article class="game-card game-proposal ${index===0?'game-proposal-featured':'game-alternative'}" data-card-id="${id}"${title.length>42?' data-long-title':''} aria-label="${esc(title)}"><div class="game-card-layout">${poster(card,{eager:index===0})}<div class="game-card-copy">`
-  +`<div class="game-card-heading"><${heading} aria-label="${esc(title)}">${titleCopyHtml(title,card.year)}</${heading}><div class="game-copy-status" data-copy-status role="status" aria-live="polite"></div>${cardMetadataHtml(card,{domain})}`
+  +`<div class="game-card-heading"><${heading} aria-label="${esc(title)}">${titleCopyHtml(title,card.year)}</${heading}><div class="game-copy-status" data-copy-status role="status" aria-live="polite"></div>${style}${cardMetadataHtml(card,{domain})}`
   +(kept?'<p class="game-kept">Знакомое название — оставлено в подборе.</p>':known?'<p class="game-kept">Уже знакомо · отметка в этом браузере</p>':'')
   +'</div>'
   +(inlineUndo?'<div class="game-replacement-inline"><p role="status">Вариант заменён</p><button type="button" class="btn btn-secondary" data-act="undo-replacement" data-inline-undo>Отменить замену</button></div>':'')

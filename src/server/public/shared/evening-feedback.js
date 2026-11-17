@@ -6,7 +6,7 @@ export const FEEDBACK_KEY = 'tastiq.site.evenings';
 export const FIT = {accept:'Подходит',conditional:'С оговоркой',reject:'Не подходит',unknown:'Пока не знаю'};
 export const REASONS = {mood:'Не то настроение',taste:'Не мой вкус',time:'Не укладывается по времени',company:'Не для моей компании',availability:'Не могу запустить или посмотреть',seen:'Уже знакомо',other:'Другая причина'};
 export const OUTCOMES = {liked:'Понравилось',mixed:'Нормально',disliked:'Не зашло',not_started:'Не начал'};
-const DOMAINS = ['game','film','series','cartoon'], ORIGINS = ['model','fill','engine'];
+const DOMAINS = ['game','film','series','cartoon','anime'], ORIGINS = ['model','fill','engine'];
 const token = (x) => typeof x === 'string' && /^[a-zA-Z0-9:_-]{1,100}$/.test(x);
 const feature = (x) => typeof x === 'string' && /^[a-zA-Z0-9._-]{1,100}$/.test(x);
 const text = (x,max) => typeof x === 'string' && x.length <= max;

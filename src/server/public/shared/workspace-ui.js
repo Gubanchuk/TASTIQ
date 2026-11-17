@@ -81,4 +81,4 @@ if(switcher&&menu){
 const shellDomain=location.pathname.includes('/pick/game')?'game':new URLSearchParams(location.search).get('domain')||'film';
 for(const link of document.querySelectorAll('[data-shell-domain]'))if(link.dataset.shellDomain===shellDomain)link.setAttribute('aria-current','page');
 
-const shortDomain=document.querySelector('.app-domain-short');if(shortDomain)shortDomain.textContent=({game:'Игра',film:'Фильм',series:'Сериал',cartoon:'Мультфильм'})[shellDomain]||'Фильм';
+const shortDomain=document.querySelector('.app-domain-short');if(shortDomain)shortDomain.textContent=({game:'Игра',film:'Фильм',series:'Сериал',cartoon:'Мультфильм',anime:'Аниме'})[shellDomain]||'Фильм';

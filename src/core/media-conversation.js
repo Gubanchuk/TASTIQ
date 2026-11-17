@@ -5,7 +5,9 @@ import { validateSessionTime, currentSessionMinutes, isSessionTimeSourceRetracte
 import { SELECTION_TURN_LIMIT,normalizeSelectionInterview,restartSelectionDepth,changeSelectionDepth,interviewQuestionFields,
   canOfferInterviewQuestion,rememberInterviewQuestion,skippedInterviewQuestions,chooseInterviewQuestion,interviewCheckpoint,reviewAtInterviewCapacity } from './selection-dialogue.js';
 
-const domains = ['film','series','cartoon'];
+import {animeRequestOptions} from './anime-request.js';
+
+const domains = ['film','series','cartoon','anime'];
 const controls = ['unknown','indifferent','none'];
 const neutral = {unknown:'Пока не знаю',indifferent:'Не принципиально',none:'Ни один вариант не подходит'};
 const stances = ['want','avoid','require','exclude','indifferent','unknown','conditional','history'];
@@ -228,7 +230,7 @@ function checkedTime(s,value,ctx) {
   const checked=validateSessionTime({...value,quote:watchTime(value.quote)},mapped);
   if(!checked.error)return {...value};
   // Explicit runtime caps are different from a whole-series duration or its commitment.
-  const t=folded(value.quote),match=t.match(/^(?:(?:хочу|нужен|нужны)\s+)?(?:на\s+)?(фильм|полнометражный фильм|эпизод(?:ы)?|сери[яиюй])\s+(?:по\s+)?(?:не больше|до|максимум)\s+(.+)$/u);
+  const t=folded(value.quote),match=t.match(/^(?:(?:хочу|нужен|нужны)\s+)?(?:на\s+)?(фильм|полнометражный фильм|(?:(?:перв(?:ая|ую|ой|ый)|кажд(?:ая|ую|ый)|все)\s+)?(?:эпизод(?:ы)?|сери[яиюй]))\s+(?:по\s+)?(?:не больше|до|максимум)\s+(.+)$/u);
   if(!match||conditional(t)||isSessionTimeSourceRetracted(value.sourceId,s))throw fail(checked.error);
   const expectedMode=/фильм/u.test(match[1])?'runtime':'episode';
   if(ctx.timeMode!==expectedMode||s.domain==='film'&&expectedMode!=='runtime')throw fail('Длина фильма и эпизода должны быть указаны отдельно.');
@@ -557,7 +559,7 @@ export function mediaConversationToLegacy(s,dict,catalog=null) {
     childAge:s.context.company==='children'&&s.context.childAge!==null?String(s.context.childAge):null,onlyEnded:s.context.onlyEnded===true,note:clean(s.summary,300)};
   for(const fact of s.facts)if(fact.titleId&&fact.exposure==='finished'&&!keep.has(fact.titleId))legacy.answers[fact.titleId]={reaction:'known',text:fact.quote};
   legacy.preferences=s.facts.filter(f=>f.scope==='history'&&f.stance==='want'&&f.feature&&dict.featureById.has(f.feature)).map(f=>({f:f.feature}));
-  legacy.session={...legacy.session,goalDriven:true,excludeSeries:false,goalWants:signal(['want','require']),goalAvoids:signal(['avoid','exclude']),goalRequires:signal(['require']),goalExcludes:signal(['exclude']),genreWants:[],
+  legacy.session={...legacy.session,...animeRequestOptions(s),goalDriven:true,excludeSeries:false,goalWants:signal(['want','require']),goalAvoids:signal(['avoid','exclude']),goalRequires:signal(['require']),goalExcludes:signal(['exclude']),genreWants:[],
     ...(s.sessionTime?{minutes:s.sessionTime.minutes,maxRuntime:s.sessionTime.minutes}:{}),notNow:[...new Set([...excluded,...[...f.excluded,...f.hidden].filter(id=>!keep.has(id))])]};
   legacy.conversation={domain:s.domain,revision:s.revision,summary:s.summary,facts:s.facts,context:s.context,contextEvidence:s.contextEvidence,sessionTime:s.sessionTime??null,uncertainties:s.uncertainties,retractions:s.retractions,
     familiarity:{returnToIds,hiddenIds:f.hidden,excludedIds:f.excluded},turns:s.turns.map(t=>({id:t.id,question:t.question.title,answer:t.answer,kind:t.kind,superseded:Boolean(t.superseded)}))};

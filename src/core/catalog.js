@@ -3,6 +3,7 @@ import { DOMAINS } from '../aspects/index.js';
 import { CONTEXTS } from './context.js';
 import { DATA, readJson } from '../lib/fsx.js';
 import { normalizeTitle, transliterate, editDistance } from '../lib/text.js';
+import { animePilot, animeCatalogCorrections, animeFirstEpisodes } from '../server/public/shared/anime-pilot.js';
 
 /**
  * Catalog of one domain in memory: items by id, editions grouped by work, a name index for search.
@@ -34,7 +35,7 @@ export function makeCatalog(raw, domainId = 'game') {
   };
 }
 
-/** Loads every domain catalog: games from catalog.json, films, series and cartoons from catalog-screen.json. */
+/** Loads the legacy screen catalogs and the reviewed anime slice of the same snapshot. */
 export function loadCatalogs({ gamesPath, screenPath } = {}) {
   const catalogs = {};
   // Russian translations of English evidence quotes (08-translate-quotes.js), shown with the original one tap away.
@@ -55,15 +56,37 @@ export function loadCatalogs({ gamesPath, screenPath } = {}) {
   if (screen) {
     translate(screen.items);
     for (const item of screen.items) if (posters[item.id]) item.poster = posters[item.id];
+    const anime = [];
+    for (const item of screen.items) {
+      if (Object.hasOwn(animeCatalogCorrections,item.id)) item.domain = animeCatalogCorrections[item.id];
+      if (!Object.hasOwn(animePilot,item.id)) continue;
+      const entry = animePilot[item.id];
+      const firstEpisode = animeFirstEpisodes[item.id];
+      // The pilot links to official sources and displays an original text placeholder for artwork.
+      // Omit imported review text, syndication summaries and images in this section.
+      const features = Object.fromEntries(Object.entries(item.features).flatMap(([id,feature]) => {
+        const ev = (feature.ev ?? []).filter(value => value.kind === 'genre' || value.kind === 'fact');
+        return ev.length && feature.src.every(value => value === 'genre' || value === 'fact') ? [[id,feature]] : [];
+      }));
+      anime.push({
+        ...item, domain:'anime', animeOrigin:entry.origin, standalone:entry.standalone,
+        ru:entry.names[0], aliases:[...(item.aliases??[]),...entry.names],
+        runtime:item.kind==='series'?firstEpisode?.minutes??null:item.runtime,
+        ...(firstEpisode?{runtimeSource:firstEpisode.source}:{}),
+        link:entry.source, poster:null, image:null, summary:null, features,
+      });
+    }
     for (const domain of ['film', 'series', 'cartoon']) {
       catalogs[domain] = makeCatalog({ ...screen, items: screen.items.filter((x) => x.domain === domain) }, domain);
     }
+    if (anime.length) catalogs.anime = makeCatalog({ ...screen, items:anime }, 'anime');
   }
   return catalogs;
 }
 
 export function catalogMeta(catalogs) {
-  return {domains:Object.fromEntries(Object.entries(catalogs).map(([id,c])=>[id,{
+  const uniqueItems=new Set(Object.entries(catalogs).flatMap(([domain,c])=>c.items.map(item=>domain==='game'?item.work??item.id:item.id))).size;
+  return {uniqueItems,domains:Object.fromEntries(Object.entries(catalogs).map(([id,c])=>[id,{
     items:c.items.length,dictionary:c.dict.version,label:c.domain.label,
     labels:Object.fromEntries([
       ...c.dict.features.map(f=>[f.id,f.label]),

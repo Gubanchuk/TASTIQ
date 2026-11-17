@@ -39,3 +39,15 @@ test('namespace and size checks are enforced, QA is separate and owner analysis 
  assert.equal(reports[0].rows[0].reviewed_lists,1);assert.equal(reports[0].rows[0].no_fit,1);
  assert.equal(reports[1].rows[0].reports,1);
 });
+test('the anime migration accepts both new and previously queued feedback',async()=>{
+ const legacy={...event(),id:'old-cartoon',domain:'cartoon'};
+ await record(legacy,'qa:anime');
+ const anime={...event(),id:'new-anime',domain:'anime'};
+ await db.exec(readFileSync('supabase/migrations/20261118020000_tastiq_anime_feedback.sql','utf8'));
+ assert.deepEqual((await record(anime,'qa:anime')).rows[0].receipt,{ok:true,id:'new-anime',revision:2});
+ await record(anime,'qa:anime');
+ await record({...legacy,revision:3},'qa:anime');
+ assert.deepEqual((await db.query("select domain, revision from public.tastiq_feedback_latest where namespace='qa:anime' order by domain")).rows,
+  [{domain:'anime',revision:2},{domain:'cartoon',revision:3}]);
+ await assert.rejects(()=>record({...anime,id:'invalid-domain',domain:'unknown'},'qa:anime'),e=>e.code==='23514');
+});

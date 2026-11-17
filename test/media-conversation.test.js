@@ -16,6 +16,20 @@ const dict = screenFixture('film').dict;
 const context = () => ({company:null,childAge:null,timeMode:null,commitment:null,onlyEnded:null,format:null});
 const q = (id='experience') => ({id,title:'Какое впечатление хочется получить?',why:'Уточним сегодняшний запрос.',options:[{id:'warm',label:'Тёплая история'},{id:'dark',label:'Мрачная история'}],multiple:true,controls:['unknown','indifferent','none']});
 const proposal = (patch={}) => ({summary:'Ищем историю на сегодняшний вечер.',facts:[],uncertainties:[],action:'question',question:q(),context:context(),sessionTime:null,...patch});
+
+test('anime accepts a sourced limit for the first episode and preserves scope',()=>{
+ for(const quote of ['Первая серия не больше 27 минут.','На первый эпизод максимум 27 минут','Каждый эпизод до 27 минут']){
+  const s=said(quote,'anime');
+  const next=accepted(s,{context:{...context(),timeMode:ev(s,'episode',quote)},
+   sessionTime:{minutes:27,sourceId:s.turns[0].id,quote}});
+  assert.equal(next.sessionTime.quote,quote);
+  assert.equal(sessionOf(project(next,dict)).allAnimeEpisodes,quote.startsWith('Каждый'));
+ }
+ const text='Если буду один, первая серия не больше 27 минут.';
+ const s=said(text,'anime'),quote='первая серия не больше 27 минут.';
+ assert.ok(apply(s,proposal({context:{...context(),timeMode:ev(s,'episode',quote)},
+  sessionTime:{minutes:27,sourceId:s.turns[0].id,quote}}),dict).error);
+});
 const reply = (s,text,patch={}) => reduce(s,{type:'answer',questionId:s.question.id,text,selected:[],...patch});
 const said = (text,domain='film') => reply(fresh({id:`test-${domain}`,domain}),text);
 const fact = (s,patch={}) => ({key:'goal',text:'Тёплая история',stance:'want',scope:'today',sourceId:s.turns.at(-1).id,quote:s.turns.at(-1).answer,feature:'tone.feelgood',titleId:null,exposure:null,titleIntent:null,...patch});

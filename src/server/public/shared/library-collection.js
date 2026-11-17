@@ -1,7 +1,8 @@
 import {isLibrarySaved} from './library-store.js';
+import {mediaLibraryDomain} from './anime-pilot.js';
 
-const key=row=>`${row.domain}:${row.id}`;
-const valid=row=>row&&['game','film','series','cartoon'].includes(row.domain)&&typeof row.id==='string'&&row.id.length>0;
+const key=row=>`${mediaLibraryDomain(row.domain,row.id)}:${row.id}`;
+const valid=row=>row&&['game','film','series','cartoon','anime'].includes(row.domain)&&typeof row.id==='string'&&row.id.length>0;
 const ratingOf=row=>['liked','disliked'].includes(row.status)?row.status:null;
 
 // A read-only view: saving, familiarity, request fit and experience are distinct.
@@ -9,7 +10,7 @@ const ratingOf=row=>['liked','disliked'].includes(row.status)?row.status:null;
 export function collectionRecords({items=[],familiar=[],runs=[]}={}) {
  const rows=new Map();
  const ensure=row=>{
-  const id=key(row);if(!rows.has(id))rows.set(id,{...row,saved:false,inLibrary:false,rating:null,ratingSource:null,ratingConflict:false,reviews:[],title:row.title||row.ru||row.name||row.id});
+  const id=key(row);if(!rows.has(id))rows.set(id,{...row,domain:mediaLibraryDomain(row.domain,row.id),saved:false,inLibrary:false,rating:null,ratingSource:null,ratingConflict:false,reviews:[],title:row.title||row.ru||row.name||row.id});
   return rows.get(id);
  };
  for(const item of items.filter(valid)){

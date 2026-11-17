@@ -19,3 +19,4 @@ a{text-underline-offset:4px}
 .conversation-brand::after{display:none}
 @media(max-width:760px){.conversation-brand .site-logo{width:123px}}
 @media(max-width:360px){.conversation-brand .site-logo{width:108px}}
+[data-anime-entry][hidden]{display:none!important}

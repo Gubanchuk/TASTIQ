@@ -27,8 +27,12 @@ export function feasibilityOf(item, session = {}) {
   if (session.minutes || session.maxRuntime) {
     const minutes = Math.min(session.minutes ?? Infinity, session.maxRuntime ?? Infinity);
     if (item.kind === 'game') checks.push({ key: 'minutes', status: 'unknown', text: `Не проверено, удобно ли прерваться через ${minutes} мин.` });
-    else checks.push({ key: 'minutes', status: item.runtime == null ? 'unknown' : item.runtime <= minutes ? 'yes' : 'no',
-      text: item.runtime == null ? `Длительность не проверена; сегодня есть ${minutes} мин.` : `${item.kind === 'series' ? 'Серия' : 'Фильм'} идёт ${item.runtime} мин; сегодня есть ${minutes} мин.` });
+    else {
+      const unit=item.kind==='series'?(item.domain==='anime'?'Первая серия':'Серия'):'Фильм';
+      checks.push({ key: 'minutes', status: item.runtime == null ? 'unknown' : item.runtime <= minutes ? 'yes' : 'no',
+        ...(item.runtimeSource?{source:item.runtimeSource}:{}),
+        text: item.runtime == null ? `Длительность не проверена; сегодня есть ${minutes} мин.` : `${unit} идёт ${item.runtime} мин; сегодня есть ${minutes} мин.` });
+    }
   }
   if (session.childAge) checks.push({ key: 'age', status: 'unknown', text: 'Возрастная пригодность по проверенному источнику пока не подтверждена.' });
   return checks;

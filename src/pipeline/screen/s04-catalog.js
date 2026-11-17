@@ -2,7 +2,7 @@
 //   IMDb (titles, votes, rating, runtime, episodes, Russian names),
 //   MovieLens Tag Genome (viewer-grounded tag relevance) and MovieLens user tags,
 //   TVmaze (status, network, genres, summary), Wikidata (country, Russian names, animated or live-action).
-// Japanese animation is split into its own "anime" domain and left out of this version's catalogs.
+// The "anime" domain in this snapshot is a candidate pool. The loader applies the reviewed pilot.
 import { createReadStream, existsSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { resolve } from 'node:path';

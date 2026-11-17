@@ -16,7 +16,7 @@ export function requestPreviewHtml({screen={},state={},busy=false}={}){
  return (raw?`<p>${esc(raw)}</p>`:'')+(first?`<button type="button" class="btn btn-secondary btn-s" data-act="preview-clarify"${busy?' disabled':''}>Уточнить один момент</button>`:'');
 }
 export function requestOverviewHtml({screen={},state={},contextHtml='',timeHtml='',toolsHtml='',clarification='',correction='',restore='',busy=false}={}){
- const summary=requestSummaryText(screen,state),media=['film','series','cartoon'].includes(screen.domain??state.domain),presentation=media?mediaRequestPresentation(screen):null,facts=presentation?.facts??screen.facts??[];
+ const summary=requestSummaryText(screen,state),media=['film','series','cartoon','anime'].includes(screen.domain??state.domain),presentation=media?mediaRequestPresentation(screen):null,facts=presentation?.facts??screen.facts??[];
  if(presentation)contextHtml=presentation.conditions.length?`<h3>Условия</h3>${factRows(presentation.conditions,busy)}`:'';
  const labels={want:'Хочется',avoid:'Не хочется',require:'Обязательно',exclude:'Исключено',indifferent:'Не принципиально',unknown:'Нужно уточнить',conditional:'При условии',history:'Прошлый опыт'};
  const groups=new Map();for(const fact of facts){const group=fact.scope==='history'?'history':fact.stance;if(!groups.has(group))groups.set(group,[]);groups.get(group).push(fact);}

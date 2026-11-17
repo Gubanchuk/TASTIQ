@@ -54,4 +54,5 @@ export const DOMAINS = {
   film: { id: 'film', label: 'Посмотреть фильм', noun: 'фильм', dict: SCREEN_DICT, minVotes: 0, qualityFloor: 0.62, qualityWarn: 0.68, votesLabel: 'оценок IMDb', time: screen.FILM_TIME },
   series: { id: 'series', label: 'Посмотреть сериал', noun: 'сериал', dict: SCREEN_DICT, minVotes: 0, qualityFloor: 0.65, qualityWarn: 0.72, votesLabel: 'оценок IMDb', time: screen.SERIES_TIME },
   cartoon: { id: 'cartoon', label: 'Посмотреть мультфильм', noun: 'мультфильм', dict: SCREEN_DICT, minVotes: 0, qualityFloor: 0.62, qualityWarn: 0.68, votesLabel: 'оценок IMDb', defining: ['format.animation'], time: screen.FILM_TIME },
+  anime: { id: 'anime', label: 'Посмотреть аниме', noun: 'аниме', dict: SCREEN_DICT, minVotes: 0, qualityFloor: 0.62, qualityWarn: 0.68, votesLabel: 'оценок IMDb', defining: ['format.animation'], time: screen.FILM_TIME },
 };

@@ -1,7 +1,7 @@
 import {selectionModeTitle} from './selection-mode.js';
 
 const clean=value=>typeof value==='string'?value.trim():'';
-const labels={game:'игры',film:'фильма',series:'сериала',cartoon:'мультфильма'};
+const labels={game:'игры',film:'фильма',series:'сериала',cartoon:'мультфильма',anime:'аниме'};
 const stances={want:'Хочется',avoid:'Не хочется',require:'Обязательно',exclude:'Исключено',indifferent:'Не принципиально',unknown:'Неясно',conditional:'При условии',history:'Прошлый опыт'};
 const safeLink=value=>{try{const url=new URL(value);return ['http:','https:'].includes(url.protocol)?url.href:'';}catch{return '';}};
 

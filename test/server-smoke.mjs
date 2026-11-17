@@ -13,6 +13,7 @@ const scratch = mkdtempSync(join(tmpdir(), 'tastiq-openai-smoke-'));
 const fixture = fixtureCatalog();
 writeFileSync(join(scratch, 'catalog.json'), JSON.stringify({ items: fixture.items, idf: fixture.idf, df: fixture.df, stats: {} }));
 const mediaItems=['film','series','cartoon'].flatMap(domain=>screenFixture(domain).items);
+mediaItems.push({...screenFixture('cartoon').items[0],id:'tt0417299',work:'tt0417299',name:'Avatar: The Last Airbender'});
 writeFileSync(join(scratch,'screen.json'),JSON.stringify({items:mediaItems,idf:{},df:{},stats:{}}));
 const reservation = createServer();
 await new Promise((resolve, reject) => { reservation.once('error', reject); reservation.listen(0, '127.0.0.1', resolve); });
@@ -23,7 +24,7 @@ const ledger = new PaidBudget(ledgerDir, { ceiling: 5, baselineUpper: 1, baselin
 ledger.close();
 Object.assign(process.env, {
   PORT: String(port), OPENAI_API_KEY: 'offline-smoke-key', OPENAI_MODEL: 'gpt-6.1-sol',
-  AI_ACCESS: 'all', AI_SPARES: '0', AI_EFFORT: 'low',
+  AI_ACCESS: 'all', AI_SPARES: '0', AI_EFFORT: 'low', TASTIQ_ANIME: 'on',
   CATALOG_PATH: join(scratch, 'catalog.json'), SCREEN_CATALOG_PATH: join(scratch, 'screen.json'),
   JOURNAL_PATH: join(scratch, 'journal.ndjson'),
   // Keep this offline fixture independent of an owner's configured hosted feedback database.
@@ -65,8 +66,10 @@ try {
   }
   assert.equal(meta?.domains.game.items, 13);
   assert.equal(meta?.domains.film.items,3);
+  assert.equal(meta?.domains.anime.items,1);
+  assert.equal(meta?.domains.anime.newSelections,true);
   const mediaPost=body=>localFetch(`${base}/api/media-conversation`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...body,uid:'offline-media'})});
-  for(const domain of ['film','series','cartoon']){
+  for(const domain of ['film','series','cartoon','anime']){
     const response=await mediaPost({domain});assert.equal(response.status,200);const initial=await response.json();
     assert.equal(initial.state.domain,domain);assert.ok(initial.screen.question);
     assert.equal((await mediaPost({domain:domain==='film'?'series':'film',state:initial.state})).status,400);
@@ -169,7 +172,7 @@ try {
   assert.equal(readFileSync(process.env.JOURNAL_PATH,'utf8'),journalBeforeQa);
   const blockedQa=await(await localFetch(`${base}/api/ai/pick`,{method:'POST',headers:{...qaHeaders,'x-tastiq-max-reserve-usd':'0.000001'},body:JSON.stringify({state,wish:'qa-before-dispatch'})})).json();
   assert.equal(requests,9,'reserve rejection cannot dispatch the model');assert.equal(blockedQa.qaBilling.calls[0].notRequested,true);
-  console.log('PASS: HTTP/static, AI picks + intent + three media domains, feedback validation/privacy, in-flight sharing, cache, no app quotas, isolated usage journal, disabled access. Paid requests: 0.');
+  console.log('PASS: HTTP/static, AI picks + intent + four media domains, feedback validation/privacy, in-flight sharing, cache, no app quotas, isolated usage journal, disabled access. Paid requests: 0.');
   process.exit(0);
 } catch (err) {
   console.error(err);

@@ -1,6 +1,6 @@
 // Local result snapshots are independent of plans, taste ratings and submitted feedback.
 export const SELECTION_ARCHIVE_KEY='tastiq.selections.v1';
-const domains=['game','film','series','cartoon'];
+const domains=['game','film','series','cartoon','anime'];
 const token=x=>typeof x==='string'&&/^[a-zA-Z0-9:_-]{1,100}$/.test(x);
 const copy=x=>structuredClone(x);
 const domainOf=s=>s?.state?.domain??'game';

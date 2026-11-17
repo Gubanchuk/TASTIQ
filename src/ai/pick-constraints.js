@@ -1,7 +1,7 @@
 import {createHash} from 'node:crypto';
 import {isSessionTimeFact,isSessionTimeSourceRetracted} from '../core/session-time.js';
 import {playerFeasibility} from '../core/feasibility.js';
-const media=new Set(['film','series','cartoon']);
+const media=new Set(['film','series','cartoon','anime']);
 const clean=value=>typeof value==='string'?value.trim():'';
 const folded=value=>clean(value).toLowerCase().replace(/ё/g,'е').replace(/\s+/gu,' ');
 const statuses=new Set(['compatible','conflict','unknown']);

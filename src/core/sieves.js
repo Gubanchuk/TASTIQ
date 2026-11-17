@@ -53,6 +53,15 @@ export function checkSieves(item, taste, session = {}, catalog) {
   // Time is a fact about tonight, not a taste: a known length over the limit removes the title, an unknown one does not.
   const players = playerFeasibility(item, session);
   if (players?.status === 'no') return { sieve: 5, reason: players.text, source: players.source };
+  if (domain.id==='anime') {
+    if(session.animeOrigin&&session.animeOrigin!==item.animeOrigin)return {sieve:5,reason:'другая страна или тип производства'};
+    if(session.animeKind&&session.animeKind!==item.kind)return {sieve:5,reason:'другой формат'};
+    if(session.standaloneOnly&&item.standalone!==true)return {sieve:5,reason:'самостоятельная точка входа не подтверждена'};
+    if(session.verifiedAge)return {sieve:5,reason:'региональная возрастная пригодность не подтверждена'};
+    if(session.maxRuntime&&session.allAnimeEpisodes&&item.kind==='series')return {sieve:5,reason:'длительность всех эпизодов не подтверждена'};
+    if(session.maxRuntime&&item.runtime==null)return {sieve:5,reason:'длительность не подтверждена'};
+    if(session.onlyEnded&&(item.kind!=='series'||item.status!=='Ended'))return {sieve:5,reason:'завершённый сериал не подтверждён'};
+  }
   if (session.maxRuntime && item.runtime != null && item.runtime > session.maxRuntime) return { sieve: 5, reason: `идёт ${item.runtime} мин, а сегодня есть ${session.maxRuntime}` };
   if (session.maxEpisodes && item.episodes != null && item.episodes > session.maxEpisodes) return { sieve: 5, reason: `${item.episodes} серий, а сегодня нужно до ${session.maxEpisodes}` };
   if (session.maxSeasons && item.seasons != null && item.seasons > session.maxSeasons) {

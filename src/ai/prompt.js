@@ -23,7 +23,7 @@ How to judge:
 - For a family evening, prioritize age suitability and tolerable intensity over pace or laughs. If age is unknown, do not invent it or guarantee "nothing scary"; choose cautious options and mention relevant frightening scenes.
 - Prefer one clear best match first, then three different good options, not four copies of one show.
 - Prefer titles this person has probably not seen yet. Set likelySeen to true when someone who loves their titles has most likely already seen this one (the biggest hit of the very same kind, a classic every fan knows); pick such a title only when nothing unseen fits as well.
-- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title of the same kind (a film, a series, a cartoon, a game). The engine looks it up and drops it if it is unknown or ruled out by the person's limits.
+- Pick from the shortlist and copy its id exactly. The engine's tags are thin, so its shortlist can miss the title that fits best: you may pick at most two titles that are not in the shortlist, only when you are sure they fit this person clearly better. For such a pick leave id empty and give its original title and release year. It must be a real title in the same catalog section. The engine looks it up and drops it if it is unknown or ruled out by the person's limits.
 
 Write all user-facing text in natural Russian and address the person as «ты». Speak directly about their request and the works. Leave the model, prompts, scores, tags and selection process out of the prose.
 - reason: one or two short sentences, up to 220 characters. Lead with a concrete detail of this work (a mechanic, setup, type of humour, pacing or viewing format), then show how it fits what the person wants today. A second sentence should add a detail or explain why the first one matters. Use a past favourite only when you can name the specific similarity. Make the reason distinct for each pick. Just repeating the request, naming a genre or summarizing the plot does not explain the fit.
@@ -59,8 +59,9 @@ const adaptiveMediaSystem=base=>base.split('\n').map(line=>line.startsWith("You 
   : line).join('\n')+'\nOmit any candidate you know violates an explicit exclusion or requirement. A caveat cannot waive it, including during more/replacement. Do not claim absence of frightening scenes or age suitability without evidence; unknowns stay unknown. Soft preferences may have caveats, but never knowingly fill the count with a hard conflict. Corrections and retractions supersede earlier interpretations.';
 export const systemFor=state=>{
  if(state.domain==='game')return state.conversation?ADAPTIVE_GAME_SYSTEM:GAME_SYSTEM;
- const base=state.domain==='cartoon'||state.situation?.company==='kids'?CONTEXTUAL_SYSTEM:SYSTEM;
- return state.conversation?adaptiveMediaSystem(base):base;
+ const base=state.domain==='cartoon'||state.domain==='anime'||state.situation?.company==='kids'?CONTEXTUAL_SYSTEM:SYSTEM;
+ const system=state.conversation?adaptiveMediaSystem(base):base;
+ return state.domain==='anime'?system+'\nAnime: runtime marked as the first episode belongs to S1E1 in the cited edition. Do not present it as the length of every episode or infer a regional age rating. A sequel with an unverified entry point may be appropriate only when the person does not require an independent start.':system;
 };
 
 // Structured output: four picks in order, each with a reason, a caveat and a guess whether the person has seen it;
@@ -101,7 +102,7 @@ function lengthOf(g) {
       g.medianHoursAtReview ? `на момент отзыва: ${Math.round(g.medianHoursAtReview)} ч, не время прохождения` : 'время прохождения в каталоге неизвестно'].filter(Boolean).join('; ');
   }
   if (g.kind === 'series') {
-    return [g.seasons ? `${g.seasons} сез.` : '', g.episodes ? `${g.episodes} сер.` : '', g.runtime ? `по ${g.runtime} мин` : '', g.status === 'Ended' ? 'закончен' : g.status ? 'идёт' : '']
+    return [g.seasons ? `${g.seasons} сез.` : '', g.episodes ? `${g.episodes} сер.` : '', g.runtime ? (g.domain==='anime'?`первая серия: ${g.runtime} мин`:`по ${g.runtime} мин`) : '', g.status === 'Ended' ? 'закончен' : g.status === 'Running' ? 'идёт' : '']
       .filter(Boolean).join(', ');
   }
   return g.runtime ? `${g.runtime} мин` : '';
@@ -207,6 +208,10 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
     const against = r.penalties.slice(0, 2).map((p) => featureById.get(p.f)?.label ?? p.f);
     const summary = (g.summary ?? '').replace(/\s+/g, ' ').slice(0, 220);
     const singleplayer = g.kind === 'game' && hasStrongSingleplayerTag(g) ? 'Steam: Singleplayer' : '';
+    const anime = g.animeOrigin ? [
+      {japanese:'Японское аниме',western:'В аниме-стиле',coproduction:'Копродукция с Японией'}[g.animeOrigin],
+      g.standalone === true ? 'можно начать без знакомства с серией' : 'самостоятельная точка входа не подтверждена',
+    ].join(', ') : '';
     if (i >= detailed) return [
       i === detailed ? '\nДополнительный поиск (те же сита, краткие карточки):\n' : '',
       `id=${g.id}`, nameOf(g), g.year ?? 'год ?',
@@ -219,7 +224,7 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
       `id=${g.id}`,
       nameOf(g),
       g.year ?? 'год ?',
-      lengthOf(g),
+      lengthOf(g), anime,
       g.kind === 'game' ? playerFactText(g) : '',
       singleplayer,
       (g.genres ?? []).slice(0, 3).join('/'),

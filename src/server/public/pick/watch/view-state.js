@@ -1,4 +1,4 @@
-export const mediaConfig=domain=>({film:{label:'Фильмы',noun:'фильм',title:'Что посмотреть сегодня'},series:{label:'Сериалы',noun:'сериал',title:'Какой сериал посмотреть'},cartoon:{label:'Мультфильмы',noun:'мультфильм',title:'Какой мультфильм посмотреть'}}[domain]??null);
+export const mediaConfig=domain=>({film:{label:'Фильмы',noun:'фильм',title:'Что посмотреть сегодня'},series:{label:'Сериалы',noun:'сериал',title:'Какой сериал посмотреть'},cartoon:{label:'Мультфильмы',noun:'мультфильм',title:'Какой мультфильм посмотреть'},anime:{label:'Аниме',noun:'аниме',title:'Какое аниме посмотреть'}}[domain]??null);
 export function mediaTimeBudgetHtml(time,{scope='summary',timeMode}={}){
  if(!Number.isInteger(time?.minutes)||time.minutes<5||time.minutes>1440||!time.sourceId||!time.quote)return '';
  const label=timeMode==='episode'?'На эпизод':timeMode==='runtime'?'На фильм':'На сегодня';

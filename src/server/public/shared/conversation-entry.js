@@ -8,7 +8,7 @@ export function initialDirectionQuestion(domain='game'){
  const game=domain==='game';
  const moods=[['mood_action','Хочется движухи'],['mood_relax','Расслабиться и отвлечься'],['mood_story','Погрузиться в историю'],['mood_explore',game?'Исследовать мир':'Перенестись в другой мир'],['mood_thought','Подумать о сложном']];
  const avoids=game?[['avoid_stress','Не хочу напрягаться','tension.high'],['avoid_learning','Не хочу разбираться в новых механиках'],['avoid_grind','Без однообразного фарма','progression.grind']]:[['avoid_stress','Не хочу напрягаться'],['avoid_dark','Без тяжёлых тем'],['avoid_slow','Без медленного начала']];
- return {id:'direction',title:game?'Во что тянет сегодня?':domain==='series'?'Какой сериал хочется сегодня?':domain==='cartoon'?'Какую анимацию хочется сегодня?':'Какой фильм хочется сегодня?',
+ return {id:'direction',title:game?'Во что тянет сегодня?':domain==='series'?'Какой сериал хочется сегодня?':domain==='cartoon'?'Какую анимацию хочется сегодня?':domain==='anime'?'Какое аниме хочется сегодня?':'Какой фильм хочется сегодня?',
   why:'Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.',multiple:true,controls:['unknown','indifferent','none'],
   options:[...moods,...genres[game?'game':'watch'],...avoids].map(([id,label,feature])=>({id,label,...(feature?{feature}:{})}))};
 }
@@ -25,7 +25,7 @@ export function selectionInterview(value){
 }
 
 export function initialConversation({domain='game',id=crypto.randomUUID(),mode,depth,requireDirection=false}={}){
- if(!['game','film','series','cartoon'].includes(domain))throw TypeError('Неизвестный раздел подбора.');
+ if(!['game','film','series','cartoon','anime'].includes(domain))throw TypeError('Неизвестный раздел подбора.');
  const media=domain!=='game';
  return {version:1,...(media?{domain}:{}),...(requireDirection?{requireDirection:true}:{}),...(isSelectionDepth(depth)?{depth}:{}),id,revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
   context:media?{company:null,childAge:null,minutes:null,timeMode:null,commitment:null,onlyEnded:null,format:null}:{platform:null,company:null,partySize:null},

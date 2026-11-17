@@ -1,0 +1,229 @@
+{
+  "head": "9477d6b35368440fb4315fce03d27c4838a29ab4",
+  "node": "v24.12.0",
+  "runtime": {
+    "builtAt": {
+      "game": "2026-10-29T01:30:10.888Z",
+      "screen": "2026-10-28T02:53:14.901Z"
+    },
+    "manifest": {
+      "catalog.json": {
+        "bytes": 13939465,
+        "sha256": "f2805c2776bc2a3327a67a875cd569cb6b8eea5b767e9aac570fcf1064ad45c1"
+      },
+      "catalog-screen.json": {
+        "bytes": 101807135,
+        "sha256": "2124d8f15efc077ee1eba2e38f751b78a17dcc6875748f73f81e23be0d0435c2"
+      },
+      "posters.json": {
+        "bytes": 941717,
+        "sha256": "ef46aa5ee62607a1b1cc698da21eef7598a709f5d3f453d0b3b4715cb6e03dac"
+      },
+      "quotes-ru.json": {
+        "bytes": 6699354,
+        "sha256": "5f226f782c77e21ad9591e7ae2ec6377cea0c2db2c5a82db9bed4ad10f5d4719"
+      },
+      "verified-game-context.json": {
+        "bytes": 1735,
+        "sha256": "a8aebe6aa691eb76c4f50c50dfe2780233ce3d64558ca79d9a31e3f00359ecfa"
+      },
+      "verified-game-releases.json": {
+        "bytes": 566,
+        "sha256": "840a279cf901f9574c4aa6e8ee968ea965ba794782c1dab94693b7e2ed6ce196"
+      }
+    },
+    "domains": {
+      "game": {
+        "items": 4952,
+        "ids": 4952,
+        "works": 4892,
+        "ru": 953,
+        "tagged": 2072,
+        "fiveTasteFeatures": 4161,
+        "zeroTasteFeatures": 32,
+        "newestYear": 2026
+      },
+      "film": {
+        "items": 32172,
+        "ids": 32172,
+        "works": 32172,
+        "ru": 27861,
+        "tagged": 14374,
+        "fiveTasteFeatures": 9780,
+        "zeroTasteFeatures": 2318,
+        "newestYear": 2026,
+        "films": 32172,
+        "series": 0,
+        "llm": 262,
+        "runtime": 32159,
+        "seriesWithStatus": 0,
+        "posterOrImage": 3912,
+        "wikiEvidenceWithoutAnyUrl": 0
+      },
+      "cartoon": {
+        "items": 1867,
+        "ids": 1867,
+        "works": 1867,
+        "ru": 1690,
+        "tagged": 1721,
+        "fiveTasteFeatures": 770,
+        "zeroTasteFeatures": 47,
+        "newestYear": 2026,
+        "films": 762,
+        "series": 1105,
+        "llm": 1709,
+        "runtime": 1851,
+        "seriesWithStatus": 947,
+        "posterOrImage": 1311,
+        "wikiEvidenceWithoutAnyUrl": 1531
+      },
+      "series": {
+        "items": 9773,
+        "ids": 9773,
+        "works": 9773,
+        "ru": 7770,
+        "tagged": 2934,
+        "fiveTasteFeatures": 1504,
+        "zeroTasteFeatures": 618,
+        "newestYear": 2026,
+        "films": 0,
+        "series": 9773,
+        "llm": 2898,
+        "runtime": 9487,
+        "seriesWithStatus": 8526,
+        "posterOrImage": 8531,
+        "wikiEvidenceWithoutAnyUrl": 2387
+      },
+      "anime": {
+        "items": 1585,
+        "ids": 1585,
+        "works": 1585,
+        "ru": 1534,
+        "tagged": 199,
+        "fiveTasteFeatures": 145,
+        "zeroTasteFeatures": 294,
+        "newestYear": 2026,
+        "films": 433,
+        "series": 1152,
+        "llm": 0,
+        "runtime": 1578,
+        "seriesWithStatus": 928,
+        "posterOrImage": 930,
+        "wikiEvidenceWithoutAnyUrl": 0
+      }
+    },
+    "recentFilms": {
+      "items": 1539,
+      "withoutLlm": 1294,
+      "withoutGenomeOrLlm": 587
+    },
+    "classificationExamples": [
+      {
+        "id": "tt0382932",
+        "name": "Ratatouille",
+        "year": 2007,
+        "kind": "film",
+        "domain": "anime"
+      },
+      {
+        "id": "tt0120587",
+        "name": "Antz",
+        "year": 1998,
+        "kind": "film",
+        "domain": "anime"
+      },
+      {
+        "id": "tt0245429",
+        "name": "Spirited Away",
+        "year": 2001,
+        "kind": "film",
+        "domain": "anime"
+      },
+      {
+        "id": "tt0417299",
+        "name": "Avatar: The Last Airbender",
+        "year": 2005,
+        "kind": "series",
+        "domain": "cartoon"
+      },
+      {
+        "id": "tt9018736",
+        "name": "Avatar: The Last Airbender",
+        "year": 2024,
+        "kind": "series",
+        "domain": "series"
+      },
+      {
+        "id": "tt13429870",
+        "name": "Robot Dreams",
+        "year": 2023,
+        "kind": "film",
+        "domain": "cartoon"
+      }
+    ]
+  },
+  "inputs": {
+    "data/raw/screen-base.json": {
+      "bytes": 11017995,
+      "sha256": "a2de93eba0a36bcfef1c9d85dca46e0ec801cde8c932dc2e543069036522ca6e"
+    },
+    "data/raw/screen-wikidata.json": {
+      "bytes": 1293527,
+      "sha256": "9bec4fec375871e32269367d717458ead29f29f125bc055cebb74becda481aab"
+    },
+    "data/raw/tvmaze-shows.json": {
+      "bytes": 61384719,
+      "sha256": "b5aa20eedefe996c49115bf9d10f98037734f23d49451c642e97ecda87d49467"
+    },
+    "data/raw/episode-runtime.json": {
+      "bytes": 17842,
+      "sha256": "217900b192862d2870fd3bf38b366dbbcebde45473ddcd55888aa293f9ded21a"
+    },
+    "data/tagging/llm-tags-screen.json": {
+      "bytes": 6927371,
+      "sha256": "fcf1d80611d009f0621f382c79428b8326c0377db8c52377082e9de68ec3d07c"
+    },
+    "data/raw/movielens/ml-latest/links.csv": {
+      "bytes": 1925962,
+      "sha256": "92f18202228071d5dc56a5bc7fd7ccbd06ff355c54bc48e55a059cd4896966d7"
+    },
+    "data/raw/movielens/ml-latest/genome-tags.csv": {
+      "bytes": 18103,
+      "sha256": "c84bf1e2addbf38432426a2bb2a117a59d76c0873fc875fe8764e92842fd3bfb"
+    },
+    "data/raw/movielens/ml-latest/genome-scores.csv": {
+      "bytes": 521514541,
+      "sha256": "72a2d7460f30b2f3ac68bdda9e46c8320a8019faf1a7b7b79aa0e9d794902b86"
+    },
+    "data/raw/movielens/ml-latest/tags.csv": {
+      "bytes": 85361813,
+      "sha256": "d485c3fff0c4b4c215ef3c213ba0b68748e805ac0f07dcba2369582b7343bd0b"
+    },
+    "data/tagging/screen-run1/in": {
+      "files": 903,
+      "bundleSha256": "da4bf13a5b53573d248a1f6771ce7057681b110b87721abd8a34363f10991f6c"
+    }
+  },
+  "rebuild": {
+    "sha256WithoutBuiltAt": [
+      "6722753b6af9162052592127bf333380e338ae2ad734dff0e839b256eed71d89",
+      "6722753b6af9162052592127bf333380e338ae2ad734dff0e839b256eed71d89"
+    ],
+    "stats": {
+      "titles": 45397,
+      "film": 32172,
+      "series": 9773,
+      "cartoon": 1867,
+      "anime": 1585,
+      "withGenome": 14861,
+      "withLlm": 4869,
+      "withRussianName": 38855,
+      "meanFeatures": 9.371
+    },
+    "missingIds": [],
+    "newIds": [],
+    "changedDomains": [],
+    "changedFeatureRecords": 0,
+    "missingFeatureEvidenceUrls": 19022
+  }
+}

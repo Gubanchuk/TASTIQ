@@ -64,6 +64,7 @@ const forms = {
   film: { one: 'фильм', few: 'фильма', many: 'фильмов' },
   series: { one: 'сериал', few: 'сериала', many: 'сериалов' },
   cartoon: { one: 'мультфильм', few: 'мультфильма', many: 'мультфильмов' },
+  anime: { one: 'произведение', few: 'произведения', many: 'произведений' },
 };
 const updatedDomains = new Set();
 const landing = readFileSync(LANDING, 'utf8').replace(/(data-catalog-count="(\w+)">)[^<]*(?=<\/span>)/g, (_, tag, domain) => {

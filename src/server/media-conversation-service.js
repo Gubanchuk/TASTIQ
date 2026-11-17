@@ -13,7 +13,7 @@ import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationMediaIdentity} from './conversation-media-identity.js';
 
-const DOMAINS=new Set(['film','series','cartoon']);
+const DOMAINS=new Set(['film','series','cartoon','anime']);
 const FORMAT_UNKNOWN='У части произведений формат не указан в каталоге: они не включены при выборе фильма или сериала.';
 const bad=message=>Object.assign(Error(message),{status:400});
 const cardsOf=result=>[result?.top,...(result?.alternatives??[])].filter(Boolean);

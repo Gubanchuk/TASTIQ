@@ -1,5 +1,7 @@
+import {mediaLibraryDomain} from './anime-pilot.js';
+
 export const LIBRARY_KEY='tastiq.site.library';
-const DOMAINS=new Set(['game','film','series','cartoon']);
+const DOMAINS=new Set(['game','film','series','cartoon','anime']);
 const LANES=new Set(['want','tonight','known']);
 const validId=value=>typeof value==='string'&&/^[a-zA-Z0-9:_.-]{1,160}$/.test(value);
 const clone=value=>structuredClone(value);
@@ -34,13 +36,14 @@ export function createLibraryStore({storage,now=()=>new Date().toISOString()}={}
  }
  const visible=row=>row&&validId(row.id)&&DOMAINS.has(row.domain);
  const view=row=>clone({...row,lane:laneOf(row),saved:isLibrarySaved(row)});
- const indexOf=(domain,id)=>snapshot.items.findIndex(row=>matches(row,domain,id));
+ const indexOf=(domain,id)=>snapshot.items.findIndex(row=>matches(row,mediaLibraryDomain(domain,id),id));
  const api={
   get persistent(){return persistent;},
   all(){read();return snapshot.items.filter(visible).map(view);},
   history(){read();return clone(snapshot.history);},
   save(card,{lane='want',domain=card?.domain}={}) {
    if(!validId(card?.id)||!DOMAINS.has(domain)||!LANES.has(lane))return null;
+   domain=mediaLibraryDomain(domain,card.id);
    read();const index=indexOf(domain,card.id),prior=snapshot.items[index],at=now();
    const title=clean(card.ru||card.name||card.title||prior?.title||card.id);
    const metadata={};

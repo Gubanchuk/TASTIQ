@@ -24,7 +24,12 @@ import {runQaRequest,qaReceipt,observeQaApi,isQaRequest} from './qa-observation.
 const PUBLIC = resolve(ROOT, 'src', 'server', 'public');
 const JOURNAL = journalPath();
 const appendJournal=(content,encoding='utf8')=>{if(!isQaRequest())appendFileSync(JOURNAL,content,encoding);};
+const animeEnabled=process.env.TASTIQ_ANIME==='on'||(process.env.VERCEL!=='1'&&process.env.TASTIQ_ANIME!=='off');
+const animePaused=()=>Object.assign(Error('Новые подборы аниме пока недоступны. Сохранённые подборы можно открыть в библиотеке.'),{status:400});
+const animeArchiveActions=new Set(['familiar_mark','familiar_unmark','familiar_keep','undo_replacement']);
 export const catalogs = loadCatalogs({ gamesPath: process.env.CATALOG_PATH, screenPath: process.env.SCREEN_CATALOG_PATH });
+const catalogDescription=catalogMeta(catalogs);
+if(catalogDescription.domains.anime)catalogDescription.domains.anime.newSelections=animeEnabled;
 const feedbackService=createFeedbackService({catalogs,repository:createFeedbackRepository(),journal:row=>appendJournal(JSON.stringify(row)+'\n')});
 const paidLedger = process.env.AI_EVAL_BUDGET_DIR ? new PaidBudget(resolve(process.env.AI_EVAL_BUDGET_DIR)) : null;
 let aiOptions = {};
@@ -59,7 +64,7 @@ const aiRunning = new Map();
 const intentCache = new Map(), intentRunning = new Map();
 const conversationService = createConversationService({catalogs, ...aiOptions, access:aiAccess, spend:aiSpend,
   journal:row=>appendJournal(JSON.stringify(row)+'\n','utf8')});
-const mediaConversationServices=Object.fromEntries(['film','series','cartoon'].filter(domain=>catalogs[domain]).map(domain=>[
+const mediaConversationServices=Object.fromEntries(['film','series','cartoon','anime'].filter(domain=>catalogs[domain]).map(domain=>[
   domain,createMediaConversationService({domain,catalogs,...aiOptions,access:aiAccess,spend:aiSpend,
     journal:row=>appendJournal(JSON.stringify(row)+'\n','utf8')}),
 ]));
@@ -137,11 +142,12 @@ async function readBody(req) {
 }
 
 const routes = {
-  'GET /api/meta': () => catalogMeta(catalogs),
+  'GET /api/meta': () => catalogDescription,
   'POST /api/conversation': (_,body,req) => conversationService(body,{uid:typeof body.uid==='string'?body.uid.slice(0,64):null,ip:clientIp(req)}),
   'POST /api/media-conversation': (_,body,req) => {
     const service=typeof body?.domain==='string'&&Object.hasOwn(mediaConversationServices,body.domain)?mediaConversationServices[body.domain]:null;
-    if(!service)throw Object.assign(new Error('Выбери раздел: фильмы, сериалы или мультфильмы.'),{status:400});
+    if(!service)throw Object.assign(new Error('Выбери раздел: фильмы, сериалы, мультфильмы или аниме.'),{status:400});
+    if(body.domain==='anime'&&!animeEnabled&&(!body.state?.result||body.action&&!animeArchiveActions.has(body.action.type)))throw animePaused();
     return service(body,{uid:typeof body.uid==='string'?body.uid.slice(0,64):null,ip:clientIp(req)});
   },
   'POST /api/dialogue': (_, body) => {
@@ -163,8 +169,14 @@ const routes = {
     const access = aiAccess({ uid: url.searchParams.get('uid'), ip: clientIp(req) });
     return { enabled: access.allowed, reason: access.reason ?? null, locked: Boolean(access.locked), model: AI.model };
   },
-  'POST /api/ai/pick': (_, body, req) => aiRoute(req, body),
-  'POST /api/ai/intent': (_, body, req) => intentRoute(req, body),
+  'POST /api/ai/pick': (_, body, req) => {
+    if(body.state?.domain==='anime'&&!animeEnabled)throw animePaused();
+    return aiRoute(req, body);
+  },
+  'POST /api/ai/intent': (_, body, req) => {
+    if(body.domain==='anime'&&!animeEnabled)throw animePaused();
+    return intentRoute(req, body);
+  },
   'POST /api/feedback': (_, body,req) => feedbackService(body,{qa:isQaRequest(),namespace:feedbackVerificationNamespace({run:qaReceipt()?.run,signature:req.headers['x-tastiq-feedback-probe']})}),
   'POST /api/log': (_, body) => {
     appendJournal( JSON.stringify({ at: new Date().toISOString(), ...body }) + '\n', 'utf8');
