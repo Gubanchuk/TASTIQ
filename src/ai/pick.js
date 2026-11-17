@@ -53,18 +53,22 @@ const sentence = (x, max) => { const t = String(x ?? '').trim().slice(0, max); r
  * Model output checked against the shortlist: known ids, no repeats, cut to size; reasons trimmed. A pick without
  * an id is looked up by title and year among the titles that passed the sieves (`ranked`), at most AI.ownPicks.
  */
-export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = []) {
+export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], {session,byId} = {}) {
   const allowed = new Set(rows.map((r) => r.game.id));
   const seen = new Set();
   const picks = [];
   let own = 0;
   const proposed = Array.isArray(out?.picks) ? out.picks : [];
-  const resolve=p=>{const id=typeof p?.id==='string'?p.id.trim():'';return allowed.has(id)?id:lookUp(ranked,p?.title,Number(p?.year)||0);};
-  const assessments=new Map(proposed.map(p=>[p,validateConstraintChecks(p,criteria)]));
+  const identities=new Map(proposed.map(p=>{
+    const id=typeof p?.id==='string'?p.id.trim():'';
+    // An explicit ID outside the shortlist must not turn into an eligible namesake.
+    return [p,id?(allowed.has(id)?id:null):lookUp(ranked,p?.title,Number(p?.year)||0)];
+  }));
+  const assessments=new Map(proposed.map(p=>[p,validateConstraintChecks(p,criteria,{item:byId?.get(identities.get(p)),session})]));
   // Any contradictory duplicate taints that identity, including a title/year alias.
-  const conflicts=new Set(proposed.filter(p=>assessments.get(p).reason==='conflict').map(resolve).filter(Boolean));
+  const conflicts=new Set(proposed.filter(p=>assessments.get(p).reason==='conflict').map(p=>identities.get(p)).filter(Boolean));
   const signatures=new Map(),inconsistent=new Set();
-  if(criteria.length)for(const p of proposed){const id=resolve(p);if(!id)continue;const a=assessments.get(p),signature=a.ok?JSON.stringify(criteria.map(c=>a.checks.find(row=>row.key===c.key).status)):a.reason;if(signatures.has(id)&&signatures.get(id)!==signature)inconsistent.add(id);else signatures.set(id,signature);}
+  if(criteria.length)for(const p of proposed){const id=identities.get(p);if(!id)continue;const a=assessments.get(p),signature=a.ok?JSON.stringify(criteria.map(c=>a.checks.find(row=>row.key===c.key).status)):a.reason;if(signatures.has(id)&&signatures.get(id)!==signature)inconsistent.add(id);else signatures.set(id,signature);}
   let conflictDrops=0,unconfirmedDrops=0;
   for (const p of proposed) {
     if (picks.length >= n) break;
@@ -72,7 +76,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = []) 
     let id = allowed.has(given) ? given : null;
     let outside = false;
     if (!id && own < AI.ownPicks) {
-      id = lookUp(ranked, p?.title, Number(p?.year) || 0);
+      id = identities.get(p);
       outside = Boolean(id) && !allowed.has(id);
     }
     if (!id || seen.has(id)) continue;
@@ -92,7 +96,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = []) 
 export async function aiPick(catalogs, state, { wish = '', previous = [], alreadyShown = [], feedbackContext=[], api = requestResponse, maxCostUsd = Infinity } = {}) {
   const catalog = catalogs[state?.domain];
   if (!catalog) return { error: 'нет домена' };
-  const adaptiveMedia=state.domain!=='game'&&Boolean(state.conversation),criteria=criteriaOf(state);
+  const adaptive=Boolean(state.conversation),criteria=criteriaOf(state);
   const cleanWish = String(wish ?? '').replace(/\s+/g, ' ').trim().slice(0, 300);
   // What was shown and did not suit («Не то? Скажи словами») cannot come back, from the list or as the model's own.
   const shown = new Set([...previous,...alreadyShown]);
@@ -101,12 +105,12 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   const all = candidatesOf(catalog, state, limit + shown.size);
   const rows = all.rows.filter((r) => !shown.has(r.game.id)).slice(0, limit);
   const ranked = all.ranked.filter((r) => !shown.has(r.game.id));
-  if(!adaptiveMedia&&rows.length<2)return {error:'выбирать не из чего'};
+  if(!adaptive&&rows.length<2)return {error:'выбирать не из чего'};
   if(!rows.length)return {error:'По этим условиям нет доступных вариантов каталога.',retryable:false};
   const liked = Object.entries(state.answers ?? {}).filter(([, a]) => a?.reaction === 'love' || a?.reaction === 'like').map(([id]) => catalog.byId.get(id)).filter(Boolean);
 
-  const total = AI.picks + AI.spares;
-  const howMany = adaptiveMedia
+  const total = adaptive ? AI.picks : AI.picks + AI.spares;
+  const howMany = adaptive
     ? `Выбери до ${total} разных тайтлов по порядку, первый — лучший. Не дополняй число заведомо неподходящими: при конфликте с обязательным условием исключи тайтл, даже с оговоркой. Можно вернуть меньше вариантов или пустой список.`
     : AI.spares
     ? `Выбери ровно ${total} разных тайтлов по порядку. Первые ${AI.picks} покажу сразу, первый — лучший; остальные ${AI.spares} — запасные, по очереди встанут на место того, что человек уже видел.`
@@ -147,14 +151,14 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   } catch {
     return { ...meta, error: 'нейросеть ответила не по форме' };
   }
-  const checked = checkPicks(parsed, rows, total, ranked, criteria);
+  const checked = checkPicks(parsed, rows, total, ranked, criteria, {session:sessionOf(state),byId:catalog.byId});
   if(!checked.picks.length&&checked.constraintDrops&&(checked.constraintDrops.conflict||checked.constraintDrops.unconfirmed))return {...meta,...checked,error:'Предложения в этом ответе не прошли проверку обязательных условий. Можно уточнить запрос.',retryable:false};
-  if (!checked.picks.length) return adaptiveMedia
+  if (!checked.picks.length) return adaptive
     ? { ...meta, error: parsed?.picks?.length?'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.':'В этом ответе не нашлось подходящих вариантов. Можно уточнить запрос.', retryable:false }
     : { ...meta, error: 'нейросеть выбрала не из списка' };
-  // Legacy paths fill a short answer in engine order. Adaptive media keeps a short
+  // Legacy paths fill a short answer in engine order. Adaptive selection keeps a short
   // answer: filling it could undo the model's decision to omit a semantic conflict.
   const chosen = new Set(checked.picks.map((p) => p.id));
-  const filled = adaptiveMedia?[]:rows.map((r) => r.game.id).filter((id) => !chosen.has(id)).slice(0, Math.max(0, AI.picks - checked.picks.length));
+  const filled = adaptive?[]:rows.map((r) => r.game.id).filter((id) => !chosen.has(id)).slice(0, Math.max(0, AI.picks - checked.picks.length));
   return { ...checked, filled, ...meta };
 }

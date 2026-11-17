@@ -1,6 +1,7 @@
 import { AI } from './config.js';
 import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
+import { selectionDecisionInstructions,selectionDecisionSchema } from './selection-decision.js';
 
 const object = properties => ({ type: 'object', properties, required: Object.keys(properties), additionalProperties: false });
 const string = maxLength => ({ type: 'string', maxLength });
@@ -11,7 +12,7 @@ const validSessionTimeFields = value => value && typeof value==='object' && !Arr
   && typeof value.quote==='string' && value.quote.trim().length>0 && value.quote.length<=400;
 const sessionTimeInput = value => validSessionTimeFields(value)?{minutes:value.minutes,sourceId:value.sourceId,quote:value.quote}:null;
 
-function schemaFor(features) {
+function schemaFor(features,depth) {
   const option = object({ id: string(100), label: string(100) });
   const question = object({
     id: string(100), title: string(220), why: string(220),
@@ -31,6 +32,7 @@ function schemaFor(features) {
     uncertainties: { type: 'array', maxItems: 8, items: string(240) },
     action: { type: 'string', enum: ['question', 'review'] }, question: nullable(question),
     sessionTime: nullable(object({minutes:{type:'integer',minimum:5,maximum:1440},sourceId:string(100),quote:string(400)})),
+    ...(depth?{decision:selectionDecisionSchema}:{}),
   });
 }
 
@@ -69,6 +71,7 @@ function inputFor(catalog, state, knownGames) {
   try {
     const input = JSON.stringify({
       domain: catalog.domain?.id ?? 'game', id: state.id, revision: state.revision, mode: state.mode, phase: state.phase,
+      ...(state.depth?{depth:state.depth,offeredQuestions:state.questionOffers?.length??0}:{}),
       context: { platform, company, partySize }, turns: state.turns, facts: state.facts,
       question: state.question ?? null, summary: state.summary ?? '', uncertainties: state.uncertainties ?? [], retractions: state.retractions ?? [],
       ...(state.skippedQuestions?.length?{skippedQuestions:state.skippedQuestions}:{}),
@@ -85,13 +88,13 @@ function inputFor(catalog, state, knownGames) {
 
 // Transport-level shape check only; exact evidence, feature membership, limits and state
 // invariants are checked together by applyConversationProposal on the server.
-function proposalShape(out) {
+function proposalShape(out,depth) {
   return out && typeof out === 'object' && !Array.isArray(out)
-    && Object.keys(out).length === (Object.hasOwn(out,'sessionTime')?6:5)
+    && Object.keys(out).length === (Object.hasOwn(out,'sessionTime')?6:5)+(depth&&Object.hasOwn(out,'decision')?1:0)
     && (!Object.hasOwn(out,'sessionTime') || out.sessionTime===null || validSessionTimeFields(out.sessionTime)&&Object.keys(out.sessionTime).length===3)
     && typeof out.summary === 'string' && Array.isArray(out.facts)
     && Array.isArray(out.uncertainties) && out.uncertainties.every(x => typeof x === 'string')
-    && ((out.action === 'review' && out.question === null)
+    && (depth&&['review','question'].includes(out.action)||(out.action === 'review' && out.question === null)
       || (out.action === 'question' && out.question && typeof out.question === 'object' && !Array.isArray(out.question)));
 }
 
@@ -101,8 +104,8 @@ export async function aiConversation(catalog, state, { api = requestResponse, ma
   if (input === null) return { error: 'запрос не запущен: контекст диалога отсутствует или превышает допустимый размер', notRequested: true };
   const request = {
     model: AI.model, max_output_tokens: 6000, reasoning: { effort: AI.effort },
-    text: { format: { type: 'json_schema', name: 'tastiq_conversation', strict: true, schema: schemaFor(catalog.dict.features) } },
-    instructions: `${INSTRUCTIONS}\n\n${modeInstructions(state.mode)}`,
+    text: { format: { type: 'json_schema', name: 'tastiq_conversation', strict: true, schema: schemaFor(catalog.dict.features,state.depth) } },
+    instructions: `${INSTRUCTIONS}\n\n${state.depth?selectionDecisionInstructions(state.depth):modeInstructions(state.mode)}`,
     input, store: false, service_tier: 'default',
   };
   if (maxCostUsd !== Infinity) {
@@ -120,6 +123,6 @@ export async function aiConversation(catalog, state, { api = requestResponse, ma
   if (blocks.some(x => x?.type === 'refusal')) return { ...meta, error: 'нейросеть отказалась отвечать' };
   let out;
   try { out = JSON.parse(blocks.filter(x => x?.type === 'output_text').map(x => x.text).join('')); } catch { /* reported below */ }
-  if (!proposalShape(out)) return { ...meta, error: 'нейросеть ответила не по форме диалога' };
+  if (!proposalShape(out,state.depth)) return { ...meta, error: 'нейросеть ответила не по форме диалога' };
   return { ...meta, proposal: out };
 }

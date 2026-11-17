@@ -22,3 +22,6 @@
 Managed worktree `C:/Users/Dusik/.codex/worktrees/tastiq-library-release/TASTIQ`, ветка `codex/library-clarity-20261117`, исходная база47d0b3c. Перенесены только библиотечные файлы и адресные изменения сохранения/выбора/словаря в общих карточках. Работа режимов из соседнего чата не подмешана в этот commit. 660/660 unit, HTTP smoke PASS (paid0), production build PASS. Предыдущие693 — общий рабочий снимок с параллельными режимами; это разные наборы, не потерянные тесты.
 
 Code reviewer проверил controller дополнительно: конфликтующие исходные outcomes, одинаковые id разных доменов, экранирование title/note, undo после параллельной отрицательной оценки, неизменность feedback envelope. Important/Critical не осталось. Старый status known после unsave и legacy choose→autosave исправлены с наблюдавшимся RED→GREEN.
+
+
+Финальное объединение: origin/main79bc25b содержит завершённые режимы; merge сохраняет библиотеку98d211d и режимы.696/696 unit+HTTP+build, Chrome4modeentries/library/archive/bookmark PASS. Узкий независимый review31/31 адресный test без Important/Critical. Словарь новой modecard приведён к нейтральному времени.
