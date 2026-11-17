@@ -93,13 +93,12 @@ body.product-page #stage .game-action-controls>.btn-secondary{background:var(--b
 body.product-page #stage .game-auxiliary{margin-top:22px;border:0;padding:0}
 body.product-page #stage .game-example{margin:0;border:0;padding:0}
 body.product-page #stage .game-example>summary{padding:12px 0;color:var(--brand-muted);font-size:12px;min-height:44px}
-body.product-page .request-editor{padding:24px;margin:0 0 28px;border:0;border-radius:20px;background:var(--workspace-soft);scroll-margin-top:120px}
-body.product-page .request-editor h2{font:600 20px/1.4 Golos,Arial,sans-serif;margin:0 0 9px;color:var(--brand-ink)}
+body.product-page .request-editor{padding:20px;margin:12px 0 0;border:1px solid var(--workspace-line);border-radius:16px;background:var(--brand-surface)}
 body.product-page .request-editor .request-editor-context{font-size:14px;line-height:1.7;color:var(--brand-muted);margin-bottom:18px;max-width:65ch}
 body.product-page .request-editor .clarification-form{display:block;margin:0;padding:0;background:transparent;border:0}
 body.product-page .request-editor textarea.input{background:white;min-height:136px}
 body.product-page .request-editor .clarification-actions{display:flex;gap:10px;margin-top:16px}
-body.product-page .request-editor .clarification-actions>button[type=submit]{background:var(--brand-primary);color:white;border:0;border-radius:12px}
+body.product-page .request-editor .game-field{font-size:1rem;font-weight:650}
 body.product-page .request-editor .game-help{font-size:12px;margin:9px 0 0}
 @media(min-width:1500px){body.product-page .app-shell{max-width:1440px}body.product-page #picker-workspace{max-width:1440px}}
 @media(max-width:1450px){body.product-page .app-shell{margin-inline:24px}body.product-page #picker-workspace{padding-inline:24px}}
@@ -150,8 +149,7 @@ body.product-page .request-editor .game-help{font-size:12px;margin:9px 0 0}
  body.product-page #stage .game-neutral-options .btn{font-size:12px;padding-inline:9px}
  body.product-page #stage .game-actions{margin-top:20px;padding-top:8px}
  body.product-page #stage .game-action-controls{gap:10px}
- body.product-page .request-editor{padding:18px 16px;border-radius:16px;margin-bottom:22px;scroll-margin-top:135px}
- body.product-page .request-editor h2{font-size:19px}
+ body.product-page .request-editor{padding:16px}
  body.product-page .request-editor .clarification-actions{flex-wrap:wrap}
  body.product-page #request-panel .request-fact-group{margin:20px 0}
 }

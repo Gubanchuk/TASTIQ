@@ -4,7 +4,7 @@ import {fixtureCatalog,game} from './fixture.js';
 import {initialConversation} from '../src/server/public/shared/conversation-entry.js';
 import {conversationToLegacy} from '../src/core/conversation.js';
 import {createConversationService} from '../src/server/conversation-service.js';
-import {aiPick} from '../src/ai/pick.js';
+import {aiPick,checkPicks} from '../src/ai/pick.js';
 import {criteriaOf,validateConstraintChecks} from '../src/ai/pick-constraints.js';
 
 const catalog=fixtureCatalog(),catalogs={game:catalog};
@@ -25,13 +25,54 @@ test('game picker checks active semantic constraints and does not fill a short r
  assert.deepEqual(criteria.map(c=>c.text),['Без обязательного PvP','Обязательно без таймера']);
  const result=await aiPick(catalogs,state,{api:async request=>{
   assert.match(request.input,/Без обязательного PvP/);
-  assert.match(request.input,/Можно вернуть меньше вариантов или пустой список/);
+  assert.match(request.input,/Сокращай выдачу, если подходящих вариантов меньше/);
   assert.deepEqual(request.text.format.schema.properties.picks.items.properties.constraintChecks.items.properties.key.enum,criteria.map(c=>c.key));
   return wire([{id:'4',constraintChecks:checks(criteria,'unknown')},{id:'6',constraintChecks:checks(criteria,'conflict')},{id:'3'}]);
  }});
  assert.deepEqual(result.picks.map(p=>p.id),['4']);
  assert.deepEqual(result.filled,[]);
  assert.deepEqual(result.picks[0].unknownCriteria.map(x=>x.text),criteria.map(c=>c.text));
+});
+
+test('More takes four different checked works from one response, and explains a partial batch',async()=>{
+ const pool=fixtureCatalog([
+  game(31,'North',{}, {work:'north'}),game(32,'North remake',{}, {work:'north'}),
+  ...[34,35,36,37,38,39].map(id=>game(id,`Candidate ${id}`,{})),
+ ]);
+ const state=review(fact('pvp','Без обязательного PvP'));
+ Object.assign(state,{phase:'result',result:{top:{id:'1',name:'The Witcher 3'},alternatives:[]}});
+ const criteria=criteriaOf(conversationToLegacy(state,pool.dict,pool));
+ let requests=0;
+ const service=createConversationService({catalogs:{game:pool},api:async request=>{
+  requests++;
+  assert.equal(request.text.format.schema.properties.picks.maxItems,6);
+  assert.match(request.input,/Целевое число вариантов — 4/);
+  assert.match(request.input,/Уже показано для выбора/);
+  const proposed=requests===1?['31','32','34','35','36','37']:['38','39'];
+  return wire(proposed.map(id=>({id,constraintChecks:checks(criteria,id==='34'?'conflict':'compatible')})));
+ }});
+ const first=await service({state,action:{type:'more'}});
+ assert.ok(!first.error,first.error);
+ assert.deepEqual([first.state.result.top,...first.state.result.alternatives].map(card=>card.id),['31','35','36','37']);
+ assert.equal(requests,1);
+ assert.match(first.state.replacement.notice,/Ещё 4 варианта/);
+ const second=await service({state:first.state,action:{type:'more'}});
+ assert.ok(!second.error,second.error);
+ assert.deepEqual([second.state.result.top,...second.state.result.alternatives].map(card=>card.id),['38','39']);
+ assert.equal(requests,2);
+ assert.match(second.state.replacement.notice,/ещё 2 подходящих варианта/);
+ assert.deepEqual(second.state.familiar.hidden,[]);
+});
+
+test('adaptive lookup can complete a batch from catalog titles outside the shortlist',()=>{
+ const works=[game(41,'A',{}, {work:'a'}),game(42,'B',{}),game(43,'C',{}),game(44,'D',{}),game(45,'E',{})];
+ const ranked=works.map(game=>({game}));
+ const state=projection(review(fact('pvp','Без обязательного PvP'))),criteria=criteriaOf(state);
+ const out={picks:['Previously shown','A','B','C','D','E'].map(title=>({id:'',title,year:0,
+  constraintChecks:checks(criteria,title==='B'?'conflict':'compatible')}))};
+ const checked=checkPicks(out,[],4,ranked,criteria,{byId:new Map(works.map(work=>[work.id,work])),distinctWorks:true,ownLimit:6});
+ assert.deepEqual(checked.picks.map(pick=>pick.id),['41','43','44','45']);
+ assert.equal(checked.constraintDrops.conflict,1);
 });
 
 test('dated, retracted, softer and unconfirmed game facts do not become hard checks',()=>{

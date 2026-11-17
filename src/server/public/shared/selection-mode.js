@@ -1,10 +1,9 @@
 import {isSelectionDepth} from './conversation-entry.js';
 
 const modes={
- standard:{title:'Быстрый подбор',pace:'Обычно быстрее',description:'Уточним главное и перейдём к рекомендациям.'},
- deep:{title:'Подробный подбор',pace:'Чуть дольше',description:'Обсудим нюансы и что тебе точно не подходит. Когда захочешь, перейдём к вариантам.'},
+ standard:{title:'Быстрый подбор',pace:'Обычно быстрее',description:'Уточним главное и покажем варианты.'},
+ deep:{title:'Подробный подбор',pace:'Чуть дольше',description:'Обсудим детали и ограничения. Можно закончить уточнения раньше.'},
 };
-const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 export const selectionModeTitle=depth=>isSelectionDepth(depth)?modes[depth].title:'';
 
 function card(depth,active){
@@ -21,22 +20,16 @@ function card(depth,active){
 export function selectionModeChooser({intent,canResume,depth}){
  return `<div class="mode-heading"><h1 id="mode-heading" tabindex="-1">${intent==='switch'?'Изменить режим подбора':'Как будем подбирать?'}</h1></div>
   <div class="mode-card-grid">${card('standard',intent==='switch'?depth:null)}${card('deep',intent==='switch'?depth:null)}</div>
-  <div class="mode-footer">${canResume?'<button type="button" class="btn btn-plain" data-mode-resume>Вернуться к текущему подбору</button>':'<a href="/pick/start/">Выбрать другой раздел</a>'}</div>`;
+  <div class="mode-footer">${canResume?'<button type="button" data-mode-resume>Вернуться к подбору</button>':'<a href="/pick/start/">Выбрать другой раздел</a>'}</div>`;
 }
 
 export function checkpointHtml(checkpoint){
  if(!checkpoint)return '';
  const title=checkpoint.reason==='neutral'?'Можно перейти к вариантам':'Уже можно подобрать варианты';
- return `<aside class="mode-checkpoint" aria-label="Продолжение подбора"><div><strong>${title}</strong><p>Ответь на вопрос ниже, если хочешь ещё уточнить запрос.</p></div><button type="button" class="btn btn-secondary" data-act="review" data-focus="review">Проверить запрос</button></aside>`;
+ return `<aside class="mode-checkpoint" aria-label="Продолжение подбора"><strong>${title}</strong><button type="button" class="btn btn-secondary" data-act="review" data-focus="review">Проверить запрос</button></aside>`;
 }
 
-export function selectionModeControl({state,screen}){
- if(!state||!screen||screen.type==='result'||state.interviewComplete||state.interview||state.result)return '';
- const title=selectionModeTitle(state.depth);
- return `<button class="btn btn-plain mode-switch-control" type="button" data-mode-switch>${title?escape(title)+' · Сменить режим':'Выбрать режим'}</button>`;
-}
-
-export function setupSelectionMode({client,render,switchDepth,onRestart}){
+export function setupSelectionMode({client,render,switchDepth,onRestart,focusWorkspace}){
  const url=new URL(location.href),explicitEntry=url.searchParams.get('choose')==='1'&&!url.searchParams.has('selection');
  let intent=explicitEntry?'new':client.needsDepth?'start':null;
  const host=document.getElementById('selection-mode'),workspace=document.getElementById('picker-workspace');
@@ -46,11 +39,6 @@ export function setupSelectionMode({client,render,switchDepth,onRestart}){
   const current=new URL(location.href);
   if(!current.searchParams.has('choose'))return;
   current.searchParams.delete('choose');window.history.replaceState(window.history.state,'',current);
- }
- function focusWorkspace(){
-  const heading=document.querySelector('#main h1');
-  if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
-  window.scrollTo({top:0,behavior:'auto'});
  }
  function open(next){
   if(client.busy)return;
@@ -64,7 +52,7 @@ export function setupSelectionMode({client,render,switchDepth,onRestart}){
   if(!option){render();focusWorkspace();return;}
   if(next==='switch'){
    render();
-   if(client.state.depth!==depth)void switchDepth(depth);
+   if(client.state.depth!==depth)void switchDepth(depth).then(result=>{if(result&&!client.error)focusWorkspace();});
    else focusWorkspace();
    return;
   }
@@ -72,7 +60,7 @@ export function setupSelectionMode({client,render,switchDepth,onRestart}){
   if(restart)onRestart();
   client.chooseDepth(depth,{restart});focusWorkspace();
  });
- tool.addEventListener('click',event=>{if(event.target.closest('[data-mode-switch]'))open('switch');});
+ tool.addEventListener('click',()=>{tool.closest('details').open=false;open('switch');});
  return {
   get choosing(){return Boolean(intent);},
   newSelection(){open('new');},
@@ -84,11 +72,12 @@ export function setupSelectionMode({client,render,switchDepth,onRestart}){
     if(!visible){
      host.innerHTML=selectionModeChooser({intent,depth:client.state?.depth,canResume:intent==='switch'||intent==='new'&&!client.needsDepth});
      host.querySelector('h1')?.focus({preventScroll:true});
-     window.scrollTo({top:0,behavior:'auto'});
+     window.scrollTo({top:0,behavior:'instant'});
     }
    }else{
-    tool.innerHTML=selectionModeControl({state:client.state,screen});
-    const control=tool.firstElementChild;if(control)control.disabled=client.busy;
+    const state=client.state;
+    tool.hidden=!state||!screen||screen.type==='result'||Boolean(state.interviewComplete||state.interview||state.result);
+    tool.disabled=client.busy;
    }
    visible=choosing;
    return choosing;

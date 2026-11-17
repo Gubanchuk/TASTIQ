@@ -239,7 +239,7 @@ body.product-page.library-page .library-lane>header h2{margin-bottom:4px}
 @media(max-width:420px){body.product-page.library-page .library-filter-options{grid-template-columns:minmax(0,1fr)}}
 
 /* Collections follow the user's intent; the old time-based lane switch is gone. */
-body.selection-design.product-page.library-page #library-app .library-views{display:flex;flex-wrap:wrap;width:fit-content;gap:6px;margin-bottom:0}
+body.selection-design.product-page.library-page #library-app .library-views{display:flex;flex-wrap:wrap;width:fit-content;gap:6px;margin-bottom:16px}
 body.selection-design.product-page.library-page #library-app .library-views button{min-width:max-content;white-space:nowrap;word-break:normal;overflow-wrap:normal}
 body.selection-design.product-page.library-page #library-app .library-secondary-nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 20px;margin:4px 0 8px}
 body.selection-design.product-page.library-page #library-app .library-secondary-nav button{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:5px 0;border:0;background:none;color:var(--brand-muted);font:500 13px/1.6 Golos,sans-serif;cursor:pointer;text-align:left;text-underline-offset:5px}
@@ -263,8 +263,8 @@ body.selection-design.product-page.library-page #library-app .library-review-sco
 body.selection-design.product-page.library-page #library-app .library-review-scope p{font-size:14px;line-height:1.6;margin:0}
 body.selection-design.product-page.library-page #library-app .library-undo{border-radius:12px}
 @media(max-width:760px){
- body.selection-design.product-page.library-page #library-app .library-views{width:100%;gap:5px}
- body.selection-design.product-page.library-page #library-app .library-views button{flex:1 1 auto;flex-direction:row;gap:6px;padding:10px 8px;font-size:12px}
+ body.selection-design.product-page.library-page #library-app .library-views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:6px}
+ body.selection-design.product-page.library-page #library-app .library-views button{min-width:0;flex-direction:column;gap:4px;padding:8px 6px;font-size:.8125rem}
  body.selection-design.product-page.library-page #library-app .library-secondary-nav{margin:2px 0 5px}
  body.selection-design.product-page.library-page #library-app .collection-description{font-size:13px;margin-bottom:14px}
  body.selection-design.product-page.library-page #library-app .board-card{padding:16px;gap:12px}

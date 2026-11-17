@@ -1,6 +1,6 @@
 // What the model reads: who the person is (titles they marked, what they said about them, tonight's limits) and the
 // shortlist the engine left after its hard sieves. The model mostly reorders and explains titles from the shortlist;
-// it may name up to two titles from its own knowledge, which pick.js looks up among the titles that passed the
+// it can also name titles from its own knowledge, which pick.js looks up among the titles that passed the
 // engine's sieves, so stops, episode length, «уже видел» and the platform stay enforced by the engine.
 import { DOMAINS } from '../aspects/index.js';
 import { contextQuestion } from '../core/context.js';
@@ -38,6 +38,7 @@ export const SYSTEM=CONTEXTUAL_SYSTEM.split('\n').filter(line=>!contextRules.som
 const GAME_SYSTEM = CONTEXTUAL_SYSTEM.split('\n').map(line => line.startsWith('- Prefer titles this person has probably not seen yet.')
   ? '- Prioritize fit to the explicit request over novelty. Do not assume an unmarked game has been played merely because it is popular or a classic of the loved genre. Known played games have already been removed. A famous title can be the best first pick; prefer lesser-known choices when the person explicitly asks for them or when fit is otherwise equal. likelySeen is only a tentative hint, never a reason by itself to demote a better fit.'
   : line).join('\n');
+const adaptiveSourceRule='- First check the shortlist and copy IDs exactly. If it lacks enough matches, name real works for catalog lookup, with exact original titles and release years and with empty IDs. The explicit requested count still applies. Catalog checks can reject an unknown, excluded, or incompatible title.';
 const ADAPTIVE_GAME_SYSTEM=GAME_SYSTEM.split('\n').map(line=>line.startsWith("You get the person's answers")
   ? "You get the person’s active answers and an engine shortlist. Catalog filters already enforce supported limits, such as platform and verified player limits. Tags do not cover every semantic condition. Check the active request again for each proposed game."
   : line.startsWith('- Start from the titles the person loves')
@@ -45,14 +46,16 @@ const ADAPTIVE_GAME_SYSTEM=GAME_SYSTEM.split('\n').map(line=>line.startsWith("Yo
   : line.startsWith('- Distinguish the person')
   ? '- Use only supported active preferences. Corrections and retractions supersede earlier interpretations. Indifference is not dislike; an unknown reason is not permission to invent one. A conditional tolerance stays conditional. Explicit exclusions win; never recommend a known violation with a caveat.'
   : line.startsWith('- Prefer one clear best match')
-  ? '- Prefer one clear best match first and add alternatives only while they satisfy the request. Return fewer picks or none if the alternatives conflict.'
+  ? '- Rank the best match first. Aim for the requested batch size and provide suitable reserves when available. Omit a candidate that conflicts with any active requirement.'
+  : line.startsWith('- Pick from the shortlist')?adaptiveSourceRule
   : line).join('\n')+'\nIn this adaptive game dialogue only explicitly completed or excluded titles have been removed. A game merely started or dropped may be offered to continue if the current request allows it. Respect the full evidence-backed conversation; factual unknowns must be stated, not guessed. Do not use interview length or mode as evidence of what someone wants. Do not claim a hard condition is guaranteed in a reason or caveat unless independent data verifies it.';
 const adaptiveMediaSystem=base=>base.split('\n').map(line=>line.startsWith("You get the person's answers")
   ? "You get the person's active answers and an engine shortlist. The engine enforces supported catalog constraints, but not every semantic exclusion is covered by its tags. You must check the full current request yourself; being shortlisted does not mean every condition is satisfied."
   : line.startsWith('- Start from the titles the person loves')
   ? '- Start from today’s explicit goal and conditions; reference titles and past likes are secondary evidence, never a substitute for the current request.'
   : line.startsWith('- Prefer one clear best match')
-  ? '- Prefer one clear best match first, then different alternatives only while they respect the request. Return fewer picks, or an empty list, if there are not enough suitable candidates.'
+  ? '- Rank the best match first. Aim for the requested batch size and provide suitable reserves when available. Search the full shortlist for different works that fit the active request.'
+  : line.startsWith('- Pick from the shortlist')?adaptiveSourceRule
   : line).join('\n')+'\nOmit any candidate you know violates an explicit exclusion or requirement. A caveat cannot waive it, including during more/replacement. Do not claim absence of frightening scenes or age suitability without evidence; unknowns stay unknown. Soft preferences may have caveats, but never knowingly fill the count with a hard conflict. Corrections and retractions supersede earlier interpretations.';
 export const systemFor=state=>{
  if(state.domain==='game')return state.conversation?ADAPTIVE_GAME_SYSTEM:GAME_SYSTEM;

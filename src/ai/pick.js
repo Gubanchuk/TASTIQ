@@ -1,5 +1,5 @@
 // AI picker: the engine ranks and sieves the catalog, the model picks four titles, mostly from its shortlist, and says
-// why in Russian. Up to two picks may come from the model's own knowledge (title and year): they are looked up among
+// why in Russian. Picks may come from the model's own knowledge (title and year): they are looked up among
 // the titles that passed the engine's sieves, so the hard limits stay in force. What the model adds is judgement the
 // tags lack (era, tone, how close a title is to the loved ones) and the person's own words.
 // Any failure (no key, timeout, refusal, ids outside the shortlist) falls back to the engine's own picks.
@@ -21,12 +21,33 @@ export function candidateLimit(domain, withWish = false) {
   return (withWish ? AI.shortlistWithWish : AI.shortlist) + Math.max(0, AI.discovery[domain] ?? 0);
 }
 
+// When a media wish has no catalog features, the ranking tends to be dominated by popular dramas.
+// Keep the leaders and give the model catalog IDs from other genres in the same shortlist budget.
+function withGenreVariety(ordered, size) {
+  const leaders = ordered.slice(0, Math.ceil(size / 2));
+  const genres = new Map();
+  for (const row of leaders) for (const genre of row.game.genres ?? []) genres.set(genre, (genres.get(genre) ?? 0) + 1);
+  const varied = [];
+  for (const row of ordered.slice(leaders.length)) {
+    const genre = row.game.genres?.find(genre => (genres.get(genre) ?? 0) < 3);
+    if (!genre) continue;
+    genres.set(genre, (genres.get(genre) ?? 0) + 1);
+    varied.push(row);
+    if (leaders.length + varied.length >= size) break;
+  }
+  const selected = new Set([...leaders, ...varied]);
+  return [...selected, ...ordered.filter(row => !selected.has(row))].slice(0, size);
+}
+
 export function candidatesOf(catalog, state, size = candidateLimit(state.domain)) {
   const { ranked } = rankAll(catalog, profileOf(state), sessionOf(state));
   const { pool, picked } = choose(ranked);
   const seen = new Set();
   const ranks = new Map(ranked.map((r, i) => [r.game.id, i + 1]));
-  const rows = [...picked, ...pool, ...ranked].filter((r) => !seen.has(r.game.id) && seen.add(r.game.id)).slice(0, size).map((r) => ({ ...r, rank: ranks.get(r.game.id) }));
+  const ordered = [...picked, ...pool, ...ranked].filter((r) => !seen.has(r.game.id) && seen.add(r.game.id));
+  const useGenres = state.conversation && state.domain !== 'game' && !state.session?.goalWants?.length && ordered.length > size;
+  const shortlist = useGenres ? withGenreVariety(ordered, size) : ordered.slice(0, size);
+  const rows = shortlist.map((r) => ({ ...r, rank: ranks.get(r.game.id) }));
   return { rows, ranked };
 }
 export const shortlistOf = (catalog, state, size = candidateLimit(state.domain)) => candidatesOf(catalog, state, size).rows;
@@ -51,11 +72,12 @@ const sentence = (x, max) => { const t = String(x ?? '').trim().slice(0, max); r
 
 /**
  * Model output checked against the shortlist: known ids, no repeats, cut to size; reasons trimmed. A pick without
- * an id is looked up by title and year among the titles that passed the sieves (`ranked`), at most AI.ownPicks.
+ * an id is looked up by title and year among the titles that passed the sieves (`ranked`), up to ownLimit.
  */
-export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], {session,byId} = {}) {
+export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], {session,byId,distinctWorks=false,ownLimit=AI.ownPicks} = {}) {
   const allowed = new Set(rows.map((r) => r.game.id));
   const seen = new Set();
+  const works = new Set();
   const picks = [];
   let own = 0;
   const proposed = Array.isArray(out?.picks) ? out.picks : [];
@@ -75,7 +97,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
     const given = typeof p?.id === 'string' ? p.id.trim() : '';
     let id = allowed.has(given) ? given : null;
     let outside = false;
-    if (!id && own < AI.ownPicks) {
+    if (!id && own < ownLimit) {
       id = identities.get(p);
       outside = Boolean(id) && !allowed.has(id);
     }
@@ -83,6 +105,11 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
     const assessment=assessments.get(p);
     if(conflicts.has(id)||inconsistent.has(id)||!assessment.ok){if(conflicts.has(id))conflictDrops++;else unconfirmedDrops++;continue;}
     seen.add(id);
+    if (distinctWorks) {
+      const work=byId?.get(id)?.work??id;
+      if(works.has(work))continue;
+      works.add(work);
+    }
     if (outside) own++;
     picks.push({ id, reason: sentence(p.reason, 220), caveat: sentence(p.caveat, 140), likelySeen: Boolean(p.likelySeen), own: outside,...(criteria.length?{constraintChecks:assessment.checks,unknownCriteria:assessment.unknowns}:{}) });
   }
@@ -109,19 +136,28 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   if(!rows.length)return {error:'По этим условиям нет доступных вариантов каталога.',retryable:false};
   const liked = Object.entries(state.answers ?? {}).filter(([, a]) => a?.reaction === 'love' || a?.reaction === 'like').map(([id]) => catalog.byId.get(id)).filter(Boolean);
 
-  const total = adaptive ? AI.picks : AI.picks + AI.spares;
+  const availableWorks = adaptive ? new Set(rows.map(({game})=>game.work??game.id)).size : 0;
+  const target = adaptive ? Math.min(AI.picks,availableWorks) : AI.picks + AI.spares;
+  // Reserve two ranked recommendations in the same response for invalid IDs, duplicate editions and declined conditions.
+  const requestCount = adaptive ? Math.min(AI.picks+2,availableWorks) : target;
+  const ownLimit = adaptive ? requestCount : AI.ownPicks;
   const howMany = adaptive
-    ? `Выбери до ${total} разных тайтлов по порядку, первый — лучший. Не дополняй число заведомо неподходящими: при конфликте с обязательным условием исключи тайтл, даже с оговоркой. Можно вернуть меньше вариантов или пустой список.`
+    ? `Целевое число вариантов — ${target}. Проверь весь список кандидатов. Верни подходящие разные произведения по порядку (максимум ${requestCount}). Первые ${target} для выдачи, остальные — запас на случай исключения при проверке. Один тайтл на произведение, без дублей изданий. Сокращай выдачу, если подходящих вариантов меньше. Не дополняй число заведомо неподходящими. Конфликт с обязательным условием исключает тайтл даже с оговоркой.`
     : AI.spares
-    ? `Выбери ровно ${total} разных тайтлов по порядку. Первые ${AI.picks} покажу сразу, первый — лучший; остальные ${AI.spares} — запасные, по очереди встанут на место того, что человек уже видел.`
+    ? `Выбери ровно ${target} разных тайтлов по порядку. Первые ${AI.picks} покажу сразу, первый — лучший; остальные ${AI.spares} — запасные, по очереди встанут на место того, что человек уже видел.`
     : `Выбери ровно ${AI.picks} разных тайтла, первый — лучший.`;
-  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} Бери из списка (id копируй из строки кандидата) или не больше ${AI.ownPicks} своих (id пустой, название и год).`;
+  const sources=adaptive
+    ? `Сначала проверь список и для его вариантов скопируй id. Если в списке мало подходящих, предложи другие произведения для поиска в каталоге. Укажи оригинальное название и год, оставь id пустым. Уже показанные произведения повторять нельзя.`
+    : `Бери из списка (id копируй из строки кандидата) или не больше ${ownLimit} своих (id пустой, название и год).`;
+  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} ${sources}`;
   const started = Date.now();
+  const schema=constraintSchema(SCHEMA,criteria);
+  const outputSchema=adaptive?{...schema,properties:{...schema.properties,picks:{...schema.properties.picks,maxItems:requestCount}}}:schema;
   const request = {
       model: AI.model,
       max_output_tokens: AI.maxOutputTokens,
       reasoning: { effort: AI.effort },
-      text: { format: { type: 'json_schema', name: 'tastiq_picks', strict: true, schema: constraintSchema(SCHEMA,criteria) } },
+      text: { format: { type: 'json_schema', name: 'tastiq_picks', strict: true, schema: outputSchema } },
       instructions: systemFor(state)+constraintInstructions(criteria)+(feedbackContext.length?'\n'+feedbackContextRule:''),
       input: content,
       store: false,
@@ -151,7 +187,7 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   } catch {
     return { ...meta, error: 'нейросеть ответила не по форме' };
   }
-  const checked = checkPicks(parsed, rows, total, ranked, criteria, {session:sessionOf(state),byId:catalog.byId});
+  const checked = checkPicks(parsed, rows, target, ranked, criteria, {session:sessionOf(state),byId:catalog.byId,distinctWorks:adaptive,ownLimit});
   if(!checked.picks.length&&checked.constraintDrops&&(checked.constraintDrops.conflict||checked.constraintDrops.unconfirmed))return {...meta,...checked,error:'Предложения в этом ответе не прошли проверку обязательных условий. Можно уточнить запрос.',retryable:false};
   if (!checked.picks.length) return adaptive
     ? { ...meta, error: parsed?.picks?.length?'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.':'В этом ответе не нашлось подходящих вариантов. Можно уточнить запрос.', retryable:false }

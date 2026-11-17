@@ -2,9 +2,9 @@ import {setupSelectionMode,checkpointHtml,selectionModeTitle} from '/shared/sele
 import {questionFormHtml,canSubmitQuestion,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
 import {createSelectionReviewController} from '/shared/selection-review-controller.js';
-import {resultBatchHelp,singleReplacementIndex} from '/shared/result-clarity.js';
+import {resultBatchHelp,resultBatchNotice,singleReplacementIndex} from '/shared/result-clarity.js';
 import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
-import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions} from '/shared/workspace-ui.js';
+import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent} from '/shared/workspace-ui.js';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
@@ -50,7 +50,7 @@ const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:a
  return response.ok?response.json():null;
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();}});
 const client=createConversationClient({localStart:true,selectionId:new URLSearchParams(location.search).get('selection'),fetch,domain,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>feedback.learning(domain),onChange:render});
-const selectionMode=setupSelectionMode({client,render,switchDepth:depth=>navigate({type:'setDepth',depth}),
+const selectionMode=setupSelectionMode({client,render,switchDepth:depth=>navigate({type:'setDepth',depth}),focusWorkspace:()=>focusPickerContent($('#main h1')),
  onRestart(){persistAnswer();activeEvening=null;activeEveningDialogue=null;observedKey=null;localNotice='';pendingBack=null;currentRequest='resume';}
 });
 if(new URLSearchParams(location.search).has('selection')){const url=new URL(location.href);url.searchParams.delete('selection');window.history.replaceState(null,'',url);}
@@ -92,7 +92,7 @@ function historyHtml() {
 
 function correctionForm({id='correction-form'}={}) {
  const draft=client.draft('__correction');
- return `<div class="clarification-tools"><form id="${id}" class="clarification-form" data-form="correction"${draft.kind==='none'?'':' hidden'}><label class="game-field">Что добавить или изменить?<textarea id="correction-text" class="input" name="correction" maxlength="1600" rows="3" required>${esc(draft.text)}</textarea></label><div class="clarification-actions"><button class="btn btn-secondary" type="submit"${client.busy?' disabled':''}>Применить поправку</button><button type="button" class="btn btn-plain" data-act="cancel-correction">Отмена</button></div></form></div>`;
+ return `<div class="clarification-tools"><form id="${id}" class="clarification-form" data-form="correction" hidden><label class="game-field">Что изменить в запросе?<textarea id="correction-text" class="input" name="correction" maxlength="1600" rows="3" required>${esc(draft.text)}</textarea></label><div class="clarification-actions"><button class="btn btn-primary" type="submit"${client.busy||!draft.text.trim()?' disabled':''}>Применить</button><button type="button" class="btn btn-plain" data-act="cancel-correction">Отмена</button></div></form></div>`;
 }
 function contextForm(context) {
  context=contextEditorValues(context,client.draft('__context').text,client.state.id);
@@ -129,14 +129,14 @@ function understanding(screen) {
   toolsHtml:(contextReady(screen)?contextForm(context):'')+historyHtml()+(time?'<details class="request-time-details"><summary>Откуда ограничение времени</summary><ul>'+timeEvidenceHtml(time)+'</ul></details>':''),
   clarification:clarificationHtml({state:client.state,uncertainties:screen.uncertainties,draft:key=>client.draft(key),busy:client.busy}),correction:correctionForm(),
   restore:client.canRestoreCorrection?'<div class="clarification-restore"><p>Предыдущий запрос и варианты можно вернуть.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуть предыдущие варианты</button></div>':''});
- syncRequestEditor(client.draft('__activeRequestEditor').text);
+ syncRequestEditor(JSON.stringify([client.state.id,client.state.revision,screen.type]));
  initCustomSelects(document);
 }
 function questionHtml(screen) {
  const question=screen.question,optional=question.id!=='direction'&&question.allowText!==false;
  const exampleHtml=question.allowText!==false
   ?'<div class="game-example"><label for="game-search">Найти знакомое название</label><input class="input" id="game-search" type="search" autocomplete="off" placeholder="Название"><div id="search-results" class="game-search-results" aria-live="polite"></div></div>':'';
- return checkpointHtml(screen.checkpoint)+questionFormHtml(question,currentDraft(question),{busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml});
+ return questionFormHtml(question,currentDraft(question),{busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml})+checkpointHtml(screen.checkpoint);
 }
 function reviewHtml(screen) {
  return '<h1>Такой выбор тебе нужен сегодня?</h1>'
@@ -155,12 +155,13 @@ function cardHtml(card,index) {
 function resultHtml(screen) {
  const result=screen.result??client.state?.result;
  const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Отмеченные варианты заменены. Остальные варианты сохранены.');
+ const batchNotice=result?.top&&!replacement?resultBatchNotice(1+(result.alternatives??[]).length):'';
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
  return '<div class="game-result-heading"><h1>Рекомендации для тебя</h1>'
   +`<div class="game-result-browse"><details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
-  +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
+  +((replacement&&notice)||batchNotice?`<p class="game-replacement-notice" role="status">${esc(replacement?notice:batchNotice)}</p>`:'')
   +(!client.archivePersistent?'<p>Браузер не разрешил сохранить подбор. Он доступен до закрытия окна.</p>':'')+'</div>'
   +'<section class="game-proposals" aria-label="Предложенные варианты">'+[result.top,...(result.alternatives??[]).slice(0,3)].map(cardHtml).join('')+'</section>';
 }
@@ -170,7 +171,7 @@ function render() {
  if(selectionMode.draw(screen))return;
  const focus=preserveView();
  $('#back').disabled=client.busy||!screen?.canBack;
- syncSessionActions({busy:client.busy,canRestore:client.canRestorePrevious});
+ syncSessionActions({busy:client.busy,canRestore:client.canRestorePrevious,canSwitch:!$('#selection-mode-control').hidden});
  const pending=loadingPresentation(pendingAction,pendingOrigin??client.state),prominent=client.busy&&pending.prominent&&!pendingAction.targetId;
  $('#notice').textContent=client.busy?(prominent?'':pending.title):localNotice||(!client.persistent?'Этот подбор сохранится только до закрытия окна.':'');
  $('#processing-title').textContent=pending.title;
@@ -201,12 +202,13 @@ function render() {
   understanding(screen);
   restoreView(null);
   if(newScreen&&!client.busy){
-   const heading=$('#main h1')??$('#main');heading.tabIndex=-1;heading.focus({preventScroll:true});
-   if(firstScreen)window.scrollTo({top:0,behavior:'auto'});
-   else (screen.type!=='result'&&screen.question?.id!=='direction'&&matchMedia('(max-width:760px)').matches?$('#request-panel'):$('#stage')).scrollIntoView({block:'start',behavior:'auto'});
+   const heading=$('#main h1')??$('#main');
+   if(firstScreen){heading.tabIndex=-1;heading.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
+   else focusPickerContent(heading);
   }
  }
  document.querySelectorAll('#main button,#main input,#main textarea,#request-editor button,#request-editor input,#request-editor textarea,#request-editor select,#request-panel button,#request-panel input,#request-panel textarea,#request-panel select').forEach(el=>el.disabled=client.busy);
+ syncEditorSubmit($('#request-editor form'),client.busy);
  const targetButton=pendingAction.targetId?document.querySelector(`[data-act="replace-one"][data-id="${CSS.escape(pendingAction.targetId)}"]`):null;
  if(targetButton){
   targetButton.innerHTML=client.busy?'<span class="game-processing-mark inline" aria-hidden="true"><img src="/assets/brand/tastiq-symbol-cobalt.svg" width="13" height="13" alt=""></span> Ищу замену…':'Заменить только этот вариант';
@@ -232,8 +234,8 @@ function render() {
   // Library writes redraw the cards; restore a feedback control after its HTML exists again.
   if(!newScreen&&!client.busy&&focus?.fk)restoreView(navigationFocus??focus);
  }
- if(prominent&&!processingShown){$('#processing').focus({preventScroll:true});$('#stage').scrollIntoView({block:'start',behavior:'auto'});}
- if(client.error&&!client.busy&&client.error!==lastVisibleError){$('#error').focus({preventScroll:true});$('#error').scrollIntoView({block:'center',behavior:'auto'});}
+ if(prominent&&!processingShown)focusPickerContent($('#processing'));
+ if(client.error&&!client.busy&&client.error!==lastVisibleError)focusPickerContent($('#error'));
  processingShown=prominent;lastVisibleError=client.error;
 }
 function refreshFeedback(cardId) {
@@ -272,7 +274,7 @@ function persistAnswer() {
  const draft=currentDraft(question),input=$('#answer-text');if(input)draft.text=input.value;
  saveCurrentDraft(question,draft);return draft;
 }
-function focusResultStart(){const heading=$('#main h1');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}$('#stage').scrollIntoView({block:'start',behavior:'auto'});}
+function focusResultStart(){focusPickerContent($('#main h1'));}
 async function navigate(action,{origin=null}={}) {
  if(client.busy)return null;
  const singleTarget=action.type==='replace_familiar'?action.id:action.type==='retry'&&client.state?.failedAction==='replace'&&client.state.replacement?.pendingIds?.length===1?client.state.replacement.pendingIds[0]:null;
@@ -295,7 +297,7 @@ async function navigate(action,{origin=null}={}) {
  const result=await client.send(action);
  rememberAcceptedFamiliar(result);
  completeBackDraft(result);
- if(result&&!client.error&&shouldClearCorrection(action,origin,client.draft('__correction').text)){client.saveDraft('__correction',{text:''});client.saveDraft('__activeRequestEditor',{text:''});const input=$('#correction-text');if(input)input.value='';closeRequestEditor($('#correction-form'),{focus:false});}
+ if(result&&!client.error&&shouldClearCorrection(action,origin,client.draft('__correction').text)){client.saveDraft('__correction',{text:''});const input=$('#correction-text');if(input)input.value='';closeRequestEditor($('#correction-form'),{focus:false});}
  if(action.type==='set_context'&&result&&!client.error){
   client.saveDraft('__context',{text:''});
   if(client.screen?.type==='question'){localNotice='Условия изменены. Проверь ответ на этот вопрос перед отправкой.';render();}
@@ -364,7 +366,7 @@ document.addEventListener('click',event=>{
  const act=el.dataset.act;
  if(act==='copy-title')return void copyCardTitle(el);
  if(el.closest('.game-session-menu'))el.closest('.game-session-menu').open=false;
- if(act==='focus-request'){$('#request-panel').scrollIntoView({block:'start',behavior:'auto'});$('#request-panel h2').focus({preventScroll:true});return;}
+ if(act==='focus-request'){focusPickerContent($('#request-panel h2'));return;}
  if(act==='focus-history'){
   expandRequestDetails();
   const details=$('.game-history');if(details){details.open=true;disclosures.set('history',true);details.querySelector('summary')?.focus();}return;
@@ -399,11 +401,11 @@ document.addEventListener('click',event=>{
  }
  if(act==='toggle-context'){setContextOpen($('.game-context-panel').dataset.contextOpen!=='true');return;}
  if(act==='preview-clarify'){setContextOpen(true);$('#understanding [data-act="clarify"]')?.click();return;}
- if(act==='focus-correction'){const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'none'});client.saveDraft('__activeRequestEditor',{text:'correction'});openRequestEditor($('#correction-form'));return;}
- if(act==='cancel-correction'){const draft=client.draft('__correction');client.saveDraft('__correction',{...draft,kind:'answer'});client.saveDraft('__activeRequestEditor',{text:''});closeRequestEditor($('#correction-form'));return;}
- if(act==='clarify'){const form=document.getElementById(el.getAttribute('aria-controls'));if(!form)return;const draft=client.draft(form.dataset.key);client.saveDraft(form.dataset.key,{...draft,kind:'none'});client.saveDraft('__activeRequestEditor',{text:form.dataset.key});el.setAttribute('aria-expanded','true');openRequestEditor(form);return;}
- if(act==='cancel-clarification'){const form=el.closest('form'),draft=client.draft(form.dataset.key);client.saveDraft(form.dataset.key,{...draft,kind:'answer'});client.saveDraft('__activeRequestEditor',{text:''});closeRequestEditor(form);return;}
- if(act==='restore-correction'){persistAnswer();if(client.restoreCorrection()){const general=client.draft('__correction');client.saveDraft('__correction',{...general,kind:'answer'});client.saveDraft('__activeRequestEditor',{text:''});for(const text of client.screen.uncertainties??[]){const key=`__clarification:${client.state.id}:${encodeURIComponent(text)}`;client.saveDraft(key,{...client.draft(key),kind:'answer'});}observedKey=null;activeEvening=null;activeEveningDialogue=null;renderedKey=null;render();}return;}
+ if(act==='focus-correction'){openRequestEditor($('#correction-form'),{trigger:el});return;}
+ if(act==='cancel-correction'){closeRequestEditor($('#correction-form'));return;}
+ if(act==='clarify'){openRequestEditor(document.getElementById(el.getAttribute('aria-controls')),{trigger:el});return;}
+ if(act==='cancel-clarification'){closeRequestEditor(el.closest('form'));return;}
+ if(act==='restore-correction'){persistAnswer();if(client.restoreCorrection()){const general=client.draft('__correction');client.saveDraft('__correction',{...general,kind:'answer'});for(const text of client.screen.uncertainties??[]){const key=`__clarification:${client.state.id}:${encodeURIComponent(text)}`;client.saveDraft(key,{...client.draft(key),kind:'answer'});}observedKey=null;activeEvening=null;activeEveningDialogue=null;renderedKey=null;render();}return;}
  if(['familiar-mark','familiar-unmark','familiar-keep'].includes(act)){
   const id=el.dataset.id,card=[client.state?.result?.top,...(client.state?.result?.alternatives??[])].find(card=>card?.id===id);
   const type={'familiar-mark':'familiar_mark','familiar-unmark':'familiar_unmark','familiar-keep':'familiar_keep'}[act];
@@ -467,8 +469,8 @@ document.addEventListener('change',event=>{
 document.addEventListener('input',event=>{
  const el=event.target;
  if(el.id==='answer-text'){const draft=persistAnswer();if(draft?.text.trim()&&draft.kind!=='answer'){draft.kind='answer';saveCurrentDraft(client.screen.question,draft);}if(draft)paintSelections(draft);return;}
- if(el.name==='clarification'){const form=el.closest('form');client.saveDraft(form.dataset.key,{text:el.value,kind:'none'});return;}
- if(el.name==='correction'){client.saveDraft('__correction',{text:el.value,kind:'none'});document.querySelectorAll('textarea[name="correction"]').forEach(other=>{if(other!==el)other.value=el.value;});return;}
+ if(el.name==='clarification'){const form=el.closest('form');client.saveDraft(form.dataset.key,{text:el.value});syncEditorSubmit(form,client.busy);return;}
+ if(el.name==='correction'){client.saveDraft('__correction',{text:el.value});syncEditorSubmit(el.closest('form'),client.busy);return;}
  const form=el.closest('[data-form="evening-reason"]');if(form)feedbackDrafts.set(`${form.dataset.run}:${form.dataset.id}`,{reason:form.elements.reason.value,note:form.elements.note.value});
  if(el.id==='game-search'){
   clearTimeout(searchTimer);const ticket=++searchGeneration,query=el.value.trim(),question=client.screen?.question?.id;

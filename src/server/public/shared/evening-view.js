@@ -28,7 +28,7 @@ export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeO
   if(modern){
     const hasExplanation=Boolean(r.reason||r.note),hasDraft=Boolean(draft?.reason||draft?.note);
     const hasRating=Boolean(r.fit||hasExplanation),ratingDetails=!history||hasRating||Boolean(r.outcome);
-    const ratingLabel=r.fit?savedLabel(`Подходит ли запросу: ${esc(FIT[r.fit])}`,'Изменить оценку'):hasExplanation?'Изменить уточнение':hasDraft?'Продолжить оценку':'Оценить рекомендацию';
+    const ratingLabel=r.fit?savedLabel(`Подходит ли запросу: ${esc(FIT[r.fit])}`,'Изменить оценку'):hasExplanation?'Изменить уточнение':hasDraft?'Продолжить оценку':resultCard?'Оценить вариант':'Оценить рекомендацию';
     const fit=`<div class="evening-fit-prompt"><div class="evening-buttons" role="group" aria-label="Подходит запросу">${Object.entries(FIT).map(([v,label])=>button('evening-fit',v,label,r.fit===v)).join('')}</div></div>`;
     return `<section class="evening-controls evening-controls-modern" aria-label="Выбор и отзыв: ${esc(card.title)}"><div class="evening-decision">${chosen}${history?start:''}</div>`
       + (history?'<div class="evening-review">':'')

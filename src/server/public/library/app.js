@@ -205,9 +205,9 @@ function render({feedbackFocus,focus:requestedFocus}={}) {
  const evenings=eveningRecords(),past=historyRecords();
  const rows=records(),counts={saved:rows.filter(row=>row.saved).length,liked:rows.filter(row=>row.rating==='liked').length,all:rows.length,history:past.length,evenings:evenings.length};
  const viewButton=(view,label=VIEWS[view])=>`<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}"${state.view===view?' aria-current="page"':''}>${label}<span>${counts[view]}</span></button>`;
- $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${['saved','liked','history'].map(view=>viewButton(view)).join('')}</nav>`
-  +`<div class="library-secondary-nav">${viewButton('all')}${['history','evenings'].includes(state.view)?viewButton('evenings'):''}</div>`
-  +(state.view==='all'||state.view==='evenings'?`<h2 class="library-view-title">${VIEWS[state.view]}</h2>`:'')
+ $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${['saved','liked','history','all'].map(view=>viewButton(view)).join('')}</nav>`
+  +(['history','evenings'].includes(state.view)?`<div class="library-secondary-nav">${viewButton('evenings')}</div>`:'')
+  +(state.view==='evenings'?`<h2 class="library-view-title">${VIEWS.evenings}</h2>`:'')
   +(!library.persistent||state.view==='history'&&!archive.persistent||!familiar.persistent||Object.values(mediaHistories).some(h=>!h.persistent)||state.view==='evenings'&&(!feedback.persistent||!feedbackDrafts.persistent)?'<p class="library-storage-note" role="status">Браузер не разрешил сохранить часть изменений. Они останутся в этом окне до его закрытия.</p>':'')
   +(isCollection()?board():undoLine()+(state.view==='history'?historyView(past):eveningsView(evenings)))
   +'<p class="library-footnote">Библиотека хранится в этом браузере.</p>';

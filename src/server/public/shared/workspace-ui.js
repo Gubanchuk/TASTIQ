@@ -1,39 +1,71 @@
-// Central editors keep the existing forms, names and draft keys used by the controllers.
+let editorKey=null,editorScope=null,editorTrigger=null;
+const keyOf=form=>form.dataset.key||'correction';
+
+export function scrollToPickerContent(target){
+ if(!target)return;
+ const shell=document.querySelector('.app-shell');
+ const top=target.getBoundingClientRect().top+window.scrollY-Math.max(0,shell?.getBoundingClientRect().bottom??0)-12;
+ window.scrollTo({top:Math.max(0,top),behavior:'instant'});
+}
+
+export function focusPickerContent(target){
+ if(!target)return;
+ target.tabIndex=-1;target.focus({preventScroll:true});scrollToPickerContent(target);
+}
+
+export function syncEditorSubmit(form,busy=false){
+ const input=form?.querySelector('textarea'),submit=form?.querySelector('button[type="submit"]');
+ if(input&&submit)submit.disabled=busy||!input.value.trim();
+}
+
+// The form's words are saved, while opening the editor is a transient UI action.
 export function closeRequestEditor(form,{focus=true}={}){
  if(!form)return;
  const host=document.getElementById('request-editor');form.hidden=true;
  form._requestAnchor?.replaceWith(form);form._requestAnchor=null;
  if(host&&!host.querySelector('form')){host.hidden=true;host.replaceChildren();}
- const trigger=form.dataset.form==='clarification'?[...document.querySelectorAll('[data-act="clarify"]')].find(el=>el.dataset.key===form.dataset.key):document.querySelector('[data-act="focus-correction"]');
- trigger?.setAttribute('aria-expanded','false');if(focus)trigger?.focus({preventScroll:true});
+ const trigger=editorTrigger?.isConnected?editorTrigger:form.dataset.form==='clarification'
+  ?[...document.querySelectorAll('[data-act="clarify"]')].find(el=>el.dataset.key===form.dataset.key)
+  :document.querySelector('#action-controls [data-act="focus-correction"],#main [data-act="focus-correction"]');
+ editorKey=null;editorTrigger=null;
+ trigger?.setAttribute('aria-expanded','false');
+ if(focus&&trigger){trigger.focus({preventScroll:true});trigger.scrollIntoView({block:'nearest',behavior:'instant'});}
 }
-export function openRequestEditor(form,{focus=true}={}){
+export function openRequestEditor(form,{focus=true,trigger=null}={}){
  const host=document.getElementById('request-editor');if(!form||!host)return;
  for(const old of host.querySelectorAll('form'))if(old!==form)closeRequestEditor(old,{focus:false});
  if(!form._requestAnchor){const anchor=document.createElement('span');anchor.hidden=true;form.before(anchor);form._requestAnchor=anchor;}
- host.replaceChildren();const heading=document.createElement('h2');heading.textContent=form.dataset.form==='clarification'?'Уточним этот момент':'Измени пожелание';
- const description=document.createElement('p');description.className='request-editor-context';description.textContent=form.dataset.form==='clarification'?document.getElementById(form.querySelector('textarea')?.getAttribute('aria-describedby')?.split(' ')[0])?.textContent??'Добавь то, чего не хватает в понимании.':'Напиши, что добавить или изменить. После поправки проверим понимание ещё раз.';
- host.append(heading,description,form);host.hidden=false;form.hidden=false;
- if(focus){host.scrollIntoView({block:'start',behavior:'auto'});form.querySelector('textarea,input,select')?.focus({preventScroll:true});}
+ editorKey=keyOf(form);
+ if(trigger)editorTrigger=trigger;
+ editorTrigger?.setAttribute('aria-expanded','true');
+ host.replaceChildren();
+ if(form.dataset.form==='clarification'){
+  const source=form.querySelector('textarea')?.getAttribute('aria-describedby')?.split(' ')[0];
+  const text=source&&document.getElementById(source)?.textContent;
+  if(text){const context=document.createElement('p');context.className='request-editor-context';context.textContent=text;host.append(context);}
+ }
+ host.append(form);host.hidden=false;form.hidden=false;syncEditorSubmit(form);
+ if(focus){form.querySelector('textarea')?.focus({preventScroll:true});scrollToPickerContent(host);}
 }
-export function syncRequestEditor(preferred=''){
+export function syncRequestEditor(scope){
  const host=document.getElementById('request-editor');if(!host)return;
  host.replaceChildren();host.hidden=true;
- const forms=[...document.querySelectorAll('#understanding form.clarification-form')].filter(form=>!form.hidden);
- const chosen=forms.find(form=>(form.dataset.key||'correction')===preferred)??forms.at(-1);
- for(const form of forms)if(form!==chosen){form.hidden=true;const trigger=[...document.querySelectorAll('[data-act="clarify"]')].find(el=>el.dataset.key===form.dataset.key);trigger?.setAttribute('aria-expanded','false');}
+ if(editorScope!==scope){editorScope=scope;editorKey=null;editorTrigger=null;}
+ if(!editorKey)return;
+ const chosen=[...document.querySelectorAll('#understanding form.clarification-form')].find(form=>keyOf(form)===editorKey);
  if(chosen)openRequestEditor(chosen,{focus:false});
 }
 
-export function syncSessionActions({busy,canRestore}){
+export function syncSessionActions({busy,canRestore,canSwitch}){
  const direct=document.getElementById('restart-direct'),restart=document.getElementById('restart');
  const restore=document.getElementById('restore'),menu=restart?.closest('.game-session-menu');
  if(!direct||!menu||!restore)return;
  const active=document.activeElement;
- direct.hidden=canRestore;menu.hidden=!canRestore;
+ const useMenu=canRestore||canSwitch;
+ direct.hidden=useMenu;menu.hidden=!useMenu;
  restore.hidden=!canRestore;
  for(const button of [direct,restart,restore])button.disabled=busy;
- if(!canRestore){menu.open=false;if(menu.contains(active))direct.focus({preventScroll:true});}
+ if(!useMenu){menu.open=false;if(menu.contains(active))direct.focus({preventScroll:true});}
  else if(active===direct)menu.querySelector('summary')?.focus({preventScroll:true});
 }
 const switcher=document.getElementById('domain-switch'),menu=document.getElementById('domain-menu');

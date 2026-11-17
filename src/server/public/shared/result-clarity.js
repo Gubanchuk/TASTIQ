@@ -1,4 +1,8 @@
-export const resultBatchHelp='До четырёх вариантов за раз. «Показать ещё» продолжает этот же подбор.';
+export const resultBatchHelp='Обычно четыре варианта за раз. При строгих условиях их может быть меньше. «Показать ещё» продолжает этот же подбор.';
+export function resultBatchNotice(count,{more=false}={}){
+ if(count===4)return more?'Ещё 4 варианта по тому же запросу.':'';
+ return `Нашёл ${more?'ещё ':''}${count===1?'1 подходящий вариант':`${count} подходящих варианта`} по этому запросу.`;
+}
 export function singleReplacementIndex(state){
  const undo=state?.familiar?.undo;
  const changed=state?.replacement?.changedIds;

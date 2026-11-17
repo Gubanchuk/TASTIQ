@@ -8,6 +8,8 @@ test('each uncertainty has a separate persistent own-word editor and escaped con
  const html=clarificationHtml({state,uncertainties:['Какой сериал?','<script>'],draft:key=>({text:key===a?'Мой ответ':'',kind:key===a?'none':'answer'})});
  assert.ok(html.includes('Уточнить'));assert.ok(html.includes('Мой ответ'));assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>'));
  assert.ok(html.includes('data-revision="3"'));assert.ok(html.includes('Отмена'));
+ assert.doesNotMatch(html,/aria-expanded="true"/);
+ assert.equal((html.match(/data-form="clarification"[^>]+ hidden>/g)??[]).length,2);
 });
 test('clarification transmits human text only and refuses stale or foreign revision',()=>{
  const form={conversation:'one',revision:'3'};
