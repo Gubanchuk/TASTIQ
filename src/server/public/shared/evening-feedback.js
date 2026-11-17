@@ -1,6 +1,7 @@
 // Shared browser/server contract. Feedback describes one evening, never a persistent taste update.
 import { feedbackTransactions } from './evening-storage.js';
 import {normalizeSelectionReview,historicalFeedback} from './selection-review.js';
+import {selectionInterview} from './conversation-entry.js';
 export const FEEDBACK_KEY = 'tastiq.site.evenings';
 export const FIT = {accept:'Подходит',conditional:'С оговоркой',reject:'Не подходит',unknown:'Пока не знаю'};
 export const REASONS = {mood:'Не то настроение',taste:'Не мой вкус',time:'Не укладывается по времени',company:'Не для моей компании',availability:'Не могу запустить или посмотреть',seen:'Уже знакомо',other:'Другая причина'};
@@ -70,7 +71,9 @@ export function normalizeFeedback(x) {
   }
   const selectionReview=Object.hasOwn(x,'selectionReview')?normalizeSelectionReview(x.selectionReview):undefined;
   if(selectionReview===null)return null;
-  return {version:1,id:x.id,dialogueId:x.dialogueId,domain:x.domain,revision:x.revision,at:x.at,updatedAt:x.updatedAt,context,cards,responses,...(selectionReview?{selectionReview}:{})};
+  const interview=selectionInterview(x.interview);
+  if(Object.hasOwn(x,'interview')&&!interview)return null;
+  return {version:1,id:x.id,dialogueId:x.dialogueId,domain:x.domain,revision:x.revision,at:x.at,updatedAt:x.updatedAt,context,cards,responses,...(interview?{interview}:{}),...(selectionReview?{selectionReview}:{})};
 }
 
 // Private source words and displayed AI sentences can contain those words. Never send either automatically.
@@ -141,7 +144,7 @@ export function createFeedbackStore({storage,send,id=()=>crypto.randomUUID(),now
       e.run.selectionReview=checked;e.run.revision++;e.run.updatedAt=now();save();return true;
     }); },
     status: (rid) => { const e=getEntry(rid); return !e ? 'missing' : e.ack===e.run.revision && e.ackPayload===payload(e.run) ? 'sent' : 'pending'; },
-    observe(dialogueId,state,result,{inheritFrom,carryIntoExisting=false,retainedIds}={}) { return exclusive(()=>{
+    observe(dialogueId,state,result,{inheritFrom,carryIntoExisting=false,retainedIds,interview}={}) { return exclusive(()=>{
       if (!token(dialogueId) || !DOMAINS.includes(state?.domain) || !result?.top) return null;
       refresh();
       const s=state.situation ?? {}, intent=s.intent?.source==='confirmed' && s.intent.sourceText===s.note ? s.intent : null;
@@ -175,7 +178,8 @@ export function createFeedbackStore({storage,send,id=()=>crypto.randomUUID(),now
       if(entries.length>=60) { const at=entries.findIndex(e=>e.ack>=e.run.revision); if(at<0)return null; entries.splice(at,1); }
       let rid=id(); for(let attempt=0;getEntry(rid)&&attempt<5;attempt++)rid=id();
       if(getEntry(rid))return null;
-      const at=now(), run=normalizeFeedback({version:1,id:rid,dialogueId,domain:state.domain,revision:0,at,updatedAt:at,context,cards,responses});
+      const at=now(), checkedInterview=selectionInterview(interview);
+      const run=normalizeFeedback({version:1,id:rid,dialogueId,domain:state.domain,revision:0,at,updatedAt:at,context,cards,responses,...(checkedInterview?{interview:checkedInterview}:{})});
       if(!run)return null;
       entries.push({key,run,ack:-1,carryFrom});save();return structuredClone(run);
     }); },

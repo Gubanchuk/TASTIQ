@@ -1,5 +1,6 @@
 import {createHash} from 'node:crypto';
 import {newMediaConversation,normalizeMediaConversation,answerMediaConversation,applyMediaConversationProposal,mediaConversationScreen,mediaConversationToLegacy} from '../core/media-conversation.js';
+import {canOfferInterviewQuestion,rememberInterviewQuestion,reviewAtInterviewCapacity,completeInterview} from '../core/selection-dialogue.js';
 import {profileOf,sessionOf} from '../core/dialogue.js';
 import {recommend,recommendIds,rankAll} from '../core/recommend.js';
 import {editionsOf,makeCatalog} from '../core/catalog.js';
@@ -15,7 +16,11 @@ const DOMAINS=new Set(['film','series','cartoon']);
 const FORMAT_UNKNOWN='У части произведений формат не указан в каталоге: они не включены при выборе фильма или сериала.';
 const bad=message=>Object.assign(Error(message),{status:400});
 const cardsOf=result=>[result?.top,...(result?.alternatives??[])].filter(Boolean);
-const contextual=s=>{const state={...s,phase:'talk',provisional:true};return {...state,question:s.question??mediaConversationScreen(state).question};};
+const contextual=s=>{
+  if(!canOfferInterviewQuestion(s))return reviewAtInterviewCapacity(s);
+  const state={...s,phase:'talk',provisional:true};state.question=s.question??mediaConversationScreen(state).question;
+  return rememberInterviewQuestion(state,state.question);
+};
 
 // One scoped controller per media catalog. The injected transport is the same guarded transport as game AI.
 export function createMediaConversationService({domain,catalogs,plan=aiMediaConversation,pick=aiPick,api,access=()=>({allowed:true}),spend=()=>{},journal=()=>{},now=Date.now}={}) {
@@ -37,7 +42,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     return {state,screen:mediaConversationScreen(state),...(state.phase==='result'?{feedbackState:projection(state)}:{}),...extra};
   };
   function log(stage,s,out) {
-    journal({at:new Date(now()).toISOString(),event:`media-conversation-${stage}`,data:{domain,id:s.id,revision:s.revision,mode:s.mode,model:out.model??AI.model,
+    journal({at:new Date(now()).toISOString(),event:`media-conversation-${stage}`,data:{domain,id:s.id,revision:s.revision,mode:s.mode,...(s.depth?{depth:s.depth}:{}),model:out.model??AI.model,
       error:out.error??null,ms:out.ms??null,usage:out.usage?{in:out.usage.input_tokens,out:out.usage.output_tokens,
         cached:out.usage.input_tokens_details?.cached_tokens??0,estimatedUsd:estimateCost(out.usage,AI.model)}:null}});
   }
@@ -134,10 +139,13 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
   }
   async function handle(body,who) {
     const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,domain);if(feedbackContext.length)who={...who,feedbackContext};
-    let s=validateSnapshot(body.state?normalizeMediaConversation(body.state,domain):newMediaConversation({domain,mode:body.mode}));
+    let s=validateSnapshot(body.state?normalizeMediaConversation(body.state,domain):newMediaConversation({domain,mode:body.mode,depth:body.depth}));
     s=remembered(body,s);
     if(!body.action) {
-      if(s.phase==='talk'&&!s.question)s.question=mediaConversationScreen(s).question;
+      if(s.phase==='talk'&&!s.question) {
+        if(!canOfferInterviewQuestion(s))s=reviewAtInterviewCapacity(s);
+        else {s.question=mediaConversationScreen(s).question;s=rememberInterviewQuestion(s,s.question);}
+      }
       return response(s); // Explicit restore never pays, including pending/error states.
     }
     const action=body.action,beforeResult=s.result,priorExclusions=s.familiar.excluded;
@@ -153,7 +161,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       return replace(s,who,more,targets);
     }
     if(action.type==='undo_replacement')return response(s,{feedbackCarry:{retainedIds:cardsOf(s.result).filter(card=>cardsOf(beforeResult).some(old=>old.id===card.id)).map(card=>card.id)}});
-    const planning=!final&&s.needsPlan&&['answer','correct','retry'].includes(action.type);
+    const planning=!final&&s.needsPlan&&['answer','correct','retry','continue'].includes(action.type);
     if(!final&&!planning)return response(s);
     const permission=access(who);
     if(planning) {
@@ -180,7 +188,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       const result=recommend(catalogFor(s),profileOf(legacy),sessionOf(legacy));
       if(!result.top)return response({...s,phase:'review',failedAction:'pick'},{error:'По этим условиям пока не нашлось доступных вариантов. Уточни условия или разреши вернуться к знакомому.',retryable:false});
       const hardCriteria=criteriaOf(legacy);for(const card of cardsOf(result)){caveats(card,s,legacy);constraintWarnings(card,hardCriteria,hardCriteria);}
-      s={...s,phase:'result',result,provisional:true,failedAction:null};
+      s={...s,...completeInterview(s),phase:'result',result,provisional:true,failedAction:null};
       s.uncertainties=[...new Set([...s.uncertainties,'Это предварительный подбор по доступным признакам: помощник сейчас недоступен, свободный ответ мог быть учтён не полностью.'])];return response(s);
     }
     spend(who);let out;
@@ -193,7 +201,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     cards.alternatives=cards.alternatives.slice(0,3);
     const byId=new Map((out.picks??[]).map(p=>[p.id,p]));for(const card of cardsOf(cards))attach(card,byId.get(card.id),s,legacy);
     cards.ai={understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist};
-    s={...s,phase:'result',result:cards,question:null,needsPlan:false,failedAction:null};return response(s);
+    s={...s,...completeInterview(s),phase:'result',result:cards,question:null,needsPlan:false,failedAction:null};return response(s);
   }
   return async(body={},who={})=>{
     checkBody(body);

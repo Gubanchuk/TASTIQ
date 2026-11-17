@@ -8,6 +8,33 @@ const response=(revision=0,id='one')=>({state:state(revision,id),screen:{type:'q
 const ok=data=>({ok:true,json:async()=>data});
 const defer=()=>{let resolve;const promise=new Promise(r=>resolve=r);return {promise,resolve};};
 
+test('local depth choice keeps a pristine draft, reloads for free and preserves a previous picker after restart',async()=>{
+ const store=storage(),bodies=[];
+ const fetch=async(_url,options)=>{
+  const body=JSON.parse(options.body);bodies.push(body);
+  return ok({state:body.state,screen:{type:'question',question:body.state.question}});
+ };
+ const client=createConversationClient({localStart:true,storage:store,fetch});
+ const initial=client.state.id;
+ assert.equal(client.needsDepth,true);
+ client.saveDraft('old-v3',{text:'Текст из черновика',selected:['mood_story']});
+ assert.equal(client.chooseDepth('deep'),true);
+ assert.equal(client.state.id,initial);
+ const reloaded=createConversationClient({localStart:true,storage:store,fetch});
+ await reloaded.start();
+ assert.equal(reloaded.state.depth,'deep');
+ assert.equal(reloaded.draft('old-v3').text,'Текст из черновика');
+ assert.equal(bodies.length,0);
+ assert.equal(reloaded.chooseDepth('standard',{restart:true}),true);
+ assert.notEqual(reloaded.state.id,initial);
+ assert.equal(reloaded.draft('old-v3').text,'');
+ await reloaded.restorePrevious();
+ assert.equal(bodies[0].action,undefined);
+ assert.equal(reloaded.state.id,initial);
+ assert.equal(reloaded.state.depth,'deep');
+ assert.equal(reloaded.draft('old-v3').text,'Текст из черновика');
+});
+
 test('start and reload only send actionless resume and retain typed draft',async()=>{
  const store=storage(),bodies=[];const fetch=async(_,opts)=>{bodies.push(JSON.parse(opts.body));return ok(response());};
  const first=createConversationClient({fetch,storage:store});await first.start();first.saveDraft('direction',{text:'Хочу историю',selected:['story']});

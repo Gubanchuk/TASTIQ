@@ -6,6 +6,7 @@ import { DOMAINS } from '../aspects/index.js';
 import { contextQuestion } from '../core/context.js';
 import { confirmedIntent } from '../core/session-intent.js';
 import { playerFactText } from '../core/feasibility.js';
+import { hasStrongSingleplayerTag } from './pick-constraints.js';
 
 const CONTEXTUAL_SYSTEM = `You pick what a person should watch or play tonight on TASTIQ, a Russian-language picker.
 
@@ -37,11 +38,15 @@ export const SYSTEM=CONTEXTUAL_SYSTEM.split('\n').filter(line=>!contextRules.som
 const GAME_SYSTEM = CONTEXTUAL_SYSTEM.split('\n').map(line => line.startsWith('- Prefer titles this person has probably not seen yet.')
   ? '- Prioritize fit to the explicit request over novelty. Do not assume an unmarked game has been played merely because it is popular or a classic of the loved genre. Known played games have already been removed. A famous title can be the best first pick; prefer lesser-known choices when the person explicitly asks for them or when fit is otherwise equal. likelySeen is only a tentative hint, never a reason by itself to demote a better fit.'
   : line).join('\n');
-const ADAPTIVE_GAME_SYSTEM=GAME_SYSTEM.split('\n').map(line=>line.startsWith('- Start from the titles the person loves')
+const ADAPTIVE_GAME_SYSTEM=GAME_SYSTEM.split('\n').map(line=>line.startsWith("You get the person's answers")
+  ? "You get the person’s active answers and an engine shortlist. Catalog filters already enforce supported limits, such as platform and verified player limits. Tags do not cover every semantic condition. Check the active request again for each proposed game."
+  : line.startsWith('- Start from the titles the person loves')
   ? '- Start from today’s explicit goal and its conditions. Past likes are secondary context, never a substitute for what this person wants now.'
   : line.startsWith('- Distinguish the person')
   ? '- Use only supported active preferences. Corrections and retractions supersede earlier interpretations. Indifference is not dislike; an unknown reason is not permission to invent one. A conditional tolerance stays conditional. Explicit exclusions win; never recommend a known violation with a caveat.'
-  : line).join('\n')+'\nIn this adaptive game dialogue only explicitly completed or excluded titles have been removed. A game merely started or dropped may be offered to continue if the current request allows it. Respect the full evidence-backed conversation; factual unknowns must be stated, not guessed.';
+  : line.startsWith('- Prefer one clear best match')
+  ? '- Prefer one clear best match first and add alternatives only while they satisfy the request. Return fewer picks or none if the alternatives conflict.'
+  : line).join('\n')+'\nIn this adaptive game dialogue only explicitly completed or excluded titles have been removed. A game merely started or dropped may be offered to continue if the current request allows it. Respect the full evidence-backed conversation; factual unknowns must be stated, not guessed. Do not use interview length or mode as evidence of what someone wants. Do not claim a hard condition is guaranteed in a reason or caveat unless independent data verifies it.';
 const adaptiveMediaSystem=base=>base.split('\n').map(line=>line.startsWith("You get the person's answers")
   ? "You get the person's active answers and an engine shortlist. The engine enforces supported catalog constraints, but not every semantic exclusion is covered by its tags. You must check the full current request yourself; being shortlisted does not mean every condition is satisfied."
   : line.startsWith('- Start from the titles the person loves')
@@ -198,10 +203,12 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
     const legacyMatches=positive.slice(0,6).map(m=>featureById.get(m.f)?.label??m.f);
     const against = r.penalties.slice(0, 2).map((p) => featureById.get(p.f)?.label ?? p.f);
     const summary = (g.summary ?? '').replace(/\s+/g, ' ').slice(0, 220);
+    const singleplayer = g.kind === 'game' && hasStrongSingleplayerTag(g) ? 'Steam: Singleplayer' : '';
     if (i >= detailed) return [
       i === detailed ? '\nДополнительный поиск (те же сита, краткие карточки):\n' : '',
       `id=${g.id}`, nameOf(g), g.year ?? 'год ?',
       g.kind === 'game' ? playerFactText(g) : '',
+      singleplayer,
       matched.length ? `подтверждено: ${matched.slice(0, 3).join(', ')}` : weak.length ? `слабый вывод: ${weak.slice(0, 2).join(', ')}` : '',
       against.length ? `против: ${against.join(', ')}` : '',
     ].filter(Boolean).join(' | ');
@@ -211,6 +218,7 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
       g.year ?? 'год ?',
       lengthOf(g),
       g.kind === 'game' ? playerFactText(g) : '',
+      singleplayer,
       (g.genres ?? []).slice(0, 3).join('/'),
       g.reviews?.desc ? `${g.reviews.desc}, ${g.reviews.total} оценок` : '',
       focused ? `движок #${r.rank ?? i + 1}${matched.length ? `, подтверждено: ${matched.join(', ')}` : ''}${weak.length ? `, слабый вывод: ${weak.join(', ')}` : ''}${against.length ? `, против: ${against.join(', ')}` : ''}`

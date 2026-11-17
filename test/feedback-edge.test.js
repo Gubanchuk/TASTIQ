@@ -21,6 +21,19 @@ test('bad/missing token, read request, malformed payload and oversized body do n
  assert.equal((await handler(request({p_payload:run,extra:'x'.repeat(262145)}))).status,413);
  assert.equal(calls,0);
 });
+test('interview metadata reaches the RPC with old payloads still supported',async()=>{
+ const interview={depth:'deep',offered:7,answered:6},payloads=[];
+ const handler=createFeedbackEdgeHandler({tokenHash,projectUrl:'https://example.supabase.co',serviceKey:'private',fetch:async(_url,opts)=>{
+  payloads.push(JSON.parse(opts.body).p_payload);
+  return new Response(JSON.stringify({ok:true,id:run.id,revision:run.revision}));
+ }});
+ const send=fields=>handler(request({p_payload:{...run,...fields},p_namespace:'qa:edge_test'}));
+ assert.equal((await send({interview})).status,200);
+ assert.equal((await send({})).status,200);
+ assert.equal((await send({interview:{...interview,answered:8}})).status,400);
+ assert.deepEqual(payloads[0].interview,interview);
+ assert.ok(!Object.hasOwn(payloads[1],'interview'));
+});
 test('upstream errors, timeouts and inconsistent receipts expose no family credentials or data',async()=>{
  for(const reply of [new Response(JSON.stringify({error:'FAMILY_DATA'}),{status:500}),new Response(JSON.stringify({ok:true,id:'foreign',revision:1}))]){
   const handler=createFeedbackEdgeHandler({tokenHash,projectUrl:'https://example.supabase.co',serviceKey:'FAMILY_KEY',fetch:async()=>reply});const out=await handler(request());assert.equal(out.status,503);assert.ok(!(await out.text()).includes('FAMILY_'));

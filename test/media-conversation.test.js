@@ -125,6 +125,36 @@ test('explicit caps phrased as na film or na episode retain the exact evidence a
   }
 });
 
+test('a film can have an explicit two-hour cap in ordinary speech without repeating the domain',()=>{
+  const request='Лёгкая авантюра на вечер со взрослыми, до двух часов. Хочется умного юмора и обаятельной команды, без жестокости.';
+  for(const [depth,contextQuote] of [['standard',request.split('.')[0]+'.'],['deep','до двух часов'],[undefined,'до двух часов']]) {
+    const initial=fresh({id:'film-cap',domain:'film',depth});
+    const state=reply(initial,request,{selected:['mood_relax']});
+    const sessionTime={minutes:120,sourceId:state.turns[0].id,quote:'до двух часов'};
+    const proposalContext={...context(),company:ev(state,'adults','со взрослыми'),timeMode:ev(state,'runtime',contextQuote)};
+    const acceptedState=accepted(state,{action:'review',question:null,context:proposalContext,sessionTime});
+    assert.equal(acceptedState.phase,'review');
+    assert.deepEqual(normalize(acceptedState).sessionTime,sessionTime);
+    assert.deepEqual(acceptedState.contextEvidence.timeMode,proposalContext.timeMode);
+    assert.equal(sessionOf(project(acceptedState,dict)).maxRuntime,120);
+  }
+});
+
+test('elliptical film caps cannot turn uncertainty, a range, past viewing or a clock time into a runtime cap',()=>{
+  for(const request of ['Если успею, до двух часов.','Думаю, примерно до двух часов.', 'Фильм от 90 минут до двух часов.',
+    'Хочу до двух часов или до трёх.', 'Вчера смотрели до двух часов.', 'Смотрели до двух часов.', 'Можем смотреть до двух часов ночи.',
+    'Раньше хотели до двух часов, но теперь лимита нет.', 'Не хочу сейчас ничего до двух часов.', 'До двух часов, если дети уснут.',
+    'Хочу фильм до двух часов. Но потом могу отлучиться, времени не будет.']) {
+    const state=said(request);
+    const ctx={...context(),timeMode:ev(state,'runtime','до двух часов')};
+    const out=apply(state,proposal({context:ctx,sessionTime:{minutes:120,sourceId:state.turns[0].id,quote:'до двух часов'}}),dict);
+    assert.ok(out.error,request);
+  }
+  const state=said('Лёгкая история на вечер, до двух часов.');
+  const ctx={...context(),timeMode:ev(state,'runtime','до двух часов')};
+  for(const minutes of [90,180])assert.ok(apply(state,proposal({context:ctx,sessionTime:{minutes,sourceId:state.turns[0].id,quote:'до двух часов'}}),dict).error);
+});
+
 test('na-film wording cannot bypass uncertain, ranged, wrong-value or retracted cap evidence',()=>{
   const quote='На фильм не больше 110 минут';
   for(const [text,minutes]of [[`Если будет время, ${quote}`,110],[`${quote} или 130 минут`,110],[quote,100],[`${quote}, но теперь времени нет`,110]]){

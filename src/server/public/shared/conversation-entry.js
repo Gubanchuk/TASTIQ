@@ -17,10 +17,17 @@ export const hasDirectionChoice=ids=>ids.some(id=>typeof id==='string'&&id&&!id.
 export const hasChosenDirection=state=>state.turns.some(turn=>turn.question.id==='direction'&&turn.kind==='answer'&&!turn.superseded
  &&Array.isArray(turn.selected)&&hasDirectionChoice(turn.selected.map(option=>option?.id)));
 
-export function initialConversation({domain='game',id=crypto.randomUUID(),mode,requireDirection=false}={}){
+export const isSelectionDepth=value=>value==='standard'||value==='deep';
+export function selectionInterview(value){
+ const {depth,offered,answered}=value??{};
+ return isSelectionDepth(depth)&&Number.isInteger(offered)&&offered>=0&&offered<=64
+  &&Number.isInteger(answered)&&answered>=0&&answered<=offered?{depth,offered,answered}:null;
+}
+
+export function initialConversation({domain='game',id=crypto.randomUUID(),mode,depth,requireDirection=false}={}){
  if(!['game','film','series','cartoon'].includes(domain))throw TypeError('Неизвестный раздел подбора.');
  const media=domain!=='game';
- return {version:1,...(media?{domain}:{}),...(requireDirection?{requireDirection:true}:{}),id,revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
+ return {version:1,...(media?{domain}:{}),...(requireDirection?{requireDirection:true}:{}),...(isSelectionDepth(depth)?{depth}:{}),id,revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
   context:media?{company:null,childAge:null,minutes:null,timeMode:null,commitment:null,onlyEnded:null,format:null}:{platform:null,company:null,partySize:null},
   ...(media?{contextEvidence:{company:null,childAge:null,timeMode:null,commitment:null,onlyEnded:null,format:null}}:{}),
   turns:[],facts:[],question:initialDirectionQuestion(domain),summary:'',uncertainties:[],retractions:[],sessionTime:null,factRemovalUndo:null,result:null,provisional:false,needsPlan:false,

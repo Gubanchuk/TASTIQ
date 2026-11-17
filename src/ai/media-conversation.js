@@ -2,13 +2,14 @@ import { AI } from './config.js';
 import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
 import { normalizeMediaConversation } from '../core/media-conversation.js';
+import { selectionDecisionInstructions,selectionDecisionSchema } from './selection-decision.js';
 
 const object = properties => ({type:'object',properties,required:Object.keys(properties),additionalProperties:false});
 const string = maxLength => ({type:'string',maxLength});
 const nullable = schema => ({anyOf:[schema,{type:'null'}]});
 const enumeration = values => ({type:'string',enum:values});
 const evidence = value => nullable(object({value,sourceId:string(100),quote:string(400)}));
-function schemaFor(features) {
+function schemaFor(features,depth) {
   const question=object({id:string(100),title:string(220),why:string(220),options:{type:'array',maxItems:6,items:object({id:string(100),label:string(100)})},multiple:{type:'boolean'},controls:{type:'array',maxItems:3,items:enumeration(['unknown','indifferent','none'])}});
   const fact=object({key:string(60),text:string(240),stance:enumeration(['want','avoid','require','exclude','indifferent','unknown','conditional','history']),scope:enumeration(['today','history']),
     sourceId:string(100),quote:string(400),feature:nullable(enumeration(features.map(f=>f.id))),titleId:nullable(string(100)),
@@ -16,7 +17,8 @@ function schemaFor(features) {
   return object({summary:string(1000),facts:{type:'array',maxItems:16,items:fact},uncertainties:{type:'array',maxItems:8,items:string(240)},action:enumeration(['question','review']),question:nullable(question),
     context:object({company:evidence(enumeration(['solo','adults','children'])),childAge:evidence({type:'integer',minimum:0,maximum:17}),timeMode:evidence(enumeration(['runtime','episode','session'])),
       commitment:evidence(enumeration(['single','short','long','open'])),onlyEnded:evidence({type:'boolean'}),format:evidence(enumeration(['movie','episodic']))}),
-    sessionTime:nullable(object({minutes:{type:'integer',minimum:5,maximum:1440},sourceId:string(100),quote:string(400)}))});
+    sessionTime:nullable(object({minutes:{type:'integer',minimum:5,maximum:1440},sourceId:string(100),quote:string(400)})),
+    ...(depth?{decision:selectionDecisionSchema}:{})});
 }
 
 const INSTRUCTIONS=`You conduct an adaptive TASTIQ conversation about the supplied media domain: film, series or cartoon. Speak concise Russian, address the person as «ты». Understand the latest answer and choose the next useful action in ONE response. Never recommend titles in this planning step.
@@ -39,6 +41,7 @@ function inputFor(catalog,state,knownTitles) {
   try {
     const s=normalizeMediaConversation(state,catalog.domain.id);
     const input=JSON.stringify({domain:s.domain,id:s.id,revision:s.revision,mode:s.mode,phase:s.phase,context:s.context,contextEvidence:s.contextEvidence,
+      ...(s.depth?{depth:s.depth,offeredQuestions:s.questionOffers.length}:{}),
       turns:s.turns.map(({id,question,selected,text,kind,answer,superseded,supersedes,context,contextQuotes})=>({id,question,selected,text,kind,answer,...(superseded?{superseded:true}:{}),...(supersedes?{supersedes}:{}),...(context?{context,contextQuotes}:{})})),
       facts:s.facts,summary:s.summary,uncertainties:s.uncertainties,retractions:s.retractions,question:s.question,sessionTime:s.sessionTime,
       ...(s.skippedQuestions?.length?{skippedQuestions:s.skippedQuestions}:{}),
@@ -68,9 +71,10 @@ export async function aiMediaConversation(catalog,state,{api=requestResponse,kno
   if(Array.isArray(knownTitles)&&knownTitles.length>64)return {error:'Запрос не отправлен: в разговоре больше 64 разных названий. Уточни меньший список.',notRequested:true,retryable:false};
   const input=inputFor(catalog,state,knownTitles);
   if(input===null)return {error:'Запрос не отправлен: раздел или контекст разговора некорректен либо превышает допустимый размер.',notRequested:true,retryable:false};
-  const schema=schemaFor(catalog.dict.features),request={model:AI.model,max_output_tokens:6500,reasoning:{effort:AI.effort},text:{format:{type:'json_schema',name:'tastiq_media_conversation',strict:true,schema}},
+  const features=catalog.dict.features,schema=schemaFor(features,state.depth),request={model:AI.model,max_output_tokens:6500,reasoning:{effort:AI.effort},text:{format:{type:'json_schema',name:'tastiq_media_conversation',strict:true,schema}},
     instructions:`${INSTRUCTIONS}\nMode ${state.mode}: ${state.mode==='free'?'the model controls conversation sequencing within the same evidence contract.':'guided invariants require one useful clarification after a broad genre unless the answer is already specific. Explicitly selected wishes and avoidances carry the same meaning as typed words; do not repeat a resolved question merely because the user selected buttons.'}`,
     input,store:false,service_tier:'default'};
+  if(state.depth)request.instructions+=`\n${selectionDecisionInstructions(state.depth)}`;
   if(maxCostUsd!==Infinity) {
     const reserve=reserveCost(request);if(!Number.isFinite(maxCostUsd)||maxCostUsd<0||reserve==null||reserve>maxCostUsd)return {error:'Запрос не отправлен: оставшийся бюджет недостаточен или цена модели неизвестна.',notRequested:true,retryable:false};
   }
@@ -81,6 +85,10 @@ export async function aiMediaConversation(catalog,state,{api=requestResponse,kno
   const blocks=(Array.isArray(res.output)?res.output:[]).filter(x=>x?.type==='message').flatMap(x=>Array.isArray(x.content)?x.content:[]);
   if(blocks.some(x=>x?.type==='refusal'))return {...meta,error:'Нейросеть отказалась отвечать.'};
   let out;try{out=JSON.parse(blocks.filter(x=>x?.type==='output_text'&&typeof x.text==='string').map(x=>x.text).join(''));}catch{/* reported below */}
-  if(!matches(out,schema)||out.action==='review'&&out.question!==null||out.action==='question'&&out.question===null)return {...meta,error:'Нейросеть ответила не по форме разговора.'};
+  // Accept the evidence shape independently of the next question and decision.
+  if(state.depth&&out&&typeof out==='object'&&!Array.isArray(out)) {
+    const {decision,...snapshot}=out;
+    if(!matches({...snapshot,question:null},schemaFor(features)))return {...meta,error:'Нейросеть ответила не по форме разговора.'};
+  } else if(!matches(out,schema)||out.action==='review'&&out.question!==null||out.action==='question'&&out.question===null)return {...meta,error:'Нейросеть ответила не по форме разговора.'};
   return {...meta,proposal:out};
 }

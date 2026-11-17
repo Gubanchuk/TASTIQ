@@ -1,3 +1,4 @@
+import {setupSelectionMode,checkpointHtml,selectionModeTitle} from '/shared/selection-mode.js';
 import {questionFormHtml,canSubmitQuestion,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
 import {createSelectionReviewController} from '/shared/selection-review-controller.js';
@@ -43,6 +44,9 @@ const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:a
  return response.ok?response.json():null;
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();}});
 const client=createConversationClient({localStart:true,selectionId:new URLSearchParams(location.search).get('selection'),fetch,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>feedback.learning('game'),onChange:render});
+const selectionMode=setupSelectionMode({client,render,switchDepth:depth=>navigate({type:'setDepth',depth}),
+ onRestart(){persistAnswer();activeEvening=null;activeEveningDialogue=null;observedKey=null;localNotice='';pendingBack=null;currentRequest='resume';}
+});
 if(new URLSearchParams(location.search).has('selection')){const url=new URL(location.href);url.searchParams.delete('selection');window.history.replaceState(null,'',url);}
 selectionReviews=createSelectionReviewController({storage,feedback,getSnapshot:()=>client.snapshot,getRunId:()=>activeEvening,isBusy:()=>client.busy,onChange:refreshFeedback});
 const knownQuestionDrafts=new Set();
@@ -75,7 +79,7 @@ function restoreView(focus) {
 }
 function historyHtml() {
  const records=history.all();
- return `<details class="game-history" data-disclosure="history"><summary>Знакомые игры${records.length?` (${records.length})`:''}</summary><p class="game-help">Отметки хранятся в этом браузере. Знакомая игра остаётся в подборе, пока ты отдельно её не исключишь.</p><p><a href="/library/?view=evenings">Выбор и отзывы в библиотеке</a></p>`
+ return `<details class="game-history" data-disclosure="history"><summary>Знакомые игры${records.length?` (${records.length})`:''}</summary><p class="game-help">Отметки хранятся в этом браузере. Знакомая игра остаётся в подборе, пока ты отдельно её не исключишь.</p><p><a href="/library/?view=evenings">Отзывы о рекомендациях</a></p>`
   +(records.length?`<ul class="game-history-list">${records.map(record=>`<li><strong>${esc(record.title)}</strong><label class="game-check"><input type="checkbox" data-history-block="${esc(record.id)}" data-focus="history-block:${esc(record.id)}"${record.blocked?' checked':''}> Не предлагать в следующих подборах</label>${button('Удалить из списка','history-forget',`data-id="${esc(record.id)}" data-focus="history-forget:${esc(record.id)}"`)}</li>`).join('')}</ul>`:'<p class="game-help">Пока нет отметок. Их можно добавить прямо на карточке результата.</p>')
   +(!history.persistent?'<p class="game-help">Отметки сохранятся только до закрытия окна.</p>':'')+'</details>';
 }
@@ -119,7 +123,7 @@ function questionHtml(screen) {
  const question=screen.question,optional=question.id!=='direction'&&question.allowText!==false;
  const exampleHtml=question.allowText!==false
   ?'<div class="game-example"><label for="game-search">Найти знакомое название</label><input class="input" id="game-search" type="search" autocomplete="off" placeholder="Название"><div id="search-results" class="game-search-results" aria-live="polite"></div></div>':'';
- return questionFormHtml(question,currentDraft(question),{busy:client.busy,canReview:optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml});
+ return checkpointHtml(screen.checkpoint)+questionFormHtml(question,currentDraft(question),{busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml});
 }
 function reviewHtml(screen) {
  return '<h1>Такой выбор тебе нужен сегодня?</h1>'
@@ -140,7 +144,7 @@ function resultHtml(screen) {
  const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Отмеченные игры заменены. Остальные варианты сохранены.');
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
  return '<div class="game-result-heading"><h1>Варианты на вечер</h1>'
-  +`<div class="game-result-browse"><details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div><p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
+  +`<div class="game-result-browse"><details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +(replacement&&notice?`<p class="game-replacement-notice" role="status">${esc(notice)}</p>`:'')
@@ -150,6 +154,7 @@ function resultHtml(screen) {
 function render() {
  ensureQuestionDraftMigration();
  const screen=client.screen;
+ if(selectionMode.draw(screen))return;
  const focus=preserveView();
  $('#back').disabled=client.busy||!screen?.canBack;
  syncSessionActions({busy:client.busy,canRestore:client.canRestorePrevious});
@@ -199,6 +204,7 @@ function render() {
  $('#action-controls').innerHTML=screen.type==='question'
   ?''
   :screen.type==='review'?button('Подобрать игры','confirm',disabled,true)+button('Изменить пожелание','focus-correction',disabled)
+   +(client.state.depth==='deep'&&screen.canContinue!==false&&!client.state.interviewComplete?button('Уточнить ещё','continue',disabled):'')
   :(marked.length?button(`Заменить отмеченные (${marked.length})`,'replace-familiar',disabled,true):'')
    +button('Показать ещё','more',`aria-describedby="result-batch-help" ${disabled}`,!marked.length)+button('Уточнить запрос','focus-correction',disabled)
    +(client.state.familiar?.undo&&singleReplacementIndex(client.state)<0?button('Вернуть предыдущие варианты','undo-replacement',disabled):'');
@@ -241,7 +247,7 @@ function observeResult() {
  if(observedKey===key){refreshFeedback();return;}if(observingKey===key)return;
  observingKey=key;
  const inheritFrom=snapshot.feedbackCarry&&activeEveningDialogue===snapshot.state.id?activeEvening:null;
- void feedback.observe(snapshot.state.id,projection,result,...(inheritFrom?[{inheritFrom,carryIntoExisting:true,retainedIds:snapshot.feedbackCarry.retainedIds}]:[])).then(run=>{
+ void feedback.observe(snapshot.state.id,projection,result,{interview:snapshot.state.interview,...(inheritFrom?{inheritFrom,carryIntoExisting:true,retainedIds:snapshot.feedbackCarry.retainedIds}:{})}).then(run=>{
   if(client.state?.id!==snapshot.state.id||JSON.stringify(client.screen?.result??client.state?.result)!==JSON.stringify(result)||client.screen?.type!=='result')return;
   if(inheritFrom&&run?.id)carryFeedbackView({drafts:feedbackDrafts,open:feedbackOpen,disclosures},inheritFrom,run.id,snapshot.feedbackCarry.retainedIds,{overwrite:true});
   activeEvening=run?.id??null;activeEveningDialogue=snapshot.state.id;observedKey=key;refreshFeedback();void feedback.flush();
@@ -408,7 +414,8 @@ document.addEventListener('click',event=>{
  if(act==='undo-fact-removal')return void navigate({type:'undo_fact_removal'});
  if(act==='remove-time')return void navigate({type:'remove_time'});
  if(act==='retry'){const browseRetry=client.state?.failedAction==='more'||pendingAction.type==='more';currentRequest='retry';if(client.state?.failedAction||pendingAction.type==='resume'){pendingAction={type:'retry'};pendingOrigin=client.state;}localNotice='';navigationFocus=preserveView();persistAnswer();void client.retry().then(result=>{rememberAcceptedFamiliar(result);completeBackDraft(result);if(browseRetry&&result&&!client.error&&client.screen?.type==='result')focusResultStart();}).finally(()=>{navigationFocus=null;});return;}
- if(['back','restart','review','confirm','continue'].includes(act))void navigate({type:act});
+ if(act==='restart'){selectionMode.newSelection();return;}
+ if(['back','review','confirm','continue'].includes(act))void navigate({type:act});
 });
 document.addEventListener('submit',event=>{
  const form=event.target;if(!form.dataset.form)return;event.preventDefault();
@@ -472,5 +479,5 @@ window.addEventListener('online',()=>void feedback.flush());
 window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());else if(event.key===null||event.key==='tastiq.site.library'||event.key.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
 compactRequest.addEventListener('change',event=>{const details=$('.game-request-details');if(details){details.open=!event.matches;disclosures.set('request-details',details.open);}});
 render();
-await client.start();
+if(!selectionMode.choosing)await client.start();
 void feedback.flush();

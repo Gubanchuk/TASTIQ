@@ -1,3 +1,5 @@
+import {selectionModeTitle} from './selection-mode.js';
+
 const clean=value=>typeof value==='string'?value.trim():'';
 const labels={game:'игры',film:'фильма',series:'сериала',cartoon:'мультфильма'};
 const stances={want:'Хочется',avoid:'Не хочется',require:'Обязательно',exclude:'Исключено',indifferent:'Не принципиально',unknown:'Неясно',conditional:'При условии',history:'Прошлый опыт'};
@@ -39,6 +41,8 @@ export function selectionCopyText({state={},screen={}}={}) {
  const uncertainties=(screen.uncertainties??state.uncertainties??[]).map(clean).filter(Boolean);
  const summary=clean(screen.summary??state.summary),context=conditions(state,domain);
  const lines=[`TASTIQ — подбор ${labels[domain]}`,'Копия текущей выдачи.'];
+ const depth=selectionModeTitle(state.interview?.depth);
+ if(depth)lines.push(`Режим: ${depth}`);
  if(answers.length)lines.push('\nКак уточнялся запрос:',answers.join('\n\n'));
  if(retractions.length)lines.push('Часть ответов изменена после удаления условий. Ниже — актуальное понимание.');
  lines.push('\nКак понят запрос:',summary||'Сводка не указана.');

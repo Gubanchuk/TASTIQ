@@ -1,3 +1,4 @@
+import {selectionModeTitle} from '/shared/selection-mode.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '/shared/library-store.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '/shared/game-history.js';
@@ -139,7 +140,7 @@ function historyView(all) {
  const entries=rows.map(row=>{
   if(row.snapshot){
    const {snapshot,top,alternatives}=row;
-   return `<article class="history-row history-selection">${media(top)}<div><p class="library-meta">${esc(date(row.at))} · ${esc(DOMAINS[row.domain])}</p><h2>${esc(title(row))}</h2><p>${esc(snapshot.screen.summary||snapshot.state.summary||'Варианты на твой вечер')}</p>${alternatives.length?`<p class="history-alternatives">Ещё: ${esc(alternatives.map(card=>card.ru||card.name||card.title).join(', '))}</p>`:''}</div><a class="library-button primary" href="${selectionUrl(row)}">Открыть подбор ${icon('arrow')}</a></article>`;
+   return `<article class="history-row history-selection">${media(top)}<div><p class="library-meta">${esc([date(row.at),DOMAINS[row.domain],selectionModeTitle(snapshot.state.interview?.depth)].filter(Boolean).join(' · '))}</p><h2>${esc(title(row))}</h2><p>${esc(snapshot.screen.summary||snapshot.state.summary||'Варианты на твой вечер')}</p>${alternatives.length?`<p class="history-alternatives">Ещё: ${esc(alternatives.map(card=>card.ru||card.name||card.title).join(', '))}</p>`:''}</div><a class="library-button primary" href="${selectionUrl(row)}">Открыть подбор ${icon('arrow')}</a></article>`;
   }
   return `<article class="history-row">${media(row)}<div><p class="library-meta">${esc([date(row.at),NOUNS[row.domain]].filter(Boolean).join(' · '))}</p><h2>${esc(title(row))}</h2>${Array.isArray(row.alternatives)&&row.alternatives.length?`<p>Ещё варианты: ${esc(row.alternatives.map(card=>card?.title).filter(Boolean).join(', '))}</p>`:''}</div>${saved.some(item=>item.domain===row.domain&&item.id===row.topId)?'<span class="history-saved">В библиотеке</span>':button('На потом','save-history',`data-index="${row.legacyIndex}" data-focus="history:${row.legacyIndex}"`)}</article>`;
  }).join('');

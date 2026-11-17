@@ -1,16 +1,23 @@
 import {createHash} from 'node:crypto';
 import {newConversation,normalizeConversation,answerConversation,applyConversationProposal,conversationScreen,conversationToLegacy,fallbackQuestion} from '../core/conversation.js';
+import {canOfferInterviewQuestion,rememberInterviewQuestion,reviewAtInterviewCapacity} from '../core/selection-dialogue.js';
 import {profileOf,sessionOf} from '../core/dialogue.js';
 import {recommend,recommendIds,rankAll} from '../core/recommend.js';
 import {editionsOf} from '../core/catalog.js';
 import {aiConversation} from '../ai/conversation.js';
 import {aiPick} from '../ai/pick.js';
+import {criteriaOf,unverifiedGameCriteria} from '../ai/pick-constraints.js';
+import {completeInterview} from '../core/selection-dialogue.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationGameIdentity} from './conversation-game-identity.js';
 import {feedbackContextOf} from '../ai/feedback-context.js';
 
-const contextual = s => ({...s,question:s.question??fallbackQuestion(s),phase:'talk',provisional:true});
+const contextual = s => {
+  if(!canOfferInterviewQuestion(s))return reviewAtInterviewCapacity(s);
+  const question=s.question??fallbackQuestion(s)??conversationScreen({...s,phase:'talk'}).question;
+  return rememberInterviewQuestion({...s,question,phase:'talk',provisional:true},question);
+};
 
 // The controller is injectable so every request boundary can be exercised without billing.
 export function createConversationService({catalogs,plan=aiConversation,pick=aiPick,api,access=()=>({allowed:true}),spend=()=>{},journal=()=>{},now=Date.now}={}) {
@@ -19,7 +26,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
   const projection=s=>conversationToLegacy(s,catalog.dict,catalog);
   const identities=createConversationGameIdentity(catalog);
   function log(stage,s,out) {
-    journal({at:new Date(now()).toISOString(),event:`conversation-${stage}`,data:{id:s.id,revision:s.revision,mode:s.mode,model:out.model??AI.model,
+    journal({at:new Date(now()).toISOString(),event:`conversation-${stage}`,data:{id:s.id,revision:s.revision,mode:s.mode,...(s.depth?{depth:s.depth}:{}),model:out.model??AI.model,
       error:out.error??null,ms:out.ms??null,usage:out.usage?{in:out.usage.input_tokens,out:out.usage.output_tokens,
         cached:out.usage.input_tokens_details?.cached_tokens??0,estimatedUsd:estimateCost(out.usage,AI.model)}:null}});
   }
@@ -29,6 +36,17 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     const list=body.rememberedExclusions;
     if(!Array.isArray(list)||list.length>500||list.some(id=>typeof id!=='string'||!/^[a-zA-Z0-9:_-]{1,80}$/.test(id)))throw Object.assign(Error('Некорректный список знакомых игр.'),{status:400});
     s.familiar.excluded=[...new Set(list.filter(id=>catalog.byId.has(id)))];return s;
+  }
+  function constraintWarnings(card,criteria) {
+    const texts=[...new Set(criteria.filter(c=>!(c.key.startsWith('session:minutes:')&&card.feasibility.some(f=>f.key==='minutes'))
+      &&!(c.key.startsWith('context:players:')&&card.feasibility.some(f=>f.key==='players'&&f.status!=='yes'))).map(c=>c.text.trim().replace(/[.!?;:]+$/u,'')))];
+    if(texts.length)card.feasibility.push({key:'request-conditions',status:'unknown',text:`Нужно проверить: ${texts.map(text=>`«${text}»`).join('; ')}.`});
+    return card;
+  }
+  function attach(card,p) {
+    card.ai={reason:p.reason,caveat:p.caveat,likelySeen:p.likelySeen,own:p.own,...(p.constraintChecks?{constraintChecks:p.constraintChecks}:{})};
+    card.labelText='Вариант по твоему запросу';
+    return constraintWarnings(card,p.unknownCriteria??[]);
   }
   async function replace(s,who,more=false,targetIds=null) {
     const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):targetIds??s.familiar.marked).filter(id=>before.some(c=>c.id===id)));
@@ -41,15 +59,15 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     if(new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)]).size>496)return failed('В этом подборе уже слишком много отметок. Начни новый подбор: явные сохранённые исключения останутся.',false);
     const eligible=rankAll(catalog,profileOf(legacy),sessionOf(legacy)).ranked;
     if(!eligible.length)return failed(more?'Других подходящих игр по этому запросу пока нет. Прежние варианты сохранены — можно уточнить запрос.':'Других подходящих игр пока нет. Оставь знакомую для возвращения или уточни запрос.',false);
-    const sole=eligible.length===1;
+    const sole=eligible.length===1&&criteriaOf(legacy,eligible[0].game).length===0;
     let out;
     if(sole)out={picks:[{id:eligible[0].game.id}]};
     else {
       const permission=access(who);if(!permission.allowed)return failed(`${permission.reason??'Помощник недоступен'}. Варианты и отметки сохранены.`,false);
       spend(who);
-      try {out=await pick(catalogs,legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,...(more?{alreadyShown:neutralShown}:{previous:before.map(c=>c.id)})});}
+      try {out=await pick(catalogs,legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,alreadyShown:neutralShown});}
       catch {out={error:'Не удалось заменить игры. Варианты и отметки сохранены.'};}
-      log(more?'more':'replace',s,out);if(out.error)return failed(out.error,out.retryable!==false);
+      log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
     }
     const unique=[...new Set((out.picks??[]).map(p=>p.id))];
     const selected=recommendIds(catalog,profileOf(legacy),sessionOf(legacy),unique);
@@ -60,8 +78,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     const changedIds=[],unresolvedIds=[];
     const decorate=next=>{
       if(sole) {next.replacementSource='engine';next.labelText='Единственный другой вариант по условиям';}
-      else {const p=picks.get(next.id);next.ai={reason:p.reason,caveat:p.caveat,likelySeen:p.likelySeen,own:p.own};next.labelText='Вариант по твоему запросу';}
-      if(legacy.session.goalExcludes.length)next.feasibility.push({status:'unknown',text:'Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором.'});
+      else attach(next,picks.get(next.id));
       return next;
     };
     const after=more?available.slice(0,4).map(decorate):before.map(card=>{
@@ -80,7 +97,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
   }
   async function handle(body,who) {
     const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,'game');if(feedbackContext.length)who={...who,feedbackContext};
-    let s=body.state?normalizeConversation(body.state):newConversation({mode:body.mode});
+    let s=body.state?normalizeConversation(body.state):newConversation({mode:body.mode,depth:body.depth});
     if(s.facts.some(f=>f?.gameId==null)) {
       const resolved=identities.resolve(s);
       // Repair identity only; preserve the saved exposure, stance and source words verbatim.
@@ -89,7 +106,10 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     s=remembered(body,s);
     if(!body.action) {
       // A visible local recovery question must also be the question accepted by the reducer.
-      if(s.phase==='talk'&&!s.question)s.question=conversationScreen(s).question;
+      if(s.phase==='talk'&&!s.question) {
+        if(!canOfferInterviewQuestion(s))s=reviewAtInterviewCapacity(s);
+        else {s.question=conversationScreen(s).question;s=rememberInterviewQuestion(s,s.question);}
+      }
       return response(s); // restore never calls an AI endpoint
     }
     const action=body.action;
@@ -107,7 +127,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     }
     if(action.type==='undo_replacement')return response(s,{feedbackCarry:{retainedIds:cardsOf(s.result).filter(c=>cardsOf(beforeResult).some(old=>old.id===c.id)).map(c=>c.id)}});
     const final=action.type==='confirm'||action.type==='retry'&&s.failedAction==='pick';
-    const planning=!final&&s.needsPlan&&['answer','correct','retry'].includes(action.type);
+    const planning=!final&&s.needsPlan&&['answer','correct','retry','continue'].includes(action.type);
     if(!final&&!planning)return response(s);
     const permission=access(who);
     if(planning) {
@@ -140,7 +160,14 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     }
     const legacy=projection(s);
     if(!permission.allowed) {
-      s={...s,phase:'result',result:recommend(catalog,profileOf(legacy),sessionOf(legacy)),provisional:true,failedAction:null};
+      const profile=profileOf(legacy),session=sessionOf(legacy);
+      const criteria=criteriaOf(legacy),strict=criteria.filter(c=>c.verificationRequired);
+      const result=strict.length
+        ? recommendIds(catalog,profile,session,rankAll(catalog,profile,session).ranked.filter(({game})=>!unverifiedGameCriteria(strict,game,session).length).slice(0,AI.picks).map(({game})=>game.id))
+        : recommend(catalog,profile,session);
+      if(!result?.top)return response({...s,phase:'review',failedAction:'pick'},{error:'По этим условиям не нашлось вариантов, которые можно предложить без проверки. Можно уточнить или изменить запрос.',retryable:false});
+      for(const card of cardsOf(result))constraintWarnings(card,unverifiedGameCriteria(criteria,catalog.byId.get(card.id),session));
+      s={...s,...completeInterview(s),phase:'result',result,provisional:true,failedAction:null};
       s.uncertainties=[...new Set([...s.uncertainties,'Это предварительный подбор по доступным признакам: помощник сейчас недоступен, свободный ответ мог быть учтён не полностью.'])];
       return response(s);
     }
@@ -151,16 +178,12 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     log('pick',s,out);
     if(out.error)return response({...s,phase:'review',failedAction:'pick'},{error:out.error,retryable:out.retryable!==false});
     // Re-sieve the actual model picks; never silently fill a failed AI list with unrelated popular titles.
-    const cards=recommendIds(catalog,profileOf(legacy),sessionOf(legacy),(out.picks??[]).map(p=>p.id));
+    const cards=recommendIds(catalog,profileOf(legacy),sessionOf(legacy),[...new Set((out.picks??[]).map(p=>p.id))].slice(0,AI.picks));
     if(!cards)return response({...s,phase:'review',failedAction:'pick'},{error:'По этим условиям пока не нашлось подтверждённых вариантов. Можно уточнить или изменить запрос.',retryable:false});
     const byId=new Map(out.picks.map(p=>[p.id,p]));
-    for(const card of [cards.top,...cards.alternatives]) {
-      const p=byId.get(card.id);card.ai={reason:p.reason,caveat:p.caveat,likelySeen:p.likelySeen,own:p.own};
-      card.labelText='Вариант по твоему запросу';
-      if(legacy.session.goalExcludes.length) card.feasibility.push({status:'unknown',text:'Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором.'});
-    }
+    for(const card of cardsOf(cards))attach(card,byId.get(card.id));
     cards.ai={understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist};
-    s={...s,phase:'result',result:cards,question:null,needsPlan:false,failedAction:null};
+    s={...s,...completeInterview(s),phase:'result',result:cards,question:null,needsPlan:false,failedAction:null};
     return response(s);
   }
   return async (body={},who={}) => {

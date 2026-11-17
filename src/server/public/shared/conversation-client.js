@@ -1,4 +1,4 @@
-import {initialConversationSnapshot} from './conversation-entry.js';
+import {initialConversationSnapshot,isSelectionDepth} from './conversation-entry.js';
 import {questionDraftKey} from '../pick/game/question-drafts.js';
 import {createSelectionArchive} from './selection-archive.js';
 export const CONVERSATION_KEY='tastiq.conversation.game.v1';
@@ -8,6 +8,7 @@ const defaultStorage=()=>{try{return globalThis.localStorage;}catch{return undef
 const cleanDraft=value=>({text:typeof value?.text==='string'?value.text.slice(0,1600):'',selected:Array.isArray(value?.selected)?value.selected.filter(x=>typeof x==='string').slice(0,20):[],kind:['answer','unknown','indifferent','none'].includes(value?.kind)?value.kind:'answer'});
 const recoveryOf=value=>typeof value?.error==='string'&&value.error?{error:value.error,retryable:value.retryable!==false,
  id:value.state?.id,revision:value.state?.revision,failedAction:value.state?.failedAction??null}:null;
+const pristine=value=>value?.state?.phase==='direction'&&value.state.revision===0&&!value.state.turns.length&&!value.error;
 
 // Transport, snapshots and drafts are independent of DOM. Reload is always a free resume.
 export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false,selectionId=null}={}) {
@@ -19,8 +20,8 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  const archive=createSelectionArchive({storage});
  const selected=selectionId?archive.get(selectionId,domain):null;
  if(selected&&JSON.stringify(snapshot?.state)!==JSON.stringify(selected.state)){if(snapshot)previous={snapshot:clone(snapshot),drafts:clone(drafts),fromArchive:true};snapshot=selected;drafts={};correctionCheckpoint=null;}
- if(localStart&&(!snapshot||snapshot.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.state.turns.length&&!snapshot.error)){
-  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,requireDirection:true,...(snapshot?{id:snapshot.state.id}:{})});
+ if(localStart&&(!snapshot||pristine(snapshot))){
+  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth:snapshot?.state.depth,requireDirection:true,...(snapshot?{id:snapshot.state.id}:{})});
   // v3 draft keys include question wording and options. Upgrade a pristine entry
   // without hiding words or genre choices written before quick wishes existed.
   if(snapshot?.screen?.question){
@@ -65,6 +66,13 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  const api={
   get state(){return clone(snapshot?.state??null);},get screen(){return clone(snapshot?.screen??null);},
   get snapshot(){return clone(snapshot);},get busy(){return busy;},get error(){return error;},get persistent(){return persistent;},get archivePersistent(){return archive.persistent;},
+  get needsDepth(){return Boolean(pristine(snapshot)&&!isSelectionDepth(snapshot.state.depth));},
+  chooseDepth(depth,{restart=false}={}){
+   if(!localStart||busy||!isSelectionDepth(depth)||(!restart&&!pristine(snapshot)))return false;
+   if(restart&&snapshot){previous={snapshot:clone(snapshot),drafts:clone(drafts)};drafts={};correctionCheckpoint=null;}
+   snapshot=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth,requireDirection:true,...(!restart&&snapshot?{id:snapshot.state.id}:{})});
+   generation++;error=null;retryBody=null;save();notify();return true;
+  },
   get canRestoreCorrection(){return Boolean(correctionCheckpoint&&correctionCheckpoint.snapshot.state.id===snapshot?.state?.id&&correctionCheckpoint.snapshot.state.revision!==snapshot?.state?.revision);},
   restoreCorrection(){if(!api.canRestoreCorrection||busy)return false;generation++;snapshot=clone(correctionCheckpoint.snapshot);drafts={...clone(correctionCheckpoint.drafts),...drafts};correctionCheckpoint=null;error=snapshot.error??null;retryBody=null;save();notify();return true;},
   get canRestorePrevious(){return Boolean(previous&&(previous.fromArchive||previous.snapshot.state.id!==snapshot?.state?.id));},
