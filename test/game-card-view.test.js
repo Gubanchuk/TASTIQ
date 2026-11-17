@@ -16,8 +16,8 @@ test('game and media cards explain the fit and distinguish the plan action from 
   const html=render(card,{index:0});
   assert.match(html,/Почему может подойти/);
   assert.match(html,/A fact-based reason/);
-  assert.match(html,/data-act="library-save"[^>]*aria-pressed="false">[^]*?<\/svg>На потом<\/button>/);
-  assert.match(render(card,{saved:true,libraryLane:'tonight'}),/data-act="library-save"[^>]*aria-pressed="false"/);
+  assert.match(html,/data-act="library-save"[^>]*aria-pressed="false">[^]*?<\/svg>Сохранить<\/button>/);
+  assert.match(render(card,{saved:true,libraryLane:'tonight'}),/data-act="library-save"[^>]*aria-pressed="true"/);
   assert.match(render(card,{saved:true,libraryLane:'want'}),/data-act="library-save"[^>]*aria-pressed="true"/);
   assert.match(html,/class="game-poster[^\"]*" data-title="One"/);
   assert.match(html,/<picture><img[^>]+loading="eager"/);

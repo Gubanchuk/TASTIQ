@@ -5,6 +5,32 @@ primary_target: "src/server/public/library/index.html"
 related_targets: ["src/server/public/shared/brand.css","src/server/public/shared/product.css","src/server/public/shared/workspace.css","src/server/public/shared/custom-select.css","src/server/public/shared/custom-select.js","src/server/public/shared/results.css","src/server/public/shared/workspace-ui.js","src/server/public/shared/request-overview.js","src/server/public/shared/clarification-view.js","src/server/public/shared/feedback-drafts.js","src/server/public/shared/evening-view.js","src/server/public/library/style.css","src/server/public/library/app.js","src/server/public/shared/library-store.js","src/server/public/pick/game/familiarity-store.js"]
 ---
 
+## CURRENT — библиотека, 17.11.2026
+
+Mode: Operate. Обычное расширение действующего интерфейса. [Текущий контракт](../../docs/superpowers/specs/2026-11-17-library-clarity-design.md) и [проверка документации](../../research-vault/library-ux-2026-11-17/DOCUMENTATION.md). Записи ниже сохранены как история; их старые названия списков и значения CSS не определяют текущую библиотеку.
+
+THESIS: отдельно найти интересное на будущее и уже понравившиеся произведения, сохранив независимые отметки.
+OWN-WORLD: существующий «Разговор», утверждённый SVG 5B / uppercase 02, Cobalt, Golos / Unbounded, реальные обложки и текущая оболочка приложения. Новая визуальная система не выбиралась.
+STORY: сохранить вариант → открыть «Сохранённое»; явно оценить произведение → найти в «Понравилось»; вернуться к запросу и отзывам → открыть «Подборы». Закладка, оценка произведения и пригодность рекомендации остаются разными действиями.
+FIRST VIEWPORT: заголовок, короткое объяснение, «Сохранённое / Понравилось / Подборы», вторичный вход «Все отметки», поиск и начало содержимого. На телефоне фильтры раскрываются отдельно; вкладки переносятся целиком. При раскрытых фильтрах и увеличенном тексте содержимое закономерно ниже; полного первого элемента в каждом таком состоянии контракт не обещает.
+FORM: code-led Operate, наследующий реальный интерфейс из Git `47d0b3c7fa3f2c1f6f8825b4752d5c0da493d910`. Основание — `src/server/public/library/{index.html,style.css}` и `src/server/public/shared/{brand.css,product.css,selection-design.css}`, визуальное подтверждение — [before-desktop.png](../../research-vault/library-ux-2026-11-17/before-desktop.png) и [before-mobile.png](../../research-vault/library-ux-2026-11-17/before-mobile.png). Старый seed `537787fa` исторический и не служит источником этой формы. Нового seed, workshop, comp или QUALITY-BAR-карточки в этой обычной доработке нет; их проведение не заявляется.
+
+### Наследуемая форма и адресные изменения
+
+- Сохранены тёмная оболочка с inverse SVG, светлое поле, белые прямоугольные карточки со скруглением, реальные обложки без crop, две колонки карточек на desktop и одна при ширине до 900 px. `brand.css`, `product.css` и `selection-design.css` совпадают с указанной Git-базой. Порядок подключений в `library/index.html` сохранён: поздний `selection-design.css` перекрывает ранние значения.
+- Действующий слой `selection-design.css` задаёт поле `#f2f4fa`, акцент `#284bc4`, шапку `#18254a` и радиус карточки 24 px. Это наблюдаемые унаследованные значения поверхности, не новые нормативные токены DESIGN.md. Заголовок — Unbounded 2.125rem/1.22, на телефоне 1.625rem; текст карточек — Golos, title 17 px, до 600 px — 16 px, до 350 px — 15 px.
+- Убран второй уровень списков по времени. Главные входы — «Сохранённое / Понравилось / Подборы»; «Все отметки» вторично. У вкладок сохранены прямоугольная форма 12 px и выбранное кобальтовое состояние; новая flex-компоновка переносит целые вкладки без разрыва подписей.
+- Вместо перемещения между списками и безымянного удаления — самостоятельная кнопка-закладка «Сохранить / Сохранено» с SVG и `aria-pressed`. Унаследованная локальная pill-форма кнопки библиотеки сохранена. Оценка и знакомство раскрываются в карточке; они не становятся следствием закладки.
+- Новый локальный ритм: card padding 20 px / mobile 16 px; gap 12×18 px / mobile 12 px; раскрытие оценки с padding 12×14 px и radius 10 px; содержимое раскрытия отделено на 16 px. Это правила этой поверхности, не изменение общих шкал.
+
+### Свидетельства и границы
+
+Текущие снимки: [desktop](../../research-vault/library-ux-2026-11-17/after-desktop.png), [mobile](../../research-vault/library-ux-2026-11-17/after-mobile.png), [320 px с увеличенным текстом](../../research-vault/library-ux-2026-11-17/after-320-large-text.png), [открытая оценка](../../research-vault/library-ux-2026-11-17/after-rating-mobile.png). Синтетические коллекции и ответы модели, изолированный QA-стенд; это не данные пользователя и не оценка human fit. Documenter визуально просмотрел первые три и исходный desktop, сверил каскад и renderer; полного браузерного прохода и продуктовых тестов сам не выполнял. После-снимки полностраничные, а не самостоятельное доказательство всех границ первого viewport.
+
+Не канонизировано и не исправлено: прежний дрейф DESIGN.md / `.impeccable/design.json` относительно `selection-design.css` (палитра рабочих поверхностей, светлая шапка, library radius 22 px, старые списки). Обновление глобальной системы не входит в эту обычную доработку. Новых материальных визуальных дефектов в просмотренной выборке не обнаружено; это не заменяет финальный review.
+
+## История до 17.11.2026
+
 Mode: Operate. Настоящая библиотека четырёх разделов после U01/U02/U07/U13/U15,03.11.2026.
 
 ## Мобильная компоновка — 05.11.2026

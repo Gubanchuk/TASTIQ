@@ -13,7 +13,7 @@ test('explicit game save uses the library plan lane and a normalized title witho
  assert.deepEqual(card.ai,{reason:'Сегодня подходит'});
 });
 
-test('a successful evening choice can use tonight without inventing taste or familiarity',()=>{
+test('legacy explicit tonight saves remain compatible without inventing taste or familiarity',()=>{
  const calls=[],library={save:(card,options)=>{calls.push({card,options});return card;}};
  saveGameToLibrary(library,{id:'steam:11',name:'A game'},{lane:'tonight'});
  assert.deepEqual(calls[0],{card:{id:'steam:11',name:'A game',title:'A game'},options:{lane:'tonight',domain:'game'}});
@@ -25,10 +25,10 @@ test('a successful evening choice can use tonight without inventing taste or fam
 test('each available result exposes explicit save and persistent state without changing familiar controls',()=>{
  const card={id:'steam:12',title:'A game'};
  const fresh=gameCardHtml(card,{index:2,known:true});
- assert.match(fresh,/data-act="library-save"[^>]+aria-pressed="false"[^]*?<\/svg>На потом<\/button>/);
+ assert.match(fresh,/data-act="library-save"[^>]+aria-pressed="false"[^]*?<\/svg>Сохранить<\/button>/);
  assert.ok(fresh.includes('data-act="familiar-mark"'));
  const tonight=gameCardHtml(card,{saved:true,libraryLane:'tonight'});
- assert.match(tonight,/data-act="library-save"[^>]+aria-pressed="false"/);
+ assert.match(tonight,/data-act="library-save"[^>]+aria-pressed="true"/);
  const saved=gameCardHtml(card,{saved:true,libraryLane:'want'});
  assert.match(saved,/data-act="library-save"[^>]+aria-pressed="true"/);
  const marked=gameCardHtml(card,{marked:true,saved:true});
@@ -45,7 +45,7 @@ test('a library known plan or a previous taste answer marks only the same game a
  ]){
   const before=structuredClone(row),state=gameLibraryState(card,[row]);
   assert.equal(state.known,true);
-  assert.equal(state.saved,true);
+  assert.equal(state.saved,row.lane!=='known');
   assert.equal(state.libraryLane,row.lane);
   assert.equal(Object.hasOwn(state,'blocked'),false);
   assert.deepEqual(row,before);

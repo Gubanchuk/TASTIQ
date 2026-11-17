@@ -11,13 +11,13 @@ export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeO
   const button=(act,value,label,on=false,primary=false)=>{
     const today=resultCard&&act==='evening-choose',focusValue=today?'toggle':value;
     const check=today&&on?'<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>':'';
-    return `<button type="button" class="btn ${primary?'btn-primary':'btn-secondary'} btn-s" data-act="${act}" data-run="${rid}" data-id="${cid}" data-v="${value}" data-fk="${act}:${rid}:${cid}:${focusValue}" aria-pressed="${on}"${today&&on?' title="Снять выбор на сегодня"':''}>${check}${esc(label)}</button>`;
+    return `<button type="button" class="btn ${primary?'btn-primary':'btn-secondary'} btn-s" data-act="${act}" data-run="${rid}" data-id="${cid}" data-v="${value}" data-fk="${act}:${rid}:${cid}:${focusValue}" aria-pressed="${on}"${today&&on?' title="Отменить выбор"':''}>${check}${esc(label)}</button>`;
   };
   const chosen=resultCard
-    ? button('evening-choose',r.chosen?'off':'on','На сегодня',Boolean(r.chosen),true)
+    ? button('evening-choose',r.chosen?'off':'on',r.chosen?'Выбрано':'Выбираю',Boolean(r.chosen),true)
     : r.chosen
-    ? `<p class="evening-chosen"><span>${history?'Выбрано':'Выбрано на сегодня'}</span> ${button('evening-choose','off',modern?'Отменить выбор':'Отменить')}</p>`
-    : button('evening-choose','on','Выбираю на сегодня',false,!history);
+    ? `<p class="evening-chosen"><span>Выбрано</span> ${button('evening-choose','off',modern?'Отменить выбор':'Отменить')}</p>`
+    : button('evening-choose','on','Выбираю',false,!history);
   const start=r.chosen?button('evening-start',r.started?'off':'on',modern?(r.started?'Начато':'Отметить начало'):(r.started?'Уже начал ✓':'Уже начал'),Boolean(r.started)):'';
   const disclosure=(type,expanded)=>` ${history?'data-detail':'data-disclosure'}="${type}:${rid}:${cid}"${expanded?' open':''}`;
   const savedLabel=(label,edit)=>`<span class="evening-saved-label">${label}<small>${edit}</small></span>`;
@@ -28,8 +28,8 @@ export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeO
   if(modern){
     const hasExplanation=Boolean(r.reason||r.note),hasDraft=Boolean(draft?.reason||draft?.note);
     const hasRating=Boolean(r.fit||hasExplanation),ratingDetails=!history||hasRating||Boolean(r.outcome);
-    const ratingLabel=r.fit?savedLabel(`Твоя оценка: ${esc(FIT[r.fit])}`,'Изменить оценку'):hasExplanation?'Изменить уточнение':hasDraft?'Продолжить оценку':'Оценить вариант';
-    const fit=`<div class="evening-fit-prompt"><div class="evening-buttons" role="group" aria-label="Подходит на сегодня">${Object.entries(FIT).map(([v,label])=>button('evening-fit',v,label,r.fit===v)).join('')}</div></div>`;
+    const ratingLabel=r.fit?savedLabel(`Подходит ли запросу: ${esc(FIT[r.fit])}`,'Изменить оценку'):hasExplanation?'Изменить уточнение':hasDraft?'Продолжить оценку':'Оценить рекомендацию';
+    const fit=`<div class="evening-fit-prompt"><div class="evening-buttons" role="group" aria-label="Подходит запросу">${Object.entries(FIT).map(([v,label])=>button('evening-fit',v,label,r.fit===v)).join('')}</div></div>`;
     return `<section class="evening-controls evening-controls-modern" aria-label="Выбор и отзыв: ${esc(card.title)}"><div class="evening-decision">${chosen}${history?start:''}</div>`
       + (history?'<div class="evening-review">':'')
       + (ratingDetails?`<details class="evening-rating"${disclosure('rating',ratingOpen)}><summary data-fk="evening-rating:${rid}:${cid}">${ratingLabel}</summary>`:'<p class="evening-fit-label">Подошёл ли вариант?</p>')
@@ -43,9 +43,9 @@ export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeO
       + (ratingDetails?'</details>':'')+(history?'</div>':'')+outcome
       + (hasRating||r.outcome?`<p class="evening-status evening-confirmation" role="status"><img src="/assets/brand/tastiq-symbol-cobalt.svg" alt="" width="20" height="20"><span><strong>Спасибо за отзыв!</strong><span data-feedback-status="${rid}">${esc(feedbackStatus(status,persistent))}</span></span></p>`:'')+'</section>';
   }
-  return `<section class="evening-controls" aria-label="Твой вечер: ${esc(card.title)}">${chosen}${progress}`
-    + `<details class="evening-fit" data-feedback-details data-run="${rid}" data-id="${cid}"${open?' open':''}><summary>Подходит на сегодня?${r.fit?` · ${FIT[r.fit]}`:''}</summary>`
-    + `<div class="evening-buttons" role="group" aria-label="Подходит на сегодня">${Object.entries(FIT).map(([v,label])=>button('evening-fit',v,label,r.fit===v)).join('')}</div>`
+  return `<section class="evening-controls" aria-label="Твой выбор: ${esc(card.title)}">${chosen}${progress}`
+    + `<details class="evening-fit" data-feedback-details data-run="${rid}" data-id="${cid}"${open?' open':''}><summary>Подходит запросу?${r.fit?` · ${FIT[r.fit]}`:''}</summary>`
+    + `<div class="evening-buttons" role="group" aria-label="Подходит запросу">${Object.entries(FIT).map(([v,label])=>button('evening-fit',v,label,r.fit===v)).join('')}</div>`
     + `<form class="evening-reason" data-form="evening-reason" data-run="${rid}" data-id="${cid}">`
     + `<label>Что стоит учесть? <select class="input" name="reason"><option value="">Без причины</option>${Object.entries(REASONS).map(([v,label])=>`<option value="${v}"${(draft?.reason??r.reason)===v?' selected':''}>${esc(label)}</option>`).join('')}</select></label>`
     + `<label>Своими словами <textarea class="input" name="note" rows="2" maxlength="300" placeholder="Необязательно">${esc(draft?.note??r.note??'')}</textarea></label>`

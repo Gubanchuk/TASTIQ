@@ -11,7 +11,7 @@ import {createConversationClient,conversationStorageKey} from '/shared/conversat
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
 import {createFeedbackDrafts} from '/shared/feedback-drafts.js';
-import {mediaCardHtml as gameCardHtml,saveMediaToLibrary as saveGameToLibrary,mediaLibraryState as gameLibraryState} from '/pick/watch/card-view.js';
+import {mediaCardHtml as gameCardHtml,toggleMediaLibrarySave as toggleGameLibrarySave,mediaLibraryState as gameLibraryState} from '/pick/watch/card-view.js';
 import {mediaConfig,mediaJourneyStage as journeyStage,mediaLoadingPresentation as loadingPresentation,mediaContextDraftText as contextDraftText,mediaContextEditorValues as contextEditorValues,mediaTimeBudgetHtml as timeBudgetHtml} from '/pick/watch/view-state.js';
 import {createMediaHistory,mediaHistoryPrefix} from '/shared/media-history.js';
 import {carryFeedbackView,feedbackToggleFocus,acceptedFamiliarCard,captureTextSelection,restoreTextSelection} from '/pick/game/feedback-view-state.js';
@@ -81,7 +81,7 @@ function restoreView(focus) {
 }
 function historyHtml() {
  const records=history.all();
- return `<details class="game-history" data-disclosure="history"><summary>Знакомые названия${records.length?` (${records.length})`:''}</summary><p class="game-help">Отметки хранятся в этом браузере. Знакомое название остаётся в подборе, пока ты отдельно его не исключишь.</p><p><a href="/library/?view=evenings">Выбор и отзывы в библиотеке</a></p>`
+ return `<details class="game-history" data-disclosure="history"><summary>Знакомые названия${records.length?` (${records.length})`:''}</summary><p class="game-help">Отметки хранятся в этом браузере. Знакомое название остаётся в подборе, пока ты отдельно его не исключишь.</p><p><a href="/library/?view=evenings">Отзывы о рекомендациях</a></p>`
   +(records.length?`<ul class="game-history-list">${records.map(record=>`<li><strong>${esc(record.title)}</strong><label class="game-check"><input type="checkbox" data-history-block="${esc(record.id)}" data-focus="history-block:${esc(record.id)}"${record.blocked?' checked':''}> Не предлагать в следующих подборах</label>${button('Удалить из списка','history-forget',`data-id="${esc(record.id)}" data-focus="history-forget:${esc(record.id)}"`)}</li>`).join('')}</ul>`:'<p class="game-help">Пока нет отметок. Их можно добавить прямо на карточке результата.</p>')
   +(!history.persistent?'<p class="game-help">Отметки сохранятся только до закрытия окна.</p>':'')+'</details>';
 }
@@ -152,7 +152,7 @@ function resultHtml(screen) {
  const result=screen.result??client.state?.result;
  const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Отмеченные варианты заменены. Остальные варианты сохранены.');
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
- return '<div class="game-result-heading"><h1>Варианты на вечер</h1>'
+ return '<div class="game-result-heading"><h1>Рекомендации для тебя</h1>'
   +`<div class="game-result-browse"><details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div><p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
@@ -338,10 +338,6 @@ async function updateEvening(element,action) {
  const {run,id}=element.dataset;
  const card=[client.state?.result?.top,...(client.state?.result?.alternatives??[])].find(item=>item?.id===id);
  if(!await feedback.update(run,id,action))return;
- if(action.type==='choose'&&action.value===true&&card){
-  const savedForLater=library.all().some(item=>item.domain===domain&&item.id===id&&item.lane==='want');
-  if(!savedForLater)saveGameToLibrary(library,card,{lane:'tonight',domain});
- }
  if(action.type==='explain'){
   const key=`${run}:${id}`,draft=feedbackDrafts.get(key);
   if(draft?.note===action.note&&(draft.reason||null)===action.reason)feedbackDrafts.delete(key);
@@ -370,10 +366,10 @@ document.addEventListener('click',event=>{
  if(act==='history-forget'){history.forget(el.dataset.id);render();$('.game-history summary')?.focus({preventScroll:true});return;}
  if(act==='library-save'){
   if(client.busy)return;
-  const id=el.dataset.id,existing=library.all().find(item=>item.domain===domain&&item.id===id);
-  if(existing?.lane==='want'){localNotice='Уже в списке «На потом».';render();return;}
+  const id=el.dataset.id;
   const card=[client.state?.result?.top,...(client.state?.result?.alternatives??[])].find(item=>item?.id===id);
-  if(saveGameToLibrary(library,card,{domain})){localNotice=library.persistent?'Сохранено в библиотеке на потом.':'На потом — в библиотеке до закрытия окна.';render();}return;
+  const saved=toggleGameLibrarySave(library,card,{domain});
+  if(saved){localNotice=saved.saved?(library.persistent?'Добавлено в «Сохранённое».':'Сохранено до закрытия окна.'):'Сохранение снято. Оценка и отзывы остались.';render();}return;
  }
  if(act==='restore-previous'){if(!client.busy){currentRequest='resume';pendingAction={type:'resume'};pendingOrigin=client.state;localNotice='';pendingBack=null;activeEvening=null;activeEveningDialogue=null;observedKey=null;void client.restorePrevious();}return;}
  if(act==='option'){

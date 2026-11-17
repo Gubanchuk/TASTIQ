@@ -2,6 +2,7 @@ import {cardMetadataHtml} from '../../shared/card-metadata.js';
 import {feasibilityHtml} from './feasibility.js';
 import {titleCopyHtml} from '../../shared/title-copy.js';
 import {resultSectionHeading} from '../../shared/result-clarity.js';
+import {isLibrarySaved} from '../../shared/library-store.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const nameOf=card=>card.ru||card.name||card.title||'Игра';
@@ -19,14 +20,20 @@ export function saveGameToLibrary(library,card,{lane='want'}={}) {
  return library.save({...card,title:nameOf(card)},{lane,domain:'game'});
 }
 
+export function toggleGameLibrarySave(library,card) {
+ if(!card?.id)return null;
+ const prior=library.all().find(row=>row.domain==='game'&&row.id===card.id);
+ return library.setSaved({...card,title:nameOf(card)},!isLibrarySaved(prior),{domain:'game'});
+}
+
 // Familiarity can be displayed from a library plan/rating without creating an exclusion.
 export function gameLibraryState(card,items=[]) {
  const item=items.find(row=>row.domain==='game'&&row.id===card?.id);
- return {saved:Boolean(item),libraryLane:item?.lane??'want',known:Boolean(item&&(item.lane==='known'||['liked','disliked','known'].includes(item.status)))};
+ return {saved:isLibrarySaved(item),libraryLane:item?.lane??'want',known:Boolean(item&&(item.lane==='known'||['liked','disliked','known'].includes(item.status)))};
 }
 
 export function gameCardHtml(card,{index=0,marked=false,kept=false,inlineUndo=false,known=false,blocked=false,saved=false,libraryLane='want'}={}) {
- const title=nameOf(card),heading='h2',id=esc(card.id),later=saved&&libraryLane==='want';
+ const title=nameOf(card),heading='h2',id=esc(card.id),later=saved;
  if(marked)return resultSectionHeading(index)+`<article class="game-card game-card-pending${index===0?'':' game-alternative'}" data-card-id="${id}" aria-label="${esc(title)}">`
   +`<div class="game-pending-identity">${poster(card)}<div><${heading}>${esc(title)}</${heading}><p class="game-pending-label">Отмечена для замены</p><p class="game-help">Остальные варианты сохранятся.</p></div></div>`
   +`<div class="game-pending-controls"><div class="game-card-actions">${button('Заменить только этот вариант','replace-one',card.id)}${button('Отменить','familiar-unmark',card.id,'familiar')}${button('Оставить — хочу вернуться','familiar-keep',card.id,'keep')}</div>`
@@ -34,13 +41,13 @@ export function gameCardHtml(card,{index=0,marked=false,kept=false,inlineUndo=fa
  const url=safeUrl(card.link),reason=card.ai?.reason||card.reason||'',caveat=card.ai?.caveat||card.caveat||'';
  return resultSectionHeading(index)+`<article class="game-card game-proposal ${index===0?'game-proposal-featured':'game-alternative'}" data-card-id="${id}"${title.length>42?' data-long-title':''} aria-label="${esc(title)}"><div class="game-card-layout">${poster(card,{eager:index===0})}<div class="game-card-copy">`
   +`<div class="game-card-heading"><${heading} aria-label="${esc(title)}">${titleCopyHtml(title,card.year)}</${heading}><div class="game-copy-status" data-copy-status role="status" aria-live="polite"></div>${cardMetadataHtml(card,{domain:'game'})}`
-  +(kept?'<p class="game-kept">Знакомая игра — оставлена на сегодня.</p>':known?'<p class="game-kept">Уже знакома · отметка в этом браузере</p>':'')
+  +(kept?'<p class="game-kept">Знакомая игра — оставлена в подборе.</p>':known?'<p class="game-kept">Уже знакома · отметка в этом браузере</p>':'')
   +'</div>'
   +(inlineUndo?'<div class="game-replacement-inline"><p role="status">Вариант заменён</p><button type="button" class="btn btn-secondary" data-act="undo-replacement" data-inline-undo>Отменить замену</button></div>':'')
   +(reason?`<p class="game-model-label">Почему может подойти</p><p class="game-card-reason">${esc(reason)}</p>`:'<p class="game-help">Вариант по каталогу. Пока мало данных, чтобы объяснить, чем он тебе подойдёт.</p>')
   +(caveat?`<p class="game-caveat"><span>Учти</span>${esc(caveat)}</p>`:'')
   +feasibilityHtml(card.feasibility)
-  +`</div></div><div class="game-card-footer"><div class="game-card-actions game-plan-actions"><div data-card-decision></div><button type="button" class="btn btn-secondary game-library-save" data-act="library-save" data-id="${id}" data-focus="library-save:${id}" aria-pressed="${later}"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none"><path d="M5.5 4.5h9v12l-4.5-3-4.5 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>На потом</button></div><div data-card-feedback="${id}"></div><div class="game-card-links">${button('Знакомо — заменить','familiar-mark',card.id,'familiar')}`
+  +`</div></div><div class="game-card-footer"><div class="game-card-actions game-plan-actions"><div data-card-decision></div><button type="button" class="btn btn-secondary game-library-save" data-act="library-save" data-id="${id}" data-focus="library-save:${id}" aria-pressed="${later}"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none"><path d="M5.5 4.5h9v12l-4.5-3-4.5 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>${later?'Сохранено':'Сохранить'}</button></div><div data-card-feedback="${id}"></div><div class="game-card-links">${button('Знакомо — заменить','familiar-mark',card.id,'familiar')}`
 
   +(url?`<a class="game-store-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="Открыть игру ${esc(title)}">Открыть игру<span aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M6 5h9v9M15 5 5 15" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>`:'')+'</div></div></article>';
 }

@@ -3,6 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createLibraryStore,LIBRARY_KEY} from '../src/server/public/shared/library-store.js';
 import * as library from '../src/server/public/shared/library-store.js';
+import {collectionRecords} from '../src/server/public/shared/library-collection.js';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '../src/server/public/shared/game-history.js';
@@ -109,7 +110,7 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
  const document={activeElement:null,hidden:false,querySelector:selector=>selector==='#library-app'?app:selector==='#library-notice'?notice:null,querySelectorAll:()=>[],getElementById:()=>null,
   addEventListener:(type,handler)=>handlers.set(type,handler)};
  const context=vm.createContext({URLSearchParams,document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:value=>value},structuredClone,matchMedia:()=>({matches:mobile,addEventListener(){}}),
-  createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl:library.safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,initCustomSelects,focusCustomSelect,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,
+  collectionRecords,createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl:library.safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,initCustomSelects,focusCustomSelect,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,
   createFeedbackStore:options=>createFeedbackStore({...options,locks:{request:async(_,fn)=>fn()},...(localTransaction?{transaction:localTransaction}:{})}),
   fetch:async(url,options)=>{requests.push({url,options});return transport?transport(url,options):{ok:true,json:async()=>catalog};},
   setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
@@ -126,6 +127,26 @@ const evening={version:1,id:'evening-one',dialogueId:'dialogue-one',domain:'game
  context:{note:'Private wish'},cards:[{id:game.id,title:game.name,origin:'model',reason:'A reason',caveat:''}],
  responses:[{cardId:game.id,fit:'accept',reason:null,note:'A review',chosen:true,started:false,outcome:null}]};
 
+test('a positive experience appears in liked and explicit clearing keeps the original review without resurrecting the like',async()=>{
+ const storage=memory(),run={...evening,responses:[{...evening.responses[0],started:true,outcome:'liked'}]};
+ storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'liked-experience',run,ack:run.revision}]}));
+ const priorFeedback=storage.getItem(FEEDBACK_KEY),page=await controller(storage);page.click({act:'view',view:'liked'});
+ assert.match(page.app.innerHTML,/data-card="game:steam:10"/);assert.match(page.app.innerHTML,/Оценка из твоего отзыва/);assert.equal(storage.getItem(LIBRARY_KEY),null);
+ page.click({act:'rate',domain:'game',id:game.id,value:'none'});assert.doesNotMatch(page.app.innerHTML,/data-card="game:steam:10"/);
+ const stored=createLibraryStore({storage}).all()[0];assert.equal(stored.saved,false);assert.equal(stored.ratingOverride,true);assert.equal(storage.getItem(FEEDBACK_KEY),priorFeedback);
+ page.click({act:'view',view:'all'});assert.match(page.app.innerHTML,/data-card="game:steam:10"/);page.click({act:'card-reviews',domain:'game',id:game.id});
+ assert.match(page.app.innerHTML,/Отзывы: Real game/);assert.match(page.app.innerHTML,/Понравилось/);assert.equal(page.requests.filter(r=>r.options?.method==='POST').length,0);
+});
+
+test('choosing a recommendation in reviews never saves or likes the work',async()=>{
+ const storage=memory(),run={...evening,responses:[{...evening.responses[0],chosen:false}]};
+ storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'review',run,ack:run.revision}]}));
+ const page=await controller(storage,{transport:async(_,options)=>{const run=JSON.parse(options.body).run;return {ok:true,json:async()=>({ok:true,id:run.id,revision:run.revision})};}});
+ page.click({act:'view',view:'evenings'});page.click({act:'evening-choose',run:run.id,id:game.id,v:'on'});await page.tick();await page.tick();
+ assert.equal(storage.getItem(LIBRARY_KEY),null);page.click({act:'view',view:'liked'});assert.doesNotMatch(page.app.innerHTML,/data-card="game:steam:10"/);
+ assert.equal(JSON.parse(storage.getItem(FEEDBACK_KEY)).entries[0].run.responses[0].chosen,true);
+});
+
 test('opening library, prior picks and evenings never sends feedback or edits saved history',async()=>{
  const storage=memory(legacy),history=createGameHistory({storage,now:()=>stamp});history.remember({id:'steam:30',title:'Known game'},{blocked:true});
  storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'old-key',run:evening,ack:-1}]}));
@@ -138,20 +159,20 @@ test('opening library, prior picks and evenings never sends feedback or edits sa
  page.click({act:'view',view:'board'});assert.ok(!page.app.innerHTML.includes('wrong-cover.jpg'));
 });
 
-test('library filters render real matching records and moving familiarity keeps exclusion and taste separate',async()=>{
+test('library filters render real matching records and saving familiarity keeps exclusion and taste separate',async()=>{
  const storage=memory(legacy),history=createGameHistory({storage,now:()=>stamp});history.remember({id:'steam:30',title:'Known game'},{blocked:true});
  const store=createLibraryStore({storage});store.save({id:'film-one',title:'A film'},{domain:'film'});
  const page=await controller(storage);
  const ids=()=>[...page.app.innerHTML.matchAll(/data-card="([^"]+)"/g)].map(match=>match[1]);
  assert.deepEqual(ids(),['film:film-one']);
- page.click({act:'lane',lane:'known'});page.change('reaction-filter','liked');assert.deepEqual(ids(),['game:steam:10']);
- page.change('reaction-filter','unrated');assert.deepEqual(ids(),['game:steam:30']);
- page.change('domain-filter','film');assert.deepEqual(ids(),[]);page.click({act:'lane',lane:'want'});assert.deepEqual(ids(),['film:film-one']);
- page.click({act:'clear'});page.change('', 'tonight',{act:'move',domain:'game',id:'steam:30'});
- assert.equal(store.all().find(row=>row.id==='steam:30').lane,'tonight');assert.equal(store.all().find(row=>row.id==='steam:30').status,'want');
+ page.click({act:'view',view:'all'});page.change('reaction-filter','liked');assert.deepEqual(ids(),['game:steam:10']);
+ page.change('reaction-filter','unrated');assert.deepEqual(ids().sort(),['film:film-one','game:steam:30']);
+ page.change('domain-filter','film');assert.deepEqual(ids(),['film:film-one']);page.click({act:'view',view:'saved'});assert.deepEqual(ids(),['film:film-one']);
+ page.click({act:'clear'});page.click({act:'view',view:'all'});page.click({act:'clear'});page.click({act:'saved',domain:'game',id:'steam:30'});
+ assert.equal(store.all().find(row=>row.id==='steam:30').saved,true);assert.equal(store.all().find(row=>row.id==='steam:30').status,'want');
  assert.deepEqual(history.blockedIds(),['steam:30']);assert.equal(store.all().find(row=>row.id===game.id).status,'liked');
- page.click({act:'remove',domain:'game',id:'steam:30'});assert.deepEqual(history.blockedIds(),['steam:30']);
- page.click({act:'undo'});assert.equal(store.all().find(row=>row.id==='steam:30').lane,'tonight');
+ page.click({act:'saved',domain:'game',id:'steam:30'});assert.deepEqual(history.blockedIds(),['steam:30']);
+ page.click({act:'undo'});assert.equal(store.all().find(row=>row.id==='steam:30').saved,true);
  assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
 });
 
@@ -167,7 +188,7 @@ test('history and review tabs keep independent filters and split a saved choice 
  storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'split',run,ack:run.revision}]}));
  const page=await controller(storage);
  const html=()=>page.app.innerHTML;
- page.change('domain-filter','film');
+ page.click({act:'view',view:'all'});page.change('domain-filter','film');
  page.click({act:'view',view:'history'});
  assert.match(html(),/Earlier pick/);assert.match(html(),/Another film/);
  page.input('Hidden adventure');assert.match(html(),/Earlier pick/);assert.doesNotMatch(html(),/Another film/);
@@ -177,7 +198,7 @@ test('history and review tabs keep independent filters and split a saved choice 
  page.change('status-filter','started');
  assert.doesNotMatch(html(),/<strong>Real game<\/strong>/);assert.match(html(),/<strong>Second game<\/strong>/);
  page.click({act:'view',view:'history'});assert.match(html(),/value="Hidden adventure"/);
- page.click({act:'view',view:'board'});assert.match(html(),/<option value="film" selected>/);
+ page.click({act:'view',view:'all'});assert.match(html(),/<option value="film" selected>/);
  page.click({act:'view',view:'evenings'});assert.match(html(),/<option value="started" selected>/);
  page.click({act:'clear'});assert.equal((html().match(/class="library-evening"/g)??[]).length,2);
  assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
@@ -245,25 +266,25 @@ test('a restored draft-only evening is visible in the library before any rating 
  const storage=memory(legacy),draftOnly={...evening,revision:0,responses:[]};storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'draft-only',run:draftOnly,ack:-1}]}));
  createFeedbackDrafts({storage}).set(`${evening.id}:${game.id}`,{reason:'mood',note:'Черновик после перезагрузки'});
  const page=await controller(storage);page.click({act:'view',view:'evenings'});
- assert.ok(page.app.innerHTML.includes('Черновик после перезагрузки</textarea>'));assert.ok(page.app.innerHTML.includes('Продолжить отзыв'));assert.ok(page.app.innerHTML.includes('data-view="evenings" data-focus="view:evenings" aria-pressed="true">Выбор и отзывы<span>1</span>'));
+ assert.ok(page.app.innerHTML.includes('Черновик после перезагрузки</textarea>'));assert.ok(page.app.innerHTML.includes('Продолжить отзыв'));assert.match(page.app.innerHTML,/data-view="evenings" data-focus="view:evenings" aria-pressed="true"[^>]*>Отзывы о рекомендациях<span>1/);
  assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
 });
 
 test('mobile filter controls preserve selections while search rerenders and views change',async()=>{
- const page=await controller(memory(legacy),{mobile:true});
+ const page=await controller(memory(legacy),{mobile:true});page.click({act:'view',view:'all'});
  const panel=()=>page.app.innerHTML.match(/<div\b[^>]*id="library-filter-panel"[^>]*>/)?.[0]??'';
  assert.ok(panel(),'The secondary filter region remains available');
  page.change('domain-filter','game');page.change('reaction-filter','liked');page.input('Real');assert.ok(panel());
  assert.ok(page.app.innerHTML.includes('data-active-count="2"'));assert.ok(page.app.innerHTML.includes('<option value="game" selected>'));
- page.input('Real game');page.click({act:'view',view:'history'});page.click({act:'view',view:'board'});assert.ok(panel());
- const desktop=await controller(memory(legacy));assert.match(desktop.app.innerHTML,/<div\b[^>]*id="library-filter-panel"/);
+ page.input('Real game');page.click({act:'view',view:'history'});page.click({act:'view',view:'all'});assert.ok(panel());
+ const desktop=await controller(memory(legacy));desktop.click({act:'view',view:'all'});assert.match(desktop.app.innerHTML,/<div\b[^>]*id="library-filter-panel"/);
 });
 
 
 test('media familiarity appears in library and block/forget/undo stay in the selected domain',async()=>{
  const storage=memory(),film=createMediaHistory('film',{storage}),series=createMediaHistory('series',{storage});
  film.remember({id:'tt1',title:'Фильм',poster:'https://example.com/film.jpg'});series.remember({id:'tt1',title:'Сериал'});
- const page=await controller(storage);assert.ok(page.app.innerHTML.includes('data-card="film:tt1"'));assert.ok(page.app.innerHTML.includes('data-card="series:tt1"'));
+ const page=await controller(storage);page.click({act:'view',view:'all'});assert.ok(page.app.innerHTML.includes('data-card="film:tt1"'));assert.ok(page.app.innerHTML.includes('data-card="series:tt1"'));
  page.change('',true,{act:'blocked',domain:'film',id:'tt1'});assert.deepEqual(film.blockedIds(),['tt1']);assert.deepEqual(series.blockedIds(),[]);
  page.click({act:'forget',domain:'film',id:'tt1'});assert.equal(film.all().length,0);assert.equal(series.all().length,1);
  page.click({act:'undo'});assert.equal(film.all().length,1);assert.deepEqual(film.blockedIds(),['tt1']);assert.equal(film.all()[0].poster,'https://example.com/film.jpg');

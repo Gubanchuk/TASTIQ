@@ -1,3 +1,7 @@
+## Библиотека — актуальное ограничение 17.11.2026
+
+При изменениях библиотеки читать docs/LIBRARY_CLARITY_2026-11-17.md. Сохранение(saved), постоянная оценка(status), знакомство и per-run choice/fit/outcome независимы. collectionRecords — read-only; clear rating не должен воскрешать старый outcome, unsave не удаляет знакомство/ответ/оценку. Старые want/tonight/known и unknown fields сохранять. Новые режимы параллельно выпускаются отдельно: перед deployment включить свежую origin/main и заново проверить объединённый снимок.
+
 # TASTIQ — контекст для Codex
 
 ## Начало новой работы

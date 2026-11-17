@@ -6,6 +6,7 @@ const clone=value=>structuredClone(value);
 const clean=value=>String(value??'').replace(/\s+/g,' ').trim().slice(0,300);
 const empty=()=>({version:1,items:[],history:[]});
 const laneOf=item=>LANES.has(item.lane)?item.lane:['liked','disliked','known'].includes(item.status)?'known':'want';
+export const isLibrarySaved=item=>Boolean(item)&&(typeof item.saved==='boolean'?item.saved:['want','tonight'].includes(laneOf(item)));
 const matches=(row,domain,id)=>row?.domain===domain&&row.id===id;
 
 export function safeLibraryUrl(value) {
@@ -32,7 +33,7 @@ export function createLibraryStore({storage,now=()=>new Date().toISOString()}={}
   if(persistent)try{storage.setItem(LIBRARY_KEY,JSON.stringify(snapshot));}catch{persistent=false;}
  }
  const visible=row=>row&&validId(row.id)&&DOMAINS.has(row.domain);
- const view=row=>clone({...row,lane:laneOf(row)});
+ const view=row=>clone({...row,lane:laneOf(row),saved:isLibrarySaved(row)});
  const indexOf=(domain,id)=>snapshot.items.findIndex(row=>matches(row,domain,id));
  const api={
   get persistent(){return persistent;},
@@ -44,15 +45,22 @@ export function createLibraryStore({storage,now=()=>new Date().toISOString()}={}
    const title=clean(card.ru||card.name||card.title||prior?.title||card.id);
    const metadata={};
    for(const field of ['year','poster','image','kind','link'])if(card[field]!=null)metadata[field]=card[field];
-   const item=prior?{...prior,...metadata,title,lane,updatedAt:at}
-    :{id:card.id,domain,title,year:null,poster:null,image:null,kind:null,link:null,...metadata,status:lane==='known'?'known':'want',lane,addedAt:at,updatedAt:at};
+   const item=prior?{...prior,...metadata,title,lane,saved:lane!=='known',updatedAt:at}
+    :{id:card.id,domain,title,year:null,poster:null,image:null,kind:null,link:null,...metadata,status:lane==='known'?'known':'want',lane,saved:lane!=='known',addedAt:at,updatedAt:at};
    if(prior)snapshot.items[index]=item;else snapshot.items.unshift(item);
    write();return view(item);
   },
   move(domain,id,lane) {
    if(!DOMAINS.has(domain)||!validId(id)||!LANES.has(lane))return null;
    read();const index=indexOf(domain,id);if(index<0)return null;
-   const item={...snapshot.items[index],lane,updatedAt:now()};snapshot.items[index]=item;write();return view(item);
+   const item={...snapshot.items[index],lane,saved:lane!=='known',updatedAt:now()};snapshot.items[index]=item;write();return view(item);
+  },
+  setSaved(card,saved,{domain=card?.domain}={}) {
+   if(!validId(card?.id)||!DOMAINS.has(domain)||typeof saved!=='boolean')return null;
+   read();let index=indexOf(domain,card.id);
+   if(index<0){if(!saved)return null;api.save(card,{domain,lane:'want'});read();index=indexOf(domain,card.id);}
+   if(index<0)return null;
+   const item={...snapshot.items[index],saved,updatedAt:now()};snapshot.items[index]=item;write();return view(item);
   },
   remove(domain,id) {
    read();const index=indexOf(domain,id);if(index<0)return null;
@@ -68,7 +76,7 @@ export function createLibraryStore({storage,now=()=>new Date().toISOString()}={}
    if(![null,'liked','disliked'].includes(status))return null;
    read();const index=indexOf(domain,id);if(index<0)return null;
    const prior=snapshot.items[index],next=status??(['liked','disliked'].includes(prior.status)?'known':prior.status);
-   const item={...prior,status:next,lane:laneOf(prior),updatedAt:now()};
+   const item={...prior,status:next,lane:laneOf(prior),ratingOverride:true,updatedAt:now()};
    if(prior.status!==next)delete item.answer;
    snapshot.items[index]=item;write();return view(item);
   },

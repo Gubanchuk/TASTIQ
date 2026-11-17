@@ -429,9 +429,6 @@ async function updateEvening(t,action) {
     const draft=feedbackDrafts.get(`${rid}:${cid}`);
     if(draft?.note===action.note && (draft.reason||null)===action.reason)feedbackDrafts.delete(`${rid}:${cid}`);
   }
-  if(action.type==='choose'&&action.value) {
-    const p=resultPick(cid);if(p){planStore.save(p,{lane:'tonight',domain:state.domain});library=loadLibrary();}
-  }
   const fk=['choose','start'].includes(action.type)?`evening-${action.type}:${rid}:${cid}:${action.value?'off':'on'}`:t.dataset.fk;
   if(view==='my')redrawMy(fk);else {render(false);focusFk(fk);}
   void feedback.flush();

@@ -18,7 +18,7 @@ test('modern picks group fit actions under a closed rating disclosure and evenin
   const explanation=html.indexOf('<details class="evening-fit evening-feedback-note"');
   assert.ok(rating>0&&explanation>rating);
   assert.doesNotMatch(html.slice(0,rating),/data-act="evening-fit"/);
-  assert.match(html,/<details class="evening-rating" data-disclosure="rating:evening-one:first"><summary[^>]*>Оценить вариант<\/summary>/);
+  assert.match(html,/<details class="evening-rating" data-disclosure="rating:evening-one:first"><summary[^>]*>Оценить рекомендацию<\/summary>/);
   const history=eveningControls(modernRun,'first',{modern:true,history:true});
   assert.doesNotMatch(history,/class="evening-rating"/);
   for(const [value,label] of [['accept','Подходит'],['conditional','С оговоркой'],['reject','Не подходит'],['unknown','Пока не знаю']]){
@@ -48,7 +48,7 @@ test('modern feedback keeps chosen/start/outcome actions and selected fit availa
   assert.match(html,/<summary[^>]*>Изменить уточнение/);
   const legacy=eveningControls(run,'first');
   assert.equal(legacy,eveningControls(run,'first',{modern:false}));
-  assert.match(legacy,/<summary>Подходит на сегодня\?/);
+  assert.match(legacy,/<summary>Подходит запросу\?/);
   assert.doesNotMatch(legacy,/evening-controls-modern/);
 });
 
