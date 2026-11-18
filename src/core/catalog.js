@@ -4,7 +4,7 @@ import { CONTEXTS } from './context.js';
 import { DATA, readJson } from '../lib/fsx.js';
 import { readScreenCatalog } from '../lib/screen-catalog.js';
 import { normalizeTitle, transliterate, editDistance } from '../lib/text.js';
-import { animeReleaseItem, cartoonCorrection, wikidataAnimeItem } from './anime-release.js';
+import { animeReleaseItem, cartoonCorrection, verifiedAnimeItem } from './anime-release.js';
 import { animeArtwork } from '../server/public/shared/anime-artwork.js';
 import { steamArtwork } from '../server/public/shared/steam-artwork.js';
 import { commonsArtwork } from './commons-artwork.js';
@@ -75,11 +75,11 @@ export function loadCatalogs({ gamesPath, screenPath, screenArtworkPath = resolv
       return item;
     };
     translate(screen.items);
-    const wikidata=readJson(resolve(DATA,'anime-wikidata.json'),{items:[]});
-    const verifiedById=new Map(wikidata.items.map(item=>[item.id,item]));
+    const verified=readJson(resolve(DATA,'anime-wikidata.json'),{items:[]});
+    const verifiedById=new Map(verified.items.map(item=>[item.id,item]));
     const anime = [];
     const screenItems=screen.items.map(item=>{
-      const release=animeReleaseItem(item.id)??wikidataAnimeItem(verifiedById.get(item.id));
+      const release=animeReleaseItem(item.id)??verifiedAnimeItem(verifiedById.get(item.id));
       if(release){
         const artwork=animeArtwork(release.id);
         if(artwork)release.poster=artwork.url;

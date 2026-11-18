@@ -29,6 +29,14 @@ test('anime is an independent entry with screened membership and stable screen I
   assert.equal(catalogMeta(catalogs).domains.anime.items, anime.byId.size);
 });
 
+test('a publisher-verified anime film links to the release when no Wikidata ID is available', () => {
+  const film = catalogs.anime.byId.get('tt6448586');
+  assert.equal(film.kind, 'film');
+  assert.equal(film.animeOrigin, 'japanese');
+  assert.equal(film.link, 'https://www.inazuma.jp/archive/eiga/03/');
+  assert.ok(film.poster);
+});
+
 test('the Japanese-only request restricts the actual shortlist and a movie time cap excludes series', () => {
   const {anime} = catalogs;
   assert.ok(anime.byId.has(avatar));

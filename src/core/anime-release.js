@@ -83,14 +83,18 @@ const verifiedAnimeAliases=new Map([
  ['tt1352421',['Natsume Yuujinchou','Natsume Yūjin-chō','Natsume Yujin-cho']],
 ]);
 
-export function wikidataAnimeItem(row) {
+export function verifiedAnimeItem(row) {
  if(!row)return null;
- const {id,qid,kind,name,ru,original,year,runtime,genres}=row;
- const link=`https://www.wikidata.org/wiki/${qid}`;
+ const {id,qid,source,kind,name,ru,original,year,runtime,genres}=row;
+ const fromWikidata=/^Q[1-9]\d*$/.test(qid??'');
+ const link=fromWikidata?`https://www.wikidata.org/wiki/${qid}`:source;
+ if(typeof link!=='string'||!URL.canParse(link))return null;
+ const origin=new URL(link);
+ if(origin.protocol!=='https:'||origin.username||origin.password)return null;
  const first=kind==='series'?animeFirstEpisodes[id]:null;
  const aliases=[original,...(verifiedAnimeAliases.get(id)??[])].filter(Boolean);
  const item=editorialItem({id,domain:'anime',kind,name,ru,aliases,year,runtime:first?.minutes??runtime,
-  runtimeSource:first?.source??(runtime?link:null),genre:genres,link,status:null,summary:null,source:'wikidata'});
+  runtimeSource:first?.source??(runtime?link:null),genre:genres,link,status:null,summary:null,source:fromWikidata?'wikidata':'editorial'});
  // These records have less evidence than the manually reviewed titles.
  return {...item,animeOrigin:'japanese',standalone:null,quality:.69};
 }
