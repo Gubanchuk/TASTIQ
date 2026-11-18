@@ -37,6 +37,18 @@ test('the Japanese-only request restricts the actual shortlist and a movie time 
   assert.ok(rows.every(({game}) => game.animeOrigin === 'japanese' && game.kind === 'film' && game.runtime <= 100));
 });
 
+test('the published anime menu uses independent metadata and no imported ratings or artwork', () => {
+  const {anime,cartoon}=catalogs;
+  assert.equal(anime.byId.get('tt0245429').runtime,125);
+  const {byId}=cartoon;
+  for(const item of [...anime.items,byId.get('tt0382932'),byId.get('tt0120587')]){
+    assert.equal(item.reviews.desc,null);
+    assert.equal(item.reviews.total,0);
+    assert.ok(!item.poster&&!item.image&&!item.network);
+    assert.ok(Object.values(item.features).every(feature=>feature.src.every(source=>source==='editorial')));
+  }
+});
+
 test('a verified first episode is distinct from the duration of every episode', () => {
   const {anime}=catalogs;
   const state=newMediaConversation({domain:'anime'});

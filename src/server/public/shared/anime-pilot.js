@@ -38,8 +38,6 @@ export const animePilot = Object.freeze(Object.fromEntries([
  ['tt10009170','western','https://www.netflix.com/title/81001988',true,['Кровь Зевса']],
 ].map(([id,origin,source,standalone,names,otherDomain])=>[id,{origin,source,standalone,names,otherDomain}])));
 
-export const animeCatalogCorrections = Object.freeze({tt0382932:'cartoon',tt0120587:'cartoon'});
-
 // The published length of S1E1 in the cited edition, rounded up to a whole minute.
 export const animeFirstEpisodes = Object.freeze({
  tt0213338:{minutes:24,source:'https://www.netflix.com/title/80001305'},
