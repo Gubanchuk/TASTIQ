@@ -2,7 +2,7 @@ import {cpSync,existsSync,lstatSync,mkdirSync,rmSync,writeFileSync} from 'node:f
 import {dirname,join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-const runtimeData=['catalog.json','catalog-screen.json','quotes-ru.json','posters.json','verified-game-context.json','verified-game-releases.json'];
+const runtimeData=['catalog.json','catalog-screen.json','anime-wikidata.json','quotes-ru.json','posters.json','verified-game-context.json','verified-game-releases.json'];
 export function buildVercel({root=resolve(dirname(fileURLToPath(import.meta.url)),'..')}={}){
  root=resolve(root);
  for(const name of runtimeData)if(!existsSync(join(root,'data',name)))throw Error(`Required runtime data missing: data/${name}`);

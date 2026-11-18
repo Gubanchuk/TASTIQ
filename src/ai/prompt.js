@@ -208,6 +208,7 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
     const against = r.penalties.slice(0, 2).map((p) => featureById.get(p.f)?.label ?? p.f);
     const summary = (g.summary ?? '').replace(/\s+/g, ' ').slice(0, 220);
     const singleplayer = g.kind === 'game' && hasStrongSingleplayerTag(g) ? 'Steam: Singleplayer' : '';
+    const animeFormat = g.domain==='anime' ? g.kind==='series' ? 'аниме-сериал' : 'аниме-фильм' : '';
     const anime = g.animeOrigin ? [
       {japanese:'Японское аниме',western:'В аниме-стиле',coproduction:'Копродукция с Японией'}[g.animeOrigin],
       g.standalone === true ? 'можно начать без знакомства с серией' : 'самостоятельная точка входа не подтверждена',
@@ -215,6 +216,7 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
     if (i >= detailed) return [
       i === detailed ? '\nДополнительный поиск (те же сита, краткие карточки):\n' : '',
       `id=${g.id}`, nameOf(g), g.year ?? 'год ?',
+      animeFormat, animeFormat?(g.genres??[]).filter(genre=>genre!=='Animation').slice(0,3).join('/'): '',
       g.kind === 'game' ? playerFactText(g) : '',
       singleplayer,
       matched.length ? `подтверждено: ${matched.slice(0, 3).join(', ')}` : weak.length ? `слабый вывод: ${weak.slice(0, 2).join(', ')}` : '',
@@ -224,7 +226,7 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
       `id=${g.id}`,
       nameOf(g),
       g.year ?? 'год ?',
-      lengthOf(g), anime,
+      animeFormat, lengthOf(g), anime,
       g.kind === 'game' ? playerFactText(g) : '',
       singleplayer,
       (g.genres ?? []).slice(0, 3).join('/'),

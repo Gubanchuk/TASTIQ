@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {loadCatalogs, catalogMeta, searchItems} from '../src/core/catalog.js';
 import {newMediaConversation, mediaConversationToLegacy} from '../src/core/media-conversation.js';
-import {candidatesOf} from '../src/ai/pick.js';
+import {candidatesOf,checkPicks,lookUp} from '../src/ai/pick.js';
+import {describeCandidates} from '../src/ai/prompt.js';
 import {pickerEntryRoute} from '../src/server/public/shared/media-route.js';
 import {collectionRecords} from '../src/server/public/shared/library-collection.js';
 import {createLibraryStore} from '../src/server/public/shared/library-store.js';
@@ -45,8 +46,24 @@ test('the published anime menu uses independent metadata and no imported ratings
     assert.equal(item.reviews.desc,null);
     assert.equal(item.reviews.total,0);
     assert.ok(!item.poster&&!item.image&&!item.network);
-    assert.ok(Object.values(item.features).every(feature=>feature.src.every(source=>source==='editorial')));
+    assert.ok(Object.values(item.features).every(feature=>feature.src.every(source=>['editorial','wikidata'].includes(source))));
   }
+});
+
+test('CC0 anime additions appear in search and broad recommendations without claiming unsupported conditions',()=>{
+  const {anime}=catalogs;
+  assert.ok(anime.items.length>1000);
+  const frieren=searchItems(anime,'Фрирен')[0];
+  assert.equal(frieren.id,'tt22248376');
+  assert.equal(frieren.kind,'series');
+  assert.match(frieren.link,/wikidata.org\/wiki\/Q115792176$/);
+  assert.equal(frieren.runtime,null);
+  assert.equal(frieren.standalone,null);
+  const state=newMediaConversation({domain:'anime'});
+  const legacy=mediaConversationToLegacy(state,anime.dict);
+  assert.ok(candidatesOf(anime,legacy).ranked.some(({game})=>game.id===frieren.id));
+  legacy.session.standaloneOnly=true;
+  assert.ok(!candidatesOf(anime,legacy).ranked.some(({game})=>game.id===frieren.id));
 });
 
 test('a verified first episode is distinct from the duration of every episode', () => {
@@ -60,6 +77,31 @@ test('a verified first episode is distinct from the duration of every episode', 
   state.sessionTime={minutes:35,sourceId:'answer'};
   state.turns[0].answer='Только западные работы. Каждый эпизод до 35 минут.';
   assert.deepEqual(search(),[]);
+});
+
+test('anime discovery identifies a series with no duration and resolves catalogue aliases',()=>{
+  const {anime}=catalogs;
+  const frieren=anime.byId.get('tt22248376');
+  const rows=[{game:frieren,matches:[],penalties:[]}];
+  assert.match(describeCandidates(rows,anime,[],{detailed:0}),/аниме-сериал/);
+  assert.match(describeCandidates(rows,anime,[],{detailed:1}),/аниме-сериал/);
+  assert.equal(lookUp(rows,frieren.aliases[0],frieren.year),frieren.id);
+  const spirited=anime.byId.get('tt0245429');
+  assert.ok(spirited.aliases.length);
+  assert.equal(lookUp([{game:spirited}],spirited.aliases.at(-1),spirited.year),spirited.id);
+});
+
+test('romaji in a model answer resolves only to the screened series and release year',()=>{
+  const {anime}=catalogs;
+  const state=newMediaConversation({domain:'anime'});
+  state.context.format='episodic';
+  state.turns=[{id:'wish',kind:'answer',answer:'Только японские анимационные сериалы.',question:{title:'Какое аниме хочется сегодня?'}}];
+  const {rows,ranked}=candidatesOf(anime,mediaConversationToLegacy(state,anime.dict));
+  const proposed=[['Natsume Yuujinchou',2008],['Hakumei to Mikochi',2018],['Ookami to Koushinryou',2008],['Somali to Mori no Kamisama',2020]];
+  const out=checkPicks({picks:proposed.map(([title,year])=>({id:'',title,year}))},rows,4,ranked,[],{ownLimit:4});
+  assert.deepEqual(out.picks.map(p=>p.id),['tt1352421','tt1158671','tt11428586']);
+  assert.equal(lookUp(ranked,'Ookami to Koushinryou',2024),null);
+  assert.equal(lookUp(ranked.filter(({game})=>game.id!=='tt1352421'),'Natsume Yuujinchou',2008),null);
 });
 
 test('the western style marker and saved work survive crossing from anime to cartoons', () => {

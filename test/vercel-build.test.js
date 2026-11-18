@@ -15,7 +15,7 @@ function fixture(){
  put('.env','OPENAI_API_KEY=PRIVATE_CANARY');
  put('data/journal.ndjson','PRIVATE_CANARY');
  put('data/unrelated.json','PRIVATE_CANARY');
- for(const name of ['catalog.json','catalog-screen.json','quotes-ru.json','posters.json','verified-game-context.json','verified-game-releases.json'])put('data/'+name,'{}');
+ for(const name of ['catalog.json','catalog-screen.json','anime-wikidata.json','quotes-ru.json','posters.json','verified-game-context.json','verified-game-releases.json'])put('data/'+name,'{}');
  return{root,put,close:()=>rmSync(root,{recursive:true,force:true})};
 }
 
@@ -30,6 +30,8 @@ test('Vercel output serves actual public HTML and a Node API, with only approved
   assert.equal(json(join(fn,'.vc-config.json')).maxDuration,300,'allow the full Hobby/Fluid window for model responses');
   assert.match(readFileSync(join(fn,'handler.mjs'),'utf8'),/src\/server\/app\.js/);
   assert.ok(existsSync(join(fn,'data/catalog-screen.json')));
+  assert.ok(existsSync(join(fn,'data/anime-wikidata.json')));
+  assert.equal(existsSync(join(output,'static/data/anime-wikidata.json')),false);
   for(const name of ['.env','data/journal.ndjson','data/unrelated.json'])assert.equal(existsSync(join(fn,name)),false,name);
   assert.equal(existsSync(join(output,'static/data/catalog.json')),false);
   const routes=json(join(output,'config.json')).routes;

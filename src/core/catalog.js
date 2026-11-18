@@ -3,7 +3,7 @@ import { DOMAINS } from '../aspects/index.js';
 import { CONTEXTS } from './context.js';
 import { DATA, readJson } from '../lib/fsx.js';
 import { normalizeTitle, transliterate, editDistance } from '../lib/text.js';
-import { animeReleaseItem, cartoonCorrection } from './anime-release.js';
+import { animeReleaseItem, cartoonCorrection, wikidataAnimeItem } from './anime-release.js';
 import { computeIdf } from './idf.js';
 
 /**
@@ -56,9 +56,11 @@ export function loadCatalogs({ gamesPath, screenPath } = {}) {
   const posters = readJson(resolve(DATA, 'posters.json'), {});
   if (screen) {
     translate(screen.items);
+    const wikidata=readJson(resolve(DATA,'anime-wikidata.json'),{items:[]});
+    const verifiedById=new Map(wikidata.items.map(item=>[item.id,item]));
     const anime = [];
     const screenItems=screen.items.map(item=>{
-      const release=animeReleaseItem(item.id);
+      const release=animeReleaseItem(item.id)??wikidataAnimeItem(verifiedById.get(item.id));
       if(release)anime.push(release);
       const cartoon=cartoonCorrection(item.id);
       if(cartoon)return cartoon;

@@ -46,12 +46,12 @@ const corrections = {
  tt0120587:['Antz','Муравей Антц',1998,83,'Adventure Comedy','https://www.dreamworks.com/movies/antz','Рабочий муравей меняется местами с солдатом и неожиданно оказывается в центре заговора.'],
 };
 
-function editorialItem({id,domain,kind,name,ru,aliases,year,runtime,runtimeSource,genre,link,status,summary}) {
- const genres = [...genre.split(' '),'Animation'];
+function editorialItem({id,domain,kind,name,ru,aliases,year,runtime,runtimeSource,genre,link,status,summary,source='editorial'}) {
+ const genres = [...(Array.isArray(genre)?genre:genre.split(' ')),'Animation'];
  const features = {};
  for(const label of genres)for(const [feature,strength] of IMDB_GENRE_FEATURES[label]??[]){
   if((features[feature]?.r??0)>=strength)continue;
-  features[feature]={r:strength,c:.65,src:['editorial'],ev:[{id:`editorial:${label}`,kind:'genre',q:label,url:link}]};
+  features[feature]={r:strength,c:.65,src:[source],ev:[{id:`${source}:${label}`,kind:'genre',q:label,url:link}]};
  }
  return {id,work:id,domain,kind,name,ru,aliases,year,runtime,runtimeSource,genres,features,link,status,summary,
   released:true,reviews:{total:0,ratio:null,desc:null},quality:.75,popularity:0};
@@ -74,4 +74,22 @@ export function cartoonCorrection(id) {
  if(!Object.hasOwn(corrections,id))return null;
  const [name,ru,year,runtime,genre,link,summary]=corrections[id];
  return editorialItem({id,domain:'cartoon',kind:'film',name,ru,aliases:[],year,runtime,runtimeSource:link,genre,link,status:null,summary});
+}
+
+// Alternate spellings of the original titles, verified against the release identities.
+const verifiedAnimeAliases=new Map([
+ ['tt11428586',['Somali to Mori no Kamisama','Somari to Mori no Kamisama']],
+ ['tt1158671',['Ookami to Koushinryou','Ōkami to Kōshinryō']],
+ ['tt1352421',['Natsume Yuujinchou','Natsume Yūjin-chō','Natsume Yujin-cho']],
+]);
+
+export function wikidataAnimeItem(row) {
+ if(!row)return null;
+ const {id,qid,kind,name,ru,original,year,runtime,genres}=row;
+ const link=`https://www.wikidata.org/wiki/${qid}`;
+ const aliases=[original,...(verifiedAnimeAliases.get(id)??[])].filter(Boolean);
+ const item=editorialItem({id,domain:'anime',kind,name,ru,aliases,year,runtime,
+  runtimeSource:runtime?link:null,genre:genres,link,status:null,summary:null,source:'wikidata'});
+ // These records have less evidence than the manually reviewed titles.
+ return {...item,animeOrigin:'japanese',standalone:null,quality:.69};
 }

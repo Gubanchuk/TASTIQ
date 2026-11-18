@@ -61,7 +61,7 @@ export function lookUp(ranked, title, year) {
   if (!key) return null;
   const gap = (g) => (!year || verifiedOriginalYear(g) === year ? 0 : g.year == null ? 2 : Math.abs(g.year - year));
   const found = ranked.map((r) => r.game)
-    .filter((g) => [g.name, g.original, g.ru].filter(Boolean).some((n) => normalizeTitle(n) === key))
+    .filter((g) => [g.name, g.original, g.ru, ...(g.domain==='anime'?(g.aliases??[]):[])].filter(Boolean).some((n) => normalizeTitle(n) === key))
     .filter((g) => gap(g) <= 1 || g.year == null)
     .sort((a, b) => gap(a) - gap(b) || b.popularity - a.popularity);
   return found[0]?.id ?? null;
@@ -149,7 +149,8 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   const sources=adaptive
     ? `Сначала проверь список и для его вариантов скопируй id. Если в списке мало подходящих, предложи другие произведения для поиска в каталоге. Укажи оригинальное название и год, оставь id пустым. Уже показанные произведения повторять нельзя.`
     : `Бери из списка (id копируй из строки кандидата) или не больше ${ownLimit} своих (id пустой, название и год).`;
-  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} ${sources}`;
+  const animeSources=state.domain==='anime'?' Из подходящих кандидатов предпочитай варианты с id. Для своего варианта без id укажи распространённое английское название в поле title. Если знаешь только японское название, используй оригинальное написание. Используй латинскую транслитерацию, только если других вариантов названия не знаешь.':'';
+  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} ${sources}${animeSources}`;
   const started = Date.now();
   const schema=constraintSchema(SCHEMA,criteria);
   const outputSchema=adaptive?{...schema,properties:{...schema.properties,picks:{...schema.properties.picks,maxItems:requestCount}}}:schema;
