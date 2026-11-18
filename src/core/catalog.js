@@ -2,8 +2,12 @@ import { resolve } from 'node:path';
 import { DOMAINS } from '../aspects/index.js';
 import { CONTEXTS } from './context.js';
 import { DATA, readJson } from '../lib/fsx.js';
+import { readScreenCatalog } from '../lib/screen-catalog.js';
 import { normalizeTitle, transliterate, editDistance } from '../lib/text.js';
 import { animeReleaseItem, cartoonCorrection, wikidataAnimeItem } from './anime-release.js';
+import { animeArtwork } from '../server/public/shared/anime-artwork.js';
+import { steamArtwork } from '../server/public/shared/steam-artwork.js';
+import { commonsArtwork } from './commons-artwork.js';
 import { computeIdf } from './idf.js';
 
 /**
@@ -37,7 +41,7 @@ export function makeCatalog(raw, domainId = 'game') {
 }
 
 /** Loads the legacy catalogs and the editorial anime section with the same work IDs. */
-export function loadCatalogs({ gamesPath, screenPath } = {}) {
+export function loadCatalogs({ gamesPath, screenPath, screenArtworkPath = resolve(DATA, 'catalog-artwork.json') } = {}) {
   const catalogs = {};
   // Russian translations of English evidence quotes (08-translate-quotes.js), shown with the original one tap away.
   const quotesRu = readJson(resolve(DATA, 'quotes-ru.json'), {});
@@ -48,24 +52,43 @@ export function loadCatalogs({ gamesPath, screenPath } = {}) {
   if (games) {
     translate(games.items);
     // Steam's portrait library capsule; some games lack it and the page falls back to the header image.
-    for (const g of games.items) g.poster ??= `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/library_600x900.jpg`;
+    for (const g of games.items) {
+      const recovered = steamArtwork(g.id);
+      if (recovered) g.poster = recovered;
+      else g.poster ??= `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/library_600x900.jpg`;
+    }
     catalogs.game = makeCatalog(games, 'game');
   }
-  const screen = readJson(screenPath ?? resolve(DATA, 'catalog-screen.json'), null);
+  const screen = readScreenCatalog(screenPath ?? resolve(DATA, 'catalog-screen.json'), null);
   // Prototype posters (s06-posters.js): Wikipedia thumbnails for popular screen titles.
   const posters = readJson(resolve(DATA, 'posters.json'), {});
   if (screen) {
+    const screenArtwork = screenArtworkPath ? readJson(screenArtworkPath, {}) : {};
+    const recoveredArtwork = screenArtworkPath ? readJson(resolve(DATA, 'catalog-artwork-recovered.json'), {}) : {};
+    const fillPoster = item => {
+      const path = screenArtwork[item.id];
+      if (!item.poster && !item.image) {
+        if (typeof path === 'string') item.poster = `https://image.tmdb.org/t/p/w342${path}`;
+        else if (Object.hasOwn(commonsArtwork, item.id)) item.poster = commonsArtwork[item.id];
+        else if (typeof recoveredArtwork[item.id]?.url === 'string') item.poster = recoveredArtwork[item.id].url;
+      }
+      return item;
+    };
     translate(screen.items);
     const wikidata=readJson(resolve(DATA,'anime-wikidata.json'),{items:[]});
     const verifiedById=new Map(wikidata.items.map(item=>[item.id,item]));
     const anime = [];
     const screenItems=screen.items.map(item=>{
       const release=animeReleaseItem(item.id)??wikidataAnimeItem(verifiedById.get(item.id));
-      if(release)anime.push(release);
+      if(release){
+        const artwork=animeArtwork(release.id);
+        if(artwork)release.poster=artwork.url;
+        anime.push(fillPoster(release));
+      }
       const cartoon=cartoonCorrection(item.id);
-      if(cartoon)return cartoon;
+      if(cartoon)return fillPoster(cartoon);
       if(posters[item.id])item.poster=posters[item.id];
-      return item;
+      return fillPoster(item);
     });
     for (const domain of ['film', 'series', 'cartoon']) {
       catalogs[domain] = makeCatalog({ ...screen, items: screenItems.filter((x) => x.domain === domain) }, domain);

@@ -10,6 +10,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { DATA, ROOT, readJson, writeJson } from '../lib/fsx.js';
+import { readScreenCatalog } from '../lib/screen-catalog.js';
 import { mapPool } from '../lib/http.js';
 
 const ENV = resolve(ROOT, '.env');
@@ -23,8 +24,7 @@ const TEXT_KINDS = new Set(['wiki', 'summary', 'review', 'description']);
 // The same test as the page (pick/app.js, looksEnglish): printable ASCII and typographic quotes only.
 const looksEnglish = (q) => /^[\x20-\x7E‘-‟–—…]+$/.test(q ?? '') && /[a-z]{3}/i.test(q);
 
-function quotesOf(path) {
-  const catalog = readJson(path, null);
+function quotesOf(catalog) {
   const out = new Set();
   for (const item of catalog?.items ?? []) {
     for (const v of Object.values(item.features)) for (const e of v.ev ?? []) if (TEXT_KINDS.has(e.kind) && looksEnglish(e.q)) out.add(e.q);
@@ -33,7 +33,10 @@ function quotesOf(path) {
 }
 
 const done = readJson(OUT, {});
-const all = new Set([...quotesOf(resolve(DATA, 'catalog-screen.json')), ...quotesOf(resolve(DATA, 'catalog.json'))]);
+const all = new Set([
+  ...quotesOf(readScreenCatalog(resolve(DATA, 'catalog-screen.json'), null)),
+  ...quotesOf(readJson(resolve(DATA, 'catalog.json'), null)),
+]);
 let todo = [...all].filter((q) => !(q in done));
 if (process.env.LIMIT) todo = todo.slice(0, Number(process.env.LIMIT));
 console.log(`quotes ${all.size}, already translated ${[...all].filter((q) => q in done).length}, to translate now ${todo.length}`);

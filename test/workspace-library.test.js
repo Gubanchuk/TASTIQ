@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '../src/server/public/shared/library-store.js';
+import {artworkImageHtml,retryArtworkImage} from '../src/server/public/shared/card-artwork.js';
 import {collectionRecords} from '../src/server/public/shared/library-collection.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '../src/server/public/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '../src/server/public/shared/media-history.js';
@@ -19,10 +20,11 @@ async function page(storage,{search=''}={}){
  const handlers=new Map(),app={innerHTML:'',setAttribute(){}},notice={};
  class Element{constructor(dataset={},value='',id=''){Object.assign(this,{dataset,value,id,checked:false});}closest(s){return s==='button[data-act]'?this:null;}matches(){return false;}focus(){document.activeElement=this;}}
  const findId=id=>app.innerHTML.includes(`id="${id}"`)?new Element({},'',id):null;
- const document={activeElement:null,querySelector:s=>s==='#library-app'?app:s==='#library-notice'?notice:s.startsWith('#')?findId(s.slice(1)):s.startsWith('[data-focus=')&&app.innerHTML.includes(s.slice(1,-1))?new Element({focus:s.match(/data-focus="([^"]+)"/)[1]}):null,querySelectorAll:()=>[],getElementById:findId,addEventListener:(t,h)=>handlers.set(t,h)};
+ const document={activeElement:null,querySelector:s=>s==='#library-app'?app:s==='#library-notice'?notice:s.startsWith('#')?findId(s.slice(1)):s.startsWith('[data-focus=')&&app.innerHTML.includes(s.slice(1,-1))?new Element({focus:s.match(/data-focus="([^"]+)"/)[1]}):null,querySelectorAll:selector=>selector==='.board-card[data-card]'?ids(app.innerHTML).map(card=>new Element({card})):[],getElementById:findId,addEventListener:(t,h)=>handlers.set(t,h)};
  const location={search,pathname:'/library/'},urls=[];
  const updateUrl=url=>{location.search=url.includes('?')?'?'+url.split('?')[1]:'';urls.push(url);};
  const context=vm.createContext({animeStyleLabel,inLibraryDomain,mediaLibraryDomain,selectionModeTitle,URLSearchParams,location,history:{pushState:(_s,_t,url)=>updateUrl(url),replaceState:(_s,_t,url)=>updateUrl(url)},document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:v=>v},structuredClone,matchMedia:()=>({matches:false,addEventListener(){}}),collectionRecords,createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,createFeedbackStore:o=>createFeedbackStore({...o,locks:{request:async(_,fn)=>fn()}}),FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,initCustomSelects(){},focusCustomSelect(){},fetch:async()=>({ok:true,json:async()=>[]}),setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
+ Object.assign(context,{artworkImageHtml,retryArtworkImage});
  vm.runInContext((await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,''),context);
  await new Promise(r=>setImmediate(r));
  return {get html(){return app.innerHTML;},get search(){return location.search;},get urls(){return urls;},back:search=>{location.search=search;handlers.get('window:popstate')();},get focus(){return document.activeElement?.dataset.focus??document.activeElement?.id;},click:dataset=>{const target=new Element(dataset);target.focus();handlers.get('click')({target});},change:(id,value,dataset={})=>handlers.get('change')({target:new Element(dataset,value,id)}),input:value=>handlers.get('input')({target:new Element({},value,'find-title')})};
@@ -52,6 +54,17 @@ test('modern results appear in saved selections with all alternatives and a free
  }
  const p=await page(storage);p.click({act:'view',view:'history'});
  assert.match(p.html,/Подборы<span>4/);assert.equal((p.html.match(/Открыть подбор/g)??[]).length,4);assert.match(p.html,/Первый &lt;вариант&gt;/);assert.match(p.html,/Второй/);assert.match(p.html,/\/pick\/game\/\?selection=/);assert.match(p.html,/domain=cartoon&selection=/);assert.equal(createLibraryStore({storage}).all().length,0);
+});
+test('a saved title without artwork can use the exact work image from a restored selection',async()=>{
+ const storage=memory(),store=createLibraryStore({storage}),archive=createSelectionArchive({storage});
+ const card={id:'tt0002130',title:'Dante’s Inferno'},poster='https://image.tmdb.org/t/p/w342/sample.jpg';
+ store.setSaved(card,true,{domain:'film'});
+ const result={top:{...card,poster},alternatives:[]};
+ const state={version:1,id:'artwork-resume',domain:'film',phase:'result',result};
+ archive.capture({state,screen:{type:'result',result}});
+ const before=storage.getItem(LIBRARY_KEY),p=await page(storage);
+ assert.match(p.html,/src="https:\/\/image\.tmdb\.org\/t\/p\/w342\/sample\.jpg"/);
+ assert.equal(storage.getItem(LIBRARY_KEY),before);
 });
 function seed(count=126){const storage=memory(),store=createLibraryStore({storage});for(let i=0;i<count;i++)store.save({id:`item-${i}`,title:`Название ${String(i).padStart(3,'0')}`,year:2020+i%6},{domain:['game','film','series','cartoon'][i%4],lane:i<100?'want':i<114?'tonight':'known'});return {storage,store};}
 

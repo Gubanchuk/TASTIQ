@@ -8,6 +8,7 @@
     "594650": { "title": "Hunt: Showdown 1896", "min": 1, "max": 3, "coverage": "mode-only", "mode": "Bounty Hunt", "source": "https://www.huntshowdown.com/player-guide/en_US", "checkedAt": "2026-10-31" },
     "962130": { "title": "Grounded", "min": 1, "max": 4, "coverage": "standard", "mode": "онлайн-кооператив", "source": "https://store.steampowered.com/app/962130/Grounded/", "checkedAt": "2026-11-01" },
     "892970": { "title": "Valheim", "min": 1, "max": 10, "coverage": "standard", "mode": "кооперативный сервер", "source": "https://www.valheimgame.com/faq/", "checkedAt": "2026-11-01" },
-    "1203620": { "title": "Enshrouded", "min": 1, "max": 16, "coverage": "standard", "mode": "онлайн-кооператив", "source": "https://enshrouded.com/en-US/FAQ", "checkedAt": "2026-11-01" }
+    "1203620": { "title": "Enshrouded", "min": 1, "max": 16, "coverage": "standard", "mode": "онлайн-кооператив", "source": "https://enshrouded.com/en-US/FAQ", "checkedAt": "2026-11-01" },
+    "2073850": { "title": "THE FINALS", "min": 3, "max": 3, "coverage": "mode-only", "mode": "Cashout, полный состав команды в PvP", "source": "https://www.reachthefinals.com/patchnotes/rte3", "checkedAt": "2026-11-18" }
   }
 }

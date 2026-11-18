@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {gameCardHtml} from '../src/server/public/pick/game/card-view.js';
 import {mediaCardHtml} from '../src/server/public/pick/watch/card-view.js';
 import {singleReplacementIndex} from '../src/server/public/shared/result-clarity.js';
+import {artworkUrls} from '../src/server/public/shared/card-artwork.js';
 
 test('the new card presentation escapes model/catalog text and rejects executable media and links',()=>{
  const html=gameCardHtml({id:'steam:1',name:'<img src=x onerror=bad()>',poster:'javascript:bad()',image:'data:text/html,bad',link:'javascript:bad()',ai:{reason:'<script>bad()</script>',caveat:'<b>warning</b>'}});
@@ -40,6 +41,22 @@ test('complete art retains load/error hooks while familiarity remains an explici
   assert.doesNotMatch(pending,/data-card-feedback/);
   assert.match(render({...card,poster:null}),/game-poster-fallback/);
  }
+});
+
+test('every section has a local illustrated cover and existing artwork stays first',()=>{
+ for(const [domain,cover] of Object.entries({film:'drama',series:'drama',cartoon:'animation',anime:'animation',game:'games'})){
+  const card={id:'example',name:'Example',domain},path=`/assets/catalog-covers/${cover}.webp`;
+  const html=domain==='game'?gameCardHtml(card):mediaCardHtml(card,{domain});
+  assert.ok(html.includes(`<img src="${path}"`),domain);
+  const poster='https://example.com/portrait.jpg';
+  assert.deepEqual(artworkUrls({...card,poster}),[poster,path],domain);
+ }
+ assert.equal(artworkUrls({genres:['Science Fiction']},'film').at(-1),'/assets/catalog-covers/science-fiction.webp');
+});
+
+test('a saved game uses the current Steam capsule when its original URL is obsolete',()=>{
+ const card={id:'steam:1374490',name:'RuneScape: Dragonwilds',poster:'https://cdn.cloudflare.steamstatic.com/steam/apps/1374490/library_600x900.jpg'};
+ assert.match(gameCardHtml(card),/<img src="https:\/\/shared\.fastly\.steamstatic\.com\/store_item_assets\/steam\/apps\/1374490\/[^/]+\/capsule_616x353\.jpg/);
 });
 
 test('an alternative retains visible reason and uncertain conditions; a marked card keeps undo/return/exclusion actions',()=>{

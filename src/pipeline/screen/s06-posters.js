@@ -5,13 +5,14 @@
 // Env: FILMS (default 4000), SERIES (default 1500), CARTOONS (default 600).
 import { resolve } from 'node:path';
 import { DATA, readJson, writeJson } from '../../lib/fsx.js';
+import { readScreenCatalog } from '../../lib/screen-catalog.js';
 import { getJson, mapPool, RateLimiter } from '../../lib/http.js';
 
 const N = { film: Number(process.env.FILMS ?? 4000), series: Number(process.env.SERIES ?? 1500), cartoon: Number(process.env.CARTOONS ?? 600) };
 const sparql = new RateLimiter(1_500);
 const rest = new RateLimiter(120);
 
-const catalog = readJson(resolve(DATA, 'catalog-screen.json'));
+const catalog = readScreenCatalog(resolve(DATA, 'catalog-screen.json'));
 const byVotes = (a, b) => b.reviews.total - a.reviews.total;
 const targets = Object.entries(N).flatMap(([domain, n]) => catalog.items.filter((x) => x.domain === domain).sort(byVotes).slice(0, n));
 const out = readJson(resolve(DATA, 'posters.json'), {});

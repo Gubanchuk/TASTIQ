@@ -47,6 +47,7 @@ export const animeFirstEpisodes = Object.freeze({
  tt6517102:{minutes:25,source:'https://www.netflix.com/title/80095241?s=i'},
  tt14833612:{minutes:28,source:'https://www.netflix.com/title/81436901'},
  tt10009170:{minutes:27,source:'https://www.netflix.com/title/81001988'},
+ tt37246098:{minutes:24,source:'https://www.primevideo.com/detail/0K1L4L4ME2B7YKCX5B74IOCJT4?tr=um'},
 });
 
 export function animeStyleLabel(id) {

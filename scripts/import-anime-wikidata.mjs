@@ -1,12 +1,13 @@
 // Run from the project root. Candidate IDs come from the legacy snapshot.
 // Every exported title, kind, release date, genre and duration comes from Wikidata (CC0).
-import {readFileSync,writeFileSync} from 'node:fs';
+import {writeFileSync} from 'node:fs';
 import {setTimeout as delay} from 'node:timers/promises';
 import {animePilot} from '../src/server/public/shared/anime-pilot.js';
+import {readScreenCatalog} from '../src/lib/screen-catalog.js';
 
 const src=new URL('../data/catalog-screen.json',import.meta.url);
 const target=new URL('../data/anime-wikidata.json',import.meta.url);
-const candidates=JSON.parse(readFileSync(src,'utf8')).items.filter(row=>
+const candidates=readScreenCatalog(src).items.filter(row=>
  row.domain==='anime'&&!Object.hasOwn(animePilot,row.id)&&!['tt0382932','tt0120587'].includes(row.id)).map(row=>row.id).sort();
 const ua='TASTIQ/1.0 (https://github.com/Gubanchuk/TASTIQ; public anime catalog data)';
 const genres=new Map([

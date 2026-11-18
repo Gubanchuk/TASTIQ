@@ -1,6 +1,6 @@
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 // How common are the flaw tags that penalised the targets, among films that could be shown (q >= 0.62)?
-import { readFileSync } from 'node:fs';
-const raw = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog-screen.json', 'utf8'));
+const raw = readScreenCatalog('E:/project/TASTIQ/data/catalog-screen.json');
 const films = raw.items.filter((x) => x.domain === 'film' && x.quality >= 0.62);
 const byPop = [...films].sort((a, b) => b.popularity - a.popularity);
 const top = byPop.slice(0, 1000);

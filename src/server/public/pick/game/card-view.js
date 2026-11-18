@@ -3,6 +3,7 @@ import {feasibilityHtml} from './feasibility.js';
 import {titleCopyHtml} from '../../shared/title-copy.js';
 import {resultSectionHeading} from '../../shared/result-clarity.js';
 import {isLibrarySaved} from '../../shared/library-store.js';
+import {resultArtworkHtml} from '../../shared/card-artwork.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const nameOf=card=>card.ru||card.name||card.title||'Игра';
@@ -10,8 +11,7 @@ const safeUrl=value=>{try{const url=new URL(value);return ['https:','http:'].inc
 const button=(label,act,id,focus=act,accessibleName)=>`<button type="button" class="btn btn-secondary" data-act="${act}" data-id="${esc(id)}" data-focus="${focus}:${esc(id)}"${accessibleName?` aria-label="${esc(accessibleName)}"`:''}>${label}</button>`;
 
 function poster(card,{eager=false}={}) {
- const image=safeUrl(card.poster)||safeUrl(card.image);
- return `<div class="game-poster${image?'':' game-poster-fallback'}" data-title="${esc(nameOf(card))}"${image?' data-had-image':''} aria-hidden="true">${image?`<picture><img src="${esc(image)}" alt="" loading="${eager?'eager':'lazy'}" referrerpolicy="no-referrer"></picture>`:`<span>${esc(nameOf(card))}</span>`}</div>`;
+ return resultArtworkHtml(card,{domain:'game',title:nameOf(card),eager});
 }
 
 // A plan is separate from taste, familiarity and evening feedback.

@@ -1,5 +1,5 @@
-import { readFileSync } from 'node:fs';
-const raw = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog-screen.json', 'utf8'));
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
+const raw = readScreenCatalog('E:/project/TASTIQ/data/catalog-screen.json');
 console.log('top keys:', Object.keys(raw).join(','));
 const items = raw.items ?? raw.titles ?? [];
 console.log('items:', items.length, 'sample keys:', Object.keys(items[0] ?? {}).join(','));

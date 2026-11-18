@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import {loadCatalogs, catalogMeta, searchItems} from '../src/core/catalog.js';
 import {newMediaConversation, mediaConversationToLegacy} from '../src/core/media-conversation.js';
 import {candidatesOf,checkPicks,lookUp} from '../src/ai/pick.js';
+import {recommendIds} from '../src/core/recommend.js';
+import {profileOf,sessionOf} from '../src/core/dialogue.js';
+import {createMediaConversationService} from '../src/server/media-conversation-service.js';
 import {describeCandidates} from '../src/ai/prompt.js';
 import {pickerEntryRoute} from '../src/server/public/shared/media-route.js';
 import {collectionRecords} from '../src/server/public/shared/library-collection.js';
@@ -38,16 +41,78 @@ test('the Japanese-only request restricts the actual shortlist and a movie time 
   assert.ok(rows.every(({game}) => game.animeOrigin === 'japanese' && game.kind === 'film' && game.runtime <= 100));
 });
 
-test('the published anime menu uses independent metadata and no imported ratings or artwork', () => {
+test('the published anime menu uses independent metadata and no imported ratings', () => {
   const {anime,cartoon}=catalogs;
   assert.equal(anime.byId.get('tt0245429').runtime,125);
   const {byId}=cartoon;
   for(const item of [...anime.items,byId.get('tt0382932'),byId.get('tt0120587')]){
     assert.equal(item.reviews.desc,null);
     assert.equal(item.reviews.total,0);
-    assert.ok(!item.poster&&!item.image&&!item.network);
+    assert.ok(!item.network);
     assert.ok(Object.values(item.features).every(feature=>feature.src.every(source=>['editorial','wikidata'].includes(source))));
   }
+});
+
+test('anime recommendations show exact-release artwork, including in earlier saved results', () => {
+  const {anime}=catalogs;
+  const legacy=mediaConversationToLegacy(newMediaConversation({domain:'anime'}),anime.dict);
+  const {top:frieren,alternatives:[spiritedAway]}=recommendIds(
+    anime,profileOf(legacy),sessionOf(legacy),['tt22248376','tt0245429']);
+  assert.equal(frieren.poster,'https://static.tvmaze.com/uploads/images/medium_portrait/479/1198409.jpg');
+  assert.match(spiritedAway.poster,/^https:\/\/www\.ghibli\.jp\/gallery\/.*chihiro/);
+  assert.match(mediaCardHtml(frieren,{domain:'anime'}),/<img .*1198409\.jpg/);
+  const archived={...frieren,poster:null,image:null};
+  const restored=mediaCardHtml(archived,{domain:'anime',index:1});
+  assert.match(restored,/<img .*1198409\.jpg/);
+  assert.match(restored,/href="https:\/\/www\.tvmaze\.com\/shows\/69956"/);
+  assert.doesNotMatch(mediaCardHtml(archived,{domain:'series'}),/1198409\.jpg/);
+  assert.match(mediaCardHtml(archived,{domain:'series'}),/<img src="\/assets\/catalog-covers\//);
+  assert.doesNotMatch(anime.byId.get('tt5847454').poster??'',/static\.tvmaze\.com/);
+});
+
+test('new screen artwork reaches recommendations and free resume of pre-artwork selections', async () => {
+  const examples={film:'tt0002130',series:'tt0044259',cartoon:'tt0032455',anime:'tt0079833'};
+  for (const [domain,id] of Object.entries(examples)) {
+    const catalog=catalogs[domain];
+    const state=newMediaConversation({domain});
+    const legacy=mediaConversationToLegacy(state,catalog.dict);
+    const result=recommendIds(catalog,profileOf(legacy),sessionOf(legacy),[id]);
+    assert.match(result.top.poster,/^https:\/\/image\.tmdb\.org\/t\/p\/w342\//);
+    const expected=result.top.poster;
+    delete result.top.poster;
+    delete result.top.image;
+    const createSelection=createMediaConversationService({
+      domain,catalogs,pick:()=>assert.fail('Restoring artwork must not run a new pick'),
+    });
+    const resumed=await createSelection({domain,state:{...state,phase:'result',result}});
+    assert.equal(resumed.state.result.top.id,id);
+    assert.equal(resumed.screen.result.top.poster,expected);
+  }
+});
+
+test('theater release dates can differ from production dates without losing ID-matched posters', () => {
+  for (const [id,year] of [['tt0020298',1929],['tt0051790',1946],['tt0061643',1968]]) {
+    const film=catalogs.film.byId.get(id);
+    assert.equal(film.year,year);
+    assert.match(film.poster,/^https:\/\/image\.tmdb\.org\//);
+  }
+});
+
+test('recovered artwork is restored into a saved result and the card uses the work image', async () => {
+  const domain='anime', id='tt9881586';
+  const state=newMediaConversation({domain});
+  const {anime}=catalogs;
+  const legacy=mediaConversationToLegacy(state,anime.dict);
+  const result=recommendIds(anime,profileOf(legacy),sessionOf(legacy),[id]);
+  const url='https://en.cloverworks.co.jp/wp/wp-content/uploads/2019/01/aobuta_m_KV.jpg';
+  assert.equal(result.top.poster,url);
+  delete result.top.poster;
+  const createSelection=createMediaConversationService({
+    domain,catalogs,pick:()=>assert.fail('Restoring artwork must not run a new pick'),
+  });
+  const {screen}=await createSelection({domain,state:{...state,phase:'result',result}});
+  assert.equal(screen.result.top.poster,url);
+  assert.match(mediaCardHtml(screen.result.top,{domain}),/<img src="https:\/\/en\.cloverworks\.co\.jp\//);
 });
 
 test('CC0 anime additions appear in search and broad recommendations without claiming unsupported conditions',()=>{

@@ -1,7 +1,7 @@
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 // Dump feature vectors of given film ids from the catalog file (read-only).
-import { readFileSync } from 'node:fs';
 const ids = process.argv.slice(2);
-const raw = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog-screen.json', 'utf8'));
+const raw = readScreenCatalog('E:/project/TASTIQ/data/catalog-screen.json');
 const byId = new Map(raw.items.map((x) => [x.id, x]));
 for (const id of ids) {
   const it = byId.get(id);

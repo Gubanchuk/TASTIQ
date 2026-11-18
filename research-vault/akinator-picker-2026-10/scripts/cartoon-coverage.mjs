@@ -1,12 +1,12 @@
 // Read-only: tag coverage of the cartoon domain in a screen catalog, the same three shares as the series check of
 // step 8 (LLM features at all, 5+ confident features, 5+ confident "likeable" features: like && infer && !risk).
 // Usage: node research-vault/akinator-picker-2026-10/scripts/cartoon-coverage.mjs [catalog-screen.json] [domain=cartoon]
-import { readFileSync } from 'node:fs';
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 import { SCREEN_FEATURES } from 'file:///E:/project/TASTIQ/src/aspects/screen.js';
 
 const path = process.argv[2] ?? 'E:/project/TASTIQ/data/catalog-screen.json';
 const domain = process.argv[3] ?? 'cartoon';
-const items = JSON.parse(readFileSync(path, 'utf8')).items.filter((g) => g.domain === domain);
+const items = readScreenCatalog(path).items.filter((g) => g.domain === domain);
 const byId = new Map(SCREEN_FEATURES.map((f) => [f.id, f]));
 const present = (v) => v && v.r >= 0.5 && v.c >= 0.5;
 const likeable = (f) => { const x = byId.get(f); return x && x.like && x.infer && !x.risk; };

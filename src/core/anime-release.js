@@ -87,9 +87,10 @@ export function wikidataAnimeItem(row) {
  if(!row)return null;
  const {id,qid,kind,name,ru,original,year,runtime,genres}=row;
  const link=`https://www.wikidata.org/wiki/${qid}`;
+ const first=kind==='series'?animeFirstEpisodes[id]:null;
  const aliases=[original,...(verifiedAnimeAliases.get(id)??[])].filter(Boolean);
- const item=editorialItem({id,domain:'anime',kind,name,ru,aliases,year,runtime,
-  runtimeSource:runtime?link:null,genre:genres,link,status:null,summary:null,source:'wikidata'});
+ const item=editorialItem({id,domain:'anime',kind,name,ru,aliases,year,runtime:first?.minutes??runtime,
+  runtimeSource:first?.source??(runtime?link:null),genre:genres,link,status:null,summary:null,source:'wikidata'});
  // These records have less evidence than the manually reviewed titles.
  return {...item,animeOrigin:'japanese',standalone:null,quality:.69};
 }

@@ -1,8 +1,9 @@
 // Peek at the shape of catalog items: keys, a sample item per domain, top-level stats.
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 import { readFileSync } from 'node:fs';
 
 const games = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog.json', 'utf8'));
-const screen = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog-screen.json', 'utf8'));
+const screen = readScreenCatalog('E:/project/TASTIQ/data/catalog-screen.json');
 const posters = JSON.parse(readFileSync('E:/project/TASTIQ/data/posters.json', 'utf8'));
 
 const out = {};

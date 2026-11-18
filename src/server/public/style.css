@@ -47,6 +47,8 @@
 .doors:focus-visible{outline:none}
 .door[data-domain=anime]{--door-ground:var(--brand-accent)}
 .foot p a{color:inherit}
+.foot .foot-tmdb{display:flex;align-items:center;gap:10px}
+.foot-tmdb img{display:block;object-fit:contain}
 @media(min-width:900px){
  .doors.with-anime{grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,1.7vw,26px)}
  .doors.with-anime .door-art{height:clamp(190px,20vw,306px)}

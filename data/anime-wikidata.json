@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 1555,
+ "queried": 1726,
  "items": [
   {
    "id": "tt0056739",
@@ -4218,6 +4218,20 @@
    "genres": []
   },
   {
+   "id": "tt1097194",
+   "qid": "Q613823",
+   "kind": "series",
+   "name": "Ghost Hound",
+   "ru": "Охота на призраков",
+   "original": null,
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Horror"
+   ]
+  },
+  {
    "id": "tt10974198",
    "qid": "Q141514850",
    "kind": "series",
@@ -6164,6 +6178,20 @@
    "genres": []
   },
   {
+   "id": "tt14228078",
+   "qid": "Q117717142",
+   "kind": "film",
+   "name": "The Girl from the Other Side",
+   "ru": "Девочка из Чужеземья OVA",
+   "original": "Totsukuni no shôjo",
+   "year": 2023,
+   "runtime": 70,
+   "genres": [
+    "Fantasy",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt1424037",
    "qid": "Q133230005",
    "kind": "series",
@@ -6321,6 +6349,20 @@
    "genres": []
   },
   {
+   "id": "tt14669108",
+   "qid": "Q109426611",
+   "kind": "series",
+   "name": "Life with an Ordinary Guy Who Reincarnated Into a Total Fantasy Knockout",
+   "ru": "В другом мире с мужчиной, обратившимся красоткой",
+   "original": "Fantasy Bishoujo Juniku Ojisan to",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt1468843",
    "qid": "Q1204250",
    "kind": "film",
@@ -6334,6 +6376,20 @@
     "Adventure",
     "Drama",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt14759062",
+   "qid": "Q120231658",
+   "kind": "film",
+   "name": "Mobile Suit Gundam SEED Freedom",
+   "ru": "Мобильный воин Гандам: Поколение. Фильм",
+   "original": "Kidô Senshi Gandamu Shîdo Furîdamu",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -6415,6 +6471,34 @@
    "genres": []
   },
   {
+   "id": "tt14960284",
+   "qid": "Q106323927",
+   "kind": "series",
+   "name": "She Professed Herself Pupil of the Wise Man",
+   "ru": "Она представилась ученицей мудреца",
+   "original": "Kenja no Deshi o Nanoru Kenja",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt14979456",
+   "qid": "Q105293746",
+   "kind": "series",
+   "name": "When Will Ayumu Make His Move?",
+   "ru": "Аюму всё равно станет ближе",
+   "original": "Soredemo Ayumu wa yosetekuru",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt14980764",
    "qid": "Q109428805",
    "kind": "series",
@@ -6482,6 +6566,20 @@
    "year": 2009,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt15170340",
+   "qid": "Q107968697",
+   "kind": "series",
+   "name": "ORIENT",
+   "ru": "Ориент",
+   "original": "Oriento",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
   },
   {
    "id": "tt15192340",
@@ -6583,6 +6681,20 @@
    "genres": []
   },
   {
+   "id": "tt15313532",
+   "qid": "Q111512826",
+   "kind": "film",
+   "name": "Teasing Master Takagi-San: The Movie",
+   "ru": "Озорная Такаги. Фильм",
+   "original": "Eiga Karakai Jouzu no Takagi-san",
+   "year": 2022,
+   "runtime": 73,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt1534184",
    "qid": "Q3728811",
    "kind": "series",
@@ -6592,6 +6704,20 @@
    "year": 2009,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt15378218",
+   "qid": "Q115937512",
+   "kind": "series",
+   "name": "Under Ninja",
+   "ru": "Низкоквалифицированный ниндзя",
+   "original": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
   },
   {
    "id": "tt15414478",
@@ -6614,6 +6740,20 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt15439344",
+   "qid": "Q114872690",
+   "kind": "film",
+   "name": "To Every You I've Loved Before",
+   "ru": "Каждой тебе, что я раньше любил",
+   "original": "Boku ga Aishita Subete no Kimi e",
+   "year": 2022,
+   "runtime": 102,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
   },
   {
    "id": "tt15441076",
@@ -6647,6 +6787,20 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt15450826",
+   "qid": "Q114873551",
+   "kind": "film",
+   "name": "To the Solitary Me Who Loved You",
+   "ru": "Единственному мне, кто тебя любил",
+   "original": "Kimi o Aishita Hitori no Boku e",
+   "year": 2022,
+   "runtime": 98,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
   },
   {
    "id": "tt15467380",
@@ -6696,6 +6850,20 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt15533674",
+   "qid": "Q106197008",
+   "kind": "series",
+   "name": "Akebi's Sailor Uniform",
+   "ru": "Школьная форма Акэби",
+   "original": "Akebi-chan no Sailor-fuku",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt15533960",
@@ -6801,6 +6969,20 @@
    "genres": []
   },
   {
+   "id": "tt15766292",
+   "qid": "Q108088427",
+   "kind": "series",
+   "name": "The Dawn of the Witch",
+   "ru": "Восхождение чародея",
+   "original": "Mahoutsukai Reimeiki",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt15792808",
    "qid": "Q112299509",
    "kind": "series",
@@ -6812,6 +6994,20 @@
    "genres": []
   },
   {
+   "id": "tt15799550",
+   "qid": "Q112235726",
+   "kind": "film",
+   "name": "Fruits Basket: Prelude",
+   "ru": "Фруктовая корзина: Прелюдия",
+   "original": null,
+   "year": 2022,
+   "runtime": 88,
+   "genres": [
+    "Drama",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt15830678",
    "qid": "Q110897898",
    "kind": "series",
@@ -6821,6 +7017,20 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt15830702",
+   "qid": "Q111338381",
+   "kind": "film",
+   "name": "Sword Art Online the Movie: Progressive - Scherzo of Deep Night",
+   "ru": "Мастера меча онлайн: Прогрессив. Скерцо глубокой ночи",
+   "original": "Gekijôban Sôdo Âto Onrain Puroguresshibu Kuraki Yûyami no Sukerutso",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt1584000",
@@ -6961,6 +7171,20 @@
    "genres": []
   },
   {
+   "id": "tt16270188",
+   "qid": "Q123421825",
+   "kind": "series",
+   "name": "Akuma Kun",
+   "ru": "Дьяволёнок",
+   "original": "Akuma-kun",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt16341212",
    "qid": "Q107736202",
    "kind": "series",
@@ -7096,6 +7320,20 @@
    "year": 2010,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt16741414",
+   "qid": "Q126934355",
+   "kind": "series",
+   "name": "Summer Pockets",
+   "ru": "Карманы лета",
+   "original": null,
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt1674928",
@@ -7402,6 +7640,20 @@
    ]
   },
   {
+   "id": "tt17677744",
+   "qid": "Q127386754",
+   "kind": "film",
+   "name": "The Seven Deadly Sins: Grudge of Edinburgh Part 1",
+   "ru": "Семь смертных грехов: Недовольство Эдинбурга. Часть 1",
+   "original": null,
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt1773185",
    "qid": "Q53353",
    "kind": "series",
@@ -7582,6 +7834,20 @@
    "genres": []
   },
   {
+   "id": "tt18566706",
+   "qid": "Q111187956",
+   "kind": "series",
+   "name": "Immoral Guild",
+   "ru": "Развращённая гильдия",
+   "original": "Futoku no Guild",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt18574004",
    "qid": "Q107555881",
    "kind": "series",
@@ -7725,6 +7991,20 @@
    "genres": []
   },
   {
+   "id": "tt19244410",
+   "qid": "Q114346009",
+   "kind": "series",
+   "name": "Level 1 Demon Lord and One Room Hero",
+   "ru": "Однушка лорда демонов и героя",
+   "original": "Lv1 Maou to One Room Yuusha",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt1929675",
    "qid": "Q106554273",
    "kind": "series",
@@ -7734,6 +8014,20 @@
    "year": 2011,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt19389868",
+   "qid": "Q112876230",
+   "kind": "series",
+   "name": "RWBY: Ice Queendom",
+   "ru": "Красный, белый, чёрный, жёлтый: Ледяная империя",
+   "original": "RWBY: Hyôsetsu Teikoku",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt1945730",
@@ -7758,6 +8052,20 @@
    "genres": []
   },
   {
+   "id": "tt19798344",
+   "qid": "Q112187209",
+   "kind": "series",
+   "name": "Detective Conan: Zero's Tea Time",
+   "ru": "Детектив Конан: Чаепитие Зеро",
+   "original": "Meitantei Conan: Zero no Tea Time",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Crime"
+   ]
+  },
+  {
    "id": "tt19848112",
    "qid": "Q112191929",
    "kind": "series",
@@ -7767,6 +8075,20 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt19853780",
+   "qid": "Q115620491",
+   "kind": "series",
+   "name": "The Legendary Hero Is Dead!",
+   "ru": "Герой мёртв!",
+   "original": "Yûsha ga shinda!",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt19869172",
@@ -8051,6 +8373,20 @@
    "genres": []
   },
   {
+   "id": "tt21223380",
+   "qid": "Q112933606",
+   "kind": "film",
+   "name": "Doraemon the Movie: Nobita's Sky Utopia",
+   "ru": "Дораэмон: Нобита и небесная утопия",
+   "original": "Eiga Doraemon: Nobita to Sora no Utopia",
+   "year": 2023,
+   "runtime": 107,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt2122656",
    "qid": "Q494610",
    "kind": "series",
@@ -8071,6 +8407,20 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt21237634",
+   "qid": "Q112174985",
+   "kind": "series",
+   "name": "The Maid I Hired Recently Is Mysterious",
+   "ru": "Моя новая горничная очень подозрительна",
+   "original": "Saikin Yatotta Maid ga Ayashii",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Mystery"
+   ]
   },
   {
    "id": "tt21249100",
@@ -8108,6 +8458,19 @@
    "genres": []
   },
   {
+   "id": "tt21345876",
+   "qid": "Q111007972",
+   "kind": "series",
+   "name": "Shinobi no Ittoki",
+   "ru": "Время ниндзя",
+   "original": null,
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action"
+   ]
+  },
+  {
    "id": "tt21345944",
    "qid": "Q113951384",
    "kind": "series",
@@ -8117,6 +8480,20 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt21345970",
+   "qid": "Q111187968",
+   "kind": "series",
+   "name": "I've Somehow Gotten Stronger When I Improved My Farm-Related Skills",
+   "ru": "Каким-то образом я стал сильнейшим, прокачивая фермерские навыки",
+   "original": "Noumin Kanren no Skill bakka Agetetara Nazeka Tsuyoku Natta.",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt2150751",
@@ -8141,6 +8518,20 @@
    "genres": []
   },
   {
+   "id": "tt21608762",
+   "qid": "Q115614597",
+   "kind": "series",
+   "name": "Saving 80,000 Gold in Another World for my Retirement",
+   "ru": "Сбережение восьмидесяти тысяч золотых монет в другом мире к моей старости",
+   "original": "Rôgo ni sonaete Isekai de 8-man-mai no kinka wo tamemasu",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt21621494",
    "qid": "Q118692115",
    "kind": "series",
@@ -8150,6 +8541,20 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt21689900",
+   "qid": "Q113954020",
+   "kind": "series",
+   "name": "My Life as Inukai-san's Dog",
+   "ru": "Стать любимой собачкой",
+   "original": "Inu ni Nattara Suki na Hito ni Hirowareta.",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt2176165",
@@ -8240,6 +8645,20 @@
    "genres": []
   },
   {
+   "id": "tt21929358",
+   "qid": "Q112685445",
+   "kind": "series",
+   "name": "Akiba Maid War",
+   "ru": "Война горничных Акибы",
+   "original": "Akiba meido sensô",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt21929398",
    "qid": "Q112659543",
    "kind": "series",
@@ -8249,6 +8668,33 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt21929424",
+   "qid": "Q113957526",
+   "kind": "series",
+   "name": "Onimai: I'm Now Your Sister!",
+   "ru": "Мой братик теперь не братик!",
+   "original": "Oniichan wa Oshimai!",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt21929436",
+   "qid": "Q113645541",
+   "kind": "series",
+   "name": "Sacrificial Princess & the King of Beasts",
+   "ru": "Принесённая в жертву принцесса и царь зверей",
+   "original": "Niehime to Kemono no Ou",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt2194724",
@@ -8293,6 +8739,34 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt21996220",
+   "qid": "Q126958217",
+   "kind": "film",
+   "name": "The Rose of Versailles",
+   "ru": "Роза Версаля",
+   "original": "Versailles no bara",
+   "year": 2025,
+   "runtime": 113,
+   "genres": [
+    "Drama",
+    "History"
+   ]
+  },
+  {
+   "id": "tt21996318",
+   "qid": "Q113771459",
+   "kind": "series",
+   "name": "Tearmoon Empire",
+   "ru": "История империи Тирмун",
+   "original": "Tearmoon Teikoku Monogatari: Dantoudai kara Hajimaru, Hime no Tensei Gyakuten Story",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt22017206",
@@ -8410,6 +8884,20 @@
    "genres": []
   },
   {
+   "id": "tt22443832",
+   "qid": "Q114565614",
+   "kind": "series",
+   "name": "Arknights: Prelude to Dawn",
+   "ru": "Аркнайтс: Прелюдия к рассвету",
+   "original": "Arknights: Reimei Zensou",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt2250034",
    "qid": "Q104253728",
    "kind": "series",
@@ -8498,6 +8986,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt22868842",
+   "qid": "Q111007970",
+   "kind": "film",
+   "name": "Lonely Castle in the Mirror",
+   "ru": "Одинокий замок в Зазеркалье",
+   "original": "Kagami no kojô",
+   "year": 2022,
+   "runtime": 116,
+   "genres": [
+    "Adventure",
+    "Drama"
+   ]
   },
   {
    "id": "tt22868844",
@@ -8654,6 +9156,20 @@
    "year": 2012,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt23132598",
+   "qid": "Q115623732",
+   "kind": "series",
+   "name": "The Most Heretical Last Boss Queen: From Villainess to Savior",
+   "ru": "Королева, ставшая причиной трагедии, сделает для народа всё, что в её силах",
+   "original": "Higeki no Genkyo to naru Saikyo Gedo Last Boss Joo wa Min no tame ni Tsukushimasu",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt2320220",
@@ -8847,6 +9363,20 @@
    "genres": []
   },
   {
+   "id": "tt23711384",
+   "qid": "Q115805857",
+   "kind": "series",
+   "name": "My Clueless First Friend",
+   "ru": "Мой глупый первый друг",
+   "original": "Jijô wo shiranai tenkôsei ga guigui kuru.",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt2374144",
    "qid": "Q14542320",
    "kind": "film",
@@ -8909,6 +9439,20 @@
    "genres": []
   },
   {
+   "id": "tt23844810",
+   "qid": "Q123038864",
+   "kind": "series",
+   "name": "Bye Bye, Earth",
+   "ru": "Пока-пока, Земля",
+   "original": null,
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt2387612",
    "qid": "Q3900174",
    "kind": "series",
@@ -8918,6 +9462,20 @@
    "year": 2011,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt23951384",
+   "qid": "Q115978240",
+   "kind": "film",
+   "name": "The Colors Within",
+   "ru": "Твой цвет",
+   "original": "Kimi no iro",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Music"
+   ]
   },
   {
    "id": "tt2398674",
@@ -8964,6 +9522,20 @@
    "genres": []
   },
   {
+   "id": "tt24326724",
+   "qid": "Q117546379",
+   "kind": "series",
+   "name": "Unnamed Memory",
+   "ru": "Безымянная память",
+   "original": null,
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt2457282",
    "qid": "Q17479150",
    "kind": "film",
@@ -8997,6 +9569,20 @@
    "year": 2013,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt25275610",
+   "qid": "Q115619873",
+   "kind": "series",
+   "name": "High Card",
+   "ru": "Старшая карта",
+   "original": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt2549540",
@@ -9047,6 +9633,19 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt25534100",
+   "qid": "Q114888419",
+   "kind": "series",
+   "name": "Revenger",
+   "ru": "Мститель",
+   "original": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Adventure"
+   ]
   },
   {
    "id": "tt2560140",
@@ -9152,6 +9751,34 @@
    "genres": []
   },
   {
+   "id": "tt25971150",
+   "qid": "Q113329708",
+   "kind": "series",
+   "name": "Reborn to Master the Blade: From Hero-King to Extraordinary Squire",
+   "ru": "Перевоплотившийся король-герой, ставший самой сильной ученицей рыцаря",
+   "original": "Eiyuuou, Bu wo Kiwameru Tame Tenseisu: Soshite, Sekai Saikyou no Minarai Kishi",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt26224944",
+   "qid": "Q115040005",
+   "kind": "film",
+   "name": "Psycho-Pass: Providence",
+   "ru": "Психопаспорт: Провидение",
+   "original": null,
+   "year": 2023,
+   "runtime": 120,
+   "genres": [
+    "Action",
+    "Crime"
+   ]
+  },
+  {
    "id": "tt2622982",
    "qid": "Q112169279",
    "kind": "series",
@@ -9172,6 +9799,19 @@
    "year": 2013,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt26346675",
+   "qid": "Q112594603",
+   "kind": "series",
+   "name": "Detective Conan: The Culprit Hanzawa",
+   "ru": "Детектив Конан: Преступник Ханадзава",
+   "original": null,
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
   },
   {
    "id": "tt2636124",
@@ -9275,6 +9915,20 @@
    ]
   },
   {
+   "id": "tt26688817",
+   "qid": "Q116756055",
+   "kind": "series",
+   "name": "Helck",
+   "ru": "Хельк",
+   "original": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt26692417",
    "qid": "Q115733264",
    "kind": "series",
@@ -9319,6 +9973,19 @@
    "genres": []
   },
   {
+   "id": "tt27182605",
+   "qid": "Q136443023",
+   "kind": "series",
+   "name": "GINTAMA - Mr.Ginpachi's Zany Class",
+   "ru": "Гинтама: 3-Z класс Гинпачи-сэнсэя",
+   "original": "3-Nen Z-Gumi Ginpachi-sensei",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt27187054",
    "qid": "Q117213010",
    "kind": "series",
@@ -9339,6 +10006,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt27237459",
+   "qid": "Q117287200",
+   "kind": "series",
+   "name": "Jellyfish Can't Swim in the Night",
+   "ru": "Медуза не умеет плавать в ночи",
+   "original": "Yoru no kurage wa oyogenai",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt27329086",
@@ -9364,6 +10045,20 @@
     "Drama",
     "Fantasy",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt27391405",
+   "qid": "Q113484661",
+   "kind": "series",
+   "name": "Summoned to Another World for a Second Time",
+   "ru": "Призванный в другой мир во второй раз",
+   "original": "Isekai Shoukan wa Nidome desu",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -9400,6 +10095,34 @@
    "genres": []
   },
   {
+   "id": "tt27460264",
+   "qid": "Q114568888",
+   "kind": "series",
+   "name": "A Girl & Her Guard Dog",
+   "ru": "Мой телохранитель",
+   "original": "Ojou to Banken-kun",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt27462671",
+   "qid": "Q116728980",
+   "kind": "series",
+   "name": "My One-Hit Kill Sister",
+   "ru": "Другой мир и сестра, которая убивает с одного удара",
+   "original": "Isekai One Turn Kill Nee-san: Ane Douhan no Isekai Seikatsu Hajimemashita",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt27484853",
    "qid": "Q117355470",
    "kind": "series",
@@ -9433,6 +10156,20 @@
    "genres": []
   },
   {
+   "id": "tt27504251",
+   "qid": "Q137784367",
+   "kind": "series",
+   "name": "Ranking of Kings: The Treasure Chest of Courage",
+   "ru": "Рейтинг короля: Сундук с сокровищами мужества",
+   "original": "Ôsama Ranking: Yûki no takarabako",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt27521477",
    "qid": "Q115182766",
    "kind": "film",
@@ -9447,6 +10184,34 @@
    ]
   },
   {
+   "id": "tt27524116",
+   "qid": "Q120825031",
+   "kind": "series",
+   "name": "Sasaki and Peeps",
+   "ru": "Сасаки и Пи",
+   "original": "Sasaki to Pi-chan",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt27548413",
+   "qid": "Q118293550",
+   "kind": "series",
+   "name": "I'm Giving the Disgraced Noble Lady I Rescued a Crash Course in Naughtiness",
+   "ru": "Я прибрал к рукам девушку, которая потеряла своего жениха, и теперь я учу её всяким плохим вещам",
+   "original": "Konyaku Haki sareta Reijou wo Hirotta Ore ga, Ikenai Koto wo Oshiekomu",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt27571597",
    "qid": "Q114708215",
    "kind": "series",
@@ -9456,6 +10221,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt27571647",
+   "qid": "Q116250122",
+   "kind": "series",
+   "name": "TenPuru -No One Can Live on Loneliness-",
+   "ru": "Храм: Никто не может жить в одиночестве",
+   "original": "TenPuru",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
   },
   {
    "id": "tt2760784",
@@ -9469,6 +10248,34 @@
    "genres": []
   },
   {
+   "id": "tt27679458",
+   "qid": "Q116272472",
+   "kind": "series",
+   "name": "Overtake!",
+   "ru": "Обгон!",
+   "original": "Ôbâteiku!",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Sport"
+   ]
+  },
+  {
+   "id": "tt2768084",
+   "qid": "Q2156382",
+   "kind": "film",
+   "name": "Doraemon: Nobita's Secret Gadget Museum",
+   "ru": "Новый Дораэмон 8",
+   "original": "Eiga Doraemon: Nobita to himitsu dougu myûjiamu",
+   "year": 2013,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt27845099",
    "qid": "Q110060904",
    "kind": "series",
@@ -9478,6 +10285,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt27865962",
+   "qid": "Q123048898",
+   "kind": "series",
+   "name": "Beyblade X",
+   "ru": null,
+   "original": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt2787558",
@@ -9511,6 +10332,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt27990718",
+   "qid": "Q113457689",
+   "kind": "series",
+   "name": "Sweet Reincarnation",
+   "ru": "Сладкое перевоплощение",
+   "original": "Okashi na Tensei",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt28036417",
@@ -9550,6 +10385,33 @@
    "genres": []
   },
   {
+   "id": "tt28100780",
+   "qid": "Q112173737",
+   "kind": "series",
+   "name": "The Masterful Cat Is Depressed Again Today",
+   "ru": "Кот-мастер на все лапы снова грустит",
+   "original": "Dekiru Neko wa Kyou mo Yuuutsu",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt28100910",
+   "qid": "Q115642057",
+   "kind": "series",
+   "name": "Liar Liar",
+   "ru": "Лжец, лжец",
+   "original": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt28101962",
    "qid": "Q114443133",
    "kind": "series",
@@ -9559,6 +10421,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt28131643",
+   "qid": "Q119791199",
+   "kind": "series",
+   "name": "The Banished Former Hero Lives as He Pleases",
+   "ru": "Бывший герой, которого прозвали неудачником и выгнали из дома, решил жить самостоятельно",
+   "original": "Dekisokonai to Yobareta Moto Eiyû wa, Jikka Kara Tsuihôsareta node Suki Katte ni Ikiru Koto ni Shita",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt28247170",
@@ -9581,6 +10457,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt28254942",
+   "qid": "Q108680123",
+   "kind": "series",
+   "name": "Classroom for Heroes",
+   "ru": "Класс для героев",
+   "original": "Eiyuu Kyoushitsu",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt28261206",
@@ -9717,6 +10607,34 @@
    ]
   },
   {
+   "id": "tt28596452",
+   "qid": "Q121202632",
+   "kind": "series",
+   "name": "Grendizer U",
+   "ru": "Грендайзер U",
+   "original": "Gurendaizâ U",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt28634577",
+   "qid": "Q121323792",
+   "kind": "series",
+   "name": "Grandpa and Grandma Turn Young Again",
+   "ru": "История о дедушке и бабушке, которые снова стали молодыми",
+   "original": "Jiisan Baasan Wakagaeru",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt28671146",
    "qid": "Q125832972",
    "kind": "film",
@@ -9761,6 +10679,20 @@
    "genres": []
   },
   {
+   "id": "tt28769801",
+   "qid": "Q116756968",
+   "kind": "series",
+   "name": "A Playthrough of a Certain Dude's VRMMO Life",
+   "ru": "Обычный мужчина средних лет и его журнал активности в VRMMO",
+   "original": "Toaru Ossan no VRMMO Katsudouki",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt28774702",
    "qid": "Q116893723",
    "kind": "series",
@@ -9792,6 +10724,19 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt28919932",
+   "qid": "Q123047919",
+   "kind": "series",
+   "name": "My New Boss Is Goofy",
+   "ru": "Мой новый босс - глупый",
+   "original": "Atarashii Joushi wa Do Tennen",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
   },
   {
    "id": "tt2902582",
@@ -9860,6 +10805,34 @@
    "genres": []
   },
   {
+   "id": "tt29171919",
+   "qid": "Q116032521",
+   "kind": "series",
+   "name": "The Vexations of a Shut-In Vampire Princess",
+   "ru": "Заботы запертой принцессы вампиров",
+   "original": "Hikikomari Kyuuketsuki no Monmon",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt29171927",
+   "qid": "Q116880477",
+   "kind": "series",
+   "name": "I Shall Survive Using Potions!",
+   "ru": "Я выживу на зельях!",
+   "original": "Potion-danomi de Ikinobimasu!",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt2918988",
    "qid": "Q11398237",
    "kind": "film",
@@ -9891,6 +10864,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt29371814",
+   "qid": "Q113289472",
+   "kind": "series",
+   "name": "Migi & Dali",
+   "ru": "Миги и Дали",
+   "original": "Migi to Dali",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Mystery"
+   ]
   },
   {
    "id": "tt29402528",
@@ -9928,6 +10915,20 @@
    "genres": []
   },
   {
+   "id": "tt29467317",
+   "qid": "Q118451841",
+   "kind": "series",
+   "name": "Mr. Villain's Day Off",
+   "ru": "Выходной Господина Злодея",
+   "original": "Kyûjitsu no Warumono-san",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt29485149",
    "qid": "Q123022503",
    "kind": "series",
@@ -9937,6 +10938,20 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt29510641",
+   "qid": "Q117265081",
+   "kind": "series",
+   "name": "Metallic Rouge",
+   "ru": "Металлическая Руж",
+   "original": "Metarikku Rûju",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt29521186",
@@ -10087,6 +11102,20 @@
    "genres": []
   },
   {
+   "id": "tt30236310",
+   "qid": "Q123587064",
+   "kind": "series",
+   "name": "A Journey Through Another World: Raising Kids While Adventuring",
+   "ru": "Приключения в другом мире: Воспитывать детей будучи авантюристом",
+   "original": "Isekai Yururi Kikô: Kosodate Shinagara Bôkensha Shimasu",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Family"
+   ]
+  },
+  {
    "id": "tt3028018",
    "qid": "Q57260534",
    "kind": "film",
@@ -10149,6 +11178,20 @@
    "genres": []
   },
   {
+   "id": "tt30495098",
+   "qid": "Q117841659",
+   "kind": "series",
+   "name": "The Foolish Angel Dances with the Devil",
+   "ru": "Неразумный ангел в танце с демоном",
+   "original": "Oroka na Tenshi wa Akuma to Odoru",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt30495119",
    "qid": "Q117288438",
    "kind": "series",
@@ -10160,6 +11203,34 @@
    "genres": []
   },
   {
+   "id": "tt30643971",
+   "qid": "Q122940810",
+   "kind": "series",
+   "name": "The Strongest Tank's Labyrinth Raids: A Tank with a Rare 9999 Resistance Skill Got Kicked from the Hero's Party",
+   "ru": "Невероятный танк проходит подземелья: Танк, обладающий редким навыком выносливости 9999, был изгнан из геройской группы",
+   "original": "Saikyou Tank no Meikyuu Kouryaku: Tairyoku 9999 no Rare Skill-mochi Tank, Yuusha Party wo Tsuihou sareru",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt30643982",
+   "qid": "Q117272425",
+   "kind": "series",
+   "name": "Fluffy Paradise",
+   "ru": "Я делаю всё возможное, чтобы чувствовать себя как дома в другом мире",
+   "original": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt30644010",
    "qid": "Q115170564",
    "kind": "series",
@@ -10169,6 +11240,34 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt30648377",
+   "qid": "Q130598211",
+   "kind": "film",
+   "name": "Uma Musume: Pretty Derby - Beginning of a New Era",
+   "ru": "Девушки-пони: Славное дерби. Начало новой эры",
+   "original": "Umamusume Puritî Dâbî Shinjidai no Tobira",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
+   "id": "tt30689448",
+   "qid": "Q124033398",
+   "kind": "series",
+   "name": "Welcome to Japan, Ms. Elf!",
+   "ru": "Добро пожаловать в Японию, госпожа эльф!",
+   "original": "Nihon e Youkoso Elf-san.",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt30689669",
@@ -10191,6 +11290,34 @@
    "year": 2001,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt30844357",
+   "qid": "Q124256086",
+   "kind": "series",
+   "name": "Shoshimin: How to Become Ordinary",
+   "ru": "Маленький гражданин",
+   "original": "Shôshimin Shirîzu",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Mystery"
+   ]
+  },
+  {
+   "id": "tt30970523",
+   "qid": "Q123473839",
+   "kind": "series",
+   "name": "The Magical Girl and the Evil Lieutenant Used to Be Archenemies",
+   "ru": "Волшебница и злой офицер",
+   "original": "Katsute Mahô Shôjo to Aku wa Tekitai Shiteita.",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt3104072",
@@ -10270,6 +11397,20 @@
    "genres": []
   },
   {
+   "id": "tt31141567",
+   "qid": "Q115650016",
+   "kind": "series",
+   "name": "2.5 Dimensional Seduction",
+   "ru": "Соблазн измерения 2,5D",
+   "original": "2.5-jigen no Ririsa",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt3114350",
    "qid": "Q107547236",
    "kind": "series",
@@ -10345,6 +11486,20 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt31250134",
+   "qid": "Q123937666",
+   "kind": "series",
+   "name": "Girls Band Cry",
+   "ru": "Плач девичьей группы",
+   "original": "Gâruzu Bando Kurai",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt3138698",
@@ -10475,6 +11630,20 @@
    "genres": []
   },
   {
+   "id": "tt31860621",
+   "qid": "Q113288407",
+   "kind": "series",
+   "name": "Gods' Games We Play",
+   "ru": "Богиня жаждет игр",
+   "original": "Kami wa Gêmu ni Ueteiru.",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt31863730",
    "qid": "Q125087128",
    "kind": "series",
@@ -10519,6 +11688,20 @@
    "genres": []
   },
   {
+   "id": "tt31975268",
+   "qid": "Q122933438",
+   "kind": "series",
+   "name": "Studio Apartment, Good Lighting, Angel Included.",
+   "ru": "Одна комната, солнечный свет, ангел",
+   "original": "One Room, Hiatari Futsuu, Tenshi-tsuki.",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt31975847",
    "qid": "Q118218872",
    "kind": "series",
@@ -10541,6 +11724,34 @@
    "genres": []
   },
   {
+   "id": "tt31976012",
+   "qid": "Q123247763",
+   "kind": "series",
+   "name": "Vampire Dormitory",
+   "ru": "Вампирское общежитие",
+   "original": "Vanpaia Danshiryô",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt31976070",
+   "qid": "Q125420244",
+   "kind": "series",
+   "name": "Welcome Home",
+   "ru": "Я дома. Добро пожаловать",
+   "original": "Tadaima, Okaeri",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt3198698",
    "qid": "Q15205223",
    "kind": "film",
@@ -10561,6 +11772,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt32174340",
+   "qid": "Q123170358",
+   "kind": "series",
+   "name": "Yatagarasu: The Raven Does Not Choose Its Master",
+   "ru": "Ворон не выбирает господина",
+   "original": "Karasu wa Aruji wo Erabanai",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt32176689",
@@ -10616,6 +11841,19 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt32332813",
+   "qid": "Q120402152",
+   "kind": "series",
+   "name": "Twilight Out of Focus",
+   "ru": "Скрытое за кадром",
+   "original": "Tasogare Out Focus",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Romance"
+   ]
   },
   {
    "id": "tt32332831",
@@ -10717,6 +11955,20 @@
    "genres": []
   },
   {
+   "id": "tt32510166",
+   "qid": "Q124357854",
+   "kind": "series",
+   "name": "The Healer Who Was Banished from His Party, Is, in Fact, the Strongest",
+   "ru": "Целитель, которого исключили из группы, оказался сильнейшим!",
+   "original": "Pâtî kara Tsuihô Sareta Sono Chiyushi, Jitsu wa Saikyô ni tsuki",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt32512773",
    "qid": "Q124329534",
    "kind": "series",
@@ -10728,6 +11980,20 @@
    "genres": []
   },
   {
+   "id": "tt32524468",
+   "qid": "Q124846374",
+   "kind": "series",
+   "name": "I'm a Noble on the Brink of Ruin, So I Might as Well Try Mastering Magic",
+   "ru": "Переродившись аристократом-неудачником, я потратил всё своё свободное время, чтобы стать великим магом!",
+   "original": "Botsuraku Yotei no Kizoku Dakedo, Hima Datta kara Mahô o Kiwametemita",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt32524709",
    "qid": "Q124798577",
    "kind": "series",
@@ -10737,6 +12003,34 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt32524882",
+   "qid": "Q117894820",
+   "kind": "series",
+   "name": "The Do-Over Damsel Conquers the Dragon Emperor",
+   "ru": "На этот раз одержи победу над императором драконов, благородная девушка!",
+   "original": "Yarinaoshi Reijô wa Ryûtei Heika o Kôryaku-chû",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt32535912",
+   "qid": "Q122719520",
+   "kind": "series",
+   "name": "Watari-kun's ****** Is About to Collapse",
+   "ru": "*** Ватари на грани краха",
+   "original": "Watari-kun no xx ga Hôkai Sunzen",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt32536168",
@@ -10836,6 +12130,34 @@
    ]
   },
   {
+   "id": "tt32579866",
+   "qid": "Q126375429",
+   "kind": "series",
+   "name": "Bogus Skill 'Fruitmaster': About That Time I Became Able to Eat Unlimited Numbers of Skill Fruits (That Kill You)",
+   "ru": "Парадоксальный навык «Мастер фруктов»: Навык, позволяющий есть бесконечное число фруктов (правда, вы умрёте, лишь откусив их)",
+   "original": "Hazure Sukiru \"Kinomi Masutâ\" ~Sukiru no Mi (Tabetara Shinu) wo Mugen ni Taberareru Yô ni Natta Ken ni Tsuite~",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt32582999",
+   "qid": "Q122947399",
+   "kind": "series",
+   "name": "Hero Without a Class: Who Even Needs Skills?!",
+   "ru": "Бесклассовый герой: Да мне всё равно не нужны эти ваши умения",
+   "original": "Mushoku no Eiyû: Betsu ni Sukiru Nanka Iranakattan da ga",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt32600395",
    "qid": "Q134007355",
    "kind": "film",
@@ -10893,6 +12215,20 @@
    "genres": []
   },
   {
+   "id": "tt32742508",
+   "qid": "Q105156949",
+   "kind": "series",
+   "name": "My Friend's Little Sister Has It in for Me!",
+   "ru": "Младшая сестра моего друга досаждает",
+   "original": "Tomodachi no Imôto ga Ore ni Dake Uzai",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt32766897",
    "qid": "Q126904533",
    "kind": "series",
@@ -10940,6 +12276,34 @@
    ]
   },
   {
+   "id": "tt32832435",
+   "qid": "Q124852924",
+   "kind": "series",
+   "name": "Good Bye, Dragon Life.",
+   "ru": "Прощай, жизнь дракона. Здравствуй, жизнь человека",
+   "original": "Sayônara Ryûsei, Konnichiha Jinsei",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt32856718",
+   "qid": "Q124972632",
+   "kind": "series",
+   "name": "Beheneko: The Elf-Girl's Cat is Secretly an S-Ranked Monster!",
+   "ru": "Я монстр S-класса Бегемот, но меня перепутали с котом, и я живу у эльфийки как домашний питомец",
+   "original": "S-ranku Monsutâ no \"Behîmosu\" Dakedo, Neko to Machigawarete Erufu Musume no Kishi (Petto) Toshite Kurashitemasu",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt32864316",
    "qid": "Q120176184",
    "kind": "series",
@@ -10971,6 +12335,20 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt33021990",
+   "qid": "Q127687361",
+   "kind": "series",
+   "name": "Headhunted to Another World: From Salaryman to Big Four!",
+   "ru": "История о служащем, который стал одним из четырех Небесных Царей, когда отправился в другой мир",
+   "original": "Sararîman ga Isekai ni Ittara Shitennô ni Natta Hanashi",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
   },
   {
    "id": "tt33028568",
@@ -11008,6 +12386,48 @@
    "genres": []
   },
   {
+   "id": "tt33050376",
+   "qid": "Q115626759",
+   "kind": "series",
+   "name": "New Saga",
+   "ru": "Стать сильнее! Новая сага",
+   "original": "Tsuyokute Nyû Sâga",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt33050528",
+   "qid": "Q128041782",
+   "kind": "film",
+   "name": "Colorful Stage! The Movie: A Miku Who Can't Sing",
+   "ru": "Проект «Мир»: Сломанный мир и непоющая Мику",
+   "original": "Gekijô-ban Purojekuto Sekai Kowareta Sekai to Utaenai Miku",
+   "year": 2025,
+   "runtime": 105,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt33058180",
+   "qid": "Q124033818",
+   "kind": "series",
+   "name": "From Bureaucrat to Villainess: Dad's Been Reincarnated!",
+   "ru": "Перерождение мужчины средних лет в дочь дворянина",
+   "original": "Akuyaku Reijô Tensei Oji-san",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt33059860",
    "qid": "Q120669696",
    "kind": "series",
@@ -11028,6 +12448,20 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt33084834",
+   "qid": "Q128787228",
+   "kind": "series",
+   "name": "The Red Ranger Becomes an Adventurer in Another World",
+   "ru": "Красный рейнджер становится искателем приключений в другом мире",
+   "original": "Sentai Reddo Isekai de Bôkensha ni Naru",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt33086804",
@@ -11085,6 +12519,20 @@
    "genres": []
   },
   {
+   "id": "tt33310730",
+   "qid": "Q118451823",
+   "kind": "series",
+   "name": "Medalist",
+   "ru": "Медалистка",
+   "original": "Medarisuto",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Sport"
+   ]
+  },
+  {
    "id": "tt33317800",
    "qid": "Q128306575",
    "kind": "series",
@@ -11107,6 +12555,20 @@
    "genres": []
   },
   {
+   "id": "tt33332400",
+   "qid": "Q130239943",
+   "kind": "series",
+   "name": "Yaiba: Samurai Legend",
+   "ru": "Яйба",
+   "original": "Shin Samurai-den YAIBA",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt33334216",
    "qid": "Q128758407",
    "kind": "series",
@@ -11116,6 +12578,34 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt33349897",
+   "qid": "Q127692579",
+   "kind": "series",
+   "name": "I Have a Crush at Work",
+   "ru": "Ты умеешь хранить секреты?",
+   "original": "Kono kaisha ni suki na hito ga imasu",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
+   "id": "tt33384314",
+   "qid": "Q125300242",
+   "kind": "series",
+   "name": "Ameku M.D.: Doctor Detective",
+   "ru": "Карта детектива Такао Амэку",
+   "original": "Ameku Takao no Suiri Karte",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Crime"
+   ]
   },
   {
    "id": "tt33384856",
@@ -11138,6 +12628,20 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt33512868",
+   "qid": "Q130370147",
+   "kind": "film",
+   "name": "Doraemon: Nobita's Art World Tales",
+   "ru": "Дораэмон: Истории о мире искусства Нобиты",
+   "original": "Eiga Doraemon: Nobita no Esekai Monogatari",
+   "year": 2025,
+   "runtime": 105,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
   },
   {
    "id": "tt3358020",
@@ -11281,6 +12785,89 @@
    "genres": []
   },
   {
+   "id": "tt34621291",
+   "qid": "Q127327650",
+   "kind": "series",
+   "name": "Magic Maker: How to Create Magic in Another World",
+   "ru": "Создатель магии: Как создать волшебство в другом мире",
+   "original": "Magic Maker -Isekai Mahou no Tsukurikata",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt34621652",
+   "qid": "Q129193320",
+   "kind": "series",
+   "name": "The Daily Life of a Middle-Aged Online Shopper in Another World",
+   "ru": "Жизнь сорокалетнего мужчины в другом мире",
+   "original": "Arafou Otoko no Isekai Tsuuhan",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt34702901",
+   "qid": "Q131292174",
+   "kind": "series",
+   "name": "Anne Shirley",
+   "ru": "Энн Ширли",
+   "original": "An Shârî",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Drama"
+   ]
+  },
+  {
+   "id": "tt34814625",
+   "qid": "Q130581386",
+   "kind": "series",
+   "name": "I'm the Evil Lord of an Intergalactic Empire!",
+   "ru": "Я злой лорд межгалактической империи!",
+   "original": "Ore wa Seikan Kokka no Akutoku Ryoushu!",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt34852231",
+   "qid": "Q131367609",
+   "kind": "series",
+   "name": "Gnosia",
+   "ru": "Гносия",
+   "original": null,
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Mystery"
+   ]
+  },
+  {
+   "id": "tt34880941",
+   "qid": "Q131383827",
+   "kind": "series",
+   "name": "Mobile Suit Gundam GQuuuuuuX",
+   "ru": "Мобильный воин Гандам: GQuuuuuuX",
+   "original": "Kidô Senshi Gundam GQuuuuuuX",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt35014218",
    "qid": "Q130553563",
    "kind": "series",
@@ -11339,6 +12926,20 @@
    "genres": []
   },
   {
+   "id": "tt35301440",
+   "qid": "Q133294436",
+   "kind": "film",
+   "name": "Mononoke the Movie: Chapter II - The Ashes of Rage",
+   "ru": "Мононокэ: Огненная крыса",
+   "original": "Mononoke Movie 2: Hinezumi",
+   "year": 2025,
+   "runtime": 74,
+   "genres": [
+    "Horror",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt3532752",
    "qid": "Q65040519",
    "kind": "series",
@@ -11383,6 +12984,20 @@
    "genres": []
   },
   {
+   "id": "tt35348180",
+   "qid": "Q130357999",
+   "kind": "series",
+   "name": "The Gorilla God's Go-To Girl",
+   "ru": "Дочь, которую защищал бог горилл, любима королевскими рыцарями",
+   "original": "Gorilla no Kami Kara Kago Sareta Reijo wa Oritsu Kishdan de Kawaigareru",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt35436364",
    "qid": "Q128292443",
    "kind": "series",
@@ -11392,6 +13007,20 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt35437319",
+   "qid": "Q130581429",
+   "kind": "series",
+   "name": "The Too-Perfect Saint: Tossed Aside by My Fiancé and Sold to Another Kingdom",
+   "ru": "Соседнему королевству продали святую, помолвку которой разорвали из-за того, что она стала слишком совершенной",
+   "original": "Kanpeki Sugite Kawaige ga Nai to Konyaku Haki Sareta Seijo wa Ringoku ni Urareru",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
   },
   {
    "id": "tt35437675",
@@ -11405,6 +13034,20 @@
    "genres": []
   },
   {
+   "id": "tt35444710",
+   "qid": "Q131358956",
+   "kind": "film",
+   "name": "Detective Conan: One-Eyed Flashback",
+   "ru": "Детектив Конан: Воспоминания одноглазого",
+   "original": "Meitantei Konan Sekigan no Furasshubakku",
+   "year": 2025,
+   "runtime": 109,
+   "genres": [
+    "Action",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt3544556",
    "qid": "Q15980655",
    "kind": "series",
@@ -11414,6 +13057,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt35636155",
+   "qid": "Q129978638",
+   "kind": "series",
+   "name": "Apocalypse Hotel",
+   "ru": "Апокалипсис-отель",
+   "original": null,
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi"
+   ]
   },
   {
    "id": "tt35636246",
@@ -11436,6 +13093,34 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt35652469",
+   "qid": "Q128037635",
+   "kind": "series",
+   "name": "Betrothed to My Sister's Ex",
+   "ru": "За небрежной молодой девушкой ухаживает бывший жених её сестры",
+   "original": "Zutaboro Reijou wa Ane no Moto Konyakusha ni Dekiai Sareru",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt35769369",
+   "qid": "Q128795998",
+   "kind": "series",
+   "name": "Chitose Is in the Ramune Bottle",
+   "ru": "Титосэ в бутылке Рамунэ",
+   "original": "Chitose-kun wa Ramune Bin no Naka",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt3579524",
@@ -11482,6 +13167,20 @@
    "genres": []
   },
   {
+   "id": "tt35936938",
+   "qid": "Q130602579",
+   "kind": "series",
+   "name": "This Monster Wants to Eat Me",
+   "ru": "Монстр хочет съесть меня",
+   "original": "Watashi wo Tabetai, Hitodenashi",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt36034547",
    "qid": "Q131316156",
    "kind": "series",
@@ -11491,6 +13190,20 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt36056731",
+   "qid": "Q132860612",
+   "kind": "series",
+   "name": "I Want to Love You Till Your Dying Day",
+   "ru": "Хочу любить тебя до самой смерти",
+   "original": "Kimi ga shinu made koi o shitai",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
+   ]
   },
   {
    "id": "tt3612626",
@@ -11504,6 +13217,20 @@
    "genres": []
   },
   {
+   "id": "tt36132068",
+   "qid": "Q127038387",
+   "kind": "series",
+   "name": "Yano-kun's Ordinary Days",
+   "ru": "Обычные дни Яно",
+   "original": "Yano-kun no Futsu no Hibi",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt3613454",
    "qid": "Q15975972",
    "kind": "series",
@@ -11513,6 +13240,33 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt36143285",
+   "qid": "Q129479947",
+   "kind": "series",
+   "name": "With You and the Rain",
+   "ru": "Дождь и ты",
+   "original": "Ame to Kimi to",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt36148135",
+   "qid": "Q133267930",
+   "kind": "film",
+   "name": "All You Need Is Kill",
+   "ru": "Всё, что тебе нужно, - это убивать",
+   "original": "Ôru Yû Nîdo Izu Kiru",
+   "year": 2026,
+   "runtime": 82,
+   "genres": [
+    "Action",
+    "Sci-Fi"
+   ]
   },
   {
    "id": "tt3615002",
@@ -11535,6 +13289,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt36221414",
+   "qid": "Q131757167",
+   "kind": "series",
+   "name": "With You, Our Love Will Make It Through",
+   "ru": "Любовь сквозь стены",
+   "original": "Kimi to Koete Koi ni Naru",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
   },
   {
    "id": "tt36230718",
@@ -11592,6 +13360,20 @@
    "genres": []
   },
   {
+   "id": "tt36592708",
+   "qid": "Q131285787",
+   "kind": "series",
+   "name": "There's No Freaking Way I'll Be Your Lover! Unless...",
+   "ru": "У меня нет любовницы! (А может и есть?!)",
+   "original": "Watashi ga koibito ni nareru wake naijan, muri muri! (*Muri janakatta!?)",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt36592736",
    "qid": "Q131722394",
    "kind": "series",
@@ -11601,6 +13383,34 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt36592756",
+   "qid": "Q131277983",
+   "kind": "series",
+   "name": "Uglymug, Epicfighter",
+   "ru": "Всё тот же невзрачный боец",
+   "original": "Busamen Gachi Fighter",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt36592820",
+   "qid": "Q128038146",
+   "kind": "series",
+   "name": "Scooped Up by an S-Rank Adventurer!",
+   "ru": "Белого мага, изгнанного из команды героя, подобрал авантюрист ранга S: Этот белый маг слишком нестандартный",
+   "original": "Yuusha Party o Tsuiho Sareta Shiro Madoshi",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt36593026",
@@ -11614,6 +13424,33 @@
    "genres": []
   },
   {
+   "id": "tt36593277",
+   "qid": "Q130416580",
+   "kind": "series",
+   "name": "The Warrior Princess and the Barbaric King",
+   "ru": "Принцесса-рыцарь - невеста варвара",
+   "original": "Hime Kishi wa Barbaroi no Yome",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt36600399",
+   "qid": "Q131448079",
+   "kind": "series",
+   "name": "Welcome to the Outcast's Restaurant!",
+   "ru": "Добро пожаловать в дешёвый ресторан изгнанника!",
+   "original": "Tsuihosha Shokudo e Yokoso!",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt3660104",
    "qid": "Q120637199",
    "kind": "series",
@@ -11623,6 +13460,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt36631539",
+   "qid": "Q133453372",
+   "kind": "series",
+   "name": "The Banished Court Magician Aims to Become the Strongest",
+   "ru": "Придворный маг, пользовавшийся лишь магией поддержки, потому что его союзники слишком слабы, решил стать сильнейшим после изгнания",
+   "original": "Mikata ga Yowasugite Hojo Maho ni Tesshteita Kyutei Mahoshi",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt3689910",
@@ -11645,6 +13496,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt37113118",
+   "qid": "Q130272456",
+   "kind": "series",
+   "name": "Ruri Rocks",
+   "ru": "Драгоценности Рури",
+   "original": "Ruri no Houseki",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
   },
   {
    "id": "tt3717532",
@@ -11670,6 +13535,32 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt37205655",
+   "qid": "Q124370198",
+   "kind": "series",
+   "name": "Nukitashi: The Animation",
+   "ru": "Нукитаси",
+   "original": null,
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt37246098",
+   "qid": "Q134397057",
+   "kind": "series",
+   "name": "In the Clear Moonlit Dusk",
+   "ru": "Прекрасная вечерняя луна",
+   "original": "Uruwashi no Yoi no Tsuki",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Romance"
+   ]
   },
   {
    "id": "tt3737650",
@@ -11707,6 +13598,20 @@
    "genres": []
   },
   {
+   "id": "tt37430949",
+   "qid": "Q133248810",
+   "kind": "series",
+   "name": "A Gatherer's Adventure in Isekai",
+   "ru": "Путешествие коллекционера по другому миру",
+   "original": null,
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt37532319",
    "qid": "Q133138402",
    "kind": "series",
@@ -11727,6 +13632,34 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt37532634",
+   "qid": "Q135102970",
+   "kind": "series",
+   "name": "Dusk Beyond the End of the World",
+   "ru": "Вечность Югурэ",
+   "original": "Towa no Yuugure",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Romance",
+    "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt37532722",
+   "qid": "Q126496647",
+   "kind": "series",
+   "name": "Tamon's B-Side",
+   "ru": "Какой сейчас Тамон?!",
+   "original": "Tamon-kun Ima Docchi!?",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Music"
+   ]
   },
   {
    "id": "tt37532893",
@@ -11762,6 +13695,48 @@
    "genres": []
   },
   {
+   "id": "tt37679127",
+   "qid": "Q131452124",
+   "kind": "series",
+   "name": "My Awkward Senpai",
+   "ru": "Неумелый сэмпай",
+   "original": "Bukiyou na Senpai",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt37729351",
+   "qid": "Q133873393",
+   "kind": "series",
+   "name": "Mistress Kanan is Devilishly Easy",
+   "ru": "Канан до чёртиков проста",
+   "original": "Kanan-sama wa Akumade Choroi",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt37901124",
+   "qid": "Q134120936",
+   "kind": "series",
+   "name": "Roll Over and Die",
+   "ru": "Неужели ты думаешь, что кто-то вроде тебя сможет победить повелителя демонов?",
+   "original": "Omae Gotoki ga Maou ni Kateru to Omouna to Yuusha Party wo Tsuihou sareta node, Outo de Kimama ni Kurashitai",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt3792116",
    "qid": "Q128600481",
    "kind": "series",
@@ -11771,6 +13746,48 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt38037460",
+   "qid": "Q130600180",
+   "kind": "series",
+   "name": "Pass the Monster Meat, Milady!",
+   "ru": "Леди со странным вкусом и безумный герцог",
+   "original": "Akujiki Reijou to Kyouketsu Koushaku",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt38037498",
+   "qid": "Q135208556",
+   "kind": "series",
+   "name": "There Was a Cute Girl in the Hero's Party, So I Tried Confessing to Her",
+   "ru": "В команде героя была милая девушка, так что я признался ей",
+   "original": "Yuusha Party ni Kawaii Ko ga Ita node, Kokuhaku shitemita.",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt38049145",
+   "qid": "Q125975705",
+   "kind": "series",
+   "name": "Goodbye, Lara",
+   "ru": "Прощай, Лара",
+   "original": "Sayonara Lara",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
   },
   {
    "id": "tt38121182",
@@ -11801,6 +13818,31 @@
    ]
   },
   {
+   "id": "tt38253018",
+   "qid": "Q133806776",
+   "kind": "series",
+   "name": "You Can't Be in a Rom-Com with Your Childhood Friends!",
+   "ru": "Это не романтическая комедия с подругой детства",
+   "original": "Osananajimi to wa LoveCom ni Naranai",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt38262097",
+   "qid": "Q135917437",
+   "kind": "series",
+   "name": "The Villager of Level 999",
+   "ru": "Крестьянин девятьсот девяносто девятого уровня",
+   "original": "Level 999 no Murabito",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt3837246",
    "qid": "Q50376961",
    "kind": "series",
@@ -11810,6 +13852,34 @@
    "year": 2015,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt38646055",
+   "qid": "Q130307869",
+   "kind": "series",
+   "name": "Dark Moon: The Blood Altar",
+   "ru": "Тёмная луна: Кровавый алтарь",
+   "original": "DARK MOON -Kuro no Tsuki: Tsuki no Saidan-",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt38646611",
+   "qid": "Q125936965",
+   "kind": "series",
+   "name": "Hana-Kimi",
+   "ru": "Для тебя во всём цвету",
+   "original": "Hanazakari no Kimitachi e",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt38646634",
@@ -11823,6 +13893,34 @@
    "genres": []
   },
   {
+   "id": "tt38646949",
+   "qid": "Q131869722",
+   "kind": "series",
+   "name": "Kunon the Sorcerer Can See",
+   "ru": "Волшебник Кунон всё видит",
+   "original": "Majutsushi Kunon wa Mieteiru",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt38647627",
+   "qid": "Q134350657",
+   "kind": "series",
+   "name": "An Adventurer's Daily Grind at Age 29",
+   "ru": "Повседневная жизнь одинокого двадцатидевятилетнего авантюриста",
+   "original": "29-Sai Dokushin Chuuken Boukensha no Nichijou",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt38648925",
    "qid": "Q132862179",
    "kind": "series",
@@ -11834,6 +13932,34 @@
    "genres": []
   },
   {
+   "id": "tt38650409",
+   "qid": "Q133126730",
+   "kind": "film",
+   "name": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
+   "ru": "О моём перерождении в слизь: Слёзы Синего моря",
+   "original": "Gekijou-ban tensei shitara slime datta ken: Soukai no namida-hen",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt38652044",
+   "qid": "Q130748787",
+   "kind": "series",
+   "name": "Isekai Office Worker: The Other World's Books Depend on the Bean Counter",
+   "ru": "Судьба параллельного мира в руках трудоголика",
+   "original": "Isekai no Sata wa Shachiku Shidai",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt3874528",
    "qid": "Q47471788",
    "kind": "series",
@@ -11843,6 +13969,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt38797595",
+   "qid": "Q135641513",
+   "kind": "series",
+   "name": "Akane-banashi",
+   "ru": "Сказание об Аканэ",
+   "original": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt38872297",
@@ -11900,6 +14040,62 @@
    "genres": []
   },
   {
+   "id": "tt38977386",
+   "qid": "Q133964514",
+   "kind": "series",
+   "name": "Easygoing Territory Defense by the Optimistic Lord: Production Magic Turns a Nameless Village into the Strongest Fortified City",
+   "ru": "Весёлая защита владений беспечного лорда",
+   "original": "Okiraku Ryoshu no Tanoshii Ryochi Boei: Seisan-kei Majutsu de Na mo Nakimura o Saikyo no Josai Toshi ni",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt38978132",
+   "qid": "Q131631829",
+   "kind": "series",
+   "name": "Noble Reincarnation: Born Blessed, So I'll Obtain Ultimate Power",
+   "ru": "Реинкарнация аристократа: Благословенный с рождения величайшей силой",
+   "original": "Kizoku Tensei: Megumareta Umare kara Saikyo no Chikara o Eru",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt38980285",
+   "qid": "Q126013375",
+   "kind": "series",
+   "name": "The Darwin Incident",
+   "ru": "Инцидент Дарвина",
+   "original": "Darwin Jihen",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
+   ]
+  },
+  {
+   "id": "tt38980445",
+   "qid": "Q133277799",
+   "kind": "series",
+   "name": "Tune in to the Midnight Heart",
+   "ru": "Полуночный мотив сердца",
+   "original": "Mayonaka Heart Tune",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt3909210",
    "qid": "Q107797059",
    "kind": "series",
@@ -11920,6 +14116,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt39113208",
+   "qid": "Q134783546",
+   "kind": "series",
+   "name": "The Ogre's Bride",
+   "ru": "Невеста демона",
+   "original": "Oni no Hanayome",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt39122671",
@@ -11968,6 +14178,62 @@
    ]
   },
   {
+   "id": "tt39229633",
+   "qid": "Q135931910",
+   "kind": "series",
+   "name": "Liar Game",
+   "ru": "Игра лжецов",
+   "original": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Horror"
+   ]
+  },
+  {
+   "id": "tt39229727",
+   "qid": "Q135400911",
+   "kind": "series",
+   "name": "Snowball Earth",
+   "ru": "Земля-снежок",
+   "original": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt39246964",
+   "qid": "Q137534207",
+   "kind": "series",
+   "name": "Kaiju Girl Caramelise",
+   "ru": "Монстрик Карамелька",
+   "original": "Otome Kaijû Kyaramerize",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt39267868",
+   "qid": "Q133848585",
+   "kind": "series",
+   "name": "Agents of the Four Seasons: Dance of Spring",
+   "ru": "Агенты четырёх сезонов: Весенний танец",
+   "original": "Shunkashuutou daikousha: Haru no mai",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt39281887",
    "qid": "Q133868998",
    "kind": "series",
@@ -11988,6 +14254,20 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt39394153",
+   "qid": "Q137759805",
+   "kind": "series",
+   "name": "Firefly Wedding",
+   "ru": "Свадьба светлячков",
+   "original": "Hotaru no Yomeiri",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "History"
+   ]
   },
   {
    "id": "tt39395275",
@@ -12012,6 +14292,19 @@
    "genres": []
   },
   {
+   "id": "tt39443204",
+   "qid": "Q136417251",
+   "kind": "series",
+   "name": "I Became a Legend After My 10 Year-Long Last Stand",
+   "ru": "Прошло десять лет с момента, как я сказал «Оставьте это на меня и уходите» и стал легендой",
+   "original": "Koko wa Ore ni Makasete Saki ni Ike to Ittekara 10-nen ga Tattara Densetsu ni Natteita.",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt39443399",
    "qid": "Q136030583",
    "kind": "series",
@@ -12021,6 +14314,20 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt39443960",
+   "qid": "Q133836659",
+   "kind": "series",
+   "name": "The Klutzy Class Monitor and the Girl with the Short Skirt",
+   "ru": "Бесполезный дежурный и школьница со слишком короткой юбкой",
+   "original": "Ponkotsu Fuukiin to Skirt Take ga Futekisetsu na JK no Hanashi",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
   },
   {
    "id": "tt3950084",
@@ -12122,6 +14429,20 @@
    "genres": []
   },
   {
+   "id": "tt40546935",
+   "qid": "Q134443712",
+   "kind": "series",
+   "name": "An Observation Log of My Fiancée Who Calls Herself a Villainess",
+   "ru": "Дневник наблюдений за моей невестой, провозгласившей себя злодейкой",
+   "original": "Jishou Akuyaku Reijou no Konyakusha no Kansatsu Kiroku.",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt40548519",
    "qid": "Q137909552",
    "kind": "series",
@@ -12147,6 +14468,20 @@
    ]
   },
   {
+   "id": "tt40550160",
+   "qid": "Q138356402",
+   "kind": "series",
+   "name": "From Overshadowed to Overpowered: Second Reincarnation of a Talentless Sage",
+   "ru": "Необыкновенный неудачник: Дневник переродившегося колдуна S-ранга",
+   "original": "Rakudai Kenja no Gakuin Musou: Nidome no Tensei, S-Rank Cheat Majutsushi Boukenroku",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt4083422",
    "qid": "Q1136431",
    "kind": "series",
@@ -12167,6 +14502,34 @@
    "year": 2015,
    "runtime": null,
    "genres": [
+    "Drama"
+   ]
+  },
+  {
+   "id": "tt41278600",
+   "qid": "Q136674397",
+   "kind": "series",
+   "name": "Rich Girl Caretaker: I'm Secretly the Caregiver of the Most Popular Girl in This Rich Kid School",
+   "ru": "Забота об одарённой девушке: В престижной школе, полной высококлассных учеников, я буду тайно заботиться о самой красивой девушке (не имеющей никаких жизненных навыков)",
+   "original": "Saijo no Osewa: Takane no Hana Darake na Meimonkou de, Gakuin-Ichi no Ojousama (Seikatsu Nouryoku Kaimu) o Kage Nagara o Sewa Suru Koto ni Narimashita",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt41278615",
+   "qid": "Q122794948",
+   "kind": "series",
+   "name": "Oh Boy, Was I Wrong About Her",
+   "ru": "Аккуратная и симпатичная девочка в моей новой школе - подруга детства, с которой я играл, думая, что она мальчик",
+   "original": "Tenkou-saki no Seiso Karen na Bishoujo ga, Mukashi Danshi to Omotte Issho ni Asonda Osananajimi Datta Ken",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
     "Drama"
    ]
   },
@@ -12287,6 +14650,20 @@
    "year": 2015,
    "runtime": 100,
    "genres": [
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt43691353",
+   "qid": "Q140041688",
+   "kind": "series",
+   "name": "Overgeared",
+   "ru": "Во всеоружии: Сила артефактов",
+   "original": "Tempal: Item no Chikara",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
     "Adventure"
    ]
   },

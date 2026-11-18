@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdtempSync,mkdirSync,writeFileSync,readFileSync,existsSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
+import {readScreenCatalog,writeScreenCatalog} from '../src/lib/screen-catalog.js';
 const {buildVercel}=await import('../scripts/build-vercel.mjs').catch(()=>({}));
 const {journalPath}=await import('../src/server/runtime-paths.js').catch(()=>({}));
 const json=path=>JSON.parse(readFileSync(path,'utf8'));
@@ -15,13 +16,17 @@ function fixture(){
  put('.env','OPENAI_API_KEY=PRIVATE_CANARY');
  put('data/journal.ndjson','PRIVATE_CANARY');
  put('data/unrelated.json','PRIVATE_CANARY');
- for(const name of ['catalog.json','catalog-screen.json','anime-wikidata.json','quotes-ru.json','posters.json','verified-game-context.json','verified-game-releases.json'])put('data/'+name,'{}');
+ for(const name of ['catalog.json','catalog-screen.json','anime-wikidata.json','quotes-ru.json','posters.json','catalog-artwork.json','catalog-artwork-recovered.json','verified-game-context.json','verified-game-releases.json'])put('data/'+name,'{}');
  return{root,put,close:()=>rmSync(root,{recursive:true,force:true})};
 }
 
 test('Vercel output serves actual public HTML and a Node API, with only approved catalog data',()=>{
  assert.equal(typeof buildVercel,'function');const f=fixture();
  try{
+  const screen={stats:{titles:2},items:[{id:'tt1',name:'Фильм'},{id:'tt2',name:'Сериал'}]};
+  const parts=writeScreenCatalog(join(f.root,'data/catalog-screen.json'),screen,{partBytes:55});
+  assert.equal(parts.length,2);
+  f.put('data/catalog-screen.part-0009-0000000000000000.json','[]');
   buildVercel({root:f.root});const output=join(f.root,'.vercel/output'),fn=join(output,'functions/tastiq.func');
   assert.match(readFileSync(join(output,'static/index.html'),'utf8'),/<h1>Выбери вечер<\/h1>/);
   assert.ok(existsSync(join(output,'static/shared/app.js')));
@@ -30,7 +35,12 @@ test('Vercel output serves actual public HTML and a Node API, with only approved
   assert.equal(json(join(fn,'.vc-config.json')).maxDuration,300,'allow the full Hobby/Fluid window for model responses');
   assert.match(readFileSync(join(fn,'handler.mjs'),'utf8'),/src\/server\/app\.js/);
   assert.ok(existsSync(join(fn,'data/catalog-screen.json')));
+  assert.deepEqual(readScreenCatalog(join(fn,'data/catalog-screen.json')),screen);
+  assert.equal(existsSync(join(fn,'data/catalog-screen.part-0009-0000000000000000.json')),false);
+  assert.ok(parts.every(name=>!existsSync(join(output,'static/data',name))));
   assert.ok(existsSync(join(fn,'data/anime-wikidata.json')));
+  assert.ok(existsSync(join(fn,'data/catalog-artwork.json')));
+  assert.ok(existsSync(join(fn,'data/catalog-artwork-recovered.json')));
   assert.equal(existsSync(join(output,'static/data/anime-wikidata.json')),false);
   for(const name of ['.env','data/journal.ndjson','data/unrelated.json'])assert.equal(existsSync(join(fn,name)),false,name);
   assert.equal(existsSync(join(output,'static/data/catalog.json')),false);
@@ -43,6 +53,17 @@ test('Vercel build refuses to publish a site missing its required screen catalog
  assert.equal(typeof buildVercel,'function');const f=fixture();
  try{rmSync(join(f.root,'data/catalog-screen.json'));assert.throws(()=>buildVercel({root:f.root}),/catalog-screen\.json/);}
  finally{f.close();}
+});
+
+test('a missing catalog part is reported by the server loader and the build',()=>{
+ const f=fixture();
+ try{
+  const path=join(f.root,'data/catalog-screen.json');
+  const [part]=writeScreenCatalog(path,{items:[{id:'tt1'}]});
+  rmSync(join(f.root,'data',part));
+  assert.throws(()=>readScreenCatalog(path),{message:new RegExp(part)});
+  assert.throws(()=>buildVercel({root:f.root}),{message:new RegExp(part)});
+ }finally{f.close();}
 });
 
 test('serverless journaling uses temporary storage, while local and explicit journal locations stay supported',()=>{

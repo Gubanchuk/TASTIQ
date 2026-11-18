@@ -1,5 +1,5 @@
-import { readFileSync } from 'node:fs';
-const raw = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog-screen.json', 'utf8'));
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
+const raw = readScreenCatalog('E:/project/TASTIQ/data/catalog-screen.json');
 const items = raw.items;
 const present = (v) => v && v.r >= 0.5 && v.c >= 0.5;
 for (const domain of ['series', 'cartoon']) {

@@ -9,7 +9,8 @@ import { resolve } from 'node:path';
 import { ANIME_TAGS, GENOME_TAG_FEATURES, IMDB_GENRE_FEATURES, TVMAZE_GENRE_FEATURES } from '../../aspects/genome-tags.js';
 import { SCREEN_DICTIONARY_VERSION, SCREEN_FEATURES, SCREEN_FEATURE_BY_ID } from '../../aspects/screen.js';
 import { computeIdf } from '../../core/idf.js';
-import { DATA, RAW, readJson, writeJson } from '../../lib/fsx.js';
+import { DATA, RAW, readJson } from '../../lib/fsx.js';
+import { writeScreenCatalog } from '../../lib/screen-catalog.js';
 import { episodesRu, htmlToText, stripTitleNote, truncate } from '../../lib/text.js';
 
 const ML = resolve(RAW, 'movielens', 'ml-latest');
@@ -253,7 +254,7 @@ const stats = {
   meanFeatures: round(items.reduce((a, x) => a + Object.keys(x.features).length, 0) / items.length),
 };
 
-writeJson(resolve(DATA, 'catalog-screen.json'), {
+writeScreenCatalog(resolve(DATA, 'catalog-screen.json'), {
   dictionaryVersion: SCREEN_DICTIONARY_VERSION,
   builtAt: new Date().toISOString(),
   sources: ['IMDb non-commercial datasets', 'MovieLens Tag Genome and tags (research licence)', 'TVmaze (CC BY-SA)', 'Wikidata (CC0)'],
@@ -261,5 +262,5 @@ writeJson(resolve(DATA, 'catalog-screen.json'), {
   df,
   idf,
   items,
-}, false);
+});
 console.log(`Screen catalog: ${JSON.stringify(stats)}`);

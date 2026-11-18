@@ -1,6 +1,7 @@
-// Run from any directory. Reads only the six versioned runtime files.
+// Run from any directory. Reads the versioned runtime data.
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
+import {readScreenCatalog,screenCatalogPartFiles} from '../../src/lib/screen-catalog.js';
 
 const data = new URL('../../data/', import.meta.url);
 const manifest = {};
@@ -14,7 +15,10 @@ function read(name, parse = true) {
 }
 
 const games = read('catalog.json');
-const screen = read('catalog-screen.json');
+const screenPath = new URL('catalog-screen.json', data);
+read('catalog-screen.json', false);
+for (const name of screenCatalogPartFiles(screenPath)) read(name, false);
+const screen = readScreenCatalog(screenPath);
 const posters = read('posters.json');
 for (const name of ['quotes-ru.json', 'verified-game-context.json', 'verified-game-releases.json']) {
   read(name, false);

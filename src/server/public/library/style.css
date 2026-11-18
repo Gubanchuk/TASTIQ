@@ -138,6 +138,11 @@ body.product-page.library-page .board-card{grid-template-columns:76px minmax(0,1
 body.product-page.library-page .library-cover{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:auto;min-height:76px;overflow:hidden;align-self:start;border-radius:8px}
 body.product-page.library-page .library-cover img{display:block;position:static;width:100%;height:auto;object-fit:contain}
 body.product-page.library-page .library-cover.no-cover{min-height:106px;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+body.product-page.library-page .library-cover>small{position:absolute;inset:0;display:grid;place-items:center;padding:6px;text-align:center;color:white;background:linear-gradient(145deg,#273f86,#131c41)}
+body.product-page.library-page .library-cover>small span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;overflow-wrap:anywhere}
+body.product-page.library-page .library-cover.is-loaded>small{display:none}
+body.product-page.library-page .library-cover:has(img[src^="/assets/catalog-covers/"]){min-height:100px}
+body.product-page.library-page .library-cover img[src^="/assets/catalog-covers/"]{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 body.product-page.library-page .board-card h3{font-size:17px;line-height:1.45;margin:5px 0 13px;font-weight:600}
 body.product-page.library-page .board-card-actions{grid-template-columns:minmax(0,1fr) 44px;gap:8px;align-items:stretch}
 body.product-page.library-page .board-card-actions{grid-column:1/-1}

@@ -1,8 +1,8 @@
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 // Read-only check: how many features (and how much r·c mass) the titles that keep winning carry,
 // versus the persona targets. Reads data/catalog-screen.json directly, nothing is written to the project.
-import { readFileSync } from 'node:fs';
 
-const raw = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog-screen.json', 'utf8'));
+const raw = readScreenCatalog('E:/project/TASTIQ/data/catalog-screen.json');
 const items = Array.isArray(raw) ? raw : raw.items ?? raw.titles ?? Object.values(raw).find(Array.isArray);
 console.log('keys:', Array.isArray(raw) ? 'array' : Object.keys(raw).join(','), 'items:', items.length);
 const sample = items.find((x) => x.id === 'tt0246578');

@@ -143,6 +143,11 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     let s=validateSnapshot(body.state?normalizeMediaConversation(body.state,domain):newMediaConversation({domain,mode:body.mode,depth:body.depth}));
     s=remembered(body,s);
     if(!body.action) {
+      for(const result of [s.result,s.familiar?.undo?.result])for(const card of cardsOf(result)){
+        const item=catalog.byId.get(card.id);
+        if(!card.poster&&item?.poster)card.poster=item.poster;
+        if(!card.image&&item?.image)card.image=item.image;
+      }
       if(s.phase==='talk'&&!s.question) {
         if(!canOfferInterviewQuestion(s))s=reviewAtInterviewCapacity(s);
         else {s.question=mediaConversationScreen(s).question;s=rememberInterviewQuestion(s,s.question);}

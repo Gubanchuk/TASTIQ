@@ -2,6 +2,7 @@ import {animeStyleLabel,inLibraryDomain,mediaLibraryDomain} from '/shared/anime-
 import {selectionModeTitle} from '/shared/selection-mode.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '/shared/library-store.js';
+import {artworkImageHtml,retryArtworkImage} from '/shared/card-artwork.js';
 import {collectionRecords} from '/shared/library-collection.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '/shared/media-history.js';
@@ -68,7 +69,7 @@ function writeNavigation(push=false){
  globalThis.history[push?'pushState':'replaceState'](null,'',url);
 }
 readNavigation();
-const metadata=new Map(),requested=new Set(),failedImages=new Set(),openDetails=new Set(),feedbackDrafts=createFeedbackDrafts({storage});
+const metadata=new Map(),requested=new Set(),openDetails=new Set(),feedbackDrafts=createFeedbackDrafts({storage});
 let noticeTimer,feedbackQueue=Promise.resolve(),feedbackQueued=0,feedbackDirty=false;
 const date=value=>{const at=new Date(value);return Number.isFinite(at.valueOf())?at.toLocaleDateString('ru',{day:'numeric',month:'short',year:'numeric'}):'Дата не сохранена';};
 const button=(label,act,attrs='',primary=false)=>`<button type="button" class="library-button${primary?' primary':''}" data-act="${act}" ${attrs}>${label}</button>`;
@@ -99,8 +100,8 @@ const eveningMatches=({response,draft},status)=>status==='all'
  ||status==='chosen'&&Boolean(response?.chosen)||status==='started'&&Boolean(response?.started)
  ||status==='reviewed'&&reviewed(response)||status==='draft'&&Boolean(draft);
 function media(row) {
- const src=[row.poster,row.image].map(safeLibraryUrl).find(url=>url&&!failedImages.has(url));
- return `<div class="library-cover${src?'':' no-cover'}" aria-hidden="true"><small>Нет фото</small>${src?`<img src="${esc(src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:''}</div>`;
+ const image=artworkImageHtml(row);
+ return `<div class="library-cover${image?'':' no-cover'}" aria-hidden="true"><small><span>${esc(title(row))}</span></small>${image}</div>`;
 }
 const dataFor=row=>`data-domain="${esc(row.domain)}" data-id="${esc(row.id)}"`;
 const focusKey=(act,row)=>esc(`${act}:${key(row)}`);
@@ -275,8 +276,8 @@ document.addEventListener('click',event=>{
   state.view=view;state.limit=24;writeNavigation(true);render();void enrichCovers();return;
  }
  if(act==='filters'){activeFilters().open=!activeFilters().open;writeNavigation();render();return;}
- if(act==='more'){state.limit+=24;render();return;}
- if(act==='clear'){Object.assign(activeFilters(),defaultFilters(),{open:activeFilters().open});state.limit=24;writeNavigation();render();$('#find-title')?.focus();return;}
+ if(act==='more'){state.limit+=24;render();void enrichCovers();return;}
+ if(act==='clear'){Object.assign(activeFilters(),defaultFilters(),{open:activeFilters().open});state.limit=24;writeNavigation();render();void enrichCovers();$('#find-title')?.focus();return;}
  if(act==='undo'){undo();return;}
  if(act==='saved'&&row){toggleSaved(row);return;}
  if(act==='forget'&&row){forgetRow(row);return;}
@@ -295,7 +296,7 @@ document.addEventListener('change',event=>{
  else if(el.id==='sort')activeFilters().sort=el.value;
  else if(el.dataset.act==='blocked'){historyFor(el.dataset.domain)?.setBlocked(el.dataset.id,el.checked);notice(el.checked?'Не будем предлагать это название в следующих подборах.':'Это название снова можно предлагать.');}
  else return;
- state.limit=24;writeNavigation();render();
+ state.limit=24;writeNavigation();render();void enrichCovers();
 });
 document.addEventListener('input',event=>{
  const el=event.target;
@@ -312,7 +313,13 @@ document.addEventListener('toggle',event=>{
  if(el.dataset.detail){el.open?openDetails.add(el.dataset.detail):openDetails.delete(el.dataset.detail);}
  if(el.matches('[data-feedback-details]')){const k=`feedback:${el.dataset.run}:${el.dataset.id}`;el.open?openDetails.add(k):openDetails.delete(k);}
 },true);
-document.addEventListener('error',event=>{const image=event.target;if(image instanceof HTMLImageElement&&image.closest('.library-cover')){failedImages.add(image.getAttribute('src'));image.closest('.library-cover').classList.add('no-cover');image.closest('.library-cover').innerHTML='<small>Нет фото</small>'; }},true);
+document.addEventListener('error',event=>{
+ const image=event.target,cover=image instanceof HTMLImageElement?image.closest('.library-cover'):null;
+ if(!cover||retryArtworkImage(image))return;
+ cover.classList.remove('is-loaded');
+ cover.classList.add('no-cover');
+ image.remove();
+},true);
 document.addEventListener('load',event=>{
  const image=event.target;
  if(image instanceof HTMLImageElement&&image.naturalWidth>0)image.closest('.library-cover')?.classList.add('is-loaded');
@@ -328,15 +335,22 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden){render();
 // Match by domain and stable ID so older feedback can recover its cover.
 async function enrichCovers() {
  const artwork=eveningArtwork();
+ const visible=new Set([...document.querySelectorAll('.board-card[data-card]')].map(card=>card.dataset.card));
  const rows=[...familiar.all().map(row=>({...row,domain:'game'})),
+  ...(isCollection()?records().filter(row=>visible.has(key(row))&&!row.poster&&!row.image):[]),
   ...(state.view==='evenings'?eveningRecords().map(({card,domain})=>({...card,domain})):[])];
  const queue=[];
+ let updated=false;
  for(const row of rows){
   const id=key(row);
-  if(requested.has(id)||artwork.has(id))continue;
+  const cached=artwork.get(id);
+  if(cached?.poster||cached?.image){
+   if(visible.has(id)&&!metadata.has(id)){metadata.set(id,cached);updated=true;}
+   continue;
+  }
+  if(requested.has(id))continue;
   requested.add(id);queue.push(row);
  }
- let updated=false;
  const worker=async()=>{for(let entry;entry=queue.shift();) {
   try {
    const response=await fetch(`/api/search?domain=${entry.domain}&q=${encodeURIComponent(entry.title)}`);

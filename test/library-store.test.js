@@ -5,6 +5,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createLibraryStore,LIBRARY_KEY} from '../src/server/public/shared/library-store.js';
 import * as library from '../src/server/public/shared/library-store.js';
+import {artworkImageHtml,retryArtworkImage} from '../src/server/public/shared/card-artwork.js';
 import {collectionRecords} from '../src/server/public/shared/library-collection.js';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
@@ -117,6 +118,7 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
   fetch:async(url,options)=>{requests.push({url,options});return transport?transport(url,options):{ok:true,json:async()=>catalog};},
   setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
  const source=(await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,'');
+ Object.assign(context,{artworkImageHtml,retryArtworkImage});
  vm.runInContext(source,context);
  await new Promise(resolve=>setImmediate(resolve));
  const noteForm=(run,id,note,reason='')=>{const form=new Element({dataset:{run,id}});form.elements={note:{value:note},reason:{value:reason}};form.matches=selector=>selector==='[data-form="evening-reason"]';form.querySelector=()=>new Element({dataset:{fk:`evening-reason:${run}:${id}`}});return form;};

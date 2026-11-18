@@ -10,6 +10,7 @@
 //
 // Usage: node research-vault/akinator-picker-2026-10/scripts/wrong-articles.mjs [run=screen-run2] [--all]
 //   --all prints every input with a missing year, not only the suspects.
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
@@ -21,7 +22,7 @@ const norm = (s) => String(s ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g
 const words = (s) => new Set(norm(s).split(' ').filter((w) => w.length >= 5 && !STOP.has(w)));
 const bare = (s) => norm(s).replace(/^(the|a|an) /, '');
 
-const screen = JSON.parse(readFileSync(resolve(ROOT, 'catalog-screen.json'), 'utf8'));
+const screen = readScreenCatalog(resolve(ROOT, 'catalog-screen.json'));
 const byId = new Map(screen.items.map((g) => [g.id, g]));
 const dir = resolve(ROOT, 'tagging', run, 'in');
 const rows = [];

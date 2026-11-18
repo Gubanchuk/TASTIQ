@@ -1,5 +1,6 @@
 // Coverage of features, fields and candidate question categories per domain, whole catalog and popular slice.
 // Read-only over data/*.json; writes JSON to the scratchpad out/ folder.
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { FEATURES as GAME_FEATURES, ASPECTS as GAME_ASPECTS } from 'file:///E:/project/TASTIQ/src/aspects/games.js';
 import { SCREEN_FEATURES, SCREEN_ASPECTS } from 'file:///E:/project/TASTIQ/src/aspects/screen.js';
@@ -8,7 +9,7 @@ const OUT = 'C:/Users/Dusik/AppData/Local/Temp/claude/E--project-TASTIQ/316e07fd
 mkdirSync(OUT, { recursive: true });
 
 const games = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog.json', 'utf8'));
-const screen = JSON.parse(readFileSync('E:/project/TASTIQ/data/catalog-screen.json', 'utf8'));
+const screen = readScreenCatalog('E:/project/TASTIQ/data/catalog-screen.json');
 const posters = JSON.parse(readFileSync('E:/project/TASTIQ/data/posters.json', 'utf8'));
 
 const present = (v) => v && v.r >= 0.5 && v.c >= 0.5;

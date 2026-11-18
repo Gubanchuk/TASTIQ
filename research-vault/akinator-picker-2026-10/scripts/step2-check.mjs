@@ -1,8 +1,8 @@
+import { readScreenCatalog } from '../../../src/lib/screen-catalog.js';
 // Step 2 done-criteria from SUMMARY.md, checked on the built data/catalog-screen.json.
 // Run: node --max-old-space-size=8192 research-vault/akinator-picker-2026-10/scripts/step2-check.mjs
-import { readFileSync } from 'node:fs';
 
-const cat = JSON.parse(readFileSync(new URL('../../../data/catalog-screen.json', import.meta.url), 'utf8'));
+const cat = readScreenCatalog(new URL('../../../data/catalog-screen.json', import.meta.url));
 const byId = new Map(cat.items.map((x) => [x.id, x]));
 const cartoons = cat.items.filter((x) => x.domain === 'cartoon');
 const fails = [];

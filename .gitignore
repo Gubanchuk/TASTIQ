@@ -30,3 +30,4 @@ data/api-test-authorization-*.json
 *.log
 
 .vercel
+supabase/.temp/

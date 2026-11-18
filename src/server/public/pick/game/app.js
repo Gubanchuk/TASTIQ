@@ -21,6 +21,7 @@ import {timeBudgetHtml,timeEvidenceHtml,hasSessionTime} from '/pick/game/time-bu
 import {questionDraftKey,questionScreenKey,planLegacyQuestionDraftMigration,prepareBackDraft,finishBackDraft} from '/pick/game/question-drafts.js';
 import {createLibraryStore} from '/shared/library-store.js';
 import {aiErrorMessage,replacementNotice} from '/shared/ai-error-message.js';
+import {bindResultArtwork} from '/shared/card-artwork.js';
 
 const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -469,8 +470,7 @@ document.addEventListener('input',event=>{
  }
 });
 document.addEventListener('toggle',event=>{const el=event.target;if(el.matches('[data-feedback-details]'))feedbackOpen.set(`${el.dataset.run}:${el.dataset.id}`,el.open);},true);
-document.addEventListener('load',event=>{const img=event.target;if(img.matches?.('.game-poster img'))img.closest('.game-poster').classList.add('is-loaded');},true);
-document.addEventListener('error',event=>{const img=event.target;if(img.matches?.('.game-poster img')){const poster=img.closest('.game-poster'),tile=document.createElement('span');tile.textContent='Нет обложки';poster.classList.add('game-poster-fallback');poster.replaceChildren(tile);}},true);
+bindResultArtwork(document);
 window.addEventListener('online',()=>void feedback.flush());
 window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());else if(event.key===null||event.key==='tastiq.site.library'||event.key.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
 compactRequest.addEventListener('change',event=>{const details=$('.game-request-details');if(details){details.open=!event.matches;disclosures.set('request-details',details.open);}});

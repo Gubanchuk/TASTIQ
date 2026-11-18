@@ -47,6 +47,10 @@ body.product-page #stage .game-card .game-poster img{display:block;width:auto;he
 body.product-page #stage .game-proposal-featured .game-poster img{max-height:420px}
 body.product-page #stage .game-card .game-poster.is-loaded{min-height:0}
 body.product-page #stage .game-card .game-poster.is-loaded>span{display:none}
+body.product-page #stage .game-card .game-poster.is-loaded img[src^="/assets/catalog-covers/"]{width:100%;height:100%;object-fit:cover}
+body.product-page #stage .game-card .game-poster.is-loaded:has(img[src^="/assets/catalog-covers/"])>span{
+ display:grid;place-items:end center;z-index:1;padding:6px;background:linear-gradient(transparent 30%,rgb(14 23 47 / 90%))
+}
 body.product-page #stage .game-card .game-poster.is-loaded>picture{opacity:1}
 body.product-page #stage .game-card .game-poster-fallback{display:grid;min-height:132px;padding:18px}
 body.product-page #stage .game-card .game-poster-fallback>span{position:static;display:block;padding:0}
@@ -168,8 +172,7 @@ body.product-page #stage .selection-review-verdicts .btn[aria-pressed="true"] {b
 .selection-review [data-selection-review-status] {min-height:1.5em;margin-top:12px;color:var(--brand-muted);line-height:1.5}
 @media(max-width:480px){.selection-review-verdicts{display:grid;grid-template-columns:1fr}.selection-review-verdicts .btn{text-align:left;justify-content:flex-start}.selection-review{margin-top:28px;padding-top:24px}}
 
-/* Use a reserved image area with the whole source visible. A failed image
-   keeps its footprint; cards without a URL give the space back to the title. */
+/* Keep the whole image visible and give every card an artwork area. */
 body.product-page:is(.game-dialogue,.media-dialogue) #stage :is(.game-proposal-featured,.game-proposal:not(.game-proposal-featured)) .game-poster{min-height:0;height:var(--result-art-height,156px);margin-bottom:16px}
 body.product-page #stage .game-proposal-featured .game-poster{--result-art-height:clamp(160px,20vw,280px);margin:0}
 body.product-page:is(.game-dialogue,.media-dialogue) #stage .game-proposal .game-poster.is-loaded{background:transparent}
@@ -178,10 +181,9 @@ body.product-page #stage .game-proposal .game-poster img{
  position:static;width:auto;height:auto;min-width:0;min-height:0;max-width:100%;max-height:100%;
  margin:0;border-radius:10px;object-fit:contain
 }
-body.product-page #stage .game-card .game-poster>span{position:absolute;inset:0;display:grid;place-items:center;padding:6px;font-size:12px;line-height:1.4;color:var(--brand-muted)}
+body.product-page #stage .game-card .game-poster>span{position:absolute;inset:0;display:grid;place-items:center;padding:6px;font-size:12px;line-height:1.4;text-align:center;overflow:hidden;color:white;background:#131c41 linear-gradient(rgb(14 23 47 / 36%),rgb(14 23 47 / 72%));background-image:linear-gradient(rgb(14 23 47 / 36%),rgb(14 23 47 / 72%)),var(--cover-illustration);background-size:cover;background-position:center}
+body.product-page #stage .game-card .game-poster>span strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;overflow-wrap:anywhere}
 body.product-page #stage .game-card .game-poster.is-loaded>span{display:none}
-body.product-page:is(.game-dialogue,.media-dialogue) #stage :is(.game-proposal,.game-card-pending) .game-poster-fallback:not([data-had-image]){display:none}
-body.product-page #stage .game-proposal-featured:not(:has(.game-poster[data-had-image])){display:block}
 body.product-page #stage .game-proposal .game-card-copy{min-width:0;overflow-wrap:anywhere}
 body.product-page #stage .game-proposal .game-card-footer{gap:12px}
 body.product-page #stage .game-proposal .game-card-heading{margin-bottom:12px}
@@ -192,6 +194,8 @@ body.product-page #stage .game-replacement-inline{
 body.product-page #stage .game-replacement-inline p{margin:0;font-size:13px}
 body.product-page #stage .game-replacement-inline .btn{min-height:44px}
 body.product-page #stage .game-proposal .game-card-layout .game-help{margin:0}
+body.product-page #stage .game-card :is(.game-card-layout,.game-pending-identity) .game-artwork-credit{margin:8px 0 0;font-size:12px;color:var(--brand-muted)}
+body.product-page #stage .game-artwork-credit a{color:inherit;text-decoration:underline;text-underline-offset:.14em}
 body.product-page #stage .game-proposal .game-store-link{min-height:44px;margin:0}
 body.product-page #stage .evening-rating .evening-fit-prompt{margin:12px 0}
 body.product-page #stage .evening-rating[open]{margin-bottom:6px}
@@ -218,8 +222,6 @@ body.product-page[data-view=result] #stage #actions{position:static;margin-top:2
  body.product-page:is(.game-dialogue,.media-dialogue) #stage .game-proposal:not(.game-proposal-featured) .game-poster{
   grid-column:1;grid-row:1;min-height:0;height:116px;margin:0
  }
- body.product-page #stage .game-proposal:not(.game-proposal-featured):not(:has(.game-poster[data-had-image])) .game-card-layout{grid-template-columns:minmax(0,1fr)}
- body.product-page #stage .game-proposal:not(.game-proposal-featured):not(:has(.game-poster[data-had-image])) .game-card-heading{grid-column:1}
  body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-title-copy{display:block}
  body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-title-copy>svg{display:inline-block;margin-inline-start:6px;vertical-align:middle}
  body.product-page #stage .game-proposal:not(.game-proposal-featured) .game-card-layout :is(.game-model-label,.game-caveat,.game-card-reason){margin:0!important}
@@ -235,17 +237,14 @@ body.product-page[data-view=result] #stage #actions{position:static;margin-top:2
 }
 @media (max-width:760px){
  body.product-page #stage :is(.game-proposal-featured,.game-proposal:not(.game-proposal-featured)) .game-card-layout{grid-template-columns:82px minmax(0,1fr);gap:8px 14px}
- body.product-page #stage .game-proposal:not(:has(.game-poster[data-had-image])) .game-card-layout{grid-template-columns:minmax(0,1fr)}
  body.product-page:is(.game-dialogue,.media-dialogue) #stage :is(.game-proposal-featured,.game-proposal:not(.game-proposal-featured)) .game-poster{grid-column:1;grid-row:1;width:100%;height:98px;margin:0}
  body.product-page #stage :is(.game-proposal-featured,.game-proposal:not(.game-proposal-featured)) .game-card-heading{grid-column:2;grid-row:1;align-self:center;margin:0}
- body.product-page #stage .game-proposal:not(:has(.game-poster[data-had-image])) .game-card-heading{grid-column:1}
  body.product-page #stage .game-proposal .game-card-copy>*:not(.game-card-heading){grid-column:1/-1}
  body.product-page #stage .game-proposal .game-card-layout .game-model-label{margin:0!important}
  body.product-page #stage .game-proposal .game-card-layout .game-card-reason{margin:0 0 6px!important}
  body.product-page #stage .game-proposal .game-card-layout .game-caveat{margin:0!important}
  body.product-page #stage .game-proposal .game-plan-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
  body.product-page #stage .game-proposal h2{overflow-wrap:anywhere}
- body.product-page #stage .game-card-pending:not(:has(.game-poster[data-had-image])) .game-pending-identity{grid-template-columns:minmax(0,1fr)}
  body.product-page #stage .game-proposal .game-title-copy{display:block}
  body.product-page #stage .game-proposal .game-title-copy>svg{display:inline-block;margin-inline-start:6px;vertical-align:middle}
 }
@@ -254,9 +253,8 @@ body.product-page #stage .game-proposal[data-long-title]{container-type:inline-s
 @container (max-width:460px){
  body.product-page #stage .game-proposal[data-long-title] .game-card-heading{display:contents}
  body.product-page #stage .game-proposal[data-long-title] .game-card-heading>h2{grid-column:1/-1;grid-row:1}
- body.product-page:is(.game-dialogue,.media-dialogue) #stage .game-proposal[data-long-title] .game-poster[data-had-image]{grid-row:2}
+ body.product-page:is(.game-dialogue,.media-dialogue) #stage .game-proposal[data-long-title] .game-poster{grid-row:2}
  body.product-page #stage .game-proposal[data-long-title] .game-meta{grid-column:2;grid-row:2;align-self:center}
- body.product-page #stage .game-proposal[data-long-title]:not(:has(.game-poster[data-had-image])) .game-meta{grid-column:1}
  body.product-page #stage .game-proposal[data-long-title] .game-card-heading>:is(.game-kept,.game-copy-status){grid-column:1/-1}
  body.product-page #stage .game-proposal[data-long-title] .game-card-heading>.game-copy-status:empty{position:absolute}
 }

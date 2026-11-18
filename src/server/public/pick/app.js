@@ -12,6 +12,7 @@ import { createLibraryStore } from '/shared/library-store.js';
 import { createResultViewState } from '/shared/result-view-state.js';
 import { pickerEntryRoute } from '/shared/media-route.js';
 import {qaLegacyTarget} from '/shared/qa-session.js';
+import {artworkUrls} from '/shared/card-artwork.js';
 
 if(qaLegacyTarget){location.replace(qaLegacyTarget);}else{
 
@@ -267,7 +268,7 @@ function reactAction(s) {
   };
 }
 
-// ---------- posters: portrait poster → landscape header (letterboxed) → typographic tile ----------
+// ---------- posters: source artwork → local cover illustration ----------
 
 const toneOf = (key) => {
   let h = 0;
@@ -281,12 +282,12 @@ const failedImages = new Set();
 
 function poster(c, { size = '', lazy = true, extra = '', domain = state?.domain } = {}) {
   const title = nameOf(c);
-  const [src, alt = ''] = [c.poster, c.image].filter((u) => u && !failedImages.has(u));
+  const [src, ...backups] = artworkUrls(c, domain).filter((u) => !failedImages.has(u));
   const shape = loadedImages.get(src);
   const letterbox = shape === 'landscape' && size !== 'poster-sm';
   const img = src
     ? (letterbox ? `<img class="p-bg" src="${esc(src)}" alt="" aria-hidden="true">` : '')
-      + `<img class="p-img${shape ? ' is-loaded' : ''}" src="${esc(src)}"${alt ? ` data-alt="${esc(alt)}"` : ''} alt=""${lazy ? ' loading="lazy"' : ''} decoding="async">`
+      + `<img class="p-img${shape ? ' is-loaded' : ''}" src="${esc(src)}"${backups.length ? ` data-alt="${esc(backups.join(' '))}"` : ''} alt=""${lazy ? ' loading="lazy"' : ''} decoding="async">`
     : '';
   const frameClass = shape ? ` is-img${letterbox ? ' is-letterbox' : ''}` : '';
   return `<span class="poster ${size}${frameClass}" data-tone="${toneOf(c.id ?? title)}">`
@@ -317,10 +318,12 @@ document.addEventListener('error', (e) => {
   if (!img.classList.contains('p-img')) return;
   failedImages.add(img.getAttribute('src'));
   if (img.dataset.alt) {
-    const next = img.dataset.alt;
-    delete img.dataset.alt;
-    img.src = next;
-    return;
+    const [next,...backups]=img.dataset.alt.split(' ').filter(u=>!failedImages.has(u));
+    if(next){
+      img.dataset.alt=backups.join(' ');
+      img.src=next;
+      return;
+    }
   }
   const frame = img.parentElement;
   frame?.classList.remove('is-letterbox', 'is-img');

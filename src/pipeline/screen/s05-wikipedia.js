@@ -9,6 +9,7 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { DATA, readJson, writeJson } from '../../lib/fsx.js';
+import { readScreenCatalog } from '../../lib/screen-catalog.js';
 import { getJson, mapPool, RateLimiter } from '../../lib/http.js';
 import { paragraphs, plainFromWikitext } from './wiki-text.js';
 import { buildTaggingPrompt } from '../tag-prompt.js';
@@ -20,7 +21,7 @@ const sparql = new RateLimiter(1_500);
 // Wikipedia answers 429 to about 4 requests a second (seen 2026-10-25); WIKI_MS slows it down.
 const wiki = new RateLimiter(Number(process.env.WIKI_MS ?? 250));
 
-const catalog = readJson(resolve(DATA, 'catalog-screen.json'));
+const catalog = readScreenCatalog(resolve(DATA, 'catalog-screen.json'));
 const byVotes = (a, b) => b.reviews.total - a.reviews.total;
 const pick = (domain, filter = () => true) => catalog.items.filter((x) => x.domain === domain && filter(x)).sort(byVotes).slice(0, N[domain]);
 // ONLY_FILE: a JSON array of IMDb ids, for lists too long for an environment variable (re-fetching thin inputs).
