@@ -164,7 +164,8 @@ test('romaji in a model answer resolves only to the screened series and release 
   const {rows,ranked}=candidatesOf(anime,mediaConversationToLegacy(state,anime.dict));
   const proposed=[['Natsume Yuujinchou',2008],['Hakumei to Mikochi',2018],['Ookami to Koushinryou',2008],['Somali to Mori no Kamisama',2020]];
   const out=checkPicks({picks:proposed.map(([title,year])=>({id:'',title,year}))},rows,4,ranked,[],{ownLimit:4});
-  assert.deepEqual(out.picks.map(p=>p.id),['tt1352421','tt1158671','tt11428586']);
+  assert.deepEqual(out.picks.map(p=>p.id),['tt1352421','tt7806844','tt1158671','tt11428586']);
+  assert.equal(lookUp(ranked.filter(({game})=>game.id!=='tt7806844'),'Hakumei to Mikochi',2018),null);
   assert.equal(lookUp(ranked,'Ookami to Koushinryou',2024),null);
   assert.equal(lookUp(ranked.filter(({game})=>game.id!=='tt1352421'),'Natsume Yuujinchou',2008),null);
 });
