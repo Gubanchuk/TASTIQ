@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 4539,
+ "queried": 4611,
  "items": [
   {
    "id": "tt0051694",
@@ -1404,6 +1404,20 @@
    ]
   },
   {
+   "id": "tt0108432",
+   "qid": "Q740339",
+   "kind": "film",
+   "name": "Ocean Waves",
+   "ru": "Здесь слышен океан",
+   "original": "Umi ga kikoeru",
+   "year": 1993,
+   "runtime": 72,
+   "genres": [
+    "Drama",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt0108736",
    "qid": "Q89892745",
    "kind": "series",
@@ -2070,6 +2084,20 @@
    ]
   },
   {
+   "id": "tt0140647",
+   "qid": "Q2758389",
+   "kind": "film",
+   "name": "Space Battleship Yamato: The New Voyage",
+   "ru": "Космический линкор Ямато: Новый поход",
+   "original": "Uchû senkan Yamato: Aratanaru tabidachi",
+   "year": 1979,
+   "runtime": 95,
+   "genres": [
+    "Action",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt0140648",
    "qid": "Q2077733",
    "kind": "film",
@@ -2285,6 +2313,20 @@
    ]
   },
   {
+   "id": "tt0142245",
+   "qid": "Q426650",
+   "kind": "film",
+   "name": "Dragon Ball Z: Bardock - The Father of Goku",
+   "ru": "Драконий жемчуг Зет: Бардок — отец Гоку",
+   "original": "Doragon Bôru Zetto Tatta Hitori no Saishû Kessen",
+   "year": 1990,
+   "runtime": 47,
+   "genres": [
+    "Action",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt0142248",
    "qid": "Q2581981",
    "kind": "film",
@@ -2490,6 +2532,19 @@
    ]
   },
   {
+   "id": "tt0148699",
+   "qid": "Q7413108",
+   "kind": "film",
+   "name": "Samurai Shodown: The Motion Picture",
+   "ru": "Самурайский дух",
+   "original": "Samurai supirittsu: Haten gôma no shô",
+   "year": 1994,
+   "runtime": null,
+   "genres": [
+    "Action"
+   ]
+  },
+  {
    "id": "tt0150844",
    "qid": "Q22078193",
    "kind": "film",
@@ -2515,6 +2570,20 @@
    "genres": [
     "Comedy",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt0154338",
+   "qid": "Q3678621",
+   "kind": "film",
+   "name": "City Hunter: The Secret Service",
+   "ru": "Городской охотник: Секретная служба",
+   "original": "City Hunter Special: The Secret Service",
+   "year": 1996,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
    ]
   },
   {
@@ -2746,6 +2815,20 @@
    "year": 1987,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0159361",
+   "qid": "Q3678620",
+   "kind": "film",
+   "name": "City Hunter: Goodbye My Sweetheart",
+   "ru": "Городской охотник: Прощай, моя любимая",
+   "original": null,
+   "year": 1997,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
   },
   {
    "id": "tt0159362",
@@ -3018,6 +3101,20 @@
    ]
   },
   {
+   "id": "tt0160528",
+   "qid": "Q3843571",
+   "kind": "film",
+   "name": "Maison Ikkoku: The Final Chapter",
+   "ru": "Доходный дом Иккоку - Фильм",
+   "original": "Mezon Ikkoku: Kanketsu-hen",
+   "year": 1988,
+   "runtime": 66,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt0160558",
    "qid": "Q1963297",
    "kind": "film",
@@ -3057,6 +3154,20 @@
    "genres": [
     "Comedy",
     "Sport"
+   ]
+  },
+  {
+   "id": "tt0161108",
+   "qid": "Q112656702",
+   "kind": "film",
+   "name": "Yawara! Zutto kimi no koto ga...",
+   "ru": null,
+   "original": null,
+   "year": 1996,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
    ]
   },
   {
@@ -3190,6 +3301,20 @@
    "original": "スプリガン",
    "year": 1998,
    "runtime": 90,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt0167006",
+   "qid": "Q3285263",
+   "kind": "film",
+   "name": "Art of Fighting",
+   "ru": null,
+   "original": "Batoru supirittsu ryuko no ken",
+   "year": 1993,
+   "runtime": null,
    "genres": [
     "Action",
     "Adventure"
@@ -3799,6 +3924,20 @@
    ]
   },
   {
+   "id": "tt0186506",
+   "qid": "Q1440601",
+   "kind": "film",
+   "name": "Lupin III: Voyage to Danger",
+   "ru": "Люпен III: Опасный вояж",
+   "original": "Rupan sansei: Rupan ansatsu shirei",
+   "year": 1993,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt0186721",
    "qid": "Q110797970",
    "kind": "film",
@@ -3988,6 +4127,20 @@
    "genres": [
     "Action",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt0189974",
+   "qid": "Q3149640",
+   "kind": "film",
+   "name": "Lupin III: Island of Assassins",
+   "ru": "Люпен III: Вальтер P38",
+   "original": "Rupan sansei: Walther P38",
+   "year": 1997,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -4434,6 +4587,20 @@
    "year": 1998,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0223503",
+   "qid": "Q4049970",
+   "kind": "film",
+   "name": "Îhatôbu gensô: KENjI no haru",
+   "ru": "Весна и хаос",
+   "original": null,
+   "year": 1996,
+   "runtime": 56,
+   "genres": [
+    "Biography",
+    "Drama"
+   ]
   },
   {
    "id": "tt0224471",
@@ -4930,6 +5097,20 @@
    "year": 2000,
    "runtime": 98,
    "genres": [
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt0270954",
+   "qid": "Q3751976",
+   "kind": "film",
+   "name": "Monster of Frankenstein",
+   "ru": null,
+   "original": "Kyofu densetsu: Kaiki! Furankenshutain",
+   "year": 1981,
+   "runtime": 98,
+   "genres": [
+    "Drama",
     "Fantasy"
    ]
   },
@@ -6873,6 +7054,20 @@
    "genres": []
   },
   {
+   "id": "tt0326092",
+   "qid": "Q3840830",
+   "kind": "film",
+   "name": "Lupin III: Alcatraz Connection",
+   "ru": "Люпен III: Алькатразская связь",
+   "original": "Rupan sansei: Arukatorazu konnekushion",
+   "year": 2001,
+   "runtime": 90,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt0326101",
    "qid": "Q3819758",
    "kind": "film",
@@ -7383,6 +7578,20 @@
    "genres": []
   },
   {
+   "id": "tt0363140",
+   "qid": "Q1440621",
+   "kind": "film",
+   "name": "Lupin the Third: The Legend of Twilight Gemini",
+   "ru": "Люпен III: Тайна алмазов-близнецов",
+   "original": "Rupan sansei: Towairaito Jemini no himitsu",
+   "year": 1996,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0363627",
    "qid": "Q116870992",
    "kind": "series",
@@ -7566,6 +7775,17 @@
     "Drama",
     "Romance"
    ]
+  },
+  {
+   "id": "tt0373944",
+   "qid": "Q3597218",
+   "kind": "film",
+   "name": "Eleven Hungry Cats",
+   "ru": null,
+   "original": "Juippiki no neko",
+   "year": 1980,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt0374191",
@@ -8374,6 +8594,20 @@
    ]
   },
   {
+   "id": "tt0412665",
+   "qid": "Q11856317",
+   "kind": "film",
+   "name": "Dracula",
+   "ru": "Дракула: Владыка проклятых",
+   "original": "Yami no teiô kyuketsuki dorakyura",
+   "year": 1980,
+   "runtime": 94,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt0413600",
    "qid": "Q130229038",
    "kind": "series",
@@ -8842,6 +9076,33 @@
    ]
   },
   {
+   "id": "tt0431769",
+   "qid": "Q5508607",
+   "kind": "film",
+   "name": "Fumoon",
+   "ru": null,
+   "original": "Fûmûn",
+   "year": 1980,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt0431960",
+   "qid": "Q3225914",
+   "kind": "film",
+   "name": "One Million-Year Trip: Bander Book",
+   "ru": null,
+   "original": "100-mannen chikyû no tabi: Bandâ bukku",
+   "year": 1978,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Sci-Fi"
+   ]
+  },
+  {
    "id": "tt0433289",
    "qid": "Q8133833",
    "kind": "series",
@@ -9305,6 +9566,20 @@
    ]
   },
   {
+   "id": "tt0449641",
+   "qid": "Q1437012",
+   "kind": "film",
+   "name": "Lupin III: The Pursuit of Harimao's Treasure",
+   "ru": "Люпен III: Погоня за сокровищами Харимао",
+   "original": "Rupan sansei: Harimao no zaiho wo oe!!",
+   "year": 1995,
+   "runtime": 90,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0449721",
    "qid": "Q135639506",
    "kind": "series",
@@ -9328,6 +9603,20 @@
    "year": 2003,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0450493",
+   "qid": "Q1440610",
+   "kind": "film",
+   "name": "Lupin the Third: Dragon of Doom",
+   "ru": "Люпен III: Роковой дракон",
+   "original": "Rupan sansei: Moeyo zantetsuken",
+   "year": 1994,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt0452039",
@@ -9447,6 +9736,34 @@
    "genres": [
     "Adventure",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt0461570",
+   "qid": "Q3840829",
+   "kind": "film",
+   "name": "Lupin III: Missed by a Dollar",
+   "ru": "Люпен III: Война из-за одного доллара",
+   "original": "Rupan Sansei: 1$ Manê Uôzu",
+   "year": 2000,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt0461571",
+   "qid": "Q3840833",
+   "kind": "film",
+   "name": "Lupin III: The Columbus Files",
+   "ru": "Люпен III: Несчастливые дни Фудзико",
+   "original": "Rupan Sansei: Ai no da capo - Fujiko's Unlucky Days",
+   "year": 1999,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -9830,6 +10147,20 @@
    "genres": []
   },
   {
+   "id": "tt0479746",
+   "qid": "Q3088282",
+   "kind": "film",
+   "name": "Lupin the 3rd: From Siberia with Love",
+   "ru": "Люпен III: Из России с любовью",
+   "original": "Rupan Sansei: Russia yori ai o komete",
+   "year": 1992,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0479783",
    "qid": "Q123934910",
    "kind": "series",
@@ -10137,6 +10468,20 @@
    "runtime": 115,
    "genres": [
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt0497532",
+   "qid": "Q179102",
+   "kind": "film",
+   "name": "Baggy",
+   "ru": null,
+   "original": "Daishizen no majû Bagi",
+   "year": 1984,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -10537,6 +10882,20 @@
    ]
   },
   {
+   "id": "tt0805540",
+   "qid": "Q116162216",
+   "kind": "film",
+   "name": "Fighting Spirit: Champion Road",
+   "ru": "Первый шаг: Путь чемпиона",
+   "original": "Hajime no ippo - Champion road",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt0805605",
    "qid": "Q2602741",
    "kind": "film",
@@ -10838,6 +11197,20 @@
    ]
   },
   {
+   "id": "tt0827737",
+   "qid": "Q1437019",
+   "kind": "film",
+   "name": "Lupin the 3rd: Episode 0: The First Contact",
+   "ru": "Люпен III: Эпизод 0 — Первый контакт",
+   "original": "Rupan Sansei: Episode 0 - Faasuto kontakuto",
+   "year": 2002,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt0829134",
    "qid": "Q11259899",
    "kind": "film",
@@ -10899,6 +11272,90 @@
    "genres": [
     "Comedy",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt0834581",
+   "qid": "Q3110705",
+   "kind": "film",
+   "name": "Lupin the Third: Bye Bye, Lady Liberty",
+   "ru": "Люпен III: Похищение статуи Свободы",
+   "original": "Rupan sansei: Bai bai ribatî kiki ippatsu!",
+   "year": 1989,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt0834582",
+   "qid": "Q3130163",
+   "kind": "film",
+   "name": "Lupin the 3rd: The Hemingway Papers",
+   "ru": "Люпен III: Бумаги Хемингуэя",
+   "original": "Rupan sansei: Hemingway paper no nazo",
+   "year": 1990,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt0834583",
+   "qid": "Q3222312",
+   "kind": "film",
+   "name": "Lupin the 3rd: Napoleon's Dictionary",
+   "ru": "Люпен III: Словарь Наполеона",
+   "original": "Rupan sansei: Napoleon no jisho wo ubae",
+   "year": 1991,
+   "runtime": 92,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt0834584",
+   "qid": "Q3840841",
+   "kind": "film",
+   "name": "Lupin III: Stolen Lupin",
+   "ru": "Люпен III: Украденный Люпен",
+   "original": "Rupan sansei: Nusumareta rupan",
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt0834585",
+   "qid": "Q1437024",
+   "kind": "film",
+   "name": "Lupin the Third: Operation Return the Tresure",
+   "ru": "Люпен III: Операция по возврату сокровища",
+   "original": "Rupan sansei: Otakara henkyaku dai-sakusen!!",
+   "year": 2003,
+   "runtime": 91,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt0834586",
+   "qid": "Q3840840",
+   "kind": "film",
+   "name": "Lupin III: Angel Tactics",
+   "ru": "Люпен III: Тактика Ангелов",
+   "original": "Rupan sansei: Tenshi no sakuryaku takutikusu yume no kakera wa koroshi no kaori",
+   "year": 2005,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -10966,6 +11423,20 @@
    "year": 2006,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0846080",
+   "qid": "Q3840835",
+   "kind": "film",
+   "name": "Lupin III: Seven Days Rhapsody",
+   "ru": "Люпен III: Семидневная рапсодия",
+   "original": "Rupan sansei: Sebundeizu rapusodei",
+   "year": 2006,
+   "runtime": 90,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
   },
   {
    "id": "tt0846454",
@@ -11061,6 +11532,20 @@
    "genres": [
     "Fantasy",
     "Horror"
+   ]
+  },
+  {
+   "id": "tt0856797",
+   "qid": "Q764897",
+   "kind": "film",
+   "name": "Ghost in the Shell: Stand Alone Complex - Solid State Society",
+   "ru": "Призрак в доспехах: Синдром одиночки. Сообщество крепкого Государства",
+   "original": "Kôkaku kidôtai: Stand Alone Complex Solid State Society",
+   "year": 2007,
+   "runtime": 105,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -11503,6 +11988,17 @@
    "ru": null,
    "original": "ヤマトナデシコ七変化♥",
    "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt0896557",
+   "qid": "Q17215605",
+   "kind": "film",
+   "name": "Back to the Forest",
+   "ru": null,
+   "original": "Nodoka mori no dobutsu daisakusen",
+   "year": 1980,
    "runtime": null,
    "genres": []
   },
@@ -14192,6 +14688,20 @@
    ]
   },
   {
+   "id": "tt1068848",
+   "qid": "Q3840832",
+   "kind": "film",
+   "name": "Lupin the 3rd: The Elusiveness of the Fog",
+   "ru": "Люпен III: Неуловимый, как туман",
+   "original": "Rupan sansei: Kiri no eryuushivu",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt1068915",
    "qid": "Q123050044",
    "kind": "series",
@@ -14997,6 +15507,20 @@
    "genres": [
     "Adventure",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt11142308",
+   "qid": "Q85874639",
+   "kind": "film",
+   "name": "Lupin III: Prison of the Past",
+   "ru": null,
+   "original": null,
+   "year": 2019,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -16849,6 +17373,20 @@
    ]
   },
   {
+   "id": "tt11744496",
+   "qid": "Q56346739",
+   "kind": "film",
+   "name": "One Piece: Episode of Skypiea",
+   "ru": "Ван-Пис: Эпизод Небесного острова",
+   "original": null,
+   "year": 2018,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt1174766",
    "qid": "Q120061858",
    "kind": "series",
@@ -16903,6 +17441,20 @@
    "genres": [
     "Drama",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt11757066",
+   "qid": "Q48744532",
+   "kind": "film",
+   "name": "One Piece - Episode of East Blue: Luffy and His Four Friends' Great Adventure",
+   "ru": "Ван-Пис. Эпизод Ист Блю: Большое приключение Луффи и его команды",
+   "original": "One Piece Episode of East Blue: Luffy to 4-nin no Nakama no Daiboken",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -18779,6 +19331,20 @@
    ]
   },
   {
+   "id": "tt12441478",
+   "qid": "Q96031360",
+   "kind": "film",
+   "name": "Earwig and the Witch",
+   "ru": "Ая и ведьма",
+   "original": "Âya to majo",
+   "year": 2021,
+   "runtime": 82,
+   "genres": [
+    "Adventure",
+    "Family"
+   ]
+  },
+  {
    "id": "tt1244315",
    "qid": "Q132184258",
    "kind": "series",
@@ -19043,6 +19609,20 @@
    "genres": []
   },
   {
+   "id": "tt1259781",
+   "qid": "Q3840834",
+   "kind": "film",
+   "name": "Lupin III: Sweet Lost Night",
+   "ru": "Люпен III: Волшебная лампа - предвестник кошмара",
+   "original": "Rupan Sansei: Sweet lost night - Maho no lamp wa akumu no yokan",
+   "year": 2008,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt12598008",
    "qid": "Q64497144",
    "kind": "series",
@@ -19107,6 +19687,20 @@
    "genres": [
     "Action",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt12623134",
+   "qid": "Q11277119",
+   "kind": "film",
+   "name": "Two Walnuts",
+   "ru": null,
+   "original": "Futatsu no kurumi",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "War"
    ]
   },
   {
@@ -21063,6 +21657,19 @@
    "genres": []
   },
   {
+   "id": "tt13445170",
+   "qid": "Q135851010",
+   "kind": "film",
+   "name": "Oishinbo: Kyûkyoku tai shikô chôju ryôri taiketsu!!",
+   "ru": null,
+   "original": null,
+   "year": 1992,
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
    "id": "tt13450886",
    "qid": "Q102221747",
    "kind": "series",
@@ -21229,6 +21836,20 @@
    "runtime": null,
    "genres": [
     "Action"
+   ]
+  },
+  {
+   "id": "tt13523306",
+   "qid": "Q11871592",
+   "kind": "film",
+   "name": "King Fang",
+   "ru": null,
+   "original": null,
+   "year": 1978,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Drama"
    ]
   },
   {
@@ -22154,6 +22775,20 @@
    "year": 2021,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt1397219",
+   "qid": "Q1364951",
+   "kind": "film",
+   "name": "Lupin III vs. Detective Conan",
+   "ru": "Люпен III против Детектива Конана",
+   "original": "Rupan Sansei vs Meitantei Conan",
+   "year": 2009,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Crime"
+   ]
   },
   {
    "id": "tt13988168",
@@ -24889,6 +25524,20 @@
    ]
   },
   {
+   "id": "tt15497404",
+   "qid": "Q135010875",
+   "kind": "film",
+   "name": "The Irregular at Magic High School: Reminiscence Arc",
+   "ru": null,
+   "original": "Mahouka Koukou no Rettousei: Tsuioku Hen",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt15529074",
    "qid": "Q106696133",
    "kind": "series",
@@ -24948,6 +25597,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt15554968",
+   "qid": "Q107910300",
+   "kind": "film",
+   "name": "Eternal 831",
+   "ru": null,
+   "original": "Eien no 831",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Sci-Fi"
+   ]
   },
   {
    "id": "tt1556079",
@@ -25139,6 +25802,20 @@
    ]
   },
   {
+   "id": "tt1569361",
+   "qid": "Q3786311",
+   "kind": "film",
+   "name": "Captain Tsubasa Movie 1: The Great Competition of Europe",
+   "ru": null,
+   "original": "Captain Tsubasa: Europe Daikessen",
+   "year": 1985,
+   "runtime": null,
+   "genres": [
+    "Family",
+    "Sport"
+   ]
+  },
+  {
    "id": "tt1571105",
    "qid": "Q3980545",
    "kind": "series",
@@ -25302,6 +25979,20 @@
    "genres": [
     "Adventure",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt1577867",
+   "qid": "Q5969254",
+   "kind": "film",
+   "name": "Lupin III: The Last Job",
+   "ru": "Люпен III: Последняя работа",
+   "original": "Rupan sansei: Saishû jobu",
+   "year": 2010,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -27441,6 +28132,20 @@
    "genres": [
     "Music",
     "Sport"
+   ]
+  },
+  {
+   "id": "tt1818963",
+   "qid": "Q3942794",
+   "kind": "film",
+   "name": "Lupin the III: Blood Seal of the Eternal Mermaid",
+   "ru": null,
+   "original": "Lupin the III: Chi no kokuin - eien no mermaid",
+   "year": 2011,
+   "runtime": 92,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -30402,6 +31107,20 @@
    "genres": []
   },
   {
+   "id": "tt22264336",
+   "qid": "Q120076629",
+   "kind": "film",
+   "name": "Fate/strange Fake: Whispers of Dawn",
+   "ru": "Судьба/Странная подделка: Шёпот рассвета",
+   "original": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt22297712",
    "qid": "Q115768573",
    "kind": "series",
@@ -32036,6 +32755,20 @@
    ]
   },
   {
+   "id": "tt2438634",
+   "qid": "Q3942809",
+   "kind": "film",
+   "name": "Lupin the III: Another Page",
+   "ru": null,
+   "original": null,
+   "year": 2012,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt2441378",
    "qid": "Q141514682",
    "kind": "series",
@@ -32473,6 +33206,20 @@
    ]
   },
   {
+   "id": "tt2575990",
+   "qid": "Q135109906",
+   "kind": "film",
+   "name": "Prime Rose: A Time Slip of 10,000 Years",
+   "ru": "Прайм Роуз: Сдвиг во времени на десять тысяч лет",
+   "original": "Taimu surippu 10000-nen: Puraimu Rôzu",
+   "year": 1983,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt25809288",
    "qid": "Q113297613",
    "kind": "series",
@@ -32521,6 +33268,17 @@
     "Action",
     "Drama"
    ]
+  },
+  {
+   "id": "tt2584128",
+   "qid": "Q11477467",
+   "kind": "film",
+   "name": "Light of the River",
+   "ru": null,
+   "original": "Kawa no hikari",
+   "year": 2009,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt2591814",
@@ -34309,6 +35067,20 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt2833226",
+   "qid": "Q7883762",
+   "kind": "film",
+   "name": "Undersea Super Train: Marine Express",
+   "ru": "Подводный суперпоезд: Морской экспресс",
+   "original": "Kaitei chô tokkyû: Marin Ekusupuresu",
+   "year": 1979,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt28347814",
@@ -36631,6 +37403,20 @@
    "genres": [
     "Comedy",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt3140358",
+   "qid": "Q107080228",
+   "kind": "film",
+   "name": "Nozoki Ana",
+   "ru": "Щель",
+   "original": null,
+   "year": 2013,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Romance"
    ]
   },
   {
@@ -39226,6 +40012,48 @@
    ]
   },
   {
+   "id": "tt3354344",
+   "qid": "Q11237364",
+   "kind": "film",
+   "name": "One Piece: Episode of Luffy - Adventure on Hand Island",
+   "ru": "Ван Пис. Эпизод Луффи: Приключения на Ладоневом острове!",
+   "original": "One Piece: Episode of Luffy - Hand Island No Bouken",
+   "year": 2012,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt3354352",
+   "qid": "Q17215984",
+   "kind": "film",
+   "name": "One Piece: Episode of Merry - Mou Hitori no Nakama no Monogatari",
+   "ru": "Ван-Пис. Эпизод про Мерри: История об ещё одном Накама",
+   "original": null,
+   "year": 2013,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt3354378",
+   "qid": "Q116163656",
+   "kind": "film",
+   "name": "Fighting Spirit: Mashiba vs. Kimura",
+   "ru": "Первый шаг: Кимура против Машиба",
+   "original": "Hajime no Ippo: Mashiba vs. Kimura",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sport"
+   ]
+  },
+  {
    "id": "tt3355356",
    "qid": "Q6690998",
    "kind": "series",
@@ -40160,6 +40988,17 @@
     "Comedy",
     "History"
    ]
+  },
+  {
+   "id": "tt3472674",
+   "qid": "Q123678818",
+   "kind": "film",
+   "name": "Wagahai wa neko de aru",
+   "ru": null,
+   "original": null,
+   "year": 1982,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt3475064",
@@ -41646,6 +42485,20 @@
    "genres": [
     "Comedy",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt36361934",
+   "qid": "Q119985700",
+   "kind": "film",
+   "name": "Cocoon: One Summer of Girlhood",
+   "ru": "Кокон",
+   "original": "Cocoon: Aru natsu no shôjo-tachi yori",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "History"
    ]
   },
   {
@@ -46897,6 +47750,20 @@
    "genres": []
   },
   {
+   "id": "tt46656123",
+   "qid": "Q141328096",
+   "kind": "film",
+   "name": "Detective Conan: The Counterfeit Case of Ultra 30",
+   "ru": null,
+   "original": "Meitantei Conan: 30-go Satsujin Jiken",
+   "year": 2026,
+   "runtime": 96,
+   "genres": [
+    "Crime",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt4668834",
    "qid": "Q28700655",
    "kind": "film",
@@ -47554,6 +48421,20 @@
    "year": 2015,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt5098548",
+   "qid": "Q18217801",
+   "kind": "film",
+   "name": "One Piece: 3D2Y - Overcome Ace's Death! Luffy's Vow to His Friends",
+   "ru": "Ван-Пис 3D2Y: Пережить смерть Эйса!",
+   "original": "One Piece '3D2Y': Âsu no shi o koete! Rufi nakamatachi no chikai",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt5100366",
@@ -49576,6 +50457,19 @@
    "genres": []
   },
   {
+   "id": "tt5865422",
+   "qid": "Q11335097",
+   "kind": "film",
+   "name": "Bremen 4: Angels in Hell",
+   "ru": null,
+   "original": "Burêmen 4: Jigoku no naka no tenshi-tachi",
+   "year": 1981,
+   "runtime": null,
+   "genres": [
+    "Family"
+   ]
+  },
+  {
    "id": "tt5867902",
    "qid": "Q124514983",
    "kind": "series",
@@ -50223,6 +51117,19 @@
    "genres": []
   },
   {
+   "id": "tt6213810",
+   "qid": "Q61466252",
+   "kind": "film",
+   "name": "Fate/Grand Order: First Order",
+   "ru": "Судьба/Великий приказ",
+   "original": null,
+   "year": 2016,
+   "runtime": 74,
+   "genres": [
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt6219010",
    "qid": "Q107079054",
    "kind": "series",
@@ -50655,6 +51562,20 @@
    "genres": []
   },
   {
+   "id": "tt6425816",
+   "qid": "Q108666474",
+   "kind": "film",
+   "name": "One Piece: Heart of Gold",
+   "ru": "Ван-Пис: Золотое сердце",
+   "original": null,
+   "year": 2016,
+   "runtime": 104,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt6435350",
    "qid": "Q92280404",
    "kind": "series",
@@ -50760,6 +51681,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt6451446",
+   "qid": "Q11650065",
+   "kind": "film",
+   "name": "Galaxy Investigation 2100: Border Planet",
+   "ru": null,
+   "original": "Ginga tansa 2100-nen: Bôdâ puranetto",
+   "year": 1986,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Romance"
    ]
   },
   {
@@ -51125,6 +52060,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt6609162",
+   "qid": "Q24868707",
+   "kind": "film",
+   "name": "One Piece: Adventure of Nebulandia",
+   "ru": "Ван-Пис: Приключение в Небуландии",
+   "original": null,
+   "year": 2015,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -53290,6 +54239,20 @@
    "genres": []
   },
   {
+   "id": "tt8051722",
+   "qid": "Q26916836",
+   "kind": "film",
+   "name": "Case Closed: Episode One - The Great Detective Turned Small",
+   "ru": "Детектив Конан: Первый эпизод. Уменьшившийся великий детектив",
+   "original": "Detective Conan: Episode One - The Great Detective Turned Small",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt8075454",
    "qid": "Q99852280",
    "kind": "series",
@@ -53405,6 +54368,20 @@
     "Action",
     "Adventure",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt8116424",
+   "qid": "Q117288790",
+   "kind": "film",
+   "name": "Andromeda Stories",
+   "ru": null,
+   "original": null,
+   "year": 1982,
+   "runtime": 85,
+   "genres": [
+    "Drama",
+    "Sci-Fi"
    ]
   },
   {
@@ -55226,6 +56203,20 @@
    "runtime": 109,
    "genres": [
     "Crime"
+   ]
+  },
+  {
+   "id": "tt9504852",
+   "qid": "Q60988569",
+   "kind": "film",
+   "name": "Lupin III: Goodbye Partner",
+   "ru": null,
+   "original": null,
+   "year": 2019,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
