@@ -15,7 +15,8 @@ import {completeInterview} from '../core/selection-dialogue.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationGameIdentity} from './conversation-game-identity.js';
-import {feedbackContextOf} from '../ai/feedback-context.js';
+import {personalContextOf} from '../ai/feedback-context.js';
+import {pickerMemoryView,refreshMemoryPlan,rememberPlanMemory,restoreMemoryFactKeys} from '../ai/taste-context.js';
 
 const contextual = s => {
   if(!canOfferInterviewQuestion(s))return reviewAtInterviewCapacity(s);
@@ -110,7 +111,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     card.labelText='Вариант по твоему запросу';
     return constraintWarnings(card,p.unknownCriteria??[]);
   }
-  async function replace(s,who,more=false,targetIds=null) {
+  async function replace(s,who,personalContext,more=false,targetIds=null) {
     const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):targetIds??s.familiar.marked).filter(id=>before.some(c=>c.id===id)));
     if(!marked.size)return response(s);
     const legacy=projection(s);
@@ -135,7 +136,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
         local=true;out={picks};
       }else{
         spend(who);
-        try {out=await pick({...catalogs,game:scoped},legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,alreadyShown:neutralShown});}
+        try {out=await pick({...catalogs,game:scoped},pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,alreadyShown:neutralShown});}
         catch {out={error:'Не удалось заменить игры. Варианты и отметки сохранены.'};}
         log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
       }
@@ -167,8 +168,8 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     return response(s,{feedbackCarry:{retainedIds}});
   }
   async function handle(body,who) {
-    const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,'game');if(feedbackContext.length)who={...who,feedbackContext};
-    let s=initialState(body);
+    const personalContext=personalContextOf(body,catalog,'game');
+    let s=refreshMemoryPlan(initialState(body),personalContext.tasteMemory,body.action);
     if(s.facts.some(f=>f?.gameId==null)) {
       const resolved=identities.resolve(s);
       // Repair identity only; preserve the saved exposure, stance and source words verbatim.
@@ -196,7 +197,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     if(replacing){
       if(action.type==='replace_familiar'&&action.id!==undefined&&!s.familiar.marked.includes(action.id))throw Object.assign(Error('Сначала отметь этот вариант для замены.'),{status:400});
       const targets=action.type==='replace_familiar'&&action.id!==undefined?[action.id]:action.type==='retry'?s.replacement?.pendingIds:null;
-      return replace(s,who,more,targets);
+      return replace(s,who,personalContext,more,targets);
     }
     if(action.type==='undo_replacement')return response(s,{feedbackCarry:{retainedIds:cardsOf(s.result).filter(c=>cardsOf(beforeResult).some(old=>old.id===c.id)).map(c=>c.id)}});
     const final=action.type==='confirm'||action.type==='retry'&&s.failedAction==='pick';
@@ -211,12 +212,12 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
       spend(who);
       const resolved=identities.resolve(s),knownGames=resolved.knownGames;
       let out;
-      try {out=await plan(catalogFor(s),s,{...(api?{api}:{}),knownGames});}
+      try {out=await plan(catalogFor(s),s,{...(api?{api}:{}),tasteMemory:personalContext.tasteMemory,knownGames});}
       catch {out={error:'Не удалось разобрать ответ. Он сохранён; попробуй ещё раз.'};}
       log('plan',s,out);
       let checked;
       if(!out.error) {
-        const bound=identities.bindFacts(s,out.proposal?.facts,resolved);
+        const bound=identities.bindFacts(s,restoreMemoryFactKeys(out.proposal?.facts,s),resolved);
         if(bound.error)checked={error:bound.error};
         else {
           const uncertainties=[...new Set([...(out.proposal?.uncertainties??[]),...resolved.ambiguous.map(m=>`Уточни название «${m.quote}»: в каталоге есть несколько разных игр.`)])];
@@ -228,7 +229,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
         s=contextual(s);s.failedAction='plan';s.needsPlan=true;
         return response(s,{error,retryable:out.retryable!==false});
       }
-      s=checked.state;s.failedAction=null;
+      s=rememberPlanMemory(checked.state,personalContext.tasteMemory);s.failedAction=null;
       return response(s);
     }
     const legacy=projection(s);
@@ -258,7 +259,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     }
     spend(who);
     let out;
-    try {out=await pick({...catalogs,game:scoped},legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,previous:[]});}
+    try {out=await pick({...catalogs,game:scoped},pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,previous:[]});}
     catch {out={error:'Не удалось получить рекомендации. Запрос сохранён.'};}
     log('pick',s,out);
     if(out.error)return response({...s,phase:'review',failedAction:'pick'},{error:out.error,retryable:out.retryable!==false});

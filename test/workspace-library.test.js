@@ -1,6 +1,8 @@
 import {animeStyleLabel,inLibraryDomain,mediaLibraryDomain} from '../src/server/public/shared/anime-pilot.js';
 import {selectionModeTitle} from '../src/server/public/shared/selection-mode.js';
 import test from 'node:test';
+import {createMemoryView} from '../src/server/public/library/memory-view.js';
+import {createTasteMemory,TASTE_MEMORY_PREFIX} from '../src/server/public/shared/taste-memory.js';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
@@ -25,7 +27,7 @@ async function page(storage,{search='',handoffStorage=memory(),fetcher}={}){
  const urls=[],location={search,pathname:'/library/',assign:url=>urls.push(url)};
  const updateUrl=url=>{location.search=url.includes('?')?'?'+url.split('?')[1]:'';urls.push(url);};
  const context=vm.createContext({animeStyleLabel,inLibraryDomain,mediaLibraryDomain,selectionModeTitle,URLSearchParams,location,history:{pushState:(_s,_t,url)=>updateUrl(url),replaceState:(_s,_t,url)=>updateUrl(url)},document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:v=>v},structuredClone,matchMedia:()=>({matches:false,addEventListener(){}}),collectionRecords,createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,createFeedbackStore:o=>createFeedbackStore({...o,locks:{request:async(_,fn)=>fn()}}),FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,initCustomSelects(){},focusCustomSelect(){},fetch:async()=>({ok:true,json:async()=>[]}),setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
- Object.assign(context,{artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains,sessionStorage:handoffStorage});
+ Object.assign(context,{artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains,createTasteMemory,TASTE_MEMORY_PREFIX,createMemoryView,sessionStorage:handoffStorage});
  if(fetcher)context.fetch=fetcher;
  vm.runInContext((await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,''),context);
  await new Promise(r=>setImmediate(r));

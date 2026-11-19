@@ -114,5 +114,5 @@ test('game shelf, ordinary game draft and reopened archive stay independent with
  assert.equal(route('/pick/game/?savedArchive=missing').missing,true);
  const ordinaryRun=createSelectionArchive({storage}).capture({state:{version:1,id:'legacy-game',phase:'result',turns:[],result},screen:{type:'result',result}});
  const ordinaryEntry=route('/pick/game/?selection='+ordinaryRun.id);
- assert.equal(ordinaryEntry.draftStorage,storage);assert.equal(ordinaryEntry.savedSource,undefined);assert.deepEqual(load(ordinaryEntry).state.result,result);
+ assert.equal(ordinaryEntry.draftStorage,tab);assert.equal(ordinaryEntry.savedSource,undefined);assert.deepEqual(load(ordinaryEntry).state.result,result);
 });

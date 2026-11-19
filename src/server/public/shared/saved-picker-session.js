@@ -2,14 +2,22 @@ import {createSelectionArchive} from './selection-archive.js';
 import {conversationStorageKey} from './conversation-client.js';
 import {pickerUrl,readSavedSourceView,savedSourceChanged,savedSourceLibraryUrl} from './saved-source.js';
 
+const resultIds=result=>[result?.top,...(result?.alternatives??[])].filter(Boolean).map(card=>card.id);
+export function isArchivedResult(session,state){
+ const original=session.archiveResult;
+ return Boolean(original&&state?.phase==='result'&&state.id===original.id&&JSON.stringify(resultIds(state.result))===JSON.stringify(original.ids));
+}
+
 // Keep a separate draft per tab and list. All results share the library archive.
 export function savedPickerSession({params,domain,storage,session}){
  const base=conversationStorageKey(domain);
- const selection=params.get('selection'),token=params.get('saved'),archiveId=params.get('savedArchive');
+ const selection=params.get('selection'),token=params.get('saved'),archiveId=params.get('savedArchive')??params.get('archive');
+ if(selection===''||archiveId==='')return {missing:true,missingSelection:true};
  const archiveEntry=selection||archiveId;
  const archived=archiveEntry?createSelectionArchive({storage}).get(archiveEntry,domain):null;
- if(selection&&!archived)return {missing:true};
- if(token===null&&archiveId===null&&!archived?.state.savedSource)return {draftStorage:storage,key:base,selection};
+ if(selection&&!archived)return {missing:true,missingSelection:true};
+ const archiveResult=archived?{id:archived.state.id,ids:resultIds(archived.state.result)}:null;
+ if(token===null&&!archiveEntry)return {draftStorage:storage,key:base,selection};
  const handle=token??archiveEntry;
  const routedDomain=params.get('domain')??(domain==='game'?'game':null);
  if(routedDomain!==domain||!handle||!/^[a-zA-Z0-9:_-]{1,100}$/.test(handle)||token!==null&&archiveEntry||selection&&archiveId)return {missing:true};
@@ -17,12 +25,16 @@ export function savedPickerSession({params,domain,storage,session}){
  let draft;
  try{draft=JSON.parse(session?.getItem(key)??'null')?.snapshot;}catch{/* the archive or library handoff can still be opened */}
  if(draft&&((draft.state?.domain??'game')!==domain||draft.screen?.domain&&draft.screen.domain!==domain))draft=null;
+ if(token===null&&!archived?.state.savedSource&&!draft?.state?.savedSource){
+  if(!archived&&!draft||params.has('savedArchive'))return {missing:true,missingSelection:true};
+  return {key,draftStorage:session??null,archivedId:archiveEntry,archiveResult,selection:selection||(!draft?archiveEntry:null)};
+ }
  const valid=source=>source?.version===1&&source.domain===domain&&Array.isArray(source.ids)&&source.ids.every(id=>typeof id==='string'&&/^[A-Za-z0-9:_-]{1,80}$/.test(id));
  const handoff=token!==null?readSavedSourceView(session,token,domain):null;
  const savedListView=handoff??archived?.savedListView??draft?.savedListView;
  const savedSource=handoff?{version:1,domain,ids:handoff.ids}:archived?.state.savedSource??draft?.state?.savedSource;
  if(!valid(savedSource))return {missing:true};
- return {key,draftStorage:session??null,token,savedSource,savedListView,archivedId:archiveEntry,
+ return {key,draftStorage:session??null,token,savedSource,savedListView,archivedId:archiveEntry,archiveResult,
   selection:archiveEntry&&(selection||!valid(draft?.state?.savedSource))?archiveEntry:null};
 }
 
@@ -31,7 +43,7 @@ export function resumeArchiveUrl(session){
  const url=new URL(location.href);
  if(!url.searchParams.has('selection'))return;
  url.searchParams.delete('selection');
- if(session.archivedId)url.searchParams.set('savedArchive',session.archivedId);
+ if(session.archivedId)url.searchParams.set(session.savedSource?'savedArchive':'archive',session.archivedId);
  window.history.replaceState(window.history.state,'',url);
 }
 
@@ -45,7 +57,13 @@ export function bindSavedSourceBanner(session,domain,tabStorage){
  panel.querySelector('#source-catalog').href=pickerUrl(domain,{choose:'1'});
  panel.hidden=false;
  if(session.missing){
-  heading.textContent='Список для этого подбора больше недоступен. Открой сохранённое и выбери список заново.';
+  if(session.missingSelection){
+   heading.textContent='Этот результат больше недоступен в этом браузере.';
+   libraryLink.href='/library/?view=history';libraryLink.textContent='Открыть историю подборов';
+  }else{
+   heading.textContent='Список для этого подбора больше недоступен. Открой сохранённое и выбери список заново.';
+   libraryLink.textContent='Открыть сохранённое';
+  }
   document.getElementById('picker-workspace').hidden=true;
   document.querySelector('.app-shell-actions').hidden=true;
   return ()=>{};

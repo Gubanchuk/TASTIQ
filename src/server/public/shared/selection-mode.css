@@ -116,7 +116,7 @@
   .mode-card:hover .mode-card-arrow { transform:translateX(3px); }
 }
 
-.mode-footer { display:flex; align-items:center; margin-top:18px; font-size:14px; }
+.mode-footer { display:flex; align-items:center; flex-wrap:wrap; gap:4px 16px; margin-top:18px; font-size:14px; }
 .mode-footer :is(a,button) {
   display:inline-flex;align-items:center;min-height:44px;padding:8px 1px;border:0;background:transparent;
   color:#2b438a;font:inherit;text-align:left;text-decoration:underline;text-underline-offset:4px;cursor:pointer;

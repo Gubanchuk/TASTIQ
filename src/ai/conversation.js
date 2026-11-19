@@ -2,6 +2,7 @@ import { AI } from './config.js';
 import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
 import { selectionDecisionInstructions,selectionDecisionSchema } from './selection-decision.js';
+import { memoryModelView, planningMemoryRule } from './taste-context.js';
 
 const object = properties => ({ type: 'object', properties, required: Object.keys(properties), additionalProperties: false });
 const string = maxLength => ({ type: 'string', maxLength });
@@ -60,7 +61,7 @@ const modeInstructions = mode => mode === 'free'
   ? 'Mode free: the model controls conversation sequencing, question selection and when to propose review. Use your full conversational reasoning with the same raw evidence, corrections, schema and safety checks. There is no prescribed interview route or extra guided sequencing invariant.'
   : 'Mode guided: guided state invariants apply in addition to the shared contract. Respect retracted sources and already answered question topics. Before review establish a meaningful specific goal today, not just one broad genre or a history preference; questions and their supporting fact snapshot are applied atomically by the controller. Choose the best next question yourself within these invariants.';
 
-function inputFor(catalog, state, knownGames) {
+function inputFor(catalog, state, knownGames, tasteMemory) {
   if (!catalog?.dict?.features?.length || !state || !Array.isArray(state.turns) || state.turns.length > 24
     || !Array.isArray(state.facts) || state.facts.length > 16 || !['guided', 'free'].includes(state.mode)
     || !Array.isArray(knownGames) || knownGames.length > 64
@@ -71,6 +72,7 @@ function inputFor(catalog, state, knownGames) {
   try {
     const input = JSON.stringify({
       domain: catalog.domain?.id ?? 'game', id: state.id, revision: state.revision, mode: state.mode, phase: state.phase,
+      ...(tasteMemory.length ? {tasteMemory} : {}),
       ...(state.depth?{depth:state.depth,offeredQuestions:state.questionOffers?.length??0}:{}),
       context: { platform, company, partySize }, turns: state.turns, facts: state.facts,
       question: state.question ?? null, summary: state.summary ?? '', uncertainties: state.uncertainties ?? [], retractions: state.retractions ?? [],
@@ -98,9 +100,9 @@ function proposalShape(out,depth) {
       || (out.action === 'question' && out.question && typeof out.question === 'object' && !Array.isArray(out.question)));
 }
 
-export async function aiConversation(catalog, state, { api = requestResponse, maxCostUsd = Infinity, knownGames = [] } = {}) {
+export async function aiConversation(catalog, state, { api = requestResponse, maxCostUsd = Infinity, knownGames = [], tasteMemory = [] } = {}) {
   if(Array.isArray(knownGames)&&knownGames.length>64)return {error:'Запрос не отправлен: в разговоре больше 64 разных названий игр. Уточни меньший список для этого подбора.',notRequested:true,retryable:false};
-  const input = inputFor(catalog, state, knownGames);
+  const input = inputFor(catalog, memoryModelView(state,tasteMemory), knownGames, tasteMemory);
   if (input === null) return { error: 'запрос не запущен: контекст диалога отсутствует или превышает допустимый размер', notRequested: true };
   const request = {
     model: AI.model, max_output_tokens: 6000, reasoning: { effort: AI.effort },
@@ -108,6 +110,7 @@ export async function aiConversation(catalog, state, { api = requestResponse, ma
     instructions: `${INSTRUCTIONS}\n\n${state.depth?selectionDecisionInstructions(state.depth):modeInstructions(state.mode)}`,
     input, store: false, service_tier: 'default',
   };
+  if (tasteMemory.length) request.instructions += '\n' + planningMemoryRule;
   if (maxCostUsd !== Infinity) {
     const reserve = reserveCost(request);
     if (!Number.isFinite(maxCostUsd) || maxCostUsd < 0 || reserve == null || reserve > maxCostUsd)

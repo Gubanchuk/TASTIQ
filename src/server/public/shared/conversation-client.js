@@ -11,7 +11,7 @@ const recoveryOf=value=>typeof value?.error==='string'&&value.error?{error:value
 const pristine=value=>value?.state?.phase==='direction'&&value.state.revision===0&&!value.state.turns.length&&!value.error;
 
 // Transport, snapshots and drafts are independent of DOM. Reload is always a free resume.
-export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),archiveStorage=storage,onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false,selectionId=null,savedSource=null,savedListView=null}={}) {
+export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),archiveStorage=storage,onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,tasteMemory,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false,selectionId=null,archiveVisit=false,savedSource=null,savedListView=null}={}) {
  if(!['game','film','series','cartoon','anime'].includes(domain)||typeof storageKey!=='string'||!storageKey||domain!=='game'&&storageKey===CONVERSATION_KEY)throw TypeError('Некорректный раздел подбора');
  const allowed=savedSource?new Set(savedSource.ids):null;
  function scoped(value,requestedSource=null){
@@ -75,13 +75,17 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  async function execute(body,{reset=false,restoredDrafts=null,clearPrevious=false,resumeFailure=null}={}) {
   if(domain!=='game')body={...body,domain};
   if(typeof rememberedExclusions==='function'&&!Object.hasOwn(body,'rememberedExclusions'))body={...body,rememberedExclusions:clone(rememberedExclusions())};
+  // A transport retry repeats its action and exclusions. Taste permissions
+  // and review text are reread even if the previous request never got a reply.
+  retryBody=clone(body);
+  if(typeof tasteMemory==='function')body={...body,tasteMemory:clone(tasteMemory())};
   if(typeof qualityFeedback==='function'){
    // A review can be switched off between a network failure and its retry.
    const rows=qualityFeedback();
    if(rows?.length)body={...body,qualityFeedback:clone(rows)};
    else if(Object.hasOwn(body,'qualityFeedback')){body={...body};delete body.qualityFeedback;}
   }
-  const ticket=++generation,base=clone(body.state);busy=true;error=null;retryBody=clone(body);retryOptions={reset,restoredDrafts:clone(restoredDrafts),clearPrevious,resumeFailure:clone(resumeFailure)};notify();
+  const ticket=++generation,base=clone(body.state);busy=true;error=null;retryOptions={reset,restoredDrafts:clone(restoredDrafts),clearPrevious,resumeFailure:clone(resumeFailure)};notify();
   try {
    const response=await request(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
    const data=await response.json();if(ticket!==generation)return null;
@@ -117,7 +121,11 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
   get canRestorePrevious(){return Boolean(previous&&(previous.fromArchive||previous.snapshot.state.id!==snapshot?.state?.id));},
   draft(key){return cleanDraft(drafts[key]);},
   saveDraft(key,value){drafts[key]=cleanDraft(value);save();},
-  start(){if(localStart&&snapshot?.state.phase==='direction'&&snapshot.state.revision===0&&!snapshot.error){save();notify();return Promise.resolve(clone(snapshot));}return execute({...(snapshot?{state:clone(snapshot.state)}:{mode:mode==='free'?'free':'guided'}),...(uid?{uid}:{})},{resumeFailure:recoveryOf(snapshot)});},
+  start(){
+   const archivedResult=(selected||archiveVisit)&&snapshot?.state.phase==='result'&&snapshot.screen?.type==='result';
+   if(localStart&&(pristine(snapshot)||archivedResult)){save();notify();return Promise.resolve(clone(snapshot));}
+   return execute({...(snapshot?{state:clone(snapshot.state)}:{mode:mode==='free'?'free':'guided'}),...(uid?{uid}:{})},{resumeFailure:recoveryOf(snapshot)});
+  },
   send(action){if(action.type==='correct'&&snapshot?.state?.result){correctionCheckpoint={snapshot:clone(snapshot),drafts:clone(drafts)};delete correctionCheckpoint.snapshot.error;delete correctionCheckpoint.snapshot.retryable;correctionCheckpoint.snapshot.state.failedAction=null;save();}if(action.type==='restart'&&localStart)action={...action,requireDirection:true};if(action.type==='restart'&&snapshot){previous={snapshot:clone(snapshot),drafts:clone(drafts)};save();}return execute({...(snapshot?{state:clone(snapshot.state)}:{}),action:clone(action),...(uid?{uid}:{})},{reset:action.type==='restart'});},
   retry(){if(error&&snapshot?.retryable===false&&snapshot.error===error)return Promise.resolve(null);return retryBody?execute(clone(retryBody),retryOptions):api.send({type:'retry'});},
   restorePrevious(){return previous?execute({state:clone(previous.snapshot.state),...(uid?{uid}:{})},{reset:true,restoredDrafts:clone(previous.drafts??{}),clearPrevious:true,resumeFailure:recoveryOf(previous.snapshot)}):Promise.resolve(null);},

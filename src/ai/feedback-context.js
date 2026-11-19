@@ -1,5 +1,11 @@
 import {REVIEW_VERDICTS,REVIEW_ISSUES} from '../server/public/shared/selection-review.js';
+import {tasteMemoryOf} from './taste-context.js';
 const clean=(value,max)=>typeof value==='string'?value.trim().slice(0,max):'';
+export function personalContextOf(body,catalog,domain) {
+ const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,domain);
+ const tasteMemory=tasteMemoryOf(body.tasteMemory,domain);
+ return {...(feedbackContext.length?{feedbackContext}:{}),...(tasteMemory.length?{tasteMemory}:{})};
+}
 export function feedbackContextOf(value,catalog,domain){
  if(value===undefined)return [];
  if(!Array.isArray(value)||value.length>6)throw Object.assign(Error('Некорректная история отзывов.'),{status:400});

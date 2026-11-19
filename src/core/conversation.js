@@ -2,6 +2,7 @@ import {initialConversation,initialDirectionQuestion,gameGenreDirections as dire
 // A game conversation owns today's goal; evidence is never silently promoted to permanent taste.
 import { initialState } from './dialogue.js';
 import { PLATFORMS } from './sieves.js';
+import {applicableGamePlatform} from '../server/public/shared/game-platform.js';
 import { editionsOf } from './catalog.js';
 import { validateSessionTime,isSessionTimeFact,isSessionTimeSourceRetracted,savedGameSessionTime,requiresVerifiedGameSession,clearsSavedGameTime } from './session-time.js';
 import { invalidSavedSource,normalizeSavedSource,savedSourceKey } from './saved-source.js';
@@ -141,6 +142,8 @@ function activeContext(turns) {
   for(const t of turns) {
     if(t.superseded)continue;
     const value=t.selected?.[0]?.id;
+    if(t.question.id==='direction'&&t.usualPlatform)ctx.platform=applicableGamePlatform(t.usualPlatform,t.text);
+    if(t.clarifyUsualPlatform)ctx.platform=null;
     if(t.question.id==='platform' && PLATFORMS[value])ctx.platform=value;
     if(t.question.id==='company' && ['solo','friend','group'].includes(value)){ctx.company=value;ctx.partySize=value==='friend'?'2':null;}
     if(t.question.id==='party' && ['2','3','4','5+'].includes(value))ctx.partySize=value;
@@ -258,6 +261,13 @@ export function answerConversation(input, action={}) {
   s.revision++;
   const answer=[...(kind==='answer'?selected.map(o=>o.label):[neutral[kind]]),text].filter(Boolean).join('; ');
   const turn={id:`${s.id}:${s.revision}`,question:q,selected,text,kind,answer};
+  if(q.id==='direction'&&kind==='answer'){
+    const platform=applicableGamePlatform(action.platform,text);
+    if(platform)turn.usualPlatform=platform;
+  }else if(kind==='answer'&&text&&s.context.platform&&!applicableGamePlatform(s.context.platform,text)){
+    const source=s.turns.findLast(t=>!t.superseded&&(t.usualPlatform||['platform','context'].includes(t.question.id)));
+    if(source?.usualPlatform)turn.clarifyUsualPlatform=true;
+  }
   s.turns.push(turn); invalidate(s); if(correcting&&!s.depth){s.facts=[];if(!s.savedSource)s.sessionTime=null;} localFacts(s,turn);
   if(s.savedSource&&kind==='answer'){
     if(s.sessionTime&&clearsSavedGameTime(text)){
@@ -267,9 +277,13 @@ export function answerConversation(input, action={}) {
   }
   if(s.depthChangedInReview)s.depthChangedInReview=false;
   s.context=activeContext(s.turns);
-  if(q.id==='direction'){s.phase='platform';s.question=platformQuestion();s.needsPlan=false;}
-  else if(q.id==='platform'){s.phase='company';s.question=companyQuestion();s.needsPlan=false;}
-  else if(q.id==='company'&&s.context.company==='group'){s.phase='party';s.question=partyQuestion();s.needsPlan=false;}
+  if(q.id==='direction'){
+    s.phase=s.context.platform?'company':'platform';
+    s.question=s.context.platform?companyQuestion():platformQuestion();s.needsPlan=false;
+  }
+  else if(turn.clarifyUsualPlatform){s.phase='platform';s.question=platformQuestion();s.needsPlan=false;}
+  else if(q.id==='platform'&&!s.context.company){s.phase='company';s.question=companyQuestion();s.needsPlan=false;}
+  else if((q.id==='company'||q.id==='platform')&&s.context.company==='group'&&!s.context.partySize){s.phase='party';s.question=partyQuestion();s.needsPlan=false;}
   else {s.phase='talk';s.question=null;s.needsPlan=true;}
   return s;
 }

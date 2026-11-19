@@ -69,3 +69,8 @@ body.conversation-page{
 }
 @media(max-width:360px){.conversation-rail{padding-left:13px;padding-right:13px;column-gap:10px}.conversation-brand{font-size:22px}.conversation-links :is(a,button){padding:8px 6px;gap:4px}.conversation-links :is(.conversation-icon,.i){display:none}.conversation-domains{gap:5px}}
 @media(prefers-reduced-motion:reduce){.conversation-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+.picker-visit-tools {display:flex;align-items:baseline;gap:6px 18px;flex-wrap:wrap;margin:.45rem 0;font-size:.875rem}
+.picker-visit-tools a,.picker-visit-tools summary {color:var(--accent,#315bb8)}
+.picker-visit-tools details {margin:0}
+.picker-visit-tools .game-history-list {max-height:14rem;overflow:auto}
+#today-platform {margin:.5rem 0;font-size:.875rem}

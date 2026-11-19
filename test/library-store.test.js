@@ -2,6 +2,8 @@ import {animeStyleLabel,inLibraryDomain,mediaLibraryDomain} from '../src/server/
 import {selectionModeTitle} from '../src/server/public/shared/selection-mode.js';
 import {createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl} from '../src/server/public/shared/selection-archive.js';
 import test from 'node:test';
+import {createMemoryView} from '../src/server/public/library/memory-view.js';
+import {createTasteMemory,TASTE_MEMORY_PREFIX} from '../src/server/public/shared/taste-memory.js';
 import assert from 'node:assert/strict';
 import {createLibraryStore,LIBRARY_KEY} from '../src/server/public/shared/library-store.js';
 import * as library from '../src/server/public/shared/library-store.js';
@@ -143,7 +145,7 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
   fetch:async(url,options)=>{requests.push({url,options});return transport?transport(url,options):{ok:true,json:async()=>catalog};},
   setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
  const source=(await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,'');
- Object.assign(context,{artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains});
+ Object.assign(context,{artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains,createTasteMemory,TASTE_MEMORY_PREFIX,createMemoryView});
  vm.runInContext(source,context);
  await new Promise(resolve=>setImmediate(resolve));
  const noteForm=(run,id,note,reason='')=>{const form=new Element({dataset:{run,id}});form.elements={note:{value:note},reason:{value:reason}};form.matches=selector=>selector==='[data-form="evening-reason"]';form.querySelector=()=>new Element({dataset:{fk:`evening-reason:${run}:${id}`}});return form;};

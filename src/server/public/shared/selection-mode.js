@@ -18,10 +18,13 @@ function card(depth,active){
  </button>`;
 }
 
-export function selectionModeChooser({intent,canResume,depth}){
- return `<div class="mode-heading"><h1 id="mode-heading" tabindex="-1">${intent==='switch'?'Изменить режим подбора':'Как будем подбирать?'}</h1></div>
+export function selectionModeChooser({intent,canResume,depth,resumeType,domain='game'}){
+ const resume=intent==='switch'?'Вернуться к подбору':resumeType==='result'?'Открыть прошлый результат':'Продолжить черновик';
+ const history=canResume&&intent==='new'&&resumeType!=='result'?'<a href="/library/?view=history">Прошлые результаты</a>':'';
+ const memory=intent==='switch'?'':`<a href="/library/?view=memory&amp;memory.domain=${encodeURIComponent(domain)}">Память предпочтений</a>`;
+ return `<div class="mode-heading"><h1 id="mode-heading" tabindex="-1">${intent==='switch'?'Изменить режим подбора':canResume?'Новый подбор':'Как будем подбирать?'}</h1></div>
   <div class="mode-card-grid">${card('standard',intent==='switch'?depth:null)}${card('deep',intent==='switch'?depth:null)}</div>
-  <div class="mode-footer">${canResume?'<button type="button" data-mode-resume>Вернуться к подбору</button>':'<a href="/pick/start/">Выбрать другой раздел</a>'}</div>`;
+  <div class="mode-footer">${canResume?`<button type="button" data-mode-resume>${resume}</button>`:'<a href="/pick/start/">Выбрать другой раздел</a>'}${history}${memory}</div>`;
 }
 
 export function checkpointHtml(checkpoint){
@@ -73,7 +76,7 @@ export function setupSelectionMode({client,render,switchDepth,onRestart,onEntryC
    document.body.classList.toggle('is-choosing-mode',choosing);
    if(choosing){
     if(!visible){
-     host.innerHTML=selectionModeChooser({intent,depth:client.state?.depth,canResume:intent==='switch'||intent==='new'&&!client.needsDepth});
+     host.innerHTML=selectionModeChooser({intent,depth:client.state?.depth,resumeType:screen?.type,domain:client.state?.domain,canResume:intent==='switch'||intent==='new'&&!client.needsDepth});
      host.querySelector('h1')?.focus({preventScroll:true});
      window.scrollTo({top:0,behavior:'instant'});
     }

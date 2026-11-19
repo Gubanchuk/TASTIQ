@@ -300,3 +300,20 @@ body.selection-design.product-page.library-page #library-app .library-undo{borde
  .library-page .shelf-filter-fields .library-search{flex-basis:100%}
  .library-page .shelf-filter-summary{display:block;margin:4px 0}
 }
+.library-memory{max-width:48rem;overflow-wrap:anywhere}
+.library-memory>p,.memory-sources>p{max-width:62ch;line-height:1.6}
+.memory-toolbar,.memory-actions{display:flex;align-items:end;flex-wrap:wrap;gap:10px}
+.memory-toolbar{margin-block:18px}
+.memory-toolbar .library-filter{min-width:min(100%,13rem)}
+.memory-editor,.memory-record{border:1px solid var(--brand-line,#cbd5e1);border-radius:14px;padding:16px;background:var(--brand-surface,#fff)}
+.memory-editor{display:grid;gap:14px;margin-block:16px}
+.memory-editor h3,.memory-record p{margin:0}
+.memory-editor label{display:grid;gap:6px;min-width:0}
+.memory-editor textarea{box-sizing:border-box;width:100%;font:inherit;color:inherit;line-height:1.5;border:1px solid var(--brand-line,#cbd5e1);border-radius:8px;padding:10px;resize:vertical}
+.memory-list{list-style:none;padding:0;margin:16px 0;display:grid;gap:10px}
+.memory-record{display:grid;gap:8px}
+.memory-wording{font-weight:600;white-space:pre-line}
+.memory-actions .library-button,.memory-toolbar .library-button{min-height:44px}
+.memory-sources{margin-block:18px}
+.memory-sources>summary{cursor:pointer;font-weight:600;padding-block:12px}
+.memory-error{color:#882222}

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createVisitReviews} from '../src/server/public/shared/visit-reviews.js';
+import {tasteMemoryPanelHtml} from '../src/server/public/shared/visit-reviews.js';
 import {historicalReviewEntries} from '../src/server/public/shared/selection-review.js';
 import {createConversationClient} from '../src/server/public/shared/conversation-client.js';
 import {feedbackContextPrompt} from '../src/ai/feedback-context.js';
@@ -73,4 +74,20 @@ test('a transport retry rebuilds the review payload after the last review is swi
  assert.ok(!Object.hasOwn(sent[0].qualityFeedback[0],'id'));
  ui.use('first-review',false);await client.retry();
  assert.ok(!Object.hasOwn(sent[1],'qualityFeedback'));assert.equal(feedbackContextPrompt(sent[1].qualityFeedback),'');
+});
+
+test('a per-visit review switch also suppresses its promoted reason; the preference manager is always reachable',()=>{
+ const client=createConversationClient({domain:'film',localStart:true,storage:null});client.chooseDepth('standard');
+ const rows=[{id:'from-review',domain:'film',revision:1,text:'Тихие истории <script>',source:{kind:'review',id:'first-review'}},
+  {id:'manual',domain:'film',revision:2,text:'Без спешки',source:{kind:'manual'}}];
+ const handlers={},root={addEventListener:(name,handler)=>handlers[name]=handler,querySelector:()=>null};
+ const memory={context:()=>rows,filterReviews:(_,reviews)=>reviews.filter(row=>row.id!=='first-review')};
+ const ctl=createVisitReviews({client,entries,root,memory,domain:'film'});
+ client.saveDraft('__skipReview:first-review',{text:'off'});
+ assert.deepEqual(ctl.tasteContext().map(row=>row.id),['manual']);
+ assert.deepEqual(ctl.context().map(row=>row.note),['second-review']);
+ handlers.change({target:{dataset:{visitMemory:'manual'},checked:false}});
+ assert.deepEqual(ctl.tasteContext(),[]);
+ assert.match(tasteMemoryPanelHtml('film',rows,()=>true),/Тихие истории &lt;script&gt;/);
+ assert.match(tasteMemoryPanelHtml('film',[],()=>true),/memory.domain=film/);
 });

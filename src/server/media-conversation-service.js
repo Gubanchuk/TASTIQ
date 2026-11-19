@@ -10,7 +10,8 @@ import {editionsOf,makeCatalog} from '../core/catalog.js';
 import {aiMediaConversation} from '../ai/media-conversation.js';
 import {aiPick} from '../ai/pick.js';
 import {criteriaOf,unconfirmedSavedCriteria} from '../ai/pick-constraints.js';
-import {feedbackContextOf} from '../ai/feedback-context.js';
+import {personalContextOf} from '../ai/feedback-context.js';
+import {pickerMemoryView,refreshMemoryPlan,rememberPlanMemory,restoreMemoryFactKeys} from '../ai/taste-context.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationMediaIdentity} from './conversation-media-identity.js';
@@ -127,7 +128,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     else card.feasibility.push({key:'request-conditions',status:'unknown',text:detail});
     return card;
   }
-  async function replace(s,who,more=false,targetIds=null) {
+  async function replace(s,who,personalContext,more=false,targetIds=null) {
     const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):targetIds??s.familiar.marked).filter(id=>before.some(card=>card.id===id)));
     if(!marked.size)return response(s);
     const legacy=projection(s);
@@ -153,7 +154,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
         local=true;out={picks};
       }else{
         spend(who);
-        try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,alreadyShown:neutralShown});}
+        try {out=await pick(catalogsFor(s),pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,alreadyShown:neutralShown});}
         catch {out={error:'Не удалось заменить варианты. Варианты и отметки сохранены.'};}
         log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
       }
@@ -182,8 +183,8 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     return response(s,{feedbackCarry:{retainedIds}});
   }
   async function handle(body,who) {
-    const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,domain);if(feedbackContext.length)who={...who,feedbackContext};
-    let s=initialState(body);
+    const personalContext=personalContextOf(body,catalog,domain);
+    let s=refreshMemoryPlan(initialState(body),personalContext.tasteMemory,body.action);
     s=remembered(body,s);
     if(s.savedSource&&!s.savedSource.ids.length&&!s.result)return response({...s,phase:'review',needsPlan:false,question:null},{
       error:'В списке сохранённых не осталось произведений этого раздела. Вернись в библиотеку или начни подбор по всему каталогу.',retryable:false});
@@ -209,7 +210,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     if(replacing){
       if(action.type==='replace_familiar'&&action.id!==undefined&&!s.familiar.marked.includes(action.id))throw bad('Сначала отметь этот вариант для замены.');
       const targets=action.type==='replace_familiar'&&action.id!==undefined?[action.id]:action.type==='retry'?s.replacement?.pendingIds:null;
-      return replace(s,who,more,targets);
+      return replace(s,who,personalContext,more,targets);
     }
     if(action.type==='undo_replacement')return response(s,{feedbackCarry:{retainedIds:cardsOf(s.result).filter(card=>cardsOf(beforeResult).some(old=>old.id===card.id)).map(card=>card.id)}});
     const planning=!final&&s.needsPlan&&['answer','correct','retry','continue'].includes(action.type);
@@ -219,11 +220,11 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       if(!permission.allowed){s=contextual(s);s.needsPlan=false;s.failedAction='plan';return response(s,{error:`${permission.reason??'Помощник недоступен'}. Можно ответить на вопросы и посмотреть предварительные варианты.`,retryable:false});}
       spend(who);
       const resolved=identities.resolve(s);let out;
-      try {out=await plan(catalogFor(s),s,{...(api?{api}:{}),knownTitles:resolved.knownTitles});}
+      try {out=await plan(catalogFor(s),s,{...(api?{api}:{}),tasteMemory:personalContext.tasteMemory,knownTitles:resolved.knownTitles});}
       catch {out={error:'Не удалось разобрать ответ. Он сохранён; попробуй ещё раз.'};}
       log('plan',s,out);let checked;
       if(!out.error) {
-        const bound=identities.bindFacts(s,out.proposal?.facts,resolved);
+        const bound=identities.bindFacts(s,restoreMemoryFactKeys(out.proposal?.facts,s),resolved);
         if(bound.error)checked={error:bound.error};
         else {
           const uncertainties=[...new Set([...(out.proposal?.uncertainties??[]),...resolved.ambiguous.map(m=>`Точная версия «${m.quote}» не определена: в этом разделе есть несколько разных произведений.`)])];
@@ -232,7 +233,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       }
       const error=out.error??checked?.error;
       if(error){s=contextual(s);s.failedAction='plan';s.needsPlan=true;return response(s,{error,retryable:out.retryable!==false});}
-      s=checked.state;s.failedAction=null;return response(s);
+      s=rememberPlanMemory(checked.state,personalContext.tasteMemory);s.failedAction=null;return response(s);
     }
     const legacy=projection(s);
     if(!permission.allowed)legacy.session=filmPreviewSession(s,legacy.session);
@@ -255,7 +256,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       s.uncertainties=[...new Set([...s.uncertainties,'Это предварительный подбор по доступным признакам: помощник сейчас недоступен, свободный ответ мог быть учтён не полностью.'])];return response(s);
     }
     spend(who);let out;
-    try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,previous:[]});}
+    try {out=await pick(catalogsFor(s),pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,previous:[]});}
     catch {out={error:'Не удалось получить рекомендации. Запрос сохранён.'};}
     log('pick',s,out);
     if(out.error)return response({...s,phase:'review',failedAction:'pick'},{error:out.error,retryable:out.retryable!==false});

@@ -11,9 +11,11 @@ import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createConversationClient} from '/shared/conversation-client.js';
-import {savedPickerSession,bindSavedSourceBanner,resumeArchiveUrl,savedResultLimits} from '/shared/saved-picker-session.js';
+import {savedPickerSession,bindSavedSourceBanner,resumeArchiveUrl,savedResultLimits,isArchivedResult} from '/shared/saved-picker-session.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
 import {createVisitReviews} from '/shared/visit-reviews.js';
+import {createTasteMemory,TASTE_MEMORY_PREFIX} from '/shared/taste-memory.js';
+import {GAME_PLATFORM_KEY,readUsualPlatform,saveUsualPlatform,gamePlatformLabels,applicableGamePlatform} from '/shared/game-platform.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
 import {createFeedbackDrafts} from '/shared/feedback-drafts.js';
 import {gameCardHtml,journeyStage,toggleGameLibrarySave,gameLibraryState} from '/pick/game/card-view.js';
@@ -51,13 +53,14 @@ const disclosures=new Map();
 const compactRequest=matchMedia('(max-width:760px)');
 const history=createGameHistory({storage});
 const library=createLibraryStore({storage});
+const memory=createTasteMemory({storage});
 let selectionReviews,visitReviews;
 const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
  return response.ok?response.json():{ok:false,status:response.status};
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();visitReviews?.refresh();}});
-const client=createConversationClient({localStart:true,selectionId:session.selection,savedSource:session.savedSource,savedListView:session.savedListView,fetch,storage:session.draftStorage,storageKey:session.key,archiveStorage:storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>visitReviews.context(),onChange:render});
-visitReviews=createVisitReviews({client,entries:()=>feedback.learningEntries('game')});
+const client=createConversationClient({localStart:true,selectionId:session.selection,archiveVisit:Boolean(session.archivedId),savedSource:session.savedSource,savedListView:session.savedListView,fetch,storage:session.draftStorage,storageKey:session.key,archiveStorage:storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>visitReviews.context(),tasteMemory:()=>visitReviews.tasteContext(),onChange:render});
+visitReviews=createVisitReviews({client,memory,domain:'game',entries:()=>feedback.learningEntries('game')});
 const selectionMode=setupSelectionMode({client,render,switchDepth:depth=>navigate({type:'setDepth',depth}),focusWorkspace:()=>focusPickerContent($('#main h1')),
  onEntryChoice(started){
   const url=new URL(location.href),token=url.searchParams.get('fromFilm');
@@ -170,7 +173,7 @@ function resultHtml(screen) {
  const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Отмеченные игры заменены. Остальные варианты сохранены.');
  const batchNotice=result?.top&&!replacement?resultBatchNotice(1+(result.alternatives??[]).length):'';
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
- return '<div class="game-result-heading"><h1>Рекомендации для тебя</h1>'
+ return '<div class="game-result-heading"><h1>'+(isArchivedResult(session,client.state)?'Подбор из истории':'Рекомендации для тебя')+'</h1>'
   +'<div class="game-result-browse">'+(currentFinalists(client.state,screen).length>=2?button('Сравнить два варианта','compare-results','aria-haspopup="dialog"'):'')
   +`<details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу. Часть пожеланий могла остаться без проверки.</p>':'')
@@ -185,6 +188,7 @@ function render() {
  syncResultDialog(client.state,screen,client.busy);
  if(session.savedSource)updateSourceBanner(client.state,library.all());
  if(selectionMode.draw(screen))return;
+ showUsualPlatform();
  const focus=preserveView();
  $('#back').disabled=client.busy||!screen?.canBack;
  syncSessionActions({busy:client.busy,canRestore:client.canRestorePrevious,canSwitch:!$('#selection-mode-control').hidden});
@@ -458,7 +462,13 @@ document.addEventListener('submit',event=>{
  if(form.dataset.form==='context')return void navigate({type:'context',platform:form.elements.platform.value,company:form.elements.company.value,partySize:form.elements.company.value==='group'?form.elements.partySize.value:form.elements.company.value==='friend'?'2':null});
  if(form.dataset.form==='answer'){
   const question=client.screen?.question,draft=persistAnswer();if(!question||!draft||!canSubmitQuestion(question,draft))return;
-  const action=answerAction(question,draft);if(action)return void navigate(action);return;
+  const action=answerAction(question,draft);
+  const toggle=$('#use-usual-platform');
+  if(action&&question.id==='direction'&&toggle.checked){
+   const platform=applicableGamePlatform(readUsualPlatform(storage),draft.text);
+   if(platform&&platform===toggle.value)action.platform=platform;
+  }
+  if(action)return void navigate(action);return;
  }
  if(form.dataset.form==='clarification'){
   const action=clarificationAction(form.dataset,client.state,form.elements.clarification.value);
@@ -478,6 +488,12 @@ document.addEventListener('keydown',event=>{
 });
 document.addEventListener('change',event=>{
  const el=event.target;
+ if(el.id==='usual-platform'){
+  const saved=saveUsualPlatform(storage,el.value);
+  $('#platform-save-status').textContent=saved?(el.value?'Платформа сохранена.':'В каждом новом подборе спросим платформу.'):'Не удалось сохранить настройку в браузере.';
+  client.saveDraft('__skipUsualPlatform',{text:''});showUsualPlatform();return;
+ }
+ if(el.id==='use-usual-platform'){client.saveDraft('__skipUsualPlatform',{text:el.checked?'':'off'});showUsualPlatform();return;}
  if(el.matches('[data-history-block]')){
   const id=el.dataset.historyBlock,card=[client.state?.result?.top,...(client.state?.result?.alternatives??[])].find(card=>card?.id===id);
   if(!history.all().some(record=>record.id===id)&&card)history.remember(card,{exposure:'played'});
@@ -489,7 +505,7 @@ document.addEventListener('change',event=>{
 });
 document.addEventListener('input',event=>{
  const el=event.target;
- if(el.id==='answer-text'){const draft=persistAnswer();if(draft?.text.trim()&&draft.kind!=='answer'){draft.kind='answer';saveCurrentDraft(client.screen.question,draft);}if(draft)paintSelections(draft);return;}
+ if(el.id==='answer-text'){const draft=persistAnswer();if(draft?.text.trim()&&draft.kind!=='answer'){draft.kind='answer';saveCurrentDraft(client.screen.question,draft);}if(draft)paintSelections(draft);showUsualPlatform();return;}
  if(el.name==='clarification'){const form=el.closest('form');client.saveDraft(form.dataset.key,{text:el.value});syncEditorSubmit(form,client.busy);return;}
  if(el.name==='correction'){client.saveDraft('__correction',{text:el.value});syncEditorSubmit(el.closest('form'),client.busy);return;}
  const form=el.closest('[data-form="evening-reason"]');if(form)feedbackDrafts.set(`${form.dataset.run}:${form.dataset.id}`,{reason:form.elements.reason.value,note:form.elements.note.value});
@@ -509,7 +525,20 @@ document.addEventListener('input',event=>{
 document.addEventListener('toggle',event=>{const el=event.target;if(el.matches('[data-feedback-details]'))feedbackOpen.set(`${el.dataset.run}:${el.dataset.id}`,el.open);},true);
 bindResultArtwork(document);
 window.addEventListener('online',()=>void feedback.flush());
-window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());else if(event.key===null||event.key==='tastiq.site.library'||event.key?.endsWith(':tastiq.site.library')||event.key?.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
+function showUsualPlatform(){
+ const platform=readUsualPlatform(storage),panel=$('#today-platform'),toggle=$('#use-usual-platform'),select=$('#usual-platform');
+ select.value=platform??'';select.disabled=client.busy;
+ panel.hidden=!platform||client.screen?.question?.id!=='direction';
+ if(panel.hidden)return;
+ toggle.value=platform;
+ const text=currentDraft(client.screen.question).text;
+ const applicable=applicableGamePlatform(platform,text);
+ toggle.checked=Boolean(applicable)&&client.draft('__skipUsualPlatform').text!=='off';
+ toggle.disabled=!applicable||client.busy;
+ panel.querySelector('span').textContent='Сегодня играю на '+gamePlatformLabels[platform];
+ $('#platform-clarification').hidden=Boolean(applicable);
+}
+window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY||event.key?.endsWith(':'+FEEDBACK_KEY))void feedback.refresh().then(()=>{refreshFeedback();visitReviews.refresh();});else if(event.key===null||event.key.includes(TASTE_MEMORY_PREFIX)||event.key.endsWith(GAME_PLATFORM_KEY)||event.key==='tastiq.site.library'||event.key?.endsWith(':tastiq.site.library')||event.key?.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
 compactRequest.addEventListener('change',event=>{const details=$('.game-request-details');if(details){details.open=!event.matches;disclosures.set('request-details',details.open);}});
 render();
 if(!selectionMode.choosing)await client.start();

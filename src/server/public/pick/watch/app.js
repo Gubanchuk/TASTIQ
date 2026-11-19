@@ -14,6 +14,7 @@ import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.j
 import {createConversationClient} from '/shared/conversation-client.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
 import {createVisitReviews} from '/shared/visit-reviews.js';
+import {createTasteMemory,TASTE_MEMORY_PREFIX} from '/shared/taste-memory.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
 import {createFeedbackDrafts} from '/shared/feedback-drafts.js';
 import {mediaCardHtml as gameCardHtml,toggleMediaLibrarySave as toggleGameLibrarySave,mediaLibraryState as gameLibraryState} from '/pick/watch/card-view.js';
@@ -26,7 +27,7 @@ import {questionDraftKey,questionScreenKey,planLegacyQuestionDraftMigration,prep
 import {createLibraryStore} from '/shared/library-store.js';
 import {aiErrorMessage,replacementNotice} from '/shared/ai-error-message.js';
 import {bindResultArtwork} from '/shared/card-artwork.js';
-import {savedPickerSession,bindSavedSourceBanner,resumeArchiveUrl,savedResultLimits} from '/shared/saved-picker-session.js';
+import {savedPickerSession,bindSavedSourceBanner,resumeArchiveUrl,savedResultLimits,isArchivedResult} from '/shared/saved-picker-session.js';
 
 const requestedDomain=new URLSearchParams(location.search).get('domain');
 const domain=['film','series','cartoon','anime'].includes(requestedDomain)?requestedDomain:'film';
@@ -60,14 +61,15 @@ const disclosures=new Map();
 const compactRequest=matchMedia('(max-width:760px)');
 const history=createMediaHistory(domain,{storage});
 const library=createLibraryStore({storage});
+const memory=createTasteMemory({storage});
 const showFilmToGame=bindFilmToGame($('#film-to-game'),tabStorage);
 let selectionReviews,visitReviews;
 const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
  return response.ok?response.json():{ok:false,status:response.status};
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();visitReviews?.refresh();}});
-const client=createConversationClient({localStart:true,selectionId:session.selection,savedSource:session.savedSource,savedListView:session.savedListView,fetch,domain,storage:session.draftStorage,storageKey:CONVERSATION_KEY,archiveStorage:storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>visitReviews.context(),onChange:render});
-visitReviews=createVisitReviews({client,entries:()=>feedback.learningEntries(domain)});
+const client=createConversationClient({localStart:true,selectionId:session.selection,archiveVisit:Boolean(session.archivedId),savedSource:session.savedSource,savedListView:session.savedListView,fetch,domain,storage:session.draftStorage,storageKey:CONVERSATION_KEY,archiveStorage:storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>visitReviews.context(),tasteMemory:()=>visitReviews.tasteContext(),onChange:render});
+visitReviews=createVisitReviews({client,memory,domain,entries:()=>feedback.learningEntries(domain)});
 const selectionMode=setupSelectionMode({client,render,switchDepth:depth=>navigate({type:'setDepth',depth}),focusWorkspace:()=>focusPickerContent($('#main h1')),
  onRestart(){persistAnswer();activeEvening=null;activeEveningDialogue=null;observedKey=null;localNotice='';pendingBack=null;currentRequest='resume';}
 });
@@ -176,7 +178,7 @@ function resultHtml(screen) {
  const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Отмеченные варианты заменены. Остальные варианты сохранены.');
  const batchNotice=result?.top&&!replacement?resultBatchNotice(1+(result.alternatives??[]).length):'';
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
- return '<div class="game-result-heading"><h1>Рекомендации для тебя</h1>'
+ return '<div class="game-result-heading"><h1>'+(isArchivedResult(session,client.state)?'Подбор из истории':'Рекомендации для тебя')+'</h1>'
   +'<div class="game-result-browse">'+(currentFinalists(client.state,screen).length>=2?button('Сравнить два варианта','compare-results','aria-haspopup="dialog"'):'')
   +`<details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу. Часть пожеланий могла остаться без проверки.</p>':'')
@@ -530,8 +532,8 @@ document.addEventListener('toggle',event=>{const el=event.target;if(el.matches('
 bindResultArtwork(document);
 window.addEventListener('online',()=>void feedback.flush());
 window.addEventListener('storage',event=>{
- if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());
- else if(event.key===null||event.key==='tastiq.site.library'||event.key?.endsWith(':tastiq.site.library')||event.key?.startsWith(GAME_HISTORY_PREFIX)
+ if(event.key===FEEDBACK_KEY||event.key?.endsWith(':'+FEEDBACK_KEY))void feedback.refresh().then(()=>{refreshFeedback();visitReviews.refresh();});
+ else if(event.key===null||event.key.includes(TASTE_MEMORY_PREFIX)||event.key==='tastiq.site.library'||event.key?.endsWith(':tastiq.site.library')||event.key?.startsWith(GAME_HISTORY_PREFIX)
    ||domain==='anime'&&event.key?.startsWith(mediaHistoryPrefix('cartoon'))){history.refresh();render();}
 });
 compactRequest.addEventListener('change',event=>{const details=$('.game-request-details');if(details){details.open=!event.matches;disclosures.set('request-details',details.open);}});

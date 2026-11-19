@@ -3,6 +3,7 @@ import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
 import { normalizeMediaConversation } from '../core/media-conversation.js';
 import { selectionDecisionInstructions,selectionDecisionSchema } from './selection-decision.js';
+import {memoryModelView,planningMemoryRule} from './taste-context.js';
 
 const object = properties => ({type:'object',properties,required:Object.keys(properties),additionalProperties:false});
 const string = maxLength => ({type:'string',maxLength});
@@ -35,12 +36,13 @@ Do not invent age suitability, episode runtime, a completed status, season count
 An explicit request for an animated series ("Хочу анимационный сериал") requires context.format episodic with its exact source quote; an explicit single film requires movie. Merely recording format.animation as a fact is not the same as preserving the requested movie/series format. Do not infer format from a reference title, past viewing, a hypothetical or a choice that explicitly allows either. Removing a time cap must not remove an independently supported format.
 Ask one coherent neutral question at a time, based on what materially remains unclear. No fixed checklist, mandatory number of rounds or repeated anchor quiz. A broad genre alone usually needs one useful clarification about desired experience; a sufficiently specific own answer may go straight to provisional review. Familiar examples are optional. Ask what worked, without supplying assumed properties. Do not repeat topics in skippedQuestions or treat them as evidence. Do not repeat an answered semantic question unless the answer was none or a correction reopened it. Buttons are optional, at most6 distinct options, multiple true when answers can coexist. Free text always remains available. Include controls ['unknown','indifferent','none']. Use stable semantic question IDs and a short why tied to this person's wish. When action review, question null; when question, provide the question. Review is a correctable understanding, never picks. Return exactly the requested JSON schema.`;
 
-function inputFor(catalog,state,knownTitles) {
+function inputFor(catalog,state,knownTitles,tasteMemory) {
   if(!catalog?.dict?.features?.length||!['film','series','cartoon','anime'].includes(catalog.domain?.id)||!Array.isArray(knownTitles)||knownTitles.length>64
     ||knownTitles.some(t=>!t||typeof t.id!=='string'||!t.id||t.id.length>100||typeof t.name!=='string'||!t.name||t.name.length>300))return null;
   try {
-    const s=normalizeMediaConversation(state,catalog.domain.id);
+    const s=memoryModelView(normalizeMediaConversation(state,catalog.domain.id),tasteMemory);
     const input=JSON.stringify({domain:s.domain,id:s.id,revision:s.revision,mode:s.mode,phase:s.phase,context:s.context,contextEvidence:s.contextEvidence,
+      ...(tasteMemory.length?{tasteMemory}:{}),
       ...(s.depth?{depth:s.depth,offeredQuestions:s.questionOffers.length}:{}),
       turns:s.turns.map(({id,question,selected,text,kind,answer,superseded,supersedes,context,contextQuotes})=>({id,question,selected,text,kind,answer,...(superseded?{superseded:true}:{}),...(supersedes?{supersedes}:{}),...(context?{context,contextQuotes}:{})})),
       facts:s.facts,summary:s.summary,uncertainties:s.uncertainties,retractions:s.retractions,question:s.question,sessionTime:s.sessionTime,
@@ -67,14 +69,15 @@ function matches(value,schema) {
     &&schema.required.every(k=>Object.hasOwn(value,k)&&matches(value[k],schema.properties[k]));
   return false;
 }
-export async function aiMediaConversation(catalog,state,{api=requestResponse,knownTitles=[],maxCostUsd=Infinity}={}) {
+export async function aiMediaConversation(catalog,state,{api=requestResponse,knownTitles=[],tasteMemory=[],maxCostUsd=Infinity}={}) {
   if(Array.isArray(knownTitles)&&knownTitles.length>64)return {error:'Запрос не отправлен: в разговоре больше 64 разных названий. Уточни меньший список.',notRequested:true,retryable:false};
-  const input=inputFor(catalog,state,knownTitles);
+  const input=inputFor(catalog,state,knownTitles,tasteMemory);
   if(input===null)return {error:'Запрос не отправлен: раздел или контекст разговора некорректен либо превышает допустимый размер.',notRequested:true,retryable:false};
   const features=catalog.dict.features,schema=schemaFor(features,state.depth),request={model:AI.model,max_output_tokens:6500,reasoning:{effort:AI.effort},text:{format:{type:'json_schema',name:'tastiq_media_conversation',strict:true,schema}},
     instructions:`${INSTRUCTIONS}\nMode ${state.mode}: ${state.mode==='free'?'the model controls conversation sequencing within the same evidence contract.':'guided invariants require one useful clarification after a broad genre unless the answer is already specific. Explicitly selected wishes and avoidances carry the same meaning as typed words; do not repeat a resolved question merely because the user selected buttons.'}`,
     input,store:false,service_tier:'default'};
   if(state.depth)request.instructions+=`\n${selectionDecisionInstructions(state.depth)}`;
+  if(tasteMemory.length)request.instructions+='\n'+planningMemoryRule;
   if(state.domain==='anime')request.instructions+='\nPreserve the requested episode scope exactly. A starting episode, an episode tonight, and a guarantee about every episode are different. Never expand the first or tonight to every episode in the summary.';
   if(maxCostUsd!==Infinity) {
     const reserve=reserveCost(request);if(!Number.isFinite(maxCostUsd)||maxCostUsd<0||reserve==null||reserve>maxCostUsd)return {error:'Запрос не отправлен: оставшийся бюджет недостаточен или цена модели неизвестна.',notRequested:true,retryable:false};

@@ -13,6 +13,7 @@ import { reserveCost } from './usage.js';
 import { verifiedOriginalYear } from '../core/title-identity.js';
 import {criteriaOf,constraintSchema,constraintInstructions,validateConstraintChecks,unconfirmedSavedCriteria} from './pick-constraints.js';
 import {feedbackContextPrompt,feedbackContextRule} from './feedback-context.js';
+import {tasteMemoryRule} from './taste-context.js';
 
 export { AI };
 
@@ -128,7 +129,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
  * Asks the model for four picks. Returns { picks: [{ id, reason, caveat, likelySeen, own }], understood, ms, usage } or
  * { error } when the engine's picks should stay.
  */
-export async function aiPick(catalogs, state, { wish = '', previous = [], alreadyShown = [], feedbackContext=[], api = requestResponse, maxCostUsd = Infinity } = {}) {
+export async function aiPick(catalogs, state, { wish = '', previous = [], alreadyShown = [], feedbackContext=[], tasteMemory=[], api = requestResponse, maxCostUsd = Infinity } = {}) {
   const catalog = catalogs[state?.domain];
   if (!catalog) return { error: 'нет домена' };
   const adaptive=Boolean(state.conversation),criteria=criteriaOf(state);
@@ -160,7 +161,8 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
     ? `Сначала проверь список и для его вариантов скопируй id. Если в списке мало подходящих, предложи другие произведения для поиска в каталоге. Укажи оригинальное название и год, оставь id пустым. Уже показанные произведения повторять нельзя.`
     : `Бери из списка (id копируй из строки кандидата) или не больше ${ownLimit} своих (id пустой, название и год).`;
   const animeSources=state.domain==='anime'?' Из подходящих кандидатов предпочитай варианты с id. Для своего варианта без id укажи распространённое английское название в поле title. Если знаешь только японское название, используй оригинальное написание. Используй латинскую транслитерацию, только если других вариантов названия не знаешь.':'';
-  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} ${sources}${animeSources}`;
+  const memory = tasteMemory.length ? '\n\nЛичная память по этому разделу:\n' + JSON.stringify({tasteMemory}) : '';
+  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}${memory}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} ${sources}${animeSources}`;
   const started = Date.now();
   const schema=constraintSchema(SCHEMA,criteria);
   const outputSchema=adaptive?{...schema,properties:{...schema.properties,picks:{...schema.properties.picks,maxItems:requestCount}}}:schema;
@@ -169,7 +171,7 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
       max_output_tokens: AI.maxOutputTokens,
       reasoning: { effort: AI.effort },
       text: { format: { type: 'json_schema', name: 'tastiq_picks', strict: true, schema: outputSchema } },
-      instructions: systemFor(state)+constraintInstructions(criteria)+(feedbackContext.length?'\n'+feedbackContextRule:''),
+      instructions: systemFor(state)+constraintInstructions(criteria)+(feedbackContext.length?'\n'+feedbackContextRule:'')+(tasteMemory.length?'\n'+tasteMemoryRule:''),
       input: content,
       store: false,
       service_tier: 'default',

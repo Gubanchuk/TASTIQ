@@ -2,6 +2,8 @@ import {animeStyleLabel,inLibraryDomain,mediaLibraryDomain} from '/shared/anime-
 import {selectionModeTitle} from '/shared/selection-mode.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '/shared/library-store.js';
+import {createTasteMemory,TASTE_MEMORY_PREFIX} from '/shared/taste-memory.js';
+import {createMemoryView} from './memory-view.js';
 import {createSavedSource,matchesLibraryQuery,savedPickerDomains} from '/shared/saved-source.js';
 import {artworkImageHtml,retryArtworkImage} from '/shared/card-artwork.js';
 import {collectionRecords} from '/shared/library-collection.js';
@@ -17,7 +19,7 @@ const $=selector=>document.querySelector(selector);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const DOMAINS={game:'Игры',film:'Фильмы',series:'Сериалы',cartoon:'Мультфильмы',anime:'Аниме'};
 const NOUNS={game:'игра',film:'фильм',series:'сериал',cartoon:'мультфильм',anime:'аниме'};
-const VIEWS={saved:'Сохранённое',liked:'Понравилось',history:'Подборы',all:'Все отметки',evenings:'Отзывы о рекомендациях'};
+const VIEWS={saved:'Сохранённое',liked:'Понравилось',history:'Подборы',all:'Все отметки',evenings:'Отзывы о рекомендациях',memory:'Память'};
 const isCollection=()=>['saved','liked','all'].includes(state.view);
 const shortShelfLimit=8;
 const EXPOSURES={played:'Уже играл',started:'Начал',finished:'Прошёл',paused:'Отложил'};
@@ -28,6 +30,7 @@ let storage,handoffStorage;
 try{storage=qaStorage(localStorage);}catch{/* keep this visit in memory */}
 try{handoffStorage=qaStorage(sessionStorage);}catch{/* list launch will explain the storage limit */}
 const library=createLibraryStore({storage});
+const tasteMemory=createTasteMemory({storage});
 const archive=createSelectionArchive({storage});
 const familiar=createGameHistory({storage});
 const mediaHistories=Object.fromEntries(['film','series','cartoon','anime'].map(domain=>[domain,createMediaHistory(domain,{storage})]));
@@ -44,6 +47,12 @@ const viewFilters=Object.fromEntries(Object.keys(VIEWS).map(view=>[view,defaultF
 const activeFilters=()=>viewFilters[state.view];
 const eveningStatuses={all:'Любой',chosen:'Выбрано',started:'Начато',reviewed:'Есть отзыв',draft:'Есть черновик'};
 const state={view:'saved',limit:24,undo:null};
+const memoryView=createMemoryView({memory:tasteMemory,library,feedback,domains:DOMAINS,escape:esc,render,notice,fetchLabels:async()=>{
+ const response=await fetch('/api/meta');
+ if(!response.ok)throw Error('Справочник недоступен');
+ const {domains}=await response.json();
+ return Object.fromEntries(Object.entries(domains).map(([id,section])=>[id,section.labels]));
+}});
 function readNavigation(){
  const params=new URLSearchParams(globalThis.location?.search??'');
  const view=params.get('view');state.view=Object.hasOwn(VIEWS,view)?view:'saved';
@@ -242,21 +251,21 @@ function eveningsView(all) {
  return (item?`<div class="library-review-scope"><p>Отзывы: ${esc(title(scope[0]?.card??records().find(row=>key(row)===item)??{title:'Выбранное произведение'}))}</p>${button('Все отзывы','all-reviews')}</div>`:'')+filters()+resultCount(rows.length,scope.length)+(entries?`<div class="library-evenings">${entries}</div>`:noMatches());
 }
 function render({feedbackFocus,focus:requestedFocus}={}) {
- const active=document.activeElement,focus=requestedFocus??active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active instanceof HTMLInputElement?[active.selectionStart,active.selectionEnd]:null;
+ const active=document.activeElement,focus=requestedFocus??active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active?.tagName==='TEXTAREA'||active instanceof HTMLInputElement&&active.type==='search'?[active.selectionStart,active.selectionEnd]:null;
  const evenings=eveningRecords(),past=historyRecords();
  const rows=records(),counts={saved:rows.filter(row=>row.saved).length,liked:rows.filter(row=>row.rating==='liked').length,all:rows.length,history:past.length,evenings:evenings.length};
- const viewButton=(view,label=VIEWS[view])=>`<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}"${state.view===view?' aria-current="page"':''}>${label}<span>${counts[view]}</span></button>`;
- $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${['saved','liked','history','all'].map(view=>viewButton(view)).join('')}</nav>`
+ const viewButton=(view,label=VIEWS[view])=>`<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}"${state.view===view?' aria-current="page"':''}>${label}${view==='memory'?'':'<span>'+counts[view]+'</span>'}</button>`;
+ $('#library-app').innerHTML=`<nav class="library-views" aria-label="В библиотеке">${['saved','liked','history','all','memory'].map(view=>viewButton(view)).join('')}</nav>`
   +(['history','evenings'].includes(state.view)?`<div class="library-secondary-nav">${viewButton('evenings')}</div>`:'')
   +(state.view==='evenings'?`<h2 class="library-view-title">${VIEWS.evenings}</h2>`:'')
   +(!library.persistent||state.view==='history'&&!archive.persistent||!familiar.persistent||Object.values(mediaHistories).some(h=>!h.persistent)||state.view==='evenings'&&(!feedback.persistent||!feedbackDrafts.persistent)?'<p class="library-storage-note" role="status">Браузер не разрешил сохранить часть изменений. Они останутся в этом окне до его закрытия.</p>':'')
-  +(isCollection()?board():undoLine()+(state.view==='history'?historyView(past):eveningsView(evenings)))
+  +(state.view==='memory'?memoryView.html(activeFilters().domain):isCollection()?board():undoLine()+(state.view==='history'?historyView(past):eveningsView(evenings)))
   +'<p class="library-footnote">Библиотека хранится в этом браузере.</p>';
  $('#library-app').setAttribute('aria-busy','false');
  const target=focus?document.querySelector(`[data-focus="${CSS.escape(focus)}"]`):feedbackKey?document.querySelector(`[data-fk="${CSS.escape(feedbackKey)}"]`):id?document.getElementById(id):null;
  initCustomSelects(document);
  const fallback=(focus||feedbackKey)?$(`[data-focus="view:${state.view}"]`):null;
- focusCustomSelect(target??fallback,{preventScroll:true});if(target instanceof HTMLInputElement&&selection&&target.type==='search')target.setSelectionRange(...selection);
+ focusCustomSelect(target??fallback,{preventScroll:true});if(selection&&target?.setSelectionRange&&(target.type==='search'||target.tagName==='TEXTAREA'))target.setSelectionRange(...selection);
 }
 function rowFor(el){return records().find(row=>row.domain===el.dataset.domain&&row.id===el.dataset.id);}
 function toggleSaved(row) {
@@ -309,7 +318,9 @@ function editEvening(el,action) {
 }
 document.addEventListener('click',event=>{
  const el=event.target instanceof Element?event.target.closest('button[data-act]'):null;if(!el)return;
- const act=el.dataset.act,row=rowFor(el);
+ const act=el.dataset.act;
+ if(state.view==='memory'&&act.startsWith('memory-')){void memoryView.act(el,activeFilters().domain);return;}
+ const row=rowFor(el);
  if(act==='saved-source-domain'&&state.view==='saved'&&savedPickerDomains.includes(el.dataset.domain)){
   activeFilters().domain=el.dataset.domain;state.limit=24;writeNavigation(true);
   render({focus:'saved-source-start'});void enrichCovers();return;
@@ -350,6 +361,10 @@ document.addEventListener('click',event=>{
 });
 document.addEventListener('change',event=>{
  const el=event.target;
+ if(el.id==='memory-domain'&&state.view==='memory'){
+  memoryView.close();activeFilters().domain=Object.hasOwn(DOMAINS,el.value)?el.value:'all';writeNavigation();render({focus:'memory-domain'});return;
+ }
+ if(state.view==='memory'&&el.closest?.('[data-form="memory"]')){memoryView.input(el);return;}
  if(el.id==='domain-filter')activeFilters().domain=el.value;
  else if(el.id==='reaction-filter'&&state.view==='all')activeFilters().reaction=el.value;
  else if(el.id==='status-filter'&&state.view==='evenings')activeFilters().status=el.value;
@@ -360,16 +375,20 @@ document.addEventListener('change',event=>{
 });
 document.addEventListener('input',event=>{
  const el=event.target;
+ if(state.view==='memory'&&el.closest?.('[data-form="memory"]')){memoryView.input(el);return;}
  if(el.id==='find-title'){activeFilters().query=el.value;state.limit=24;writeNavigation();render();void enrichCovers();}
  const form=el.closest?.('[data-form="evening-reason"]');if(form)feedbackDrafts.set(`${form.dataset.run}:${form.dataset.id}`,{reason:form.elements.reason.value,note:form.elements.note.value});
 });
 document.addEventListener('submit',event=>{
- const form=event.target;if(!form.matches('[data-form="evening-reason"]'))return;event.preventDefault();
+ const form=event.target;
+ if(state.view==='memory'&&form.matches('[data-form="memory"]')){event.preventDefault();void memoryView.submit(form);return;}
+ if(!form.matches('[data-form="evening-reason"]'))return;event.preventDefault();
  const submit=form.querySelector('button[type="submit"]');submit.dataset.run=form.dataset.run;submit.dataset.id=form.dataset.id;
  void editEvening(submit,{type:'explain',reason:form.elements.reason.value||null,note:form.elements.note.value});
 });
 document.addEventListener('toggle',event=>{
  const el=event.target;
+ if(el.hasAttribute?.('data-memory-sources')&&el.isConnected)memoryView.rememberSources(el.open);
  if(el.dataset.detail){el.open?openDetails.add(el.dataset.detail):openDetails.delete(el.dataset.detail);}
  if(el.matches('[data-feedback-details]')){const k=`feedback:${el.dataset.run}:${el.dataset.id}`;el.open?openDetails.add(k):openDetails.delete(k);}
 },true);
@@ -385,6 +404,7 @@ document.addEventListener('load',event=>{
  if(image instanceof HTMLImageElement&&image.naturalWidth>0)image.closest('.library-cover')?.classList.add('is-loaded');
 },true);
 addEventListener('storage',event=>{
+ if(state.view==='memory'&&event.key?.includes(TASTE_MEMORY_PREFIX))render();
  if(event.key===LIBRARY_KEY||event.key===SELECTION_ARCHIVE_KEY||event.key?.startsWith(GAME_HISTORY_PREFIX)||event.key?.startsWith(MEDIA_HISTORY_PREFIX)||event.key===null){render();void enrichCovers();}
  if(event.key===FEEDBACK_KEY||event.key===null)void feedback.refresh().then(()=>{render();});
  if(event.key===FEEDBACK_DRAFTS_KEY)render();
