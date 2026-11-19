@@ -16,7 +16,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  const allowed=savedSource?new Set(savedSource.ids):null;
  function scoped(value,requestedSource=null){
   const state=value?.state;
-  if(!state||(state.domain??'game')!==domain)return false;
+  if(!state||(state.domain??'game')!==domain||value.screen?.domain&&value.screen.domain!==domain)return false;
   if(!allowed)return !state.savedSource;
   const source=state.savedSource;
   if(source?.version!==1||source.domain!==domain||!Array.isArray(source.ids)||!source.ids.every(id=>allowed.has(id)))return false;
@@ -43,9 +43,14 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  const archive=createSelectionArchive({storage:archiveStorage});
  const selected=selectionId?archive.get(selectionId,domain):null;
  if(scoped(selected)&&JSON.stringify(snapshot?.state)!==JSON.stringify(selected.state)){if(snapshot)previous={snapshot:clone(snapshot),drafts:clone(drafts),fromArchive:true};snapshot=selected;drafts={};correctionCheckpoint=null;}
+ function initialSnapshot(depth,restart=false){
+  const prior=snapshot?.state;
+  const initial=initialConversationSnapshot({domain,mode:prior?.mode??mode,depth,savedSource:prior?.savedSource??savedSource,requireDirection:true,...(!restart&&prior?{id:prior.id}:{})});
+  if(prior?.savedSourceKey)initial.state.savedSourceKey=prior.savedSourceKey;
+  return initial;
+ }
  if(localStart&&(!snapshot||pristine(snapshot))){
-  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth:snapshot?.state.depth,savedSource:snapshot?.state.savedSource??savedSource,requireDirection:true,...(snapshot?{id:snapshot.state.id}:{})});
-  if(snapshot?.state.savedSourceKey)initial.state.savedSourceKey=snapshot.state.savedSourceKey;
+  const initial=initialSnapshot(snapshot?.state.depth);
   // v3 draft keys include question wording and options. Upgrade a pristine entry
   // without hiding words or genre choices written before quick wishes existed.
   if(snapshot?.screen?.question){
@@ -104,7 +109,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
   chooseDepth(depth,{restart=false}={}){
    if(!localStart||busy||!isSelectionDepth(depth)||(!restart&&!pristine(snapshot)))return false;
    if(restart&&snapshot){previous={snapshot:clone(snapshot),drafts:clone(drafts)};drafts={};correctionCheckpoint=null;}
-   snapshot=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth,savedSource:snapshot?.state.savedSource??savedSource,requireDirection:true,...(!restart&&snapshot?{id:snapshot.state.id}:{})});
+   snapshot=initialSnapshot(depth,restart);
    generation++;error=null;retryBody=null;save();notify();return true;
   },
   get canRestoreCorrection(){return Boolean(correctionCheckpoint&&correctionCheckpoint.snapshot.state.id===snapshot?.state?.id&&correctionCheckpoint.snapshot.state.revision!==snapshot?.state?.revision);},

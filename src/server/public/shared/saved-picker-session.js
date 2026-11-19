@@ -16,6 +16,7 @@ export function savedPickerSession({params,domain,storage,session}){
  const key=base+(token!==null?'.saved.':'.archive.')+handle;
  let draft;
  try{draft=JSON.parse(session?.getItem(key)??'null')?.snapshot;}catch{/* the archive or library handoff can still be opened */}
+ if(draft&&((draft.state?.domain??'game')!==domain||draft.screen?.domain&&draft.screen.domain!==domain))draft=null;
  const valid=source=>source?.version===1&&source.domain===domain&&Array.isArray(source.ids)&&source.ids.every(id=>typeof id==='string'&&/^[A-Za-z0-9:_-]{1,80}$/.test(id));
  const handoff=token!==null?readSavedSourceView(session,token,domain):null;
  const savedListView=handoff??archived?.savedListView??draft?.savedListView;
