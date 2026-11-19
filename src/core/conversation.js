@@ -3,7 +3,8 @@ import {initialConversation,initialDirectionQuestion,gameGenreDirections as dire
 import { initialState } from './dialogue.js';
 import { PLATFORMS } from './sieves.js';
 import { editionsOf } from './catalog.js';
-import { validateSessionTime,isSessionTimeFact,isSessionTimeSourceRetracted } from './session-time.js';
+import { validateSessionTime,isSessionTimeFact,isSessionTimeSourceRetracted,savedGameSessionTime,requiresVerifiedGameSession,clearsSavedGameTime } from './session-time.js';
+import { invalidSavedSource,normalizeSavedSource,savedSourceKey } from './saved-source.js';
 import { SELECTION_TURN_LIMIT,normalizeSelectionInterview,restartSelectionDepth,changeSelectionDepth,interviewQuestionFields,
   canOfferInterviewQuestion,rememberInterviewQuestion,skippedInterviewQuestions,chooseInterviewQuestion,interviewCheckpoint,reviewAtInterviewCapacity } from './selection-dialogue.js';
 
@@ -68,8 +69,10 @@ function normalizeFactRemovalUndo(value) {
 const captureFactRemovalUndo=s=>normalizeFactRemovalUndo({facts:s.facts,retractions:s.retractions,summary:s.summary,result:s.result,
   phase:s.phase,question:s.question,provisional:s.provisional,needsPlan:s.needsPlan,marked:s.familiar.marked,familiarUndo:s.familiar.undo,replacement:s.replacement});
 
-export function newConversation({id,mode,requireDirection,depth}={}) {
-  return initialConversation({id:clean(id,100)||undefined,mode,requireDirection,depth});
+export function newConversation({id,mode,requireDirection,depth,savedSource}={}) {
+  const state=initialConversation({id:clean(id,100)||undefined,mode,requireDirection,depth});
+  if(savedSource!==undefined){state.savedSource=normalizeSavedSource(savedSource,'game');state.savedSourceKey=savedSourceKey(state.savedSource);}
+  return state;
 }
 
 export function normalizeConversation(input) {
@@ -79,6 +82,13 @@ export function normalizeConversation(input) {
     || !Array.isArray(input.retractions) || input.retractions.length>64) throw failure('Сохранённый разговор не удалось прочитать. Начни новый подбор.');
   if(input.turns.some(t=>!t?.id || typeof t.answer!=='string' || t.answer.length>2400 || !t.question?.id)) throw failure('Некорректный ответ в истории разговора');
   const s=structuredClone(input);
+  if(s.domain!=null&&s.domain!=='game')throw failure('Сохранённый подбор относится к другому разделу.');
+  if(Object.hasOwn(s,'savedSource')||Object.hasOwn(s,'savedSourceKey')){
+    s.savedSource=normalizeSavedSource(s.savedSource,'game');
+    const key=savedSourceKey(s.savedSource);
+    if(s.savedSourceKey!==key && (Object.hasOwn(s,'savedSourceKey')||s.revision||s.phase!=='direction'||s.turns.length||s.result))throw invalidSavedSource();
+    s.savedSourceKey=key;
+  }
   normalizeSelectionInterview(s,failure);
   s.skippedQuestions=Array.isArray(s.skippedQuestions)?s.skippedQuestions.filter(id=>typeof id==='string'&&id.length<=100).slice(s.depth?-64:-12):[];
   s.browseSeen=familiarIds(s.browseSeen);s.familiar=normalizeFamiliar(s.familiar);s.replacement=normalizeReplacement(s.replacement);
@@ -86,7 +96,10 @@ export function normalizeConversation(input) {
   s.mode=s.mode==='free'?'free':'guided';
   s.summary=clean(s.summary,1000); s.uncertainties=(s.uncertainties??[]).map(x=>clean(x,240)).slice(0,8);
   const checkedTime=validateSessionTime(s.sessionTime,s);s.sessionTime=checkedTime.time??null;
-  if(checkedTime.error)s.uncertainties=['Сохранённое время не удалось подтвердить.',...s.uncertainties].slice(0,8);
+  if(checkedTime.error){
+    if(s.savedSource)throw failure(checkedTime.error);
+    s.uncertainties=['Сохранённое время не удалось подтвердить.',...s.uncertainties].slice(0,8);
+  }
   s.context={platform:PLATFORMS[s.context?.platform]?s.context.platform:null,
     company:['solo','friend','group'].includes(s.context?.company)?s.context.company:null,
     partySize:['2','3','4','5+'].includes(s.context?.partySize)?s.context.partySize:null};
@@ -138,7 +151,7 @@ function activeContext(turns) {
 
 export function answerConversation(input, action={}) {
   let s=normalizeConversation(input);
-  if(action.type==='restart')return newConversation({mode:s.mode,depth:restartSelectionDepth(s,action,failure),requireDirection:s.requireDirection===true||action.requireDirection===true});
+  if(action.type==='restart')return newConversation({mode:s.mode,depth:restartSelectionDepth(s,action,failure),requireDirection:s.requireDirection===true||action.requireDirection===true,savedSource:s.savedSource});
   if(!action.type)return s;
   if(action.type==='setDepth')return changeSelectionDepth(s,action,failure);
   if(action.type==='undo_fact_removal') {
@@ -210,9 +223,8 @@ export function answerConversation(input, action={}) {
   if(action.type==='remove_time') {
     if(!s.sessionTime)return s;
     if(s.retractions.length>=64)throw failure('В этом разговоре уже слишком много исправлений. Начни новый подбор.');
-    const time=s.sessionTime,unansweredQuestion=!['review','result'].includes(s.phase)?s.question??fallbackQuestion(s):null,phase=s.phase;
-    s.retractions.push({kind:'session_time',sourceId:time.sourceId,quote:time.quote,at:s.turns.at(-1)?.id});s.sessionTime=null;
-    s.facts=s.facts.filter(f=>!isSessionTimeSourceRetracted(f.sourceId,s)||!isSessionTimeFact(f,s));
+    const unansweredQuestion=!['review','result'].includes(s.phase)?s.question??fallbackQuestion(s):null,phase=s.phase;
+    retractTime(s);
     invalidate(s);s.phase=unansweredQuestion?phase:'review';s.question=unansweredQuestion;s.needsPlan=false;s.failedAction=null;s.revision++;return s;
   }
   if(s.turns.length>=TURN_LIMIT)throw failure('Разговор получился длинным. Проверь понимание и посмотри варианты или начни новый подбор.');
@@ -240,13 +252,19 @@ export function answerConversation(input, action={}) {
   const selected=kind==='answer'?(q.options??[]).filter(o=>ids.includes(o.id)).map(({id,label})=>({id,label})):[];
   if(ids.length>selected.length && kind==='answer' || !q.multiple&&selected.length>1)throw failure('Проверь выбранные варианты ответа.');
   const text=clean(action.text);
-  if(s.requireDirection===true&&q.id==='direction'&&!hasDirectionChoice(selected.map(option=>option.id)))throw failure(directionChoiceMessage);
+  if(s.requireDirection===true&&q.id==='direction'&&(kind!=='answer'||!hasDirectionChoice(selected.map(option=>option.id),text)))throw failure(directionChoiceMessage);
   if(kind==='answer'&&!text&&!selected.length)throw failure('Выбери вариант, напиши свой ответ или пропусти вопрос.');
   if(contextIds.has(q.id)&&!selected.length)throw failure('Для этого условия выбери один из доступных вариантов.');
   s.revision++;
   const answer=[...(kind==='answer'?selected.map(o=>o.label):[neutral[kind]]),text].filter(Boolean).join('; ');
   const turn={id:`${s.id}:${s.revision}`,question:q,selected,text,kind,answer};
-  s.turns.push(turn); invalidate(s); if(correcting&&!s.depth){s.facts=[];s.sessionTime=null;} localFacts(s,turn);
+  s.turns.push(turn); invalidate(s); if(correcting&&!s.depth){s.facts=[];if(!s.savedSource)s.sessionTime=null;} localFacts(s,turn);
+  if(s.savedSource&&kind==='answer'){
+    if(s.sessionTime&&clearsSavedGameTime(text)){
+      if(s.retractions.length>=64)throw failure('В этом разговоре уже слишком много исправлений. Начни новый подбор.');
+      retractTime(s);
+    }else s.sessionTime=savedGameSessionTime(turn,s)??s.sessionTime;
+  }
   if(s.depthChangedInReview)s.depthChangedInReview=false;
   s.context=activeContext(s.turns);
   if(q.id==='direction'){s.phase='platform';s.question=platformQuestion();s.needsPlan=false;}
@@ -254,6 +272,12 @@ export function answerConversation(input, action={}) {
   else if(q.id==='company'&&s.context.company==='group'){s.phase='party';s.question=partyQuestion();s.needsPlan=false;}
   else {s.phase='talk';s.question=null;s.needsPlan=true;}
   return s;
+}
+
+function retractTime(s){
+  const time=s.sessionTime;
+  s.retractions.push({kind:'session_time',sourceId:time.sourceId,quote:time.quote,at:s.turns.at(-1)?.id});s.sessionTime=null;
+  s.facts=s.facts.filter(f=>!isSessionTimeSourceRetracted(f.sourceId,s)||!isSessionTimeFact(f,s));
 }
 
 const stances = new Set(['want','avoid','require','exclude','indifferent','unknown','conditional','history']);
@@ -283,7 +307,7 @@ export function applyConversationProposal(state, proposal, dict, expectedRevisio
   try {
     if(expectedRevision!==state.revision)throw failure('Пришёл ответ на предыдущую версию запроса.');
     const facts=checkedFacts(state,proposal?.facts,dict);
-    const checkedTime=validateSessionTime(proposal?.sessionTime,state);if(checkedTime.error)throw failure(checkedTime.error);
+    const checkedTime=validateSessionTime(proposal?.sessionTime??(state.savedSource?state.sessionTime:null),state);if(checkedTime.error)throw failure(checkedTime.error);
     if(!['question','review'].includes(proposal?.action)||typeof proposal.summary!=='string'||!Array.isArray(proposal.uncertainties))throw failure('Неполный ответ помощника.');
     let next=null;
     if(proposal.action==='question') {
@@ -312,7 +336,7 @@ export function applyConversationProposal(state, proposal, dict, expectedRevisio
 
 export function conversationScreen(s) {
   const prefix={want:'Хочется',avoid:'Меньше',require:'Обязательно',exclude:'Исключить',indifferent:'Неважно',unknown:'Неясно',conditional:'При условии'};
-  const common={summary:s.summary||s.facts.filter(f=>f.scope==='today').map(f=>`${prefix[f.stance]??''}: ${f.text}`).join('; '),facts:s.facts,uncertainties:s.uncertainties,
+  const common={...(s.savedSource?{savedSource:s.savedSource}:{}),summary:s.summary||s.facts.filter(f=>f.scope==='today').map(f=>`${prefix[f.stance]??''}: ${f.text}`).join('; '),facts:s.facts,uncertainties:s.uncertainties,
     context:s.context,sessionTime:s.sessionTime??null,canUndoFactRemoval:Boolean(s.factRemovalUndo),canBack:s.turns.length>0,provisional:Boolean(s.provisional),turns:s.turns.map(t=>({id:t.id,question:t.question.title,answer:t.answer}))};
   if(s.phase==='result')return {...common,type:'result',result:s.result};
   if(s.phase==='review')return {...common,type:'review',...(!canOfferInterviewQuestion(s)?{canContinue:false}:{})};
@@ -322,7 +346,7 @@ export function conversationScreen(s) {
 }
 
 export function conversationToLegacy(s, dict, catalog=null) {
-  const legacy={...initialState(),domain:'game',step:'result',platform:s.context.platform??'windows'};
+  const legacy={...initialState(),domain:'game',step:'result',platform:s.context.platform??'windows',...(s.savedSource?{savedSource:s.savedSource}:{})};
   const expand=id=>catalog?editionsOf(catalog,id):[id];
   const familiarity=normalizeFamiliar(s.familiar);
   // Returning is a supported current decision, never inferred from liking or a title example.
@@ -332,11 +356,15 @@ export function conversationToLegacy(s, dict, catalog=null) {
   const today=s.facts.filter(f=>f.scope==='today'), signal=(stances)=>today.filter(f=>f.feature&&dict.featureById.has(f.feature)&&stances.includes(f.stance)).map(f=>({f:f.feature,evidence:f.quote}));
   legacy.situation={...legacy.situation,company:s.context.company,partySize:s.context.partySize,note:clean(s.summary,300)};
   // Known completed titles are excluded individually. Beginning/abandoning a game is not a negative rating.
-  for(const f of s.facts)if(f.gameId&&f.exposure==='finished'&&!keep.has(f.gameId))legacy.answers[f.gameId]={reaction:'known',text:f.quote};
+  for(const f of s.facts)if(f.gameId&&f.exposure==='finished'&&!keep.has(f.gameId)){
+    for(const id of s.savedSource?expand(f.gameId):[f.gameId])legacy.answers[id]={reaction:'known',text:f.quote};
+  }
   legacy.preferences=s.facts.filter(f=>f.scope==='history'&&f.stance==='want'&&f.feature).map(f=>({f:f.feature}));
   const genres=today.filter(f=>f.stance==='want'||f.stance==='require').flatMap(f=>directions.filter(d=>d[3]&&(f.key===`direction:${d[0]}`||f.quote===d[1])).map(d=>d[3]));
   legacy.session={...legacy.session,goalDriven:true,excludeSeries:false,goalWants:signal(['want','require']),goalAvoids:signal(['avoid','exclude']),
     ...(s.sessionTime?{minutes:s.sessionTime.minutes}:{}),
+    ...(s.savedSource&&s.context.company==='solo'?{savedSolo:true}:{}),
+    ...(s.savedSource&&requiresVerifiedGameSession(s)?{requireVerifiedGameSession:true}:{}),
     goalRequires:signal(['require']),goalExcludes:signal(['exclude']),genreWants:[...new Set(genres)],
     notNow:[...new Set([...today.filter(f=>f.stance==='exclude'&&f.gameId).flatMap(f=>expand(f.gameId)),
       ...[...familiarity.excluded,...familiarity.hidden].flatMap(expand).filter(id=>!keep.has(id))])]};

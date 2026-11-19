@@ -3,15 +3,18 @@ import {createHash} from 'node:crypto';
 import {newMediaConversation,normalizeMediaConversation,answerMediaConversation,applyMediaConversationProposal,mediaConversationScreen,mediaConversationToLegacy} from '../core/media-conversation.js';
 import {canOfferInterviewQuestion,rememberInterviewQuestion,reviewAtInterviewCapacity,completeInterview} from '../core/selection-dialogue.js';
 import {profileOf,sessionOf} from '../core/dialogue.js';
+import {filmPreviewSession} from '../core/film-preview.js';
+import {savedMediaMismatch} from '../core/sieves.js';
 import {recommend,recommendIds,rankAll} from '../core/recommend.js';
 import {editionsOf,makeCatalog} from '../core/catalog.js';
 import {aiMediaConversation} from '../ai/media-conversation.js';
 import {aiPick} from '../ai/pick.js';
-import {criteriaOf} from '../ai/pick-constraints.js';
+import {criteriaOf,unconfirmedSavedCriteria} from '../ai/pick-constraints.js';
 import {feedbackContextOf} from '../ai/feedback-context.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationMediaIdentity} from './conversation-media-identity.js';
+import {invalidSavedSource,normalizeSavedSource,savedSourceKey} from '../core/saved-source.js';
 
 const DOMAINS=new Set(['film','series','cartoon','anime']);
 const FORMAT_UNKNOWN='У части произведений формат не указан в каталоге: они не включены при выборе фильма или сериала.';
@@ -31,6 +34,10 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
   // shortlist, deterministic sieves and model-owned additions all see the same eligible view.
   function catalogFor(s) {
     const format=s.context?.format,kind=format==='movie'?'film':format==='episodic'?'series':null;
+    if(s.savedSource){
+      const items=s.savedSource.ids.map(id=>catalog.byId.get(id)).filter(item=>item?.domain===domain&&(!kind||item.kind===kind));
+      return makeCatalog({...catalog,items},domain);
+    }
     if(!kind)return catalog;
     if(!formatCatalogs.has(format))formatCatalogs.set(format,makeCatalog({...catalog,items:catalog.items.filter(item=>item.kind===kind)},domain));
     return formatCatalogs.get(format);
@@ -52,8 +59,20 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     if(body.state!=null&&(typeof body.state!=='object'||Array.isArray(body.state)||body.state.domain!==domain))throw bad('Сохранённый подбор относится к другому разделу.');
   }
   function validateCards(result,s) {
-    for(const card of cardsOf(result))if(!catalog.byId.has(card.id)||catalog.byId.get(card.id).domain!==domain||card.domain!=null&&card.domain!==domain)throw bad('Этой карточки нет в каталоге выбранного раздела.');
-    for(const card of cardsOf(result))if(!catalogFor(s).byId.has(card.id))throw bad('В сохранённых вариантах есть произведение другого или неподтверждённого формата. Уточни условия просмотра.');
+    const cards=cardsOf(result);
+    if(!cards.length)return;
+    const eligible=catalogFor(s),works=new Set(),session=s.savedSource?sessionOf(projection(s)):null;
+    for(const card of cards){
+      const item=eligible.byId.get(card.id);
+      if(!catalog.byId.has(card.id)||catalog.byId.get(card.id).domain!==domain||card.domain!=null&&card.domain!==domain)throw bad('Этой карточки нет в каталоге выбранного раздела.');
+      if(s.savedSource&&!s.savedSource.ids.includes(card.id))throw invalidSavedSource();
+      if(!item)throw bad('В сохранённых вариантах есть произведение другого или неподтверждённого формата. Уточни условия просмотра.');
+      const mismatch=session&&savedMediaMismatch(item,session);
+      if(mismatch)throw bad('Сохранённый вариант не проходит условия просмотра: '+mismatch+'.');
+      const work=item.work??item.id;
+      if(s.savedSource&&works.has(work))throw invalidSavedSource();
+      works.add(work);
+    }
   }
   function validateSnapshot(s) {
     validateCards(s.result,s);validateCards(s.familiar?.undo?.result,s);
@@ -70,6 +89,19 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     if(!Array.isArray(list)||list.length>500||list.some(id=>typeof id!=='string'||!/^[a-zA-Z0-9:_-]{1,80}$/.test(id)))throw bad('Некорректный список знакомых произведений.');
     s.familiar.excluded=[...new Set(list.filter(id=>catalog.byId.get(id)?.domain===domain))];return s;
   }
+  function initialState(body) {
+    const state=body.state?normalizeMediaConversation(body.state,domain):newMediaConversation({domain,mode:body.mode,depth:body.depth});
+    const provided=Object.hasOwn(body,'savedSource')?normalizeSavedSource(body.savedSource,domain):null;
+    if(provided&&state.savedSourceKey&&savedSourceKey(provided)!==state.savedSourceKey)throw invalidSavedSource();
+    if(provided&&!state.savedSource&&(state.revision||state.turns.length||state.phase!=='direction'||state.result))throw invalidSavedSource();
+    const source=state.savedSource??provided;
+    if(source && !state.revision && state.phase==='direction'){
+      state.savedSource={...source,ids:source.ids.filter(id=>catalog.byId.get(id)?.domain===domain)};
+      state.savedSourceKey=savedSourceKey(state.savedSource);
+    }
+    return validateSnapshot(state);
+  }
+  const locallyConfirmed=(legacy,item)=>(legacy.savedSource?unconfirmedSavedCriteria(legacy,item):criteriaOf(legacy,item)).length===0;
   function caveats(card,s,legacy) {
     const item=catalog.byId.get(card.id),context=s.context??{},session=sessionOf(legacy);
     card.feasibility??=[];
@@ -99,29 +131,40 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const before=cardsOf(s.result),marked=new Set((more?before.map(card=>card.id):targetIds??s.familiar.marked).filter(id=>before.some(card=>card.id===id)));
     if(!marked.size)return response(s);
     const legacy=projection(s);
-    const neutralShown=[...new Set([...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(card=>editionsOf(catalog,card.id))])].filter(id=>!(legacy.session.notNow??[]).includes(id));
-    legacy.session.notNow=[...new Set([...(legacy.session.notNow??[]),...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(card=>editionsOf(catalog,card.id))])];
+    const explicitExclusions=new Set([...s.familiar.excluded,...s.facts.filter(f=>f.scope==='today'&&f.stance==='exclude'&&f.titleId).map(f=>f.titleId)]);
+    const shown=[...new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)].flatMap(id=>editionsOf(catalog,id)))];
+    const neutralShown=shown.filter(id=>!explicitExclusions.has(id));
+    legacy.session.notNow=[...new Set([...(legacy.session.notNow??[]),...shown])];
     const failed=(error,retryable=true)=>response({...s,failedAction:more?'more':'replace',...(!more?{replacement:{...s.replacement,pendingIds:[...marked]}}:{})},{error,retryable});
     if(new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)]).size>496)return failed('В этом подборе уже слишком много отметок. Начни новый подбор: явные сохранённые исключения останутся.',false);
-    const eligibleCatalog=catalogFor(s),eligible=rankAll(eligibleCatalog,profileOf(legacy),sessionOf(legacy)).ranked;
-    if(!eligible.length)return failed(more?'Других подходящих вариантов по этому запросу пока нет. Прежние варианты сохранены — можно уточнить запрос.':'Других подходящих вариантов пока нет. Оставь знакомое для возвращения или уточни запрос.',false);
-    const sole=eligible.length===1&&criteriaOf(legacy,eligible[0].game).length===0;
+    const eligibleCatalog=catalogFor(s),session=sessionOf(legacy),previewSession=filmPreviewSession(s,session);
+    const eligible=rankAll(eligibleCatalog,profileOf(legacy),previewSession).ranked;
+    if(!eligible.length)return failed(s.savedSource?'В этом списке сохранённых больше нет подходящих вариантов. Можно уточнить условия или начать подбор по всему каталогу.':more?'Других подходящих вариантов по этому запросу пока нет. Прежние варианты сохранены — можно уточнить запрос.':'Других подходящих вариантов пока нет. Оставь знакомое для возвращения или уточни запрос.',false);
+    const sole=eligible.length===1&&locallyConfirmed(legacy,eligible[0].game);
+    let local=sole;
     let out;
     if(sole)out={picks:[{id:eligible[0].game.id}]};
     else {
-      const permission=access(who);if(!permission.allowed)return failed(`${permission.reason??'Помощник недоступен'}. Варианты и отметки сохранены.`,false);
-      spend(who);
-      try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,...(more?{alreadyShown:neutralShown}:{previous:before.map(card=>card.id)})});}
-      catch {out={error:'Не удалось заменить варианты. Варианты и отметки сохранены.'};}
-      log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
+      const permission=access(who);
+      if(!permission.allowed){
+        if(!s.savedSource)return failed(`${permission.reason??'Помощник недоступен'}. Варианты и отметки сохранены.`,false);
+        const picks=eligible.filter(({game})=>locallyConfirmed(legacy,game)).slice(0,4).map(({game})=>({id:game.id}));
+        if(!picks.length)return failed('В списке сохранённых не удалось подтвердить обязательные условия. Прежние варианты сохранены.',false);
+        local=true;out={picks};
+      }else{
+        spend(who);
+        try {out=await pick(catalogsFor(s),legacy,{...(api?{api}:{}),...(who.feedbackContext?.length?{feedbackContext:who.feedbackContext}:{}),wish:s.summary,alreadyShown:neutralShown});}
+        catch {out={error:'Не удалось заменить варианты. Варианты и отметки сохранены.'};}
+        log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
+      }
     }
     const ids=[...new Set((out.picks??[]).map(p=>p.id))];
-    const selected=recommendIds(eligibleCatalog,profileOf(legacy),sessionOf(legacy),ids),picks=new Map((out.picks??[]).map(p=>[p.id,p]));
+    const selected=recommendIds(eligibleCatalog,profileOf(legacy),local?previewSession:session,ids),picks=new Map((out.picks??[]).map(p=>[p.id,p]));
     const used=new Set(),available=cardsOf(selected).filter(card=>{const work=catalog.byId.get(card.id)?.work??card.id;if(used.has(work))return false;used.add(work);return true;});
     if(!available.length)return failed('Не получилось найти подтверждённую замену. Прежние варианты и отметки сохранены.',false);
     const changedIds=[],unresolvedIds=[];
     const decorate=next=>{
-      if(sole){next.replacementSource='engine';next.labelText='Единственный другой вариант по условиям';caveats(next,s,legacy);}
+      if(local){next.replacementSource='engine';next.labelText=sole?'Единственный другой вариант по условиям':'Вариант из сохранённых по данным каталога';caveats(next,s,legacy);}
       else attach(next,picks.get(next.id),s,legacy);
       return next;
     };
@@ -133,15 +176,17 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     if(more)changedIds.push(...before.map(card=>card.id));
     const undo={result:s.result,marked:s.familiar.marked,keep:s.familiar.keep,hidden:s.familiar.hidden,replacement:s.replacement};
     const retainedIds=after.filter(card=>before.some(old=>old.id===card.id)).map(card=>card.id);
-    const result={...s.result,top:after[0],alternatives:after.slice(1),ai:sole?s.result.ai?{...s.result.ai,mixed:true}:undefined:{understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist,mixed:retainedIds.length>0}};
+    const result={...s.result,top:after[0],alternatives:after.slice(1),ai:local?s.result.ai?{...s.result.ai,mixed:true}:undefined:{understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist,mixed:retainedIds.length>0}};
     s={...s,result,browseSeen:[...new Set([...(s.browseSeen??[]),...before.map(card=>card.id),...after.map(card=>card.id)])],failedAction:null,familiar:{...s.familiar,marked:more?[]:s.familiar.marked.filter(id=>!changedIds.includes(id)),hidden:more?s.familiar.hidden:[...new Set([...s.familiar.hidden,...changedIds])],undo},
       replacement:{changedIds,unresolvedIds,notice:[more?resultBatchNotice(after.length,{more:true}):'',sole?'Доступен только один другой вариант по условиям. Он подобран по каталогу.':'',unresolvedIds.length?'Часть отмеченных вариантов осталась: подтверждённых замен пока недостаточно.':''].filter(Boolean).join(' ')}};
     return response(s,{feedbackCarry:{retainedIds}});
   }
   async function handle(body,who) {
     const feedbackContext=feedbackContextOf(body.qualityFeedback,catalog,domain);if(feedbackContext.length)who={...who,feedbackContext};
-    let s=validateSnapshot(body.state?normalizeMediaConversation(body.state,domain):newMediaConversation({domain,mode:body.mode,depth:body.depth}));
+    let s=initialState(body);
     s=remembered(body,s);
+    if(s.savedSource&&!s.savedSource.ids.length&&!s.result)return response({...s,phase:'review',needsPlan:false,question:null},{
+      error:'В списке сохранённых не осталось произведений этого раздела. Вернись в библиотеку или начни подбор по всему каталогу.',retryable:false});
     if(!body.action) {
       for(const result of [s.result,s.familiar?.undo?.result])for(const card of cardsOf(result)){
         const item=catalog.byId.get(card.id);
@@ -190,6 +235,18 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       s=checked.state;s.failedAction=null;return response(s);
     }
     const legacy=projection(s);
+    if(!permission.allowed)legacy.session=filmPreviewSession(s,legacy.session);
+    if(s.savedSource){
+      const scoped=catalogFor(s),session=sessionOf(legacy),profile=profileOf(legacy);
+      const {ranked}=rankAll(scoped,profile,session);
+      const candidates=permission.allowed?ranked:ranked.filter(({game})=>locallyConfirmed(legacy,game));
+      if(!candidates.length)return response({...s,phase:'review',failedAction:'pick'},{error:'В этом списке сохранённых не нашлось вариантов с подтверждёнными условиями. Можно изменить условия или начать подбор по всему каталогу.',retryable:false});
+      if(!permission.allowed || candidates.length===1&&locallyConfirmed(legacy,candidates[0].game)){
+        const result=recommendIds(scoped,profile,session,candidates.slice(0,4).map(({game})=>game.id));
+        for(const card of cardsOf(result)){caveats(card,s,legacy);card.labelText='Вариант из сохранённых по данным каталога';}
+        return response({...s,...completeInterview(s),phase:'result',result,provisional:true,failedAction:null,question:null,needsPlan:false});
+      }
+    }
     if(!permission.allowed) {
       const result=recommend(catalogFor(s),profileOf(legacy),sessionOf(legacy));
       if(!result.top)return response({...s,phase:'review',failedAction:'pick'},{error:'По этим условиям пока не нашлось доступных вариантов. Уточни условия или разреши вернуться к знакомому.',retryable:false});

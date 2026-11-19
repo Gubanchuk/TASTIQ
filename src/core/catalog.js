@@ -9,6 +9,7 @@ import { animeArtwork } from '../server/public/shared/anime-artwork.js';
 import { steamArtwork } from '../server/public/shared/steam-artwork.js';
 import { commonsArtwork } from './commons-artwork.js';
 import { computeIdf } from './idf.js';
+import { distinctGameWorks } from './game-editions.js';
 
 /**
  * Catalog of one domain in memory: items by id, editions grouped by work, a name index for search.
@@ -16,7 +17,7 @@ import { computeIdf } from './idf.js';
  */
 export function makeCatalog(raw, domainId = 'game') {
   const domain = DOMAINS[domainId];
-  const items = raw.items;
+  const items = domainId === 'game' ? distinctGameWorks(raw.items) : raw.items;
   const byId = new Map(items.map((g) => [g.id, g]));
   const byWork = new Map();
   for (const g of items) {

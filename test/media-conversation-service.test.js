@@ -18,6 +18,31 @@ const proposal={summary:'Сегодня нужна история',facts:[],unce
 const goodPlan=async()=>({proposal,model:'stub',usage:{input_tokens:100,output_tokens:40}});
 const create=(domain='film',options={})=>createMediaConversationService({domain,catalogs,plan:goodPlan,...options});
 const answerBody=start=>({domain:start.state.domain,state:start.state,action:{type:'answer',questionId:start.screen.question.id,selected:[],text:'Хочу историю на вечер',kind:'answer'}});
+
+test('a text-only film wish constrains offline preview exactly like the editor and can be cleared',async()=>{
+ const domain='film',service=create(domain,{catalogs:{film:screenFixture(domain)},access:()=>({allowed:false}),spend:()=>assert.fail('offline')});
+ const act=(state,action)=>service({domain,state,action});
+ const picks=async state=>{
+  const reviewed=await act(state,{type:'review'}),out=await act(reviewed.state,{type:'confirm'});
+  return [out.state.result?.top,...(out.state.result?.alternatives??[])].filter(Boolean).map(x=>x.id).sort();
+ };
+ const initial=await service({domain}),body=answerBody(initial);
+ body.state.requireDirection=true;
+ body.action.text='Лёгкое приключение с юмором до двух часов';
+ const wish=await service(body);
+ assert.equal(wish.screen.sessionTime.minutes,120);
+ assert.equal(wish.screen.sessionTime.quote,'до двух часов');
+ assert.equal(wish.state.context.timeMode,'runtime');
+ const restored=await service({domain,state:wish.state});
+ assert.deepEqual(await picks(restored.state),['t1']);
+ const edited=await act(restored.state,{type:'set_context',context:{minutes:120,timeMode:'runtime'}});
+ assert.deepEqual(await picks(edited.state),['t1']);
+ const fewer=await act(edited.state,{type:'set_context',context:{minutes:60,timeMode:'runtime'}});
+ assert.deepEqual(await picks(fewer.state),[]);
+ const removed=await act(fewer.state,{type:'remove_time'});
+ assert.equal(removed.state.sessionTime,null);
+ assert.deepEqual(await picks(removed.state),['t1','t2','t3']);
+});
 const resultState=async service=>{
   const {state}=await service({domain:'film'});
   return {...state,phase:'result',needsPlan:false,summary:'Сегодня нужна история',result:{top:{id:'t1',domain:'film',name:'Old',ai:{reason:'Старое объяснение'}},alternatives:[{id:'t2',domain:'film',name:'Keep',ai:{reason:'Оставить'}}],ai:{model:'old'}}};

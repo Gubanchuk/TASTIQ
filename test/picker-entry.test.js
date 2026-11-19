@@ -8,7 +8,7 @@ import {questionDraftKey} from '../src/server/public/pick/game/question-drafts.j
 import {conversationStorageKey} from '../src/server/public/shared/conversation-client.js';
 
 test('instant entry is the same state and question accepted by every server adapter',()=>{
- for(const domain of ['game','film','series','cartoon']){
+ for(const domain of ['game','film','series','cartoon','anime']){
   const local=initialConversationSnapshot({domain,id:'entry',mode:'free'});
   const server=domain==='game'?newConversation({id:'entry',mode:'free'}):newMediaConversation({domain,id:'entry',mode:'free'});
   assert.deepEqual(local.state,server);
@@ -33,7 +33,7 @@ test('quick restrictions remain negative evidence instead of becoming wishes',()
  assert.ok(state.turns[0].answer.includes('Расслабиться и отвлечься'));
 });
 
-for(const domain of ['game','film','series','cartoon'])test(`${domain}: upgrading a pristine saved question preserves the old v3 draft, also after restoring a previous entry`,async()=>{
+for(const domain of ['game','film','series','cartoon','anime'])test(`${domain}: upgrading a pristine saved question preserves the old v3 draft, also after restoring a previous entry`,async()=>{
  const old=initialConversationSnapshot({domain,id:`old-${domain}`}),option=domain==='game'?'rpg':'comedy';
  const question={...old.state.question,options:old.state.question.options.filter(o=>!o.id.startsWith('mood_')&&!o.id.startsWith('avoid_'))};
  old.state.question=question;old.screen.question=question;

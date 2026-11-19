@@ -1,8 +1,8 @@
 export const mediaConfig=domain=>({film:{label:'Фильмы',noun:'фильм',title:'Что посмотреть сегодня'},series:{label:'Сериалы',noun:'сериал',title:'Какой сериал посмотреть'},cartoon:{label:'Мультфильмы',noun:'мультфильм',title:'Какой мультфильм посмотреть'},anime:{label:'Аниме',noun:'аниме',title:'Какое аниме посмотреть'}}[domain]??null);
 export function mediaTimeBudgetHtml(time,{scope='summary',timeMode}={}){
  if(!Number.isInteger(time?.minutes)||time.minutes<5||time.minutes>1440||!time.sourceId||!time.quote)return '';
- const label=timeMode==='episode'?'На эпизод':timeMode==='runtime'?'На фильм':'На сегодня';
- return `<div class="game-time-budget"><span>${label}: ${time.minutes} мин</span><button type="button" class="btn btn-plain btn-s" data-act="remove-time" data-focus="remove-time:${scope==='review'?'review':'summary'}">Убрать ограничение времени</button></div>`;
+ const label=timeMode==='episode'?'На эпизод:':timeMode==='runtime'?'На фильм до':'На сегодня:';
+ return `<div class="game-time-budget"><span>${label} ${time.minutes} мин</span><button type="button" class="btn btn-plain btn-s" data-act="edit-time" aria-label="Изменить ограничение времени">Изменить</button><button type="button" class="btn btn-plain btn-s" data-act="remove-time" data-focus="remove-time:${scope==='review'?'review':'summary'}">Убрать ограничение времени</button></div>`;
 }
 export function mediaJourneyStage(state,screen){if(screen?.type==='result')return 3;if(screen?.question?.id==='direction')return 0;if(['time','company','child_age','commitment','format','duration'].includes(screen?.question?.id))return 1;return state?2:0;}
 export function mediaLoadingPresentation(action,state){

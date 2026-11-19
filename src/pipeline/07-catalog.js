@@ -5,11 +5,14 @@ import { resolve } from 'node:path';
 import { DICTIONARY_VERSION, FEATURE_BY_ID } from '../aspects/games.js';
 import { STEAM_CATEGORY_FACTS, STEAM_TAG_FEATURES } from '../aspects/steam-tags.js';
 import { computeIdf } from '../core/idf.js';
-import { DATA, RAW, readJson, writeJson } from '../lib/fsx.js';
+import { DATA, RAW, readJson } from '../lib/fsx.js';
+import { catalogBuildOptions, catalogSnapshot, mergeCatalogBuild, writeBuildJson } from './catalog-build.js';
 import { workKey } from '../lib/text.js';
 import { withLengthFromHours } from './length-from-hours.js';
 
 const TAG_MIN_SHARE = 0.08; // tag votes relative to the game's top tag; below this a tag is noise
+const {output,baseline,decisions} = catalogBuildOptions('catalog.json');
+const release = readJson(baseline);
 const C_TAG = 0.6; // confidence of a feature backed only by player tag votes
 const QUALITY_PRIOR_WEIGHT = 500; // Bayesian shrinkage: reviews worth of prior
 // A store category says a mode exists, not that it is the core of the game. An optional PvP mode must not
@@ -139,7 +142,7 @@ const round = (x) => Math.round(x * 1000) / 1000;
 const ratios = games.filter((g) => g.reviewSummary?.total_reviews).map((g) => g.reviewSummary.total_positive / g.reviewSummary.total_reviews);
 const meanRatio = ratios.reduce((a, b) => a + b, 0) / ratios.length;
 
-const catalog = games.map((g) => {
+const rawCatalog = games.map((g) => {
   const wd = wikidata[g.appid] ?? {};
   const total = g.reviewSummary?.total_reviews ?? 0;
   const positive = g.reviewSummary?.total_positive ?? 0;
@@ -185,7 +188,7 @@ for (const g of tail) {
   const wd = wikidata[g.appid] ?? {};
   const details = tailDetails[g.appid] ?? {};
   const total = g.positive + g.negative;
-  catalog.push({
+  rawCatalog.push({
     id: `steam:${g.appid}`,
     domain: 'game',
     kind: 'game',
@@ -217,27 +220,29 @@ for (const g of tail) {
   });
 }
 
+const {items:catalog,report:changes} = mergeCatalogBuild(release.items,rawCatalog,decisions);
 const { df, idf } = computeIdf(catalog);
 
 const stats = {
+  ...release.stats,
   games: catalog.length,
   head: catalog.filter((g) => g.head).length,
   tailTagged: catalog.filter((g) => !g.head && g.tagged).length,
   llmTagged: catalog.filter((g) => g.tagged).length,
   withRussianName: catalog.filter((g) => g.ru).length,
   meanFeatures: round(catalog.reduce((a, g) => a + Object.keys(g.features).length, 0) / catalog.length),
+  // This is the training-set prior used for source quality scores above.
   meanReviewRatio: round(meanRatio),
   taggerAgreement: report.agreement.overallPresenceAgreement ?? null,
   agreementSample: report.agreement.sharedGames ?? 0,
 };
 
-writeJson(resolve(DATA, 'catalog.json'), {
+writeBuildJson(resolve(output,'catalog.changes.json'),changes);
+writeBuildJson(resolve(output,'catalog.json'),catalogSnapshot(release, {
   dictionaryVersion: DICTIONARY_VERSION,
-  builtAt: new Date().toISOString(),
-  sources: ['Steam Store API', 'SteamSpy', 'Wikidata (CC0)', 'LLM tags from Steam review texts'],
   stats,
   df,
   idf,
   items: catalog,
-}, false);
-console.log(`Catalog: ${JSON.stringify(stats)}`);
+}));
+console.log(`Staged game catalog in ${output}: ${JSON.stringify(stats)}`);

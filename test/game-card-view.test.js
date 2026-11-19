@@ -64,7 +64,10 @@ test('an alternative retains visible reason and uncertain conditions; a marked c
  const card={id:'steam:1',name:'Example',ai:{reason,caveat:'Оговорка'},feasibility:[{status:'unknown',text:'Вместимость не проверена'}]};
  for(const render of [gameCardHtml,mediaCardHtml]){
   const html=render(card,{index:1});
-  assert.ok(html.includes(reason));assert.ok(!html.includes('<details'));
+  const more=html.indexOf('<details class="game-card-secondary"');
+  assert.ok(more>0);assert.ok(html.slice(0,more).includes(reason));
+  assert.ok(html.slice(0,more).includes('Оговорка'));assert.ok(html.slice(0,more).includes('Вместимость не проверена'));
+  assert.ok(html.slice(more).includes('data-act="familiar-mark"'));assert.ok(html.slice(more).includes('data-card-feedback'));
   assert.doesNotMatch(html,/мнение модели|данные каталога/);
  }
  const html=gameCardHtml(card,{index:1});

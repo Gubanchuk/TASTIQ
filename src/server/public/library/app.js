@@ -2,6 +2,7 @@ import {animeStyleLabel,inLibraryDomain,mediaLibraryDomain} from '/shared/anime-
 import {selectionModeTitle} from '/shared/selection-mode.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '/shared/library-store.js';
+import {createSavedSource,matchesLibraryQuery,savedPickerDomains} from '/shared/saved-source.js';
 import {artworkImageHtml,retryArtworkImage} from '/shared/card-artwork.js';
 import {collectionRecords} from '/shared/library-collection.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '/shared/game-history.js';
@@ -18,11 +19,14 @@ const DOMAINS={game:'Игры',film:'Фильмы',series:'Сериалы',carto
 const NOUNS={game:'игра',film:'фильм',series:'сериал',cartoon:'мультфильм',anime:'аниме'};
 const VIEWS={saved:'Сохранённое',liked:'Понравилось',history:'Подборы',all:'Все отметки',evenings:'Отзывы о рекомендациях'};
 const isCollection=()=>['saved','liked','all'].includes(state.view);
+const shortShelfLimit=8;
 const EXPOSURES={played:'Уже играл',started:'Начал',finished:'Прошёл',paused:'Отложил'};
 const key=row=>`${mediaLibraryDomain(row.domain,row.id)}:${row.id}`;
 const title=row=>String(row.title||row.ru||row.name||'Без названия');
 const icon=name=>`<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">${({search:'<circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/>',close:'<path d="m5 5 10 10M15 5 5 15"/>',arrow:'<path d="M3 10h13m-5-5 5 5-5 5"/>',book:'<path d="M5 3h10v14l-5-3-5 3V3Z"/>'})[name]||''}</svg>`;
-let storage;try{storage=qaStorage(localStorage);}catch{/* keep this visit in memory */}
+let storage,handoffStorage;
+try{storage=qaStorage(localStorage);}catch{/* keep this visit in memory */}
+try{handoffStorage=qaStorage(sessionStorage);}catch{/* list launch will explain the storage limit */}
 const library=createLibraryStore({storage});
 const archive=createSelectionArchive({storage});
 const familiar=createGameHistory({storage});
@@ -30,9 +34,10 @@ const mediaHistories=Object.fromEntries(['film','series','cartoon','anime'].map(
 const historyFor=domain=>domain==='game'?familiar:mediaHistories[domain];
 const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
- if(!response.ok)throw Error('Feedback unavailable');return response.json();
+ return response.ok?response.json():{ok:false,status:response.status};
 },onChange:()=>{
  document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});
+ document.querySelectorAll('[data-feedback-retry]').forEach(el=>{el.hidden=!['conflict','rejected'].includes(feedback.status(el.dataset.feedbackRetry));});
 }});
 const defaultFilters=()=>({query:'',domain:'all',reaction:'all',status:'all',sort:'added',open:false,item:''});
 const viewFilters=Object.fromEntries(Object.keys(VIEWS).map(view=>[view,defaultFilters()]));
@@ -69,7 +74,7 @@ function writeNavigation(push=false){
  globalThis.history[push?'pushState':'replaceState'](null,'',url);
 }
 readNavigation();
-const metadata=new Map(),requested=new Set(),openDetails=new Set(),feedbackDrafts=createFeedbackDrafts({storage});
+const metadata=new Map(),requested=new Set(),pendingMetadata=new Set(),openDetails=new Set(),feedbackDrafts=createFeedbackDrafts({storage});
 let noticeTimer,feedbackQueue=Promise.resolve(),feedbackQueued=0,feedbackDirty=false;
 const date=value=>{const at=new Date(value);return Number.isFinite(at.valueOf())?at.toLocaleDateString('ru',{day:'numeric',month:'short',year:'numeric'}):'Дата не сохранена';};
 const button=(label,act,attrs='',primary=false)=>`<button type="button" class="library-button${primary?' primary':''}" data-act="${act}" ${attrs}>${label}</button>`;
@@ -78,17 +83,17 @@ function notice(text){$('#library-notice').textContent=text;$('#library-notice')
 
 function records() {
  const known=[...familiar.all().map(row=>({...row,domain:'game'})),...Object.entries(mediaHistories).flatMap(([domain,history])=>history.all().map(row=>({...row,domain})))];
- return collectionRecords({items:library.all(),familiar:known,runs:feedback.all()}).map(row=>{
+ return collectionRecords({items:library.all(),familiar:known,runs:feedback.all(),archivedOutcomes:feedback.archivedOutcomes()}).map(row=>{
   const extra=metadata.get(key(row))??{};
-  for(const field of ['image','poster','year','link'])if(!row[field]&&extra[field])row[field]=extra[field];
+  for(const field of ['image','poster','year','link','name','original','aliases'])if(!row[field]&&extra[field])row[field]=extra[field];
   return row;
  });
 }
 function filtered(rows,matches=()=>true) {
- const {query,domain,sort}=activeFilters(),needle=query.trim().toLocaleLowerCase('ru');
+ const {query,domain,sort}=activeFilters();
  const at=row=>new Date(row.at??row.addedAt??0).valueOf()||0;
  return rows.filter(row=>(domain==='all'||inLibraryDomain(row,domain))&&matches(row)
-  &&(!needle||`${title(row)} ${row.original??''} ${row.searchText??''}`.toLocaleLowerCase('ru').includes(needle)))
+  &&matchesLibraryQuery(row,query))
  .sort(sort==='title'?(a,b)=>title(a).localeCompare(title(b),'ru'):sort==='oldest'?(a,b)=>at(a)-at(b):(a,b)=>at(b)-at(a));
 }
 function hasSearchFilters(){
@@ -115,22 +120,30 @@ function card(row) {
   +`</div><div class="board-card-actions">${button(`${icon('book')}${row.saved?'Сохранено':'Сохранить'}`,'saved',`${attrs} data-focus="${focusKey('saved',row)}" aria-pressed="${row.saved}" title="${row.saved?'Убрать из сохранённого':'Сохранить на будущее'}"`)}</div>`
   +`<details class="card-details" data-detail="card:${esc(k)}"${openDetails.has(`card:${k}`)?' open':''}><summary data-focus="${focusKey('details',row)}">${rating?'Оценка и отметки':exposure?'Оценить и изменить отметки':'Оценить произведение'}</summary><div class="card-details-content">`
   +`<p>${row.ratingConflict?'В отзывах остались разные впечатления. Укажи, что думаешь сейчас.':row.ratingSource==='experience'?'Оценка из твоего отзыва после знакомства. Можно изменить её здесь.':'Уже знакомо? Отметь, понравилось ли тебе.'}</p><div class="rating-actions">${ratingButton('liked','Нравится')}${ratingButton('disliked','Не нравится')}${rating?button('Убрать оценку','rate',`${attrs} data-value="none" data-focus="${focusKey('rate-none',row)}"`):''}</div>`
-  +(row.answer?'<p class="library-meta">Твои прежние уточнения к оценке сохранены и учитываются в подборе.</p>':'')
+  +(row.answer?`<p class="library-meta">${typeof row.answer.text==='string'&&row.answer.text.trim()?`Твои слова из прежнего подбора: «${esc(row.answer.text.trim())}».`:'Уточнения из прежнего подбора сохранены с этой оценкой.'}</p>`:'')
   +(exposure?`<div class="familiarity-facts"><p>${esc(row.domain==='game'?(EXPOSURES[exposure.exposure]||'Уже знакомо'):({seen:'Уже смотрел',started:'Начал смотреть',finished:'Досмотрел',dropped:'Не досмотрел',paused:'Отложил'}[exposure.exposure]||'Уже знакомо'))} · ${esc(date(exposure.updatedAt))}</p><label class="library-check"><input type="checkbox" data-act="blocked" ${attrs} data-focus="${focusKey('blocked',row)}"${exposure.blocked?' checked':''}> Не предлагать в следующих подборах</label>${button('Забыть знакомство','forget',`${attrs} data-focus="${focusKey('forget',row)}"`)}</div>`:'')
   +(row.reviews.length?button('Мои отзывы','card-reviews',`${attrs} data-focus="${focusKey('reviews',row)}"`):'')
   +(url?`<a class="library-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${row.domain==='game'?'Открыть игру':'Открыть страницу'} ${icon('arrow')}</a>`:'')+'</div></details></article>';
 }
-function filters() {
+function filters({compact=false}={}) {
  const {query,domain,reaction,status,sort,open,item}=activeFilters();
  const activeCount=Number(domain!=='all')+Number(reaction!=='all')+Number(status!=='all')+Number(sort!=='added');
  const select=(id,label,options,value)=>`<label class="library-filter"><span>${label}</span><select id="${id}">${Object.entries(options).map(([key,text])=>`<option value="${key}"${value===key&&key!=='all'?' selected':''}>${text}</option>`).join('')}</select></label>`;
- return `<div class="library-filters" data-view-filters="${state.view}"><label class="library-search">${icon('search')}<span class="library-sr-only">Найти название</span><input id="find-title" type="search" placeholder="Найти название" autocomplete="off" value="${esc(query)}"></label>`
- +`<div class="library-filter-actions">${button(`Фильтры${activeCount?`<span class="filter-active-count">${activeCount}</span>`:''}<svg class="filter-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,'filters',`data-focus="filters-toggle" aria-expanded="${open}" aria-controls="library-filter-options"`)}${button('Сбросить','clear',`data-focus="filters-reset"${query||activeCount||item?'':' disabled'}`)}</div>`
- +`<div class="library-filter-panel" id="library-filter-panel" data-active-count="${activeCount}" data-filter-open="${open}"><div class="library-filter-options" id="library-filter-options" data-filter-options>`
- +select('domain-filter','Раздел',{all:'Всё',...DOMAINS},domain)
+ const search=`<label class="library-search">${icon('search')}<span class="library-sr-only">Найти название</span><input id="find-title" type="search" placeholder="Найти название" autocomplete="off" maxlength="300" value="${esc(query)}"></label>`;
+ const options=select('domain-filter','Раздел',{all:'Всё',...DOMAINS},domain)
  +(state.view==='all'?select('reaction-filter','Оценка',{all:'Любая',liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'},reaction):'')
  +(state.view==='evenings'?select('status-filter','Статус',eveningStatuses,status):'')
- +select('sort','Порядок',{added:'Сначала новые',oldest:'Сначала давние',title:'По названию'},sort)+'</div></div></div>';
+ +select('sort','Порядок',{added:'Сначала новые',oldest:'Сначала давние',title:'По названию'},sort);
+ const reset=button('Сбросить','clear',`data-focus="filters-reset"${query||activeCount||item?'':' disabled'}`);
+ const chevron='<svg class="filter-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+ const toggle=(label,panel)=>button(label+chevron,'filters',`data-focus="filters-toggle" aria-expanded="${open}" aria-controls="${panel}"`);
+ if(compact){
+  const summary=[query.trim()?`«${query.trim()}»`:'',DOMAINS[domain],
+   {liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'}[reaction],
+   {oldest:'Сначала давние',title:'По названию'}[sort]].filter(Boolean).join(' · ');
+  return `<div class="shelf-filters" data-view-filters="${state.view}">${toggle('Поиск и фильтры','library-filter-panel')}${!open&&summary?`<span class="shelf-filter-summary">${esc(summary)}</span>`:''}<div id="library-filter-panel" class="shelf-filter-fields" data-active-count="${activeCount}"${open?'':' hidden'}>${search}<div class="library-filter-options">${options}</div>${reset}</div></div>`;
+ }
+ return `<div class="library-filters" data-view-filters="${state.view}">${search}<div class="library-filter-actions">${toggle(`Фильтры${activeCount?`<span class="filter-active-count">${activeCount}</span>`:''}`,'library-filter-options')}${reset}</div><div class="library-filter-panel" id="library-filter-panel" data-active-count="${activeCount}" data-filter-open="${open}"><div class="library-filter-options" id="library-filter-options" data-filter-options>${options}</div></div></div>`;
 }
 function resultCount(shown,total){return hasSearchFilters()?`<p class="library-count" role="status">Найдено ${shown} из ${total}</p>`:'';}
 function noMatches(){return '<div class="library-empty wide-empty"><h2>Нет совпадений</h2><p>Попробуй другое название или сбрось фильтры.</p>'+button('Сбросить фильтры','clear')+'</div>';}
@@ -140,11 +153,37 @@ function empty(view,hasFilters) {
  return `<div class="library-empty"><h2>${copy[0]}</h2><p>${copy[1]}</p>${view==='liked'?button('Открыть сохранённое','view','data-view="saved"'):pickLink('Найти вариант')}</div>`;
 }
 function undoLine(){return state.undo?`<div class="library-undo" role="status"><span>${esc(state.undo.message)}</span>${button('Вернуть','undo','data-focus="undo"')}</div>`:'';}
+const inActiveCollection=row=>state.view==='saved'?row.saved:state.view==='liked'?row.rating==='liked':true;
+let savedPreview=[];
+function checkingSavedNames(rows,domain,query){
+ return Boolean(query.trim()&&pendingMetadata.size&&rows.some(row=>inLibraryDomain(row,domain)&&!Array.isArray(row.aliases)&&pendingMetadata.has(key(row))));
+}
+function savedSourceControls(rows,all) {
+ let {domain,query}=activeFilters();
+ if(!rows.length||state.view!=='saved')return '';
+ if(domain==='all'){
+  const sections=savedPickerDomains.map(id=>({id,count:rows.filter(row=>inLibraryDomain(row,id)).length})).filter(section=>section.count);
+  if(!sections.length)return '';
+  if(sections.length>1){
+   const choices=sections.map(({id,count})=>button(`${DOMAINS[id]} · ${count}`,'saved-source-domain',`data-domain="${id}"`)).join('');
+   return `<details class="saved-source-chooser" data-detail="saved-source"${openDetails.has('saved-source')?' open':''}><summary data-focus="saved-source-menu">Выбрать из сохранённого</summary><p>Из какого раздела выбрать?</p><div class="saved-source-actions">${choices}</div></details>`;
+  }
+  domain=sections[0].id;
+ }
+ if(!savedPickerDomains.includes(domain))return '';
+ const checking=checkingSavedNames(all,domain,query);
+ const count=rows.filter(row=>inLibraryDomain(row,domain)).length;
+ return `<div class="saved-source-actions">${button('Выбрать из сохранённого','saved-source-start',`data-domain="${domain}" data-focus="saved-source-start" aria-describedby="saved-source-scope"`+(checking?' disabled':''),true)}<p id="saved-source-scope">${DOMAINS[domain]}${query.trim()?` · Поиск «${esc(query.trim())}»`:''} · ${checking?'Проверяем названия…':`В подборе: ${count}`}</p></div>`;
+}
 function board() {
- const all=records().filter(row=>state.view==='saved'?row.saved:state.view==='liked'?row.rating==='liked':true),{reaction}=activeFilters();
+ const all=records().filter(inActiveCollection),{reaction}=activeFilters();
  const rows=filtered(all,row=>reaction==='all'||(reaction==='unrated'?!row.rating:row.rating===reaction)),shown=rows.slice(0,state.limit);
- return `<p class="collection-description">${{saved:'Интересное, к чему хочешь вернуться.',liked:'Произведения, которые ты оценил положительно.',all:'Сохранённое, оценки, знакомые произведения и отзывы.'}[state.view]}</p>`
-  +(all.length?filters():'')+undoLine()+(all.length?resultCount(rows.length,all.length):'')
+ savedPreview=state.view==='saved'?rows:[];
+ const compact=all.length>0&&all.length<=shortShelfLimit;
+ const filterUi=all.length?filters({compact}):'',sourceUi=savedSourceControls(rows,all);
+ const tools=compact?`<div class="short-shelf-tools">${sourceUi}${filterUi}</div>`:filterUi+sourceUi;
+ return (compact?'':`<p class="collection-description">${{saved:'Интересное, к чему хочешь вернуться.',liked:'Произведения, которые ты оценил положительно.',all:'Сохранённое, оценки, знакомые произведения и отзывы.'}[state.view]}</p>`)
+  +tools+undoLine()+(all.length?resultCount(rows.length,all.length):'')
   +`<section class="library-board" aria-label="${VIEWS[state.view]}"><div class="library-card-list">${shown.map(card).join('')||empty(state.view,Boolean(all.length&&hasSearchFilters()))}</div>${rows.length>shown.length?`<div class="library-more"><p>Показано ${shown.length} из ${rows.length}</p>${button(`Показать ещё ${Math.min(24,rows.length-shown.length)}`,'more','data-focus="library-more"')}</div>`:''}</section>`;
 }
 const legacyHistory=()=>library.history().filter(row=>row&&typeof row==='object').reverse();
@@ -271,13 +310,34 @@ function editEvening(el,action) {
 document.addEventListener('click',event=>{
  const el=event.target instanceof Element?event.target.closest('button[data-act]'):null;if(!el)return;
  const act=el.dataset.act,row=rowFor(el);
+ if(act==='saved-source-domain'&&state.view==='saved'&&savedPickerDomains.includes(el.dataset.domain)){
+  activeFilters().domain=el.dataset.domain;state.limit=24;writeNavigation(true);
+  render({focus:'saved-source-start'});void enrichCovers();return;
+ }
+ if(act==='saved-source-start'&&state.view==='saved'){
+  const {query}=activeFilters(),domain=el.dataset.domain??activeFilters().domain;
+  if(checkingSavedNames(library.all().filter(row=>row.saved),domain,query))return;
+  const url=createSavedSource(handoffStorage,domain,savedPreview,query,library.all());
+  if(url)location.assign(url);
+  else notice('Не удалось открыть подбор из сохранённого. Проверь, что браузер разрешает хранить данные сайта.');
+  return;
+ }
+ if(act==='evening-retry'){
+  el.disabled=true;
+  void feedback.retry(el.dataset.feedbackRetry).finally(()=>{el.disabled=false;});
+  return;
+ }
  if(act==='view'){
   const view=el.dataset.view==='board'?'saved':el.dataset.view;if(!Object.hasOwn(VIEWS,view)||view===state.view)return;
   state.view=view;state.limit=24;writeNavigation(true);render();void enrichCovers();return;
  }
  if(act==='filters'){activeFilters().open=!activeFilters().open;writeNavigation();render();return;}
  if(act==='more'){state.limit+=24;render();void enrichCovers();return;}
- if(act==='clear'){Object.assign(activeFilters(),defaultFilters(),{open:activeFilters().open});state.limit=24;writeNavigation();render();void enrichCovers();$('#find-title')?.focus();return;}
+ if(act==='clear'){
+  Object.assign(activeFilters(),defaultFilters(),{open:activeFilters().open});state.limit=24;writeNavigation();render();void enrichCovers();
+  const focusTarget=$('.shelf-filter-fields')&&!activeFilters().open?$('[data-focus="filters-toggle"]'):$('#find-title');
+  focusTarget?.focus();return;
+ }
  if(act==='undo'){undo();return;}
  if(act==='saved'&&row){toggleSaved(row);return;}
  if(act==='forget'&&row){forgetRow(row);return;}
@@ -300,7 +360,7 @@ document.addEventListener('change',event=>{
 });
 document.addEventListener('input',event=>{
  const el=event.target;
- if(el.id==='find-title'){activeFilters().query=el.value;state.limit=24;writeNavigation();render();}
+ if(el.id==='find-title'){activeFilters().query=el.value;state.limit=24;writeNavigation();render();void enrichCovers();}
  const form=el.closest?.('[data-form="evening-reason"]');if(form)feedbackDrafts.set(`${form.dataset.run}:${form.dataset.id}`,{reason:form.elements.reason.value,note:form.elements.note.value});
 });
 document.addEventListener('submit',event=>{
@@ -332,35 +392,48 @@ addEventListener('storage',event=>{
 addEventListener('popstate',()=>{readNavigation();render({focus:`view:${state.view}`});void enrichCovers();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){render();void feedback.refresh().then(()=>{render();});void enrichCovers();}});
 
-// Match by domain and stable ID so older feedback can recover its cover.
+// Resolve old records by ID. An active search includes the entire selected list, even offscreen rows.
 async function enrichCovers() {
  const artwork=eveningArtwork();
  const visible=new Set([...document.querySelectorAll('.board-card[data-card]')].map(card=>card.dataset.card));
- const rows=[...familiar.all().map(row=>({...row,domain:'game'})),
-  ...(isCollection()?records().filter(row=>visible.has(key(row))&&!row.poster&&!row.image):[]),
-  ...(state.view==='evenings'?eveningRecords().map(({card,domain})=>({...card,domain})):[])];
- const queue=[];
+ const {query,domain}=activeFilters();
+ const searching=isCollection()&&Boolean(query.trim());
+ const rows=isCollection()?records().filter(inActiveCollection)
+  :state.view==='evenings'?eveningRecords().map(({card,domain})=>({...card,domain})):[];
+ const byDomain=new Map();
  let updated=false;
  for(const row of rows){
   const id=key(row);
-  const cached=artwork.get(id);
-  if(cached?.poster||cached?.image){
-   if(visible.has(id)&&!metadata.has(id)){metadata.set(id,cached);updated=true;}
-   continue;
+  const cover=artwork.get(id);
+  const needsCover=(visible.has(id)||state.view==='evenings')&&!row.poster&&!row.image;
+  if(needsCover&&(cover?.poster||cover?.image)){
+   metadata.set(id,{...metadata.get(id),poster:cover.poster,image:cover.image});updated=true;
   }
+  const needsNames=searching&&(domain==='all'||inLibraryDomain(row,domain))&&!Array.isArray(row.aliases);
+  if(!needsNames&&(!needsCover||cover?.poster||cover?.image))continue;
   if(requested.has(id))continue;
-  requested.add(id);queue.push(row);
+  requested.add(id);pendingMetadata.add(id);
+  if(!byDomain.has(row.domain))byDomain.set(row.domain,[]);
+  byDomain.get(row.domain).push(row.id);
  }
- const worker=async()=>{for(let entry;entry=queue.shift();) {
-  try {
-   const response=await fetch(`/api/search?domain=${entry.domain}&q=${encodeURIComponent(entry.title)}`);
-   if(!response.ok)continue;
-   const found=await response.json(),match=Array.isArray(found)?found.find(card=>card?.id===entry.id):null;
-   if(match){metadata.set(key(entry),match);updated=true;}
-  }catch{/* Missing artwork uses the same local fallback as the lists. */}
- }};
- await Promise.all([worker(),worker()]);
- if(updated&&(isCollection()||state.view==='evenings'))render();
+ if(state.view==='saved'&&query.trim()&&byDomain.size)render();
+ for(const [domain,ids] of byDomain){
+  for(let i=0;i<ids.length;i+=40){
+   const batch=ids.slice(i,i+40),params=new URLSearchParams({domain});
+   for(const id of batch)params.append('id',id);
+   try {
+    const response=await fetch('/api/search?'+params);
+    if(!response.ok)throw Error('Catalog lookup failed');
+    for(const card of await response.json()){
+     if(!batch.includes(card.id))continue;
+     const id=key({domain,id:card.id});
+     metadata.set(id,{...metadata.get(id),...card});updated=true;
+    }
+   }catch{for(const id of batch)requested.delete(key({domain,id}));}
+   finally{for(const id of batch)pendingMetadata.delete(key({domain,id}));}
+  }
+ }
+ if(updated&&(isCollection()||state.view==='evenings')||state.view==='saved'&&activeFilters().query.trim()&&byDomain.size)render();
 }
 render();
 // Refresh opens the authoritative IndexedDB snapshot. Viewing never observes, updates or flushes a run.

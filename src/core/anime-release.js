@@ -67,7 +67,7 @@ export function animeReleaseItem(id) {
  const item=editorialItem({id,domain:'anime',kind:film?'film':'series',name,ru,aliases,year,
   runtime:film?film[2]:first?.minutes??null,runtimeSource:film?film[4]:first?.source,genre:film?film[3]:serial[2],
   link:entry.source,status:serial?.[3]??null,summary:film?film[5]:serial[4]});
- return {...item,animeOrigin:entry.origin,standalone:entry.standalone};
+ return {...item,...(first?{firstEpisodeMinutes:first.minutes}:{}),animeOrigin:entry.origin,standalone:entry.standalone};
 }
 
 export function cartoonCorrection(id) {
@@ -96,5 +96,5 @@ export function verifiedAnimeItem(row) {
  const item=editorialItem({id,domain:'anime',kind,name,ru,aliases,year,runtime:first?.minutes??runtime,
   runtimeSource:first?.source??(runtime?link:null),genre:genres,link,status:null,summary:null,source:fromWikidata?'wikidata':'editorial'});
  // These records have less evidence than the manually reviewed titles.
- return {...item,animeOrigin:'japanese',standalone:null,quality:.69};
+ return {...item,...(first?{firstEpisodeMinutes:first.minutes}:{}),animeOrigin:'japanese',standalone:null,quality:.69};
 }

@@ -18,7 +18,7 @@ export function createSelectionReviewController({storage,feedback,getSnapshot,ge
  };
  root.addEventListener('click',event=>{
   const button=event.target.closest('[data-act]');if(!button||button.disabled||isBusy())return;
-  if(button.dataset.act==='selection-retry'){void feedback.flush();return;}
+  if(button.dataset.act==='selection-retry'){const run=current();if(run)void feedback.retry(run.id);return;}
   const {act}=button.dataset;
   if(!['selection-verdict','selection-edit','selection-cancel'].includes(act))return;
   const run=current();if(!run||button.dataset.run!==run.id)return;

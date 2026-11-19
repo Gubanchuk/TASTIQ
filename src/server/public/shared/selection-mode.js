@@ -1,16 +1,17 @@
 import {isSelectionDepth} from './conversation-entry.js';
 
 const modes={
- standard:{title:'Быстрый подбор',pace:'Обычно быстрее',description:'Уточним главное и покажем варианты.'},
- deep:{title:'Подробный подбор',pace:'Чуть дольше',description:'Обсудим детали и ограничения. Можно закончить уточнения раньше.'},
+ standard:{title:'Быстрый подбор',description:'Уточним главное и перейдём к вариантам.'},
+ deep:{title:'Подробный подбор',description:'Разберём, что для тебя важнее. Уточнения можно закончить раньше.'},
 };
 export const selectionModeTitle=depth=>isSelectionDepth(depth)?modes[depth].title:'';
 
 function card(depth,active){
- const {title,pace,description}=modes[depth];
- return `<button type="button" class="mode-card mode-card--${depth}" data-mode-option="${depth}" aria-labelledby="mode-${depth}-title" aria-describedby="mode-${depth}-pace mode-${depth}-description">
-  <span class="mode-card-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-  <span class="mode-card-pace" id="mode-${depth}-pace">${active===depth?'Текущий режим · ':''}${pace}</span>
+ const {title,description}=modes[depth];
+ const current=active===depth;
+ return `<button type="button" class="mode-card mode-card--${depth}" data-mode-option="${depth}"${current?' aria-current="true"':''} aria-labelledby="mode-${depth}-title" aria-describedby="mode-${depth}-description">
+  <span class="mode-card-art" aria-hidden="true"></span>
+  ${current?'<span class="mode-card-current">Текущий режим</span>':''}
   <span class="mode-card-title" id="mode-${depth}-title">${title}</span>
   <span class="mode-card-description" id="mode-${depth}-description">${description}</span>
   <span class="mode-card-arrow" aria-hidden="true"></span>
@@ -29,7 +30,7 @@ export function checkpointHtml(checkpoint){
  return `<aside class="mode-checkpoint" aria-label="Продолжение подбора"><strong>${title}</strong><button type="button" class="btn btn-secondary" data-act="review" data-focus="review">Проверить запрос</button></aside>`;
 }
 
-export function setupSelectionMode({client,render,switchDepth,onRestart,focusWorkspace}){
+export function setupSelectionMode({client,render,switchDepth,onRestart,onEntryChoice,focusWorkspace}){
  const url=new URL(location.href),explicitEntry=url.searchParams.get('choose')==='1'&&!url.searchParams.has('selection');
  let intent=explicitEntry?'new':client.needsDepth?'start':null;
  const host=document.getElementById('selection-mode'),workspace=document.getElementById('picker-workspace');
@@ -49,7 +50,7 @@ export function setupSelectionMode({client,render,switchDepth,onRestart,focusWor
   if(!option&&!event.target.closest('[data-mode-resume]'))return;
   const next=intent,depth=option?.dataset.modeOption;
   intent=null;clearEntry();
-  if(!option){render();focusWorkspace();return;}
+  if(!option){onEntryChoice?.(false);render();focusWorkspace();return;}
   if(next==='switch'){
    render();
    if(client.state.depth!==depth)void switchDepth(depth).then(result=>{if(result&&!client.error)focusWorkspace();});
@@ -58,7 +59,9 @@ export function setupSelectionMode({client,render,switchDepth,onRestart,focusWor
   }
   const restart=next!=='start'&&!client.needsDepth;
   if(restart)onRestart();
-  client.chooseDepth(depth,{restart});focusWorkspace();
+  const started=client.chooseDepth(depth,{restart});
+  if(next==='new'||next==='start')onEntryChoice?.(started);
+  focusWorkspace();
  });
  tool.addEventListener('click',()=>{tool.closest('details').open=false;open('switch');});
  return {

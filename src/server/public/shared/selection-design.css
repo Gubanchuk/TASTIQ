@@ -449,3 +449,10 @@ body.selection-start>main nav a svg {
   grid-template-columns:minmax(0,1fr);
  }
 }
+#saved-source-banner {
+ box-sizing:border-box; width:min(100% - 32px,1040px); margin:0 auto 16px;
+ padding:14px 18px; color:var(--brand-ink); background:var(--brand-surface); border:1px solid var(--workspace-line); border-radius:16px;
+}
+#saved-source-banner nav {display:flex;flex-wrap:wrap;gap:0 20px;}
+#saved-source-banner a {display:inline-flex;align-items:center;min-height:44px;color:var(--brand-primary);}
+#source-changed {display:block;margin-top:4px;}

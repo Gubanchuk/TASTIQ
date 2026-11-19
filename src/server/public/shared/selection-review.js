@@ -9,14 +9,22 @@ export function normalizeSelectionReview(value){
  for(const [key,max]of [['note',600],['requestSummary',1600],['transcript',48000]])if(typeof value[key]!=='string'||value[key].length>max)return null;
  return {verdict:value.verdict,issue:value.issue,note:value.note.trim(),requestSummary:value.requestSummary.trim(),transcript:value.transcript.trim(),learn:value.learn};
 }
-export function historicalFeedback(runs,domain){
+export function historicalReviewEntries(runs,domain){
  return runs.filter(run=>run.domain===domain&&run.selectionReview?.learn===true&&Object.hasOwn(REVIEW_VERDICTS,run.selectionReview.verdict))
-  .sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt))).slice(0,6).map(run=>({domain,verdict:run.selectionReview.verdict,issue:run.selectionReview.issue,note:clean(run.selectionReview.note,300),request:clean(run.selectionReview.requestSummary,500),cards:run.cards.slice(0,4).map(c=>({id:c.id,title:clean(c.title,200)}))}));
+  .sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt))).slice(0,6).map(run=>({
+   id:run.id,
+   context:{domain,verdict:run.selectionReview.verdict,issue:run.selectionReview.issue,note:clean(run.selectionReview.note,300),request:clean(run.selectionReview.requestSummary,500),cards:run.cards.slice(0,4).map(c=>({id:c.id,title:clean(c.title,200)}))}
+  }));
+}
+export function historicalFeedback(runs,domain){
+ return historicalReviewEntries(runs,domain).map(entry=>entry.context);
 }
 const draftOf=value=>({verdict:Object.hasOwn(REVIEW_VERDICTS,value?.verdict)?value.verdict:null,issue:Object.hasOwn(REVIEW_ISSUES,value?.issue)?value.issue:null,note:typeof value?.note==='string'?value.note.slice(0,600):'',learn:value?.learn!==false});
 export function selectionReviewStatus(run,{draft,status='pending',persistent=true}={}){
  if(draft)return JSON.stringify(draftOf(run?.selectionReview))===JSON.stringify(draftOf(draft))?'':'Изменения ещё не отправлены.';
  if(!run?.selectionReview)return '';
+ if(status==='conflict')return 'На сервере есть другая версия. Чтобы отправить свой вариант новой версией, нажми «Повторить отправку».';
+ if(status==='rejected')return 'Сервер отклонил отзыв. Можно изменить его и отправить снова.';
  if(status==='sent')return 'Твой отзыв помогает нам улучшать подбор.';
  return persistent?'Отзыв сохранён на устройстве и ожидает отправки.':'Отзыв пока сохранён в этом окне и ожидает отправки.';
 }

@@ -57,6 +57,31 @@ for(const domain of ['game','film'])test(`${domain}: more coalesces duplicate re
  assert.ok(invalid.error);assert.deepEqual(invalid.state.result,recycled.state.result);
 });
 
+for(const domain of ['film','series','cartoon','anime'])test(`${domain}: a single familiar replacement stays neutral before and after browsing`,async()=>{
+ const prompts=[];
+ const {service,state}=setup(domain,{pick:(all,legacy,options)=>aiPick(all,legacy,{...options,api:async request=>{
+  prompts.push(request.input);
+  const picks=rankAll(all[domain],profileOf(legacy),sessionOf(legacy)).ranked.slice(0,4).map(({game})=>({id:game.id,reason:'stub',caveat:'stub'}));
+  return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({picks})}]}]};
+ }})});
+ state.familiar.excluded=['t17'];
+ let current=state;
+ const act=async action=>{const out=await service({domain,state:current,action});assert.equal(out.error,undefined);current=out.state;};
+ const seen=new Set();
+ for(const type of ['replace_familiar','more','replace_familiar']){
+  const page=cards(current.result),id=page[0].id;
+  for(const card of page)seen.add(card.id);
+  if(type==='replace_familiar')await act({type:'familiar_mark',id});
+  await act(type==='more'?{type}:{type,id});
+  if(type==='replace_familiar')assert.deepEqual(cards(current.result).slice(1),page.slice(1));
+  const prompt=prompts.at(-1);
+  const neutral=prompt.split('\n').find(line=>line.startsWith('Уже показано для выбора'))??'';
+  assert.doesNotMatch(prompt,/Уже показано и не устроило/);
+  assert.match(prompt,/Отказался сейчас [^\n]*: Title 17\.(?:\n|$)/);
+  for(const shown of seen)assert.ok(neutral.includes('Title '+shown.slice(1)),shown);
+ }
+});
+
 for(const domain of ['game','film','series','cartoon'])test(`${domain}: real more prompt treats shown cards as neutral pagination, preserving actual exclusions`,async()=>{
  let prompt;const {service,state}=setup(domain,{pick:async(catalogs,legacy,options)=>aiPick(catalogs,legacy,{...options,api:async request=>{
   prompt=request.input;const catalog=catalogs[domain];

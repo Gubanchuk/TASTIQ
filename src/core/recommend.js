@@ -80,6 +80,8 @@ function present(item, detail, taste, label, catalog, session) {
     domain: catalog.domain.id,
     name: item.name,
     ru: item.ru,
+    original: item.original ?? null,
+    aliases: item.aliases ?? [],
     year: item.year,
     image: item.image ?? null,
     poster: item.poster ?? null,
@@ -136,6 +138,14 @@ export function rankAll(catalog, profile = {}, session = {}) {
   const ranked = passed
     .map((game) => ({ game, ...scoreGame(game, taste, mood, catalog, session) }))
     .sort((a, b) => b.score - a.score);
+  if(session.savedIds){
+    const seen=new Set();
+    return {taste,mood,removed,ranked:ranked.filter(({game})=>{
+      const work=game.work??game.id;
+      if(seen.has(work))return false;
+      seen.add(work);return true;
+    })};
+  }
   return { taste, mood, ranked, removed };
 }
 
@@ -147,14 +157,36 @@ export function choose(ranked) {
   return { pool, picked: diversify(pool, ALTERNATIVES) };
 }
 
-export function recommend(catalog, profile = {}, session = {}) {
+// The offline picker has no model to weigh a selected mechanic against secondary wishes.
+// Prefer evidence among similarly scored games only. Keep the original when no comparable game supports it.
+function preferMechanic(picked, pool, feature) {
+  if (!feature) return picked;
+  const matches = ({game}) => game.features[feature]?.r >= 0.5 && game.features[feature].c >= 0.5;
+  const work = ({game}) => game.work ?? game.id;
+  const used = new Set(picked.map(work));
+  const candidates = pool.slice(0, 60).filter(row => {
+    const evidence = row.game.features[feature];
+    return matches(row) && (evidence.src?.includes('fact') || evidence.ev?.some(entry => ['description','review','wiki'].includes(entry.kind)));
+  });
+  return picked.map(row => {
+    if (matches(row)) return row;
+    const floor = row.score - STRONG_MARGIN * Math.abs(row.score);
+    const replacement = candidates.find(candidate => candidate.score >= floor && !used.has(work(candidate)));
+    if (!replacement) return row;
+    used.add(work(replacement));
+    return replacement;
+  });
+}
+
+export function recommend(catalog, profile = {}, session = {}, preferredMechanic = null) {
   const { taste, ranked, removed } = rankAll(catalog, profile, session);
   const sieves = SIEVES.map((s) => ({ ...s, removed: removed[s.id] }));
   if (!ranked.length) return { top: null, alternatives: [], sieves, considered: 0, taste: summarizeTaste(taste, catalog) };
 
   const { pool, picked } = choose(ranked);
   const p1 = belief(pool.map((r) => r.score))[0];
-  const [top, ...alts] = picked.map((r, i) => present(r.game, r, taste, confidenceLabel(r, i === 0 ? p1 : 0), catalog, session));
+  const cards = preferMechanic(picked, pool, preferredMechanic);
+  const [top, ...alts] = cards.map((r, i) => present(r.game, r, taste, confidenceLabel(r, i === 0 && r === picked[0] ? p1 : 0), catalog, session));
   return {
     top,
     alternatives: alts,

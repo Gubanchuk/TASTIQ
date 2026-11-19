@@ -1,0 +1,140 @@
+@import url("/shared/selection-mode.css?original=1");
+
+.selection-design .mode-picker { width: min(100% - 64px, 1040px); }
+.mode-card-grid { gap: 20px; }
+.mode-heading { margin-bottom: clamp(20px, 3vw, 32px); }
+.selection-design .mode-card {
+  --surface: #cddcfa;
+  --ink: #142651;
+  --description: #293e69;
+  --shadow: #7790ba;
+  --art: url("/design-study/transport.jpg");
+  --inset: clamp(23px, 3vw, 34px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto 1fr;
+  justify-content: stretch;
+  align-items: start;
+  min-height: 0;
+  padding: 0 0 var(--inset);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--shadow);
+  border-radius: 22px;
+}
+.selection-design .mode-card--deep {
+  --surface: #28378b;
+  --ink: #fff;
+  --description: #e4e8ff;
+  --shadow: #263571;
+  --art: url("/design-study/mixer.jpg");
+}
+.studio-object {
+  display: block;
+  position: relative;
+  grid-area: 1 / 1 / 2 / -1;
+  width: 100%;
+  aspect-ratio: 1.92;
+  pointer-events: none;
+}
+.studio-object::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--art) center 32% / cover no-repeat;
+  mask-image: linear-gradient(to bottom, #000 0 82%, transparent);
+  transition: transform .25s ease-out;
+}
+.selection-design .mode-card-title {
+  grid-area: 2 / 1 / 3 / -1;
+  font: 620 clamp(21px, 2.4vw, 31px)/1.16 Unbounded,Golos,sans-serif;
+  letter-spacing: -.056em;
+  margin: 8px var(--inset) 0;
+  color: var(--ink);
+}
+.selection-design .mode-card-description {
+  grid-area: 3 / 1;
+  margin: 12px 12px 0 var(--inset);
+  min-height: 0;
+  max-width: 34ch;
+  font: 450 clamp(15px, 1.4vw, 17px)/1.42 Golos,sans-serif;
+  color: var(--description);
+}
+.selection-design .mode-card .mode-card-arrow {
+  position: static;
+  grid-area: 3 / 2;
+  align-self: end;
+  margin: 7px var(--inset) 0 0;
+  width: 38px;
+  height: 38px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: var(--ink);
+}
+.selection-design .mode-card .mode-card-pace[hidden] { display: none; }
+.selection-design .mode-card-pace {
+  position: absolute;
+  z-index: 1;
+  top: 13px;
+  left: 15px;
+  min-height: 0;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #fff;
+  color: #233774;
+  font: 650 12px/1.3 Golos,sans-serif;
+}
+.selection-design .mode-card-current { outline: 2px solid #4561c8; outline-offset: 2px; }
+.selection-design .mode-card:focus-visible { outline: 3px solid #143fcb; outline-offset: 5px; }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  .selection-design .mode-card:hover { transform: translateY(-3px); box-shadow: 0 7px 17px #22356926; }
+  .mode-card:hover .studio-object::before { transform: scale(1.025); }
+}
+@media (max-width:760px) {
+  .selection-design .mode-picker { width: min(100% - 32px, 540px); }
+  .mode-heading { margin-bottom: 16px; }
+  .mode-card-grid { gap: 12px; }
+  .selection-design .mode-card {
+    --inset: 15px;
+    grid-template-columns: 54% minmax(0,1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 150px;
+    padding: 16px 0 12px;
+    border-radius: 17px;
+  }
+  .studio-object {
+    position: absolute;
+    grid-area: auto;
+    inset: 0 0 0 auto;
+    width: 49%;
+    height: 100%;
+    aspect-ratio: auto;
+    z-index: -1;
+  }
+  .studio-object::before {
+    background-position: 51% center;
+    background-size: cover;
+    mask-image: linear-gradient(to right, transparent, #000 17%);
+  }
+  .selection-design .mode-card-title {
+    grid-area: 1 / 1;
+    margin: 0 0 0 var(--inset);
+    font: 730 clamp(18px, 4.65vw, 22px)/1.14 Golos,sans-serif;
+    letter-spacing: -.035em;
+  }
+  .selection-design .mode-card-description { grid-area: 2 / 1; margin: 7px 0 0 var(--inset); font-size: .875rem; line-height: 1.35; }
+  .selection-design .mode-card .mode-card-arrow { grid-area: 3 / 1; width: 24px; height: 24px; margin: 8px 0 0 var(--inset); }
+  .selection-design .mode-card .mode-card-arrow::before { width: 11px; }
+  .selection-design .mode-card .mode-card-arrow::after { width: 7px; height: 7px; }
+  .selection-design .mode-card-pace { top: auto; left: auto; right: 7px; bottom: 7px; font-size: 11px; }
+}
+@media (max-width:360px) {
+  .studio-object::before {
+    background-size: auto 83%;
+    mask-image: linear-gradient(to right, transparent, #000 18%);
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .studio-object::before { transition: none; }
+}

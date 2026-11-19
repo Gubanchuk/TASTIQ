@@ -7,8 +7,9 @@ const ratingOf=row=>['liked','disliked'].includes(row.status)?row.status:null;
 
 // A read-only view: saving, familiarity, request fit and experience are distinct.
 // Historical feedback is never rewritten into the model's persistent taste.
-export function collectionRecords({items=[],familiar=[],runs=[]}={}) {
+export function collectionRecords({items=[],familiar=[],runs=[],archivedOutcomes=[]}={}) {
  const rows=new Map();
+ const pastOpinions=new Map();
  const ensure=row=>{
   const id=key(row);if(!rows.has(id))rows.set(id,{...row,domain:mediaLibraryDomain(row.domain,row.id),saved:false,inLibrary:false,rating:null,ratingSource:null,ratingConflict:false,reviews:[],title:row.title||row.ru||row.name||row.id});
   return rows.get(id);
@@ -21,6 +22,13 @@ export function collectionRecords({items=[],familiar=[],runs=[]}={}) {
   for(const field of ['poster','image','year','link','addedAt'])if(!row[field]&&entry[field])row[field]=entry[field];
   if(!row.addedAt)row.addedAt=entry.updatedAt;
  }
+ for(const entry of archivedOutcomes.filter(valid)){
+  const {id,domain,title,at,outcomes}=entry;
+  if(!Array.isArray(outcomes)||!outcomes.length)continue;
+  const row=ensure({id,domain,title});
+  if(!row.addedAt)row.addedAt=at;
+  const k=key(row);pastOpinions.set(k,[...(pastOpinions.get(k)??[]),...outcomes]);
+ }
  for(const run of runs)for(const card of run.cards??[]){
   const response=run.responses?.find(r=>r.cardId===card.id);
   if(!response||!response.chosen&&!response.started&&!response.fit&&!response.outcome&&!response.note&&!response.reason)continue;
@@ -30,7 +38,7 @@ export function collectionRecords({items=[],familiar=[],runs=[]}={}) {
  }
  return [...rows.values()].map(row=>{
   if(!row.ratingOverride&&!row.rating){
-   const opinions=new Set(row.reviews.map(r=>r.response.outcome).filter(v=>['liked','mixed','disliked'].includes(v)));
+   const opinions=new Set([...(pastOpinions.get(key(row))??[]),...row.reviews.map(r=>r.response.outcome)].filter(v=>['liked','mixed','disliked'].includes(v)));
    row.ratingConflict=opinions.size>1;
    if(opinions.size===1){const value=[...opinions][0];row.rating=value==='mixed'?'mixed':value;row.ratingSource='experience';}
   }

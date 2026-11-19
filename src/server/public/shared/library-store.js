@@ -11,6 +11,13 @@ const laneOf=item=>LANES.has(item.lane)?item.lane:['liked','disliked','known'].i
 export const isLibrarySaved=item=>Boolean(item)&&(typeof item.saved==='boolean'?item.saved:['want','tonight'].includes(laneOf(item)));
 const matches=(row,domain,id)=>row?.domain===domain&&row.id===id;
 
+function titleFields(card) {
+ const fields={};
+ for(const key of ['name','original'])if(typeof card[key]==='string'&&card[key].trim())fields[key]=clean(card[key]);
+ if(Array.isArray(card.aliases))fields.aliases=[...new Set(card.aliases.filter(alias=>typeof alias==='string').map(clean).filter(Boolean))];
+ return fields;
+}
+
 export function safeLibraryUrl(value) {
  if(typeof value!=='string'||!value||/[\\\u0000-\u0020]/.test(value))return null;
  if(value.startsWith('/')&&!value.startsWith('//'))return value;
@@ -46,7 +53,7 @@ export function createLibraryStore({storage,now=()=>new Date().toISOString()}={}
    domain=mediaLibraryDomain(domain,card.id);
    read();const index=indexOf(domain,card.id),prior=snapshot.items[index],at=now();
    const title=clean(card.ru||card.name||card.title||prior?.title||card.id);
-   const metadata={};
+   const metadata=titleFields(card);
    for(const field of ['year','poster','image','kind','link'])if(card[field]!=null)metadata[field]=card[field];
    const item=prior?{...prior,...metadata,title,lane,saved:lane!=='known',updatedAt:at}
     :{id:card.id,domain,title,year:null,poster:null,image:null,kind:null,link:null,...metadata,status:lane==='known'?'known':'want',lane,saved:lane!=='known',addedAt:at,updatedAt:at};
@@ -63,7 +70,7 @@ export function createLibraryStore({storage,now=()=>new Date().toISOString()}={}
    read();let index=indexOf(domain,card.id);
    if(index<0){if(!saved)return null;api.save(card,{domain,lane:'want'});read();index=indexOf(domain,card.id);}
    if(index<0)return null;
-   const item={...snapshot.items[index],saved,updatedAt:now()};snapshot.items[index]=item;write();return view(item);
+   const item={...snapshot.items[index],...titleFields(card),saved,updatedAt:now()};snapshot.items[index]=item;write();return view(item);
   },
   remove(domain,id) {
    read();const index=indexOf(domain,id);if(index<0)return null;

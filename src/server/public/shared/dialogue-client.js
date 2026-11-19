@@ -15,7 +15,7 @@
 async function api(path, body) {
   const res = await fetch(path, body ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : undefined);
   const data = await res.json();
-  if (!res.ok) throw new Error(data.error ?? res.statusText);
+  if (!res.ok) throw Object.assign(new Error(data.error ?? res.statusText),{status:res.status});
   return data;
 }
 

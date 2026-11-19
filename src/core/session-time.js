@@ -53,6 +53,45 @@ export function currentSessionMinutes(quote,question=null) {
  return current?minutes:null;
 }
 
+// Saved-game previews also run offline. Recognize an explicit budget for one
+// play session using the same exact-quote and correction checks as the planner.
+function savedSessionMinutes(quote,question) {
+ const existing=currentSessionMinutes(quote,question);
+ if(existing!==null)return existing;
+ const cap=quote.trim().match(/^(?:(?:сегодня|сейчас)\s+)?(?:на (?:одну )?(?:игровую )?сессию|(?:игровой )?сеанс|(?:игровая )?сессия|(?:сегодня|сейчас)(?: есть)?|(?:могу )?(?:играть|поиграть))\s*[:—–-]?\s*(?:строго\s+)?(?:до|не больше|максимум)\s+(.+)$/iu);
+ if(!cap)return null;
+ const duration=cap[1].toLowerCase();
+ return currentSessionMinutes('Сегодня есть '+(duration==='получаса'?'полчаса':duration==='полутора часов'?'полтора часа':duration));
+}
+
+export function savedGameSessionTime(turn,state) {
+ const text=turn.text?.trim();
+ if(!text)return null;
+ const candidates=[];
+ for(const clause of text.split(/[.!?;,]/u)){
+  const quote=clause.trim(),minutes=savedSessionMinutes(quote,turn.question);
+  if(minutes===null)continue;
+  const checked=validateSessionTime({sourceId:turn.id,quote,minutes},state);
+  if(checked.time)candidates.push(checked.time);
+ }
+ return candidates.length===1?candidates[0]:null;
+}
+
+export function requiresVerifiedGameSession(state) {
+ if(!state.sessionTime)return false;
+ const index=state.turns.findIndex(turn=>turn.id===state.sessionTime.sourceId);
+ const quote=state.sessionTime.quote;
+ if(/строго|не больше|максимум|(?:^|\s)до\s/iu.test(quote))return true;
+ return state.turns.slice(index).some(turn=>!turn.superseded&&turn.kind==='answer'&&
+  (turn.text??'').split(/[.!?;]/u).some(clause=>
+   /(?:подтвержд[её]н|проверенн|гарантирован|обязательн|строго|только)/iu.test(clause)&&
+   /прервать|прерваться|вовремя остановиться|время (?:одного |игрового )?сеанса|длительность (?:игровой )?сессии/iu.test(clause)&&
+   !/(?:не (?:обязательн|требу|нуж)|неважн|не важно)/iu.test(clause)));
+}
+
+export const clearsSavedGameTime=text=>text.split(/[.!?;]/u).some(clause=>
+ /^(?:теперь\s+)?(?:без (?:лимита|ограничений) по времени|(?:сними|убери) (?:ограничение|лимит) по времени|время (?:больше |теперь )?не ?важно)\s*$/iu.test(clause.trim()));
+
 export function validateSessionTime(value,state) {
  if(value==null)return {time:null};
  if(typeof value!=='object'||Array.isArray(value)||Object.keys(value).length!==3
@@ -63,10 +102,11 @@ export function validateSessionTime(value,state) {
  const source=state.turns?.find(t=>t.id===value.sourceId&&!t.superseded),quote=value.quote.trim();
  if(!source||!source.answer.includes(quote))return {error:'Время не подтверждено точной цитатой действующего ответа.'};
  if(isSessionTimeSourceRetracted(value.sourceId,state))return {error:'Это ограничение времени уже снято тобой.'};
- if(currentSessionMinutes(quote,source.question)!==value.minutes)return {error:'Не удалось подтвердить указанное число минут именно для сегодняшней сессии.'};
+ const minutesOf=state.savedSource?.domain==='game'?savedSessionMinutes:currentSessionMinutes;
+ if(minutesOf(quote,source.question)!==value.minutes)return {error:'Не удалось подтвердить указанное число минут именно для сегодняшней сессии.'};
  // A bare answer is safe only as the whole answer to a current-time question.
  // Do not let a convenient subquote omit its original uncertainty or range.
- if(currentSessionMinutes(quote)===null&&source.answer.trim()!==quote)return {error:'Цитата времени не сохраняет условия исходного ответа.'};
+ if(minutesOf(quote)===null&&source.answer.trim()!==quote)return {error:'Цитата времени не сохраняет условия исходного ответа.'};
  const start=source.answer.indexOf(quote),before=source.answer.slice(0,start).split(/[.!?;]/u).at(-1)??'',after=source.answer.slice(start+quote.length);
  const afterBudget=timeSuffix(quote,after).split(/[,.!?;]\s*(?:а\s+|но\s+)?(?:хочу|нужн|предпочита|важн|игра)/iu)[0];
  if(/если|может|возможно|наверн|не знаю|не уверен|примерно|около|не\s+(?:будет|могу|есть|хочу)|(?:вчера|раньше).*?(?:говор|дум|сказ)/iu.test(before)
@@ -88,6 +128,7 @@ export function isSessionTimeSourceRetracted(sourceId,state) {
 export function isSessionTimeFact(fact,state) {
  if(fact?.feature!=null||fact?.gameId!=null||typeof fact?.quote!=='string')return false;
  const source=state.turns?.find(t=>t.id===fact.sourceId&&!t.superseded);
- const textTime=currentSessionMinutes(fact.text,fact.scope==='today'?{title:'Сколько времени есть сегодня?'}:null);
- return Boolean(source?.answer.includes(fact.quote))&&(currentSessionMinutes(fact.quote,source.question)!==null||textTime!==null);
+ const minutesOf=state.savedSource?.domain==='game'?savedSessionMinutes:currentSessionMinutes;
+ const textTime=typeof fact.text==='string'?minutesOf(fact.text,fact.scope==='today'?{title:'Сколько времени есть сегодня?'}:null):null;
+ return Boolean(source?.answer.includes(fact.quote))&&(minutesOf(fact.quote,source.question)!==null||textTime!==null);
 }

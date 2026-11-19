@@ -11,17 +11,41 @@ const recoveryOf=value=>typeof value?.error==='string'&&value.error?{error:value
 const pristine=value=>value?.state?.phase==='direction'&&value.state.revision===0&&!value.state.turns.length&&!value.error;
 
 // Transport, snapshots and drafts are independent of DOM. Reload is always a free resume.
-export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false,selectionId=null}={}) {
+export function createConversationClient({fetch:request=globalThis.fetch,storage=defaultStorage(),archiveStorage=storage,onChange=()=>{},mode='guided',uid=null,rememberedExclusions,qualityFeedback,domain='game',storageKey=conversationStorageKey(domain),endpoint=domain==='game'?'/api/conversation':'/api/media-conversation',localStart=false,selectionId=null,savedSource=null,savedListView=null}={}) {
  if(!['game','film','series','cartoon','anime'].includes(domain)||typeof storageKey!=='string'||!storageKey||domain!=='game'&&storageKey===CONVERSATION_KEY)throw TypeError('Некорректный раздел подбора');
- const scoped=state=>state&&(domain==='game'?state.domain==null||state.domain==='game':state.domain===domain);
+ const allowed=savedSource?new Set(savedSource.ids):null;
+ function scoped(value,requestedSource=null){
+  const state=value?.state;
+  if(!state||(state.domain??'game')!==domain)return false;
+  if(!allowed)return !state.savedSource;
+  const source=state.savedSource;
+  if(source?.version!==1||source.domain!==domain||!Array.isArray(source.ids)||!source.ids.every(id=>allowed.has(id)))return false;
+  const ids=new Set(source.ids);
+  if(ids.size!==source.ids.length)return false;
+  if(requestedSource){
+   const requested=new Set(requestedSource.ids);
+   if(source.ids.some(id=>!requested.has(id)))return false;
+  }
+  return [state.result,value.screen?.result].every(result=>!result||
+   [result.top,...(result.alternatives??[])].filter(Boolean).every(card=>ids.has(card.id)));
+ }
  let snapshot=null,drafts={},previous=null,correctionCheckpoint=null,persistent=Boolean(storage),generation=0,busy=false,error=null,retryBody=null,retryOptions={};
- try {const saved=JSON.parse(storage?.getItem(storageKey)??'null');if(saved?.version===1){if(saved.snapshot?.state?.version===1&&saved.snapshot?.screen&&scoped(saved.snapshot.state)){snapshot=saved.snapshot;if(saved.drafts&&typeof saved.drafts==='object')drafts=saved.drafts;}if(saved.previous?.snapshot?.state?.version===1&&saved.previous.snapshot.screen&&scoped(saved.previous.snapshot.state))previous=saved.previous;}}catch { /* invalid storage is not trusted */ }
- try {const saved=JSON.parse(storage?.getItem(storageKey)??'null');if(saved?.version===1&&saved.correctionCheckpoint?.snapshot?.state?.version===1&&saved.correctionCheckpoint.snapshot.screen?.type==='result'&&saved.correctionCheckpoint.snapshot.state.result&&scoped(saved.correctionCheckpoint.snapshot.state)&&saved.correctionCheckpoint.drafts&&typeof saved.correctionCheckpoint.drafts==='object')correctionCheckpoint=saved.correctionCheckpoint;}catch {}
- const archive=createSelectionArchive({storage});
+ try{
+  const saved=JSON.parse(storage?.getItem(storageKey)??'null');
+  const valid=value=>value?.state?.version===1&&value.screen&&scoped(value);
+  if(saved?.version===1){
+   if(valid(saved.snapshot)){snapshot=saved.snapshot;if(saved.drafts&&typeof saved.drafts==='object')drafts=saved.drafts;}
+   if(valid(saved.previous?.snapshot))previous=saved.previous;
+   const checkpoint=saved.correctionCheckpoint;
+   if(valid(checkpoint?.snapshot)&&checkpoint.snapshot.screen.type==='result'&&checkpoint.snapshot.state.result&&checkpoint.drafts&&typeof checkpoint.drafts==='object')correctionCheckpoint=checkpoint;
+  }
+ }catch{/* A broken local draft cannot replace a valid selection. */}
+ const archive=createSelectionArchive({storage:archiveStorage});
  const selected=selectionId?archive.get(selectionId,domain):null;
- if(selected&&JSON.stringify(snapshot?.state)!==JSON.stringify(selected.state)){if(snapshot)previous={snapshot:clone(snapshot),drafts:clone(drafts),fromArchive:true};snapshot=selected;drafts={};correctionCheckpoint=null;}
+ if(scoped(selected)&&JSON.stringify(snapshot?.state)!==JSON.stringify(selected.state)){if(snapshot)previous={snapshot:clone(snapshot),drafts:clone(drafts),fromArchive:true};snapshot=selected;drafts={};correctionCheckpoint=null;}
  if(localStart&&(!snapshot||pristine(snapshot))){
-  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth:snapshot?.state.depth,requireDirection:true,...(snapshot?{id:snapshot.state.id}:{})});
+  const initial=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth:snapshot?.state.depth,savedSource:snapshot?.state.savedSource??savedSource,requireDirection:true,...(snapshot?{id:snapshot.state.id}:{})});
+  if(snapshot?.state.savedSourceKey)initial.state.savedSourceKey=snapshot.state.savedSourceKey;
   // v3 draft keys include question wording and options. Upgrade a pristine entry
   // without hiding words or genre choices written before quick wishes existed.
   if(snapshot?.screen?.question){
@@ -36,18 +60,28 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
  error=recoveryOf(snapshot)?.error??null;
  if(error&&snapshot.retryable!==false)retryBody={state:clone(snapshot.state),action:{type:'retry'},...(uid?{uid}:{})};
  let lastArchived=null;
- const save=()=>{if(snapshot!==lastArchived){archive.capture(snapshot);lastArchived=snapshot;}try{if(!storage)throw Error();storage.setItem(storageKey,JSON.stringify({version:1,snapshot,drafts,previous,correctionCheckpoint}));}catch{persistent=false;}};
+ const save=()=>{
+  // The library search and aliases stay on the device. Requests send just the state.
+  if(snapshot&&savedListView)snapshot.savedListView=savedListView;
+  if(snapshot!==lastArchived){archive.capture(snapshot);lastArchived=snapshot;}
+  try{if(!storage)throw Error();storage.setItem(storageKey,JSON.stringify({version:1,snapshot,drafts,previous,correctionCheckpoint}));}catch{persistent=false;}
+ };
  const notify=()=>onChange(api);
  async function execute(body,{reset=false,restoredDrafts=null,clearPrevious=false,resumeFailure=null}={}) {
   if(domain!=='game')body={...body,domain};
   if(typeof rememberedExclusions==='function'&&!Object.hasOwn(body,'rememberedExclusions'))body={...body,rememberedExclusions:clone(rememberedExclusions())};
-  if(typeof qualityFeedback==='function'&&!Object.hasOwn(body,'qualityFeedback')){const rows=qualityFeedback();if(rows?.length)body={...body,qualityFeedback:clone(rows)};}
+  if(typeof qualityFeedback==='function'){
+   // A review can be switched off between a network failure and its retry.
+   const rows=qualityFeedback();
+   if(rows?.length)body={...body,qualityFeedback:clone(rows)};
+   else if(Object.hasOwn(body,'qualityFeedback')){body={...body};delete body.qualityFeedback;}
+  }
   const ticket=++generation,base=clone(body.state);busy=true;error=null;retryBody=clone(body);retryOptions={reset,restoredDrafts:clone(restoredDrafts),clearPrevious,resumeFailure:clone(resumeFailure)};notify();
   try {
    const response=await request(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
    const data=await response.json();if(ticket!==generation)return null;
    if(!data?.state||!data?.screen)throw Error(data?.error||'Не удалось получить ответ. Попробуй ещё раз.');
-   if(!scoped(data.state))throw Error('Ответ относится к другому разделу. Твой подбор сохранён.');
+   if(!scoped(data,base?.savedSource)||base?.savedSourceKey&&!data.state.savedSourceKey)throw Error(allowed?'Ответ не совпадает с сохранённым списком. Твой подбор сохранён.':'Ответ относится к другому разделу. Твой подбор сохранён.');
    if(!reset&&base&&(data.state.id!==base.id||data.state.revision<base.revision))throw Error('Ответ устарел. Повтори действие.');
    // Free resume does not finish a previously rejected interpretation. Keep its explicit
    // recovery, including a nonretryable budget failure, only on that same accepted state.
@@ -70,7 +104,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
   chooseDepth(depth,{restart=false}={}){
    if(!localStart||busy||!isSelectionDepth(depth)||(!restart&&!pristine(snapshot)))return false;
    if(restart&&snapshot){previous={snapshot:clone(snapshot),drafts:clone(drafts)};drafts={};correctionCheckpoint=null;}
-   snapshot=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth,requireDirection:true,...(!restart&&snapshot?{id:snapshot.state.id}:{})});
+   snapshot=initialConversationSnapshot({domain,mode:snapshot?.state.mode??mode,depth,savedSource:snapshot?.state.savedSource??savedSource,requireDirection:true,...(!restart&&snapshot?{id:snapshot.state.id}:{})});
    generation++;error=null;retryBody=null;save();notify();return true;
   },
   get canRestoreCorrection(){return Boolean(correctionCheckpoint&&correctionCheckpoint.snapshot.state.id===snapshot?.state?.id&&correctionCheckpoint.snapshot.state.revision!==snapshot?.state?.revision);},

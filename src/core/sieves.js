@@ -1,7 +1,7 @@
 // Hard filters: sieves 1–3 fully, the hard parts of 4 and 5. Soft parts of 4 and 5 live in scoring.
 // Every removed title records the first sieve that removed it, so "why not X?" has an answer.
 import { plural } from '../lib/text.js';
-import { playerFeasibility } from './feasibility.js';
+import { playerFact, playerFeasibility } from './feasibility.js';
 
 export const HARD_MIN_R = 0.67;
 // Short episodes are up to 35 minutes, long ones from 40: 1 940 and 4 475 of the 8 368 series above the quality floor.
@@ -22,9 +22,47 @@ export const SIEVES = [
   { id: 5, name: 'Подходит ли сегодня (обязательное)' },
 ];
 
+// Run these same catalog checks before showing a restored saved result. A model
+// can judge a story, but it cannot provide a missing certificate, duration or status.
+export function savedMediaMismatch(item,session) {
+  if(!session.savedIds)return null;
+  if(!session.savedIds.has(item.id))return 'вне выбранного списка сохранённых';
+  if(session.savedFormat==='movie'&&item.kind!=='film'||session.savedFormat==='episodic'&&item.kind!=='series'
+    ||session.savedTimeMode==='runtime'&&item.kind!=='film'||session.savedTimeMode==='episode'&&item.kind!=='series')return 'другой или неизвестный формат';
+  if(session.onlyEnded&&(item.kind!=='series'||item.status!=='Ended'))return 'завершённый сериал не подтверждён';
+  if(session.childAge!=null||session.verifiedAge)return 'региональная возрастная пригодность не подтверждена';
+  if(session.maxRuntime){
+    if(!Number.isFinite(item.runtime)||item.runtime<=0)return 'длительность не подтверждена';
+    if(item.runtime>session.maxRuntime)return 'длительность превышает лимит';
+    if(item.kind==='series'&&session.firstEpisodeRequested&&item.firstEpisodeMinutes!==item.runtime)return 'длительность первой серии не подтверждена';
+    if(item.kind==='series'&&(session.allEpisodesRequested||session.allAnimeEpisodes))return 'длительность всех эпизодов не подтверждена';
+  }
+  return null;
+}
+
+export function savedGameMismatch(item,session) {
+  if(!session.savedIds)return null;
+  if(!session.savedIds.has(item.id)||item.kind!=='game')return 'вне выбранного списка игр';
+  if(!PLATFORMS[session.platform]?.test(item))return 'платформа не подтверждена';
+  if(session.partySize){
+    const players=playerFeasibility(item,session);
+    if(players?.status!=='yes')return players?.text??'вместимость не подтверждена';
+  }
+  if(session.savedSolo&&session.platform==='windows'){
+    const fact=playerFact(item);
+    if(fact?.coverage==='standard'&&fact.min>1)return 'для игры требуется несколько игроков';
+  }
+  // The catalog currently has no verified times to a stopping point.
+  if(session.minutes&&session.requireVerifiedGameSession)return 'возможность прерваться вовремя не подтверждена';
+  return null;
+}
+
 /** Returns null when the title passes, or {sieve, reason} for the first sieve that removes it. */
 export function checkSieves(item, taste, session = {}, catalog) {
   const { domain, dict } = catalog;
+  const mismatch=domain.id==='game'?savedGameMismatch(item,session):savedMediaMismatch(item,session);
+  if(mismatch)return {sieve:5,reason:mismatch};
+  if(session.requireKnownRuntime && session.maxRuntime && !(Number.isFinite(item.runtime)&&item.runtime>0))return {sieve:5,reason:'длительность не подтверждена'};
   const label = (f) => dict.featureById.get(f)?.label ?? f;
   if (!item.released) return { sieve: 1, reason: 'ещё не вышла' };
   if (domain.id === 'game') {

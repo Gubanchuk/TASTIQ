@@ -55,7 +55,8 @@ function send(res, status, body) {
 const aiCache = new Map();
 const AI_CACHE_MS = 3_600_000;
 const aiKey = (body) => JSON.stringify([body.state?.domain, body.state?.answers, body.state?.situation, body.state?.stops,
-  body.state?.preferences, body.state?.corrections, body.state?.session, body.state?.platform, body.wish ?? '', body.previous ?? []]);
+  body.state?.preferences, body.state?.corrections, body.state?.session, body.state?.platform, body.state?.savedSource,
+  body.state?.conversation,body.wish ?? '', body.previous ?? []]);
 const clientIp = (req) => req.socket.remoteAddress ?? null;
 
 // A request still running is shared too: «Повторить» after the page stopped waiting (15 s) joins it instead of
@@ -134,6 +135,7 @@ async function aiCall(who, body, key) {
 
 async function readBody(req) {
   let raw = '';
+  req.setEncoding('utf8');
   for await (const chunk of req) {
     raw += chunk;
     if (raw.length > 2_000_000) throw new Error('body too large');
@@ -157,7 +159,7 @@ const routes = {
   },
   'GET /api/search': (url) => {
     const domain = url.searchParams.get('domain');
-    return searchInDomain({ domain }, catalogs, url.searchParams.get('q') ?? '');
+    return searchInDomain({ domain }, catalogs, url.searchParams.get('q') ?? '', url.searchParams.getAll('id'));
   },
   'POST /api/parse': (_, body) => parseFreeText(body.text ?? '', catalogs[body.domain]?.dict ?? catalogs.game.dict),
   'POST /api/why': (_, body) => {

@@ -2,6 +2,8 @@ import { FIT, REASONS, OUTCOMES } from './evening-feedback.js';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 export const feedbackStatus = (status,persistent=true) => status==='sent'
   ? (persistent?'Отзыв отправлен без имени.':'Отзыв отправлен. На устройстве сохранится только до закрытия окна.')
+  : status==='conflict'?'На сервере есть другая версия. Свою можно отправить повторно в библиотеке.'
+  : status==='rejected'?'Сервер отклонил отзыв. Можно изменить оценку или уточнение и отправить снова.'
   : (persistent?'Сохранено на устройстве. Ожидает отправки.':'Пока сохранено только в этом окне. Ожидает отправки.');
 
 export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeOpen,history=false,status='pending',persistent=true,draft=null,modern=false}={}) {
@@ -27,6 +29,7 @@ export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeO
   const hasExplanation=Boolean(r.reason||r.note),hasRating=Boolean(r.fit||hasExplanation);
   const showConfirmation=hasRating||Boolean(history&&r.outcome);
   if(modern){
+    const retry=history?`<button type="button" class="btn btn-secondary btn-s" data-act="evening-retry" data-feedback-retry="${rid}"${['conflict','rejected'].includes(status)?'':' hidden'}>Повторить отправку</button>`:'';
     const hasDraft=Boolean(draft?.reason||draft?.note),ratingDetails=!history||showConfirmation;
     const fitLabel=history?`Подходит ли запросу: ${esc(FIT[r.fit])}`:esc(FIT[r.fit]);
     const ratingLabel=r.fit?savedLabel(fitLabel,'Изменить оценку'):hasExplanation?'Изменить уточнение':hasDraft?'Продолжить оценку':resultCard?'Оценить вариант':'Оценить рекомендацию';
@@ -42,7 +45,7 @@ export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeO
       + `<button type="submit" class="btn btn-secondary btn-s" data-fk="evening-reason:${rid}:${cid}">Сохранить отзыв</button></form>`
       + '<p class="evening-help">Оценка и уточнение отправляются без имени, чтобы улучшать подбор. Исходное пожелание не прикладываем.</p></details>'
       + (ratingDetails?'</details>':'')+(history?'</div>':'')+outcome
-      + (showConfirmation?`<p class="evening-status evening-confirmation" role="status"><strong><img src="/assets/brand/tastiq-symbol-cobalt.svg" alt="" width="20" height="20">Спасибо за отзыв!</strong><span data-feedback-status="${rid}">${esc(feedbackStatus(status,persistent))}</span></p>`:'')+'</section>';
+      + (showConfirmation?`<p class="evening-status evening-confirmation" role="status"><strong><img src="/assets/brand/tastiq-symbol-cobalt.svg" alt="" width="20" height="20">Спасибо за отзыв!</strong><span data-feedback-status="${rid}">${esc(feedbackStatus(status,persistent))}</span></p>`:'')+retry+'</section>';
   }
   const progress=showExperience?`<div class="evening-progress">${start}${outcome}</div>`:'';
   return `<section class="evening-controls" aria-label="Твой выбор: ${esc(card.title)}">${chosen}${progress}`

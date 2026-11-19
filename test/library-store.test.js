@@ -12,6 +12,7 @@ import vm from 'node:vm';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '../src/server/public/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '../src/server/public/shared/media-history.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '../src/server/public/shared/evening-feedback.js';
+import {createSavedSource,matchesLibraryQuery,savedPickerDomains} from '../src/server/public/shared/saved-source.js';
 import {eveningControls,feedbackStatus} from '../src/server/public/shared/evening-view.js';
 import {qaStorage,qaFeedbackOptions} from '../src/server/public/shared/qa-session.js';
 import {initCustomSelects,focusCustomSelect} from '../src/server/public/shared/custom-select.js';
@@ -61,6 +62,30 @@ test('identity includes domain and new familiarity never manufactures a taste ra
  assert.equal(store.save({id:'bad<script>',title:'Bad'},{domain:'game'}),null);
  assert.equal(store.save(game,{domain:'unknown'}),null);
  assert.equal(store.move('film','same','bad'),null);assert.equal(store.all().length,2);
+});
+
+test('saved localized titles can be found by their other names after reopening',async()=>{
+ const storage=memory(),store=createLibraryStore({storage});
+ store.setSaved({id:'matrix',ru:'Матрица',name:'The Matrix',original:'The Matrix',aliases:['Matrix I']},true,{domain:'film'});
+ const page=await controller(storage);
+ for(const query of ['Матрица','the matrix','matrix i']){
+  page.input(query);
+  assert.match(page.app.innerHTML,/data-card="film:matrix"/,query);
+ }
+});
+
+test('a search recovers older titles by exact ID including offscreen cards with existing covers',async()=>{
+ const storage=memory({version:1,items:Array.from({length:29},(_,i)=>({
+  id:'tt'+i,domain:'film',title:'Название '+i,saved:true,poster:'/cover.jpg'
+ })),history:[]});
+ const before=storage.getItem(LIBRARY_KEY);
+ const page=await controller(storage,{transport:async(url)=>{
+  const ids=new URL(url,'http://localhost').searchParams.getAll('id');
+  return {ok:true,json:async()=>ids.includes('tt28')?[{id:'tt28',name:'International Name',aliases:['Alternate Name']}]:[]};
+ }});
+ page.input('alternate name');await page.tick();await page.tick();
+ assert.match(page.app.innerHTML,/data-card="film:tt28"/);
+ assert.equal(storage.getItem(LIBRARY_KEY),before);
 });
 
 test('remove and restore keep order and never overwrite a newly saved collision',()=>{
@@ -118,7 +143,7 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
   fetch:async(url,options)=>{requests.push({url,options});return transport?transport(url,options):{ok:true,json:async()=>catalog};},
   setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
  const source=(await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,'');
- Object.assign(context,{artworkImageHtml,retryArtworkImage});
+ Object.assign(context,{artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains});
  vm.runInContext(source,context);
  await new Promise(resolve=>setImmediate(resolve));
  const noteForm=(run,id,note,reason='')=>{const form=new Element({dataset:{run,id}});form.elements={note:{value:note},reason:{value:reason}};form.matches=selector=>selector==='[data-form="evening-reason"]';form.querySelector=()=>new Element({dataset:{fk:`evening-reason:${run}:${id}`}});return form;};
@@ -130,6 +155,22 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
 const evening={version:1,id:'evening-one',dialogueId:'dialogue-one',domain:'game',revision:1,at:stamp,updatedAt:stamp,
  context:{note:'Private wish'},cards:[{id:game.id,title:game.name,origin:'model',reason:'A reason',caveat:''}],
  responses:[{cardId:game.id,fit:'accept',reason:null,note:'A review',chosen:true,started:false,outcome:null}]};
+
+test('the library can resend the same card review as a new revision after an HTTP conflict',async()=>{
+ const storage=memory();storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'review',run:evening,ack:-1}]}));
+ const posts=[];
+ const page=await controller(storage,{transport:async(url,options)=>{
+  if(url!=='/api/feedback')return {ok:true,json:async()=>[]};
+  const run=JSON.parse(options.body).run;posts.push(run);
+  return posts.length===1?{ok:false,status:409}:{ok:true,json:async()=>({ok:true,id:run.id,revision:run.revision})};
+ }});
+ page.click({act:'view',view:'evenings'});page.click({act:'evening-fit',run:evening.id,id:game.id,v:'reject'});
+ await page.tick();await page.tick();page.click({act:'view',view:'all'});page.click({act:'view',view:'evenings'});
+ assert.match(page.app.innerHTML,/другая версия/);
+ assert.match(page.app.innerHTML,/data-feedback-retry="evening-one">Повторить отправку/);
+ page.click({act:'evening-retry',feedbackRetry:evening.id});await page.tick();await page.tick();
+ assert.deepEqual(posts.map(r=>r.revision),[2,3]);assert.deepEqual(posts[1].responses,posts[0].responses);
+});
 
 test('a positive experience appears in liked and explicit clearing keeps the original review without resurrecting the like',async()=>{
  const storage=memory(),run={...evening,responses:[{...evening.responses[0],started:true,outcome:'liked'}]};

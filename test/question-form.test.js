@@ -5,25 +5,28 @@ import {initialConversation,initialDirectionQuestion} from '../src/server/public
 import {answerConversation,applyConversationProposal,conversationScreen} from '../src/core/conversation.js';
 import {answerMediaConversation,applyMediaConversationProposal,mediaConversationScreen,normalizeMediaConversation} from '../src/core/media-conversation.js';
 const draft={kind:'answer',selected:[],text:''};
-test('required direction choices and optional details precede the submit button',()=>{
+test('the first answer field is visible before optional mood and genre choices',()=>{
  const html=questionFormHtml(initialDirectionQuestion(),draft);
- assert.ok(html.indexOf('data-id="mood_relax"')<html.indexOf('id="answer-text"'));
+ assert.ok(html.indexOf('id="answer-text"')<html.indexOf('data-id="mood_relax"'));
+ assert.ok(html.indexOf('id="answer-text"')<html.indexOf('<details'));
  assert.match(html,/Выбрать жанр/);assert.match(html,/Чего хочется избежать/);
- assert.match(html,/Обязательно/);assert.match(html,/Необязательно/);
  assert.ok(html.indexOf('data-first-next')>html.indexOf('id="answer-text"'));
  assert.match(html,/data-first-next disabled/);assert.doesNotMatch(html,/data-act="review"/);
- assert.match(html,/<details class="game-answer-extra" data-disclosure="answer-own">/);
- assert.match(questionFormHtml(initialDirectionQuestion(),{...draft,text:'мой ответ'}),/data-disclosure="answer-own" open/);
+ assert.doesNotMatch(questionFormHtml(initialDirectionQuestion(),{...draft,text:'мой ответ'}),/data-first-next disabled/);
 });
-test('new modern dialogues require a mood or genre and keep additional words',()=>{
- for(const domain of ['game','film','series','cartoon']){
+test('all modern dialogues accept a text-only wish or a direction chip and reject empty or neutral input',()=>{
+ for(const domain of ['game','film','series','cartoon','anime']){
   const state=initialConversation({domain,id:'entry-required',requireDirection:true});
   const answer=domain==='game'?answerConversation:answerMediaConversation;
   const action={type:'answer',questionId:'direction',text:'Хочется неспешного приключения',kind:'answer'};
-  for(const invalid of [{...action,kind:'unknown'},{...action,selected:['avoid_stress']},action,{type:'review'}]){
-   assert.throws(()=>answer(state,invalid),/Выбери хотя бы одно/);
+  for(const invalid of [{...action,kind:'unknown'},{...action,text:' ',selected:['avoid_stress']},{...action,text:'  '},{type:'review'}]){
+   assert.throws(()=>answer(state,invalid),/Напиши|Выбери/);
   }
-  assert.equal(canSubmitQuestion(state.question,{...draft,text:action.text}),false);
+  const textOnly=answer(state,action);
+  assert.deepEqual(textOnly.turns[0].selected,[]);
+  assert.equal(textOnly.turns[0].answer,action.text);
+  if(domain!=='game')assert.equal(answer(textOnly,{type:'review'}).phase,'review');
+  assert.equal(canSubmitQuestion(state.question,{...draft,text:action.text}),true);
   assert.equal(canSubmitQuestion(state.question,{...draft,selected:['avoid_stress']}),false);
   assert.equal(canSubmitQuestion(state.question,{...draft,selected:['mood_relax']}),true);
   const accepted=answer(state,{...action,selected:['mood_relax']});

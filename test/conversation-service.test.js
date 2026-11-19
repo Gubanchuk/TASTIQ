@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {createConversationService} from '../src/server/conversation-service.js';
 import {newConversation,answerConversation,applyConversationProposal} from '../src/core/conversation.js';
-import {fixtureCatalog} from './fixture.js';
+import {fixtureCatalog,game} from './fixture.js';
 import {rankAll} from '../src/core/recommend.js';
 import {profileOf,sessionOf} from '../src/core/dialogue.js';
 import {aiPick} from '../src/ai/pick.js';
@@ -12,6 +12,46 @@ function pending(){let s=newConversation({id:'service'});s=reply(s,'rpg');s=repl
 const q={id:'experience',title:'Что хочется от игры?',why:'Уточним цель',options:[],multiple:true,controls:['unknown','indifferent','none']};
 const proposal={summary:'Ищем RPG',facts:[],uncertainties:[],action:'question',question:q};
 const goodPlan=async()=>({proposal,usage:{input_tokens:100,output_tokens:50},model:'stub'});
+
+test('offline cards prefer a comparable confirmed shooting game while a soft request still admits alternatives',async()=>{
+  const calm={'freedom.open_world':1,'tension.low':1,'difficulty.forgiving':1};
+  const simulation=game(90,'Driving simulator',calm);
+  const shooters=[91,92,93,94].map(id=>game(id,`Shooter ${id}`,{
+    'freedom.open_world':1,'loop.shooting':0.7,'tension.low':0.75,'difficulty.forgiving':0.55,
+  }));
+  const state=newConversation({id:'fallback-loop',depth:'deep'});
+  let input=reply(state,'shooter','Нужны открытый мир, отдых и лёгкая победа');
+  input=reply(input,'windows');
+  input=reply(input,'solo');
+  const turn=input.turns[0];
+  for(const [feature,quote,stance] of [['freedom.open_world','открытый мир','require'],['tension.low','отдых','want'],['difficulty.forgiving','лёгкая победа','want']]){
+    input.facts.push({key:feature,feature,quote,text:quote,sourceId:turn.id,scope:'today',stance,gameId:null,exposure:null});
+  }
+  const review=answerConversation(input,{type:'review'});
+  async function cards(items,source=review){
+    const gameCatalog={...fixtureCatalog(items),items};
+    const service=createConversationService({catalogs:{game:gameCatalog},access:()=>({allowed:false})});
+    const out=await service({state:source,action:{type:'confirm'}});
+    assert.equal(out.error,undefined);
+    assert.ok(out.state.provisional);
+    return [out.state.result.top,...out.state.result.alternatives].map(card=>card.id);
+  }
+  assert.deepEqual(new Set(await cards([simulation,...shooters])),new Set(shooters.map(item=>item.id)));
+  assert.deepEqual(new Set(await cards([simulation,shooters[0]])),new Set(['90','91']));
+  const weak=game(95,'Limited match',{'loop.shooting':0.51,'freedom.open_world':0.51});
+  const noWorld=game(96,'No open world',{'loop.shooting':1,'tension.low':1,'difficulty.forgiving':1});
+  const limited=await cards([simulation,...shooters.slice(0,3),weak,noWorld]);
+  assert.ok(limited.includes('90'));
+  assert.ok(!limited.includes('96'));
+  const tagOnly=structuredClone(shooters);
+  for(const item of tagOnly){
+    item.features['loop.shooting'].ev=[{kind:'tag',id:'tag:FPS',q:'FPS'}];
+    item.features['loop.shooting'].src=['tag'];
+  }
+  assert.ok((await cards([simulation,...tagOnly])).includes('90'));
+  const cleared=answerConversation(review,{type:'remove_fact',key:'direction:shooter'});
+  assert.ok((await cards([simulation,...shooters],cleared)).includes('90'));
+});
 test('initial and actionless restore never trigger paid planning',async()=>{
   let calls=0;const service=createConversationService({catalogs,plan:async()=>{calls++;return goodPlan();}});
   const start=await service({mode:'free'}); assert.equal(start.state.mode,'free');assert.equal(start.screen.question.id,'direction');

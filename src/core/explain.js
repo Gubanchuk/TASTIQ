@@ -92,9 +92,12 @@ export function renderExplanation(facts, catalog) {
           slot.factIds.push(fact.id);
         }
         break;
-      case 'mood':
-        reasons.push({ text: `Под настроение «${fact.why[0]}»: ${f}`, factIds: [fact.id] });
+      case 'mood': {
+        const quote = /^сегодня хочется: «(.+)»$/u.exec(fact.why[0])?.[1];
+        const text = quote ? `Твоё пожелание «${quote}» совпадает с отметкой ${f} в каталоге.` : `Под настроение «${fact.why[0]}»: ${f}`;
+        reasons.push({ text, factIds: [fact.id] });
         break;
+      }
       case 'risk_dislike':
         risks.push({ text: `${titles(fact.sources)}: тебе мешало «${complaint(fact.f)}». Здесь это тоже есть`, factIds: [fact.id] });
         break;

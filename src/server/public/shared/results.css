@@ -202,6 +202,11 @@ body.product-page #stage .evening-rating[open]{margin-bottom:6px}
 body.product-page .evening-fit-label{margin:0}
 body.product-page #stage .game-result-browse{display:flex;align-items:flex-start;gap:8px 16px;margin-top:12px}
 body.product-page #stage .game-result-tools{min-width:0}
+body.product-page #film-to-game{margin:16px 0;color:var(--brand-ink);border-top:1px solid var(--brand-line,#ced7ed);padding-top:10px}
+body.product-page #film-to-game>summary{cursor:pointer;min-height:44px;align-content:center;font-weight:650}
+body.product-page #film-to-game form{display:grid;max-width:32rem;gap:12px;padding:8px 0}
+body.product-page #film-to-game .btn{justify-self:start}
+body.product-page #film-to-game p:empty{display:none}
 body.product-page #stage .game-result-tools>div{display:flex;gap:8px;flex-wrap:wrap;padding-top:10px}
 body.product-page #stage .game-result-tools p{flex-basis:100%;margin:0;color:var(--brand-muted);font-size:13px;line-height:1.6}
 body.product-page #stage .game-result-notes{display:grid;gap:8px;margin:0 0 12px}
@@ -250,6 +255,120 @@ body.product-page[data-view=result] #stage #actions{position:static;margin-top:2
 }
 
 body.product-page #stage .game-proposal[data-long-title]{container-type:inline-size}
+
+body.product-page #stage .game-card-secondary>summary {
+ display:flex;align-items:center;gap:8px;min-height:44px;color:var(--brand-muted);
+ font-size:.875rem;cursor:pointer;list-style:none;
+}
+.game-card-secondary>summary::-webkit-details-marker{display:none}
+.game-card-secondary>summary::after{content:"";width:7px;height:7px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+.game-card-secondary[open]>summary::after{transform:rotate(225deg)}
+.game-card-secondary[open] [data-card-feedback]{margin-top:4px}
+body.product-page #stage .game-result-browse{align-items:center}
+
+.result-dialog {
+ box-sizing:border-box;width:min(42rem,calc(100% - 24px));max-height:calc(100dvh - 32px);
+ margin:auto;padding:clamp(16px,3vw,30px);overflow:auto;overscroll-behavior:contain;
+ background:white;border:1px solid var(--selection-edge);border-radius:20px;color:var(--selection-navy);
+}
+.result-dialog::backdrop{background:rgb(16 25 45 / 42%)}
+.result-dialog h2{margin:0 0 16px;font:650 clamp(1.3rem,4vw,1.75rem)/1.25 Golos,Arial,sans-serif}
+.result-dialog .btn{min-height:44px;white-space:normal;overflow-wrap:anywhere}
+.result-dialog :focus-visible,.game-card-secondary>summary:focus-visible{outline:2px solid var(--selection-accent);outline-offset:2px}
+.result-dialog-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.shorter-form p{margin:10px 0;color:var(--selection-muted);font-size:.875rem}
+.shorter-form label{display:grid;gap:6px;font-weight:550}
+.shorter-form input{max-width:12rem}
+.finalist-dialog{
+ --pair-edge:var(--brand-line,#c9d3e9);--pair-muted:var(--brand-muted,#52617d);
+ width:min(54rem,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:clamp(18px,3vw,32px);
+ border:0;border-radius:24px;background:var(--brand-surface,#fff);color:var(--brand-ink,#1c2945);
+ font-family:Golos,Arial,sans-serif;box-shadow:0 20px 80px -32px rgb(15 27 54 / 48%);
+}
+.finalist-dialog::backdrop{background:rgb(16 26 51 / 58%)}
+.finalist-heading,.finalist-picker-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.finalist-heading{margin-bottom:20px}
+.finalist-dialog .finalist-heading h2{margin:0;font:500 clamp(21px,3vw,32px)/1.22 Unbounded,Golos,sans-serif;letter-spacing:-.045em}
+.finalist-dialog .finalist-heading h2:focus{outline:0}
+.finalist-dialog button{appearance:none;margin:0;font:inherit;color:inherit;cursor:pointer}
+.finalist-dialog svg{width:17px;height:17px;flex:none}
+.finalist-dialog .finalist-close{display:grid;place-items:center;width:44px;height:44px;flex:none;border:0;border-radius:50%;background:var(--brand-paper,#f1f4fc)}
+.finalist-dialog .finalist-close:hover{background:var(--brand-fill,#e3e9f7)}
+.finalist-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.finalist-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.finalist-panel{
+ --panel-bg:#d4dff8;--panel-ink:#18294f;--panel-rule:rgb(27 50 97 / 22%);--panel-tilt:-5deg;
+ display:grid;grid-template-columns:minmax(88px,.78fr) minmax(0,1.22fr);grid-template-rows:1fr auto;align-items:center;
+ gap:12px 18px;min-width:0;padding:24px 19px 0;border-radius:16px;color:var(--panel-ink);background:var(--panel-bg);
+}
+.finalist-panel[data-slot="1"]{--panel-bg:#293986;--panel-ink:#fff;--panel-rule:rgb(224 232 255 / 32%);--panel-tilt:4deg}
+.finalist-stage{display:grid;place-items:center;min-width:0;min-height:168px}
+.finalist-dialog .game-poster{
+ display:block;position:relative;isolation:isolate;overflow:hidden;margin:0;padding:0;width:100%;height:auto;aspect-ratio:2/3;
+ border:0;border-radius:3px;background:var(--brand-dark,#15213d);
+}
+.finalist-stage .game-poster{width:min(100%,108px);transform:rotate(var(--panel-tilt));box-shadow:1px 2px 2px rgb(9 19 42 / 40%),4px 9px 14px -5px rgb(9 19 42 / 48%)}
+.finalist-dialog .game-poster::before,.finalist-dialog .game-poster::after{content:none}
+.finalist-dialog .game-poster>span,.finalist-dialog .game-poster picture,.finalist-dialog .game-poster img{position:absolute;inset:0;display:block;width:100%;height:100%;margin:0;border:0;object-fit:cover}
+.finalist-dialog .game-poster>span{background:var(--brand-dark,#15213d) var(--cover-illustration) center/cover}
+.finalist-dialog .game-poster>span strong{display:none}
+.finalist-identity{min-width:0}
+.finalist-year{margin-bottom:6px;font:550 .86rem/1.2 Golos,Arial,sans-serif;font-variant-numeric:tabular-nums}
+.finalist-dialog .finalist-panel .finalist-identity h3{margin:0;font:650 clamp(18px,2.25vw,26px)/1.12 Golos,Arial,sans-serif;letter-spacing:-.045em;color:var(--panel-ink);overflow-wrap:anywhere}
+.finalist-controls{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:6px;border-top:1px solid var(--panel-rule)}
+.finalist-controls button,.finalist-picker-head button{
+ display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:2px 0;border:0;border-radius:3px;background:transparent;font-size:.83rem;font-weight:560;
+}
+.finalist-controls button:hover,.finalist-picker-head button:hover{text-decoration:underline;text-underline-offset:3px}
+.finalist-controls button[aria-expanded="true"]{text-decoration:underline;text-underline-offset:4px}
+.finalist-panel :focus-visible{outline:2px solid currentColor;outline-offset:1px}
+#finalist-picker{margin-top:12px;padding:10px 16px 16px;border:1px solid var(--pair-edge);border-radius:14px;background:var(--brand-paper,#f1f4fc)}
+#finalist-picker[hidden]{display:none}
+.finalist-picker-head{margin-bottom:5px}
+.finalist-picker-head h3{margin:0;font-size:.95rem;font-weight:600;overflow-wrap:anywhere}
+.finalist-picker-head button{color:var(--brand-primary,#3154d6)}
+.finalist-candidates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.finalist-candidates button{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:10px;text-align:left;overflow-wrap:anywhere;padding:8px 10px;border:1px solid var(--pair-edge);border-radius:9px;background:#fff;font-size:.92rem;font-weight:600}
+.finalist-candidates button:hover{border-color:var(--brand-primary,#3154d6)}
+.finalist-candidates small,.finalist-table small{display:block;margin-top:3px;font-weight:400;color:var(--pair-muted)}
+.finalist-table{display:block;width:100%;margin-top:14px;border-collapse:collapse;line-height:1.4}
+.finalist-table tbody{display:block}
+.finalist-table tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(8rem,.6fr) minmax(0,1fr);align-items:baseline;padding:14px 0;border-bottom:1px solid var(--pair-edge)}
+.finalist-table tr:last-child{border-bottom:0;padding-bottom:0}
+.finalist-table :is(th,td){padding:0 8px;border:0;text-align:center;overflow-wrap:anywhere}
+.finalist-table th[scope="row"]{grid-column:2;grid-row:1;font-size:.82rem;font-weight:500;color:var(--pair-muted)}
+.finalist-table td{grid-row:1;font-size:.96rem;text-wrap:pretty;font-variant-numeric:tabular-nums}
+.finalist-table td:first-of-type{grid-column:1}
+.finalist-table td:last-of-type{grid-column:3}
+.finalist-time{font:520 clamp(19px,2vw,24px)/1.2 Unbounded,Golos,sans-serif;letter-spacing:-.055em}
+.finalist-rating{font-weight:600}
+.finalist-unknown,.finalist-empty{color:var(--pair-muted)}
+.finalist-empty{margin:18px 0 0}
+@media(max-width:660px){
+ .finalist-dialog{width:calc(100% - 16px);max-width:calc(100% - 16px);padding:16px;border-radius:18px;max-height:calc(100dvh - 16px)}
+ .finalist-heading{margin-bottom:12px}
+ .finalist-pair{gap:8px}
+ .finalist-panel{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr auto;align-items:start;gap:10px;padding:16px 12px 0;border-radius:12px}
+ .finalist-stage{min-height:0;padding:3px 0}
+ .finalist-stage .game-poster{width:min(68%,87px)}
+ .finalist-dialog .finalist-panel .finalist-identity h3{font-size:clamp(17px,3.8vw,22px);line-height:1.2;letter-spacing:-.035em}
+ .finalist-year{font-size:.77rem}
+ .finalist-controls{flex-wrap:wrap;justify-content:flex-start;column-gap:10px;row-gap:0}
+ .finalist-controls button{font-size:.8rem}
+ .finalist-candidates{grid-template-columns:1fr}
+ .finalist-table{margin-top:6px}
+ .finalist-table tr{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 8px;padding:10px 0}
+ .finalist-table th[scope="row"]{grid-column:1/-1;grid-row:1}
+ .finalist-table td{grid-row:2;font-size:.88rem}
+ .finalist-table td:last-of-type{grid-column:2}
+}
+@media(max-width:420px){
+ .finalist-dialog .finalist-heading h2{font-size:20px}
+ .finalist-panel{padding-inline:10px}
+ .finalist-controls{display:flex;justify-content:space-between;gap:2px}
+ .finalist-controls button{min-width:0;font-size:.75rem}
+ .finalist-controls button svg{display:none}
+}
 @container (max-width:460px){
  body.product-page #stage .game-proposal[data-long-title] .game-card-heading{display:contents}
  body.product-page #stage .game-proposal[data-long-title] .game-card-heading>h2{grid-column:1/-1;grid-row:1}

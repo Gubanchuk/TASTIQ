@@ -12,10 +12,10 @@ export function initialDirectionQuestion(domain='game'){
   why:'Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.',multiple:true,controls:['unknown','indifferent','none'],
   options:[...moods,...genres[game?'game':'watch'],...avoids].map(([id,label,feature])=>({id,label,...(feature?{feature}:{})}))};
 }
-export const directionChoiceMessage='Выбери хотя бы одно настроение или жанр.';
-export const hasDirectionChoice=ids=>ids.some(id=>typeof id==='string'&&id&&!id.startsWith('avoid_'));
+export const directionChoiceMessage='Напиши, чего хочется, или выбери настроение или жанр.';
+export const hasDirectionChoice=(ids,text)=>typeof text==='string'&&Boolean(text.trim())||ids.some(id=>typeof id==='string'&&id&&!id.startsWith('avoid_'));
 export const hasChosenDirection=state=>state.turns.some(turn=>turn.question.id==='direction'&&turn.kind==='answer'&&!turn.superseded
- &&Array.isArray(turn.selected)&&hasDirectionChoice(turn.selected.map(option=>option?.id)));
+ &&Array.isArray(turn.selected)&&hasDirectionChoice(turn.selected.map(option=>option?.id),turn.text));
 
 export const isSelectionDepth=value=>value==='standard'||value==='deep';
 export function selectionInterview(value){
@@ -24,10 +24,10 @@ export function selectionInterview(value){
   &&Number.isInteger(answered)&&answered>=0&&answered<=offered?{depth,offered,answered}:null;
 }
 
-export function initialConversation({domain='game',id=crypto.randomUUID(),mode,depth,requireDirection=false}={}){
+export function initialConversation({domain='game',id=crypto.randomUUID(),mode,depth,requireDirection=false,savedSource}={}){
  if(!['game','film','series','cartoon','anime'].includes(domain))throw TypeError('Неизвестный раздел подбора.');
  const media=domain!=='game';
- return {version:1,...(media?{domain}:{}),...(requireDirection?{requireDirection:true}:{}),...(isSelectionDepth(depth)?{depth}:{}),id,revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
+ return {version:1,...(media?{domain}:{}),...(savedSource?{savedSource:structuredClone(savedSource)}:{}),...(requireDirection?{requireDirection:true}:{}),...(isSelectionDepth(depth)?{depth}:{}),id,revision:0,mode:mode==='free'?'free':'guided',phase:'direction',
   context:media?{company:null,childAge:null,minutes:null,timeMode:null,commitment:null,onlyEnded:null,format:null}:{platform:null,company:null,partySize:null},
   ...(media?{contextEvidence:{company:null,childAge:null,timeMode:null,commitment:null,onlyEnded:null,format:null}}:{}),
   turns:[],facts:[],question:initialDirectionQuestion(domain),summary:'',uncertainties:[],retractions:[],sessionTime:null,factRemovalUndo:null,result:null,provisional:false,needsPlan:false,

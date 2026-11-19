@@ -11,7 +11,7 @@ import { AI } from './config.js';
 import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
 import { verifiedOriginalYear } from '../core/title-identity.js';
-import {criteriaOf,constraintSchema,constraintInstructions,validateConstraintChecks} from './pick-constraints.js';
+import {criteriaOf,constraintSchema,constraintInstructions,validateConstraintChecks,unconfirmedSavedCriteria} from './pick-constraints.js';
 import {feedbackContextPrompt,feedbackContextRule} from './feedback-context.js';
 
 export { AI };
@@ -74,7 +74,7 @@ const sentence = (x, max) => { const t = String(x ?? '').trim().slice(0, max); r
  * Model output checked against the shortlist: known ids, no repeats, cut to size; reasons trimmed. A pick without
  * an id is looked up by title and year among the titles that passed the sieves (`ranked`), up to ownLimit.
  */
-export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], {session,byId,distinctWorks=false,ownLimit=AI.ownPicks} = {}) {
+export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], {session,byId,distinctWorks=false,ownLimit=AI.ownPicks,savedState} = {}) {
   const allowed = new Set(rows.map((r) => r.game.id));
   const seen = new Set();
   const works = new Set();
@@ -86,7 +86,15 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
     // An explicit ID outside the shortlist must not turn into an eligible namesake.
     return [p,id?(allowed.has(id)?id:null):lookUp(ranked,p?.title,Number(p?.year)||0)];
   }));
-  const assessments=new Map(proposed.map(p=>[p,validateConstraintChecks(p,criteria,{item:byId?.get(identities.get(p)),session})]));
+  const assessments=new Map(proposed.map(p=>{
+    const item=byId?.get(identities.get(p));
+    const assessment=validateConstraintChecks(p,criteria,{item,session});
+    if(savedState&&assessment.unknowns?.length){
+      const unresolved=new Set(unconfirmedSavedCriteria(savedState,item).map(c=>c.key));
+      if(assessment.unknowns.some(c=>unresolved.has(c.key)))return [p,{ok:false,reason:'unconfirmed'}];
+    }
+    return [p,assessment];
+  }));
   // Any contradictory duplicate taints that identity, including a title/year alias.
   const conflicts=new Set(proposed.filter(p=>assessments.get(p).reason==='conflict').map(p=>identities.get(p)).filter(Boolean));
   const signatures=new Map(),inconsistent=new Set();
@@ -146,7 +154,9 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
     : AI.spares
     ? `Выбери ровно ${target} разных тайтлов по порядку. Первые ${AI.picks} покажу сразу, первый — лучший; остальные ${AI.spares} — запасные, по очереди встанут на место того, что человек уже видел.`
     : `Выбери ровно ${AI.picks} разных тайтла, первый — лучший.`;
-  const sources=adaptive
+  const sources=state.savedSource
+    ? 'Источник — выбранный список сохранённых. Выбирай только из перечисленных кандидатов и копируй их id. Сохранение не означает, что произведение понравилось или уже знакомо.'
+    : adaptive
     ? `Сначала проверь список и для его вариантов скопируй id. Если в списке мало подходящих, предложи другие произведения для поиска в каталоге. Укажи оригинальное название и год, оставь id пустым. Уже показанные произведения повторять нельзя.`
     : `Бери из списка (id копируй из строки кандидата) или не больше ${ownLimit} своих (id пустой, название и год).`;
   const animeSources=state.domain==='anime'?' Из подходящих кандидатов предпочитай варианты с id. Для своего варианта без id укажи распространённое английское название в поле title. Если знаешь только японское название, используй оригинальное написание. Используй латинскую транслитерацию, только если других вариантов названия не знаешь.':'';
@@ -188,7 +198,7 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   } catch {
     return { ...meta, error: 'нейросеть ответила не по форме' };
   }
-  const checked = checkPicks(parsed, rows, target, ranked, criteria, {session:sessionOf(state),byId:catalog.byId,distinctWorks:adaptive,ownLimit});
+  const checked = checkPicks(parsed, rows, target, ranked, criteria, {session:sessionOf(state),byId:catalog.byId,distinctWorks:adaptive,ownLimit,savedState:state.savedSource?state:null});
   if(!checked.picks.length&&checked.constraintDrops&&(checked.constraintDrops.conflict||checked.constraintDrops.unconfirmed))return {...meta,...checked,error:'Предложения в этом ответе не прошли проверку обязательных условий. Можно уточнить запрос.',retryable:false};
   if (!checked.picks.length) return adaptive
     ? { ...meta, error: parsed?.picks?.length?'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.':'В этом ответе не нашлось подходящих вариантов. Можно уточнить запрос.', retryable:false }

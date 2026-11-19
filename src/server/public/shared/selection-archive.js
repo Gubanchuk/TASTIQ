@@ -6,7 +6,7 @@ const copy=x=>structuredClone(x);
 const domainOf=s=>s?.state?.domain??'game';
 const cardsOf=s=>[s?.state?.result?.top,...(s?.state?.result?.alternatives??[])].filter(Boolean);
 const valid=s=>s?.state?.version===1&&token(s.state.id)&&domains.includes(domainOf(s))&&s.state.phase==='result'&&s.screen?.type==='result'&&cardsOf(s).length>0&&cardsOf(s).length<=4&&cardsOf(s).every(c=>token(c.id));
-const batchKey=s=>JSON.stringify([domainOf(s),s.state.id,cardsOf(s).map(c=>c.id)]);
+const batchKey=s=>JSON.stringify([domainOf(s),s.state.id,cardsOf(s).map(c=>c.id),s.state.savedSource?.ids??null]);
 export const selectionUrl=row=>row.domain==='game'?`/pick/game/?selection=${encodeURIComponent(row.id)}`:`/pick/watch/?domain=${row.domain}&selection=${encodeURIComponent(row.id)}`;
 export function createSelectionArchive({storage,now=()=>new Date().toISOString(),id=()=>crypto.randomUUID()}={}){
  let rows=[],persistent=Boolean(storage);

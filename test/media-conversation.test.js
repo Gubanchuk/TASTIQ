@@ -8,6 +8,7 @@ import { feasibilityOf } from '../src/core/feasibility.js';
 import { readFileSync } from 'node:fs';
 import { makeCatalog } from '../src/core/catalog.js';
 import { createMediaConversationService } from '../src/server/media-conversation-service.js';
+import { createConversationClient,conversationStorageKey } from '../src/server/public/shared/conversation-client.js';
 const liveProposal=domain=>JSON.parse(readFileSync(new URL('./fixtures/media-live-proposals.json',import.meta.url),'utf8'))[domain];
 const core = await import('../src/core/media-conversation.js').catch(() => ({}));
 const { newMediaConversation: fresh, normalizeMediaConversation: normalize, answerMediaConversation: reduce,
@@ -112,6 +113,43 @@ test('context editor records explicit evidence and preserves current unanswered 
   assert.throws(()=>reduce(s,{type:'set_context',context:{company:'adults',childAge:5}}),e=>e.status===400);
 });
 
+test('repeated editor saves and old oversized drafts resume with their explicit removals intact',async()=>{
+  const domain='film',original=said('Хочу тёплую историю. Сегодня есть 90 минут');
+  const goal=fact(original,{quote:'Хочу тёплую историю'});
+  const time=ev(original,null,'Сегодня есть 90 минут');
+  const sessionTime={minutes:90,sourceId:time.sourceId,quote:time.quote};
+  let state=accepted(original,{facts:[goal],sessionTime});
+  state=reduce(state,{type:'remove_fact',key:goal.key});
+  const oldRetractions=[...state.retractions];
+  for(let i=0;i<13;i++){
+    const form={...context(),company:i%2?'solo':'adults',format:'movie',minutes:null};
+    state=reduce(state,{type:'set_context',context:form});
+    const id=state.turns.at(-1).id;
+    for(const [key,value] of Object.entries(form))if(value===null){
+      oldRetractions.push({...(key==='minutes'?{kind:'session_time'}:{kind:'context',key}),at:id,sourceId:id,quote:'Условия просмотра сняты'});
+    }
+    assert.deepEqual(normalize(state,domain),state);
+  }
+  assert.equal(oldRetractions.length,66);
+  const legacy={...state,retractions:oldRetractions};
+  const data=new Map([[conversationStorageKey(domain),JSON.stringify({version:1,snapshot:{state:legacy,screen:screen(legacy)},drafts:{wish:{text:'Мой черновик'}}})]]);
+  const storage={getItem:key=>data.get(key)??null,setItem:(key,value)=>data.set(key,value)};
+  const service=createMediaConversationService({domain,catalogs:{film:screenFixture(domain)},access:()=>({allowed:false})});
+  const client=()=>createConversationClient({storage,domain,localStart:true,fetch:async(_,options)=>({ok:true,json:()=>service(JSON.parse(options.body))})});
+  for(let i=0;i<2;i++){
+    const resumed=client();await resumed.start();
+    assert.equal(resumed.error,null);
+    assert.equal(resumed.draft('wish').text,'Мой черновик');
+    assert.deepEqual(resumed.state.retractions,state.retractions);
+    assert.equal(resumed.state.turns.length,14);
+    assert.ok(apply(resumed.state,proposal({facts:[goal]}),dict).error);
+    assert.ok(apply(resumed.state,proposal({sessionTime}),dict).error);
+    const back=reduce(resumed.state,{type:'back'});
+    assert.equal(back.sessionTime,null);
+    assert.ok(apply(back,proposal({sessionTime}),dict).error);
+  }
+});
+
 test('available time projects film runtime and episode runtime without whole-series limits',()=>{
   for(const domain of ['film','series','cartoon']) {
     let s=said('Сегодня есть 45 минут',domain);s=accepted(s,{sessionTime:{minutes:45,sourceId:s.turns[0].id,quote:'Сегодня есть 45 минут'},context:{...context(),timeMode:ev(s,'session')}});
@@ -167,6 +205,35 @@ test('elliptical film caps cannot turn uncertainty, a range, past viewing or a c
   const state=said('Лёгкая история на вечер, до двух часов.');
   const ctx={...context(),timeMode:ev(state,'runtime','до двух часов')};
   for(const minutes of [90,180])assert.ok(apply(state,proposal({context:ctx,sessionTime:{minutes,sourceId:state.turns[0].id,quote:'до двух часов'}}),dict).error);
+});
+
+test('offline film time ignores ambiguous, unrelated and withdrawn limits, and keeps later explicit edits',()=>{
+  const wish='Лёгкое приключение с юмором до двух часов';
+  for(const phrase of ['До полутора часов или до двух часов', 'От 90 минут до двух часов', 'До двух часов ночи',
+    'До двух часов, если успею', 'Вчера смотрели до двух часов', 'До двух часов, но лимита нет',
+    'Фильм про гонку до двух часов', 'На дорогу до двух часов', 'Не обязательно до двух часов',
+    'Желательно до двух часов', 'Фильм до двух часов, но подойдёт и длиннее',
+    'Серия до 40 минут', 'Время не важно', 'До двух часов. Хотя ограничения по времени нет.']){
+    assert.equal(said(phrase).sessionTime,null,phrase);
+  }
+  for(const domain of ['series','anime','cartoon'])assert.equal(said(wish,domain).sessionTime,null,domain);
+  for(const [phrase,minutes] of [['Фильм не дольше полутора часов',90],['Не более 105 минут',105],['Комедия до 1 ч 40 мин',100]]){
+    const film=normalize(said(phrase),'film');
+    assert.equal(film.sessionTime?.minutes,minutes,phrase);
+  }
+  let state=accepted(said(wish));
+  assert.equal(state.sessionTime.minutes,120);
+  const priorTime=state.sessionTime,priorMode=state.contextEvidence.timeMode;
+  const edited=reduce(state,{type:'set_context',context:{minutes:75,timeMode:'runtime'}});
+  const stale=accepted(edited,{sessionTime:priorTime,context:{...context(),timeMode:priorMode}});
+  assert.deepEqual(stale.sessionTime,edited.sessionTime);
+  assert.deepEqual(stale.contextEvidence.timeMode,edited.contextEvidence.timeMode);
+  state=reduce(state,{type:'correct',text:'До полутора часов'});
+  assert.equal(state.sessionTime.minutes,90);
+  state=accepted(state);
+  assert.equal(state.sessionTime.minutes,90);
+  state=reduce(state,{type:'correct',text:'Убери ограничение по времени'});
+  assert.equal(accepted(state).sessionTime,null);
 });
 
 test('na-film wording cannot bypass uncertain, ranged, wrong-value or retracted cap evidence',()=>{

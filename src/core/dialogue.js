@@ -8,6 +8,7 @@
 import { DOMAINS } from '../aspects/index.js';
 import { nextQuestion } from './ask.js';
 import { searchItems } from './catalog.js';
+import {normalizeSavedSource} from './saved-source.js';
 import { complaintChips, likeChips, pairFor, seedItems } from './questions.js';
 import { recommend } from './recommend.js';
 import { PLATFORMS } from './sieves.js';
@@ -46,6 +47,7 @@ const card = (item) => ({
   name: item.name,
   ru: item.ru,
   original: item.original ?? null,
+  aliases: item.aliases ?? [],
   year: item.year,
   image: item.image ?? null,
   poster: item.poster ?? null,
@@ -70,6 +72,7 @@ export function sessionOf(state) {
   const intent = confirmedIntent(state.situation, DOMAINS[state.domain]?.dict);
   return {
     ...state.session,
+    ...(Object.hasOwn(state,'savedSource')?{savedIds:new Set(normalizeSavedSource(state.savedSource,state.domain).ids)}:{}),
     platform: state.platform,
     partySize: state.domain === 'game' ? (state.situation?.company === 'friend' ? '2' : state.situation?.company === 'group' && ['2','3','4','5+'].includes(state.situation?.partySize) ? state.situation.partySize : null) : null,
     childAge: state.situation?.company === 'kids' ? state.situation.childAge ?? null : null,
@@ -416,7 +419,12 @@ export function reduce(state, action, catalogs) {
 }
 
 /** Title search inside the chosen domain (for "назови своё"). */
-export function searchInDomain(state, catalogs, query) {
+export function searchInDomain(state, catalogs, query, ids = []) {
+  if (!Object.hasOwn(catalogs, state.domain)) return [];
   const catalog = catalogs[state.domain];
-  return catalog ? searchItems(catalog, query).map((x) => card(x, catalog)) : [];
+  if (ids.length) {
+    const matches = [...new Set(ids.slice(0, 40))].map(id => catalog.byId.get(id)).filter(Boolean);
+    return matches.map(item => ({ ...card(item), link: item.link ?? null }));
+  }
+  return searchItems(catalog, query).map(card);
 }

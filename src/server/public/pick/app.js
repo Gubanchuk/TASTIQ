@@ -8,7 +8,8 @@ import { hasAnswerContent } from '/shared/answer-memory.js';
 import { createFeedbackStore, FEEDBACK_KEY } from '/shared/evening-feedback.js';
 import { eveningControls, feedbackStatus } from '/shared/evening-view.js';
 import { createAnchorDraft } from '/shared/anchor-draft.js';
-import { createLibraryStore } from '/shared/library-store.js';
+import { createLibraryStore, isLibrarySaved } from '/shared/library-store.js';
+import { mediaLibraryDomain } from '/shared/anime-pilot.js';
 import { createResultViewState } from '/shared/result-view-state.js';
 import { pickerEntryRoute } from '/shared/media-route.js';
 import {qaLegacyTarget} from '/shared/qa-session.js';
@@ -191,7 +192,7 @@ try { planStore = createLibraryStore({storage:localStorage}); } catch { planStor
 function loadLibrary() {
   try {
     const x = JSON.parse(localStorage.getItem(LIB_KEY));
-    if (x?.version === 1 && Array.isArray(x.items)) return { version: 1, items: x.items, history: Array.isArray(x.history) ? x.history : [] };
+    if (x?.version === 1 && Array.isArray(x.items)) return { ...x, history: Array.isArray(x.history) ? x.history : [] };
   } catch { /* unreadable or private mode: start empty */ }
   return { version: 1, items: [], history: [] };
 }
@@ -1132,15 +1133,18 @@ function aiWishForm() {
 }
 
 function resultLink(p){try{const url=new URL(p.link);return ['http:','https:'].includes(url.protocol)?url.href:'';}catch{return '';}}
+function hasBookmark(id,domain=state?.domain) {
+  return isLibrarySaved(library.items.find(item=>item.id===id&&item.domain===mediaLibraryDomain(domain,id)));
+}
 function conversationProposal(p) {
-  const saved=savedItem(p.id),onLater=saved?.lane==='want'||saved?.status==='want'&&!saved.lane;
+  const onLater=hasBookmark(p.id);
   const reason=p.ai?.reason||(p.explanation?.reasons??[]).filter(x=>!x.weak).slice(0,2).map(x=>x.text).join(' ');
   const caveat=p.ai?.caveat||p.explanation?.risks?.[0]?.text||'';
   return `<article class="conversation-proposal" data-proposal-id="${esc(p.id)}">${poster(p,{lazy:false})}<div class="conversation-proposal-copy"><h2>${esc(nameOf(p))}</h2><p class="conversation-proposal-meta">${esc(pickMeta(p))}</p>`
     +(reason?`<p class="conversation-proposal-reason">${esc(reason)}</p>`:'<p class="conversation-proposal-reason">Вариант по каталогу. Пока мало данных, чтобы объяснить, чем он тебе подойдёт.</p>')
     +(caveat?`<p class="conversation-proposal-caveat"><strong>Учти</strong>${esc(caveat)}</p>`:'')
     +feasibilityHint(p)
-    +`<div class="conversation-proposal-actions"><button class="btn btn-secondary" type="button" data-act="take" data-id="${esc(p.id)}" data-fk="take:${esc(p.id)}" aria-pressed="${Boolean(onLater)}">${icon(onLater?'check':'bookmark')}${onLater?'На потом':'Сохранить на потом'}</button>${seenButton(p)}<button class="btn btn-plain" type="button" data-act="not-now" data-id="${esc(p.id)}" data-fk="notnow:${esc(p.id)}">Не сейчас</button></div>`
+    +`<div class="conversation-proposal-actions"><button class="btn btn-secondary" type="button" data-act="take" data-id="${esc(p.id)}" data-fk="take:${esc(p.id)}" aria-pressed="${onLater}">${icon(onLater?'check':'bookmark')}${onLater?'Сохранено':'Сохранить'}</button>${seenButton(p)}<button class="btn btn-plain" type="button" data-act="not-now" data-id="${esc(p.id)}" data-fk="notnow:${esc(p.id)}">Не сейчас</button></div>`
     +eveningHtml(feedback.get(activeEveningId),p.id)
     +`<details class="conversation-proposal-details" data-result-disclosure="${esc(p.id)}"><summary>Подробнее о варианте</summary>${detail(p,{inline:true,controls:false})}</details>`
     +(resultLink(p)?`<a class="conversation-title-link" href="${esc(resultLink(p))}" target="_blank" rel="noopener noreferrer">${linkLabel(p)}${icon('external')}</a>`:'')+'</div></article>';
@@ -1214,8 +1218,7 @@ function seenNote(slot, orLater = false) {
     + '<button class="btn btn-plain btn-s" type="button" data-act="unseen" data-fk="unseen">Вернуть</button></span></div>';
 }
 
-const savedMark = (p) => (savedItem(p.id) ? `<span class="saved-mark">${icon('bookmark', 'i-s')}Уже в «Моё»</span>` : '');
-const SAVED_AS = { want: 'В «Моё»', liked: 'В «Моё»: зашло', disliked: 'В «Моё»: не зашло' };
+const savedMark = (p) => (hasBookmark(p.id) ? `<span class="saved-mark">${icon('bookmark', 'i-s')}Сохранено</span>` : '');
 
 // Evidence reads in Russian: the reason already names the feature, so an English tag or quote is the original,
 // shown on request (plan step 6). A translated quote (e.ru, 08-translate-quotes.js) is shown as a translation with
@@ -1276,7 +1279,7 @@ function detail(p, { inline = false, controls = true } = {}) {
   const info = ex.info.filter((x) => x !== rating && !x.factIds.some((id) => id === 'fact:runtime' || id === 'fact:seasons'));
   const genres = genresOf(p, state?.domain);
   const verb = doneVerb(p.domain);
-  const saved = savedItem(p.id);
+  const saved = hasBookmark(p.id);
   return `<div class="detail${compact ? ' is-compact' : ''}" data-id="${esc(p.id)}">`
     + (compact ? '' : `<div class="detail-head">${poster(p, { lazy: false })}<div><h2 class="detail-title">${esc(nameOf(p))}</h2>`
       + (originalOf(p) ? `<p class="detail-orig">${esc(originalOf(p))}</p>` : '')
@@ -1285,9 +1288,9 @@ function detail(p, { inline = false, controls = true } = {}) {
       + `${statusPill(p)}</div></div>`)
     + (controls ? `<div class="detail-actions">`
     + (saved
-      ? `<div class="saved-row"><button class="btn btn-secondary is-done" type="button" data-act="take" data-id="${esc(p.id)}" data-fk="take:${esc(p.id)}" aria-disabled="true">${icon('check', 'i-s')}${SAVED_AS[saved.status] ?? SAVED_AS.want}</button>`
+      ? `<div class="saved-row"><button class="btn btn-secondary is-done" type="button" data-act="take" data-id="${esc(p.id)}" data-fk="take:${esc(p.id)}" aria-pressed="true">${icon('check', 'i-s')}Сохранено</button>`
         + '<a class="saved-link" href="/library/">Открыть библиотеку</a></div>'
-      : `<button class="btn btn-secondary" type="button" data-act="take" data-id="${esc(p.id)}" data-fk="take:${esc(p.id)}">${icon('bookmark', 'i-s')}Сохранить на потом</button>`)
+      : `<button class="btn btn-secondary" type="button" data-act="take" data-id="${esc(p.id)}" data-fk="take:${esc(p.id)}" aria-pressed="false">${icon('bookmark', 'i-s')}Сохранить</button>`)
     + `<button class="btn btn-secondary" type="button" data-act="seen" data-id="${esc(p.id)}" data-fk="played:${esc(p.id)}">Уже ${verb}</button>`
     + `<button class="btn btn-secondary" type="button" data-act="not-now" data-id="${esc(p.id)}" data-fk="notnow:${esc(p.id)}">Не сейчас</button>`
     + (p.link ? `<a class="detail-link" href="${esc(p.link)}" target="_blank" rel="noopener">${linkLabel(p)}${icon('external', 'i-s')}</a>` : '')
@@ -1425,7 +1428,7 @@ function myHistory() {
       + `<span class="row-label">${esc(h.title)}</span>`
       + `<span class="row-sub num">${esc([dateText(h.at), DOMAIN_NOUN[h.domain] ?? ''].filter(Boolean).join(' · '))}</span>`
       + (alts.length ? `<span class="row-sub">Ещё варианты: ${esc(alts.join(', '))}</span>` : '')
-      + `</span>${savedItem(h.topId) ? `<span class="saved-mark">${icon('bookmark', 'i-s')}В «Моё»</span>` : ''}</div>`;
+      + `</span>${hasBookmark(h.topId,h.domain) ? `<span class="saved-mark">${icon('bookmark', 'i-s')}Сохранено</span>` : ''}</div>`;
   }).join('')}</div>`;
 }
 
@@ -1965,14 +1968,17 @@ document.addEventListener('click', (e) => {
       const id = t.dataset.id;
       const p = resultPick(id);
       if (!p) return;
-      planStore.save(p,{lane:'want',domain:state.domain});
-      library=loadLibrary();
-      client.log('take', { id, step: 'result' });
+      const domain=state.domain,prior=planStore.all().find(row=>row.domain===mediaLibraryDomain(domain,id)&&row.id===id);
+      const updated=planStore.setSaved(p,!isLibrarySaved(prior),{domain});
+      if(!updated)return;
+      if(planStore.persistent)library=loadLibrary();
+      else library.items=planStore.all();
+      client.log(updated.saved?'take':'unsave', { id, step: 'result' });
       renderSidebar();
       renderContent();
       renderInspector();
       focusFk(`take:${id}`);
-      announce(`«${nameOf(p)}» сохранено на потом в библиотеке.`);
+      announce(updated.saved?`«${nameOf(p)}» сохранено в библиотеке.`:`Закладка «${nameOf(p)}» снята.`);
       return;
     }
     // «Уже смотрел»: one tap removes the card, its place gets the note with «как тебе?» and «Вернуть».
@@ -2153,7 +2159,7 @@ window.addEventListener('storage', async (e) => {
   if (e.key !== LIB_KEY) return;
   library = loadLibrary();
   renderSidebar();
-  if (view === 'my') { renderContent(); renderInspector(); }
+  if (view === 'my' || screen?.step==='result') { renderContent(); renderInspector(); }
 });
 
 // ---------- start ----------

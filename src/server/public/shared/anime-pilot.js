@@ -40,6 +40,9 @@ export const animePilot = Object.freeze(Object.fromEntries([
 
 // The published length of S1E1 in the cited edition, rounded up to a whole minute.
 export const animeFirstEpisodes = Object.freeze({
+ tt1352421:{minutes:23,source:'https://tv.apple.com/us/episode/episode-1/umc.cmc.18ahw86v33u8h6t41ky9rynbc?showId=umc.cmc.3rjo4n7v7pws6v64rdl95a6hr'},
+ tt11428586:{minutes:23,source:'https://tv.apple.com/ca/episode/journeying-parent-and-child/umc.cmc.4pue8gkbrwa2ucc7n0up4r5aq?showId=umc.cmc.1wp11iln7umwunq1zpp3nef2d'},
+ tt7806844:{minutes:24,source:'https://tv.apple.com/jp/show/hakumei-and-mikochi/umc.cmc.10077n59k8m0nxgpmrcoct203?l=en'},
  tt0213338:{minutes:24,source:'https://www.netflix.com/title/80001305'},
  tt0877057:{minutes:23,source:'https://tubitv.com/tv-shows/319042/s01-e01-rebirth'},
  tt14134550:{minutes:24,source:'https://www.bbfc.co.uk/release/oddtaxi-q29sbgvjdglvbjpwwc0xmdmxodc4'},

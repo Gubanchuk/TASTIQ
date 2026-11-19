@@ -31,7 +31,10 @@ test('context drafts restore only to the same conversation and accepted context'
 test('visible time distinguishes a whole film, an episode and todays viewing session',()=>{
  const time={minutes:45,sourceId:'one',quote:'Есть 45 минут'};
  assert.match(mediaTimeBudgetHtml(time,{timeMode:'episode'}),/На эпизод: 45 мин/);
- assert.match(mediaTimeBudgetHtml(time,{timeMode:'runtime'}),/На фильм: 45 мин/);
+ const film=mediaTimeBudgetHtml(time,{timeMode:'runtime'});
+ assert.match(film,/На фильм до 45 мин/);
+ assert.match(film,/data-act="edit-time"/);
+ assert.match(film,/data-act="remove-time"/);
  assert.match(mediaTimeBudgetHtml(time,{timeMode:'session'}),/На сегодня: 45 мин/);
  assert.equal(mediaTimeBudgetHtml(null), '');
 });

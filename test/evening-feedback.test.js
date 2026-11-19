@@ -1,12 +1,130 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createFeedbackStore, publicFeedback, normalizeFeedback } from '../src/server/public/shared/evening-feedback.js';
+import {collectionRecords} from '../src/server/public/shared/library-collection.js';
+import {feedbackTransactions,FEEDBACK_KEY,OUTCOME_ARCHIVE_KEY} from '../src/server/public/shared/evening-storage.js';
 const state = { domain:'game',seed:1,platform:'windows',situation:{note:'Только мои исходные слова',company:'solo'},answers:{},stops:[] };
 const result = {ai:{model:'stub'},top:{id:'1',name:'One',ai:{reason:'my quoted reason'}},alternatives:[{id:'2',name:'Two'}]};
 function memory() { const data = new Map(); return {getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v)}; }
 let lockTail=Promise.resolve();
 const locks={request:(_,fn)=>{const work=lockTail.then(fn);lockTail=work.catch(()=>{});return work;}};
 function store(storage=memory(), send=async(p)=>({ok:true,id:p.id,revision:p.revision})) { let seq=0; return createFeedbackStore({storage,send,locks,id:()=>`run-${++seq}`,now:()=> '2026-10-31T12:00:00.000Z'}); }
+
+test('a rejected revision remains local while later feedback is delivered; retry and edit survive reload', async () => {
+  const storage=memory(), sent=[], codes=new Map();
+  const send=async run=>{
+    sent.push([run.id,run.revision]);
+    const status=codes.get(run.id);
+    return status?{ok:false,status}:{ok:true,id:run.id,revision:run.revision};
+  };
+  const s=store(storage,send);
+  const a=await s.observe('a',state,result), b=await s.observe('b',state,result), c=await s.observe('c',state,result);
+  codes.set(a.id,409);codes.set(b.id,400);await s.flush();
+  assert.equal(s.status(a.id),'conflict');assert.equal(s.status(b.id),'rejected');assert.equal(s.status(c.id),'sent');
+  const restored=store(storage,send);await restored.flush();assert.equal(sent.length,3);
+  codes.clear();await restored.retry(a.id);
+  assert.equal(restored.get(a.id).revision,1);assert.equal(restored.status(a.id),'sent');
+  await restored.update(b.id,'1',{type:'fit',value:'accept'});await restored.flush();
+  assert.equal(restored.status(b.id),'sent');assert.equal(restored.get(b.id).responses[0].fit,'accept');
+});
+
+test('a temporary server failure keeps the queue pending for a later flush', async () => {
+  const storage=memory(),s=store(storage,async()=>({ok:false,status:503}));
+  const a=await s.observe('a',state,result);await s.flush();
+  assert.equal(s.status(a.id),'pending');
+  const restored=store(storage);await restored.flush();assert.equal(restored.status(a.id),'sent');
+});
+
+test('a late conflict on an older version cannot reject a newer card edit',async()=>{
+  const sent=[];let finish,signal;
+  const dispatched=new Promise(resolve=>signal=resolve);
+  const s=store(memory(),async run=>{
+    sent.push(run.revision);
+    if(run.revision===0){signal();return new Promise(resolve=>{finish=()=>resolve({ok:false,status:409});});}
+    return {ok:true,id:run.id,revision:run.revision};
+  });
+  const run=await s.observe('a',state,result),delivery=s.flush();await dispatched;
+  await s.update(run.id,'1',{type:'fit',value:'accept'});finish();await delivery;
+  assert.deepEqual(sent,[0,1]);assert.equal(s.status(run.id),'sent');
+});
+
+test('evicted outcomes remain visible after reload, with conflicts and explicit overrides, without obsolete review links',async()=>{
+  const storage=memory(),s=store(storage);
+  for(const [dialogue,outcome] of [['a','liked'],['b','disliked']]){
+    const r=await s.observe(dialogue,state,result);
+    await s.update(r.id,'1',{type:'choose',value:true});await s.update(r.id,'1',{type:'outcome',value:outcome});
+    if(dialogue==='a'){await s.update(r.id,'2',{type:'choose',value:true});await s.update(r.id,'2',{type:'outcome',value:'liked'});}
+  }
+  await s.flush();
+  // Older installations stored only the recent runs. Start eviction from that envelope.
+  const old=JSON.parse(storage.getItem('tastiq.site.evenings'));delete old.archivedOutcomes;
+  for(const entry of old.entries)delete entry.rejected;
+  storage.setItem('tastiq.site.evenings',JSON.stringify(old));
+  let seq=0;
+  const migrated=createFeedbackStore({storage,locks,id:()=>`new-run-${++seq}`});
+  const later={top:{id:'3',name:'Three'}};
+  for(let i=0;i<60;i++)await migrated.observe('subsequent-'+i,state,later);
+  const resumed=store(storage);assert.equal(resumed.all().length,60);
+  // An older open tab replaces only its own snapshot, knowing nothing about the archive.
+  const feedbackKey='tastiq.site.evenings';
+  storage.setItem(feedbackKey,JSON.stringify({version:1,entries:JSON.parse(storage.getItem(feedbackKey)).entries}));
+  await resumed.refresh();
+  assert.equal(store(storage).archivedOutcomes().length,2);
+  const input={runs:resumed.all(),archivedOutcomes:resumed.archivedOutcomes()};
+  const rows=collectionRecords(input);
+  assert.equal(rows.find(r=>r.id==='1').ratingConflict,true);
+  const liked=rows.find(r=>r.id==='2');assert.equal(liked.rating,'liked');assert.equal(liked.ratingSource,'experience');
+  assert.deepEqual(liked.reviews,[]);assert.equal(liked.saved,false);
+  const cleared=collectionRecords({...input,items:[{id:'2',domain:'game',status:'known',saved:false,ratingOverride:true}]});
+  assert.equal(cleared.find(r=>r.id==='2').rating,null);
+});
+
+test('opening an intermediate snapshot migrates its outcomes without modifying or delivering the old queue',async()=>{
+  const storage=memory(),key='tastiq.site.evenings',at='2026-11-19T14:00:00Z';
+  const row={id:'1',domain:'game',title:'One',at,outcomes:['liked']};
+  const envelope=JSON.stringify({version:1,entries:[],archivedOutcomes:[row]});
+  storage.setItem(key,envelope);const opened=store(storage);
+  assert.deepEqual(opened.archivedOutcomes(),[row]);await opened.refresh();
+  assert.equal(storage.getItem(key),envelope);
+  storage.setItem(key,JSON.stringify({version:1,entries:[]}));
+  assert.deepEqual(store(storage).archivedOutcomes(),[row]);
+});
+
+test('the IndexedDB adapter commits both keys together and imports a local archive independently from an old queue',async()=>{
+  const records=new Map(),commits=[],cache=memory();
+  const db={transaction(){
+    const changes=new Map(),reads=[];
+    const tx={objectStore:()=>({
+      get(key){const request={result:records.get(key)};reads.push(request);return request;},
+      put(value,key){changes.set(key,value);},
+    }),abort(){tx.aborted=true;}};
+    setImmediate(()=>{
+      for(const request of reads)request.onsuccess();
+      if(tx.aborted){tx.onabort();return;}
+      for(const [key,value] of changes)records.set(key,value);
+      commits.push([...changes.keys()]);tx.oncomplete();
+    });
+    return tx;
+  }};
+  const factory={open(name,version){
+    assert.equal(name,'tastiq-qa-archive');assert.equal(version,1);
+    const request={result:db};setImmediate(()=>request.onsuccess());return request;
+  }};
+  const transaction=feedbackTransactions(cache,factory,'tastiq-qa-archive');
+  const row={id:'1',domain:'game',title:'One',at:'2026-11-19T14:00:00Z',outcomes:['liked']};
+  cache.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[],archivedOutcomes:[row]}));
+  const s=createFeedbackStore({storage:cache,transaction,id:()=> 'first'});
+  await s.observe('dialogue',state,result);
+  assert.deepEqual(new Set(commits.at(-1)),new Set([FEEDBACK_KEY,OUTCOME_ARCHIVE_KEY]));
+  const old=JSON.stringify({version:1,entries:[]});
+  records.set(FEEDBACK_KEY,old);cache.setItem(FEEDBACK_KEY,old);
+  const fresh=createFeedbackStore({storage:memory(),transaction});
+  await fresh.refresh();assert.deepEqual(fresh.archivedOutcomes(),[row]);assert.equal(fresh.all().length,0);
+  assert.deepEqual(commits.at(-1),[]);assert.deepEqual(JSON.parse(cache.getItem(OUTCOME_ARCHIVE_KEY)).outcomes,[row]);
+  records.delete(OUTCOME_ARCHIVE_KEY);
+  await fresh.refresh();assert.deepEqual(commits.at(-1),[OUTCOME_ARCHIVE_KEY]);
+  assert.deepEqual(fresh.archivedOutcomes(),[row]);
+});
 
 test('the actual visible snapshot deduplicates reload, distinguishes origin and keeps evenings separate', async () => {
   const storage=memory(), s=store(storage);

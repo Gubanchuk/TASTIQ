@@ -1,0 +1,31 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Что выбрать сегодня · TASTIQ</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f4fa;color:#172549;font:16px/1.5 system-ui,sans-serif}main{max-width:880px;margin:auto;padding:36px 20px}h1{font-size:clamp(28px,5vw,46px);line-height:1.1;margin:0 0 12px}#lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr));gap:12px}fieldset,textarea,select{min-width:0;border:1px solid #a7b4cf;border-radius:12px;background:#fff;color:inherit;padding:12px}fieldset label{display:block;padding:8px 0}legend{font-weight:700}form>label{display:grid;gap:5px;margin:20px 0}button{font:inherit;color:#fff;background:#213880;border:0;border-radius:10px;padding:12px 20px;cursor:pointer}input,select,textarea{font:inherit}input:focus-visible,:focus-visible{outline:3px solid #526dcb;outline-offset:2px}
+</style><main data-case="@@CASE@@">
+<h1>Что бы ты выбрал сегодня?</h1><p>Твоё пожелание — <b>@@WISH@@</b></p>
+<p>В каждом списке отметь один вариант, который действительно хочется начать сегодня.</p>
+<form><div id="lists">@@LISTS@@</div>
+<label>Какой список подошёл лучше?
+<select name="preferred" required><option value="">Выбрать</option><option>А</option><option>Б</option><option>В</option><option>Одинаково подошли</option><option>Ни один</option></select></label>
+<label>Что решило выбор? Что оттолкнуло в остальных вариантах?<textarea rows="3" name="reason" maxlength="3000"></textarea></label>
+<label>Что в вопросах утомило или пришлось исправить?<textarea rows="2" name="effort" maxlength="2000"></textarea></label>
+<label>Что было дальше?<select name="started"><option value="unknown">Пока неизвестно</option><option value="started">Начал смотреть или играть</option><option value="not_started">Так и не начал</option></select></label>
+<label>Какую работу в итоге начал?<input name="actual" maxlength="250"></label>
+<button>Скачать мой ответ</button> <span role="status"></span></form></main>
+<script>
+const form=document.querySelector('form'), caseId=document.querySelector('main').dataset.case, storageKey='tastiq.blind.'+caseId;
+const fields=()=>Object.fromEntries(new FormData(form));
+let active=0,since=document.hidden?null:performance.now(),decision=null;
+function elapsed(){return active+(since===null?0:performance.now()-since);}
+try{const previous=JSON.parse(localStorage.getItem(storageKey));if(previous){active=previous.activeMs||0;decision=previous.decisionMs??null;for(const [name,value] of Object.entries(previous.fields||{})){const field=form.elements.namedItem(name);if(field)field.value=value;}}}catch{}
+function save(){try{localStorage.setItem(storageKey,JSON.stringify({activeMs:elapsed(),decisionMs:decision,fields:fields()}));}catch{}}
+form.addEventListener('input',save);
+document.addEventListener('visibilitychange',()=>{if(document.hidden){active=elapsed();since=null;save();}else since=performance.now();});
+form.addEventListener('submit',event=>{
+ event.preventDefault();decision??=Math.round(elapsed());save();
+ const blob=new Blob([JSON.stringify({caseId,reviewActiveMsAtFirstExport:decision,...fields()},null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='evening-'+caseId+'.private.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ document.querySelector('[role="status"]').textContent='Ответ сохранён в файл. Позже здесь можно отметить, что ты начал.';
+});
+</script></html>

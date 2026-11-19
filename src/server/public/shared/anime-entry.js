@@ -1,13 +1,21 @@
+const nouns = {
+ game: ['игра', 'игры', 'игр'], film: ['фильм', 'фильма', 'фильмов'],
+ series: ['сериал', 'сериала', 'сериалов'], cartoon: ['мультфильм', 'мультфильма', 'мультфильмов'],
+ anime: ['произведение', 'произведения', 'произведений'],
+};
 const entries = document.querySelectorAll('[data-anime-entry]');
-if (entries.length) {
+const counters = document.querySelectorAll('[data-catalog-count]');
+if (entries.length || counters.length) {
  fetch('/api/meta').then(response => response.ok ? response.json() : null).then(meta => {
-  if (!meta?.domains?.anime?.newSelections) return;
-  const count = document.querySelector('[data-catalog-count="anime"]');
-  if (count) {
-   const items=meta.domains.anime.items,form=new Intl.PluralRules('ru-RU').select(items);
-   count.textContent=new Intl.NumberFormat('ru-RU').format(items)+' '+({one:'произведение',few:'произведения',many:'произведений'}[form]??'произведений');
+  const plural = new Intl.PluralRules('ru-RU'), number = new Intl.NumberFormat('ru-RU');
+  for (const counter of counters) {
+   const domain = counter.dataset.catalogCount, items = meta?.domains?.[domain]?.items;
+   if (!nouns[domain] || !Number.isSafeInteger(items) || items < 0) continue;
+   const form = plural.select(items);
+   counter.textContent = number.format(items) + ' ' + nouns[domain][form === 'one' ? 0 : form === 'few' ? 1 : 2];
   }
-  for (const entry of entries) entry.hidden=false;
+  if (!meta?.domains?.anime?.newSelections) return;
+  for (const entry of entries) entry.hidden = false;
   document.querySelector('.doors')?.classList.add('with-anime');
- }).catch(()=>{/* Existing sections remain available. */});
+ }).catch(()=>{/* The four permanent entrances also work without metadata. */});
 }

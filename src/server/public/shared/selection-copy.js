@@ -1,4 +1,5 @@
 import {selectionModeTitle} from './selection-mode.js';
+import {resultCardReason} from './result-clarity.js';
 
 const clean=value=>typeof value==='string'?value.trim():'';
 const labels={game:'игры',film:'фильма',series:'сериала',cartoon:'мультфильма',anime:'аниме'};
@@ -56,7 +57,7 @@ export function selectionCopyText({state={},screen={}}={}) {
   lines.push(`\n${index+1}. ${title}${card.year?` (${card.year})`:''}`);
   const meta=[...(domain!=='game'?[card.runtime?`${card.runtime} мин${card.kind==='series'?' · эпизод':''}`:'',...(card.kind==='series'?[card.seasons?`${card.seasons} сез.`:'',card.episodes?`${card.episodes} эп.`:'']:[])]:[]),...(card.genres??[]).slice(0,2)].filter(Boolean);
   if(meta.length)lines.push(meta.join(' · '));
-  const reason=clean(card.ai?.reason)||clean(card.reason),caveat=clean(card.ai?.caveat)||clean(card.caveat),link=safeLink(card.link);
+  const reason=resultCardReason(card),caveat=clean(card.ai?.caveat)||clean(card.caveat),link=safeLink(card.link);
   if(reason)lines.push(`Почему может подойти: ${reason}`);
   if(caveat)lines.push(`Учти: ${caveat}`);
   const checks={unknown:'Не подтверждено',conditional:'Есть условие',no:'Не подходит по условию'};

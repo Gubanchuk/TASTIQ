@@ -1,15 +1,19 @@
 import {setupSelectionMode,checkpointHtml,selectionModeTitle} from '/shared/selection-mode.js';
+import {takeGameWish} from '/shared/film-to-game.js';
 import {questionFormHtml,canSubmitQuestion,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
 import {createSelectionReviewController} from '/shared/selection-review-controller.js';
-import {resultBatchHelp,resultBatchNotice,singleReplacementIndex} from '/shared/result-clarity.js';
+import {resultBatchHelp,resultBatchNotice,resultRequestScreen,singleReplacementIndex} from '/shared/result-clarity.js';
+import {currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=2';
 import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent} from '/shared/workspace-ui.js';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
-import {createConversationClient,CONVERSATION_KEY} from '/shared/conversation-client.js';
+import {createConversationClient} from '/shared/conversation-client.js';
+import {savedPickerSession,bindSavedSourceBanner,resumeArchiveUrl,savedResultLimits} from '/shared/saved-picker-session.js';
 import {createFeedbackStore,FEEDBACK_KEY} from '/shared/evening-feedback.js';
+import {createVisitReviews} from '/shared/visit-reviews.js';
 import {eveningControls,feedbackStatus} from '/shared/evening-view.js';
 import {createFeedbackDrafts} from '/shared/feedback-drafts.js';
 import {gameCardHtml,journeyStage,toggleGameLibrarySave,gameLibraryState} from '/pick/game/card-view.js';
@@ -29,8 +33,16 @@ const nameOf=card=>card.ru||card.name||card.title||'Игра';
 const stanceLabel=fact=>fact.scope==='history'?'Прошлый опыт':({want:'Хочется',avoid:'Меньше',require:'Обязательно',exclude:'Исключить',indifferent:'Неважно',unknown:'Неясно',conditional:'При условии',history:'Прошлый опыт'}[fact.stance]??'Неясно');
 const contextReady=screen=>Boolean(screen?.context?.platform&&screen.context.company&&(screen.context.company!=='group'||screen.context.partySize));
 const button=(label,act,extra='',primary=false)=>`<button type="button" class="btn ${primary?'btn-primary':'btn-secondary'}" data-act="${act}"${extra.includes('data-focus=')?'':` data-focus="${act}"`} ${extra}>${esc(label)}</button>`;
-let storage,uid=null;
-try{storage=qaStorage(localStorage);uid=storage.getItem('tastiq.uid');if(!uid){uid=crypto.randomUUID();storage.setItem('tastiq.uid',uid);}}catch{ /* this visit can continue without persistence */ }
+let storage,tabStorage;
+try{storage=qaStorage(localStorage);}catch{}
+try{tabStorage=qaStorage(sessionStorage);}catch{}
+const session=savedPickerSession({params:new URLSearchParams(location.search),domain:'game',storage,session:tabStorage});
+const updateSourceBanner=bindSavedSourceBanner(session,'game',tabStorage);
+if(!session.missing)await startPicker();
+
+async function startPicker(){
+let uid=null;
+try{uid=storage.getItem('tastiq.uid');if(!uid){uid=crypto.randomUUID();storage.setItem('tastiq.uid',uid);}}catch{ /* this visit can continue without persistence */ }
 const mode=new URLSearchParams(location.search).get('mode')==='free'?'free':'guided';
 let renderedKey=null,screenKey=null,navigationFocus=null,lastRemovedFactFocus=null,pendingFamiliar=null,pendingBack=null,localNotice='',currentRequest='resume',searchTimer=null,searchGeneration=0,activeEvening=null,activeEveningDialogue=null,observedKey=null,observingKey=null;
 let pendingAction={type:'resume'},pendingOrigin=null,processingShown=false,lastVisibleError=null;
@@ -39,24 +51,36 @@ const disclosures=new Map();
 const compactRequest=matchMedia('(max-width:760px)');
 const history=createGameHistory({storage});
 const library=createLibraryStore({storage});
-let selectionReviews;
+let selectionReviews,visitReviews;
 const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:async run=>{
  const response=await fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run})});
- return response.ok?response.json():null;
-},onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();}});
-const client=createConversationClient({localStart:true,selectionId:new URLSearchParams(location.search).get('selection'),fetch,storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>feedback.learning('game'),onChange:render});
+ return response.ok?response.json():{ok:false,status:response.status};
+},onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();visitReviews?.refresh();}});
+const client=createConversationClient({localStart:true,selectionId:session.selection,savedSource:session.savedSource,savedListView:session.savedListView,fetch,storage:session.draftStorage,storageKey:session.key,archiveStorage:storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>visitReviews.context(),onChange:render});
+visitReviews=createVisitReviews({client,entries:()=>feedback.learningEntries('game')});
 const selectionMode=setupSelectionMode({client,render,switchDepth:depth=>navigate({type:'setDepth',depth}),focusWorkspace:()=>focusPickerContent($('#main h1')),
+ onEntryChoice(started){
+  const url=new URL(location.href),token=url.searchParams.get('fromFilm');
+  if(!token)return;
+  url.searchParams.delete('fromFilm');window.history.replaceState(window.history.state,'',url);
+  if(session.savedSource)return;
+  const wish=takeGameWish(tabStorage,token);
+  const input=$('#answer-text');
+  if(!started||!wish||!input||client.screen?.question?.id!=='direction')return;
+  input.value=wish;input.dispatchEvent(new Event('input',{bubbles:true}));
+  const disclosure=input.closest('details');if(disclosure)disclosure.open=true;
+ },
  onRestart(){persistAnswer();activeEvening=null;activeEveningDialogue=null;observedKey=null;localNotice='';pendingBack=null;currentRequest='resume';}
 });
-if(new URLSearchParams(location.search).has('selection')){const url=new URL(location.href);url.searchParams.delete('selection');window.history.replaceState(null,'',url);}
+resumeArchiveUrl(session);
 selectionReviews=createSelectionReviewController({storage,feedback,getSnapshot:()=>client.snapshot,getRunId:()=>activeEvening,isBusy:()=>client.busy,onChange:refreshFeedback});
 const knownQuestionDrafts=new Set();
-try {const saved=JSON.parse(storage?.getItem(CONVERSATION_KEY)??'null');for(const drafts of [saved?.drafts,saved?.previous?.drafts])for(const key of Object.keys(drafts??{}))knownQuestionDrafts.add(key);}catch { /* no saved keys in a memory-only visit */ }
+try {const saved=JSON.parse(session.draftStorage?.getItem(session.key)??'null');for(const drafts of [saved?.drafts,saved?.previous?.drafts])for(const key of Object.keys(drafts??{}))knownQuestionDrafts.add(key);}catch { /* no saved keys in a memory-only visit */ }
 const currentDraft=question=>client.draft(questionDraftKey(client.state,question));
 const saveCurrentDraft=(question,draft)=>{const key=questionDraftKey(client.state,question);knownQuestionDrafts.add(key);client.saveDraft(key,draft);};
 function hasQuestionDraft(key){
  if(knownQuestionDrafts.has(key))return true;
- try {const saved=JSON.parse(storage?.getItem(CONVERSATION_KEY)??'null');if(Object.hasOwn(saved?.drafts??{},key)){knownQuestionDrafts.add(key);return true;}}catch { /* memory-only visits use the keys written in this page */ }
+ try {const saved=JSON.parse(session.draftStorage?.getItem(session.key)??'null');if(Object.hasOwn(saved?.drafts??{},key)){knownQuestionDrafts.add(key);return true;}}catch { /* memory-only visits use the keys written in this page */ }
  const draft=client.draft(key);return Boolean(draft.text||draft.selected.length||draft.kind!=='answer');
 }
 function ensureQuestionDraftMigration(){
@@ -114,7 +138,7 @@ function understanding(screen) {
  const labels={windows:'Windows',mac:'macOS',linux:'Linux',deck:'Steam Deck',pc:'ПК',ps:'PlayStation',xbox:'Xbox',switch:'Nintendo Switch',any:'Любая платформа',solo:'Один',friend:'Вдвоём',group:'Компания',kids:'С детьми'};
  const contextHtml=`<div class="game-context">${Object.entries(context).filter(([,v])=>v).map(([key,v])=>`<span>${esc(key==='partySize'?`${v} игроков`:labels[v]??v)}</span>`).join('')}</div>`;
  $('#understanding').innerHTML=requestOverviewHtml({screen,state:client.state,contextHtml,timeHtml:timeBudgetHtml(time),busy:client.busy,
-  toolsHtml:(contextReady(screen)?contextForm(context):'')+historyHtml()+(time?'<details class="request-time-details"><summary>Откуда ограничение времени</summary><ul>'+timeEvidenceHtml(time)+'</ul></details>':''),
+  toolsHtml:(contextReady(screen)?contextForm(context):'')+(screen.type==='review'?'':'<div data-visit-reviews></div>')+historyHtml()+(time?'<details class="request-time-details"><summary>Откуда ограничение времени</summary><ul>'+timeEvidenceHtml(time)+'</ul></details>':''),
   clarification:clarificationHtml({state:client.state,uncertainties:screen.uncertainties,draft:key=>client.draft(key),busy:client.busy}),correction:correctionForm(),
   restore:client.canRestoreCorrection?'<div class="clarification-restore"><p>Предыдущий запрос и варианты можно вернуть.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуть предыдущие варианты</button></div>':''});
  syncRequestEditor(JSON.stringify([client.state.id,client.state.revision,screen.type]));
@@ -130,6 +154,7 @@ function reviewHtml(screen) {
  return '<h1>Такой выбор тебе нужен сегодня?</h1>'
   +`<p>${esc(screen.summary||'Пока запрос широкий. Можно получить предварительный подбор или уточнить его своими словами.')}</p>`
   +timeBudgetHtml(screen.sessionTime,{scope:'review'})
+  +'<div data-visit-reviews></div>'
   +(screen.provisional?'<p class="game-help">Это предварительное понимание. Уточни его, если упущено что-то важное.</p>':'')
   +'<p class="game-help">Если всё верно, можно подбирать игры. Детали и условия запроса доступны в сводке.</p>';
 }
@@ -146,8 +171,9 @@ function resultHtml(screen) {
  const batchNotice=result?.top&&!replacement?resultBatchNotice(1+(result.alternatives??[]).length):'';
  if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
  return '<div class="game-result-heading"><h1>Рекомендации для тебя</h1>'
-  +`<div class="game-result-browse"><details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
-  +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу.</p>':'')
+  +'<div class="game-result-browse">'+(currentFinalists(client.state,screen).length>=2?button('Сравнить два варианта','compare-results','aria-haspopup="dialog"'):'')
+  +`<details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
+  +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу. Часть пожеланий могла остаться без проверки.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +((replacement&&notice)||batchNotice?`<p class="game-replacement-notice" role="status">${esc(replacement?notice:batchNotice)}</p>`:'')
   +(!client.archivePersistent?'<p>Браузер не разрешил сохранить подбор. Он доступен до закрытия окна.</p>':'')+'</div>'
@@ -156,6 +182,8 @@ function resultHtml(screen) {
 function render() {
  ensureQuestionDraftMigration();
  const screen=client.screen;
+ syncResultDialog(client.state,screen,client.busy);
+ if(session.savedSource)updateSourceBanner(client.state,library.all());
  if(selectionMode.draw(screen))return;
  const focus=preserveView();
  $('#back').disabled=client.busy||!screen?.canBack;
@@ -186,7 +214,7 @@ function render() {
   renderedKey=key;screenKey=nextScreenKey;searchGeneration++;clearTimeout(searchTimer);
   $('#main').innerHTML=screen.type==='question'?questionHtml(screen):screen.type==='review'?reviewHtml(screen):resultHtml(screen);
   $('#selection-review-slot').replaceChildren();
-  understanding(screen);
+  understanding(resultRequestScreen(screen));
   restoreView(null);
   if(newScreen&&!client.busy){
    const heading=$('#main h1')??$('#main');
@@ -202,14 +230,16 @@ function render() {
   targetButton.setAttribute('aria-busy',String(client.busy));
  }
  const disabled=client.busy?' disabled':'';
+ visitReviews.refresh();
  if(screen.type==='question')paintSelections(currentDraft(screen.question));
  const marked=client.state.familiar?.marked??[];
+ const {noFirstMatch,noMore}=savedResultLimits(client.snapshot);
  $('#action-controls').innerHTML=screen.type==='question'
   ?''
-  :screen.type==='review'?button('Подобрать игры','confirm',disabled,true)+button('Изменить пожелание','focus-correction',disabled)
+  :screen.type==='review'?(noFirstMatch?'':button('Подобрать игры','confirm',disabled,true))+button('Изменить пожелание','focus-correction',disabled,noFirstMatch)
    +(client.state.depth==='deep'&&screen.canContinue!==false&&!client.state.interviewComplete?button('Уточнить ещё','continue',disabled):'')
   :(marked.length?button(`Заменить отмеченные (${marked.length})`,'replace-familiar',disabled,true):'')
-   +button('Показать ещё','more',`aria-describedby="result-batch-help" ${disabled}`,!marked.length)+button('Уточнить запрос','focus-correction',disabled)
+   +(noMore?'':button('Показать ещё','more',`aria-describedby="result-batch-help" ${disabled}`,!marked.length))+button('Уточнить запрос','focus-correction',disabled,noMore)
    +(client.state.familiar?.undo&&singleReplacementIndex(client.state)<0?button('Вернуть предыдущие варианты','undo-replacement',disabled):'');
  if(screen.canUndoFactRemoval)$('#action-controls').insertAdjacentHTML('beforeend',button('Отменить удаление','undo-fact-removal',disabled));
  $('#actions').hidden=prominent||(screen.type==='question'&&!screen.canUndoFactRemoval);
@@ -352,6 +382,13 @@ document.addEventListener('click',event=>{
  const el=event.target.closest('[data-act]');if(!el||el.disabled)return;
  const act=el.dataset.act;
  if(act==='copy-title')return void copyCardTitle(el);
+ if(act==='compare-results'&&!client.busy){
+  const cards=currentFinalists(client.state,client.screen);
+  if(cards.length>=2)openComparison(resultDialog(client.state,client.screen),cards,'game',id=>{
+   focusPickerContent(document.querySelector('[data-card-id="'+CSS.escape(id)+'"] h2'));
+  });
+  return;
+ }
  if(el.closest('.game-session-menu'))el.closest('.game-session-menu').open=false;
  if(act==='focus-request'){focusPickerContent($('#request-panel h2'));return;}
  if(act==='focus-history'){
@@ -472,8 +509,9 @@ document.addEventListener('input',event=>{
 document.addEventListener('toggle',event=>{const el=event.target;if(el.matches('[data-feedback-details]'))feedbackOpen.set(`${el.dataset.run}:${el.dataset.id}`,el.open);},true);
 bindResultArtwork(document);
 window.addEventListener('online',()=>void feedback.flush());
-window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());else if(event.key===null||event.key==='tastiq.site.library'||event.key.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
+window.addEventListener('storage',event=>{if(event.key===FEEDBACK_KEY)void feedback.refresh().then(()=>refreshFeedback());else if(event.key===null||event.key==='tastiq.site.library'||event.key?.endsWith(':tastiq.site.library')||event.key?.startsWith(GAME_HISTORY_PREFIX)){history.refresh();render();}});
 compactRequest.addEventListener('change',event=>{const details=$('.game-request-details');if(details){details.open=!event.matches;disclosures.set('request-details',details.open);}});
 render();
 if(!selectionMode.choosing)await client.start();
 void feedback.flush();
+}

@@ -10,10 +10,13 @@ import { ANIME_TAGS, GENOME_TAG_FEATURES, IMDB_GENRE_FEATURES, TVMAZE_GENRE_FEAT
 import { SCREEN_DICTIONARY_VERSION, SCREEN_FEATURES, SCREEN_FEATURE_BY_ID } from '../../aspects/screen.js';
 import { computeIdf } from '../../core/idf.js';
 import { DATA, RAW, readJson } from '../../lib/fsx.js';
-import { writeScreenCatalog } from '../../lib/screen-catalog.js';
+import { readScreenCatalog, writeScreenCatalog } from '../../lib/screen-catalog.js';
+import { catalogBuildOptions, catalogSnapshot, mergeCatalogBuild, writeBuildJson } from '../catalog-build.js';
 import { episodesRu, htmlToText, stripTitleNote, truncate } from '../../lib/text.js';
 
 const ML = resolve(RAW, 'movielens', 'ml-latest');
+const {output,baseline,decisions} = catalogBuildOptions('catalog-screen.json');
+const release = readScreenCatalog(baseline);
 const GENOME_MIN = 0.35; // genome relevance below this is "not about this film"
 const C = { genome: 0.75, usertag: 0.45, genre: 0.6, tvmaze: 0.6, fact: 1 };
 const QUALITY_PRIOR_VOTES = 3000;
@@ -207,7 +210,7 @@ function domainOf(t, show) {
   return 'cartoon';
 }
 
-const items = base.filter((t) => !NOT_STORIES.has(t.imdb)).map((t) => {
+const rawItems = base.filter((t) => !NOT_STORIES.has(t.imdb)).map((t) => {
   const show = tvmaze.get(t.imdb);
   const wd = wikidata[t.imdb];
   const quality = (t.rating * t.votes + QUALITY_PRIOR_MEAN * QUALITY_PRIOR_VOTES) / (t.votes + QUALITY_PRIOR_VOTES) / 10;
@@ -240,27 +243,29 @@ const items = base.filter((t) => !NOT_STORIES.has(t.imdb)).map((t) => {
   };
 });
 
+const {items,report:changes} = mergeCatalogBuild(release.items,rawItems,decisions);
 const { df, idf } = computeIdf(items, SCREEN_FEATURES);
 const count = (fn) => items.filter(fn).length;
 const stats = {
+  ...release.stats,
   titles: items.length,
   film: count((x) => x.domain === 'film'),
   series: count((x) => x.domain === 'series'),
   cartoon: count((x) => x.domain === 'cartoon'),
   anime: count((x) => x.domain === 'anime'),
-  withGenome: count((x) => genome.has(x.id)),
+  withGenome: count(item=>item.tagged && (!item.llm || genome.has(item.id) ||
+    Object.values(item.features).some(feature=>feature.src?.includes('genome')))),
   withLlm: count((x) => x.llm),
   withRussianName: count((x) => x.ru),
   meanFeatures: round(items.reduce((a, x) => a + Object.keys(x.features).length, 0) / items.length),
 };
 
-writeScreenCatalog(resolve(DATA, 'catalog-screen.json'), {
+writeBuildJson(resolve(output,'catalog-screen.changes.json'),changes);
+writeScreenCatalog(resolve(output, 'catalog-screen.json'),catalogSnapshot(release,{
   dictionaryVersion: SCREEN_DICTIONARY_VERSION,
-  builtAt: new Date().toISOString(),
-  sources: ['IMDb non-commercial datasets', 'MovieLens Tag Genome and tags (research licence)', 'TVmaze (CC BY-SA)', 'Wikidata (CC0)'],
   stats,
   df,
   idf,
   items,
-});
-console.log(`Screen catalog: ${JSON.stringify(stats)}`);
+}));
+console.log(`Staged screen catalog in ${output}: ${JSON.stringify(stats)}`);

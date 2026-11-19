@@ -12,7 +12,7 @@ export function focusOwnAnswer(field){
 export function canSubmitQuestion(question,draft){
  if(!question||draft.kind!=='answer')return false;
  const selected=(question.options??[]).filter(option=>draft.selected.includes(option.id)).map(option=>option.id);
- if(question.id==='direction')return hasDirectionChoice(selected);
+ if(question.id==='direction')return hasDirectionChoice(selected,draft.text);
  return selected.length>0||question.allowText!==false&&Boolean(draft.text.trim());
 }
 export function questionFormHtml(question,draft,{busy=false,canReview=false,canChange=false,exampleHtml=''}={}){
@@ -28,13 +28,14 @@ export function questionFormHtml(question,draft,{busy=false,canReview=false,canC
  const genre=grouped&&genres.length?details('Выбрать жанр <small data-genre-count hidden></small>',group(genres,'Жанр'),'answer-genres',genres.some(selected)):'';
  const own=question.allowText!==false?`<label class="game-field" id="answer-field" for="answer-text">Своими словами<textarea class="input" id="answer-text" name="answer" maxlength="1600" rows="3" placeholder="${first?'Например, хочется приключения без спешки':'Что важно для сегодняшнего выбора?'}">${esc(draft.text)}</textarea></label>`:'';
  const avoid=grouped&&avoids.length?`<fieldset class="game-answer-avoid"><legend>Чего хочется избежать</legend>${group(avoids,'Исключения')}</fieldset>`:'';
- const extra=own&&(first||options.length)?details(first?'Добавить детали <small>Необязательно</small>':'Ответить своими словами',own+avoid+exampleHtml,first?'answer-own':`answer-own:${esc(question.id)}`,Boolean(draft.text)||avoids.some(selected)):'';
+ const extra=first?(avoid||exampleHtml?details('Добавить детали',avoid+exampleHtml,'answer-own',avoids.some(selected)):'')
+  :own&&options.length?details('Ответить своими словами',own+exampleHtml,`answer-own:${esc(question.id)}`,Boolean(draft.text)):'';
  const instruction=first?directionChoiceMessage:required?'Выбери один вариант, чтобы продолжить.':'Можешь ответить или пропустить этот вопрос.';
  const hasDraft=Boolean(draft.text.trim()||draft.selected.length)&&draft.kind==='answer';
- return `<h1>${esc(question.title)}</h1><p id="answer-instruction" class="game-help"><strong>${required?'Обязательно':'Необязательно'}</strong> ${instruction}</p>`
+ return `<h1>${esc(question.title)}</h1><p id="answer-instruction" class="game-help">${first?'':`<strong>${required?'Обязательно':'Необязательно'}</strong> `}${instruction}</p>`
   +(!first&&question.why?`<p class="game-help game-question-why">${esc(question.why)}</p>`:'')
-  +`<form id="answer-form" data-form="answer" data-multiple="${question.multiple===true}" aria-describedby="answer-instruction">${choices}`
-  +(genre||extra?`<div class="game-answer-extras">${genre}${extra}</div>`:own+exampleHtml)
+  +`<form id="answer-form" data-form="answer" data-multiple="${question.multiple===true}" aria-describedby="answer-instruction">${first?own:''}${choices}`
+  +(genre||extra?`<div class="game-answer-extras">${genre}${extra}</div>`:first?'':own+exampleHtml)
   +`<div id="neutral-status" class="game-neutral-status"${draft.kind==='answer'?' hidden':''}>Сохранён прежний ответ «${esc(neutralLabels[draft.kind])}». <button type="button" class="game-text-action" data-act="resume-answer">Изменить ответ</button></div>`
   +'<div class="game-question-footer">'
   +(canReview?`<p class="game-draft-hint" id="review-draft-hint"${hasDraft?'':' hidden'}>Нажми «Дальше», чтобы учесть ответ.</p>`:'')

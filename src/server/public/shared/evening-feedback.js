@@ -1,8 +1,8 @@
 // Shared browser/server contract. Feedback describes one evening, never a persistent taste update.
-import { feedbackTransactions } from './evening-storage.js';
-import {normalizeSelectionReview,historicalFeedback} from './selection-review.js';
+import { FEEDBACK_KEY, OUTCOME_ARCHIVE_KEY, feedbackTransactions } from './evening-storage.js';
+import {normalizeSelectionReview,historicalFeedback,historicalReviewEntries} from './selection-review.js';
 import {selectionInterview} from './conversation-entry.js';
-export const FEEDBACK_KEY = 'tastiq.site.evenings';
+export { FEEDBACK_KEY };
 export const FIT = {accept:'Подходит',conditional:'С оговоркой',reject:'Не подходит',unknown:'Пока не знаю'};
 export const REASONS = {mood:'Не то настроение',taste:'Не мой вкус',time:'Не укладывается по времени',company:'Не для моей компании',availability:'Не могу запустить или посмотреть',seen:'Уже знакомо',other:'Другая причина'};
 export const OUTCOMES = {liked:'Понравилось',mixed:'Нормально',disliked:'Не зашло',not_started:'Не начал'};
@@ -87,66 +87,114 @@ export function publicFeedback(run) {
 
 export function createFeedbackStore({storage,send,id=()=>crypto.randomUUID(),now=()=>new Date().toISOString(),onChange=()=>{},locks,transaction=feedbackTransactions(storage)}) {
   // A transaction contains local read-modify-write, never a network request. Locks are an offline test adapter.
+  const startupCache=storage;
   if(!transaction&&!locks?.request)storage=undefined;
+  let entries=[], archived=new Map(), persistent=Boolean(transaction||storage), pending=null;
+  let archiveChanged=false, startupOutcomes=[];
+  const payload=run=>JSON.stringify(publicFeedback(run));
+  const refusal=status=>[400,409,413,422].includes(status);
+  function rememberOutcomes({id,title,domain,at,outcomes}){
+    if(!token(id)||!text(title,200)||!DOMAINS.includes(domain)||!date(at)||!Array.isArray(outcomes))return false;
+    const key=domain+':'+id, prior=archived.get(key);
+    const opinions=[...new Set([...(prior?.outcomes??[]),...outcomes.filter(v=>['liked','mixed','disliked'].includes(v))])];
+    if(opinions.length===(prior?.outcomes.length??0))return false;
+    archived.set(key,{id,title,domain,at:prior?.at??at,outcomes:opinions});return true;
+  }
+  function evictDelivered(){
+    const index=entries.findIndex(e=>e.ack===e.run.revision&&e.ackPayload===payload(e.run));
+    if(index<0)return false;
+    const {run}=entries.splice(index,1)[0];
+    for(const response of run.responses){
+      const card=run.cards.find(c=>c.id===response.cardId);
+      if(card&&response.outcome&&rememberOutcomes({...card,domain:run.domain,at:run.at,outcomes:[response.outcome]}))archiveChanged=true;
+    }
+    return true;
+  }
   const exclusive=async fn=>{
     if(transaction){let called=false,value;
       try{return await transaction(atomic=>{
         const cache=storage;storage=atomic;
-        try{entries=read();called=true;value=fn();return value;}finally{storage=cache;}
+        try{read(true);called=true;value=fn();return value;}finally{storage=cache;}
       });}catch{
         transaction=null;storage=undefined;persistent=false;onChange();
         return called?value:fn();
       }
     }
-    return locks?.request?locks.request(FEEDBACK_KEY,fn):fn();
+    return locks?.request?locks.request(FEEDBACK_KEY,()=>{read(true);return fn();}):fn();
   };
-  const payload=run=>JSON.stringify(publicFeedback(run));
-  let entries = [], persistent = Boolean(transaction||storage), pending = null;
-  const read = () => { try {
-    const saved = JSON.parse(storage?.getItem(FEEDBACK_KEY) ?? 'null');
-    if (saved?.version === 1 && Array.isArray(saved.entries)) return saved.entries.flatMap(e=>{
+  function readValue(source,key){
+    try{return JSON.parse(source.getItem(key)??'null');}catch{return null;}
+  }
+  function saveArchive(){
+    if(!archiveChanged)return;
+    storage.setItem(OUTCOME_ARCHIVE_KEY,JSON.stringify({version:1,outcomes:[...archived.values()]}));
+    archiveChanged=false;
+  }
+  function read(migrate,source=storage) {
+    if(!source||migrate&&!persistent)return;
+    const saved=readValue(source,FEEDBACK_KEY), history=readValue(source,OUTCOME_ARCHIVE_KEY);
+    const rows=saved?.version===1&&Array.isArray(saved.entries)?saved.entries:[];
+    entries=rows.flatMap(e=>{
+      if(!e)return [];
       const run=normalizeFeedback(e.run);
       if(!run || !text(e.key,100000) || !Number.isInteger(e.ack) || e.ack < -1 || e.ack>run.revision)return [];
       const ack=e.ack===run.revision && e.ackPayload!==payload(run)?-1:e.ack;
       const carryFrom=token(e.carryFrom?.id)&&Number.isSafeInteger(e.carryFrom.revision)&&e.carryFrom.revision>=0
         ? {id:e.carryFrom.id,revision:e.carryFrom.revision} : null;
-      return [{run,key:e.key,ack,ackPayload:e.ackPayload??null,carryFrom}];
+      const rejected=e.rejected?.revision===run.revision&&refusal(e.rejected.status)?e.rejected:null;
+      return [{run,key:e.key,ack,ackPayload:e.ackPayload??null,carryFrom,rejected}];
     });
-  } catch { /* malformed storage starts empty */ } return []; };
-  entries=read();
-  const refresh = () => {
-    for(const stored of read()) {
-      const current=entries.find(e=>e.run.id===stored.run.id);
-      if(!current)entries.push(stored);
-      else {
-        if(stored.run.revision>current.run.revision){current.run=stored.run;current.key=stored.key;current.carryFrom=stored.carryFrom;}
-        if(stored.run.revision===current.run.revision && payload(stored.run)===payload(current.run))current.carryFrom=stored.carryFrom;
-        if(payload(stored.run)===payload(current.run) && stored.ack>=current.ack){current.ack=stored.ack;current.ackPayload=stored.ackPayload;}
-      }
+    archived=new Map();archiveChanged=false;
+    if(history?.version===1&&Array.isArray(history.outcomes))for(const row of history.outcomes)if(row)rememberOutcomes(row);
+    // Import the former inline archive and any outcomes seen before IndexedDB opened.
+    const inline=saved?.version===1&&Array.isArray(saved.archivedOutcomes)?saved.archivedOutcomes:[];
+    for(const row of [...inline,...startupOutcomes])if(row&&rememberOutcomes(row))archiveChanged=true;
+    if(migrate){
+      startupOutcomes=[];
+      try{saveArchive();}catch{persistent=false;}
     }
-    while(entries.length>60){const i=entries.findIndex(e=>e.ack>=e.run.revision);if(i<0)break;entries.splice(i,1);}
-  };
+  }
+  read(false,startupCache);
+  startupOutcomes=[...archived.values()];
   const save = () => {
-    try { if (!storage) throw Error(); storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries})); }
+    try {
+      if (!storage) throw Error();
+      saveArchive();
+      storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries}));
+    }
     catch { persistent=false; }
     onChange();
   };
   const getEntry = (rid) => entries.find(e=>e.run.id===rid);
   const api = {
     get persistent() { return persistent; },
-    async refresh() {await exclusive(()=>refresh());onChange();},
+    async refresh() {await exclusive(()=>{});onChange();},
     all: () => entries.map(e=>structuredClone(e.run)),
+    archivedOutcomes: () => structuredClone([...archived.values()]),
     get: (rid) => { const e=getEntry(rid); return e ? structuredClone(e.run) : null; },
     learning: domain => historicalFeedback(entries.map(e=>e.run),domain),
+    learningEntries: domain => historicalReviewEntries(entries.map(e=>e.run),domain),
     review(rid,value) { return exclusive(()=>{
-      refresh();const e=getEntry(rid),checked=normalizeSelectionReview(value);if(!e||!checked)return false;
+      const e=getEntry(rid),checked=normalizeSelectionReview(value);if(!e||!checked)return false;
       if(JSON.stringify(e.run.selectionReview)===JSON.stringify(checked))return true;
       e.run.selectionReview=checked;e.run.revision++;e.run.updatedAt=now();save();return true;
     }); },
-    status: (rid) => { const e=getEntry(rid); return !e ? 'missing' : e.ack===e.run.revision && e.ackPayload===payload(e.run) ? 'sent' : 'pending'; },
+    status(rid) {
+      const e=getEntry(rid);if(!e)return 'missing';
+      if(e.ack===e.run.revision&&e.ackPayload===payload(e.run))return 'sent';
+      if(e.rejected?.revision===e.run.revision)return e.rejected.status===409?'conflict':'rejected';
+      return 'pending';
+    },
+    async retry(rid) {
+      await exclusive(()=>{
+        const e=getEntry(rid);if(!e||e.rejected?.revision!==e.run.revision)return;
+        if(e.rejected.status===409){if(e.run.revision>=1e6)return;e.run.revision++;e.run.updatedAt=now();}
+        e.rejected=null;save();
+      });
+      return api.flush();
+    },
     observe(dialogueId,state,result,{inheritFrom,carryIntoExisting=false,retainedIds,interview}={}) { return exclusive(()=>{
       if (!token(dialogueId) || !DOMAINS.includes(state?.domain) || !result?.top) return null;
-      refresh();
       const s=state.situation ?? {}, intent=s.intent?.source==='confirmed' && s.intent.sourceText===s.note ? s.intent : null;
       const context={platform:state.domain==='game'?state.platform:null,time:s.time??null,company:s.company??null,
         partySize:state.domain==='game'?(s.company==='friend'?'2':s.company==='group'?s.partySize??null:null):null,childAge:s.company==='kids'?s.childAge??null:null,
@@ -175,16 +223,15 @@ export function createFeedbackStore({storage,send,id=()=>crypto.randomUUID(),now
         }
         return structuredClone(prior.run);
       }
-      if(entries.length>=60) { const at=entries.findIndex(e=>e.ack>=e.run.revision); if(at<0)return null; entries.splice(at,1); }
       let rid=id(); for(let attempt=0;getEntry(rid)&&attempt<5;attempt++)rid=id();
       if(getEntry(rid))return null;
       const at=now(), checkedInterview=selectionInterview(interview);
       const run=normalizeFeedback({version:1,id:rid,dialogueId,domain:state.domain,revision:0,at,updatedAt:at,context,cards,responses,...(checkedInterview?{interview:checkedInterview}:{})});
       if(!run)return null;
+      while(entries.length>=60)if(!evictDelivered())return null;
       entries.push({key,run,ack:-1,carryFrom});save();return structuredClone(run);
     }); },
     update(rid,cardId,action) { return exclusive(()=>{
-      refresh();
       const e=getEntry(rid); if(!e?.run.cards.some(c=>c.id===cardId))return false;
       const before=e.run.responses.find(r=>r.cardId===cardId);
       const r={...(before??{cardId,fit:null,reason:null,note:'',chosen:false,started:false,outcome:null})};
@@ -199,16 +246,23 @@ export function createFeedbackStore({storage,send,id=()=>crypto.randomUUID(),now
     }); },
     flush() {
       if(pending)return pending;
-      // Drain the latest revisions, including edits during a slow request. Bound work; stop on the first error.
+      // A refusal concerns only the exact revision sent. Leave transient errors for the next flush.
       pending=(async()=>{
         for(let count=0;count<120;count++)try {
-          const run=await exclusive(()=>{refresh();const next=entries.find(e=>api.status(e.run.id)==='pending');return next?publicFeedback(next.run):null;});
+          const run=await exclusive(()=>{const next=entries.find(e=>api.status(e.run.id)==='pending');return next?publicFeedback(next.run):null;});
           if(!run)break;
-          const ack=await send(run);
+          let ack;try{ack=await send(run);}catch(error){if(!refusal(error?.status))break;ack={status:error.status};}
+          if(!ack?.ok&&refusal(ack?.status)){
+            await exclusive(()=>{
+              const e=getEntry(run.id);
+              if(e&&api.status(run.id)==='pending'&&payload(e.run)===payload(run)){e.rejected={status:ack.status,revision:run.revision};save();}
+            });
+            continue;
+          }
           if(!ack?.ok || ack.id!==run.id || ack.revision!==run.revision)break;
           await exclusive(()=>{
-            refresh();const e=getEntry(run.id);
-            if(e && (e.run.revision>run.revision || payload(e.run)===payload(run)) && run.revision>=e.ack){e.ack=run.revision;e.ackPayload=payload(run);save();}
+            const e=getEntry(run.id);
+            if(e && (e.run.revision>run.revision || payload(e.run)===payload(run)) && run.revision>=e.ack){e.ack=run.revision;e.ackPayload=payload(run);if(e.rejected?.revision===run.revision)e.rejected=null;save();}
           });
         } catch { break; }
       })().finally(()=>{pending=null;onChange();});

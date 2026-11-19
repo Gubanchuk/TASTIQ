@@ -5,6 +5,7 @@ import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createServer } from 'node:net';
+import { Readable } from 'node:stream';
 import { fixtureCatalog, screenFixture } from './fixture.js';
 import { initialState } from '../src/core/dialogue.js';
 import { PaidBudget } from '../src/stand/paid-budget.js';
@@ -68,6 +69,17 @@ try {
   assert.equal(meta?.domains.film.items,3);
   assert.equal(meta?.domains.anime.items,1);
   assert.equal(meta?.domains.anime.newSelections,true);
+  const exact = await (await localFetch(base+'/api/search?domain=game&id=12&id=missing&id=1&id=12')).json();
+  assert.deepEqual(exact.map(card=>card.id),['12','1']);
+  assert.equal(exact[1].name,'The Witcher 3');
+  const {handler}=await import('../src/server/app.js');
+  const bytes=Buffer.from(JSON.stringify({domain:'game',text:'гринд'}));
+  const split=bytes.indexOf(Buffer.from('гринд'))+1;
+  const parseReq=Object.assign(Readable.from([bytes.subarray(0,split),bytes.subarray(split)]),{
+    method:'POST',url:'/api/parse',headers:{host:'localhost'}
+  });
+  let parsed;await handler(parseReq,{writeHead(status){assert.equal(status,200);},end(value){parsed=JSON.parse(value);}});
+  assert.ok(parsed.negative.some(feature=>feature.f==='progression.grind'));
   const mediaPost=body=>localFetch(`${base}/api/media-conversation`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...body,uid:'offline-media'})});
   for(const domain of ['film','series','cartoon','anime']){
     const response=await mediaPost({domain});assert.equal(response.status,200);const initial=await response.json();

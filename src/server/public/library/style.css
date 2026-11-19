@@ -277,3 +277,26 @@ body.selection-design.product-page.library-page #library-app .library-undo{borde
  body.selection-design.product-page.library-page #library-app .library-undo{align-items:flex-start;gap:10px;padding:12px;flex-wrap:wrap}
 }
 @media(max-width:420px){body.selection-design.product-page.library-page #library-app .library-filter-options{grid-template-columns:minmax(0,1fr)}}
+
+.library-page .saved-source-chooser,.library-page .saved-source-actions{margin:0 0 16px}
+.library-page .saved-source-chooser>summary{width:fit-content;min-height:44px;padding:10px 0;color:var(--brand-primary);cursor:pointer;font-weight:600}
+.library-page .saved-source-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px}
+.library-page .saved-source-actions>p,.library-page .saved-source-chooser>p{margin:0;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.library-page .saved-source-chooser>p{margin-bottom:8px}
+
+.library-page .shelf-filters{margin-bottom:12px}
+.library-page .short-shelf-tools{display:flex;align-items:start;justify-content:space-between;gap:4px 16px;flex-wrap:wrap;margin-block:0 12px}
+.library-page .short-shelf-tools>.saved-source-chooser,.library-page .short-shelf-tools>.saved-source-actions,.library-page .short-shelf-tools>.shelf-filters{margin:0}
+.library-page .short-shelf-tools .shelf-filters:has([aria-expanded=true]){flex-basis:100%}
+.library-page .shelf-filters>[data-act=filters]{min-height:44px;gap:8px}
+.library-page .shelf-filters .filter-chevron{width:16px;height:16px}
+.library-page .shelf-filters [aria-expanded=true] .filter-chevron{transform:rotate(180deg)}
+.library-page .shelf-filter-summary{margin-inline-start:10px;font-size:14px;color:var(--brand-muted);overflow-wrap:anywhere}
+.library-page .shelf-filter-fields:not([hidden]){display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin:10px 0}
+.library-page .shelf-filter-fields .library-search{flex:1 1 180px;min-width:0}
+.library-page .shelf-filter-fields .library-filter-options{display:flex;flex-wrap:wrap;flex:2 1 260px}
+.library-page .shelf-filter-fields .library-filter{flex:1 1 110px}
+@media(max-width:760px){
+ .library-page .shelf-filter-fields .library-search{flex-basis:100%}
+ .library-page .shelf-filter-summary{display:block;margin:4px 0}
+}

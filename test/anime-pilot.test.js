@@ -49,6 +49,32 @@ test('the Japanese-only request restricts the actual shortlist and a movie time 
   assert.ok(rows.every(({game}) => game.animeOrigin === 'japanese' && game.kind === 'film' && game.runtime <= 100));
 });
 
+test('anime origin accepts singular western series and only demands age proof when the age condition is explicit',()=>{
+  const {anime}=catalogs;
+  const state=newMediaConversation({domain:'anime'});
+  const answer=(id,text)=>({id,kind:'answer',answer:text,question:{title:'Какое аниме хочется?'}});
+  const ranked=(...answers)=>{
+    state.turns=answers.map((text,i)=>answer(String(i),text));
+    return candidatesOf(anime,mediaConversationToLegacy(state,anime.dict)).ranked.map(row=>row.game.id);
+  };
+  const japan=ranked('Только японское аниме.');
+  assert.ok(japan.length);
+  assert.deepEqual(ranked('Только японское аниме. Возрастной рейтинг не важен.'),japan);
+  assert.deepEqual(ranked('Только японское аниме и возрастной рейтинг не указан.'),japan);
+  const strict='Нужен подтверждённый возрастной рейтинг.';
+  assert.deepEqual(ranked('Только японское аниме.',strict),[]);
+  state.retractions=[{sourceId:'1',quote:'возрастной рейтинг'}];
+  assert.deepEqual(ranked('Только японское аниме.',strict),japan);
+  state.retractions=[];
+  for(const correction of ['Возрастной рейтинг мне больше не важен.','Можно и без проверенного возрастного рейтинга.','Мне не нужен подтверждённый возрастной рейтинг.']){
+    assert.deepEqual(ranked('Только японское аниме.',strict,correction),japan,correction);
+  }
+  const western=ranked('Только западные сериалы.');
+  assert.ok(western.length&&western.every(id=>anime.byId.get(id).animeOrigin==='western'));
+  for(const text of ['Только западный сериал.','Только западное аниме.','Только западную анимацию.'])
+    assert.deepEqual(ranked(text),western,text);
+});
+
 test('the published anime menu uses independent metadata and no imported ratings', () => {
   const {anime,cartoon}=catalogs;
   assert.equal(anime.byId.get('tt0245429').runtime,125);
