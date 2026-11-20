@@ -15,12 +15,16 @@ body.conversation-page.game-dialogue .clarification-list{margin:22px 0;padding:1
 .clarification-item+.clarification-item{padding-top:16px;margin-top:16px;border-top:1px solid var(--brand-line)}
 body.conversation-page.game-dialogue .clarification-question{font-size:13px;line-height:1.7;margin-bottom:10px}
 body.conversation-page.game-dialogue .clarification-item>.btn{color:var(--brand-primary);background:var(--brand-surface);border-color:var(--brand-strong-line);min-height:44px;padding-inline:16px;font-weight:600}
-body.conversation-page.game-dialogue .clarification-item>.btn:hover{background:var(--brand-selected)}
+@media (hover:hover) {
+ body.conversation-page.game-dialogue .clarification-item>.btn:hover {background:var(--brand-selected)}
+}
 body.conversation-page.game-dialogue .clarification-form .game-field{margin:12px 0;font-size:13px}
 body.conversation-page.game-dialogue.workspace-v2 .clarification-form textarea.input{min-height:115px;font-size:14px;background:white;padding:12px;width:100%;resize:vertical}
 .clarification-actions,.clarification-tools{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 body.conversation-page.game-dialogue .clarification-actions>button[type=submit]{background:var(--brand-primary);color:white;border-color:var(--brand-primary)}
-body.conversation-page.game-dialogue .clarification-actions>button[type=submit]:hover{background:var(--brand-hover)}
+@media (hover:hover) {
+ body.conversation-page.game-dialogue .clarification-actions>button[type=submit]:hover {background:var(--brand-hover)}
+}
 .clarification-tools{margin:18px 0}
 .clarification-restore{margin-top:14px;color:var(--brand-primary)}
 body.conversation-page.game-dialogue .game-proposals{max-width:1050px}
@@ -40,7 +44,9 @@ body.conversation-page.game-dialogue .game-proposal:not(.game-proposal-featured)
 body.conversation-page.game-dialogue .game-proposal:not(.game-proposal-featured) .game-poster{width:100px;border-radius:5px}
 body.conversation-page.game-dialogue .game-proposal .game-card-footer{margin-top:22px}
 body.conversation-page.game-dialogue .game-proposal .evening-controls>.btn-primary{background:var(--brand-primary);border-color:var(--brand-primary);color:white;font-weight:600}
-body.conversation-page.game-dialogue .game-proposal .evening-controls>.btn-primary:hover{background:var(--brand-hover)}
+@media (hover:hover) {
+ body.conversation-page.game-dialogue .game-proposal .evening-controls>.btn-primary:hover {background:var(--brand-hover)}
+}
 body.conversation-page.game-dialogue .game-proposal .game-card-reason{max-width:62ch}
 body.conversation-page.game-dialogue .game-proposal .game-caveat{color:var(--brand-muted)}
 body.conversation-page.game-dialogue .game-result-heading{margin-bottom:24px}

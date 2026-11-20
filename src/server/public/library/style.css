@@ -268,8 +268,9 @@ body.selection-design.product-page.library-page #library-app .library-review-sco
 body.selection-design.product-page.library-page #library-app .library-review-scope p{font-size:14px;line-height:1.6;margin:0}
 body.selection-design.product-page.library-page #library-app .library-undo{border-radius:12px}
 @media(max-width:760px){
- body.selection-design.product-page.library-page #library-app .library-views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:6px}
- body.selection-design.product-page.library-page #library-app .library-views button{min-width:0;flex-direction:column;gap:4px;padding:8px 6px;font-size:.8125rem}
+ body.selection-design.product-page.library-page #library-app .library-views{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));width:100%;gap:6px}
+ body.selection-design.product-page.library-page #library-app .library-views button{grid-column:span 2;min-width:0;flex-direction:column;gap:4px;padding:8px 4px;font-size:.8125rem;white-space:normal}
+ body.selection-design.product-page.library-page #library-app .library-views button:nth-child(-n+2){grid-column:span 3}
  body.selection-design.product-page.library-page #library-app .library-secondary-nav{margin:2px 0 5px}
  body.selection-design.product-page.library-page #library-app .collection-description{font-size:13px;margin-bottom:14px}
  body.selection-design.product-page.library-page #library-app .board-card{padding:16px;gap:12px}

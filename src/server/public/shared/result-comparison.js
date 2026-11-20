@@ -1,6 +1,7 @@
 import {genreLabels} from './card-metadata.js';
 import {resultArtworkHtml} from './card-artwork.js';
 import {animeArtwork} from './anime-artwork.js';
+import {resultCardReason} from './result-clarity.js';
 
 const nameOf=card=>(card.ru||card.name||card.title||'Без названия')+(card.year?' ('+card.year+')':'');
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -53,20 +54,42 @@ export function comparisonRows(cards,domain){
 
 const glyphs={
  close:'M6 6l12 12M18 6 6 18', arrow:'M5 12h13m-5-5 5 5-5 5',
- swap:'M4 8h15m-4-4 4 4-4 4M20 16H5m4 4-4-4 4-4',
+ prev:'m14 6-6 6 6 6', next:'m10 6 6 6-6 6',
 };
 const icon=key=>'<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="'+glyphs[key]+'"/></svg>';
 const titleOf=card=>card.ru||card.name||card.title||'Без названия';
 const cover=(card,domain)=>resultArtworkHtml(card,{title:titleOf(card),domain,eager:true,extra:domain==='anime'?animeArtwork(card.id)?.url:null});
 
-function finalistPanel(card,slot,domain,canSwitch){
- const title=esc(titleOf(card)),full=esc(nameOf(card));
- return '<article class="finalist-panel" data-slot="'+slot+'"><div class="finalist-stage">'+cover(card,domain)+'</div>'
-  +'<div class="finalist-identity">'+(card.year?'<div class="finalist-year">'+esc(card.year)+'</div>':'')
-  +'<h3>'+title+'</h3></div><div class="finalist-controls">'
-  +'<button type="button" data-open-card="'+esc(card.id)+'" aria-label="К карточке «'+full+'»">К карточке '+icon('arrow')+'</button>'
-  +(canSwitch?'<button type="button" data-switch-slot="'+slot+'" aria-expanded="false" aria-controls="finalist-picker" aria-label="Сменить вариант «'+full+'»">'+icon('swap')+'Сменить</button>':'')
-  +'</div></article>';
+function finalistPanel(slot,canSwitch){
+ const side=slot===0?'слева':'справа';
+ const arrows=canSwitch?`<div class="finalist-controls">
+  <button type="button" data-step="-1" aria-label="Предыдущий вариант ${side}">${icon('prev')}</button>
+  <button type="button" data-step="1" aria-label="Следующий вариант ${side}">${icon('next')}</button>
+ </div>`:'';
+ return `<article class="finalist-panel" data-slot="${slot}" aria-labelledby="finalist-title-${slot}">
+  ${arrows}<div class="finalist-stage"></div><div class="finalist-identity"></div></article>`;
+}
+
+export function comparisonReasonsHtml(cards){
+ const reasons=cards.map(resultCardReason);
+ const sharedReason=reasons.length===2&&reasons[0]===reasons[1]?reasons[0]:'';
+ const entries=cards.map((card,i)=>{
+  const reason=reasons[i];
+  const caveat=[card.ai?.caveat,card.caveat].find(text=>typeof text==='string'&&text.trim())?.trim();
+  const paragraphs=[];
+  if(reason&&!sharedReason)paragraphs.push(`<p>${esc(reason)}</p>`);
+  if(caveat&&caveat!==reason)paragraphs.push(`<p class="finalist-caveat"><strong>Учти</strong> ${esc(caveat)}</p>`);
+  if(!paragraphs.length)return '';
+  return `<section data-slot="${i}"><h4>${esc(titleOf(card))}</h4>
+   ${paragraphs.join('')}</section>`;
+ });
+ if(sharedReason){
+  const details=entries.some(Boolean)?'<div class="finalist-reasons">'+entries.join('')+'</div>':'';
+  return '<h3>Почему подходят оба варианта</h3><p class="finalist-shared-reason">'+esc(sharedReason)+'</p>'+details;
+ }
+ if(entries.every(entry=>!entry))return '<p class="finalist-empty">В этой подборке для пары нет пояснений к запросу.</p>';
+ const columns=entries.map((entry,i)=>entry||`<section data-slot="${i}"><h4>${esc(titleOf(cards[i]))}</h4><p>Для этого варианта нет пояснения к запросу.</p></section>`);
+ return '<h3>Под твой запрос</h3><div class="finalist-reasons">'+columns.join('')+'</div>';
 }
 
 function comparisonValue(label,value,sameFilmFormat){
@@ -97,43 +120,33 @@ export function openComparison(dialog,cards,domain,onCard){
  if(cards.length<2)return;
  // The displayed pair is a preview of the batch. No choice or feedback is recorded.
  const pair=cards.slice(0,2);
- let editing=null;
  dialog.classList.add('finalist-dialog');
- dialog.innerHTML='<header class="finalist-heading"><h2 id="result-dialog-title" tabindex="-1" autofocus>Сравнить два варианта</h2><button class="finalist-close" type="button" data-close aria-label="Закрыть сравнение">'+icon('close')+'</button></header>'
-  +'<div class="finalist-pair"></div><section id="finalist-picker" hidden></section><div data-comparison></div><span class="finalist-sr" role="status"></span>';
- const panels=dialog.querySelector('.finalist-pair'),picker=dialog.querySelector('#finalist-picker'),facts=dialog.querySelector('[data-comparison]');
- function drawPair(){
-  panels.innerHTML=pair.map((card,i)=>finalistPanel(card,i,domain,cards.length>2)).join('');
-  facts.innerHTML=comparisonTable(pair,domain);
+ dialog.innerHTML='<header class="finalist-heading"><h2 id="result-dialog-title" tabindex="-1" autofocus>Сравнение</h2><button class="finalist-close" type="button" data-close aria-label="Закрыть сравнение">'+icon('close')+'</button></header>'
+  +'<div class="finalist-pair">'+pair.map((_,i)=>finalistPanel(i,cards.length>2)).join('')+'</div>'
+  +'<section data-comparison-copy></section><div data-comparison></div><span class="finalist-sr" role="status"></span>';
+ const panels=dialog.querySelectorAll('.finalist-panel');
+ function drawCard(slot){
+  const card=pair[slot],panel=panels[slot];
+  panel.querySelector('.finalist-stage').innerHTML=cover(card,domain);
+  panel.querySelector('.finalist-identity').innerHTML=(card.year?'<div class="finalist-year">'+esc(card.year)+'</div>':'')
+   +`<h3 id="finalist-title-${slot}"><button type="button" data-open-card="${esc(card.id)}" aria-label="К карточке «${esc(nameOf(card))}»"><span>${esc(titleOf(card))}</span>${icon('arrow')}</button></h3>`;
  }
- function showPicker(slot){
-  const previous=editing;
-  editing=slot;
-  panels.querySelectorAll('[data-switch-slot]').forEach(button=>button.setAttribute('aria-expanded',String(Number(button.dataset.switchSlot)===slot)));
-  picker.hidden=slot===null;
-  if(slot===null){
-   picker.replaceChildren();
-   if(previous!==null)panels.querySelector('[data-switch-slot="'+previous+'"]')?.focus();
-   return;
-  }
-  const available=cards.filter(card=>pair.every(selected=>selected.id!==card.id));
-  picker.innerHTML='<div class="finalist-picker-head"><h3>Вместо «'+esc(nameOf(pair[slot]))+'»</h3><button type="button" data-cancel-switch>Отмена</button></div><div class="finalist-candidates">'
-   +available.map(card=>'<button type="button" data-finalist-id="'+esc(card.id)+'">'+cover(card,domain)+'<span>'+esc(titleOf(card))+(card.year?'<small>'+esc(card.year)+'</small>':'')+'</span>'+icon('arrow')+'</button>').join('')+'</div>';
-  picker.querySelector('[data-finalist-id]')?.focus();
+ function drawDetails(){
+  dialog.querySelector('[data-comparison-copy]').innerHTML=comparisonReasonsHtml(pair);
+  dialog.querySelector('[data-comparison]').innerHTML=comparisonTable(pair,domain);
  }
- dialog.addEventListener('cancel',event=>{if(editing!==null){event.preventDefault();showPicker(null);}});
  dialog.addEventListener('click',event=>{
   const button=event.target.closest('button');if(!button)return;
   if(button.hasAttribute('data-open-card')){dialog.close();onCard(button.dataset.openCard);return;}
-  if(button.hasAttribute('data-switch-slot')){const slot=Number(button.dataset.switchSlot);showPicker(slot===editing?null:slot);return;}
-  if(button.hasAttribute('data-cancel-switch')){showPicker(null);return;}
-  if(editing===null||!button.hasAttribute('data-finalist-id'))return;
-  const next=cards.find(card=>card.id===button.dataset.finalistId);
-  if(!next||pair.some(card=>card.id===next.id))return;
-  pair[editing]=next;drawPair();showPicker(null);
+  if(!button.hasAttribute('data-step'))return;
+  const slot=Number(button.closest('[data-slot]').dataset.slot);
+  const available=cards.filter(card=>card.id!==pair[1-slot].id);
+  const index=available.indexOf(pair[slot]);
+  pair[slot]=available[(index+Number(button.dataset.step)+available.length)%available.length];
+  drawCard(slot);drawDetails();
   dialog.querySelector('[role="status"]').textContent='Сравниваются '+pair.map(nameOf).join(' и ')+'.';
  });
- drawPair();dialog.showModal();
+ drawCard(0);drawCard(1);drawDetails();dialog.showModal();
 }
 
 // Native dialog owns the focus trap and Escape. A changed selection invalidates an open preview.

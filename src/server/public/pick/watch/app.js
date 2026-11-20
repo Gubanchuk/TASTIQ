@@ -4,9 +4,9 @@ import {questionFormHtml,canSubmitQuestion,focusOwnAnswer} from '/shared/questio
 import {copyCardTitle} from '/shared/title-copy.js';
 import {createSelectionReviewController} from '/shared/selection-review-controller.js';
 import {resultBatchHelp,resultBatchNotice,resultRequestScreen,singleReplacementIndex} from '/shared/result-clarity.js';
-import {currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=2';
+import {currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=4';
 import {openShorter,shorterLimit} from './shorter-result.js';
-import {requestOverviewHtml,requestPreviewHtml} from '/shared/request-overview.js';
+import {requestOverviewHtml,requestPreviewHtml,requestSummaryText} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent} from '/shared/workspace-ui.js';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
@@ -160,11 +160,10 @@ function questionHtml(screen) {
 }
 function reviewHtml(screen) {
  return '<h1>Такой выбор тебе нужен сегодня?</h1>'
-  +`<p>${esc(screen.summary||'Пока запрос широкий. Можно получить предварительный подбор или уточнить его своими словами.')}</p>`
+  +`<p>${esc(requestSummaryText(screen,client.state)||'Можно перейти к подбору или добавить пожелание.')}</p>`
   +timeBudgetHtml(screen.sessionTime,{scope:'review',timeMode:screen.context?.timeMode})
   +'<div data-visit-reviews></div>'
-  +(screen.provisional?'<p class="game-help">Это предварительное понимание. Уточни его, если упущено что-то важное.</p>':'')
-  +'<p class="game-help">Если всё верно, можно подбирать варианты. Детали и условия запроса доступны в сводке.</p>';
+  +(screen.provisional?'<p class="game-help">Это предварительный запрос. Ты ещё можешь его изменить.</p>':'');
 }
 function cardHtml(card,index) {
  const familiar=client.state?.familiar??{},marked=familiar.marked?.includes(card.id),kept=familiar.keep?.includes(card.id);

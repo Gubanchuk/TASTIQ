@@ -41,13 +41,17 @@ body.product-page #main h1{font-family:Unbounded,Golos,sans-serif;font-size:30px
 body.product-page #main .game-help{font-size:14px;line-height:1.8;max-width:65ch}
 body.product-page #stage .btn{min-height:46px;padding:10px 17px;border-radius:999px;font-size:13px;line-height:1.5;font-weight:500;transition:background .18s ease,border-color .18s ease}
 body.product-page #stage .btn-primary{background:var(--brand-primary);color:white;border-color:var(--brand-primary);font-weight:550}
-body.product-page #stage .btn-primary:hover:not(:disabled){background:var(--brand-hover);border-color:var(--brand-hover)}
+@media (hover:hover) {
+ body.product-page #stage .btn-primary:hover:not(:disabled) {background:var(--brand-hover);border-color:var(--brand-hover)}
+}
 body.product-page #stage .input{border-radius:16px;border-color:var(--brand-strong-line);background:var(--brand-paper)}
 body.product-page #stage textarea.input{min-height:116px;border-radius:20px;padding:16px 18px;font-size:15px;line-height:1.75}
 body.product-page #stage .game-field{font-size:14px;gap:10px;margin-top:25px}
 body.product-page #stage .game-question-options{gap:12px;margin-top:24px}
 body.product-page #stage .game-option{min-height:64px;padding:16px 18px;border:1px solid var(--brand-line);border-radius:18px;background:var(--brand-paper);font-size:14px;line-height:1.6}
-body.product-page #stage .game-option:hover:not(:disabled){background:var(--brand-context);border-color:var(--brand-strong-line)}
+@media (hover:hover) {
+ body.product-page #stage .game-option:hover:not(:disabled) {background:var(--brand-context);border-color:var(--brand-strong-line)}
+}
 body.product-page #stage .game-option[aria-pressed=true]{background:var(--brand-selected);border-color:var(--brand-primary);color:var(--brand-ink)}
 body.product-page #stage .game-direction-options{gap:9px;margin-top:12px}
 body.product-page #stage .game-direction-options .game-option{min-height:44px;padding:10px 16px;border-radius:999px;font-size:13px}

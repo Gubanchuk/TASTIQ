@@ -311,19 +311,27 @@ body.is-busy .content, body.is-busy .inspector, body.is-busy .actionbar { pointe
 }
 .btn-lg { min-height: 40px; padding: 0 22px; }
 .btn-primary { background: var(--accent-fill); color: var(--on-accent); }
-.btn-primary:hover { background: var(--accent-fill-hover); }
+@media (hover:hover) {
+ .btn-primary:hover { background: var(--accent-fill-hover); }
+}
 .btn-primary:active { background: var(--accent-fill-press); }
 .btn-primary:disabled { background: var(--fill); color: var(--text-3); cursor: not-allowed; }
 .btn-secondary { background: var(--fill); color: var(--text); }
-.btn-secondary:hover { background: var(--fill-2); }
+@media (hover:hover) {
+ .btn-secondary:hover { background: var(--fill-2); }
+}
 .btn-secondary:active { background: var(--fill-3); }
 .btn-plain { background: transparent; color: var(--text-2); padding: 0 10px; }
-.btn-plain:hover { background: var(--fill); color: var(--text); }
+@media (hover:hover) {
+ .btn-plain:hover { background: var(--fill); color: var(--text); }
+}
 .btn-plain:active { background: var(--fill-2); }
 .btn:disabled { cursor: default; }
 .btn-plain:disabled { opacity: 0.4; background: transparent; color: var(--text-2); }
 .btn-link { background: transparent; color: var(--accent-text); padding: 0 4px; font-weight: 500; }
-.btn-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (hover:hover) {
+ .btn-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+}
 .btn.is-done { background: var(--fill); color: var(--text); }
 
 .icon-btn {

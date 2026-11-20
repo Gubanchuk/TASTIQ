@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {currentFinalists,comparisonRows} from '../src/server/public/shared/result-comparison.js';
+import {currentFinalists,comparisonRows,comparisonReasonsHtml} from '../src/server/public/shared/result-comparison.js';
 import {resultCardReason,resultRequestScreen} from '../src/server/public/shared/result-clarity.js';
 import {gameCardHtml} from '../src/server/public/pick/game/card-view.js';
 import {mediaCardHtml} from '../src/server/public/pick/watch/card-view.js';
@@ -33,6 +33,30 @@ test('game comparison uses real player checks and never turns unverified capacit
  const rows=comparisonRows([{id:'a',feasibility:[{key:'players',status:'unknown',text:'Нет источника'}],facts:[{id:'fact:hours',hours:20}]},
   {id:'b',feasibility:[{key:'players',status:'yes',text:'В компании из четырёх человек'}],genres:['Action']}],'game');
  assert.deepEqual(rows,[{label:'Жанры',values:['','Экшен']},{label:'Число игроков',values:['','В компании из четырёх человек']}]);
+});
+
+test('each finalist keeps its own explanation and caveat even when the genres match',()=>{
+ const a={id:'a',name:'Мир <А>',genres:['Drama'],ai:{reason:'Герои решают спор за разговором.',caveat:'Начало медленное.'}};
+ const b={id:'b',name:'Б',genres:['Drama'],reason:'Спор быстро переходит в погоню.'};
+ assert.deepEqual(comparisonRows([a,b],'film'),[]);
+ const html=comparisonReasonsHtml([a,b]);
+ assert.match(html,/Мир &lt;А&gt;<\/h4>\s*<p>Герои решают спор за разговором\.<\/p>.*Начало медленное\./s);
+ assert.match(html,/<h4>Б<\/h4>\s*<p>Спор быстро переходит в погоню\.<\/p>/);
+ const replacement={name:'В',facts:[{id:'pace'}],explanation:{reasons:[{text:'Можно остановиться после главы.',factIds:['pace']}]}};
+ const changed=comparisonReasonsHtml([replacement,b]);
+ assert.match(changed,/Можно остановиться после главы/);
+ assert.doesNotMatch(changed,/Начало медленное|Герои решают спор/);
+ assert.match(comparisonReasonsHtml([b,{name:'Г',genres:['Drama']}]),/Для этого варианта нет пояснения/);
+ assert.match(comparisonReasonsHtml([{name:'Д'},{name:'Е'}]),/для пары нет пояснений/);
+});
+
+test('a shared reason appears once and a distinct caveat stays on the correct side',()=>{
+ const a={name:'Первый',reason:'Тихое исследование.'},b={name:'Второй',reason:a.reason,caveat:'Долгое вступление.'};
+ const html=comparisonReasonsHtml([a,b]);
+ assert.equal(html.split(a.reason).length,2);
+ assert.match(html,/<section data-slot="1"><h4>Второй<\/h4>[\s\S]*Долгое вступление\./);
+ assert.doesNotMatch(html,/нет пояснения/);
+ assert.doesNotMatch(comparisonReasonsHtml([a,{...b,caveat:''}]),/<section/);
 });
 
 test('an available grounded reason is shown, while a card without evidence never repeats a batch disclaimer',()=>{

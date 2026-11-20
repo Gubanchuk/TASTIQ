@@ -25,9 +25,13 @@ body.conversation-page{
 .conversation-page button{cursor:pointer}
 .conversation-page button:disabled{cursor:default;opacity:.48}
 .conversation-page .btn{min-height:44px;padding:10px 15px;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--ink);font-size:13px;font-weight:500;line-height:1.5}
-.conversation-page .btn:hover:not(:disabled){background:var(--brand-fill)}
+@media (hover:hover) {
+ .conversation-page .btn:hover:not(:disabled) {background:var(--brand-fill)}
+}
 .conversation-page .btn-primary{border-color:var(--accent);background:var(--accent);color:#fff}
-.conversation-page .btn-primary:hover:not(:disabled){background:var(--brand-hover)}
+@media (hover:hover) {
+ .conversation-page .btn-primary:hover:not(:disabled) {background:var(--brand-hover)}
+}
 .conversation-page .btn-plain{border-color:transparent}
 .conversation-page .input{background:var(--brand-surface);border:1px solid var(--brand-strong-line);border-radius:5px;color:var(--ink);min-height:44px}
 .conversation-page .input::placeholder{color:var(--brand-muted);opacity:1}
@@ -39,12 +43,16 @@ body.conversation-page{
 .conversation-brand::after{content:'';height:6px;width:6px;border-radius:50%;background:var(--brand-strong-line);align-self:flex-start;margin-top:1px}
 .conversation-links{display:flex;flex-direction:column;gap:8px}
 .conversation-links :is(a,button){display:flex;align-items:center;gap:9px;min-height:44px;padding:10px 9px;border:0;border-radius:4px;background:none;text-align:left;text-decoration:none;color:var(--brand-inverse);font-size:12px;font-weight:500;line-height:1.5}
-.conversation-links :is(a,button):hover{background:var(--brand-ink);color:#fff}
+@media (hover:hover) {
+ .conversation-links :is(a,button):hover {background:var(--brand-ink);color:#fff}
+}
 .conversation-links :is([aria-current=page],[aria-current=true],.is-active){background:var(--brand-primary);color:#fff}
 .conversation-domains{display:flex;flex-direction:column;gap:5px;border-top:1px solid var(--brand-muted);padding-top:23px}
 .conversation-domains :is(a,button){display:flex;align-items:center;gap:8px;min-height:40px;border:0;background:none;color:var(--brand-inverse);text-decoration:none;text-align:left;font-size:12px;line-height:1.5;padding:8px 9px}
 .conversation-domains :is([aria-current=page],[aria-current=true]){color:#fff;font-weight:650}
-.conversation-domains :is(a,button):hover{color:#fff;background:var(--brand-ink);border-radius:4px}
+@media (hover:hover) {
+ .conversation-domains :is(a,button):hover {color:#fff;background:var(--brand-ink);border-radius:4px}
+}
 .conversation-rail-note{margin-top:auto!important;color:var(--brand-accent);font-size:12px;line-height:1.8;padding:20px 8px 0}
 .conversation-progress{display:flex;list-style:none;padding:0;margin:0;max-width:670px;gap:0}
 .conversation-progress li{position:relative;flex:1;display:flex;align-items:center;gap:9px;color:var(--brand-muted);font-size:12px;min-width:0;line-height:1.4}
@@ -69,8 +77,9 @@ body.conversation-page{
 }
 @media(max-width:360px){.conversation-rail{padding-left:13px;padding-right:13px;column-gap:10px}.conversation-brand{font-size:22px}.conversation-links :is(a,button){padding:8px 6px;gap:4px}.conversation-links :is(.conversation-icon,.i){display:none}.conversation-domains{gap:5px}}
 @media(prefers-reduced-motion:reduce){.conversation-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-.picker-visit-tools {display:flex;align-items:baseline;gap:6px 18px;flex-wrap:wrap;margin:.45rem 0;font-size:.875rem}
-.picker-visit-tools a,.picker-visit-tools summary {color:var(--accent,#315bb8)}
+.picker-visit-tools {display:flex;align-items:flex-start;gap:0 20px;flex-wrap:wrap;margin:20px 0 0;padding-top:8px;border-top:1px solid var(--brand-line);font-size:.875rem}
+.picker-visit-tools a,.picker-visit-tools summary {box-sizing:border-box;min-height:44px;padding-block:10px;line-height:24px;color:var(--brand-primary);overflow-wrap:anywhere}
+.picker-visit-tools a {display:inline-block;text-underline-offset:3px}
 .picker-visit-tools details {margin:0}
 .picker-visit-tools .game-history-list {max-height:14rem;overflow:auto}
 #today-platform {margin:.5rem 0;font-size:.875rem}
