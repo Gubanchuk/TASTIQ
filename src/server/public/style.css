@@ -42,6 +42,13 @@
  .door-go .i{width:19px;height:19px}
  .foot-in{flex-direction:column;align-items:flex-start;gap:20px;padding-block:24px 30px}
 }
+@media(max-width:480px){
+ .door-art{height:clamp(105px,27.5vw,132px)}
+ .door-art::before{inset-block-start:10px}
+ .door-cover:nth-child(1){top:16px;left:11%;width:33%}
+ .door-cover:nth-child(2){top:5px;left:31%;width:38%}
+ .door-cover:nth-child(3){top:16px;left:55%;width:33%}
+}
 @media(max-width:360px){.brand .site-logo{width:110px}.btn{padding-inline:13px;font-size:12px;gap:8px}.door-title{font-size:18px}.door-go{width:32px;height:32px;right:0}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.door:is(:hover,:focus-visible) .door-cover:nth-child(1){transform:rotate(-16deg)}.door:is(:hover,:focus-visible) .door-cover:nth-child(2){transform:rotate(-3deg)}.door:is(:hover,:focus-visible) .door-cover:nth-child(3){transform:rotate(15deg)}}
 .doors:focus-visible{outline:none}
