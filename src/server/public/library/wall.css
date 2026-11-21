@@ -1,4 +1,5 @@
 /* Poster-first collection. History, reviews and taste memory retain their own layouts. */
+html:has(body.library-page) {scrollbar-gutter:stable}
 body.library-page {
   --wall-paper:#f8f9fc; --wall-ink:#182742; --wall-muted:#52617a;
   --wall-line:#cfd5e2; --wall-blue:#2a4abb; --wall-selected:#e3eaff;
@@ -26,7 +27,7 @@ body.library-page main#library-content {
   display:grid; grid-template-areas:"title source" "views tools"; grid-template-columns:minmax(0,1fr) auto;
   align-items:center; gap:20px 16px; margin:0 0 25px; padding:0 0 10px; border-bottom:1px solid var(--wall-line);
 }
-#library-content .wall-heading h1 {grid-area:title; color:var(--wall-ink); margin:0; font:520 clamp(38px,4.1vw,65px)/1.13 Unbounded,Golos,sans-serif; letter-spacing:-.038em}
+#library-content .wall-heading h1 {grid-area:title; align-content:center; min-height:48px; color:var(--wall-ink); margin:0; font:520 clamp(38px,4.1vw,65px)/1.13 Unbounded,Golos,sans-serif; letter-spacing:-.038em}
 #library-content .wall-source {grid-area:source; justify-self:end; max-width:100%; min-width:0}
 #library-content .wall-source :is(.saved-source-chooser,.saved-source-actions) {margin:0}
 #library-content .wall-source .saved-source-chooser {position:relative; z-index:5}
@@ -149,18 +150,17 @@ body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px 
   .library-shell img {width:91px}.library-shell nav {gap:12px}.library-shell a {font-size:13px}
   body.library-page main#library-content {padding:21px 15px 48px}
   #library-content .wall-heading {gap:5px 6px; margin-bottom:16px; padding-bottom:6px}
-  #library-content .wall-heading h1 {display:flex; align-items:center; min-height:44px; font-size:clamp(25px,7.8vw,42px); margin:0}
+  #library-content .wall-heading h1 {min-height:44px; font-size:clamp(25px,7.8vw,42px)}
   #library-content .collection-nav {
-    display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; gap:2px; padding:3px;
-    border:1px solid var(--wall-line); border-radius:12px; background:#fff;
+    display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; gap:2px;
   }
   #library-content #library-app .collection-nav button {
-    min-width:0; flex-wrap:wrap; justify-content:flex-start; align-content:center; gap:2px 6px; padding:6px 8px; text-align:start; font-size:.9rem;
+    display:grid; grid-template-areas:"icon count" "label label"; grid-template-columns:auto auto; min-width:0;
+    justify-content:center; align-content:center; gap:3px 4px; padding:5px 2px; font-size:.875rem; text-align:center;
   }
-  #library-content .collection-nav .view-label {min-width:0; max-width:100%; overflow-wrap:anywhere; line-height:1.25}
-  #library-content .collection-nav .view-count {margin-inline-start:auto; color:var(--wall-muted); font-size:.8rem; background:var(--wall-paper); padding:2px 4px; border-radius:4px}
-  #library-content .collection-nav button[aria-pressed=true] .view-count {color:inherit}
-  #library-content .collection-nav svg {display:none}
+  #library-content .collection-nav .view-label {grid-area:label; min-width:0; overflow-wrap:anywhere}
+  #library-content .collection-nav .view-count {grid-area:count; justify-self:start}
+  #library-content .collection-nav svg {grid-area:icon; width:16px; height:16px; justify-self:end}
   #library-content .wall-tools {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); width:100%; gap:2px}
   #library-content .wide-label,#library-content .source-suffix {display:none}
   #library-content #library-app .wall-tools button {min-width:0; flex-wrap:wrap; font-size:.875rem; padding:5px 2px; gap:2px 4px; overflow-wrap:anywhere}

@@ -182,7 +182,7 @@ function filters() {
   {liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'}[reaction],
   status==='all'?'':eveningStatuses[status],!memorySearch&&{oldest:'Сначала старые',title:'По названию'}[sort]].filter(Boolean).join(' · ');
  return {
-  toggle:`<button type="button" class="search-toggle" data-act="filters" data-focus="filters-toggle" aria-label="${memorySearch?label:'Поиск и фильтры'}" aria-expanded="${open}" aria-controls="library-filter-panel">${icon('search')}<span>Поиск<span class="wide-label">${memorySearch?' в памяти':' и фильтры'}</span></span></button>`,
+  toggle:`<button type="button" class="search-toggle" data-act="filters" data-focus="filters-toggle" aria-label="Поиск и фильтры" aria-expanded="${open}" aria-controls="library-filter-panel">${icon('search')}<span>Поиск<span class="wide-label"> и фильтры</span></span></button>`,
   fields:`${!open&&summary?`<button type="button" class="filter-summary" data-act="clear" aria-label="Сбросить фильтры: ${esc(summary)}">${esc(summary)} ×</button>`:''}<div id="library-filter-panel" class="shelf-filter-fields" data-active-count="${activeCount}"${open?'':' hidden'}>${search}${options?`<div class="library-filter-options">${options}</div>`:''}${reset}</div>`
  };
 }
