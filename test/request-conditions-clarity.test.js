@@ -12,7 +12,7 @@ test('the real family request shows one canonical format and no repeated raw con
  const state=family(),before=JSON.stringify(state),view=html(state);
  assert.equal((view.match(/>Полнометражный мультфильм<\/span>/g)??[]).length,1);
  assert.match(view,/data-key="context:format"/);assert.doesNotMatch(view,/data-key="format.movie"|data-key="context:commitment"|data-key="context:timeMode"|data-key="context:childAge"/);
- assert.match(view,/С ребёнком 7 лет/);assert.match(view,/На сегодня: 90 мин/);
+ assert.match(view,/Возраст младшего ребёнка — 7 лет/);assert.match(view,/На сегодня: 90 мин/);
  assert.match(view,/Хочется добрый мультфильм/);assert.match(view,/Страшные сцены исключены/);
  assert.equal(JSON.stringify(state),before,'presentation never mutates accepted facts or sources');
 });
@@ -20,7 +20,7 @@ test('the real family request shows one canonical format and no repeated raw con
 test('one format removal clears its duplicate binding, preserves other conditions, and undo restores the display',()=>{
  const state=family(),removed=answerMediaConversation(state,{type:'remove_fact',key:'context:format'}),view=html(removed);
  assert.doesNotMatch(view,/data-key="context:format"|data-key="format.movie"/);assert.equal(removed.context.format,null);
- assert.match(view,/С ребёнком 7 лет/);assert.match(view,/Страшные сцены исключены/);assert.match(view,/На сегодня: 90 мин/);
+ assert.match(view,/Возраст младшего ребёнка — 7 лет/);assert.match(view,/Страшные сцены исключены/);assert.match(view,/На сегодня: 90 мин/);
  assert.equal(html(answerMediaConversation(removed,{type:'undo_fact_removal'})),html(state));
 });
 
@@ -31,7 +31,7 @@ test('a shared quote alone does not hide a distinct goal, a conditional preferen
 
 test('the age condition uses the correct Russian form for a one-year-old child',()=>{
  const state=family();state.context.childAge=1;
- assert.match(html(state),/С ребёнком 1 года/);
+ assert.match(html(state),/Возраст младшего ребёнка — 1 год/);
 });
 
 test('a compound fact bound to format keeps its additional meaning visible',()=>{

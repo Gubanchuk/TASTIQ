@@ -166,11 +166,11 @@ export const MOODS = [
 
 // "Это или то?" asked after the fixed screens when the answer splits the leaders (plan, category Г).
 export const PAIRS = [
-  { a: 'tension.high', b: 'tension.low', text: 'Адреналин или расслабиться?', labels: ['адреналин', 'расслабиться'] },
+  { a: 'tension.high', b: 'tension.low', text: 'Хочешь напряжения или отдыха?', labels: ['адреналин', 'расслабиться'] },
   { a: 'cognitive.high', b: 'cognitive.low', text: 'Подумать или отключить голову?', labels: ['подумать', 'отключить голову'] },
-  { a: 'pace.fast', b: 'pace.slow', text: 'Быстрый темп или неторопливо?', labels: ['быстрый темп', 'неторопливо'] },
-  { a: 'difficulty.hard', b: 'difficulty.forgiving', text: 'Чтобы было сложно или щадяще?', labels: ['сложно, с вызовом', 'щадяще'] },
-  { a: 'freedom.open_world', b: 'freedom.linear', text: 'Открытый мир или чтобы вели по истории?', labels: ['открытый мир', 'по истории'] },
+  { a: 'pace.fast', b: 'pace.slow', text: 'Какой темп тебе ближе?', labels: ['быстрый', 'неторопливый'] },
+  { a: 'difficulty.hard', b: 'difficulty.forgiving', text: 'Нужен вызов или хочется играть без особых сложностей?', labels: ['хочу испытаний', 'без особых сложностей'] },
+  { a: 'freedom.open_world', b: 'freedom.linear', text: 'Хочешь исследовать открытый мир или идти по сюжету?', labels: ['открытый мир', 'идти по сюжету'] },
   { a: 'session.short', b: 'session.long', text: 'Короткие заходы или засесть надолго?', labels: ['короткие заходы', 'засесть надолго'] },
   // Length is known from Wikipedia articles of the tail since 2026-10-28 (01d-games-wikipedia.js); asked only when
   // enough leaders carry each side, like every pair.

@@ -88,7 +88,7 @@ export function createConversationClient({fetch:request=globalThis.fetch,storage
   const ticket=++generation,base=clone(body.state);busy=true;error=null;retryOptions={reset,restoredDrafts:clone(restoredDrafts),clearPrevious,resumeFailure:clone(resumeFailure)};notify();
   try {
    const response=await request(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-   const data=await response.json();if(ticket!==generation)return null;
+   const data=await response.json().catch(()=>{throw Error('Сервер не ответил. Попробуй ещё раз.');});if(ticket!==generation)return null;
    if(!data?.state||!data?.screen)throw Error(data?.error||'Не удалось получить ответ. Попробуй ещё раз.');
    if(!scoped(data,base?.savedSource)||base?.savedSourceKey&&!data.state.savedSourceKey)throw Error(allowed?'Ответ не совпадает с сохранённым списком. Твой подбор сохранён.':'Ответ относится к другому разделу. Твой подбор сохранён.');
    if(!reset&&base&&(data.state.id!==base.id||data.state.revision<base.revision))throw Error('Ответ устарел. Повтори действие.');

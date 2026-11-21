@@ -20,7 +20,7 @@ export function requestOverviewHtml({screen={},state={},contextHtml='',timeHtml=
  if(presentation)contextHtml=presentation.conditions.length?`<h3>Условия</h3>${factRows(presentation.conditions,busy)}`:'';
  const labels={want:'Хочется',avoid:'Не хочется',require:'Обязательно',exclude:'Исключено',indifferent:'Не принципиально',unknown:'Нужно уточнить',conditional:'При условии',history:'Прошлый опыт'};
  const groups=new Map();for(const fact of facts){const group=fact.scope==='history'?'history':fact.stance;if(!groups.has(group))groups.set(group,[]);groups.get(group).push(fact);}
- return `<div class="request-overview"><p class="request-summary${summary?'':' is-empty'}">${esc(summary||'Здесь появится то, что важно для твоего выбора.')}</p>`
+ return `<div class="request-overview"><p class="request-summary${summary?'':' is-empty'}">${esc(summary||'Здесь появятся твои ответы.')}</p>`
  +(contextHtml.replace(/<[^>]+>/g,'').trim()||timeHtml?`<section class="request-conditions" aria-label="Условия выбора">${contextHtml}${timeHtml}</section>`:'')
  +[...groups].map(([group,rows])=>`<section class="request-fact-group"><h3>${esc(labels[group]??'Пожелания')}</h3>${factRows(rows,busy)}</section>`).join('')
  +(toolsHtml?`<div class="request-tools">${toolsHtml}</div>`:'')+clarification+correction+restore+'</div>';

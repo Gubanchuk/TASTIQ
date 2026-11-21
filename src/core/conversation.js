@@ -19,8 +19,8 @@ const question = (id,title,options,why='',multiple=true) => ({id,title,why,optio
 export const directionQuestion = () => initialDirectionQuestion('game');
 const requiredQuestion = (...args) => ({...question(...args),allowText:false,controls:[]});
 const platformQuestion = () => requiredQuestion('platform','Где будешь играть?',Object.entries(PLATFORMS).map(([id,p])=>[id,p.label]),'Сейчас в каталоге игры для компьютера и Steam Deck.',false);
-const companyQuestion = () => requiredQuestion('company','Будешь играть один или вместе с кем-то?',[['solo','Один'],['friend','Вдвоём, в кооперативе'],['group','Компанией']], 'Это поможет проверить доступные режимы.',false);
-const partyQuestion = () => requiredQuestion('party','Сколько вас будет?',[['2','Двое'],['3','Трое'],['4','Четверо'],['5+','Пять и больше']], 'Если вместимость не подтверждена, я отмечу это в результате.',false);
+const companyQuestion = () => requiredQuestion('company','Будешь играть один или вместе с кем-то?',[['solo','Один'],['friend','Вдвоём, в кооперативе'],['group','Компанией']], 'Проверим, подходит ли игра для твоей компании.',false);
+const partyQuestion = () => requiredQuestion('party','Сколько вас будет?',[['2','Двое'],['3','Трое'],['4','Четверо'],['5+','Пять и больше']], 'Отмечу, если не удастся проверить число игроков.',false);
 const contextIds = new Set(['platform','company','party','context']);
 const familiarIds = (value,max=500) => {
   if(value==null)return [];
@@ -110,9 +110,9 @@ export function normalizeConversation(input) {
 export function fallbackQuestion(s) {
   const answered = new Set([...s.turns.filter(t=>t.kind!=='none').map(t=>t.question.id),...(s.skippedQuestions??[])]);
   const qs=[
-    question('experience','Что хочется получать от игры?',[['story','Увлечься историей','story.central'],['explore','Находить интересное в мире','loop.exploration'],['builds','Развивать героя и пробовать билды','progression.builds'],['challenge','Преодолевать сложные испытания','difficulty.hard'],['relax','Спокойно проводить время','tension.low']], 'Жанр задаёт направление, а здесь — что важно именно сегодня.'),
-    question('reference','Есть игра, из которой хочется что-то оставить?',[], 'Напиши название и что именно понравилось. Можно без примера.'),
-    question('avoidance','Что может испортить тебе этот вечер?', [['grind','Однообразный фарм','progression.grind'],['stress','Постоянное напряжение','tension.high'],['slow','Медленное начало','pace.slow']], 'Можно написать свой ответ или отметить, что ограничений нет.'),
+    question('experience','Что хочется получать от игры?',[['story','Увлечься историей','story.central'],['explore','Находить интересное в мире','loop.exploration'],['builds','Развивать героя и пробовать билды','progression.builds'],['challenge','Преодолевать сложные испытания','difficulty.hard'],['relax','Спокойно проводить время','tension.low']], ''),
+    question('reference','Есть игра, из которой хочется что-то оставить?',[], 'Например, в Portal понравились головоломки.'),
+    question('avoidance','Что может испортить тебе этот вечер?', [['grind','Однообразный фарм','progression.grind'],['stress','Постоянное напряжение','tension.high'],['slow','Медленное начало','pace.slow']], 'Если ничего не мешает, так и напиши.'),
   ];
   return qs.find(q=>!answered.has(q.id))??null;
 }
@@ -186,7 +186,7 @@ export function answerConversation(input, action={}) {
   if(action.type==='continue') {
     if(!canOfferInterviewQuestion(s))return reviewAtInterviewCapacity(s);
     if(s.depthChangedInReview&&s.phase==='review')return {...s,depthChangedInReview:false,revision:s.revision+1,phase:'talk',question:null,needsPlan:true,failedAction:null};
-    return {...s,revision:s.revision+1,phase:'talk',question:question('extra','Что ещё важно для этого выбора?',[],'Добавь то, чего не хватает в моём понимании. Я учту это и уточню дальше, если нужно.'),needsPlan:false,result:null,familiar:{...s.familiar,marked:[],undo:null},replacement:null,factRemovalUndo:null};
+    return {...s,revision:s.revision+1,phase:'talk',question:question('extra','Что ещё важно для этого выбора?',[],'Напиши, что ещё учесть.'),needsPlan:false,result:null,familiar:{...s.familiar,marked:[],undo:null},replacement:null,factRemovalUndo:null};
   }
   if(action.type==='review') {
     if(s.requireDirection===true&&!hasChosenDirection(s))throw failure(directionChoiceMessage);

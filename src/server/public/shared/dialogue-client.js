@@ -13,9 +13,18 @@
 //   await client.aiPick({ wish });       // { result } with the model's four picks, or { error }
 
 async function api(path, body) {
-  const res = await fetch(path, body ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : undefined);
-  const data = await res.json();
-  if (!res.ok) throw Object.assign(new Error(data.error ?? res.statusText),{status:res.status});
+  let res;
+  try {
+    res = await fetch(path, body ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : undefined);
+  } catch {
+    throw new Error('Нет связи с сервером. Проверь подключение и попробуй ещё раз.');
+  }
+  let data;
+  try { data = await res.json(); } catch { throw new Error('Сервер не ответил. Попробуй ещё раз.'); }
+  if (!res.ok) {
+    const message=typeof data?.error==='string'&&/^[А-Яа-яЁё]/u.test(data.error)?data.error:'Попробуй ещё раз.';
+    throw Object.assign(new Error(message),{status:res.status});
+  }
   return data;
 }
 

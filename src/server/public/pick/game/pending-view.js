@@ -1,9 +1,9 @@
 const presentations={
- plan:{prominent:true,title:'Обдумываю твой ответ',description:'Учитываю то, что ты рассказал, и уточняю сегодняшнее желание.'},
- pick:{prominent:true,title:'Подбираю игры для тебя',description:'Сопоставляю твой запрос с играми и проверяю условия выбора.'},
- more:{prominent:true,title:'Ищу другие варианты',description:'Продолжаю по тому же запросу. Уже показанное не повторится.'},
- replace:{prominent:true,title:'Ищу замену знакомым играм',description:'Подбираю новые варианты. Остальные игры и твой запрос сохранятся.'},
- local:{prominent:false,title:'Сохраняю ответ…',description:'Применяю изменение к текущему подбору.'},
+ plan:{prominent:true,title:'Уточняю запрос',description:''},
+ pick:{prominent:true,title:'Подбираю игры',description:''},
+ more:{prominent:true,title:'Ищу другие варианты',description:'По тому же запросу, без повторов.'},
+ replace:{prominent:true,title:'Ищу замену знакомым играм',description:'Остальные игры останутся в подборе.'},
+ local:{prominent:false,title:'Сохраняю ответ…',description:''},
 };
 
 // Use the submitted action and the question before accepting it. In particular,

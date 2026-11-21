@@ -6,7 +6,7 @@
 import { profileOf, sessionOf } from '../core/dialogue.js';
 import { choose, rankAll } from '../core/recommend.js';
 import { normalizeTitle } from '../lib/text.js';
-import { describeCandidates, describePerson, SCHEMA, systemFor } from './prompt.js';
+import { comparisonInstruction, comparisonSchema, describeCandidates, describePerson, SCHEMA, systemFor } from './prompt.js';
 import { AI } from './config.js';
 import { publicApiError, requestResponse } from './openai.js';
 import { reserveCost } from './usage.js';
@@ -101,6 +101,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
   const signatures=new Map(),inconsistent=new Set();
   if(criteria.length)for(const p of proposed){const id=identities.get(p);if(!id)continue;const a=assessments.get(p),signature=a.ok?JSON.stringify(criteria.map(c=>a.checks.find(row=>row.key===c.key).status)):a.reason;if(signatures.has(id)&&signatures.get(id)!==signature)inconsistent.add(id);else signatures.set(id,signature);}
   let conflictDrops=0,unconfirmedDrops=0;
+  const accepted = new Map();
   for (const p of proposed) {
     if (picks.length >= n) break;
     const given = typeof p?.id === 'string' ? p.id.trim() : '';
@@ -121,6 +122,15 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
     }
     if (outside) own++;
     picks.push({ id, reason: sentence(p.reason, 220), caveat: sentence(p.caveat, 140), likelySeen: Boolean(p.likelySeen), own: outside,...(criteria.length?{constraintChecks:assessment.checks,unknownCriteria:assessment.unknowns}:{}) });
+    accepted.set(p, picks.at(-1));
+  }
+  // Use the original proposals. Filtering an edition or a failed constraint shifts the display positions.
+  for (const pair of (Array.isArray(out?.comparisons) ? out.comparisons.slice(0, 6) : [])) {
+    if (!Number.isInteger(pair?.a) || !Number.isInteger(pair.b) || pair.a < 1 || pair.a >= pair.b || pair.b > 4) continue;
+    const first = accepted.get(proposed[pair.a - 1]), second = accepted.get(proposed[pair.b - 1]);
+    const summary = typeof pair.summary === 'string' ? pair.summary.trim() : '';
+    if (!first || !second || !summary || [...summary].length > 260 || first.comparisons?.some(row => row.otherId === second.id)) continue;
+    (first.comparisons ??= []).push({ otherId: second.id, summary });
   }
   return { picks, understood: String(out?.understood ?? '').trim().slice(0, 220), dropped: proposed.length - picks.length,...(criteria.length?{constraintDrops:{conflict:conflictDrops,unconfirmed:unconfirmedDrops}}:{}) };
 }
@@ -166,12 +176,17 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   const started = Date.now();
   const schema=constraintSchema(SCHEMA,criteria);
   const outputSchema=adaptive?{...schema,properties:{...schema.properties,picks:{...schema.properties.picks,maxItems:requestCount}}}:schema;
+  const compare = adaptive && target >= 2;
+  if (compare) {
+    outputSchema.properties.comparisons = comparisonSchema;
+    outputSchema.required = [...schema.required, 'comparisons'];
+  }
   const request = {
       model: AI.model,
       max_output_tokens: AI.maxOutputTokens,
       reasoning: { effort: AI.effort },
       text: { format: { type: 'json_schema', name: 'tastiq_picks', strict: true, schema: outputSchema } },
-      instructions: systemFor(state)+constraintInstructions(criteria)+(feedbackContext.length?'\n'+feedbackContextRule:'')+(tasteMemory.length?'\n'+tasteMemoryRule:''),
+      instructions: systemFor(state)+constraintInstructions(criteria)+(compare?'\n'+comparisonInstruction:'')+(feedbackContext.length?'\n'+feedbackContextRule:'')+(tasteMemory.length?'\n'+tasteMemoryRule:''),
       input: content,
       store: false,
       service_tier: 'default',

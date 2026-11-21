@@ -19,7 +19,7 @@ test('the shareable selection contains the sent request, current understanding, 
   assert.match(text,/Почему может подойти: Почему Первый/);
   assert.doesNotMatch(text,/мнение модели|уточнение моделью/i);
   if(domain==='game')assert.match(text,/Windows|Вдвоём/);
-  if(domain==='series')assert.match(text,/Продолжающиеся сериалы допустимы/);
+  if(domain==='series')assert.match(text,/Подойдут сериалы, которые ещё выходят/);
  }
 });
 
@@ -31,7 +31,7 @@ test('superseded and retracted source answers are not re-exposed as the current 
  s.retractions=[{sourceId:'removed',quote:'REMOVED_SECRET'}];
  const text=selectionCopyText({state:s});
  assert.doesNotMatch(text,/OLD_SECRET|REMOVED_SECRET/);assert.match(text,/Оставь добрый юмор/);assert.match(text,/Хочется приключения с юмором, без жестокости/);
- assert.match(text,/Часть ответов изменена/);
+ assert.match(text,/с учётом твоих исправлений/);
 });
 
 test('a new batch exports only its visible result and provisional/unknown data stay explicit',()=>{

@@ -5,6 +5,20 @@ import vm from 'node:vm';
 import {createLibraryStore,LIBRARY_KEY,isLibrarySaved} from '../src/server/public/shared/library-store.js';
 import {mediaLibraryDomain} from '../src/server/public/shared/anime-pilot.js';
 
+test('legacy section choices show the active anime catalog once and respect the launch switch',async()=>{
+ const source=await readFile(new URL('../src/server/public/pick/app.js',import.meta.url),'utf8');
+ const choices={options:[{value:'film',label:'Посмотреть фильм'},{value:'anime',label:'Посмотреть аниме'}],later:['Аниме','Почитать']};
+ const context=vm.createContext({counts:{film:{items:3},anime:{items:1,newSelections:true}},choices,esc:String,icon:()=>'',nf:{format:String},plural:(_,forms)=>forms[0]});
+ vm.runInContext(source.slice(source.indexOf('const DOMAINS ='),source.indexOf('const PLATFORM =')),context);
+ vm.runInContext(source.slice(source.indexOf('function domainBody('),source.indexOf('function platformBody(')),context);
+ const render=()=>vm.runInContext('domainBody(choices)',context);
+ assert.equal((render().match(/data-v="anime"/g)??[]).length,1);
+ assert.doesNotMatch(render(),/скоро|Почитать/);
+ context.counts.anime.newSelections=false;
+ assert.doesNotMatch(render(),/аниме/i);
+ assert.match(render(),/Посмотреть фильм/);
+});
+
 test('choosing a title in a restored legacy selection does not create a bookmark',async()=>{
  const source=await readFile(new URL('../src/server/public/pick/app.js',import.meta.url),'utf8');
  const saved=[],changes=[];

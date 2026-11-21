@@ -35,7 +35,8 @@ test('game and media cards explain the fit and distinguish the plan action from 
 test('complete art retains load/error hooks while familiarity remains an explicit reversible replacement',()=>{
  for(const render of [gameCardHtml,mediaCardHtml]){
   const card={id:'one',name:'One',poster:'https://example.com/portrait.jpg'};
-  assert.match(render(card),/data-act="familiar-mark"[^>]*aria-label="Знакомо — заменить">Заменить<\/button>/);
+  const replacementLabel=render===gameCardHtml?'Уже играл — заменить':'Уже смотрел — заменить';
+  assert.ok(render(card).includes(`data-focus="familiar:one">${replacementLabel}</button>`));
   const pending=render(card,{marked:true,blocked:true});
   for(const token of ['data-title="One"','<picture><img','familiar-unmark','familiar-keep','data-history-block="one"',' checked'])assert.ok(pending.includes(token),token);
   assert.doesNotMatch(pending,/data-card-feedback/);

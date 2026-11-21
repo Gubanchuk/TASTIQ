@@ -50,7 +50,7 @@ export function resumeArchiveUrl(session){
 export function bindSavedSourceBanner(session,domain,tabStorage){
  if(!session.savedSource&&!session.missing)return ()=>{};
  const panel=document.getElementById('saved-source-banner');
- panel.innerHTML='<strong id="source-description"></strong><span id="source-changed" role="status" hidden>Список изменился. Здесь сохранён его прежний состав.</span>'
+ panel.innerHTML='<strong id="source-description"></strong><span id="source-changed" role="status" hidden>Сохранённое изменилось. Этот подбор использует прежний список.</span>'
   +'<nav aria-label="Изменить источник подбора"><a id="source-library">Открыть сохранённое</a><a id="source-catalog">Искать во всём каталоге</a></nav>';
  const heading=panel.querySelector('#source-description'),libraryLink=panel.querySelector('#source-library');
  libraryLink.href=savedSourceLibraryUrl(tabStorage,session.token,domain,session.savedListView);
@@ -61,7 +61,7 @@ export function bindSavedSourceBanner(session,domain,tabStorage){
    heading.textContent='Этот результат больше недоступен в этом браузере.';
    libraryLink.href='/library/?view=history';libraryLink.textContent='Открыть историю подборов';
   }else{
-   heading.textContent='Список для этого подбора больше недоступен. Открой сохранённое и выбери список заново.';
+   heading.textContent='Список для этого подбора недоступен. Выбери его заново в библиотеке.';
    libraryLink.textContent='Открыть сохранённое';
   }
   document.getElementById('picker-workspace').hidden=true;

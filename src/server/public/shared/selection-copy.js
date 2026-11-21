@@ -12,15 +12,15 @@ function conditions(state,domain) {
  if(domain==='game'&&platform)lines.push(`Платформа: ${platform}`);
  const company={solo:'Один',friend:'Вдвоём',group:'Компания',adults:'Со взрослыми',children:'С детьми',kids:'С детьми'}[c.company];
  if(company)lines.push(`Компания: ${company}`);
- if(domain==='game'&&Number.isInteger(c.partySize))lines.push(`Игроков: ${c.partySize}`);
+ if(domain==='game'&&(['2','3','4','5+'].includes(c.partySize)||Number.isInteger(c.partySize)))lines.push(`Игроков: ${c.partySize}`);
  if(['children','kids'].includes(c.company)&&Number.isInteger(c.childAge))lines.push(`Возраст младшего ребёнка: ${c.childAge}`);
  if(c.onlyEnded===true)lines.push('Только завершённые сериалы');
- else if(c.onlyEnded===false)lines.push('Продолжающиеся сериалы допустимы');
+ else if(c.onlyEnded===false)lines.push('Подойдут сериалы, которые ещё выходят');
  const commitment={single:'На один просмотр',short:'Короткая история',long:'Можно надолго',open:'Длина истории не важна'}[c.commitment];
  if(commitment)lines.push(`История: ${commitment}`);
- const format={movie:'Одна история',episodic:'Эпизоды'}[c.format];
+ const format={movie:'Полнометражный фильм',episodic:'Эпизоды'}[c.format];
  if(format)lines.push(`Формат: ${format}`);
- const minutes=state.sessionTime?.minutes;
+ const minutes=state.sessionTime?.minutes??c.minutes;
  if(Number.isFinite(minutes)&&minutes>0){const timeLabel=c.timeMode==='episode'?'Лимит одного эпизода':c.timeMode==='runtime'?'Лимит длительности':'Время на сегодня';lines.push(`${timeLabel}: ${minutes} мин`);}
  return lines;
 }
@@ -41,12 +41,12 @@ export function selectionCopyText({state={},screen={}}={}) {
  const facts=(screen.facts??state.facts??[]).map(f=>`${f.scope==='history'?'Прошлый опыт':stances[f.stance]??'Пожелание'}: ${clean(f.text)}`).filter(text=>!text.endsWith(': '));
  const uncertainties=(screen.uncertainties??state.uncertainties??[]).map(clean).filter(Boolean);
  const summary=clean(screen.summary??state.summary),context=conditions(state,domain);
- const lines=[`TASTIQ — подбор ${labels[domain]}`,'Копия текущей выдачи.'];
+ const lines=[`TASTIQ — подбор ${labels[domain]}`,'Варианты по твоему запросу.'];
  const depth=selectionModeTitle(state.interview?.depth);
  if(depth)lines.push(`Режим: ${depth}`);
- if(answers.length)lines.push('\nКак уточнялся запрос:',answers.join('\n\n'));
- if(retractions.length)lines.push('Часть ответов изменена после удаления условий. Ниже — актуальное понимание.');
- lines.push('\nКак понят запрос:',summary||'Сводка не указана.');
+ if(answers.length)lines.push('\nВопросы и ответы',answers.join('\n\n'));
+ if(retractions.length)lines.push('Ниже указаны условия с учётом твоих исправлений.');
+ lines.push('\nТвой запрос',summary||'Краткого описания пока нет.');
  if(facts.length)lines.push(facts.join('\n'));
  if(context.length)lines.push('\nУсловия:',context.join('\n'));
  if(uncertainties.length)lines.push('\nПока неясно:',uncertainties.map(text=>`- ${text}`).join('\n'));

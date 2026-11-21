@@ -6,7 +6,7 @@ const memoryKey=id=>'__visitPreference:'+id;
 
 export function tasteMemoryPanelHtml(domain,rows,enabled,{busy=false,result=false}={}){
  const href='/library/?view=memory&amp;memory.domain='+encodeURIComponent(domain);
- if(!rows.length)return `<a href="${href}">Память предпочтений</a>`;
+ if(!rows.length)return `<a href="${href}">Мои предпочтения</a>`;
  const count=rows.filter(enabled).length;
  const list=rows.map(row=>`<li><label class="game-check"><input type="checkbox" data-visit-memory="${esc(row.id)}"${enabled(row)?' checked':''}${busy?' disabled':''}><span>${esc(row.text)}</span></label></li>`).join('');
  return `<details class="request-time-details" data-disclosure="visit-memory"><summary>${result?'Предпочтения для следующих вариантов':'Предпочтения для этого подбора'} · ${count} из ${rows.length}</summary><ul class="game-history-list">${list}</ul><a href="${href}">Изменить в библиотеке</a></details>`;
@@ -48,7 +48,7 @@ export function createVisitReviews({client,entries,memory,domain='game',root=doc
    return `<li><label class="game-check"><input type="checkbox" data-visit-review="${esc(id)}" data-focus="visit-review:${esc(id)}"${isEnabled(id)?' checked':''}${client.busy?' disabled':''}><span>${esc(review.request||cards||'Прошлый подбор')}<small>${esc(description)}</small>${review.request&&cards?`<small>${esc(cards)}</small>`:''}</span></label></li>`;
   }).join('');
   const count=rows.filter(row=>isEnabled(row.id)).length;
-  const html=list?`<details class="request-time-details visit-reviews" data-disclosure="visit-reviews"><summary data-focus="visit-reviews">Отзывы для этого подбора · ${count} из ${rows.length}</summary><p class="game-help">Ты разрешил учитывать эти отзывы при онлайн-подборе. Можно выключить любой для текущего запроса.</p><ul class="game-history-list">${list}</ul></details>`:'';
+  const html=list?`<details class="request-time-details visit-reviews" data-disclosure="visit-reviews"><summary data-focus="visit-reviews">Отзывы для этого подбора · ${count} из ${rows.length}</summary><p class="game-help">Эти отзывы учитываются при онлайн-подборе. Сними галочку, чтобы пропустить отзыв в этот раз.</p><ul class="game-history-list">${list}</ul></details>`:'';
   if(rendered.get(slot)===html)return;
   const details=slot.querySelector('details'),wasOpen=details?.open;
   const focused=slot.contains(root.activeElement)?root.activeElement:null;

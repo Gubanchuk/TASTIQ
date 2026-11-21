@@ -177,8 +177,8 @@ export const SCREEN_MOODS = [
 // mood: a soft session mood. Up to 2.5 hours (the plan's option) would cut only 5.8 % of films, so the middle
 // option is "about two hours", the limit people actually name.
 export const FILM_TIME = [
-  { id: 'short', label: 'до полутора часов', session: { maxRuntime: 95 } },
-  { id: 'two', label: 'часа два', session: { maxRuntime: 130 } },
+  { id: 'short', label: 'до 1 ч 35 мин', session: { maxRuntime: 95 } },
+  { id: 'two', label: 'до 2 ч 10 мин', session: { maxRuntime: 130 } },
   { id: 'any', label: 'сколько угодно' },
 ];
 export const SERIES_TIME = [
@@ -189,9 +189,9 @@ export const SERIES_TIME = [
 
 // "Это или то?" asked after the fixed screens when the answer splits the leaders (plan, category Г).
 export const SCREEN_PAIRS = [
-  { a: 'humor.funny', b: 'tone.melancholic', text: 'Поржать или чтобы пробрало?', labels: ['поржать', 'чтобы пробрало'] },
+  { a: 'humor.funny', b: 'tone.melancholic', text: 'Хочешь посмеяться или погрустить?', labels: ['посмеяться', 'погрустить'] },
   { a: 'cognitive.high', b: 'cognitive.low', text: 'Чтобы подумать или не напрягаться?', labels: ['подумать', 'не напрягаться'] },
-  { a: 'tension.high', b: 'tension.low', text: 'Держит в напряжении или спокойное?', labels: ['в напряжении', 'спокойное'] },
+  { a: 'tension.high', b: 'tension.low', text: 'Хочешь напряжённую историю или спокойную?', labels: ['напряжённую', 'спокойную'] },
   { a: 'tone.feelgood', b: 'tone.dark', text: 'Тёплое или мрачное?', labels: ['тёплое', 'мрачное'] },
   { a: 'pace.fast', b: 'pace.slow', text: 'Динамичное или неторопливое?', labels: ['динамичное', 'неторопливое'] },
   { a: 'structure.serialized', b: 'structure.procedural', text: 'Одна большая история или каждая серия отдельно?', labels: ['одна история', 'серии отдельно'] },

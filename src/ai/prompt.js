@@ -91,6 +91,20 @@ export const SCHEMA = {
   additionalProperties: false,
 };
 
+// Positions work for both catalog IDs and proposals resolved later by title and year.
+export const comparisonSchema = {
+  type: 'array', maxItems: 6,
+  items: {
+    type: 'object', additionalProperties: false, required: ['a', 'b', 'summary'],
+    properties: {
+      a: { type: 'integer', minimum: 1, maximum: 4 },
+      b: { type: 'integer', minimum: 1, maximum: 4 },
+      summary: { type: 'string', maxLength: 260 },
+    },
+  },
+};
+export const comparisonInstruction = `For each distinct pair among the first four proposed picks, write one short Russian comparison in comparisons. a and b are their 1-based positions in your picks (a < b). Name both works so the text also reads correctly in reverse display order. Compare them on a concrete dimension that matters to this request (what the player does, the pace, tone, or viewing commitment). Explain when someone would choose each, in one or two natural sentences, at most 260 characters. Use supported details and respect uncertainties and caveats. Avoid plot recap, scores, or a generic winner. Omit a pair if you lack a reliable difference.`;
+
 const REACTION = { love: 'обожаю', like: 'нормально', dislike: 'не моё', tried: 'не моё, бросил' };
 const nameOf = (g) => (g.ru && g.ru !== g.name ? `${g.ru} (${g.name})` : g.name);
 

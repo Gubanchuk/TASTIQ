@@ -11,7 +11,7 @@ export function mediaRequestPresentation(screen={}) {
  const sources=new Map(facts.filter(f=>f.key?.startsWith('context:')).map(f=>[f.key.slice(8),f]));
  const add=(key,text)=>{if(text)rows.push({text,key:sources.has(key)?`context:${key}`:null});};
  add('format',context.format==='movie'?(screen.domain==='cartoon'?'Полнометражный мультфильм':'Полнометражный фильм'):context.format==='episodic'?(screen.domain==='cartoon'?'Мультсериал':'Сериал'):null);
- add('company',context.company==='children'&&Number.isInteger(context.childAge)?`С ребёнком ${context.childAge} ${context.childAge===1?'года':'лет'}`:{solo:'Смотрю один',adults:'Со взрослыми',children:'С детьми'}[context.company]);
+ add('company',context.company==='children'&&Number.isInteger(context.childAge)?`Возраст младшего ребёнка — ${context.childAge} ${context.childAge===1?'год':context.childAge>=2&&context.childAge<=4?'года':'лет'}`:{solo:'Смотрю один',adults:'Со взрослыми',children:'С детьми'}[context.company]);
  if(context.company!=='children'&&context.childAge!=null)add('childAge',`Возраст младшего: ${context.childAge} лет`);
  if(!(context.format==='movie'&&context.commitment==='single'))add('commitment',{single:'На один вечер',short:'Короткая история',long:'Готов к длинной истории',open:'Длина истории не важна'}[context.commitment]);
  if(context.onlyEnded!=null)add('onlyEnded',context.onlyEnded?'Только завершённый сериал':'Можно продолжающийся сериал');

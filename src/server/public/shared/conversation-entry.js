@@ -12,7 +12,7 @@ export function initialDirectionQuestion(domain='game'){
   why:'Выбери, чего хочется. Можно отметить несколько вариантов или написать своё.',multiple:true,controls:['unknown','indifferent','none'],
   options:[...moods,...genres[game?'game':'watch'],...avoids].map(([id,label,feature])=>({id,label,...(feature?{feature}:{})}))};
 }
-export const directionChoiceMessage='Напиши, чего хочется, или выбери настроение или жанр.';
+export const directionChoiceMessage='Напиши, чего хочется, или выбери настроение, жанр либо оба сразу.';
 export const hasDirectionChoice=(ids,text)=>typeof text==='string'&&Boolean(text.trim())||ids.some(id=>typeof id==='string'&&id&&!id.startsWith('avoid_'));
 export const hasChosenDirection=state=>state.turns.some(turn=>turn.question.id==='direction'&&turn.kind==='answer'&&!turn.superseded
  &&Array.isArray(turn.selected)&&hasDirectionChoice(turn.selected.map(option=>option?.id),turn.text));

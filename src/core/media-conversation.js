@@ -30,7 +30,7 @@ const endedUncertainty='Пока неясно, нужен ли полность�
 const seriesUncertainty='Число сезонов, общая длительность и статус сериала могут отсутствовать в каталоге.';
 const seriesContext=s=>s.context?.format!=='movie'&&(s.domain==='series'||s.context?.format==='episodic'||s.context?.onlyEnded!=null);
 const scopedUncertainties=(s,list)=>seriesContext(s)?list:list.filter(text=>text!==seriesUncertainty);
-const endedQuestion=()=>({...q('only_ended','Сериал должен быть полностью закончен?',endedOptions,'Законченная история может быть и в ещё выходящем сериале. Уточню, какой статус тебе подходит.'),multiple:false});
+const endedQuestion=()=>({...q('only_ended','Сериал должен быть полностью закончен?',endedOptions,'У сериала может быть законченная сюжетная линия, пока новые сезоны ещё выходят.'),multiple:false});
 const isEndedQuestion=value=>value?.id==='only_ended'&&value.options?.length===2&&endedOptions.every(([id,label])=>value.options.some(o=>o.id===id&&o.label===label));
 const direction = initialDirectionQuestion;
 const cards = result => [result?.top,...(result?.alternatives??[])].filter(Boolean);
@@ -434,10 +434,10 @@ export function normalizeMediaConversation(input,expectedDomain) {
 }
 export function mediaFallbackQuestion(s) {
   const answered=new Set([...s.turns.filter(t=>!t.superseded&&t.kind!=='none').map(t=>t.question.id),...(s.skippedQuestions??[])]);
-  if(s.context.company==='children'&&s.context.childAge===null&&!answered.has('child_age'))return q('child_age','Сколько лет самому младшему зрителю?',[],'Возраст поможет проверить доступные сведения. Если пригодность неизвестна, я это отмечу.');
-  const list=[q('experience','Какое впечатление хочется получить?', [['warm','Тёплая история'],['intrigue','Интрига'],['laugh','Посмеяться'],['adventure','Приключение']], 'Направление можно уточнить своими словами.'),
-    ...(s.domain==='series'?[q('commitment','На какую историю сейчас готов?',[['single','Один эпизод'],['short','Короткий сериал'],['long','Готов к длинной истории'],['open','Длина не важна']], 'Это про общую историю, а не про свободные минуты сегодня.')]:[]),
-    q('avoidance','Что может испортить этот просмотр?',[],'Если ограничений нет, так и напиши.'),q('reference','Есть история, которую хочется взять за ориентир?',[],'Название — только пример. Напиши, что именно хочется сохранить.')];
+  if(s.context.company==='children'&&s.context.childAge===null&&!answered.has('child_age'))return q('child_age','Сколько лет самому младшему зрителю?',[],'Проверим возрастные ограничения там, где они известны.');
+  const list=[q('experience','Какое впечатление хочется получить?', [['warm','Тёплая история'],['intrigue','Интрига'],['laugh','Посмеяться'],['adventure','Приключение']], ''),
+    ...(s.domain==='series'?[q('commitment','На какую историю сейчас готов?',[['single','Один эпизод'],['short','Короткий сериал'],['long','Готов к длинной истории'],['open','Длина не важна']], 'Имеется в виду весь сериал.')]:[]),
+    q('avoidance','Что может испортить этот просмотр?',[],'Если ограничений нет, так и напиши.'),q('reference','Есть история, которую хочется взять за ориентир?',[],'Назови историю и расскажи, что тебе в ней понравилось.')];
   return list.find(question=>!answered.has(question.id))??null;
 }
 function replacementQuestion(s) {
@@ -663,7 +663,7 @@ export function applyMediaConversationProposal(state,proposal,dict,expectedRevis
     }
     const uncertainties=[...(clarifyEnded?[endedUncertainty]:[]),...(decision.notice?[decision.notice]:[]),...proposal.uncertainties];
     if(checked.context.childAge!==null)uncertainties.push('Возрастная пригодность проверяется по доступной разметке; если данных нет, она остаётся неизвестной.');
-    if(sessionTime)uncertainties.push(checked.context.timeMode==='session'?'Указано общее время на просмотр.':state.domain==='series'||checked.context.format==='episodic'||checked.context.timeMode==='episode'?'Длительность относится к эпизоду. Неизвестный хронометраж требует проверки.':'Если длительность произведения неизвестна, попадание в лимит времени не подтверждено.');
+    if(sessionTime)uncertainties.push(checked.context.timeMode==='session'?'Указано общее время на просмотр.':state.domain==='series'||checked.context.format==='episodic'||checked.context.timeMode==='episode'?'Длительность относится к эпизоду. Если длительность серии неизвестна, проверь её перед просмотром.':'Если длительность неизвестна, проверь её перед просмотром.');
     const contextScope={domain:state.domain,context:checked.context};
     if(seriesContext(contextScope)&&(checked.context.commitment!==null||checked.context.onlyEnded!==null))uncertainties.push(seriesUncertainty);
     const turns=structuredClone(state.turns);if(turns.length){turns.at(-1).acceptedContext=structuredClone(checked.evidence);turns.at(-1).acceptedTime=structuredClone(sessionTime);}
@@ -680,7 +680,7 @@ export function mediaConversationScreen(s) {
     sessionTime:s.sessionTime??null,canBack:s.turns.length>0,canUndoFactRemoval:Boolean(s.factRemovalUndo),provisional:Boolean(s.provisional),turns:s.turns.map(t=>({id:t.id,question:t.question.title,answer:t.answer,superseded:Boolean(t.superseded)}))};
   if(s.phase==='result')return {...common,type:'result',result:s.result};
   if(s.phase==='review')return {...common,type:'review',...(!canOfferInterviewQuestion(s)?{canContinue:false}:{})};
-  const next=s.question??mediaFallbackQuestion(s)??q('extra','Что ещё важно учесть?',[],'Можно перейти к пониманию и посмотреть варианты.');
+  const next=s.question??mediaFallbackQuestion(s)??q('extra','Что ещё важно учесть?',[],'Можно проверить запрос и перейти к вариантам.');
   const checkpoint=interviewCheckpoint(s,next);
   return {...common,type:'question',canChangeQuestion:Boolean(replacementQuestion(s)),question:next,...(checkpoint?{checkpoint}:{})};
 }

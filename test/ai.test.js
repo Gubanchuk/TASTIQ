@@ -121,6 +121,22 @@ test('picks outside the shortlist and repeats are dropped, the rest keep the mod
   assert.equal(out.dropped, 2);
 });
 
+test('adaptive picker requests pair summaries and binds them only to accepted proposals', async () => {
+  const adaptiveState = {...state, conversation: {turns:[], facts:[]}};
+  const result = await aiPick(catalogs, adaptiveState, {api: async request => {
+    assert.ok(request.text.format.schema.required.includes('comparisons'));
+    assert.match(request.instructions, /Name both works/);
+    const [a,b] = [...request.input.matchAll(/^id=(\S+) \|/gm)].map(match => match[1]);
+    return response({picks:[{id:'missing'},{id:a},{id:a},{id:b}], comparisons:[
+      {a:1,b:2,summary:'Rejected pick'}, {a:3,b:4,summary:'Duplicate edition'},
+      {a:2,b:4,summary:'Пешее исследование или гонка на время.'}, {a:2,b:4,summary:'Duplicate pair'},
+    ]});
+  }});
+  assert.equal(result.picks.length,2);
+  assert.deepEqual(result.picks[0].comparisons,[{otherId:result.picks[1].id,summary:'Пешее исследование или гонка на время.'}]);
+  assert.equal(result.picks[1].comparisons,undefined);
+});
+
 test('a refusal, broken JSON or no valid id keeps the engine picks', async () => {
   assert.ok((await aiPick(catalogs, state, { api: stub({}, { output: [{ type: 'message', content: [{ type: 'refusal', refusal: 'no' }] }] }) })).error);
   const broken = async () => response({}, { output: [{ type: 'message', content: [{ type: 'output_text', text: '{' }] }] });

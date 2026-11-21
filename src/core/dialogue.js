@@ -130,10 +130,10 @@ function anchorsScreen(state, catalog) {
   const extra = Boolean(state.firstPage);
   return {
     step: 'anchors',
-    title: extra ? 'Может, что-то из этого знаешь?' : game ? 'Во что играл, и как?' : 'Что смотрел, и как?',
+    title: extra ? 'Какие из этих названий тебе знакомы?' : game ? 'Во что ты уже играл?' : 'Что ты уже смотрел?',
     hint: extra
-      ? 'Пока отмечено мало, и подбор выйдет наугад. Отметь, что знаешь. Если ничего, жми «Дальше».'
-      : 'Отметь, как тебе знакомые названия, затем нажми «Дальше». Все карточки заполнять не нужно.',
+      ? 'Если ничего не знакомо, нажми «Дальше».'
+      : 'Отметь, что понравилось, а что нет. Незнакомое можно пропустить.',
     extra,
     items: items.map(card),
     reactions: [
@@ -154,16 +154,15 @@ export function screen(state, catalogs) {
     case 'domain':
       return {
         step: 'domain',
-        title: 'Что хочешь?',
+        title: 'Что хочется выбрать?',
         options: Object.values(DOMAINS).filter((d) => catalogs[d.id]).map((d) => ({ value: d.id, label: d.label })),
-        later: ['Почитать', 'Аниме'],
       };
     case 'platform':
       return { step: 'platform', title: 'Где играешь?', options: Object.entries(PLATFORMS).map(([value, p]) => ({ value, label: p.label })) };
     case 'time':
       return {
         step: 'time',
-        title: state.domain === 'series' ? 'На сколько готов засесть?' : 'Сколько есть времени?',
+        title: state.domain === 'series' ? 'Какой длины сериал хочется посмотреть?' : 'Сколько есть времени?',
         options: timeOptions(state).map((t) => ({ value: t.id, label: t.label })),
         canSkip: true,
       };
@@ -185,8 +184,8 @@ export function screen(state, catalogs) {
       const item = catalog.byId.get(id);
       return {
         step: 'why',
-        title: `За что тебе ${state.answers[id]?.reaction === 'love' ? 'так нравится' : 'зашло'} «${item.ru ?? item.name}»?`,
-        hint: 'Что главное? Можно выбрать несколько, остальные причины ниже.',
+        title: `Что тебе понравилось в «${item.ru ?? item.name}»?`,
+        hint: 'Можно отметить обе причины или открыть другие.',
         item: card(item),
         pair: pairFor(item, catalog).map((c) => ({ value: c.f, label: c.label })),
         options: likeChips(item, catalog).map((c) => ({ value: c.f, label: c.label })),
@@ -201,8 +200,8 @@ export function screen(state, catalogs) {
       const chips = complaintChips(item, catalog, 'dislike');
       return {
         step: 'why_not',
-        title: `Что не так с «${item.ru ?? item.name}»?`,
-        hint: 'Один тап: мешало. Второй: «никогда, ни в чём».',
+        title: `Что тебе не понравилось в «${item.ru ?? item.name}»?`,
+        hint: 'Нажми один раз, если это мешало здесь. Дважды — если хочешь исключить такое из подбора.',
         item: card(item),
         options: chips.complaints.map((c) => ({ value: c.f, label: c.label })),
         categories: chips.categories.map((c) => ({ value: c.f, label: c.label })),
@@ -216,7 +215,7 @@ export function screen(state, catalogs) {
       return {
         step: 'stops',
         title: 'Что точно не надо?',
-        hint: 'Такое не предложу совсем. Если всё можно, просто дальше.',
+        hint: 'Если ограничений нет, нажми «Всё можно».',
         // «Длинное» after a time answer is either already sieved («до полутора часов») or contradicts it («надолго»).
         options: catalog.dict.stops.filter((x) => x.f !== 'length.long' || !state.situation?.time).map((x) => ({ value: x.f, label: x.label })),
         canSkip: true,
@@ -229,9 +228,9 @@ export function screen(state, catalogs) {
         kind: q.kind,
         qid: q.id,
         title: q.text,
-        hint: q.kind === 'guess' ? 'Если уже знаешь его, предложу другое.'
+        hint: q.kind === 'guess' ? 'Если название знакомо, поищу другой вариант.'
           : q.kind === 'lean' ? 'Выбери, чего хочется сегодня. Если оба варианта подходят — нажми «Всё равно».'
-            : 'Уточним, что тебе подходит сегодня. Если не важно — нажми «Всё равно».',
+            : 'Уточним, что тебе подходит сегодня. Если оба подходят, нажми «Всё равно».',
         options: q.options,
         canSkip: true,
         progress: `${(state.asked?.length ?? 0) + 1}`,

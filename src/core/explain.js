@@ -68,7 +68,7 @@ export function buildFacts(item, detail, taste, catalog) {
 }
 
 const DECK_RU = { verified: 'проверена для Steam Deck', playable: 'играбельна на Steam Deck', unsupported: 'не поддерживается на Steam Deck', unknown: 'статус на Steam Deck неизвестен' };
-const STATUS_RU = { Ended: 'закончен', Running: 'ещё выходит', 'To Be Determined': 'судьба неизвестна', 'In Development': 'в разработке' };
+const STATUS_RU = { Ended: 'завершён', Running: 'выходит', 'To Be Determined': 'продолжение под вопросом', 'In Development': 'в разработке' };
 
 export function renderExplanation(facts, catalog) {
   const { featureById, complaintByFeature } = catalog.dict;
@@ -82,8 +82,8 @@ export function renderExplanation(facts, catalog) {
     const f = fact.f ? `«${label(fact.f)}»` : '';
     switch (fact.type) {
       case 'match':
-        if (fact.basis === 'confirmed') reasons.push({ text: `${titles(fact.sources)}: ты отметил ${f}, здесь это тоже есть`, factIds: [fact.id] });
-        else if (fact.basis === 'preference') reasons.push({ text: `Ты сказал, что тебе важно ${f}, здесь это есть`, factIds: [fact.id] });
+        if (fact.basis === 'confirmed') reasons.push({ text: `Тут есть ${f}. Ты отметил это в ${titles(fact.sources)}.`, factIds: [fact.id] });
+        else if (fact.basis === 'preference') reasons.push({ text: `Здесь есть ${f}, как ты и хотел.`, factIds: [fact.id] });
         else {
           // Inferred matches read as one line, not one sentence each: they are the weakest part of the case.
           const slot = reasons.find((x) => x.inferred) ?? reasons[reasons.push({ inferred: [], sources: [], factIds: [], weak: true }) - 1];
@@ -108,13 +108,13 @@ export function renderExplanation(facts, catalog) {
         risks.push({ text: `${isGame ? 'Игроки' : 'Зрители'} жалуются: ${label(fact.f)}`, factIds: [fact.id] });
         break;
       case 'risk_fact':
-        risks.push({ text: 'Ранний доступ: игра ещё не закончена', factIds: [fact.id] });
+        risks.push({ text: 'Игра пока в раннем доступе.', factIds: [fact.id] });
         break;
       case 'risk_quality':
-        risks.push({ text: `Оценка ${fact.desc ?? `${Math.round(fact.ratio * 100)}%`}: ниже, чем у большинства в каталоге`, factIds: [fact.id] });
+        risks.push({ text: `Оценка ${isGame?'игроков':'зрителей'} — ${fact.desc ?? `${Math.round(fact.ratio * 100)}%`}.`, factIds: [fact.id] });
         break;
       case 'gap':
-        risks.push({ text: `Нет данных: ${fact.what}`, factIds: [fact.id] });
+        risks.push({ text: fact.what==='длина'?'Время прохождения неизвестно.':`Нет данных: ${fact.what}`, factIds: [fact.id] });
         break;
       case 'fact':
         if (fact.total != null) {
@@ -125,7 +125,7 @@ export function renderExplanation(facts, catalog) {
             factIds: [fact.id],
           });
         }
-        if (fact.hours != null) info.push({ text: `Авторы отзывов к моменту отзыва наиграли в среднем (медиана) ${fact.hours} ч`, factIds: [fact.id] });
+        if (fact.hours != null) info.push({ text: `Медианное время в игре на момент отзыва — ${fact.hours} ч.`, factIds: [fact.id] });
         if (fact.deck) info.push({ text: DECK_RU[fact.deck], factIds: [fact.id] });
         if (fact.runtime) info.push({ text: `${fact.runtime} мин`, factIds: [fact.id] });
         if (fact.seasons || fact.episodes) {
@@ -137,7 +137,7 @@ export function renderExplanation(facts, catalog) {
   }
   for (const [i, x] of reasons.entries()) {
     if (!x.inferred) continue;
-    reasons[i] = { text: `${titles([...new Set(x.sources)])}: ещё ${list(x.inferred)}. Это ты не отмечал, вес слабый`, factIds: x.factIds, weak: true };
+    reasons[i] = { text: `Сходство с ${titles([...new Set(x.sources)])} — ${list(x.inferred)}. Пока не знаю, важно ли это для тебя.`, factIds: x.factIds, weak: true };
   }
   return { reasons, risks, info };
 }

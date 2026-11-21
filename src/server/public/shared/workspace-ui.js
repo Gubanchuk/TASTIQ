@@ -4,8 +4,11 @@ const keyOf=form=>form.dataset.key||'correction';
 export function scrollToPickerContent(target){
  if(!target)return;
  const shell=document.querySelector('.app-shell');
- const top=target.getBoundingClientRect().top+window.scrollY-Math.max(0,shell?.getBoundingClientRect().bottom??0)-12;
- window.scrollTo({top:Math.max(0,top),behavior:'instant'});
+ const rect=target.getBoundingClientRect(),viewport=window.visualViewport;
+ const visibleTop=Math.max(0,shell?.getBoundingClientRect().bottom??0,viewport?.offsetTop??0)+12;
+ const visibleBottom=(viewport?.offsetTop??0)+(viewport?.height??window.innerHeight);
+ if(rect.top>=visibleTop&&rect.bottom<=visibleBottom)return;
+ window.scrollTo({top:Math.max(0,rect.top+window.scrollY-visibleTop),behavior:'instant'});
 }
 
 export function focusPickerContent(target){

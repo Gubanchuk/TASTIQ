@@ -76,15 +76,16 @@ const DOMAINS = [
   { id: 'film', short: 'Фильм', icon: 'film', count: ['фильм', 'фильма', 'фильмов'], plural: 'Фильмы' },
   { id: 'series', short: 'Сериал', icon: 'series', count: ['сериал', 'сериала', 'сериалов'], plural: 'Сериалы' },
   { id: 'cartoon', short: 'Мультфильм', icon: 'cartoon', count: ['мультфильм', 'мультфильма', 'мультфильмов'], plural: 'Мультфильмы' },
+  { id: 'anime', short: 'Аниме', icon: 'anime', count: ['аниме', 'аниме', 'аниме'], plural: 'Аниме' },
 ];
 const DOMAIN_NOUN = { game: 'игра', film: 'фильм', series: 'сериал', cartoon: 'мультфильм' };
-const LATER_ICON = { Почитать: 'book', Аниме: 'anime' };
+const entryAvailable = id => id !== 'anime' || counts?.anime?.newSelections === true;
 const domainOf = (id) => DOMAINS.find((d) => d.id === id);
 const PLATFORM = { windows: { short: 'ПК', icon: 'monitor' }, mac: { short: 'Mac', icon: 'laptop' }, linux: { short: 'Linux', icon: 'terminal' }, deck: { short: 'Steam Deck', icon: 'deck' } };
 const STEP_LABEL = { domain: 'Что хочешь', platform: 'Платформа', time: 'Время', company: 'С кем', context:'Состав компании', anchors: 'Что знаешь', why: 'За что', why_not: 'Что не так', stops: 'Что точно не надо', ask: 'Уточню', result: 'Подбор' };
 const stepsFor = (domain) => ['domain', ...(domain === 'game' ? ['platform'] : ['time']), 'company', ...((state?.situation?.company==='kids'||domain==='game'&&state?.situation?.company==='group')?['context']:[]), 'anchors', 'why', 'why_not', 'stops', 'ask', 'result'];
 const REACTION_ICON = { love: 'heart', like: 'check', dislike: 'minus', unknown: 'dash' };
-const SEARCH_EXAMPLE = { game: '«ведьмак 3», «portal»', film: '«матрица», «амели»', series: '«во все тяжкие», «тьма»', cartoon: '«шрек», «вверх»' };
+const SEARCH_EXAMPLE = { game: '«Ведьмак 3»', film: '«Матрица»', series: '«Тьма»', cartoon: '«Шрек»' };
 const STEAM_RATING = {
   'Overwhelmingly Positive': 'крайне положительные', 'Very Positive': 'очень положительные', Positive: 'положительные',
   'Mostly Positive': 'в основном положительные', Mixed: 'смешанные', 'Mostly Negative': 'в основном отрицательные',
@@ -596,7 +597,7 @@ async function run(fn, trigger) {
     trigger?.querySelector(':scope > .spinner')?.remove();
     trigger?.removeAttribute('aria-busy');
     if (failed) {
-      error = failed.message || 'нет ответа от сервера';
+      error = failed.message && /^[А-Яа-яЁё]/u.test(failed.message) ? failed.message : 'Попробуй ещё раз.';
       renderContent();
       renderActionbar();
       $('#error-banner')?.focus();
@@ -629,7 +630,7 @@ async function restartAll() {
 async function switchDomain(id) {
   if (busy) return;
   if (id === 'game') { location.href = '/pick/game/'; return; }
-  if(['film','series','cartoon'].includes(id)&&new URLSearchParams(location.search).get('legacy')!=='1'){location.href=`/pick/watch/?domain=${id}`;return;}
+  if(id==='anime'||['film','series','cartoon'].includes(id)&&new URLSearchParams(location.search).get('legacy')!=='1'){location.href=`/pick/watch/?domain=${id}`;return;}
   if (screen?.step === 'domain') { closeDrawer(false); return go({ type: 'choose', value: id }); }
   if (state?.domain === id) { closeDrawer(); return; }
   const progressed = !['domain', 'platform', 'time', 'company'].includes(screen?.step);
@@ -703,8 +704,7 @@ function announce(text) {
 
 function renderSidebar() {
   const current = view === 'dialogue' ? state?.domain : null;
-  const later = screen?.later ?? ['Почитать', 'Аниме'];
-  el.domains.innerHTML = DOMAINS.map((d) => `<button class="side-item" type="button" data-act="side-domain" data-v="${d.id}" data-fk="side:${d.id}"${d.id === current ? ' aria-current="true"' : ''}>${icon(d.icon)}<span>${esc(d.plural)}</span></button>`).join('');
+  el.domains.innerHTML = DOMAINS.filter(d => entryAvailable(d.id)).map((d) => `<button class="side-item" type="button" data-act="side-domain" data-v="${d.id}" data-fk="side:${d.id}"${d.id === current ? ' aria-current="true"' : ''}>${icon(d.icon)}<span>${esc(d.plural)}</span></button>`).join('');
 
   if (!screen) { el.steps.innerHTML = ''; el.taste.innerHTML = ''; return; }
   // Steps are a disclosure: one summary row, the full list only for those who open it.
@@ -717,7 +717,7 @@ function renderSidebar() {
     + `<span>${esc(STEP_LABEL[r.id])}</span>${r.value ? `<span class="step-value">${esc(r.value)}</span>` : ''}`
     + `<span class="sr-only">${{ done: ', пройдено', skipped: ', пропущено', current: ', сейчас', todo: '' }[r.st]}</span></li>`).join('')}</ol>`;
 
-  el.taste.innerHTML = `<h2 class="side-title">Что я понял о тебе</h2><div class="taste">${tasteHtml()}</div>`;
+  el.taste.innerHTML = `<h2 class="side-title">Твои предпочтения</h2><div class="taste">${tasteHtml()}</div>`;
 }
 
 function answersBy(reactions) {
@@ -774,7 +774,7 @@ function tasteHtml() {
       group('Не нравится', taste.dislikes.map((x) => li(x.label, x.sources.join(', ')))),
       group('Никогда', taste.hardNo.map((x) => li(x.label, x.sources.join(', ')))),
       group('Сегодня', todayLabels.length ? [li(todayLabels.join(', '))] : []),
-    ].join('') || '<p class="taste-empty">Пока ничего не понял.</p>';
+    ].join('') || '<p class="taste-empty">Пока нет отметок.</p>';
   }
 
   const liked = answersBy(['like', 'love']).map(([id, a]) => li(
@@ -791,7 +791,7 @@ function tasteHtml() {
     group('Не зашло', disliked),
     group('Никогда', (state?.stops ?? []).length ? [li(state.stops.map(labelOf).join(', '))] : []),
   ].join('');
-  return html || '<p class="taste-empty">Пока ничего. Ответь на пару вопросов, и здесь появится, что я понял.</p>';
+  return html || '<p class="taste-empty">Здесь появятся твои ответы.</p>';
 }
 
 /* toolbar */
@@ -830,7 +830,7 @@ function head(s, hint = s.hint) {
 }
 
 function errorBanner() {
-  return `<div class="banner" id="error-banner" role="alert" tabindex="-1">${icon('alert')}<div class="banner-text"><b>Не получилось связаться с сервером</b><span>${esc(error)}</span></div>`
+  return `<div class="banner" id="error-banner" role="alert" tabindex="-1">${icon('alert')}<div class="banner-text"><b>Не удалось продолжить подбор</b><span>${esc(error)}</span></div>`
     + `<button class="btn btn-secondary" type="button" data-act="retry">Повторить</button>`
     + `${screen ? '' : '<button class="btn btn-plain" type="button" data-act="hard-restart">Начать заново</button>'}</div>`;
 }
@@ -844,7 +844,7 @@ function renderContent() {
     return;
   }
   if (!s) {
-    mountContent(`<div class="content-inner">${html || '<div class="legacy-thinking" role="status"><span class="legacy-thinking-signal" aria-hidden="true"><span class="spinner"></span></span><h1 class="q-title" id="q-title" tabindex="-1">Открываю подбор</h1><p>Восстанавливаю твой текущий шаг.</p></div>'}</div>`);
+    mountContent(`<div class="content-inner">${html || '<div class="legacy-thinking" role="status"><span class="legacy-thinking-signal" aria-hidden="true"><span class="spinner"></span></span><h1 class="q-title" id="q-title" tabindex="-1">Открываю подбор</h1></div>'}</div>`);
     return;
   }
   switch (s.step) {
@@ -905,7 +905,7 @@ const chip = (o, act, on, fk = `${act}:${o.value}`) => `<button class="chip" typ
 const chipGroup = (options, act, set, label) => `<div class="chips" role="group" aria-label="${esc(label)}">${options.map((o) => chip(o, act, set.has(o.value))).join('')}</div>`;
 
 function domainBody(s) {
-  const rows = s.options.map((o) => {
+  const rows = s.options.filter(o => entryAvailable(o.value)).map((o) => {
     const d = domainOf(o.value);
     const n = counts?.[o.value]?.items;
     return `<button class="row" type="button" data-act="domain" data-v="${esc(o.value)}" data-fk="domain:${esc(o.value)}">`
@@ -913,9 +913,7 @@ function domainBody(s) {
       + `<span class="row-main"><span class="row-label">${esc(o.label)}</span>${n ? `<span class="row-sub num">${nf.format(n)} ${plural(n, d.count)} в каталоге</span>` : ''}</span>`
       + `<span class="row-chev">${icon('chevR')}</span></button>`;
   });
-  const later = (s.later ?? []).map((l) => `<button class="row" type="button" disabled><span class="row-icon">${icon(LATER_ICON[l] ?? 'book')}</span>`
-    + `<span class="row-main"><span class="row-label">${esc(l)}</span></span><span class="pill">скоро</span></button>`);
-  return `<div class="q-body"><div class="list">${[...rows, ...later].join('')}</div></div>`;
+  return `<div class="q-body"><div class="list">${rows.join('')}</div></div>`;
 }
 
 function platformBody(s) {
@@ -954,7 +952,7 @@ function anchorCard(c) {
   return `<div class="pcard acard${r ? ' is-marked' : ''}" data-id="${esc(c.id)}">`
     + poster(c, { extra: r ? `<span class="badge is-on">${icon(REACTION_ICON[r])}</span>` : '' })
     + `<span class="pcard-text"><span class="pcard-title">${esc(name)}</span><span class="pcard-meta">${esc(cardMeta(c))}</span>`
-    + (fromMine(c.id) ? `<span class="pcard-from">${icon('bookmark')}из «Моё»</span>` : '') + '</span>'
+    + (fromMine(c.id) ? `<span class="pcard-from">${icon('bookmark')}из библиотеки</span>` : '') + '</span>'
     + `<span class="reacts" role="group" aria-label="${esc(name)}: как тебе?">${screen.reactions.map((x) => `<button class="react" type="button" data-act="react" data-id="${esc(c.id)}" data-r="${x.value}" data-fk="react:${esc(c.id)}:${x.value}" aria-pressed="${r === x.value}">${esc(x.label)}</button>`).join('')}</span>`
     + '</div>';
 }
@@ -966,9 +964,9 @@ function anchorsBody(s) {
   for (const c of found.values()) if (!onPage.has(c.id)) pinned.set(c.id, c);
   for (const [id, m] of marks) if (!onPage.has(id) && !pinned.has(id)) pinned.set(id, m.card);
   const cards = [...pinned.values(), ...s.items].map(anchorCard).join('');
-  const tools = (s.search ? searchBox('pick', `Найти своё: ${SEARCH_EXAMPLE[state.domain] ?? ''}`, 'Найти в каталоге') : '<span></span>')
+  const tools = (s.search ? searchBox('pick', `Например, ${SEARCH_EXAMPLE[state.domain] ?? ''}`, 'Найти в каталоге') : '<span></span>')
     + (s.more ? `<button class="btn btn-secondary" type="button" data-act="more" data-fk="more">${icon('refresh', 'i-s')}Показать другие</button>` : '');
-  const note=`<details class="section" id="evening-details"${ui.noteOpen || state?.situation?.note ? ' open' : ''}><summary>Есть пожелание на сегодня?</summary><label class="group-title" for="evening-note">Что хочется сегодня — своими словами</label><input class="input" id="evening-note" maxlength="300" value="${esc(ui.note??state?.situation?.note??'')}" placeholder="${state?.domain==='game'?'Например: история с героями на час перед сном':'Например: что-то доброе и смешное, без мрака'}" data-fk="evening-note"><div id="intent-controls" aria-live="polite">${intentControls()}</div></details>`;
+  const note=`<details class="section" id="evening-details"${ui.noteOpen || state?.situation?.note ? ' open' : ''}><summary>Добавить пожелание</summary><label class="group-title" for="evening-note">Чего хочется сегодня?</label><input class="input" id="evening-note" maxlength="300" value="${esc(ui.note??state?.situation?.note??'')}" placeholder="${state?.domain==='game'?'Хочу поиграть час перед сном, без сражений':'Хочу добрую комедию без грустного финала'}" data-fk="evening-note"><div id="intent-controls" aria-live="polite">${intentControls()}</div></details>`;
   return `<div class="q-body"><div class="grid-tools">${tools}</div><div class="pgrid" id="pgrid" role="group" aria-label="Названия">${cards}</div>${actionSlot()}${note}</div>`;
 }
 const anchorCount=()=>marks.size?`Отмечено: ${marks.size}`:'Можно продолжить без отметок';
@@ -1018,7 +1016,7 @@ function whyNotBody(s) {
 // ---------- complaints: one tap «мешало», a second «никогда», a third takes it back ----------
 // A complaint is off, «не нравится» (hard: false) or «никогда» (hard: true); ui.issues keeps 'soft' | 'hard'.
 
-const COMPLAINT_HINT = 'Один тап: мешало. Второй: «никогда, ни в чём».';
+const COMPLAINT_HINT = 'Нажми один раз, если это мешало здесь. Дважды — если хочешь исключить такое из подбора.';
 const NEXT_STATE = { off: 'soft', soft: 'hard', hard: 'off' };
 
 function complaintOptions(key) {
@@ -1047,8 +1045,8 @@ function complaintChip(o, st) {
 
 function freeText(placeholder) {
   return `<details class="freetext" id="freetext"${ui.parsed || ui.parseText ? ' open' : ''}>`
-    + `<summary data-fk="freetext">${icon('chevR', 'i-s')}Нет нужного варианта? Напиши своими словами</summary>`
-    + `<div class="freetext-body"><p>Разберу текст в такие же варианты и покажу, что понял. Без твоего подтверждения ничего не запишу.</p>`
+    + `<summary data-fk="freetext">${icon('chevR', 'i-s')}Ответить своими словами</summary>`
+    + `<div class="freetext-body"><p>Покажу, какие причины нашлись в ответе. Ты выберешь, какие добавить.</p>`
     + `<form class="field" data-form="parse"><input class="input" id="free" name="q" type="text" value="${esc(ui.parseText)}" placeholder="${esc(placeholder)}" autocomplete="off" aria-label="Своими словами" data-fk="free">`
     + `<button class="btn btn-secondary" type="submit" data-fk="parse">Разобрать</button></form>`
     + `<div class="parsed" id="parsed" aria-live="polite">${parsedHtml()}</div></div></details>`;
@@ -1067,11 +1065,11 @@ function parsedHtml() {
   const p = ui.parsed;
   if (!p) return '';
   if (p.loading) return '<p class="parsed-note"><span class="spinner" aria-hidden="true"></span> Разбираю…</p>';
-  if (p.error) return `<p class="parsed-note">Не получилось разобрать: ${esc(p.error)}</p>`;
+  if (p.error) return '<p class="parsed-note">Не удалось разобрать ответ. Попробуй ещё раз или выбери причину выше.</p>';
   if (!p.understood) return '<p class="parsed-note">Не понял. Выбери из вариантов выше или напиши иначе.</p>';
   const list = offered();
   if (!list.length) return '<p class="parsed-note">Всё, что понял, уже отмечено.</p>';
-  return `<p class="parsed-note">Понял так. Нажми, чтобы добавить:</p><div class="chips">${list.map((x) => `<button class="chip chip-add" type="button" data-act="add" data-v="${esc(x.f)}" data-l="${esc(x.label)}" data-as="${x.as}" data-hard="${x.hard ? 1 : 0}" data-fk="add:${esc(x.f)}">`
+  return `<p class="parsed-note">Какие причины добавить?</p><div class="chips">${list.map((x) => `<button class="chip chip-add" type="button" data-act="add" data-v="${esc(x.f)}" data-l="${esc(x.label)}" data-as="${x.as}" data-hard="${x.hard ? 1 : 0}" data-fk="add:${esc(x.f)}">`
     + `${icon(x.as === 'reason' ? 'check' : 'minus')}<span>${esc(x.label)}</span></button>`).join('')}</div>`;
 }
 
@@ -1103,14 +1101,10 @@ function pickMeta(p, withKind = false) {
 }
 
 // While the model chooses: the same frame as the result, with placeholders where the cards will be.
-function aiLoading(s, run) {
-  const hint = run.wish
-    ? `Учитываю «${run.wish}» и всё, что ты рассказал.`
-    : 'Сопоставляю варианты с твоими ответами и проверяю, что подходит на сегодня.';
-  return '<section class="legacy-thinking" role="status" aria-live="polite" aria-labelledby="q-title" aria-describedby="legacy-pick-wait-description">'
+function aiLoading(run) {
+  return '<section class="legacy-thinking" role="status" aria-live="polite" aria-labelledby="q-title">'
     + '<span class="legacy-thinking-signal" aria-hidden="true"><span class="spinner"></span></span>'
-    + `<h1 class="q-title" id="q-title" tabindex="-1">Подбираю вариант на вечер</h1><p id="legacy-pick-wait-description">${esc(hint)}</p>`
-    + '<p class="legacy-thinking-note">Ответы сохранены. Когда подбор закончится, варианты появятся здесь.</p>'
+    + `<h1 class="q-title" id="q-title" tabindex="-1">Подбираю варианты</h1>${run.wish?`<p>${esc(run.wish)}</p>`:''}`
     + '<button class="btn btn-secondary" type="button" data-act="ai-off" data-fk="ai-off">Показать варианты по ответам</button></section>';
 }
 
@@ -1126,8 +1120,8 @@ function aiNote(r) {
 
 function aiWishForm() {
   if (!aiOn()) return '';
-  return '<form class="ai-wish" data-form="ai-wish"><label class="group-title" for="ai-wish">Не то? Скажи словами</label>'
-    + `<div class="field"><input class="input" id="ai-wish" name="wish" type="text" maxlength="300" value="${esc(resultView.value(resultWishKey(),ai.wish))}" placeholder="например: посвежее" autocomplete="off" data-fk="ai-wish" data-result-key="${esc(resultWishKey())}">`
+  return '<form class="ai-wish" data-form="ai-wish"><label class="group-title" for="ai-wish">Что изменить в подборе?</label>'
+    + `<div class="field"><input class="input" id="ai-wish" name="wish" type="text" maxlength="300" value="${esc(resultView.value(resultWishKey(),ai.wish))}" placeholder="Например, что-нибудь последних лет" autocomplete="off" data-fk="ai-wish" data-result-key="${esc(resultWishKey())}">`
     + '<button class="btn btn-secondary" type="submit" data-fk="ai-wish-go">Подобрать</button></div>'
     + '</form>';
 }
@@ -1151,9 +1145,9 @@ function conversationProposal(p) {
 }
 function resultBody(s) {
   const run=aiRun();
-  if(run?.pending&&s.result?.top){activeEveningId=null;eveningRequestKey=null;return aiLoading(s,run);}
+  if(run?.pending&&s.result?.top){activeEveningId=null;eveningRequestKey=null;return aiLoading(run);}
   const r=s.result;
-  if(!r.top){activeEveningId=null;eveningRequestKey=null;return head(s)+'<p class="empty">После всех фильтров ничего не осталось. Вернись назад и ослабь условия.</p>';}
+  if(!r.top){activeEveningId=null;eveningRequestKey=null;return head(s)+'<p class="empty">Ничего не нашлось. Вернись к условиям и попробуй убрать одно из ограничений.</p>';}
   observeEvening(r);
   let html=aiNote(r);
   if(!r.ai&&r.uncheckedContext?.length)html+=`<p class="q-hint" role="status">В этих вариантах пока не учтено: ${esc(r.uncheckedContext.join(', '))}.</p>`;
@@ -1310,7 +1304,7 @@ function whyOutHtml() {
   if (!o) return '';
   const name = esc(nameOf(o.card));
   if (o.loading) return '<p class="muted"><span class="spinner" aria-hidden="true"></span> Проверяю…</p>';
-  if (o.error) return `<div class="whynot-card"><p>Не получилось проверить «${name}»: ${esc(o.error)}</p></div>`;
+  if (o.error) return `<div class="whynot-card"><p>Не удалось проверить «${name}». Попробуй найти название ещё раз.</p></div>`;
   const w = o.w;
   if (w.error) return `<div class="whynot-card"><p>«${name}»: ${esc(w.error)}.</p></div>`;
   if (w.removedBy) return `<div class="whynot-card"><p><b>«${name}»</b> не показываю: ${esc(w.removedBy.reason)}.</p></div>`;
@@ -1342,9 +1336,9 @@ const MY_TABS = [
 ];
 const MY_EMPTY = {
   evenings: ['Вечера пока не отмечены', 'Выбери вариант на сегодня или оставь отзыв на подборе. Здесь сможешь рассказать, как прошло.'],
-  want: ['Пока пусто', 'Нажми «В „Моё“» у варианта на подборе, и он появится здесь.'],
-  liked: ['Пока пусто', 'Здесь будет то, что тебе зашло. В следующем подборе я сам отмечу это среди знакомых тайтлов.'],
-  disliked: ['Пока пусто', 'Здесь будет то, что не зашло. В следующем подборе я сам отмечу это среди знакомых тайтлов.'],
+  want: ['Пока пусто', 'Нажми «Сохранить» у интересного варианта.'],
+  liked: ['Пока пусто', 'Здесь будет то, что тебе зашло. В следующем подборе эти названия появятся среди знакомых.'],
+  disliked: ['Пока пусто', 'Здесь будет то, что не зашло. В следующем подборе эти названия появятся среди знакомых.'],
   history: ['Подборов пока не было', 'Здесь будут прошлые подборы: что было первым и какие были ещё варианты.'],
 };
 const whenFmt = new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
@@ -1543,7 +1537,7 @@ function renderInspector() {
         + (list.length
           ? `<ul class="mini-list">${list.map((m) => mini(m.card, `<span class="mini-tag">${esc(label(m.r))}</span><button class="icon-btn" type="button" data-act="unmark" data-id="${esc(m.id)}" data-fk="unmark:${esc(m.id)}" aria-label="Снять отметку: ${esc(nameOf(m.card))}">${icon('x')}</button>`)).join('')}</ul>`
           : '<p class="insp-note">Пока ничего. Отметь знакомое или найди своё через поиск.</p>')
-        + '<p class="insp-note" style="margin-top:14px">Про два любимых спрошу, за что, про одно неудачное — что мешало. Остальное запишу как есть.</p>';
+        + '<p class="insp-note" style="margin-top:14px">Можно будет уточнить, что понравилось или помешало.</p>';
       break;
     }
     case 'why':
@@ -1593,7 +1587,7 @@ const searches = {}; // kind → { results, active, seq, timer }
 function suggestHtml(kind) {
   const st = searches[kind];
   if (st.loading) return '<div class="opt-empty">Ищу…</div>';
-  if (st.error) return `<div class="opt-empty">Поиск не ответил: ${esc(st.error)}</div>`;
+  if (st.error) return '<div class="opt-empty">Поиск недоступен. Попробуй ещё раз.</div>';
   if (!st.results.length) return '<div class="opt-empty">Нет в каталоге</div>';
   return st.results.map((c, i) => `<button class="opt" type="button" role="option" tabindex="-1" id="opt-${kind}-${i}" data-act="opt" data-kind="${kind}" data-i="${i}" aria-selected="${i === st.active}">`
     + poster(c, { size: 'poster-sm', lazy: false })
@@ -1685,13 +1679,13 @@ function currentIntentDraft() {
 }
 function intentControls() {
   const draft = currentIntentDraft();
-  let html = `<button class="btn btn-secondary" type="button" data-act="parse-intent" data-fk="parse-intent"${!state?.situation?.note || ui.intentLoading ? ' disabled' : ''}>${ui.intentLoading ? 'Разбираю пожелание…' : 'Понять пожелание'}</button>`;
+  let html = `<button class="btn btn-secondary" type="button" data-act="parse-intent" data-fk="parse-intent"${!state?.situation?.note || ui.intentLoading ? ' disabled' : ''}>${ui.intentLoading ? 'Разбираю пожелание…' : 'Проверить пожелание'}</button>`;
   if (ui.intentError) html += '<p class="q-hint">Не удалось уточнить пожелание. Твои слова сохранены, можно продолжить.</p>';
   if (ui.intentClarification) html += `<p class="q-hint">${esc(ui.intentClarification)} Допиши ответ в пожелание выше.</p>`;
   if (!draft) return html;
   const signals = [...draft.wants.map((x) => ({ ...x, kind: 'wants', title: `Хочется: ${labelOf(x.f)}` })), ...draft.avoids.map((x) => ({ ...x, kind: 'avoids', title: `Меньше: ${labelOf(x.f)}` }))];
   if (draft.time) signals.push({ ...draft.time, kind: 'time', f: 'minutes', title: `На сегодня есть ${draft.time.minutes} мин` });
-  if (!signals.length) return html + `<p class="q-hint">${draft.source === 'confirmed' ? 'Ничего из разбора не применено. Твои слова сохранены.' : 'Пока не стал угадывать. Уточни желаемое впечатление или продолжи со своими словами.'}</p>`;
+  if (!signals.length) return html + `<p class="q-hint">${draft.source === 'confirmed' ? 'Ничего из разбора не применено. Твои слова сохранены.' : 'Пока не нашлось точного совпадения. Можно уточнить пожелание или оставить как есть.'}</p>`;
   const confirmed = draft.source === 'confirmed';
   html += `<div class="intent-review"><p class="group-title">${confirmed ? 'Учту в этом подборе' : 'Так понял тебя — убери лишнее'}</p>`;
   html += signals.map((x) => `<label class="intent-check"><input type="checkbox" data-intent-kind="${x.kind}" data-intent-f="${esc(x.f)}" checked><span>${esc(x.title)}<small>Из слов: «${esc(x.evidence)}»</small></span></label>`).join('');
@@ -1881,7 +1875,7 @@ document.addEventListener('click', (e) => {
     }
     case 'domain':
       if (t.dataset.v === 'game') { location.href = '/pick/game/'; return; }
-      if(['film','series','cartoon'].includes(t.dataset.v)&&new URLSearchParams(location.search).get('legacy')!=='1'){location.href=`/pick/watch/?domain=${t.dataset.v}`;return;}
+      if(t.dataset.v==='anime'||['film','series','cartoon'].includes(t.dataset.v)&&new URLSearchParams(location.search).get('legacy')!=='1'){location.href=`/pick/watch/?domain=${t.dataset.v}`;return;}
       return go({ type: 'choose', value: t.dataset.v }, null);
     case 'platform':
     case 'choice': return go({ type: 'choose', value: t.dataset.v }, null);
@@ -2036,7 +2030,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// «Не то? Скажи словами»: the model picks again with the wish; what it showed goes along as «не устроило».
+// «Что изменить в подборе?»: the model picks again with the wish; what it showed goes along as «не устроило».
 function askAgain(wish) {
   const text = wish.replace(/\s+/g, ' ').trim();
   if (!text || !aiOn() || screen?.step !== 'result') return;
@@ -2182,6 +2176,8 @@ try {
 const startDomain = domainOf(new URLSearchParams(location.search).get('start'))?.id;
 if (startDomain === 'game') {
   location.replace('/pick/game/');
+} else if (startDomain === 'anime') {
+  location.replace('/pick/watch/?domain=anime');
 } else if (startDomain) {
   const url = new URL(location.href);
   url.searchParams.delete('start');

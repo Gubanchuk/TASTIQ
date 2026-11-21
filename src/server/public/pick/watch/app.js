@@ -4,7 +4,7 @@ import {questionFormHtml,canSubmitQuestion,focusOwnAnswer} from '/shared/questio
 import {copyCardTitle} from '/shared/title-copy.js';
 import {createSelectionReviewController} from '/shared/selection-review-controller.js';
 import {resultBatchHelp,resultBatchNotice,resultRequestScreen,singleReplacementIndex} from '/shared/result-clarity.js';
-import {currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=4';
+import {compareButtonHtml,currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=5';
 import {openShorter,shorterLimit} from './shorter-result.js';
 import {requestOverviewHtml,requestPreviewHtml,requestSummaryText} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent} from '/shared/workspace-ui.js';
@@ -106,8 +106,8 @@ function restoreView(focus) {
 function historyHtml() {
  const records=history.all();
  return `<details class="game-history" data-disclosure="history"><summary>Знакомые названия${records.length?` (${records.length})`:''}</summary><p class="game-help">Отметки хранятся в этом браузере. Знакомое название остаётся в подборе, пока ты отдельно его не исключишь.</p><p><a href="/library/?view=evenings">Отзывы о рекомендациях</a></p>`
-  +(records.length?`<ul class="game-history-list">${records.map(record=>`<li><strong>${esc(record.title)}</strong><label class="game-check"><input type="checkbox" data-history-block="${esc(record.id)}" data-focus="history-block:${esc(record.id)}"${record.blocked?' checked':''}> Не предлагать в следующих подборах</label>${button('Удалить из списка','history-forget',`data-id="${esc(record.id)}" data-focus="history-forget:${esc(record.id)}"`)}</li>`).join('')}</ul>`:'<p class="game-help">Пока нет отметок. Их можно добавить прямо на карточке результата.</p>')
-  +(!history.persistent?'<p class="game-help">Отметки сохранятся только до закрытия окна.</p>':'')+'</details>';
+  +(records.length?`<ul class="game-history-list">${records.map(record=>`<li><strong>${esc(record.title)}</strong><label class="game-check"><input type="checkbox" data-history-block="${esc(record.id)}" data-focus="history-block:${esc(record.id)}"${record.blocked?' checked':''}> Не предлагать в следующих подборах</label>${button('Удалить из списка','history-forget',`data-id="${esc(record.id)}" data-focus="history-forget:${esc(record.id)}"`)}</li>`).join('')}</ul>`:'<p class="game-help">Знакомые варианты можно отметить в рекомендациях.</p>')
+  +(!history.persistent?'<p class="game-help">При обновлении или закрытии страницы эти отметки пропадут.</p>':'')+'</details>';
 }
 
 function correctionForm({id='correction-form'}={}) {
@@ -120,11 +120,11 @@ function contextForm(context) {
  return '<details class="game-context-editor" data-disclosure="context"><summary>Изменить условия</summary><form data-form="context" id="context-form"><p class="request-field-note">Все поля необязательны.</p>'
   +select('company','С кем смотришь',{solo:'Один',adults:'Со взрослыми',children:'С детьми'})
   +`<label class="game-field" data-child-field${context.company==='children'?'':' hidden'}>Возраст младшего зрителя<input class="input" name="childAge" type="number" min="0" max="17" value="${context.childAge??''}"></label>`
-  +`<label class="game-field">Есть минут на сегодня<input class="input" name="minutes" type="number" min="5" max="1440" value="${context.minutes??''}" placeholder="Без указанного ограничения"></label>`
-  +(domain==='film'?'<input type="hidden" name="timeMode" value="runtime">':select('timeMode','Ограничение относится к',domain==='series'?{episode:'Одному эпизоду',session:'Просмотру сегодня'}:{runtime:'Всему фильму',episode:'Одному эпизоду',session:'Просмотру сегодня'}))
+  +`<label class="game-field">Сколько минут есть на просмотр?<input class="input" name="minutes" type="number" min="5" max="1440" value="${context.minutes??''}" placeholder="Без ограничения"></label>`
+  +(domain==='film'?'<input type="hidden" name="timeMode" value="runtime">':select('timeMode','На что отводишь это время?',domain==='series'?{episode:'Одному эпизоду',session:'Просмотру сегодня'}:{runtime:'Всему фильму',episode:'Одному эпизоду',session:'Просмотру сегодня'}))
   +(animation?select('format','Формат',{movie:domain==='anime'?'Полнометражное аниме':'Один мультфильм',episodic:'Эпизоды'}):'')
-  +(domain!=='film'?select('commitment','Готовность к длинной истории',{single:'Один просмотр',short:'Короткая история',long:'Можно надолго',open:'Не принципиально'}):'')
-  +(domain!=='film'?select('onlyEnded','Завершённость сериала',{'true':'Только завершённые','false':'Можно продолжающиеся'}):'')
+  +(domain!=='film'?select('commitment','Какой длины историю хочешь?',{single:'Один просмотр',short:'Короткая история',long:'Можно надолго',open:'Не принципиально'}):'')
+  +(domain!=='film'?select('onlyEnded','Статус сериала',{'true':'Только завершённые','false':'Подойдут и те, что ещё выходят'}):'')
   +'<button type="submit" class="btn btn-secondary">Сохранить условия</button></form></details>';
 }
 function readContextForm(form) {
@@ -148,22 +148,22 @@ function understanding(screen) {
  $('#understanding').innerHTML=requestOverviewHtml({screen,state:client.state,timeHtml:timeBudgetHtml(time,{timeMode:context.timeMode}),busy:client.busy,
   toolsHtml:(contextReady(screen)?contextForm(context):'')+(screen.type==='review'?'':'<div data-visit-reviews></div>')+historyHtml()+(time?'<details class="request-time-details"><summary>Откуда ограничение времени</summary><ul>'+timeEvidenceHtml(time)+'</ul></details>':''),
   clarification:clarificationHtml({state:client.state,uncertainties:screen.uncertainties,draft:key=>client.draft(key),busy:client.busy}),correction:correctionForm(),
-  restore:client.canRestoreCorrection?'<div class="clarification-restore"><p>Предыдущий запрос и варианты можно вернуть.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуть предыдущие варианты</button></div>':''});
+  restore:client.canRestoreCorrection?'<div class="clarification-restore"><p>Вместе с вариантами вернётся прежний запрос.</p><button type="button" class="btn btn-secondary" data-act="restore-correction">Вернуть предыдущие варианты</button></div>':''});
  syncRequestEditor(JSON.stringify([client.state.id,client.state.revision,screen.type]));
  initCustomSelects(document);
 }
 function questionHtml(screen) {
  const question=screen.question,optional=question.id!=='direction'&&question.allowText!==false;
  const exampleHtml=question.allowText!==false
-  ?'<div class="game-example"><label for="game-search">Найти знакомое название</label><input class="input" id="game-search" type="search" autocomplete="off" placeholder="Название"><div id="search-results" class="game-search-results" aria-live="polite"></div></div>':'';
- return questionFormHtml(question,currentDraft(question),{busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml})+checkpointHtml(screen.checkpoint);
+  ?'<div class="game-example"><label for="game-search">Добавить знакомое название как пример</label><input class="input" id="game-search" type="search" autocomplete="off" placeholder="Введи название"><div id="search-results" class="game-search-results" aria-live="polite"></div></div>':'';
+ return questionFormHtml(question,currentDraft(question),{domain,busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml})+checkpointHtml(screen.checkpoint);
 }
 function reviewHtml(screen) {
- return '<h1>Такой выбор тебе нужен сегодня?</h1>'
-  +`<p>${esc(requestSummaryText(screen,client.state)||'Можно перейти к подбору или добавить пожелание.')}</p>`
+ return '<h1>Всё верно в твоём запросе?</h1>'
+  +`<p>${esc(requestSummaryText(screen,client.state)||'Можно искать по выбранным условиям или добавить пожелание.')}</p>`
   +timeBudgetHtml(screen.sessionTime,{scope:'review',timeMode:screen.context?.timeMode})
   +'<div data-visit-reviews></div>'
-  +(screen.provisional?'<p class="game-help">Это предварительный запрос. Ты ещё можешь его изменить.</p>':'');
+  +(screen.provisional?'<p class="game-help">Проверь, все ли пожелания учтены.</p>':'');
 }
 function cardHtml(card,index) {
  const familiar=client.state?.familiar??{},marked=familiar.marked?.includes(card.id),kept=familiar.keep?.includes(card.id);
@@ -174,16 +174,16 @@ function cardHtml(card,index) {
 }
 function resultHtml(screen) {
  const result=screen.result??client.state?.result;
- const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Отмеченные варианты заменены. Остальные варианты сохранены.');
+ const replacement=client.state.replacement,notice=replacementNotice(replacement?.notice)||(client.state.familiar?.marked?.length?'':'Заменил отмеченные варианты.');
  const batchNotice=result?.top&&!replacement?resultBatchNotice(1+(result.alternatives??[]).length):'';
- if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Поправь запрос или вернись к вопросу.</p>'+button('Изменить пожелание','focus-correction');
- return '<div class="game-result-heading"><h1>'+(isArchivedResult(session,client.state)?'Подбор из истории':'Рекомендации для тебя')+'</h1>'
-  +'<div class="game-result-browse">'+(currentFinalists(client.state,screen).length>=2?button('Сравнить два варианта','compare-results','aria-haspopup="dialog"'):'')
+ if(!result?.top)return '<h1>Пока не нашёл подходящего варианта</h1><p>Попробуй изменить пожелание.</p>'+button('Изменить пожелание','focus-correction');
+ return '<div class="game-result-heading"><h1>'+(isArchivedResult(session,client.state)?'Подбор из истории':'Что посмотреть')+'</h1>'
+  +'<div class="game-result-browse">'+(currentFinalists(client.state,screen).length>=2?compareButtonHtml:'')
   +`<details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
-  +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу. Часть пожеланий могла остаться без проверки.</p>':'')
+  +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу. Некоторые пожелания пока не удалось проверить.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +((replacement&&notice)||batchNotice?`<p class="game-replacement-notice" role="status">${esc(replacement?notice:batchNotice)}</p>`:'')
-  +(!client.archivePersistent?'<p>Браузер не разрешил сохранить подбор. Он доступен до закрытия окна.</p>':'')+'</div>'
+  +(!client.archivePersistent?'<p>Не удалось добавить подбор в историю. Оставь страницу открытой, чтобы вернуться к вариантам.</p>':'')+'</div>'
   +'<section class="game-proposals" aria-label="Предложенные варианты">'+[result.top,...(result.alternatives??[]).slice(0,3)].map(cardHtml).join('')+'</section>';
 }
 function render() {
@@ -197,9 +197,10 @@ function render() {
  $('#back').disabled=client.busy||!screen?.canBack;
  syncSessionActions({busy:client.busy,canRestore:client.canRestorePrevious,canSwitch:!$('#selection-mode-control').hidden});
  const pending=loadingPresentation(pendingAction,pendingOrigin??client.state),prominent=client.busy&&pending.prominent&&!pendingAction.targetId;
- $('#notice').textContent=client.busy?(prominent?'':pending.title):localNotice||(!client.persistent?'Этот подбор сохранится только до закрытия окна.':'');
+ $('#notice').textContent=client.busy?(prominent?'':pending.title):localNotice||(!client.persistent?'Браузер не сохраняет ответы. Оставь страницу открытой, чтобы продолжить подбор.':'');
  $('#processing-title').textContent=pending.title;
  $('#processing-description').textContent=pending.description;
+ $('#processing-description').hidden=!pending.description;
  $('#processing').hidden=!prominent;
  $('#main').hidden=prominent;$('#main').inert=prominent;
  $('#selection-review-slot').hidden=prominent||screen?.type!=='result';
@@ -327,9 +328,9 @@ async function navigate(action,{origin=null}={}) {
  if(result&&!client.error&&shouldClearCorrection(action,origin,client.draft('__correction').text)){client.saveDraft('__correction',{text:''});const input=$('#correction-text');if(input)input.value='';closeRequestEditor($('#correction-form'),{focus:false});}
  if(action.type==='set_context'&&result&&!client.error){
   client.saveDraft('__context',{text:''});
-  if(client.screen?.type==='question'){localNotice='Условия изменены. Проверь ответ на этот вопрос перед отправкой.';render();}
+  if(client.screen?.type==='question'){localNotice='Условия изменились. Проверь свой ответ.';render();}
  }
- if(action.type==='remove_fact'&&result&&!client.error){localNotice='Убрал из понимания запроса.';render();}
+ if(action.type==='remove_fact'&&result&&!client.error){localNotice='Условие убрано из запроса.';render();}
  if(action.type==='undo_fact_removal'&&result&&!client.error){localNotice='Удаление отменено.';render();}
  if(result&&!client.error&&client.screen?.type==='result'&&browseNavigation)focusResultStart();
  if(singleSlot>=0&&result&&!client.error&&client.screen?.type==='result'){
@@ -411,7 +412,7 @@ document.addEventListener('click',event=>{
   const id=el.dataset.id;
   const card=[client.state?.result?.top,...(client.state?.result?.alternatives??[])].find(item=>item?.id===id);
   const saved=toggleGameLibrarySave(library,card,{domain});
-  if(saved){localNotice=saved.saved?(library.persistent?'Добавлено в «Сохранённое».':'Сохранено до закрытия окна.'):'Сохранение снято. Оценка и отзывы остались.';render();}return;
+  if(saved){localNotice=saved.saved?(library.persistent?'Добавлено в «Сохранённое».':'Закладка пропадёт при обновлении или закрытии страницы.'):'Убрано из сохранённого. Оценка и отзывы сохранились.';render();}return;
  }
  if(act==='restore-previous'){if(!client.busy){currentRequest='resume';pendingAction={type:'resume'};pendingOrigin=client.state;localNotice='';pendingBack=null;activeEvening=null;activeEveningDialogue=null;observedKey=null;void client.restorePrevious();}return;}
  if(act==='option'){
@@ -482,7 +483,7 @@ document.addEventListener('submit',event=>{
  }
  if(form.dataset.form==='clarification'){
   const action=clarificationAction(form.dataset,client.state,form.elements.clarification.value);
-  if(action)void navigate(action);else {localNotice='Запрос уже изменился. Проверь уточнение в текущей сводке.';render();}return;
+  if(action)void navigate(action);else {localNotice='Запрос изменился. Открой «Твой запрос» и проверь уточнение.';render();}return;
  }
  if(form.dataset.form==='correction'){
   const text=form.elements.correction.value.trim();if(text)void navigate({type:'correct',text},{origin:'correction'});
@@ -522,7 +523,7 @@ document.addEventListener('input',event=>{
     const response=await fetch(`/api/search?domain=${domain}&q=${encodeURIComponent(query)}`);if(!response.ok)throw Error();const data=await response.json();
     if(ticket!==searchGeneration||client.screen?.question?.id!==question||!$('#search-results'))return;
     const cards=Array.isArray(data)?data:data.items??data.results??[];
-    $('#search-results').innerHTML=cards.length?cards.slice(0,6).map(card=>`<button type="button" class="btn btn-secondary" data-act="example" data-title="${esc(nameOf(card))}">${esc(nameOf(card))}${card.year?`<small>${esc(card.year)}</small>`:''}</button>`).join(''):'<p class="game-help">Не нашёл. Название можно написать в ответе.</p>';
+    $('#search-results').innerHTML=cards.length?cards.slice(0,6).map(card=>`<button type="button" class="btn btn-secondary" data-act="example" data-title="${esc(nameOf(card))}">${esc(nameOf(card))}${card.year?`<small>${esc(card.year)}</small>`:''}</button>`).join(''):'<p class="game-help">Ничего не нашлось. Напиши название в своём ответе.</p>';
    }catch{if(ticket===searchGeneration&&$('#search-results'))$('#search-results').innerHTML='<p class="game-help">Поиск недоступен. Название можно написать в ответе.</p>';}
   },250);
  }

@@ -382,6 +382,7 @@ body.selection-start>main .back:is(:hover,:focus-visible) {
  background:var(--selection-accent);border-color:var(--selection-accent);color:white;
 }
 body.selection-start>main nav a {
+ --tile-background:var(--selection-soft);--tile-border:var(--selection-edge);--tile-active:var(--selection-accent);
  padding:20px 24px;background:var(--tile-background);border:1px solid var(--tile-border);border-radius:var(--selection-surface);
  color:var(--selection-navy);font-weight:650;min-height:94px;
 }
@@ -389,6 +390,7 @@ body.selection-start>main nav a:nth-child(1) {--tile-background:#dfe8ff;--tile-b
 body.selection-start>main nav a:nth-child(2) {--tile-background:#e5eaff;--tile-border:#c3cdf9;--tile-active:#4149aa}
 body.selection-start>main nav a:nth-child(3) {--tile-background:#eee8fa;--tile-border:#d9c7f1;--tile-active:#664099}
 body.selection-start>main nav a:nth-child(4) {--tile-background:#faeee1;--tile-border:#ebd2b6;--tile-active:#8a4b18}
+body.selection-start>main nav a[data-anime-entry] {--tile-background:#dbeafb;--tile-border:#b6cde8;--tile-active:#305780}
 body.selection-start>main nav a:is(:hover,:focus-visible,:active) {
  background:var(--tile-active);border-color:var(--tile-active);color:white;
 }
@@ -434,14 +436,22 @@ body.selection-start>main nav a svg {
 }
 
 @media(max-width:760px) {
- /* The browser can expose the root canvas above a sticky header during overscroll. */
- html:has(>body.game-dialogue.selection-design) {background-color:#18254a}
- body.selection-design.game-dialogue .app-shell {
+ html:has(>body.product-page.selection-design) {background-color:#18254a}
+ body.selection-design.product-page .app-shell {
   padding-top:calc(10px + env(safe-area-inset-top,0px));
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
  }
  body.selection-design.product-page.conversation-page .app-shell {
   grid-template-columns:minmax(0,1fr) auto;border-radius:0;margin-bottom:16px;gap:6px 10px;
+ }
+ /* Both rows stay on one viewport-fixed surface as Android's address bar moves.
+    Reserve their measured space in normal flow so the document still scrolls. */
+ html.has-measured-shell:has(body:not(.is-choosing-mode)) {scroll-padding-top:calc(var(--app-shell-height) + 12px)}
+ .has-measured-shell body.product-page:not(.is-choosing-mode) .app-shell {
+  position:fixed;inset:0 0 auto;margin:0;
+ }
+ .has-measured-shell body.product-page:not(.is-choosing-mode) .conversation-app::before {
+  content:"";display:block;height:var(--app-shell-height);margin-bottom:16px;
  }
  body.selection-design.product-page.conversation-page .app-brand {min-width:0;max-width:100%}
  body.selection-design.product-page.conversation-page .app-brand img {max-width:100%}

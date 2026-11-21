@@ -8,5 +8,5 @@ test('server metadata supplies domain-specific labels for restored answers and c
   assert.equal(meta.domains.game.labels['humor.funny'],'много юмора');
   assert.equal(meta.domains.film.labels['humor.funny'],'смешно');
   assert.equal(meta.domains.film.labels['company:kids'],'с детьми');
-  assert.equal(meta.domains.film.labels['time:two'],'часа два');
+  assert.equal(meta.domains.film.labels['time:two'],'до 2 ч 10 мин');
 });

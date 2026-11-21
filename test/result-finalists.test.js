@@ -46,8 +46,23 @@ test('each finalist keeps its own explanation and caveat even when the genres ma
  const changed=comparisonReasonsHtml([replacement,b]);
  assert.match(changed,/Можно остановиться после главы/);
  assert.doesNotMatch(changed,/Начало медленное|Герои решают спор/);
- assert.match(comparisonReasonsHtml([b,{name:'Г',genres:['Drama']}]),/Для этого варианта нет пояснения/);
- assert.match(comparisonReasonsHtml([{name:'Д'},{name:'Е'}]),/для пары нет пояснений/);
+ assert.match(comparisonReasonsHtml([b,{name:'Г',genres:['Drama']}]),/Спор быстро переходит в погоню/);
+ assert.equal(comparisonReasonsHtml([{name:'Д'},{name:'Е'}]),'');
+});
+
+test('the pair summary follows both identities on switch, including reverse order and older cards',()=>{
+ const summary='В «А» ты сам ищешь дорогу. В «Б» погоня задаёт темп.';
+ const a={id:'a',name:'А',ai:{reason:'Открытые маршруты.',comparisons:[{otherId:'b',summary}]}};
+ const b={id:'b',name:'Б',ai:{reason:'Быстрая погоня.',caveat:'Сложный старт.'}};
+ for(const pair of [[a,b],[b,a]]){
+  const html=comparisonReasonsHtml(pair);
+  assert.ok(html.includes(summary));assert.ok(html.includes(b.ai.caveat));assert.ok(!html.includes(b.ai.reason));
+ }
+ const c={id:'c',name:'В',reason:'Спокойный маршрут.'};
+ assert.doesNotMatch(comparisonReasonsHtml([a,c]),/погоня задаёт/);
+ assert.ok(comparisonReasonsHtml([a,c]).includes(c.reason));
+ const hostile={...a,ai:{comparisons:[{otherId:'b',summary:'<tag>'}]}};
+ assert.match(comparisonReasonsHtml([b,hostile]),/&lt;tag&gt;/);
 });
 
 test('a shared reason appears once and a distinct caveat stays on the correct side',()=>{
@@ -57,6 +72,16 @@ test('a shared reason appears once and a distinct caveat stays on the correct si
  assert.match(html,/<section data-slot="1"><h4>Второй<\/h4>[\s\S]*Долгое вступление\./);
  assert.doesNotMatch(html,/нет пояснения/);
  assert.doesNotMatch(comparisonReasonsHtml([a,{...b,caveat:''}]),/<section/);
+});
+
+test('a restored or mixed pair compares available catalog facts even if the old reasons match',()=>{
+ const [a,b]=[{id:'a',name:'А',genres:['Action'],reason:'Одна причина.'},{id:'b',name:'Б',genres:['Action','Adventure'],reason:'Одна причина.'}];
+ const html=comparisonReasonsHtml([a,b],'game');
+ assert.match(html,/Общий жанр — экшен\. У «Б» в каталоге также указан жанр «приключения»/);
+ assert.equal(html.split(a.reason).length,2);
+ const series=[{...a,kind:'series',runtime:24},{...b,kind:'series',runtime:45}];
+ assert.match(comparisonReasonsHtml(series,'anime'),/Первая серия в «А» длится 24 мин, в «Б» — 45 мин/);
+ assert.doesNotMatch(comparisonReasonsHtml([{...a,genres:[]},b],'game'),/Различия по каталогу/);
 });
 
 test('an available grounded reason is shown, while a card without evidence never repeats a batch disclaimer',()=>{

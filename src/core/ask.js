@@ -106,7 +106,7 @@ function pairQuestions(top, p, taste, catalog, session, M, asked) {
 
 function factQuestions(top, p, catalog, session, M, taste = null) {
   const game = catalog.domain.id === 'game';
-  // Scores if the answer changed the session; with the taste the era penalty («можно и старое» lifts it) is in too.
+  // Scores if the answer changed the session; with the taste the era penalty («подойдёт любой год» lifts it) is in too.
   const scoresWith = (extra) => top.map((r) => r.score - priorOf(r.game, catalog, session, taste) + priorOf(r.game, catalog, { ...session, ...extra }, taste));
   const filteredScores = (extra) => top.map((r) => checkSieves(r.game, taste, { ...session, ...extra }, catalog) ? -Infinity : r.score);
   const sides = (test) => { const n = top.filter((r) => test(r.game)).length; return n >= M && top.length - n >= M; };
@@ -121,7 +121,7 @@ function factQuestions(top, p, catalog, session, M, taste = null) {
     const known = (g) => g.popularity >= median;
     if (sides(known)) {
       out.push(question('fact', 'fact:popularity',
-        game ? 'Известная игра или что-то менее известное?' : 'Что-то известное или менее известное?',
+        game ? 'Известная игра или что-то менее известное?' : 'Что посмотреть — известную историю или что-то менее популярное?',
         [{ value: 'mainstream', label: 'более известное' }, { value: 'niche', label: 'менее известное' }],
         p, [side(known), flip(side(known)), dontCare], [scoresWith({ popularity: 'mainstream' }), scoresWith({ popularity: 'niche' }), null]));
     }
@@ -133,8 +133,8 @@ function factQuestions(top, p, catalog, session, M, taste = null) {
     const old = (g) => g.year != null && g.year < 2015;
     if (top.filter((r) => recent(r.game)).length >= M && top.filter((r) => old(r.game)).length >= M) {
       const known = (test) => top.map((r) => (r.game.year == null ? 0.5 : test(r.game) ? 1 : 0));
-      out.push(question('fact', 'fact:era', 'Свежее или можно и старое?',
-        [{ value: 'new', label: 'свежее, с 2015' }, { value: 'any', label: 'можно и старое' }],
+      out.push(question('fact', 'fact:era', 'Важен ли год выхода?',
+        [{ value: 'new', label: 'с 2015 года' }, { value: 'any', label: 'подойдёт любой год' }],
         p, [known(recent), known(old), dontCare], [scoresWith({ era: 'new' }), scoresWith({ era: 'any' }), null]));
     }
   }
@@ -153,7 +153,7 @@ function factQuestions(top, p, catalog, session, M, taste = null) {
     const running = (g) => g.status && g.status !== 'Ended';
     if (sides(running)) {
       out.push(question('fact', 'fact:ended', 'Только законченные сериалы?',
-        [{ value: 'yes', label: 'только законченные' }, { value: 'any', label: 'не важно' }],
+        [{ value: 'yes', label: 'только законченные' }, { value: 'any', label: 'неважно' }],
         p, [flip(side(running)), side(running), dontCare], [filteredScores({ onlyEnded: true }), null, null]));
     }
   }

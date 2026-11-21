@@ -64,7 +64,7 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
     const suppressed=state&&state.state!=='released';
     const status=kind==='answer'?'Ответ из прежней библиотеки':suppressed?'Отзыв отключён'
       :memory.persistent?'Учитывается как отзыв о том вечере':'Ранее разрешённый отзыв';
-    let controls=button('Сформулировать предпочтение','from-source',attrs);
+    let controls=button('Добавить в предпочтения','from-source',attrs);
     if(kind==='review'&&(!suppressed||state.state==='suppressed')){
       const action=suppressed?'restore-review':'suppress-review';
       controls+=button(suppressed?'Снова учитывать отзыв':'Не учитывать отзыв',action,`${attrs} data-focus="${esc(focusKey('source',id))}"`);
@@ -77,15 +77,15 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
     const available=sources(domain).filter(s=>!linked.has(JSON.stringify([s.domain,s.kind,s.id])));
     const origins=new Map(memory.sourceStates().map(s=>[JSON.stringify([s.domain,s.kind,s.id]),s]));
     const previous=available.length?`<details class="memory-sources"${openSources?' open':''} data-memory-sources><summary>Прежние ответы и отзывы · ${available.length}</summary>
-      <p>Здесь можно отключить разрешённый отзыв или своими словами сохранить предпочтение на будущее.</p>
+      <p>Отзыв можно отключить. Если пожелание из него важно и на будущее, добавь его в предпочтения.</p>
       <ul class="memory-list">${available.map(s=>sourceCard(s,origins.get(JSON.stringify([s.domain,s.kind,s.id])))).join('')}</ul></details>`:'';
-    return `<section class="library-memory"><h2 class="library-view-title">Память для подбора</h2>
-      <p>При онлайн-подборе помощник получает включённые предпочтения выбранного раздела. Сегодняшнее пожелание важнее. Правки действуют в этом браузере, а прошлые отзывы остаются в истории.</p>
+    return `<section class="library-memory"><h2 class="library-view-title">Мои предпочтения</h2>
+      <p>В онлайн-подборе учитываются включённые предпочтения этого раздела. Сегодняшнее пожелание важнее. Изменения действуют в этом браузере. Прежние отзывы остаются в истории.</p>
       <div class="memory-toolbar"><label class="library-filter">Показать раздел<select id="memory-domain" data-focus="memory-domain"${draft?' disabled':''}><option value="all">Все разделы</option>${options(domain)}</select></label>
       ${draft?'':button('Добавить предпочтение','new','data-focus="memory-new"')}</div>
-      ${!memory.persistent?'<p role="status">Хранилище браузера недоступно. Сейчас сохранить изменения в памяти не получится.</p>':''}
+      ${!memory.persistent?'<p role="status">Браузер не разрешает сохранять предпочтения. Проверь настройки данных сайта.</p>':''}
       ${error?`<p role="alert" class="memory-error">${esc(error)}</p>`:''}${draft?editor():''}
-      ${rows.length?`<ul class="memory-list">${rows.map(record).join('')}</ul>`:'<p class="library-empty">В этом списке пока нет сохранённых предпочтений.</p>'}
+      ${rows.length?`<ul class="memory-list">${rows.map(record).join('')}</ul>`:'<p class="library-empty">Пока нет сохранённых предпочтений.</p>'}
       ${previous}${Object.hasOwn(domains,domain)?`<a class="library-button" href="${esc(pickerUrl(domain,{choose:'1'}))}">Начать подбор · ${esc(domains[domain])}</a>`:''}</section>`;
   }
   function close() { draft=null;confirming=null;error=''; }
@@ -124,7 +124,7 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
         }
         saving=true;
         await memory.mutate(()=>action==='restore-review'?memory.restoreReview(source.domain,source.entry,version):memory.suppressReview(source.domain,source.entry,version));
-        error='';render({focus:focusKey('source',id)});notice(action==='restore-review'?'Отзыв снова учитывается.':'Отзыв отключён для будущих подборов.');return;
+        error='';render({focus:focusKey('source',id)});notice(action==='restore-review'?'Отзыв снова учитывается.':'В следующих подборах этот отзыв учитываться не будет.');return;
       }
       const row=memory.all().find(item=>item.id===id);
       if(!row)throw Error('Эта запись уже удалена.');

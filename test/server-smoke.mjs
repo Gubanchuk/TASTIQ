@@ -69,6 +69,19 @@ try {
   assert.equal(meta?.domains.film.items,3);
   assert.equal(meta?.domains.anime.items,1);
   assert.equal(meta?.domains.anime.newSelections,true);
+  const browserHeaders={Accept:'text/html,application/xhtml+xml'};
+  const missingPage=await localFetch(base+'/page-that-does-not-exist/',{headers:browserHeaders});
+  assert.equal(missingPage.status,404);
+  assert.match(missingPage.headers.get('content-type'),/^text\/html/);
+  const missingHtml=await missingPage.text();
+  assert.match(missingHtml,/<h1>Страница не найдена<\/h1>/);
+  assert.match(missingHtml,/<a[^>]+href="\/">На главную<\/a>/);
+  assert.equal((await localFetch(base+'/')).status,200);
+  for(const [path,headers] of [['/api/unknown',browserHeaders],['/assets/missing.webp',browserHeaders],['/missing/',{Accept:'application/json'}]]){
+    const missingResource=await localFetch(base+path,{headers});
+    assert.equal(missingResource.status,404);
+    assert.deepEqual(await missingResource.json(),{error:'not found'});
+  }
   const exact = await (await localFetch(base+'/api/search?domain=game&id=12&id=missing&id=1&id=12')).json();
   assert.deepEqual(exact.map(card=>card.id),['12','1']);
   assert.equal(exact[1].name,'The Witcher 3');

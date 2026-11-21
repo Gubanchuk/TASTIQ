@@ -16,9 +16,9 @@ export function shorterAction(limit,value){
 }
 
 export function openShorter(dialog,limit,apply){
- dialog.innerHTML='<h2 id="result-dialog-title">Насколько короче?</h2><form class="shorter-form">'
-  +(limit.previous?'<p>Сейчас в запросе до '+limit.previous+' мин.</p>':limit.leadMinutes?'<p>У главного варианта '+limit.leadMinutes+' мин.</p>':'')
-  +'<label>'+limit.label+', максимум минут<input class="input" name="minutes" type="number" inputmode="numeric" min="5" max="'+limit.max+'" step="1" required></label>'
+ dialog.innerHTML='<h2 id="result-dialog-title">Сколько минут есть на просмотр?</h2><form class="shorter-form">'
+  +(limit.previous?'<p>Текущий предел — '+limit.previous+' мин.</p>':limit.leadMinutes?'<p>Главный вариант длится '+limit.leadMinutes+' мин.</p>':'')
+  +'<label>'+limit.label+', не дольше (мин)<input class="input" name="minutes" type="number" inputmode="numeric" min="5" max="'+limit.max+'" step="1" required></label>'
   +'<p data-limit-preview role="status">Введи от 5 до '+limit.max+' минут.</p>'
   +'<div class="result-dialog-actions"><button class="btn btn-primary" type="submit" disabled>Проверить запрос</button><button class="btn btn-secondary" type="button" data-close>Отмена</button></div></form>';
  const form=dialog.querySelector('form'),submit=form.querySelector('[type="submit"]'),input=form.elements.minutes;

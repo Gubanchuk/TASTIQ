@@ -49,7 +49,7 @@ test('a library known plan or a previous taste answer marks only the same game a
   assert.equal(state.libraryLane,row.lane);
   assert.equal(Object.hasOwn(state,'blocked'),false);
   assert.deepEqual(row,before);
-  assert.ok(gameCardHtml(card,state).includes('Уже знакома'));
+  assert.ok(gameCardHtml(card,state).includes('Знакомая игра'));
  }
  for(const rows of [
   [{id:card.id,domain:'film',lane:'known'}],

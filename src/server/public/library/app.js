@@ -128,9 +128,9 @@ function card(row) {
   +(!exposure&&(row.status==='known'||row.lane==='known')?'<p class="library-meta">Уже знакомо</p>':'')
   +`</div><div class="board-card-actions">${button(`${icon('book')}${row.saved?'Сохранено':'Сохранить'}`,'saved',`${attrs} data-focus="${focusKey('saved',row)}" aria-pressed="${row.saved}" title="${row.saved?'Убрать из сохранённого':'Сохранить на будущее'}"`)}</div>`
   +`<details class="card-details" data-detail="card:${esc(k)}"${openDetails.has(`card:${k}`)?' open':''}><summary data-focus="${focusKey('details',row)}">${rating?'Оценка и отметки':exposure?'Оценить и изменить отметки':'Оценить произведение'}</summary><div class="card-details-content">`
-  +`<p>${row.ratingConflict?'В отзывах остались разные впечатления. Укажи, что думаешь сейчас.':row.ratingSource==='experience'?'Оценка из твоего отзыва после знакомства. Можно изменить её здесь.':'Уже знакомо? Отметь, понравилось ли тебе.'}</p><div class="rating-actions">${ratingButton('liked','Нравится')}${ratingButton('disliked','Не нравится')}${rating?button('Убрать оценку','rate',`${attrs} data-value="none" data-focus="${focusKey('rate-none',row)}"`):''}</div>`
+  +`<p>${row.ratingConflict?'В прошлых отзывах оценки различаются. Как тебе сейчас?':row.ratingSource==='experience'?'Эта оценка взята из твоего отзыва. Здесь её можно изменить.':'Уже знакомо? Отметь, понравилось ли тебе.'}</p><div class="rating-actions">${ratingButton('liked','Нравится')}${ratingButton('disliked','Не нравится')}${rating?button('Убрать оценку','rate',`${attrs} data-value="none" data-focus="${focusKey('rate-none',row)}"`):''}</div>`
   +(row.answer?`<p class="library-meta">${typeof row.answer.text==='string'&&row.answer.text.trim()?`Твои слова из прежнего подбора: «${esc(row.answer.text.trim())}».`:'Уточнения из прежнего подбора сохранены с этой оценкой.'}</p>`:'')
-  +(exposure?`<div class="familiarity-facts"><p>${esc(row.domain==='game'?(EXPOSURES[exposure.exposure]||'Уже знакомо'):({seen:'Уже смотрел',started:'Начал смотреть',finished:'Досмотрел',dropped:'Не досмотрел',paused:'Отложил'}[exposure.exposure]||'Уже знакомо'))} · ${esc(date(exposure.updatedAt))}</p><label class="library-check"><input type="checkbox" data-act="blocked" ${attrs} data-focus="${focusKey('blocked',row)}"${exposure.blocked?' checked':''}> Не предлагать в следующих подборах</label>${button('Забыть знакомство','forget',`${attrs} data-focus="${focusKey('forget',row)}"`)}</div>`:'')
+  +(exposure?`<div class="familiarity-facts"><p>${esc(row.domain==='game'?(EXPOSURES[exposure.exposure]||'Уже знакомо'):({seen:'Уже смотрел',started:'Начал смотреть',finished:'Досмотрел',dropped:'Не досмотрел',paused:'Отложил'}[exposure.exposure]||'Уже знакомо'))} · ${esc(date(exposure.updatedAt))}</p><label class="library-check"><input type="checkbox" data-act="blocked" ${attrs} data-focus="${focusKey('blocked',row)}"${exposure.blocked?' checked':''}> Не предлагать в следующих подборах</label>${button('Убрать отметку знакомства','forget',`${attrs} data-focus="${focusKey('forget',row)}"`)}</div>`:'')
   +(row.reviews.length?button('Мои отзывы','card-reviews',`${attrs} data-focus="${focusKey('reviews',row)}"`):'')
   +(url?`<a class="library-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${row.domain==='game'?'Открыть игру':'Открыть страницу'} ${icon('arrow')}</a>`:'')+'</div></details></article>';
 }
@@ -138,18 +138,18 @@ function filters({compact=false}={}) {
  const {query,domain,reaction,status,sort,open,item}=activeFilters();
  const activeCount=Number(domain!=='all')+Number(reaction!=='all')+Number(status!=='all')+Number(sort!=='added');
  const select=(id,label,options,value)=>`<label class="library-filter"><span>${label}</span><select id="${id}">${Object.entries(options).map(([key,text])=>`<option value="${key}"${value===key&&key!=='all'?' selected':''}>${text}</option>`).join('')}</select></label>`;
- const search=`<label class="library-search">${icon('search')}<span class="library-sr-only">Найти название</span><input id="find-title" type="search" placeholder="Найти название" autocomplete="off" maxlength="300" value="${esc(query)}"></label>`;
+ const search=`<label class="library-search">${icon('search')}<span class="library-sr-only">Поиск по названию</span><input id="find-title" type="search" placeholder="Поиск по названию" autocomplete="off" maxlength="300" value="${esc(query)}"></label>`;
  const options=select('domain-filter','Раздел',{all:'Всё',...DOMAINS},domain)
  +(state.view==='all'?select('reaction-filter','Оценка',{all:'Любая',liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'},reaction):'')
  +(state.view==='evenings'?select('status-filter','Статус',eveningStatuses,status):'')
- +select('sort','Порядок',{added:'Сначала новые',oldest:'Сначала давние',title:'По названию'},sort);
+ +select('sort','Порядок',{added:'Сначала новые',oldest:'Сначала старые',title:'По названию'},sort);
  const reset=button('Сбросить','clear',`data-focus="filters-reset"${query||activeCount||item?'':' disabled'}`);
  const chevron='<svg class="filter-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
  const toggle=(label,panel)=>button(label+chevron,'filters',`data-focus="filters-toggle" aria-expanded="${open}" aria-controls="${panel}"`);
  if(compact){
   const summary=[query.trim()?`«${query.trim()}»`:'',DOMAINS[domain],
    {liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'}[reaction],
-   {oldest:'Сначала давние',title:'По названию'}[sort]].filter(Boolean).join(' · ');
+   {oldest:'Сначала старые',title:'По названию'}[sort]].filter(Boolean).join(' · ');
   return `<div class="shelf-filters" data-view-filters="${state.view}">${toggle('Поиск и фильтры','library-filter-panel')}${!open&&summary?`<span class="shelf-filter-summary">${esc(summary)}</span>`:''}<div id="library-filter-panel" class="shelf-filter-fields" data-active-count="${activeCount}"${open?'':' hidden'}>${search}<div class="library-filter-options">${options}</div>${reset}</div></div>`;
  }
  return `<div class="library-filters" data-view-filters="${state.view}">${search}<div class="library-filter-actions">${toggle(`Фильтры${activeCount?`<span class="filter-active-count">${activeCount}</span>`:''}`,'library-filter-options')}${reset}</div><div class="library-filter-panel" id="library-filter-panel" data-active-count="${activeCount}" data-filter-open="${open}"><div class="library-filter-options" id="library-filter-options" data-filter-options>${options}</div></div></div>`;
@@ -158,7 +158,7 @@ function resultCount(shown,total){return hasSearchFilters()?`<p class="library-c
 function noMatches(){return '<div class="library-empty wide-empty"><h2>Нет совпадений</h2><p>Попробуй другое название или сбрось фильтры.</p>'+button('Сбросить фильтры','clear')+'</div>';}
 function empty(view,hasFilters) {
  if(hasFilters)return noMatches();
- const copy={saved:['Пока ничего не сохранено','Нажми «Сохранить» у интересного варианта, чтобы вернуться к нему позже.'],liked:['Здесь будет то, что понравилось','Отметь «Нравится» у знакомого произведения. Положительные впечатления из отзывов тоже появятся здесь.'],all:['Твои отметки появятся здесь','Сохранённое, оценки и знакомые произведения — всё можно найти в одном месте.']}[view];
+ const copy={saved:['Пока ничего не сохранено','Нажми «Сохранить» у интересного варианта, чтобы вернуться к нему позже.'],liked:['Здесь будет то, что понравилось','Нажми «Нравится» у знакомой игры или истории. Сюда попадают и те, для которых ты выбрал «Понравилось» в отзыве.'],all:['Твои отметки появятся здесь','Сохрани вариант, оцени его или отметь как знакомый.']}[view];
  return `<div class="library-empty"><h2>${copy[0]}</h2><p>${copy[1]}</p>${view==='liked'?button('Открыть сохранённое','view','data-view="saved"'):pickLink('Найти вариант')}</div>`;
 }
 function undoLine(){return state.undo?`<div class="library-undo" role="status"><span>${esc(state.undo.message)}</span>${button('Вернуть','undo','data-focus="undo"')}</div>`:'';}
@@ -191,7 +191,7 @@ function board() {
  const compact=all.length>0&&all.length<=shortShelfLimit;
  const filterUi=all.length?filters({compact}):'',sourceUi=savedSourceControls(rows,all);
  const tools=compact?`<div class="short-shelf-tools">${sourceUi}${filterUi}</div>`:filterUi+sourceUi;
- return (compact?'':`<p class="collection-description">${{saved:'Интересное, к чему хочешь вернуться.',liked:'Произведения, которые ты оценил положительно.',all:'Сохранённое, оценки, знакомые произведения и отзывы.'}[state.view]}</p>`)
+ return (!all.length||compact?'':`<p class="collection-description">${{saved:'То, что ты сохранил на будущее.',liked:'То, что тебе понравилось.',all:'Сохранённое, оценки, знакомые произведения и отзывы.'}[state.view]}</p>`)
   +tools+undoLine()+(all.length?resultCount(rows.length,all.length):'')
   +`<section class="library-board" aria-label="${VIEWS[state.view]}"><div class="library-card-list">${shown.map(card).join('')||empty(state.view,Boolean(all.length&&hasSearchFilters()))}</div>${rows.length>shown.length?`<div class="library-more"><p>Показано ${shown.length} из ${rows.length}</p>${button(`Показать ещё ${Math.min(24,rows.length-shown.length)}`,'more','data-focus="library-more"')}</div>`:''}</section>`;
 }
@@ -206,7 +206,7 @@ function historyRecords(){
   searchText:(Array.isArray(row.alternatives)?row.alternatives:[]).map(card=>card?.title).filter(Boolean).join(' ')}))];
 }
 function historyView(all) {
- if(!all.length)return '<div class="library-empty wide-empty"><h2>Здесь будут твои подборы</h2><p>Запрос и предложенные варианты сохраняются автоматически. Можно открыть их снова.</p>'+pickLink('Найти вариант')+'</div>';
+ if(!all.length)return '<div class="library-empty wide-empty"><h2>Здесь будут твои подборы</h2><p>После подбора здесь можно снова открыть запрос и рекомендации.</p>'+pickLink('Найти вариант')+'</div>';
  const rows=filtered(all),saved=library.all().filter(row=>row.saved);
  const entries=rows.map(row=>{
   if(row.snapshot){
@@ -235,7 +235,7 @@ function eveningArtwork(){
  return artwork;
 }
 function eveningsView(all) {
- if(!all.length)return '<div class="library-empty wide-empty"><h2>Пока нет отзывов</h2><p>Здесь можно вернуться к выбранным вариантам и рассказать, подошли ли рекомендации.</p>'+pickLink('Найти вариант')+'</div>';
+ if(!all.length)return '<div class="library-empty wide-empty"><h2>Пока нет отзывов</h2><p>Выбери вариант в рекомендациях или оставь оценку. Здесь можно вернуться к нему и рассказать, как всё прошло.</p>'+pickLink('Найти вариант')+'</div>';
  const {status,item}=activeFilters(),scope=item?all.filter(row=>key({...row.card,domain:row.domain})===item):all,rows=filtered(scope,row=>eveningMatches(row,status)),artwork=eveningArtwork();
  const entries=rows.map(({run,card,response,draft})=>{
   const pair=`${run.id}:${card.id}`,detail=`evening:${pair}`,outcome=`outcome:${pair}`;
@@ -285,7 +285,7 @@ function undo() {
   if(current&&current.saved===entry.current)restored=Boolean(library.setSaved(current,entry.previous));
  }
  else{const history=historyFor(entry.domain??'game');if(history&&!history.all().some(row=>row.id===entry.entry.id))restored=Boolean(history.remember(entry.entry,{exposure:entry.entry.exposure,blocked:entry.entry.blocked}));}
- state.undo=null;render({focus:`view:${state.view}`});notice(restored?'Изменение отменено.':'Отметка уже изменена. Сохранили новое состояние.');
+ state.undo=null;render({focus:`view:${state.view}`});notice(restored?'Изменение отменено.':'Отметку уже изменили. Сохранена последняя версия.');
 }
 function editEvening(el,action) {
  const rid=el.dataset.run,cid=el.dataset.id,queuedAction={...action},focusKey=el.dataset.fk;
@@ -355,7 +355,7 @@ document.addEventListener('click',event=>{
  if(act==='rate'&&row){if(!row.inLibrary)library.save(row,{domain:row.domain,lane:'known'});library.rate(row.domain,row.id,el.dataset.value==='none'?null:el.dataset.value);openDetails.delete(`card:${key(row)}`);render({focus:`details:${key(row)}`});notice(el.dataset.value==='none'?'Оценка убрана.':'Оценка сохранена.');return;}
  if(act==='card-reviews'&&row){state.view='evenings';Object.assign(activeFilters(),defaultFilters(),{item:key(row)});state.limit=24;writeNavigation(true);render({focus:'view:evenings'});return;}
  if(act==='all-reviews'){Object.assign(activeFilters(),defaultFilters());writeNavigation(true);render();return;}
- if(act==='save-history'){const h=legacyHistory()[Number(el.dataset.index)];if(h&&library.setSaved({...h,id:h.topId},true,{domain:h.domain})){render();notice('Сохранено.');}else notice('У этой старой записи не сохранился раздел или идентификатор. Её нельзя добавить в сохранённое.');return;}
+ if(act==='save-history'){const h=legacyHistory()[Number(el.dataset.index)];if(h&&library.setSaved({...h,id:h.topId},true,{domain:h.domain})){render();notice('Сохранено.');}else notice('Не удалось найти это название в старом подборе. Попробуй найти его по названию в новом.');return;}
  const actions={'evening-fit':{type:'fit',value:el.dataset.v},'evening-choose':{type:'choose',value:el.dataset.v==='on'},'evening-start':{type:'start',value:el.dataset.v==='on'},'evening-outcome':{type:'outcome',value:el.dataset.v}};
  if(actions[act])void editEvening(el,actions[act]);
 });

@@ -1,4 +1,4 @@
-export const resultBatchHelp='Обычно четыре варианта за раз. При строгих условиях их может быть меньше. «Показать ещё» продолжает этот же подбор.';
+export const resultBatchHelp='За раз появится до четырёх вариантов. «Показать ещё» найдёт другие по тому же запросу.';
 // Older drafts also store the catalog fallback notice as a clarifying question.
 export function resultRequestScreen(screen){
  if(screen.type!=='result'||!(screen.provisional||screen.result?.ai?.error))return screen;

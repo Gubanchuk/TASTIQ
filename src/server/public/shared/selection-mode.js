@@ -1,8 +1,8 @@
 import {isSelectionDepth} from './conversation-entry.js';
 
 const modes={
- standard:{title:'Быстрый подбор',description:'Уточним главное и перейдём к вариантам.'},
- deep:{title:'Подробный подбор',description:'Разберём, что для тебя важнее. Уточнения можно закончить раньше.'},
+ standard:{title:'Быстрый подбор',description:'Расскажи, чего хочется, и ответь на основные вопросы.'},
+ deep:{title:'Подробный подбор',description:'Обсудим, что тебе нравится и чего хочется избежать. К вариантам можно перейти раньше.'},
 };
 export const selectionModeTitle=depth=>isSelectionDepth(depth)?modes[depth].title:'';
 
@@ -21,7 +21,7 @@ function card(depth,active){
 export function selectionModeChooser({intent,canResume,depth,resumeType,domain='game'}){
  const resume=intent==='switch'?'Вернуться к подбору':resumeType==='result'?'Открыть прошлый результат':'Продолжить черновик';
  const history=canResume&&intent==='new'&&resumeType!=='result'?'<a href="/library/?view=history">Прошлые результаты</a>':'';
- const memory=intent==='switch'?'':`<a href="/library/?view=memory&amp;memory.domain=${encodeURIComponent(domain)}">Память предпочтений</a>`;
+ const memory=intent==='switch'?'':`<a href="/library/?view=memory&amp;memory.domain=${encodeURIComponent(domain)}">Мои предпочтения</a>`;
  return `<div class="mode-heading"><h1 id="mode-heading" tabindex="-1">${intent==='switch'?'Изменить режим подбора':canResume?'Новый подбор':'Как будем подбирать?'}</h1></div>
   <div class="mode-card-grid">${card('standard',intent==='switch'?depth:null)}${card('deep',intent==='switch'?depth:null)}</div>
   <div class="mode-footer">${canResume?`<button type="button" data-mode-resume>${resume}</button>`:'<a href="/pick/start/">Выбрать другой раздел</a>'}${history}${memory}</div>`;

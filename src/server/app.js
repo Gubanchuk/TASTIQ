@@ -187,6 +187,15 @@ const routes = {
 };
 
 export async function handler(req,res){return runQaRequest(req,()=>handleRequest(req,res));}
+function sendNotFound(req,res,pathname){
+  const pageRequest=(req.method==='GET'||req.method==='HEAD') && (req.headers.accept??'').includes('text/html');
+  const resource=/^\/(?:api|assets|shared|data)(?:\/|$)/.test(pathname);
+  if(!pageRequest||resource||!['','.html'].includes(extname(pathname).toLowerCase())){
+    return send(res,404,{error:'not found'});
+  }
+  res.writeHead(404,{'Content-Type':MIME['.html'],'Cache-Control':'no-store',Vary:'Accept'});
+  res.end(req.method==='HEAD'?undefined:readFileSync(resolve(PUBLIC,'404.html')));
+}
 async function handleRequest(req, res) {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const handler = routes[`${req.method} ${url.pathname}`];
@@ -194,7 +203,7 @@ async function handleRequest(req, res) {
     if (handler) return send(res, 200, await handler(url, req.method === 'POST' ? await readBody(req) : null, req));
     // "/" is the landing, "/pick/" the picker: a folder address serves its index.html.
     const path = resolve(PUBLIC, url.pathname.endsWith('/') ? `.${url.pathname}index.html` : `.${url.pathname}`);
-    if (!path.startsWith(PUBLIC) || !existsSync(path)) return send(res, 404, { error: 'not found' });
+    if (!path.startsWith(PUBLIC) || !existsSync(path)) return sendNotFound(req,res,url.pathname);
     if (statSync(path).isDirectory()) { // "/pick" → "/pick/", so the page's relative links resolve
       res.writeHead(301, { Location: `${url.pathname}/${url.search}` });
       return res.end();

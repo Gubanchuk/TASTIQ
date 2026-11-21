@@ -14,6 +14,16 @@ test('the first answer field is visible before optional mood and genre choices',
  assert.match(html,/data-first-next disabled/);assert.doesNotMatch(html,/data-act="review"/);
  assert.doesNotMatch(questionFormHtml(initialDirectionQuestion(),{...draft,text:'мой ответ'}),/data-first-next disabled/);
 });
+test('the first wish example fits the selected section and leaves the stored question intact',()=>{
+ const examples=new Set();
+ for(const domain of ['game','film','series','cartoon','anime']){
+  const question=initialDirectionQuestion(domain),original=structuredClone(question);
+  const form=questionFormHtml(question,draft,{domain});
+  const example=form.match(/id="answer-text"[^>]+placeholder="([^"]+)"/)?.[1];
+  assert.ok(example,domain);examples.add(example);assert.deepEqual(question,original);
+ }
+ assert.equal(examples.size,5);
+});
 test('all modern dialogues accept a text-only wish or a direction chip and reject empty or neutral input',()=>{
  for(const domain of ['game','film','series','cartoon','anime']){
   const state=initialConversation({domain,id:'entry-required',requireDirection:true});

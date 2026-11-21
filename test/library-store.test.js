@@ -178,7 +178,7 @@ test('a positive experience appears in liked and explicit clearing keeps the ori
  const storage=memory(),run={...evening,responses:[{...evening.responses[0],started:true,outcome:'liked'}]};
  storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'liked-experience',run,ack:run.revision}]}));
  const priorFeedback=storage.getItem(FEEDBACK_KEY),page=await controller(storage);page.click({act:'view',view:'liked'});
- assert.match(page.app.innerHTML,/data-card="game:steam:10"/);assert.match(page.app.innerHTML,/Оценка из твоего отзыва/);assert.equal(storage.getItem(LIBRARY_KEY),null);
+ assert.match(page.app.innerHTML,/data-card="game:steam:10"/);assert.match(page.app.innerHTML,/Эта оценка взята из твоего отзыва/);assert.equal(storage.getItem(LIBRARY_KEY),null);
  page.click({act:'rate',domain:'game',id:game.id,value:'none'});assert.doesNotMatch(page.app.innerHTML,/data-card="game:steam:10"/);
  const stored=createLibraryStore({storage}).all()[0];assert.equal(stored.saved,false);assert.equal(stored.ratingOverride,true);assert.equal(storage.getItem(FEEDBACK_KEY),priorFeedback);
  page.click({act:'view',view:'all'});assert.match(page.app.innerHTML,/data-card="game:steam:10"/);page.click({act:'card-reviews',domain:'game',id:game.id});

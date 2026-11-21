@@ -150,7 +150,7 @@ export function createTasteMemory({storage, now = () => new Date().toISOString()
       const rows = read(true);
       if (!domains.has(domain)) throw Error('Выбери раздел для этой записи.');
       text = typeof text === 'string' ? text.trim() : '';
-      if (!text || text.length > 300) throw Error('Опиши предпочтение в пределах 300 символов.');
+      if (!text || text.length > 300) throw Error('Напиши от 1 до 300 символов.');
       let prior;
       if (recordId !== undefined) {
         prior = editable(rows, recordId, expectedRevision);
