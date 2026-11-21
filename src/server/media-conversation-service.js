@@ -15,6 +15,7 @@ import {pickerMemoryView,refreshMemoryPlan,rememberPlanMemory,restoreMemoryFactK
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationMediaIdentity} from './conversation-media-identity.js';
+import {checkedRatedExamples,reviewRatedExamples} from './rated-examples.js';
 import {invalidSavedSource,normalizeSavedSource,savedSourceKey} from '../core/saved-source.js';
 
 const DOMAINS=new Set(['film','series','cartoon','anime']);
@@ -48,7 +49,9 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
   const response=(state,extra={})=>{
     const unknown=state.context?.format&&catalog.items.some(item=>!['film','series'].includes(item.kind));
     state={...state,uncertainties:[...(unknown?[FORMAT_UNKNOWN]:[]),...state.uncertainties.filter(text=>text!==FORMAT_UNKNOWN)].slice(0,8)};
-    return {state,screen:mediaConversationScreen(state),...(state.phase==='result'?{feedbackState:projection(state)}:{}),...extra};
+    const screen=mediaConversationScreen(state);
+    if(screen.type==='review')screen.ratedExamples=reviewRatedExamples(state,catalog,identities,projection(state));
+    return {state,screen,...(state.phase==='result'?{feedbackState:projection(state)}:{}),...extra};
   };
   function log(stage,s,out) {
     journal({at:new Date(now()).toISOString(),event:`media-conversation-${stage}`,data:{domain,id:s.id,revision:s.revision,mode:s.mode,...(s.depth?{depth:s.depth}:{}),model:out.model??AI.model,
@@ -92,6 +95,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
   }
   function initialState(body) {
     const state=body.state?normalizeMediaConversation(body.state,domain):newMediaConversation({domain,mode:body.mode,depth:body.depth});
+    if(Object.hasOwn(state,'ratedExamples'))state.ratedExamples=checkedRatedExamples(state.ratedExamples,catalog);
     const provided=Object.hasOwn(body,'savedSource')?normalizeSavedSource(body.savedSource,domain):null;
     if(provided&&state.savedSourceKey&&savedSourceKey(provided)!==state.savedSourceKey)throw invalidSavedSource();
     if(provided&&!state.savedSource&&(state.revision||state.turns.length||state.phase!=='direction'||state.result))throw invalidSavedSource();
@@ -206,6 +210,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const replacing=more||action.type==='replace_familiar'||action.type==='retry'&&s.failedAction==='replace';
     const final=action.type==='confirm'||action.type==='retry'&&s.failedAction==='pick';
     s=answerMediaConversation(s,action);
+    if(action.type==='confirm'&&Object.hasOwn(action,'ratedExamples'))s.ratedExamples=checkedRatedExamples(action.ratedExamples,catalog);
     if(action.type==='restart'){s.familiar.excluded=priorExclusions;s=remembered(body,s);}
     if(replacing){
       if(action.type==='replace_familiar'&&action.id!==undefined&&!s.familiar.marked.includes(action.id))throw bad('Сначала отметь этот вариант для замены.');

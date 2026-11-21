@@ -12,10 +12,10 @@ export function tasteMemoryPanelHtml(domain,rows,enabled,{busy=false,result=fals
  return `<details class="request-time-details" data-disclosure="visit-memory"><summary>${result?'Предпочтения для следующих вариантов':'Предпочтения для этого подбора'} · ${count} из ${rows.length}</summary><ul class="game-history-list">${list}</ul><a href="${href}">Изменить в библиотеке</a></details>`;
 }
 
-export function createVisitReviews({client,entries,memory,domain='game',root=document}){
+export function createVisitReviews({client,entries,memory,library,domain='game',root=document}){
  const isEnabled=id=>client.draft(draftKey(id)).text!=='off';
  const reviews=()=>memory?memory.filterReviews(domain,entries()):entries();
- const memories=()=>memory?.context(domain)??[];
+ const memories=()=>[...(memory?.context(domain)??[]),...(library?.ratingMemory(domain)??[]).slice(0,12)];
  const memoryEnabled=row=>{
   const override=client.draft(memoryKey(row.id)).text;
   return override?override==='on':row.source?.kind!=='review'||isEnabled(row.source.id);

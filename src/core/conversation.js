@@ -383,6 +383,7 @@ export function conversationToLegacy(s, dict, catalog=null) {
     notNow:[...new Set([...today.filter(f=>f.stance==='exclude'&&f.gameId).flatMap(f=>expand(f.gameId)),
       ...[...familiarity.excluded,...familiarity.hidden].flatMap(expand).filter(id=>!keep.has(id))])]};
   legacy.conversation={revision:s.revision,summary:s.summary,facts:s.facts,sessionTime:s.sessionTime??null,uncertainties:s.uncertainties,retractions:s.retractions,
+    ...(s.ratedExamples?.length?{ratedExamples:s.ratedExamples}:{}),
     familiarity:{returnToIds,hiddenIds:familiarity.hidden,excludedIds:familiarity.excluded},
     turns:s.turns.map(t=>({id:t.id,question:t.question.title,questionId:t.question.id,answer:t.answer,text:t.text,kind:t.kind,superseded:Boolean(t.superseded)}))};
   return legacy;

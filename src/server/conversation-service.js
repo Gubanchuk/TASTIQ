@@ -15,6 +15,7 @@ import {completeInterview} from '../core/selection-dialogue.js';
 import {AI} from '../ai/config.js';
 import {estimateCost} from '../ai/usage.js';
 import {createConversationGameIdentity} from './conversation-game-identity.js';
+import {checkedRatedExamples,reviewRatedExamples} from './rated-examples.js';
 import {personalContextOf} from '../ai/feedback-context.js';
 import {pickerMemoryView,refreshMemoryPlan,rememberPlanMemory,restoreMemoryFactKeys} from '../ai/taste-context.js';
 
@@ -65,6 +66,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
   function initialState(body){
     if(body.domain!=null&&body.domain!=='game')throw invalidSavedSource();
     const state=body.state?normalizeConversation(body.state):newConversation({mode:body.mode,depth:body.depth});
+    if(Object.hasOwn(state,'ratedExamples'))state.ratedExamples=checkedRatedExamples(state.ratedExamples,catalog);
     const provided=Object.hasOwn(body,'savedSource')?normalizeSavedSource(body.savedSource,'game'):null;
     if(provided&&state.savedSourceKey&&savedSourceKey(provided)!==state.savedSourceKey)throw invalidSavedSource();
     const pristine=!state.revision&&!state.turns.length&&state.phase==='direction'&&!state.result;
@@ -93,7 +95,11 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
       error:out.error??null,ms:out.ms??null,usage:out.usage?{in:out.usage.input_tokens,out:out.usage.output_tokens,
         cached:out.usage.input_tokens_details?.cached_tokens??0,estimatedUsd:estimateCost(out.usage,AI.model)}:null}});
   }
-  const response = (state,extra={}) => ({state,screen:conversationScreen(state),...(state.phase==='result'?{feedbackState:projection(state)}:{}),...extra});
+  function response(state,extra={}){
+    const screen=conversationScreen(state);
+    if(screen.type==='review')screen.ratedExamples=reviewRatedExamples(state,catalog,identities,projection(state));
+    return {state,screen,...(state.phase==='result'?{feedbackState:projection(state)}:{}),...extra};
+  }
   function remembered(body,s) {
     if(body.rememberedExclusions===undefined)return s;
     const list=body.rememberedExclusions;
@@ -193,6 +199,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     const more=action.type==='more'||action.type==='retry'&&s.failedAction==='more';
     const replacing=more||action.type==='replace_familiar'||action.type==='retry'&&s.failedAction==='replace';
     s=answerConversation(s,action);
+    if(action.type==='confirm'&&Object.hasOwn(action,'ratedExamples'))s.ratedExamples=checkedRatedExamples(action.ratedExamples,catalog);
     if(action.type==='restart') {s.familiar.excluded=priorExclusions;s=remembered(body,s);}
     if(replacing){
       if(action.type==='replace_familiar'&&action.id!==undefined&&!s.familiar.marked.includes(action.id))throw Object.assign(Error('Сначала отметь этот вариант для замены.'),{status:400});

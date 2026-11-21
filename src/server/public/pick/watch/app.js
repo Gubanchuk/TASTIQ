@@ -27,6 +27,7 @@ import {questionDraftKey,questionScreenKey,planLegacyQuestionDraftMigration,prep
 import {createLibraryStore} from '/shared/library-store.js';
 import {aiErrorMessage,replacementNotice} from '/shared/ai-error-message.js';
 import {bindResultArtwork} from '/shared/card-artwork.js';
+import {mountRatedExamples,currentExampleVotes,rememberExampleVotes} from '/shared/example-view.js';
 import {savedPickerSession,bindSavedSourceBanner,resumeArchiveUrl,savedResultLimits,isArchivedResult} from '/shared/saved-picker-session.js';
 
 const requestedDomain=new URLSearchParams(location.search).get('domain');
@@ -69,7 +70,7 @@ const feedback=createFeedbackStore({storage,...qaFeedbackOptions(storage),send:a
  return response.ok?response.json():{ok:false,status:response.status};
 },onChange:()=>{document.querySelectorAll('[data-feedback-status]').forEach(el=>{el.textContent=feedbackStatus(feedback.status(el.dataset.feedbackStatus),feedback.persistent);});selectionReviews?.refreshStatus();visitReviews?.refresh();}});
 const client=createConversationClient({localStart:true,selectionId:session.selection,archiveVisit:Boolean(session.archivedId),savedSource:session.savedSource,savedListView:session.savedListView,fetch,domain,storage:session.draftStorage,storageKey:CONVERSATION_KEY,archiveStorage:storage,uid,mode,rememberedExclusions:()=>history.blockedIds(),qualityFeedback:()=>visitReviews.context(),tasteMemory:()=>visitReviews.tasteContext(),onChange:render});
-visitReviews=createVisitReviews({client,memory,domain,entries:()=>feedback.learningEntries(domain)});
+visitReviews=createVisitReviews({client,memory,library,domain,entries:()=>feedback.learningEntries(domain)});
 const selectionMode=setupSelectionMode({client,render,switchDepth:depth=>navigate({type:'setDepth',depth}),focusWorkspace:()=>focusPickerContent($('#main h1')),
  onRestart(){persistAnswer();activeEvening=null;activeEveningDialogue=null;observedKey=null;localNotice='';pendingBack=null;currentRequest='resume';}
 });
@@ -163,6 +164,7 @@ function reviewHtml(screen) {
   +`<p>${esc(requestSummaryText(screen,client.state)||'Можно искать по выбранным условиям или добавить пожелание.')}</p>`
   +timeBudgetHtml(screen.sessionTime,{scope:'review',timeMode:screen.context?.timeMode})
   +'<div data-visit-reviews></div>'
+  +'<div data-rated-examples></div>'
   +(screen.provisional?'<p class="game-help">Проверь, все ли пожелания учтены.</p>':'');
 }
 function cardHtml(card,index) {
@@ -197,7 +199,7 @@ function render() {
  $('#back').disabled=client.busy||!screen?.canBack;
  syncSessionActions({busy:client.busy,canRestore:client.canRestorePrevious,canSwitch:!$('#selection-mode-control').hidden});
  const pending=loadingPresentation(pendingAction,pendingOrigin??client.state),prominent=client.busy&&pending.prominent&&!pendingAction.targetId;
- $('#notice').textContent=client.busy?(prominent?'':pending.title):localNotice||(!client.persistent?'Браузер не сохраняет ответы. Оставь страницу открытой, чтобы продолжить подбор.':'');
+ $('#notice').textContent=client.busy?(prominent?'':pending.title):localNotice||client.draft('__exampleMemoryNotice').text||(!client.persistent?'Браузер не сохраняет ответы. Оставь страницу открытой, чтобы продолжить подбор.':'');
  $('#processing-title').textContent=pending.title;
  $('#processing-description').textContent=pending.description;
  $('#processing-description').hidden=!pending.description;
@@ -223,6 +225,7 @@ function render() {
  if(key!==renderedKey) {
   renderedKey=key;screenKey=nextScreenKey;searchGeneration++;clearTimeout(searchTimer);
   $('#main').innerHTML=screen.type==='question'?questionHtml(screen):screen.type==='review'?reviewHtml(screen):resultHtml(screen);
+  if(screen.type==='review')mountRatedExamples($('[data-rated-examples]'),{client,screen,library:library.all(),history:history.all(),fetch,domain});
   $('#selection-review-slot').replaceChildren();
   understanding(resultRequestScreen(screen));
   restoreView(null);
@@ -305,6 +308,9 @@ function persistAnswer() {
 function focusResultStart(){focusPickerContent($('#main h1'));}
 async function navigate(action,{origin=null}={}) {
  if(client.busy)return null;
+ if(action.type==='confirm'&&client.screen?.type==='review'){
+  action={...action,ratedExamples:currentExampleVotes(client)};
+ }
  const singleTarget=action.type==='replace_familiar'?action.id:action.type==='retry'&&client.state?.failedAction==='replace'&&client.state.replacement?.pendingIds?.length===1?client.state.replacement.pendingIds[0]:null;
  const undoSlot=action.type==='undo_replacement'&&origin==='card-undo'?singleReplacementIndex(client.state):-1;
  const singleSlot=undoSlot>=0?undoSlot:singleTarget?Array.from(document.querySelectorAll('[data-card-id]')).findIndex(card=>card.dataset.cardId===singleTarget):-1;
@@ -322,7 +328,9 @@ async function navigate(action,{origin=null}={}) {
  if(!['familiar_mark','familiar_keep'].includes(action.type))pendingFamiliar=null;
  if(['back','restart','set_context'].includes(action.type))client.invalidate();
  if(action.type==='restart'){activeEvening=null;activeEveningDialogue=null;observedKey=null;}
- const result=await client.send(action);
+ const sending=client.send(action);
+ if(action.type==='confirm'&&action.ratedExamples)rememberExampleVotes(client,library,history,domain,action.ratedExamples);
+ const result=await sending;
  rememberAcceptedFamiliar(result);
  completeBackDraft(result);
  if(result&&!client.error&&shouldClearCorrection(action,origin,client.draft('__correction').text)){client.saveDraft('__correction',{text:''});const input=$('#correction-text');if(input)input.value='';closeRequestEditor($('#correction-form'),{focus:false});}
@@ -468,6 +476,7 @@ document.addEventListener('click',event=>{
  if(act==='remove-fact'){lastRemovedFactFocus=el.dataset.focus;return void navigate({type:'remove_fact',key:el.dataset.key});}
  if(act==='undo-fact-removal')return void navigate({type:'undo_fact_removal'});
  if(act==='remove-time')return void navigate({type:'remove_time'});
+ if(act==='retry'&&client.screen?.type==='review'&&(client.state.failedAction==='pick'||pendingAction.type==='confirm'))return void navigate({type:'confirm'});
  if(act==='retry'){const browseRetry=client.state?.failedAction==='more'||pendingAction.type==='more';currentRequest='retry';if(client.state?.failedAction||pendingAction.type==='resume'){pendingAction={type:'retry'};pendingOrigin=client.state;}localNotice='';navigationFocus=preserveView();persistAnswer();void client.retry().then(result=>{rememberAcceptedFamiliar(result);completeBackDraft(result);if(browseRetry&&result&&!client.error&&client.screen?.type==='result')focusResultStart();}).finally(()=>{navigationFocus=null;});return;}
  if(act==='restart'){selectionMode.newSelection();return;}
  if(['back','review','confirm','continue'].includes(act))void navigate({type:act});

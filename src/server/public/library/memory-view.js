@@ -78,6 +78,9 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
   }
   function html(domain) {
     const saved=memory.all(),rows=saved.filter(row=>domain==='all'||row.domain===domain);
+    const ratingDomains=domain==='all'?Object.keys(domains):[domain];
+    const rated=[...new Map(ratingDomains.flatMap(d=>(library.ratingMemory?.(d)??[]).map(row=>[row.id,row]))).values()];
+    const ratings=rated.length?`<details class="memory-sources"><summary>Оценки знакомых произведений · ${rated.length}</summary><div class="memory-source-body"><p>В подборе учитываются до 12 последних оценок раздела. Оценку можно изменить или снять в библиотеке.</p><ul class="memory-list">${rated.map(r=>`<li><a href="/library/?view=all&amp;all.domain=${esc(r.domain==='anime'?'all':r.domain)}&amp;all.q=${encodeURIComponent(r.title)}">${esc(r.text)}</a></li>`).join('')}</ul></div></details>`:'';
     const linked=new Set(saved.map(row=>JSON.stringify([row.domain,row.source.kind,row.source.id])));
     const available=sources(domain).filter(s=>!linked.has(JSON.stringify([s.domain,s.kind,s.id])));
     const origins=new Map(memory.sourceStates().map(s=>[JSON.stringify([s.domain,s.kind,s.id]),s]));
@@ -95,7 +98,7 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
       <div class="memory-layout"><section class="memory-saved"><header class="memory-section-head"><h3>Мои предпочтения</h3>
       ${button('Добавить','new','aria-label="Добавить предпочтение" data-focus="memory-new"'+(draft?' disabled':''))}</header>
       ${newEditor?editor():''}${rows.length?`<ul class="memory-list">${rows.map(record).join('')}</ul>`:!newEditor?`<p class="memory-empty">${domain==='all'?'Здесь пока нет записей.':'Для этого раздела пока нет записей.'} Добавь то, что стоит запомнить, например любимый жанр.</p>`:''}
-      </section>${previous}</div>${Object.hasOwn(domains,domain)?`<a class="memory-start" href="${esc(pickerUrl(domain,{choose:'1'}))}">Начать подбор · ${esc(domains[domain])} <span aria-hidden="true">→</span></a>`:''}</section>`;
+      </section>${previous}</div>${ratings}${Object.hasOwn(domains,domain)?`<a class="memory-start" href="${esc(pickerUrl(domain,{choose:'1'}))}">Начать подбор · ${esc(domains[domain])} <span aria-hidden="true">→</span></a>`:''}</section>`;
   }
   function close() { draft=null;confirming=null;error=''; }
   function open(record,domain,source={kind:'manual'},text='',expectedRevision) {

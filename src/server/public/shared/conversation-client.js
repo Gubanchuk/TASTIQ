@@ -1,11 +1,13 @@
 import {initialConversationSnapshot,isSelectionDepth} from './conversation-entry.js';
 import {questionDraftKey} from '../pick/game/question-drafts.js';
+import {cleanExampleDraft} from './example-choices.js';
 import {createSelectionArchive} from './selection-archive.js';
 export const CONVERSATION_KEY='tastiq.conversation.game.v1';
 export const conversationStorageKey=domain=>`tastiq.conversation.${domain}.v1`;
 const clone=value=>value==null?value:structuredClone(value);
 const defaultStorage=()=>{try{return globalThis.localStorage;}catch{return undefined;}};
-const cleanDraft=value=>({text:typeof value?.text==='string'?value.text.slice(0,1600):'',selected:Array.isArray(value?.selected)?value.selected.filter(x=>typeof x==='string').slice(0,20):[],kind:['answer','unknown','indifferent','none'].includes(value?.kind)?value.kind:'answer'});
+const cleanDraft=value=>({text:typeof value?.text==='string'?value.text.slice(0,1600):'',selected:Array.isArray(value?.selected)?value.selected.filter(x=>typeof x==='string').slice(0,20):[],kind:['answer','unknown','indifferent','none'].includes(value?.kind)?value.kind:'answer',
+ ...(Array.isArray(value?.ratedExamples)?{ratedExamples:cleanExampleDraft(value.ratedExamples)}:{})});
 const recoveryOf=value=>typeof value?.error==='string'&&value.error?{error:value.error,retryable:value.retryable!==false,
  id:value.state?.id,revision:value.state?.revision,failedAction:value.state?.failedAction??null}:null;
 const pristine=value=>value?.state?.phase==='direction'&&value.state.revision===0&&!value.state.turns.length&&!value.error;

@@ -700,6 +700,7 @@ export function mediaConversationToLegacy(s,dict,catalog=null) {
     ...(s.domain==='film'&&s.context.timeMode==='runtime'&&s.sessionTime?{requireKnownRuntime:true}:{}),
     notNow:[...new Set([...excluded,...[...f.excluded,...f.hidden].filter(id=>!keep.has(id))])]};
   legacy.conversation={domain:s.domain,revision:s.revision,summary:s.summary,facts:s.facts,context:s.context,contextEvidence:s.contextEvidence,sessionTime:s.sessionTime??null,uncertainties:s.uncertainties,retractions:s.retractions,
+    ...(s.ratedExamples?.length?{ratedExamples:s.ratedExamples}:{}),
     familiarity:{returnToIds,hiddenIds:f.hidden,excludedIds:f.excluded},turns:s.turns.map(t=>({id:t.id,question:t.question.title,answer:t.answer,kind:t.kind,superseded:Boolean(t.superseded)}))};
   return legacy;
 }
