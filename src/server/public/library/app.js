@@ -47,7 +47,10 @@ const viewFilters=Object.fromEntries(Object.keys(VIEWS).map(view=>[view,defaultF
 const activeFilters=()=>viewFilters[state.view];
 const eveningStatuses={all:'Любой',chosen:'Выбрано',started:'Начато',reviewed:'Есть отзыв',draft:'Есть черновик'};
 const state={view:'saved',limit:24,undo:null};
-const memoryView=createMemoryView({memory:tasteMemory,library,feedback,domains:DOMAINS,escape:esc,render,notice,fetchLabels:async()=>{
+const memoryView=createMemoryView({memory:tasteMemory,library,feedback,domains:DOMAINS,escape:esc,render,notice,revealDomain(domain){
+ const filters=viewFilters.memory;
+ if(filters.domain!=='all'&&filters.domain!==domain){filters.domain=domain;writeNavigation();}
+},fetchLabels:async()=>{
  const response=await fetch('/api/meta');
  if(!response.ok)throw Error('Справочник недоступен');
  const {domains}=await response.json();
@@ -250,7 +253,7 @@ function eveningsView(all) {
  }).join('');
  return (item?`<div class="library-review-scope"><p>Отзывы: ${esc(title(scope[0]?.card??records().find(row=>key(row)===item)??{title:'Выбранное произведение'}))}</p>${button('Все отзывы','all-reviews')}</div>`:'')+filters()+resultCount(rows.length,scope.length)+(entries?`<div class="library-evenings">${entries}</div>`:noMatches());
 }
-function render({feedbackFocus,focus:requestedFocus}={}) {
+function render({feedbackFocus,focus:requestedFocus,reveal=false}={}) {
  const active=document.activeElement,focus=requestedFocus??active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active?.tagName==='TEXTAREA'||active instanceof HTMLInputElement&&active.type==='search'?[active.selectionStart,active.selectionEnd]:null;
  const evenings=eveningRecords(),past=historyRecords();
  const rows=records(),counts={saved:rows.filter(row=>row.saved).length,liked:rows.filter(row=>row.rating==='liked').length,all:rows.length,history:past.length,evenings:evenings.length};
@@ -265,7 +268,9 @@ function render({feedbackFocus,focus:requestedFocus}={}) {
  const target=focus?document.querySelector(`[data-focus="${CSS.escape(focus)}"]`):feedbackKey?document.querySelector(`[data-fk="${CSS.escape(feedbackKey)}"]`):id?document.getElementById(id):null;
  initCustomSelects(document);
  const fallback=(focus||feedbackKey)?$(`[data-focus="view:${state.view}"]`):null;
- focusCustomSelect(target??fallback,{preventScroll:true});if(selection&&target?.setSelectionRange&&(target.type==='search'||target.tagName==='TEXTAREA'))target.setSelectionRange(...selection);
+ focusCustomSelect(target??fallback,{preventScroll:true});
+ if(reveal&&target)target.scrollIntoView({block:'nearest'});
+ if(selection&&target?.setSelectionRange&&(target.type==='search'||target.tagName==='TEXTAREA'))target.setSelectionRange(...selection);
 }
 function rowFor(el){return records().find(row=>row.domain===el.dataset.domain&&row.id===el.dataset.id);}
 function toggleSaved(row) {

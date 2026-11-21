@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="/shared/custom-select.css?v=3">
   <link rel="stylesheet" href="/shared/results.css?v=11">
   <link rel="stylesheet" href="/shared/controls.css?v=6">
-  <link rel="stylesheet" href="/shared/selection-design.css?v=mobile-shell">
+  <link rel="stylesheet" href="/shared/selection-design.css?v=preference-layout">
   <script type="module" src="/shared/app-shell.js"></script>
   <link rel="stylesheet" href="/shared/selection-mode.css?v=3">
 </head>
@@ -52,14 +52,12 @@
       <section id="request-editor" class="request-editor" aria-label="Редактирование запроса" hidden></section>
       <div id="selection-review-slot" data-selection-review hidden></div>
       <div class="picker-visit-tools">
-        <div data-taste-memory></div>
-        <details id="platform-preference" class="request-time-details">
-          <summary>Обычная платформа</summary>
-          <label class="game-field">Для новых игровых подборов
-            <select id="usual-platform" class="input"><option value="">Спрашивать каждый раз</option><option value="windows">Windows</option><option value="mac">macOS</option><option value="linux">Linux</option><option value="deck">Steam Deck</option></select>
-          </label>
+        <div id="platform-preference">
+          <label for="usual-platform">Платформа для новых подборов</label>
+          <select id="usual-platform" class="input"><option value="">Спрашивать каждый раз</option><option value="windows">Windows</option><option value="mac">macOS</option><option value="linux">Linux</option><option value="deck">Steam Deck</option></select>
           <small id="platform-save-status" role="status"></small>
-        </details>
+        </div>
+        <div data-taste-memory></div>
       </div>
     </section>
   </div>

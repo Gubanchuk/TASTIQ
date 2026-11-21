@@ -516,3 +516,39 @@ body.selection-start>main nav a svg {
 #saved-source-banner nav {display:flex;flex-wrap:wrap;gap:0 20px;}
 #saved-source-banner a {display:inline-flex;align-items:center;min-height:44px;color:var(--brand-primary);}
 #source-changed {display:block;margin-top:4px;}
+
+/* Visit settings stay within reach after the answers and results. */
+.picker-visit-tools:has(#platform-preference){align-items:start;gap:8px 24px;padding-top:14px}
+#platform-preference{display:grid;grid-template-columns:auto minmax(10rem,auto);align-items:center;gap:4px 12px;max-width:100%}
+#platform-preference>label{font-size:.875rem;font-weight:550;line-height:1.4;color:var(--brand-ink)}
+#platform-preference .custom-select{min-width:0;max-width:100%}
+#platform-save-status{grid-column:2;font-size:.8rem;line-height:1.4;color:var(--brand-muted)}
+#platform-save-status:empty{display:none}
+.picker-visit-tools [data-taste-memory]{max-width:100%;min-width:0}
+@media(max-width:600px){
+ .picker-visit-tools:has(#platform-preference){display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+ #platform-preference{grid-template-columns:minmax(0,1fr);gap:5px}
+ #platform-save-status{grid-column:1}
+}
+
+body.selection-design.product-page #request-panel .game-context>span{padding:5px 10px;border:1px solid var(--brand-strong-line);border-radius:9px;background:var(--brand-selected);color:var(--selection-nav);font-size:.82rem;font-weight:600;line-height:1.5}
+body.selection-design.product-page #request-panel .request-fact-group{margin:18px 0}
+body.selection-design.product-page #request-panel :is(.request-fact-group,.request-conditions) h3{margin:0 0 7px;color:var(--selection-nav);font-size:.85rem}
+body.selection-design.product-page #request-panel .request-facts{gap:0;border:1px solid var(--selection-edge);border-radius:12px;background:white}
+body.selection-design.product-page #request-panel .request-facts li{align-items:center;gap:5px;min-height:44px;margin:0;padding:3px 4px 3px 12px;border-radius:0;background:transparent;color:var(--selection-ink);font-size:.875rem;line-height:1.5}
+body.selection-design.product-page #request-panel .request-facts li+li{border-top:1px solid var(--workspace-line)}
+body.selection-design.product-page.conversation-page #request-panel .request-facts button{height:36px;width:36px;min-width:36px;min-height:36px;border:0;background:transparent;color:var(--selection-muted);box-shadow:none}
+@media(hover:hover) and (pointer:fine){
+ body.selection-design.product-page.conversation-page #request-panel .request-facts button:hover{background:var(--workspace-soft);color:var(--brand-primary)}
+}
+@media(pointer:coarse){
+ body.selection-design.product-page.conversation-page #request-panel .request-facts button{height:44px;width:44px;min-width:44px}
+}
+
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-secondary{margin:0}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-secondary>summary{border-color:var(--selection-edge);color:var(--selection-nav);background:white}
+body.selection-design.product-page.conversation-page #stage .game-proposal .game-card-secondary[open]>summary{border-color:var(--brand-strong-line);background:var(--brand-fill);color:var(--selection-nav)}
+body.selection-design.product-page.conversation-page #stage .game-card-secondary[open]>.game-card-links{margin-top:10px}
+body.selection-design.product-page.conversation-page #stage .game-card-secondary .game-card-links>*{align-self:stretch;height:100%}
+body.selection-design.product-page.conversation-page #stage .game-card-secondary[open]>[data-card-feedback]{margin-top:8px}
+body.selection-design.product-page.conversation-page #stage .game-card-secondary .evening-rating>summary{justify-content:flex-start;padding-inline:10px}

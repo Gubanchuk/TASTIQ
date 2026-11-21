@@ -14,8 +14,8 @@ function oldAnswerEvidence(answer,labels) {
     answer.badQuality?'Такое люблю, но в этой работе плохо сделано':'',typeof answer.text==='string'?answer.text.trim():''].filter(Boolean).join('. ');
 }
 
-export function createMemoryView({memory, library, feedback, domains, escape, render, notice, fetchLabels}) {
-  let draft=null, confirming=null, error='', openSources=false, saving=false;
+export function createMemoryView({memory, library, feedback, domains, escape, render, notice, fetchLabels, revealDomain}) {
+  let draft=null, confirming=null, error='', openSources=true, saving=false;
   let labelsRequested=false, catalogLabels={};
   const esc=escape;
   const labels={manual:'Твоя запись',review:'Отзыв о подборе',answer:'Ответ о произведении'};
@@ -44,56 +44,65 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
     const d=draft,scoped=d.id||d.source.kind!=='manual';
     const section=scoped?`<p class="library-meta">${esc(domains[d.domain])} · ${labels[d.source.kind]}</p>`
       :`<label class="library-filter">Раздел<select name="domain" required data-focus="memory-editor-domain"><option value="">Выбери раздел</option>${options(d.domain)}</select></label>`;
-    return `<form class="memory-editor" data-form="memory"><h3>${d.id?'Изменить предпочтение':'Новое предпочтение'}</h3>${section}
-      <label class="library-filter">Что учитывать в следующих подборах<textarea name="text" id="memory-text" data-focus="memory-text" required maxlength="300" rows="3" placeholder="Например, люблю короткие детективы без жестоких сцен">${esc(d.text)}</textarea></label>
+    const reference=!d.id&&scoped&&d.source.title?`<blockquote class="memory-quote">${esc(d.source.title)}</blockquote>`:'';
+    return `<form class="memory-editor" data-form="memory"><h4 tabindex="-1" data-focus="memory-form-heading">${d.id?'Изменить предпочтение':'Новое предпочтение'}</h4>${section}${reference}
+      <label class="library-filter">Что учитывать в подборе<textarea name="text" id="memory-text" data-focus="memory-text" required maxlength="300" rows="3" placeholder="Например, люблю детективы без жестоких сцен">${esc(d.text)}</textarea></label>
+      ${error?`<p role="alert" class="memory-error">${esc(error)}</p>`:''}
       <div class="memory-actions"><button type="submit" class="library-button primary">Сохранить</button>${button('Отмена','cancel')}</div></form>`;
   }
   function record(row) {
+    if(draft?.id===row.id)return `<li>${editor()}</li>`;
     const ref=`data-id="${esc(row.id)}" data-revision="${esc(row.revision)}"`;
-    const evidence=row.source.title||row.source.evidence?`<details class="card-details"><summary>Источник записи</summary><p>${esc(row.source.title||'')}${row.source.title&&row.source.evidence?' · ':''}${esc(row.source.evidence||'')}</p></details>`:'';
+    const hasSource=row.source.title||row.source.evidence&&row.source.evidence!==row.text;
+    const evidence=hasSource?`<details class="memory-origin"><summary>Источник записи</summary><p>${esc(row.source.title||'')}${row.source.title&&row.source.evidence?' · ':''}${esc(row.source.evidence||'')}</p></details>`:'';
     const deletion=confirming?.id===row.id;
-    return `<li class="memory-record"><p class="library-meta">${esc(domains[row.domain])} · ${labels[row.source.kind]} · ${row.enabled?'Учитывается':'Отключено'}</p>
+    return `<li class="memory-record" data-enabled="${Boolean(row.enabled)}"><div class="memory-byline"><span>${esc(domains[row.domain])} · ${labels[row.source.kind]}</span><span class="memory-state">${row.enabled?'Учитывается':'Отключено'}</span></div>
       <p class="memory-wording">${esc(row.text)}</p>${evidence}<div class="memory-actions">
       ${deletion?`<span>Удалить это предпочтение из памяти?</span>${button('Удалить из памяти','confirm-remove',ref+' data-focus="memory-confirm-remove"')}${button('Оставить','cancel-remove',ref)}`
-        :button('Изменить','edit',`${ref} data-focus="${esc(focusKey('edit',row.id))}"`)+button(row.enabled?'Отключить':'Включить','toggle',`${ref} data-enabled="${!row.enabled}" data-focus="${esc(focusKey('toggle',row.id))}"`)+button('Удалить','remove',ref)}</div></li>`;
+        :button('Изменить','edit',`${ref} data-focus="${esc(focusKey('edit',row.id))}" ${draft?'disabled':''}`)+button(row.enabled?'Отключить':'Включить','toggle',`${ref} data-enabled="${!row.enabled}" data-focus="${esc(focusKey('toggle',row.id))}"`)+button('Удалить','remove',ref+(draft?' disabled':''))}</div></li>`;
   }
   function sourceCard(source,state) {
     const {kind,domain,id}=source;
+    if(draft&&!draft.id&&draft.source.kind===kind&&draft.source.id===id&&draft.domain===domain)return `<li>${editor()}</li>`;
     const version=state?.revision??0;
     const attrs=`data-kind="${kind}" data-domain="${esc(domain)}" data-id="${esc(id)}" data-version="${version}"`;
     const suppressed=state&&state.state!=='released';
-    const status=kind==='answer'?'Ответ из прежней библиотеки':suppressed?'Отзыв отключён'
-      :memory.persistent?'Учитывается как отзыв о том вечере':'Ранее разрешённый отзыв';
-    let controls=button('Добавить в предпочтения','from-source',attrs);
+    const status=kind==='answer'?'Ответ о произведении':suppressed?'Отзыв отключён'
+      :memory.persistent?'Отзыв учитывается':'Ранее разрешённый отзыв';
+    let controls=button('Добавить в предпочтения','from-source',attrs+` data-focus="${esc(focusKey('from-'+kind+'-'+domain,id))}" ${draft?'disabled':''}`);
     if(kind==='review'&&(!suppressed||state.state==='suppressed')){
       const action=suppressed?'restore-review':'suppress-review';
       controls+=button(suppressed?'Снова учитывать отзыв':'Не учитывать отзыв',action,`${attrs} data-focus="${esc(focusKey('source',id))}"`);
     }
-    return `<li class="memory-record"><p class="library-meta">${esc(domains[domain])} · ${status}</p><p class="memory-wording">${esc(source.title)}</p><p>${esc(source.evidence)}</p><div class="memory-actions">${controls}</div></li>`;
+    return `<li class="memory-record"><p class="library-meta">${esc(domains[domain])} · ${status}</p><p class="memory-wording">${esc(source.title)}</p>${source.evidence?`<p>${esc(source.evidence)}</p>`:''}<div class="memory-actions">${controls}</div></li>`;
   }
   function html(domain) {
     const saved=memory.all(),rows=saved.filter(row=>domain==='all'||row.domain===domain);
     const linked=new Set(saved.map(row=>JSON.stringify([row.domain,row.source.kind,row.source.id])));
     const available=sources(domain).filter(s=>!linked.has(JSON.stringify([s.domain,s.kind,s.id])));
     const origins=new Map(memory.sourceStates().map(s=>[JSON.stringify([s.domain,s.kind,s.id]),s]));
-    const previous=available.length?`<details class="memory-sources"${openSources?' open':''} data-memory-sources><summary>Прежние ответы и отзывы · ${available.length}</summary>
-      <p>Отзыв можно отключить. Если пожелание из него важно и на будущее, добавь его в предпочтения.</p>
-      <ul class="memory-list">${available.map(s=>sourceCard(s,origins.get(JSON.stringify([s.domain,s.kind,s.id])))).join('')}</ul></details>`:'';
-    return `<section class="library-memory"><h2 class="library-view-title">Мои предпочтения</h2>
-      <p>В онлайн-подборе учитываются включённые предпочтения этого раздела. Сегодняшнее пожелание важнее. Изменения действуют в этом браузере. Прежние отзывы остаются в истории.</p>
-      <div class="memory-toolbar"><label class="library-filter">Показать раздел<select id="memory-domain" data-focus="memory-domain"${draft?' disabled':''}><option value="all">Все разделы</option>${options(domain)}</select></label>
-      ${draft?'':button('Добавить предпочтение','new','data-focus="memory-new"')}</div>
+    const sourceDraft=draft&&!draft.id&&available.some(s=>s.domain===draft.domain&&s.id===draft.source.id&&s.kind===draft.source.kind);
+    const inlineRecord=draft?.id&&rows.some(row=>row.id===draft.id);
+    const newEditor=draft&&!sourceDraft&&!inlineRecord;
+    const previous=available.length?`<details class="memory-sources"${openSources?' open':''} data-memory-sources><summary><span>Прошлые ответы и отзывы</span><span class="memory-count">${available.length}</span></summary>
+      <div class="memory-source-body"><p>Если пожелание по-прежнему важно, добавь его в предпочтения.</p>
+      <ul class="memory-list">${available.map(s=>sourceCard(s,origins.get(JSON.stringify([s.domain,s.kind,s.id])))).join('')}</ul></div></details>`:'';
+    return `<section class="library-memory" aria-labelledby="memory-heading"><header class="memory-heading"><div><h2 id="memory-heading">Память предпочтений</h2>
+      <p>Онлайн-подбор учитывает предпочтения из выбранного раздела. Пожелания на сегодня важнее.</p></div>
+      <label class="library-filter">Раздел<select id="memory-domain" data-focus="memory-domain"${draft?' disabled':''}><option value="all">Все разделы</option>${options(domain)}</select></label></header>
       ${!memory.persistent?'<p role="status">Браузер не разрешает сохранять предпочтения. Проверь настройки данных сайта.</p>':''}
-      ${error?`<p role="alert" class="memory-error">${esc(error)}</p>`:''}${draft?editor():''}
-      ${rows.length?`<ul class="memory-list">${rows.map(record).join('')}</ul>`:'<p class="library-empty">Пока нет сохранённых предпочтений.</p>'}
-      ${previous}${Object.hasOwn(domains,domain)?`<a class="library-button" href="${esc(pickerUrl(domain,{choose:'1'}))}">Начать подбор · ${esc(domains[domain])}</a>`:''}</section>`;
+      ${error&&!draft?`<p role="alert" class="memory-error">${esc(error)}</p>`:''}
+      <div class="memory-layout"><section class="memory-saved"><header class="memory-section-head"><h3>Мои предпочтения</h3>
+      ${button('Добавить','new','aria-label="Добавить предпочтение" data-focus="memory-new"'+(draft?' disabled':''))}</header>
+      ${newEditor?editor():''}${rows.length?`<ul class="memory-list">${rows.map(record).join('')}</ul>`:!newEditor?`<p class="memory-empty">${domain==='all'?'Здесь пока нет записей.':'Для этого раздела пока нет записей.'} Добавь то, что стоит запомнить, например любимый жанр.</p>`:''}
+      </section>${previous}</div>${Object.hasOwn(domains,domain)?`<a class="memory-start" href="${esc(pickerUrl(domain,{choose:'1'}))}">Начать подбор · ${esc(domains[domain])} <span aria-hidden="true">→</span></a>`:''}</section>`;
   }
   function close() { draft=null;confirming=null;error=''; }
   function open(record,domain,source={kind:'manual'},text='',expectedRevision) {
     close();
     draft=record?{...record,expectedRevision:record.revision}
       :{domain:domain==='all'?'':domain,source,text:text.slice(0,300),expectedRevision};
-    render({focus:'memory-text'});
+    render({focus:'memory-form-heading',reveal:true});
   }
   async function submit(form) {
     if(!draft||saving)return;
@@ -103,7 +112,7 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
     saving=true;
     try{
       const row=await memory.mutate(()=>memory.save(edited));
-      close();render({focus:focusKey('edit',row.id)});notice('Предпочтение сохранено.');
+      close();revealDomain?.(row.domain);render({focus:focusKey('edit',row.id),reveal:true});notice('Предпочтение сохранено.');
     }catch(err){error=err.message;render({focus:'memory-text'});}
     finally{saving=false;}
   }
@@ -113,7 +122,10 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
     const revision=Number(el.dataset.revision);
     try {
       if(action==='new'){open(null,domain);return;}
-      if(action==='cancel'){close();render({focus:'memory-new'});return;}
+      if(action==='cancel'){
+        const focus=draft?.id?focusKey('edit',draft.id):draft?.source.id?focusKey('from-'+draft.source.kind+'-'+draft.domain,draft.source.id):'memory-new';
+        close();render({focus,reveal:true});return;
+      }
       if(action==='from-source'||action==='suppress-review'||action==='restore-review'){
         const source=sources(el.dataset.domain).find(row=>row.kind===kind&&row.id===id);
         if(!source)throw Error('Источник изменился. Открой список ещё раз.');

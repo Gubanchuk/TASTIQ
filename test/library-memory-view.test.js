@@ -9,12 +9,24 @@ test('library memory actions preserve the original feedback and explicit opt-in'
   const review={id:'run-id',context:{domain:'film',request:'На прошлой неделе',note:'Изначальная формулировка',verdict:'partial',cards:[]}};
   const legacy={id:'tt123',domain:'film',title:'Кино',status:'liked',answer:{reaction:'like',reasons:['story.central'],issues:[{f:'difficulty.hard',hard:true}],text:'Причина из старого ответа'}};
   const before=JSON.stringify({review,legacy});
+  let rendered;
   const ui=createMemoryView({memory,library:{all:()=>[legacy]},feedback:{learningEntries:d=>d==='film'?[review]:[]},
-    domains:{film:'Фильмы',game:'Игры'},escape:String,render(){},notice(){},
+    domains:{film:'Фильмы',game:'Игры'},escape:String,render(options){if(options?.focus)rendered=options;},notice(){},
     fetchLabels:async()=>({film:{'story.central':'Важен сюжет','difficulty.hard':'Высокая сложность'}})});
   const click=(action,data={})=>ui.act({dataset:{act:'memory-'+action,...data}},'film');
   const write=text=>ui.submit({elements:{text:{value:text}}});
   const source={kind:'review',domain:'film',id:review.id};
+  await t.test('edit beside the selected review and return focus to it on cancel',async()=>{
+    await click('from-source',{...source,version:0});
+    const [saved,previous]=ui.html('film').split('<details class="memory-sources"');
+    assert.doesNotMatch(saved,/<form/);
+    assert.match(previous,/<form[^>]+data-form="memory"/);
+    assert.ok(previous.includes('<blockquote class="memory-quote">'+review.context.request+'</blockquote>'));
+    assert.equal(rendered.focus,'memory-form-heading');
+    await click('cancel');
+    assert.equal(rendered.focus,'memory-from-review-film:'+review.id);
+    assert.deepEqual(memory.context('film'),[]);
+  });
   await t.test('promote an allowed review only after saving an explicit wording',async()=>{
     assert.match(ui.html('film'),/Причина из старого ответа/);
     await new Promise(resolve=>setImmediate(resolve));
