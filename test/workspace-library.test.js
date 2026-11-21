@@ -12,7 +12,7 @@ import {artworkImageHtml,retryArtworkImage} from '../src/server/public/shared/ca
 import {collectionRecords} from '../src/server/public/shared/library-collection.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '../src/server/public/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '../src/server/public/shared/media-history.js';
-import {createFeedbackStore,FEEDBACK_KEY} from '../src/server/public/shared/evening-feedback.js';
+import {createFeedbackStore,FEEDBACK_KEY,FIT,OUTCOMES,REASONS} from '../src/server/public/shared/evening-feedback.js';
 import {eveningControls,feedbackStatus} from '../src/server/public/shared/evening-view.js';
 import {qaStorage,qaFeedbackOptions} from '../src/server/public/shared/qa-session.js';
 import {createFeedbackDrafts,FEEDBACK_DRAFTS_KEY} from '../src/server/public/shared/feedback-drafts.js';
@@ -27,7 +27,7 @@ async function page(storage,{search='',handoffStorage=memory(),fetcher}={}){
  const urls=[],location={search,pathname:'/library/',assign:url=>urls.push(url)};
  const updateUrl=url=>{location.search=url.includes('?')?'?'+url.split('?')[1]:'';urls.push(url);};
  const context=vm.createContext({animeStyleLabel,inLibraryDomain,mediaLibraryDomain,selectionModeTitle,URLSearchParams,location,history:{pushState:(_s,_t,url)=>updateUrl(url),replaceState:(_s,_t,url)=>updateUrl(url)},document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:v=>v},structuredClone,matchMedia:()=>({matches:false,addEventListener(){}}),collectionRecords,createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,createFeedbackStore:o=>createFeedbackStore({...o,locks:{request:async(_,fn)=>fn()}}),FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,initCustomSelects(){},focusCustomSelect(){},fetch:async()=>({ok:true,json:async()=>[]}),setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
- Object.assign(context,{artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains,createTasteMemory,TASTE_MEMORY_PREFIX,createMemoryView,sessionStorage:handoffStorage});
+ Object.assign(context,{FIT,OUTCOMES,REASONS,artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains,createTasteMemory,TASTE_MEMORY_PREFIX,createMemoryView,sessionStorage:handoffStorage});
  if(fetcher)context.fetch=fetcher;
  vm.runInContext((await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,''),context);
  await new Promise(r=>setImmediate(r));
@@ -139,7 +139,7 @@ test('modern results appear in saved selections with all alternatives and a free
   archive.capture({state,screen:{type:'result',result,summary:'Хочу историю'}});
  }
  const p=await page(storage);p.click({act:'view',view:'history'});
- assert.match(p.html,/Подборы<span>4/);assert.equal((p.html.match(/Открыть подбор/g)??[]).length,4);assert.match(p.html,/Первый &lt;вариант&gt;/);assert.match(p.html,/Второй/);assert.match(p.html,/\/pick\/game\/\?selection=/);assert.match(p.html,/domain=cartoon&selection=/);assert.equal(createLibraryStore({storage}).all().length,0);
+ assert.match(p.html.replace(/<[^>]+>/g,''),/Подборы 4/);assert.equal((p.html.match(/Открыть подбор/g)??[]).length,4);assert.match(p.html,/Первый &lt;вариант&gt;/);assert.match(p.html,/Второй/);assert.match(p.html,/\/pick\/game\/\?selection=/);assert.match(p.html,/domain=cartoon&selection=/);assert.equal(createLibraryStore({storage}).all().length,0);
 });
 test('a saved title without artwork can use the exact work image from a restored selection',async()=>{
  const storage=memory(),store=createLibraryStore({storage}),archive=createSelectionArchive({storage});
@@ -174,7 +174,7 @@ test('a title search matching a single section launches directly from a mixed sh
  const p=await page(storage,{handoffStorage:handoff});
  p.input('Фильм');await new Promise(r=>setImmediate(r));
  assert.match(p.html,/Фильмы · Поиск «Фильм» · В подборе: 1/);
- assert.match(p.html,/data-act="saved-source-start" data-domain="film"[^>]*>Выбрать из сохранённого/);
+ assert.match(p.html,/data-act="saved-source-start" data-domain="film"[^>]*aria-label="Выбрать из сохранённого"/);
  p.click({act:'saved-source-start',domain:'film'});
  const url=new URL(p.urls.at(-1),'http://localhost');
  assert.deepEqual(readSavedSource(handoff,url.searchParams.get('saved'),'film').ids,['saved-film']);
@@ -185,7 +185,7 @@ test('large library renders one active list in chunks and load more preserves al
  assert.equal(ids(p.html).length,24);assert.ok(!p.html.includes('data-active="false"'));assert.match(p.html,/data-act="more"/);
  p.click({act:'more'});assert.equal(ids(p.html).length,48);
  p.click({act:'view',view:'liked'});assert.equal(ids(p.html).length,0);assert.ok(!p.html.includes('data-act="more"'));
- p.click({act:'view',view:'saved'});assert.equal(ids(p.html).length,24);assert.match(p.html,/Сохранённое<span>114/);
+ p.click({act:'view',view:'saved'});assert.equal(ids(p.html).length,24);assert.match(p.html.replace(/<[^>]+>/g,''),/Сохранённое 114/);
  assert.equal(storage.getItem(LIBRARY_KEY),before);assert.equal(store.all().length,126);
 });
 test('search filters within the active list, reset also restores ordering and chunk size',async()=>{

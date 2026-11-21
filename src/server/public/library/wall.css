@@ -23,7 +23,7 @@ body.library-page main#library-content {
   padding:clamp(22px,3.4vw,52px) clamp(20px,4.5vw,74px) 65px; background:transparent; box-shadow:none; border:0;
 }
 #library-content .wall-heading {
-  display:grid; grid-template-areas:"title source" "views search"; grid-template-columns:minmax(0,1fr) auto;
+  display:grid; grid-template-areas:"title source" "views tools"; grid-template-columns:minmax(0,1fr) auto;
   align-items:center; gap:20px 16px; margin:0 0 25px; padding:0 0 10px; border-bottom:1px solid var(--wall-line);
 }
 #library-content .wall-heading h1 {grid-area:title; color:var(--wall-ink); margin:0; font:520 clamp(38px,4.1vw,65px)/1.13 Unbounded,Golos,sans-serif; letter-spacing:-.038em}
@@ -40,25 +40,23 @@ body.library-page main#library-content {
 }
 #library-content .wall-source .saved-source-chooser>p {position:absolute; clip-path:inset(100%); width:1px; height:1px; overflow:hidden}
 #library-content .wall-source>.saved-source-actions {display:flex; flex-direction:column; align-items:flex-end; gap:4px}
-#library-content .wall-source #saved-source-scope {font-size:13px; color:var(--wall-muted); overflow-wrap:anywhere}
+#library-content #saved-source-scope {font:450 14px/1.45 Golos,sans-serif; margin:0 0 12px; color:var(--wall-muted); overflow-wrap:anywhere}
 #library-content .collection-nav {grid-area:views; display:flex; align-items:center; flex-wrap:wrap; gap:6px; min-width:0}
-#library-content #library-app :is(.collection-nav button,.more-views>summary,.search-toggle,.filter-summary) {
+#library-content .wall-tools {grid-area:tools; justify-self:end; display:flex; flex-wrap:wrap; align-items:center; gap:2px}
+#library-content #library-app :is(.collection-nav button,.wall-tools button,.filter-summary) {
   display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; margin:0;
   padding:7px 12px; border:0; border-radius:8px; background:transparent; color:var(--wall-muted);
   font:550 16px/1.25 Golos,sans-serif; cursor:pointer; list-style:none; text-align:left;
 }
-#library-app :is(.collection-nav,.poster-bookmark,.search-toggle) svg,#work-dialog svg {
+#library-app :is(.collection-nav,.poster-bookmark,.wall-tools) svg,#work-dialog svg {
   width:20px; height:20px; flex:none; stroke:currentColor; fill:none; stroke-width:1.65; stroke-linecap:round; stroke-linejoin:round;
 }
-#library-content .collection-nav button span {font-size:13px; font-weight:500}
-#library-content #library-app .collection-nav :is([aria-pressed=true],.selected),
-#library-content #library-app :is(.collection-nav button,.more-views>summary,.search-toggle):hover {background:var(--wall-selected); color:var(--wall-blue)}
-#library-content .more-views {position:relative; z-index:4}
-#library-content #library-app .more-views>summary::after {content:none}
-#library-content .more-menu {position:absolute; left:0; top:calc(100% + 5px); min-width:190px; padding:6px; background:white; border:1px solid var(--wall-line); border-radius:12px; box-shadow:0 10px 24px #17253d1a}
-#library-content #library-app .more-menu button {width:100%; justify-content:flex-start}
-#library-content .more-menu button span {margin-left:auto}
-#library-content #library-app .search-toggle {grid-area:search; justify-self:end; font-size:15px}
+#library-content .collection-nav .view-count {font-size:.82em; font-weight:500; font-variant-numeric:tabular-nums}
+#library-content #library-app :is(.collection-nav,.wall-tools) button:is([aria-pressed=true],[aria-expanded=true]) {background:var(--wall-selected); color:var(--wall-blue)}
+@media(hover:hover){
+  #library-content #library-app :is(.collection-nav,.wall-tools) button:hover {background:var(--wall-selected); color:var(--wall-blue)}
+}
+#library-content #library-app .wall-tools button {font-size:15px}
 #library-content #library-app .filter-summary {max-width:100%; margin-bottom:12px; color:var(--wall-blue); overflow-wrap:anywhere}
 #library-content #library-app .shelf-filter-fields:not([hidden]) {display:flex; align-items:end; flex-wrap:wrap; gap:12px; margin:0; padding:0 0 22px}
 #library-content #library-app .shelf-filter-fields .library-search {flex:2 1 200px}
@@ -91,47 +89,98 @@ body.library-page main#library-content {
 #library-app .poster-open:hover {outline:2px solid var(--wall-blue); outline-offset:3px}
 body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px solid #3870df; outline-offset:3px}
 #library-content #library-app .library-footnote {margin:32px 0 0; font:400 14px/1.5 Golos,sans-serif; color:var(--wall-muted)}
-#work-dialog {width:min(760px,calc(100vw - 32px)); max-height:calc(100dvh - 34px); margin:auto; border:0; border-radius:16px; color:var(--wall-ink); background:white; padding:0; box-shadow:0 20px 75px #09142652; overflow:auto}
+#work-dialog {width:min(760px,calc(100% - 28px)); max-height:calc(100dvh - 24px); margin:auto; border:1px solid var(--wall-line); border-radius:18px; color:var(--wall-ink); background:white; padding:0; box-shadow:0 20px 75px #09142652; overflow:auto}
 #work-dialog::backdrop {background:#121b31ab}
-#work-dialog .work-panel {display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:26px; align-items:start; padding:28px}
-#work-dialog .work-copy {min-width:0; overflow-wrap:anywhere}
-#work-dialog .work-copy>.library-meta {margin:0 35px 7px 0; font-size:15px; color:var(--wall-muted)}
-#work-dialog h2 {font:650 clamp(23px,3vw,38px)/1.14 Golos,sans-serif; margin:0 8px 16px 0}
-#work-dialog .card-details-content {display:block; padding:0}
-#work-dialog .card-details-content p {font:450 16px/1.5 Golos,sans-serif; margin:12px 0}
-#work-dialog .rating-actions {display:flex; gap:6px; flex-wrap:wrap}
-#work-dialog [aria-pressed=true] {border-color:var(--wall-blue); background:var(--wall-selected); color:var(--wall-blue)}
+#work-dialog .work-panel {position:relative; display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); grid-template-areas:"art intro" "art actions"; gap:18px 28px; align-content:start; padding:28px}
+#work-dialog .work-art {grid-area:art; min-width:0}
+#work-dialog .work-intro {grid-area:intro; min-width:0; padding-right:24px; align-self:end}
+#work-dialog .work-intro .library-meta {font:500 14px/1.4 Golos,sans-serif; color:var(--wall-muted); margin:0 0 7px}
+#work-dialog h2 {font:650 clamp(22px,3vw,36px)/1.12 Golos,sans-serif; margin:0 0 14px; overflow-wrap:anywhere}
+#work-dialog .work-actions {grid-area:actions; display:grid; align-content:start; gap:12px; min-width:0}
+#work-dialog .work-actions h3 {font:600 17px/1.35 Golos,sans-serif; margin:0 0 9px}
+#work-dialog .work-rating {border-block-start:1px solid var(--wall-line); padding-top:16px}
+#work-dialog .rating-actions {display:flex; flex-wrap:wrap; gap:6px}
+#work-dialog :is(.library-button,.library-source) {display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; margin:0; padding:7px 11px; font:550 15px/1.3 Golos,sans-serif; border:1px solid var(--wall-line); border-radius:8px; color:var(--wall-ink); background:#fff; cursor:pointer; text-decoration:none}
+#work-dialog :is(.library-button,.library-source):hover {background:var(--wall-paper); border-color:var(--wall-blue)}
+#work-dialog .library-button[aria-pressed=true] {border-color:var(--wall-blue); background:var(--wall-selected); color:var(--wall-blue)}
+#work-dialog [aria-pressed=true] svg {fill:currentColor}
+#work-dialog :is([data-value=none],[data-act=forget],.library-source) {justify-self:start; color:var(--wall-muted); font-size:14px; padding-inline:0; border:0; text-decoration:underline; text-underline-offset:3px}
+#work-dialog .work-hint {color:var(--wall-muted); font:400 14px/1.45 Golos,sans-serif; margin:7px 0 0}
+#work-dialog [data-act=card-reviews] {justify-content:flex-start; width:100%; border-width:1px 0 0; border-radius:0; padding:10px 0; color:var(--wall-blue)}
+#work-dialog [data-act=card-reviews] svg:last-child {margin-left:auto}
+#work-dialog .work-familiar {border-block-start:1px solid var(--wall-line)}
+#work-dialog .work-familiar>summary {padding:12px 0; min-height:44px; cursor:pointer; font:550 15px/1.4 Golos,sans-serif}
+#work-dialog .work-close {right:8px; top:8px}
+#library-content .wall-tools .view-count {font-size:.82em; font-variant-numeric:tabular-nums}
+#library-content .review-journal {max-width:990px; margin-inline:auto}
+#library-content .reviews-heading {margin:0 0 20px}
+#library-content .reviews-heading h2 {font:650 clamp(24px,3.2vw,42px)/1.15 Golos,sans-serif; letter-spacing:-.025em; overflow-wrap:anywhere; margin:0}
+#library-content .reviews-heading p {margin:6px 0 0; color:var(--wall-muted); font:450 15px/1.45 Golos,sans-serif}
+#library-content #library-app .reviews-heading button {padding:6px 0; display:inline-flex; min-height:44px; align-items:center; gap:6px; color:var(--wall-blue); background:transparent; border:0; border-radius:4px; font:550 15px/1.3 Golos,sans-serif}
+#library-content .reviews-heading button svg {width:18px; height:18px; stroke:currentColor; stroke-width:1.6; transform:rotate(180deg)}
+#library-content #library-app .library-evenings {display:grid; gap:0; max-width:none; border-block-start:1px solid var(--wall-line)}
+#library-content #library-app details.library-evening {margin:0; border:0; border-block-end:1px solid var(--wall-line); padding:0; border-radius:0; background:transparent; overflow:visible}
+#library-content #library-app details.library-evening>summary {display:grid; grid-template-columns:76px minmax(0,1fr) 20px; align-items:center; gap:18px; padding:14px 8px; min-height:0; background:transparent}
+#library-content #library-app details.library-evening[open]>summary,#library-content #library-app details.library-evening>summary:hover {background:#eff2f9}
+#library-content #library-app .library-evening>summary .library-cover {width:100%; height:auto; min-height:0; aspect-ratio:2/3; border-radius:6px; background:var(--wall-line)}
+#library-content #library-app .library-evening>summary .library-cover img {position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+#library-content #library-app .library-evening>summary .landscape img {object-fit:contain; background:var(--wall-ink)}
+#library-content #library-app .evening-summary-copy {display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:4px}
+#library-content #library-app .evening-summary-copy strong {font:650 clamp(18px,1.7vw,24px)/1.25 Golos,sans-serif; color:var(--wall-ink)}
+#library-content #library-app .evening-summary-copy .review-meta,#library-content .review-states {color:var(--wall-muted); font:500 13px/1.4 Golos,sans-serif}
+#library-content #library-app .evening-summary-copy .review-excerpt {font:400 16px/1.45 Golos,sans-serif; color:var(--wall-ink); overflow-wrap:anywhere; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+#library-content #library-app .library-evening[open] .review-excerpt {-webkit-line-clamp:unset}
+#library-content #library-app .evening-content {padding:16px clamp(12px,2vw,24px) 20px; background:white; border:1px solid var(--wall-line); border-radius:8px; margin:0 0 14px}
+#library-content .review-wish {font:400 15px/1.45 Golos,sans-serif; color:var(--wall-muted); margin:0 0 16px; overflow-wrap:anywhere}
+#library-content .review-wish strong {display:block; color:var(--wall-ink); font-weight:600}
 @media(max-width:1100px){#library-content #library-app .wall-grid {grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:800px){#library-content #library-app .wall-grid {grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1200px){
+  #library-content .wall-heading {
+    grid-template-areas:"title source" "views views" "tools tools"; grid-template-columns:minmax(0,1fr) auto; gap:8px 12px;
+  }
+  #library-content .wall-tools {justify-self:start}
+}
+@media(min-width:601px) and (max-width:780px){
+  #library-content #library-app .collection-nav button {padding-inline:6px; font-size:14px; gap:4px}
+}
 @media(max-width:600px){
   .library-shell {height:55px; padding:0 16px; gap:15px}
   .library-shell img {width:91px}.library-shell nav {gap:12px}.library-shell a {font-size:13px}
   body.library-page main#library-content {padding:21px 15px 48px}
-  #library-content .wall-heading {grid-template-areas:"title title" "views views" "search source"; grid-template-columns:auto 1fr; justify-content:start; gap:8px 10px; margin-bottom:16px; padding-bottom:9px}
-  #library-content .wall-heading h1 {font-size:clamp(29px,8.2vw,42px); margin-bottom:4px}
-  #library-content .collection-nav {gap:2px; justify-content:space-between}
-  #library-content #library-app :is(.collection-nav button,.more-views>summary) {font-size:14px; padding:7px 6px; gap:5px}
-  #library-content .collection-nav button span {font-size:12px}
-  #library-app .collection-nav>button svg {width:16px; height:16px}
-  #library-content .more-views>summary svg,#library-content .wide-label {display:none}
-  #library-content .more-menu {left:auto; right:0}
-  #library-content #library-app .search-toggle {font-size:14px; padding:7px 10px; justify-self:start}
-  #library-content .wall-source {justify-self:start}
-  #library-content .wall-source>.saved-source-actions {align-items:flex-start}
-  #library-content .wall-source .saved-source-chooser>summary,#library-content .wall-source [data-act=saved-source-start] {font-size:13px; gap:4px; padding:6px 10px}
-  #library-content #library-app .wall-source .saved-source-chooser[open]>.saved-source-actions {left:0; right:auto; min-width:150px}
+  #library-content .wall-heading {gap:5px 6px; margin-bottom:16px; padding-bottom:6px}
+  #library-content .wall-heading h1 {font-size:clamp(25px,7.8vw,42px); margin:0}
+  #library-content .collection-nav {gap:2px}
+  #library-content #library-app .collection-nav button {
+    flex:1 0 auto; display:grid; grid-template-areas:"icon count" "label label"; grid-template-columns:auto auto;
+    justify-content:center; align-content:center; gap:3px 4px; padding:5px 2px; font-size:.875rem; text-align:center;
+  }
+  #library-content .collection-nav .view-label {grid-area:label}
+  #library-content .collection-nav .view-count {grid-area:count; justify-self:start}
+  #library-content .collection-nav svg {grid-area:icon; width:16px; height:16px; justify-self:end}
+  #library-content .wide-label,#library-content .source-suffix {display:none}
+  #library-content #library-app .wall-tools button {font-size:.875rem; padding:6px; gap:4px}
+  #library-content .wall-tools svg {width:17px; height:17px}
+  #library-content #library-app .wall-source .saved-source-chooser>summary,#library-content #library-app .wall-source [data-act=saved-source-start] {font:550 14px/1.3 Golos,sans-serif; gap:4px; padding:5px 8px; text-align:center; width:auto}
+  #library-content #library-app .wall-source .saved-source-chooser[open]>.saved-source-actions {min-width:150px}
   #library-content #library-app .wall-grid {grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 12px}
   #library-content #library-app .poster-tile h3 {margin-top:8px}
   #library-content #library-app .poster-tile .library-meta {font-size:14px}
   #library-content #library-app .poster-bookmark {right:6px; top:6px}
-  #work-dialog .work-panel {grid-template-columns:minmax(0,1fr); gap:15px; padding:20px}
-  #work-dialog .work-panel>.library-cover {width:48%; max-width:200px; justify-self:center}
-  #work-dialog .work-copy>.library-meta {margin-bottom:3px}
+  #work-dialog .work-panel {grid-template-columns:minmax(64px,27%) minmax(0,1fr); grid-template-areas:"art intro" "actions actions"; gap:18px 13px; padding:18px}
+  #work-dialog .work-intro {padding-right:14px; align-self:center}
+  #work-dialog .work-intro .library-meta {padding-right:12px}
+  #work-dialog .work-close {right:3px; top:3px; width:36px; height:36px; background:white; box-shadow:none}
+  #work-dialog .work-close::after {content:""; position:absolute; inset:-4px}
+  #library-content #library-app details.library-evening>summary {grid-template-columns:60px minmax(0,1fr) 16px; padding:12px 2px; gap:12px}
+  #library-content #library-app .evening-summary-copy .review-excerpt {font-size:15px}
 }
-@media(max-width:355px){
-  #library-app .collection-nav>button svg {display:none}
-  #library-content #library-app .collection-nav {display:grid; grid-template-columns:auto auto auto; gap:0; justify-content:space-between}
-  #library-content #library-app :is(.collection-nav>button,.more-views>summary) {font-size:13px; padding-inline:4px; gap:3px}
+@media(max-width:385px){
+  #library-content #library-app .collection-nav button {font-size:.8125rem; padding-inline:1px}
   body.library-page main#library-content {padding-inline:12px}
-  #library-content #library-app .search-toggle,#library-content .wall-source .saved-source-chooser>summary {font-size:12px; padding-inline:7px}
+}
+@media(max-width:345px){
+  #library-content .all-prefix {position:absolute; clip-path:inset(50%); width:1px; height:1px; overflow:hidden}
+  #library-content .collection-nav .view-label {letter-spacing:-.02em}
+  #library-content .collection-nav [data-view=all] .view-label::first-letter {text-transform:uppercase}
 }

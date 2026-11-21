@@ -32,19 +32,20 @@ export function eveningControls(run,cardId,{open=false,ratingOpen=false,outcomeO
     const retry=history?`<button type="button" class="btn btn-secondary btn-s" data-act="evening-retry" data-feedback-retry="${rid}"${['conflict','rejected'].includes(status)?'':' hidden'}>Повторить отправку</button>`:'';
     const hasDraft=Boolean(draft?.reason||draft?.note),ratingDetails=!history||showConfirmation;
     const fitLabel=history?`Подходит ли запросу: ${esc(FIT[r.fit])}`:esc(FIT[r.fit]);
-    const ratingLabel=r.fit?savedLabel(fitLabel,'Изменить оценку'):hasExplanation?'Изменить уточнение':hasDraft?'Продолжить оценку':'Оценить рекомендацию';
+    const noteLabel=hasExplanation?(history?'Изменить текст отзыва':'Изменить уточнение'):hasDraft?'Продолжить отзыв':history?'Написать отзыв':'Добавить уточнение';
+    const ratingLabel=r.fit?savedLabel(fitLabel,'Изменить оценку'):history?'Оценить рекомендацию':hasExplanation?'Изменить уточнение':hasDraft?'Продолжить оценку':'Оценить рекомендацию';
     const fit=`<div class="evening-fit-prompt"><div class="evening-buttons" role="group" aria-label="Подходит запросу">${Object.entries(FIT).map(([v,label])=>button('evening-fit',v,label,r.fit===v)).join('')}</div></div>`;
     return `<section class="evening-controls evening-controls-modern" aria-label="Выбор и отзыв: ${esc(card.title)}"><div class="evening-decision">${chosen}${history?start:''}</div>`
       + (history?'<div class="evening-review">':'')
       + (ratingDetails?`<details class="evening-rating"${disclosure('rating',ratingOpen)}><summary data-fk="evening-rating:${rid}:${cid}">${ratingLabel}</summary>`:'<p class="evening-fit-label">Подошёл ли вариант?</p>')
-      + fit
-      + `<details class="evening-fit evening-feedback-note" data-feedback-details data-run="${rid}" data-id="${cid}"${open?' open':''}><summary data-fk="evening-note:${rid}:${cid}">${hasExplanation?'Изменить уточнение':hasDraft?'Продолжить отзыв':'Добавить уточнение'}<span>Необязательно</span></summary>`
+      + fit+(ratingDetails&&history?'</details>':'')
+      + `<details class="evening-fit evening-feedback-note" data-feedback-details data-run="${rid}" data-id="${cid}"${open?' open':''}><summary data-fk="evening-note:${rid}:${cid}">${noteLabel}<span>Необязательно</span></summary>`
       + `<form class="evening-reason" data-form="evening-reason" data-run="${rid}" data-id="${cid}">`
       + `<label>Что стоит учесть? <select class="input" name="reason"><option value="">Не указывать</option>${Object.entries(REASONS).map(([v,label])=>`<option value="${v}"${(draft?.reason??r.reason)===v?' selected':''}>${esc(label)}</option>`).join('')}</select></label>`
       + `<label>Своими словами <textarea class="input" name="note" rows="2" maxlength="300" placeholder="Например, сегодня хотелось чего-то спокойнее">${esc(draft?.note??r.note??'')}</textarea></label>`
       + `<button type="submit" class="btn btn-secondary btn-s" data-fk="evening-reason:${rid}:${cid}">Сохранить отзыв</button></form>`
       + '<p class="evening-help">Оценка и уточнение отправляются без имени, чтобы улучшать подбор. Исходное пожелание не прикладываем.</p></details>'
-      + (ratingDetails?'</details>':'')+(history?'</div>':'')+outcome
+      + (ratingDetails&&!history?'</details>':'')+(history?'</div>':'')+outcome
       + (showConfirmation?`<p class="evening-status evening-confirmation" role="status"><strong><img src="/assets/brand/tastiq-symbol-cobalt.svg" alt="" width="20" height="20">Спасибо за отзыв!</strong><span data-feedback-status="${rid}">${esc(feedbackStatus(status,persistent))}</span></p>`:'')+retry+'</section>';
   }
   const progress=showExperience?`<div class="evening-progress">${start}${outcome}</div>`:'';

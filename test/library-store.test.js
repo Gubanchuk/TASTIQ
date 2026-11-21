@@ -13,7 +13,7 @@ import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '../src/server/public/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '../src/server/public/shared/media-history.js';
-import {createFeedbackStore,FEEDBACK_KEY} from '../src/server/public/shared/evening-feedback.js';
+import {createFeedbackStore,FEEDBACK_KEY,FIT,OUTCOMES,REASONS} from '../src/server/public/shared/evening-feedback.js';
 import {createSavedSource,matchesLibraryQuery,savedPickerDomains} from '../src/server/public/shared/saved-source.js';
 import {eveningControls,feedbackStatus} from '../src/server/public/shared/evening-view.js';
 import {qaStorage,qaFeedbackOptions} from '../src/server/public/shared/qa-session.js';
@@ -146,7 +146,7 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
   fetch:async(url,options)=>{requests.push({url,options});return transport?transport(url,options):{ok:true,json:async()=>catalog};},
   setTimeout:()=>1,clearTimeout(){},addEventListener:(type,handler)=>handlers.set(`window:${type}`,handler)});
  const source=(await readFile(new URL('../src/server/public/library/app.js',import.meta.url),'utf8')).replace(/^import .+;\r?$/gm,'');
- Object.assign(context,{artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains,createTasteMemory,TASTE_MEMORY_PREFIX,createMemoryView});
+ Object.assign(context,{FIT,OUTCOMES,REASONS,artworkImageHtml,retryArtworkImage,createSavedSource,matchesLibraryQuery,savedPickerDomains,createTasteMemory,TASTE_MEMORY_PREFIX,createMemoryView});
  vm.runInContext(source,context);
  await new Promise(resolve=>setImmediate(resolve));
  const noteForm=(run,id,note,reason='')=>{const form=new Element({dataset:{run,id}});form.elements={note:{value:note},reason:{value:reason}};form.matches=selector=>selector==='[data-form="evening-reason"]';form.querySelector=()=>new Element({dataset:{fk:`evening-reason:${run}:${id}`}});return form;};
@@ -185,7 +185,21 @@ test('a positive experience appears in liked and explicit clearing keeps the ori
  assert.equal(page.dialog.open,false);
  const stored=createLibraryStore({storage}).all()[0];assert.equal(stored.saved,false);assert.equal(stored.ratingOverride,true);assert.equal(storage.getItem(FEEDBACK_KEY),priorFeedback);
  page.click({act:'view',view:'all'});assert.match(page.app.innerHTML,/data-card="game:steam:10"/);page.click({act:'card-reviews',domain:'game',id:game.id});
- assert.match(page.app.innerHTML,/Отзывы: Real game/);assert.match(page.app.innerHTML,/Понравилось/);assert.equal(page.requests.filter(r=>r.options?.method==='POST').length,0);
+ assert.match(page.app.innerHTML,/data-focus="reviews-heading">Real game</);assert.match(page.app.innerHTML,/Понравилось/);assert.equal(page.requests.filter(r=>r.options?.method==='POST').length,0);
+});
+
+test('review search resets within a work and the permanent reviews button reopens the whole journal',async()=>{
+ const storage=memory(legacy);
+ const other={...evening,id:'second-run',cards:[{...evening.cards[0],id:'steam:99',title:'Another game'}],responses:[{...evening.responses[0],cardId:'steam:99'}]};
+ storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[evening,other].map(run=>({key:run.id,run,ack:run.revision}))}));
+ const page=await controller(storage);
+ assert.match(page.app.innerHTML,/<div class="wall-tools">[^]*?data-view="evenings"[^]*?<\/div>/);
+ page.click({act:'card-reviews',domain:'game',id:game.id});
+ page.input('missing');page.click({act:'clear'});
+ assert.equal((page.app.innerHTML.match(/class="library-evening"/g)??[]).length,1);
+ page.click({act:'view',view:'evenings'});
+ assert.equal((page.app.innerHTML.match(/class="library-evening"/g)??[]).length,2);
+ assert.equal(page.requests.filter(r=>r.options?.method==='POST').length,0);
 });
 
 test('choosing a recommendation in reviews never saves or likes the work',async()=>{
@@ -316,7 +330,7 @@ test('a restored draft-only evening is visible in the library before any rating 
  const storage=memory(legacy),draftOnly={...evening,revision:0,responses:[]};storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'draft-only',run:draftOnly,ack:-1}]}));
  createFeedbackDrafts({storage}).set(`${evening.id}:${game.id}`,{reason:'mood',note:'Черновик после перезагрузки'});
  const page=await controller(storage);page.click({act:'view',view:'evenings'});
- assert.ok(page.app.innerHTML.includes('Черновик после перезагрузки</textarea>'));assert.ok(page.app.innerHTML.includes('Продолжить отзыв'));assert.match(page.app.innerHTML,/data-view="evenings" data-focus="view:evenings" aria-pressed="true"[^>]*>Отзывы о рекомендациях<span>1/);
+ assert.ok(page.app.innerHTML.includes('Черновик после перезагрузки</textarea>'));assert.ok(page.app.innerHTML.includes('Продолжить отзыв'));assert.match(page.app.innerHTML,/data-view="evenings" data-focus="view:evenings" aria-pressed="true"/);assert.match(page.app.innerHTML.replace(/<[^>]+>/g,''),/Отзывы 1/);
  assert.equal(page.requests.filter(request=>request.options?.method==='POST').length,0);
 });
 
