@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#18254A">
+  <meta name="theme-color" content="#f8f9fc">
   <title>Библиотека — TASTIQ</title>
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
   <link rel="stylesheet" href="/shared/conversation.css?v=conversation-production-3">
   <link rel="stylesheet" href="/library/style.css?v=memory-layout">
-  <script type="module" src="/library/app.js?v=catalog-artwork"></script>
+  <script type="module" src="/library/app.js?v=poster-wall"></script>
   <link rel="stylesheet" href="/shared/brand.css">
   <link rel="stylesheet" href="/shared/product.css?v=1">
   <link rel="stylesheet" href="/shared/workspace.css?v=3">
@@ -17,20 +17,23 @@
   <link rel="stylesheet" href="/shared/results.css?v=10">
   <link rel="stylesheet" href="/shared/controls.css?v=5">
   <link rel="stylesheet" href="/shared/selection-design.css?v=preference-layout">
-  <script type="module" src="/shared/app-shell.js"></script>
+  <link rel="stylesheet" href="/library/wall.css?v=1">
 </head>
 <body class="selection-design product-page conversation-page library-page">
   <a class="library-skip" href="#library-content">К библиотеке</a>
   <div class="conversation-app">
-    <header class="app-shell" aria-label="Навигация TASTIQ"><a class="app-brand" href="/" aria-label="TASTIQ — главная"><img src="/assets/brand/tastiq-logo-inverse.svg" alt="TASTIQ" width="148" height="36"></a><nav class="app-shell-nav" aria-label="Основное"><a href="/pick/start/">Подбор</a><a href="/library/" aria-current="page">Библиотека</a></nav><div class="app-shell-actions"><a class="app-shell-primary" href="/pick/start/">Подобрать новое</a></div></header>
+    <header class="library-shell" aria-label="Навигация TASTIQ">
+      <a class="library-brand" href="/" aria-label="TASTIQ — главная"><img src="/assets/brand/tastiq-logo-cobalt.svg" alt="TASTIQ" width="122" height="32"></a>
+      <nav aria-label="Основное"><a href="/pick/start/">Подбор</a><a href="/library/" aria-current="page">Библиотека</a></nav>
+    </header>
     <div class="conversation-body">
       <main class="board-library" id="library-content" tabindex="-1">
-        <header class="board-heading"><div><h1>Библиотека</h1></div></header>
-        <div id="library-app" aria-busy="true"><p class="library-loading" role="status">Открываю библиотеку…</p></div>
+        <div id="library-app" aria-busy="true"><h1>Библиотека</h1><p class="library-loading" role="status">Открываю библиотеку…</p></div>
         <noscript><p class="library-empty">Включи JavaScript, чтобы увидеть сохранённые названия в этом браузере.</p></noscript>
       </main>
     </div>
   </div>
+  <dialog id="work-dialog" aria-labelledby="work-title"></dialog>
   <div class="library-notice" id="library-notice" role="status" hidden></div>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Четыре макета библиотеки — TASTIQ</title>
+<style>
+@font-face{font-family:Golos;src:local("Golos Text"),url("/assets/fonts/GolosText-Variable.ttf");font-weight:400 900;font-display:swap}
+*{box-sizing:border-box}body{margin:0;background:#fafbff;color:#1c2945;font:17px/1.48 Golos,"Segoe UI",sans-serif}main{max-width:1520px;margin:auto;padding:28px clamp(18px,4.5vw,74px) 70px}
+header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:0 0 20px;border-bottom:1px solid #c9d3e9}
+header b{font-size:21px;letter-spacing:-.04em;color:#2b48b2}a{color:#2849b0;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #3154d6;outline-offset:4px}
+h1{font-size:clamp(33px,4.7vw,73px);font-weight:650;line-height:1.05;letter-spacing:-.04em;margin:32px 0 13px}p{margin:0 0 16px;max-width:75ch}h2{font-size:clamp(24px,2.1vw,35px);letter-spacing:-.035em;line-height:1.1;margin:15px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px clamp(18px,2.8vw,44px);margin:26px 0 40px}
+article{min-width:0}.preview{display:block;position:relative;aspect-ratio:1.88;background:#e4e9f2;border:1px solid #c9d3e9;border-radius:11px;overflow:hidden}
+.preview>img{position:absolute;display:block;object-fit:cover;object-position:top}.wide{width:86%;height:100%;left:0;top:0}.phone{width:22%;height:90%;right:2.4%;bottom:0;border:2px solid white;border-bottom:0;border-radius:6px 6px 0 0;box-shadow:-3px 0 15px #1823453d}
+article>p{margin:0 0 8px}article .skill{color:#52617d;font-size:14px;margin-top:11px}article h2{margin-top:2px}
+.open{min-height:44px;display:inline-flex;align-items:center;font-weight:600}.preview:hover{outline:2px solid #3154d6;outline-offset:2px}
+details{border-block-start:1px solid #c9d3e9;padding:14px 0}summary{cursor:pointer;font-size:20px;font-weight:600;min-height:44px;display:list-item;padding:6px 0}
+.refs{margin:3px 0 16px;padding-left:22px;max-width:88ch}.refs li{margin:0 0 13px}.note{color:#52617d;font-size:15px}
+@media(max-width:730px){.grid{grid-template-columns:1fr;gap:27px}main{padding-top:15px}header{padding-bottom:11px}header a{font-size:14px}h1{margin-top:24px}}
+</style>
+<main>
+<header><b>TASTIQ</b><a data-route="original" href="http://127.0.0.1:5333/v/original/">Нынешняя библиотека</a></header>
+<h1>Как смотреть библиотеку</h1>
+<p>Четыре кликабельных макета на одних и тех же 15 произведениях. Открой обложку, поставь оценку или переключись на «Понравилось». У каждого макета своя демонстрационная коллекция.</p>
+<div class="grid">
+<article><a class="preview" data-route="wall" href="http://127.0.0.1:5333/v/wall/" aria-label="Открыть макет Стена обложек"><img class="wide" alt="Сетка из пяти постеров на компьютере" src="shots/wall-desktop.jpg"><img class="phone" alt="Две обложки в ряд на телефоне" src="shots/wall-mobile.jpg"></a><p class="skill">Impeccable</p><h2>Стена обложек</h2><p>Все сохранения перед глазами. Ищи по знакомому постеру, открывай работу нажатием на обложку.</p><a class="open" data-route="wall" href="http://127.0.0.1:5333/v/wall/">Открыть стену обложек</a></article>
+<article><a class="preview" data-route="shelves" href="http://127.0.0.1:5333/v/shelves/" aria-label="Открыть макет Полки по разделам"><img class="wide" alt="Боковая навигация и отдельные полки по видам произведений" src="shots/shelves-desktop.jpg"><img class="phone" alt="Полка аниме, которую можно листать пальцем" src="shots/shelves-mobile.jpg"></a><p class="skill">UI/UX Pro Max</p><h2>Полки по разделам</h2><p>Аниме, игры, фильмы, сериалы и мультфильмы стоят отдельно. На телефоне каждую полку можно листать вбок.</p><a class="open" data-route="shelves" href="http://127.0.0.1:5333/v/shelves/">Открыть полки</a></article>
+<article><a class="preview" data-route="focus" href="http://127.0.0.1:5333/v/focus/" aria-label="Открыть макет Крупный план"><img class="wide" alt="Выбранный постер и крупное название на тёмном фоне" src="shots/focus-desktop.jpg"><img class="phone" alt="Вертикальная афиша с перелистыванием на телефоне" src="shots/focus-mobile.jpg"></a><p class="skill">Frontend Design</p><h2>Крупный план</h2><p>Одно произведение занимает сцену. Листай стрелками или выбери другую обложку в коллекции ниже.</p><a class="open" data-route="focus" href="http://127.0.0.1:5333/v/focus/">Открыть крупный план</a></article>
+<article><a class="preview" data-route="catalog" href="http://127.0.0.1:5333/v/catalog/" aria-label="Открыть макет Каталог с карточкой"><img class="wide" alt="Коллекция с подробностями выбранной работы справа" src="shots/catalog-desktop.jpg"><img class="phone" alt="Одно произведение в строке с крупной обложкой" src="shots/catalog-mobile.jpg"></a><p class="skill">По референсам Figma</p><h2>Каталог с карточкой</h2><p>На компьютере выбранная работа остаётся справа при просмотре коллекции. На телефоне у каждой работы своя строка с крупной обложкой и названием.</p><a class="open" data-route="catalog" href="http://127.0.0.1:5333/v/catalog/">Открыть каталог</a></article>
+</div>
+<details open id="references"><summary>Референсы и шаблоны Figma</summary><ul class="refs">
+<li><b>Readme — E-Book Application.</b> Светлый фон и короткие подписи дают обложкам больше внимания. Этот приём использован в «Стене». <a href="https://www.figma.com/community/file/1530897183480676361/readme-e-book-application">Figma Community</a> · <a href="https://dribbble.com/shots/26322842-Readme-E-Book-App-UI-Kit">Превью автора</a></li>
+<li><b>VIXA Play.</b> Горизонтальная подборка игр подсказала устройство полок и видимый край следующей обложки на телефоне. <a href="https://www.figma.com/community/file/1268515272328894240/ui-kit-game-portal-vixaplay">Figma Community</a> · <a href="https://dribbble.com/shots/23219090-VIXA-Play-Game-Portal-Mobile-App-UI-Kit">Превью студии</a></li>
+<li><b>Movie &amp; Series Website.</b> Одна работа в фокусе и переход в подробности — основа «Крупного плана». <a href="https://www.figma.com/community/file/1345709891812866081/movie-series-website">Figma Community</a> · <a href="https://dribbble.com/shots/24016847-Movie-Series-Website">Превью автора</a></li>
+<li><b>Steam Library Redesign.</b> Библиотека с фильтрами и раскрытием выбранной игры. Подсказала сочетание списка и подробностей в четвёртом макете. <a href="https://www.figma.com/proto/GJzXBWwKmEDsNooiVyYXpH/Steam_redesign?node-id=112-32238&amp;page-id=0%3A1">Прототип Figma</a> · <a href="https://canisius-ui.com/project-steam">Кейс автора</a></li>
+<li><b>PopFlix Watchlist.</b> Мобильный ориентир для списка сохранённых работ, истории и пустого экрана. <a href="https://dribbble.com/shots/25983272-PopFlix-Movie-Streaming-App-Watchlist-Profile-pages">Экраны автора</a></li>
+</ul><p class="note">Ссылки на Figma сверены по публикациям дизайнеров. Визуальные решения изучены по авторским превью.</p></details>
+</main>
+<script>if(location.protocol!=='file:')for(const link of document.querySelectorAll('[data-route]'))link.href='/v/'+link.dataset.route+'/';</script>
+</html>

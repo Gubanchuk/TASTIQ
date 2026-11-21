@@ -154,17 +154,17 @@ test('a saved title without artwork can use the exact work image from a restored
 });
 function seed(count=126){const storage=memory(),store=createLibraryStore({storage});for(let i=0;i<count;i++)store.save({id:`item-${i}`,title:`Название ${String(i).padStart(3,'0')}`,year:2020+i%6},{domain:['game','film','series','cartoon'][i%4],lane:i<100?'want':i<114?'tonight':'known'});return {storage,store};}
 
-test('short shelves collapse search and all filters together and keep the visible summary on reload and back',async()=>{
+test('poster walls collapse search and filters together and keep the visible summary on reload and back',async()=>{
  const {storage}=seed(8),p=await page(storage);
  const closed=html=>assert.match(html,/<div id="library-filter-panel" class="shelf-filter-fields"[^>]* hidden>/);
- closed(p.html);assert.match(p.html,/aria-expanded="false" aria-controls="library-filter-panel">Поиск и фильтры/);
+ closed(p.html);assert.match(p.html,/aria-label="Поиск и фильтры" aria-expanded="false" aria-controls="library-filter-panel"/);
  p.click({act:'filters',focus:'filters-toggle'});assert.doesNotMatch(p.html,/class="shelf-filter-fields"[^>]* hidden>/);
  p.change('domain-filter','film');p.change('sort','title');p.input('005');p.click({act:'filters',focus:'filters-toggle'});
  const url=p.search,restored=await page(storage,{search:url});
  closed(restored.html);assert.match(restored.html,/«005» · Фильмы · По названию/);assert.deepEqual(ids(restored.html),['film:item-5']);
  p.click({act:'view',view:'liked'});p.back(url);closed(p.html);assert.deepEqual(ids(p.html),['film:item-5']);
  p.click({act:'filters'});assert.match(p.html,/value="005"/);assert.match(p.html,/<option value="film" selected>/);
- const larger=await page(seed(9).storage);assert.doesNotMatch(larger.html,/shelf-filter-fields/);
+ const larger=await page(seed(9).storage);closed(larger.html);assert.match(larger.html,/class="library-card-list wall-grid"/);
 });
 
 test('a title search matching a single section launches directly from a mixed shelf',async()=>{
@@ -203,11 +203,11 @@ test('removing a bookmark and undo keep explicit taste and familiarity',async()=
 test('secondary filter disclosure keeps chosen values, content, reset and toggle focus through rerenders',async()=>{
  const {storage}=seed(),p=await page(storage);p.click({act:'view',view:'all'});
  const expanded=()=>p.html.match(/data-act="filters"[^>]*aria-expanded="([^"]+)"/)?.[1];
- assert.equal(expanded(),'false');assert.match(p.html,/aria-controls="library-filter-options"/);assert.match(p.html,/data-filter-open="false"/);
+ assert.equal(expanded(),'false');assert.match(p.html,/aria-controls="library-filter-panel"/);assert.match(p.html,/class="shelf-filter-fields"[^>]* hidden>/);
  const initial=ids(p.html);p.click({act:'filters',focus:'filters-toggle'});assert.equal(expanded(),'true');assert.equal(p.focus,'filters-toggle');assert.deepEqual(ids(p.html),initial);
  p.change('domain-filter','film');p.change('reaction-filter','unrated');p.change('sort','title');p.input('Название');
  assert.equal(expanded(),'true');assert.match(p.html,/<option value="film" selected>/);assert.match(p.html,/<option value="unrated" selected>/);assert.match(p.html,/<option value="title" selected>/);
  const filtered=ids(p.html);p.click({act:'filters',focus:'filters-toggle'});assert.equal(expanded(),'false');assert.equal(p.focus,'filters-toggle');assert.deepEqual(ids(p.html),filtered);
  p.click({act:'view',view:'history'});p.click({act:'view',view:'all'});assert.equal(expanded(),'false');assert.deepEqual(ids(p.html),filtered);
- p.click({act:'clear',focus:'filters-reset'});assert.equal(expanded(),'false');assert.match(p.html,/<option value="added" selected>/);assert.equal(ids(p.html).length,24);assert.equal(p.focus,'find-title');
+ p.click({act:'clear',focus:'filters-reset'});assert.equal(expanded(),'false');assert.match(p.html,/<option value="added" selected>/);assert.equal(ids(p.html).length,24);assert.equal(p.focus,'filters-toggle');
 });

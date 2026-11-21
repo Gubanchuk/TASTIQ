@@ -137,7 +137,8 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
   closest(selector){return selector==='button[data-act]'?this:null;}
   matches(){return false;}
  }
- const document={activeElement:null,hidden:false,querySelector:selector=>selector==='#library-app'?app:selector==='#library-notice'?notice:null,querySelectorAll:()=>[],getElementById:()=>null,
+ const dialog={open:false,innerHTML:'',addEventListener(){},showModal(){this.open=true;},close(){this.open=false;},querySelector:()=>({focus(){}})};
+ const document={activeElement:null,hidden:false,querySelector:selector=>selector==='#library-app'?app:selector==='#work-dialog'?dialog:selector==='#library-notice'?notice:null,querySelectorAll:()=>[],getElementById:()=>null,
   addEventListener:(type,handler)=>handlers.set(type,handler)};
  const context=vm.createContext({animeStyleLabel,inLibraryDomain,mediaLibraryDomain,URLSearchParams,document,localStorage:storage,Element,HTMLInputElement:class extends Element{},HTMLImageElement:class extends Element{},CSS:{escape:value=>value},structuredClone,matchMedia:()=>({matches:mobile,addEventListener(){}}),
   selectionModeTitle,collectionRecords,createSelectionArchive,SELECTION_ARCHIVE_KEY,selectionUrl,createLibraryStore,LIBRARY_KEY,safeLibraryUrl:library.safeLibraryUrl,createGameHistory,GAME_HISTORY_PREFIX,createMediaHistory,MEDIA_HISTORY_PREFIX,FEEDBACK_KEY,eveningControls,feedbackStatus,qaStorage,qaFeedbackOptions,initCustomSelects,focusCustomSelect,createFeedbackDrafts,FEEDBACK_DRAFTS_KEY,
@@ -149,7 +150,7 @@ async function controller(storage,{catalog=[],transport,mobile=false,localTransa
  vm.runInContext(source,context);
  await new Promise(resolve=>setImmediate(resolve));
  const noteForm=(run,id,note,reason='')=>{const form=new Element({dataset:{run,id}});form.elements={note:{value:note},reason:{value:reason}};form.matches=selector=>selector==='[data-form="evening-reason"]';form.querySelector=()=>new Element({dataset:{fk:`evening-reason:${run}:${id}`}});return form;};
- return {app,requests,click:dataset=>handlers.get('click')({target:new Element({dataset})}),change:(id,value,dataset={})=>handlers.get('change')({target:new Element({id,value,dataset,checked:value===true})}),input:value=>handlers.get('input')({target:new Element({id:'find-title',value})}),
+ return {app,dialog,requests,click:dataset=>handlers.get('click')({target:new Element({dataset})}),change:(id,value,dataset={})=>handlers.get('change')({target:new Element({id,value,dataset,checked:value===true})}),input:value=>handlers.get('input')({target:new Element({id:'find-title',value})}),
   submitNote:(run,id,note,reason='')=>handlers.get('submit')({target:noteForm(run,id,note,reason),preventDefault(){}}),
   draftNote:(run,id,note,reason='')=>{const input=new Element();input.closest=()=>noteForm(run,id,note,reason);handlers.get('input')({target:input});},
   toggleFilters:open=>{const target=new Element({dataset:{filterPanel:'true'}});target.open=open;handlers.get('toggle')({target});},tick:()=>new Promise(resolve=>setImmediate(resolve))};
@@ -178,8 +179,10 @@ test('a positive experience appears in liked and explicit clearing keeps the ori
  const storage=memory(),run={...evening,responses:[{...evening.responses[0],started:true,outcome:'liked'}]};
  storage.setItem(FEEDBACK_KEY,JSON.stringify({version:1,entries:[{key:'liked-experience',run,ack:run.revision}]}));
  const priorFeedback=storage.getItem(FEEDBACK_KEY),page=await controller(storage);page.click({act:'view',view:'liked'});
- assert.match(page.app.innerHTML,/data-card="game:steam:10"/);assert.match(page.app.innerHTML,/Эта оценка взята из твоего отзыва/);assert.equal(storage.getItem(LIBRARY_KEY),null);
+ assert.match(page.app.innerHTML,/data-card="game:steam:10"/);page.click({act:'work',domain:'game',id:game.id,focus:'poster:game:steam:10'});
+ assert.equal(page.dialog.open,true);assert.match(page.dialog.innerHTML,/Эта оценка взята из твоего отзыва/);assert.equal(storage.getItem(LIBRARY_KEY),null);
  page.click({act:'rate',domain:'game',id:game.id,value:'none'});assert.doesNotMatch(page.app.innerHTML,/data-card="game:steam:10"/);
+ assert.equal(page.dialog.open,false);
  const stored=createLibraryStore({storage}).all()[0];assert.equal(stored.saved,false);assert.equal(stored.ratingOverride,true);assert.equal(storage.getItem(FEEDBACK_KEY),priorFeedback);
  page.click({act:'view',view:'all'});assert.match(page.app.innerHTML,/data-card="game:steam:10"/);page.click({act:'card-reviews',domain:'game',id:game.id});
  assert.match(page.app.innerHTML,/Отзывы: Real game/);assert.match(page.app.innerHTML,/Понравилось/);assert.equal(page.requests.filter(r=>r.options?.method==='POST').length,0);
