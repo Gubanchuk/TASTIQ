@@ -444,14 +444,19 @@ body.selection-start>main nav a svg {
  body.selection-design.product-page.conversation-page .app-shell {
   grid-template-columns:minmax(0,1fr) auto;border-radius:0;margin-bottom:16px;gap:6px 10px;
  }
- /* Both rows stay on one viewport-fixed surface as Android's address bar moves.
-    Reserve their measured space in normal flow so the document still scrolls. */
- html.has-measured-shell:has(body:not(.is-choosing-mode)) {scroll-padding-top:calc(var(--app-shell-height) + 12px)}
- .has-measured-shell body.product-page:not(.is-choosing-mode) .app-shell {
-  position:fixed;inset:0 0 auto;margin:0;
+ /* Only the questions scroll. Both navigation rows stay in the same layout
+    while a long answer is replaced by the shorter loading screen. */
+ html:has(body.game-dialogue:not(.is-choosing-mode) .picker-scroll) {overflow:hidden;scroll-padding:0}
+ body.game-dialogue.selection-design:not(.is-choosing-mode) {padding:0}
+ body.game-dialogue:not(.is-choosing-mode) .conversation-app {
+  display:flex;flex-direction:column;align-items:stretch;height:100dvh;min-height:0;
  }
- .has-measured-shell body.product-page:not(.is-choosing-mode) .conversation-app::before {
-  content:"";display:block;height:var(--app-shell-height);margin-bottom:16px;
+ body.game-dialogue.selection-design:not(.is-choosing-mode) .app-shell {
+  position:relative;flex:none;top:auto;width:100%;margin:0;
+ }
+ body.game-dialogue:not(.is-choosing-mode) .picker-scroll {
+  flex:1;min-height:0;overflow:auto;overscroll-behavior-y:contain;scroll-padding-block:12px;
+  padding-top:16px;
  }
  body.selection-design.product-page.conversation-page .app-brand {min-width:0;max-width:100%}
  body.selection-design.product-page.conversation-page .app-brand img {max-width:100%}

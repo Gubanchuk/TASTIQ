@@ -3,6 +3,23 @@ import assert from 'node:assert/strict';
 import {createTasteMemory} from '../src/server/public/shared/taste-memory.js';
 import {createMemoryView} from '../src/server/public/library/memory-view.js';
 
+test('memory search matches wording, source evidence and rated titles within the chosen domain',()=>{
+  const review={id:'prior',context:{domain:'film',request:'Вечернее кино',note:'Нужна тишина',verdict:'partial',cards:[]}};
+  const records=['film','game'].map(domain=>({id:domain,text:'Тихие истории '+domain,domain,enabled:true,source:{kind:'manual'}}));
+  const ui=createMemoryView({
+    memory:{all:()=>records,persistent:true,sourceStates:()=>[]},
+    library:{all:()=>[],ratingMemory:domain=>domain==='game'?[{id:'r1',title:'Тихий лес',text:'Тихий лес — понравилось',domain}]:[]},
+    feedback:{learningEntries:domain=>domain==='film'?[review]:[]},
+    domains:{game:'Игры',film:'Фильмы'},escape:String
+  });
+  assert.match(ui.html('film','ТИХИЕ'),/Тихие истории film/);
+  assert.doesNotMatch(ui.html('film','тихие'),/Тихие истории game/);
+  assert.match(ui.html('all','тишина'),/Вечернее кино/);
+  assert.match(ui.html('game','лес'),/Тихий лес — понравилось/);
+  assert.doesNotMatch(ui.html('film','лес'),/Тихий лес/);
+  assert.match(ui.html('all','нет совпадения'),/предпочтений не найдено/);
+});
+
 test('library memory actions preserve the original feedback and explicit opt-in',async function historyControl(t) {
   const values=new Map(), storage={get length(){return values.size;},key:i=>[...values.keys()][i]??null,getItem:k=>values.get(k)??null,setItem:(k,v)=>values.set(k,v)};
   const memory=createTasteMemory({storage});

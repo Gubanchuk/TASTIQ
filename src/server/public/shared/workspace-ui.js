@@ -1,6 +1,13 @@
 let editorKey=null,editorScope=null,editorTrigger=null;
 const keyOf=form=>form.dataset.key||'correction';
 
+function pickerScrollHost(){
+ const pane=document.querySelector('.picker-scroll');
+ return pane&&getComputedStyle(pane).overflowY==='auto'?pane:window;
+}
+export function scrollPickerToStart(){
+ pickerScrollHost().scrollTo({top:0,behavior:'instant'});
+}
 export function scrollToPickerContent(target){
  if(!target)return;
  const shell=document.querySelector('.app-shell');
@@ -8,7 +15,7 @@ export function scrollToPickerContent(target){
  const visibleTop=Math.max(0,shell?.getBoundingClientRect().bottom??0,viewport?.offsetTop??0)+12;
  const visibleBottom=(viewport?.offsetTop??0)+(viewport?.height??window.innerHeight);
  if(rect.top>=visibleTop&&rect.bottom<=visibleBottom)return;
- window.scrollTo({top:Math.max(0,rect.top+window.scrollY-visibleTop),behavior:'instant'});
+ pickerScrollHost().scrollBy({top:rect.top-visibleTop,behavior:'instant'});
 }
 
 export function focusPickerContent(target){

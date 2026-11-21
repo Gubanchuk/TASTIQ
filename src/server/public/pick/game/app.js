@@ -6,7 +6,7 @@ import {createSelectionReviewController} from '/shared/selection-review-controll
 import {resultBatchHelp,resultBatchNotice,resultRequestScreen,singleReplacementIndex} from '/shared/result-clarity.js';
 import {compareButtonHtml,currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=5';
 import {requestOverviewHtml,requestPreviewHtml,requestSummaryText} from '/shared/request-overview.js';
-import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent} from '/shared/workspace-ui.js';
+import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent,scrollPickerToStart} from '/shared/workspace-ui.js?v=picker-scroll';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
@@ -225,7 +225,7 @@ function render() {
   restoreView(null);
   if(newScreen&&!client.busy){
    const heading=$('#main h1')??$('#main');
-   if(firstScreen){heading.tabIndex=-1;heading.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
+   if(firstScreen){heading.tabIndex=-1;heading.focus({preventScroll:true});scrollPickerToStart();}
    else focusPickerContent(heading);
   }
  }
@@ -336,11 +336,7 @@ async function navigate(action,{origin=null}={}) {
  if(result&&!client.error&&client.screen?.type==='result'&&browseNavigation)focusResultStart();
  if(singleSlot>=0&&result&&!client.error&&client.screen?.type==='result'){
   const heading=document.querySelectorAll('[data-card-id]')[singleSlot]?.querySelector('h2');
-  if(heading){
-   heading.tabIndex=-1;heading.focus({preventScroll:true});
-   const rect=heading.getBoundingClientRect(),header=$('.app-shell').getBoundingClientRect().bottom;
-   if(rect.top<header+8||rect.bottom>innerHeight)window.scrollBy(0,rect.top-header-12);
-  }
+  focusPickerContent(heading);
  }
  navigationFocus=null;return result;
 }

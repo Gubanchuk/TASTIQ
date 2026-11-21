@@ -3,7 +3,7 @@ import {selectionModeTitle} from '/shared/selection-mode.js';
 import {qaFetch as fetch,qaStorage,qaFeedbackOptions} from '/shared/qa-session.js';
 import {createLibraryStore,LIBRARY_KEY,safeLibraryUrl} from '/shared/library-store.js';
 import {createTasteMemory,TASTE_MEMORY_PREFIX} from '/shared/taste-memory.js';
-import {createMemoryView} from './memory-view.js';
+import {createMemoryView} from './memory-view.js?v=memory-search';
 import {createSavedSource,matchesLibraryQuery,savedPickerDomains} from '/shared/saved-source.js';
 import {artworkImageHtml,retryArtworkImage} from '/shared/card-artwork.js';
 import {collectionRecords} from '/shared/library-collection.js';
@@ -29,7 +29,7 @@ const wallIcon=name=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${({
  saved:'M6 4h12v16l-6-4-6 4z',liked:'M20.5 6.5c-2.5-3-6.5-2-8.5 1-2-3-6-4-8.5-1-3 4 0 7 8.5 13.5 8.5-6.5 11.5-9.5 8.5-13.5z',
  history:'M4 11a8 8 0 1 1 2 7M4 5v6h6M12 7v5l4 2',all:'m4 7 2 2 3-4M12 7h8M4 16l2 2 3-4M12 16h8',
  memory:'M9 19h6M10 22h4M8 15a7 7 0 1 1 8 0c-1 .8-1.2 1.1-1.2 2H9.6c0-.9-.2-1.2-1.6-2z',
- evenings:'M4 4h16v12H9l-5 4zM8 8h8M8 12h5',dislike:'M4 4h4v10H4zM8 13l5 7c2 0 3-1 2-4l-1-3h5c1 0 2-1 2-2l-2-6c0-1-1-1-2-1H8',filters:'M3 7h10m4 0h4M3 17h4m4 0h10M13 4v6M7 14v6'
+ evenings:'M4 4h16v12H9l-5 4zM8 8h8M8 12h5',dislike:'M4 4h4v10H4zM8 13l5 7c2 0 3-1 2-4l-1-3h5c1 0 2-1 2-2l-2-6c0-1-1-1-2-1H8'
  })[name]}"/></svg>`;
 let storage,handoffStorage;
 try{storage=qaStorage(localStorage);}catch{/* keep this visit in memory */}
@@ -54,7 +54,8 @@ const eveningStatuses={all:'Любой',chosen:'Выбрано',started:'Нач�
 const state={view:'saved',limit:24,undo:null};
 const memoryView=createMemoryView({memory:tasteMemory,library,feedback,domains:DOMAINS,escape:esc,render,notice,revealDomain(domain){
  const filters=viewFilters.memory;
- if(filters.domain!=='all'&&filters.domain!==domain){filters.domain=domain;writeNavigation();}
+ if(filters.domain!=='all')filters.domain=domain;
+ filters.query='';writeNavigation();
 },fetchLabels:async()=>{
  const response=await fetch('/api/meta');
  if(!response.ok)throw Error('Справочник недоступен');
@@ -165,28 +166,25 @@ function workPanel(row) {
   <button type="button" class="work-close" data-act="close-work" data-focus="work-close" aria-label="Закрыть карточку">${icon('close')}</button>
  </div>`;
 }
-function filters({compact=false}={}) {
+function filters() {
  const {query,domain,reaction,status,sort,open}=activeFilters();
- const activeCount=Number(domain!=='all')+Number(reaction!=='all')+Number(status!=='all')+Number(sort!=='added');
+ const memorySearch=state.view==='memory';
+ const activeCount=memorySearch?0:Number(domain!=='all')+Number(reaction!=='all')+Number(status!=='all')+Number(sort!=='added');
+ const label=memorySearch?'Поиск в памяти':'Поиск по названию';
  const select=(id,label,options,value)=>`<label class="library-filter"><span>${label}</span><select id="${id}">${Object.entries(options).map(([key,text])=>`<option value="${key}"${value===key&&key!=='all'?' selected':''}>${text}</option>`).join('')}</select></label>`;
- const search=`<label class="library-search">${icon('search')}<span class="library-sr-only">Поиск по названию</span><input id="find-title" type="search" placeholder="Поиск по названию" autocomplete="off" maxlength="300" value="${esc(query)}"></label>`;
- const options=select('domain-filter','Раздел',{all:'Всё',...DOMAINS},domain)
- +(state.view==='all'?select('reaction-filter','Оценка',{all:'Любая',liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'},reaction):'')
- +(state.view==='evenings'?select('status-filter','Статус',eveningStatuses,status):'')
- +select('sort','Порядок',{added:'Сначала новые',oldest:'Сначала старые',title:'По названию'},sort);
+ const search=`<label class="library-search">${icon('search')}<span class="library-sr-only">${label}</span><input id="find-title" type="search" placeholder="${label}" autocomplete="off" maxlength="300" value="${esc(query)}"></label>`;
+ const options=memorySearch?'':select('domain-filter','Раздел',{all:'Всё',...DOMAINS},domain)
+  +(state.view==='all'?select('reaction-filter','Оценка',{all:'Любая',liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'},reaction):'')
+  +(state.view==='evenings'?select('status-filter','Статус',eveningStatuses,status):'')
+  +select('sort','Порядок',{added:'Сначала новые',oldest:'Сначала старые',title:'По названию'},sort);
  const reset=button('Сбросить','clear',`data-focus="filters-reset"${query||activeCount?'':' disabled'}`);
- const chevron='<svg class="filter-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 8 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
- const toggle=(label,panel)=>button(label+chevron,'filters',`data-focus="filters-toggle" aria-expanded="${open}" aria-controls="${panel}"`);
- if(compact){
-  const summary=[query.trim()?`«${query.trim()}»`:'',DOMAINS[domain],
-   {liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'}[reaction],
-   status==='all'?'':eveningStatuses[status],{oldest:'Сначала старые',title:'По названию'}[sort]].filter(Boolean).join(' · ');
-  return {
-   toggle:`<button type="button" class="search-toggle" data-act="filters" data-focus="filters-toggle" aria-label="Поиск и фильтры" aria-expanded="${open}" aria-controls="library-filter-panel">${wallIcon('filters')}<span>Поиск<span class="wide-label"> и фильтры</span></span></button>`,
-   fields:`${!open&&summary?`<button type="button" class="filter-summary" data-act="clear" aria-label="Сбросить фильтры: ${esc(summary)}">${esc(summary)} ×</button>`:''}<div id="library-filter-panel" class="shelf-filter-fields" data-active-count="${activeCount}"${open?'':' hidden'}>${search}<div class="library-filter-options">${options}</div>${reset}</div>`
-  };
- }
- return `<div class="library-filters" data-view-filters="${state.view}">${search}<div class="library-filter-actions">${toggle(`Фильтры${activeCount?`<span class="filter-active-count">${activeCount}</span>`:''}`,'library-filter-options')}${reset}</div><div class="library-filter-panel" id="library-filter-panel" data-active-count="${activeCount}" data-filter-open="${open}"><div class="library-filter-options" id="library-filter-options" data-filter-options>${options}</div></div></div>`;
+ const summary=[query.trim()?`«${query.trim()}»`:'',!memorySearch&&DOMAINS[domain],
+  {liked:'Нравится',disliked:'Не нравится',mixed:'Смешанная',unrated:'Без оценки'}[reaction],
+  status==='all'?'':eveningStatuses[status],!memorySearch&&{oldest:'Сначала старые',title:'По названию'}[sort]].filter(Boolean).join(' · ');
+ return {
+  toggle:`<button type="button" class="search-toggle" data-act="filters" data-focus="filters-toggle" aria-label="${memorySearch?label:'Поиск и фильтры'}" aria-expanded="${open}" aria-controls="library-filter-panel">${icon('search')}<span>Поиск<span class="wide-label">${memorySearch?' в памяти':' и фильтры'}</span></span></button>`,
+  fields:`${!open&&summary?`<button type="button" class="filter-summary" data-act="clear" aria-label="Сбросить фильтры: ${esc(summary)}">${esc(summary)} ×</button>`:''}<div id="library-filter-panel" class="shelf-filter-fields" data-active-count="${activeCount}"${open?'':' hidden'}>${search}${options?`<div class="library-filter-options">${options}</div>`:''}${reset}</div>`
+ };
 }
 function resultCount(shown,total){return hasSearchFilters()?`<p class="library-count" role="status">Найдено ${shown} из ${total}</p>`:'';}
 function noMatches(){return '<div class="library-empty wide-empty"><h2>Нет совпадений</h2><p>Попробуй другое название или сбрось фильтры.</p>'+button('Сбросить фильтры','clear')+'</div>';}
@@ -223,10 +221,9 @@ function board(records) {
  const all=records.filter(inActiveCollection),{reaction}=activeFilters();
  const rows=filtered(all,row=>reaction==='all'||(reaction==='unrated'?!row.rating:row.rating===reaction)),shown=rows.slice(0,state.limit);
  savedPreview=state.view==='saved'?rows:[];
- const search=all.length?filters({compact:true}):{toggle:'',fields:''};
  const source=savedSourceControls(rows,all);
- return {shown,search,source:source?.action,
-  html:search.fields+(source?.scope??'')+undoLine()+(all.length?resultCount(rows.length,all.length):'')
+ return {shown,source:source?.action,
+  html:(source?.scope??'')+undoLine()+(all.length?resultCount(rows.length,all.length):'')
    +`<section class="library-board" aria-label="${VIEWS[state.view]}"><div class="library-card-list wall-grid">${shown.map(card).join('')||empty(state.view,Boolean(all.length&&hasSearchFilters()))}</div>${rows.length>shown.length?`<div class="library-more"><p>Показано ${shown.length} из ${rows.length}</p>${button(`Показать ещё ${Math.min(24,rows.length-shown.length)}`,'more','data-focus="library-more"')}</div>`:''}</section>`
  };
 }
@@ -250,7 +247,7 @@ function historyView(all) {
   }
   return `<article class="history-row">${media(row)}<div><p class="library-meta">${esc([date(row.at),NOUNS[row.domain]].filter(Boolean).join(' · '))}</p><h2>${esc(title(row))}</h2>${Array.isArray(row.alternatives)&&row.alternatives.length?`<p>Ещё варианты: ${esc(row.alternatives.map(card=>card?.title).filter(Boolean).join(', '))}</p>`:''}</div>${saved.some(item=>item.domain===row.domain&&item.id===row.topId)?'<span class="history-saved">Сохранено</span>':button('Сохранить','save-history',`data-index="${row.legacyIndex}" data-focus="history:${row.legacyIndex}"`)}</article>`;
  }).join('');
- return filters()+resultCount(rows.length,all.length)+(entries?`<div class="library-history">${entries}</div>`:noMatches());
+ return resultCount(rows.length,all.length)+(entries?`<div class="library-history">${entries}</div>`:noMatches());
 }
 function eveningRecords(){
  const drafts=new Map(feedbackDrafts);
@@ -269,7 +266,7 @@ function eveningArtwork(){
  for(const row of records())if(row.poster||row.image)artwork.set(key(row),row);
  return artwork;
 }
-function eveningsView(all,search) {
+function eveningsView(all) {
  const {status,item,query,domain}=activeFilters();
  const scope=item?all.filter(row=>key({domain:row.domain,id:row.card.id})===item):all;
  const rows=filtered(scope,row=>eveningMatches(row,status));
@@ -300,7 +297,7 @@ function eveningsView(all,search) {
  }).join('');
  const filteredCount=(query.trim()||domain!=='all'||status!=='all')?resultCount(rows.length,scope.length):'';
  const emptyList=item?'<div class="library-empty"><h3>Пока нет записей об этом произведении</h3></div>':'<div class="library-empty"><h3>Пока нет отзывов</h3><p>Когда выберешь вариант в подборе или оценишь рекомендацию, запись появится здесь.</p>'+pickLink('Найти вариант')+'</div>';
- return `<section class="review-journal">${heading}${search?.fields??''}${filteredCount}${entries?`<div class="library-evenings">${entries}</div>`:scope.length?noMatches():emptyList}</section>`;
+ return `<section class="review-journal">${heading}${filteredCount}${entries?`<div class="library-evenings">${entries}</div>`:scope.length?noMatches():emptyList}</section>`;
 }
 let openedWork=null;
 const workDialog=$('#work-dialog');
@@ -328,19 +325,20 @@ function render({feedbackFocus,focus:requestedFocus,reveal=false}={}) {
  const evenings=eveningRecords(),past=historyRecords();
  const rows=records(),counts={saved:rows.filter(row=>row.saved).length,liked:rows.filter(row=>row.rating==='liked').length,all:rows.length,history:past.length,evenings:evenings.length};
  const viewButton=view=>{
-  const label=view==='evenings'?'Отзывы':view==='all'?'<span class="all-prefix">Все </span>отметки':VIEWS[view];
+  const label=view==='evenings'?'Отзывы':VIEWS[view];
   const count=counts[view]===undefined?'':` <span class="view-count">${counts[view]}</span>`;
   return `<button type="button" data-act="view" data-view="${view}" data-focus="view:${view}" aria-pressed="${state.view===view}"${state.view===view?' aria-current="page"':''}>${wallIcon(view)}<span class="view-label">${label}</span>${count}</button>`;
  };
  const shelf=isCollection()?board(rows):null;
- const reviewSearch=state.view==='evenings'&&evenings.length?filters({compact:true}):null;
+ const search=filters();
  $('#library-app').innerHTML=`<header class="wall-heading">
   <h1>Библиотека</h1>${shelf?.source?`<div class="wall-source">${shelf.source}</div>`:''}
   <nav class="collection-nav" aria-label="В библиотеке">${['saved','liked','history','all'].map(viewButton).join('')}</nav>
-  <div class="wall-tools">${shelf?.search.toggle??reviewSearch?.toggle??''}${viewButton('memory')}${viewButton('evenings')}</div>
+  <div class="wall-tools">${search.toggle}${viewButton('memory')}${viewButton('evenings')}</div>
  </header>`
   +(!library.persistent||state.view==='history'&&!archive.persistent||!familiar.persistent||Object.values(mediaHistories).some(h=>!h.persistent)||state.view==='evenings'&&(!feedback.persistent||!feedbackDrafts.persistent)?'<p class="library-storage-note" role="status">Браузер не разрешил сохранить часть изменений. Они останутся в этом окне до его закрытия.</p>':'')
-  +(state.view==='memory'?memoryView.html(activeFilters().domain):shelf?shelf.html:undoLine()+(state.view==='history'?historyView(past):eveningsView(evenings,reviewSearch)))
+  +search.fields
+  +(state.view==='memory'?memoryView.html(activeFilters().domain,activeFilters().query):shelf?shelf.html:undoLine()+(state.view==='history'?historyView(past):eveningsView(evenings)))
   +'<p class="library-footnote">Библиотека хранится в этом браузере.</p>';
  $('#library-app').setAttribute('aria-busy','false');
  syncWorkDialog(shelf?.shown);
@@ -440,8 +438,10 @@ document.addEventListener('click',event=>{
  if(act==='filters'){activeFilters().open=!activeFilters().open;writeNavigation();render();return;}
  if(act==='more'){state.limit+=24;render();void enrichCovers();return;}
  if(act==='clear'){
-  Object.assign(activeFilters(),defaultFilters(),{open:activeFilters().open,item:activeFilters().item});state.limit=24;writeNavigation();render();void enrichCovers();
-  const focusTarget=(isCollection()||state.view==='evenings')&&!activeFilters().open?$('[data-focus="filters-toggle"]'):$('#find-title');
+  if(state.view==='memory')activeFilters().query='';
+  else Object.assign(activeFilters(),defaultFilters(),{open:activeFilters().open,item:activeFilters().item});
+  state.limit=24;writeNavigation();render();void enrichCovers();
+  const focusTarget=!activeFilters().open?$('[data-focus="filters-toggle"]'):$('#find-title');
   focusTarget?.focus();return;
  }
  if(act==='undo'){undo();return;}
@@ -483,7 +483,7 @@ document.addEventListener('submit',event=>{
 });
 document.addEventListener('toggle',event=>{
  const el=event.target;
- if(el.hasAttribute?.('data-memory-sources')&&el.isConnected)memoryView.rememberSources(el.open);
+ if(el.hasAttribute?.('data-memory-sources')&&el.isConnected&&!viewFilters.memory.query.trim())memoryView.rememberSources(el.open);
  if(el.dataset.detail&&el.isConnected){el.open?openDetails.add(el.dataset.detail):openDetails.delete(el.dataset.detail);}
  if(el.matches('[data-feedback-details]')){const k=`feedback:${el.dataset.run}:${el.dataset.id}`;el.open?openDetails.add(k):openDetails.delete(k);}
 },true);

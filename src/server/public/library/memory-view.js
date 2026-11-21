@@ -76,18 +76,23 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
     }
     return `<li class="memory-record"><p class="library-meta">${esc(domains[domain])} · ${status}</p><p class="memory-wording">${esc(source.title)}</p>${source.evidence?`<p>${esc(source.evidence)}</p>`:''}<div class="memory-actions">${controls}</div></li>`;
   }
-  function html(domain) {
-    const saved=memory.all(),rows=saved.filter(row=>domain==='all'||row.domain===domain);
+  function html(domain,query='') {
+    const needle=query.trim().toLocaleLowerCase('ru');
+    const matches=(...values)=>!needle||values.some(value=>typeof value==='string'&&value.toLocaleLowerCase('ru').includes(needle));
+    const saved=memory.all();
+    const rows=saved.filter(row=>(domain==='all'||row.domain===domain)
+      &&(row.id===draft?.id||matches(row.text,row.source.title,row.source.evidence,domains[row.domain])));
     const ratingDomains=domain==='all'?Object.keys(domains):[domain];
-    const rated=[...new Map(ratingDomains.flatMap(d=>(library.ratingMemory?.(d)??[]).map(row=>[row.id,row]))).values()];
-    const ratings=rated.length?`<details class="memory-sources"><summary>Оценки знакомых произведений · ${rated.length}</summary><div class="memory-source-body"><p>В подборе учитываются до 12 последних оценок раздела. Оценку можно изменить или снять в библиотеке.</p><ul class="memory-list">${rated.map(r=>`<li><a href="/library/?view=all&amp;all.domain=${esc(r.domain==='anime'?'all':r.domain)}&amp;all.q=${encodeURIComponent(r.title)}">${esc(r.text)}</a></li>`).join('')}</ul></div></details>`:'';
+    const rated=[...new Map(ratingDomains.flatMap(d=>(library.ratingMemory?.(d)??[]).map(row=>[row.id,row]))).values()].filter(row=>matches(row.title,row.text,domains[row.domain]));
+    const ratings=rated.length?`<details class="memory-sources"${needle?' open':''}><summary>Оценки знакомых произведений · ${rated.length}</summary><div class="memory-source-body"><p>В подборе учитываются до 12 последних оценок раздела. Оценку можно изменить или снять в библиотеке.</p><ul class="memory-list">${rated.map(r=>`<li><a href="/library/?view=all&amp;all.domain=${esc(r.domain==='anime'?'all':r.domain)}&amp;all.q=${encodeURIComponent(r.title)}">${esc(r.text)}</a></li>`).join('')}</ul></div></details>`:'';
     const linked=new Set(saved.map(row=>JSON.stringify([row.domain,row.source.kind,row.source.id])));
-    const available=sources(domain).filter(s=>!linked.has(JSON.stringify([s.domain,s.kind,s.id])));
+    const available=sources(domain).filter(s=>!linked.has(JSON.stringify([s.domain,s.kind,s.id]))
+      &&(draft?.source.kind===s.kind&&draft.source.id===s.id&&draft.domain===s.domain||matches(s.title,s.text,s.evidence,domains[s.domain])));
     const origins=new Map(memory.sourceStates().map(s=>[JSON.stringify([s.domain,s.kind,s.id]),s]));
     const sourceDraft=draft&&!draft.id&&available.some(s=>s.domain===draft.domain&&s.id===draft.source.id&&s.kind===draft.source.kind);
     const inlineRecord=draft?.id&&rows.some(row=>row.id===draft.id);
     const newEditor=draft&&!sourceDraft&&!inlineRecord;
-    const previous=available.length?`<details class="memory-sources"${openSources?' open':''} data-memory-sources><summary><span>Прошлые ответы и отзывы</span><span class="memory-count">${available.length}</span></summary>
+    const previous=available.length?`<details class="memory-sources"${openSources||needle?' open':''} data-memory-sources><summary><span>Прошлые ответы и отзывы</span><span class="memory-count">${available.length}</span></summary>
       <div class="memory-source-body"><p>Если пожелание по-прежнему важно, добавь его в предпочтения.</p>
       <ul class="memory-list">${available.map(s=>sourceCard(s,origins.get(JSON.stringify([s.domain,s.kind,s.id])))).join('')}</ul></div></details>`:'';
     return `<section class="library-memory" aria-labelledby="memory-heading"><header class="memory-heading"><div><h2 id="memory-heading">Память предпочтений</h2>
@@ -97,7 +102,7 @@ export function createMemoryView({memory, library, feedback, domains, escape, re
       ${error&&!draft?`<p role="alert" class="memory-error">${esc(error)}</p>`:''}
       <div class="memory-layout"><section class="memory-saved"><header class="memory-section-head"><h3>Мои предпочтения</h3>
       ${button('Добавить','new','aria-label="Добавить предпочтение" data-focus="memory-new"'+(draft?' disabled':''))}</header>
-      ${newEditor?editor():''}${rows.length?`<ul class="memory-list">${rows.map(record).join('')}</ul>`:!newEditor?`<p class="memory-empty">${domain==='all'?'Здесь пока нет записей.':'Для этого раздела пока нет записей.'} Добавь то, что стоит запомнить, например любимый жанр.</p>`:''}
+      ${newEditor?editor():''}${rows.length?`<ul class="memory-list">${rows.map(record).join('')}</ul>`:!newEditor?`<p class="memory-empty">${needle?'По этому запросу предпочтений не найдено.':(domain==='all'?'Здесь пока нет записей.':'Для этого раздела пока нет записей.')+' Добавь то, что стоит запомнить, например любимый жанр.'}</p>`:''}
       </section>${previous}</div>${ratings}${Object.hasOwn(domains,domain)?`<a class="memory-start" href="${esc(pickerUrl(domain,{choose:'1'}))}">Начать подбор · ${esc(domains[domain])} <span aria-hidden="true">→</span></a>`:''}</section>`;
   }
   function close() { draft=null;confirming=null;error=''; }
