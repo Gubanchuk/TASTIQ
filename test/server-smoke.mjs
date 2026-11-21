@@ -69,6 +69,8 @@ try {
   assert.equal(meta?.domains.film.items,3);
   assert.equal(meta?.domains.anime.items,1);
   assert.equal(meta?.domains.anime.newSelections,true);
+  const landing=await (await localFetch(base+'/')).text();
+  assert.ok(landing.includes(`data-anime-enabled="${meta.domains.anime.newSelections}"`));
   const browserHeaders={Accept:'text/html,application/xhtml+xml'};
   const missingPage=await localFetch(base+'/page-that-does-not-exist/',{headers:browserHeaders});
   assert.equal(missingPage.status,404);

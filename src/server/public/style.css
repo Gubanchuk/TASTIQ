@@ -71,10 +71,12 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.door:is(:hover,:focus-visible) .door-cover:nth-child(1){transform:rotate(-16deg)}.door:is(:hover,:focus-visible) .door-cover:nth-child(2){transform:rotate(-3deg)}.door:is(:hover,:focus-visible) .door-cover:nth-child(3){transform:rotate(15deg)}}
 .doors:focus-visible{outline:none}
 .door[data-domain=anime]{--door-ground:#86a9d0}
+[data-anime-enabled=false] [data-anime-entry]{display:none}
+.door-count{min-block-size:1lh}
 .foot .foot-tmdb{display:flex;align-items:center;gap:10px}
 .foot-tmdb img{display:block;object-fit:contain}
 @media(min-width:900px){
- .doors.with-anime{grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,1.7vw,26px)}
- .doors.with-anime .door-art{height:clamp(190px,20vw,306px)}
+ [data-anime-enabled=true] .doors{grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,1.7vw,26px)}
+ [data-anime-enabled=true] .doors .door-art{height:clamp(190px,20vw,306px)}
 }
-@media(min-width:761px) and (max-width:899px){.doors.with-anime{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:761px) and (max-width:899px){[data-anime-enabled=true] .doors{grid-template-columns:repeat(3,minmax(0,1fr))}}

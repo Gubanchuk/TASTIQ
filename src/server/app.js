@@ -19,12 +19,13 @@ import { budgetTransport } from '../ai/budget-transport.js';
 import { createConversationService } from './conversation-service.js';
 import { createMediaConversationService } from './media-conversation-service.js';
 import {journalPath} from './runtime-paths.js';
+import {animeSelectionsEnabled,renderLanding} from './landing.js';
 import {runQaRequest,qaReceipt,observeQaApi,isQaRequest} from './qa-observation.js';
 
 const PUBLIC = resolve(ROOT, 'src', 'server', 'public');
 const JOURNAL = journalPath();
 const appendJournal=(content,encoding='utf8')=>{if(!isQaRequest())appendFileSync(JOURNAL,content,encoding);};
-const animeEnabled=process.env.TASTIQ_ANIME==='on'||(process.env.VERCEL!=='1'&&process.env.TASTIQ_ANIME!=='off');
+const animeEnabled=animeSelectionsEnabled();
 const animePaused=()=>Object.assign(Error('Новые подборы аниме пока недоступны. Сохранённые подборы можно открыть в библиотеке.'),{status:400});
 const animeArchiveActions=new Set(['familiar_mark','familiar_unmark','familiar_keep','undo_replacement']);
 export const catalogs = loadCatalogs({ gamesPath: process.env.CATALOG_PATH, screenPath: process.env.SCREEN_CATALOG_PATH });
@@ -209,6 +210,7 @@ async function handleRequest(req, res) {
       return res.end();
     }
     res.writeHead(200, { 'Content-Type': MIME[extname(path)] ?? 'application/octet-stream' });
+    if(path===resolve(PUBLIC,'index.html'))return res.end(renderLanding(readFileSync(path,'utf8'),animeEnabled));
     res.end(readFileSync(path));
   } catch (err) {
     if (err.status !== 400) console.error(err);

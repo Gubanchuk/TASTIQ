@@ -1,10 +1,11 @@
-import {cpSync,existsSync,lstatSync,mkdirSync,rmSync,writeFileSync} from 'node:fs';
+import {cpSync,existsSync,lstatSync,mkdirSync,readFileSync,rmSync,writeFileSync} from 'node:fs';
 import {dirname,join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {screenCatalogPartFiles} from '../src/lib/screen-catalog.js';
+import {animeSelectionsEnabled,renderLanding} from '../src/server/landing.js';
 
 const runtimeData=['catalog.json','catalog-screen.json','anime-wikidata.json','quotes-ru.json','posters.json','catalog-artwork.json','catalog-artwork-recovered.json','verified-game-context.json','verified-game-releases.json'];
-export function buildVercel({root=resolve(dirname(fileURLToPath(import.meta.url)),'..')}={}){
+export function buildVercel({root=resolve(dirname(fileURLToPath(import.meta.url)),'..'),env=process.env}={}){
  root=resolve(root);
  for(const name of runtimeData)if(!existsSync(join(root,'data',name)))throw Error(`Required runtime data missing: data/${name}`);
  const screenParts=screenCatalogPartFiles(join(root,'data/catalog-screen.json'));
@@ -15,6 +16,8 @@ export function buildVercel({root=resolve(dirname(fileURLToPath(import.meta.url)
  rmSync(output,{recursive:true,force:true});
  const fn=join(output,'functions/tastiq.func');mkdirSync(fn,{recursive:true});
  cpSync(join(root,'src/server/public'),join(output,'static'),{recursive:true});
+ const landing=join(output,'static/index.html');
+ writeFileSync(landing,renderLanding(readFileSync(landing,'utf8'),animeSelectionsEnabled(env)));
  cpSync(join(root,'src'),join(fn,'src'),{recursive:true});
  mkdirSync(join(fn,'data'),{recursive:true});
  for(const name of [...runtimeData,...screenParts])cpSync(join(root,'data',name),join(fn,'data',name));

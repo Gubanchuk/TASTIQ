@@ -14,8 +14,12 @@ if (entries.length || counters.length) {
    const form = plural.select(items);
    counter.textContent = number.format(items) + ' ' + nouns[domain][form === 'one' ? 0 : form === 'few' ? 1 : 2];
   }
-  if (!meta?.domains?.anime?.newSelections) return;
-  for (const entry of entries) entry.hidden = false;
-  document.querySelector('.doors')?.classList.add('with-anime');
+  const enabled = meta?.domains?.anime?.newSelections;
+  if (typeof enabled !== 'boolean') return;
+  if (document.documentElement.hasAttribute('data-anime-enabled')) {
+   document.documentElement.dataset.animeEnabled = String(enabled);
+  } else {
+   for (const entry of entries) entry.hidden = !enabled;
+  }
  }).catch(()=>{/* The four permanent entrances also work without metadata. */});
 }

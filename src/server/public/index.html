@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-anime-enabled="true">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,14 +9,14 @@
   <meta name="description" content="Подбери игру, фильм, сериал, мультфильм или аниме на сегодня. Расскажи, чего хочется, и получи до четырёх вариантов с пояснениями.">
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
   <link rel="stylesheet" href="/shared/brand.css">
-  <link rel="stylesheet" href="/style.css?v=category-captions">
-  <link rel="stylesheet" href="/landing-bottom.css?v=landing-choice-1">
+  <link rel="stylesheet" href="/style.css?v=stable-categories">
+  <link rel="stylesheet" href="/landing-bottom.css?v=film-example">
 </head>
 <body>
   <a class="skip" href="#doors">К выбору раздела</a>
   <header class="top"><div class="top-in">
     <a class="brand" href="/pick/start/" aria-label="TASTIQ — выбрать раздел"><img class="site-logo" src="/assets/brand/tastiq-logo-cobalt.svg" alt="TASTIQ" width="164" height="40"></a>
-    <a class="btn btn-primary" href="/pick/start/">Начать подбор <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    <a class="btn btn-primary" href="#doors">Выбрать раздел <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
   </div></header>
   <main>
     <section class="first" aria-labelledby="hero-title">
@@ -57,7 +57,7 @@
           </span><span class="door-go" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
           <span class="door-label"><span class="door-title">Мультфильм</span><span class="door-count num" data-catalog-count="cartoon"></span></span>
         </a>
-        <a class="door" data-domain="anime" data-anime-entry hidden href="/pick/watch/?domain=anime&amp;choose=1">
+        <a class="door" data-domain="anime" data-anime-entry href="/pick/watch/?domain=anime&amp;choose=1">
           <span class="door-art"><span class="wall" aria-hidden="true">
             <img class="door-cover" src="/assets/landing/anime-howl.webp" width="300" height="450" alt="" decoding="async">
             <img class="door-cover" src="/assets/landing/anime-chihiro.webp" width="300" height="450" alt="" decoding="async">
@@ -68,14 +68,7 @@
       </nav>
     </section>
     <section class="landing-method" aria-labelledby="method-title">
-      <div class="method-intro">
-        <h2 id="method-title">Как работает подбор</h2>
-        <ul class="method-steps">
-          <li><strong>Расскажи, что ищешь.</strong> Можно выбрать подсказку или ответить своими словами.</li>
-          <li><strong>Добавь детали.</strong> Например, сколько у тебя времени и кто составит компанию. Перед подбором можно поправить ответ.</li>
-          <li><strong>Сравни варианты.</strong> Сохрани то, что заинтересовало. Знакомый вариант можно заменить.</li>
-        </ul>
-      </div>
+      <h2 id="method-title">Как работает подбор</h2>
       <article class="landing-example" aria-labelledby="example-title">
         <h3 id="example-title">Пример подбора</h3>
         <blockquote>Хочу приключение с юмором. На фильм есть два часа.</blockquote>
@@ -83,8 +76,14 @@
           <img src="/assets/landing/tt0088763.webp" width="250" height="375" alt="" loading="lazy" decoding="async">
           <div><h4>Назад в будущее</h4><p class="example-year">1985 · 1 ч 56 мин</p></div>
         </div>
-        <p>На машине времени Марти попадает в 1955 год. Чтобы вернуться домой, ему придётся устроить первое свидание своих родителей.</p>
+        <p>За приключение отвечает поездка Марти в 1955-й, за юмор — его попытки устроить свидание собственным родителям. Фильм укладывается в твои два часа.</p>
+        <a class="example-link" href="/pick/watch/?domain=film&amp;choose=1">Подобрать мне фильм <span aria-hidden="true">→</span></a>
       </article>
+      <ul class="method-steps">
+        <li><strong>Расскажи, что ищешь.</strong> Можно выбрать подсказку или ответить своими словами.</li>
+        <li><strong>Добавь детали.</strong> Например, сколько у тебя времени и кто составит компанию. Перед подбором можно поправить ответ.</li>
+        <li><strong>Сравни варианты.</strong> Сохрани то, что заинтересовало. Знакомый вариант можно заменить.</li>
+      </ul>
     </section>
   <section class="landing-finale" aria-labelledby="finale-title">
     <div class="finale-inner">
@@ -94,7 +93,7 @@
         <a class="final-choice" href="/pick/watch/?domain=film&amp;choose=1"><span>Фильм</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
         <a class="final-choice" href="/pick/watch/?domain=series&amp;choose=1"><span>Сериал</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
         <a class="final-choice" href="/pick/watch/?domain=cartoon&amp;choose=1"><span>Мультфильм</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-        <a class="final-choice" data-anime-entry hidden href="/pick/watch/?domain=anime&amp;choose=1"><span>Аниме</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="final-choice" data-anime-entry href="/pick/watch/?domain=anime&amp;choose=1"><span>Аниме</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
       </nav>
     </div>
   </section>
@@ -120,6 +119,6 @@
       </div>
     </details>
   </div></footer>
-  <script type="module" src="/shared/anime-entry.js"></script>
+  <script type="module" src="/shared/anime-entry.js?v=stable-categories"></script>
 </body>
 </html>

@@ -55,6 +55,19 @@ test('Vercel build refuses to publish a site missing its required screen catalog
  finally{f.close();}
 });
 
+test('landing HTML uses the deployment anime flag before catalog metadata arrives',()=>{
+ const f=fixture();
+ try{
+  f.put('src/server/public/index.html',readFileSync(new URL('../src/server/public/index.html',import.meta.url),'utf8'));
+  for(const [flag,expected] of [['on','true'],['off','false'],[undefined,'false']]){
+   const output=buildVercel({root:f.root,env:{VERCEL:'1',TASTIQ_ANIME:flag}});
+   const html=readFileSync(join(output,'static/index.html'),'utf8');
+   assert.ok(html.includes(`data-anime-enabled="${expected}"`));
+   assert.match(html,/<a class="door" data-domain="anime" data-anime-entry href=/);
+  }
+ }finally{f.close();}
+});
+
 test('a missing catalog part is reported by the server loader and the build',()=>{
  const f=fixture();
  try{
