@@ -7,7 +7,7 @@ import {noMatchHtml} from '/shared/no-match-view.js';
 import {resultBatchHelp,resultBatchNotice,resultRequestScreen,singleReplacementIndex} from '/shared/result-clarity.js';
 import {compareButtonHtml,currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=6';
 import {openShorter,shorterLimit} from './shorter-result.js';
-import {originalWishHtml,requestOverviewHtml,requestPreviewHtml,requestSummaryText} from '/shared/request-overview.js';
+import {openRequestReader,originalWishHtml,requestOverviewHtml,requestPreviewHtml,requestSummaryText} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent,scrollPickerToStart} from '/shared/workspace-ui.js?v=picker-scroll';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
@@ -139,8 +139,7 @@ function setContextOpen(open) {
  panel.dataset.contextOpen=String(open);toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Свернуть':'Показать';
 }
 function renderRequestPreview(screen) {
- const first=screen.uncertainties?.[0];
- const preview=$('#request-preview');preview.dataset.hasUncertainty=String(Boolean(first));
+ const preview=$('#request-preview');
  preview.innerHTML=requestPreviewHtml({screen,state:client.state,busy:client.busy});
  preview.hidden=!preview.innerHTML;
 }
@@ -158,7 +157,7 @@ function questionHtml(screen) {
  const question=screen.question,optional=question.id!=='direction'&&question.allowText!==false;
  const exampleHtml=question.allowText!==false
   ?'<div class="game-example"><label for="game-search">Знакомое название для примера</label><input class="input" id="game-search" type="search" autocomplete="off" placeholder="Введи название"><div id="search-results" class="game-search-results" aria-live="polite"></div></div>':'';
- return (question.id==='direction'?'':originalWishHtml(client.state))+questionFormHtml(question,currentDraft(question),{domain,busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml})+checkpointHtml(screen.checkpoint);
+ return (question.id==='direction'?'':originalWishHtml(client.state,client.draft))+questionFormHtml(question,currentDraft(question),{domain,busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml})+checkpointHtml(screen.checkpoint);
 }
 function reviewHtml(screen) {
  if(screen.noMatch)return noMatchHtml(screen,esc);
@@ -400,6 +399,7 @@ document.addEventListener('click',event=>{
  const menu=$('.game-session-menu');if(menu?.open&&!menu.contains(event.target)){menu.open=false;disclosures.set('session',false);}
  const el=event.target.closest('[data-act]');if(!el||el.disabled)return;
  const act=el.dataset.act;
+ if(act==='read-request')return openRequestReader(el);
  if(act==='copy-title')return void copyCardTitle(el);
  if(act==='compare-results'&&!client.busy){
   const cards=currentFinalists(client.state,client.screen);

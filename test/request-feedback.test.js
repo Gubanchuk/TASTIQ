@@ -8,7 +8,7 @@ import {answerConversation,normalizeConversation,conversationToLegacy,applyConve
 import {answerMediaConversation,normalizeMediaConversation,mediaConversationToLegacy,applyMediaConversationProposal} from '../src/core/media-conversation.js';
 import {criteriaOf} from '../src/ai/pick-constraints.js';
 import {pureRatingRequirement} from '../src/core/age-rating.js';
-import {originalWishHtml} from '../src/server/public/shared/request-overview.js';
+import {originalWishHtml,requestPreviewHtml} from '../src/server/public/shared/request-overview.js';
 
 test('a separate avoidance survives submission, normalization and returning to the first form',()=>{
  for(const domain of ['game','film','anime','series','cartoon']){
@@ -41,9 +41,37 @@ test('clarifications retain the original wish even after a newer answer or a mod
  const html=originalWishHtml(state);
  assert.match(html,/Исходный запрос/);
  assert.ok(html.includes(text.replaceAll('<','&lt;').replaceAll('>','&gt;')));
- assert.match(html,/<details/);
+ assert.match(html,/<button[^>]*aria-haspopup="dialog"/);
  assert.doesNotMatch(html,/До трёх сезонов|<без мистики>/);
  assert.equal(originalWishHtml({turns:[]}), '');
+});
+
+test('compact original wishes are readable inline and multiline wishes open the reader',()=>{
+ const render=text=>originalWishHtml({turns:[{kind:'answer',question:{id:'direction'},text}]});
+ assert.match(render('Лёгкая комедия'),/<p>Лёгкая комедия<\/p>/);
+ assert.doesNotMatch(render('Лёгкая комедия'),/<button/);
+ for(const text of ['Первая строка\nВторая строка','я'.repeat(1600)]){
+  const html=render(text);
+  assert.match(html,/aria-haspopup="dialog"/);
+  assert.ok(html.includes(text));
+ }
+});
+
+test('reader restores paragraphs only from a matching accepted draft',()=>{
+ const state={id:'reader',turns:[{question:{id:'direction'},kind:'answer',text:'Хочу фильм. Без мистики.'}]};
+ assert.match(originalWishHtml(state,()=>({text:'Хочу фильм.\n\nБез мистики.'})),/Хочу фильм\.\n\nБез мистики\./);
+ const html=originalWishHtml(state,()=>({text:'Другой черновик'}));
+ assert.match(html,/Хочу фильм\. Без мистики\./);
+ assert.doesNotMatch(html,/Другой черновик/);
+});
+
+test('the compact panel omits a repeated original wish but keeps a new summary and its clarification',()=>{
+ const state={turns:[{kind:'answer',question:{id:'direction'},text:'Хочется комедию.'}]};
+ const screen={type:'question',question:{id:'mood'},summary:state.turns[0].text,uncertainties:['Какой юмор нравится?']};
+ const preview=requestPreviewHtml({screen,state});
+ assert.doesNotMatch(preview,/Хочется комедию/);
+ assert.match(preview,/Уточнить один момент/);
+ assert.match(requestPreviewHtml({screen:{...screen,summary:'Вдвоём, до двух часов.'},state}),/Вдвоём, до двух часов/);
 });
 
 test('a model paraphrase does not obstruct opting out of an explicitly quoted 18+ rating',()=>{

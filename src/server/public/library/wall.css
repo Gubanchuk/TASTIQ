@@ -16,7 +16,7 @@ body.library-page main#library-content {
 }
 #library-content .wall-heading {
   display:grid; grid-template-areas:"title source" "views tools"; grid-template-columns:minmax(0,1fr) auto;
-  align-items:center; gap:20px 16px; margin:0 0 25px; padding:0 0 10px; border-bottom:1px solid var(--wall-line);
+  align-items:center; gap:20px 16px; margin:0 0 25px; padding:0;
 }
 #library-content .wall-heading h1 {grid-area:title; align-content:center; min-height:48px; color:var(--wall-ink); margin:0; font:520 clamp(38px,4.1vw,65px)/1.13 Unbounded,Golos,sans-serif; letter-spacing:-.038em}
 #library-content .wall-source {grid-area:source; justify-self:end; max-width:100%; min-width:0}
@@ -24,12 +24,12 @@ body.library-page main#library-content {
 #library-content .wall-source .saved-source-chooser {position:relative; z-index:5}
 #library-content .wall-source .saved-source-chooser>summary,#library-content .wall-source [data-act=saved-source-start] {
   display:flex; align-items:center; justify-content:center; gap:12px; min-height:44px; margin:0; padding:8px 16px;
-  color:var(--wall-blue); background:white; border:1px solid var(--wall-line); border-radius:9px; font:600 15px/1.3 Golos,sans-serif; cursor:pointer;
+  color:var(--wall-blue); background:var(--wall-selected); border:0; border-radius:9px; font:600 15px/1.3 Golos,sans-serif; cursor:pointer;
 }
 #library-content #library-app .wall-source .saved-source-chooser[open]>.saved-source-actions {
   position:absolute; top:calc(100% + 6px); right:0; width:min(16rem,calc(100vw - 40px)); box-sizing:border-box;
   max-height:min(55dvh,28rem); overflow:auto; overscroll-behavior:contain; display:grid; gap:0; padding:6px;
-  background:white; border:1px solid var(--wall-line); border-radius:14px; box-shadow:0 12px 32px #14213424;
+  background:white; border:0; border-radius:14px; box-shadow:0 12px 32px #14213424;
 }
 #library-content #saved-domain-question {margin:0; padding:9px 10px 8px; color:var(--wall-muted); font:500 .875rem/1.4 Golos,sans-serif}
 #library-content #library-app .saved-source-actions [data-act=saved-source-domain] {
@@ -99,7 +99,7 @@ body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px 
 #work-dialog h2 {font:650 clamp(22px,3vw,36px)/1.12 Golos,sans-serif; margin:0 0 14px; overflow-wrap:anywhere}
 #work-dialog .work-actions {grid-area:actions; display:grid; align-content:start; gap:12px; min-width:0}
 #work-dialog .work-actions h3 {font:600 17px/1.35 Golos,sans-serif; margin:0 0 9px}
-#work-dialog .work-rating {border-block-start:1px solid var(--wall-line); padding-top:16px}
+#work-dialog .work-rating {padding-top:8px}
 #work-dialog .rating-actions {display:flex; flex-wrap:wrap; gap:6px}
 #work-dialog :is(.library-button,.library-source) {display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; margin:0; padding:7px 11px; font:550 15px/1.3 Golos,sans-serif; border:1px solid var(--wall-line); border-radius:8px; color:var(--wall-ink); background:#fff; cursor:pointer; text-decoration:none}
 #work-dialog :is(.library-button,.library-source):hover {background:var(--wall-paper); border-color:var(--wall-blue)}
@@ -107,9 +107,9 @@ body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px 
 #work-dialog [aria-pressed=true] svg {fill:currentColor}
 #work-dialog :is([data-value=none],[data-act=forget],.library-source) {justify-self:start; color:var(--wall-muted); font-size:14px; padding-inline:0; border:0; text-decoration:underline; text-underline-offset:3px}
 #work-dialog .work-hint {color:var(--wall-muted); font:400 14px/1.45 Golos,sans-serif; margin:7px 0 0}
-#work-dialog [data-act=card-reviews] {justify-content:flex-start; width:100%; border-width:1px 0 0; border-radius:0; padding:10px 0; color:var(--wall-blue)}
+#work-dialog [data-act=card-reviews] {justify-content:flex-start; width:100%; border:0; border-radius:0; padding:10px 0; color:var(--wall-blue)}
 #work-dialog [data-act=card-reviews] svg:last-child {margin-left:auto}
-#work-dialog .work-familiar {border-block-start:1px solid var(--wall-line)}
+#work-dialog .work-familiar {margin-block-start:6px}
 #work-dialog .work-familiar>summary {padding:12px 0; min-height:44px; cursor:pointer; font:550 15px/1.4 Golos,sans-serif}
 #work-dialog .work-close {right:8px; top:8px}
 #library-content .wall-tools .view-count {font-size:.82em; font-variant-numeric:tabular-nums}
@@ -119,9 +119,9 @@ body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px 
 #library-content .reviews-heading p {margin:6px 0 0; color:var(--wall-muted); font:450 15px/1.45 Golos,sans-serif}
 #library-content #library-app .reviews-heading button {padding:6px 0; display:inline-flex; min-height:44px; align-items:center; gap:6px; color:var(--wall-blue); background:transparent; border:0; border-radius:4px; font:550 15px/1.3 Golos,sans-serif}
 #library-content .reviews-heading button svg {width:18px; height:18px; stroke:currentColor; stroke-width:1.6; transform:rotate(180deg)}
-#library-content #library-app .library-evenings {display:grid; gap:0; max-width:none; border-block-start:1px solid var(--wall-line)}
-#library-content #library-app details.library-evening {margin:0; border:0; border-block-end:1px solid var(--wall-line); padding:0; border-radius:0; background:transparent; overflow:visible}
-#library-content #library-app details.library-evening>summary {display:grid; grid-template-columns:76px minmax(0,1fr) 20px; align-items:center; gap:18px; padding:14px 8px; min-height:0; background:transparent}
+#library-content #library-app .library-evenings {display:grid; gap:12px; max-width:none}
+#library-content #library-app details.library-evening {margin:0; border:0; padding:0; border-radius:16px; background:white; overflow:visible}
+#library-content #library-app details.library-evening>summary {display:grid; grid-template-columns:76px minmax(0,1fr) 20px; align-items:center; gap:18px; border-radius:16px; padding:14px 18px; min-height:0; background:transparent}
 #library-content #library-app details.library-evening[open]>summary,#library-content #library-app details.library-evening>summary:hover {background:#eff2f9}
 #library-content #library-app .library-evening>summary .library-cover {width:100%; height:auto; min-height:0; aspect-ratio:2/3; border-radius:6px; background:var(--wall-line)}
 #library-content #library-app .library-evening>summary .library-cover img {position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
@@ -131,7 +131,7 @@ body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px 
 #library-content #library-app .evening-summary-copy .review-meta,#library-content .review-states {color:var(--wall-muted); font:500 13px/1.4 Golos,sans-serif}
 #library-content #library-app .evening-summary-copy .review-excerpt {font:400 16px/1.45 Golos,sans-serif; color:var(--wall-ink); overflow-wrap:anywhere; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
 #library-content #library-app .library-evening[open] .review-excerpt {-webkit-line-clamp:unset}
-#library-content #library-app .evening-content {padding:16px clamp(12px,2vw,24px) 20px; background:white; border:1px solid var(--wall-line); border-radius:8px; margin:0 0 14px}
+#library-content #library-app .evening-content {padding:16px clamp(12px,2vw,24px) 20px; background:transparent; border:0; margin:0}
 #library-content .review-wish {font:400 15px/1.45 Golos,sans-serif; color:var(--wall-muted); margin:0 0 16px; overflow-wrap:anywhere}
 #library-content .review-wish strong {display:block; color:var(--wall-ink); font-weight:600}
 @media(max-width:1100px){#library-content #library-app .wall-grid {grid-template-columns:repeat(4,minmax(0,1fr))}}
@@ -147,7 +147,7 @@ body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px 
 }
 @media(max-width:600px){
   body.library-page main#library-content {padding:21px 15px 48px}
-  #library-content .wall-heading {gap:5px 6px; margin-bottom:16px; padding-bottom:6px}
+  #library-content .wall-heading {gap:5px 6px; margin-bottom:22px}
   #library-content .wall-heading h1 {min-height:44px; font-size:clamp(25px,7.8vw,42px)}
   #library-content .collection-nav {
     display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; gap:2px;
@@ -173,7 +173,7 @@ body.library-page :is(button,a,summary,input,select):focus-visible {outline:3px 
   #work-dialog .work-intro .library-meta {padding-right:12px}
   #work-dialog .work-close {right:3px; top:3px; width:36px; height:36px; background:white; box-shadow:none}
   #work-dialog .work-close::after {content:""; position:absolute; inset:-4px}
-  #library-content #library-app details.library-evening>summary {grid-template-columns:60px minmax(0,1fr) 16px; padding:12px 2px; gap:12px}
+  #library-content #library-app details.library-evening>summary {grid-template-columns:60px minmax(0,1fr) 16px; padding:12px; gap:12px}
   #library-content #library-app .evening-summary-copy .review-excerpt {font-size:15px}
 }
 @media(max-width:385px){

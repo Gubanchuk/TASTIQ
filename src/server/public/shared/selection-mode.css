@@ -24,7 +24,6 @@
   --card-surface:#cddcfa;
   --card-ink:#142651;
   --card-description:#293e69;
-  --card-border:#7790ba;
   --card-inset:clamp(23px, 3vw, 34px);
   position:relative;
   isolation:isolate;
@@ -36,7 +35,7 @@
   padding:0 0 var(--card-inset);
   overflow:hidden;
   appearance:none;
-  border:1px solid var(--card-border);
+  border:0;
   border-radius:22px;
   background:var(--card-surface);
   color:var(--card-ink);
@@ -48,7 +47,6 @@
   --card-surface:#28378b;
   --card-ink:#fff;
   --card-description:#e4e8ff;
-  --card-border:#263571;
 }
 .mode-card-art {
   position:relative;
@@ -141,11 +139,11 @@
 .mode-footer { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:22px; }
 .mode-footer :is(a,button) {
   display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px;
-  padding:9px 15px; border:1px solid var(--selection-edge); border-radius:12px; background:white;
+  padding:9px 15px; border:0; border-radius:12px; background:white;
   color:#253a71; font:550 .9rem/1.35 Golos,sans-serif; text-align:left; text-decoration:none; cursor:pointer;
 }
-.mode-footer [data-mode-resume] {background:var(--selection-soft); border-color:#afc1eb}
-.mode-footer :is(a,button):is(:hover,:focus-visible) {background:var(--selection-active); border-color:var(--selection-accent)}
+.mode-footer [data-mode-resume] {background:var(--selection-soft)}
+.mode-footer :is(a,button):is(:hover,:focus-visible) {background:var(--selection-active)}
 .mode-footer svg {flex:none; width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
 .mode-checkpoint {
   display:flex;
@@ -155,7 +153,7 @@
   justify-content:space-between;
   margin:16px 0 0;
   padding:14px 16px;
-  border:1px solid #d6def5;
+  border:0;
   border-radius:14px;
   background:#edf2ff;
 }

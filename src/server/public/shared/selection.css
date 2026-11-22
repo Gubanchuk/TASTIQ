@@ -69,7 +69,7 @@ body.conversation-page.game-dialogue.workspace-v2 .game-error{background:var(--b
  body.conversation-page.game-dialogue .game-context-panel[data-context-open=true] .game-context-preview{display:none}
  body.conversation-page.game-dialogue .game-context-panel:not([data-context-open=true]) #understanding{display:none}
  body.conversation-page.game-dialogue .game-context-preview p{font-size:13px;line-height:1.7;margin:6px 0 10px}
- body.conversation-page.game-dialogue .game-context-preview[data-has-uncertainty=false] p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ body.conversation-page.game-dialogue .game-context-preview p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
  body.conversation-page.game-dialogue .game-context-preview .btn{min-height:44px;color:var(--brand-primary);background:var(--brand-surface);margin-bottom:8px}
  body.conversation-page .conversation-domains{display:none}
  .selection-header strong{font-size:18px}body.conversation-page .selection-header{padding:12px 20px}

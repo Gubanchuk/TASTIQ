@@ -9,7 +9,7 @@
 .conversation-page.legacy-workspace #side-domains .side-item[aria-current=true]{color:white;font-weight:650}
 .conversation-page.legacy-workspace #side-domains :is(.side-count,.side-title){display:none}
 .conversation-page.legacy-workspace .side-item .i{width:15px;height:15px}
-.conversation-page.legacy-workspace .legacy-context-panel{grid-column:2;grid-row:1;display:block;position:sticky;top:0;margin:0;border:0;border-right:1px solid var(--brand-line);border-radius:0;min-height:100svh;max-height:100svh;overflow:auto;background:var(--brand-context)}
+.conversation-page.legacy-workspace .legacy-context-panel{grid-column:2;grid-row:1;display:block;position:sticky;top:0;margin:0;border:0;border-radius:0;min-height:100svh;max-height:100svh;overflow:auto;background:var(--brand-context)}
 .conversation-page.legacy-workspace .legacy-context-panel>summary{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;min-height:0;padding:29px 22px 15px;font-size:12px;color:var(--brand-muted)}
 .legacy-context-summary-copy{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;width:100%;min-width:0}
 .legacy-context-toggle{display:none}
@@ -19,7 +19,7 @@
 .conversation-page.legacy-workspace :is(.insp-note,.insp-steps,.taste){font-size:13px;line-height:1.8;color:var(--brand-ink)}
 .conversation-page.legacy-workspace .insp-note{margin-top:14px}
 .conversation-page.legacy-workspace .context-response{padding:17px 15px;background:var(--brand-surface);border-radius:7px;margin:0 0 25px;font-size:13px;line-height:1.8}
-.conversation-page.legacy-workspace .context-details{border-top:1px solid var(--brand-strong-line);padding-top:19px;margin-top:23px;font-size:12px}
+.conversation-page.legacy-workspace .context-details{border:0;padding-top:19px;margin-top:23px;font-size:12px}
 .conversation-page.legacy-workspace .context-details>summary{font-weight:550;cursor:pointer;min-height:44px}
 .conversation-page.legacy-workspace .main{grid-column:3;grid-row:1;min-width:0;padding:27px clamp(24px,3vw,52px) 64px;background:var(--paper)}
 .conversation-page.legacy-workspace .toolbar{max-width:960px;min-height:44px;margin:0 auto 24px;padding:0;gap:10px;background:none}
@@ -32,9 +32,9 @@
 .conversation-page.legacy-workspace .q-hint{font-size:14px;line-height:1.8;color:var(--muted);max-width:65ch;margin-top:17px}
 .conversation-page.legacy-workspace .q-body{margin-top:29px}
 .conversation-page.legacy-workspace .list{border:0;border-radius:0;display:grid;gap:10px;background:none}
-.conversation-page.legacy-workspace .list .row{border:1px solid var(--brand-line);border-radius:5px;background:var(--brand-surface);min-height:62px;padding:16px 18px}
+.conversation-page.legacy-workspace .list .row{border:1px solid transparent;border-radius:12px;background:var(--brand-surface);min-height:62px;padding:16px 18px}
 .conversation-page.legacy-workspace .legacy-answer-list .row[aria-pressed=true]{background:var(--brand-fill);border-color:var(--brand-primary)}
-.conversation-page.legacy-workspace .actionbar{border-top:1px solid var(--line);margin-top:27px;padding-top:20px;gap:10px}
+.conversation-page.legacy-workspace .actionbar{border:0;margin-top:27px;padding-top:20px;gap:10px}
 .conversation-page.legacy-workspace .legacy-stage>.actionbar{padding:20px 0;margin-top:27px}
 .conversation-page.legacy-workspace .actionbar .btn-primary{min-width:140px}
 .conversation-page.legacy-workspace .poster{border-color:var(--brand-line);border-radius:3px}
@@ -47,7 +47,7 @@
 .conversation-page.legacy-workspace .legacy-thinking{padding:30px 20px}
 .conversation-page.legacy-workspace .legacy-thinking h2{font-family:Unbounded,Golos,sans-serif;font-size:26px;font-weight:500;letter-spacing:-.03em}
 .conversation-proposals{margin-top:28px}
-.conversation-proposal{display:grid;grid-template-columns:91px minmax(0,1fr);gap:24px;padding:27px 0 31px;border-bottom:1px solid var(--line);min-width:0}
+.conversation-proposal{display:grid;grid-template-columns:91px minmax(0,1fr);gap:24px;padding:27px 0 31px;min-width:0}
 .conversation-proposal:first-child{padding-top:0}
 .conversation-proposal>.poster{width:91px;aspect-ratio:2/3;height:auto;align-self:start}
 .conversation-page.legacy-workspace .conversation-proposal>.poster.is-letterbox{aspect-ratio:16/9}
@@ -68,7 +68,7 @@
 .conversation-proposal .evening-fit>summary{font-size:12px;color:var(--brand-muted);min-height:40px;cursor:pointer}
 .conversation-proposal .evening-progress{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .conversation-proposal .evening-status{font-size:12px;line-height:1.7;margin-top:13px}
-.conversation-proposal-details{margin-top:18px;font-size:13px;border-top:1px solid var(--brand-line);padding-top:8px}
+.conversation-proposal-details{margin-top:18px;font-size:13px;padding-top:8px}
 .conversation-proposal-details>summary{min-height:44px;padding:10px 0;color:var(--brand-ink);cursor:pointer}
 .conversation-proposal-details .detail{padding:0;border:0;background:none}
 .conversation-proposal-details .detail-head{display:none}
@@ -83,10 +83,10 @@
  .conversation-page.legacy-workspace .legacy-header{display:contents}
  .conversation-page.legacy-workspace .legacy-sections{flex-direction:row;justify-content:flex-end;gap:3px}
  .conversation-page.legacy-workspace .legacy-sections :is(a,button){font-size:12px;min-height:44px;padding:9px 8px}
- .conversation-page.legacy-workspace #side-domains{grid-column:1/-1;display:flex;flex-direction:row;border:0;padding:0;justify-content:space-between;gap:8px}
- .conversation-page.legacy-workspace #side-domains .side-item{min-width:0;font-size:12px;padding:6px 0;gap:5px}
+ .conversation-page.legacy-workspace #side-domains{grid-column:1/-1;display:flex;flex-flow:row wrap;border:0;padding:0;justify-content:flex-start;gap:0 12px}
+ .conversation-page.legacy-workspace #side-domains .side-item{flex:0 0 auto;width:auto;min-width:0;min-height:44px;font-size:12px;padding:6px 0;gap:5px}
  .conversation-page.legacy-workspace #side-domains .i{display:none}
- .conversation-page.legacy-workspace .legacy-context-panel{position:relative;min-height:0;max-height:none;width:100%;overflow:visible;border:0;border-bottom:1px solid var(--brand-line)}
+ .conversation-page.legacy-workspace .legacy-context-panel{position:relative;min-height:0;max-height:none;width:100%;overflow:visible;border:0}
  .conversation-page.legacy-workspace .legacy-context-panel>summary{padding:17px 20px;min-height:66px;gap:15px;font-size:12px;line-height:1.7}
  .legacy-context-summary-copy{display:grid;gap:2px;flex:1}
  .conversation-page.legacy-workspace .legacy-context-panel>summary{cursor:pointer;align-items:center}
