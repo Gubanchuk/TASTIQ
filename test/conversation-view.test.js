@@ -8,6 +8,8 @@ test('card warnings visibly retain unknown, conditional and incompatible conditi
  assert.ok(!html.includes('Подтверждено'));
 });
 test('feasibility text is escaped and empty or verified-only conditions add no warning',()=>{
+ const saved=feasibilityHtml([{status:'unknown',text:'Условия требуют проверки: «Без супергероев».'}]);
+ assert.match(saved,/Не подтверждено:<\/b> «Без супергероев»/);assert.doesNotMatch(saved,/требуют проверки/);
  assert.equal(feasibilityHtml(), '');assert.equal(feasibilityHtml([{status:'yes',text:'Можно'}]),'');assert.equal(feasibilityHtml([{status:'unknown',text:'  '}]),'');
  const html=feasibilityHtml([{status:'unknown',text:'<img src=x onerror="bad()"> & факт'}]);assert.ok(!html.includes('<img'));assert.ok(html.includes('&lt;img'));assert.ok(html.includes('&amp; факт'));
 });

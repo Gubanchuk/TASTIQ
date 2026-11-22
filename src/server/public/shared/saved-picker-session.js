@@ -79,6 +79,6 @@ export function bindSavedSourceBanner(session,domain,tabStorage){
 export function savedResultLimits(snapshot){
  const {state,error,retryable}=snapshot??{};
  const exhausted=state?.savedSource&&error&&retryable===false;
- return {noFirstMatch:Boolean(exhausted&&(!state.savedSource.ids.length||state.failedAction==='pick')),
-  noMore:Boolean(exhausted&&state.failedAction==='more')};
+ return {noFirstMatch:Boolean(snapshot?.screen?.noMatch&&state?.failedAction==='pick'||exhausted&&(!state.savedSource.ids.length||state.failedAction==='pick')),
+  noMore:Boolean((snapshot?.screen?.noMatch||exhausted)&&state?.failedAction==='more')};
 }

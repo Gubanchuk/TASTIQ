@@ -28,8 +28,8 @@ export function questionFormHtml(question,draft,{domain='game',busy=false,canRev
  const choices=group(grouped?moods:options,first?'Настроение':'Варианты ответа');
  const genre=grouped&&genres.length?details('Выбрать жанр <small data-genre-count hidden></small>',group(genres,'Жанр'),'answer-genres',genres.some(selected)):'';
  const own=question.allowText!==false?`<label class="game-field" id="answer-field" for="answer-text">Своими словами<textarea class="input" id="answer-text" name="answer" maxlength="1600" rows="3" ${first?`placeholder="${wishExamples[domain]??wishExamples.game}"`:''}>${esc(draft.text)}</textarea></label>`:'';
- const avoid=grouped&&avoids.length?`<fieldset class="game-answer-avoid"><legend>Чего хочется избежать</legend>${group(avoids,'Исключения')}</fieldset>`:'';
- const extra=first?(avoid||exampleHtml?details('Добавить детали',avoid+exampleHtml,'answer-own',avoids.some(selected)):'')
+ const avoid=first?`<fieldset class="game-answer-avoid"><legend>Чего хочется избежать</legend>${grouped?group(avoids,'Исключения'):''}<label class="game-field" for="answer-avoid">Своё исключение<input class="input" id="answer-avoid" name="avoidText" maxlength="240" placeholder="${domain==='game'?'Например, долгих обучающих заданий':'Например, любовных треугольников'}" value="${esc(draft.avoidText)}"></label></fieldset>`:'';
+ const extra=first?(avoid||exampleHtml?details('Добавить детали',avoid+exampleHtml,'answer-own',avoids.some(selected)||Boolean(draft.avoidText)):'')
   :own&&options.length?details('Ответить своими словами',own+exampleHtml,`answer-own:${esc(question.id)}`,Boolean(draft.text)):'';
  const instruction=first?directionChoiceMessage:required?'Выбери один вариант.':options.length?(question.multiple?'Можно выбрать несколько вариантов или написать свой ответ.':'Выбери вариант или напиши свой ответ.'):'Ответь своими словами.';
  const hasDraft=Boolean(draft.text.trim()||draft.selected.length)&&draft.kind==='answer';

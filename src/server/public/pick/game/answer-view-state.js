@@ -8,7 +8,8 @@ export function chooseOption(draft,id,multiple) {
 export function answerAction(question,draft) {
  if(question.allowText===false){if(!draft.selected.length)return null;return {type:'answer',questionId:question.id,selected:draft.selected,text:'',kind:'answer'};}
  const kind=draft.kind!=='answer'?draft.kind:draft.selected.length||draft.text.trim()?'answer':'unknown';
- return {type:'answer',questionId:question.id,selected:kind==='answer'?draft.selected:[],text:kind==='answer'?draft.text:'',kind};
+ const avoidText=kind==='answer'&&question.id==='direction'?draft.avoidText?.trim():'';
+ return {type:'answer',questionId:question.id,selected:kind==='answer'?draft.selected:[],text:kind==='answer'?draft.text:'',kind,...(avoidText?{avoidText}:{})};
 }
 export const hasPendingAnswer=draft=>Boolean(draft.text.trim()||draft.selected.length||draft.kind!=='answer');
 export function keyboardSubmit({key,control=false,busy=false,composing=false,modified=false,form=null,prevented=false,dialog=false}={}) {

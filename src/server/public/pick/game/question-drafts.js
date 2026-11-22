@@ -12,9 +12,9 @@ export function questionDraftKey(state,question) {
 export const legacyQuestionDraftKeyV2=(state,question)=>`question.v2:${JSON.stringify([state.id,fingerprint(question),turnsOf(state).filter(turn=>turn?.question&&fingerprint(turn.question)===fingerprint(question)).length])}`;
 export const questionScreenKey=(state,screen)=>JSON.stringify([state.id,screen.type,screen.type==='question'&&screen.question?questionDraftKey(state,screen.question):null]);
 
-const toDraft=turn=>({text:typeof turn.text==='string'?turn.text:'',selected:(Array.isArray(turn.selected)?turn.selected:[]).map(option=>typeof option==='string'?option:option?.id).filter(id=>typeof id==='string'),kind:['unknown','indifferent','none'].includes(turn.kind)?turn.kind:'answer'});
-const hasData=draft=>Boolean(draft?.text?.trim()||draft?.selected?.length||draft?.kind&&draft.kind!=='answer');
-const comparable=draft=>JSON.stringify([draft.kind??'answer',(draft.text??'').replace(/\s+/g,' ').trim(),[...new Set(draft.selected??[])].sort()]);
+const toDraft=turn=>({text:typeof turn.text==='string'?turn.text:'',selected:(Array.isArray(turn.selected)?turn.selected:[]).map(option=>typeof option==='string'?option:option?.id).filter(id=>typeof id==='string'),kind:['unknown','indifferent','none'].includes(turn.kind)?turn.kind:'answer',...(turn.avoidText?{avoidText:turn.avoidText}:{})});
+const hasData=draft=>Boolean(draft?.text?.trim()||draft?.avoidText?.trim()||draft?.selected?.length||draft?.kind&&draft.kind!=='answer');
+const comparable=draft=>JSON.stringify([draft.kind??'answer',(draft.text??'').replace(/\s+/g,' ').trim(),draft.avoidText?.trim()??'',[...new Set(draft.selected??[])].sort()]);
 
 // Legacy keys carry no question wording or occurrence. Migrate an obviously accepted
 // answer back to its old instance; preserve ambiguous current words rather than discard them.

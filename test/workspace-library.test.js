@@ -39,7 +39,7 @@ test('launch from saved freezes every matching title in one screen section inclu
  for(let i=0;i<28;i++)library.setSaved({id:'film-'+i,domain:'film',title:'Совпадение '+i},true);
  const outside={id:'other-film',domain:'film',title:'Другое'};
  library.setSaved(outside,true);library.setSaved({id:'show',domain:'series',title:'Совпадение'},true);
- const handoff=memory(),p=await page(storage,{handoffStorage:handoff});p.input('Совпадение');assert.match(p.html,/Фильмы · 28/);
+ const handoff=memory(),p=await page(storage,{handoffStorage:handoff});p.input('Совпадение');assert.match(p.html,/aria-label="Фильмы, сохранено 28"[^>]*><span>Фильмы<\/span><span class="source-count">28<\/span>/);
  p.click({act:'saved-source-domain',domain:'film'});await new Promise(r=>setImmediate(r));assert.equal(ids(p.html).length,24);
  assert.match(p.html,/Поиск «Совпадение» · В подборе: 28/);
  const before=storage.getItem(LIBRARY_KEY);p.click({act:'saved-source-start'});

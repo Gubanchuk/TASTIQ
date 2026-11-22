@@ -1,3 +1,4 @@
+import {noMatchScreen} from './no-match.js';
 import {resultBatchNotice} from './public/shared/result-clarity.js';
 import {createHash} from 'node:crypto';
 import {newConversation,normalizeConversation,answerConversation,applyConversationProposal,conversationScreen,conversationToLegacy,fallbackQuestion} from '../core/conversation.js';
@@ -98,7 +99,9 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
   function response(state,extra={}){
     const screen=conversationScreen(state);
     if(screen.type==='review')screen.ratedExamples=reviewRatedExamples(state,catalog,identities,projection(state));
-    return {state,screen,...(state.phase==='result'?{feedbackState:projection(state)}:{}),...extra};
+    const noMatch=noMatchScreen(state,{catalogFor,projection,answer:answerConversation,sessionFor:(_state,session)=>session});
+    if(noMatch)screen.noMatch=noMatch;
+    return {state,screen,...(state.phase==='result'?{feedbackState:projection(state)}:{}),...(noMatch?{retryable:false}:{}),...extra};
   }
   function remembered(body,s) {
     if(body.rememberedExclusions===undefined)return s;
@@ -124,11 +127,13 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     const neutralShown=[...new Set([...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(card=>editionsOf(catalog,card.id))])].filter(id=>!(legacy.session.notNow??[]).includes(id));
     // Every displayed work is unavailable as a replacement, including editions of retained cards.
     legacy.session.notNow=[...new Set([...legacy.session.notNow,...(s.browseSeen??[]).flatMap(id=>editionsOf(catalog,id)),...before.flatMap(c=>editionsOf(catalog,c.id))])];
-    const failed=(error,retryable=true)=>response({...s,failedAction:more?'more':'replace',...(!more?{replacement:{...s.replacement,pendingIds:[...marked]}}:{})},{error,retryable});
+    const pendingState={...s,failedAction:more?'more':'replace',...(!more?{replacement:{...s.replacement,pendingIds:[...marked]}}:{})};
+    const failed=(error,retryable=true)=>response(pendingState,{error,retryable});
+    const empty=kind=>response({...pendingState,noMatchKind:kind});
     if(new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)]).size>496)return failed('В этом подборе достигнут предел отметок. Начни новый подбор. Сохранённые исключения останутся в силе.',false);
     const scoped=catalogFor(s),session=sessionOf(legacy),profile=profileOf(legacy);
     const eligible=rankAll(scoped,profile,session).ranked;
-    if(!eligible.length)return failed(s.savedSource?'В этом списке сохранённых больше нет подходящих игр. Прежние варианты сохранены.':more?'Других подходящих игр пока нет. Предыдущие варианты на экране. Можно изменить запрос.':'Замену найти не удалось. Можно оставить знакомую игру или изменить запрос.',false);
+    if(!eligible.length)return empty('catalog');
     const sole=eligible.length===1&&locallyConfirmed(legacy,eligible[0].game);
     let local=sole;
     let out;
@@ -138,13 +143,15 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
       if(!permission.allowed){
         if(!s.savedSource)return failed(`${permission.reason??'Помощник недоступен'}. Варианты и отметки сохранены.`,false);
         const picks=eligible.filter(({game})=>locallyConfirmed(legacy,game)).slice(0,AI.picks).map(({game})=>({id:game.id}));
-        if(!picks.length)return failed('В списке сохранённых не удалось подтвердить условия для других игр. Прежние варианты сохранены.',false);
+        if(!picks.length)return empty('catalog');
         local=true;out={picks};
       }else{
         spend(who);
         try {out=await pick({...catalogs,game:scoped},pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,alreadyShown:neutralShown});}
         catch {out={error:'Не удалось заменить игры. Варианты и отметки сохранены.'};}
-        log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
+        log(more?'more':'replace',s,out);
+        if(out.noMatch)return empty(out.noMatch);
+        if(out.error)return failed(out.error,out.retryable!==false);
       }
     }
     const unique=[...new Set((out.picks??[]).map(p=>p.id))];
@@ -182,8 +189,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
       s.facts=s.facts.map(f=>f?.gameId==null?identities.bindFacts(s,[f],resolved).facts?.[0]??f:f);
     }
     s=remembered(body,s);
-    if(s.savedSource&&!s.savedSource.ids.length&&!s.result)return response({...s,phase:'review',needsPlan:false,question:null},{
-      error:'В списке сохранённых не осталось игр. Вернись в библиотеку или начни подбор по всему каталогу.',retryable:false});
+    if(s.savedSource&&!s.savedSource.ids.length&&!s.result)return response({...s,phase:'review',needsPlan:false,question:null,failedAction:'pick',noMatchKind:'catalog'});
     if(!body.action) {
       // A visible local recovery question must also be the question accepted by the reducer.
       if(s.phase==='talk'&&!s.question) {
@@ -192,6 +198,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
       }
       return response(s); // restore never calls an AI endpoint
     }
+    delete s.noMatchKind;
     const action=body.action;
     const beforeResult=s.result;
     const priorExclusions=s.familiar.excluded;
@@ -245,7 +252,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
       const session=sessionOf(legacy),profile=profileOf(legacy);
       const {ranked}=rankAll(scoped,profile,session);
       const candidates=permission.allowed?ranked:ranked.filter(({game})=>locallyConfirmed(legacy,game));
-      if(!candidates.length)return response({...s,phase:'review',failedAction:'pick'},{error:'В списке сохранённых не нашлось игр с подтверждёнными условиями. Можно изменить условия или начать подбор по всему каталогу.',retryable:false});
+      if(!candidates.length)return response({...s,phase:'review',failedAction:'pick',noMatchKind:'catalog'});
       if(!permission.allowed||candidates.length===1&&locallyConfirmed(legacy,candidates[0].game)){
         const result=recommendIds(scoped,profile,session,candidates.slice(0,AI.picks).map(({game})=>game.id));
         for(const card of cardsOf(result))card.labelText='Вариант из сохранённых по данным каталога';
@@ -258,7 +265,7 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
       const result=strict.length
         ? recommendIds(catalog,profile,session,rankAll(catalog,profile,session).ranked.filter(({game})=>!unverifiedGameCriteria(strict,game,session).length).slice(0,AI.picks).map(({game})=>game.id))
         : recommend(catalog,profile,session,legacy.conversation.familiarity.returnToIds.length?null:chosenMechanic(s));
-      if(!result?.top)return response({...s,phase:'review',failedAction:'pick'},{error:'По данным каталога не удалось подтвердить все условия ни для одной игры. Попробуй изменить запрос.',retryable:false});
+      if(!result?.top)return response({...s,phase:'review',failedAction:'pick',noMatchKind:'catalog'});
       for(const card of cardsOf(result))constraintWarnings(card,unverifiedGameCriteria(criteria,catalog.byId.get(card.id),session));
       s={...s,...completeInterview(s),phase:'result',result,provisional:true,failedAction:null};
       s.uncertainties=[...new Set([...s.uncertainties,'Это предварительный подбор по доступным признакам: помощник сейчас недоступен, свободный ответ мог быть учтён не полностью.'])];
@@ -269,11 +276,12 @@ export function createConversationService({catalogs,plan=aiConversation,pick=aiP
     try {out=await pick({...catalogs,game:scoped},pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,previous:[]});}
     catch {out={error:'Не удалось получить рекомендации. Запрос сохранён.'};}
     log('pick',s,out);
+    if(out.noMatch)return response({...s,phase:'review',failedAction:'pick',noMatchKind:out.noMatch});
     if(out.error)return response({...s,phase:'review',failedAction:'pick'},{error:out.error,retryable:out.retryable!==false});
     // Re-sieve the actual model picks; never silently fill a failed AI list with unrelated popular titles.
     const ids=[...new Set((out.picks??[]).map(p=>p.id))];
     const cards=recommendIds(scoped,profileOf(legacy),sessionOf(legacy),s.savedSource?ids:ids.slice(0,AI.picks));
-    if(!cards)return response({...s,phase:'review',failedAction:'pick'},{error:'Пока не нашлось вариантов, для которых подтверждены все условия. Попробуй изменить запрос.',retryable:false});
+    if(!cards)return response({...s,phase:'review',failedAction:'pick',noMatchKind:'checked'});
     cards.alternatives=cards.alternatives.slice(0,AI.picks-1);
     const byId=new Map(out.picks.map(p=>[p.id,p]));
     for(const card of cardsOf(cards))attach(card,byId.get(card.id));

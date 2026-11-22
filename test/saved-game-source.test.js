@@ -136,7 +136,7 @@ test('scoped replacement, more, undo and exhaustion do not repeat works or chang
     assert.equal(shown.length,8);assert.ok(shown.every(id=>list.includes(id)));
     assert.equal(new Set(shown.map(id=>catalog.byId.get(id).work)).size,8);
     const exhausted=await send(srv,second,{type:'more'});
-    assert.match(exhausted.error,/сохранён/);assert.deepEqual(ids(exhausted),ids(second));
+    assert.match(exhausted.screen.noMatch.message,/сохранён/);assert.deepEqual(ids(exhausted),ids(second));
     assert.deepEqual(ids(await send(srv,exhausted,{type:'undo_replacement'})),before);
   }
 });

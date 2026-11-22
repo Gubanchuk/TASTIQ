@@ -190,7 +190,7 @@ function resultCount(shown,total){return hasSearchFilters()?`<p class="library-c
 function noMatches(){return '<div class="library-empty wide-empty"><h2>Нет совпадений</h2><p>Попробуй другое название или сбрось фильтры.</p>'+button('Сбросить фильтры','clear')+'</div>';}
 function empty(view,hasFilters) {
  if(hasFilters)return noMatches();
- const copy={saved:['Пока ничего не сохранено','Нажми «Сохранить» у интересного варианта, чтобы вернуться к нему позже.'],liked:['Здесь будет то, что понравилось','Нажми «Нравится» у знакомой игры или истории. Сюда попадают и те, для которых ты выбрал «Понравилось» в отзыве.'],all:['Твои отметки появятся здесь','Сохрани вариант, оцени его или отметь как знакомый.']}[view];
+ const copy={saved:['Пока ничего не сохранено','Нажми «Сохранить» у интересного варианта, чтобы вернуться к нему позже.'],liked:['Здесь будет то, что понравилось','Нажми «Нравится» в карточке. Если выберешь «Понравилось» в отзыве, название тоже появится здесь.'],all:['Твои отметки появятся здесь','Сохрани вариант, оцени его или отметь как знакомый.']}[view];
  return `<div class="library-empty"><h2>${copy[0]}</h2><p>${copy[1]}</p>${view==='liked'?button('Открыть сохранённое','view','data-view="saved"'):pickLink('Найти вариант')}</div>`;
 }
 function undoLine(){return state.undo?`<div class="library-undo" role="status"><span>${esc(state.undo.message)}</span>${button('Вернуть','undo','data-focus="undo"')}</div>`:'';}
@@ -199,7 +199,7 @@ let savedPreview=[];
 function checkingSavedNames(rows,domain,query){
  return Boolean(query.trim()&&pendingMetadata.size&&rows.some(row=>inLibraryDomain(row,domain)&&!Array.isArray(row.aliases)&&pendingMetadata.has(key(row))));
 }
-const savedSourceLabel='Выбрать<span class="source-suffix"> из сохранённого</span>';
+const savedSourceLabel='<span>Выбрать<span class="source-suffix"> из сохранённого</span></span>';
 function savedSourceControls(rows,all) {
  let {domain,query}=activeFilters();
  if(!rows.length||state.view!=='saved')return '';
@@ -207,8 +207,11 @@ function savedSourceControls(rows,all) {
   const sections=savedPickerDomains.map(id=>({id,count:rows.filter(row=>inLibraryDomain(row,id)).length})).filter(section=>section.count);
   if(!sections.length)return '';
   if(sections.length>1){
-   const choices=sections.map(({id,count})=>button(`${DOMAINS[id]} · ${count}`,'saved-source-domain',`data-domain="${id}"`)).join('');
-   return {action:`<details class="saved-source-chooser" data-detail="saved-source"${openDetails.has('saved-source')?' open':''}><summary data-focus="saved-source-menu" aria-label="Выбрать из сохранённого">${savedSourceLabel}</summary><p>Из какого раздела выбрать?</p><div class="saved-source-actions">${choices}</div></details>`};
+   const choices=sections.map(({id,count})=>button(
+    `<span>${DOMAINS[id]}</span><span class="source-count">${count}</span>`,
+    'saved-source-domain',`data-domain="${id}" data-focus="saved-source-domain:${id}" aria-label="${DOMAINS[id]}, сохранено ${count}"`
+   )).join('');
+   return {action:`<details class="saved-source-chooser" data-detail="saved-source"${openDetails.has('saved-source')?' open':''}><summary data-focus="saved-source-menu" aria-label="Выбрать из сохранённого">${savedSourceLabel}</summary><div class="saved-source-actions" role="group" aria-labelledby="saved-domain-question"><p id="saved-domain-question">Из какого раздела выбрать?</p>${choices}</div></details>`};
   }
   domain=sections[0].id;
  }
@@ -320,6 +323,14 @@ document.addEventListener('keydown',event=>{
  const disclosure=event.target.closest?.('.saved-source-chooser[open]');
  if(disclosure){disclosure.open=false;disclosure.querySelector('summary').focus();event.preventDefault();}
 });
+document.addEventListener('pointerdown',event=>{
+ const chooser=document.querySelector('.saved-source-chooser[open]');
+ if(chooser&&!chooser.contains(event.target))chooser.open=false;
+});
+document.addEventListener('focusout',event=>{
+ const chooser=event.target.closest?.('.saved-source-chooser[open]');
+ if(chooser&&event.relatedTarget&&!chooser.contains(event.relatedTarget))chooser.open=false;
+});
 function render({feedbackFocus,focus:requestedFocus,reveal=false}={}) {
  const active=document.activeElement,focus=requestedFocus??active?.dataset.focus,feedbackKey=feedbackFocus??active?.dataset.fk,id=active?.id,selection=active?.tagName==='TEXTAREA'||active instanceof HTMLInputElement&&active.type==='search'?[active.selectionStart,active.selectionEnd]:null;
  const evenings=eveningRecords(),past=historyRecords();
@@ -413,6 +424,7 @@ document.addEventListener('click',event=>{
  }
  if(act==='close-work'){closeWork();return;}
  if(act==='saved-source-domain'&&state.view==='saved'&&savedPickerDomains.includes(el.dataset.domain)){
+  openDetails.delete('saved-source');
   activeFilters().domain=el.dataset.domain;state.limit=24;writeNavigation(true);
   render({focus:'saved-source-start'});void enrichCovers();return;
  }

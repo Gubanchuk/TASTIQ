@@ -83,3 +83,7 @@ body.conversation-page{
 .picker-visit-tools details {margin:0}
 .picker-visit-tools .game-history-list {max-height:14rem;overflow:auto}
 #today-platform {margin:.5rem 0;font-size:.875rem}
+.no-match {max-width:64ch}
+.no-match p+p {margin-top:.75rem}
+.no-match-choices {display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:16px 0}
+.no-match-choices .btn {max-width:100%;min-height:44px;white-space:normal;overflow-wrap:anywhere;text-align:start}

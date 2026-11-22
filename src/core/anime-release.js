@@ -83,6 +83,15 @@ const verifiedAnimeAliases=new Map([
  ['tt1352421',['Natsume Yuujinchou','Natsume Yūjin-chō','Natsume Yujin-cho']],
 ]);
 
+// A numbered title can still be an independent story. Only annotate releases
+// whose distributor identifies the viewing order; leave all other rows unknown.
+const viewingOrder=new Map([
+ ['tt0169858',{standalone:false,priorTitleId:'tt0112159',viewingOrderSource:'https://gkids.com/films/end-of-evangelion/'}],
+ ['tt0988824',{standalone:false,priorTitleId:'tt0409591',viewingOrderSource:'https://naruto-official.com/en/news/01_1296'}],
+ ['tt11032374',{standalone:false,priorTitleId:'tt9335498',viewingOrderSource:'https://aniplexusa.com/pdf/PR_031621_DSKY.pdf'}],
+ ['tt0347246',{standalone:true,viewingOrderSource:'https://gkids.com/2024/04/17/gkids-acquires-theatrical-rights-to-renowned-director-mamoru-oshiis-ghost-in-the-shell-2-innocence/'}],
+]);
+
 export function verifiedAnimeItem(row) {
  if(!row)return null;
  const {id,qid,source,kind,name,ru,original,year,runtime,genres}=row;
@@ -96,5 +105,5 @@ export function verifiedAnimeItem(row) {
  const item=editorialItem({id,domain:'anime',kind,name,ru,aliases,year,runtime:first?.minutes??runtime,
   runtimeSource:first?.source??(runtime?link:null),genre:genres,link,status:null,summary:null,source:fromWikidata?'wikidata':'editorial'});
  // These records have less evidence than the manually reviewed titles.
- return {...item,...(first?{firstEpisodeMinutes:first.minutes}:{}),animeOrigin:'japanese',standalone:null,quality:.69};
+ return {...item,...(first?{firstEpisodeMinutes:first.minutes}:{}),animeOrigin:'japanese',standalone:null,...viewingOrder.get(id),quality:.69};
 }

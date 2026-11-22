@@ -52,7 +52,8 @@ globalThis.fetch = async (url, init) => {
       question:{id:'experience',title:'Какого впечатления хочется?',why:'Уточним сегодняшний запрос',options:[],multiple:false,controls:['unknown','indifferent','none']},
       context:{company:null,childAge:null,timeMode:null,commitment:null,onlyEnded:null,format:null},sessionTime:null,
     } : {
-      understood: 'Тебе нужен живой мир', picks: (String(request.input).includes('id=t1 |')?['t1','t2','t3']:['7', '10', '4', '13']).map((id) => ({ id, title: '', year: 0, reason: 'Причина', caveat: '', likelySeen: false })),
+      understood: 'Тебе нужен живой мир', picks: (String(request.input).includes('id=t1 |')?['t1','t2','t3']:['7', '10', '4', '13']).map((id) => ({ id, title: '', year: 0, reason: 'Причина', caveat: '', likelySeen: false,
+        ...(request.text.format.schema.properties.picks.items.properties.viewingStart?{viewingStart:'independent'}:{}) })),
     }) }] }],
   }));
 };

@@ -15,7 +15,7 @@ export function aiErrorMessage(error){
   .replace(/[^.!?]$/,'$&.');
  if(interrupted.test(error))return 'Не получилось продолжить подбор. Твои ответы сохранены.';
  if(budget.test(error))return 'Онлайн-подбор временно недоступен. Твои ответы сохранены.';
- if(unverifiedReading.test(error))return 'Не удалось проверить, правильно ли понят ответ. Можно повторить попытку.';
+ if(unverifiedReading.test(error))return 'Не удалось разобрать ответ. Попробуй ещё раз.';
  if(oversized.test(error))return 'Не удалось обработать этот разговор. Начни новый подбор и укажи главные пожелания.';
  if(error==='Предыдущий запрос ещё не подтверждён. Повтор временно недоступен; ответы сохранены.')return 'Повтор пока недоступен. Твои ответы сохранены.';
  return error;

@@ -1,6 +1,24 @@
 // A small deterministic grammar for explicit available session time, not general text extraction.
 const hour='(?:hours?|hrs?|hr|h|час(?:а|ов)?|ч)';
-const minute='(?:minutes?|mins?|min|m|минут(?:а|ы)?|мин)';
+const minute='(?:minutes?|mins?|min|m|минут(?:а|у|ы)?|мин)';
+const minuteWords=new Map([
+ [1,'одна одну одной'],[2,'две двух'],[3,'три трех'],[4,'четыре четырех'],[5,'пять пяти'],[6,'шесть шести'],
+ [7,'семь семи'],[8,'восемь восьми'],[9,'девять девяти'],[10,'десять десяти'],[11,'одиннадцать одиннадцати'],
+ [12,'двенадцать двенадцати'],[13,'тринадцать тринадцати'],[14,'четырнадцать четырнадцати'],[15,'пятнадцать пятнадцати'],
+ [16,'шестнадцать шестнадцати'],[17,'семнадцать семнадцати'],[18,'восемнадцать восемнадцати'],[19,'девятнадцать девятнадцати'],
+ [20,'двадцать двадцати'],[30,'тридцать тридцати'],[40,'сорок сорока'],[50,'пятьдесят пятидесяти'],
+ [60,'шестьдесят шестидесяти'],[70,'семьдесят семидесяти'],[80,'восемьдесят восьмидесяти'],[90,'девяносто девяноста'],
+].flatMap(([number,forms])=>forms.split(' ').map(word=>[word,number])));
+const spokenNumber=[...minuteWords.keys()].join('|');
+const spokenMinutes=new RegExp(String.raw`(?<![\p{L}\p{N}])(${spokenNumber})(?:\s+(${spokenNumber}))?(?=\s+минут(?:у|а|ы)?(?!\p{L}))`,'gu');
+const rangeAfterBudget=new RegExp(String.raw`^[\s,;:]*(?:[-–—]|до|или|либо)\s*(?:\d|час|пол|(?:${spokenNumber})(?!\p{L}))`,'iu');
+function numericMinutes(text){
+ return text.replace(spokenMinutes,(words,first,last)=>{
+  const number=minuteWords.get(first);
+  if(!last)return String(number);
+  return number>=20&&minuteWords.get(last)<10?String(number+minuteWords.get(last)):words;
+ });
+}
 const amount=new RegExp(`(?<!\\p{L})(?:полтора\\s+часа|полчаса|часа?)(?!\\p{L})|(?<!\\d)(?:\\d{1,4}\\s*${hour}(?:\\s*(?:и\\s+)?\\d{1,3}\\s*${minute})?|\\d{1,4}\\s*${minute})(?![\\p{L}\\p{N}])`,'giu');
 const hoursAndMinutes=new RegExp(`^(\\d{1,4})\\s*${hour}(?:\\s*(?:и\\s+)?(\\d{1,3})\\s*${minute})?$`,'iu');
 const onlyMinutes=new RegExp(`^(\\d{1,4})\\s*${minute}$`,'iu');
@@ -29,7 +47,7 @@ function timeSuffix(quote,after) {
 
 export function currentSessionMinutes(quote,question=null) {
  if(typeof quote!=='string')return null;
- const text=quote.toLowerCase().replace(/ё/g,'е'),matches=[...text.matchAll(amount)];
+ const text=numericMinutes(quote.toLowerCase().replace(/ё/g,'е')),matches=[...text.matchAll(amount)];
  if(matches.length!==1)return null;
  const match=matches[0],duration=match[0];let minutes;
  if(duration==='полчаса')minutes=30;
@@ -111,7 +129,7 @@ export function validateSessionTime(value,state) {
  const afterBudget=timeSuffix(quote,after).split(/[,.!?;]\s*(?:а\s+|но\s+)?(?:хочу|нужн|предпочита|важн|игра)/iu)[0];
  if(/если|может|возможно|наверн|не знаю|не уверен|примерно|около|не\s+(?:будет|могу|есть|хочу)|(?:вчера|раньше).*?(?:говор|дум|сказ)/iu.test(before)
    ||/если|при условии|может|возможно|наверн|(?:но|это).*?(?:вчера|раньше).*?(?:дум|говор|сказ)|(?:теперь|сейчас|уже)\s+(?:уже\s+)?(?:нет|не\s+(?:будет|могу|получится))|не\s+(?:получится|могу)\s+(?:поиграть|играть)|не\s+будет\s+времени|(?:это|время|бюджет)\s+(?:уже\s+)?неактуальн/iu.test(afterBudget)
-   ||/^[\s,;:]*(?:[-–—]\s*(?:\d|час|пол)|(?:до|или)\s*(?:\d|час|пол))/iu.test(afterBudget))return {error:'Цитата времени не сохраняет условия исходного ответа.'};
+   ||rangeAfterBudget.test(afterBudget.replace(/ё/giu,'е')))return {error:'Цитата времени не сохраняет условия исходного ответа.'};
  return {time:{minutes:value.minutes,sourceId:value.sourceId,quote}};
 }
 

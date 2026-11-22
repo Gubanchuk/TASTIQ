@@ -18,6 +18,27 @@ const context = () => ({company:null,childAge:null,timeMode:null,commitment:null
 const q = (id='experience') => ({id,title:'Какое впечатление хочется получить?',why:'Уточним сегодняшний запрос.',options:[{id:'warm',label:'Тёплая история'},{id:'dark',label:'Мрачная история'}],multiple:true,controls:['unknown','indifferent','none']});
 const proposal = (patch={}) => ({summary:'Ищем историю на сегодняшний вечер.',facts:[],uncertainties:[],action:'question',question:q(),context:context(),sessionTime:null,...patch});
 
+test('spoken minutes retain the quoted viewing budget and distinguish it from episode counts, ranges and prior plans',()=>{
+ for(const [quote,minutes] of [['На фильм есть пять минут.',5],['На фильм есть сорок пять минут.',45],['Сегодня есть тридцать минут.',30]]){
+  const s=said('Хочу полнометражную драму о семье. '+quote);
+  const e={sourceId:s.turns[0].id,quote};
+  const out=apply(s,proposal({context:{...context(),timeMode:{...e,value:'session'}},sessionTime:{...e,minutes}}),dict);
+  assert.equal(out.error,undefined,quote);assert.deepEqual(normalize(out.state).sessionTime,{...e,minutes});
+ }
+ for(const [words,quote,minutes=5,mode='session'] of [
+  ['Вчера я сказал: на фильм есть пять минут.','на фильм есть пять минут.'],
+  ['Если успею, на фильм есть пять минут.','на фильм есть пять минут.'],
+  ['На фильм нет пяти минут.','На фильм нет пяти минут.'],
+  ['На фильм есть пять минут или десять.','На фильм есть пять минут'],
+  ['На фильм есть от пяти до десяти минут.','до десяти минут',10,'runtime'],
+  ['На фильм есть пять серий.','На фильм есть пять серий.'],
+  ['На просмотр есть пять сезонов.','На просмотр есть пять сезонов.'],
+ ]){
+  const s=said(words),e={sourceId:s.turns[0].id,quote};
+  assert.ok(apply(s,proposal({context:{...context(),timeMode:{...e,value:mode}},sessionTime:{...e,minutes}}),dict).error,words);
+ }
+});
+
 test('anime accepts a sourced limit for the first episode and preserves scope',()=>{
  for(const quote of ['Первая серия не больше 27 минут.','На первый эпизод максимум 27 минут','Каждый эпизод до 27 минут']){
   const s=said(quote,'anime');

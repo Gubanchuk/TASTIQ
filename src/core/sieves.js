@@ -2,6 +2,7 @@
 // Every removed title records the first sieve that removed it, so "why not X?" has an answer.
 import { plural } from '../lib/text.js';
 import { playerFact, playerFeasibility } from './feasibility.js';
+import { needsEarlierWork } from './viewing-order.js';
 
 export const HARD_MIN_R = 0.67;
 // Short episodes are up to 35 minutes, long ones from 40: 1 940 and 4 475 of the 8 368 series above the quality floor.
@@ -62,7 +63,9 @@ export function checkSieves(item, taste, session = {}, catalog) {
   const { domain, dict } = catalog;
   const mismatch=domain.id==='game'?savedGameMismatch(item,session):savedMediaMismatch(item,session);
   if(mismatch)return {sieve:5,reason:mismatch};
+  if(domain.id!=='game'&&session.verifiedAge)return {sieve:5,reason:'региональная возрастная пригодность не подтверждена'};
   if(session.requireKnownRuntime && session.maxRuntime && !(Number.isFinite(item.runtime)&&item.runtime>0))return {sieve:5,reason:'длительность не подтверждена'};
+  if(needsEarlierWork(item,session.viewingOrder))return {sieve:5,reason:'сначала нужно посмотреть предыдущую часть'};
   const label = (f) => dict.featureById.get(f)?.label ?? f;
   if (!item.released) return { sieve: 1, reason: 'ещё не вышла' };
   if (domain.id === 'game') {
@@ -95,7 +98,6 @@ export function checkSieves(item, taste, session = {}, catalog) {
     if(session.animeOrigin&&session.animeOrigin!==item.animeOrigin)return {sieve:5,reason:'другая страна или тип производства'};
     if(session.animeKind&&session.animeKind!==item.kind)return {sieve:5,reason:'другой формат'};
     if(session.standaloneOnly&&item.standalone!==true)return {sieve:5,reason:'самостоятельная точка входа не подтверждена'};
-    if(session.verifiedAge)return {sieve:5,reason:'региональная возрастная пригодность не подтверждена'};
     if(session.maxRuntime&&session.allAnimeEpisodes&&item.kind==='series')return {sieve:5,reason:'длительность всех эпизодов не подтверждена'};
     if(session.maxRuntime&&item.runtime==null)return {sieve:5,reason:'длительность не подтверждена'};
     if(session.onlyEnded&&(item.kind!=='series'||item.status!=='Ended'))return {sieve:5,reason:'завершённый сериал не подтверждён'};

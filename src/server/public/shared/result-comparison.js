@@ -57,7 +57,7 @@ const glyphs={
  prev:'m14 6-6 6 6 6', next:'m10 6 6 6-6 6',
 };
 const icon=key=>'<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="'+glyphs[key]+'"/></svg>';
-export const compareButtonHtml='<button type="button" class="compare-trigger" data-act="compare-results" data-focus="compare-results" aria-haspopup="dialog">Чем отличаются варианты?'+icon('arrow')+'</button>';
+export const compareButtonHtml='<button type="button" class="compare-trigger" data-act="compare-results" data-focus="compare-results" aria-haspopup="dialog">Сравнить варианты'+icon('arrow')+'</button>';
 const titleOf=card=>card.ru||card.name||card.title||'Без названия';
 const cover=(card,domain)=>resultArtworkHtml(card,{title:titleOf(card),domain,eager:true,extra:domain==='anime'?animeArtwork(card.id)?.url:null});
 

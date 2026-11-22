@@ -42,7 +42,7 @@ export function criteriaOf(state,knownItem=null){
  const active=value=>Boolean(activeSource(value));
  const removed=f=>retractions.some(r=>!['session_time','context'].includes(r.kind)&&r.sourceId===f.sourceId&&(r.key===f.key||r.quote===f.quote||r.feature&&r.feature===f.feature));
  const criteria=(c.facts??[]).filter(f=>f.scope==='today'&&['require','exclude'].includes(f.stance)&&clean(f.key)&&clean(f.text)&&active(f)&&!removed(f))
-  .map(f=>({key:'fact:'+f.key,stance:f.stance,text:f.text,sourceId:f.sourceId,quote:f.quote}));
+  .map(f=>({key:'fact:'+f.key,stance:f.stance,text:f.key==='direction:own-avoidance'?'Хочу избежать: '+f.text:f.text,sourceId:f.sourceId,quote:f.quote}));
  const time=c.sessionTime;
  if(game){
   const session={platform:state.platform,partySize:state.situation?.company==='friend'?'2':state.situation?.company==='group'?state.situation?.partySize:null};

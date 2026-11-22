@@ -19,7 +19,7 @@ test('picker-specific next steps and the catalog explanation on old replacements
  assert.equal(aiErrorMessage('Failed to fetch'),'Нет связи с сервером. Проверь подключение и попробуй ещё раз.');
  assert.equal(aiErrorMessage('Unexpected token <'),'Не удалось продолжить подбор. Попробуй ещё раз.');
  for(const message of ['Не удалось проверить основания вывода.','Некорректный вывод о пожелании.']) {
-  assert.equal(aiErrorMessage(message),'Не удалось проверить, правильно ли понят ответ. Можно повторить попытку.');
+  assert.equal(aiErrorMessage(message),'Не удалось разобрать ответ. Попробуй ещё раз.');
  }
  const next='По этим условиям пока не нашлось подтверждённых вариантов. Можно уточнить или изменить запрос.';
  assert.equal(aiErrorMessage(next),next);

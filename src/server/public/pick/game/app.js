@@ -3,9 +3,10 @@ import {takeGameWish} from '/shared/film-to-game.js';
 import {questionFormHtml,canSubmitQuestion,focusOwnAnswer} from '/shared/question-form.js';
 import {copyCardTitle} from '/shared/title-copy.js';
 import {createSelectionReviewController} from '/shared/selection-review-controller.js';
+import {noMatchHtml} from '/shared/no-match-view.js';
 import {resultBatchHelp,resultBatchNotice,resultRequestScreen,singleReplacementIndex} from '/shared/result-clarity.js';
-import {compareButtonHtml,currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=5';
-import {requestOverviewHtml,requestPreviewHtml,requestSummaryText} from '/shared/request-overview.js';
+import {compareButtonHtml,currentFinalists,openComparison,resultDialog,syncResultDialog} from '/shared/result-comparison.js?v=6';
+import {originalWishHtml,requestOverviewHtml,requestPreviewHtml,requestSummaryText} from '/shared/request-overview.js';
 import {openRequestEditor,closeRequestEditor,syncRequestEditor,syncSessionActions,syncEditorSubmit,focusPickerContent,scrollPickerToStart} from '/shared/workspace-ui.js?v=picker-scroll';
 import {initCustomSelects,focusCustomSelect} from '/shared/custom-select.js';
 import {clarificationHtml,clarificationAction,shouldClearCorrection} from '/shared/clarification-view.js';
@@ -85,7 +86,7 @@ const saveCurrentDraft=(question,draft)=>{const key=questionDraftKey(client.stat
 function hasQuestionDraft(key){
  if(knownQuestionDrafts.has(key))return true;
  try {const saved=JSON.parse(session.draftStorage?.getItem(session.key)??'null');if(Object.hasOwn(saved?.drafts??{},key)){knownQuestionDrafts.add(key);return true;}}catch { /* memory-only visits use the keys written in this page */ }
- const draft=client.draft(key);return Boolean(draft.text||draft.selected.length||draft.kind!=='answer');
+ const draft=client.draft(key);return Boolean(draft.text||draft.avoidText||draft.selected.length||draft.kind!=='answer');
 }
 function ensureQuestionDraftMigration(){
  if(!client.state||client.draft('__questionDraftV3').text===client.state.id)return;
@@ -151,11 +152,12 @@ function understanding(screen) {
 function questionHtml(screen) {
  const question=screen.question,optional=question.id!=='direction'&&question.allowText!==false;
  const exampleHtml=question.allowText!==false
-  ?'<div class="game-example"><label for="game-search">Добавить знакомое название как пример</label><input class="input" id="game-search" type="search" autocomplete="off" placeholder="Введи название"><div id="search-results" class="game-search-results" aria-live="polite"></div></div>':'';
- return questionFormHtml(question,currentDraft(question),{domain:'game',busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml})+checkpointHtml(screen.checkpoint);
+  ?'<div class="game-example"><label for="game-search">Пример из знакомых игр</label><input class="input" id="game-search" type="search" autocomplete="off" placeholder="Введи название"><div id="search-results" class="game-search-results" aria-live="polite"></div></div>':'';
+ return (question.id==='direction'?'':originalWishHtml(client.state))+questionFormHtml(question,currentDraft(question),{domain:'game',busy:client.busy,canReview:!screen.checkpoint&&optional&&contextReady(screen),canChange:screen.canChangeQuestion,exampleHtml})+checkpointHtml(screen.checkpoint);
 }
 function reviewHtml(screen) {
- return '<h1>Всё верно в твоём запросе?</h1>'
+ if(screen.noMatch)return noMatchHtml(screen,esc);
+ return '<h1>Проверь свой запрос</h1>'
   +`<p>${esc(requestSummaryText(screen,client.state)||'Можно искать по выбранным условиям или добавить пожелание.')}</p>`
   +timeBudgetHtml(screen.sessionTime,{scope:'review'})
   +'<div data-visit-reviews></div>'
@@ -177,6 +179,7 @@ function resultHtml(screen) {
  return '<div class="game-result-heading"><h1>'+(isArchivedResult(session,client.state)?'Подбор из истории':'Во что поиграть')+'</h1>'
   +'<div class="game-result-browse">'+(currentFinalists(client.state,screen).length>=2?compareButtonHtml:'')
   +`<details class="game-result-tools" data-disclosure="result-tools"><summary data-focus="result-tools">О подборе</summary><div>${selectionModeTitle(client.state.interview?.depth)?`<p>${selectionModeTitle(client.state.interview.depth)}</p>`:''}<p id="result-batch-help">${resultBatchHelp}</p><a class="btn btn-secondary" href="/library/?view=history">Все подборы</a></div></details></div></div>`
+  +noMatchHtml(screen,esc)
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу. Некоторые пожелания пока не удалось проверить.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
   +((replacement&&notice)||batchNotice?`<p class="game-replacement-notice" role="status">${esc(replacement?notice:batchNotice)}</p>`:'')
@@ -219,7 +222,7 @@ function render() {
  if(key!==renderedKey) {
   renderedKey=key;screenKey=nextScreenKey;searchGeneration++;clearTimeout(searchTimer);
   $('#main').innerHTML=screen.type==='question'?questionHtml(screen):screen.type==='review'?reviewHtml(screen):resultHtml(screen);
-  if(screen.type==='review')mountRatedExamples($('[data-rated-examples]'),{client,screen,library:library.all(),history:history.all(),fetch,domain:'game'});
+  if(screen.type==='review'&&!screen.noMatch)mountRatedExamples($('[data-rated-examples]'),{client,screen,library:library.all(),history:history.all(),fetch,domain:'game'});
   $('#selection-review-slot').replaceChildren();
   understanding(resultRequestScreen(screen));
   restoreView(null);
@@ -295,7 +298,7 @@ function observeResult() {
 }
 function persistAnswer() {
  const question=client.screen?.question;if(!question)return null;
- const draft=currentDraft(question),input=$('#answer-text');if(input)draft.text=input.value;
+ const draft=currentDraft(question),input=$('#answer-text'),avoid=$('#answer-avoid');if(input)draft.text=input.value;if(avoid)draft.avoidText=avoid.value;
  saveCurrentDraft(question,draft);return draft;
 }
 function focusResultStart(){focusPickerContent($('#main h1'));}
@@ -333,8 +336,9 @@ async function navigate(action,{origin=null}={}) {
  }
  if(action.type==='remove_fact'&&result&&!client.error){localNotice='Условие убрано из запроса.';render();}
  if(action.type==='undo_fact_removal'&&result&&!client.error){localNotice='Удаление отменено.';render();}
- if(result&&!client.error&&client.screen?.type==='result'&&browseNavigation)focusResultStart();
- if(singleSlot>=0&&result&&!client.error&&client.screen?.type==='result'){
+ if(result?.screen.noMatch)focusPickerContent($('#no-match-title'));
+ else if(result&&!client.error&&client.screen?.type==='result'&&browseNavigation)focusResultStart();
+ if(!result?.screen.noMatch&&singleSlot>=0&&result&&!client.error&&client.screen?.type==='result'){
   const heading=document.querySelectorAll('[data-card-id]')[singleSlot]?.querySelector('h2');
   focusPickerContent(heading);
  }
@@ -344,7 +348,7 @@ function completeBackDraft(result) {
  const question=client.screen?.type==='question'?client.screen.question:null,key=question?questionDraftKey(client.state,question):null;
  const completed=finishBackDraft(pendingBack,client.state,client.screen,{successful:Boolean(result),error:client.error,hasDraft:key?hasQuestionDraft(key):false});
  pendingBack=completed.pending;
- if(completed.seed&&question){saveCurrentDraft(question,completed.seed);const draft=currentDraft(question),input=$('#answer-text');if(input)input.value=draft.text;paintSelections(draft);}
+ if(completed.seed&&question){saveCurrentDraft(question,completed.seed);const draft=currentDraft(question),input=$('#answer-text');if(input)input.value=draft.text;const avoid=$('#answer-avoid');if(avoid)avoid.value=draft.avoidText??'';paintSelections(draft);}
 }
 function rememberAcceptedFamiliar(result) {
  if(!result||client.error)return;
@@ -510,7 +514,7 @@ document.addEventListener('change',event=>{
 });
 document.addEventListener('input',event=>{
  const el=event.target;
- if(el.id==='answer-text'){const draft=persistAnswer();if(draft?.text.trim()&&draft.kind!=='answer'){draft.kind='answer';saveCurrentDraft(client.screen.question,draft);}if(draft)paintSelections(draft);showUsualPlatform();return;}
+ if(el.id==='answer-text'||el.id==='answer-avoid'){const draft=persistAnswer();if((draft?.text.trim()||draft?.avoidText?.trim())&&draft.kind!=='answer'){draft.kind='answer';saveCurrentDraft(client.screen.question,draft);}if(draft)paintSelections(draft);showUsualPlatform();return;}
  if(el.name==='clarification'){const form=el.closest('form');client.saveDraft(form.dataset.key,{text:el.value});syncEditorSubmit(form,client.busy);return;}
  if(el.name==='correction'){client.saveDraft('__correction',{text:el.value});syncEditorSubmit(el.closest('form'),client.busy);return;}
  const form=el.closest('[data-form="evening-reason"]');if(form)feedbackDrafts.set(`${form.dataset.run}:${form.dataset.id}`,{reason:form.elements.reason.value,note:form.elements.note.value});

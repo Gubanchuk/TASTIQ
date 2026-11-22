@@ -1,16 +1,22 @@
 import {isSelectionDepth} from './conversation-entry.js';
+import {selectionModeArt} from './selection-mode-art.js';
 
 const modes={
- standard:{title:'Быстрый подбор',description:'Расскажи, чего хочется, и ответь на основные вопросы.'},
- deep:{title:'Подробный подбор',description:'Обсудим, что тебе нравится и чего хочется избежать. К вариантам можно перейти раньше.'},
+ standard:{title:'Быстрый подбор',description:'Расскажи, чего хочется. Уточним главное и предложим варианты.'},
+ deep:{title:'Подробный подбор',description:'Обсудим, что тебе нравится и чего хочется избежать. Перейдём к вариантам, когда скажешь.'},
 };
 export const selectionModeTitle=depth=>isSelectionDepth(depth)?modes[depth].title:'';
+
+const footerIcon=path=>`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${path}"/></svg>`;
+const backIcon=footerIcon('m9 5-6 6 6 6M4 11h10a6 6 0 0 1 6 6v2');
+const historyIcon=footerIcon('M4 11a8 8 0 1 1 2 7M4 5v6h6M12 7v5l4 2');
+const tasteIcon=footerIcon('M4 7h9m4 0h3M4 17h3m4 0h9M13 4v6M8 14v6');
 
 function card(depth,active){
  const {title,description}=modes[depth];
  const current=active===depth;
  return `<button type="button" class="mode-card mode-card--${depth}" data-mode-option="${depth}"${current?' aria-current="true"':''} aria-labelledby="mode-${depth}-title" aria-describedby="mode-${depth}-description">
-  <span class="mode-card-art" aria-hidden="true"></span>
+  ${selectionModeArt(depth)}
   ${current?'<span class="mode-card-current">Текущий режим</span>':''}
   <span class="mode-card-title" id="mode-${depth}-title">${title}</span>
   <span class="mode-card-description" id="mode-${depth}-description">${description}</span>
@@ -20,11 +26,11 @@ function card(depth,active){
 
 export function selectionModeChooser({intent,canResume,depth,resumeType,domain='game'}){
  const resume=intent==='switch'?'Вернуться к подбору':resumeType==='result'?'Открыть прошлый результат':'Продолжить черновик';
- const history=canResume&&intent==='new'&&resumeType!=='result'?'<a href="/library/?view=history">Прошлые результаты</a>':'';
- const memory=intent==='switch'?'':`<a href="/library/?view=memory&amp;memory.domain=${encodeURIComponent(domain)}">Мои предпочтения</a>`;
+ const history=canResume&&intent==='new'&&resumeType!=='result'?`<a href="/library/?view=history">${historyIcon}Прошлые результаты</a>`:'';
+ const memory=intent==='switch'?'':`<a href="/library/?view=memory&amp;memory.domain=${encodeURIComponent(domain)}">${tasteIcon}Мои предпочтения</a>`;
  return `<div class="mode-heading"><h1 id="mode-heading" tabindex="-1">${intent==='switch'?'Изменить режим подбора':canResume?'Новый подбор':'Как будем подбирать?'}</h1></div>
   <div class="mode-card-grid">${card('standard',intent==='switch'?depth:null)}${card('deep',intent==='switch'?depth:null)}</div>
-  <div class="mode-footer">${canResume?`<button type="button" data-mode-resume>${resume}</button>`:'<a href="/pick/start/">Выбрать другой раздел</a>'}${history}${memory}</div>`;
+  <div class="mode-footer">${canResume?`<button type="button" data-mode-resume>${backIcon}${resume}</button>`:`<a href="/pick/start/">${backIcon}Выбрать другой раздел</a>`}${history}${memory}</div>`;
 }
 
 export function checkpointHtml(checkpoint){

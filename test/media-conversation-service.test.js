@@ -160,11 +160,11 @@ test('planner failure after the local question list is exhausted still stores an
     assert.equal(out.state.question?.id,out.screen.question.id,'visible recovery question must be accepted on the next answer');
   }
 });
-test('disabled access with no admissible titles keeps a valid review snapshot and actionable error',async()=>{
+test('disabled access with no admissible titles keeps a valid review snapshot and actionable empty state',async()=>{
   const service=create('film',{access:()=>({allowed:false,reason:'offline'})});
   let out=await service({domain:'film'});out=await service({domain:'film',state:out.state,action:{type:'review'}});
   out=await service({domain:'film',state:out.state,rememberedExclusions:catalogs.film.items.map(x=>x.id),action:{type:'confirm'}});
-  assert.ok(out.error);assert.equal(out.screen.type,'review');
+  assert.equal(out.error,undefined);assert.ok(out.screen.noMatch);assert.equal(out.screen.type,'review');
   const restored=await service({domain:'film',state:out.state});assert.equal(restored.screen.type,'review');
 });
 test('unknown episode runtime, zero child age, status and series commitment are visible caveats',async()=>{

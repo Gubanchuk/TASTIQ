@@ -47,7 +47,7 @@ for(const domain of ['game','film'])test(`${domain}: more coalesces duplicate re
  let current=a.state,seen=new Set([...cards(state.result),...cards(a.state.result)].map(c=>c.id)),failed;
  for(let i=0;i<20;i++){
   const out=await service({domain,state:current,action:{type:'more'}});
-  if(out.error){failed=out;break;}
+  if(out.screen.noMatch){failed=out;break;}
   for(const card of cards(out.state.result)){assert.ok(!seen.has(card.id));seen.add(card.id);}
   current=out.state;
  }
@@ -61,7 +61,7 @@ for(const domain of ['film','series','cartoon','anime'])test(`${domain}: a singl
  const prompts=[];
  const {service,state}=setup(domain,{pick:(all,legacy,options)=>aiPick(all,legacy,{...options,api:async request=>{
   prompts.push(request.input);
-  const picks=rankAll(all[domain],profileOf(legacy),sessionOf(legacy)).ranked.slice(0,4).map(({game})=>({id:game.id,reason:'stub',caveat:'stub'}));
+  const picks=rankAll(all[domain],profileOf(legacy),sessionOf(legacy)).ranked.slice(0,4).map(({game})=>({id:game.id,viewingStart:'independent',reason:'stub',caveat:'stub'}));
   return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({picks})}]}]};
  }})});
  state.familiar.excluded=['t17'];
@@ -85,7 +85,7 @@ for(const domain of ['film','series','cartoon','anime'])test(`${domain}: a singl
 for(const domain of ['game','film','series','cartoon'])test(`${domain}: real more prompt treats shown cards as neutral pagination, preserving actual exclusions`,async()=>{
  let prompt;const {service,state}=setup(domain,{pick:async(catalogs,legacy,options)=>aiPick(catalogs,legacy,{...options,api:async request=>{
   prompt=request.input;const catalog=catalogs[domain];
-  const picks=rankAll(catalog,profileOf(legacy),sessionOf(legacy)).ranked.slice(0,4).map(r=>({id:r.game.id,reason:'stub',caveat:'caveat'}));
+  const picks=rankAll(catalog,profileOf(legacy),sessionOf(legacy)).ranked.slice(0,4).map(r=>({id:r.game.id,...(domain!=='game'?{viewingStart:'independent'}:{}),reason:'stub',caveat:'caveat'}));
   return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({picks})}]}]};
  }})});
  state.browseSeen=[domain==='game'?'110':'t10'];state.familiar.excluded=[domain==='game'?'115':'t15'];

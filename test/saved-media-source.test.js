@@ -30,7 +30,7 @@ test('saved snapshots canonicalize on start and reject scope drift on restore, r
  }
  await assert.rejects(()=>srv({domain,savedSource:{...source(['a']),domain:'series'}}),e=>e.status===400);
  const empty=await srv({domain,savedSource:source(['gone'])});assert.deepEqual(empty.state.savedSource.ids,[]);
- const none=await confirm(srv,empty);assert.match(none.error,/сохранён/i);assert.deepEqual(ids(none),[]);
+ const none=await confirm(srv,empty);assert.match(none.screen.noMatch.message,/сохранён/i);assert.deepEqual(ids(none),[]);
 });
 
 test('a free-text strict cap on a saved list works offline, survives restore and excludes unknown runtime',async()=>{
@@ -40,7 +40,7 @@ test('a free-text strict cap on a saved list works offline, survives restore and
  const result=await confirm(srv,out);
  assert.equal(result.state.sessionTime.minutes,90);assert.deepEqual(ids(result),['a']);
  assert.deepEqual(ids(await srv({domain,state:result.state})),['a']);
- const more=await send(srv,result.state,{type:'more'});assert.match(more.error,/сохранён/i);assert.deepEqual(ids(more),['a']);
+ const more=await send(srv,result.state,{type:'more'});assert.match(more.screen.noMatch.message,/сохранён/i);assert.deepEqual(ids(more),['a']);
 });
 
 test('saved picks, replacement, more, exhaustion and undo all respect the same works',async()=>{
@@ -57,8 +57,8 @@ test('saved picks, replacement, more, exhaustion and undo all respect the same w
  assert.equal(ids(rep)[1],ids(first)[1]);assert.ok(!ids(first).includes(ids(rep)[0]));
  const undo=await send(srv,rep.state,{type:'undo_replacement'});assert.deepEqual(ids(undo),ids(first));
  let out=first;const seen=new Set(ids(out).map(id=>catalog.byId.get(id).work));
- for(let i=0;i<3;i++){out=await send(srv,out.state,{type:'more'});if(out.error)break;for(const id of ids(out)){const w=catalog.byId.get(id).work;assert.ok(!seen.has(w));seen.add(w);}}
- assert.match(out.error,/сохранён/i);assert.equal(seen.size,5);assert.ok(calls>=2);
+ for(let i=0;i<3;i++){out=await send(srv,out.state,{type:'more'});if(out.screen.noMatch)break;for(const id of ids(out)){const w=catalog.byId.get(id).work;assert.ok(!seen.has(w));seen.add(w);}}
+ assert.match(out.screen.noMatch.message,/сохранён/i);assert.equal(seen.size,5);assert.ok(calls>=2);
 });
 
 test('direct model selection only resolves titles inside the saved source',async()=>{
@@ -66,7 +66,7 @@ test('direct model selection only resolves titles inside the saved source',async
  const attempt=await aiPick({film:catalog},legacy,{api:async req=>{
    assert.equal(req.text.format.schema.properties.picks.maxItems,2);
    assert.doesNotMatch(req.input,/id=h \|/);assert.match(req.input,/сохранён/);
-   const pick=(title,id='')=>({id,title,year:2010,reason:'Подходит',caveat:'',likelySeen:false});
+   const pick=(title,id='')=>({id,title,year:2010,viewingStart:'independent',reason:'Подходит',caveat:'',likelySeen:false});
    return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({understood:'',picks:[pick('h'),pick('a')]})}]}]};
  }});
  assert.deepEqual(attempt.picks.map(p=>p.id),['a']);
@@ -86,7 +86,7 @@ test('a model refusal with two candidates keeps the saved scope for the retry',a
  let calls=0;const srv=service({api:async req=>{
    calls++;assert.equal(req.text.format.schema.properties.picks.maxItems,2);
    const content=calls===1?[{type:'refusal',refusal:'stub'}]:[{type:'output_text',text:JSON.stringify({understood:'',picks:[
-    {id:'h',title:'h',reason:'',caveat:''},{id:'b',title:'b',reason:'Да',caveat:''}]})}];
+    {id:'h',title:'h',viewingStart:'independent',reason:'',caveat:''},{id:'b',title:'b',viewingStart:'independent',reason:'Да',caveat:''}]})}];
    return {status:'completed',output:[{type:'message',content}]};
  }});
  let out=await confirm(srv,await srv({domain,savedSource:source(['a','b'])}));
@@ -126,6 +126,9 @@ test('saved strict duration is sourced and checked across mixed formats, the epi
   ['film','Лёгкое приключение с юмором до двух часов','runtime',120],
   ['film','Хочу фильм про любовь, до двух часов','runtime',120],
   ['film','Фильм до 90 минут и без насилия','runtime',90],
+  ['film','Фильм до девяноста минут','runtime',90],
+  ['film','На фильм есть девяносто минут.','session',90],
+  ['series','Эпизод до тридцати минут.','episode',30],
   ['film','Хочу фильм не дольше 90 минут','runtime',90],
   ['series','Хочу эпизод до 30 минут','episode',30],
   ['cartoon','Хочу эпизод до 30 минут','episode',30],
@@ -163,7 +166,7 @@ test('saved completed status excludes unknown and returning series for model, re
  const {call}=savedScreen('series',{access:()=>({allowed:true}),api:async req=>{
   attempts++;if(attempts===1)return {status:'completed',output:[{type:'message',content:[{type:'refusal',refusal:'stub'}]}]};
   const keys=req.text.format.schema.properties.picks.items.properties.constraintChecks.items.properties.key.enum;
-  const pick=(id,title=id)=>({id,title,year:2010,reason:'Подходит',caveat:'',constraintChecks:keys.map(key=>({key,status:'compatible',reason:'Да'}))});
+  const pick=(id,title=id)=>({id,title,year:2010,viewingStart:'independent',reason:'Подходит',caveat:'',constraintChecks:keys.map(key=>({key,status:'compatible',reason:'Да'}))});
   const picks=[pick('unknown-status'),pick('','episode-long'),pick('episode-short')];
   return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({understood:'',picks})}]}]};
  }});
@@ -182,7 +185,7 @@ test('saved films with family tags cannot satisfy a checked age without certific
   const {call}=savedScreen('film');let out=await call();
   out=text?await answer(call,out,text):await call(out.state,{type:'set_context',context:{company:'children',childAge:6}});
   const online=savedScreen('film',{access:()=>({allowed:true}),pick:()=>assert.fail('cannot delegate a verified fact to a model')}).call;
-  for(const driver of [online,call]){const chosen=await result(driver,out);assert.deepEqual(ids(chosen),[],text);assert.match(chosen.error,/подтвержд/);}
+  for(const driver of [online,call]){const chosen=await result(driver,out);assert.deepEqual(ids(chosen),[],text);assert.match(chosen.screen.noMatch.message,/подтвержд/);}
  }
 });
 

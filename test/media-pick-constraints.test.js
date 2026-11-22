@@ -13,11 +13,11 @@ const response=out=>({status:'completed',model:'offline-recorded',output:[{type:
 const catalogs=loadCatalogs();
 const legacy=()=>mediaConversationToLegacy(structuredClone(original.state),catalogs.cartoon.dict,catalogs.cartoon);
 const checks=(criteria,status='unknown')=>criteria.map(c=>({key:c.key,status,reason:'Недостаточно проверенных данных о содержании'}));
-const checkedOutput=criteria=>({...saved.output,picks:saved.output.picks.map(p=>({...p,constraintChecks:checks(criteria)}))});
+const checkedOutput=criteria=>({...saved.output,picks:saved.output.picks.map(p=>({...p,viewingStart:'independent',constraintChecks:checks(criteria)}))});
 
 test('the delivered explicit hard-conflict admission cannot replace the original family result',async()=>{
  let calls=0;const service=createMediaConversationService({domain:'cartoon',catalogs,api:async()=>{calls++;return response(saved.output);}});
- const out=await service(original);assert.equal(calls,1);assert.ok(out.error,'unchecked old wire output must not become checked recommendations');
+ const out=await service(original);assert.equal(calls,1);assert.ok(out.screen.noMatch,'unchecked old wire output must not become checked recommendations');
  assert.deepEqual(out.state.result,original.state.result);assert.deepEqual(out.state.familiar,original.state.familiar);assert.deepEqual(out.state.browseSeen,original.state.browseSeen);
 });
 
@@ -26,7 +26,7 @@ test('constrained sole media candidate uses the checked picker instead of bypass
  const catalog=makeCatalog({...catalogs.cartoon,items:catalogs.cartoon.items.filter(c=>ids.includes(c.id))},'cartoon');let calls=0;
  const service=createMediaConversationService({domain:'cartoon',catalogs:{cartoon:catalog},api:async request=>{
   calls++;const keys=request.text.format.schema.properties.picks.items.properties.constraintChecks.items.properties.key.enum;
-  return response({understood:'Проверено',picks:[{...saved.output.picks[0],constraintChecks:keys.map(key=>({key,status:'unknown',reason:'Не проверено'}))}]});
+  return response({understood:'Проверено',picks:[{...saved.output.picks[0],viewingStart:'independent',constraintChecks:keys.map(key=>({key,status:'unknown',reason:'Не проверено'}))}]});
  }});
  const out=await service(original);assert.equal(calls,1);assert.equal(out.error,undefined);assert.equal(out.state.result.top.id,'tt2709692');
  assert.ok(out.state.result.top.feasibility.some(c=>c.status==='unknown'&&c.text.includes('Страшные сцены исключены')));

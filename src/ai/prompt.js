@@ -60,8 +60,10 @@ const adaptiveMediaSystem=base=>base.split('\n').map(line=>line.startsWith("You 
 export const systemFor=state=>{
  if(state.domain==='game')return state.conversation?ADAPTIVE_GAME_SYSTEM:GAME_SYSTEM;
  const base=state.domain==='cartoon'||state.domain==='anime'||state.situation?.company==='kids'?CONTEXTUAL_SYSTEM:SYSTEM;
- const system=state.conversation?adaptiveMediaSystem(base):base;
- return state.domain==='anime'?system+'\nAnime: runtime marked as the first episode belongs to S1E1 in the cited edition. Do not present it as the length of every episode or infer a regional age rating. A sequel with an unverified entry point may be appropriate only when the person does not require an independent start.':system;
+ const system=state.conversation?adaptiveMediaSystem(base)+`
+Rank for the viewing experience the person described. Separate subject matter from how the story feels to follow: its pace, atmosphere, character arcs, relationships and time spent with the cast. A shared philosophical theme alone is weak evidence. "Без филлеров" or "no filler" asks for a focused story; it does not imply a preference for a short film, a single sitting or fewer episodes. When no format was specified, consider series and films according to the person's actual reasons; when a format was requested, respect it.
+For every pick including reserves and title/year suggestions, assess its viewingStart. Use independent when a newcomer can follow this particular release, including genuinely self-contained franchise stories. A sequel, finale or film continuing a series that needs earlier context is requires_prior. An after:<id> value is only for the actual prerequisite explicitly watched or requested by this viewer. A similar title, a favourite franchise or a reference does not establish that prerequisite. If unsure, use unknown. Prefer the suitable first work when proposing a franchise to a newcomer. Do not claim that model judgement is a verified viewing order.`:base;
+ return state.domain==='anime'?system+'\nAnime: runtime marked as the first episode belongs to S1E1 in the cited edition. Do not present it as the length of every episode or infer a regional age rating.':system;
 };
 
 // Structured output: four picks in order, each with a reason, a caveat and a guess whether the person has seen it;
@@ -225,7 +227,7 @@ export function describeCandidates(rows, catalog, liked = [], { detailed = 40 } 
     const animeFormat = g.domain==='anime' ? g.kind==='series' ? 'аниме-сериал' : 'аниме-фильм' : '';
     const anime = g.animeOrigin ? [
       {japanese:'Японское аниме',western:'В аниме-стиле',coproduction:'Копродукция с Японией'}[g.animeOrigin],
-      g.standalone === true ? 'можно начать без знакомства с серией' : 'самостоятельная точка входа не подтверждена',
+      g.standalone === true ? 'можно начать без знакомства с серией' : g.standalone === false ? 'продолжение, предыдущая часть: '+g.priorTitleId : 'самостоятельная точка входа не подтверждена',
     ].join(', ') : '';
     if (i >= detailed) return [
       i === detailed ? '\nДополнительный поиск (те же сита, краткие карточки):\n' : '',

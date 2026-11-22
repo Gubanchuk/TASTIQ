@@ -188,7 +188,7 @@ body.product-page #stage .game-text-action{
 @media (hover:hover) {
  body.product-page #stage .game-text-action:hover:not(:disabled) {text-decoration:underline;text-underline-offset:3px}
 }
-body.product-page.conversation-page #stage .game-action-controls>[data-act=focus-correction]{
+body.product-page.conversation-page #stage .game-action-controls>.btn-secondary[data-act=focus-correction]{
  border-color:transparent;background:transparent;box-shadow:none
 }
 body.product-page #stage .game-neutral-status:not([hidden]){margin:8px 0;font-size:13px}

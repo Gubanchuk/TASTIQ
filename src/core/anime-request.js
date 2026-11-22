@@ -21,10 +21,10 @@ const requiredAge=new RegExp([
  String.raw`${ageSubject}\s*[-—:]?\s*(?:долж\p{L}*\s+(?:быть\s+)?)?(?:обязател\p{L}*|${verified})`,
 ].join('|'),'u');
 const mentionsAge=new RegExp(ageSubject,'u');
+const exactAdultRating=/(?<!\p{L})(?:только|строго|обязательно|нужен|нужна)\s+(?:(?:фильм|сериал|аниме)\s+)?(?:(?:с\s+)?(?:(?:официальн|возрастн)\p{L}*\s+)?(?:рейтинг\p{L}*|маркировк\p{L}*)\s+)?18\s*\+(?!\d|\s*(?:сери[йиюя]|эпизод|сезон|минут|час))/u;
 
 // These are narrow explicit preferences. Later answers and corrections take precedence.
 export function animeRequestOptions(state,allowClause=()=>true) {
- if(state.domain!=='anime'&&!state.savedSource)return {};
  let animeOrigin=null, standaloneOnly=false, verifiedAge=false;
  for(const turn of state.turns??[]){
   if(turn.kind!=='answer'||turn.superseded)continue;
@@ -38,12 +38,16 @@ export function animeRequestOptions(state,allowClause=()=>true) {
   if(noStandalone.test(answer))standaloneOnly=false;
   else if(active(standalone,'самостоятельн'))standaloneOnly=true;
   const removedAgeQuotes=(state.retractions??[]).filter(r=>r.sourceId===turn.id)
-   .map(r=>String(r.quote??'').toLowerCase().replace(/ё/g,'е')).filter(quote=>mentionsAge.test(quote));
+   .map(r=>String(r.quote??'').toLowerCase().replace(/ё/g,'е')).filter(quote=>mentionsAge.test(quote)||/18\s*\+/u.test(quote));
   for(const raw of String(turn.answer??'').split(/[.!?;,\n]/u)){
-   if(!allowClause(raw,turn))continue;
    const clause=raw.toLowerCase().replace(/ё/g,'е');
+   if(!allowClause(raw,turn,optionalAge.test(clause)))continue;
    if(optionalAge.test(clause))verifiedAge=false;
-   else if(requiredAge.test(clause)&&!removedAgeQuotes.some(quote=>clause.includes(quote)||quote.includes(clause.trim())))verifiedAge=true;
+   else {
+    const exact=exactAdultRating.exec(clause);
+    const explicitlyRequired=exact&&!/(?:^|\s)не\s+$/u.test(clause.slice(0,exact.index));
+    if((requiredAge.test(clause)||explicitlyRequired)&&!removedAgeQuotes.some(quote=>clause.includes(quote)||quote.includes(clause.trim())))verifiedAge=true;
+   }
   }
  }
  const {format,timeMode}=state.context??{};

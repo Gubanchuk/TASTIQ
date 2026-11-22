@@ -1,4 +1,5 @@
 import {initialConversation,initialDirectionQuestion,hasDirectionChoice,hasChosenDirection,directionChoiceMessage} from '../server/public/shared/conversation-entry.js';
+import {directionAvoidance,validTurnAvoidance,initialAvoidanceFact,respectAvoidanceField,storedFactLimit} from './direction-avoidance.js';
 // Separate media adapter: today's evidence never silently becomes permanent taste.
 import { initialState } from './dialogue.js';
 import { validateSessionTime, currentSessionMinutes, isSessionTimeSourceRetracted } from './session-time.js';
@@ -6,6 +7,8 @@ import { SELECTION_TURN_LIMIT,normalizeSelectionInterview,restartSelectionDepth,
   canOfferInterviewQuestion,rememberInterviewQuestion,skippedInterviewQuestions,chooseInterviewQuestion,interviewCheckpoint,reviewAtInterviewCapacity } from './selection-dialogue.js';
 
 import {animeRequestOptions} from './anime-request.js';
+import {viewingOrderOf} from './viewing-order.js';
+import {groundedRatingFacts,hasUnresolvedRating,ratingSummary,watchingWithChildren,withoutRating} from './age-rating.js';
 import {invalidSavedSource,normalizeSavedSource,savedSourceKey} from './saved-source.js';
 
 const domains = ['film','series','cartoon','anime'];
@@ -117,6 +120,7 @@ function explicitEndedSeries(quote,source) {
   // Adjective→series or series→predicate are structural evidence. Merely finding
   // both words in a quote would confuse 'законченная история в сериале' with this.
   return /(?<!\p{L})(?:закончен|завершен)\p{L}*\s+(?:мини[- ]?)?сериал(?:а|ы|ов|у|ом|е)?(?!\p{L})/u.test(t)
+    ||directViewingWish(quote,source)&&descriptiveEndedSeries.test(t)
     ||/(?<!\p{L})сериал(?:ы)?(?!\p{L})\s*[,—–-]?\s*(?:котор(?:ый|ые)\s+)?(?:(?:уже|полностью|давно|окончательно)\s+)*(?:закончен|завершен)\p{L}*/u.test(t);
 }
 function completedStory(quote,source) {
@@ -125,13 +129,21 @@ function completedStory(quote,source) {
     &&(/(?<!\p{L})(?:закончен|завершен)\p{L}*\s+(?:сюжетн\p{L}*\s+)?(?:истори|сюжет|арк)\p{L}*/u.test(t)
       ||/(?<!\p{L})(?:истори|сюжет|арк)\p{L}*\s+(?:(?:уже|полностью)\s+)*(?:закончен|завершен)\p{L}*/u.test(t));
 }
-const mediaDescriptor=String.raw`(?:добр|легк|детективн|комедийн|приключенческ|фантастическ|историческ|романтическ|драматическ|криминальн|полицейск|шпионск|анимационн|мультипликационн|смешн|весел|мрачн|законченн|завершенн)`;
+const mediaDescriptor=String.raw`(?:добр|легк|детективн|комедийн|приключенческ|фантастическ|историческ|романтическ|драматическ|криминальн|полицейск|шпионск|анимационн|мультипликационн|смешн|весел|мрачн|серьезн|длинн|коротк|законченн|завершенн)`;
 const mediaModifiers=String.raw`(?:(?:и\s+)?${mediaDescriptor}\p{L}*\s*,?\s+){0,4}`;
+const descriptiveEndedSeries=new RegExp(String.raw`(?<!\p{L})(?:закончен|завершен)\p{L}*\s+${mediaModifiers}(?:(?:аниме|мини)[- ]?)?сериал(?:а|ы|ов|у|ом|е)?(?!\p{L})`,'u');
+function directViewingWish(quote,source) {
+  const at=source.answer.indexOf(quote);
+  const lead=source.answer.slice(0,at+quote.length).split(/[.!?;]/u).at(-1).trim();
+  return /^(?:(?:я|мне|сейчас|сегодня|теперь)\s+)*(?:хочу|хочется|ищу|нужен|нужна|готов[аы]?)\s+/iu.test(lead)
+    && currentViewingEvidence(quote,source);
+}
+const sustainedCharacterArc=/(?:геро(?:ями|ем|иней)|персонаж(?:ами|ем))\s*,?\s+за\s+котор(?:ых|ого|ую)\s+(?:можно\s+)?(?:пережива(?:ешь|ть)|следи(?:шь|ть))\s+(?:(?:на\s+протяжении|в\s+течение)\s+)?нескольк(?:о|их)\s+сезонов/u;
 const moviePhrase=String.raw`${mediaModifiers}(?:полнометражн\p{L}*\s+)?${mediaModifiers}(?:мульт)?фильм(?:а|у|ом|е|ы|ов|ам|ами|ах)?(?!\p{L})`;
 const movieRequestPattern=new RegExp(String.raw`(?<!\p{L})(?:нуж(?:ен|на|но)|хочу|только)\s+(?:од(?:ин|ну)\s+)?${moviePhrase}`,'u');
 const singleMoviePattern=new RegExp(String.raw`(?<!\p{L})од(?:ин|ну)\s+${moviePhrase}`,'u');
 const movieRequest=quote=>movieRequestPattern.test(folded(quote));
-const seriesRequestPattern=new RegExp(String.raw`(?<!\p{L})(?:нуж(?:ен|на|но)|хочу|только)\s+(?:од(?:ин|ну)\s+)?${mediaModifiers}(?:мини[- ]?)?сериал(?:а|у|ом|е|ы|ов|ам|ами|ах)?(?!\p{L})`,'u');
+const seriesRequestPattern=new RegExp(String.raw`(?<!\p{L})(?:нуж(?:ен|на|но)|хочу|только)\s+(?:посмотреть\s+)?(?:од(?:ин|ну)\s+)?${mediaModifiers}(?:(?:мини|аниме)[- ]?)?сериал(?:а|у|ом|е|ы|ов|ам|ами|ах)?(?!\p{L})`,'u');
 function formatAlternatives(quote,source) {
   const start=source.answer.indexOf(quote),before=source.answer.slice(0,start).split(/[.!?;]/u).at(-1)??'',after=source.answer.slice(start+quote.length).split(/[.!?;]/u)[0];
   const clause=folded(before+quote+after);
@@ -157,6 +169,28 @@ function directFormatSource(format,quote,source) {
   // This omission fallback does not assign the speaker of a quoted/history sentence.
   return !/[«“„"]\s*$/u.test(before)&&!/синопсис|описани|персонаж|герой|раньше|тогда|в детстве/iu.test(before);
 }
+function applyExplicitFormat(state,turn) {
+  if(!['anime','cartoon'].includes(state.domain))return false;
+  const words=turn.text.trim(), prior=state.contextEvidence.format;
+  if(prior && /^(?:теперь\s+)?(?:формат\s+(?:мне\s+)?не\s*важен|(?:можно|подойд[её]т)\s+и\s+фильм,?\s+и\s+сериал)[.!]?$/iu.test(words)){
+    if(state.retractions.length>=retractionLimit)throw fail('Слишком много исправлений. Начни новый подбор.');
+    state.retractions.push({kind:'context',key:'format',sourceId:turn.id,at:turn.id,quote:words});
+    state.context.format=null;state.contextEvidence.format=null;
+    return true;
+  }
+  const matches=[];
+  for(const sentence of words.split(/[.!?;\n]/u)){
+    for(const [format,pattern] of [['movie',movieRequestPattern],['episodic',seriesRequestPattern]]){
+      const match=pattern.exec(folded(sentence));
+      if(!match || !/^(?:\s*(?:я|мне|сегодня|сейчас|теперь)\s+)*\s*$/iu.test(sentence.slice(0,match.index)))continue;
+      const quote=sentence.slice(match.index,match.index+match[0].length);
+      if(currentViewingEvidence(quote,turn) && contextMeaning('format',format,quote,turn,state.domain))matches.push({value:format,sourceId:turn.id,quote});
+    }
+  }
+  if(matches.length!==1 || /(?:фильм|сериал)\s+тоже\s+(?:можно|подойд[её]т)/iu.test(words))return false;
+  state.contextEvidence.format=matches[0];state.context.format=matches[0].value;
+  return true;
+}
 // Bound the intervening words to media descriptors: adjective endings alone
 // also match nouns like "description", which may refer to a long series.
 const shortStoryPattern=new RegExp(String.raw`(?<!\p{L})(?:коротк\p{L}*\s*,?\s+${mediaModifiers}(?:истори(?:я|ю|и|ей|й|ями|ях)|(?:мини[- ]?)?сериал(?:а|у|ом|е|ы|ов|ам|ами|ах)?)|мини[- ]?сериал(?:а|у|ом|е|ы|ов|ам|ами|ах)?|ненадолго)(?!\p{L})`,'u');
@@ -168,7 +202,7 @@ function shortStoryEvidence(quote) {
 const spelledFilmHours=new Map([
   ['одного часа',60],['полутора часов',90],['двух часов',120],['два часа',120],['двух с половиной часов',150],['два с половиной часа',150],['трех часов',180],['три часа',180],
 ]);
-const filmCapStart=/(?<![\p{L}\p{N}])(?:до|не\s+(?:больше|более|дольше)|максимум)\s+(?=\d|час|пол|одного|двух|два|тр[её]х|три)/giu;
+const filmCapStart=/(?<![\p{L}\p{N}])(?:до|не\s+(?:больше|более|дольше)|максимум)\s+(?=\d|час|пол|одного|двух|два|тр[её]х|три|\p{L}+(?:\s+\p{L}+)?\s+минут)/giu;
 // In the film section, an explicit upper cap at the end of a viewing clause
 // can omit the word «фильм». Keep the original quote and inspect its surroundings.
 function filmCapMinutes(quote,source) {
@@ -181,6 +215,7 @@ function filmCapMinutes(quote,source) {
   const before=folded(source.answer.slice(0,start).split(/[.!?;]/u).at(-1)??'');
   const [after,next='']=folded(source.answer.slice(end)).split(/[.!?;]/u,2);
   if(conditional(`${before} ${after}`)||/(?:^|\s)(?:вчера|раньше|тогда|днем|прошл\p{L}*|(?:по)?смотрел\p{L}*|от\s+\d|от\s+(?:часа|одного|полутора|двух|трех))|(?<!\p{L})не\s+(?:хочу|нуж|буду|надо|могу)/u.test(before)
+    ||/(?<!\p{L})от\s+\p{L}+(?:\s+\p{L}+)?\s*$/u.test(before)
     ||/^\s*[,–—-]?\s*(?:дня|ночи|утра|вечера|или|либо|до|а\s+может|колебл)/u.test(after)
     ||/^\s*(?:но|а|теперь|сейчас|уже|если).*?(?:времени\s+нет|времени\s+не\s+будет|не\s+актуальн|лимита\s+нет|не\s+получится)/u.test(next)
     ||after.trim()&&!/^\s*(?:,|и\s+без)/u.test(after))return null;
@@ -191,7 +226,8 @@ function filmCapMinutes(quote,source) {
 // same exact-source checks as a proposed film runtime after restore.
 function explicitViewingCap(turn,domain='film',saved=false) {
   const [cap,conflict]=turn.text.matchAll(filmCapStart);
-  if(!cap||conflict)return null;
+  if(!cap)return explicitFilmBudget(turn);
+  if(conflict)return null;
   const at=cap.index;
   const before=folded(turn.text.slice(0,at).split(/[.!?;]/u).at(-1));
   const subject=before.split(',').at(-1);
@@ -211,12 +247,13 @@ function explicitViewingCap(turn,domain='film',saved=false) {
   return minutes===null?null:{mode,time:{minutes,quote,sourceId:turn.id}};
 }
 
-function currentViewingEvidence(quote,turn){
+function currentViewingEvidence(quote,turn,allowNegated=false){
   const start=turn.answer.indexOf(quote),end=start+quote.length;
   const before=turn.answer.slice(0,start).split(/[.!?;]/u).at(-1)??'';
   const evidence=folded(before+quote);
   if(/[«“„"]/u.test(quote)||[...turn.answer.matchAll(/«[^»]*(?:»|$)|[“„][^”]*(?:”|$)|"[^"]*(?:"|$)/gu)].some(m=>m.index<end&&m.index+m[0].length>start))return false;
-  return !conditional(evidence)&&!/(?:^|\s)(?:раньше|вчера|тогда|в\s+детстве|любил\p{L}*|(?:по)?смотрел\p{L}*|сказал\p{L}*|говорил\p{L}*|персонаж|герой|цитата|не\s+(?:хочу|нуж\p{L}*|буду)|вместо)(?!\p{L})/u.test(evidence);
+  if(!allowNegated&&/(?:^|\s)не\s+(?:хочу|нуж\p{L}*|буду)(?!\p{L})/u.test(evidence))return false;
+  return !conditional(evidence)&&!/(?:^|\s)(?:раньше|вчера|тогда|в\s+детстве|любил\p{L}*|(?:по)?смотрел\p{L}*|сказал\p{L}*|говорил\p{L}*|персонаж|герой|цитата|вместо)(?!\p{L})/u.test(evidence);
 }
 
 function contextMeaning(key,value,quote,source,domain,saved=false) {
@@ -243,7 +280,8 @@ function contextMeaning(key,value,quote,source,domain,saved=false) {
   }
   if(key==='timeMode')return value==='episode'?/эпизод|сери[яиюй]/u.test(t):value==='runtime'?/фильм|полнометраж|хронометраж/u.test(t)||domain==='film'&&filmCapMinutes(quote,source)!==null:/сегодня|сейчас|вечер|есть.*(?:минут|час)|могу\s+(?:по)?смотр/u.test(t)||/сегодня.*врем|врем.*сегодня/u.test(folded(source.question.title));
   if(key==='commitment')return value==='single'?/од(?:ин|ну)\s+(?:эпизод|серию)|на один вечер|одним (?:фильмом|вечером)/u.test(t)
-    ||singleMoviePattern.test(t)&&movieEvidence(quote,source):value==='short'?shortStoryEvidence(quote):value==='long'?/(?:готов|хочу|можно|не против).*(?:длинн\p{L}*\s+(?:истори|сериал)|много\s+сезон)|надолго/u.test(t):/любая (?:длина|длительность)|длина не важна|длительность не важна|неважно.*(?:сезон|длин)/u.test(t);
+    ||singleMoviePattern.test(t)&&movieEvidence(quote,source):value==='short'?shortStoryEvidence(quote):value==='long'?/(?:готов|хочу|можно|не против).*(?:длинн\p{L}*\s+(?:истори|сериал)|много\s+сезон)|надолго/u.test(t)
+      ||sustainedCharacterArc.test(t)&&directViewingWish(quote,source):/любая (?:длина|длительность)|длина не важна|длительность не важна|неважно.*(?:сезон|длин)/u.test(t);
   if(key==='onlyEnded') {
     if(isEndedQuestion(source.question))return endedOptions.some(([id,label])=>source.selected?.some(o=>o.id===id&&o.label===label)&&quote===label&&value===(id==='yes'));
     return value?explicitEndedSeries(quote,source)
@@ -297,7 +335,24 @@ function checkedContext(s,value,{clarify=false}={}) {
 }
 // The mature current-session grammar supplies range, uncertainty and cutoff checks.
 // Watch verbs are mapped only for parsing; stored and shown evidence stays untouched.
-const watchTime = v => String(v).replace(/посмотреть|смотреть|посмотрю/giu,'поиграть');
+const filmBudgetSubject=/(?<!\p{L})на\s+фильм(?=\s+(?:у\s+(?:меня|нас)\s+)?есть(?!\p{L}))/iu;
+const watchTime = v => String(v).replace(filmBudgetSubject,'на просмотр').replace(/посмотреть|смотреть|посмотрю/giu,'поиграть');
+function explicitFilmBudget(turn) {
+  const sentences=(turn.text.match(/[^.!?;]+[.!?;]?/gu)??[]).map(part=>part.trim()).filter(part=>filmBudgetSubject.test(part));
+  if(sentences.length!==1)return null;
+  const quote=sentences[0],minutes=currentSessionMinutes(watchTime(quote));
+  if(minutes===null||quote.endsWith('?')||!currentViewingEvidence(quote,turn))return null;
+  const time={sourceId:turn.id,quote,minutes};
+  const mapped={...turn,answer:watchTime(turn.answer)};
+  const checked=validateSessionTime({...time,quote:watchTime(quote)},{turns:[mapped]});
+  return checked.time?{mode:'session',time}:null;
+}
+function requiresKnownFilmRuntime(s){
+  if(s.domain!=='film'||!s.sessionTime)return false;
+  if(s.context.timeMode==='runtime')return true;
+  const source=s.context.timeMode==='session'&&s.turns.find(t=>t.id===s.sessionTime.sourceId);
+  return Boolean(source?.text&&explicitFilmBudget(source)?.time.quote.includes(s.sessionTime.quote));
+}
 function correctionMinutes(source,context) {
   if(!source.question.id.startsWith('correction:')||context.timeMode===null)return null;
   const t=folded(source.answer);if(conditional(t))return null;
@@ -308,6 +363,7 @@ function checkedTime(s,value,ctx) {
   if(value==null)return null;
   if(!exactKeys(value,['minutes','sourceId','quote'])||!Number.isInteger(value.minutes)||value.minutes<5||value.minutes>1440)throw fail('Некорректное время просмотра.');
   const source=sourceFor(s,value);
+  if(filmBudgetSubject.test(value.quote)&&(!currentViewingEvidence(value.quote,source)||ctx.timeMode!=='session'))throw fail('Цитата времени потеряла условия ответа.');
   const remaining=source.answer.slice(source.answer.indexOf(value.quote)+value.quote.length).split(/[.!?;]/u)[0];
   if(/(?:но|теперь|сейчас|уже).*?(?:времени\s+нет|времени\s+не\s+будет|не\s+актуальн)|не\s+получится\s+(?:по)?смотр/iu.test(remaining))throw fail('Цитата времени потеряла условия ответа.');
   if(source.question.id==='context'&&source.context?.minutes===value.minutes&&value.quote===source.contextQuotes?.minutes&&!isSessionTimeSourceRetracted(value.sourceId,s))return {...value};
@@ -331,8 +387,8 @@ function checkedTime(s,value,ctx) {
   if(conditional(before??'')||conditional(after)||/^\s*(?:[-–—]|или|до)\s*\d/u.test(after)||/не актуальн|времени нет|не получится/u.test(after))throw fail('Цитата времени потеряла условия ответа.');
   return {...value};
 }
-function checkedFacts(s,list,dict) {
-  if(!Array.isArray(list)||list.length>16)throw fail('Некорректное понимание ответа.');
+function checkedFacts(s,list,dict,limit=16) {
+  if(!Array.isArray(list)||list.length>limit)throw fail('Некорректное понимание ответа.');
   const seen=new Set();
   return list.map(f=>{
     if(!exactKeys(f,factFields)||!text(f.key,60)||seen.has(f.key)||!text(f.text,240)
@@ -375,7 +431,7 @@ export function normalizeMediaConversation(input,expectedDomain) {
   if(input==null)return newMediaConversation({domain:expectedDomain??'film'});
   if(!object(input)||input.version!==1||!domains.includes(input.domain)||expectedDomain&&input.domain!==expectedDomain||!text(input.id,100)||!Number.isSafeInteger(input.revision)||input.revision<0
     ||!['guided','free'].includes(input.mode)||!['direction','talk','review','result'].includes(input.phase)||!Array.isArray(input.turns)||input.turns.length>SELECTION_TURN_LIMIT
-    ||!Array.isArray(input.facts)||input.facts.length>16||!Array.isArray(input.retractions)||input.retractions.length>retractionLimit+fields.length+1||!Array.isArray(input.uncertainties)||input.uncertainties.length>8
+    ||!Array.isArray(input.facts)||input.facts.length>storedFactLimit(input.facts)||!Array.isArray(input.retractions)||input.retractions.length>retractionLimit+fields.length+1||!Array.isArray(input.uncertainties)||input.uncertainties.length>8
     ||input.uncertainties.some(v=>typeof v!=='string'||v.length>240)||typeof input.summary!=='string'||input.summary.length>1000)throw fail('Сохранённый разговор не удалось прочитать. Начни новый подбор.');
   const s=structuredClone(input),seen=new Set();
   if(Object.hasOwn(s,'savedSource')||Object.hasOwn(s,'savedSourceKey')){
@@ -391,7 +447,7 @@ export function normalizeMediaConversation(input,expectedDomain) {
     if(!object(t)||!text(t.id,100)||seen.has(t.id)||typeof t.answer!=='string'||t.answer.length>2400||typeof t.text!=='string'||t.text.length>1600
       ||!['answer',...controls].includes(t.kind)||!Array.isArray(t.selected)||t.selected.length>(t.question?.id==='direction'?20:6)||t.selected.some(o=>!text(o?.id,100)||!text(o?.label,100))
       ||t.supersedes!=null&&(!Array.isArray(t.supersedes)||t.supersedes.length>24||t.supersedes.some(id=>typeof id!=='string'))
-      ||t.superseded!=null&&typeof t.superseded!=='boolean')throw fail('Некорректный ответ в истории разговора.');
+      ||t.superseded!=null&&typeof t.superseded!=='boolean'||!validTurnAvoidance(t))throw fail('Некорректный ответ в истории разговора.');
     seen.add(t.id);t.question=checkedQuestion(t.question);if(t.context)t.context=validateContext(t.context);
   }
   for(const t of s.turns)if(t.acceptedContext!=null||t.acceptedTime!=null) {
@@ -411,7 +467,7 @@ export function normalizeMediaConversation(input,expectedDomain) {
   compactEditorClears(s);
   for(const r of s.retractions)if(r.kind==='untyped_source') {
     const source=s.turns.find(t=>t.id===r.sourceId);
-    if(!Array.isArray(r.allowedFacts)||r.allowedFacts.length>16||r.allowedFacts.some(f=>!exactKeys(f,factFields)||f.feature!==null||f.titleId!==null||f.sourceId!==r.sourceId
+    if(!Array.isArray(r.allowedFacts)||r.allowedFacts.length>storedFactLimit(r.allowedFacts)||r.allowedFacts.some(f=>!exactKeys(f,factFields)||f.feature!==null||f.titleId!==null||f.sourceId!==r.sourceId
       ||!text(f.key,60)||!text(f.text,240)||!text(f.quote,400)||!stances.includes(f.stance)||!['today','history'].includes(f.scope)||f.exposure!==null||![null,'reference'].includes(f.titleIntent)
       ||source&&!source.answer.includes(f.quote)))throw fail('Не удалось проверить оставшиеся свободные выводы после снятия.');
   }
@@ -420,7 +476,9 @@ export function normalizeMediaConversation(input,expectedDomain) {
   s.contextEvidence=checked.evidence;s.sessionTime=checkedTime(s,s.sessionTime??null,s.context);
   if(s.context.minutes!==(s.sessionTime?.minutes??null))throw fail('Количество минут не подтверждено источником.');
   // Feature membership is validated against the selected catalog at proposal/projection time.
-  const features=new Map(s.facts.filter(f=>typeof f?.feature==='string').map(f=>[f.feature,{}]));s.facts=checkedFacts(s,s.facts,{featureById:features});
+  const features=new Map(s.facts.filter(f=>typeof f?.feature==='string').map(f=>[f.feature,{}]));s.facts=checkedFacts(s,s.facts,{featureById:features},storedFactLimit(s.facts));
+  const age=groundedRatingFacts(s.facts,s);
+  if(age.changed){s.facts=age.facts;s.summary=ratingSummary(s,s.facts);}
   s.question=s.question?checkedQuestion(s.question):null;s.result=validResult(s.result);if(s.phase==='result'&&!s.result)throw fail('В сохранённом результате нет вариантов.');
   s.familiar=familiar(s.familiar);s.replacement=replacement(s.replacement);
   if(s.factRemovalUndo!=null) {
@@ -466,8 +524,34 @@ function refreshContext(s) {
 }
 const contextLabels={company:{solo:'Смотрю один',adults:'Смотрим со взрослыми',children:'Смотрим с детьми'},timeMode:{runtime:'Ограничение длительности фильма',episode:'Ограничение длительности эпизода',session:'Доступное время сегодня'},commitment:{single:'Один эпизод или один вечер',short:'Короткая история',long:'Готов к длинной истории',open:'Длина истории не важна'},format:{movie:'Полнометражный фильм',episodic:'Сериал'}};
 const contextQuote=(key,value)=>key==='childAge'?`Ребёнку ${value} лет`:key==='onlyEnded'?value?'Только законченный сериал':'Можно продолжающийся сериал':contextLabels[key]?.[value];
+const factSummary=f=>f.key==='direction:own-avoidance'?'Хочу избежать: '+f.text:f.text;
 export function answerMediaConversation(input,action={}) {
   let s=normalizeMediaConversation(input);
+  if(action.type==='allow_unverified_rating'){
+    if(s.phase!=='review'||watchingWithChildren(s)||!animeRequestOptions(s,currentViewingEvidence).verifiedAge)throw fail('Это условие возрастной маркировки нельзя снять для текущего запроса.');
+    const edits=s.facts.map((fact,index)=>({fact,index,keep:withoutRating(fact)})).filter(({fact,keep})=>fact!==keep);
+    if(s.retractions.length+edits.length>retractionLimit)throw fail('Слишком много исправлений. Начни новый подбор.');
+    const next=answerMediaConversation(s,{type:'correct',text:'Возрастной рейтинг мне больше не важен.'});
+    const editTurn=next.turns.at(-1);
+    editTurn.recoveryEdit='rating';
+    next.facts=s.facts.map(withoutRating).filter(Boolean);
+    if(next.facts.some(hasUnresolvedRating))throw fail('Уточни возрастную маркировку отдельно от остальных условий.');
+    for(const {fact,keep,index} of edits)next.retractions.push({...(keep?{}:{key:fact.key}),sourceId:fact.sourceId,quote:fact.quote,at:editTurn.id,priorRatingFact:fact,priorIndex:index});
+    return {...next,phase:'review',needsPlan:false,summary:(next.facts.filter(f=>f.scope==='today').map(factSummary).join(' ')||editTurn.answer).slice(0,1000)};
+  }
+  if(action.type==='extend_runtime'){
+    const minutes=action.minutes;
+    const timeMode=requiresKnownFilmRuntime(s)?'runtime':s.context.timeMode;
+    if(s.phase!=='review'||!s.sessionTime||!Number.isInteger(minutes)||minutes<=s.sessionTime.minutes||minutes>1440
+      ||!['runtime','episode'].includes(timeMode))throw fail('Проверь новый лимит длительности.');
+    const base=answerMediaConversation(s,{type:'remove_time'});
+    const next=answerMediaConversation(base,{type:'set_context',context:{minutes,timeMode}});
+    const cutoff=next.retractions.findLast(r=>r.kind==='session_time'&&r.sourceId===s.sessionTime.sourceId&&r.quote===s.sessionTime.quote);
+    const editTurn=next.turns.at(-1);
+    editTurn.recoveryEdit='runtime';
+    if(cutoff)cutoff.replacedBy=editTurn.id;
+    return next;
+  }
   if(action.type==='restart')return newMediaConversation({domain:s.domain,mode:s.mode,depth:restartSelectionDepth(s,action,fail),requireDirection:s.requireDirection===true||action.requireDirection===true,savedSource:s.savedSource});
   if(!action.type)return s;
   if(action.type==='setDepth')return changeSelectionDepth(s,action,fail);
@@ -502,9 +586,20 @@ export function answerMediaConversation(input,action={}) {
   }
   if(action.type==='back') {
     if(!s.turns.length)return s;const removed=s.turns.pop();for(const t of s.turns)if(removed.supersedes?.includes(t.id))t.superseded=false;
+    const restored=s.retractions.filter(r=>removed.recoveryEdit==='rating'&&r.at===removed.id&&r.priorRatingFact);
+    s.retractions=s.retractions.filter(r=>!(removed.recoveryEdit==='runtime'&&r.kind==='session_time'&&r.replacedBy===removed.id));
     const active=new Set(s.turns.map(t=>t.id));s.facts=s.facts.filter(f=>active.has(f.sourceId));
-    s.retractions=s.retractions.flatMap(r=>r.at&&!active.has(r.at)?['session_time','context'].includes(r.kind)?[{...r,at:s.turns.at(-1)?.id}]:[]:[r]);
-    refreshContext(s);invalidate(s);s.question=removed.resumeQuestion??removed.question;s.phase=s.question.id==='direction'?'direction':'talk';s.needsPlan=false;s.revision++;return s;
+    s.retractions=s.retractions.filter(r=>!(r.kind==='context'&&r.key==='format'&&r.sourceId===removed.id&&r.quote===removed.text))
+      .flatMap(r=>r.at&&!active.has(r.at)?['session_time','context'].includes(r.kind)?[{...r,at:s.turns.at(-1)?.id}]:[]:[r]);
+    if(restored.length){
+      if(restored.some(r=>r.sourceId!==r.priorRatingFact.sourceId||r.quote!==r.priorRatingFact.quote
+        ||!Number.isInteger(r.priorIndex)||r.priorIndex<0||r.priorIndex>16||withoutRating(r.priorRatingFact)===r.priorRatingFact))throw fail('Не удалось восстановить прежнее условие о рейтинге.');
+      const past=checkedFacts(s,restored.map(r=>r.priorRatingFact),{featureById:new Map()});
+      for(const [i,fact] of past.entries()){s.facts=s.facts.filter(f=>f.key!==fact.key);s.facts.splice(restored[i].priorIndex,0,fact);}
+    }
+    refreshContext(s);invalidate(s);s.needsPlan=false;s.revision++;
+    if(removed.recoveryEdit==='rating'||removed.recoveryEdit==='runtime'){s.question=null;s.phase='review';return s;}
+    s.question=removed.resumeQuestion??removed.question;s.phase=s.question.id==='direction'?'direction':'talk';return s;
   }
   if(action.type==='remove_fact'||action.type==='remove_time') {
     const key=action.type==='remove_time'?'session_time':action.key,f=s.facts.find(f=>f.key===key),contextKey=key?.startsWith('context:')?key.slice(8):null;
@@ -552,7 +647,9 @@ export function answerMediaConversation(input,action={}) {
   const own=clean(action.text);
   if(s.requireDirection===true&&question.id==='direction'&&(kind!=='answer'||!hasDirectionChoice(selected.map(option=>option.id),own)))throw fail(directionChoiceMessage);
   if(kind==='answer'&&!selected.length&&!own)throw fail('Напиши ответ, выбери вариант или пропусти вопрос.');
-  const turn={id:`${s.id}:${s.revision+1}`,question,selected:selected.map(({id,label})=>({id,label})),text:own,kind,answer:[...(kind==='answer'?selected.map(o=>o.label):[neutral[kind]]),own].filter(Boolean).join('; ')};
+  const avoidText=directionAvoidance(action,question,kind,fail);
+  const turn={id:`${s.id}:${s.revision+1}`,question,selected:selected.map(({id,label})=>({id,label})),text:own,kind,...(avoidText?{avoidText}:{}),answer:[...(kind==='answer'?selected.map(o=>o.label):[neutral[kind]]),own,avoidText&&'Хочу избежать: '+avoidText].filter(Boolean).join('; ')};
+  s.facts.push(...initialAvoidanceFact(turn));
   if(!correcting&&isEndedQuestion(question)&&!own&&(selected.length===1||controls.includes(kind))) {
     const value=kind==='answer'?selected[0].id==='yes':null,summary=s.summary;
     s.revision++;s.turns.push(turn);invalidate(s);s.summary=summary;s.context.onlyEnded=value;
@@ -572,13 +669,15 @@ export function answerMediaConversation(input,action={}) {
     if(clearsTime){s.context.timeMode=null;s.contextEvidence.timeMode=null;}
   }
   s.revision++;s.turns.push(turn);
+  if(correcting)s.facts=respectAvoidanceField(s.facts,s);
+  const explicitFormat=kind==='answer'&&applyExplicitFormat(s,turn);
   const savedContext=s.savedSource&&kind==='answer'&&applySavedViewingContext(s,turn);
   if(filmTime){
     s.sessionTime=filmTime;
     s.context.minutes=filmTime.minutes;s.context.timeMode=cap.mode;
     s.contextEvidence.timeMode={value:cap.mode,quote:filmTime.quote,sourceId:turn.id};
   }
-  if(filmTime||savedContext){turn.acceptedTime=structuredClone(s.sessionTime);turn.acceptedContext=structuredClone(s.contextEvidence);}
+  if(filmTime||savedContext||explicitFormat){turn.acceptedTime=structuredClone(s.sessionTime);turn.acceptedContext=structuredClone(s.contextEvidence);}
   invalidate(s);s.phase='talk';s.question=null;s.needsPlan=true;return s;
 }
 
@@ -589,7 +688,9 @@ export function applyMediaConversationProposal(state,proposal,dict,expectedRevis
     const expectedKeys=state.depth&&Object.hasOwn(proposal??{},'decision')?[...fields,'decision']:fields;
     if(!exactKeys(proposal,expectedKeys)||typeof proposal.summary!=='string'||proposal.summary.length>1000
       ||!Array.isArray(proposal.uncertainties)||proposal.uncertainties.length>8||proposal.uncertainties.some(v=>typeof v!=='string'||v.length>240)||!['question','review'].includes(proposal.action))throw fail('Неполный ответ помощника.');
-    let facts=checkedFacts(state,proposal.facts,dict);
+    const age=groundedRatingFacts(checkedFacts(state,proposal.facts,dict),state);
+    let facts=respectAvoidanceField(age.facts,state);
+    if(age.changed)proposal={...proposal,summary:ratingSummary(state,facts)};
     const checked=checkedContext(state,proposal.context,{clarify:true});
     // A confirmed runtime survives omission by the planner until the user changes it.
     const currentTime=(state.savedSource||state.domain==='film'&&state.contextEvidence?.timeMode?.value==='runtime')&&state.sessionTime&&
@@ -627,6 +728,10 @@ export function applyMediaConversationProposal(state,proposal,dict,expectedRevis
       if(retractedContext(state,'format',f.sourceId))throw fail('Этот формат уже снят. Уточни его новым ответом.');
       if(checked.context.format!==null&&checked.context.format!==format)throw fail('В условиях одновременно указаны фильм и сериал. Уточни нужный формат.');
       if(checked.context.format===null){checked.context.format=format;checked.evidence.format={value:format,sourceId:f.sourceId,quote:f.quote};}
+    }
+    const priorFormat=state.contextEvidence.format;
+    if(priorFormat&&!retractedContext(state,'format',priorFormat.sourceId)&&(!checked.evidence.format||turnIndex(priorFormat)>turnIndex(checked.evidence.format))){
+      checked.context.format=priorFormat.value;checked.evidence.format=priorFormat;
     }
     // A finished story/arc does not prove that production of its whole series ended.
     // Keep supported goal facts and ask this one scalar question locally. An invalid
@@ -667,7 +772,7 @@ export function applyMediaConversationProposal(state,proposal,dict,expectedRevis
     const contextScope={domain:state.domain,context:checked.context};
     if(seriesContext(contextScope)&&(checked.context.commitment!==null||checked.context.onlyEnded!==null))uncertainties.push(seriesUncertainty);
     const turns=structuredClone(state.turns);if(turns.length){turns.at(-1).acceptedContext=structuredClone(checked.evidence);turns.at(-1).acceptedTime=structuredClone(sessionTime);}
-    return {state:rememberInterviewQuestion({...state,turns,facts,context:checked.context,contextEvidence:checked.evidence,sessionTime,summary:clarifyEnded?facts.map(f=>f.text).join(' ').slice(0,1000):proposal.summary.trim(),uncertainties:[...new Set(scopedUncertainties(contextScope,uncertainties))].slice(0,8),question,
+    return {state:rememberInterviewQuestion({...state,turns,facts,context:checked.context,contextEvidence:checked.evidence,sessionTime,summary:clarifyEnded?facts.map(factSummary).join(' ').slice(0,1000):proposal.summary.trim(),uncertainties:[...new Set(scopedUncertainties(contextScope,uncertainties))].slice(0,8),question,
       phase:question?'talk':'review',needsPlan:false,provisional:Boolean(decision.notice),result:null,failedAction:null,factRemovalUndo:null},question)};
   } catch(e) {return {state,error:e.message};}
 }
@@ -694,10 +799,11 @@ export function mediaConversationToLegacy(s,dict,catalog=null) {
     childAge:s.context.company==='children'&&s.context.childAge!==null?String(s.context.childAge):null,onlyEnded:s.context.onlyEnded===true,note:clean(s.summary,300)};
   for(const fact of s.facts)if(fact.titleId&&fact.exposure==='finished'&&!keep.has(fact.titleId))legacy.answers[fact.titleId]={reaction:'known',text:fact.quote};
   legacy.preferences=s.facts.filter(f=>f.scope==='history'&&f.stance==='want'&&f.feature&&dict.featureById.has(f.feature)).map(f=>({f:f.feature}));
-  legacy.session={...legacy.session,...animeRequestOptions(s,s.savedSource?currentViewingEvidence:undefined),goalDriven:true,excludeSeries:false,goalWants:signal(['want','require']),goalAvoids:signal(['avoid','exclude']),goalRequires:signal(['require']),goalExcludes:signal(['exclude']),genreWants:[],
+  legacy.session={...legacy.session,...animeRequestOptions(s,currentViewingEvidence),goalDriven:true,excludeSeries:false,goalWants:signal(['want','require']),goalAvoids:signal(['avoid','exclude']),goalRequires:signal(['require']),goalExcludes:signal(['exclude']),genreWants:[],
+    viewingOrder:viewingOrderOf(s,returnToIds),
     ...(s.savedSource?{savedFormat:s.context.format,savedTimeMode:s.sessionTime?s.context.timeMode:null}:{}),
     ...(s.sessionTime?{minutes:s.sessionTime.minutes,maxRuntime:s.sessionTime.minutes}:{}),
-    ...(s.domain==='film'&&s.context.timeMode==='runtime'&&s.sessionTime?{requireKnownRuntime:true}:{}),
+    ...(requiresKnownFilmRuntime(s)?{requireKnownRuntime:true}:{}),
     notNow:[...new Set([...excluded,...[...f.excluded,...f.hidden].filter(id=>!keep.has(id))])]};
   legacy.conversation={domain:s.domain,revision:s.revision,summary:s.summary,facts:s.facts,context:s.context,contextEvidence:s.contextEvidence,sessionTime:s.sessionTime??null,uncertainties:s.uncertainties,retractions:s.retractions,
     ...(s.ratedExamples?.length?{ratedExamples:s.ratedExamples}:{}),

@@ -1,9 +1,9 @@
 .conversation-page.legacy-workspace .app{grid-template-columns:164px 270px minmax(0,1fr);gap:0;max-width:none;padding:0;min-height:100svh;margin:0}
-.conversation-page.legacy-workspace .sidebar{position:sticky;transform:none;inset:auto;top:0;z-index:2;display:flex;visibility:visible;width:auto;border:0;box-shadow:none;grid-column:1;grid-row:1}
+.conversation-page.legacy-workspace .sidebar{position:sticky;transform:none;inset:auto;top:0;z-index:2;display:flex;visibility:visible;width:auto;border:0;box-shadow:none;grid-column:1;grid-row:1;background:var(--brand-cobalt)}
 .conversation-page.legacy-workspace .legacy-header{display:flex;flex-direction:column;align-items:stretch;gap:35px;padding:0;border:0;min-height:0}
 .conversation-page.legacy-workspace .legacy-sections{display:flex;flex-direction:column;align-items:stretch}
 .conversation-page.legacy-workspace .legacy-sections :is(a,button){padding:11px 9px;min-height:44px;color:var(--brand-fill);font-size:12px;text-decoration:none}
-.conversation-page.legacy-workspace .legacy-sections [aria-current=page]{background:var(--brand-primary);color:#fff;border-radius:4px}
+.conversation-page.legacy-workspace .legacy-sections [aria-current=page]{background:#fff;color:var(--brand-hover);border-radius:8px}
 .conversation-page.legacy-workspace #side-domains{margin:0}
 .conversation-page.legacy-workspace #side-domains .side-item{min-height:40px;padding:8px 4px;color:var(--brand-inverse);background:none;border:0;border-radius:0}
 .conversation-page.legacy-workspace #side-domains .side-item[aria-current=true]{color:white;font-weight:650}

@@ -1,3 +1,4 @@
+import {noMatchScreen} from './no-match.js';
 import {resultBatchNotice} from './public/shared/result-clarity.js';
 import {createHash} from 'node:crypto';
 import {newMediaConversation,normalizeMediaConversation,answerMediaConversation,applyMediaConversationProposal,mediaConversationScreen,mediaConversationToLegacy} from '../core/media-conversation.js';
@@ -51,7 +52,9 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     state={...state,uncertainties:[...(unknown?[FORMAT_UNKNOWN]:[]),...state.uncertainties.filter(text=>text!==FORMAT_UNKNOWN)].slice(0,8)};
     const screen=mediaConversationScreen(state);
     if(screen.type==='review')screen.ratedExamples=reviewRatedExamples(state,catalog,identities,projection(state));
-    return {state,screen,...(state.phase==='result'?{feedbackState:projection(state)}:{}),...extra};
+    const noMatch=noMatchScreen(state,{catalogFor,projection,answer:answerMediaConversation,sessionFor:filmPreviewSession});
+    if(noMatch)screen.noMatch=noMatch;
+    return {state,screen,...(state.phase==='result'?{feedbackState:projection(state)}:{}),...(noMatch?{retryable:false}:{}),...extra};
   };
   function log(stage,s,out) {
     journal({at:new Date(now()).toISOString(),event:`media-conversation-${stage}`,data:{domain,id:s.id,revision:s.revision,mode:s.mode,...(s.depth?{depth:s.depth}:{}),model:out.model??AI.model,
@@ -111,11 +114,13 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const item=catalog.byId.get(card.id),context=s.context??{},session=sessionOf(legacy);
     card.feasibility??=[];
     const add=(key,text)=>{if(!card.feasibility.some(f=>f.key===key))card.feasibility.push({key,status:'unknown',text});};
+    if(!card.ai && item.standalone==null && !session.viewingOrder?.returnToIds.includes(item.id))
+      add('viewing-order','В каталоге нет сведений о том, можно ли начинать с этой части.');
     if(context.minutes!=null&&item.runtime==null)add('minutes',`Длительность ${domain==='series'?'эпизода':'просмотра'} не проверена; сегодня есть ${context.minutes} мин.`);
     if(context.company==='children'&&context.childAge!=null)add('age','Возрастная пригодность по проверенному источнику пока не подтверждена.');
     if(context.onlyEnded&&item.status==null)add('ended','Статус завершения в каталоге не подтверждён.');
     if(domain==='series'&&['short','long'].includes(context.commitment)&&item.seasons==null&&item.episodes==null)add('commitment','Общий объём истории в каталоге не подтверждён.');
-    if((session.goalExcludes??[]).length)add('excluded-features','Отсутствие исключённых особенностей не всегда подтверждено разметкой; проверь оговорку перед выбором.');
+    if((session.goalExcludes??[]).length)add('excluded-features','По описанию не удалось проверить всё, чего ты хочешь избежать.');
     return card;
   }
   function attach(card,p,s,legacy) {
@@ -140,11 +145,13 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const shown=[...new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)].flatMap(id=>editionsOf(catalog,id)))];
     const neutralShown=shown.filter(id=>!explicitExclusions.has(id));
     legacy.session.notNow=[...new Set([...(legacy.session.notNow??[]),...shown])];
-    const failed=(error,retryable=true)=>response({...s,failedAction:more?'more':'replace',...(!more?{replacement:{...s.replacement,pendingIds:[...marked]}}:{})},{error,retryable});
+    const pendingState={...s,failedAction:more?'more':'replace',...(!more?{replacement:{...s.replacement,pendingIds:[...marked]}}:{})};
+    const failed=(error,retryable=true)=>response(pendingState,{error,retryable});
+    const empty=kind=>response({...pendingState,noMatchKind:kind});
     if(new Set([...(s.browseSeen??[]),...s.familiar.hidden,...before.map(card=>card.id)]).size>496)return failed('В этом подборе достигнут предел отметок. Начни новый подбор. Сохранённые исключения останутся в силе.',false);
     const eligibleCatalog=catalogFor(s),session=sessionOf(legacy),previewSession=filmPreviewSession(s,session);
     const eligible=rankAll(eligibleCatalog,profileOf(legacy),previewSession).ranked;
-    if(!eligible.length)return failed(s.savedSource?'В этом списке сохранённых больше нет подходящих вариантов. Можно уточнить условия или начать подбор по всему каталогу.':more?'Других подходящих вариантов пока нет. Предыдущие варианты на экране. Можно изменить запрос.':'Замену найти не удалось. Можно оставить знакомый вариант или изменить запрос.',false);
+    if(!eligible.length)return empty('catalog');
     const sole=eligible.length===1&&locallyConfirmed(legacy,eligible[0].game);
     let local=sole;
     let out;
@@ -154,13 +161,15 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       if(!permission.allowed){
         if(!s.savedSource)return failed(`${permission.reason??'Помощник недоступен'}. Варианты и отметки сохранены.`,false);
         const picks=eligible.filter(({game})=>locallyConfirmed(legacy,game)).slice(0,4).map(({game})=>({id:game.id}));
-        if(!picks.length)return failed('В списке сохранённых не удалось подтвердить обязательные условия. Прежние варианты сохранены.',false);
+        if(!picks.length)return empty('catalog');
         local=true;out={picks};
       }else{
         spend(who);
         try {out=await pick(catalogsFor(s),pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,alreadyShown:neutralShown});}
         catch {out={error:'Не удалось заменить варианты. Варианты и отметки сохранены.'};}
-        log(more?'more':'replace',s,out);if(out.error)return failed(out.error+(out.constraintDrops?' Прежние варианты и отметки сохранены.':''),out.retryable!==false);
+        log(more?'more':'replace',s,out);
+        if(out.noMatch)return empty(out.noMatch);
+        if(out.error)return failed(out.error,out.retryable!==false);
       }
     }
     const ids=[...new Set((out.picks??[]).map(p=>p.id))];
@@ -190,8 +199,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     const personalContext=personalContextOf(body,catalog,domain);
     let s=refreshMemoryPlan(initialState(body),personalContext.tasteMemory,body.action);
     s=remembered(body,s);
-    if(s.savedSource&&!s.savedSource.ids.length&&!s.result)return response({...s,phase:'review',needsPlan:false,question:null},{
-      error:'В списке сохранённых не осталось произведений этого раздела. Вернись в библиотеку или начни подбор по всему каталогу.',retryable:false});
+    if(s.savedSource&&!s.savedSource.ids.length&&!s.result)return response({...s,phase:'review',needsPlan:false,question:null,failedAction:'pick',noMatchKind:'catalog'});
     if(!body.action) {
       for(const result of [s.result,s.familiar?.undo?.result])for(const card of cardsOf(result)){
         const item=catalog.byId.get(card.id);
@@ -204,6 +212,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       }
       return response(s); // Explicit restore never pays, including pending/error states.
     }
+    delete s.noMatchKind;
     const action=body.action,beforeResult=s.result,priorExclusions=s.familiar.excluded;
     if(['familiar_mark','familiar_unmark','familiar_keep'].includes(action.type)&&catalog.byId.get(action.id)?.domain!==domain)throw bad('Этой карточки нет в каталоге выбранного раздела.');
     const more=action.type==='more'||action.type==='retry'&&s.failedAction==='more';
@@ -246,7 +255,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
       const scoped=catalogFor(s),session=sessionOf(legacy),profile=profileOf(legacy);
       const {ranked}=rankAll(scoped,profile,session);
       const candidates=permission.allowed?ranked:ranked.filter(({game})=>locallyConfirmed(legacy,game));
-      if(!candidates.length)return response({...s,phase:'review',failedAction:'pick'},{error:'В этом списке сохранённых не нашлось вариантов с подтверждёнными условиями. Можно изменить условия или начать подбор по всему каталогу.',retryable:false});
+      if(!candidates.length)return response({...s,phase:'review',failedAction:'pick',noMatchKind:'catalog'});
       if(!permission.allowed || candidates.length===1&&locallyConfirmed(legacy,candidates[0].game)){
         const result=recommendIds(scoped,profile,session,candidates.slice(0,4).map(({game})=>game.id));
         for(const card of cardsOf(result)){caveats(card,s,legacy);card.labelText='Вариант из сохранённых по данным каталога';}
@@ -255,7 +264,7 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     }
     if(!permission.allowed) {
       const result=recommend(catalogFor(s),profileOf(legacy),sessionOf(legacy));
-      if(!result.top)return response({...s,phase:'review',failedAction:'pick'},{error:'По этим условиям пока не нашлось доступных вариантов. Уточни условия или разреши вернуться к знакомому.',retryable:false});
+      if(!result.top)return response({...s,phase:'review',failedAction:'pick',noMatchKind:'catalog'});
       const hardCriteria=criteriaOf(legacy);for(const card of cardsOf(result)){caveats(card,s,legacy);constraintWarnings(card,hardCriteria,hardCriteria);}
       s={...s,...completeInterview(s),phase:'result',result,provisional:true,failedAction:null};
       s.uncertainties=[...new Set([...s.uncertainties,'Это предварительный подбор по доступным признакам: помощник сейчас недоступен, свободный ответ мог быть учтён не полностью.'])];return response(s);
@@ -264,9 +273,10 @@ export function createMediaConversationService({domain,catalogs,plan=aiMediaConv
     try {out=await pick(catalogsFor(s),pickerMemoryView(legacy,s,personalContext.tasteMemory),{...(api?{api}:{}),...personalContext,wish:s.summary,previous:[]});}
     catch {out={error:'Не удалось получить рекомендации. Запрос сохранён.'};}
     log('pick',s,out);
+    if(out.noMatch)return response({...s,phase:'review',failedAction:'pick',noMatchKind:out.noMatch});
     if(out.error)return response({...s,phase:'review',failedAction:'pick'},{error:out.error,retryable:out.retryable!==false});
     const ids=[...new Set((out.picks??[]).map(p=>p.id))],cards=recommendIds(catalogFor(s),profileOf(legacy),sessionOf(legacy),ids);
-    if(!cards)return response({...s,phase:'review',failedAction:'pick'},{error:'Пока не нашлось вариантов, для которых подтверждены все условия. Попробуй изменить запрос.',retryable:false});
+    if(!cards)return response({...s,phase:'review',failedAction:'pick',noMatchKind:'checked'});
     cards.alternatives=cards.alternatives.slice(0,3);
     const byId=new Map((out.picks??[]).map(p=>[p.id,p]));for(const card of cardsOf(cards))attach(card,byId.get(card.id),s,legacy);
     cards.ai={understood:s.summary,model:out.model??AI.model,shortlist:out.shortlist};

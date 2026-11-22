@@ -1,4 +1,5 @@
 import {initialConversation,initialDirectionQuestion,gameGenreDirections as directions,hasDirectionChoice,hasChosenDirection,directionChoiceMessage} from '../server/public/shared/conversation-entry.js';
+import {directionAvoidance,validTurnAvoidance,initialAvoidanceFact,respectAvoidanceField,storedFactLimit} from './direction-avoidance.js';
 // A game conversation owns today's goal; evidence is never silently promoted to permanent taste.
 import { initialState } from './dialogue.js';
 import { PLATFORMS } from './sieves.js';
@@ -42,7 +43,7 @@ function normalizeFamiliar(value) {
 
 function normalizeFactRemovalUndo(value) {
   if(value==null)return null;
-  if(!Array.isArray(value.facts)||value.facts.length>16||!Array.isArray(value.retractions)||value.retractions.length>64
+  if(!Array.isArray(value.facts)||value.facts.length>storedFactLimit(value.facts)||!Array.isArray(value.retractions)||value.retractions.length>64
     ||!['direction','platform','company','party','talk','review','result'].includes(value.phase)
     ||value.result&&(resultCards(value.result).length>4||!value.result.top)||value.phase==='result'&&!value.result?.top)throw failure('Не удалось прочитать отмену снятого вывода.');
   const fields=(row,keys)=>{
@@ -79,9 +80,9 @@ export function newConversation({id,mode,requireDirection,depth,savedSource}={})
 export function normalizeConversation(input) {
   if (!input) return newConversation();
   if(input.version!==1 || !clean(input.id,100) || !Number.isSafeInteger(input.revision) || input.revision<0
-    || !Array.isArray(input.turns) || input.turns.length>TURN_LIMIT || !Array.isArray(input.facts) || input.facts.length>16
+    || !Array.isArray(input.turns) || input.turns.length>TURN_LIMIT || !Array.isArray(input.facts) || input.facts.length>storedFactLimit(input.facts)
     || !Array.isArray(input.retractions) || input.retractions.length>64) throw failure('Сохранённый разговор не удалось прочитать. Начни новый подбор.');
-  if(input.turns.some(t=>!t?.id || typeof t.answer!=='string' || t.answer.length>2400 || !t.question?.id)) throw failure('Некорректный ответ в истории разговора');
+  if(input.turns.some(t=>!t?.id || typeof t.answer!=='string' || t.answer.length>2400 || !t.question?.id || !validTurnAvoidance(t))) throw failure('Некорректный ответ в истории разговора');
   const s=structuredClone(input);
   if(s.domain!=null&&s.domain!=='game')throw failure('Сохранённый подбор относится к другому разделу.');
   if(Object.hasOwn(s,'savedSource')||Object.hasOwn(s,'savedSourceKey')){
@@ -124,13 +125,17 @@ function replacementQuestion(s) {
 
 function localFacts(s, turn) {
   if(turn.kind!=='answer')return;
+  s.facts.push(...initialAvoidanceFact(turn,true));
   for(const o of turn.selected) {
     const source=turn.question.options.find(x=>x.id===o.id);
     if(turn.question.id!=='direction' && !source?.feature)continue;
     s.facts.push({key:`${turn.question.id}:${o.id}`,text:o.label,stance:turn.question.id==='avoidance'||o.id.startsWith('avoid_')?'avoid':'want',scope:'today',
       sourceId:turn.id,quote:o.label,feature:source?.feature??null,gameId:null,exposure:null});
   }
-  if(s.facts.length>16)s.facts=s.depth?s.facts.slice(0,16):s.facts.slice(-16);
+  if(s.facts.length>16){
+    const options=s.facts.filter(f=>f.key!=='direction:own-avoidance');
+    s.facts=respectAvoidanceField(s.depth?options.slice(0,16):options.slice(-16),s);
+  }
 }
 
 function invalidate(s) {
@@ -259,8 +264,9 @@ export function answerConversation(input, action={}) {
   if(kind==='answer'&&!text&&!selected.length)throw failure('Выбери вариант, напиши свой ответ или пропусти вопрос.');
   if(contextIds.has(q.id)&&!selected.length)throw failure('Для этого условия выбери один из доступных вариантов.');
   s.revision++;
-  const answer=[...(kind==='answer'?selected.map(o=>o.label):[neutral[kind]]),text].filter(Boolean).join('; ');
-  const turn={id:`${s.id}:${s.revision}`,question:q,selected,text,kind,answer};
+  const avoidText=directionAvoidance(action,q,kind,failure);
+  const answer=[...(kind==='answer'?selected.map(o=>o.label):[neutral[kind]]),text,avoidText&&'Хочу избежать: '+avoidText].filter(Boolean).join('; ');
+  const turn={id:`${s.id}:${s.revision}`,question:q,selected,text,kind,answer,...(avoidText?{avoidText}:{})};
   if(q.id==='direction'&&kind==='answer'){
     const platform=applicableGamePlatform(action.platform,text);
     if(platform)turn.usualPlatform=platform;
@@ -268,7 +274,7 @@ export function answerConversation(input, action={}) {
     const source=s.turns.findLast(t=>!t.superseded&&(t.usualPlatform||['platform','context'].includes(t.question.id)));
     if(source?.usualPlatform)turn.clarifyUsualPlatform=true;
   }
-  s.turns.push(turn); invalidate(s); if(correcting&&!s.depth){s.facts=[];if(!s.savedSource)s.sessionTime=null;} localFacts(s,turn);
+  s.turns.push(turn); invalidate(s); if(correcting&&!s.depth){s.facts=respectAvoidanceField([],s);if(!s.savedSource)s.sessionTime=null;} localFacts(s,turn);
   if(s.savedSource&&kind==='answer'){
     if(s.sessionTime&&clearsSavedGameTime(text)){
       if(s.retractions.length>=64)throw failure('В этом разговоре уже слишком много исправлений. Начни новый подбор.');
@@ -320,7 +326,7 @@ function checkedFacts(s, list, dict) {
 export function applyConversationProposal(state, proposal, dict, expectedRevision=state.revision) {
   try {
     if(expectedRevision!==state.revision)throw failure('Пришёл ответ на предыдущую версию запроса.');
-    const facts=checkedFacts(state,proposal?.facts,dict);
+    const facts=respectAvoidanceField(checkedFacts(state,proposal?.facts,dict),state);
     const checkedTime=validateSessionTime(proposal?.sessionTime??(state.savedSource?state.sessionTime:null),state);if(checkedTime.error)throw failure(checkedTime.error);
     if(!['question','review'].includes(proposal?.action)||typeof proposal.summary!=='string'||!Array.isArray(proposal.uncertainties))throw failure('Неполный ответ помощника.');
     let next=null;

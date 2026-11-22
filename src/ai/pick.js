@@ -14,6 +14,7 @@ import { verifiedOriginalYear } from '../core/title-identity.js';
 import {criteriaOf,constraintSchema,constraintInstructions,validateConstraintChecks,unconfirmedSavedCriteria} from './pick-constraints.js';
 import {feedbackContextPrompt,feedbackContextRule} from './feedback-context.js';
 import {tasteMemoryRule} from './taste-context.js';
+import {acceptsViewingStart} from '../core/viewing-order.js';
 
 export { AI };
 
@@ -75,7 +76,7 @@ const sentence = (x, max) => { const t = String(x ?? '').trim().slice(0, max); r
  * Model output checked against the shortlist: known ids, no repeats, cut to size; reasons trimmed. A pick without
  * an id is looked up by title and year among the titles that passed the sieves (`ranked`), up to ownLimit.
  */
-export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], {session,byId,distinctWorks=false,ownLimit=AI.ownPicks,savedState} = {}) {
+export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], {session,byId,distinctWorks=false,ownLimit=AI.ownPicks,savedState,viewingOrder} = {}) {
   const allowed = new Set(rows.map((r) => r.game.id));
   const seen = new Set();
   const works = new Set();
@@ -83,12 +84,14 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
   let own = 0;
   const proposed = Array.isArray(out?.picks) ? out.picks : [];
   const identities=new Map(proposed.map(p=>{
+    if(p?.id!==undefined&&typeof p.id!=='string')return [p,null];
     const id=typeof p?.id==='string'?p.id.trim():'';
     // An explicit ID outside the shortlist must not turn into an eligible namesake.
     return [p,id?(allowed.has(id)?id:null):lookUp(ranked,p?.title,Number(p?.year)||0)];
   }));
   const assessments=new Map(proposed.map(p=>{
     const item=byId?.get(identities.get(p));
+    if(viewingOrder && item && !acceptsViewingStart(item,p?.viewingStart,viewingOrder))return [p,{ok:false,reason:'conflict'}];
     const assessment=validateConstraintChecks(p,criteria,{item,session});
     if(savedState&&assessment.unknowns?.length){
       const unresolved=new Set(unconfirmedSavedCriteria(savedState,item).map(c=>c.key));
@@ -132,7 +135,8 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
     if (!first || !second || !summary || [...summary].length > 260 || first.comparisons?.some(row => row.otherId === second.id)) continue;
     (first.comparisons ??= []).push({ otherId: second.id, summary });
   }
-  return { picks, understood: String(out?.understood ?? '').trim().slice(0, 220), dropped: proposed.length - picks.length,...(criteria.length?{constraintDrops:{conflict:conflictDrops,unconfirmed:unconfirmedDrops}}:{}) };
+  const hasCheckedDrops=conflictDrops>0||unconfirmedDrops>0;
+  return { picks, understood: String(out?.understood ?? '').trim().slice(0, 220), dropped: proposed.length - picks.length,...(criteria.length||hasCheckedDrops?{constraintDrops:{conflict:conflictDrops,unconfirmed:unconfirmedDrops}}:{}) };
 }
 
 /**
@@ -152,7 +156,7 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   const rows = all.rows.filter((r) => !shown.has(r.game.id)).slice(0, limit);
   const ranked = all.ranked.filter((r) => !shown.has(r.game.id));
   if(!adaptive&&rows.length<2)return {error:'выбирать не из чего'};
-  if(!rows.length)return {error:'По этим условиям нет доступных вариантов каталога.',retryable:false};
+  if(!rows.length)return {error:'По этим условиям нет доступных вариантов каталога.',noMatch:'catalog',retryable:false};
   const liked = Object.entries(state.answers ?? {}).filter(([, a]) => a?.reaction === 'love' || a?.reaction === 'like').map(([id]) => catalog.byId.get(id)).filter(Boolean);
 
   const availableWorks = adaptive ? new Set(rows.map(({game})=>game.work??game.id)).size : 0;
@@ -172,10 +176,17 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
     : `Бери из списка (id копируй из строки кандидата) или не больше ${ownLimit} своих (id пустой, название и год).`;
   const animeSources=state.domain==='anime'?' Из подходящих кандидатов предпочитай варианты с id. Для своего варианта без id укажи распространённое английское название в поле title. Если знаешь только японское название, используй оригинальное написание. Используй латинскую транслитерацию, только если других вариантов названия не знаешь.':'';
   const memory = tasteMemory.length ? '\n\nЛичная память по этому разделу:\n' + JSON.stringify({tasteMemory}) : '';
-  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}${memory}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} ${sources}${animeSources}`;
+  const runtimeSource=state.session?.requireKnownRuntime?' Для жёсткого лимита времени используй длительность конкретной версии из каталога. Если поместится только другой монтаж, пропусти произведение.':'';
+  const content = `${describePerson(state, catalog, { wish: cleanWish, previous, alreadyShown })}${feedbackContextPrompt(feedbackContext)}${memory}\n\nКандидаты (${rows.length}):\n${describeCandidates(rows, catalog, liked, { detailed })}\n\n${howMany} ${sources}${animeSources}${runtimeSource}`;
   const started = Date.now();
   const schema=constraintSchema(SCHEMA,criteria);
   const outputSchema=adaptive?{...schema,properties:{...schema.properties,picks:{...schema.properties.picks,maxItems:requestCount}}}:schema;
+  const viewingOrder=adaptive&&state.domain!=='game'?(state.session?.viewingOrder??{priorIds:[],returnToIds:[]}):null;
+  if(viewingOrder){
+    const item=outputSchema.properties.picks.items;
+    const viewingStart={type:'string',enum:['independent','requires_prior','unknown',...viewingOrder.priorIds.map(id=>'after:'+id)]};
+    outputSchema.properties.picks.items={...item,properties:{...item.properties,viewingStart},required:[...item.required,'viewingStart']};
+  }
   const compare = adaptive && target >= 2;
   if (compare) {
     outputSchema.properties.comparisons = comparisonSchema;
@@ -216,11 +227,17 @@ export async function aiPick(catalogs, state, { wish = '', previous = [], alread
   } catch {
     return { ...meta, error: 'нейросеть ответила не по форме' };
   }
-  const checked = checkPicks(parsed, rows, target, ranked, criteria, {session:sessionOf(state),byId:catalog.byId,distinctWorks:adaptive,ownLimit,savedState:state.savedSource?state:null});
-  if(!checked.picks.length&&checked.constraintDrops&&(checked.constraintDrops.conflict||checked.constraintDrops.unconfirmed))return {...meta,...checked,error:'Предложения в этом ответе не прошли проверку обязательных условий. Можно уточнить запрос.',retryable:false};
-  if (!checked.picks.length) return adaptive
-    ? { ...meta, error: parsed?.picks?.length?'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.':'В этом ответе не нашлось подходящих вариантов. Можно уточнить запрос.', retryable:false }
-    : { ...meta, error: 'нейросеть выбрала не из списка' };
+  if(!Array.isArray(parsed?.picks))return {...meta,error:'нейросеть ответила не по форме'};
+  const checked = checkPicks(parsed, rows, target, ranked, criteria, {session:sessionOf(state),byId:catalog.byId,distinctWorks:adaptive,ownLimit,savedState:state.savedSource?state:null,viewingOrder});
+  if(!checked.picks.length&&checked.constraintDrops&&(checked.constraintDrops.conflict||checked.constraintDrops.unconfirmed))return {...meta,...checked,noMatch:'checked',error:'Предложения в этом ответе не прошли проверку обязательных условий. Можно уточнить запрос.',retryable:false};
+  if (!checked.picks.length) {
+    if(!adaptive)return {...meta,error:'нейросеть выбрала не из списка'};
+    // A title/year lookup is explicitly allowed. No eligible catalog edition
+    // is a legitimate empty search. Invalid shortlist IDs are response errors.
+    if(!parsed.picks.length)return {...meta,noMatch:'checked',error:'В этом ответе не нашлось подходящих вариантов. Можно уточнить запрос.',retryable:false};
+    const unlistedTitles=!state.savedSource&&parsed.picks.every(p=>p?.id===''&&typeof p.title==='string'&&p.title.trim()&&Number.isInteger(p.year)&&p.year>0);
+    return {...meta,...(unlistedTitles?{noMatch:'title-lookup'}:{}),error:'Предложенные названия не прошли проверку каталога и условий. Попробуй уточнить запрос.',retryable:false};
+  }
   // Legacy paths fill a short answer in engine order. Adaptive selection keeps a short
   // answer: filling it could undo the model's decision to omit a semantic conflict.
   const chosen = new Set(checked.picks.map((p) => p.id));

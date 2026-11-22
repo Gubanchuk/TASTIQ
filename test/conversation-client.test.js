@@ -66,6 +66,14 @@ test('starting from saved error never retries paid action on reload',async()=>{
  const store=storage();let fail=false;const bodies=[];const fetch=async(_,opts)=>{bodies.push(JSON.parse(opts.body));if(fail)throw Error();return ok(response());};
  const first=createConversationClient({fetch,storage:store});await first.start();fail=true;await first.send({type:'confirm'});fail=false;const second=createConversationClient({fetch,storage:store});await second.start();assert.equal(bodies.at(-1).action,undefined);
 });
+test('an old empty-catalog draft opens the review without replaying its obsolete error or paying for a pick',async()=>{
+ const store=storage(),bodies=[];
+ const saved={state:{...state(3),phase:'review',failedAction:'pick'},screen:{type:'review'},error:'По этим условиям нет доступных вариантов каталога.',retryable:false};
+ store.setItem(CONVERSATION_KEY,JSON.stringify({version:1,snapshot:saved,drafts:{}}));
+ const client=createConversationClient({storage:store,fetch:async(_,opt)=>{bodies.push(JSON.parse(opt.body));return ok({state:saved.state,screen:saved.screen});}});
+ await client.start();
+ assert.equal(client.error,null);assert.equal(client.screen.type,'review');assert.deepEqual(bodies.map(body=>body.action),[undefined]);
+});
 test('planner failure with a committed answer retries from returned state, keeping draft',async()=>{
  const bodies=[];const client=createConversationClient({storage:storage(),fetch:async(_,opts)=>{
   bodies.push(JSON.parse(opts.body));return ok(bodies.length===2?{...response(1),error:'Модель недоступна',retryable:true}:response(bodies.length));

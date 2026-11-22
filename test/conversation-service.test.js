@@ -172,7 +172,7 @@ test('no eligible candidates and invalid picker IDs leave every familiar card vi
   const service=createConversationService({catalogs,pick:async()=>{calls++;return {picks:[{id:'2',reason:'Edition'},{id:'1',reason:'Same'},{id:'3',reason:'Retained'}]};},spend:()=>spends++});
   const marked=await service({state:resultState(),action:{type:'familiar_mark',id:'1'}});
   const blocked=await service({state:marked.state,action:{type:'replace_familiar'},rememberedExclusions:catalog.items.map(g=>g.id)});
-  assert.equal(calls,0);assert.equal(spends,0);assert.deepEqual(blocked.state.result,marked.state.result);assert.ok(blocked.error);
+  assert.equal(calls,0);assert.equal(spends,0);assert.deepEqual(blocked.state.result,marked.state.result);assert.ok(blocked.screen.noMatch);
   const invalid=await service({state:marked.state,action:{type:'replace_familiar'}});
   assert.equal(calls,1);assert.deepEqual(invalid.state.result,marked.state.result);assert.deepEqual(invalid.state.familiar.marked,['1']);assert.ok(invalid.error);
 });

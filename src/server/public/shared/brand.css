@@ -1,7 +1,7 @@
 @font-face{font-family:Golos;src:url('/assets/fonts/GolosText-Variable.ttf') format('truetype');font-weight:400 900;font-display:swap}
 @font-face{font-family:Unbounded;src:url('/assets/fonts/Unbounded-Variable.ttf') format('truetype');font-weight:200 900;font-display:swap}
 :root{
- --brand-primary:#3154d6;--brand-ink:#1c2945;--brand-paper:#f1f4fc;
+ --brand-cobalt:#3154d6;--brand-primary:var(--brand-cobalt);--brand-ink:#1c2945;--brand-paper:#f1f4fc;
  --brand-dark:#15213d;--brand-inverse:#dfe8ff;--brand-accent:#abc9ed;
  --brand-surface:#fff;--brand-context:#e7ecf8;--brand-fill:#e3e9f7;
  --brand-hover:#2544b8;--brand-press:#1e3898;--brand-muted:#52617d;

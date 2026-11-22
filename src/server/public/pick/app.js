@@ -1154,7 +1154,7 @@ function resultBody(s) {
   const cards=[r.top,...r.alternatives];
   html+=`<div class="conversation-proposals">${cards.map((p,i)=>seenNote(i)+conversationProposal(p)).join('')}${seenNote(cards.length,true)}</div>`;
   html+=aiWishForm()+`<section class="whynot"><h2 class="group-title">Почему не показал…</h2>${searchBox('why','Название','Почему не показал')}<div class="whynot-out" id="whynot-out" aria-live="polite">${whyOutHtml()}</div></section>`;
-  return head(s,'Несколько вариантов под твой запрос. Сохрани на потом или выбери на этот вечер.')+`<div class="q-body" data-result-owner="${esc(resultWishKey())}">${html}</div>`;
+  return head(s,'Выбери, с чего начать. Остальное можно сохранить на потом.')+`<div class="q-body" data-result-owner="${esc(resultWishKey())}">${html}</div>`;
 }
 
 function focusedPick() {

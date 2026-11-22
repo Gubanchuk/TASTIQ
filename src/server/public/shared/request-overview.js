@@ -7,8 +7,18 @@ export function activeRequestText(state){
  if(state.retractions?.some(row=>row.sourceId===turn.id&&typeof row.quote==='string'&&row.quote&&turn.text.includes(row.quote)))return '';
  return turn.text;
 }
+export function originalWishHtml(state){
+ const turn=state?.turns?.find(t=>t.question?.id==='direction'&&t.kind==='answer'&&!t.superseded);
+ const wish=turn?.text?.trim()||turn?.selected?.map(option=>option.label).filter(Boolean).join(', ');
+ if(!wish)return '';
+ const label='<span class="original-wish-label">Исходный запрос</span>';
+ if(wish.length<=140)return `<div class="original-wish">${label}<p>${esc(wish)}</p></div>`;
+ const preview=wish.slice(0,136).replace(/\s+\S*$/u,'').trimEnd()||wish.slice(0,136);
+ return `<details class="original-wish" data-disclosure="original-wish:${esc(state.id)}"><summary>${label}<span class="original-wish-toggle"><span>Прочитать целиком</span><span>Свернуть</span></span><span class="original-wish-preview">${esc(preview)}…</span></summary><p>${esc(wish)}</p></details>`;
+}
 export function requestSummaryText(screen={},state={}){
- const own=activeRequestText(state),localSummary=/^(Хочется|Меньше|Обязательно|Исключить):/.test(screen.summary??'');
+ const own=activeRequestText(state),localSummary=/^(Хочется|Меньше|Обязательно|Исключить):/.test(screen.summary??'')
+   ||!state.summary&&state.turns?.some(turn=>turn.avoidText)&&screen.summary===state.facts?.filter(f=>f.scope==='today').map(f=>f.text).join('; ');
  return localSummary&&own?own:screen.summary||own;
 }
 export function requestPreviewHtml({screen={},state={},busy=false}={}){

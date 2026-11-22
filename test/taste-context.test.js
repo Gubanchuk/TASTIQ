@@ -33,7 +33,7 @@ for(const domain of ['game','film','series','cartoon','anime']){
       requests.push(req);
       if(req.text.format.name==='tastiq_picks'){
         const id=req.input.match(/^id=([^ |\n]+)/m)?.[1];
-        return completed({understood:today,picks:[{id,title:'',year:0,reason:'Для вечера',caveat:'',likelySeen:false}]});
+        return completed({understood:today,picks:[{id,title:'',year:0,reason:'Для вечера',caveat:'',likelySeen:false,...(domain!=='game'?{viewingStart:'independent'}:{})}]});
       }
       number++;
       const label=number<=2?marker:'Новая тема';
@@ -112,7 +112,7 @@ for(const domain of ['game','film','series','cartoon','anime']){
         if(failNextPick){failNextPick=false;return {status:'incomplete'};}
         const id=req.input.match(/^id=([^ |\n]+)/m)?.[1];
         assert.ok(id);
-        return completed({understood:today,picks:[{id,title:'',year:0,reason:'Подходит запросу.',caveat:'',likelySeen:false}]});
+        return completed({understood:today,picks:[{id,title:'',year:0,reason:'Подходит запросу.',caveat:'',likelySeen:false,...(domain!=='game'?{viewingStart:'independent'}:{})}]});
       }
       const question={id:'evening',title:'Какой темп нужен сегодня?',why:'Уточним впечатление',options:[],multiple:false,controls:['unknown','indifferent','none']};
       const proposal={facts:[],summary:today,uncertainties:[],action:'question',question,sessionTime:null};

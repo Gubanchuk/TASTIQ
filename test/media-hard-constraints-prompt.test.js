@@ -27,7 +27,7 @@ test('adaptive media permits fewer picks and does not promise all semantic exclu
   const catalog=makeCatalog(screenFixture(domain),domain),state={...initialState(domain),domain,conversation:{summary:'Без страшных сцен',facts:[],context:{},uncertainties:[],retractions:[]}};
   const id=candidatesOf(catalog,state).rows[0].game.id;let request;
   const out=await aiPick({[domain]:catalog},state,{alreadyShown:['earlier-card'],api:async body=>{
-   request=body;return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({understood:'Понял',picks:[{id,reason:'Спокойная история',caveat:''}]})}]}]};
+   request=body;return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({understood:'Понял',picks:[{id,viewingStart:'independent',reason:'Спокойная история',caveat:''}]})}]}]};
   }});
   assert.match(request.instructions,/not every semantic exclusion is covered/);
   assert.match(request.instructions,/Omit any candidate you know violates/);
@@ -46,6 +46,6 @@ test('an intentionally empty adaptive choice is explained as no fit rather than 
 test('the real unverified model-owned replacement preserves prior cards and explains catalog verification without paid retry',async()=>{
  const saved=JSON.parse(readFileSync(new URL('./fixtures/cartoon-more-no-fit-2026-11-03.json',import.meta.url),'utf8'));
  let calls=0;const service=createMediaConversationService({domain:'cartoon',catalogs:loadCatalogs(),api:async()=>{calls++;return saved.response;}});
- const out=await service(saved.request);assert.equal(calls,1);assert.match(out.error,/проверку каталога/);assert.equal(out.retryable,false);
+ const out=await service(saved.request);assert.equal(calls,1);assert.equal(out.error,undefined);assert.equal(out.screen.noMatch.kind,'title-lookup');assert.match(out.screen.noMatch.message,/В каталоге не удалось подтвердить/);assert.equal(out.retryable,false);
  assert.deepEqual(out.state.result,saved.request.state.result);assert.equal(out.state.context.childAge,7);assert.equal(out.state.context.minutes,90);
 });
