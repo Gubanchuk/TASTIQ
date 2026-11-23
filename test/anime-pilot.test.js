@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {loadCatalogs, catalogMeta, searchItems} from '../src/core/catalog.js';
+import {verifiedAnimeItem} from '../src/core/anime-release.js';
 import {newMediaConversation, mediaConversationToLegacy} from '../src/core/media-conversation.js';
 import {candidatesOf,checkPicks,lookUp} from '../src/ai/pick.js';
 import {recommendIds} from '../src/core/recommend.js';
@@ -14,6 +15,19 @@ import {mediaCardHtml, mediaLibraryState, toggleMediaLibrarySave} from '../src/s
 
 const catalogs = loadCatalogs();
 const avatar = 'tt0417299';
+
+test('catalog anime keeps verified aliases and precision of the release date', () => {
+  const entry = { id:'mal:900001', source:'https://myanimelist.net/anime/900001', kind:'series',
+    name:'Story from the Old Town', original:'古い町の物語', year:2003, genres:[],
+    aliases:['Story from the Old Town','Сказание о старом городе','古い町の物語'],
+    releaseSeason:'FALL', releasePrecision:'season' };
+  const item = verifiedAnimeItem(entry);
+  assert.ok(item.aliases.includes('Сказание о старом городе'));
+  assert.equal(item.releasePrecision,'season');
+  assert.equal(item.releaseSeason,'FALL');
+  assert.equal(item.releaseDate,undefined);
+  assert.equal(verifiedAnimeItem({...entry,releaseDate:'2003-10-12',releaseSeason:null,releasePrecision:null}).releaseDate,'2003-10-12');
+});
 
 test('anime is an independent entry with screened membership and stable screen IDs', () => {
   assert.equal(pickerEntryRoute({search:'?start=anime'}), '/pick/watch/?domain=anime');

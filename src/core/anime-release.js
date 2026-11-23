@@ -101,9 +101,12 @@ export function verifiedAnimeItem(row) {
  const origin=new URL(link);
  if(origin.protocol!=='https:'||origin.username||origin.password)return null;
  const first=kind==='series'?animeFirstEpisodes[id]:null;
- const aliases=[original,...(verifiedAnimeAliases.get(id)??[])].filter(Boolean);
+ const suppliedAliases=Array.isArray(row.aliases)?row.aliases.filter(alias=>typeof alias==='string'):[];
+ const aliases=[...new Set([original,...suppliedAliases,...(verifiedAnimeAliases.get(id)??[])].filter(Boolean))];
  const item=editorialItem({id,domain:'anime',kind,name,ru,aliases,year,runtime:first?.minutes??runtime,
   runtimeSource:first?.source??(runtime?link:null),genre:genres,link,status:null,summary:null,source:fromWikidata?'wikidata':'editorial'});
+ const release=Object.fromEntries(['releaseDate','releaseMonth','releaseSeason','releasePrecision']
+   .filter(field=>typeof row[field]==='string').map(field=>[field,row[field]]));
  // These records have less evidence than the manually reviewed titles.
- return {...item,...(first?{firstEpisodeMinutes:first.minutes}:{}),animeOrigin:'japanese',standalone:null,...viewingOrder.get(id),quality:.69};
+ return {...item,...release,...(first?{firstEpisodeMinutes:first.minutes}:{}),animeOrigin:'japanese',standalone:null,...viewingOrder.get(id),quality:.69};
 }
