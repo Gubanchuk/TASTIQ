@@ -1,5 +1,5 @@
 // Run from the project root. Candidate IDs come from the legacy snapshot.
-// Every exported title, kind, release date, genre and duration comes from Wikidata (CC0).
+// Refresh IMDb-linked entries from Wikidata (CC0) and retain verified releases with independent IDs.
 import {writeFileSync} from 'node:fs';
 import {setTimeout as delay} from 'node:timers/promises';
 import {animePilot} from '../src/server/public/shared/anime-pilot.js';
@@ -8,10 +8,12 @@ import {readJson} from '../src/lib/fsx.js';
 
 const src=new URL('../data/catalog-screen.json',import.meta.url);
 const target=new URL('../data/anime-wikidata.json',import.meta.url);
-const publisherItems=readJson(target,{items:[]}).items.filter(row=>!row.qid&&row.source);
-const publisherIds=new Set(publisherItems.map(row=>row.id));
+const imdbId=/^tt\d+$/;
+const preserved=readJson(target,{items:[]}).items.filter(row=>
+ (!row.qid&&row.source)||(!imdbId.test(row.id)&&/^Q[1-9]\d*$/.test(row.qid??'')));
+const preservedIds=new Set(preserved.map(row=>row.id));
 const candidates=readScreenCatalog(src).items.filter(row=>
- row.domain==='anime'&&!publisherIds.has(row.id)&&!Object.hasOwn(animePilot,row.id)&&!['tt0382932','tt0120587'].includes(row.id)).map(row=>row.id).sort();
+ row.domain==='anime'&&imdbId.test(row.id)&&!preservedIds.has(row.id)&&!Object.hasOwn(animePilot,row.id)&&!['tt0382932','tt0120587'].includes(row.id)).map(row=>row.id).sort();
 const ua='TASTIQ/1.0 (https://github.com/Gubanchuk/TASTIQ; public anime catalog data)';
 const genres=new Map([
  ['Q8253','Fiction'],['Q157394','Fantasy'],['Q1054574','Romance'],['Q24925','Sci-Fi'],
@@ -68,7 +70,7 @@ for(const row of rows){
  list.push(data);
  byId.set(data.id,list);
 }
-const byEntity=new Set();
+const byEntity=new Set(preserved.map(row=>row.qid).filter(Boolean));
 const items=[];
 for(const [id,list] of [...byId].sort(([a],[b])=>a.localeCompare(b))){
  if(list.length!==1)continue;
@@ -84,6 +86,6 @@ for(const [id,list] of [...byId].sort(([a],[b])=>a.localeCompare(b))){
 }
 if(items.length<700)throw Error(`Received only ${items.length} independently classified works, leaving the release snapshot alone`);
 const output={source:'https://www.wikidata.org/wiki/Wikidata:Licensing',retrievedAt:new Date().toISOString(),queried:candidates.length,
- items:[...items,...publisherItems].sort((a,b)=>a.id.localeCompare(b.id))};
+ items:[...items,...preserved].sort((a,b)=>a.id.localeCompare(b.id))};
 writeFileSync(target,JSON.stringify(output,null,1)+'\n');
 console.log(JSON.stringify({queried:candidates.length,accepted:items.length,films:items.filter(row=>row.kind==='film').length}));

@@ -1,8 +1,19 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 4868,
+ "queried": 5197,
  "items": [
+  {
+   "id": "tmdb:movie:1225556",
+   "qid": "Q22124014",
+   "kind": "film",
+   "name": "Hikawa Maru Monogatari",
+   "ru": null,
+   "original": "氷川丸ものがたり",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
   {
    "id": "tmdb:movie:1727340",
    "source": "https://www.themoviedb.org/movie/1727340",
@@ -31,6 +42,890 @@
     "Adventure",
     "Family"
    ]
+  },
+  {
+   "id": "tmdb:movie:461499",
+   "qid": "Q142090621",
+   "kind": "film",
+   "name": "Rokudenashi Blues 1993",
+   "ru": null,
+   "original": "ろくでなしBLUES 1993",
+   "year": 1993,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:movie:779019",
+   "qid": "Q125065938",
+   "kind": "film",
+   "name": "Grisaia: Phantom Trigger the Animation Stargazer",
+   "ru": null,
+   "original": "グリザイア：ファントムトリガー THE ANIMATION スターゲイザー",
+   "year": 2020,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:100581",
+   "qid": "Q11660261",
+   "kind": "series",
+   "name": "Denkō Chō Tokkyū Hikarian",
+   "ru": null,
+   "original": "電光超特急ヒカリアン",
+   "year": 2002,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:101503",
+   "qid": "Q843115",
+   "kind": "series",
+   "name": "MapleStory",
+   "ru": null,
+   "original": "メイプルストーリー",
+   "year": 2007,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:119404",
+   "qid": "Q107311889",
+   "kind": "series",
+   "name": "Ore, Tsushima",
+   "ru": null,
+   "original": "俺、つしま",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:119977",
+   "source": "https://www.themoviedb.org/tv/119977",
+   "kind": "series",
+   "name": "Mazica Party",
+   "ru": null,
+   "original": "マジカパーティ",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:122474",
+   "qid": "Q107438105",
+   "kind": "series",
+   "name": "Dinosaur Biyori",
+   "ru": null,
+   "original": "ダイナ荘びより",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:12437",
+   "qid": "Q16348215",
+   "kind": "series",
+   "name": "Ape Escape",
+   "ru": null,
+   "original": "レッチュ　ゲッチュ　サルゲッチュ",
+   "year": 2002,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:127618",
+   "qid": "Q135284780",
+   "kind": "series",
+   "name": "Hana no Kakarichō",
+   "ru": null,
+   "original": "花の係長",
+   "year": 1976,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:128128",
+   "qid": "Q106943954",
+   "kind": "series",
+   "name": "Pretty All Friends Selection",
+   "ru": null,
+   "original": "プリティーオールフレンズセレクション",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:128845",
+   "qid": "Q124799128",
+   "kind": "series",
+   "name": "Mama Loves the Poyopoyo-Saurus",
+   "ru": null,
+   "original": "ママはぽよぽよザウルスがお好き",
+   "year": 1995,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:129060",
+   "qid": "Q134360390",
+   "kind": "series",
+   "name": "Muka Muka Paradise",
+   "ru": null,
+   "original": "ムカムカパラダイス",
+   "year": 1993,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:130674",
+   "qid": "Q717222",
+   "kind": "series",
+   "name": "Golden Warrior Gold Lightan",
+   "ru": "Ogon Senshi Gold Lightan",
+   "original": "ゴールドライタン",
+   "year": 1981,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:130794",
+   "qid": "Q112678877",
+   "kind": "series",
+   "name": "Beast Saga",
+   "ru": null,
+   "original": "ビーストサーガ",
+   "year": 2013,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:131437",
+   "qid": "Q124611519",
+   "kind": "series",
+   "name": "El-Hazard: The Alternative World",
+   "ru": null,
+   "original": "異次元の世界エルハザード",
+   "year": 1998,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:132227",
+   "qid": "Q106394425",
+   "kind": "series",
+   "name": "Chickip Dancers",
+   "ru": null,
+   "original": "チキップダンサーズ",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:132359",
+   "qid": "Q3636858",
+   "kind": "series",
+   "name": "Battle Spirits: Shounen Toppa Bashin",
+   "ru": null,
+   "original": "バトルスピリッツ 少年突破バシン",
+   "year": 2008,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:133306",
+   "qid": "Q124061532",
+   "kind": "series",
+   "name": "Gunma‐chan",
+   "ru": null,
+   "original": "ぐんまちゃん",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:137809",
+   "qid": "Q110805756",
+   "kind": "series",
+   "name": "On Air Dekinai!",
+   "ru": null,
+   "original": "オンエアできない!",
+   "year": 2022,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:138634",
+   "qid": "Q134980320",
+   "kind": "series",
+   "name": "Totsugeki! Pappara-tai",
+   "ru": null,
+   "original": "突撃!パッパラ隊",
+   "year": 1998,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:139278",
+   "qid": "Q141514840",
+   "kind": "series",
+   "name": "Game Center Arashi",
+   "ru": null,
+   "original": "ゲームセンターあらし",
+   "year": 1982,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:152487",
+   "qid": "Q137424806",
+   "kind": "series",
+   "name": "Tottemo! Luckyman",
+   "ru": null,
+   "original": "とっても!ラッキーマン",
+   "year": 1994,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:155241",
+   "source": "https://www.themoviedb.org/tv/155241",
+   "kind": "series",
+   "name": "Mahjong Soul Pon☆",
+   "ru": null,
+   "original": "じゃんたま PONG☆",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:16674",
+   "qid": "Q4024167",
+   "kind": "series",
+   "name": "Zenmai Zamurai",
+   "ru": null,
+   "original": "ぜんまいざむらい",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:16823",
+   "qid": "Q135188382",
+   "kind": "series",
+   "name": "Bomberman B-Daman Bakugaiden",
+   "ru": null,
+   "original": "Bビーダマン爆外伝",
+   "year": 1998,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:17118",
+   "qid": "Q13479444",
+   "kind": "series",
+   "name": "Bikkuriman 2000",
+   "ru": null,
+   "original": "ビックリマン2000",
+   "year": 1999,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:19343",
+   "qid": "Q11330690",
+   "kind": "series",
+   "name": "Bikkuriman",
+   "ru": null,
+   "original": "ビックリマン",
+   "year": 1987,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:197218",
+   "qid": "Q11305291",
+   "kind": "series",
+   "name": "Salad Jū Yūshi Tomatoman",
+   "ru": null,
+   "original": "サラダ十勇士トマトマン",
+   "year": 1992,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:197513",
+   "qid": "Q20039313",
+   "kind": "series",
+   "name": "Omakase! Miracle Cat-dan",
+   "ru": null,
+   "original": "おまかせ!みらくるキャット団",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:199372",
+   "qid": "Q6730998",
+   "kind": "series",
+   "name": "Magical Hat",
+   "ru": null,
+   "original": "まじかるハット",
+   "year": 1989,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:201092",
+   "qid": "Q11283027",
+   "kind": "series",
+   "name": "Akubi-chan",
+   "ru": null,
+   "original": "アクビガール",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:201495",
+   "source": "https://www.themoviedb.org/tv/201495",
+   "kind": "series",
+   "name": "Kenda Master Ken",
+   "ru": null,
+   "original": "ケンダマスター拳",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:201740",
+   "qid": "Q11275582",
+   "kind": "series",
+   "name": "Shimajirō no Wow!",
+   "ru": null,
+   "original": "しまじろうのわお!",
+   "year": 2012,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:20184",
+   "qid": "Q866312",
+   "kind": "series",
+   "name": "Mechander Robo",
+   "ru": "Mechander Robo",
+   "original": "合身戦隊メカンダーロボ",
+   "year": 1977,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:202275",
+   "qid": "Q122382519",
+   "kind": "series",
+   "name": "Uchi no Sanshimai",
+   "ru": null,
+   "original": "うちの3姉妹",
+   "year": 2008,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:202544",
+   "qid": "Q137580724",
+   "kind": "series",
+   "name": "Taro the Space Alien",
+   "ru": null,
+   "original": "うちゅう人 田中太郎",
+   "year": 2000,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:20345",
+   "qid": "Q987783",
+   "kind": "series",
+   "name": "Wan Wan Celeb Soreyuke! Tetsunoshin",
+   "ru": null,
+   "original": "ワンワンセレプー それゆけ!徹之進",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:203936",
+   "qid": "Q137844249",
+   "kind": "series",
+   "name": "Robotan",
+   "ru": null,
+   "original": "ロボタン",
+   "year": 1966,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:204047",
+   "qid": "Q137758543",
+   "kind": "series",
+   "name": "Yuuyake Banchō",
+   "ru": null,
+   "original": "夕やけ番長",
+   "year": 1968,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:204068",
+   "qid": "Q139929175",
+   "kind": "series",
+   "name": "Bakuhatsu Gorō",
+   "ru": null,
+   "original": "ばくはつ五郎",
+   "year": 1970,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:204273",
+   "qid": "Q11284345",
+   "kind": "series",
+   "name": "Anime Document: München e no Michi",
+   "ru": null,
+   "original": "アニメドキュメント ミュンヘンへの道",
+   "year": 1972,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:204719",
+   "qid": "Q11331663",
+   "kind": "series",
+   "name": "Pink Lady Monogatari: Eikō no Tenshitachi",
+   "ru": null,
+   "original": "ピンク・レディー物語 栄光の天使たち",
+   "year": 1978,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:204801",
+   "qid": "Q141514691",
+   "kind": "series",
+   "name": "Ikkyū-san",
+   "ru": null,
+   "original": "一球さん",
+   "year": 1978,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:205341",
+   "qid": "Q11334243",
+   "kind": "series",
+   "name": "Fūsen no Doratarō",
+   "ru": null,
+   "original": "フーセンのドラ太郎",
+   "year": 1981,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:20652",
+   "qid": "Q5922748",
+   "kind": "series",
+   "name": "Bomberman B-Daman Bakugaiden Victory",
+   "ru": null,
+   "original": "Bビーダマン爆外伝V",
+   "year": 1999,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:20664",
+   "qid": "Q4033710",
+   "kind": "series",
+   "name": "Alice SOS",
+   "ru": "Alice SOS",
+   "original": "アリスSOS",
+   "year": 1998,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:208466",
+   "qid": "Q106771496",
+   "kind": "series",
+   "name": "Hero Bank",
+   "ru": null,
+   "original": "ヒーローバンク",
+   "year": 2014,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:209074",
+   "qid": "Q11332350",
+   "kind": "series",
+   "name": "Fabre-sensei wa Meitantei",
+   "ru": null,
+   "original": "ファーブル先生は名探偵",
+   "year": 2000,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:210864",
+   "qid": "Q11278684",
+   "kind": "series",
+   "name": "まんが偉人物語",
+   "ru": null,
+   "original": "まんが偉人物語",
+   "year": 1977,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:211524",
+   "qid": "Q11541546",
+   "kind": "series",
+   "name": "Tanoshii Willow Town",
+   "ru": "Ветер в ивах",
+   "original": "楽しいウイロータウン",
+   "year": 1993,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:21196",
+   "qid": "Q128807732",
+   "kind": "series",
+   "name": "Marude Dameo",
+   "ru": null,
+   "original": "丸出だめ夫",
+   "year": 1991,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:21197",
+   "qid": "Q11264303",
+   "kind": "series",
+   "name": "Musashi, the Samurai Lord",
+   "ru": "Karakuri Kengo Den Musashi Lord",
+   "original": "からくり剣豪伝ムサシロード",
+   "year": 1990,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:214899",
+   "qid": "Q115426727",
+   "kind": "series",
+   "name": "Yomawari Neko",
+   "ru": null,
+   "original": "夜廻り猫",
+   "year": 2023,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:227810",
+   "qid": "Q122909958",
+   "kind": "series",
+   "name": "Shinobanai! CryptoNinja Sakuya",
+   "ru": null,
+   "original": "忍ばない！クリプトニンジャ咲耶",
+   "year": 2023,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:231439",
+   "qid": "Q17192013",
+   "kind": "series",
+   "name": "Alice Tanteikyoku",
+   "ru": null,
+   "original": "アリス探偵局",
+   "year": 1995,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:233785",
+   "source": "https://www.themoviedb.org/tv/233785",
+   "kind": "series",
+   "name": "Matsuinu",
+   "ru": null,
+   "original": "まついぬ",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:236131",
+   "qid": "Q130325809",
+   "kind": "series",
+   "name": "Soreike! Zukkoke San'ningumi",
+   "ru": null,
+   "original": "それいけ！ズッコケ三人組",
+   "year": 2004,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:239757",
+   "qid": "Q124809132",
+   "kind": "series",
+   "name": "Gakkō no Kowai Uwasa: Hanako-san ga Kita!!",
+   "ru": null,
+   "original": "学校のコワイうわさ 花子さんがきた!!",
+   "year": 1994,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:242565",
+   "qid": "Q11666012",
+   "kind": "series",
+   "name": "Shokupan Mimi",
+   "ru": null,
+   "original": "食パンミミー",
+   "year": 2010,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:246676",
+   "source": "https://www.themoviedb.org/tv/246676",
+   "kind": "series",
+   "name": "SHIBUYA♡HACHI",
+   "ru": null,
+   "original": "SHIBUYA♡HACHI",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:246862",
+   "source": "https://www.themoviedb.org/tv/246862",
+   "kind": "series",
+   "name": "New PANTY & STOCKING with GARTERBELT",
+   "ru": null,
+   "original": "New PANTY & STOCKING with GARTERBELT",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:253227",
+   "qid": "Q3794251",
+   "kind": "series",
+   "name": "Yume Miru, Anime: On-chan",
+   "ru": null,
+   "original": "ユメミル、アニメ「onちゃん」",
+   "year": 2008,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:255984",
+   "qid": "Q7121819",
+   "kind": "series",
+   "name": "Paboo & Mojies",
+   "ru": null,
+   "original": "パブー&モジーズ",
+   "year": 2012,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:261945",
+   "qid": "Q135189934",
+   "kind": "series",
+   "name": "Cooking Papa",
+   "ru": null,
+   "original": "クッキングパパ",
+   "year": 1992,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:26392",
+   "qid": "Q123501747",
+   "kind": "series",
+   "name": "Karaoke Senshi Mike Jirō",
+   "ru": null,
+   "original": "カラオケ戦士マイク次郎",
+   "year": 1994,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:27537",
+   "qid": "Q5018393",
+   "kind": "series",
+   "name": "Ehrgeiz",
+   "ru": null,
+   "original": "ネクスト戦記EHRGEIZ",
+   "year": 1997,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:28106",
+   "qid": "Q141514758",
+   "kind": "series",
+   "name": "Magical Meow Meow Taruto",
+   "ru": null,
+   "original": "魔法少女猫たると",
+   "year": 2001,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:285388",
+   "qid": "Q141537744",
+   "kind": "series",
+   "name": "Haai! Myakumyaku desu",
+   "ru": null,
+   "original": "はーい!ミャクミャクです",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:286487",
+   "source": "https://www.themoviedb.org/tv/286487",
+   "kind": "series",
+   "name": "Welcome to Magical Girl Village (illegally occupied)",
+   "ru": null,
+   "original": "おいでよ魔法少女村（不法占拠）",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:290837",
+   "source": "https://www.themoviedb.org/tv/290837",
+   "kind": "series",
+   "name": "Heart Cocktail Colorful",
+   "ru": null,
+   "original": "ハートカクテル カラフル",
+   "year": 2023,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:294718",
+   "qid": "Q134519222",
+   "kind": "series",
+   "name": "Gakkō dewa Oshiete Kurenai Taisetsu na Koto",
+   "ru": null,
+   "original": "学校では教えてくれない大切なこと",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:297698",
+   "qid": "Q132767607",
+   "kind": "series",
+   "name": "Meimon! Daisan Yakyū-bu",
+   "ru": null,
+   "original": "名門!第三野球部",
+   "year": 1988,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:298889",
+   "source": "https://www.themoviedb.org/tv/298889",
+   "kind": "series",
+   "name": "Latair the Earth",
+   "ru": null,
+   "original": "地球のラテール",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:299743",
+   "source": "https://www.themoviedb.org/tv/299743",
+   "kind": "series",
+   "name": "Forget That Night, Your Majesty",
+   "ru": null,
+   "original": "陛下わたしを忘れてください",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:30035",
+   "qid": "Q11313602",
+   "kind": "series",
+   "name": "Sue Cat",
+   "ru": null,
+   "original": "スーキャット",
+   "year": 1980,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:301124",
+   "source": "https://www.themoviedb.org/tv/301124",
+   "kind": "series",
+   "name": "2200-nen Neko no Kuni Nippon",
+   "ru": null,
+   "original": "2200年ねこの国ニッポン",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:302169",
+   "source": "https://www.themoviedb.org/tv/302169",
+   "kind": "series",
+   "name": "Anila and Cocora",
+   "ru": null,
+   "original": "アニラとココラ",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:304023",
+   "qid": "Q136516241",
+   "kind": "series",
+   "name": "I'll Live a Long Life to Dote on My Favorite Stepbrother!",
+   "ru": null,
+   "original": "最推しの義兄を愛でるため、長生きします!",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tmdb:tv:304126",
@@ -81,6 +976,17 @@
    "genres": []
   },
   {
+   "id": "tmdb:tv:309874",
+   "qid": "Q11262421",
+   "kind": "series",
+   "name": "Omakase Scrappers",
+   "ru": "Предоставьте это Скрапперам",
+   "original": "おまかせスクラッパーズ",
+   "year": 1994,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tmdb:tv:315682",
    "source": "https://www.themoviedb.org/tv/315682",
    "kind": "series",
@@ -92,6 +998,17 @@
    "genres": [
     "Comedy"
    ]
+  },
+  {
+   "id": "tmdb:tv:315699",
+   "qid": "Q11339145",
+   "kind": "series",
+   "name": "PostPet Momobin",
+   "ru": null,
+   "original": "ポストペットモモ便",
+   "year": 2004,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tmdb:tv:318460",
@@ -187,6 +1104,39 @@
    ]
   },
   {
+   "id": "tmdb:tv:335305",
+   "qid": "Q16612139",
+   "kind": "series",
+   "name": "Tamagotchi! Yume Kira Dream",
+   "ru": null,
+   "original": "たまごっち! ゆめキラドリーム",
+   "year": 2012,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:335316",
+   "qid": "Q134350386",
+   "kind": "series",
+   "name": "Tamagotchi! Miracle Friends",
+   "ru": null,
+   "original": "たまごっち！～みらくるフレンズ～",
+   "year": 2013,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:335318",
+   "qid": "Q16561269",
+   "kind": "series",
+   "name": "GO-GO Tamagotchi!",
+   "ru": null,
+   "original": "GO-GO たまごっち！",
+   "year": 2014,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tmdb:tv:336630",
    "source": "https://www.themoviedb.org/tv/336630",
    "kind": "series",
@@ -263,6 +1213,514 @@
    "ru": null,
    "original": "マゼンチュ",
    "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:34085",
+   "qid": "Q141514813",
+   "kind": "series",
+   "name": "Kero Kero Chime",
+   "ru": null,
+   "original": "ケロケロちゃいむ",
+   "year": 1997,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:34706",
+   "qid": "Q994390",
+   "kind": "series",
+   "name": "Kōtetsu Sangokushi",
+   "ru": null,
+   "original": "鋼鉄三国志",
+   "year": 2007,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:37514",
+   "qid": "Q6962407",
+   "kind": "series",
+   "name": "Nanami-chan",
+   "ru": null,
+   "original": "ななみちゃん",
+   "year": 2004,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:413113",
+   "qid": "Q11295181",
+   "kind": "series",
+   "name": "Karl to Fushigi na Tō",
+   "ru": null,
+   "original": "カルルとふしぎな塔",
+   "year": 2010,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:43910",
+   "qid": "Q5509381",
+   "kind": "series",
+   "name": "Funny Pets",
+   "ru": null,
+   "original": "Funny Pets",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:43917",
+   "qid": "Q16834795",
+   "kind": "series",
+   "name": "Deko Boko Friends",
+   "ru": null,
+   "original": "でこぼこフレンズ",
+   "year": 2002,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:43928",
+   "qid": "Q5238129",
+   "kind": "series",
+   "name": "Hatara Kizzu Maihamu Gumi",
+   "ru": null,
+   "original": "はたらキッズ マイハム組",
+   "year": 2007,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44030",
+   "qid": "Q5288719",
+   "kind": "series",
+   "name": "Dokachin the Primitive Boy",
+   "ru": null,
+   "original": "ドカチン",
+   "year": 1968,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44070",
+   "qid": "Q141514860",
+   "kind": "series",
+   "name": "Kiko-chan's Smile",
+   "ru": null,
+   "original": "きこちゃんすまいる",
+   "year": 1996,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44263",
+   "qid": "Q4184272",
+   "kind": "series",
+   "name": "Chibikko Kaiju Yadamon",
+   "ru": null,
+   "original": "ちびっこ怪獣ヤダモン",
+   "year": 1967,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44270",
+   "qid": "Q141514826",
+   "kind": "series",
+   "name": "Crash B-Daman",
+   "ru": null,
+   "original": "爆球Hit! クラッシュビーダマン",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44370",
+   "qid": "Q5625684",
+   "kind": "series",
+   "name": "Gyōten Ningen Batseelor",
+   "ru": null,
+   "original": "仰天人間バトシーラー",
+   "year": 2001,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44466",
+   "qid": "Q125456801",
+   "kind": "series",
+   "name": "Kappa no Kaikata",
+   "ru": null,
+   "original": "カッパの飼い方",
+   "year": 2004,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44520",
+   "qid": "Q130705127",
+   "kind": "series",
+   "name": "Mainichi Kaasan",
+   "ru": null,
+   "original": "毎日かあさん",
+   "year": 2009,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44743",
+   "qid": "Q137844250",
+   "kind": "series",
+   "name": "Robotan",
+   "ru": null,
+   "original": "ロボタン",
+   "year": 1986,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44897",
+   "qid": "Q5562797",
+   "kind": "series",
+   "name": "Gin'iro no Olynssis",
+   "ru": null,
+   "original": "銀色のオリンシス",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:44942",
+   "qid": "Q3893490",
+   "kind": "series",
+   "name": "Panyo Panyo Di Gi Charat",
+   "ru": null,
+   "original": "ぱにょぱにょデ・ジ・キャラット",
+   "year": 2002,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:45052",
+   "qid": "Q122350655",
+   "kind": "series",
+   "name": "Ganbarist! Shun",
+   "ru": null,
+   "original": "ガンバリスト!駿",
+   "year": 1996,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:45074",
+   "qid": "Q5299425",
+   "kind": "series",
+   "name": "Doteraman",
+   "ru": null,
+   "original": "ドテラマン",
+   "year": 1986,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:45146",
+   "qid": "Q919321",
+   "kind": "series",
+   "name": "Jeanie with the Light Brown Hair",
+   "ru": "Kinpatsu no Jeanie",
+   "original": "風の中の少女 金髪のジェニー",
+   "year": 1992,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:45526",
+   "qid": "Q141514886",
+   "kind": "series",
+   "name": "Kotencotenco",
+   "ru": null,
+   "original": "こてんこてんこ",
+   "year": 2005,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:45549",
+   "qid": "Q3543727",
+   "kind": "series",
+   "name": "Time Bokan 2000: Kaitou Kiramekiman",
+   "ru": "Kaitou Kiramekiman",
+   "original": "タイムボカン2000 怪盗きらめきマン",
+   "year": 2000,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:53031",
+   "qid": "Q11079811",
+   "kind": "series",
+   "name": "Straight Title Robot Anime",
+   "ru": null,
+   "original": "直球表題ロボットアニメ",
+   "year": 2013,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:53424",
+   "qid": "Q27651196",
+   "kind": "series",
+   "name": "Wild 7 Another",
+   "ru": null,
+   "original": "ワイルド7 another -謀略運河-",
+   "year": 2002,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:53722",
+   "qid": "Q130342311",
+   "kind": "series",
+   "name": "Litchi DE Hikari Club",
+   "ru": null,
+   "original": "ライチDE光クラブ",
+   "year": 2012,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:55413",
+   "qid": "Q139564698",
+   "kind": "series",
+   "name": "Shiba Inuko-san",
+   "ru": null,
+   "original": "しばいぬ子さん",
+   "year": 2012,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:66569",
+   "qid": "Q141493743",
+   "kind": "series",
+   "name": "Bonobono",
+   "ru": null,
+   "original": "ぼのぼの",
+   "year": 1995,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:68400",
+   "qid": "Q26158040",
+   "kind": "series",
+   "name": "Nazotokine",
+   "ru": null,
+   "original": "ナゾトキネ",
+   "year": 2016,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:69140",
+   "qid": "Q27131914",
+   "kind": "series",
+   "name": "Sengokuchojugiga",
+   "ru": null,
+   "original": "戦国鳥獣戯画",
+   "year": 2016,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:69469",
+   "qid": "Q63285418",
+   "kind": "series",
+   "name": "Forest Fairy Five",
+   "ru": null,
+   "original": "FOREST FAIRY FIVE",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:70208",
+   "qid": "Q24876623",
+   "kind": "series",
+   "name": "Time Bokan 24",
+   "ru": null,
+   "original": "タイムボカン24",
+   "year": 2016,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:71069",
+   "qid": "Q141514743",
+   "kind": "series",
+   "name": "PriPri Chi-chan!!",
+   "ru": null,
+   "original": "プリプリちぃちゃん!!",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:71070",
+   "qid": "Q64840248",
+   "kind": "series",
+   "name": "Tomica Hyper Rescue Drive Head Kidō Kyūkyū Keisatsu",
+   "ru": null,
+   "original": "トミカハイパーレスキュー ドライブヘッド 機動救急警察",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:71215",
+   "qid": "Q136830603",
+   "kind": "series",
+   "name": "Don't Lose!! Evil Corps!",
+   "ru": null,
+   "original": "まけるな!!あくのぐんだん!",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:71778",
+   "qid": "Q85968544",
+   "kind": "series",
+   "name": "Baku Tech! Bakugan",
+   "ru": null,
+   "original": "爆TECH!爆丸",
+   "year": 2012,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:72501",
+   "qid": "Q135422539",
+   "kind": "series",
+   "name": "Clione no Akari",
+   "ru": null,
+   "original": "クリオネの灯り",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:78784",
+   "qid": "Q135207773",
+   "kind": "series",
+   "name": "0-sen Hayato",
+   "ru": null,
+   "original": "0戦はやと",
+   "year": 1964,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:80559",
+   "qid": "Q55224180",
+   "kind": "series",
+   "name": "Puzzle & Dragons",
+   "ru": null,
+   "original": "パズドラ",
+   "year": 2018,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:82825",
+   "qid": "Q140183781",
+   "kind": "series",
+   "name": "Devidol!",
+   "ru": null,
+   "original": "でびどる!",
+   "year": 2018,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:82944",
+   "qid": "Q60438713",
+   "kind": "series",
+   "name": "Sono Toki, Kanojo wa.",
+   "ru": null,
+   "original": "その時、カノジョは。",
+   "year": 2018,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:84662",
+   "qid": "Q60677925",
+   "kind": "series",
+   "name": "Dimension High School",
+   "ru": null,
+   "original": "Dimensionハイスクール",
+   "year": 2019,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:90579",
+   "qid": "Q48749562",
+   "kind": "series",
+   "name": "Glamorous Heroes",
+   "ru": null,
+   "original": "GLAMOROUS HEROES",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:9570",
+   "qid": "Q699173",
+   "kind": "series",
+   "name": "Juuni Senshi Bakuretsu Eto Ranger",
+   "ru": null,
+   "original": "十二戦支 爆烈エトレンジャー",
+   "year": 1995,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:96484",
+   "source": "https://www.themoviedb.org/tv/96484",
+   "kind": "series",
+   "name": "Rebirth",
+   "ru": null,
+   "original": "りばあす",
+   "year": 2020,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:9668",
+   "qid": "Q5288473",
+   "kind": "series",
+   "name": "Dogtato",
+   "ru": "Dogtato",
+   "original": "じゃがいぬくん",
+   "year": 2004,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:97407",
+   "source": "https://www.themoviedb.org/tv/97407",
+   "kind": "series",
+   "name": "Hentatsu",
+   "ru": null,
+   "original": "へんたつ",
+   "year": 2020,
    "runtime": null,
    "genres": [
     "Comedy"
@@ -17231,6 +18689,19 @@
    "genres": []
   },
   {
+   "id": "tt11349866",
+   "source": "https://www.themoviedb.org/tv/91764",
+   "kind": "series",
+   "name": "Sorcerous Stabber Orphen",
+   "ru": null,
+   "original": "魔術士オーフェンはぐれ旅",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure"
+   ]
+  },
+  {
    "id": "tt1135522",
    "qid": "Q4174726",
    "kind": "film",
@@ -17388,6 +18859,20 @@
    "genres": []
   },
   {
+   "id": "tt11418344",
+   "source": "https://www.themoviedb.org/tv/92591",
+   "kind": "series",
+   "name": "Drifting Dragons",
+   "ru": null,
+   "original": "空挺ドラゴンズ",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt11427380",
    "qid": "Q134524981",
    "kind": "film",
@@ -17459,6 +18944,21 @@
    "runtime": 137,
    "genres": [
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt11433900",
+   "source": "https://www.themoviedb.org/movie/659896",
+   "kind": "film",
+   "name": "Gundam Reconguista in G Movie II: Bellri's Fierce Charge",
+   "ru": null,
+   "original": "劇場版 ガンダム Ｇのレコンギスタ Ⅱ ベルリ 撃進",
+   "year": 2020,
+   "runtime": 94,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
    ]
   },
   {
@@ -17979,6 +19479,21 @@
    "year": 2019,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt11547516",
+   "source": "https://www.themoviedb.org/tv/96420",
+   "kind": "series",
+   "name": "Pokémon: Twilight Wings",
+   "ru": null,
+   "original": "薄明の翼",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Family",
+    "Sci-Fi & Fantasy"
+   ]
   },
   {
    "id": "tt1155604",
@@ -19329,6 +20844,21 @@
    "genres": []
   },
   {
+   "id": "tt12007484",
+   "source": "https://www.themoviedb.org/movie/829920",
+   "kind": "film",
+   "name": "Fate/Grand Order Final Singularity – Grand Temple of Time: Solomon",
+   "ru": null,
+   "original": "Fate/Grand Order -終局特異点 冠位時間神殿ソロモン-",
+   "year": 2021,
+   "runtime": 94,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt12013558",
    "qid": "Q78051864",
    "kind": "series",
@@ -19665,6 +21195,20 @@
    "year": 2008,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt12105596",
+   "source": "https://www.themoviedb.org/movie/719088",
+   "kind": "film",
+   "name": "Yes, No, or Maybe?",
+   "ru": null,
+   "original": "イエスかノーか半分か",
+   "year": 2020,
+   "runtime": 53,
+   "genres": [
+    "Drama",
+    "Romance"
+   ]
   },
   {
    "id": "tt12105800",
@@ -20360,6 +21904,19 @@
    ]
   },
   {
+   "id": "tt12317746",
+   "source": "https://www.themoviedb.org/tv/101562",
+   "kind": "series",
+   "name": "CARDFIGHT!! VANGUARD EXTRA STORY -if-",
+   "ru": null,
+   "original": "カードファイト!! ヴァンガード外伝 イフ-if-",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
    "id": "tt1233119",
    "qid": "Q110463374",
    "kind": "series",
@@ -20767,6 +22324,19 @@
    "genres": []
   },
   {
+   "id": "tt12439230",
+   "source": "https://www.themoviedb.org/movie/653858",
+   "kind": "film",
+   "name": "Seitokai Yakuindomo the Movie 2",
+   "ru": null,
+   "original": "劇場版 生徒会役員共２",
+   "year": 2021,
+   "runtime": 78,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt12439248",
    "qid": "Q119918172",
    "kind": "film",
@@ -20778,6 +22348,22 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt12439268",
+   "source": "https://www.themoviedb.org/movie/711683",
+   "kind": "film",
+   "name": "BEM: BECOME HUMAN",
+   "ru": null,
+   "original": "劇場版BEM 〜BECOME HUMAN〜",
+   "year": 2020,
+   "runtime": 90,
+   "genres": [
+    "Action",
+    "Drama",
+    "Fantasy",
+    "Horror"
    ]
   },
   {
@@ -20945,6 +22531,20 @@
    "genres": []
   },
   {
+   "id": "tt12471116",
+   "source": "https://www.themoviedb.org/tv/104518",
+   "kind": "series",
+   "name": "POKÉTOON",
+   "ru": null,
+   "original": "POKÉTOON",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
+  },
+  {
    "id": "tt12486080",
    "qid": "Q127726317",
    "kind": "series",
@@ -20967,6 +22567,21 @@
    "year": 2021,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt12502802",
+   "source": "https://www.themoviedb.org/tv/107293",
+   "kind": "series",
+   "name": "Mashin Hero Wataru: The Seven Spirits of Ryujinmaru",
+   "ru": null,
+   "original": "魔神英雄伝ワタル： 七魂の龍神丸",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
   },
   {
    "id": "tt12510204",
@@ -21582,6 +23197,19 @@
    ]
   },
   {
+   "id": "tt12803708",
+   "source": "https://www.themoviedb.org/tv/106691",
+   "kind": "series",
+   "name": "I Tried Asking While Kowtowing",
+   "ru": null,
+   "original": "土下座で頼んでみた",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt1281341",
    "qid": "Q122982021",
    "kind": "series",
@@ -21684,6 +23312,22 @@
    "runtime": null,
    "genres": [
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt12866680",
+   "source": "https://www.themoviedb.org/tv/125429",
+   "kind": "series",
+   "name": "Battle Spirits: Gallet's Revolution",
+   "ru": null,
+   "original": "バトルスピリッツ 赫盟のガレット",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Kids",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -21981,6 +23625,21 @@
    ]
   },
   {
+   "id": "tt13022842",
+   "source": "https://www.themoviedb.org/tv/217857",
+   "kind": "series",
+   "name": "Motto! Majime ni Fumajime Kaiketsu Zorori",
+   "ru": null,
+   "original": "もっと！まじめにふまじめ かいけつゾロリ",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Kids"
+   ]
+  },
+  {
    "id": "tt13023508",
    "qid": "Q141514676",
    "kind": "series",
@@ -22030,6 +23689,20 @@
    "genres": [
     "Music",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt13033818",
+   "source": "https://www.themoviedb.org/movie/649523",
+   "kind": "film",
+   "name": "Happy-Go-Lucky Days",
+   "ru": null,
+   "original": "どうにかなる日々",
+   "year": 2020,
+   "runtime": 54,
+   "genres": [
+    "Drama",
+    "Romance"
    ]
   },
   {
@@ -22091,6 +23764,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt13054188",
+   "source": "https://www.themoviedb.org/movie/721686",
+   "kind": "film",
+   "name": "Cells at Work!! The Return of the Strongest Enemy: A Huge Uproar in the Body’s Bowels!",
+   "ru": null,
+   "original": "「はたらく細胞!!」最強の敵、再び。体の中は\"腸\"大騒ぎ！",
+   "year": 2020,
+   "runtime": 112,
+   "genres": [
+    "Action",
+    "Comedy"
    ]
   },
   {
@@ -22294,6 +23981,22 @@
    ]
   },
   {
+   "id": "tt13102918",
+   "source": "https://www.themoviedb.org/tv/196256",
+   "kind": "series",
+   "name": "Cap Revolution Bottleman",
+   "ru": null,
+   "original": "キャップ革命ボトルマン",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Kids",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt13103028",
    "qid": "Q100331979",
    "kind": "series",
@@ -22450,6 +24153,19 @@
    "year": 2021,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt13192574",
+   "source": "https://www.themoviedb.org/tv/110837",
+   "kind": "series",
+   "name": "Bungo Stray Dogs Wan!",
+   "ru": null,
+   "original": "文豪ストレイドッグス わん!",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
   },
   {
    "id": "tt13196080",
@@ -22791,6 +24507,19 @@
    ]
   },
   {
+   "id": "tt13344434",
+   "source": "https://www.themoviedb.org/tv/121301",
+   "kind": "series",
+   "name": "Hetalia: World Stars",
+   "ru": null,
+   "original": "ヘタリア World★Stars",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt13344602",
    "qid": "Q81413861",
    "kind": "film",
@@ -23022,6 +24751,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt13409412",
+   "source": "https://www.themoviedb.org/tv/112615",
+   "kind": "series",
+   "name": "CESTVS -The Roman Fighter-",
+   "ru": null,
+   "original": "セスタス -The Roman Fighter-",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama"
    ]
   },
   {
@@ -23486,6 +25229,19 @@
    "genres": []
   },
   {
+   "id": "tt13567394",
+   "source": "https://www.themoviedb.org/tv/112501",
+   "kind": "series",
+   "name": "Cute Executive Officer",
+   "ru": null,
+   "original": "幼女社長",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt13567416",
    "qid": "Q114288296",
    "kind": "series",
@@ -23617,6 +25373,20 @@
    "year": 2005,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt13592980",
+   "source": "https://www.themoviedb.org/tv/255107",
+   "kind": "series",
+   "name": "Code Geass: Rozé of the Recapture",
+   "ru": null,
+   "original": "コードギアス 奪還のロゼ",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
   },
   {
    "id": "tt13592988",
@@ -24243,6 +26013,24 @@
    ]
   },
   {
+   "id": "tt13898164",
+   "source": "https://www.themoviedb.org/movie/749401",
+   "kind": "film",
+   "name": "Macross Delta: Zettai Live!!!!!!",
+   "ru": null,
+   "original": "劇場版 マクロスΔ 絶対LIVE!!!!!!",
+   "year": 2021,
+   "runtime": 110,
+   "genres": [
+    "Action",
+    "Drama",
+    "Music",
+    "Romance",
+    "Science Fiction",
+    "War"
+   ]
+  },
+  {
    "id": "tt13908152",
    "qid": "Q141514697",
    "kind": "series",
@@ -24444,6 +26232,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt14017226",
+   "source": "https://www.themoviedb.org/tv/106432",
+   "kind": "series",
+   "name": "Kamen Rider Zero-One Short Anime: Everyone's Daily Life",
+   "ru": null,
+   "original": "仮面ライダーゼロワン・ショートアニメ: EVERYONE’S DAILY LIFE",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -24912,6 +26714,17 @@
    "genres": []
   },
   {
+   "id": "tt14187740",
+   "source": "https://www.themoviedb.org/tv/154739",
+   "kind": "series",
+   "name": "Idol Land PriPara",
+   "ru": null,
+   "original": "アイドルランドプリパラ",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt14201334",
    "qid": "Q105771102",
    "kind": "series",
@@ -25046,6 +26859,20 @@
    ]
   },
   {
+   "id": "tt14264308",
+   "source": "https://www.themoviedb.org/movie/745115",
+   "kind": "film",
+   "name": "BanG Dream! FILM LIVE 2nd Stage",
+   "ru": null,
+   "original": "BanG Dream! FILM LIVE 2nd Stage",
+   "year": 2021,
+   "runtime": 85,
+   "genres": [
+    "Comedy",
+    "Music"
+   ]
+  },
+  {
    "id": "tt1427163",
    "qid": "Q105044806",
    "kind": "series",
@@ -25083,6 +26910,20 @@
    "year": 2021,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt14272704",
+   "source": "https://www.themoviedb.org/tv/138273",
+   "kind": "series",
+   "name": "Rilakkuma's Theme Park Adventure",
+   "ru": null,
+   "original": "リラックマと遊園地",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama"
+   ]
   },
   {
    "id": "tt14278890",
@@ -25291,6 +27132,19 @@
    "genres": []
   },
   {
+   "id": "tt14402928",
+   "source": "https://www.themoviedb.org/movie/814662",
+   "kind": "film",
+   "name": "Kakushigoto Theatrical Edition",
+   "ru": null,
+   "original": "劇場編集版 かくしごと ―ひめごとはなんですか―",
+   "year": 2021,
+   "runtime": 79,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt14402938",
    "qid": "Q106401902",
    "kind": "series",
@@ -25425,6 +27279,21 @@
    ]
   },
   {
+   "id": "tt14446300",
+   "source": "https://www.themoviedb.org/movie/843248",
+   "kind": "film",
+   "name": "Gundam Reconguista in G Movie III:  Legacy from Space",
+   "ru": null,
+   "original": "劇場版 ガンダム Ｇのレコンギスタ Ⅲ 宇宙からの遺産",
+   "year": 2021,
+   "runtime": 104,
+   "genres": [
+    "Adventure",
+    "Science Fiction",
+    "War"
+   ]
+  },
+  {
    "id": "tt14453538",
    "qid": "Q109026460",
    "kind": "series",
@@ -25437,6 +27306,17 @@
     "Action",
     "Adventure"
    ]
+  },
+  {
+   "id": "tt14463958",
+   "source": "https://www.themoviedb.org/movie/820651",
+   "kind": "film",
+   "name": "Luginsky",
+   "ru": null,
+   "original": "Luginsky",
+   "year": 2020,
+   "runtime": 63,
+   "genres": []
   },
   {
    "id": "tt14469954",
@@ -25514,6 +27394,21 @@
    "genres": [
     "Comedy",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt14489118",
+   "source": "https://www.themoviedb.org/movie/820530",
+   "kind": "film",
+   "name": "DAKAICHI - I'm being harassed by the sexiest man of the year - the Movie: Spain Arc",
+   "ru": null,
+   "original": "劇場版 抱かれたい男1位に脅されています。～スペイン編～",
+   "year": 2021,
+   "runtime": 78,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Romance"
    ]
   },
   {
@@ -25810,6 +27705,19 @@
    ]
   },
   {
+   "id": "tt14648632",
+   "source": "https://www.themoviedb.org/tv/125515",
+   "kind": "series",
+   "name": "Artiswitch",
+   "ru": null,
+   "original": "Artiswitch",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt14669108",
    "qid": "Q109426611",
    "kind": "series",
@@ -25889,6 +27797,22 @@
    "genres": [
     "Drama",
     "Sport"
+   ]
+  },
+  {
+   "id": "tt14702778",
+   "source": "https://www.themoviedb.org/movie/813707",
+   "kind": "film",
+   "name": "RE:cycle of the PENGUINDRUM Part 1: Your Train Is the Survival Tactic",
+   "ru": null,
+   "original": "劇場版 RE:cycle of the PENGUINDRUM 前編 君の列車は生存戦略",
+   "year": 2022,
+   "runtime": 124,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Mystery",
+    "Science Fiction"
    ]
   },
   {
@@ -26057,6 +27981,34 @@
    ]
   },
   {
+   "id": "tt14821326",
+   "source": "https://www.themoviedb.org/tv/121304",
+   "kind": "series",
+   "name": "Sushi Sumo",
+   "ru": null,
+   "original": "どすこい すしずもう",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Kids"
+   ]
+  },
+  {
+   "id": "tt14821350",
+   "source": "https://www.themoviedb.org/tv/127264",
+   "kind": "series",
+   "name": "iii icecrin",
+   "ru": null,
+   "original": "iiiあいすくりん",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
+  {
    "id": "tt14827932",
    "qid": "Q106488042",
    "kind": "series",
@@ -26110,6 +28062,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt14837962",
+   "source": "https://www.themoviedb.org/tv/217710",
+   "kind": "series",
+   "name": "MAKE MY DAY",
+   "ru": null,
+   "original": "MAKE MY DAY",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -26286,6 +28252,17 @@
    "name": "Takt op.Destiny",
    "ru": null,
    "original": "takt op.Destiny",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt14951100",
+   "source": "https://www.themoviedb.org/tv/296233",
+   "kind": "series",
+   "name": "Assault Lily: Fruits",
+   "ru": null,
+   "original": "アサルトリリィ ふるーつ",
    "year": 2021,
    "runtime": null,
    "genres": []
@@ -26472,6 +28449,20 @@
    ]
   },
   {
+   "id": "tt15077804",
+   "source": "https://www.themoviedb.org/tv/122371",
+   "kind": "series",
+   "name": "Obey Me!",
+   "ru": null,
+   "original": "Obey Me!",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt1508179",
    "qid": "Q2737216",
    "kind": "series",
@@ -26646,6 +28637,20 @@
    "genres": [
     "Adventure",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt15176722",
+   "source": "https://www.themoviedb.org/tv/130206",
+   "kind": "series",
+   "name": "Fantasia Sango – Realm of Legends",
+   "ru": null,
+   "original": "幻想三國誌 -天元霊心記-",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -26939,6 +28944,20 @@
    "genres": []
   },
   {
+   "id": "tt15353550",
+   "source": "https://www.themoviedb.org/tv/132664",
+   "kind": "series",
+   "name": "The Heike Story",
+   "ru": null,
+   "original": "平家物語",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt15378218",
    "qid": "Q115937512",
    "kind": "series",
@@ -26950,6 +28969,20 @@
    "genres": [
     "Action",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt15379212",
+   "source": "https://www.themoviedb.org/tv/131168",
+   "kind": "series",
+   "name": "Ganbare Doukichan",
+   "ru": null,
+   "original": "がんばれ同期ちゃん",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -26967,6 +29000,19 @@
    ]
   },
   {
+   "id": "tt15389924",
+   "source": "https://www.themoviedb.org/movie/843250",
+   "kind": "film",
+   "name": "A Crocodile Who Lived for 100 Days",
+   "ru": null,
+   "original": "100日間生きたワニ",
+   "year": 2021,
+   "runtime": 62,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
    "id": "tt15391190",
    "qid": "Q106594883",
    "kind": "series",
@@ -26978,6 +29024,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt15392166",
+   "source": "https://www.themoviedb.org/movie/965244",
+   "kind": "film",
+   "name": "Ghost in the Shell: SAC_2045 Sustainable War",
+   "ru": null,
+   "original": "攻殻機動隊 SAC_2045 持続可能戦争",
+   "year": 2021,
+   "runtime": 118,
+   "genres": [
+    "Action",
+    "Science Fiction"
    ]
   },
   {
@@ -27303,6 +29363,19 @@
    ]
   },
   {
+   "id": "tt15529826",
+   "source": "https://www.themoviedb.org/tv/131083",
+   "kind": "series",
+   "name": "Rusted Armors",
+   "ru": null,
+   "original": "錆色のアーマ-黎明-",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure"
+   ]
+  },
+  {
    "id": "tt15533674",
    "qid": "Q106197008",
    "kind": "series",
@@ -27437,6 +29510,20 @@
    ]
   },
   {
+   "id": "tt15610384",
+   "source": "https://www.themoviedb.org/movie/952175",
+   "kind": "film",
+   "name": "Backflip!! The Movie",
+   "ru": null,
+   "original": "映画 バクテン!!",
+   "year": 2022,
+   "runtime": 90,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt1561921",
    "qid": "Q384357",
    "kind": "series",
@@ -27448,6 +29535,19 @@
    "genres": [
     "Adventure",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt15660128",
+   "source": "https://www.themoviedb.org/tv/205493",
+   "kind": "series",
+   "name": "The Prince of Tennis II U-17 WORLD CUP",
+   "ru": null,
+   "original": "新テニスの王子様 U-17 WORLD CUP",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -27476,6 +29576,21 @@
    "genres": [
     "Action",
     "Music"
+   ]
+  },
+  {
+   "id": "tt15680762",
+   "source": "https://www.themoviedb.org/tv/156269",
+   "kind": "series",
+   "name": "Tales of Luminaria: The Fateful Crossroad",
+   "ru": null,
+   "original": "テイルズ オブ ルミナリア The Fateful Crossroad",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -27746,6 +29861,20 @@
    "runtime": null,
    "genres": [
     "Music"
+   ]
+  },
+  {
+   "id": "tt15783458",
+   "source": "https://www.themoviedb.org/movie/849907",
+   "kind": "film",
+   "name": "Mirage Queen Prefers Circus",
+   "ru": null,
+   "original": "怪盗クイーンはサーカスがお好き",
+   "year": 2022,
+   "runtime": 60,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -28192,6 +30321,17 @@
    ]
   },
   {
+   "id": "tt16148546",
+   "source": "https://www.themoviedb.org/tv/138882",
+   "kind": "series",
+   "name": "Shoot! Goal to the Future",
+   "ru": null,
+   "original": "シュート！Goal to the Future",
+   "year": 2022,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt16156718",
    "qid": "Q109651922",
    "kind": "series",
@@ -28300,6 +30440,19 @@
    "genres": [
     "Adventure",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt16270300",
+   "source": "https://www.themoviedb.org/tv/130857",
+   "kind": "series",
+   "name": "Hanabichan ~The girl who popped out of the game world~",
+   "ru": null,
+   "original": "ハナビちゃんは遅れがち",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -29253,6 +31406,19 @@
    ]
   },
   {
+   "id": "tt17066860",
+   "source": "https://www.themoviedb.org/tv/135149",
+   "kind": "series",
+   "name": "Petit SEKAI",
+   "ru": null,
+   "original": "ぷちセカ",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt17069148",
    "qid": "Q126127689",
    "kind": "series",
@@ -29940,6 +32106,17 @@
    ]
   },
   {
+   "id": "tt18160990",
+   "source": "https://www.themoviedb.org/tv/198466",
+   "kind": "series",
+   "name": "STARS Collection",
+   "ru": null,
+   "original": "スターズこれくしょん！",
+   "year": 2022,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt18183882",
    "qid": "Q110899083",
    "kind": "series",
@@ -29993,6 +32170,19 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt18274178",
+   "source": "https://www.themoviedb.org/movie/930821",
+   "kind": "film",
+   "name": "Adam by Eve: A Live in Animation",
+   "ru": null,
+   "original": "Adam by Eve: A Live in Animation",
+   "year": 2022,
+   "runtime": 58,
+   "genres": [
+    "Music"
    ]
   },
   {
@@ -30170,6 +32360,19 @@
    "runtime": null,
    "genres": [
     "Adventure",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt18562094",
+   "source": "https://www.themoviedb.org/movie/866055",
+   "kind": "film",
+   "name": "Mr. Osomatsu: The Soulful Takoyaki Party and the Legendary Sleepover",
+   "ru": null,
+   "original": "おそ松さん～魂のたこ焼きパーティーと伝説のお泊り会～",
+   "year": 2023,
+   "runtime": 59,
+   "genres": [
     "Comedy"
    ]
   },
@@ -30394,6 +32597,37 @@
    "runtime": null,
    "genres": [
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt18973304",
+   "source": "https://www.themoviedb.org/movie/994311",
+   "kind": "film",
+   "name": "Gundam Reconguista in G Movie IV: Love That Cries Out in Battle",
+   "ru": null,
+   "original": "劇場版 ガンダム Ｇのレコンギスタ Ⅳ 激闘に叫ぶ愛",
+   "year": 2022,
+   "runtime": 101,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction",
+    "War"
+   ]
+  },
+  {
+   "id": "tt18973450",
+   "source": "https://www.themoviedb.org/movie/994319",
+   "kind": "film",
+   "name": "Gundam Reconguista in G Movie V: Beyond the Peril of Death",
+   "ru": null,
+   "original": "劇場版 ガンダム Ｇのレコンギスタ V 死線を越えて",
+   "year": 2022,
+   "runtime": 95,
+   "genres": [
+    "Drama",
+    "Science Fiction",
+    "War"
    ]
   },
   {
@@ -31023,6 +33257,20 @@
    "genres": []
   },
   {
+   "id": "tt19848562",
+   "source": "https://www.themoviedb.org/tv/199966",
+   "kind": "series",
+   "name": "Pokémon: Hisuian Snow",
+   "ru": null,
+   "original": "雪ほどきし二藍",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Family"
+   ]
+  },
+  {
    "id": "tt19849494",
    "qid": "Q130597889",
    "kind": "film",
@@ -31422,6 +33670,20 @@
    ]
   },
   {
+   "id": "tt20419902",
+   "source": "https://www.themoviedb.org/tv/202482",
+   "kind": "series",
+   "name": "Gebäude-Bäude",
+   "ru": null,
+   "original": "ゲボイデ＝ボイデ",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt2048804",
    "qid": "Q106589598",
    "kind": "film",
@@ -31613,6 +33875,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt20835112",
+   "source": "https://www.themoviedb.org/tv/203340",
+   "kind": "series",
+   "name": "BanG Dream! Morfonication",
+   "ru": null,
+   "original": "BanG Dream! Morfonication",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -31815,6 +34091,23 @@
    ]
   },
   {
+   "id": "tt21104776",
+   "source": "https://www.themoviedb.org/tv/107315",
+   "kind": "series",
+   "name": "Aikatsu Planet!",
+   "ru": null,
+   "original": "アイカツプラネット！",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Family",
+    "Kids",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt21105546",
    "qid": "Q112672023",
    "kind": "film",
@@ -31985,6 +34278,19 @@
    "year": 2022,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt21237620",
+   "source": "https://www.themoviedb.org/tv/201395",
+   "kind": "series",
+   "name": "KJ File",
+   "ru": null,
+   "original": "KJファイル",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
+   ]
   },
   {
    "id": "tt21237634",
@@ -32768,6 +35074,20 @@
    "genres": []
   },
   {
+   "id": "tt21970564",
+   "source": "https://www.themoviedb.org/tv/207567",
+   "kind": "series",
+   "name": "Pokémon: The Arceus Chronicles",
+   "ru": null,
+   "original": "ポケットモンスター 神とよばれし アルセウス",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt21975436",
    "qid": "Q115777186",
    "kind": "series",
@@ -32829,6 +35149,19 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt22006444",
+   "source": "https://www.themoviedb.org/movie/1021630",
+   "kind": "film",
+   "name": "Chibiham, Juicy & Me",
+   "ru": null,
+   "original": "チビハム・ジューシー・アンド・ミー",
+   "year": 2022,
+   "runtime": 69,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -32946,6 +35279,19 @@
    ]
   },
   {
+   "id": "tt22171506",
+   "source": "https://www.themoviedb.org/tv/210511",
+   "kind": "series",
+   "name": "Nijiyon Animation",
+   "ru": null,
+   "original": "にじよん あにめーしょん",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt22192398",
    "qid": "Q116450094",
    "kind": "film",
@@ -33008,6 +35354,21 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt22264252",
+   "source": "https://www.themoviedb.org/tv/210946",
+   "kind": "series",
+   "name": "Onmyoji",
+   "ru": null,
+   "original": "陰陽師",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Mystery",
+    "Sci-Fi & Fantasy"
+   ]
   },
   {
    "id": "tt22264336",
@@ -33762,6 +36123,22 @@
    ]
   },
   {
+   "id": "tt22983862",
+   "source": "https://www.themoviedb.org/tv/213044",
+   "kind": "series",
+   "name": "LUPIN ZERO",
+   "ru": null,
+   "original": "LUPIN ZERO",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Crime",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt2298577",
    "qid": "Q2666340",
    "kind": "series",
@@ -34316,6 +36693,21 @@
    ]
   },
   {
+   "id": "tt23642616",
+   "source": "https://www.themoviedb.org/movie/1066946",
+   "kind": "film",
+   "name": "Aikatsu! 10th Story: Starway to the Future",
+   "ru": null,
+   "original": "アイカツ! 10th STORY ～未来へのSTARWAY～",
+   "year": 2023,
+   "runtime": 72,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Music"
+   ]
+  },
+  {
    "id": "tt2368717",
    "qid": "Q1055108",
    "kind": "film",
@@ -34658,6 +37050,17 @@
    ]
   },
   {
+   "id": "tt24132268",
+   "source": "https://www.themoviedb.org/movie/1030712",
+   "kind": "film",
+   "name": "Fafner: Behind the Line",
+   "ru": null,
+   "original": "蒼穹のファフナー BEHIND THE LINE",
+   "year": 2023,
+   "runtime": 53,
+   "genres": []
+  },
+  {
    "id": "tt2414994",
    "qid": "Q333687",
    "kind": "series",
@@ -34892,6 +37295,23 @@
    "genres": []
   },
   {
+   "id": "tt25009508",
+   "source": "https://www.themoviedb.org/tv/216879",
+   "kind": "series",
+   "name": "Battle Spirits: The Core Bearers",
+   "ru": null,
+   "original": "バトルスピリッツ -コアの光主たち-",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama",
+    "Family",
+    "Kids",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt25010142",
    "qid": "Q127386758",
    "kind": "film",
@@ -34903,6 +37323,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt25048890",
+   "source": "https://www.themoviedb.org/movie/1062372",
+   "kind": "film",
+   "name": "Sand Land",
+   "ru": null,
+   "original": "SAND LAND",
+   "year": 2023,
+   "runtime": 105,
+   "genres": [
+    "Comedy",
+    "Fantasy"
    ]
   },
   {
@@ -34957,6 +37391,21 @@
    "runtime": null,
    "genres": [
     "Drama"
+   ]
+  },
+  {
+   "id": "tt25407384",
+   "source": "https://www.themoviedb.org/movie/784500",
+   "kind": "film",
+   "name": "Pretty Guardian Sailor Moon Eternal the Movie Part 2",
+   "ru": null,
+   "original": "劇場版 美少女戦士セーラームーンEternal 後編",
+   "year": 2021,
+   "runtime": 80,
+   "genres": [
+    "Action",
+    "Drama",
+    "Fantasy"
    ]
   },
   {
@@ -35239,6 +37688,17 @@
     "Action",
     "Adventure"
    ]
+  },
+  {
+   "id": "tt25808792",
+   "source": "https://www.themoviedb.org/tv/210899",
+   "kind": "series",
+   "name": "UniteUp!",
+   "ru": null,
+   "original": "UniteUp!",
+   "year": 2023,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt25809288",
@@ -36322,6 +38782,46 @@
    ]
   },
   {
+   "id": "tt27246089",
+   "source": "https://www.themoviedb.org/tv/215402",
+   "kind": "series",
+   "name": "Phoenix: Eden17",
+   "ru": null,
+   "original": "火の鳥 エデンの宙",
+   "year": 2023,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt27250338",
+   "source": "https://www.themoviedb.org/tv/223119",
+   "kind": "series",
+   "name": "Yakitori: Soldiers of Misfortune",
+   "ru": null,
+   "original": "ヤキトリ",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tt27272779",
+   "source": "https://www.themoviedb.org/movie/968993",
+   "kind": "film",
+   "name": "RE:cycle of the PENGUINDRUM Part 2: I Love You",
+   "ru": null,
+   "original": "劇場版 RE:cycle of the PENGUINDRUM 後編 僕は君を愛してる",
+   "year": 2022,
+   "runtime": 142,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Mystery",
+    "Science Fiction"
+   ]
+  },
+  {
    "id": "tt27329086",
    "qid": "Q112172500",
    "kind": "series",
@@ -36440,6 +38940,19 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt27429868",
+   "source": "https://www.themoviedb.org/tv/212385",
+   "kind": "series",
+   "name": "Umayuru",
+   "ru": null,
+   "original": "うまゆる",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
   },
   {
    "id": "tt27450217",
@@ -36600,6 +39113,20 @@
    ]
   },
   {
+   "id": "tt27522506",
+   "source": "https://www.themoviedb.org/tv/223251",
+   "kind": "series",
+   "name": "Umamusume: Pretty Derby - Road to the Top",
+   "ru": null,
+   "original": "ウマ娘 プリティーダービー ROAD TO THE TOP",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt27524116",
    "qid": "Q120825031",
    "kind": "series",
@@ -36692,6 +39219,19 @@
    "genres": []
   },
   {
+   "id": "tt27617338",
+   "source": "https://www.themoviedb.org/tv/221165",
+   "kind": "series",
+   "name": "Hyakusho Kizoku-the farmer's days",
+   "ru": null,
+   "original": "百姓貴族",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt27626792",
    "qid": "Q117997583",
    "kind": "film",
@@ -36731,6 +39271,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt27724196",
+   "source": "https://www.themoviedb.org/tv/220632",
+   "kind": "series",
+   "name": "Kuromi's Pretty Journey",
+   "ru": null,
+   "original": "KUROMI'S PRETTY JOURNEY",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy"
    ]
   },
   {
@@ -36806,6 +39360,19 @@
    "year": 2013,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt27892601",
+   "source": "https://www.themoviedb.org/movie/1108298",
+   "kind": "film",
+   "name": "IDOLiSH7 Movie: LIVE 4bit - BEYOND THE PERiOD",
+   "ru": null,
+   "original": "劇場版アイドリッシュセブン LIVE 4bit BEYOND THE PERiOD",
+   "year": 2023,
+   "runtime": 93,
+   "genres": [
+    "Music"
+   ]
   },
   {
    "id": "tt27990591",
@@ -36890,6 +39457,21 @@
    ]
   },
   {
+   "id": "tt28036831",
+   "source": "https://www.themoviedb.org/movie/1030588",
+   "kind": "film",
+   "name": "Ghost Cat Anzu",
+   "ru": null,
+   "original": "化け猫あんずちゃん",
+   "year": 2024,
+   "runtime": 94,
+   "genres": [
+    "Comedy",
+    "Family",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt28038239",
    "qid": "Q115640769",
    "kind": "series",
@@ -36901,6 +39483,32 @@
    "genres": [
     "Drama",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt28055106",
+   "source": "https://www.themoviedb.org/movie/1071101",
+   "kind": "film",
+   "name": "Kaina of the Great Snow Sea: Star Sage",
+   "ru": null,
+   "original": "大雪海のカイナ ほしのけんじゃ",
+   "year": 2023,
+   "runtime": 100,
+   "genres": [
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt28061652",
+   "source": "https://www.themoviedb.org/tv/224208",
+   "kind": "series",
+   "name": "Ikimono-san",
+   "ru": null,
+   "original": "いきものさん",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -37002,6 +39610,19 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt28212662",
+   "source": "https://www.themoviedb.org/tv/221313",
+   "kind": "series",
+   "name": "Bosanimal",
+   "ru": null,
+   "original": "ぼさにまる",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Kids"
    ]
   },
   {
@@ -37109,6 +39730,20 @@
    "genres": []
   },
   {
+   "id": "tt28306749",
+   "source": "https://www.themoviedb.org/tv/136342",
+   "kind": "series",
+   "name": "Disney Twisted-Wonderland: The Animation",
+   "ru": null,
+   "original": "ディズニー ツイステッドワンダーランド ザ アニメーション",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt28313387",
    "qid": "Q120282932",
    "kind": "series",
@@ -37159,6 +39794,19 @@
    ]
   },
   {
+   "id": "tt28363275",
+   "source": "https://www.themoviedb.org/movie/1151861",
+   "kind": "film",
+   "name": "PHOENIX: Reminiscence of Flower",
+   "ru": null,
+   "original": "火の鳥 エデンの花",
+   "year": 2023,
+   "runtime": 95,
+   "genres": [
+    "Science Fiction"
+   ]
+  },
+  {
    "id": "tt28400589",
    "qid": "Q131923877",
    "kind": "series",
@@ -37170,6 +39818,19 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt28448782",
+   "source": "https://www.themoviedb.org/movie/745313",
+   "kind": "film",
+   "name": "Horizon Blue",
+   "ru": null,
+   "original": "ホライズンブルー",
+   "year": 2020,
+   "runtime": 112,
+   "genres": [
+    "Drama"
    ]
   },
   {
@@ -37458,6 +40119,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt28813376",
+   "source": "https://www.themoviedb.org/movie/1172228",
+   "kind": "film",
+   "name": "Dead Dead Demon's Dededede Destruction Part 1",
+   "ru": null,
+   "original": "デッドデッドデーモンズデデデデデストラクション 前章",
+   "year": 2024,
+   "runtime": 120,
+   "genres": [
+    "Drama",
+    "Science Fiction"
+   ]
   },
   {
    "id": "tt28821523",
@@ -37914,6 +40589,20 @@
    "genres": []
   },
   {
+   "id": "tt29338030",
+   "source": "https://www.themoviedb.org/tv/236000",
+   "kind": "series",
+   "name": "Kinnikuman Perfect Origin Arc",
+   "ru": null,
+   "original": "キン肉マン 完璧超人始祖編",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt29340934",
    "qid": "Q121323817",
    "kind": "series",
@@ -37962,6 +40651,21 @@
    "runtime": null,
    "genres": [
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt29402539",
+   "source": "https://www.themoviedb.org/tv/236385",
+   "kind": "series",
+   "name": "T・P BON",
+   "ru": null,
+   "original": "T・Pぼん",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -38069,6 +40773,20 @@
    ]
   },
   {
+   "id": "tt29473209",
+   "source": "https://www.themoviedb.org/tv/233408",
+   "kind": "series",
+   "name": "After-school Hanako-kun",
+   "ru": null,
+   "original": "放課後少年花子くん",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt29474142",
    "qid": "Q124041166",
    "kind": "series",
@@ -38093,6 +40811,20 @@
    "genres": [
     "Action",
     "Thriller"
+   ]
+  },
+  {
+   "id": "tt29476307",
+   "source": "https://www.themoviedb.org/tv/214649",
+   "kind": "series",
+   "name": "BULLBUSTER",
+   "ru": null,
+   "original": "ブルバスター",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -38344,6 +41076,21 @@
    "genres": []
   },
   {
+   "id": "tt30008198",
+   "source": "https://www.themoviedb.org/movie/1193662",
+   "kind": "film",
+   "name": "Gintama on Theater 2D: Baragaki-hen",
+   "ru": null,
+   "original": "銀魂オンシアター2D バラガキ篇",
+   "year": 2023,
+   "runtime": 88,
+   "genres": [
+    "Action",
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt30008208",
    "qid": "Q136745274",
    "kind": "film",
@@ -38369,6 +41116,20 @@
    "genres": []
   },
   {
+   "id": "tt30057177",
+   "source": "https://www.themoviedb.org/movie/1232176",
+   "kind": "film",
+   "name": "Zashikiro",
+   "ru": null,
+   "original": "極彩色肉筆絵巻 座敷牢",
+   "year": 2025,
+   "runtime": 165,
+   "genres": [
+    "Drama",
+    "Horror"
+   ]
+  },
+  {
    "id": "tt30089363",
    "qid": "Q120636943",
    "kind": "series",
@@ -38376,6 +41137,17 @@
    "ru": null,
    "original": "魔女と野獣",
    "year": 2024,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt30138102",
+   "source": "https://www.themoviedb.org/tv/216890",
+   "kind": "series",
+   "name": "Tenchi Muyo! GXP Paradise Starting",
+   "ru": null,
+   "original": "天地無用!GXP パラダイス始動編",
+   "year": 2023,
    "runtime": null,
    "genres": []
   },
@@ -38466,6 +41238,20 @@
    "genres": []
   },
   {
+   "id": "tt30317151",
+   "source": "https://www.themoviedb.org/movie/1214138",
+   "kind": "film",
+   "name": "Fureru",
+   "ru": null,
+   "original": "ふれる。",
+   "year": 2024,
+   "runtime": 107,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt30325850",
    "qid": "Q121337625",
    "kind": "series",
@@ -38533,6 +41319,17 @@
     "Adventure",
     "Comedy"
    ]
+  },
+  {
+   "id": "tt30414322",
+   "source": "https://www.themoviedb.org/tv/223705",
+   "kind": "series",
+   "name": "Star Blazers: Space Battleship Yamato 3199",
+   "ru": null,
+   "original": "ヤマトよ永遠に REBEL3199",
+   "year": 2024,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt30472557",
@@ -39171,6 +41968,19 @@
    ]
   },
   {
+   "id": "tt31108359",
+   "source": "https://www.themoviedb.org/tv/229606",
+   "kind": "series",
+   "name": "Gundam Build Metaverse",
+   "ru": null,
+   "original": "ガンダムビルドメタバース",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt3111906",
    "qid": "Q14539183",
    "kind": "series",
@@ -39494,6 +42304,19 @@
    "genres": []
   },
   {
+   "id": "tt31314348",
+   "source": "https://www.themoviedb.org/tv/296724",
+   "kind": "series",
+   "name": "Zenryoku Usagi",
+   "ru": null,
+   "original": "全力ウサギ",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt31368928",
    "qid": "Q135215829",
    "kind": "series",
@@ -39609,6 +42432,21 @@
    "year": 2017,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt31490653",
+   "source": "https://www.themoviedb.org/tv/229801",
+   "kind": "series",
+   "name": "AMAIM: Warrior at the Borderline UltraSteel Ogre-Gear",
+   "ru": null,
+   "original": "境界戦機 極鋼ノ装鬼",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy",
+    "War & Politics"
+   ]
   },
   {
    "id": "tt31514720",
@@ -40292,6 +43130,20 @@
    ]
   },
   {
+   "id": "tt32025151",
+   "source": "https://www.themoviedb.org/movie/1297646",
+   "kind": "film",
+   "name": "SINoALICE: The Very Last Story",
+   "ru": null,
+   "original": "シノアリス 一番最後のモノガタリ",
+   "year": 2024,
+   "runtime": 64,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt32034812",
    "qid": "Q124475035",
    "kind": "series",
@@ -40408,6 +43260,20 @@
    ]
   },
   {
+   "id": "tt32138702",
+   "source": "https://www.themoviedb.org/tv/134821",
+   "kind": "series",
+   "name": "Gundam Breaker: Battlogue",
+   "ru": null,
+   "original": "ガンダムブレイカー バトローグ",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt32148867",
    "qid": "Q141241871",
    "kind": "series",
@@ -40507,6 +43373,19 @@
    "genres": []
   },
   {
+   "id": "tt32178759",
+   "source": "https://www.themoviedb.org/tv/252425",
+   "kind": "series",
+   "name": "Garouden: The Way of the Lone Wolf",
+   "ru": null,
+   "original": "餓狼伝: The Way of the Lone Wolf",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure"
+   ]
+  },
+  {
    "id": "tt3218680",
    "qid": "Q14870116",
    "kind": "series",
@@ -40587,6 +43466,20 @@
    ]
   },
   {
+   "id": "tt32235713",
+   "source": "https://www.themoviedb.org/movie/1211650",
+   "kind": "film",
+   "name": "Ya Boy Kongming! Road to Summer Sonia",
+   "ru": null,
+   "original": "パリピ孔明 Road to Summer Sonia",
+   "year": 2024,
+   "runtime": 119,
+   "genres": [
+    "Comedy",
+    "Music"
+   ]
+  },
+  {
    "id": "tt32245490",
    "qid": "Q141514692",
    "kind": "series",
@@ -40623,6 +43516,17 @@
    "genres": []
   },
   {
+   "id": "tt32272445",
+   "source": "https://www.themoviedb.org/tv/251708",
+   "kind": "series",
+   "name": "Enter the Garden",
+   "ru": null,
+   "original": "Enter the Garden",
+   "year": 2024,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt32281073",
    "qid": "Q123514250",
    "kind": "series",
@@ -40644,6 +43548,20 @@
    "runtime": null,
    "genres": [
     "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt32298591",
+   "source": "https://www.themoviedb.org/movie/1309514",
+   "kind": "film",
+   "name": "Let's Go! Anpanman: Baikinman and Lulun",
+   "ru": null,
+   "original": "それいけ！アンパンマン ばいきんまんとえほんのルルン",
+   "year": 2024,
+   "runtime": 64,
+   "genres": [
+    "Family",
     "Fantasy"
    ]
   },
@@ -40851,6 +43769,20 @@
    "genres": []
   },
   {
+   "id": "tt32367651",
+   "source": "https://www.themoviedb.org/movie/1216265",
+   "kind": "film",
+   "name": "Who Said Death Is Beautiful?",
+   "ru": null,
+   "original": "死が美しいなんて誰が言った",
+   "year": 2023,
+   "runtime": 68,
+   "genres": [
+    "Drama",
+    "Horror"
+   ]
+  },
+  {
    "id": "tt32395862",
    "qid": "Q123285138",
    "kind": "series",
@@ -40860,6 +43792,21 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt32420174",
+   "source": "https://www.themoviedb.org/tv/254987",
+   "kind": "series",
+   "name": "DEAD DEAD DEMONS DEDEDEDE DESTRUCTION",
+   "ru": null,
+   "original": "デッドデッドデーモンズデデデデデストラクション",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Sci-Fi & Fantasy"
+   ]
   },
   {
    "id": "tt32463887",
@@ -40898,6 +43845,35 @@
    "genres": [
     "Action",
     "History"
+   ]
+  },
+  {
+   "id": "tt32477753",
+   "source": "https://www.themoviedb.org/movie/1266528",
+   "kind": "film",
+   "name": "Zegapain STA",
+   "ru": null,
+   "original": "ゼーガペインSTA",
+   "year": 2024,
+   "runtime": 90,
+   "genres": [
+    "Action",
+    "Romance",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "tt32485245",
+   "source": "https://www.themoviedb.org/tv/261311",
+   "kind": "series",
+   "name": "I Want to Escape from Princess Lessons",
+   "ru": null,
+   "original": "妃教育から逃げたい私",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -40959,6 +43935,21 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt32514593",
+   "source": "https://www.themoviedb.org/tv/256109",
+   "kind": "series",
+   "name": "Teogonia",
+   "ru": null,
+   "original": "神統記",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -41182,6 +44173,49 @@
    ]
   },
   {
+   "id": "tt32581027",
+   "source": "https://www.themoviedb.org/tv/247367",
+   "kind": "series",
+   "name": "Übel Blatt",
+   "ru": null,
+   "original": "Übel Blatt～ユーベルブラット～",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tt32581507",
+   "source": "https://www.themoviedb.org/tv/256323",
+   "kind": "series",
+   "name": "Leviathan",
+   "ru": null,
+   "original": "リヴァイアサン",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tt32581509",
+   "source": "https://www.themoviedb.org/tv/256324",
+   "kind": "series",
+   "name": "Tokyo Override",
+   "ru": null,
+   "original": "Tokyo Override",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt32582999",
    "qid": "Q122947399",
    "kind": "series",
@@ -41369,6 +44403,21 @@
    "runtime": null,
    "genres": [
     "Drama"
+   ]
+  },
+  {
+   "id": "tt32809227",
+   "source": "https://www.themoviedb.org/movie/1310672",
+   "kind": "film",
+   "name": "Fuuto PI: The Portrait of Kamen Rider Skull",
+   "ru": null,
+   "original": "風都探偵 仮面ライダースカルの肖像",
+   "year": 2024,
+   "runtime": 82,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy"
    ]
   },
   {
@@ -41603,6 +44652,54 @@
    ]
   },
   {
+   "id": "tt32909346",
+   "source": "https://www.themoviedb.org/movie/918427",
+   "kind": "film",
+   "name": "The Legend of the Galactic Heroes: Die Neue These Collision 1",
+   "ru": null,
+   "original": "銀河英雄伝説 Die Neue These 激突 第⼀章",
+   "year": 2022,
+   "runtime": 105,
+   "genres": [
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "tt32909350",
+   "source": "https://www.themoviedb.org/movie/918428",
+   "kind": "film",
+   "name": "The Legend of the Galactic Heroes: Die Neue These Collision 2",
+   "ru": null,
+   "original": "銀河英雄伝説 Die Neue These 激突 第二章",
+   "year": 2022,
+   "runtime": 100,
+   "genres": []
+  },
+  {
+   "id": "tt32909353",
+   "source": "https://www.themoviedb.org/movie/918429",
+   "kind": "film",
+   "name": "The Legend of the Galactic Heroes: Die Neue These Collision 3",
+   "ru": null,
+   "original": "銀河英雄伝説 Die Neue These 激突 第三章",
+   "year": 2022,
+   "runtime": 95,
+   "genres": []
+  },
+  {
+   "id": "tt32909366",
+   "source": "https://www.themoviedb.org/movie/1030422",
+   "kind": "film",
+   "name": "Legend of the Galactic Heroes: Die Neue These - Intrigue 3",
+   "ru": null,
+   "original": "銀河英雄伝説 Die Neue These 策謀 3",
+   "year": 2022,
+   "runtime": 95,
+   "genres": [
+    "Science Fiction"
+   ]
+  },
+  {
    "id": "tt32915652",
    "qid": "Q135094966",
    "kind": "film",
@@ -41614,6 +44711,32 @@
    "genres": [
     "Action",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt32918701",
+   "source": "https://www.themoviedb.org/tv/238460",
+   "kind": "series",
+   "name": "Sumikko Gurashi: Sorairo no Mainichi",
+   "ru": null,
+   "original": "アニメ すみっコぐらし そらいろのまいにち",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt32919667",
+   "source": "https://www.themoviedb.org/movie/1143875",
+   "kind": "film",
+   "name": "Love Live! Nijigasaki High School Idol Club Final Chapter Part 1",
+   "ru": null,
+   "original": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編 第1章",
+   "year": 2024,
+   "runtime": 67,
+   "genres": [
+    "Music"
    ]
   },
   {
@@ -41750,6 +44873,19 @@
    ]
   },
   {
+   "id": "tt33022388",
+   "source": "https://www.themoviedb.org/tv/254024",
+   "kind": "series",
+   "name": "Go! Go! Vehicle Zoo",
+   "ru": null,
+   "original": "ゴー！ゴ―！びーくるずー",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
+  {
    "id": "tt33028568",
    "qid": "Q126080512",
    "kind": "series",
@@ -41785,6 +44921,19 @@
    "runtime": 111,
    "genres": [
     "Crime"
+   ]
+  },
+  {
+   "id": "tt33042054",
+   "source": "https://www.themoviedb.org/tv/216389",
+   "kind": "series",
+   "name": "Space Idol",
+   "ru": null,
+   "original": "スペアイ",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -42065,6 +45214,22 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt33318428",
+   "source": "https://www.themoviedb.org/movie/1346722",
+   "kind": "film",
+   "name": "Inazuma Eleven The Movie: Legendary Kickoff",
+   "ru": null,
+   "original": "映画 イナズマイレブン総集編 伝説のキックオフ",
+   "year": 2024,
+   "runtime": 42,
+   "genres": [
+    "Action",
+    "Comedy",
+    "Family",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt3331846",
@@ -42504,6 +45669,17 @@
    ]
   },
   {
+   "id": "tt33594221",
+   "source": "https://www.themoviedb.org/tv/273394",
+   "kind": "series",
+   "name": "Togane! Chronicle",
+   "ru": null,
+   "original": "とーがね！クロニクル",
+   "year": 2024,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt33609048",
    "qid": "Q122584947",
    "kind": "series",
@@ -42543,6 +45719,17 @@
    "genres": [
     "Comedy"
    ]
+  },
+  {
+   "id": "tt33614031",
+   "source": "https://www.themoviedb.org/tv/253504",
+   "kind": "series",
+   "name": "Okaimono Panda!",
+   "ru": null,
+   "original": "お買いものパンダ!",
+   "year": 2024,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt33615466",
@@ -43311,6 +46498,21 @@
    ]
   },
   {
+   "id": "tt34623148",
+   "source": "https://www.themoviedb.org/tv/259789",
+   "kind": "series",
+   "name": "Surviving Science!",
+   "ru": null,
+   "original": "科学×冒険サバイバル！",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Kids"
+   ]
+  },
+  {
    "id": "tt3465006",
    "qid": "Q11446794",
    "kind": "series",
@@ -43350,6 +46552,20 @@
    "genres": []
   },
   {
+   "id": "tt34680890",
+   "source": "https://www.themoviedb.org/tv/255083",
+   "kind": "series",
+   "name": "ATASHIn'CHI Next",
+   "ru": null,
+   "original": "あたしンちNEXT",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
+  },
+  {
    "id": "tt34702901",
    "qid": "Q131292174",
    "kind": "series",
@@ -43361,6 +46577,35 @@
    "genres": [
     "Adventure",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt34710525",
+   "source": "https://www.themoviedb.org/tv/286691",
+   "kind": "series",
+   "name": "Cat's Eye",
+   "ru": null,
+   "original": "キャッツ♥アイ",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Mystery"
+   ]
+  },
+  {
+   "id": "tt34710683",
+   "source": "https://www.themoviedb.org/tv/215401",
+   "kind": "series",
+   "name": "Bullet Bullet",
+   "ru": null,
+   "original": "BULLET/BULLET",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -43456,6 +46701,19 @@
    "genres": [
     "Adventure",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt34810833",
+   "source": "https://www.themoviedb.org/movie/1313216",
+   "kind": "film",
+   "name": "Yohane the Parhelion: Sunshine in the Mirror Movie",
+   "ru": null,
+   "original": "幻日のヨハネ -SUNSHINE in the MIRROR- 劇場総集編",
+   "year": 2024,
+   "runtime": 99,
+   "genres": [
+    "Fantasy"
    ]
   },
   {
@@ -43582,6 +46840,21 @@
    ]
   },
   {
+   "id": "tt34861938",
+   "source": "https://www.themoviedb.org/movie/1396445",
+   "kind": "film",
+   "name": "Be Forever Yamato Rebel 3199: Part 3: Ultramarine Asteroid",
+   "ru": null,
+   "original": "ヤマトよ永遠に REBEL3199 第三章 群青のアステロイド",
+   "year": 2025,
+   "runtime": 97,
+   "genres": [
+    "Action",
+    "Drama",
+    "Science Fiction"
+   ]
+  },
+  {
    "id": "tt3486780",
    "qid": "Q130250040",
    "kind": "series",
@@ -43662,6 +46935,21 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt35009463",
+   "source": "https://www.themoviedb.org/movie/1404404",
+   "kind": "film",
+   "name": "Crayon Shinchan the Movie: Super Hot! The Spicy Kasukabe Dancers",
+   "ru": null,
+   "original": "クレヨンしんちゃん 超華麗！灼熱のカスカベダンサーズ",
+   "year": 2025,
+   "runtime": 105,
+   "genres": [
+    "Adventure",
+    "Comedy",
+    "Family"
    ]
   },
   {
@@ -43872,6 +47160,31 @@
    ]
   },
   {
+   "id": "tt35319876",
+   "source": "https://www.themoviedb.org/movie/978039",
+   "kind": "film",
+   "name": "Toku: Touken Ranbu: Hanamaru  ~Setsugetsuka~ Yuki no Maki",
+   "ru": null,
+   "original": "特『刀剣乱舞-花丸-』～雪ノ巻～",
+   "year": 2022,
+   "runtime": 73,
+   "genres": []
+  },
+  {
+   "id": "tt35323313",
+   "source": "https://www.themoviedb.org/tv/281512",
+   "kind": "series",
+   "name": "My Melody & Kuromi",
+   "ru": null,
+   "original": "My Melody & Kuromi",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Kids",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt3532752",
    "qid": "Q65040519",
    "kind": "series",
@@ -43952,6 +47265,17 @@
     "Fantasy",
     "Romance"
    ]
+  },
+  {
+   "id": "tt35348212",
+   "source": "https://www.themoviedb.org/tv/285260",
+   "kind": "series",
+   "name": "Kaijuu Sekai Seifuku",
+   "ru": null,
+   "original": "かいじゅうせかいせいふく",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt35351289",
@@ -44087,6 +47411,19 @@
    ]
   },
   {
+   "id": "tt35438167",
+   "source": "https://www.themoviedb.org/movie/1406240",
+   "kind": "film",
+   "name": "Butt Detective the Movie: Star and Moon",
+   "ru": null,
+   "original": "映画 おしりたんてい スター・アンド・ムーン",
+   "year": 2025,
+   "runtime": 77,
+   "genres": [
+    "Family"
+   ]
+  },
+  {
    "id": "tt35444710",
    "qid": "Q131358956",
    "kind": "film",
@@ -44192,6 +47529,20 @@
    "genres": []
   },
   {
+   "id": "tt35636950",
+   "source": "https://www.themoviedb.org/movie/1326106",
+   "kind": "film",
+   "name": "Kaiju No. 8: Mission Recon",
+   "ru": null,
+   "original": "怪獣８号 第1期総集編／同時上映「保科の休日」",
+   "year": 2025,
+   "runtime": 110,
+   "genres": [
+    "Action",
+    "Science Fiction"
+   ]
+  },
+  {
    "id": "tt3563898",
    "qid": "Q116103318",
    "kind": "series",
@@ -44201,6 +47552,20 @@
    "year": 2014,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt35652362",
+   "source": "https://www.themoviedb.org/movie/1106916",
+   "kind": "film",
+   "name": "Mirage Queen's Elegant Vacations",
+   "ru": null,
+   "original": "怪盗クイーンの優雅な休暇",
+   "year": 2025,
+   "runtime": 88,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt35652378",
@@ -44475,6 +47840,17 @@
     "Comedy",
     "Sport"
    ]
+  },
+  {
+   "id": "tt35995292",
+   "source": "https://www.themoviedb.org/movie/1329578",
+   "kind": "film",
+   "name": "Dream Animals the Movie",
+   "ru": null,
+   "original": "たべっ子どうぶつ THE MOVIE",
+   "year": 2025,
+   "runtime": 90,
+   "genres": []
   },
   {
    "id": "tt35995358",
@@ -45042,6 +48418,19 @@
    ]
   },
   {
+   "id": "tt36454732",
+   "source": "https://www.themoviedb.org/movie/1154800",
+   "kind": "film",
+   "name": "Love Live! Nijigasaki High School Idol Club Final Chapter Part 2",
+   "ru": null,
+   "original": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 完結編 第2章",
+   "year": 2025,
+   "runtime": 75,
+   "genres": [
+    "Music"
+   ]
+  },
+  {
    "id": "tt36461929",
    "qid": "Q133834880",
    "kind": "film",
@@ -45102,6 +48491,20 @@
    "genres": []
   },
   {
+   "id": "tt36492669",
+   "source": "https://www.themoviedb.org/tv/286275",
+   "kind": "series",
+   "name": "Samishii Anata",
+   "ru": null,
+   "original": "さみしいあなた",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt3650462",
    "qid": "Q141514805",
    "kind": "series",
@@ -45139,6 +48542,21 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt36518254",
+   "source": "https://www.themoviedb.org/movie/1567571",
+   "kind": "film",
+   "name": "Be Forever Yamato Rebel 3199: Part 4: Light Blue Maiden (Sasha)",
+   "ru": null,
+   "original": "ヤマトよ永遠に REBEL3199 第四章 水色の乙女",
+   "year": 2025,
+   "runtime": 105,
+   "genres": [
+    "Action",
+    "Drama",
+    "Science Fiction"
+   ]
   },
   {
    "id": "tt36534630",
@@ -45679,6 +49097,17 @@
    ]
   },
   {
+   "id": "tt37105192",
+   "source": "https://www.themoviedb.org/tv/289422",
+   "kind": "series",
+   "name": "Yu-Gi-Oh! CARD GAME THE CHRONICLES",
+   "ru": null,
+   "original": "Yu-Gi-Oh! CARD GAME THE CHRONICLES",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt37113118",
    "qid": "Q130272456",
    "kind": "series",
@@ -45905,6 +49334,34 @@
    ]
   },
   {
+   "id": "tt37437763",
+   "source": "https://www.themoviedb.org/tv/294766",
+   "kind": "series",
+   "name": "Milky☆Subway: The Galactic Limited Express",
+   "ru": null,
+   "original": "銀河特急 ミルキー☆サブウェイ",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tt37483753",
+   "source": "https://www.themoviedb.org/tv/310069",
+   "kind": "series",
+   "name": "Umayuru: Pretty Gray",
+   "ru": null,
+   "original": "うまゆる ぷりてぃ～ぐれい",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt37499375",
    "qid": "Q133443442",
    "kind": "series",
@@ -45917,6 +49374,17 @@
     "Action",
     "Adventure"
    ]
+  },
+  {
+   "id": "tt37509404",
+   "source": "https://www.themoviedb.org/tv/289728",
+   "kind": "series",
+   "name": "Gekkan! Nanmono Anime",
+   "ru": null,
+   "original": "げっかん！なんものアニメ",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt37518144",
@@ -46345,6 +49813,22 @@
    ]
   },
   {
+   "id": "tt37815628",
+   "source": "https://www.themoviedb.org/tv/97941",
+   "kind": "series",
+   "name": "Tomica Bond Combination Earth Granner",
+   "ru": null,
+   "original": "トミカ絆合体 アースグランナー",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama",
+    "Kids",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt37836273",
    "qid": "Q134967094",
    "kind": "series",
@@ -46558,6 +50042,19 @@
     "Action",
     "Drama",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt38128496",
+   "source": "https://www.themoviedb.org/tv/301747",
+   "kind": "series",
+   "name": "GANSO! BanG Dream Chan",
+   "ru": null,
+   "original": "元祖！バンドリちゃん",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -47276,6 +50773,35 @@
    ]
   },
   {
+   "id": "tt38799508",
+   "source": "https://www.themoviedb.org/tv/242747",
+   "kind": "series",
+   "name": "Kumarba",
+   "ru": null,
+   "original": "クマーバ",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Comedy",
+    "Kids"
+   ]
+  },
+  {
+   "id": "tt38828026",
+   "source": "https://www.themoviedb.org/movie/1520936",
+   "kind": "film",
+   "name": "Mobile Suit Gundam: Iron-Blooded Orphans - Urdr-Hunt: Path of the Little Challenger",
+   "ru": null,
+   "original": "機動戦士ガンダム 鉄血のオルフェンズ ウルズハント -小さな挑戦者の軌跡-",
+   "year": 2025,
+   "runtime": 83,
+   "genres": [
+    "Action",
+    "Science Fiction"
+   ]
+  },
+  {
    "id": "tt38840807",
    "qid": "Q136541860",
    "kind": "series",
@@ -47287,6 +50813,19 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt38849607",
+   "source": "https://www.themoviedb.org/tv/300586",
+   "kind": "series",
+   "name": "Project Sekai: Journey to Bloom",
+   "ru": null,
+   "original": "Journey to Bloom",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -48100,6 +51639,17 @@
    ]
   },
   {
+   "id": "tt39281420",
+   "source": "https://www.themoviedb.org/tv/296933",
+   "kind": "series",
+   "name": "Koala's Diary",
+   "ru": null,
+   "original": "コアラ絵日記",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt39281887",
    "qid": "Q133868998",
    "kind": "series",
@@ -48160,6 +51710,33 @@
    "genres": [
     "Drama"
    ]
+  },
+  {
+   "id": "tt39318020",
+   "source": "https://www.themoviedb.org/movie/968868",
+   "kind": "film",
+   "name": "Pretty Guardian Sailor Moon Cosmos the Movie Part 1",
+   "ru": null,
+   "original": "劇場版 美少女戦士セーラームーンCosmos 前編",
+   "year": 2023,
+   "runtime": 80,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy",
+    "Romance"
+   ]
+  },
+  {
+   "id": "tt39320668",
+   "source": "https://www.themoviedb.org/movie/1610861",
+   "kind": "film",
+   "name": "Swan Lake starring Kizuna AI",
+   "ru": null,
+   "original": "SWAN LAKE〜starring KizunaAI",
+   "year": 2025,
+   "runtime": 77,
+   "genres": []
   },
   {
    "id": "tt39335288",
@@ -48243,6 +51820,21 @@
    "genres": [
     "Action",
     "Science Fiction"
+   ]
+  },
+  {
+   "id": "tt39388288",
+   "source": "https://www.themoviedb.org/movie/1431089",
+   "kind": "film",
+   "name": "GIRLS BAND CRY The Movie: Hey, Our Future",
+   "ru": null,
+   "original": "劇場版総集編 ガールズバンドクライ 【後編】 なぁ、未来。",
+   "year": 2025,
+   "runtime": 110,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Music"
    ]
   },
   {
@@ -60353,6 +63945,479 @@
     "Adventure",
     "Comedy"
    ]
+  },
+  {
+   "id": "wikidata:Q105721347",
+   "qid": "Q105721347",
+   "kind": "film",
+   "name": "Hakuoki: Wild Dance of Kyoto",
+   "ru": null,
+   "original": "劇場版「薄桜鬼」 〜京都乱舞〜",
+   "year": 2013,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q10921857",
+   "qid": "Q10921857",
+   "kind": "film",
+   "name": "Wow, The Kid Gang of Bandits",
+   "ru": null,
+   "original": "ドラミちゃん アララ・少年山賊団!",
+   "year": 1991,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q11278697",
+   "qid": "Q11278697",
+   "kind": "series",
+   "name": "Manga Nihon Emaki",
+   "ru": null,
+   "original": "まんが日本絵巻",
+   "year": 1977,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q11308358",
+   "qid": "Q11308358",
+   "kind": "series",
+   "name": "Silkroad Kids Yuto",
+   "ru": null,
+   "original": "シルクロード少年 ユート",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q113625015",
+   "qid": "Q113625015",
+   "kind": "series",
+   "name": "Saiyuki Reload: Zeroin",
+   "ru": null,
+   "original": "最遊記RELOAD -ZEROIN-",
+   "year": 2022,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q11392425",
+   "qid": "Q11392425",
+   "kind": "series",
+   "name": "Roppo Yabure-kun",
+   "ru": null,
+   "original": "六法やぶれクン",
+   "year": 1969,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q11417031",
+   "qid": "Q11417031",
+   "kind": "series",
+   "name": "Mirakuru! Mimika",
+   "ru": null,
+   "original": "味楽る!ミミカ",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q11442611",
+   "qid": "Q11442611",
+   "kind": "series",
+   "name": "Genius? Dr. Hamax",
+   "ru": null,
+   "original": "天才? Dr.ハマックス",
+   "year": 2007,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q117756927",
+   "qid": "Q117756927",
+   "kind": "series",
+   "name": "Cap Revolution Bottleman DX",
+   "ru": null,
+   "original": "キャップ革命 ボトルマンDX",
+   "year": 2022,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q124809133",
+   "qid": "Q124809133",
+   "kind": "series",
+   "name": "Gakkō no Kowai Uwasa Shin: Hanako-san ga Kita!!",
+   "ru": null,
+   "original": "学校のコワイうわさ 新・花子さんがきた!!",
+   "year": 2010,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q125208648",
+   "qid": "Q125208648",
+   "kind": "series",
+   "name": "Glass no Kamen desu ga Z",
+   "ru": null,
+   "original": "ガラスの仮面ですがZ",
+   "year": 2013,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q127682011",
+   "qid": "Q127682011",
+   "kind": "film",
+   "name": "Jigoku Sensei Nūbē: Gozen 0 toki Nūbē Shisu!",
+   "ru": null,
+   "original": "地獄先生ぬ〜べ〜 午前0時ぬ〜べ〜死す!",
+   "year": 1997,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q128293254",
+   "qid": "Q128293254",
+   "kind": "series",
+   "name": "Tsuribaka Nisshi",
+   "ru": null,
+   "original": "釣りバカ日誌",
+   "year": 2002,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q128457035",
+   "qid": "Q128457035",
+   "kind": "series",
+   "name": "Sugarbunnies: Chocolat!",
+   "ru": null,
+   "original": "シュガーバニーズ ショコラ！",
+   "year": 2008,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q128457036",
+   "qid": "Q128457036",
+   "kind": "series",
+   "name": "Sugarbunnies: Fleur",
+   "ru": null,
+   "original": "シュガーバニーズ フルール",
+   "year": 2009,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q131783953",
+   "qid": "Q131783953",
+   "kind": "film",
+   "name": "Hana Kappa Adventure in the Butterfly Kingdom",
+   "ru": null,
+   "original": "映画はなかっぱ 花さけ!パッカ～ん♪ 蝶の国の大冒険",
+   "year": 2013,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q133449013",
+   "qid": "Q133449013",
+   "kind": "film",
+   "name": "Cute High Earth Defense Club Eternal Love!",
+   "ru": null,
+   "original": "美男高校地球防衛部ETERNAL LOVE!",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q134350392",
+   "qid": "Q134350392",
+   "kind": "series",
+   "name": "Tamagotchi! Tama Tomo Daishū GO",
+   "ru": null,
+   "original": "たまごっち! たまともだいしゅーGO",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q134739740",
+   "qid": "Q134739740",
+   "kind": "film",
+   "name": "Love Live! Hasu no Sora Jogakuin School Idol Club Bloom Garden Party",
+   "ru": null,
+   "original": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ Bloom Garden Party",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q135070913",
+   "qid": "Q135070913",
+   "kind": "film",
+   "name": "Toi-san wa Seishun Shitai! \"Baka to SmaPho to Romance to\"",
+   "ru": null,
+   "original": "遠井さんは青春したい！『バカとスマホとロマンスと』",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q135221999",
+   "qid": "Q135221999",
+   "kind": "series",
+   "name": "Ganbare Gonbe",
+   "ru": null,
+   "original": "がんばれゴンベ",
+   "year": 1980,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q135277930",
+   "qid": "Q135277930",
+   "kind": "series",
+   "name": "Itsumo Kokoro ni Taiyō o!",
+   "ru": null,
+   "original": "いつも心に太陽を!",
+   "year": 1999,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q136378335",
+   "qid": "Q136378335",
+   "kind": "series",
+   "name": "Shimajirō Hesoka",
+   "ru": null,
+   "original": "しまじろう ヘソカ",
+   "year": 2010,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q137002702",
+   "qid": "Q137002702",
+   "kind": "series",
+   "name": "Always! Super Radical Gag Family",
+   "ru": null,
+   "original": "毎度！浦安鉄筋家族",
+   "year": 2014,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q139553373",
+   "qid": "Q139553373",
+   "kind": "series",
+   "name": "Yanbo, Ninbo and Tonbo",
+   "ru": null,
+   "original": "ヤンボウ ニンボウ トンボウ",
+   "year": 1995,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q141493027",
+   "qid": "Q141493027",
+   "kind": "film",
+   "name": "Bonobono",
+   "ru": null,
+   "original": "ぼのぼの",
+   "year": 1993,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q141493747",
+   "qid": "Q141493747",
+   "kind": "film",
+   "name": "Bonobono: Kumomo no Ki no Koto",
+   "ru": null,
+   "original": "ぼのぼの クモモの木のこと",
+   "year": 2002,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q141537911",
+   "qid": "Q141537911",
+   "kind": "series",
+   "name": "Tantei Shōnen Kageman",
+   "ru": null,
+   "original": "探偵少年カゲマン",
+   "year": 2001,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q141822104",
+   "qid": "Q141822104",
+   "kind": "series",
+   "name": "Hanasaka Tenshi Tenten-kun",
+   "ru": null,
+   "original": "花さか天使テンテンくん",
+   "year": 1998,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q142175182",
+   "qid": "Q142175182",
+   "kind": "series",
+   "name": "Ijiwaru Baasan",
+   "ru": null,
+   "original": "いじわるばあさん",
+   "year": 1996,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q15898752",
+   "qid": "Q15898752",
+   "kind": "series",
+   "name": "Pretty Rhythm: All Star Selection",
+   "ru": null,
+   "original": "プリティーリズム・オールスターセレクション",
+   "year": 2014,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q17219047",
+   "qid": "Q17219047",
+   "kind": "series",
+   "name": "Patta Potta Monta",
+   "ru": null,
+   "original": "パッタ ポッタ モン太",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q17225780",
+   "qid": "Q17225780",
+   "kind": "series",
+   "name": "Onegai My Melody Kirara",
+   "ru": null,
+   "original": "おねがい♪マイメロディ きららっ★",
+   "year": 2008,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q18914828",
+   "qid": "Q18914828",
+   "kind": "film",
+   "name": "Tensai Bakavon: Yomigaeru Flanders no Inu",
+   "ru": "Tensai Bakavon: Yomigaeru Flanders no Inu",
+   "original": "天才バカヴォン〜蘇るフランダースの犬〜",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q199175",
+   "qid": "Q199175",
+   "kind": "series",
+   "name": "Dagon in the Land of Weeds",
+   "ru": "Ikinari Dagon",
+   "original": "いきなりダゴン",
+   "year": 1988,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q24874409",
+   "qid": "Q24874409",
+   "kind": "series",
+   "name": "Curry no Kuni no Coburoux",
+   "ru": null,
+   "original": "カレーの国のコバ〜ル",
+   "year": 2004,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q28714363",
+   "qid": "Q28714363",
+   "kind": "series",
+   "name": "Jewelpet Twinkle",
+   "ru": null,
+   "original": "ジュエルペット てぃんくる☆",
+   "year": 2010,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q3286351",
+   "qid": "Q3286351",
+   "kind": "series",
+   "name": "RoboDz Kazagumo Hen",
+   "ru": null,
+   "original": "ロボディーズ -RoboDz- 風雲篇",
+   "year": 2008,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q368683",
+   "qid": "Q368683",
+   "kind": "film",
+   "name": "11 Piki no Neko to Ahōdori",
+   "ru": null,
+   "original": "11ぴきのねことあほうどり",
+   "year": 1986,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q50317552",
+   "qid": "Q50317552",
+   "kind": "series",
+   "name": "Cute High Earth Defense Club HAPPY KISS!",
+   "ru": null,
+   "original": "美男高校地球防衛部HAPPY KISS!",
+   "year": 2018,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q61641406",
+   "qid": "Q61641406",
+   "kind": "series",
+   "name": "Mini Hama: Minimum Hamatora",
+   "ru": null,
+   "original": "ミニはま -MINIMUM HAMATORA-",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q89895965",
+   "qid": "Q89895965",
+   "kind": "series",
+   "name": "Ai-Mai-Mi: Surgical Friends",
+   "ru": null,
+   "original": "ちょぼらうにょぽみ劇場第三幕『あいまいみー～Surgical Friends～』",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "wikidata:Q99655845",
+   "qid": "Q99655845",
+   "kind": "film",
+   "name": "Maze Bakunetsu Jikū: Tenpen Kyōi no Giant",
+   "ru": null,
+   "original": "MAZE☆爆熱時空 天変脅威の大巨人",
+   "year": 1998,
+   "runtime": null,
+   "genres": []
   }
  ]
 }
