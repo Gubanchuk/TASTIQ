@@ -1,8 +1,61 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 4820,
+ "queried": 4868,
  "items": [
+  {
+   "id": "tmdb:movie:1727340",
+   "source": "https://www.themoviedb.org/movie/1727340",
+   "kind": "film",
+   "name": "Alices",
+   "ru": null,
+   "original": "もう一人のアリス",
+   "year": 2026,
+   "runtime": 120,
+   "genres": [
+    "Drama",
+    "Fantasy",
+    "History"
+   ]
+  },
+  {
+   "id": "tmdb:movie:1729116",
+   "source": "https://www.themoviedb.org/movie/1729116",
+   "kind": "film",
+   "name": "Go! Anpanman: Pantan and the star of promises",
+   "ru": null,
+   "original": "それいけ！アンパンマン　パンタンと約束の星",
+   "year": 2026,
+   "runtime": 62,
+   "genres": [
+    "Adventure",
+    "Family"
+   ]
+  },
+  {
+   "id": "tmdb:tv:304126",
+   "source": "https://www.themoviedb.org/tv/304126",
+   "kind": "series",
+   "name": "You Don't Know Gunma Yet: Reiwa Version",
+   "ru": null,
+   "original": "お前はまだグンマを知らない～令和版～",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:308828",
+   "source": "https://www.themoviedb.org/tv/308828",
+   "kind": "series",
+   "name": "CHOPPER's",
+   "ru": null,
+   "original": "CHOPPER's",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
+  },
   {
    "id": "tmdb:tv:309202",
    "source": "https://www.themoviedb.org/tv/309202",
@@ -17,12 +70,157 @@
    ]
   },
   {
+   "id": "tmdb:tv:309774",
+   "source": "https://www.themoviedb.org/tv/309774",
+   "kind": "series",
+   "name": "GelPiyo",
+   "ru": null,
+   "original": "ゲルぴよ",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tmdb:tv:315682",
    "source": "https://www.themoviedb.org/tv/315682",
    "kind": "series",
    "name": "Pop Pap Polters",
    "original": "ポップパップポルターズ",
    "ru": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:318460",
+   "source": "https://www.themoviedb.org/tv/318460",
+   "kind": "series",
+   "name": "Pino & Shinoby",
+   "ru": null,
+   "original": "ピノ＆シノビー",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:318963",
+   "source": "https://www.themoviedb.org/tv/318963",
+   "kind": "series",
+   "name": "Loveez",
+   "ru": null,
+   "original": "らぶいーず",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:319455",
+   "source": "https://www.themoviedb.org/tv/319455",
+   "kind": "series",
+   "name": "Shou 3 Ashibe QQ Goma-chan",
+   "ru": null,
+   "original": "小３アシベ QQゴマちゃん",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:327228",
+   "source": "https://www.themoviedb.org/tv/327228",
+   "kind": "series",
+   "name": "Babies of Bread",
+   "ru": null,
+   "original": "パンの赤ちゃん",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:328237",
+   "source": "https://www.themoviedb.org/tv/328237",
+   "kind": "series",
+   "name": "Plannosaurus: Serious Paleontology Club",
+   "ru": null,
+   "original": "プラノサウルス ガチコセイブツ部",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:329057",
+   "source": "https://www.themoviedb.org/tv/329057",
+   "kind": "series",
+   "name": "角醒ハンター オメガホーン",
+   "ru": null,
+   "original": "角醒ハンター オメガホーン",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
+   "id": "tmdb:tv:334103",
+   "source": "https://www.themoviedb.org/tv/334103",
+   "kind": "series",
+   "name": "Ghost Meets Gal!",
+   "ru": null,
+   "original": "ごーすと・みーつ・ぎゃる！",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:336630",
+   "source": "https://www.themoviedb.org/tv/336630",
+   "kind": "series",
+   "name": "Delivery Kitten Unyan",
+   "ru": null,
+   "original": "子猫の配達員うーにゃん",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Kids",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:337069",
+   "source": "https://www.themoviedb.org/tv/337069",
+   "kind": "series",
+   "name": "Chocotto Yabacity",
+   "ru": null,
+   "original": "ちょこっとヤバシティ",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:337260",
+   "source": "https://www.themoviedb.org/tv/337260",
+   "kind": "series",
+   "name": "Funbarus",
+   "ru": null,
+   "original": "ふんばるず",
    "year": 2026,
    "runtime": null,
    "genres": [
@@ -40,6 +238,34 @@
    "runtime": null,
    "genres": [
     "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:337456",
+   "source": "https://www.themoviedb.org/tv/337456",
+   "kind": "series",
+   "name": "Yuusanchi! from Yuuhachi",
+   "ru": null,
+   "original": "ゆうさんち！from 遊ハち",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family",
+    "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:339181",
+   "source": "https://www.themoviedb.org/tv/339181",
+   "kind": "series",
+   "name": "Mazenchu",
+   "ru": null,
+   "original": "マゼンチュ",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -25358,6 +25584,21 @@
    ]
   },
   {
+   "id": "tt14523706",
+   "source": "https://www.themoviedb.org/movie/822653",
+   "kind": "film",
+   "name": "Puella Magi Madoka Magica the Movie -Walpurgisnacht: Rising-",
+   "ru": null,
+   "original": "劇場版 魔法少女まどか☆マギカ〈ワルプルギスの廻天〉",
+   "year": 2026,
+   "runtime": 120,
+   "genres": [
+    "Drama",
+    "Fantasy",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt1452420",
    "qid": "Q1393821",
    "kind": "series",
@@ -39839,6 +40080,20 @@
    ]
   },
   {
+   "id": "tt31970593",
+   "source": "https://www.themoviedb.org/movie/920167",
+   "kind": "film",
+   "name": "Witch on the Holy Night",
+   "ru": null,
+   "original": "魔法使いの夜",
+   "year": 2026,
+   "runtime": 130,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt31975268",
    "qid": "Q122933438",
    "kind": "series",
@@ -40261,6 +40516,19 @@
    "year": 2013,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt32192760",
+   "source": "https://www.themoviedb.org/movie/1279865",
+   "kind": "film",
+   "name": "A New Dawn",
+   "ru": null,
+   "original": "花緑青が明ける日に",
+   "year": 2026,
+   "runtime": 75,
+   "genres": [
+    "Drama"
+   ]
   },
   {
    "id": "tt32201743",
@@ -45916,6 +46184,20 @@
    ]
   },
   {
+   "id": "tt37627165",
+   "source": "https://www.themoviedb.org/tv/317256",
+   "kind": "series",
+   "name": "Cyborg 009 Nemesis",
+   "ru": null,
+   "original": "サイボーグ009 ネメシス",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt37674481",
    "qid": "Q135438272",
    "kind": "series",
@@ -46151,6 +46433,21 @@
    "runtime": 73,
    "genres": [
     "Action",
+    "Fantasy"
+   ]
+  },
+  {
+   "id": "tt37968925",
+   "source": "https://www.themoviedb.org/movie/1725074",
+   "kind": "film",
+   "name": "Sekiro: No Defeat",
+   "ru": null,
+   "original": "SEKIRO: NO DEFEAT",
+   "year": 2026,
+   "runtime": 107,
+   "genres": [
+    "Action",
+    "Adventure",
     "Fantasy"
    ]
   },
@@ -46775,6 +47072,21 @@
    "genres": []
   },
   {
+   "id": "tt38649153",
+   "source": "https://www.themoviedb.org/movie/1542877",
+   "kind": "film",
+   "name": "Assassination Classroom the Movie: Our Time",
+   "ru": null,
+   "original": "劇場版「暗殺教室」みんなの時間",
+   "year": 2026,
+   "runtime": 87,
+   "genres": [
+    "Action",
+    "Comedy",
+    "Science Fiction"
+   ]
+  },
+  {
    "id": "tt38650409",
    "qid": "Q133126730",
    "kind": "film",
@@ -46786,6 +47098,19 @@
    "genres": [
     "Adventure",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt38650422",
+   "source": "https://www.themoviedb.org/movie/1363979",
+   "kind": "film",
+   "name": "The Dangers in My Heart: The Movie",
+   "ru": null,
+   "original": "劇場版 僕の心のヤバイやつ",
+   "year": 2026,
+   "runtime": 101,
+   "genres": [
+    "Romance"
    ]
   },
   {
@@ -46976,6 +47301,21 @@
    "genres": [
     "Family",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt38864557",
+   "source": "https://www.themoviedb.org/movie/1526917",
+   "kind": "film",
+   "name": "Made in Abyss: Mezameru Shinpi",
+   "ru": null,
+   "original": "メイドインアビス 目覚める神秘",
+   "year": 2026,
+   "runtime": 71,
+   "genres": [
+    "Adventure",
+    "Fantasy",
+    "Science Fiction"
    ]
   },
   {
@@ -47541,6 +47881,33 @@
    ]
   },
   {
+   "id": "tt39123173",
+   "source": "https://www.themoviedb.org/movie/1675042",
+   "kind": "film",
+   "name": "Love Live! Hasunosora Girls' High School Idol Club Bloom Garden Party",
+   "ru": null,
+   "original": "映画 ラブライブ！蓮ノ空女学院スクールアイドルクラブ Bloom Garden Party",
+   "year": 2026,
+   "runtime": 75,
+   "genres": [
+    "Music"
+   ]
+  },
+  {
+   "id": "tt39123182",
+   "source": "https://www.themoviedb.org/movie/1449433",
+   "kind": "film",
+   "name": "Sound! Euphonium: The Final Movie, Part 1",
+   "ru": null,
+   "original": "最終楽章 響け！ユーフォニアム 前編",
+   "year": 2026,
+   "runtime": 120,
+   "genres": [
+    "Drama",
+    "Music"
+   ]
+  },
+  {
    "id": "tt3912856",
    "qid": "Q15911009",
    "kind": "film",
@@ -47607,6 +47974,19 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt39195693",
+   "source": "https://www.themoviedb.org/movie/1592548",
+   "kind": "film",
+   "name": "Girls und Panzer das Finale: Part 5",
+   "ru": null,
+   "original": "ガールズ＆パンツァー 最終章 第5話",
+   "year": 2026,
+   "runtime": 55,
+   "genres": [
+    "Action"
    ]
   },
   {
@@ -47769,6 +48149,19 @@
    ]
   },
   {
+   "id": "tt39314736",
+   "source": "https://www.themoviedb.org/tv/309599",
+   "kind": "series",
+   "name": "The Idolm@ster Gakuen: Story of Re;IRIS",
+   "ru": null,
+   "original": "学園アイドルマスター Story of Re;IRIS",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
    "id": "tt39335288",
    "qid": "Q137770433",
    "kind": "film",
@@ -47780,6 +48173,21 @@
    "genres": [
     "Drama",
     "Music"
+   ]
+  },
+  {
+   "id": "tt39369076",
+   "source": "https://www.themoviedb.org/movie/1694711",
+   "kind": "film",
+   "name": "Armored Trooper VOTOMS: Die Graue Hexe - Part 1",
+   "ru": null,
+   "original": "装甲騎兵ボトムズ 灰色の魔女 第1作",
+   "year": 2026,
+   "runtime": 100,
+   "genres": [
+    "Action",
+    "Science Fiction",
+    "War"
    ]
   },
   {
@@ -47807,6 +48215,34 @@
    "runtime": null,
    "genres": [
     "Romance"
+   ]
+  },
+  {
+   "id": "tt39382754",
+   "source": "https://www.themoviedb.org/movie/1631504",
+   "kind": "film",
+   "name": "Patlabor EZY File 1",
+   "ru": null,
+   "original": "機動警察パトレイバー EZY File 1",
+   "year": 2026,
+   "runtime": 71,
+   "genres": [
+    "Action",
+    "Science Fiction"
+   ]
+  },
+  {
+   "id": "tt39382758",
+   "source": "https://www.themoviedb.org/movie/1633790",
+   "kind": "film",
+   "name": "Patlabor EZY File 2",
+   "ru": null,
+   "original": "機動警察パトレイバー EZY　File 2",
+   "year": 2026,
+   "runtime": 70,
+   "genres": [
+    "Action",
+    "Science Fiction"
    ]
   },
   {
@@ -48239,6 +48675,21 @@
    ]
   },
   {
+   "id": "tt39927807",
+   "source": "https://www.themoviedb.org/movie/1553200",
+   "kind": "film",
+   "name": "Rascal Does Not Dream of a Dear Friend",
+   "ru": null,
+   "original": "青春ブタ野郎はディアフレンドの夢を見ない",
+   "year": 2026,
+   "runtime": 118,
+   "genres": [
+    "Drama",
+    "Mystery",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt3995516",
    "qid": "Q3977608",
    "kind": "series",
@@ -48295,6 +48746,19 @@
    ]
   },
   {
+   "id": "tt40104578",
+   "source": "https://www.themoviedb.org/tv/312383",
+   "kind": "series",
+   "name": "Candy Caries",
+   "ru": null,
+   "original": "キャンディーカリエス",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt4012832",
    "qid": "Q3538638",
    "kind": "series",
@@ -48342,6 +48806,21 @@
    "runtime": null,
    "genres": [
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt40356933",
+   "source": "https://www.themoviedb.org/tv/316973",
+   "kind": "series",
+   "name": "Dandelion",
+   "ru": null,
+   "original": "だんでらいおん",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Sci-Fi & Fantasy"
    ]
   },
   {
@@ -48566,6 +49045,28 @@
    ]
   },
   {
+   "id": "tt40588862",
+   "source": "https://www.themoviedb.org/movie/1646064",
+   "kind": "film",
+   "name": "Girls und Panzer: Motto Love Love Sakusen Desu! Act 3",
+   "ru": null,
+   "original": "ガールズ＆パンツァー　もっとらぶらぶ作戦です！　第3幕",
+   "year": 2026,
+   "runtime": 72,
+   "genres": []
+  },
+  {
+   "id": "tt40590770",
+   "source": "https://www.themoviedb.org/movie/1649868",
+   "kind": "film",
+   "name": "Girls und Panzer: Motto Love Love Sakusen Desu! Act 4",
+   "ru": null,
+   "original": "ガールズ＆パンツァー　もっとらぶらぶ作戦です！　第4幕",
+   "year": 2026,
+   "runtime": 72,
+   "genres": []
+  },
+  {
    "id": "tt4060956",
    "qid": "Q11580515",
    "kind": "series",
@@ -48646,6 +49147,20 @@
    ]
   },
   {
+   "id": "tt41054228",
+   "source": "https://www.themoviedb.org/tv/328010",
+   "kind": "series",
+   "name": "Devils' Crest",
+   "ru": null,
+   "original": "デモンズ・クレスト",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Sci-Fi & Fantasy"
+   ]
+  },
+  {
    "id": "tt41054252",
    "qid": "Q135414627",
    "kind": "series",
@@ -48657,6 +49172,17 @@
    "genres": [
     "Fantasy"
    ]
+  },
+  {
+   "id": "tt41095208",
+   "source": "https://www.themoviedb.org/tv/325158",
+   "kind": "series",
+   "name": "The Forsaken Saintess and Her Foodie Road Trip in Another World",
+   "ru": null,
+   "original": "捨てられ聖女の異世界ごはん旅 隠れスキルでキャンピングカーを召喚しました",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt4109918",
@@ -48687,6 +49213,19 @@
    ]
   },
   {
+   "id": "tt41189965",
+   "source": "https://www.themoviedb.org/movie/1659338",
+   "kind": "film",
+   "name": "SHIBOYUGI: Playing Death Games to Put Food on the Table - 44: CLOUDY BEACH",
+   "ru": null,
+   "original": "死亡遊戯で飯を食う。 44:CLOUDY BEACH",
+   "year": 2026,
+   "runtime": 90,
+   "genres": [
+    "Action"
+   ]
+  },
+  {
    "id": "tt4125300",
    "qid": "Q18389392",
    "kind": "film",
@@ -48711,6 +49250,19 @@
    "genres": [
     "Comedy",
     "History"
+   ]
+  },
+  {
+   "id": "tt41274718",
+   "source": "https://www.themoviedb.org/tv/317727",
+   "kind": "series",
+   "name": "Komekami! Girls",
+   "ru": null,
+   "original": "こめかみっ！Girls",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -48898,6 +49450,22 @@
    ]
   },
   {
+   "id": "tt41293342",
+   "source": "https://www.themoviedb.org/movie/1598766",
+   "kind": "film",
+   "name": "Crayon Shinchan the Movie: Spooky! My Yokai Vacation",
+   "ru": null,
+   "original": "クレヨンしんちゃん 奇々怪々！オラの妖怪バケ～ション",
+   "year": 2026,
+   "runtime": 101,
+   "genres": [
+    "Adventure",
+    "Comedy",
+    "Family",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt41295083",
    "qid": "Q132449749",
    "kind": "series",
@@ -48985,6 +49553,19 @@
    "runtime": null,
    "genres": [
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt41448834",
+   "source": "https://www.themoviedb.org/tv/299144",
+   "kind": "series",
+   "name": "Rilakkuma",
+   "ru": null,
+   "original": "リラックマ",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Kids"
    ]
   },
   {
@@ -49399,6 +49980,20 @@
    "genres": []
   },
   {
+   "id": "tt42939636",
+   "source": "https://www.themoviedb.org/movie/1494419",
+   "kind": "film",
+   "name": "Sound! Euphonium: The Final Movie, Part 2",
+   "ru": null,
+   "original": "最終楽章 響け！ユーフォニアム 後編",
+   "year": 2026,
+   "runtime": 127,
+   "genres": [
+    "Drama",
+    "Music"
+   ]
+  },
+  {
    "id": "tt4295746",
    "qid": "Q135207764",
    "kind": "series",
@@ -49464,6 +50059,19 @@
    ]
   },
   {
+   "id": "tt43306485",
+   "source": "https://www.themoviedb.org/tv/326697",
+   "kind": "series",
+   "name": "Chikyuu Daisuki! Kikkun",
+   "ru": null,
+   "original": "地球大好き！きっくん",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt4331400",
    "qid": "Q17152104",
    "kind": "film",
@@ -49525,6 +50133,22 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt43625959",
+   "source": "https://www.themoviedb.org/movie/1654313",
+   "kind": "film",
+   "name": "Unanswered//butterfly",
+   "ru": null,
+   "original": "Unanswered//butterfly",
+   "year": 2026,
+   "runtime": 118,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy",
+    "Science Fiction"
+   ]
   },
   {
    "id": "tt43650242",
@@ -49773,6 +50397,20 @@
    "genres": [
     "Adventure",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt43691434",
+   "source": "https://www.themoviedb.org/movie/1632015",
+   "kind": "film",
+   "name": "To You in the Beyond",
+   "ru": null,
+   "original": "どこよりも遠い場所にいる君へ",
+   "year": 2026,
+   "runtime": 116,
+   "genres": [
+    "Drama",
+    "Romance"
    ]
   },
   {
@@ -50430,6 +51068,21 @@
    "genres": [
     "Action",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt48295411",
+   "source": "https://www.themoviedb.org/tv/337290",
+   "kind": "series",
+   "name": "Tanuki and Kitsune",
+   "ru": null,
+   "original": "タヌキとキツネ",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family",
+    "Kids"
    ]
   },
   {
