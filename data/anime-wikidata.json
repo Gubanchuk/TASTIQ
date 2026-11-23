@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 12237,
+ "queried": 12248,
  "items": [
   {
    "id": "anidb:10000",
@@ -13077,6 +13077,27 @@
    "releaseDate": "2004-01-08"
   },
   {
+   "id": "anidb:13320",
+   "kind": "film",
+   "name": "Robinson Crusoe: Mujintou no Bouken",
+   "original": "ロビンソンクルーソー 無人島の冒険",
+   "ru": null,
+   "year": 1994,
+   "runtime": 40,
+   "genres": [],
+   "aliases": [
+    "Robinson Crusoe: Mujintou no Bouken",
+    "ロビンソンクルーソー 無人島の冒険"
+   ],
+   "providerIds": [
+    "anidb:13320",
+    "anidb.net/anime/13320",
+    "mal:35495"
+   ],
+   "source": "https://anidb.net/anime/13320",
+   "releasePrecision": "year"
+  },
+  {
    "id": "anidb:13326",
    "kind": "series",
    "name": "Cogimyun",
@@ -16680,6 +16701,27 @@
    ],
    "source": "https://anidb.net/anime/14294",
    "releaseDate": "1987-08-21"
+  },
+  {
+   "id": "anidb:14301",
+   "kind": "series",
+   "name": "Mori no Ratio",
+   "original": "森のレシオ",
+   "ru": null,
+   "year": 2010,
+   "runtime": null,
+   "genres": [],
+   "aliases": [
+    "Mori no Ratio",
+    "森のレシオ"
+   ],
+   "providerIds": [
+    "anidb:14301",
+    "anidb.net/anime/14301",
+    "mal:29427"
+   ],
+   "source": "https://anidb.net/anime/14301",
+   "releaseDate": "2010-03-26"
   },
   {
    "id": "anidb:14307",
@@ -26287,6 +26329,29 @@
    ],
    "source": "https://anidb.net/anime/17243",
    "releaseDate": "2022-03-21"
+  },
+  {
+   "id": "anidb:17261",
+   "kind": "series",
+   "name": "Katsuren Omoro Soushi",
+   "original": "勝連おもろそうし",
+   "ru": null,
+   "year": 2022,
+   "runtime": null,
+   "genres": [],
+   "aliases": [
+    "Katsuren Omoro Soushi",
+    "勝連おもろそうし",
+    "Katsuren Omorosoushi"
+   ],
+   "providerIds": [
+    "anidb:17261",
+    "anidb.net/anime/17261",
+    "ann:25450"
+   ],
+   "source": "https://anidb.net/anime/17261",
+   "releasePrecision": "month",
+   "releaseMonth": "2022-04"
   },
   {
    "id": "anidb:17267",
@@ -42502,6 +42567,30 @@
    "releaseDate": "1997-10-04"
   },
   {
+   "id": "anidb:4091",
+   "kind": "series",
+   "name": "Oretachi Ijiwaru Kei",
+   "original": "おれたちイジワルケイ",
+   "ru": null,
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ],
+   "aliases": [
+    "Oretachi Ijiwaru Kei",
+    "おれたちイジワルケイ"
+   ],
+   "providerIds": [
+    "anidb:4091",
+    "anidb.net/anime/4091",
+    "mal:25809",
+    "ann:6265"
+   ],
+   "source": "https://anidb.net/anime/4091",
+   "releaseDate": "2004-12-26"
+  },
+  {
    "id": "anidb:4092",
    "kind": "series",
    "name": "Gakuentoshi Varanoir: Kingdom of Chaos The Universe",
@@ -43389,6 +43478,31 @@
    ],
    "source": "https://anidb.net/anime/4254",
    "releaseDate": "1991-04-21"
+  },
+  {
+   "id": "anidb:4258",
+   "kind": "film",
+   "name": "Ganbare! Bokura no Hit and Run",
+   "original": "がんばれ! ぼくらのヒットエンドラン",
+   "ru": null,
+   "year": 1979,
+   "runtime": 75,
+   "genres": [
+    "Action"
+   ],
+   "aliases": [
+    "Ganbare! Bokura no Hit and Run",
+    "がんばれ! ぼくらのヒットエンドラン",
+    "Hit and Run"
+   ],
+   "providerIds": [
+    "anidb:4258",
+    "anidb.net/anime/4258",
+    "mal:11593",
+    "ann:9005"
+   ],
+   "source": "https://anidb.net/anime/4258",
+   "releaseDate": "1979-02-18"
   },
   {
    "id": "anidb:4259",
@@ -51879,6 +51993,28 @@
    ],
    "source": "https://anidb.net/anime/6515",
    "releaseDate": "1990-04-03"
+  },
+  {
+   "id": "anidb:6525",
+   "kind": "film",
+   "name": "Anne Frank Monogatari: Anne no Nikki to Douwa yori",
+   "original": "アンネ･フランク物語 アンネの日記と童話より",
+   "ru": null,
+   "year": 1979,
+   "runtime": 82,
+   "genres": [],
+   "aliases": [
+    "Anne Frank Monogatari: Anne no Nikki to Douwa yori",
+    "アンネ･フランク物語 アンネの日記と童話より"
+   ],
+   "providerIds": [
+    "anidb:6525",
+    "anidb.net/anime/6525",
+    "mal:12027",
+    "ann:4662"
+   ],
+   "source": "https://anidb.net/anime/6525",
+   "releaseDate": "1979-09-28"
   },
   {
    "id": "anidb:654",
@@ -69161,6 +69297,25 @@
    ],
    "source": "https://lidenfilms.jp/works/%E3%81%93%E3%82%93%E3%81%AA%E3%81%93%E3%81%84%E3%82%8B%E3%81%8B%E3%81%AA/",
    "releaseDate": "2026-03-30"
+  },
+  {
+   "id": "bangumi:637584",
+   "kind": "series",
+   "name": "Matsuken Anime: Kore Seibai Shitemo Ii Desu ka?",
+   "original": "マツケンアニメ～コレ成敗してもいいですか？～",
+   "ru": null,
+   "aliases": [
+    "マツケンアニメ～コレ成敗してもいいですか？～",
+    "Matsuken Anime"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:637584"
+   ],
+   "source": "https://tatsunoko.co.jp/news/4291/",
+   "releaseDate": "2026-08-29"
   },
   {
    "id": "bangumi:663242",
@@ -111546,6 +111701,63 @@
     "One Piece 3D: Strawhat Chase"
    ],
    "releaseDate": "2011-03-19"
+  },
+  {
+   "id": "nippon-animation:1304",
+   "source": "https://www.nippon-animation.co.jp/work/1304/",
+   "kind": "film",
+   "name": "Daisetsuzan no Yuusha: Gaou",
+   "original": "大雪山の勇者 牙王",
+   "ru": null,
+   "year": 1978,
+   "runtime": 75,
+   "genres": [],
+   "aliases": [
+    "Daisetsuzan no Yuusha: Gaou",
+    "大雪山の勇者 牙王"
+   ],
+   "providerIds": [
+    "nippon-animation:1304"
+   ],
+   "releaseDate": "1978-09-23"
+  },
+  {
+   "id": "nippon-animation:13715",
+   "source": "https://www.nippon-animation.co.jp/work/13715/",
+   "kind": "series",
+   "name": "Ikkins",
+   "original": "いっきんず",
+   "ru": null,
+   "year": 2022,
+   "runtime": null,
+   "genres": [],
+   "aliases": [
+    "Ikkins",
+    "いっきんず"
+   ],
+   "providerIds": [
+    "nippon-animation:13715"
+   ],
+   "releaseDate": "2022-10-12"
+  },
+  {
+   "id": "nippon-animation:13722",
+   "source": "https://www.nippon-animation.co.jp/work/13722/",
+   "kind": "series",
+   "name": "Omutsu no Gorou",
+   "original": "オムツのごろう",
+   "ru": null,
+   "year": 2023,
+   "runtime": null,
+   "genres": [],
+   "aliases": [
+    "Omutsu no Gorou",
+    "オムツのごろう"
+   ],
+   "providerIds": [
+    "nippon-animation:13722"
+   ],
+   "releaseDate": "2023-06-02"
   },
   {
    "id": "tmdb:movie:1000861",
@@ -212661,6 +212873,33 @@
     "Action",
     "Adventure"
    ]
+  },
+  {
+   "id": "tt5473288",
+   "kind": "series",
+   "name": "A Piece of Phantasmagoria",
+   "original": "ア・ピース・オブ ファンタスマゴリア",
+   "ru": null,
+   "year": 1995,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ],
+   "aliases": [
+    "A Piece of Phantasmagoria",
+    "ア・ピース・オブ ファンタスマゴリア"
+   ],
+   "providerIds": [
+    "anidb:5588",
+    "anidb.net/anime/5588",
+    "tt5473288",
+    "mal:6094",
+    "ann:15370",
+    "tmdb:tv:45223"
+   ],
+   "source": "https://anidb.net/anime/5588",
+   "releasePrecision": "year"
   },
   {
    "id": "tt5476944",
