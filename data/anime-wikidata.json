@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 12279,
+ "queried": 12325,
  "items": [
   {
    "id": "anidb:10000",
@@ -69412,6 +69412,26 @@
    "releaseDate": "2026-08-20"
   },
   {
+   "id": "bangumi:700683",
+   "name": "Shogakukan Ehon Anime Gekijo",
+   "original": "小学館絵本アニメ劇場",
+   "aliases": [
+    "Shougakukan Ehon Anime Gekijou",
+    "小学館絵本アニメ劇場"
+   ],
+   "source": "https://sho.jp/ehon/87102",
+   "year": 2026,
+   "kind": "series",
+   "runtime": null,
+   "genres": [
+    "Family"
+   ],
+   "providerIds": [
+    "bangumi:700683"
+   ],
+   "releaseDate": "2026-09-15"
+  },
+  {
    "id": "bangumi:704737",
    "kind": "series",
    "name": "Sylvanian Families: Freya's Colourful Everyday",
@@ -69429,6 +69449,28 @@
    ],
    "source": "https://www.sylvanianfamilies.com/ja-jp/special/tv/",
    "releaseDate": "2026-10-01"
+  },
+  {
+   "id": "bangumi:716367",
+   "name": "Hanarabeez",
+   "original": "歯ならび～ズ",
+   "aliases": [
+    "Hanarabiizu",
+    "Hanarabeez",
+    "歯ならび～ズ"
+   ],
+   "source": "https://www.dle.jp/jp/news/other_brand/3660.html",
+   "year": 2026,
+   "kind": "series",
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ],
+   "providerIds": [
+    "bangumi:716367"
+   ],
+   "releaseDate": "2026-10-26"
   },
   {
    "id": "bangumi:718060",
@@ -71135,6 +71177,31 @@
     "Hayabusa: Back to the Earth - Kikan Version"
    ],
    "releaseDate": "2011-05-14"
+  },
+  {
+   "id": "mal:10603",
+   "source": "https://www.sci-museum.jp/press/20090306/",
+   "kind": "film",
+   "name": "Hayabusa: Back to the Earth",
+   "original": "HAYABUSA - BACK TO THE EARTH -",
+   "ru": "Хаябуса: Возвращение на Землю",
+   "aliases": [
+    "Hayabusa: Back to the Earth",
+    "HAYABUSA - BACK TO THE EARTH -",
+    "Хаябуса: Возвращение на Землю",
+    "はやぶさ HAYABUSA BACK TO THE EARTH",
+    "HAYABUSA"
+   ],
+   "year": 2009,
+   "runtime": 43,
+   "genres": [],
+   "providerIds": [
+    "shikimori:10603",
+    "mal:10603",
+    "anidb:8359",
+    "tt1438523"
+   ],
+   "releaseDate": "2009-04-01"
   },
   {
    "id": "mal:10607",
@@ -75091,6 +75158,31 @@
    "releaseDate": "2012-10-05"
   },
   {
+   "id": "mal:15971",
+   "source": "https://shikimori.io/animes/15971-dasshutsu-gasshapon",
+   "kind": "series",
+   "name": "Dasshutsu Gasshapon",
+   "original": "脱出ガシャポン",
+   "ru": "Побег Гасяпона",
+   "aliases": [
+    "Dasshutsu Gasshapon",
+    "脱出ガシャポン",
+    "Побег Гасяпона",
+    "Escape Gasshapon"
+   ],
+   "year": 2012,
+   "runtime": 3,
+   "genres": [
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "shikimori:15971",
+    "mal:15971",
+    "anidb:9477"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "mal:16131",
    "source": "https://myanimelist.net/anime/16131",
    "kind": "series",
@@ -75471,6 +75563,82 @@
    "releaseDate": "2013-01-08"
   },
   {
+   "id": "mal:16988",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Anpanman to Christmas no Hoshi",
+   "original": "それいけ! アンパンマン アンパンそれいけ! アンパンマン アンパンマンとクリスマスの星",
+   "ru": "Вперёд, Анпанман! Анпанман и рождественская звезда",
+   "aliases": [
+    "Sore Ike! Anpanman: Anpanman to Christmas no Hoshi",
+    "それいけ! アンパンマン アンパンそれいけ! アンパンマン アンパンマンとクリスマスの星",
+    "Вперёд, Анпанман! Анпанман и рождественская звезда",
+    "Soreike! Anpanman: Anpanman to Christmas no Hoshi",
+    "Go! Anpanman: Anpanman and the Star of Christmas"
+   ],
+   "year": 2004,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:16988",
+    "mal:16988"
+   ],
+   "releaseDate": "2004-12-24"
+  },
+  {
+   "id": "mal:17004",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Franken-Robo-kun's Surprised Christmas",
+   "original": "それいけ!アンパンマン フランケンロボくんのビックリクリスマス",
+   "ru": "Вперёд, Анпанман! Удивительное Рождество Франкенробо",
+   "aliases": [
+    "Sore Ike! Anpanman: Franken-Robo-kun's Surprised Christmas",
+    "それいけ!アンパンマン フランケンロボくんのビックリクリスマス",
+    "Вперёд, Анпанман! Удивительное Рождество Франкенробо",
+    "Go! Anpanman: Franken-Robo-kun's Surprised Christmas"
+   ],
+   "year": 2008,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:17004",
+    "mal:17004"
+   ],
+   "releaseDate": "2008-12-19"
+  },
+  {
+   "id": "mal:17006",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Sing! Dance! Everybody's Christmas",
+   "original": "それいけ!アンパンマン うたおう!おどろう!みんなのクリスマス",
+   "ru": "Вперёд, Анпанман! Пой! Танцуй! Рождество для всех",
+   "aliases": [
+    "Sore Ike! Anpanman: Sing! Dance! Everybody's Christmas",
+    "それいけ!アンパンマン うたおう!おどろう!みんなのクリスマス",
+    "Вперёд, Анпанман! Пой! Танцуй! Рождество для всех",
+    "Go! Anpanman: Sing! Dance! Everybody's Christmas"
+   ],
+   "year": 2006,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:17006",
+    "mal:17006"
+   ],
+   "releaseDate": "2006-12-22"
+  },
+  {
    "id": "mal:17121",
    "source": "https://myanimelist.net/anime/17121",
    "kind": "film",
@@ -75505,6 +75673,32 @@
     "Чийсь погляд"
    ],
    "releaseDate": "2013-02-10"
+  },
+  {
+   "id": "mal:17141",
+   "source": "https://shikimori.io/animes/17141-kara-the-animation",
+   "kind": "series",
+   "name": "Kara The Animation",
+   "original": "KARA THE ANIMATION",
+   "ru": "Кара",
+   "aliases": [
+    "Kara The Animation",
+    "KARA THE ANIMATION",
+    "Кара"
+   ],
+   "year": 2013,
+   "runtime": 24,
+   "genres": [
+    "Action"
+   ],
+   "providerIds": [
+    "shikimori:17141",
+    "mal:17141",
+    "anidb:9718",
+    "tt2565784",
+    "tmdb:tv:65756"
+   ],
+   "releaseDate": "2013-03-01"
   },
   {
    "id": "mal:17291",
@@ -76831,6 +77025,29 @@
    "releaseDate": "1990-03-28"
   },
   {
+   "id": "mal:18577",
+   "source": "https://shikimori.io/animes/18577-noobow-na-kokoro",
+   "kind": "series",
+   "name": "Noobow: Na Kokoro",
+   "original": "ぬ～ぼ～なこころ",
+   "ru": "Нубо: Мини-театр",
+   "aliases": [
+    "Noobow: Na Kokoro",
+    "ぬ～ぼ～なこころ",
+    "Нубо: Мини-театр",
+    "Noobow: Mini Theater"
+   ],
+   "year": 2009,
+   "runtime": 1,
+   "genres": [],
+   "providerIds": [
+    "shikimori:18577",
+    "mal:18577",
+    "anidb:9866"
+   ],
+   "releaseDate": "2009-08-03"
+  },
+  {
    "id": "mal:18587",
    "source": "https://myanimelist.net/anime/18587",
    "kind": "film",
@@ -77010,6 +77227,31 @@
     "Captain the Movie"
    ],
    "releaseDate": "1981-07-04"
+  },
+  {
+   "id": "mal:18773",
+   "source": "https://fanworks.co.jp/en/project/kuwagata-tsumami/",
+   "kind": "series",
+   "name": "Stag Beetle Tsumami",
+   "original": "くわがたツマミ",
+   "ru": null,
+   "aliases": [
+    "Kuwagata Tsumami",
+    "Stag Beetle Tsumami",
+    "くわがたツマミ",
+    "Kuwagata Tumami"
+   ],
+   "year": 2005,
+   "runtime": 1,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:18773",
+    "mal:18773",
+    "anidb:9095"
+   ],
+   "releaseDate": "2005-07-10"
   },
   {
    "id": "mal:18817",
@@ -77400,6 +77642,33 @@
     "Tabo's Great Dragon-King Planet Expedition"
    ],
    "releaseDate": "1991-07-20"
+  },
+  {
+   "id": "mal:19559",
+   "source": "https://www.allcinema.net/cinema/235200",
+   "kind": "film",
+   "name": "Otoko wa Tsurai yo: Torajirou Wasurenagusa",
+   "original": "男はつらいよ 寅次郎忘れな草",
+   "ru": null,
+   "aliases": [
+    "Otoko wa Tsurai yo: Torajirou Wasurenagusa",
+    "男はつらいよ 寅次郎忘れな草",
+    "Tora-san's Forget Me Not",
+    "Anime-ban Otoko wa Tsurai yo: Torajirou Wasurenagusa"
+   ],
+   "year": 1998,
+   "runtime": 60,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "providerIds": [
+    "shikimori:19559",
+    "mal:19559",
+    "anidb:6682",
+    "ann:11519"
+   ],
+   "releaseDate": "1998-08-07"
   },
   {
    "id": "mal:19585",
@@ -79292,6 +79561,53 @@
    "releaseDate": "1959-09-05"
   },
   {
+   "id": "mal:21941",
+   "source": "https://store.vap.co.jp/syousai.asp?item=VPBE-12612",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Anpanman no Jin-Jin-Jingle Bells",
+   "original": "それいけ!アンパンマン アンパンマンのジンジンジングルベル",
+   "ru": null,
+   "aliases": [
+    "Sore Ike! Anpanman: Anpanman no Jin-Jin-Jingle Bells",
+    "それいけ!アンパンマン アンパンマンのジンジンジングルベル"
+   ],
+   "year": 2005,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:21941",
+    "mal:21941"
+   ],
+   "releaseDate": "2005-12-23"
+  },
+  {
+   "id": "mal:21955",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Kokin-chan to Namida no Christmas",
+   "original": "それいけ!アンパンマン コキンちゃんとなみだのクリスマス",
+   "ru": "Вперёд, Анпанман! Кокин-чан и Рождество слёз",
+   "aliases": [
+    "Sore Ike! Anpanman: Kokin-chan to Namida no Christmas",
+    "それいけ!アンパンマン コキンちゃんとなみだのクリスマス",
+    "Вперёд, Анпанман! Кокин-чан и Рождество слёз"
+   ],
+   "year": 2007,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:21955",
+    "mal:21955"
+   ],
+   "releaseDate": "2007-12-21"
+  },
+  {
    "id": "mal:2199",
    "source": "https://myanimelist.net/anime/2199",
    "kind": "film",
@@ -79641,6 +79957,31 @@
     "あずみ　マンマ・ミーア"
    ],
    "releaseDate": "1997-07-07"
+  },
+  {
+   "id": "mal:22279",
+   "source": "https://shikimori.io/animes/22279-watashitachi-no-kurashi-to-doboku",
+   "kind": "series",
+   "name": "Watashitachi no Kurashi to Doboku",
+   "original": "私たちの暮らしと土木",
+   "ru": "Гражданское строительство и наша жизнь",
+   "aliases": [
+    "Watashitachi no Kurashi to Doboku",
+    "私たちの暮らしと土木",
+    "Гражданское строительство и наша жизнь",
+    "Civil Engineering and Our Lives",
+    "Watashi-tachi no Kurashi to Doboku Series"
+   ],
+   "year": 2001,
+   "runtime": 20,
+   "genres": [],
+   "providerIds": [
+    "shikimori:22279",
+    "mal:22279",
+    "anidb:9364"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "2001-11"
   },
   {
    "id": "mal:22327",
@@ -82010,6 +82351,36 @@
    "releaseDate": "1950-12-01"
   },
   {
+   "id": "mal:23645",
+   "source": "https://shikimori.io/animes/23645-anime-art-video-collection-douwa",
+   "kind": "series",
+   "name": "Anime Art Video Collection: Douwa",
+   "original": "アニメ・アート・ビデオ・コレクション 童話",
+   "ru": "Коллекция анимированного искусства: Сказки",
+   "aliases": [
+    "Anime Art Video Collection: Douwa",
+    "アニメ・アート・ビデオ・コレクション 童話",
+    "Коллекция анимированного искусства: Сказки",
+    "Jack And The Beanstalk",
+    "Jack to Mame no Ki (1993)",
+    "Onigiri Kororin",
+    "Urashima Tarou",
+    "Akazukin-chan",
+    "Match Uri no Shoujo",
+    "Ookami to 7-hiki no Koyagi"
+   ],
+   "year": 1991,
+   "runtime": 13,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:23645",
+    "mal:23645"
+   ],
+   "releaseDate": "1991-12-21"
+  },
+  {
    "id": "mal:23661",
    "source": "https://myanimelist.net/anime/23661",
    "kind": "film",
@@ -83185,6 +83556,29 @@
    "releaseDate": "1970-03-17"
   },
   {
+   "id": "mal:24969",
+   "source": "https://shikimori.io/animes/24969-sumiko-tv",
+   "kind": "series",
+   "name": "Sumiko (TV)",
+   "original": "スミ子 (2014)",
+   "ru": "Сумико",
+   "aliases": [
+    "Sumiko (TV)",
+    "スミ子 (2014)",
+    "Сумико"
+   ],
+   "year": 2014,
+   "runtime": 3,
+   "genres": [],
+   "providerIds": [
+    "shikimori:24969",
+    "mal:24969",
+    "anidb:10707",
+    "ann:23275"
+   ],
+   "releaseDate": "2014-07-04"
+  },
+  {
    "id": "mal:2498",
    "source": "https://myanimelist.net/anime/2498",
    "kind": "film",
@@ -84011,6 +84405,53 @@
    "releaseDate": "2006-12-09"
   },
   {
+   "id": "mal:26095",
+   "source": "https://www.pref.shizuoka.jp/a_content/1_09/jinken/about/documents/videolist.pdf",
+   "kind": "film",
+   "name": "Kono Sora no Shita de",
+   "original": "この空の下で",
+   "ru": "Под этим небом",
+   "aliases": [
+    "Kono Sora no Shita de",
+    "この空の下で",
+    "Под этим небом"
+   ],
+   "year": 2006,
+   "runtime": 42,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "shikimori:26095",
+    "mal:26095",
+    "anidb:10097"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "mal:26099",
+   "source": "https://www.city.okegawa.lg.jp/material/files/group/57/2026jinkenvideo.pdf",
+   "kind": "film",
+   "name": "Hidamari no Ie",
+   "original": "陽だまりの家",
+   "ru": "Семья Хидамари",
+   "aliases": [
+    "Hidamari no Ie",
+    "陽だまりの家",
+    "Семья Хидамари"
+   ],
+   "year": 2003,
+   "runtime": 42,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "shikimori:26099",
+    "mal:26099"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "mal:2614",
    "source": "https://myanimelist.net/anime/2614",
    "kind": "film",
@@ -84112,6 +84553,102 @@
     "スパイダーライダーズ ～オラクルの勇者たち～"
    ],
    "releaseDate": "2006-03-25"
+  },
+  {
+   "id": "mal:26217",
+   "source": "https://www.pref.shizuoka.jp/a_content/1_09/jinken/about/documents/videolist.pdf",
+   "kind": "film",
+   "name": "Himawari no You ni",
+   "original": "ひまわりのように",
+   "ru": "Как подсолнух",
+   "aliases": [
+    "Himawari no You ni",
+    "ひまわりのように",
+    "Как подсолнух"
+   ],
+   "year": 2007,
+   "runtime": 42,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "shikimori:26217",
+    "mal:26217",
+    "anidb:10138"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "mal:26219",
+   "source": "https://www.city.okegawa.lg.jp/material/files/group/57/2026jinkenvideo.pdf",
+   "kind": "film",
+   "name": "Tabidachi no Hi ni",
+   "original": "旅立ちの日に",
+   "ru": null,
+   "aliases": [
+    "Tabidachi no Hi ni",
+    "旅立ちの日に"
+   ],
+   "year": 2004,
+   "runtime": 40,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "shikimori:26219",
+    "mal:26219",
+    "anidb:10116"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "mal:26221",
+   "source": "https://www.city.okegawa.lg.jp/material/files/group/57/2026jinkenvideo.pdf",
+   "kind": "film",
+   "name": "Mebae no Ashita",
+   "original": "めばえの朝（あした）",
+   "ru": "Утро первых ростков",
+   "aliases": [
+    "Mebae no Ashita",
+    "めばえの朝（あした）",
+    "Утро первых ростков",
+    "Mebae no Asa"
+   ],
+   "year": 2004,
+   "runtime": 41,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "shikimori:26221",
+    "mal:26221",
+    "anidb:10130"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "mal:26307",
+   "source": "https://www.lib.city.miyazaki.miyazaki.jp/sityoukaku/video/video-num.html",
+   "kind": "film",
+   "name": "Yume, Sora Takaku",
+   "original": "夢、空高く",
+   "ru": "Мечта высоко в небе",
+   "aliases": [
+    "Yume, Sora Takaku",
+    "夢、空高く",
+    "Мечта высоко в небе"
+   ],
+   "year": 2001,
+   "runtime": 41,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "shikimori:26307",
+    "mal:26307",
+    "anidb:10125"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "mal:2633",
@@ -84619,6 +85156,30 @@
    "releaseDate": "1969-03-18"
   },
   {
+   "id": "mal:27389",
+   "source": "https://shikimori.io/animes/27389-oretachi-tomodachi",
+   "kind": "film",
+   "name": "Oretachi, Tomodachi!",
+   "original": "おれたち, ともだち!",
+   "ru": "Ты и я — друзья!",
+   "aliases": [
+    "Oretachi, Tomodachi!",
+    "おれたち, ともだち!",
+    "Ты и я — друзья!"
+   ],
+   "year": 2006,
+   "runtime": 52,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:27389",
+    "mal:27389",
+    "anidb:10133"
+   ],
+   "releaseDate": "2006-12-08"
+  },
+  {
    "id": "mal:27393",
    "source": "https://myanimelist.net/anime/27393",
    "kind": "series",
@@ -84646,6 +85207,29 @@
     "Virtual Trilogy part 3"
    ],
    "releaseDate": "1997-04-09"
+  },
+  {
+   "id": "mal:27493",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Yuuki no Honoo to Christmas",
+   "original": "それいけ! アンパンマン 勇気のほのおとクリスマス",
+   "ru": null,
+   "aliases": [
+    "Sore Ike! Anpanman: Yuuki no Honoo to Christmas",
+    "それいけ! アンパンマン 勇気のほのおとクリスマス"
+   ],
+   "year": 2002,
+   "runtime": 50,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:27493",
+    "mal:27493"
+   ],
+   "releaseDate": "2002-12-13"
   },
   {
    "id": "mal:2750",
@@ -84809,6 +85393,30 @@
     "映画 それいけ! アンパンマン はしれ! わくわく アンパンマングランプリ"
    ],
    "releaseDate": "2010-07-10"
+  },
+  {
+   "id": "mal:27571",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Keito no Shiro no Christmas",
+   "original": "それいけ! アンパンマン けいとのしろのクリスマス",
+   "ru": "Вперёд, Анпанман! Рождество в шерстяном замке",
+   "aliases": [
+    "Sore Ike! Anpanman: Keito no Shiro no Christmas",
+    "それいけ! アンパンマン けいとのしろのクリスマス",
+    "Вперёд, Анпанман! Рождество в шерстяном замке"
+   ],
+   "year": 1995,
+   "runtime": 50,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:27571",
+    "mal:27571"
+   ],
+   "releaseDate": "1995-12-25"
   },
   {
    "id": "mal:27575",
@@ -85351,6 +85959,30 @@
     "Yamma and Moburi 2: The Naval Treasure and Riddle Island"
    ],
    "releaseDate": "2014-10-23"
+  },
+  {
+   "id": "mal:27963",
+   "source": "https://shikimori.io/animes/27963-shouta-no-sushi-kokoro-ni-hibiku-shari-no-aji",
+   "kind": "film",
+   "name": "Shouta no Sushi: Kokoro ni Hibiku Shari no Aji",
+   "original": "将太の寿司 心にひびくシャリの味",
+   "ru": "Суши Сёты: Милый сердцу вкус белого риса",
+   "aliases": [
+    "Shouta no Sushi: Kokoro ni Hibiku Shari no Aji",
+    "将太の寿司 心にひびくシャリの味",
+    "Суши Сёты: Милый сердцу вкус белого риса",
+    "Shouta's Sushi"
+   ],
+   "year": 1999,
+   "runtime": 54,
+   "genres": [],
+   "providerIds": [
+    "shikimori:27963",
+    "mal:27963",
+    "anidb:10383",
+    "ann:6659"
+   ],
+   "releaseDate": "1999-10-11"
   },
   {
    "id": "mal:2803",
@@ -88121,6 +88753,29 @@
    "releaseDate": "1997-03-20"
   },
   {
+   "id": "mal:31007",
+   "source": "https://shikimori.io/animes/31007-kumori-nochi-hare",
+   "kind": "film",
+   "name": "Kumori Nochi Hare",
+   "original": "くもりのち晴れ",
+   "ru": null,
+   "aliases": [
+    "Kumori Nochi Hare",
+    "くもりのち晴れ"
+   ],
+   "year": 1996,
+   "runtime": 40,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "shikimori:31007",
+    "mal:31007",
+    "anidb:10152"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "mal:31052",
    "source": "https://myanimelist.net/anime/31052",
    "kind": "film",
@@ -88844,6 +89499,30 @@
    "releaseDate": "1997-10-19"
   },
   {
+   "id": "mal:31924",
+   "source": "https://shikimori.io/animes/31924-monchhichiisu",
+   "kind": "series",
+   "name": "Monchhichiisu",
+   "original": "もんちっちーず",
+   "ru": null,
+   "aliases": [
+    "Monchhichiisu",
+    "もんちっちーず",
+    "Monchicchiizu",
+    "Monchicchiisu"
+   ],
+   "year": 2012,
+   "runtime": 1,
+   "genres": [],
+   "providerIds": [
+    "shikimori:31924",
+    "mal:31924",
+    "anidb:9539",
+    "ann:14929"
+   ],
+   "releaseDate": "2012-12-01"
+  },
+  {
    "id": "mal:31927",
    "source": "https://myanimelist.net/anime/31927",
    "kind": "film",
@@ -89085,6 +89764,29 @@
     "Caterpillar of Rags"
    ],
    "releaseDate": "2018-03-21"
+  },
+  {
+   "id": "mal:32143",
+   "source": "https://shikimori.io/animes/32143-peeping-life-x-kaijuu-sakaba-kaiji-kaijuu-tachi-ga-iru-tokoro",
+   "kind": "series",
+   "name": "Peeping Life x Kaijuu Sakaba Kaiji: Kaijuu-tachi ga Iru Tokoro",
+   "original": "Peeping Lifex怪獣酒場 かいじゅうたちがいるところ",
+   "ru": "Сложности жизни x Kaijuu Sakaba: Место, где находятся кайдзю",
+   "aliases": [
+    "Peeping Life x Kaijuu Sakaba Kaiji: Kaijuu-tachi ga Iru Tokoro",
+    "Peeping Lifex怪獣酒場 かいじゅうたちがいるところ",
+    "Сложности жизни x Kaijuu Sakaba: Место, где находятся кайдзю"
+   ],
+   "year": 2015,
+   "runtime": 5,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:32143",
+    "mal:32143"
+   ],
+   "releaseDate": "2015-07-10"
   },
   {
    "id": "mal:3215",
@@ -92031,6 +92733,29 @@
     "决斗大师（2017）"
    ],
    "releaseDate": "2017-04-02"
+  },
+  {
+   "id": "mal:34924",
+   "source": "https://shikimori.io/animes/34924-nenbutsu-monogatari",
+   "kind": "series",
+   "name": "Nenbutsu Monogatari",
+   "original": "念仏物語",
+   "ru": "История о молитве",
+   "aliases": [
+    "Nenbutsu Monogatari",
+    "念仏物語",
+    "История о молитве"
+   ],
+   "year": 1993,
+   "runtime": 30,
+   "genres": [],
+   "providerIds": [
+    "shikimori:34924",
+    "mal:34924",
+    "anidb:12279"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "1993-04"
   },
   {
    "id": "mal:34962",
@@ -96217,6 +96942,33 @@
    "releasePrecision": "year"
   },
   {
+   "id": "mal:3923",
+   "source": "https://shikimori.io/animes/3923-kamen-rider-den-o-imagin-anime",
+   "kind": "series",
+   "name": "Kamen Rider Den-O: Imagin Anime",
+   "original": "仮面ライダー電王: イマジンあにめ",
+   "ru": "Наездник в маске Дэн-О",
+   "aliases": [
+    "Kamen Rider Den-O: Imagin Anime",
+    "仮面ライダー電王: イマジンあにめ",
+    "Наездник в маске Дэн-О",
+    "Masked Rider Den-O: Imagin Anime"
+   ],
+   "year": 2008,
+   "runtime": 4,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:3923",
+    "mal:3923",
+    "anidb:12527"
+   ],
+   "releaseDate": "2008-04-25"
+  },
+  {
    "id": "mal:3929",
    "source": "https://myanimelist.net/anime/3929",
    "kind": "film",
@@ -98498,6 +99250,31 @@
    "releaseDate": "1975-03-21"
   },
   {
+   "id": "mal:42540",
+   "source": "https://shikimori.io/animes/42540-pittarazu",
+   "kind": "series",
+   "name": "Pittarazu",
+   "original": "ぴったらず",
+   "ru": "Питтарадзу",
+   "aliases": [
+    "Pittarazu",
+    "ぴったらず",
+    "Питтарадзу",
+    "Pittarazu Tarazu no Maki",
+    "Pittarazu Pinnomaki"
+   ],
+   "year": 2014,
+   "runtime": 4,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:42540",
+    "mal:42540"
+   ],
+   "releaseDate": "2014-03-04"
+  },
+  {
    "id": "mal:42593",
    "source": "https://myanimelist.net/anime/42593",
    "kind": "film",
@@ -100073,6 +100850,32 @@
    "releaseDate": "2026-07-18"
   },
   {
+   "id": "mal:48904",
+   "source": "https://www.jstage.jst.go.jp/article/jjas/18/1/18_33/_pdf",
+   "kind": "series",
+   "name": "Mr.Digital Tokoro",
+   "original": "デジタル所さん",
+   "ru": "Цифровой Токоро",
+   "aliases": [
+    "Digital Tokoro-san",
+    "Mr.Digital Tokoro",
+    "デジタル所さん",
+    "Цифровой Токоро",
+    "Mr. Digital Tokoro"
+   ],
+   "year": 2000,
+   "runtime": 3,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:48904",
+    "mal:48904",
+    "ann:1303"
+   ],
+   "releaseDate": "2000-10-02"
+  },
+  {
    "id": "mal:48909",
    "source": "https://myanimelist.net/anime/48909",
    "kind": "film",
@@ -100123,6 +100926,30 @@
     "Aru Nihon no Ekaki Shōnen"
    ],
    "releaseDate": "2019-03-02"
+  },
+  {
+   "id": "mal:48994",
+   "source": "https://shikimori.io/animes/48994-closure-no-kimitsu-file",
+   "kind": "series",
+   "name": "Closure's Secret Files",
+   "original": "クロージャの機密ファイル",
+   "ru": "Секретные файлы Кложур",
+   "aliases": [
+    "Closure no Kimitsu File",
+    "Closure's Secret Files",
+    "クロージャの機密ファイル",
+    "Секретные файлы Кложур"
+   ],
+   "year": 2021,
+   "runtime": 2,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:48994",
+    "mal:48994"
+   ],
+   "releaseDate": "2021-05-16"
   },
   {
    "id": "mal:4905",
@@ -103712,6 +104539,28 @@
    "releaseDate": "2022-10-14"
   },
   {
+   "id": "mal:56853",
+   "source": "https://cu.tbs.co.jp/program/24054",
+   "kind": "series",
+   "name": "I.Cinnamoroll Animation",
+   "original": "I.CINNAMOROLL Animation",
+   "ru": "Я — Синнаморолл",
+   "aliases": [
+    "I.Cinnamoroll Animation",
+    "I.CINNAMOROLL Animation",
+    "Я — Синнаморолл"
+   ],
+   "year": 2023,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "shikimori:56853",
+    "mal:56853",
+    "anidb:18943"
+   ],
+   "releaseDate": "2023-10-05"
+  },
+  {
    "id": "mal:57012",
    "source": "https://myanimelist.net/anime/57012",
    "kind": "series",
@@ -105488,6 +106337,147 @@
    "releaseDate": "2025-02-21"
   },
   {
+   "id": "mal:60308",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Anpanman to Black Christmas",
+   "original": "それいけ!アンパンマン アンパンマンとブラッククリスマス",
+   "ru": "Вперёд, Анпанман! Анпанман и Чёрное Рождество",
+   "aliases": [
+    "Sore Ike! Anpanman: Anpanman to Black Christmas",
+    "それいけ!アンパンマン アンパンマンとブラッククリスマス",
+    "Вперёд, Анпанман! Анпанман и Чёрное Рождество"
+   ],
+   "year": 1996,
+   "runtime": 45,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60308",
+    "mal:60308"
+   ],
+   "releaseDate": "1996-12-13"
+  },
+  {
+   "id": "mal:60309",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Meringue Sisters no Christmas",
+   "original": "それいけ!アンパンマン メレンゲシスターズのクリスマス",
+   "ru": null,
+   "aliases": [
+    "Sore Ike! Anpanman: Meringue Sisters no Christmas",
+    "それいけ!アンパンマン メレンゲシスターズのクリスマス"
+   ],
+   "year": 1997,
+   "runtime": 45,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60309",
+    "mal:60309"
+   ],
+   "releaseDate": "1997-12-25"
+  },
+  {
+   "id": "mal:60322",
+   "source": "https://store.vap.co.jp/syousai.asp?item=VPBE-13231",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Bokura no Christmas Concert",
+   "original": "それいけ!アンパンマン ぼくらのクリスマスコンサート",
+   "ru": null,
+   "aliases": [
+    "Sore Ike! Anpanman: Bokura no Christmas Concert",
+    "それいけ!アンパンマン ぼくらのクリスマスコンサート"
+   ],
+   "year": 1998,
+   "runtime": 45,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60322",
+    "mal:60322"
+   ],
+   "releaseDate": "1998-12-18"
+  },
+  {
+   "id": "mal:60323",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Anpanman to Merry Christmas",
+   "original": "それいけ!アンパンマン アンパンマンとメリークリスマス",
+   "ru": "Вперёд, Анпанман! Анпанман и счастливое Рождество",
+   "aliases": [
+    "Sore Ike! Anpanman: Anpanman to Merry Christmas",
+    "それいけ!アンパンマン アンパンマンとメリークリスマス",
+    "Вперёд, Анпанман! Анпанман и счастливое Рождество"
+   ],
+   "year": 1999,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60323",
+    "mal:60323"
+   ],
+   "releaseDate": "1999-12-17"
+  },
+  {
+   "id": "mal:60364",
+   "source": "https://store.vap.co.jp/syousai.asp?item=VPBE-13233",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Anpanman no Christmas Show",
+   "original": "それいけ!アンパンマン アンパンマンのクリスマスショー",
+   "ru": null,
+   "aliases": [
+    "Sore Ike! Anpanman: Anpanman no Christmas Show",
+    "それいけ!アンパンマン アンパンマンのクリスマスショー"
+   ],
+   "year": 2000,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60364",
+    "mal:60364"
+   ],
+   "releaseDate": "2000-12-22"
+  },
+  {
+   "id": "mal:60365",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Anpanman to Chiisana Santa no Christmas",
+   "original": "それいけ!アンパンマン アンパンマンとちいさなサンタのクリスマス",
+   "ru": "Вперёд, Анпанман! Анпанман и Рождество с маленьким Сантой",
+   "aliases": [
+    "Sore Ike! Anpanman: Anpanman to Chiisana Santa no Christmas",
+    "それいけ!アンパンマン アンパンマンとちいさなサンタのクリスマス",
+    "Вперёд, Анпанман! Анпанман и Рождество с маленьким Сантой"
+   ],
+   "year": 2001,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60365",
+    "mal:60365"
+   ],
+   "releaseDate": "2001-12-21"
+  },
+  {
    "id": "mal:6038",
    "source": "https://myanimelist.net/anime/6038",
    "kind": "film",
@@ -105522,6 +106512,30 @@
    "releaseDate": "1990-07-21"
   },
   {
+   "id": "mal:60383",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Black Santa to Suteki na Present",
+   "original": "それいけ!アンパンマン ブラックサンタとすてきなプレゼント",
+   "ru": "Вперёд, Анпанман! Чёрный Санта и чудесный подарок",
+   "aliases": [
+    "Sore Ike! Anpanman: Black Santa to Suteki na Present",
+    "それいけ!アンパンマン ブラックサンタとすてきなプレゼント",
+    "Вперёд, Анпанман! Чёрный Санта и чудесный подарок"
+   ],
+   "year": 2003,
+   "runtime": 48,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60383",
+    "mal:60383"
+   ],
+   "releaseDate": "2003-12-19"
+  },
+  {
    "id": "mal:60384",
    "source": "https://www.vap.co.jp/data/html/product/ptazapr3d4bi5u7q.html",
    "kind": "film",
@@ -105544,6 +106558,30 @@
     "mal:60384"
    ],
    "releaseDate": "2009-12-25"
+  },
+  {
+   "id": "mal:60392",
+   "source": "https://www.vap.co.jp/anpan/christmas/",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Akahana Chappie Yuuki no Christmas",
+   "original": "それいけ！ アンパンマン 赤鼻チャッピー 勇気のクリスマス",
+   "ru": "Вперёд, Анпанман! Красноносый Чаппи и Рождество мужества",
+   "aliases": [
+    "Sore Ike! Anpanman: Akahana Chappie Yuuki no Christmas",
+    "それいけ！ アンパンマン 赤鼻チャッピー 勇気のクリスマス",
+    "Вперёд, Анпанман! Красноносый Чаппи и Рождество мужества"
+   ],
+   "year": 2010,
+   "runtime": 50,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60392",
+    "mal:60392"
+   ],
+   "releaseDate": "2010-12-24"
   },
   {
    "id": "mal:60446",
@@ -106251,6 +107289,29 @@
    "releaseDate": "2025-06-25"
   },
   {
+   "id": "mal:61772",
+   "source": "https://www.dle.jp/jp/news/cat72/3475.html",
+   "kind": "series",
+   "name": "Wonder Agent Yanen",
+   "original": "ワンダーエージェントやねん",
+   "ru": "Агенты «Уандер»",
+   "aliases": [
+    "Wonder Agent Yanen",
+    "ワンダーエージェントやねん",
+    "Агенты «Уандер»"
+   ],
+   "year": 2025,
+   "runtime": 1,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:61772",
+    "mal:61772"
+   ],
+   "releaseDate": "2025-06-01"
+  },
+  {
    "id": "mal:62061",
    "source": "https://myanimelist.net/anime/62061",
    "kind": "film",
@@ -106698,6 +107759,30 @@
    ],
    "source": "https://saigate.co.jp/oshirifront/",
    "releaseDate": "2026-03-20"
+  },
+  {
+   "id": "mal:6272",
+   "source": "https://shikimori.io/animes/6272-zakuro-yashiki",
+   "kind": "film",
+   "name": "Zakuro Yashiki",
+   "original": "ざくろ屋敷",
+   "ru": "Гранатник",
+   "aliases": [
+    "Zakuro Yashiki",
+    "ざくろ屋敷",
+    "Гранатник",
+    "Мансион Дзакури",
+    "La Grenadière"
+   ],
+   "year": 2006,
+   "runtime": 48,
+   "genres": [],
+   "providerIds": [
+    "shikimori:6272",
+    "mal:6272",
+    "ann:7956"
+   ],
+   "releaseDate": "2006-08-01"
   },
   {
    "id": "mal:6280",
@@ -107413,6 +108498,28 @@
    ],
    "releasePrecision": "season",
    "releaseSeason": "SPRING"
+  },
+  {
+   "id": "mal:65267",
+   "source": "https://shikimori.io/animes/65267-anime-kanshi-kanbun-no-sekai",
+   "kind": "series",
+   "name": "Anime Kanshi: Kanbun no Sekai",
+   "original": "アニメ漢詩・漢文の世界",
+   "ru": null,
+   "aliases": [
+    "Anime Kanshi: Kanbun no Sekai",
+    "アニメ漢詩・漢文の世界"
+   ],
+   "year": 2018,
+   "runtime": 15,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:65267",
+    "mal:65267"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "mal:6583",
