@@ -7,6 +7,7 @@ import {makeCatalog} from '../src/core/catalog.js';
 import {readFileSync} from 'node:fs';
 import {createMediaConversationService} from '../src/server/media-conversation-service.js';
 import {loadCatalogs} from '../src/core/catalog.js';
+import {normalizeTitle} from '../src/lib/text.js';
 
 test('a media wish without mapped preferences gets a varied shortlist within the same catalog limits',()=>{
  const items=Array.from({length:16},(_,i)=>({...title(`film-${i}`,`Film ${i}`,'film',{}),
@@ -45,7 +46,13 @@ test('an intentionally empty adaptive choice is explained as no fit rather than 
 
 test('the real unverified model-owned replacement preserves prior cards and explains catalog verification without paid retry',async()=>{
  const saved=JSON.parse(readFileSync(new URL('./fixtures/cartoon-more-no-fit-2026-11-03.json',import.meta.url),'utf8'));
- let calls=0;const service=createMediaConversationService({domain:'cartoon',catalogs:loadCatalogs(),api:async()=>{calls++;return saved.response;}});
+ const proposal=JSON.parse(saved.response.output.flatMap(block=>block.content??[]).find(block=>block.type==='output_text').text).picks[0];
+ const {cartoon}=loadCatalogs();
+ // Replay the original missing-title case independently of later catalog imports.
+ const unavailable=normalizeTitle(proposal.title);
+ const items=cartoon.items.filter(item=>Math.abs(item.year-proposal.year)>1||
+  ![item.name,item.ru,item.original,...(item.aliases??[])].filter(Boolean).some(name=>normalizeTitle(name)===unavailable));
+ let calls=0;const service=createMediaConversationService({domain:'cartoon',catalogs:{cartoon:makeCatalog({...cartoon,items},'cartoon')},api:async()=>{calls++;return saved.response;}});
  const out=await service(saved.request);assert.equal(calls,1);assert.equal(out.error,undefined);assert.equal(out.screen.noMatch.kind,'title-lookup');assert.match(out.screen.noMatch.message,/В каталоге не удалось подтвердить/);assert.equal(out.retryable,false);
  assert.deepEqual(out.state.result,saved.request.state.result);assert.equal(out.state.context.childAge,7);assert.equal(out.state.context.minutes,90);
 });
