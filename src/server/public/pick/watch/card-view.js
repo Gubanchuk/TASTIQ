@@ -1,4 +1,4 @@
-import {cardMetadataHtml} from '../../shared/card-metadata.js';
+import {animeEncyclopediaCreditHtml,cardMetadataHtml} from '../../shared/card-metadata.js';
 import {feasibilityHtml} from '../game/feasibility.js';
 import {titleCopyHtml} from '../../shared/title-copy.js';
 import {resultSectionHeading,resultCardReason} from '../../shared/result-clarity.js';
@@ -34,14 +34,16 @@ export function mediaCardHtml(card,{domain='film',index=0,marked=false,kept=fals
  const title=nameOf(card),heading='h2',id=esc(card.id),later=saved;
  const artwork=domain==='anime'?animeArtwork(card.id):null;
  const image=safeUrl(card.poster)||safeUrl(card.image)||artwork?.url;
- const credit=artwork&&image===artwork.url?`<p class="game-help game-artwork-credit"><a href="${esc(artwork.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(artwork.source)}</a></p>`:'';
+ const encyclopediaCredit=animeEncyclopediaCreditHtml(card);
+ const artworkCredit=artwork&&image===artwork.url&&!(encyclopediaCredit&&artwork.sourceUrl===card.link)?`<p class="game-help game-artwork-credit"><a href="${esc(artwork.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(artwork.source)}</a></p>`:'';
+ const credit=artworkCredit+(encyclopediaCredit?`<p class="game-help game-artwork-credit">${encyclopediaCredit}</p>`:'');
  const poster=eager=>resultArtworkHtml(card,{domain,title,eager,extra:artwork?.url});
  const style=domain==='anime'&&animeStyleLabel(card.id)?'<p class="game-kept">В аниме-стиле</p>':'';
  if(marked)return resultSectionHeading(index)+`<article class="game-card game-card-pending${index===0?'':' game-alternative'}" data-card-id="${id}" aria-label="${esc(title)}">`
   +`<div class="game-pending-identity">${poster(false)}<div><${heading}>${esc(title)}</${heading}>${style}<p class="game-pending-label">Отмечено для замены</p><p class="game-help">Если передумаешь, можно снять отметку замены. Знакомство сохранится.</p>${credit}</div></div>`
   +`<div class="game-pending-controls"><div class="game-card-actions">${button('Заменить только этот вариант','replace-one',card.id)}${button('Снять отметку замены','familiar-unmark',card.id,'familiar')}${button('Оставить — хочу пересмотреть','familiar-keep',card.id,'keep')}</div>`
   +`<label class="game-check"><input type="checkbox" data-history-block="${id}" data-focus="block:${id}"${blocked?' checked':''}> Не предлагать в следующих подборах</label></div></article>`;
- const url=safeUrl(card.link),reason=resultCardReason(card),caveat=card.ai?.caveat||card.caveat||'';
+ const url=encyclopediaCredit?null:safeUrl(card.link),reason=resultCardReason(card),caveat=card.ai?.caveat||card.caveat||'';
  return resultSectionHeading(index)+`<article class="game-card game-proposal ${index===0?'game-proposal-featured':'game-alternative'}" data-card-id="${id}"${title.length>42?' data-long-title':''} aria-label="${esc(title)}"><div class="game-card-layout">${poster(index===0)}<div class="game-card-copy">`
   +`<div class="game-card-heading"><${heading} aria-label="${esc(title)}">${titleCopyHtml(title,card.year)}</${heading}><div class="game-copy-status" data-copy-status role="status" aria-live="polite"></div>${style}${cardMetadataHtml(card,{domain})}`
   +(kept?'<p class="game-kept">Хочешь пересмотреть.</p>':known?'<p class="game-kept">Уже знакомо</p>':'')

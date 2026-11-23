@@ -1,4 +1,4 @@
-import {genreLabels} from './card-metadata.js';
+import {animeEncyclopediaCreditHtml,genreLabels} from './card-metadata.js';
 import {resultArtworkHtml} from './card-artwork.js';
 import {animeArtwork} from './anime-artwork.js';
 import {resultCardReason} from './result-clarity.js';
@@ -179,9 +179,11 @@ export function openComparison(dialog,cards,domain,onCard){
  const panels=dialog.querySelectorAll('.finalist-panel');
  function drawCard(slot){
   const card=pair[slot],panel=panels[slot];
+  const encyclopediaCredit=animeEncyclopediaCreditHtml(card);
   panel.querySelector('.finalist-stage').innerHTML=cover(card,domain);
   panel.querySelector('.finalist-identity').innerHTML=(card.year?'<div class="finalist-year">'+esc(card.year)+'</div>':'')
-   +`<h3 id="finalist-title-${slot}"><button type="button" data-open-card="${esc(card.id)}" aria-label="К карточке «${esc(nameOf(card))}»"><span>${esc(titleOf(card))}</span></button></h3>`;
+   +`<h3 id="finalist-title-${slot}"><button type="button" data-open-card="${esc(card.id)}" aria-label="К карточке «${esc(nameOf(card))}»"><span>${esc(titleOf(card))}</span></button></h3>`
+   +(encyclopediaCredit?`<p class="finalist-year">${encyclopediaCredit}</p>`:'');
  }
  function drawDetails(){
   dialog.querySelector('[data-comparison-copy]').innerHTML=comparisonReasonsHtml(pair,domain);

@@ -6,6 +6,7 @@ import {createTasteMemory,TASTE_MEMORY_PREFIX} from '/shared/taste-memory.js';
 import {createMemoryView} from './memory-view.js?v=memory-search';
 import {createSavedSource,matchesLibraryQuery,savedPickerDomains} from '/shared/saved-source.js';
 import {artworkImageHtml,retryArtworkImage} from '/shared/card-artwork.js';
+import {animeEncyclopediaCreditHtml} from '/shared/card-metadata.js';
 import {collectionRecords} from '/shared/library-collection.js';
 import {createGameHistory,GAME_HISTORY_PREFIX} from '/shared/game-history.js';
 import {createMediaHistory,MEDIA_HISTORY_PREFIX} from '/shared/media-history.js';
@@ -132,15 +133,17 @@ const workMeta=row=>esc([row.year,NOUNS[row.domain],animeStyleLabel(row.id)].fil
 function card(row) {
  const attrs=dataFor(row),name=esc(title(row));
  const bookmark=row.saved?'Убрать из сохранённого':'Сохранить';
+ const encyclopediaCredit=animeEncyclopediaCreditHtml(row);
  return `<article class="board-card poster-tile" data-card="${esc(key(row))}">
   <button type="button" class="poster-open" data-act="work" ${attrs} data-focus="${focusKey('poster',row)}" aria-haspopup="dialog" aria-label="Открыть карточку «${name}»">${media(row)}</button>
   <h3><button type="button" class="title-open" data-act="work" ${attrs} data-focus="${focusKey('title',row)}" aria-haspopup="dialog">${name}</button></h3>
-  <p class="library-meta">${workMeta(row)}</p>
+  <p class="library-meta">${workMeta(row)}${encyclopediaCredit?` · ${encyclopediaCredit}`:''}</p>
   <button type="button" class="poster-bookmark" data-act="saved" ${attrs} data-focus="${focusKey('saved',row)}" aria-pressed="${row.saved}" aria-label="${bookmark} — ${name}" title="${bookmark}">${wallIcon('saved')}</button>
  </article>`;
 }
 function workPanel(row) {
  const attrs=dataFor(row),url=safeLibraryUrl(row.link),exposure=row.familiarity;
+ const encyclopediaCredit=animeEncyclopediaCreditHtml(row,{className:'library-source'});
  const hasRating=Boolean(row.rating||row.ratingConflict);
  const ratingButton=(status,label)=>button(wallIcon(status==='liked'?'liked':'dislike')+label,'rate',`${attrs} data-value="${status}" data-focus="${focusKey(`rate-${status}`,row)}" aria-pressed="${row.rating===status}"`);
  const ratingHint=row.ratingConflict?'В прошлых отзывах оценки различаются.':row.ratingSource==='experience'?(row.rating==='mixed'?'В отзыве у тебя смешанные впечатления.':'Эта оценка взята из твоего отзыва.'):'';
@@ -161,7 +164,7 @@ function workPanel(row) {
    ${row.answer?`<p class="work-hint">${typeof row.answer.text==='string'&&row.answer.text.trim()?`Твои слова из подбора — «${esc(row.answer.text.trim())}».`:'С этой оценкой сохранены уточнения из подбора.'}</p>`:''}
    ${familiarity}
    ${reviewCount?button(`${wallIcon('evenings')}Открыть отзывы <span>${reviewCount}</span>${icon('arrow')}`,'card-reviews',`${attrs} data-focus="${focusKey('reviews',row)}"`):''}
-   ${url?`<a class="library-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${row.domain==='game'?'Страница игры':'Страница произведения'} ${icon('arrow')}</a>`:''}
+   ${encyclopediaCredit||(url?`<a class="library-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${row.domain==='game'?'Страница игры':'Страница произведения'} ${icon('arrow')}</a>`:'')}
   </div>
   <button type="button" class="work-close" data-act="close-work" data-focus="work-close" aria-label="Закрыть карточку">${icon('close')}</button>
  </div>`;

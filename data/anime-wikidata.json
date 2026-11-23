@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 12029,
+ "queried": 12232,
  "items": [
   {
    "id": "anidb:10000",
@@ -67072,6 +67072,2062 @@
    "releaseDate": "2013-10-10"
   },
   {
+   "id": "ann:10969",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=10969",
+   "kind": "series",
+   "name": "Battle Spirits: Shōnen Gekiha Dan",
+   "original": "Battle Spirits: Shōnen Gekiha Dan",
+   "ru": null,
+   "year": 2009,
+   "aliases": [
+    "Battle Spirits: Shōnen Gekiha Dan",
+    "Battle Spirits II",
+    "バトルスピリッツ 少年激覇ダン"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "ann:10969",
+    "anidb:6978",
+    "kitsu:4779",
+    "mal:6901"
+   ],
+   "releaseDate": "2009-09-13"
+  },
+  {
+   "id": "ann:11165",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=11165",
+   "kind": "series",
+   "name": "Weiß Survive R",
+   "original": "ヴァイス・サヴァイヴR",
+   "ru": null,
+   "year": 2009,
+   "aliases": [
+    "Weiß Survive R",
+    "ヴァイス・サヴァイヴR"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:11165",
+    "anidb:7207",
+    "kitsu:4985",
+    "mal:7463"
+   ],
+   "releaseDate": "2009-12-04"
+  },
+  {
+   "id": "ann:11634",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=11634",
+   "kind": "series",
+   "name": "Kuttsukiboshi",
+   "original": "Kuttsukiboshi",
+   "ru": null,
+   "year": 2010,
+   "aliases": [
+    "Kuttsukiboshi",
+    "Stars Intertwined",
+    "くっつきぼし"
+   ],
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:11634",
+    "anidb:7602",
+    "kitsu:5576",
+    "mal:9014",
+    "tmdb:tv:44595",
+    "tt7121336"
+   ],
+   "releaseDate": "2010-08-16"
+  },
+  {
+   "id": "ann:12113",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=12113",
+   "kind": "film",
+   "name": "Nana to Kaoru",
+   "original": "Nana to Kaoru",
+   "ru": null,
+   "year": 2011,
+   "aliases": [
+    "Nana to Kaoru",
+    "ナナとカオル"
+   ],
+   "runtime": 24,
+   "genres": [
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:12113",
+    "anidb:8066",
+    "kitsu:5845",
+    "mal:9741",
+    "tmdb:movie:421594",
+    "tt4128416"
+   ],
+   "releaseDate": "2011-03-29"
+  },
+  {
+   "id": "ann:12413",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=12413",
+   "kind": "series",
+   "name": "Katteni Kaizō",
+   "original": "Katteni Kaizō",
+   "ru": null,
+   "year": 2011,
+   "aliases": [
+    "Katteni Kaizō",
+    "かってに改蔵"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:12413",
+    "anidb:8223",
+    "kitsu:6069",
+    "mal:10191",
+    "mal:12991",
+    "tmdb:tv:43256",
+    "tt2011083"
+   ],
+   "releaseDate": "2011-05-25"
+  },
+  {
+   "id": "ann:12648",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=12648",
+   "kind": "film",
+   "name": "Baton",
+   "original": "バトン",
+   "ru": null,
+   "year": 2009,
+   "aliases": [
+    "Baton",
+    "バトン"
+   ],
+   "runtime": 65,
+   "genres": [
+    "Action",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:12648",
+    "anidb:6651",
+    "kitsu:4466",
+    "mal:6189",
+    "tmdb:movie:41444",
+    "tt1397147"
+   ],
+   "releaseDate": "2009-04-28"
+  },
+  {
+   "id": "ann:13361",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=13361",
+   "kind": "film",
+   "name": "GYO: Tokyo Fish Attack",
+   "original": "Gyo",
+   "ru": null,
+   "year": 2012,
+   "aliases": [
+    "GYO: Tokyo Fish Attack",
+    "Gyo",
+    "Gyo Ugomeku Bukimi",
+    "Tokyo Shark Attack",
+    "ギョ",
+    "ギョ うごめく不気味"
+   ],
+   "runtime": 70,
+   "genres": [
+    "Adventure",
+    "Horror",
+    "Mystery",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:13361",
+    "anidb:8315",
+    "kitsu:6171",
+    "mal:10417",
+    "tmdb:movie:94684",
+    "tt1857718"
+   ],
+   "releaseDate": "2012-02-15"
+  },
+  {
+   "id": "ann:13808",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=13808",
+   "kind": "series",
+   "name": "Upotte!!",
+   "original": "Upotte!!",
+   "ru": null,
+   "year": 2012,
+   "aliases": [
+    "Upotte!!",
+    "うぽって!!"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:13808",
+    "anidb:8829",
+    "kitsu:6704",
+    "mal:12317",
+    "tmdb:tv:45190",
+    "tt2255264"
+   ],
+   "releaseDate": "2012-04-07"
+  },
+  {
+   "id": "ann:13896",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=13896",
+   "kind": "series",
+   "name": "Sekai no Hikari: Shinran Shōnin",
+   "original": "Sekai no Hikari: Shinran Shōnin",
+   "ru": null,
+   "year": 1992,
+   "aliases": [
+    "Sekai no Hikari: Shinran Shōnin",
+    "世界の光 親鸞聖人"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:13896",
+    "anidb:8851",
+    "kitsu:9571",
+    "mal:22523"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "1992-06"
+  },
+  {
+   "id": "ann:14165",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=14165",
+   "kind": "film",
+   "name": "Fusé: Memoirs of a Huntress",
+   "original": "Fuse Teppō Musume no Torimonochō",
+   "ru": null,
+   "year": 2012,
+   "aliases": [
+    "Fusé: Memoirs of a Huntress",
+    "Fuse Teppō Musume no Torimonochō",
+    "Fuse",
+    "Fuse: A Gun Girl's Detective Story",
+    "Fuse: Memoirs of the Hunter Girl",
+    "伏 鉄砲娘の捕物帳"
+   ],
+   "runtime": 106,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "ann:14165",
+    "anidb:9074",
+    "kitsu:6942",
+    "mal:13335",
+    "tmdb:movie:204755",
+    "tt2403867"
+   ],
+   "releaseDate": "2012-10-20"
+  },
+  {
+   "id": "ann:14241",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=14241",
+   "kind": "series",
+   "name": "Yakimochi Caprice",
+   "original": "Yakimochi Caprice",
+   "ru": null,
+   "year": 2011,
+   "aliases": [
+    "Yakimochi Caprice",
+    "やきもち狂想曲（カプリス）"
+   ],
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:14241",
+    "anidb:9154",
+    "kitsu:7268",
+    "mal:15533"
+   ],
+   "releaseDate": "2011-12-17"
+  },
+  {
+   "id": "ann:1440",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=1440",
+   "kind": "series",
+   "name": "Video Warrior Laserion",
+   "original": "Video Senshi Lezarion",
+   "ru": null,
+   "year": 1984,
+   "aliases": [
+    "Video Warrior Laserion",
+    "Video Senshi Lezarion",
+    "Lazerion",
+    "ビデオ戦士レザリオン"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:1440",
+    "anidb:1934",
+    "kitsu:4657",
+    "mal:6672"
+   ],
+   "releaseDate": "1984-03-04"
+  },
+  {
+   "id": "ann:14416",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=14416",
+   "kind": "film",
+   "name": "Dangerous Jii-san Ja",
+   "original": "Dangerous Jii-san Ja",
+   "ru": null,
+   "year": 2012,
+   "aliases": [
+    "Dangerous Jii-san Ja",
+    "でんぢゃらすじーさん邪"
+   ],
+   "runtime": 25,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:14416",
+    "anidb:9282",
+    "kitsu:7145",
+    "mal:14631"
+   ],
+   "releaseDate": "2012-07-27"
+  },
+  {
+   "id": "ann:15003",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=15003",
+   "kind": "series",
+   "name": "You're Being Summoned, Azazel Z",
+   "original": "Yondemasuyo, Azazel-san. Z",
+   "ru": null,
+   "year": 2013,
+   "aliases": [
+    "You're Being Summoned, Azazel Z",
+    "Yondemasuyo, Azazel-san. Z",
+    "よんでますよ、アザゼルさん。Z"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:15003",
+    "anidb:9501",
+    "kitsu:7391",
+    "mal:16241",
+    "tmdb:tv:49294",
+    "tt8869838"
+   ],
+   "releaseDate": "2013-04-06"
+  },
+  {
+   "id": "ann:15287",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=15287",
+   "kind": "series",
+   "name": "Yozakura Quartet ~Hana no Uta~",
+   "original": "夜桜四重奏 ～ハナノウタ～",
+   "ru": null,
+   "year": 2013,
+   "aliases": [
+    "Yozakura Quartet ~Hana no Uta~",
+    "夜桜四重奏 ～ハナノウタ～"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action"
+   ],
+   "providerIds": [
+    "ann:15287",
+    "anidb:9816",
+    "kitsu:7843",
+    "mal:18497",
+    "mal:20987",
+    "tmdb:tv:80500",
+    "tt3169640"
+   ],
+   "releaseDate": "2013-10-06"
+  },
+  {
+   "id": "ann:16241",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=16241",
+   "kind": "series",
+   "name": "Nozo × Kimi",
+   "original": "Nozo × Kimi",
+   "ru": null,
+   "year": 2014,
+   "aliases": [
+    "Nozo × Kimi",
+    "ノゾ×キミ"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:16241",
+    "anidb:10672",
+    "kitsu:8567",
+    "mal:24175",
+    "tmdb:tv:94756",
+    "tt3779860"
+   ],
+   "releaseDate": "2014-08-18"
+  },
+  {
+   "id": "ann:16256",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=16256",
+   "kind": "film",
+   "name": "Tamayura: Sotsugyō Shashin",
+   "original": "Tamayura: Sotsugyō Shashin",
+   "ru": null,
+   "year": 2015,
+   "aliases": [
+    "Tamayura: Sotsugyō Shashin",
+    "Tamayura: The Final",
+    "たまゆら～卒業写真～"
+   ],
+   "runtime": 213,
+   "genres": [],
+   "providerIds": [
+    "ann:16256",
+    "anidb:10767",
+    "mal:25729",
+    "mal:29829",
+    "mal:29830",
+    "mal:29831"
+   ],
+   "releaseDate": "2015-04-04"
+  },
+  {
+   "id": "ann:16441",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=16441",
+   "kind": "series",
+   "name": "Comical Psychosomatic Medicine",
+   "original": "アニメで分かる心療内科",
+   "ru": null,
+   "year": 2015,
+   "aliases": [
+    "Comical Psychosomatic Medicine",
+    "アニメで分かる心療内科",
+    "Anime de Wakaru Shinryōnaika"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:16441",
+    "anidb:10877",
+    "kitsu:9786",
+    "mal:27911",
+    "tmdb:tv:74251",
+    "tt10787030"
+   ],
+   "releaseDate": "2015-02-13"
+  },
+  {
+   "id": "ann:16550",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=16550",
+   "kind": "series",
+   "name": "Hanayaka Nari, Waga Ichizoku",
+   "original": "華ヤカ哉、我ガ一族 キネトグラフ",
+   "ru": null,
+   "year": 2012,
+   "aliases": [
+    "Hanayaka Nari, Waga Ichizoku",
+    "華ヤカ哉、我ガ一族 キネトグラフ"
+   ],
+   "runtime": null,
+   "genres": [
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:16550",
+    "anidb:9317",
+    "kitsu:7088",
+    "mal:14145"
+   ],
+   "releaseDate": "2012-12-21"
+  },
+  {
+   "id": "ann:17375",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=17375",
+   "kind": "series",
+   "name": "Tokyo Ghoul: Pinto",
+   "original": "東京喰種［PINTO］",
+   "ru": null,
+   "year": 2015,
+   "aliases": [
+    "Tokyo Ghoul: Pinto",
+    "東京喰種［PINTO］"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:17375",
+    "anidb:11268",
+    "ann:17155",
+    "kitsu:11294",
+    "mal:30458",
+    "mal:31297"
+   ],
+   "releaseDate": "2015-12-25"
+  },
+  {
+   "id": "ann:17528",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=17528",
+   "kind": "film",
+   "name": "Ryūjinnuma",
+   "original": "Ryūjinnuma",
+   "ru": null,
+   "year": 2001,
+   "aliases": [
+    "Ryūjinnuma",
+    "龍神沼"
+   ],
+   "runtime": 15,
+   "genres": [],
+   "providerIds": [
+    "ann:17528",
+    "anidb:11484",
+    "mal:62212"
+   ],
+   "releaseDate": "2001-07-23"
+  },
+  {
+   "id": "ann:17602",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=17602",
+   "kind": "series",
+   "name": "Video Ehon-kan Sekai no Meisaku Dōwa",
+   "original": "Video Ehon-kan Sekai no Meisaku Dōwa",
+   "ru": null,
+   "year": 1988,
+   "aliases": [
+    "Video Ehon-kan Sekai no Meisaku Dōwa",
+    "Sekai Meisaku Dōwa",
+    "Video Anime-kan Sekai no Otogibanashi",
+    "Video Ehon-kan Sekai Meisaku Dōwa",
+    "ビデオアニメ館 世界のおとぎばなし",
+    "ビデオえほん館 世界の名作童話",
+    "ビデオえほん館 世界名作童話",
+    "世界めいさく童話"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:17602",
+    "anidb:7164",
+    "kitsu:10596",
+    "mal:30029"
+   ],
+   "releaseDate": "1988-12-04"
+  },
+  {
+   "id": "ann:18136",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=18136",
+   "kind": "series",
+   "name": "Ancient Magus' Bride: Those Awaiting a Star",
+   "original": "Mahō Tsukai no Yome: Hoshi Matsu Hito",
+   "ru": null,
+   "year": 2016,
+   "aliases": [
+    "Ancient Magus' Bride: Those Awaiting a Star",
+    "Mahō Tsukai no Yome: Hoshi Matsu Hito",
+    "The Ancient Magus' Bride: Those Awaiting a Star",
+    "魔法使いの嫁 星待つひと"
+   ],
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "ann:18136",
+    "anidb:11982",
+    "kitsu:11913",
+    "mal:32902",
+    "tmdb:tv:67800",
+    "tt5970298"
+   ],
+   "releaseDate": "2016-08-13"
+  },
+  {
+   "id": "ann:18475",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=18475",
+   "kind": "film",
+   "name": "Doraemon the Movie: Nobita and the Birth of Japan 2016",
+   "original": "Eiga Doraemon: Shin Nobita no Nippon Tanjō",
+   "ru": null,
+   "year": 2016,
+   "aliases": [
+    "Doraemon the Movie: Nobita and the Birth of Japan 2016",
+    "Eiga Doraemon: Shin Nobita no Nippon Tanjō",
+    "映画ドラえもん 新・のび太の日本誕生"
+   ],
+   "runtime": 105,
+   "genres": [
+    "Adventure",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:18475",
+    "anidb:11353",
+    "kitsu:11197",
+    "mal:31201"
+   ],
+   "releaseDate": "2016-03-05"
+  },
+  {
+   "id": "ann:18801",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=18801",
+   "kind": "series",
+   "name": "Onihei",
+   "original": "Onihei",
+   "ru": null,
+   "year": 2017,
+   "aliases": [
+    "Onihei",
+    "鬼平"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
+   ],
+   "providerIds": [
+    "ann:18801",
+    "anidb:12369",
+    "kitsu:12538",
+    "mal:33983",
+    "tmdb:tv:70943",
+    "tt6494518"
+   ],
+   "releaseDate": "2017-01-09"
+  },
+  {
+   "id": "ann:19255",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=19255",
+   "kind": "film",
+   "name": "Doraemon the Movie: \"Kachi-Kochi\" Nobita's Great Adventure in the Antarctic",
+   "original": "Eiga Doraemon: Nobita no Nankyoku Kachi Kochi Daibōken",
+   "ru": null,
+   "year": 2017,
+   "aliases": [
+    "Doraemon the Movie: \"Kachi-Kochi\" Nobita's Great Adventure in the Antarctic",
+    "Eiga Doraemon: Nobita no Nankyoku Kachi Kochi Daibōken",
+    "映画ドラえもん のび太の南極カチコチ大冒険"
+   ],
+   "runtime": 101,
+   "genres": [
+    "Adventure"
+   ],
+   "providerIds": [
+    "ann:19255",
+    "anidb:12275",
+    "kitsu:12500",
+    "mal:33672"
+   ],
+   "releaseDate": "2017-03-04"
+  },
+  {
+   "id": "ann:19991",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=19991",
+   "kind": "series",
+   "name": "Human Revolution",
+   "original": "Ningen Kakumei",
+   "ru": null,
+   "year": 1995,
+   "aliases": [
+    "Human Revolution",
+    "Ningen Kakumei",
+    "The Human Revolution",
+    "人間革命"
+   ],
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "ann:19991",
+    "anidb:7534",
+    "kitsu:8702",
+    "mal:22325"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "1995-01"
+  },
+  {
+   "id": "ann:20574",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=20574",
+   "kind": "series",
+   "name": "Yonimo Osoroshii Grimm Dōwa",
+   "original": "Yonimo Osoroshii Grimm Dōwa",
+   "ru": null,
+   "year": 2000,
+   "aliases": [
+    "Yonimo Osoroshii Grimm Dōwa",
+    "世にも恐ろしいグリム童話"
+   ],
+   "runtime": null,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "ann:20574",
+    "anidb:8747",
+    "kitsu:3456",
+    "mal:4085"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:20627",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=20627",
+   "kind": "series",
+   "name": "IDOLiSH7 Vibrato",
+   "original": "アイドリッシュセブン Vibrato",
+   "ru": null,
+   "year": 2018,
+   "aliases": [
+    "IDOLiSH7 Vibrato",
+    "アイドリッシュセブン Vibrato"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:20627",
+    "anidb:14543",
+    "kitsu:42455",
+    "mal:36963",
+    "tmdb:tv:117534",
+    "tt9001710"
+   ],
+   "releaseDate": "2018-02-17"
+  },
+  {
+   "id": "ann:21367",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=21367",
+   "kind": "series",
+   "name": "Hora, Mimi ga Mieteru yo!",
+   "original": "Hora, Mimi ga Mieteru yo!",
+   "ru": null,
+   "year": 2018,
+   "aliases": [
+    "Hora, Mimi ga Mieteru yo!",
+    "ほら、耳がみえてるよ！"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:21367",
+    "anidb:14306",
+    "kitsu:41945",
+    "mal:38217"
+   ],
+   "releaseDate": "2018-08-25"
+  },
+  {
+   "id": "ann:21403",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=21403",
+   "kind": "film",
+   "name": "Royal Tutor",
+   "original": "王室教師ハイネ",
+   "ru": null,
+   "year": 2019,
+   "aliases": [
+    "Royal Tutor",
+    "王室教師ハイネ",
+    "The Royal Tutor"
+   ],
+   "runtime": 65,
+   "genres": [],
+   "providerIds": [
+    "ann:21403",
+    "anidb:14394",
+    "kitsu:42058",
+    "mal:38313"
+   ],
+   "releaseDate": "2019-02-16"
+  },
+  {
+   "id": "ann:218",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=218",
+   "kind": "series",
+   "name": "Kinkyū Hasshin Saver Kids",
+   "original": "Kinkyū Hasshin Saver Kids",
+   "ru": null,
+   "year": 1991,
+   "aliases": [
+    "Kinkyū Hasshin Saver Kids",
+    "Emergency Departure Rescue Kids",
+    "The Rescue Kids",
+    "緊急発進セイバーキッズ"
+   ],
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:218",
+    "anidb:4417",
+    "kitsu:3654",
+    "mal:4504"
+   ],
+   "releaseDate": "1991-03-02"
+  },
+  {
+   "id": "ann:21875",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=21875",
+   "kind": "film",
+   "name": "Pandora to Akubi",
+   "original": "Pandora to Akubi",
+   "ru": null,
+   "year": 2019,
+   "aliases": [
+    "Pandora to Akubi",
+    "パンドラとアクビ"
+   ],
+   "runtime": 27,
+   "genres": [],
+   "providerIds": [
+    "ann:21875",
+    "anidb:14682",
+    "kitsu:42172",
+    "mal:39249"
+   ],
+   "releaseDate": "2019-04-12"
+  },
+  {
+   "id": "ann:21882",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=21882",
+   "kind": "film",
+   "name": "Tomcat's Big Adventure",
+   "original": "Chibineko Tom no Daibōken - Chikyū o Sukue! Nakama-tachi",
+   "ru": null,
+   "year": 1992,
+   "aliases": [
+    "Tomcat's Big Adventure",
+    "Chibineko Tom no Daibōken - Chikyū o Sukue! Nakama-tachi",
+    "ちびねこトムの大冒険 地球を救え！なかまたち"
+   ],
+   "runtime": 81,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "ann:21882",
+    "anidb:12135",
+    "kitsu:9734",
+    "mal:17657"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:22318",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=22318",
+   "kind": "series",
+   "name": "Popee the Performer",
+   "original": "ポピーザぱフォーマー",
+   "ru": null,
+   "year": 2000,
+   "aliases": [
+    "Popee the Performer",
+    "ポピーザぱフォーマー"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:22318",
+    "anidb:8471",
+    "kitsu:4611",
+    "mal:39780",
+    "mal:6560",
+    "tmdb:tv:35427",
+    "tt8344276"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "2000-01"
+  },
+  {
+   "id": "ann:22394",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=22394",
+   "kind": "film",
+   "name": "Kennel Tokorozawa",
+   "original": "Kennel Tokorozawa",
+   "ru": null,
+   "year": 1992,
+   "aliases": [
+    "Kennel Tokorozawa",
+    "ケンネル所沢"
+   ],
+   "runtime": 30,
+   "genres": [],
+   "providerIds": [
+    "ann:22394",
+    "anidb:7536",
+    "kitsu:7018",
+    "mal:13715",
+    "tmdb:movie:328354",
+    "tt6863600"
+   ],
+   "releaseDate": "1992-02-21"
+  },
+  {
+   "id": "ann:2264",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2264",
+   "kind": "film",
+   "name": "Ninja Ryūkenden",
+   "original": "Ninja Ryūkenden",
+   "ru": null,
+   "year": 1991,
+   "aliases": [
+    "Ninja Ryūkenden",
+    "Ninja Gaiden",
+    "Ninja Ryu: The Dragon Sword Story",
+    "忍者龍剣伝"
+   ],
+   "runtime": 50,
+   "genres": [
+    "Action",
+    "Drama",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:2264",
+    "anidb:2249",
+    "kitsu:574",
+    "mal:619",
+    "tt0402400"
+   ],
+   "releaseDate": "1991-11-22"
+  },
+  {
+   "id": "ann:2275",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2275",
+   "kind": "film",
+   "name": "Mt. Head",
+   "original": "Atama-yama",
+   "ru": "Голова-гора",
+   "year": 2002,
+   "aliases": [
+    "Mt. Head",
+    "Atama-yama",
+    "Atamayama",
+    "Mount Head",
+    "Голова-гора",
+    "頭山"
+   ],
+   "runtime": 10,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:2275",
+    "anidb:1210",
+    "kitsu:1224",
+    "mal:1370",
+    "tmdb:movie:36072",
+    "tt0351382"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:22977",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=22977",
+   "kind": "film",
+   "name": "Twittering Birds Never Fly: The Clouds Gather",
+   "original": "Saezuru Tori wa Habatakanai: The Clouds Gather",
+   "ru": null,
+   "year": 2020,
+   "aliases": [
+    "Twittering Birds Never Fly: The Clouds Gather",
+    "Saezuru Tori wa Habatakanai: The Clouds Gather",
+    "囀る鳥は羽ばたかない The clouds gather"
+   ],
+   "runtime": 85,
+   "genres": [
+    "Drama",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:22977",
+    "anidb:14889",
+    "ann:23831",
+    "kitsu:42295",
+    "mal:39761",
+    "mal:41289",
+    "mal:42913",
+    "tmdb:movie:650498",
+    "tmdb:movie:673411",
+    "tt10675392"
+   ],
+   "releaseDate": "2020-02-15"
+  },
+  {
+   "id": "ann:23225",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=23225",
+   "kind": "film",
+   "name": "Tobe! Pegasus: Kokoro ni Goal ni Shoot",
+   "original": "Tobe! Pegasus: Kokoro ni Goal ni Shoot",
+   "ru": null,
+   "year": 1995,
+   "aliases": [
+    "Tobe! Pegasus: Kokoro ni Goal ni Shoot",
+    "翔べ! ペガサス 心のゴールにシュート"
+   ],
+   "runtime": 75,
+   "genres": [],
+   "providerIds": [
+    "ann:23225",
+    "anidb:8665",
+    "kitsu:7800",
+    "mal:19049"
+   ],
+   "releaseDate": "1995-06-03"
+  },
+  {
+   "id": "ann:23276",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=23276",
+   "kind": "series",
+   "name": "Mori no Ongaku-dan",
+   "original": "森のおんがくだん",
+   "ru": null,
+   "year": 2015,
+   "aliases": [
+    "Mori no Ongaku-dan",
+    "森のおんがくだん"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:23276",
+    "anidb:11465",
+    "kitsu:11328",
+    "mal:31369"
+   ],
+   "releaseDate": "2015-07-30"
+  },
+  {
+   "id": "ann:2345",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2345",
+   "kind": "series",
+   "name": "Parasite Dolls",
+   "original": "パラサイトドールズ",
+   "ru": "Хищные куклы",
+   "year": 2003,
+   "aliases": [
+    "Parasite Dolls",
+    "パラサイトドールズ",
+    "Parasite Dolls: Another Story of Bubblegum Crisis",
+    "Хищные куклы"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:2345",
+    "anidb:779",
+    "kitsu:1205",
+    "mal:1350",
+    "tmdb:tv:42507",
+    "tt0376058"
+   ],
+   "releaseDate": "2003-05-22"
+  },
+  {
+   "id": "ann:2364",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2364",
+   "kind": "series",
+   "name": "Mirai Kara Shōnen Super Jetter",
+   "original": "Mirai Kara Shōnen Super Jetter",
+   "ru": null,
+   "year": 1965,
+   "aliases": [
+    "Mirai Kara Shōnen Super Jetter",
+    "Super Jetter",
+    "未来から少年スーパージェッター"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:2364",
+    "anidb:1776",
+    "kitsu:7380",
+    "mal:16159"
+   ],
+   "releaseDate": "1965-01-07"
+  },
+  {
+   "id": "ann:23794",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=23794",
+   "kind": "series",
+   "name": "Anime Koten Bungaku Kan",
+   "original": "アニメ古典文学館",
+   "ru": null,
+   "year": 2003,
+   "aliases": [
+    "Anime Koten Bungaku Kan",
+    "アニメ古典文学館"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:23794",
+    "anidb:10168",
+    "kitsu:9192",
+    "mal:24859"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:23956",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=23956",
+   "kind": "film",
+   "name": "Santa Company: Manatsu no Merry Christmas",
+   "original": "Santa Company: Manatsu no Merry Christmas",
+   "ru": null,
+   "year": 2021,
+   "aliases": [
+    "Santa Company: Manatsu no Merry Christmas",
+    "サンタ・カンパニー ～真夏のメリークリスマス～"
+   ],
+   "runtime": 26,
+   "genres": [],
+   "providerIds": [
+    "ann:23956",
+    "anidb:16005",
+    "kitsu:43896",
+    "mal:46491"
+   ],
+   "releaseDate": "2021-01-28"
+  },
+  {
+   "id": "ann:23965",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=23965",
+   "kind": "film",
+   "name": "Dayan to Tama to Tobi Neko to: Mittsu no Neko no Monogatari",
+   "original": "ダヤンとタマと飛び猫と ~3つの猫の物語~",
+   "ru": null,
+   "year": 2019,
+   "aliases": [
+    "Dayan to Tama to Tobi Neko to: Mittsu no Neko no Monogatari",
+    "ダヤンとタマと飛び猫と ~3つの猫の物語~"
+   ],
+   "runtime": 23,
+   "genres": [],
+   "providerIds": [
+    "ann:23965",
+    "anidb:14699",
+    "mal:39351",
+    "tt35146971",
+    "tt35147219",
+    "tt35147437"
+   ],
+   "releaseDate": "2019-05-10"
+  },
+  {
+   "id": "ann:24122",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=24122",
+   "kind": "film",
+   "name": "Starry Tales: Seiza wa Toki wo Koete",
+   "original": "スターリーテイルズ -星座は時をこえて-",
+   "ru": null,
+   "year": 2011,
+   "aliases": [
+    "Starry Tales: Seiza wa Toki wo Koete",
+    "スターリーテイルズ -星座は時をこえて-"
+   ],
+   "runtime": 30,
+   "genres": [],
+   "providerIds": [
+    "ann:24122",
+    "anidb:10082",
+    "kitsu:11768",
+    "mal:32563"
+   ],
+   "releaseDate": "2011-03-19"
+  },
+  {
+   "id": "ann:2481",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2481",
+   "kind": "film",
+   "name": "Sanctuary",
+   "original": "サンクチュアリ",
+   "ru": null,
+   "year": 1996,
+   "aliases": [
+    "Sanctuary",
+    "サンクチュアリ"
+   ],
+   "runtime": 65,
+   "genres": [
+    "Drama"
+   ],
+   "providerIds": [
+    "ann:2481",
+    "anidb:3439",
+    "kitsu:2460",
+    "mal:2698",
+    "tmdb:movie:373522",
+    "tt0295582"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:25366",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=25366",
+   "kind": "film",
+   "name": "Chokin Senshi Cashman",
+   "original": "貯金戦士キャッシュマン",
+   "ru": null,
+   "year": 1997,
+   "aliases": [
+    "Chokin Senshi Cashman",
+    "貯金戦士キャッシュマン"
+   ],
+   "runtime": 15,
+   "genres": [],
+   "providerIds": [
+    "ann:25366",
+    "anidb:9497",
+    "kitsu:4578",
+    "mal:6484"
+   ],
+   "releaseDate": "1997-07-29"
+  },
+  {
+   "id": "ann:25831",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=25831",
+   "kind": "series",
+   "name": "Yonimo Osoroshii Nihon Mukashibanashi",
+   "original": "世にも恐ろしい日本昔話",
+   "ru": null,
+   "year": 2000,
+   "aliases": [
+    "Yonimo Osoroshii Nihon Mukashibanashi",
+    "世にも恐ろしい日本昔話"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:25831",
+    "anidb:8748",
+    "kitsu:5893",
+    "mal:9829"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:2592",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2592",
+   "kind": "series",
+   "name": "Very Private Lesson",
+   "original": "Kyōkasho ni Nai!",
+   "ru": null,
+   "year": 1998,
+   "aliases": [
+    "Very Private Lesson",
+    "Kyōkasho ni Nai!",
+    "教科書にないッ！"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:2592",
+    "anidb:1335",
+    "kitsu:1146",
+    "mal:1271",
+    "tmdb:tv:138724",
+    "tt2304700"
+   ],
+   "releaseDate": "1998-04-21"
+  },
+  {
+   "id": "ann:2722",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2722",
+   "kind": "series",
+   "name": "Grimm Dōwa",
+   "original": "Grimm Dōwa",
+   "ru": null,
+   "year": 1980,
+   "aliases": [
+    "Grimm Dōwa",
+    "Kage-e Grimm Dōwa",
+    "影絵グリム童話"
+   ],
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "ann:2722",
+    "anidb:5923",
+    "kitsu:6088",
+    "mal:10236"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:2949",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=2949",
+   "kind": "series",
+   "name": "Yoiko",
+   "original": "Yoiko",
+   "ru": null,
+   "year": 1998,
+   "aliases": [
+    "Yoiko",
+    "よいこ"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:2949",
+    "anidb:3954",
+    "kitsu:3699",
+    "mal:4591",
+    "tmdb:tv:34694"
+   ],
+   "releaseDate": "1998-11-06"
+  },
+  {
+   "id": "ann:320",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=320",
+   "kind": "series",
+   "name": "Sakura Diaries",
+   "original": "Sakura Tsūshin",
+   "ru": null,
+   "year": 1997,
+   "aliases": [
+    "Sakura Diaries",
+    "Sakura Tsūshin",
+    "Cherry Tree Communication",
+    "Sakura Mail",
+    "さくらつうしん",
+    "桜通信"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:320",
+    "anidb:138",
+    "kitsu:725",
+    "mal:818",
+    "tmdb:tv:44621",
+    "tt0364867"
+   ],
+   "releaseDate": "1997-05-21"
+  },
+  {
+   "id": "ann:3252",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=3252",
+   "kind": "series",
+   "name": "Gakusaver",
+   "original": "Ryūseiki Gakusaver",
+   "ru": null,
+   "year": 1993,
+   "aliases": [
+    "Gakusaver",
+    "Ryūseiki Gakusaver",
+    "Shooting Star Gakusaver",
+    "流星機ガクセイバー"
+   ],
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:3252",
+    "anidb:1491",
+    "kitsu:3220",
+    "mal:3735",
+    "tmdb:tv:125902",
+    "tt1986117"
+   ],
+   "releaseDate": "1993-08-21"
+  },
+  {
+   "id": "ann:3281",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=3281",
+   "kind": "series",
+   "name": "Generation of Chaos III ~Toki no Fuuin~",
+   "original": "Generation of Chaos III ~Toki no Fuuin~",
+   "ru": null,
+   "year": 2003,
+   "aliases": [
+    "Generation of Chaos III ~Toki no Fuuin~",
+    "Generation of Chaos III ~Seal of Time~",
+    "ジェネレーションオブカオス３ ～時の封印～"
+   ],
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "ann:3281",
+    "anidb:1109",
+    "kitsu:2534",
+    "mal:2778",
+    "tt15724404",
+    "tt15724420"
+   ],
+   "releaseDate": "2003-12-12"
+  },
+  {
+   "id": "ann:3378",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=3378",
+   "kind": "film",
+   "name": "Tenguri, the Boy of the Plains",
+   "original": "Sougen no Ko Tenguri",
+   "ru": null,
+   "year": 1977,
+   "aliases": [
+    "Tenguri, the Boy of the Plains",
+    "Sougen no Ko Tenguri",
+    "草原の子テングリ"
+   ],
+   "runtime": 22,
+   "genres": [],
+   "providerIds": [
+    "ann:3378",
+    "anidb:6207",
+    "kitsu:6537",
+    "mal:11561",
+    "tmdb:movie:101640",
+    "tt1888591"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:3399",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=3399",
+   "kind": "series",
+   "name": "Eien no Filena",
+   "original": "Eien no Filena",
+   "ru": null,
+   "year": 1992,
+   "aliases": [
+    "Eien no Filena",
+    "Eternal Filena",
+    "永遠のフィレーナ"
+   ],
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "ann:3399",
+    "anidb:5943",
+    "kitsu:4247",
+    "mal:5689",
+    "tmdb:tv:116332"
+   ],
+   "releaseDate": "1992-12-21"
+  },
+  {
+   "id": "ann:3431",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=3431",
+   "kind": "series",
+   "name": "Tristia of the Deep Blue Sea",
+   "original": "Aoi Umi no Tristia",
+   "ru": "Тристия",
+   "year": 2004,
+   "aliases": [
+    "Tristia of the Deep Blue Sea",
+    "Aoi Umi no Tristia",
+    "Тристия",
+    "蒼い海のトリスティア"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "ann:3431",
+    "anidb:1664",
+    "kitsu:1426",
+    "mal:1586",
+    "tmdb:tv:208847",
+    "tt0491745"
+   ],
+   "releaseDate": "2004-04-23"
+  },
+  {
+   "id": "ann:4198",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=4198",
+   "kind": "film",
+   "name": "Ichi the Killer: Episode Zero",
+   "original": "Koroshiya Ichi the Animation: Episode 0",
+   "ru": null,
+   "year": 2002,
+   "aliases": [
+    "Ichi the Killer: Episode Zero",
+    "Koroshiya Ichi the Animation: Episode 0",
+    "殺し屋１ THE ANIMATION EPISODE 0"
+   ],
+   "runtime": 50,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "ann:4198",
+    "anidb:431",
+    "kitsu:2126",
+    "mal:2346",
+    "tmdb:movie:87069",
+    "tt0362808"
+   ],
+   "releaseDate": "2002-09-27"
+  },
+  {
+   "id": "ann:4359",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=4359",
+   "kind": "series",
+   "name": "Ghost Talker's Daydream",
+   "original": "Teizokurei Daydream",
+   "ru": null,
+   "year": 2004,
+   "aliases": [
+    "Ghost Talker's Daydream",
+    "Teizokurei Daydream",
+    "Vulgar Ghost Daydream",
+    "Vulgar Spirit Daydream",
+    "低俗霊DAYDREAM",
+    "저속령 DAYDREAM"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Horror"
+   ],
+   "providerIds": [
+    "ann:4359",
+    "anidb:2159",
+    "kitsu:1346",
+    "mal:1500",
+    "tmdb:tv:74090",
+    "tt0896540"
+   ],
+   "releaseDate": "2004-06-25"
+  },
+  {
+   "id": "ann:4808",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=4808",
+   "kind": "series",
+   "name": "Eternal Family",
+   "original": "Eikyuu Kazoku",
+   "ru": "Вечная семейка",
+   "year": 1997,
+   "aliases": [
+    "Eternal Family",
+    "Eikyuu Kazoku",
+    "Вечная семейка",
+    "永久家族"
+   ],
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:4808",
+    "anidb:2777",
+    "kitsu:991",
+    "mal:1106",
+    "tmdb:movie:73713",
+    "tt0380887"
+   ],
+   "releaseDate": "1997-04-01"
+  },
+  {
+   "id": "ann:5360",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=5360",
+   "kind": "film",
+   "name": "Minna Agechau",
+   "original": "Minna Agechau",
+   "ru": null,
+   "year": 1987,
+   "aliases": [
+    "Minna Agechau",
+    "I Give My All",
+    "I'll Do It with Anyone",
+    "I'm All Yours",
+    "みんなあげちゃう♥"
+   ],
+   "runtime": 45,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:5360",
+    "anidb:3357",
+    "kitsu:3739",
+    "mal:4688",
+    "tmdb:movie:124511",
+    "tmdb:movie:409377",
+    "tt0143683"
+   ],
+   "releaseDate": "1987-03-01"
+  },
+  {
+   "id": "ann:566",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=566",
+   "kind": "series",
+   "name": "New Cutey Honey",
+   "original": "新・キューティーハニー",
+   "ru": null,
+   "year": 1994,
+   "aliases": [
+    "New Cutey Honey",
+    "新・キューティーハニー",
+    "Cutey Honey",
+    "Shin Cutey Honey"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:566",
+    "anidb:215",
+    "kitsu:2266",
+    "mal:2497",
+    "tmdb:tv:23313",
+    "tt0110652"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:626",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=626",
+   "kind": "series",
+   "name": "Wonder Three",
+   "original": "ワンダー３",
+   "ru": null,
+   "year": 1965,
+   "aliases": [
+    "Wonder Three",
+    "ワンダー３",
+    "The Amazing Three",
+    "W 3"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:626",
+    "anidb:2876",
+    "kitsu:3459",
+    "mal:30767",
+    "mal:4088"
+   ],
+   "releaseDate": "1965-06-06"
+  },
+  {
+   "id": "ann:6550",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=6550",
+   "kind": "series",
+   "name": "Demon Prince Enma",
+   "original": "Kikoushi-Enma",
+   "ru": null,
+   "year": 2006,
+   "aliases": [
+    "Demon Prince Enma",
+    "Kikoushi-Enma",
+    "鬼公子炎魔",
+    "귀공자 염마"
+   ],
+   "runtime": null,
+   "genres": [
+    "Horror",
+    "Mystery"
+   ],
+   "providerIds": [
+    "ann:6550",
+    "anidb:4411",
+    "kitsu:1396",
+    "mal:1556",
+    "tmdb:tv:67580",
+    "tt1348985"
+   ],
+   "releaseDate": "2006-08-25"
+  },
+  {
+   "id": "ann:687",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=687",
+   "kind": "film",
+   "name": "Junk Boy",
+   "original": "The Incredible Gyōkai Video Junk Boy",
+   "ru": null,
+   "year": 1987,
+   "aliases": [
+    "Junk Boy",
+    "The Incredible Gyōkai Video Junk Boy",
+    "The Incredible Gyōkai Video ジャンクボーイ",
+    "ジャンクボーイ"
+   ],
+   "runtime": 44,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:687",
+    "anidb:2135",
+    "kitsu:3328",
+    "mal:3889",
+    "tmdb:movie:60933",
+    "tt0264741"
+   ],
+   "releaseDate": "1987-12-16"
+  },
+  {
+   "id": "ann:688",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=688",
+   "kind": "series",
+   "name": "Kekkō Kamen",
+   "original": "けっこう仮面",
+   "ru": null,
+   "year": 1991,
+   "aliases": [
+    "Kekkō Kamen",
+    "けっこう仮面"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:688",
+    "anidb:1867",
+    "kitsu:2290",
+    "mal:2525",
+    "tmdb:tv:82252",
+    "tt8024248"
+   ],
+   "releaseDate": "1991-08-01"
+  },
+  {
+   "id": "ann:7093",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=7093",
+   "kind": "film",
+   "name": "Chikyū Monogatari Telepath 2500",
+   "original": "Chikyū Monogatari Telepath 2500",
+   "ru": null,
+   "year": 1984,
+   "aliases": [
+    "Chikyū Monogatari Telepath 2500",
+    "Tale of the Earth",
+    "地球物語 テレパス2500"
+   ],
+   "runtime": 105,
+   "genres": [
+    "Drama",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:7093",
+    "anidb:6687",
+    "kitsu:5392",
+    "mal:8563"
+   ],
+   "releaseDate": "1984-08-04"
+  },
+  {
+   "id": "ann:7164",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=7164",
+   "kind": "film",
+   "name": "Joker - Marginal City",
+   "original": "JOKER マージナル・シティ",
+   "ru": null,
+   "year": 1992,
+   "aliases": [
+    "Joker - Marginal City",
+    "JOKER マージナル・シティ"
+   ],
+   "runtime": 45,
+   "genres": [
+    "Action",
+    "Mystery",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:7164",
+    "anidb:4206",
+    "kitsu:3177",
+    "mal:3661"
+   ],
+   "releaseDate": "1992-04-21"
+  },
+  {
+   "id": "ann:7411",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=7411",
+   "kind": "series",
+   "name": "Kyokujitsu no Kantai",
+   "original": "Kyokujitsu no Kantai",
+   "ru": null,
+   "year": 1997,
+   "aliases": [
+    "Kyokujitsu no Kantai",
+    "The Fleet of the Rising Sun",
+    "旭日の艦隊"
+   ],
+   "runtime": null,
+   "genres": [
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:7411",
+    "anidb:4287",
+    "kitsu:4486",
+    "mal:6230"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "ann:7430",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=7430",
+   "kind": "series",
+   "name": "Korogashi Ryōta",
+   "original": "Korogashi Ryōta",
+   "ru": null,
+   "year": 1990,
+   "aliases": [
+    "Korogashi Ryōta",
+    "ころがし涼太"
+   ],
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:7430",
+    "anidb:7691",
+    "kitsu:6243",
+    "mal:10564"
+   ],
+   "releaseDate": "1990-11-21"
+  },
+  {
+   "id": "ann:7913",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=7913",
+   "kind": "film",
+   "name": "SOS! Tokyo Metro Explorers: The Next",
+   "original": "Shin SOS Dai Tokyo Tankentai",
+   "ru": null,
+   "year": 2007,
+   "aliases": [
+    "SOS! Tokyo Metro Explorers: The Next",
+    "Shin SOS Dai Tokyo Tankentai",
+    "新SOS大東京探検隊"
+   ],
+   "runtime": 40,
+   "genres": [
+    "Adventure"
+   ],
+   "providerIds": [
+    "ann:7913",
+    "anidb:5174",
+    "kitsu:3627",
+    "mal:4471",
+    "tmdb:movie:25662",
+    "tt1160937"
+   ],
+   "releaseDate": "2007-05-19"
+  },
+  {
+   "id": "ann:815",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=815",
+   "kind": "film",
+   "name": "Call Me Tonight",
+   "original": "コール・ミー・トゥナイト",
+   "ru": null,
+   "year": 1986,
+   "aliases": [
+    "Call Me Tonight",
+    "コール・ミー・トゥナイト"
+   ],
+   "runtime": 30,
+   "genres": [
+    "Comedy",
+    "Horror",
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:815",
+    "anidb:3383",
+    "kitsu:1944",
+    "mal:2147",
+    "tmdb:movie:166614",
+    "tt3923092"
+   ],
+   "releaseDate": "1986-07-28"
+  },
+  {
+   "id": "ann:8221",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=8221",
+   "kind": "film",
+   "name": "Dengeki Oshioki Musume Gōtaman: Gōtaman Tanjō-hen",
+   "original": "Dengeki Oshioki Musume Gōtaman: Gōtaman Tanjō-hen",
+   "ru": null,
+   "year": 1994,
+   "aliases": [
+    "Dengeki Oshioki Musume Gōtaman: Gōtaman Tanjō-hen",
+    "Butt Attack Punisher Girl Gautaman",
+    "臀撃おしおき娘 ゴータマン ゴータマン誕生編"
+   ],
+   "runtime": 45,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "ann:8221",
+    "anidb:1422",
+    "kitsu:3889",
+    "mal:5025"
+   ],
+   "releaseDate": "1994-05-24"
+  },
+  {
+   "id": "ann:8229",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=8229",
+   "kind": "series",
+   "name": "Fujiko F Fujio no SF Tanpen Theater",
+   "original": "Fujiko F Fujio no SF Tanpen Theater",
+   "ru": null,
+   "year": 1990,
+   "aliases": [
+    "Fujiko F Fujio no SF Tanpen Theater",
+    "藤子・Ｆ・不二雄のＳｕｋｏｓｈｉ Ｆｕｓｈｉｇｉ短編シアター"
+   ],
+   "runtime": null,
+   "genres": [
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "ann:8229",
+    "anidb:7071",
+    "kitsu:9742",
+    "mal:19899"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "1990-03"
+  },
+  {
+   "id": "ann:9883",
+   "source": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=9883",
+   "kind": "film",
+   "name": "Sora Tobu Toshi Keikaku",
+   "original": "Sora Tobu Toshi Keikaku",
+   "ru": null,
+   "year": 2005,
+   "aliases": [
+    "Sora Tobu Toshi Keikaku",
+    "A Flying City Plan",
+    "空飛ぶ都市計画"
+   ],
+   "runtime": 5,
+   "genres": [
+    "Romance"
+   ],
+   "providerIds": [
+    "ann:9883",
+    "anidb:3966",
+    "kitsu:3272",
+    "mal:3818",
+    "tmdb:movie:465586"
+   ],
+   "releaseDate": "2005-09-10"
+  },
+  {
+   "id": "bangumi:663242",
+   "kind": "series",
+   "name": "Shinzou ni Fukushuu wo Chikatte",
+   "original": "心臓に復讐を誓って",
+   "ru": null,
+   "aliases": [
+    "心臓に復讐を誓って",
+    "Shinzō ni Fukushū o Chikatte"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:663242"
+   ],
+   "source": "https://minto-inc.jp/works/iNjxNKzc",
+   "releaseDate": "2026-03-10"
+  },
+  {
+   "id": "bangumi:704737",
+   "kind": "series",
+   "name": "Sylvanian Families: Freya's Colourful Everyday",
+   "original": "シルバニアファミリー フレアのカラフル・エブリデイ",
+   "ru": null,
+   "aliases": [
+    "シルバニアファミリー フレアのカラフル・エブリデイ",
+    "Sylvanian Families: Freya no Colorful Everyday"
+   ],
+   "year": 2026,
+   "runtime": 11,
+   "genres": [],
+   "providerIds": [
+    "bangumi:704737"
+   ],
+   "source": "https://www.sylvanianfamilies.com/ja-jp/special/tv/",
+   "releaseDate": "2026-10-01"
+  },
+  {
    "id": "madb:C10278",
    "source": "https://mediaarts-db.artmuseums.go.jp/id/C10278",
    "kind": "series",
@@ -109481,6 +111537,25 @@
    "releaseDate": "2000-04-16"
   },
   {
+   "id": "tmdb:movie:1001913",
+   "source": "https://www.themoviedb.org/movie/1001913",
+   "kind": "film",
+   "name": "Charmmy Kitty",
+   "original": "チャーミーキティ",
+   "ru": null,
+   "year": 2006,
+   "runtime": 90,
+   "genres": [
+    "Family",
+    "Fantasy",
+    "Adventure"
+   ],
+   "providerIds": [
+    "tmdb:movie:1001913"
+   ],
+   "releaseDate": "2006-11-15"
+  },
+  {
    "id": "tmdb:movie:1003471",
    "source": "https://www.themoviedb.org/movie/1003471",
    "kind": "film",
@@ -109583,6 +111658,24 @@
     "Thriller"
    ],
    "releaseDate": "2023-05-26"
+  },
+  {
+   "id": "tmdb:movie:1021664",
+   "source": "https://www.themoviedb.org/movie/1021664",
+   "kind": "film",
+   "name": "Dino!",
+   "original": "Dino!",
+   "ru": null,
+   "year": 2020,
+   "runtime": 25,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tmdb:movie:1021664"
+   ],
+   "releaseDate": "2020-10-31"
   },
   {
    "id": "tmdb:movie:1024876",
@@ -109764,6 +111857,21 @@
    "releaseDate": "2022-12-06"
   },
   {
+   "id": "tmdb:movie:1069475",
+   "source": "https://www.themoviedb.org/movie/1069475",
+   "kind": "film",
+   "name": "Weird Volunteers",
+   "original": "へんてこな ボランティア",
+   "ru": null,
+   "year": 1993,
+   "runtime": 46,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1069475"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:1070190",
    "source": "https://www.themoviedb.org/movie/1070190",
    "kind": "film",
@@ -109775,6 +111883,21 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:1070190"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1071981",
+   "source": "https://www.themoviedb.org/movie/1071981",
+   "kind": "film",
+   "name": "Bloom",
+   "original": "Bloom",
+   "ru": null,
+   "year": 2009,
+   "runtime": 8,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1071981"
    ],
    "releasePrecision": "year"
   },
@@ -109897,6 +112020,21 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:1081803"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1083517",
+   "source": "https://www.themoviedb.org/movie/1083517",
+   "kind": "film",
+   "name": "SONODA Video - Spring / Summer / Fall / Winter",
+   "original": "SONODA Video - Spring / Summer / Fall / Winter",
+   "ru": null,
+   "year": 1988,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1083517"
    ],
    "releasePrecision": "year"
   },
@@ -110085,6 +112223,21 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:1094693",
+   "source": "https://www.themoviedb.org/movie/1094693",
+   "kind": "film",
+   "name": "Eternity",
+   "original": "Eternity",
+   "ru": null,
+   "year": 2022,
+   "runtime": 21,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1094693"
+   ],
+   "releaseDate": "2022-12-10"
+  },
+  {
    "id": "tmdb:movie:1096530",
    "source": "https://www.themoviedb.org/movie/1096530",
    "kind": "film",
@@ -110203,6 +112356,41 @@
    ]
   },
   {
+   "id": "tmdb:movie:1104289",
+   "source": "https://www.themoviedb.org/movie/1104289",
+   "kind": "film",
+   "name": "Magic",
+   "original": "Magic",
+   "ru": null,
+   "year": 2020,
+   "runtime": 3,
+   "genres": [
+    "Music",
+    "Fantasy",
+    "Adventure",
+    "Mystery"
+   ],
+   "providerIds": [
+    "tmdb:movie:1104289"
+   ],
+   "releaseDate": "2020-10-14"
+  },
+  {
+   "id": "tmdb:movie:1104526",
+   "source": "https://www.themoviedb.org/movie/1104526",
+   "kind": "film",
+   "name": "A Visitor on a Foggy Night",
+   "original": "A Visitor on a Foggy Night",
+   "ru": null,
+   "year": 1986,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1104526"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:1104731",
    "source": "https://www.themoviedb.org/movie/1104731",
    "kind": "film",
@@ -110294,6 +112482,39 @@
     "tmdb:movie:1121957"
    ],
    "releaseDate": "2022-09-24"
+  },
+  {
+   "id": "tmdb:movie:1123706",
+   "source": "https://www.themoviedb.org/movie/1123706",
+   "kind": "film",
+   "name": "Osomatsu-kun: Go For It! Chibita's Oni War",
+   "original": "おそ松くん あっぱれ！チビ太の鬼たいじザンス",
+   "ru": null,
+   "year": 1988,
+   "runtime": 50,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tmdb:movie:1123706"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1126110",
+   "source": "https://www.themoviedb.org/movie/1126110",
+   "kind": "film",
+   "name": "The King of Minami 2",
+   "original": "難波金融伝　ミナミの帝王２",
+   "ru": null,
+   "year": 1994,
+   "runtime": 45,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1126110"
+   ],
+   "releaseDate": "1994-05-27"
   },
   {
    "id": "tmdb:movie:1126305",
@@ -110400,6 +112621,21 @@
    ],
    "providerIds": [
     "tmdb:movie:1136569"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1137448",
+   "source": "https://www.themoviedb.org/movie/1137448",
+   "kind": "film",
+   "name": "Don't You Wish You Were Here?",
+   "original": "Don't You Wish You Were Here?",
+   "ru": null,
+   "year": 1997,
+   "runtime": 4,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1137448"
    ],
    "releasePrecision": "year"
   },
@@ -110514,6 +112750,23 @@
     "tmdb:movie:1152070"
    ],
    "releaseDate": "2023-07-09"
+  },
+  {
+   "id": "tmdb:movie:1152932",
+   "source": "https://www.themoviedb.org/movie/1152932",
+   "kind": "film",
+   "name": "Orochi: \"Sisters\" & \"Bones\"",
+   "original": "おろち: 「姉妹」&「骨」",
+   "ru": null,
+   "year": 1999,
+   "runtime": 88,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "tmdb:movie:1152932"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tmdb:movie:1155151",
@@ -110647,6 +112900,40 @@
    "releaseDate": "2003-05-01"
   },
   {
+   "id": "tmdb:movie:1183294",
+   "source": "https://www.themoviedb.org/movie/1183294",
+   "kind": "film",
+   "name": "The Nighthawk Is Not a Hawk",
+   "original": "よだか",
+   "ru": null,
+   "year": 2023,
+   "runtime": 8,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1183294"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1183797",
+   "source": "https://www.themoviedb.org/movie/1183797",
+   "kind": "film",
+   "name": "CannibAlien",
+   "original": "カニバル星人",
+   "ru": null,
+   "year": 2009,
+   "runtime": 32,
+   "genres": [
+    "Comedy",
+    "Horror",
+    "Science Fiction"
+   ],
+   "providerIds": [
+    "tmdb:movie:1183797"
+   ],
+   "releaseDate": "2009-09-19"
+  },
+  {
    "id": "tmdb:movie:1188098",
    "source": "https://www.themoviedb.org/movie/1188098",
    "kind": "film",
@@ -110757,6 +113044,21 @@
     "tmdb:movie:1199431"
    ],
    "releaseDate": "2023-10-31"
+  },
+  {
+   "id": "tmdb:movie:1203795",
+   "source": "https://www.themoviedb.org/movie/1203795",
+   "kind": "film",
+   "name": "Inner Ray",
+   "original": "Inner Ray",
+   "ru": null,
+   "year": 2023,
+   "runtime": 3,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1203795"
+   ],
+   "releaseDate": "2023-01-06"
   },
   {
    "id": "tmdb:movie:1205040",
@@ -110877,6 +113179,23 @@
    "releaseDate": "2002-07-03"
   },
   {
+   "id": "tmdb:movie:1237547",
+   "source": "https://www.themoviedb.org/movie/1237547",
+   "kind": "film",
+   "name": "In Search of Axis",
+   "original": "In Search of Axis",
+   "ru": null,
+   "year": 1989,
+   "runtime": 6,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tmdb:movie:1237547"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:1249858",
    "source": "https://www.themoviedb.org/movie/1249858",
    "kind": "film",
@@ -110993,6 +113312,21 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:1288716"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1293060",
+   "source": "https://www.themoviedb.org/movie/1293060",
+   "kind": "film",
+   "name": "Docook",
+   "original": "Docook",
+   "ru": null,
+   "year": 2023,
+   "runtime": 4,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1293060"
    ],
    "releasePrecision": "year"
   },
@@ -111144,6 +113478,23 @@
    "releaseDate": "2024-03-22"
   },
   {
+   "id": "tmdb:movie:1308693",
+   "source": "https://www.themoviedb.org/movie/1308693",
+   "kind": "film",
+   "name": "Mystery of Necronomicom",
+   "original": "黒の断章",
+   "ru": null,
+   "year": 1999,
+   "runtime": 120,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "tmdb:movie:1308693"
+   ],
+   "releaseDate": "1999-10-29"
+  },
+  {
    "id": "tmdb:movie:1308803",
    "source": "https://www.themoviedb.org/movie/1308803",
    "kind": "film",
@@ -111291,6 +113642,51 @@
    "releaseDate": "2014-04-30"
   },
   {
+   "id": "tmdb:movie:1326310",
+   "source": "https://www.themoviedb.org/movie/1326310",
+   "kind": "film",
+   "name": "Flander's Tales: Stormy Night",
+   "original": "嵐の夜 フランドル童話",
+   "ru": null,
+   "year": 1935,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326310"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1326311",
+   "source": "https://www.themoviedb.org/movie/1326311",
+   "kind": "film",
+   "name": "Otsuki - Mr. Moon",
+   "original": "お月さん",
+   "ru": null,
+   "year": 1935,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326311"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1326313",
+   "source": "https://www.themoviedb.org/movie/1326313",
+   "kind": "film",
+   "name": "Urashima Tarō",
+   "original": "浦島太郎",
+   "ru": null,
+   "year": 1935,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326313"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:1326315",
    "source": "https://www.themoviedb.org/movie/1326315",
    "kind": "film",
@@ -111306,6 +113702,51 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:1326316",
+   "source": "https://www.themoviedb.org/movie/1326316",
+   "kind": "film",
+   "name": "Sutakora Sacchan Raccoon Dog Balloon",
+   "original": "スタコラサッチャン 狸の風船玉",
+   "ru": null,
+   "year": 1935,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326316"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1326317",
+   "source": "https://www.themoviedb.org/movie/1326317",
+   "kind": "film",
+   "name": "Norakuro - The Hot Air Balloon",
+   "original": "のらくろ軽気球の巻",
+   "ru": null,
+   "year": 1935,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326317"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1326319",
+   "source": "https://www.themoviedb.org/movie/1326319",
+   "kind": "film",
+   "name": "Train Trip",
+   "original": "汽車の旅",
+   "ru": null,
+   "year": 1935,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326319"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:1326323",
    "source": "https://www.themoviedb.org/movie/1326323",
    "kind": "film",
@@ -111317,6 +113758,21 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:1326323"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1326324",
+   "source": "https://www.themoviedb.org/movie/1326324",
+   "kind": "film",
+   "name": "Ponsuke's Shapeshifting Training",
+   "original": "ポンスケ化け修業",
+   "ru": null,
+   "year": 1938,
+   "runtime": 3,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326324"
    ],
    "releasePrecision": "year"
   },
@@ -111362,6 +113818,21 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:1326327"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1326329",
+   "source": "https://www.themoviedb.org/movie/1326329",
+   "kind": "film",
+   "name": "Reffie's Rocket",
+   "original": "レフ坊のロケット",
+   "ru": null,
+   "year": 1937,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1326329"
    ],
    "releasePrecision": "year"
   },
@@ -111478,6 +113949,39 @@
     "TV Movie"
    ],
    "releaseDate": "2014-04-04"
+  },
+  {
+   "id": "tmdb:movie:1371852",
+   "source": "https://www.themoviedb.org/movie/1371852",
+   "kind": "film",
+   "name": "Two on the Road: Always Together",
+   "original": "TWO ON THE ROAD「いつもふたりで」",
+   "ru": null,
+   "year": 1992,
+   "runtime": 58,
+   "genres": [
+    "Music",
+    "Romance"
+   ],
+   "providerIds": [
+    "tmdb:movie:1371852"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1378377",
+   "source": "https://www.themoviedb.org/movie/1378377",
+   "kind": "film",
+   "name": "Yellow Marine Meteorological Observatory",
+   "original": "黄色い海洋気象台",
+   "ru": null,
+   "year": 1988,
+   "runtime": 15,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1378377"
+   ],
+   "releaseDate": "1988-12-08"
   },
   {
    "id": "tmdb:movie:1378820",
@@ -111876,6 +114380,36 @@
    "genres": []
   },
   {
+   "id": "tmdb:movie:1448744",
+   "source": "https://www.themoviedb.org/movie/1448744",
+   "kind": "film",
+   "name": "Anemone",
+   "original": "アネモネ",
+   "ru": null,
+   "year": 2023,
+   "runtime": 1,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1448744"
+   ],
+   "releaseDate": "2023-08-09"
+  },
+  {
+   "id": "tmdb:movie:1448781",
+   "source": "https://www.themoviedb.org/movie/1448781",
+   "kind": "film",
+   "name": "A Little Love Letter: Mariko And The Children Of The Silk Tree",
+   "original": "小さなラブレター まり子とねむの木の子供たち",
+   "ru": null,
+   "year": 1981,
+   "runtime": 84,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1448781"
+   ],
+   "releaseDate": "1981-12-22"
+  },
+  {
    "id": "tmdb:movie:1448783",
    "source": "https://www.themoviedb.org/movie/1448783",
    "kind": "film",
@@ -111920,6 +114454,21 @@
    "genres": []
   },
   {
+   "id": "tmdb:movie:1448858",
+   "source": "https://www.themoviedb.org/movie/1448858",
+   "kind": "film",
+   "name": "Alexander's Decision",
+   "original": "アレクサンドロスの決断",
+   "ru": null,
+   "year": 2003,
+   "runtime": 45,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1448858"
+   ],
+   "releaseDate": "2003-06-01"
+  },
+  {
    "id": "tmdb:movie:1448883",
    "source": "https://www.themoviedb.org/movie/1448883",
    "kind": "film",
@@ -111929,6 +114478,21 @@
    "year": 1996,
    "runtime": 90,
    "genres": []
+  },
+  {
+   "id": "tmdb:movie:1448890",
+   "source": "https://www.themoviedb.org/movie/1448890",
+   "kind": "film",
+   "name": "Ushiro no Seki no Ochiai-kun",
+   "original": "うしろのせきのオチアイくん",
+   "ru": null,
+   "year": 1995,
+   "runtime": 46,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1448890"
+   ],
+   "releaseDate": "1995-12-08"
   },
   {
    "id": "tmdb:movie:1448912",
@@ -112062,6 +114626,23 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:1453855",
+   "source": "https://www.themoviedb.org/movie/1453855",
+   "kind": "film",
+   "name": "Till a City Beneath the Sea is Built",
+   "original": "海底都市の出来るまで",
+   "ru": null,
+   "year": 1969,
+   "runtime": 45,
+   "genres": [
+    "Science Fiction"
+   ],
+   "providerIds": [
+    "tmdb:movie:1453855"
+   ],
+   "releaseDate": "1969-02-02"
+  },
+  {
    "id": "tmdb:movie:1453858",
    "source": "https://www.themoviedb.org/movie/1453858",
    "kind": "film",
@@ -112161,6 +114742,40 @@
    "releaseDate": "2023-06-19"
   },
   {
+   "id": "tmdb:movie:1464774",
+   "source": "https://www.themoviedb.org/movie/1464774",
+   "kind": "film",
+   "name": "Slug",
+   "original": "なめくじ",
+   "ru": null,
+   "year": 2017,
+   "runtime": 7,
+   "genres": [
+    "Romance"
+   ],
+   "providerIds": [
+    "tmdb:movie:1464774"
+   ],
+   "releaseDate": "2017-07-25"
+  },
+  {
+   "id": "tmdb:movie:1465564",
+   "source": "https://www.themoviedb.org/movie/1465564",
+   "kind": "film",
+   "name": "Spring storm",
+   "original": "大和田華加",
+   "ru": null,
+   "year": 2023,
+   "runtime": 4,
+   "genres": [
+    "Adventure"
+   ],
+   "providerIds": [
+    "tmdb:movie:1465564"
+   ],
+   "releaseDate": "2023-05-29"
+  },
+  {
    "id": "tmdb:movie:1466221",
    "source": "https://www.themoviedb.org/movie/1466221",
    "kind": "film",
@@ -112212,6 +114827,21 @@
     "tmdb:movie:1468237"
    ],
    "releaseDate": "2006-05-12"
+  },
+  {
+   "id": "tmdb:movie:1471634",
+   "source": "https://www.themoviedb.org/movie/1471634",
+   "kind": "film",
+   "name": "Finder",
+   "original": "Finder",
+   "ru": null,
+   "year": 2016,
+   "runtime": 6,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1471634"
+   ],
+   "releaseDate": "2016-08-24"
   },
   {
    "id": "tmdb:movie:1486435",
@@ -112517,6 +115147,21 @@
    "releaseDate": "2023-03-11"
   },
   {
+   "id": "tmdb:movie:1546526",
+   "source": "https://www.themoviedb.org/movie/1546526",
+   "kind": "film",
+   "name": "Continuation",
+   "original": "Continuation",
+   "ru": null,
+   "year": 2025,
+   "runtime": 5,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1546526"
+   ],
+   "releaseDate": "2025-09-12"
+  },
+  {
    "id": "tmdb:movie:1546883",
    "source": "https://www.themoviedb.org/movie/1546883",
    "kind": "film",
@@ -112701,6 +115346,21 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:1590560",
+   "source": "https://www.themoviedb.org/movie/1590560",
+   "kind": "film",
+   "name": "Momotaro Wild Eagle Conquest",
+   "original": "桃太郎 荒鷲退治",
+   "ru": null,
+   "year": 1935,
+   "runtime": 3,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1590560"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:1593889",
    "source": "https://www.themoviedb.org/movie/1593889",
    "kind": "film",
@@ -112778,6 +115438,21 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:1601494",
+   "source": "https://www.themoviedb.org/movie/1601494",
+   "kind": "film",
+   "name": "Platonic Chain: Web",
+   "original": "プラトニック・チェーン",
+   "ru": null,
+   "year": 2003,
+   "runtime": 15,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1601494"
+   ],
+   "releaseDate": "2003-09-14"
+  },
+  {
    "id": "tmdb:movie:1610086",
    "source": "https://www.themoviedb.org/movie/1610086",
    "kind": "film",
@@ -112837,6 +115512,21 @@
     "tmdb:movie:1620520"
    ],
    "releaseDate": "2002-08-25"
+  },
+  {
+   "id": "tmdb:movie:1621804",
+   "source": "https://www.themoviedb.org/movie/1621804",
+   "kind": "film",
+   "name": "worry bead",
+   "original": "worry bead",
+   "ru": null,
+   "year": 2016,
+   "runtime": 1,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1621804"
+   ],
+   "releaseDate": "2016-10-19"
   },
   {
    "id": "tmdb:movie:1623548",
@@ -113017,6 +115707,23 @@
     "tmdb:movie:1655970"
    ],
    "releaseDate": "2010-10-23"
+  },
+  {
+   "id": "tmdb:movie:1662227",
+   "source": "https://www.themoviedb.org/movie/1662227",
+   "kind": "film",
+   "name": "Komaneko: The First Step",
+   "original": "こまねこ はじめのいっぽ",
+   "ru": null,
+   "year": 2003,
+   "runtime": 5,
+   "genres": [
+    "Family"
+   ],
+   "providerIds": [
+    "tmdb:movie:1662227"
+   ],
+   "releaseDate": "2003-02-28"
   },
   {
    "id": "tmdb:movie:1668207",
@@ -113296,6 +116003,21 @@
    "releaseDate": "2016-02-24"
   },
   {
+   "id": "tmdb:movie:1727196",
+   "source": "https://www.themoviedb.org/movie/1727196",
+   "kind": "film",
+   "name": "little boarlet",
+   "original": "ちいさなうりぼう",
+   "ru": null,
+   "year": 2026,
+   "runtime": 4,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1727196"
+   ],
+   "releaseDate": "2026-09-24"
+  },
+  {
    "id": "tmdb:movie:1727340",
    "source": "https://www.themoviedb.org/movie/1727340",
    "kind": "film",
@@ -113372,6 +116094,21 @@
    "releaseDate": "2026-04-14"
   },
   {
+   "id": "tmdb:movie:1741612",
+   "source": "https://www.themoviedb.org/movie/1741612",
+   "kind": "film",
+   "name": "A Moonlit Spring Night at Ma-Ma Temple",
+   "original": "真間寺春宵図",
+   "ru": null,
+   "year": 1989,
+   "runtime": 1,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1741612"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:1744503",
    "source": "https://www.themoviedb.org/movie/1744503",
    "kind": "film",
@@ -113383,6 +116120,23 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:1744503"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1762316",
+   "source": "https://www.themoviedb.org/movie/1762316",
+   "kind": "film",
+   "name": "Floating Dream Theatre MSX",
+   "original": "Floating Dream Theatre MSX",
+   "ru": null,
+   "year": 1988,
+   "runtime": 6,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tmdb:movie:1762316"
    ],
    "releasePrecision": "year"
   },
@@ -113529,6 +116283,21 @@
     "tmdb:movie:1827298"
    ],
    "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:1827994",
+   "source": "https://www.themoviedb.org/movie/1827994",
+   "kind": "film",
+   "name": "Through the Looking-Glass and what a girl found there",
+   "original": "鏡を通り抜け、そこで少女が見たものは",
+   "ru": null,
+   "year": 2012,
+   "runtime": 5,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:1827994"
+   ],
+   "releaseDate": "2012-01-29"
   },
   {
    "id": "tmdb:movie:369431",
@@ -113770,6 +116539,21 @@
     "tmdb:movie:477370"
    ],
    "releaseDate": "2014-07-15"
+  },
+  {
+   "id": "tmdb:movie:477899",
+   "source": "https://www.themoviedb.org/movie/477899",
+   "kind": "film",
+   "name": "Lullaby for Wednesday's Cinderella",
+   "original": "あいつとララバイ 水曜日のシンデレラ",
+   "ru": null,
+   "year": 1987,
+   "runtime": 53,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:477899"
+   ],
+   "releaseDate": "1987-08-01"
   },
   {
    "id": "tmdb:movie:490956",
@@ -114893,6 +117677,26 @@
    "releaseDate": "2012-07-07"
   },
   {
+   "id": "tmdb:movie:583246",
+   "source": "https://www.themoviedb.org/movie/583246",
+   "kind": "film",
+   "name": "Fukuyama Theater: Summer Secret",
+   "original": "ふくやま劇場 なつのひみつ",
+   "ru": null,
+   "year": 1990,
+   "runtime": 56,
+   "genres": [
+    "Comedy",
+    "Family",
+    "Music",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tmdb:movie:583246"
+   ],
+   "releaseDate": "1990-09-27"
+  },
+  {
    "id": "tmdb:movie:587348",
    "source": "https://www.themoviedb.org/movie/587348",
    "kind": "film",
@@ -115161,6 +117965,23 @@
    "releaseDate": "1999-01-01"
   },
   {
+   "id": "tmdb:movie:612753",
+   "source": "https://www.themoviedb.org/movie/612753",
+   "kind": "film",
+   "name": "The Esoteric Retina",
+   "original": "The Esoteric Retina",
+   "ru": null,
+   "year": 1994,
+   "runtime": 44,
+   "genres": [
+    "Music"
+   ],
+   "providerIds": [
+    "tmdb:movie:612753"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:617401",
    "source": "https://www.themoviedb.org/movie/617401",
    "kind": "film",
@@ -115258,6 +118079,25 @@
     "tmdb:movie:625793"
    ],
    "releaseDate": "2015-08-07"
+  },
+  {
+   "id": "tmdb:movie:629202",
+   "source": "https://www.themoviedb.org/movie/629202",
+   "kind": "film",
+   "name": "Hana no Asuka-gumi! 2: Lonely Cats Battle Royale",
+   "original": "花のあすか組！２ ロンリーキャッツ・バトルロイヤル",
+   "ru": null,
+   "year": 1990,
+   "runtime": 52,
+   "genres": [
+    "Drama",
+    "Adventure",
+    "Action"
+   ],
+   "providerIds": [
+    "tmdb:movie:629202"
+   ],
+   "releaseDate": "1990-03-23"
   },
   {
    "id": "tmdb:movie:631557",
@@ -115573,6 +118413,24 @@
    "releaseDate": "2016-03-01"
   },
   {
+   "id": "tmdb:movie:689455",
+   "source": "https://www.themoviedb.org/movie/689455",
+   "kind": "film",
+   "name": "Clan of Pihyoro",
+   "original": "現世守護神　ぴーひょろ一家",
+   "ru": null,
+   "year": 1988,
+   "runtime": 60,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tmdb:movie:689455"
+   ],
+   "releaseDate": "1988-07-09"
+  },
+  {
    "id": "tmdb:movie:690959",
    "source": "https://www.themoviedb.org/movie/690959",
    "kind": "film",
@@ -115618,6 +118476,81 @@
     "tmdb:movie:692280"
    ],
    "releaseDate": "2016-06-16"
+  },
+  {
+   "id": "tmdb:movie:692874",
+   "source": "https://www.themoviedb.org/movie/692874",
+   "kind": "film",
+   "name": "Biological Cycle No. 2",
+   "original": "生物的サイクル No.2",
+   "ru": null,
+   "year": 1971,
+   "runtime": 8,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:692874"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:692892",
+   "source": "https://www.themoviedb.org/movie/692892",
+   "kind": "film",
+   "name": "Biological Cycle No. 3",
+   "original": "生物的サイクル No.3",
+   "ru": null,
+   "year": 1971,
+   "runtime": 9,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:692892"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:692946",
+   "source": "https://www.themoviedb.org/movie/692946",
+   "kind": "film",
+   "name": "Anapoko",
+   "original": "穴ポコ",
+   "ru": null,
+   "year": 1963,
+   "runtime": 7,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:692946"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:693903",
+   "source": "https://www.themoviedb.org/movie/693903",
+   "kind": "film",
+   "name": "Biological Cycle No. 1",
+   "original": "生物的サイクル No.1",
+   "ru": null,
+   "year": 1971,
+   "runtime": 6,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:693903"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:693908",
+   "source": "https://www.themoviedb.org/movie/693908",
+   "kind": "film",
+   "name": "Biological Cycle No. 5",
+   "original": "生物的サイクル No.5",
+   "ru": null,
+   "year": 1982,
+   "runtime": 8,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:693908"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tmdb:movie:695839",
@@ -115667,6 +118600,38 @@
     "tmdb:movie:701569"
    ],
    "releaseDate": "1999-04-17"
+  },
+  {
+   "id": "tmdb:movie:701868",
+   "source": "https://www.themoviedb.org/movie/701868",
+   "kind": "film",
+   "name": "Singles Apartment Dokudami-sou",
+   "original": "独身アパートどくだみ荘",
+   "ru": null,
+   "year": 1989,
+   "runtime": 165,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "tmdb:movie:701868"
+   ],
+   "releaseDate": "1989-12-01"
+  },
+  {
+   "id": "tmdb:movie:701914",
+   "source": "https://www.themoviedb.org/movie/701914",
+   "kind": "film",
+   "name": "Seizoki",
+   "original": "精造機",
+   "ru": null,
+   "year": 1964,
+   "runtime": 4,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:701914"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tmdb:movie:702268",
@@ -116252,6 +119217,21 @@
    "releaseDate": "2011-12-11"
   },
   {
+   "id": "tmdb:movie:726446",
+   "source": "https://www.themoviedb.org/movie/726446",
+   "kind": "film",
+   "name": "ちょう使いまわし",
+   "original": "ちょう使いまわし",
+   "ru": null,
+   "year": 2010,
+   "runtime": 8,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:726446"
+   ],
+   "releaseDate": "2010-09-12"
+  },
+  {
    "id": "tmdb:movie:726449",
    "source": "https://www.themoviedb.org/movie/726449",
    "kind": "film",
@@ -116280,6 +119260,21 @@
     "tmdb:movie:726618"
    ],
    "releaseDate": "2012-08-09"
+  },
+  {
+   "id": "tmdb:movie:726624",
+   "source": "https://www.themoviedb.org/movie/726624",
+   "kind": "film",
+   "name": "DNA Qualia",
+   "original": "螺旋のクオリア",
+   "ru": null,
+   "year": 2020,
+   "runtime": 6,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:726624"
+   ],
+   "releaseDate": "2020-07-22"
   },
   {
    "id": "tmdb:movie:727433",
@@ -116602,6 +119597,21 @@
     "tmdb:movie:739318"
    ],
    "releaseDate": "2017-04-20"
+  },
+  {
+   "id": "tmdb:movie:740789",
+   "source": "https://www.themoviedb.org/movie/740789",
+   "kind": "film",
+   "name": "Fast Week",
+   "original": "Fast Week",
+   "ru": null,
+   "year": 2015,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:740789"
+   ],
+   "releaseDate": "2015-02-16"
   },
   {
    "id": "tmdb:movie:741646",
@@ -117096,6 +120106,38 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:775857",
+   "source": "https://www.themoviedb.org/movie/775857",
+   "kind": "film",
+   "name": "Decent Work",
+   "original": "すばらしい仕事",
+   "ru": null,
+   "year": 2015,
+   "runtime": 7,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "tmdb:movie:775857"
+   ],
+   "releaseDate": "2015-09-28"
+  },
+  {
+   "id": "tmdb:movie:775860",
+   "source": "https://www.themoviedb.org/movie/775860",
+   "kind": "film",
+   "name": "I like ducks",
+   "original": "鴨が好き",
+   "ru": null,
+   "year": 2017,
+   "runtime": 7,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:775860"
+   ],
+   "releaseDate": "2017-04-06"
+  },
+  {
    "id": "tmdb:movie:775886",
    "source": "https://www.themoviedb.org/movie/775886",
    "kind": "film",
@@ -117126,6 +120168,21 @@
     "tmdb:movie:775904"
    ],
    "releaseDate": "2016-03-28"
+  },
+  {
+   "id": "tmdb:movie:776133",
+   "source": "https://www.themoviedb.org/movie/776133",
+   "kind": "film",
+   "name": "Baby Variations",
+   "original": "Baby Variations",
+   "ru": null,
+   "year": 1974,
+   "runtime": 8,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:776133"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tmdb:movie:776679",
@@ -117435,6 +120492,25 @@
    "releaseDate": "1994-01-02"
   },
   {
+   "id": "tmdb:movie:797013",
+   "source": "https://www.themoviedb.org/movie/797013",
+   "kind": "film",
+   "name": "Tôkaidô Yotsuya Kaidan: The Anime",
+   "original": "アニメ版 東海道・四谷怪談",
+   "ru": null,
+   "year": 1981,
+   "runtime": 46,
+   "genres": [
+    "History",
+    "Horror",
+    "TV Movie"
+   ],
+   "providerIds": [
+    "tmdb:movie:797013"
+   ],
+   "releaseDate": "1981-08-16"
+  },
+  {
    "id": "tmdb:movie:797047",
    "source": "https://www.themoviedb.org/movie/797047",
    "kind": "film",
@@ -117657,6 +120733,21 @@
     "tmdb:movie:800429"
    ],
    "releaseDate": "2021-02-08"
+  },
+  {
+   "id": "tmdb:movie:800679",
+   "source": "https://www.themoviedb.org/movie/800679",
+   "kind": "film",
+   "name": "Kokoro no Koukyougaku",
+   "original": "こころの交響楽",
+   "ru": null,
+   "year": 2002,
+   "runtime": 43,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:800679"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tmdb:movie:802370",
@@ -118860,6 +121951,21 @@
     "tmdb:movie:826309"
    ],
    "releaseDate": "2016-03-12"
+  },
+  {
+   "id": "tmdb:movie:826750",
+   "source": "https://www.themoviedb.org/movie/826750",
+   "kind": "film",
+   "name": "Locomotor",
+   "original": "Locomotor",
+   "ru": null,
+   "year": 2018,
+   "runtime": 3,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:826750"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tmdb:movie:826867",
@@ -120427,6 +123533,24 @@
    "releaseDate": "2021-08-08"
   },
   {
+   "id": "tmdb:movie:863160",
+   "source": "https://www.themoviedb.org/movie/863160",
+   "kind": "film",
+   "name": "Eagle Talon THE MOVIE 4 ~The Man with Kaspersky~",
+   "original": "秘密結社鷹の爪 THE MOVIE4 〜カスペルスキーを持つ男〜",
+   "ru": null,
+   "year": 2010,
+   "runtime": 43,
+   "genres": [
+    "Comedy",
+    "Action"
+   ],
+   "providerIds": [
+    "tmdb:movie:863160"
+   ],
+   "releaseDate": "2010-06-10"
+  },
+  {
    "id": "tmdb:movie:863347",
    "source": "https://www.themoviedb.org/movie/863347",
    "kind": "film",
@@ -121003,6 +124127,21 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:885983",
+   "source": "https://www.themoviedb.org/movie/885983",
+   "kind": "film",
+   "name": "Sakuhin",
+   "original": "Sakuhin",
+   "ru": null,
+   "year": 1983,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:885983"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:890580",
    "kind": "film",
    "name": "Extra-Terrestrial Boys & Girls: Part 2",
@@ -121017,6 +124156,23 @@
     "Science Fiction"
    ],
    "releaseDate": "2022-02-11"
+  },
+  {
+   "id": "tmdb:movie:893877",
+   "source": "https://www.themoviedb.org/movie/893877",
+   "kind": "film",
+   "name": "Sea Slug Sisters go to Heaven",
+   "original": "うみうし姉妹劇場〜七夕編〜",
+   "ru": null,
+   "year": 2017,
+   "runtime": 6,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tmdb:movie:893877"
+   ],
+   "releaseDate": "2017-08-04"
   },
   {
    "id": "tmdb:movie:893878",
@@ -121197,6 +124353,21 @@
    "releaseDate": "1994-07-21"
   },
   {
+   "id": "tmdb:movie:925758",
+   "source": "https://www.themoviedb.org/movie/925758",
+   "kind": "film",
+   "name": "Buildings",
+   "original": "Buildings",
+   "ru": null,
+   "year": 2009,
+   "runtime": 6,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:925758"
+   ],
+   "releaseDate": "2009-06-02"
+  },
+  {
    "id": "tmdb:movie:927402",
    "source": "https://www.themoviedb.org/movie/927402",
    "kind": "film",
@@ -121241,6 +124412,21 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:927963"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:928292",
+   "source": "https://www.themoviedb.org/movie/928292",
+   "kind": "film",
+   "name": "Esprits de Sel",
+   "original": "塩のエスプリ",
+   "ru": null,
+   "year": 1990,
+   "runtime": 14,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:928292"
    ],
    "releasePrecision": "year"
   },
@@ -121308,6 +124494,21 @@
    "releasePrecision": "year"
   },
   {
+   "id": "tmdb:movie:939729",
+   "source": "https://www.themoviedb.org/movie/939729",
+   "kind": "film",
+   "name": "鳥たちの棲むところ",
+   "original": "鳥たちの棲むところ",
+   "ru": null,
+   "year": 1983,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:939729"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tmdb:movie:939744",
    "source": "https://www.themoviedb.org/movie/939744",
    "kind": "film",
@@ -121321,6 +124522,24 @@
     "tmdb:movie:939744"
    ],
    "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:940127",
+   "source": "https://www.themoviedb.org/movie/940127",
+   "kind": "film",
+   "name": "Infinite Blue",
+   "original": "無限のァ才",
+   "ru": null,
+   "year": 2022,
+   "runtime": 7,
+   "genres": [
+    "Music",
+    "Science Fiction"
+   ],
+   "providerIds": [
+    "tmdb:movie:940127"
+   ],
+   "releaseDate": "2022-01-25"
   },
   {
    "id": "tmdb:movie:944742",
@@ -121391,6 +124610,24 @@
    "releaseDate": "2021-03-19"
   },
   {
+   "id": "tmdb:movie:951445",
+   "source": "https://www.themoviedb.org/movie/951445",
+   "kind": "film",
+   "name": "Heartbreak Angels",
+   "original": "傷だらけの天使たち",
+   "ru": null,
+   "year": 1990,
+   "runtime": 70,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "providerIds": [
+    "tmdb:movie:951445"
+   ],
+   "releaseDate": "1990-01-22"
+  },
+  {
    "id": "tmdb:movie:951557",
    "kind": "film",
    "name": "Shimajiro and the Prince of Glittering Kingdom",
@@ -121406,6 +124643,21 @@
     "Fantasy"
    ],
    "releaseDate": "2022-03-11"
+  },
+  {
+   "id": "tmdb:movie:954719",
+   "source": "https://www.themoviedb.org/movie/954719",
+   "kind": "film",
+   "name": "Recorder",
+   "original": "Recorder",
+   "ru": null,
+   "year": 2006,
+   "runtime": 1,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:954719"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tmdb:movie:955681",
@@ -121436,6 +124688,36 @@
    "genres": [],
    "providerIds": [
     "tmdb:movie:955998"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:957740",
+   "source": "https://www.themoviedb.org/movie/957740",
+   "kind": "film",
+   "name": "É in MOTION No.2",
+   "original": "É in MOTION No.2",
+   "ru": null,
+   "year": 2013,
+   "runtime": 12,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:957740"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "tmdb:movie:957751",
+   "source": "https://www.themoviedb.org/movie/957751",
+   "kind": "film",
+   "name": "Flow",
+   "original": "Flow",
+   "ru": null,
+   "year": 2005,
+   "runtime": 5,
+   "genres": [],
+   "providerIds": [
+    "tmdb:movie:957751"
    ],
    "releasePrecision": "year"
   },
@@ -121986,6 +125268,24 @@
     "Music"
    ],
    "releaseDate": "2013-06-29"
+  },
+  {
+   "id": "tmdb:movie:995840",
+   "source": "https://www.themoviedb.org/movie/995840",
+   "kind": "film",
+   "name": "Hippo Director's Zoo Diary",
+   "original": "カバ園長の動物園日記",
+   "ru": null,
+   "year": 1981,
+   "runtime": 75,
+   "genres": [
+    "TV Movie",
+    "Drama"
+   ],
+   "providerIds": [
+    "tmdb:movie:995840"
+   ],
+   "releaseDate": "1981-08-23"
   },
   {
    "id": "tmdb:movie:996358",
@@ -122620,6 +125920,21 @@
    "releaseDate": "2021-07-01"
   },
   {
+   "id": "tmdb:tv:125666",
+   "source": "https://www.themoviedb.org/tv/125666",
+   "kind": "series",
+   "name": "ファミリー！",
+   "original": "ファミリー！",
+   "ru": null,
+   "year": 1986,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "tmdb:tv:125666"
+   ],
+   "releaseDate": "1986-10-06"
+  },
+  {
    "id": "tmdb:tv:126351",
    "kind": "series",
    "name": "Zoku Attacker YOU! Kin Medal e no Michi",
@@ -122713,6 +126028,24 @@
    "year": 1993,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tmdb:tv:129505",
+   "source": "https://www.themoviedb.org/tv/129505",
+   "kind": "series",
+   "name": "In a Distant Time OVA",
+   "original": "遙かなる時空の中で",
+   "ru": null,
+   "year": 2002,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure",
+    "Drama"
+   ],
+   "providerIds": [
+    "tmdb:tv:129505"
+   ],
+   "releaseDate": "2002-03-27"
   },
   {
    "id": "tmdb:tv:130006",
@@ -124621,6 +127954,23 @@
    "genres": []
   },
   {
+   "id": "tmdb:tv:26016",
+   "source": "https://www.themoviedb.org/tv/26016",
+   "kind": "series",
+   "name": "FireStorm",
+   "original": "FireStorm",
+   "ru": null,
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure"
+   ],
+   "providerIds": [
+    "tmdb:tv:26016"
+   ],
+   "releaseDate": "2003-04-06"
+  },
+  {
    "id": "tmdb:tv:260495",
    "kind": "series",
    "name": "Ariel Deluxe",
@@ -125658,6 +129008,24 @@
    "releaseDate": "2020-10-02"
   },
   {
+   "id": "tmdb:tv:323900",
+   "source": "https://www.themoviedb.org/tv/323900",
+   "kind": "series",
+   "name": "Looney Tunes Gokko",
+   "original": "るーにー・てゅーんずごっこ",
+   "ru": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Kids"
+   ],
+   "providerIds": [
+    "tmdb:tv:323900"
+   ],
+   "releaseDate": "2026-04-30"
+  },
+  {
    "id": "tmdb:tv:324225",
    "kind": "series",
    "name": "XL上司。",
@@ -126053,6 +129421,21 @@
    "year": 2007,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tmdb:tv:34786",
+   "source": "https://www.themoviedb.org/tv/34786",
+   "kind": "series",
+   "name": "DinoZaurs",
+   "original": "DinoZaurs",
+   "ru": null,
+   "year": 2000,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "tmdb:tv:34786"
+   ],
+   "releaseDate": "2000-07-28"
   },
   {
    "id": "tmdb:tv:36202",
@@ -127535,6 +130918,24 @@
    "genres": []
   },
   {
+   "id": "tt0061885",
+   "source": "https://www.themoviedb.org/movie/581713",
+   "kind": "film",
+   "name": "The Kurohime Story",
+   "original": "黒姫ものがたり",
+   "ru": null,
+   "year": 1967,
+   "runtime": 61,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tt0061885",
+    "tmdb:movie:581713"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tt0062044",
    "kind": "film",
    "name": "Band of Ninja",
@@ -128191,6 +131592,22 @@
    ]
   },
   {
+   "id": "tt0083687",
+   "source": "https://www.themoviedb.org/movie/247567",
+   "kind": "film",
+   "name": "Box",
+   "original": "Box",
+   "ru": null,
+   "year": 1982,
+   "runtime": 8,
+   "genres": [],
+   "providerIds": [
+    "tt0083687",
+    "tmdb:movie:247567"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tt0084458",
    "qid": "Q3224176",
    "kind": "film",
@@ -128663,6 +132080,22 @@
     "Drama",
     "Fantasy"
    ]
+  },
+  {
+   "id": "tt0092368",
+   "source": "https://www.themoviedb.org/tv/5972",
+   "kind": "series",
+   "name": "Hello Kitty's Furry Tale Theater",
+   "original": "Hello Kitty's Furry Tale Theater",
+   "ru": null,
+   "year": 1987,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "tt0092368",
+    "tmdb:tv:5972"
+   ],
+   "releaseDate": "1987-09-19"
   },
   {
    "id": "tt0092386",
@@ -132932,6 +136365,25 @@
    ]
   },
   {
+   "id": "tt0160505",
+   "source": "https://www.themoviedb.org/movie/645987",
+   "kind": "film",
+   "name": "Minky Momo: Station of Your Memories",
+   "original": "Mahô no purinsesu Minkî Momo: Tabidachi no eki",
+   "ru": null,
+   "year": 1994,
+   "runtime": 40,
+   "genres": [
+    "Fantasy",
+    "Family"
+   ],
+   "providerIds": [
+    "tt0160505",
+    "tmdb:movie:645987"
+   ],
+   "releaseDate": "1994-06-22"
+  },
+  {
    "id": "tt0160506",
    "kind": "film",
    "name": "Minky Momo: The Bridge Over Dreams",
@@ -132959,6 +136411,27 @@
    ],
    "source": "https://anidb.net/anime/4013",
    "releaseDate": "1993-05-21"
+  },
+  {
+   "id": "tt0160521",
+   "source": "https://www.themoviedb.org/movie/155017",
+   "kind": "film",
+   "name": "Megazone 23",
+   "original": "Megazone 23",
+   "ru": null,
+   "year": 1985,
+   "runtime": 81,
+   "genres": [
+    "Action",
+    "Science Fiction",
+    "Romance",
+    "Music"
+   ],
+   "providerIds": [
+    "tt0160521",
+    "tmdb:movie:155017"
+   ],
+   "releaseDate": "1985-03-09"
   },
   {
    "id": "tt0160523",
@@ -135910,6 +139383,26 @@
    ]
   },
   {
+   "id": "tt0234650",
+   "source": "https://www.themoviedb.org/movie/410387",
+   "kind": "film",
+   "name": "Samurai Shodown 2",
+   "original": "サムライスピリッツ2 アスラ斬魔伝",
+   "ru": null,
+   "year": 1999,
+   "runtime": 60,
+   "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tt0234650",
+    "tmdb:movie:410387"
+   ],
+   "releaseDate": "1999-06-25"
+  },
+  {
    "id": "tt0235119",
    "qid": "Q549203",
    "kind": "series",
@@ -136309,6 +139802,25 @@
     "Action",
     "Science Fiction"
    ]
+  },
+  {
+   "id": "tt0250736",
+   "source": "https://www.themoviedb.org/movie/958900",
+   "kind": "film",
+   "name": "Sins of the Sisters",
+   "original": "聖ミカエラ学園漂流記II",
+   "ru": null,
+   "year": 1994,
+   "runtime": 100,
+   "genres": [
+    "Fantasy",
+    "Horror"
+   ],
+   "providerIds": [
+    "tt0250736",
+    "tmdb:movie:958900"
+   ],
+   "releaseDate": "1994-10-01"
   },
   {
    "id": "tt0250793",
@@ -138154,6 +141666,25 @@
    "genres": []
   },
   {
+   "id": "tt0295295",
+   "source": "https://www.themoviedb.org/movie/212648",
+   "kind": "film",
+   "name": "Hanappe Bazooka",
+   "original": "花平バズーカ",
+   "ru": null,
+   "year": 1992,
+   "runtime": 43,
+   "genres": [
+    "Action",
+    "Comedy"
+   ],
+   "providerIds": [
+    "tt0295295",
+    "tmdb:movie:212648"
+   ],
+   "releaseDate": "1992-09-04"
+  },
+  {
    "id": "tt0295455",
    "qid": "Q3328034",
    "kind": "film",
@@ -138895,6 +142426,28 @@
    "releaseDate": "2001-07-07"
   },
   {
+   "id": "tt0304564",
+   "source": "https://www.themoviedb.org/movie/36897",
+   "kind": "film",
+   "name": "Pokémon: Mewtwo Returns",
+   "original": "ポケットモンスター ミュウツー! 我ハココニ在リ MEWTWO SAGA",
+   "ru": null,
+   "year": 2000,
+   "runtime": 63,
+   "genres": [
+    "Family",
+    "Action",
+    "Adventure",
+    "Drama",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tt0304564",
+    "tmdb:movie:36897"
+   ],
+   "releaseDate": "2000-12-30"
+  },
+  {
    "id": "tt0304995",
    "qid": "Q3113311",
    "kind": "series",
@@ -139224,6 +142777,28 @@
    "year": 2000,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0311108",
+   "source": "https://www.themoviedb.org/movie/30620",
+   "kind": "film",
+   "name": "Fake",
+   "original": "フェイク",
+   "ru": null,
+   "year": 1996,
+   "runtime": 55,
+   "genres": [
+    "Crime",
+    "Mystery",
+    "Comedy",
+    "Romance",
+    "Horror"
+   ],
+   "providerIds": [
+    "tt0311108",
+    "tmdb:movie:30620"
+   ],
+   "releaseDate": "1996-12-01"
   },
   {
    "id": "tt0311618",
@@ -141211,6 +144786,26 @@
    ]
   },
   {
+   "id": "tt0380651",
+   "source": "https://www.themoviedb.org/movie/88879",
+   "kind": "film",
+   "name": "Psycho Diver: Soul Siren",
+   "original": "サイコダイバー 魔性菩薩",
+   "ru": null,
+   "year": 1997,
+   "runtime": 48,
+   "genres": [
+    "Action",
+    "Science Fiction",
+    "Thriller"
+   ],
+   "providerIds": [
+    "tt0380651",
+    "tmdb:movie:88879"
+   ],
+   "releaseDate": "1997-05-21"
+  },
+  {
    "id": "tt0381348",
    "qid": "Q484176",
    "kind": "film",
@@ -142659,6 +146254,25 @@
     "Sakura: Haru no Gensou"
    ],
    "releaseDate": "1946-01-01"
+  },
+  {
+   "id": "tt0419115",
+   "source": "https://www.themoviedb.org/movie/455455",
+   "kind": "film",
+   "name": "Yasuji Murata's Monkey and the Crabs",
+   "original": "猿蟹合戰",
+   "ru": null,
+   "year": 1927,
+   "runtime": 5,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tt0419115",
+    "tmdb:movie:455455"
+   ],
+   "releaseDate": "1927-05-03"
   },
   {
    "id": "tt0419177",
@@ -152918,6 +156532,22 @@
    ]
   },
   {
+   "id": "tt1092574",
+   "source": "https://www.themoviedb.org/movie/468160",
+   "kind": "film",
+   "name": "Dead Girls",
+   "original": "Dead Girls",
+   "ru": null,
+   "year": 2007,
+   "runtime": 45,
+   "genres": [],
+   "providerIds": [
+    "tt1092574",
+    "tmdb:movie:468160"
+   ],
+   "releaseDate": "2007-08-04"
+  },
+  {
    "id": "tt1092584",
    "kind": "film",
    "name": "Hanasaka Jijii",
@@ -152939,6 +156569,24 @@
    ],
    "source": "https://anidb.net/anime/5385",
    "releaseDate": "1917-08-26"
+  },
+  {
+   "id": "tt1093378",
+   "source": "https://www.themoviedb.org/movie/260209",
+   "kind": "film",
+   "name": "Metastasis",
+   "original": "Metastasis",
+   "ru": null,
+   "year": 1971,
+   "runtime": 8,
+   "genres": [
+    "Science Fiction"
+   ],
+   "providerIds": [
+    "tt1093378",
+    "tmdb:movie:260209"
+   ],
+   "releaseDate": "1971-03-20"
   },
   {
    "id": "tt1093380",
@@ -154437,6 +158085,26 @@
    "genres": [
     "Action"
    ]
+  },
+  {
+   "id": "tt11359596",
+   "source": "https://www.themoviedb.org/movie/665875",
+   "kind": "film",
+   "name": "After Man",
+   "original": "After Man",
+   "ru": null,
+   "year": 1989,
+   "runtime": 90,
+   "genres": [
+    "Documentary",
+    "TV Movie",
+    "Science Fiction"
+   ],
+   "providerIds": [
+    "tt11359596",
+    "tmdb:movie:665875"
+   ],
+   "releaseDate": "1989-10-29"
   },
   {
    "id": "tt11374058",
@@ -161030,6 +164698,25 @@
     "tmdb:movie:1259215"
    ],
    "releaseDate": "1988-06-08"
+  },
+  {
+   "id": "tt12975220",
+   "source": "https://www.themoviedb.org/movie/701881",
+   "kind": "film",
+   "name": "Nine: Final",
+   "original": "ナイン3 完結編",
+   "ru": null,
+   "year": 1984,
+   "runtime": 73,
+   "genres": [
+    "Romance",
+    "TV Movie"
+   ],
+   "providerIds": [
+    "tt12975220",
+    "tmdb:movie:701881"
+   ],
+   "releaseDate": "1984-09-05"
   },
   {
    "id": "tt12986888",
@@ -167759,6 +171446,24 @@
    ]
   },
   {
+   "id": "tt14880392",
+   "source": "https://www.themoviedb.org/movie/580801",
+   "kind": "film",
+   "name": "A Log Day of Timbre",
+   "original": "A Log Day of Timbre",
+   "ru": null,
+   "year": 2011,
+   "runtime": 3,
+   "genres": [
+    "Music"
+   ],
+   "providerIds": [
+    "tt14880392",
+    "tmdb:movie:580801"
+   ],
+   "releaseDate": "2011-02-25"
+  },
+  {
    "id": "tt1488591",
    "qid": "Q2096026",
    "kind": "film",
@@ -171997,6 +175702,24 @@
    ]
   },
   {
+   "id": "tt1648133",
+   "source": "https://www.themoviedb.org/movie/53269",
+   "kind": "film",
+   "name": "xxxHolic: Rō",
+   "original": "×××HOLiC・籠",
+   "ru": null,
+   "year": 2010,
+   "runtime": 45,
+   "genres": [
+    "Mystery"
+   ],
+   "providerIds": [
+    "tt1648133",
+    "tmdb:movie:53269"
+   ],
+   "releaseDate": "2010-04-23"
+  },
+  {
    "id": "tt1651881",
    "kind": "film",
    "name": "Idol Fighter Su-Chi-Pai",
@@ -172317,6 +176040,25 @@
     "Action",
     "Fantasy"
    ]
+  },
+  {
+   "id": "tt16652658",
+   "source": "https://www.themoviedb.org/movie/920172",
+   "kind": "film",
+   "name": "The Legend of Kentauros",
+   "original": "ケンタウロスの伝説",
+   "ru": null,
+   "year": 1987,
+   "runtime": 92,
+   "genres": [
+    "Action",
+    "Drama"
+   ],
+   "providerIds": [
+    "tt16652658",
+    "tmdb:movie:920172"
+   ],
+   "releaseDate": "1987-12-21"
   },
   {
    "id": "tt16658952",
@@ -175217,6 +178959,22 @@
    "releaseDate": "1994-08-30"
   },
   {
+   "id": "tt1929282",
+   "source": "https://www.themoviedb.org/movie/893884",
+   "kind": "film",
+   "name": "The Paper House",
+   "original": "Kami no ie",
+   "ru": null,
+   "year": 1986,
+   "runtime": 2,
+   "genres": [],
+   "providerIds": [
+    "tt1929282",
+    "tmdb:movie:893884"
+   ],
+   "releasePrecision": "year"
+  },
+  {
    "id": "tt1929675",
    "qid": "Q106554273",
    "kind": "series",
@@ -176703,6 +180461,38 @@
    "year": 2011,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt2062562",
+   "source": "https://www.themoviedb.org/movie/868749",
+   "kind": "film",
+   "name": "The Garden of Five Fingers",
+   "original": "Itsutsu no yubi no niwa",
+   "ru": null,
+   "year": 1988,
+   "runtime": 5,
+   "genres": [],
+   "providerIds": [
+    "tt2062562",
+    "tmdb:movie:868749"
+   ],
+   "releaseDate": "1988-08-30"
+  },
+  {
+   "id": "tt2062627",
+   "source": "https://www.themoviedb.org/movie/893865",
+   "kind": "film",
+   "name": "Spiral Labyrinth",
+   "original": "螺旋迷宮",
+   "ru": null,
+   "year": 1982,
+   "runtime": 3,
+   "genres": [],
+   "providerIds": [
+    "tt2062627",
+    "tmdb:movie:893865"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tt2064704",
@@ -179512,6 +183302,22 @@
     "Action",
     "Adventure"
    ]
+  },
+  {
+   "id": "tt2239480",
+   "source": "https://www.themoviedb.org/movie/381969",
+   "kind": "film",
+   "name": "Modern No.2",
+   "original": "Modern No.2",
+   "ru": null,
+   "year": 2011,
+   "runtime": 4,
+   "genres": [],
+   "providerIds": [
+    "tt2239480",
+    "tmdb:movie:381969"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tt22410622",
@@ -184089,6 +187895,26 @@
    ]
   },
   {
+   "id": "tt27135554",
+   "source": "https://www.themoviedb.org/movie/629188",
+   "kind": "film",
+   "name": "Hana no Asuka-gumi! Shin Kabukichō Story",
+   "original": "花のあすか組！ 新歌舞伎町ストーリー",
+   "ru": null,
+   "year": 1987,
+   "runtime": 48,
+   "genres": [
+    "Adventure",
+    "Drama",
+    "Action"
+   ],
+   "providerIds": [
+    "tt27135554",
+    "tmdb:movie:629188"
+   ],
+   "releaseDate": "1987-06-12"
+  },
+  {
    "id": "tt2714788",
    "qid": "Q122166510",
    "kind": "film",
@@ -188228,6 +192054,26 @@
    "year": 2001,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt30749922",
+   "source": "https://www.themoviedb.org/movie/1164804",
+   "kind": "film",
+   "name": "Pledge To Peace",
+   "original": "Pledge To Peace",
+   "ru": null,
+   "year": 2007,
+   "runtime": 45,
+   "genres": [
+    "Drama",
+    "History",
+    "War"
+   ],
+   "providerIds": [
+    "tt30749922",
+    "tmdb:movie:1164804"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tt30789794",
@@ -192439,6 +196285,26 @@
    "genres": []
   },
   {
+   "id": "tt3296930",
+   "source": "https://www.themoviedb.org/movie/282915",
+   "kind": "film",
+   "name": "Riki-Oh: The Wall of Hell",
+   "original": "RIKI-OH 力王 等括地獄",
+   "ru": null,
+   "year": 1989,
+   "runtime": 48,
+   "genres": [
+    "Action",
+    "Drama",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tt3296930",
+    "tmdb:movie:282915"
+   ],
+   "releaseDate": "1989-06-25"
+  },
+  {
    "id": "tt3297074",
    "qid": "Q141514713",
    "kind": "series",
@@ -195419,6 +199285,22 @@
    "genres": []
   },
   {
+   "id": "tt35051296",
+   "source": "https://www.themoviedb.org/movie/1309423",
+   "kind": "film",
+   "name": "Origami",
+   "original": "Origami",
+   "ru": null,
+   "year": 2024,
+   "runtime": 3,
+   "genres": [],
+   "providerIds": [
+    "tt35051296",
+    "tmdb:movie:1309423"
+   ],
+   "releaseDate": "2024-10-19"
+  },
+  {
    "id": "tt3505574",
    "qid": "Q62000086",
    "kind": "series",
@@ -195538,6 +199420,22 @@
    "year": 2025,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt3514506",
+   "source": "https://www.themoviedb.org/movie/412770",
+   "kind": "film",
+   "name": "Sink",
+   "original": "Sink",
+   "ru": null,
+   "year": 1999,
+   "runtime": 4,
+   "genres": [],
+   "providerIds": [
+    "tt3514506",
+    "tmdb:movie:412770"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tt3514596",
@@ -196822,6 +200720,24 @@
     "tmdb:movie:1077141"
    ],
    "releaseDate": "2017-03-31"
+  },
+  {
+   "id": "tt36127570",
+   "source": "https://www.themoviedb.org/movie/1089117",
+   "kind": "film",
+   "name": "Deform",
+   "original": "変容",
+   "ru": null,
+   "year": 2020,
+   "runtime": 64,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "tt36127570",
+    "tmdb:movie:1089117"
+   ],
+   "releaseDate": "2020-01-25"
   },
   {
    "id": "tt36131958",
@@ -198473,6 +202389,24 @@
     "tmdb:movie:993151"
    ],
    "releasePrecision": "year"
+  },
+  {
+   "id": "tt3708924",
+   "source": "https://www.themoviedb.org/movie/390768",
+   "kind": "film",
+   "name": "Woman Who Stole Fingers",
+   "original": "指を盗んだ女",
+   "ru": null,
+   "year": 2015,
+   "runtime": 4,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "tt3708924",
+    "tmdb:movie:390768"
+   ],
+   "releaseDate": "2015-09-03"
   },
   {
    "id": "tt3709630",
@@ -204182,6 +208116,25 @@
    ]
   },
   {
+   "id": "tt41852842",
+   "source": "https://www.themoviedb.org/movie/1518886",
+   "kind": "film",
+   "name": "Yumeji Tanima's Scream Theater",
+   "original": "谷間夢路の絶叫劇場",
+   "ru": null,
+   "year": 1999,
+   "runtime": 45,
+   "genres": [
+    "Horror",
+    "Comedy"
+   ],
+   "providerIds": [
+    "tt41852842",
+    "tmdb:movie:1518886"
+   ],
+   "releaseDate": "1999-02-21"
+  },
+  {
    "id": "tt41888569",
    "qid": "Q138577832",
    "kind": "series",
@@ -204685,6 +208638,24 @@
    "genres": [
     "Fantasy"
    ]
+  },
+  {
+   "id": "tt4297084",
+   "source": "https://www.themoviedb.org/movie/284235",
+   "kind": "film",
+   "name": "Desert Rose: The Snow Apocalypse",
+   "original": "砂の薔薇（デザート・ローズ） 「雪の黙示録」",
+   "ru": null,
+   "year": 1993,
+   "runtime": 45,
+   "genres": [
+    "Action"
+   ],
+   "providerIds": [
+    "tt4297084",
+    "tmdb:movie:284235"
+   ],
+   "releaseDate": "1993-04-25"
   },
   {
    "id": "tt4297116",
@@ -206013,6 +209984,25 @@
     "Comedy",
     "History"
    ]
+  },
+  {
+   "id": "tt4689260",
+   "source": "https://www.themoviedb.org/movie/307105",
+   "kind": "film",
+   "name": "My Milk Cup Cow",
+   "original": "コップの中の子牛",
+   "ru": null,
+   "year": 2014,
+   "runtime": 11,
+   "genres": [
+    "Drama",
+    "Family"
+   ],
+   "providerIds": [
+    "tt4689260",
+    "tmdb:movie:307105"
+   ],
+   "releaseDate": "2014-03-07"
   },
   {
    "id": "tt4689276",
@@ -210394,6 +214384,24 @@
    "genres": []
   },
   {
+   "id": "tt5923184",
+   "source": "https://www.themoviedb.org/movie/803175",
+   "kind": "film",
+   "name": "Poker",
+   "original": "Poker",
+   "ru": null,
+   "year": 2014,
+   "runtime": 4,
+   "genres": [
+    "Music"
+   ],
+   "providerIds": [
+    "tt5923184",
+    "tmdb:movie:803175"
+   ],
+   "releaseDate": "2014-04-14"
+  },
+  {
    "id": "tt5923962",
    "qid": "Q24211079",
    "kind": "film",
@@ -212954,6 +216962,26 @@
    ]
   },
   {
+   "id": "tt6614620",
+   "source": "https://www.themoviedb.org/movie/386453",
+   "kind": "film",
+   "name": "Deep Imagination",
+   "original": "スウェットパンチ",
+   "ru": null,
+   "year": 2006,
+   "runtime": 57,
+   "genres": [
+    "Fantasy",
+    "Action",
+    "History"
+   ],
+   "providerIds": [
+    "tt6614620",
+    "tmdb:movie:386453"
+   ],
+   "releaseDate": "2006-01-25"
+  },
+  {
    "id": "tt6628206",
    "source": "https://www.themoviedb.org/movie/352792",
    "kind": "film",
@@ -213641,6 +217669,24 @@
    ]
   },
   {
+   "id": "tt6903202",
+   "source": "https://www.themoviedb.org/movie/741453",
+   "kind": "film",
+   "name": "Licca the Movie: Licca-chan to Yamaneko Hoshi no Tabi",
+   "original": "リカちゃんとヤマネコ 星の旅",
+   "ru": null,
+   "year": 1994,
+   "runtime": 78,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "tt6903202",
+    "tmdb:movie:741453"
+   ],
+   "releaseDate": "1994-04-21"
+  },
+  {
    "id": "tt6912372",
    "qid": "Q25768126",
    "kind": "series",
@@ -213761,6 +217807,24 @@
     "Comedy",
     "Drama"
    ]
+  },
+  {
+   "id": "tt6987944",
+   "source": "https://www.themoviedb.org/movie/830381",
+   "kind": "film",
+   "name": "God Bless America",
+   "original": "God Bless America",
+   "ru": null,
+   "year": 2002,
+   "runtime": 8,
+   "genres": [
+    "Documentary"
+   ],
+   "providerIds": [
+    "tt6987944",
+    "tmdb:movie:830381"
+   ],
+   "releaseDate": "2002-09-11"
   },
   {
    "id": "tt6994582",
@@ -216193,6 +220257,26 @@
    "releaseDate": "2009-08-21"
   },
   {
+   "id": "tt7973996",
+   "source": "https://www.themoviedb.org/movie/484418",
+   "kind": "film",
+   "name": "Romance of the Three Kingdoms",
+   "original": "三国志",
+   "ru": null,
+   "year": 1985,
+   "runtime": 93,
+   "genres": [
+    "Action",
+    "History",
+    "War"
+   ],
+   "providerIds": [
+    "tt7973996",
+    "tmdb:movie:484418"
+   ],
+   "releaseDate": "1985-03-20"
+  },
+  {
    "id": "tt7976226",
    "qid": "Q65925232",
    "kind": "series",
@@ -217149,6 +221233,24 @@
    ]
   },
   {
+   "id": "tt8394246",
+   "source": "https://www.themoviedb.org/tv/88905",
+   "kind": "series",
+   "name": "Heroes: Legend of Battle Disks",
+   "original": "Heroes: Legend of Battle Disks",
+   "ru": null,
+   "year": 2015,
+   "runtime": null,
+   "genres": [
+    "Action & Adventure"
+   ],
+   "providerIds": [
+    "tt8394246",
+    "tmdb:tv:88905"
+   ],
+   "releaseDate": "2015-07-15"
+  },
+  {
    "id": "tt8400662",
    "qid": "Q113434592",
    "kind": "series",
@@ -217323,6 +221425,26 @@
    "year": 2018,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt8501318",
+   "source": "https://www.themoviedb.org/movie/519159",
+   "kind": "film",
+   "name": "Violence Voyager",
+   "original": "バイオレンス・ボイジャー",
+   "ru": null,
+   "year": 2018,
+   "runtime": 84,
+   "genres": [
+    "Horror",
+    "Adventure",
+    "Science Fiction"
+   ],
+   "providerIds": [
+    "tt8501318",
+    "tmdb:movie:519159"
+   ],
+   "releaseDate": "2018-04-18"
   },
   {
    "id": "tt8503628",
@@ -217771,6 +221893,22 @@
    "year": 2018,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt8706220",
+   "source": "https://www.themoviedb.org/movie/1522471",
+   "kind": "film",
+   "name": "Melan & Chory",
+   "original": "Melan & Chory",
+   "ru": null,
+   "year": 2010,
+   "runtime": 5,
+   "genres": [],
+   "providerIds": [
+    "tt8706220",
+    "tmdb:movie:1522471"
+   ],
+   "releaseDate": "2010-05-30"
   },
   {
    "id": "tt8714584",

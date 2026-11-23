@@ -10,6 +10,20 @@ test('media cards retain honest reasons, unknowns and viewed replacement without
  const marked=mediaCardHtml({id:'tt1',name:'Сериал'},{domain:'series',marked:true});
  for(const action of ['familiar-unmark','familiar-keep','data-history-block'])assert.ok(marked.includes(action));
 });
+test('anime imported from ANN credits and links the exact entry in regular and replacement cards',()=>{
+ const link='https://www.animenewsnetwork.com/encyclopedia/anime.php?id=13';
+ const card={id:'ann:13',name:'Cowboy Bebop',kind:'series',year:1998,link};
+ for(const marked of [false,true]){
+  const html=mediaCardHtml(card,{domain:'anime',marked});
+  assert.ok(html.includes(`href="${link}" target="_blank" rel="noopener noreferrer">Anime News Network</a>`));
+  assert.equal(html.split(link).length,2);
+ }
+ const unrelated=mediaCardHtml({...card,link:'https://animenewsnetwork.com.example.org/encyclopedia/anime.php?id=13'},{domain:'anime'});
+ assert.doesNotMatch(unrelated,/>Anime News Network</);
+ const directArt=mediaCardHtml({...card,id:'ann:2345',link:link.replace('id=13','id=2345'),
+  poster:'https://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A2345-5.jpg'},{domain:'anime'});
+ assert.match(directArt,/>Anime News Network · ©AIC and Parasite production committee</);
+});
 test('saving and known labels use the requested media domain and leave opposite same-ID records separate',()=>{
  let call;saveMediaToLibrary({save:(card,options)=>{call={card,options};return card;}},{id:'tt1',name:'Название'},{domain:'cartoon',lane:'tonight'});
  assert.deepEqual(call.options,{domain:'cartoon',lane:'tonight'});

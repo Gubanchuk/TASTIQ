@@ -1,3 +1,5 @@
+import {animeArtwork} from './anime-artwork.js';
+
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const genres={Action:'Боевик',Adventure:'Приключения',Animation:'Анимация',Biography:'Биография',Comedy:'Комедия',Crime:'Криминал',Documentary:'Документальный',Drama:'Драма',Family:'Семейный',Fantasy:'Фэнтези',History:'Исторический',Horror:'Ужасы',Music:'Музыка',Musical:'Мюзикл',Mystery:'Детектив',Romance:'Мелодрама','Sci-Fi':'Фантастика',Sport:'Спорт',Thriller:'Триллер',War:'Военный',Western:'Вестерн',Short:'Короткий метр',Indie:'Инди',RPG:'Ролевая игра',Strategy:'Стратегия',Casual:'Казуальная',Simulation:'Симулятор',Racing:'Гонки',Sports:'Спорт','Early Access':'Ранний доступ','Massively Multiplayer':'ММО'};
 export function genreLabels(card,domain){
@@ -11,3 +13,12 @@ export function cardMetadataParts(card,{domain='game'}={}){
   ...genreLabels(card,domain).slice(0,2)].filter(Boolean);
 }
 export function cardMetadataHtml(card,options){const parts=cardMetadataParts(card,options);return parts.length?`<p class="game-meta">${parts.map(part=>`<span>${esc(part)}</span>`).join('')}</p>`:'';}
+
+export function animeEncyclopediaCreditHtml(card,{className}={}){
+ const match=/^https:\/\/(?:www\.)?animenewsnetwork\.com\/encyclopedia\/anime\.php\?id=([1-9]\d*)$/.exec(card?.link??'');
+ if(!match)return '';
+ const link=`https://www.animenewsnetwork.com/encyclopedia/anime.php?id=${match[1]}`;
+ const artwork=animeArtwork(card.id);
+ const copyright=artwork?.sourceUrl===link && (card.poster===artwork.url||card.image===artwork.url) ? artwork.copyright : '';
+ return `<a${className?` class="${esc(className)}"`:''} href="${link}" target="_blank" rel="noopener noreferrer">Anime News Network${copyright?` · ${esc(copyright)}`:''}</a>`;
+}
