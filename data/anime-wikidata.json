@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 12248,
+ "queried": 12279,
  "items": [
   {
    "id": "anidb:10000",
@@ -69245,6 +69245,27 @@
    "releasePrecision": "year"
   },
   {
+   "id": "bangumi:583974",
+   "kind": "series",
+   "name": "Koizumi Yakumo no Kwaidan no Sekai",
+   "original": "小泉八雲のKWAIDANの世界",
+   "ru": null,
+   "aliases": [
+    "小泉八雲のKWAIDANの世界",
+    "Lafcadio Hearn’s Kwaidan"
+   ],
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Horror"
+   ],
+   "providerIds": [
+    "bangumi:583974"
+   ],
+   "source": "https://www.dle.jp/jp/news/ai_1/3539.html",
+   "releaseDate": "2025-10-02"
+  },
+  {
    "id": "bangumi:616830",
    "kind": "series",
    "name": "Secret Society Eagle Talon XX",
@@ -69318,6 +69339,24 @@
    "releaseDate": "2026-08-29"
   },
   {
+   "id": "bangumi:638082",
+   "kind": "series",
+   "name": "Hokkaidoubutsu",
+   "original": "ほっかいどうぶつ",
+   "ru": null,
+   "aliases": [
+    "ほっかいどうぶつ"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:638082"
+   ],
+   "source": "https://prtimes.jp/main/html/rd/p/000000094.000082555.html",
+   "releaseDate": "2026-04-01"
+  },
+  {
    "id": "bangumi:663242",
    "kind": "series",
    "name": "Shinzou ni Fukushuu wo Chikatte",
@@ -69337,6 +69376,42 @@
    "releaseDate": "2026-03-10"
   },
   {
+   "id": "bangumi:695725",
+   "kind": "series",
+   "name": "Rakuraku Hanten",
+   "original": "楽楽飯店",
+   "ru": null,
+   "aliases": [
+    "楽楽飯店"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:695725"
+   ],
+   "source": "https://plott.tokyo/posts/20260918",
+   "releaseDate": "2026-09-18"
+  },
+  {
+   "id": "bangumi:696670",
+   "kind": "series",
+   "name": "Puella Magi Yotsugi Peace",
+   "original": "魔法童女よつぎ☆ピース",
+   "ru": null,
+   "aliases": [
+    "魔法童女よつぎ☆ピース"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:696670"
+   ],
+   "source": "https://www.aniplex.co.jp/lineup/OFMs/news/detail/?id=71047",
+   "releaseDate": "2026-08-20"
+  },
+  {
    "id": "bangumi:704737",
    "kind": "series",
    "name": "Sylvanian Families: Freya's Colourful Everyday",
@@ -69354,6 +69429,60 @@
    ],
    "source": "https://www.sylvanianfamilies.com/ja-jp/special/tv/",
    "releaseDate": "2026-10-01"
+  },
+  {
+   "id": "bangumi:718060",
+   "kind": "series",
+   "name": "Charisma: Short Anime",
+   "original": "ショートアニメ『カリスマ』",
+   "ru": null,
+   "aliases": [
+    "ショートアニメ『カリスマ』"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:718060"
+   ],
+   "source": "https://anime.charisma-house.com/news/72/",
+   "releaseDate": "2026-11-04"
+  },
+  {
+   "id": "bangumi:720123",
+   "kind": "series",
+   "name": "Everyday High School",
+   "original": "えぶりでい高校",
+   "ru": null,
+   "aliases": [
+    "えぶりでい高校"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:720123"
+   ],
+   "source": "https://www.youtube.com/watch?v=eE_SZYnXhE8",
+   "releaseDate": "2026-11-13"
+  },
+  {
+   "id": "bangumi:720444",
+   "kind": "series",
+   "name": "Chrono Bravers",
+   "original": "クロノブレイバーズ",
+   "ru": null,
+   "aliases": [
+    "クロノブレイバーズ"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:720444"
+   ],
+   "source": "https://www.roll-net.com/news/view/111",
+   "releaseDate": "2026-07-09"
   },
   {
    "id": "madb:C10278",
@@ -76971,6 +77100,30 @@
    "releaseDate": "1993-04-21"
   },
   {
+   "id": "mal:18835",
+   "source": "https://shikimori.io/animes/18835-hakuouki-reimeiroku-ova",
+   "kind": "series",
+   "name": "Hakuouki: Reimeiroku OVA",
+   "original": "薄桜鬼　黎明録　特典ディスク　",
+   "ru": "Сказание о демонах сакуры: Хроники рассвета OVA 2",
+   "aliases": [
+    "Hakuouki: Reimeiroku OVA",
+    "薄桜鬼　黎明録　特典ディスク　",
+    "Сказание о демонах сакуры: Хроники рассвета OVA 2",
+    "Hakuouki: Reimeiroku Tokuten Disc"
+   ],
+   "year": 2013,
+   "runtime": 11,
+   "genres": [
+    "Action"
+   ],
+   "providerIds": [
+    "shikimori:18835",
+    "mal:18835"
+   ],
+   "releaseDate": "2013-05-22"
+  },
+  {
    "id": "mal:18845",
    "source": "https://myanimelist.net/anime/18845",
    "kind": "series",
@@ -80851,6 +81004,38 @@
    "releaseDate": "1972-08-27"
   },
   {
+   "id": "mal:2291",
+   "source": "https://shikimori.io/animes/2291-tatakae-iczer-1",
+   "kind": "series",
+   "name": "Fight!! Iczer-1",
+   "original": "戦え!! イクサー1",
+   "ru": "Вперёд, Икзер-1!",
+   "aliases": [
+    "Tatakae!! Iczer-1",
+    "Fight!! Iczer-1",
+    "戦え!! イクサー1",
+    "Вперёд, Икзер-1!",
+    "В бой, Икзер-1!",
+    "Iczer-One",
+    "Fight! Iczer-One",
+    "Fight! Iczer One"
+   ],
+   "year": 1985,
+   "runtime": 33,
+   "genres": [
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "shikimori:2291",
+    "mal:2291",
+    "anidb:436",
+    "tt0158615",
+    "ann:684",
+    "tmdb:tv:97412"
+   ],
+   "releaseDate": "1985-10-19"
+  },
+  {
    "id": "mal:22959",
    "source": "https://myanimelist.net/anime/22959",
    "kind": "film",
@@ -82148,6 +82333,36 @@
     "The Crab Gets Its Revenge on the Monkey"
    ],
    "releaseDate": "1997-03-01"
+  },
+  {
+   "id": "mal:2387",
+   "source": "https://www.allcinema.net/cinema/235599",
+   "kind": "film",
+   "name": "Ai Monogatari: 9 Love Stories",
+   "original": "愛物語 9 Love Stories",
+   "ru": "Девять историй о любви",
+   "aliases": [
+    "Ai Monogatari: 9 Love Stories",
+    "愛物語 9 Love Stories",
+    "Девять историй о любви",
+    "Kawaguchi Kaiji's 9 Love Stories",
+    "愛物語　9　ＬＯＶＥ　ＳＴＯＲＩＥＳ"
+   ],
+   "year": 1993,
+   "runtime": 92,
+   "genres": [
+    "Drama",
+    "Romance"
+   ],
+   "providerIds": [
+    "shikimori:2387",
+    "mal:2387",
+    "anidb:3354",
+    "tt1977699",
+    "ann:4880",
+    "tmdb:movie:383527"
+   ],
+   "releaseDate": "1993-06-01"
   },
   {
    "id": "mal:23871",
@@ -88477,6 +88692,33 @@
    "releaseDate": "2007-10-20"
   },
   {
+   "id": "mal:31667",
+   "source": "https://www.youtube.com/channel/UCX2pZgr9yHgeGWeg9TTil8A",
+   "kind": "series",
+   "name": "Ponkotsu Quest: Maou to Haken no Mamono-tachi",
+   "original": "ポンコツクエスト～魔王と派遣の魔物たち～",
+   "ru": "Квест Понкоцу: Король демонов и монстры в командировке",
+   "aliases": [
+    "Ponkotsu Quest: Maou to Haken no Mamono-tachi",
+    "ポンコツクエスト～魔王と派遣の魔物たち～",
+    "Квест Понкоцу: Король демонов и монстры в командировке",
+    "PonQue"
+   ],
+   "year": 2013,
+   "runtime": 3,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:31667",
+    "mal:31667",
+    "anidb:12965",
+    "ann:24407"
+   ],
+   "releaseDate": "2013-08-22"
+  },
+  {
    "id": "mal:31696",
    "source": "https://myanimelist.net/anime/31696",
    "kind": "series",
@@ -88760,6 +89002,31 @@
     "森林传说 第二乐章"
    ],
    "releaseDate": "2014-08-21"
+  },
+  {
+   "id": "mal:32084",
+   "source": "https://shikimori.io/animes/32084-watashitachi-luck-logic-bu",
+   "kind": "series",
+   "name": "Watashitachi, Luck Logic-bu!",
+   "original": "私たち、らくろじ部！",
+   "ru": "Наш клуб удачи и логики!",
+   "aliases": [
+    "Watashitachi, Luck Logic-bu!",
+    "私たち、らくろじ部！",
+    "Наш клуб удачи и логики!",
+    "Watashitachi Rakuroji-bu!"
+   ],
+   "year": 2016,
+   "runtime": 1,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:32084",
+    "mal:32084",
+    "anidb:11781"
+   ],
+   "releaseDate": "2016-01-09"
   },
   {
    "id": "mal:32088",
@@ -96241,6 +96508,37 @@
    "releaseDate": "2019-09-10"
   },
   {
+   "id": "mal:39610",
+   "source": "https://acca-anime.com/regards/",
+   "kind": "film",
+   "name": "ACCA: 13-Territory Inspection Department - Regards",
+   "original": "ACCA13区監察課 Regards",
+   "ru": "АККА: Инспекция по 13 округам OVA",
+   "aliases": [
+    "ACCA: 13-ku Kansatsu-ka - Regards",
+    "ACCA: 13-Territory Inspection Department - Regards",
+    "ACCA13区監察課 Regards",
+    "АККА: Инспекция по 13 округам OVA",
+    "ACCA: 13-Territory Inspection Dept. Regards",
+    "ACCA: 13th Territory Inspection Department",
+    "ACCA: 13th Ward Observation Department - Regards",
+    "ACCA Jusanku Kansatsuka Regards"
+   ],
+   "year": 2020,
+   "runtime": 47,
+   "genres": [
+    "Drama",
+    "Mystery"
+   ],
+   "providerIds": [
+    "shikimori:39610",
+    "mal:39610",
+    "anidb:14799",
+    "ann:23517"
+   ],
+   "releaseDate": "2020-02-14"
+  },
+  {
    "id": "mal:39668",
    "source": "https://myanimelist.net/anime/39668",
    "kind": "series",
@@ -97283,6 +97581,24 @@
     "Troubling Old Man"
    ],
    "releaseDate": "2020-04-08"
+  },
+  {
+   "id": "mal:40901",
+   "kind": "series",
+   "name": "Katana Maidens: Tomoshibi",
+   "original": "刀使ノ巫女 刻みし一閃の燈火",
+   "ru": null,
+   "aliases": [
+    "刀使ノ巫女 刻みし一閃の燈火"
+   ],
+   "year": 2020,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "mal:40901"
+   ],
+   "source": "https://tojitomo-anime.jp/onair/index.html",
+   "releaseDate": "2020-10-25"
   },
   {
    "id": "mal:40939",
@@ -98434,6 +98750,32 @@
    ],
    "releasePrecision": "season",
    "releaseSeason": "SUMMER"
+  },
+  {
+   "id": "mal:42885",
+   "source": "https://www.takaratomy.co.jp/products/zoidswild/anime/ep01.html",
+   "kind": "series",
+   "name": "Zoids Wild Senki",
+   "original": "ゾイドワイルド戦記",
+   "ru": "Дикие Зойды: Военная хроника",
+   "aliases": [
+    "Zoids Wild Senki",
+    "ゾイドワイルド戦記",
+    "Дикие Зойды: Военная хроника"
+   ],
+   "year": 2020,
+   "runtime": 3,
+   "genres": [
+    "Adventure",
+    "Comedy",
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "shikimori:42885",
+    "mal:42885",
+    "anidb:17186"
+   ],
+   "releaseDate": "2020-10-17"
   },
   {
    "id": "mal:42906",
@@ -99682,6 +100024,55 @@
    "releaseDate": "2021-08-13"
   },
   {
+   "id": "mal:48790",
+   "source": "https://shikimori.io/animes/48790-neko-jockey",
+   "kind": "series",
+   "name": "Neko Jockey",
+   "original": "猫ジョッキー",
+   "ru": "Кот-жокей",
+   "aliases": [
+    "Neko Jockey",
+    "猫ジョッキー",
+    "Кот-жокей"
+   ],
+   "year": 2021,
+   "runtime": 2,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:48790",
+    "mal:48790",
+    "ann:24804"
+   ],
+   "releaseDate": "2021-05-06"
+  },
+  {
+   "id": "mal:48832",
+   "source": "https://fantasiafestival.com/en/film/cherry-and-virgin",
+   "kind": "film",
+   "name": "Cherry and Virgin",
+   "original": "CHERRY AND VIRGIN",
+   "ru": "Вишня и дева",
+   "aliases": [
+    "Cherry and Virgin",
+    "CHERRY AND VIRGIN",
+    "Вишня и дева"
+   ],
+   "year": 2026,
+   "runtime": 87,
+   "genres": [
+    "Romance"
+   ],
+   "providerIds": [
+    "shikimori:48832",
+    "mal:48832",
+    "anidb:16279",
+    "ann:24341"
+   ],
+   "releaseDate": "2026-07-18"
+  },
+  {
    "id": "mal:48909",
    "source": "https://myanimelist.net/anime/48909",
    "kind": "film",
@@ -100435,6 +100826,31 @@
    "releaseDate": "2022-01-12"
   },
   {
+   "id": "mal:50689",
+   "source": "https://www.youtube.com/watch?v=GD7yitpkfI8",
+   "kind": "series",
+   "name": "The Missing 8",
+   "original": "The Missing 8",
+   "ru": "Пропавшая восьмёрка",
+   "aliases": [
+    "The Missing 8",
+    "Пропавшая восьмёрка"
+   ],
+   "year": 2021,
+   "runtime": 14,
+   "genres": [
+    "Sci-Fi"
+   ],
+   "providerIds": [
+    "shikimori:50689",
+    "mal:50689",
+    "anidb:17090",
+    "ann:25099",
+    "tmdb:tv:154333"
+   ],
+   "releaseDate": "2021-12-28"
+  },
+  {
    "id": "mal:5080",
    "source": "https://myanimelist.net/anime/5080",
    "kind": "film",
@@ -100467,6 +100883,31 @@
     "クイズマジックアカデミー ~The Original Animation~"
    ],
    "releaseDate": "2008-09-12"
+  },
+  {
+   "id": "mal:50848",
+   "source": "https://shikimori.io/animes/50848-ojamajo-doremi-honobono-gekijou",
+   "kind": "series",
+   "name": "Ojamajo Doremi: Heartwarming Theater",
+   "original": "おジャ魔女どれみ ほのぼの劇場",
+   "ru": "Невезучая ведьма Дореми: Трогательный театр",
+   "aliases": [
+    "Ojamajo Doremi: Honobono Gekijou",
+    "Ojamajo Doremi: Heartwarming Theater",
+    "おジャ魔女どれみ ほのぼの劇場",
+    "Невезучая ведьма Дореми: Трогательный театр"
+   ],
+   "year": 2020,
+   "runtime": 5,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:50848",
+    "mal:50848",
+    "anidb:16105"
+   ],
+   "releaseDate": "2020-01-10"
   },
   {
    "id": "mal:5089",
@@ -100771,6 +101212,31 @@
     "쥐라기 월드컵"
    ],
    "releaseDate": "1993-05-07"
+  },
+  {
+   "id": "mal:52028",
+   "source": "https://shikimori.io/animes/52028-anime-nihon-no-mukashibanashi",
+   "kind": "series",
+   "name": "Anime Nihon no Mukashibanashi",
+   "original": "アニメ 日本の昔ばなし",
+   "ru": "Японские сказки",
+   "aliases": [
+    "Anime Nihon no Mukashibanashi",
+    "アニメ 日本の昔ばなし",
+    "Японские сказки",
+    "Anime Japanese Folktales"
+   ],
+   "year": 1989,
+   "runtime": null,
+   "genres": [
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:52028",
+    "mal:52028",
+    "anidb:17451"
+   ],
+   "releaseDate": "1989-06-25"
   },
   {
    "id": "mal:52029",
@@ -103307,6 +103773,31 @@
    "releaseDate": "2023-09-16"
   },
   {
+   "id": "mal:57532",
+   "source": "https://www.dle.jp/jp/works/3426.html",
+   "kind": "series",
+   "name": "Sakigake!! Reiwa no Otokojuku",
+   "original": "魁!!令和の男塾",
+   "ru": "Вперёд, школьник! Школа для мальчиков эпохи Рэйва",
+   "aliases": [
+    "Sakigake!! Reiwa no Otokojuku",
+    "魁!!令和の男塾",
+    "Вперёд, школьник! Школа для мальчиков эпохи Рэйва"
+   ],
+   "year": 2023,
+   "runtime": 4,
+   "genres": [
+    "Action",
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:57532",
+    "mal:57532",
+    "ann:31065"
+   ],
+   "releaseDate": "2023-12-18"
+  },
+  {
    "id": "mal:57590",
    "source": "https://myanimelist.net/anime/57590",
    "kind": "film",
@@ -103403,6 +103894,32 @@
     "Uta no Prince-sama: Maji Love TABOO NIGHT XXXX"
    ],
    "releaseDate": "2025-05-09"
+  },
+  {
+   "id": "mal:57753",
+   "source": "https://mahjongsoul-kang.jp/",
+   "kind": "series",
+   "name": "Mahjong Soul Kan!!",
+   "original": "じゃんたま カン!!",
+   "ru": "Душа маджонга: Кан!",
+   "aliases": [
+    "Jantama Kan!!",
+    "Mahjong Soul Kan!!",
+    "じゃんたま カン!!",
+    "Душа маджонга: Кан!"
+   ],
+   "year": 2024,
+   "runtime": 5,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:57753",
+    "mal:57753",
+    "anidb:18390",
+    "ann:31351"
+   ],
+   "releaseDate": "2024-04-25"
   },
   {
    "id": "mal:57828",
@@ -103614,6 +104131,30 @@
     "シナモン the Movie ／ ねずみ物語"
    ],
    "releaseDate": "2007-12-22"
+  },
+  {
+   "id": "mal:58499",
+   "source": "https://www.dle.jp/jp/works/3426.html",
+   "kind": "series",
+   "name": "Dokonjo Gaeru Yanen",
+   "original": "ど根性ガエルやねん",
+   "ru": "Лягушка с характером! Ага, конечно",
+   "aliases": [
+    "Dokonjo Gaeru Yanen",
+    "ど根性ガエルやねん",
+    "Лягушка с характером! Ага, конечно"
+   ],
+   "year": 2024,
+   "runtime": 1,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:58499",
+    "mal:58499",
+    "ann:32143"
+   ],
+   "releaseDate": "2024-02-22"
   },
   {
    "id": "mal:58517",
@@ -104713,6 +105254,32 @@
    "releaseDate": "2024-10-09"
   },
   {
+   "id": "mal:59753",
+   "source": "https://c21media.net/marketplace/tencentvideo/taisu-project/22507/",
+   "kind": "series",
+   "name": "Taisu Project",
+   "original": "Taisu系列",
+   "ru": "Коллекция Taisu",
+   "aliases": [
+    "Taisu Xilie",
+    "Taisu Project",
+    "Taisu系列",
+    "Коллекция Taisu"
+   ],
+   "year": 2024,
+   "runtime": 25,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:59753",
+    "mal:59753",
+    "ann:27065"
+   ],
+   "releaseDate": "2024-08-10"
+  },
+  {
    "id": "mal:59865",
    "source": "https://myanimelist.net/anime/59865",
    "kind": "series",
@@ -104953,6 +105520,30 @@
     "トランスフォーマーＺ[ゾーン]"
    ],
    "releaseDate": "1990-07-21"
+  },
+  {
+   "id": "mal:60384",
+   "source": "https://www.vap.co.jp/data/html/product/ptazapr3d4bi5u7q.html",
+   "kind": "film",
+   "name": "Sore Ike! Anpanman: Ganbare Cream Panda! Christmas no Bouken",
+   "original": "それいけ!アンパンマン がんばれクリームパンダ!クリスマスの冒険",
+   "ru": "Вперёд, Анпанман! Держись, Крем-Панда! Рождественское приключение",
+   "aliases": [
+    "Sore Ike! Anpanman: Ganbare Cream Panda! Christmas no Bouken",
+    "それいけ!アンパンマン がんばれクリームパンダ!クリスマスの冒険",
+    "Вперёд, Анпанман! Держись, Крем-Панда! Рождественское приключение"
+   ],
+   "year": 2009,
+   "runtime": 47,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ],
+   "providerIds": [
+    "shikimori:60384",
+    "mal:60384"
+   ],
+   "releaseDate": "2009-12-25"
   },
   {
    "id": "mal:60446",
@@ -105236,6 +105827,32 @@
    "releaseDate": "2025-06-27"
   },
   {
+   "id": "mal:61016",
+   "source": "https://www.dle.jp/jp/works/3426.html",
+   "kind": "series",
+   "name": "Heidi's Elderly Grandfather of the Alps",
+   "original": "アルプスの老人ハイジのおじいさん",
+   "ru": "Дедушка Хайди — старик Альп",
+   "aliases": [
+    "Alps no Roujin Heidi no Ojii-san",
+    "Heidi's Elderly Grandfather of the Alps",
+    "アルプスの老人ハイジのおじいさん",
+    "Дедушка Хайди — старик Альп",
+    "Old Man of the Alps Heidi's Grandfather"
+   ],
+   "year": 2024,
+   "runtime": 1,
+   "genres": [
+    "Comedy"
+   ],
+   "providerIds": [
+    "shikimori:61016",
+    "mal:61016",
+    "ann:34170"
+   ],
+   "releaseDate": "2024-12-18"
+  },
+  {
    "id": "mal:61041",
    "source": "https://myanimelist.net/anime/61041",
    "kind": "film",
@@ -105515,6 +106132,31 @@
    "releaseDate": "2025-04-04"
   },
   {
+   "id": "mal:61326",
+   "source": "https://www.dle.jp/jp/works/3426.html",
+   "kind": "series",
+   "name": "Dokodemo Makibao",
+   "original": "どこでもマキバオー",
+   "ru": "Вездесущий Макибао",
+   "aliases": [
+    "Dokodemo Makibao",
+    "どこでもマキバオー",
+    "Вездесущий Макибао"
+   ],
+   "year": 2024,
+   "runtime": 5,
+   "genres": [
+    "Comedy",
+    "Sport"
+   ],
+   "providerIds": [
+    "shikimori:61326",
+    "mal:61326",
+    "ann:34169"
+   ],
+   "releaseDate": "2024-12-16"
+  },
+  {
    "id": "mal:61558",
    "source": "https://myanimelist.net/anime/61558",
    "kind": "film",
@@ -105779,6 +106421,27 @@
    "releaseDate": "2025-10-31"
   },
   {
+   "id": "mal:62267",
+   "source": "https://tatsunoko.co.jp/works/color-leon/",
+   "kind": "series",
+   "name": "Color Leon",
+   "original": "カラーレオン",
+   "ru": null,
+   "aliases": [
+    "Color Leon",
+    "カラーレオン"
+   ],
+   "year": 2023,
+   "runtime": 1,
+   "genres": [],
+   "providerIds": [
+    "shikimori:62267",
+    "mal:62267"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "2023-07"
+  },
+  {
    "id": "mal:62269",
    "source": "https://myanimelist.net/anime/62269",
    "kind": "film",
@@ -106017,6 +106680,24 @@
     "Red Coloured Elegy"
    ],
    "releaseDate": "2007-06-29"
+  },
+  {
+   "id": "mal:62690",
+   "kind": "film",
+   "name": "Oshiri Mae Man: Fukkatsu no Oshiri Mae Teikoku",
+   "original": "おしり前マン～復活のおしり前帝国～",
+   "ru": null,
+   "aliases": [
+    "おしり前マン～復活のおしり前帝国～"
+   ],
+   "year": 2026,
+   "runtime": 78,
+   "genres": [],
+   "providerIds": [
+    "mal:62690"
+   ],
+   "source": "https://saigate.co.jp/oshirifront/",
+   "releaseDate": "2026-03-20"
   },
   {
    "id": "mal:6280",
@@ -130916,6 +131597,48 @@
    "genres": [
     "Sci-Fi & Fantasy"
    ]
+  },
+  {
+   "id": "toei-education:144",
+   "source": "https://dramatic-study.toei.co.jp/movie-search/144",
+   "kind": "film",
+   "name": "Boku to Gaku: Ano Natsu no Monogatari",
+   "original": "ボクとガク 〜あの夏のものがたり〜",
+   "ru": null,
+   "year": 2010,
+   "runtime": 42,
+   "genres": [],
+   "aliases": [
+    "Boku to Gaku: Ano Natsu no Monogatari",
+    "ボクとガク 〜あの夏のものがたり〜"
+   ],
+   "providerIds": [
+    "toei-education:144",
+    "madb:C444609",
+    "anilist:121531"
+   ],
+   "releasePrecision": "month",
+   "releaseMonth": "2010-03"
+  },
+  {
+   "id": "toei-education:205",
+   "source": "https://dramatic-study.toei.co.jp/movie-search/205",
+   "kind": "film",
+   "name": "Yume no Tsuzuki",
+   "original": "夢のつづき",
+   "ru": null,
+   "year": 2008,
+   "runtime": 40,
+   "genres": [],
+   "aliases": [
+    "Yume no Tsuzuki",
+    "夢のつづき"
+   ],
+   "providerIds": [
+    "toei-education:205",
+    "anidb:10103"
+   ],
+   "releasePrecision": "year"
   },
   {
    "id": "tt0038759",
