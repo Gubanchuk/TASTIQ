@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 6237,
+ "queried": 6248,
  "items": [
   {
    "id": "madb:C10278",
@@ -1128,6 +1128,17 @@
    "genres": []
   },
   {
+   "id": "tmdb:movie:1134165",
+   "source": "https://www.themoviedb.org/movie/1134165",
+   "kind": "film",
+   "name": "Uncle Remodelling Course",
+   "ru": null,
+   "original": "おじさん改造講座",
+   "year": 1990,
+   "runtime": 92,
+   "genres": []
+  },
+  {
    "id": "tmdb:movie:1139866",
    "source": "https://www.themoviedb.org/movie/1139866",
    "kind": "film",
@@ -1478,6 +1489,42 @@
    "original": "グリザイア：ファントムトリガー THE ANIMATION スターゲイザー",
    "year": 2020,
    "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:movie:786440",
+   "source": "https://www.themoviedb.org/movie/786440",
+   "kind": "film",
+   "name": "Star of the Giants - Go, Go, Hyuma",
+   "ru": null,
+   "original": "巨人の星 行け行け飛雄馬",
+   "year": 1969,
+   "runtime": 70,
+   "genres": [
+    "Drama",
+    "Family"
+   ]
+  },
+  {
+   "id": "tmdb:movie:786448",
+   "source": "https://www.themoviedb.org/movie/786448",
+   "kind": "film",
+   "name": "Star of the Giants - Big League Ball",
+   "ru": null,
+   "original": "巨人の星 大リーグボール",
+   "year": 1970,
+   "runtime": 70,
+   "genres": []
+  },
+  {
+   "id": "tmdb:movie:786454",
+   "source": "https://www.themoviedb.org/movie/786454",
+   "kind": "film",
+   "name": "Star of the Giants - Fateful Showdown",
+   "ru": null,
+   "original": "巨人の星 宿命の対決",
+   "year": 1970,
+   "runtime": 60,
    "genres": []
   },
   {
@@ -2734,6 +2781,17 @@
    "ru": null,
    "original": "夜廻り猫",
    "year": 2023,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tmdb:tv:217578",
+   "source": "https://mediaarts-db.artmuseums.go.jp/id/C15864",
+   "kind": "series",
+   "name": "なめこ せかいのともだち",
+   "original": "なめこ せかいのともだち",
+   "ru": null,
+   "year": 2016,
    "runtime": null,
    "genres": []
   },
@@ -7800,6 +7858,17 @@
    "genres": [
     "Action"
    ]
+  },
+  {
+   "id": "tt0142636",
+   "source": "https://www.themoviedb.org/movie/1148703",
+   "kind": "film",
+   "name": "Magical★Taruruuto-kun: Moeru! Yuujou no Mahou Taisen",
+   "ru": null,
+   "original": "まじかる★タルるートくん 燃えろ! 友情の魔法大戦",
+   "year": 1991,
+   "runtime": 40,
+   "genres": []
   },
   {
    "id": "tt0142666",
@@ -12978,6 +13047,20 @@
    "genres": [
     "Action",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt0297215",
+   "source": "https://www.themoviedb.org/movie/116318",
+   "kind": "film",
+   "name": "A Journey Through Fairyland",
+   "ru": null,
+   "original": "妖精フローレンス",
+   "year": 1985,
+   "runtime": 90,
+   "genres": [
+    "Family",
+    "Fantasy"
    ]
   },
   {
@@ -35360,6 +35443,20 @@
    ]
   },
   {
+   "id": "tt14471040",
+   "source": "https://www.themoviedb.org/movie/472668",
+   "kind": "film",
+   "name": "The Monster Kid and The Demon's Sword",
+   "ru": null,
+   "original": "怪物くん デーモンの剣",
+   "year": 1982,
+   "runtime": 52,
+   "genres": [
+    "Comedy",
+    "Horror"
+   ]
+  },
+  {
    "id": "tt14476236",
    "qid": "Q106523151",
    "kind": "series",
@@ -41284,6 +41381,20 @@
    "runtime": null,
    "genres": [
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt1863338",
+   "source": "https://www.themoviedb.org/movie/20062",
+   "kind": "film",
+   "name": "Nitaboh",
+   "ru": null,
+   "original": "NITABOH 仁太坊―津軽三味線始祖外聞",
+   "year": 2004,
+   "runtime": 100,
+   "genres": [
+    "History",
+    "Music"
    ]
   },
   {
@@ -47604,6 +47715,22 @@
    "genres": [
     "Action",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt25816286",
+   "source": "https://www.themoviedb.org/movie/471485",
+   "kind": "film",
+   "name": "Noel's Fantastic Trip",
+   "ru": null,
+   "original": "ノエルの不思議な冒険",
+   "year": 1983,
+   "runtime": 72,
+   "genres": [
+    "Adventure",
+    "Comedy",
+    "Fantasy",
+    "Music"
    ]
   },
   {
@@ -71622,6 +71749,19 @@
    "genres": [
     "Action",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt6531060",
+   "source": "https://www.themoviedb.org/movie/432130",
+   "kind": "film",
+   "name": "Ao Oni The Animation",
+   "ru": null,
+   "original": "青鬼 THE ANIMATION",
+   "year": 2017,
+   "runtime": 60,
+   "genres": [
+    "Horror"
    ]
   },
   {
