@@ -53,13 +53,14 @@ export function buildFacts(item, detail, taste, catalog) {
     if (taste.weights.get(f)?.confirmed || taste.weights.get(f)?.preferred) continue; // the person said they like it (grind fans exist)
     facts.push({ id: `risk:flaw:${f}`, type: 'risk_flaw', f, evidence: v.ev.filter((e) => e.kind !== 'fact').slice(0, 1) });
   }
-  if (item.quality < catalog.domain.qualityWarn) {
+  const hasReviews = item.reviews.total > 0 && Number.isFinite(item.reviews.ratio);
+  if (hasReviews && item.quality < catalog.domain.qualityWarn) {
     facts.push({ id: 'risk:quality', type: 'risk_quality', ratio: item.reviews.ratio, desc: item.reviews.desc });
   }
   const hasLength = ['length.short', 'length.long', 'length.endless'].some((f) => item.features[f]?.r >= 0.5);
   if (catalog.domain.id === 'game' && !hasLength && item.medianHoursAtReview == null) facts.push({ id: 'gap:length', type: 'gap', what: 'длина' });
 
-  facts.push({ id: 'fact:reviews', type: 'fact', ratio: item.reviews.ratio, total: item.reviews.total, desc: item.reviews.desc });
+  if (hasReviews) facts.push({ id: 'fact:reviews', type: 'fact', ratio: item.reviews.ratio, total: item.reviews.total, desc: item.reviews.desc });
   if (item.medianHoursAtReview != null) facts.push({ id: 'fact:hours', type: 'fact', hours: item.medianHoursAtReview });
   if (item.deck) facts.push({ id: 'fact:deck', type: 'fact', deck: item.deck });
   if (item.runtime && item.kind === 'film') facts.push({ id: 'fact:runtime', type: 'fact', runtime: item.runtime });

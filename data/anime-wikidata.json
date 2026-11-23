@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 4611,
+ "queried": 4774,
  "items": [
   {
    "id": "tt0051694",
@@ -1418,6 +1418,20 @@
    ]
   },
   {
+   "id": "tt0108689",
+   "qid": "Q135270682",
+   "kind": "series",
+   "name": "Akazukin Chacha",
+   "ru": null,
+   "original": "赤ずきんチャチャ",
+   "year": 1994,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt0108736",
    "qid": "Q89892745",
    "kind": "series",
@@ -1607,6 +1621,20 @@
    ]
   },
   {
+   "id": "tt0112105",
+   "qid": "Q118868876",
+   "kind": "series",
+   "name": "Nurse Angel Ririka SOS",
+   "ru": null,
+   "original": "ナースエンジェルりりかSOS",
+   "year": 1995,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt0112159",
    "qid": "Q662",
    "kind": "series",
@@ -1700,6 +1728,20 @@
    ]
   },
   {
+   "id": "tt0115234",
+   "qid": "Q137041082",
+   "kind": "series",
+   "name": "Kodocha",
+   "ru": null,
+   "original": "こどものおもちゃ",
+   "year": 1996,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt0115263",
    "qid": "Q701317",
    "kind": "series",
@@ -1763,6 +1805,20 @@
    "year": 1989,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0121306",
+   "qid": "Q141514760",
+   "kind": "series",
+   "name": "Marvelous Melmo",
+   "ru": null,
+   "original": "ふしぎなメルモ",
+   "year": 1971,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt0122336",
@@ -3007,6 +3063,20 @@
    ]
   },
   {
+   "id": "tt0159901",
+   "qid": "Q133720106",
+   "kind": "series",
+   "name": "Dear Brother",
+   "ru": "Уважаемый старший брат",
+   "original": "おにいさまへ…",
+   "year": 1991,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt0159923",
    "qid": "Q2708504",
    "kind": "series",
@@ -4214,6 +4284,20 @@
    ]
   },
   {
+   "id": "tt0195542",
+   "qid": "Q141452470",
+   "kind": "series",
+   "name": "Battle Athletes Victory",
+   "ru": null,
+   "original": "バトルアスリーテス大運動会",
+   "year": 1997,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0196050",
    "qid": "Q709818",
    "kind": "series",
@@ -4659,6 +4743,20 @@
    ]
   },
   {
+   "id": "tt0231050",
+   "qid": "Q772381",
+   "kind": "series",
+   "name": "Transformers: Robots in Disguise",
+   "ru": "Трансформеры: Автороботы",
+   "original": "トランスフォーマー カーロボット",
+   "year": 2000,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0235119",
    "qid": "Q549203",
    "kind": "series",
@@ -4695,6 +4793,20 @@
     "Comedy",
     "Drama",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt0236450",
+   "qid": "Q134459569",
+   "kind": "series",
+   "name": "Lost Universe",
+   "ru": null,
+   "original": "ロスト・ユニバース",
+   "year": 1998,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
    ]
   },
   {
@@ -5010,6 +5122,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt0257297",
+   "qid": "Q135639483",
+   "kind": "series",
+   "name": "Boys Be...",
+   "ru": null,
+   "original": "BOYS BE…",
+   "year": 2000,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
    ]
   },
   {
@@ -5529,6 +5655,20 @@
    "genres": [
     "Drama",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt0289018",
+   "qid": "Q135438571",
+   "kind": "series",
+   "name": "Sarutobi Ecchan",
+   "ru": null,
+   "original": "さるとびエッちゃん",
+   "year": 1971,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
    ]
   },
   {
@@ -6064,6 +6204,20 @@
    ]
   },
   {
+   "id": "tt0294614",
+   "qid": "Q141514896",
+   "kind": "series",
+   "name": "Haunted Junction",
+   "ru": null,
+   "original": "HAUNTEDじゃんくしょん",
+   "year": 1997,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt0295080",
    "qid": "Q696346",
    "kind": "series",
@@ -6198,6 +6352,20 @@
    ]
   },
   {
+   "id": "tt0296367",
+   "qid": "Q135113090",
+   "kind": "series",
+   "name": "Judo Boy",
+   "ru": null,
+   "original": "紅三四郎",
+   "year": 1969,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0296374",
    "qid": "Q2556944",
    "kind": "series",
@@ -6272,6 +6440,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt0297580",
+   "qid": "Q113367232",
+   "kind": "series",
+   "name": "Lady Georgie",
+   "ru": null,
+   "original": "レディジョージィ",
+   "year": 1983,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
    ]
   },
   {
@@ -6598,6 +6780,17 @@
    "genres": []
   },
   {
+   "id": "tt0305038",
+   "qid": "Q24887863",
+   "kind": "series",
+   "name": "Heisei Tensai Bakabon",
+   "ru": null,
+   "original": "平成天才バカボン",
+   "year": 1990,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt0305046",
    "qid": "Q2015843",
    "kind": "series",
@@ -6787,6 +6980,20 @@
    "runtime": null,
    "genres": [
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt0313133",
+   "qid": "Q617266",
+   "kind": "series",
+   "name": "Taotao",
+   "ru": "Taotao",
+   "original": "タオタオ絵本館",
+   "year": 1983,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Family"
    ]
   },
   {
@@ -7393,6 +7600,20 @@
    ]
   },
   {
+   "id": "tt0346280",
+   "qid": "Q140384895",
+   "kind": "series",
+   "name": "Ginga Sengoku Gun'yūden Rai",
+   "ru": null,
+   "original": "銀河戦国群雄伝ライ",
+   "year": 1994,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0346285",
    "qid": "Q124335567",
    "kind": "series",
@@ -7528,6 +7749,34 @@
    ]
   },
   {
+   "id": "tt0352038",
+   "qid": "Q615648",
+   "kind": "series",
+   "name": "Blue Blink",
+   "ru": "Aoi Blink",
+   "original": "青いブリンク",
+   "year": 1989,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Family"
+   ]
+  },
+  {
+   "id": "tt0352068",
+   "qid": "Q1204125",
+   "kind": "series",
+   "name": "Pinocchio: The Series",
+   "ru": "Mokku of the Oak Tree",
+   "original": "樫の木モック",
+   "year": 1972,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Family"
+   ]
+  },
+  {
    "id": "tt0352099",
    "qid": "Q1051871",
    "kind": "series",
@@ -7623,6 +7872,20 @@
    "year": 2003,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0366064",
+   "qid": "Q135921413",
+   "kind": "series",
+   "name": "Oruchuban Ebichu",
+   "ru": null,
+   "original": "おるちゅばんエビちゅ",
+   "year": 1999,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Short"
+   ]
   },
   {
    "id": "tt0366099",
@@ -8105,6 +8368,20 @@
    "year": 2003,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0388621",
+   "qid": "Q1012762",
+   "kind": "series",
+   "name": "Midnight Horror School",
+   "ru": null,
+   "original": "ミッドナイトホラースクール",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
   },
   {
    "id": "tt0388629",
@@ -8840,6 +9117,20 @@
    ]
   },
   {
+   "id": "tt0421391",
+   "qid": "Q141514665",
+   "kind": "series",
+   "name": "Demon Lord Dante",
+   "ru": null,
+   "original": "魔王ダンテ",
+   "year": 2002,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Horror"
+   ]
+  },
+  {
    "id": "tt0421426",
    "qid": "Q2306622",
    "kind": "series",
@@ -9446,6 +9737,19 @@
    "genres": []
   },
   {
+   "id": "tt0441824",
+   "qid": "Q141514709",
+   "kind": "series",
+   "name": "Ninja Nonsense",
+   "ru": null,
+   "original": "ニニンがシノブ伝",
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt0443232",
    "qid": "Q7719330",
    "kind": "film",
@@ -9605,6 +9909,20 @@
    "genres": []
   },
   {
+   "id": "tt0450430",
+   "qid": "Q141514865",
+   "kind": "series",
+   "name": "Gokusen",
+   "ru": null,
+   "original": "ごくせん",
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt0450493",
    "qid": "Q1440610",
    "kind": "film",
@@ -9616,6 +9934,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt0450911",
+   "qid": "Q135641316",
+   "kind": "series",
+   "name": "E's Otherwise",
+   "ru": null,
+   "original": "E'S OTHERWISE",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
    ]
   },
   {
@@ -9937,6 +10269,20 @@
    "genres": [
     "Comedy",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt0468607",
+   "qid": "Q135677308",
+   "kind": "series",
+   "name": "Miami Guns",
+   "ru": null,
+   "original": "マイアミ☆ガンズ",
+   "year": 2000,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Crime"
    ]
   },
   {
@@ -10447,6 +10793,20 @@
    ]
   },
   {
+   "id": "tt0493328",
+   "qid": "Q141514701",
+   "kind": "series",
+   "name": "Hanaukyo Maid Team",
+   "ru": null,
+   "original": "花右京メイド隊",
+   "year": 2001,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt0493334",
    "qid": "Q527316",
    "kind": "series",
@@ -10469,6 +10829,17 @@
    "genres": [
     "Fantasy"
    ]
+  },
+  {
+   "id": "tt0496522",
+   "qid": "Q55521636",
+   "kind": "film",
+   "name": "Kakkun Cafe",
+   "ru": null,
+   "original": "カッくんカフェ",
+   "year": 1984,
+   "runtime": 86,
+   "genres": []
   },
   {
    "id": "tt0497532",
@@ -10920,6 +11291,20 @@
    "genres": []
   },
   {
+   "id": "tt0807655",
+   "qid": "Q1745049",
+   "kind": "series",
+   "name": ".hack//Roots",
+   "ru": ".hack//Roots",
+   "original": ".hack//Roots",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt0807675",
    "qid": "Q141440197",
    "kind": "series",
@@ -10954,6 +11339,20 @@
    "year": 2005,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0807834",
+   "qid": "Q141514704",
+   "kind": "series",
+   "name": "Rec",
+   "ru": null,
+   "original": "REC",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
   },
   {
    "id": "tt0808082",
@@ -10993,6 +11392,20 @@
    "year": 2004,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0810056",
+   "qid": "Q139155602",
+   "kind": "series",
+   "name": "Strawberry Marshmallow",
+   "ru": null,
+   "original": "苺ましまろ",
+   "year": 2005,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt0810705",
@@ -11183,6 +11596,20 @@
    "genres": []
   },
   {
+   "id": "tt0823967",
+   "qid": "Q141514864",
+   "kind": "series",
+   "name": "Full Moon o Sagashite",
+   "ru": null,
+   "original": "満月をさがして",
+   "year": 2002,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt0824043",
    "qid": "Q836752",
    "kind": "series",
@@ -11219,6 +11646,17 @@
    "original": "Inochi no chikyuu: Daiokishin no natsu",
    "year": 2001,
    "runtime": 82,
+   "genres": []
+  },
+  {
+   "id": "tt0829177",
+   "qid": "Q141105789",
+   "kind": "film",
+   "name": "The Glass Rabbit",
+   "ru": null,
+   "original": "ガラスのうさぎ",
+   "year": 2005,
+   "runtime": 84,
    "genres": []
   },
   {
@@ -11272,6 +11710,20 @@
    "genres": [
     "Comedy",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt0834546",
+   "qid": "Q135875413",
+   "kind": "series",
+   "name": "Cinderella Boy",
+   "ru": null,
+   "original": "シンデレラボーイ",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
    ]
   },
   {
@@ -11750,6 +12202,20 @@
    ]
   },
   {
+   "id": "tt0875155",
+   "qid": "Q141734556",
+   "kind": "film",
+   "name": "The Weathering Continent",
+   "ru": null,
+   "original": "風の大陸 The Weathering Continent",
+   "year": 1992,
+   "runtime": 54,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0875609",
    "qid": "Q890720",
    "kind": "film",
@@ -11763,6 +12229,19 @@
     "Adventure",
     "Drama",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt0875778",
+   "qid": "Q120357901",
+   "kind": "series",
+   "name": "Bartender",
+   "ru": null,
+   "original": "バーテンダー",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Drama"
    ]
   },
   {
@@ -11855,6 +12334,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt0880283",
+   "qid": "Q709574",
+   "kind": "series",
+   "name": "Otogi-Jūshi Akazukin",
+   "ru": "Otogi-Juushi Akazukin",
+   "original": "おとぎ銃士 赤ずきん",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
    ]
   },
   {
@@ -12027,6 +12520,20 @@
    ]
   },
   {
+   "id": "tt0903437",
+   "qid": "Q141514749",
+   "kind": "series",
+   "name": "Igano Kabamaru",
+   "ru": null,
+   "original": "伊賀野カバ丸",
+   "year": 1983,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0907604",
    "qid": "Q141514698",
    "kind": "series",
@@ -12090,6 +12597,20 @@
    "genres": [
     "Adventure",
     "Family"
+   ]
+  },
+  {
+   "id": "tt0928092",
+   "qid": "Q141065664",
+   "kind": "series",
+   "name": "Hataraki Man",
+   "ru": null,
+   "original": "働きマン",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -12503,6 +13024,20 @@
    ]
   },
   {
+   "id": "tt0973423",
+   "qid": "Q141514891",
+   "kind": "series",
+   "name": "Jyu-Oh-Sei",
+   "ru": null,
+   "original": "獣王星",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt0976008",
    "qid": "Q1302552",
    "kind": "series",
@@ -12531,6 +13066,19 @@
    ]
   },
   {
+   "id": "tt0978030",
+   "qid": "Q141611920",
+   "kind": "series",
+   "name": "Gakuen Heaven: Boy's Love Hyper",
+   "ru": null,
+   "original": "学園ヘヴン BOY'S LOVE HYPER!",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Romance"
+   ]
+  },
+  {
    "id": "tt0978042",
    "qid": "Q17209807",
    "kind": "series",
@@ -12540,6 +13088,20 @@
    "year": 2005,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0978046",
+   "qid": "Q141514899",
+   "kind": "series",
+   "name": "Hitohira",
+   "ru": null,
+   "original": "ひとひら",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Romance"
+   ]
   },
   {
    "id": "tt0978215",
@@ -12659,6 +13221,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt0983204",
+   "qid": "Q140388953",
+   "kind": "series",
+   "name": "Popotan",
+   "ru": null,
+   "original": "ぽぽたん",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -13081,6 +13657,20 @@
    ]
   },
   {
+   "id": "tt0989777",
+   "qid": "Q140384610",
+   "kind": "series",
+   "name": "Moeyo Ken",
+   "ru": null,
+   "original": "機動新撰組 萌えよ剣 TV",
+   "year": 2005,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt0989781",
    "qid": "Q2618801",
    "kind": "series",
@@ -13465,6 +14055,20 @@
    "genres": []
   },
   {
+   "id": "tt0997020",
+   "qid": "Q138048024",
+   "kind": "series",
+   "name": "Weed",
+   "ru": null,
+   "original": "銀牙伝説WEED",
+   "year": 2005,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0997021",
    "qid": "Q3988373",
    "kind": "series",
@@ -13671,6 +14275,19 @@
    ]
   },
   {
+   "id": "tt10066026",
+   "qid": "Q136450807",
+   "kind": "series",
+   "name": "Hinomaru Sumo",
+   "ru": null,
+   "original": "火ノ丸相撲",
+   "year": 2018,
+   "runtime": null,
+   "genres": [
+    "Sport"
+   ]
+  },
+  {
    "id": "tt10068158",
    "qid": "Q112471467",
    "kind": "film",
@@ -13843,6 +14460,20 @@
    "runtime": null,
    "genres": [
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt1025104",
+   "qid": "Q136099096",
+   "kind": "series",
+   "name": "009-1",
+   "ru": null,
+   "original": "009ノ1",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Crime"
    ]
   },
   {
@@ -14727,6 +15358,20 @@
    "genres": []
   },
   {
+   "id": "tt10696020",
+   "qid": "Q130349855",
+   "kind": "series",
+   "name": "Over Drive Girl 1/6",
+   "ru": null,
+   "original": "超可動ガール1/6",
+   "year": 2019,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt10706734",
    "qid": "Q24514655",
    "kind": "series",
@@ -14956,6 +15601,19 @@
    "genres": []
   },
   {
+   "id": "tt10823610",
+   "qid": "Q142143990",
+   "kind": "series",
+   "name": "Piace: Watashi no Italian",
+   "ru": null,
+   "original": "ピアシェ 私のイタリアン",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt1085074",
    "qid": "Q120357178",
    "kind": "series",
@@ -15099,6 +15757,20 @@
    "genres": [
     "Action",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt1092560",
+   "qid": "Q137210348",
+   "kind": "series",
+   "name": "Potemayo",
+   "ru": null,
+   "original": "ぽてまよ",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -15247,6 +15919,20 @@
    ]
   },
   {
+   "id": "tt10959186",
+   "qid": "Q869380",
+   "kind": "series",
+   "name": "Mighty Cat Masked Niyandar",
+   "ru": null,
+   "original": "ニャニがニャンだー ニャンダーかめん",
+   "year": 2000,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
+  },
+  {
    "id": "tt1097194",
    "qid": "Q613823",
    "kind": "series",
@@ -15297,6 +15983,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt10978032",
+   "qid": "Q136258596",
+   "kind": "series",
+   "name": "Kandagawa Jet Girls",
+   "ru": null,
+   "original": "神田川JET GIRLS",
+   "year": 2019,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sport"
    ]
   },
   {
@@ -15673,6 +16373,20 @@
    "genres": []
   },
   {
+   "id": "tt11189300",
+   "qid": "Q137010668",
+   "kind": "series",
+   "name": "Jibaku-kun: Twelve Worlds Story",
+   "ru": null,
+   "original": "ジバクくん TWELVE WORLDS STORY",
+   "year": 1999,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt11192890",
    "qid": "Q105281783",
    "kind": "series",
@@ -15763,6 +16477,20 @@
     "Action",
     "Adventure",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt1125577",
+   "qid": "Q135498139",
+   "kind": "series",
+   "name": "Kodomo no Jikan",
+   "ru": "Детское время",
+   "original": "こどものじかん",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -15888,6 +16616,20 @@
    ]
   },
   {
+   "id": "tt1132204",
+   "qid": "Q141514882",
+   "kind": "series",
+   "name": "Hero Tales",
+   "ru": null,
+   "original": "獣神演武",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt1132205",
    "qid": "Q35191609",
    "kind": "series",
@@ -15925,6 +16667,20 @@
    "year": 2006,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt1132215",
+   "qid": "Q115945914",
+   "kind": "series",
+   "name": "Zombie-Loan",
+   "ru": null,
+   "original": "ZOMBIE-LOAN",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
   },
   {
    "id": "tt1132544",
@@ -16063,6 +16819,20 @@
    "name": "Blue Drop",
    "ru": "Синяя капля: Драма ангелов",
    "original": "Blue Drop: Tenshi tachi no gikyoku",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Mystery"
+   ]
+  },
+  {
+   "id": "tt1139539",
+   "qid": "Q135231617",
+   "kind": "series",
+   "name": "Fantastic Detective Labyrinth",
+   "ru": null,
+   "original": "素敵探偵☆ラビリンス",
    "year": 2007,
    "runtime": null,
    "genres": [
@@ -16261,6 +17031,19 @@
    ]
   },
   {
+   "id": "tt1143944",
+   "qid": "Q141739460",
+   "kind": "series",
+   "name": "Night Wizard The ANIMATION",
+   "ru": null,
+   "original": "ナイトウィザード The ANIMATION",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt11443824",
    "qid": "Q100050258",
    "kind": "series",
@@ -16284,6 +17067,20 @@
    "year": 2020,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt1144841",
+   "qid": "Q140681507",
+   "kind": "series",
+   "name": "KimiKiss: Pure Rouge",
+   "ru": null,
+   "original": "キミキス pure rouge",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt1145380",
@@ -16723,6 +17520,20 @@
    "year": 2019,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt1155604",
+   "qid": "Q136329516",
+   "kind": "series",
+   "name": "Bamboo Blade",
+   "ru": null,
+   "original": "BAMBOO BLADE",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
   },
   {
    "id": "tt1155605",
@@ -17250,6 +18061,20 @@
    ]
   },
   {
+   "id": "tt1169180",
+   "qid": "Q133241621",
+   "kind": "series",
+   "name": "Kaiketsu Zorori",
+   "ru": null,
+   "original": "かいけつゾロリ",
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt1169187",
    "qid": "Q17222342",
    "kind": "series",
@@ -17565,6 +18390,20 @@
    "genres": []
   },
   {
+   "id": "tt1179815",
+   "qid": "Q140588746",
+   "kind": "series",
+   "name": "Sister Princess",
+   "ru": null,
+   "original": "シスター・プリンセス",
+   "year": 2001,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt11802992",
    "qid": "Q115812510",
    "kind": "film",
@@ -17696,6 +18535,19 @@
    "genres": [
     "Action",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt1188328",
+   "qid": "Q141498949",
+   "kind": "series",
+   "name": "Princess Princess",
+   "ru": null,
+   "original": "プリンセス・プリンセス",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -18001,6 +18853,20 @@
    "genres": []
   },
   {
+   "id": "tt1201681",
+   "qid": "Q139159395",
+   "kind": "series",
+   "name": "Amatsuki",
+   "ru": null,
+   "original": "あまつき",
+   "year": 2008,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt12017010",
    "qid": "Q50845417",
    "kind": "series",
@@ -18199,6 +19065,34 @@
    ]
   },
   {
+   "id": "tt1208358",
+   "qid": "Q141514890",
+   "kind": "series",
+   "name": "Blade of the Immortal",
+   "ru": null,
+   "original": "無限の住人",
+   "year": 2008,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt12088162",
+   "qid": "Q62009877",
+   "kind": "series",
+   "name": "I'm From Japan",
+   "ru": null,
+   "original": "ジモトがジャパン",
+   "year": 2019,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt1209386",
    "qid": "Q1721391",
    "kind": "series",
@@ -18371,6 +19265,20 @@
    "runtime": null,
    "genres": [
     "Sport"
+   ]
+  },
+  {
+   "id": "tt12150836",
+   "qid": "Q137734143",
+   "kind": "series",
+   "name": "Cells at Work! Code Black",
+   "ru": null,
+   "original": "はたらく細胞BLACK",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
    ]
   },
   {
@@ -18846,6 +19754,20 @@
    ]
   },
   {
+   "id": "tt1230400",
+   "qid": "Q136259350",
+   "kind": "series",
+   "name": "Telepathy Shōjo Ran",
+   "ru": null,
+   "original": "テレパシー少女 蘭",
+   "year": 2008,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt1230420",
    "qid": "Q101251545",
    "kind": "series",
@@ -18981,6 +19903,20 @@
    "runtime": null,
    "genres": [
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt1233538",
+   "qid": "Q2297129",
+   "kind": "series",
+   "name": "Strain: Strategic Armored Infantry",
+   "ru": "Soukou no Strain",
+   "original": "奏光のストレイン",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
    ]
   },
   {
@@ -19544,6 +20480,17 @@
     "Fantasy",
     "Music"
    ]
+  },
+  {
+   "id": "tt1252091",
+   "qid": "Q111634731",
+   "kind": "series",
+   "name": "Love Get Chu: Miracle Seiyū Hakusho",
+   "ru": null,
+   "original": "ラブゲッCHU 〜ミラクル声優白書〜",
+   "year": 2006,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt12522530",
@@ -20343,6 +21290,20 @@
    ]
   },
   {
+   "id": "tt1291491",
+   "qid": "Q137439511",
+   "kind": "series",
+   "name": "Princess Resurrection",
+   "ru": null,
+   "original": "怪物王女",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt12987468",
    "qid": "Q141493748",
    "kind": "series",
@@ -20492,6 +21453,17 @@
    ]
   },
   {
+   "id": "tt13023508",
+   "qid": "Q141514676",
+   "kind": "series",
+   "name": "Lovely Muco",
+   "ru": null,
+   "original": "いとしのムーコ",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt13027536",
    "qid": "Q132176887",
    "kind": "series",
@@ -20635,6 +21607,20 @@
    ]
   },
   {
+   "id": "tt13062668",
+   "qid": "Q107121303",
+   "kind": "series",
+   "name": "Petopeto-san",
+   "ru": null,
+   "original": "ぺとぺとさん",
+   "year": 2005,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt13064272",
    "qid": "Q107463193",
    "kind": "film",
@@ -20728,6 +21714,17 @@
     "Comedy",
     "Romance"
    ]
+  },
+  {
+   "id": "tt13084262",
+   "qid": "Q140329430",
+   "kind": "series",
+   "name": "Uchū Nanchara Kotetsu-kun",
+   "ru": null,
+   "original": "宇宙なんちゃら こてつくん",
+   "year": 2021,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt1308847",
@@ -21853,6 +22850,20 @@
    ]
   },
   {
+   "id": "tt1352414",
+   "qid": "Q137029851",
+   "kind": "series",
+   "name": "Samurai Harem: Asu no Yoichi",
+   "ru": null,
+   "original": "明日のよいち!",
+   "year": 2009,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt1352417",
    "qid": "Q134619099",
    "kind": "series",
@@ -22042,6 +23053,17 @@
     "Action",
     "Adventure"
    ]
+  },
+  {
+   "id": "tt13586830",
+   "qid": "Q141514844",
+   "kind": "series",
+   "name": "Happy Seven",
+   "ru": null,
+   "original": "はっぴぃセブン 〜ざ・テレビまんが〜",
+   "year": 2005,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt13592988",
@@ -22496,6 +23518,20 @@
    "genres": []
   },
   {
+   "id": "tt13870312",
+   "qid": "Q142179224",
+   "kind": "series",
+   "name": "The Night Beyond the Tricornered Window",
+   "ru": null,
+   "original": "さんかく窓の外側は夜",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Horror"
+   ]
+  },
+  {
    "id": "tt13870536",
    "qid": "Q134915838",
    "kind": "series",
@@ -22652,6 +23688,17 @@
     "Action",
     "Sci-Fi"
    ]
+  },
+  {
+   "id": "tt13908152",
+   "qid": "Q141514697",
+   "kind": "series",
+   "name": "Judo Sanka",
+   "ru": null,
+   "original": "柔道讃歌",
+   "year": 1974,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt13911284",
@@ -23812,6 +24859,20 @@
    ]
   },
   {
+   "id": "tt14469954",
+   "qid": "Q115754388",
+   "kind": "series",
+   "name": "Higepiyo",
+   "ru": null,
+   "original": "ヒゲぴよ",
+   "year": 2009,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
+  },
+  {
    "id": "tt14470008",
    "qid": "Q62011261",
    "kind": "series",
@@ -23860,6 +24921,20 @@
    "year": 2021,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt14478826",
+   "qid": "Q28966632",
+   "kind": "series",
+   "name": "Heybot!",
+   "ru": null,
+   "original": "ヘボット!",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sci-Fi"
+   ]
   },
   {
    "id": "tt14489130",
@@ -23954,6 +25029,20 @@
    "genres": [
     "Drama",
     "Sport"
+   ]
+  },
+  {
+   "id": "tt1454712",
+   "qid": "Q141514802",
+   "kind": "series",
+   "name": "Ristorante Paradiso",
+   "ru": null,
+   "original": "リストランテ・パラディーゾ",
+   "year": 2009,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Romance"
    ]
   },
   {
@@ -24123,6 +25212,20 @@
    "genres": [
     "Adventure",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt1467299",
+   "qid": "Q134619155",
+   "kind": "film",
+   "name": "Blade of the Phantom Master",
+   "ru": null,
+   "original": "新暗行御史",
+   "year": 2004,
+   "runtime": 87,
+   "genres": [
+    "Action",
+    "Fantasy"
    ]
   },
   {
@@ -25116,6 +26219,20 @@
    "genres": []
   },
   {
+   "id": "tt15280328",
+   "qid": "Q116783685",
+   "kind": "series",
+   "name": "Futarigurashi",
+   "ru": "Двое под одной крышей",
+   "original": "ふたり暮らし",
+   "year": 1998,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt1528406",
    "qid": "Q16510277",
    "kind": "series",
@@ -25292,6 +26409,20 @@
    "year": 2024,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt1541531",
+   "qid": "Q135902410",
+   "kind": "series",
+   "name": "Venus Versus Virus",
+   "ru": null,
+   "original": "Venus Versus Virus",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
+   ]
   },
   {
    "id": "tt15420852",
@@ -26577,6 +27708,17 @@
    ]
   },
   {
+   "id": "tt16290286",
+   "qid": "Q138454325",
+   "kind": "series",
+   "name": "Chiisana Ojisan",
+   "ru": null,
+   "original": "ちいさなおじさん",
+   "year": 2012,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt16295758",
    "qid": "Q5649342",
    "kind": "series",
@@ -26867,6 +28009,19 @@
    "genres": [
     "Action",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt1653967",
+   "qid": "Q141993514",
+   "kind": "series",
+   "name": "First Human Giatrus",
+   "ru": null,
+   "original": "はじめ人間ギャートルズ",
+   "year": 1974,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -27550,6 +28705,20 @@
    ]
   },
   {
+   "id": "tt1715081",
+   "qid": "Q115649248",
+   "kind": "series",
+   "name": "Psychic Detective Yakumo",
+   "ru": null,
+   "original": "心霊探偵 八雲",
+   "year": 2010,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Horror"
+   ]
+  },
+  {
    "id": "tt1715210",
    "qid": "Q91955517",
    "kind": "film",
@@ -27675,6 +28844,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt1738078",
+   "qid": "Q137752693",
+   "kind": "series",
+   "name": "Otome Yōkai Zakuro",
+   "ru": null,
+   "original": "おとめ妖怪 ざくろ",
+   "year": 2010,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
    ]
   },
   {
@@ -28110,6 +29293,19 @@
    ]
   },
   {
+   "id": "tt1804031",
+   "qid": "Q135215302",
+   "kind": "series",
+   "name": "Kōya no Shōnen Isamu",
+   "ru": null,
+   "original": "荒野の少年イサム",
+   "year": 1973,
+   "runtime": null,
+   "genres": [
+    "Western"
+   ]
+  },
+  {
    "id": "tt1805647",
    "qid": "Q647351",
    "kind": "series",
@@ -28119,6 +29315,20 @@
    "year": 2009,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt1815065",
+   "qid": "Q133184623",
+   "kind": "series",
+   "name": "Heroman",
+   "ru": null,
+   "original": "HEROMAN",
+   "year": 2010,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sci-Fi"
+   ]
   },
   {
    "id": "tt18183882",
@@ -28549,6 +29759,20 @@
    "year": 2011,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt1893520",
+   "qid": "Q483561",
+   "kind": "series",
+   "name": "C",
+   "ru": "C",
+   "original": "C",
+   "year": 2011,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt18939874",
@@ -29480,6 +30704,20 @@
    "genres": []
   },
   {
+   "id": "tt2019541",
+   "qid": "Q902228",
+   "kind": "series",
+   "name": "Pretty Rhythm: Aurora Dream",
+   "ru": null,
+   "original": "プリティーリズム・オーロラドリーム",
+   "year": 2011,
+   "runtime": null,
+   "genres": [
+    "Family",
+    "Music"
+   ]
+  },
+  {
    "id": "tt20228550",
    "qid": "Q123286348",
    "kind": "series",
@@ -29884,6 +31122,20 @@
    "genres": [
     "Adventure",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt21001320",
+   "qid": "Q110715679",
+   "kind": "series",
+   "name": "Prima Doll",
+   "ru": null,
+   "original": "プリマドール",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Sci-Fi"
    ]
   },
   {
@@ -30337,6 +31589,20 @@
    ]
   },
   {
+   "id": "tt2147522",
+   "qid": "Q133738043",
+   "kind": "series",
+   "name": "Magic User's Club",
+   "ru": null,
+   "original": "魔法使いTai!",
+   "year": 1999,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt2147761",
    "qid": "Q131314127",
    "kind": "series",
@@ -30557,6 +31823,20 @@
    "runtime": null,
    "genres": [
     "Action",
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt2176669",
+   "qid": "Q141496219",
+   "kind": "series",
+   "name": "Bodacious Space Pirates",
+   "ru": null,
+   "original": "モーレツ宇宙海賊",
+   "year": 2012,
+   "runtime": null,
+   "genres": [
+    "Adventure",
     "Comedy"
    ]
   },
@@ -31082,6 +32362,20 @@
    "genres": [
     "Action",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt2223998",
+   "qid": "Q141537940",
+   "kind": "series",
+   "name": "Hanaukyo Maid Team: La Verite",
+   "ru": null,
+   "original": "花右京メイド隊 La Verite",
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
    ]
   },
   {
@@ -32467,6 +33761,20 @@
    "genres": []
   },
   {
+   "id": "tt23812370",
+   "qid": "Q114607905",
+   "kind": "series",
+   "name": "Giant Beasts of Ars",
+   "ru": null,
+   "original": "アルスの巨獣",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt23844810",
    "qid": "Q123038864",
    "kind": "series",
@@ -32636,6 +33944,20 @@
    "genres": [
     "Romance",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt2401248",
+   "qid": "Q138048038",
+   "kind": "series",
+   "name": "Legend of Himiko",
+   "ru": null,
+   "original": "火魅子伝",
+   "year": 1999,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -32810,6 +34132,19 @@
    ]
   },
   {
+   "id": "tt24553854",
+   "qid": "Q137844161",
+   "kind": "series",
+   "name": "Tsuide ni Tonchinkan",
+   "ru": null,
+   "original": "ついでにとんちんかん",
+   "year": 1987,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt2455490",
    "qid": "Q2346223",
    "kind": "series",
@@ -32953,6 +34288,19 @@
    ]
   },
   {
+   "id": "tt2531918",
+   "qid": "Q108599850",
+   "kind": "series",
+   "name": "Ray the Animation",
+   "ru": null,
+   "original": "RAY THE ANIMATION",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
    "id": "tt2549176",
    "qid": "Q11295656",
    "kind": "series",
@@ -32990,6 +34338,20 @@
    "name": "Amnesia",
    "ru": "Амнезия",
    "original": null,
+   "year": 2013,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Mystery"
+   ]
+  },
+  {
+   "id": "tt2552218",
+   "qid": "Q140909890",
+   "kind": "series",
+   "name": "Karneval",
+   "ru": null,
+   "original": "カーニヴァル",
    "year": 2013,
    "runtime": null,
    "genres": [
@@ -33467,6 +34829,19 @@
    "genres": [
     "Comedy",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt2622978",
+   "qid": "Q115786588",
+   "kind": "series",
+   "name": "Yuyushiki",
+   "ru": null,
+   "original": "ゆゆ式",
+   "year": 2013,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -34125,6 +35500,20 @@
    "year": 2013,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt27117596",
+   "qid": "Q119288989",
+   "kind": "series",
+   "name": "Yohane the Parhelion: Sunshine in the Mirror",
+   "ru": null,
+   "original": "幻日のヨハネ -SUNSHINE in the MIRROR-",
+   "year": 2023,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt2714788",
@@ -35237,6 +36626,20 @@
    ]
   },
   {
+   "id": "tt28650274",
+   "qid": "Q136672859",
+   "kind": "series",
+   "name": "IDOLM@STER SideM",
+   "ru": null,
+   "original": "アイドルマスター SideM",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt28671146",
    "qid": "Q125832972",
    "kind": "film",
@@ -35643,6 +37046,20 @@
    ]
   },
   {
+   "id": "tt29092780",
+   "qid": "Q117599092",
+   "kind": "film",
+   "name": "Sasaki and Miyano: Graduation",
+   "ru": null,
+   "original": "映画 佐々木と宮野ー卒業編ー",
+   "year": 2023,
+   "runtime": 59,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ]
+  },
+  {
    "id": "tt2909912",
    "qid": "Q122173355",
    "kind": "series",
@@ -36038,6 +37455,17 @@
    "ru": null,
    "original": "Lv2からチートだった元勇者候補のまったり異世界ライフ",
    "year": 2024,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt29549256",
+   "qid": "Q141514827",
+   "kind": "series",
+   "name": "Croket!",
+   "ru": null,
+   "original": "コロッケ!",
+   "year": 2003,
    "runtime": null,
    "genres": []
   },
@@ -36710,6 +38138,20 @@
    "genres": []
   },
   {
+   "id": "tt30789794",
+   "qid": "Q107212863",
+   "kind": "series",
+   "name": "The Marshmallow Times",
+   "ru": null,
+   "original": "マシュマロ通信",
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
+  },
+  {
    "id": "tt30827040",
    "qid": "Q124700230",
    "kind": "film",
@@ -37354,6 +38796,17 @@
    ]
   },
   {
+   "id": "tt31314314",
+   "qid": "Q141514855",
+   "kind": "series",
+   "name": "Zenryoku Usagi",
+   "ru": null,
+   "original": "全力ウサギ",
+   "year": 2008,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt31368928",
    "qid": "Q135215829",
    "kind": "series",
@@ -37420,6 +38873,19 @@
    ]
   },
   {
+   "id": "tt31419478",
+   "qid": "Q135100145",
+   "kind": "series",
+   "name": "Eagle Sam",
+   "ru": null,
+   "original": "イーグルサム",
+   "year": 1983,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt31435652",
    "qid": "Q124631848",
    "kind": "series",
@@ -37447,6 +38913,17 @@
    ]
   },
   {
+   "id": "tt31471068",
+   "qid": "Q30928113",
+   "kind": "series",
+   "name": "Akindo Sei no Little Peso",
+   "ru": null,
+   "original": "アキンド星のリトル・ペソ",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt31514720",
    "qid": "Q122705531",
    "kind": "series",
@@ -37470,6 +38947,17 @@
     "Comedy",
     "Family"
    ]
+  },
+  {
+   "id": "tt31521024",
+   "qid": "Q115866147",
+   "kind": "series",
+   "name": "Asari-chan",
+   "ru": null,
+   "original": "あさりちゃん",
+   "year": 1982,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt3152146",
@@ -37648,6 +39136,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt31808047",
+   "qid": "Q136831188",
+   "kind": "series",
+   "name": "Fortune Dogs",
+   "ru": null,
+   "original": "ふぉうちゅんドッグす",
+   "year": 2002,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
    ]
   },
   {
@@ -38183,6 +39685,41 @@
    ]
   },
   {
+   "id": "tt32148867",
+   "qid": "Q141241871",
+   "kind": "series",
+   "name": "Otoko Ippiki Gaki Daishō",
+   "ru": null,
+   "original": "男一匹ガキ大将",
+   "year": 1969,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt32149530",
+   "qid": "Q25807484",
+   "kind": "series",
+   "name": "Idol Memories",
+   "ru": null,
+   "original": "アイドルメモリーズ",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
+   "id": "tt32149718",
+   "qid": "Q28690902",
+   "kind": "series",
+   "name": "Idol Time PriPara",
+   "ru": null,
+   "original": "アイドルタイムプリパラ",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt32158870",
    "qid": "Q124359965",
    "kind": "series",
@@ -38298,6 +39835,17 @@
     "Action",
     "Drama"
    ]
+  },
+  {
+   "id": "tt32245490",
+   "qid": "Q141514692",
+   "kind": "series",
+   "name": "Twin Angel: Twinkle Paradise",
+   "ru": null,
+   "original": "快盗天使ツインエンジェル〜キュンキュン☆ときめきパラダイス!!〜",
+   "year": 2011,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt32245532",
@@ -38527,6 +40075,17 @@
    "ru": null,
    "original": "違国日記",
    "year": 2026,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt32341810",
+   "qid": "Q2081199",
+   "kind": "series",
+   "name": "Battle Spirits: Sword Eyes",
+   "ru": null,
+   "original": "バトルスピリッツ ソードアイズ",
+   "year": 2012,
    "runtime": null,
    "genres": []
   },
@@ -39635,6 +41194,19 @@
    "genres": []
   },
   {
+   "id": "tt33131788",
+   "qid": "Q114747566",
+   "kind": "series",
+   "name": "Nanashi Kaidan",
+   "ru": null,
+   "original": "ななし怪談",
+   "year": 2022,
+   "runtime": null,
+   "genres": [
+    "Horror"
+   ]
+  },
+  {
    "id": "tt33165027",
    "qid": "Q129264041",
    "kind": "series",
@@ -39809,6 +41381,17 @@
    ]
   },
   {
+   "id": "tt33358675",
+   "qid": "Q107502115",
+   "kind": "series",
+   "name": "Ikemen Sengoku: Bromances Across Time",
+   "ru": null,
+   "original": "イケメン戦国◆時をかけるが恋ははじまらない",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt3337196",
    "qid": "Q141514875",
    "kind": "series",
@@ -39915,6 +41498,19 @@
    "genres": [
     "Drama",
     "Horror"
+   ]
+  },
+  {
+   "id": "tt33472011",
+   "qid": "Q130337043",
+   "kind": "series",
+   "name": "City the Animation",
+   "ru": null,
+   "original": "CITY THE ANIMATION",
+   "year": 2025,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -40474,6 +42070,20 @@
    "genres": []
   },
   {
+   "id": "tt3411198",
+   "qid": "Q141514722",
+   "kind": "series",
+   "name": "Future Card Buddyfight",
+   "ru": null,
+   "original": "フューチャーカード バディファイト",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sci-Fi"
+   ]
+  },
+  {
    "id": "tt34119820",
    "qid": "Q130569811",
    "kind": "series",
@@ -40799,6 +42409,20 @@
    "runtime": null,
    "genres": [
     "History"
+   ]
+  },
+  {
+   "id": "tt3458374",
+   "qid": "Q1106113",
+   "kind": "series",
+   "name": "Aquarion Evol",
+   "ru": null,
+   "original": "アクエリオンEVOL",
+   "year": 2012,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
    ]
   },
   {
@@ -41844,6 +43468,17 @@
    ]
   },
   {
+   "id": "tt35657740",
+   "qid": "Q1645386",
+   "kind": "series",
+   "name": "Parasol Henbē",
+   "ru": "Parasol Henbei",
+   "original": "パラソルヘンべえ",
+   "year": 1989,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt35658228",
    "qid": "Q131993712",
    "kind": "film",
@@ -42393,6 +44028,17 @@
    "genres": []
   },
   {
+   "id": "tt36270200",
+   "qid": "Q131432742",
+   "kind": "series",
+   "name": "Araiguma Calcal-dan",
+   "ru": null,
+   "original": "あらいぐま カルカル団",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt36271422",
    "qid": "Q133059930",
    "kind": "series",
@@ -42502,6 +44148,20 @@
    ]
   },
   {
+   "id": "tt3639836",
+   "qid": "Q141514829",
+   "kind": "series",
+   "name": "Dramatical Murder",
+   "ru": null,
+   "original": "DRAMAtical Murder",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sci-Fi"
+   ]
+  },
+  {
    "id": "tt3639864",
    "qid": "Q134488135",
    "kind": "series",
@@ -42565,6 +44225,20 @@
    ]
   },
   {
+   "id": "tt3644300",
+   "qid": "Q134481097",
+   "kind": "series",
+   "name": "Majin Bone",
+   "ru": null,
+   "original": "マジンボーン",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt36461929",
    "qid": "Q133834880",
    "kind": "film",
@@ -42576,6 +44250,17 @@
    "genres": [
     "Drama"
    ]
+  },
+  {
+   "id": "tt36467147",
+   "qid": "Q133307564",
+   "kind": "series",
+   "name": "Chikuwa Senki",
+   "ru": null,
+   "original": "ちくわ戦記～おれのカワイイで地球侵略～",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt36469273",
@@ -42649,6 +44334,17 @@
    "ru": "Призрак в доспехах",
    "original": "攻殻機動隊 THE GHOST IN THE SHELL",
    "year": 2026,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt36534630",
+   "qid": "Q135070902",
+   "kind": "series",
+   "name": "Muzik Tiger In the Forest",
+   "ru": null,
+   "original": "MUZIK TIGER In the Forest",
+   "year": 2025,
    "runtime": null,
    "genres": []
   },
@@ -43002,6 +44698,20 @@
    "runtime": null,
    "genres": [
     "Adventure",
+    "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt36857472",
+   "qid": "Q132916464",
+   "kind": "film",
+   "name": "As One",
+   "ru": null,
+   "original": "アズワン/AS ONE",
+   "year": 2025,
+   "runtime": 91,
+   "genres": [
+    "Action",
     "Sci-Fi"
    ]
   },
@@ -43643,6 +45353,20 @@
    "genres": []
   },
   {
+   "id": "tt3761860",
+   "qid": "Q131540035",
+   "kind": "series",
+   "name": "Sabagebu!",
+   "ru": null,
+   "original": "さばげぶっ!",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt3761892",
    "qid": "Q18454925",
    "kind": "series",
@@ -43698,6 +45422,28 @@
    ]
   },
   {
+   "id": "tt37692084",
+   "qid": "Q135107219",
+   "kind": "series",
+   "name": "Binan Kōkō Chikyū Bōei-bu Haikara!",
+   "ru": null,
+   "original": "美男高校地球防衛部ハイカラ!",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt37727204",
+   "qid": "Q134972124",
+   "kind": "series",
+   "name": "Hana-Doll*: Reinterpretation of Flowering",
+   "ru": null,
+   "original": "華Doll*-Reinterpretation of Flowering-",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt37729351",
    "qid": "Q133873393",
    "kind": "series",
@@ -43723,6 +45469,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt3774766",
+   "qid": "Q131539417",
+   "kind": "series",
+   "name": "Magimoji Rurumo",
+   "ru": null,
+   "original": "まじもじるるも",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
    ]
   },
   {
@@ -43766,6 +45526,17 @@
     "Comedy",
     "Romance"
    ]
+  },
+  {
+   "id": "tt37836273",
+   "qid": "Q134967094",
+   "kind": "series",
+   "name": "Shūkan Ranobe Anime",
+   "ru": null,
+   "original": "週刊ラノベアニメ",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt3786608",
@@ -43918,6 +45689,17 @@
    ]
   },
   {
+   "id": "tt38046507",
+   "qid": "Q131274922",
+   "kind": "series",
+   "name": "Future Kid Takara",
+   "ru": null,
+   "original": "Future Kid Takara",
+   "year": 2025,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt38049145",
    "qid": "Q125975705",
    "kind": "series",
@@ -44053,6 +45835,17 @@
     "Comedy",
     "Romance"
    ]
+  },
+  {
+   "id": "tt38254583",
+   "qid": "Q135649159",
+   "kind": "series",
+   "name": "Hoppe-chan: Sun Ōkoku to Kuro Hoppe-dan no Himitsu",
+   "ru": null,
+   "original": "ほっぺちゃん ～サン王国と黒ほっぺ団の秘密～",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt38262097",
@@ -44502,6 +46295,19 @@
    ]
   },
   {
+   "id": "tt3866984",
+   "qid": "Q141485835",
+   "kind": "series",
+   "name": "Fisherman Sanpei",
+   "ru": null,
+   "original": "釣りキチ三平",
+   "year": 1980,
+   "runtime": null,
+   "genres": [
+    "Sport"
+   ]
+  },
+  {
    "id": "tt38691315",
    "qid": "Q133262007",
    "kind": "series",
@@ -44635,6 +46441,20 @@
    "genres": [
     "Family",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt3886492",
+   "qid": "Q136930332",
+   "kind": "series",
+   "name": "Girl Friend Beta",
+   "ru": null,
+   "original": "ガールフレンド（仮）",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
    ]
   },
   {
@@ -45585,6 +47405,20 @@
    ]
   },
   {
+   "id": "tt3950066",
+   "qid": "Q141514669",
+   "kind": "series",
+   "name": "In Search of the Lost Future",
+   "ru": null,
+   "original": "失われた未来を求めて",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Mystery"
+   ]
+  },
+  {
    "id": "tt3950084",
    "qid": "Q122999270",
    "kind": "series",
@@ -45693,6 +47527,20 @@
    "genres": [
     "Action",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt3957472",
+   "qid": "Q141514726",
+   "kind": "series",
+   "name": "Laughing Under the Clouds",
+   "ru": null,
+   "original": "曇天に笑う",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
    ]
   },
   {
@@ -46085,6 +47933,17 @@
    "name": "Nippon Sangoku",
    "ru": null,
    "original": "日本三國",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt40548570",
+   "qid": "Q138501848",
+   "kind": "series",
+   "name": "Onegai AiPri",
+   "ru": null,
+   "original": "おねがいアイプリ",
    "year": 2026,
    "runtime": null,
    "genres": []
@@ -46674,6 +48533,17 @@
     "Adventure",
     "Comedy"
    ]
+  },
+  {
+   "id": "tt41888569",
+   "qid": "Q138577832",
+   "kind": "series",
+   "name": "Daikenja Riddle no Jikan Gyakkō",
+   "ru": null,
+   "original": "大賢者リドルの時間逆行",
+   "year": 2026,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt4216878",
@@ -47651,6 +49521,17 @@
    ]
   },
   {
+   "id": "tt4609952",
+   "qid": "Q136833442",
+   "kind": "series",
+   "name": "Sushi and Beyond",
+   "ru": null,
+   "original": "英国一家、日本を食べる",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt4616700",
    "qid": "Q123022472",
    "kind": "series",
@@ -48168,6 +50049,30 @@
    ]
   },
   {
+   "id": "tt4928988",
+   "qid": "Q131360221",
+   "kind": "series",
+   "name": "Ultimate Otaku Teacher",
+   "ru": null,
+   "original": "電波教師",
+   "year": 2015,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tt4954596",
+   "qid": "Q140514674",
+   "kind": "series",
+   "name": "Wakakozake",
+   "ru": null,
+   "original": "ワカコ酒",
+   "year": 2015,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt4954660",
    "qid": "Q21600367",
    "kind": "film",
@@ -48484,6 +50389,20 @@
    "genres": [
     "Family",
     "Mystery"
+   ]
+  },
+  {
+   "id": "tt5147776",
+   "qid": "Q141514871",
+   "kind": "series",
+   "name": "Ojamanga Yamada-kun",
+   "ru": null,
+   "original": "おじゃまんが山田くん",
+   "year": 1980,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
    ]
   },
   {
@@ -50028,6 +51947,19 @@
    ]
   },
   {
+   "id": "tt5671172",
+   "qid": "Q131404897",
+   "kind": "series",
+   "name": "Three Leaves, Three Colors",
+   "ru": null,
+   "original": "三者三葉",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt5674066",
    "qid": "Q130753243",
    "kind": "series",
@@ -50051,6 +51983,19 @@
    "year": 2016,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt5675392",
+   "qid": "Q141514731",
+   "kind": "series",
+   "name": "Seiyu's Life!",
+   "ru": null,
+   "original": "それが声優!",
+   "year": 2015,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
   },
   {
    "id": "tt5679248",
@@ -50208,6 +52153,20 @@
    "genres": [
     "Comedy",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt5753374",
+   "qid": "Q131737191",
+   "kind": "series",
+   "name": "Shōnen Maid",
+   "ru": null,
+   "original": "少年メイド",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -50433,6 +52392,20 @@
    "year": 2016,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt5861440",
+   "qid": "Q135550600",
+   "kind": "series",
+   "name": "Servamp",
+   "ru": null,
+   "original": "SERVAMP -サーヴァンプ-",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
   },
   {
    "id": "tt5861670",
@@ -50706,6 +52679,20 @@
    ]
   },
   {
+   "id": "tt5914182",
+   "qid": "Q141514798",
+   "kind": "series",
+   "name": "Majū Sensen: The Apocalypse",
+   "ru": null,
+   "original": "魔獣戦線 THE APOCALYPSE",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt5914996",
    "qid": "Q37601569",
    "kind": "film",
@@ -50745,6 +52732,20 @@
    "genres": [
     "Adventure",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt5921946",
+   "qid": "Q141514759",
+   "kind": "series",
+   "name": "Cheer Boys!!",
+   "ru": null,
+   "original": "チア男子!!",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Sport"
    ]
   },
   {
@@ -51320,6 +53321,20 @@
    ]
   },
   {
+   "id": "tt6344982",
+   "qid": "Q142129361",
+   "kind": "series",
+   "name": "Poco's Udon World",
+   "ru": null,
+   "original": "うどんの国の金色毛鞠",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt6348126",
    "qid": "Q23747084",
    "kind": "series",
@@ -51417,6 +53432,17 @@
    "genres": [
     "Comedy"
    ]
+  },
+  {
+   "id": "tt6379606",
+   "qid": "Q142175075",
+   "kind": "series",
+   "name": "Miss Bernard said.",
+   "ru": null,
+   "original": "バーナード嬢曰く。",
+   "year": 2016,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt6382544",
@@ -52757,6 +54783,20 @@
    ]
   },
   {
+   "id": "tt7033302",
+   "qid": "Q141444268",
+   "kind": "series",
+   "name": "Ganbare Genki",
+   "ru": null,
+   "original": "がんばれ元気",
+   "year": 1980,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sport"
+   ]
+  },
+  {
    "id": "tt7033370",
    "qid": "Q672596",
    "kind": "series",
@@ -53411,6 +55451,20 @@
    "genres": []
   },
   {
+   "id": "tt7498270",
+   "qid": "Q48758845",
+   "kind": "series",
+   "name": "Pingu in the City",
+   "ru": null,
+   "original": "ピングー in ザ・シティ",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
+  },
+  {
    "id": "tt7513452",
    "qid": "Q30642130",
    "kind": "series",
@@ -53651,6 +55705,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt7727278",
+   "qid": "Q142201754",
+   "kind": "series",
+   "name": "Love Is Like a Cocktail",
+   "ru": null,
+   "original": "お酒は夫婦になってから",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Romance"
    ]
   },
   {
@@ -53961,6 +56029,20 @@
    ]
   },
   {
+   "id": "tt7879496",
+   "qid": "Q50870358",
+   "kind": "series",
+   "name": "Lupin the 3rd Part 5",
+   "ru": null,
+   "original": "ルパン三世 PART5",
+   "year": 2018,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt7880466",
    "qid": "Q43984092",
    "kind": "film",
@@ -54036,6 +56118,20 @@
    "year": 2017,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt7918846",
+   "qid": "Q42774082",
+   "kind": "series",
+   "name": "Evil or Live",
+   "ru": null,
+   "original": "EVIL OR LIVE",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
+   ]
   },
   {
    "id": "tt7925024",
@@ -54137,6 +56233,20 @@
    "year": 2018,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt7976226",
+   "qid": "Q65925232",
+   "kind": "series",
+   "name": "Aah! Harimanada",
+   "ru": null,
+   "original": "見ると強くなる 痛快!横綱アニメ ああ播磨灘",
+   "year": 1992,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sport"
+   ]
   },
   {
    "id": "tt7978710",
@@ -54368,6 +56478,19 @@
     "Action",
     "Adventure",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt8113938",
+   "qid": "Q131631176",
+   "kind": "series",
+   "name": "Mr. Tonegawa: Middle Management Blues",
+   "ru": null,
+   "original": "中間管理録トネガワ",
+   "year": 2018,
+   "runtime": null,
+   "genres": [
+    "Comedy"
    ]
   },
   {
@@ -55777,6 +57900,20 @@
    ]
   },
   {
+   "id": "tt9135316",
+   "qid": "Q66809149",
+   "kind": "series",
+   "name": "Senran Kagura Shinovi Master",
+   "ru": null,
+   "original": "閃乱カグラ SHINOVI MASTER -東京妖魔篇-",
+   "year": 2018,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt9150104",
    "qid": "Q105045943",
    "kind": "series",
@@ -56594,6 +58731,31 @@
    "genres": [
     "Adventure",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt9728264",
+   "qid": "Q134467749",
+   "kind": "series",
+   "name": "Convenience Store Boy Friends",
+   "ru": null,
+   "original": "コンビニカレシ",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt9728290",
+   "qid": "Q110419932",
+   "kind": "series",
+   "name": "Chronos Ruler",
+   "ru": null,
+   "original": "時間の支配者",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
    ]
   },
   {
