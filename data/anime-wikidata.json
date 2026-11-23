@@ -1,7 +1,7 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 12232,
+ "queried": 12237,
  "items": [
   {
    "id": "anidb:10000",
@@ -69088,6 +69088,79 @@
     "tmdb:movie:465586"
    ],
    "releaseDate": "2005-09-10"
+  },
+  {
+   "id": "bangumi:208346",
+   "source": "https://prtimes.jp/main/html/rd/p/000000357.000002734.html",
+   "name": "Happy Jozy",
+   "original": "ハッピージョージ",
+   "aliases": [
+    "Happy George",
+    "ハッピージョージ"
+   ],
+   "kind": "series",
+   "runtime": null,
+   "year": 2015,
+   "ru": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:208346"
+   ],
+   "releasePrecision": "year"
+  },
+  {
+   "id": "bangumi:616830",
+   "kind": "series",
+   "name": "Secret Society Eagle Talon XX",
+   "original": "秘密結社 鷹の爪XX",
+   "ru": null,
+   "aliases": [
+    "秘密結社 鷹の爪XX"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:616830"
+   ],
+   "source": "https://www.dle.jp/jp/news/takanotsume/3567.html",
+   "releaseDate": "2026-01-06"
+  },
+  {
+   "id": "bangumi:620404",
+   "kind": "series",
+   "name": "Black Jack Yanen",
+   "original": "ブラックジャックやねん",
+   "ru": null,
+   "aliases": [
+    "ブラックジャックやねん"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:620404"
+   ],
+   "source": "https://www.dle.jp/jp/news/cat87/3579.html",
+   "releaseDate": "2026-01-08"
+  },
+  {
+   "id": "bangumi:635233",
+   "kind": "series",
+   "name": "Konna Ko Iru Kana",
+   "original": "こんなこいるかな",
+   "ru": null,
+   "aliases": [
+    "こんなこいるかな"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "bangumi:635233"
+   ],
+   "source": "https://lidenfilms.jp/works/%E3%81%93%E3%82%93%E3%81%AA%E3%81%93%E3%81%84%E3%82%8B%E3%81%8B%E3%81%AA/",
+   "releaseDate": "2026-03-30"
   },
   {
    "id": "bangumi:663242",
@@ -207414,6 +207487,24 @@
     "Drama",
     "Sci-Fi"
    ]
+  },
+  {
+   "id": "tt41129750",
+   "kind": "series",
+   "name": "Sakuna: Of Rice and Ruin – Kokorowa Rice Cultivation Diary",
+   "original": "天穂のサクナヒメ ココロワ稲作日誌",
+   "ru": null,
+   "aliases": [
+    "天穂のサクナヒメ ココロワ稲作日誌"
+   ],
+   "year": 2026,
+   "runtime": null,
+   "genres": [],
+   "providerIds": [
+    "tt41129750"
+   ],
+   "source": "https://sakuna-anime.com/news/detail_260114_01.html",
+   "releaseDate": "2026-02-15"
   },
   {
    "id": "tt41153966",
