@@ -1,8 +1,47 @@
 {
  "source": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "retrievedAt": "2026-11-18T03:50:39.858Z",
- "queried": 4774,
+ "queried": 4820,
  "items": [
+  {
+   "id": "tmdb:tv:309202",
+   "source": "https://www.themoviedb.org/tv/309202",
+   "kind": "series",
+   "name": "PANDOROBO",
+   "original": "パンどろぼう",
+   "ru": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
+  {
+   "id": "tmdb:tv:315682",
+   "source": "https://www.themoviedb.org/tv/315682",
+   "kind": "series",
+   "name": "Pop Pap Polters",
+   "original": "ポップパップポルターズ",
+   "ru": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
+   "id": "tmdb:tv:337299",
+   "source": "https://www.themoviedb.org/tv/337299",
+   "kind": "series",
+   "name": "Yuruyuru Zukan",
+   "original": "ゆるゆる図鑑",
+   "ru": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Kids"
+   ]
+  },
   {
    "id": "tt0051694",
    "qid": "Q1235519",
@@ -1467,6 +1506,20 @@
    "ru": "Космический рыцарь Теккамен Блейд",
    "original": "Uchû no kishi Tekkaman Burêdo",
    "year": 1992,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
+   "id": "tt0108966",
+   "qid": "Q141504892",
+   "kind": "series",
+   "name": "Super Pig",
+   "ru": null,
+   "original": "愛と勇気のピッグガールとんでぶーりん",
+   "year": 1994,
    "runtime": null,
    "genres": [
     "Action",
@@ -4687,6 +4740,19 @@
    ]
   },
   {
+   "id": "tt0224470",
+   "qid": "Q141514828",
+   "kind": "series",
+   "name": "D4 Princess",
+   "ru": null,
+   "original": "D4プリンセス",
+   "year": 1999,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt0224471",
    "qid": "Q1171190",
    "kind": "series",
@@ -5468,6 +5534,20 @@
    "genres": []
   },
   {
+   "id": "tt0283891",
+   "qid": "Q141514711",
+   "kind": "series",
+   "name": "Arc the Lad",
+   "ru": null,
+   "original": "アークザラッド",
+   "year": 1999,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0285368",
    "qid": "Q704581",
    "kind": "series",
@@ -5778,6 +5858,20 @@
    ]
   },
   {
+   "id": "tt0292823",
+   "qid": "Q141514664",
+   "kind": "series",
+   "name": "Nanako SOS",
+   "ru": null,
+   "original": "ななこSOS",
+   "year": 1983,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Family"
+   ]
+  },
+  {
    "id": "tt0293416",
    "qid": "Q640695",
    "kind": "film",
@@ -5984,6 +6078,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt0294103",
+   "qid": "Q141514811",
+   "kind": "series",
+   "name": "Hai Step Jun",
+   "ru": null,
+   "original": "はーいステップジュン",
+   "year": 1985,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Romance"
    ]
   },
   {
@@ -8040,6 +8148,20 @@
    ]
   },
   {
+   "id": "tt0373625",
+   "qid": "Q141513271",
+   "kind": "series",
+   "name": "Submarine Super 99",
+   "ru": null,
+   "original": "SUBMARINE SUPER 99",
+   "year": 2003,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0373944",
    "qid": "Q3597218",
    "kind": "film",
@@ -8600,6 +8722,20 @@
    "year": 2002,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt0403751",
+   "qid": "Q141514745",
+   "kind": "series",
+   "name": "Dash Kappei",
+   "ru": null,
+   "original": "ダッシュ勝平",
+   "year": 1981,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Sport"
+   ]
   },
   {
    "id": "tt0404597",
@@ -9989,6 +10125,19 @@
    "genres": [
     "Action",
     "War"
+   ]
+  },
+  {
+   "id": "tt0454362",
+   "qid": "Q141514806",
+   "kind": "series",
+   "name": "Plawres Sanshiro",
+   "ru": null,
+   "original": "プラレス3四郎",
+   "year": 1983,
+   "runtime": null,
+   "genres": [
+    "Action"
    ]
   },
   {
@@ -12825,6 +12974,20 @@
    "genres": []
   },
   {
+   "id": "tt0963017",
+   "qid": "Q141514872",
+   "kind": "series",
+   "name": "Onmyō Taisenki",
+   "ru": null,
+   "original": "陰陽大戦記",
+   "year": 2004,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt0963150",
    "qid": "Q123944266",
    "kind": "series",
@@ -13101,6 +13264,20 @@
    "genres": [
     "Drama",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt0978204",
+   "qid": "Q142122953",
+   "kind": "series",
+   "name": "Sumomomo Momomo - The Strongest Bride on Earth",
+   "ru": null,
+   "original": "すもももももも ～地上最強のヨメ～",
+   "year": 2006,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
    ]
   },
   {
@@ -14718,6 +14895,34 @@
    "genres": [
     "Action",
     "Sci-Fi"
+   ]
+  },
+  {
+   "id": "tt10395156",
+   "qid": "Q142247540",
+   "kind": "series",
+   "name": "Re: Stage! Dream Days",
+   "ru": null,
+   "original": "Re:ステージ! ドリームデイズ♪",
+   "year": 2019,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "Music"
+   ]
+  },
+  {
+   "id": "tt10399638",
+   "qid": "Q141514885",
+   "kind": "series",
+   "name": "Dash! Yonkuro",
+   "ru": null,
+   "original": "ダッシュ!四駆郎",
+   "year": 1989,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sport"
    ]
   },
   {
@@ -16658,6 +16863,20 @@
    ]
   },
   {
+   "id": "tt1132208",
+   "qid": "Q142141934",
+   "kind": "series",
+   "name": "Nanatsuiro Drops",
+   "ru": null,
+   "original": "ななついろ★ドロップス",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt1132211",
    "qid": "Q847219",
    "kind": "series",
@@ -17094,6 +17313,20 @@
    "genres": [
     "Drama",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt11455784",
+   "qid": "Q142247548",
+   "kind": "series",
+   "name": "Show by Rock!! Mashumairesh!!",
+   "ru": null,
+   "original": "SHOW BY ROCK!! ましゅまいれっしゅ!!",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Music"
    ]
   },
   {
@@ -17845,6 +18078,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt1161678",
+   "qid": "Q4043789",
+   "kind": "series",
+   "name": "Master of Epic: The Animation Age",
+   "ru": "Master of Epic: The Animation Age",
+   "original": "Master of Epic The Animation Age",
+   "year": 2007,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
    ]
   },
   {
@@ -18611,6 +18858,20 @@
    "ru": null,
    "original": null,
    "year": 1993,
+   "runtime": 60,
+   "genres": [
+    "Adventure",
+    "Family"
+   ]
+  },
+  {
+   "id": "tt1189083",
+   "qid": "Q11270564",
+   "kind": "film",
+   "name": "Go! Anpanman: The Lyrical Magical Witch’s School",
+   "ru": null,
+   "original": "それいけ!アンパンマン リリカル☆マジカルまほうの学校",
+   "year": 1994,
    "runtime": 60,
    "genres": [
     "Adventure",
@@ -19810,6 +20071,19 @@
    ]
   },
   {
+   "id": "tt12311920",
+   "qid": "Q142247554",
+   "kind": "series",
+   "name": "Gal & Dino",
+   "ru": null,
+   "original": "ギャルと恐竜",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt12311976",
    "qid": "Q98803646",
    "kind": "series",
@@ -20211,6 +20485,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt12415562",
+   "qid": "Q142247560",
+   "kind": "series",
+   "name": "LBX Girls",
+   "ru": null,
+   "original": "装甲娘戦機",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sci-Fi"
    ]
   },
   {
@@ -20779,6 +21067,20 @@
    "genres": [
     "Drama",
     "Music"
+   ]
+  },
+  {
+   "id": "tt12706364",
+   "qid": "Q142247644",
+   "kind": "series",
+   "name": "Ninja Collection",
+   "ru": null,
+   "original": "忍者コレクション",
+   "year": 2020,
+   "runtime": null,
+   "genres": [
+    "Fantasy",
+    "Horror"
    ]
   },
   {
@@ -21647,6 +21949,17 @@
     "Adventure",
     "Crime"
    ]
+  },
+  {
+   "id": "tt13070158",
+   "qid": "Q142247544",
+   "kind": "series",
+   "name": "Days of Urashimasakatasen",
+   "ru": null,
+   "original": "浦島坂田船の日常",
+   "year": 2019,
+   "runtime": null,
+   "genres": []
   },
   {
    "id": "tt13074010",
@@ -22546,6 +22859,20 @@
    "runtime": null,
    "genres": [
     "Music"
+   ]
+  },
+  {
+   "id": "tt13417144",
+   "qid": "Q142247571",
+   "kind": "series",
+   "name": "Getter Robo Ark",
+   "ru": null,
+   "original": "ゲッターロボ アーク",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -23838,6 +24165,20 @@
    ]
   },
   {
+   "id": "tt13984000",
+   "qid": "Q142247570",
+   "kind": "series",
+   "name": "Seven Knights Revolution: The Hero's Successor",
+   "ru": null,
+   "original": "セブンナイツ レボリューション -英雄の継承者-",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
+  },
+  {
    "id": "tt13988168",
    "qid": "Q106411234",
    "kind": "series",
@@ -24831,6 +25172,19 @@
    ]
   },
   {
+   "id": "tt14442258",
+   "qid": "Q142247637",
+   "kind": "series",
+   "name": "I Am Takamiya Nasuno!",
+   "ru": null,
+   "original": "高宮なすのです！〜てーきゅうスピンオフ〜",
+   "year": 2015,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt14444388",
    "qid": "Q132194614",
    "kind": "series",
@@ -25096,6 +25450,20 @@
    "genres": [
     "Action",
     "Fantasy"
+   ]
+  },
+  {
+   "id": "tt1461279",
+   "qid": "Q17228984",
+   "kind": "film",
+   "name": "Go! Anpanman: Dadandan and the Twin Stars",
+   "ru": null,
+   "original": "それいけ!アンパンマン だだんだんとふたごの星",
+   "year": 2009,
+   "runtime": 50,
+   "genres": [
+    "Adventure",
+    "Family"
    ]
   },
   {
@@ -32415,6 +32783,28 @@
    ]
   },
   {
+   "id": "tt22265884",
+   "qid": "Q142247589",
+   "kind": "series",
+   "name": "The Human Crazy university",
+   "ru": null,
+   "original": "ヒューマンバグ大学",
+   "year": 2022,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt22266604",
+   "qid": "Q142247592",
+   "kind": "series",
+   "name": "VazzRock the Animation",
+   "ru": null,
+   "original": "VAZZROCK THE ANIMATION",
+   "year": 2022,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt22297712",
    "qid": "Q115768573",
    "kind": "series",
@@ -32925,6 +33315,20 @@
    "year": 2023,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt2284001",
+   "qid": "Q142175140",
+   "kind": "series",
+   "name": "Hidamari no Ki",
+   "ru": null,
+   "original": "陽だまりの樹",
+   "year": 2000,
+   "runtime": null,
+   "genres": [
+    "Drama",
+    "History"
+   ]
   },
   {
    "id": "tt2286879",
@@ -33800,6 +34204,20 @@
    "genres": [
     "Action",
     "Adventure"
+   ]
+  },
+  {
+   "id": "tt23866094",
+   "qid": "Q142247562",
+   "kind": "series",
+   "name": "Show by Rock!! Stars!!",
+   "ru": null,
+   "original": "SHOW BY ROCK!! STARS!!",
+   "year": 2021,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Fantasy"
    ]
   },
   {
@@ -35557,6 +35975,20 @@
    ]
   },
   {
+   "id": "tt2718686",
+   "qid": "Q141514780",
+   "kind": "series",
+   "name": "Miracle Giants Dome-kun",
+   "ru": null,
+   "original": "ミラクルジャイアンツ童夢くん",
+   "year": 1989,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
+   ]
+  },
+  {
    "id": "tt27187053",
    "qid": "Q117212700",
    "kind": "series",
@@ -37082,6 +37514,20 @@
    "genres": [
     "Comedy",
     "Drama"
+   ]
+  },
+  {
+   "id": "tt29106483",
+   "qid": "Q142247481",
+   "kind": "series",
+   "name": "Fist of the North Star: Hokuto no Ken",
+   "ru": null,
+   "original": "北斗の拳 -FIST OF THE NORTH STAR-",
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
    ]
   },
   {
@@ -39084,6 +39530,17 @@
    ]
   },
   {
+   "id": "tt31778224",
+   "qid": "Q142247608",
+   "kind": "series",
+   "name": "Bikkuri-Men",
+   "ru": null,
+   "original": "ビックリメン",
+   "year": 2023,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt3178174",
    "qid": "Q15733151",
    "kind": "film",
@@ -39632,6 +40089,17 @@
    "genres": []
   },
   {
+   "id": "tt32056914",
+   "qid": "Q141533788",
+   "kind": "series",
+   "name": "Twin Angel Break",
+   "ru": null,
+   "original": "ツインエンジェルBREAK",
+   "year": 2017,
+   "runtime": null,
+   "genres": []
+  },
+  {
    "id": "tt3207762",
    "qid": "Q97479525",
    "kind": "series",
@@ -39793,6 +40261,20 @@
    "year": 2013,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt32201743",
+   "qid": "Q142247613",
+   "kind": "series",
+   "name": "Touken Ranbu Kai: Kyoden Moyuru Honnouji",
+   "ru": null,
+   "original": "刀剣乱舞 廻 -虚伝 燃ゆる本能寺-",
+   "year": 2024,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt3220476",
@@ -42031,6 +42513,20 @@
    ]
   },
   {
+   "id": "tt3399758",
+   "qid": "Q142247634",
+   "kind": "series",
+   "name": "Go! Go! 575",
+   "ru": null,
+   "original": "GO！GO！575",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Music"
+   ]
+  },
+  {
    "id": "tt3399762",
    "qid": "Q15502387",
    "kind": "series",
@@ -42120,6 +42616,20 @@
    "genres": [
     "Comedy",
     "Romance"
+   ]
+  },
+  {
+   "id": "tt3417500",
+   "qid": "Q141715371",
+   "kind": "series",
+   "name": "Kūchū Buranko",
+   "ru": null,
+   "original": "空中ブランコ",
+   "year": 2009,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Drama"
    ]
   },
   {
@@ -42934,6 +43444,31 @@
    "genres": [
     "Action",
     "Comedy"
+   ]
+  },
+  {
+   "id": "tt3508224",
+   "qid": "Q141537910",
+   "kind": "series",
+   "name": "Wasimo",
+   "ru": null,
+   "original": "わしも-wasimo-",
+   "year": 2014,
+   "runtime": null,
+   "genres": []
+  },
+  {
+   "id": "tt3509378",
+   "qid": "Q141514898",
+   "kind": "series",
+   "name": "Broken Blade",
+   "ru": null,
+   "original": "ブレイク ブレイド",
+   "year": 2014,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Drama"
    ]
   },
   {
@@ -47130,6 +47665,19 @@
    ]
   },
   {
+   "id": "tt39240299",
+   "source": "https://www.themoviedb.org/tv/337277",
+   "kind": "series",
+   "name": "Magical Girl Raising Project: Restart",
+   "original": "魔法少女育成計画restart",
+   "ru": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Drama"
+   ]
+  },
+  {
    "id": "tt39246964",
    "qid": "Q137534207",
    "kind": "series",
@@ -49052,6 +49600,20 @@
    "year": 2026,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt43665709",
+   "source": "https://www.themoviedb.org/tv/337195",
+   "kind": "series",
+   "name": "Sirotan",
+   "original": "しろたん",
+   "ru": null,
+   "year": 2026,
+   "runtime": null,
+   "genres": [
+    "Comedy",
+    "Kids"
+   ]
   },
   {
    "id": "tt43691315",
@@ -51794,6 +52356,20 @@
    ]
   },
   {
+   "id": "tt5616582",
+   "qid": "Q142247642",
+   "kind": "series",
+   "name": "Onigiri",
+   "ru": null,
+   "original": "鬼斬",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Adventure"
+   ]
+  },
+  {
    "id": "tt5618002",
    "qid": "Q124622444",
    "kind": "series",
@@ -53877,6 +54453,20 @@
    "genres": []
   },
   {
+   "id": "tt6478640",
+   "qid": "Q142247491",
+   "kind": "series",
+   "name": "Schoolgirl Strikers: Animation Channel",
+   "ru": null,
+   "original": "スクールガールストライカーズ Animation Channel",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Action",
+    "Sci-Fi"
+   ]
+  },
+  {
    "id": "tt6538106",
    "qid": "Q128363861",
    "kind": "series",
@@ -55514,6 +56104,19 @@
    ]
   },
   {
+   "id": "tt7535706",
+   "qid": "Q142247497",
+   "kind": "series",
+   "name": "Anime-Gataris",
+   "ru": null,
+   "original": "アニメガタリズ",
+   "year": 2017,
+   "runtime": null,
+   "genres": [
+    "Comedy"
+   ]
+  },
+  {
    "id": "tt7535746",
    "qid": "Q61652240",
    "kind": "series",
@@ -56667,6 +57270,20 @@
    "year": 2018,
    "runtime": null,
    "genres": []
+  },
+  {
+   "id": "tt8256136",
+   "qid": "Q142247703",
+   "kind": "series",
+   "name": "Puzzle & Dragons X",
+   "ru": null,
+   "original": "パズドラクロス",
+   "year": 2016,
+   "runtime": null,
+   "genres": [
+    "Adventure",
+    "Fantasy"
+   ]
   },
   {
    "id": "tt8271972",
