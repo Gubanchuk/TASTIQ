@@ -72,6 +72,15 @@ export function lookUp(ranked, title, year) {
 // A reason or caveat as shown: trimmed, capitalised, cut to the card's length.
 const sentence = (x, max) => { const t = String(x ?? '').trim().slice(0, max); return t && t[0].toUpperCase() + t.slice(1); };
 
+// Do not publish a numeric duration contradicting the matched catalog item.
+// This validates consistency only; it does not establish the real episode length.
+function runtimeGroundedText(value,max,item) {
+  const text=sentence(value,max);
+  if(!Number.isFinite(item?.runtime)||item.runtime<=0)return text;
+  const claims=[...text.matchAll(/(?<![\p{L}\p{N}])(\d+(?:[.,]\d+)?)\s*(?:минут\p{L}*|мин\.?)(?!\p{L})/giu)];
+  return claims.some(match=>Number(match[1].replace(',','.'))!==item.runtime)?'':text;
+}
+
 /**
  * Model output checked against the shortlist: known ids, no repeats, cut to size; reasons trimmed. A pick without
  * an id is looked up by title and year among the titles that passed the sieves (`ranked`), up to ownLimit.
@@ -124,7 +133,7 @@ export function checkPicks(out, rows, n = AI.picks, ranked = [], criteria = [], 
       works.add(work);
     }
     if (outside) own++;
-    picks.push({ id, reason: sentence(p.reason, 220), caveat: sentence(p.caveat, 140), likelySeen: Boolean(p.likelySeen), own: outside,...(criteria.length?{constraintChecks:assessment.checks,unknownCriteria:assessment.unknowns}:{}) });
+    picks.push({ id, reason: runtimeGroundedText(p.reason, 220, byId?.get(id)), caveat: runtimeGroundedText(p.caveat, 140, byId?.get(id)), likelySeen: Boolean(p.likelySeen), own: outside,...(criteria.length?{constraintChecks:assessment.checks,unknownCriteria:assessment.unknowns}:{}) });
     accepted.set(p, picks.at(-1));
   }
   // Use the original proposals. Filtering an edition or a failed constraint shifts the display positions.

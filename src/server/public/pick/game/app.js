@@ -181,7 +181,7 @@ function resultHtml(screen) {
   +noMatchHtml(screen,esc)
   +'<div class="game-result-notes">'+(screen.provisional||result.ai?.error?'<p>Предварительный подбор по каталогу. Некоторые пожелания пока не удалось проверить.</p>':'')
   +(result.ai?.wish?`<p class="game-help">${esc(result.ai.wish)}</p>`:'')
-  +((replacement&&notice)||batchNotice?`<p class="game-replacement-notice" role="status">${esc(replacement?notice:batchNotice)}</p>`:'')
+  +(!screen.noMatch&&((replacement&&notice)||batchNotice)?`<p class="game-replacement-notice" role="status">${esc(replacement?notice:batchNotice)}</p>`:'')
   +(!client.archivePersistent?'<p>Не удалось добавить подбор в историю. Оставь страницу открытой, чтобы вернуться к вариантам.</p>':'')+'</div>'
   +'<section class="game-proposals" aria-label="Предложенные игры">'+[result.top,...(result.alternatives??[]).slice(0,3)].map(cardHtml).join('')+'</section>';
 }

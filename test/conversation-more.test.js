@@ -19,7 +19,7 @@ function setup(domain,overrides={}){
  },...overrides});
  const state=initialConversation({domain,id:`more-${domain}`});if(domain==='game')state.context={platform:'windows',company:'solo',partySize:null};
  Object.assign(state,{phase:'result',summary:'История на вечер',question:null,result:{top:{id:items[0].id,domain,name:'First'},alternatives:items.slice(1,4).map(x=>({id:x.id,domain,name:x.name}))}});
- return {service,state,calls:()=>calls,domain};
+ return {service,state,calls:()=>calls,domain,catalog};
 }
 for(const domain of ['game','film','series','cartoon'])test(`${domain}: more preserves the request, avoids all shown works, never infers familiarity, supports undo`,async()=>{
  const {service,state,calls}=setup(domain),seen=new Set(cards(state.result).map(c=>c.id));let current=state,previous;
@@ -97,3 +97,67 @@ for(const domain of ['game','film','series','cartoon'])test(`${domain}: real mor
  const neutral=prompt.split('\n').find(line=>line.startsWith('Уже показано для выбора'))??'';
  assert.ok(neutral.includes(old));assert.match(neutral,/не означает отказ|не означает неприязнь/);
 });
+
+// Render the actual result view: controller state alone cannot detect stale announcements.
+async function resultView(domain, out) {
+ const [{readFile}, vm, clarity, errors, emptyView] = await Promise.all([
+  import('node:fs/promises'), import('node:vm'),
+  import('../src/server/public/shared/result-clarity.js'),
+  import('../src/server/public/shared/ai-error-message.js'),
+  import('../src/server/public/shared/no-match-view.js'),
+ ]);
+ const picker=domain==='game'?'game':'watch';
+ const source=await readFile(new URL(`../src/server/public/pick/${picker}/app.js`,import.meta.url),'utf8');
+ const start=source.indexOf('function resultHtml('),end=source.indexOf('function render()',start);
+ assert.ok(start>=0&&end>start);
+ const context=vm.createContext({domain,client:{state:out.state,archivePersistent:true},session:{},
+  ...clarity,...errors,...emptyView,esc:String,isArchivedResult:()=>false,
+  currentFinalists:s=>cards(s.result),compareButtonHtml:'',selectionModeTitle:()=>'',
+  cardHtml:card=>`<article data-card-id="${card.id}">${card.name}</article>`,screen:out.screen});
+ return vm.runInContext(source.slice(start,end)+';resultHtml(screen)',context);
+}
+for(const domain of ['game','film','series','cartoon','anime'])for(const kind of ['checked','catalog'])
+ test(`${domain}: empty more (${kind}) hides previous success in the real result view, including restored snapshots`,async()=>{
+  let empty=false,calls=0;
+  const {service,state,catalog}=setup(domain,{pick:async(all,legacy,options)=>{
+   calls++;
+   return aiPick(all,legacy,{...options,api:async()=>{
+    const picks=empty?[]:rankAll(all[domain],profileOf(legacy),sessionOf(legacy)).ranked.slice(0,4)
+     .map(({game})=>({id:game.id,viewingStart:'independent',reason:'stub',caveat:'stub'}));
+    return {status:'completed',output:[{type:'message',content:[{type:'output_text',text:JSON.stringify({picks})}]}]};
+   }});
+  }});
+  const success=await service({domain,state,action:{type:'more'}});
+  assert.equal(success.error,undefined);
+  const notice=success.state.replacement.notice;
+  assert.match(notice,/Ещё 4 варианта/);
+  assert.ok((await resultView(domain,success)).includes(notice));
+  empty=true;
+  const before=structuredClone(success.state);
+  if(kind==='catalog')before.browseSeen=catalog.items.map(item=>item.id);
+  const out=await service({domain,state:before,action:{type:'more'}});
+  assert.equal(out.screen.noMatch.kind,kind);
+  assert.equal(out.retryable,false);
+  for(const key of ['result','turns','facts','context','summary','sessionTime','browseSeen','familiar'])
+   assert.deepEqual(out.state[key],before[key],key);
+  const check=async snapshot=>{
+   const html=await resultView(domain,snapshot);
+   assert.match(html,/Больше совпадений пока нет/);
+   assert.ok(html.includes(snapshot.screen.noMatch.message));
+   assert.ok(!html.includes(notice),'previous success must not be announced after empty more');
+   assert.doesNotMatch(html,/game-replacement-notice|Заменил отмеченные/);
+   for(const card of cards(before.result))assert.ok(html.includes(`data-card-id="${card.id}"`));
+  };
+  await check(out);
+  const count=calls;
+  let restored=out;
+  for(let i=0;i<2;i++){
+   restored=await service({domain,state:JSON.parse(JSON.stringify(restored.state))});
+   await check(restored);
+   assert.deepEqual(restored.state.result,JSON.parse(JSON.stringify(before.result)));
+  }
+  assert.equal(calls,count,'restore must not ask the model again');
+  const undo=await service({domain,state:restored.state,action:{type:'undo_replacement'}});
+  assert.deepEqual(undo.state.result,state.result);
+  assert.equal(undo.screen.noMatch,undefined);
+ });
